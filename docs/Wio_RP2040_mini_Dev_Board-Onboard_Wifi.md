@@ -65,7 +65,7 @@ The main control board has built-in MicroPython firmware, so users can directly 
 
 - Wio RP2040 mini Dev Board x 1
 - Computer x 1
-- USB Type-Ccablex 1
+- USB Type-Ccable x 1
 
 Connect the Wio RP2040 mini Dev Board to the computer via the USB cable, and the red LED power indicator on the board should light up.
 ## Software
@@ -85,7 +85,7 @@ The main interface of Thonny is very simple, divided into the following four par
 
 3.Shell: We can run commands here, and the results of the commands will be displayed in the Shell immediately. We also can see outputs of our code in the Shell window.
 
-4.Interpreter: Here you can select the type of interpreter to compile the program. Click Python 3.7.9, find MicroPython (Raspberry pi Pico) in the pop-up menu, and click OK to switch the interpreter to Pico interpreter. You can also click "Tools>>>Settings>>>Interpreter" to select. 
+4.Interpreter: Here you can select the type of interpreter to compile the program. Click Python 3.7.9, find MicroPython (Raspberry pi Pico) in the pop-up menu, and click OK to switch the interpreter to Pico interpreter. You can also click "Tools>>>Options>>>Interpreter" to select. 
 
 ![2.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/board_8.png)
 ![3.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/board_9.png)
@@ -139,9 +139,6 @@ You can click the RESET button of the main control board to restart the board, a
 ## Tech Support
 Please submit any technical issues into our [forum](https://forum.seeedstudio.com/).
 ![](https://cdn.nlark.com/yuque/0/2021/jpeg/2493901/1621328819666-606de681-4bb3-4daa-98b4-e0476d75b0f6.jpeg#from=paste&height=169&id=Uw2tn&margin=%5Bobject%20Object%5D&originHeight=338&originWidth=1024&originalType=url&status=done&style=none&width=512)
-上一篇
-###### RP2040项目
-下一篇
-###### RP2040 模组wiki
+
 
 

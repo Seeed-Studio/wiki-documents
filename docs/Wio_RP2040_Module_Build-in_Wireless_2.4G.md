@@ -9,15 +9,15 @@ sku: 102991556
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Wio_RP2040_Module-Build-in_Wireless_2.4G/module_1.jpg)
 
-Wio RP2040 module is Seeed's self-developed module using RP2040+wifi chip, supporting MicroPython programming. It has Cortex M0+ dual-core with flexible clock running up to 133Mhz. And the module is a low-power microcontroller with wireless functions. With powerful performance and small size, it is a perfect option for various IOT projects development. The module can be easily soldered on various PCB backplanes.
+Wio RP2040 module is Seeed's self-developed module using RP2040+WiFi chip, supporting MicroPython programming. It has Cortex M0+ dual-core with flexible clock running up to 133MHz. And the module is a low-power microcontroller with wireless functions. With powerful performance and small size, it is a perfect option for various IoT projects development. The module can be easily soldered on various PCB backplanes.
 
 The module has rich interfaces, including 28 GPIO PINs (19 PINs support PIO and PWM), 2 UART, 4 ADC, 2 SPI, 2 I2C. Some pins can be multiplexed, such as GP12 and GP13 with I2C, SPI, UART functions. That’s why 28 GPIO PINs can achieve more I/O PINs and interfaces. Wio RP2040 module also has a USB PIN, which can be designed to supports a USB Type-C interface.
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Wio-RP2040-Module-p-4932.html)  
 
 ## Key Features
 
-- **Powerful CPU**: dual-core 133MHZ Cortex M0+  processor and 264KB SRAM, 2MB Flash
-- **Reliable wireless connection**: using powerful wifi chip, supporting 2.4~2.4835 GHz frequency and Ap&Station mode
+- **Powerful CPU**: dual-core 133MHz Cortex M0+  processor and 264KB SRAM, 2MB Flash
+- **Reliable wireless connection**: using powerful WiFi chip, supporting 2.4~2.4835 GHz frequency and AP&Station mode
 - **Flexibility**: compatible with Thonny editor
 - **Small size**: 18.0x 28.2x 1.0mm 32 Pins SMT
 - **Multiple certifications**: FCC and CE Certified
@@ -30,7 +30,7 @@ The module has rich interfaces, including 28 GPIO PINs (19 PINs support PIO and 
 | Processors     | Dual Cortex M0+ processors, up to 133 MHz       |
 | SRAM | 264KB |
 | Flash          | 2MB            |
-| Wireless connectivity         | 2.4〜2.4835 GHz；IEEE802.11 b/g/n；Ap & Station            |
+| Wireless connectivity         | 2.4〜2.4835 GHz；IEEE802.11 b/g/n；AP & Station            |
 | GPIO，PIO and PWM Pins            | 20            |
 | I2C             | 2            |
 | SPI                  | 2   |

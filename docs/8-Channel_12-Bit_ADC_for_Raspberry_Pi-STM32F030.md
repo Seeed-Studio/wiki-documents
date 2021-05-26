@@ -1,5 +1,5 @@
 ---
-name: 8-Channel 12-Bit ADC for Raspberry Pi (STM32F030)
+name: 8-Channel 12-Bit ADC for Raspberry Pi 
 category:
 bzurl: 
 oldwikiname: 
@@ -331,14 +331,23 @@ You can quit this program by simply press ++ctrl+c++.
 <div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/8-Channel%2012-Bit%20ADC%20for%20Raspberry%20Pi%20(STM32F030).zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
+!!!Product Change Note:
+
+Because ST32 series chips are out of stock globally, prices have increased several times and there is no clear delivery date. We have no choice but to switch to the MM32 chip. The specific replacement models are as follows: STM32F030F4P6TR is replaced by MM32F031F6P6. After the chip is replaced, the product functions, features, usage methods and codes remain unchanged. It should be noted that the firmware version has changed, and the factory firmware has been adjusted according to different chips. If you need to re-burn the firmware, please download the firmware corresponding to the chip.
+
 
 ## Resources
 
 - **[Zip]** [8-Channel 12-Bit ADC for Raspberry Pi (STM32F030) Eagle Files](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/8-Channel%2012-Bit%20ADC%20for%20Raspberry%20Pi%20(STM32F030).zip)
 
+- **[Zip]** [MM32F031F6P6-Firmware](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/MM32F031F6P6_firmware.zip)
+
 - **[Zip]** [8-Channel 12-Bit ADC for Raspberry Pi (STM32F030) Software Library](https://github.com/Seeed-Studio/grove.py)
 
 - **[PDF]** [Datasheet STM32F030](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/STM32.pdf)
+
+- **[PDF]** [MM32F031F6P6_Datasheet.pdf](https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/res/MM32F031F6P6_Datasheet.pdf)
+
 
 
 

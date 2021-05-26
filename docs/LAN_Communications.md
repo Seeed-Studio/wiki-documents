@@ -1,4 +1,4 @@
-### Configure the LAN Server
+### 1. Configure the LAN Server
 
 This project requires the Server and the main control board to work in the same local area network. The principle: Setup one PC as a server, connect the main control board to the Server through the local area network, and then PC and board communicate through a fixed port.
 First, download and install the network debugging assistant (Net Assistant network debugging assistant software in this project).
@@ -33,7 +33,7 @@ if N1.isconnected():
     s.connect(addr)
     s.send('Hello! Wio RP2040')
 ```
-Please fill in line 17 (the name and password of the Wifi ) and line 22（the IP address and port number of the computer server). Then run the program, you should see the message sent by the main control board in the Data log of the network debugging assistant.
+Please fill in line 17 (the name and password of the WiFi ) and line 22（the IP address and port number of the computer server). Then run the program, you should see the message sent by the main control board in the Data log of the network debugging assistant.
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/demo_9.png)
 

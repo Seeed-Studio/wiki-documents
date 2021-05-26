@@ -72,7 +72,7 @@ while True:
     cl.wait_msg()
     sleep(0.1)
 ```
-**Pay attention to fill in your WFI name and password in line 8 of the code**, and then run the program. Wait for the prompt "ok" in the Shell window, which means that the connection has been successful. At that time you can send information in MQTTX for controlling.
+**Pay attention to fill in your WiFi name and password in line 8 of the code**, and then run the program. Wait for the prompt "ok" in the Shell window, which means that the connection has been successful. At that time you can send information in MQTTX for controlling.
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/demo_15.png)
 

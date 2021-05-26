@@ -36,7 +36,7 @@ while True:
     data = s.recv(500)
     print(str(data, 'utf8'), end = '')
 ```
-**Pay attention to replace with your own WIFI name and password on line 17, then run the program and get the result in the Shell window.**
+**Pay attention to replace with your own WiFi name and password on line 17, then run the program and get the result in the Shell window.**
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/demo_20.png)
 You can also find other servers that support the telnet protocol on the Internet, and then fill in the server address and port as shown. Now, you can use the terminal to visit these websites!
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/demo_21.png)
