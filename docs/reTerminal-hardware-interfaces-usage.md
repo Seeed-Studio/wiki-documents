@@ -14,6 +14,8 @@ This wiki introduces the various different hardware and interfaces on the reTerm
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"></p>
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal.jpg" alt="pir" width="1000" height="auto"></p>
+
 ## 40-Pin Raspberry Pi Compatible Pins
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v1.png" alt="pir" width="1000" height="auto"></p>
