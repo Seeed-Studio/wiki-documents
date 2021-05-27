@@ -43,6 +43,14 @@ It features a variety of I/O peripherals such as MIPI CSI, MIPI DSI, micro-HDMI 
 | Dimensions | 75x64x21mm |
 | Weight | 43g |
 
+<div class="tips" style="background-color: #ffdde3; height: 97px;">
+<div class="left-icon" style="background-color: #ff8da4; padding-top: 10px; box-sizing: border-box; height: 97px; width: 38px; text-align: center; float: left;"><img style="width: 26px;" src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+<div class="right-desc" style="margin-left: 15px; width: calc(95% - 38px); float: left;">
+<p style="font-weight: bold; margin-top: 10px;">Danger</p>
+<p style="font-size: 14px;"><span>Due to the high level of integration of this product, it must be used with a </span><a href="https://www.seeedstudio.com/Aluminum-Alloy-CNC-Heat-Sink-with-Fan-for-Raspberry-Pi-CM4-Module-p-4923.html" target="_blank">CM4 heat sink</a>. O<span>therwise it may cause USB or Ethernet instability</span></p>
+</div>
+</div>
+
 ## Hardware Overview
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/hw-overview.png" alt="pir" width="900" height="auto"></p>
