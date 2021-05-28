@@ -128,6 +128,12 @@ Compute Module 4 natively has only a **USB 2.0 interface**. However, we have use
 
 Additionally there is a **USB 3.0 9-pin header** and you can connect even more USB devices using this header.
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/9-Pin-USB.jpg" alt="pir" width="1000" height="auto"></p>
+
+**Note:** If you want to connect a [5V fan](https://www.seeedstudio.com/Aluminum-Alloy-CNC-Heat-Sink-with-Fan-for-Raspberry-Pi-CM4-Module-p-4923.html) to this board using **jumper wires**, you can connect the **positive end (+)** of fan to **VBUS** and **negative end(-)** of fan to **GND** pins.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/with-fan.jpg" alt="pir" width="1000" height="auto"></p>
+
 #### Schematics of USB 3.0 HOST
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/USB3.0.png" alt="pir" width="1000" height="auto"></p>
