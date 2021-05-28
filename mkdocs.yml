@@ -347,6 +347,9 @@ nav:
           - Snips Voice Interaction Satellite Kit: Snips_Voice_Interaction_Satellite_Kit.md
           - Snips Voice Interaction Base Kit: Snips_Voice_Interaction_Base_Kit.md
 
+      - NVIDIA:
+          - Jetson Mate: Jetson-Mate.md
+
       - NPi-i:
           - NPi i.MX6ULL Dev Board Linux SBC: NPi-i.MX6ULL-Dev-Board-Linux-SBC.md
 
@@ -816,7 +819,6 @@ nav:
                 - Grove IoT Developer Kit Microsoft Azure Edition: Grove_IoT_Developer_Kit-Microsoft_Azure_Edition.md
                 - BeagleBone Green and Grove IoT Starter Kit Powered by AWS: Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS.md
                 - SEEED IOT BUTTON FOR AWS: SEEED-IOT-BUTTON-FOR-AWS.md
-                - Jetson Mate: Jetson-Mate.md
 
           # - MakerPro Introduction: MakerPro.md
           - 0.5w Solar Panel 55*70: 0.5w_Solar_Panel_55x70.md
