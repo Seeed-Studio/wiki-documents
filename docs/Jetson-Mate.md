@@ -171,8 +171,6 @@ You will see the following output when the SDK manager has sucessfully downloade
 
 ### Launch the Cluster
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/cluster-pic.png"/></div>
-
 - **Step 1.** Connect an Ethernet cable from router to Jetson Mate
 
 **Note:** Make sure the PC and Jetson Mate are connected to the same router
