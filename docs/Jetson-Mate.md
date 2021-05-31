@@ -2,7 +2,7 @@
 
 <div align=center><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/banner-2.png"/></div>
 
-**Jetson Mate** is a carrier board which can install up to **4 Nvidia Jetson Nano/NX SoMs**. There is an on board **5-port gigabit switch enabling the 4 SoMs to communicate with each other**. All the 3 peripheral SoMs can be powered on or off separately. With one 65w PD power adapter and 1 ethernet cable, developers can easily build their own Jetson Cluster.
+**Jetson Mate** is a carrier board which can install up to **4 Nvidia Jetson Nano/NX SoMs**. There is an on board **5-port gigabit switch enabling the 4 SoMs to communicate with each other**. All the 3 peripheral SoMs can be powered on or off separately. With a 65W 2-Port PD charger, for Jetson Nano SoMs or a 90W 2-Port PD charger for Jetson NX SoMs, and one ethernet cable, developers can easily build their own Jetson Cluster.
 
 ## Feature
 
@@ -27,59 +27,171 @@
 
 ## Getting Started
 
-### Step.1 Preparation
+!!!Note
+        In this guide, Ubuntu 18.04 LTS is installed on the host PC. Currently OS flashing using NVIDIA SDK Manager is not supported by Ubuntu 20.04. So make sure to use either Ubuntu 18.04 or 16.04. Also if you are running Ubuntu on a virtual machine, it is recommended to use [VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html) as we have tested this. It is not recommended to use Oracle VM VirtualBox, since it fails to flash the OS.
 
-- **Power Supply**: A qualified Type-C power adapter (at least **65w**) with PD protocol (**Not included**).
+### Hardware Needed
 
-- **Nvidia Jetson Nano / Xavier NX Compute Modules** x 4. Either eMMC version or SD card version from Dev Kit is supported.
+- Jetson Mate
+- Jetson Nano/ NX Module(s)
+- Micro - USB Cable
+- 65W or 90W charging adapter with USB Type-C Cable
+- Host PC with Ubuntu 18.04 or 16.04 installed
 
-### Step.2 Install and Configure Jetson OS
+### Hardware Set Up
 
-> If you are using Computer Modules form Dev Kit with SD card, we suggest you install and configure the system on the Dev Kit carrier board.
+- **Step 1.** Insert a **Jetson Nano/ NX** module to **Master Node**
 
-If you are using Compute Modules with eMMC storage, please use Nvidia’s official SDK manager.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-3.jpg" alt="pir" width="800" height="auto"></p>
 
-- Choose the target hardware:
+- **Step 2.** Connect a **micro-USB** cable from Jetson Mate to PC
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/step-1.png"/></div>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/micro-usb.jpg" alt="pir" width="800" height="auto"></p>
 
-- Choose the OS and Libraries you want to install:
+- **Step 3.** Connect a jumper between **BOOT and GND pins** for **recovery mode**
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/step-2.png"/></div>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/jumper.jpg" alt="pir" width="800" height="auto"></p>
 
-- Download and install the files.
+- **Step 4.** Connect Jetson Mate to a power adapter and turn on Jetson Mate by pressing on the **WAKE** button
 
-**During this Process**
+- **Step 5.** Remove the jumper after Jetson Mate turns on
 
-1.Insert the computer module to the main node.
+- **Step 6.** Open a terminal window on host PC and execute the following
 
-<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-3.jpg"/></div>
+```sh
+lsusb
+```
 
-2.Short the **2 GND pin** shown in the picture.
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/1.png" alt="pir" width="800" height="auto"></p>
 
-<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-1.jpg"/></div>
+If the output includes **0955:7f21 NVidia Corp.**, Jetson Mate has entered recovery mode
 
-3.Connect Jetson Mate to your computer via micro USB port.
+### Software Set Up
 
-<div align=center><img width = 550 src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-2.jpg"/></div>
+> If you are using modules with micro-SD card from Developer Kit, we suggest you install and configure the system by following [this guide for Jetson Nano](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit), [this guide for Jetson Nano 2GB](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit) and [this guide for Jetson Xavier NX](https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit)
 
-4.Power on the machine, press the **wake up button**.
+If you are using modules with eMMC storage, please use NVIDIA’s official SDK Manager and follow the steps below
 
-5.Flash your compute module.
+- **Step 1.** Download **NVIDIA SDK Manager** by clicking [here](https://developer.nvidia.com/nvidia-sdk-manager)
 
-- When the installation of OS and software library is completed, you will see a window pop up. Select Manual Setup option. Then click flash. Wait until it’s finished.
+**Note:** Choose the relavant version according to the host PC OS. We choose Ubuntu here because the host PC used in this guide is running Ubuntu 18.04
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/step-3.png"/></div>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/SDK-Manager.png" alt="pir" width="800" height="auto"></p>
 
-- Flash all the left compute modules you have.
+- **Step 2.** Create an account or log in to **NVIDIA Developer Program Membership**
 
-**All the modules can only be flashed when installed on the main node**. Thus, you should flash and configure the modules one by one on the main node.
+- **Step 3.** Install NVIDIA SDK Manager 
+
+**Note:** Double click the downloaded file to install it
+
+- **Step 4.** Open NVIDIA SDK Manager and you will notice it automatically detects the connected Jetson Nano/ NX module
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/2.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 5.** Select the connected module 
+
+- **Step 6.** On the configuration window, **uncheck** Host Machine.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/3.png" alt="pir" width="1000" height="auto"></p>
+
+**Note:** Here **DeepStream SDK** is also unchecked. But if you plan to install it as well, you can check it. However, the **16GB** on the eMMC module will not be enough to install this SDK.
+
+- **Step 7.** Click **CONTINUE TO STEP 02**
+
+- **Step 8.** Review the required components and check **I accept the terms and conditions of the license agreements**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/5.png" alt="pir" width="1000" height="auto"></p>
+
+**Note:** If you only want to install the **Jetson OS**, you can uncheck **Jetson SDK Components**
+
+- **Step 9.** Click **CONTINUE TO STEP 03**
+
+- **Step 10.** Once following error message pops up, click **Create**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/6.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 11.** Start downloading and flashing
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/7.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 12.** After downloading and flashing the OS is finshed, you will see the following output
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/8.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 13.** Turn off Jetson Mate
+
+- **Step 14.** Open a terminal window on host PC and install **minicom** which is a serial terminal application
+
+```sh
+sudo apt update
+sudo apt install minicom
+```
+
+**Note:** We will use this application to establish a serial connection between the host PC and Jetson Mate
+
+- **Step 15.** Turn on Jetson Mate while still connected to PC via micro - USB cable, enter the following to identify the connected serial port
+
+```sh
+dmesg | grep tty
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/grep_tty.png" alt="pir" width="1000" height="auto"></p>
+
+**Note:** Here the port name is **ttyACM0**
+
+- **Step 16.** Connect to Jetson Mate using minicom
+
+```sh
+sudo minicom -b 9600 -D /dev/ttyACM0
+```
+
+**Note:** -b is baud rate and -D is device
+
+- **Step 17.** Go through the **initial configuration** for Jetson OS
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/initial-config-minicom.png" alt="pir" width="800" height="auto"></p>
+
+- **Step 18.** After configuration is finished, come back to SDK Manager window, enter the **username and password** set for Jetson Mate and click **Install**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/9.png" alt="pir" width="1000" height="auto"></p>
+
+**Note:** Use the username and password set in the initial configuration
+
+Now it will start downloading and installing the SDK components
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/10.png" alt="pir" width="1000" height="auto"></p>
+
+You will see the following output when the SDK manager has sucessfully downloaded and installed the necessary components
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/11.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 19.** Flash all the remaining Jetson Nano/ NX modules you have
+
+**Note:** **All the modules can only be flashed when installed on the master node**. Therefore, you should flash and configure the modules one by one on the master node.
 
 ### Launch the Cluster
 
-Install all the compute modules you have. **Power on**, then click **wake up button**. Now you can check the IP address through your router. You can also connect to the nodes via their hostname!
+<div align=center><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/cluster-pic.png"/></div>
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/banner-1.png"/></div>
+- **Step 1.** Connect an Ethernet cable from router to Jetson Mate
+
+**Note:** Make sure the PC and Jetson Mate are connected to the same router
+
+- **Step 2.** Enter Jetson Mate using **minicom** as explained before, while micro-USB connected to host PC and type the following to obtain the IP addresses of the modules connected to Jetson Mate
+
+```sh
+ifconfig
+```
+
+- **Step 3.** Type the following on the host PC terminal to establish an SSH connection 
+
+```sh
+ssh user@192.xxx.xx.xx
+```
+
+**Note:** Replace **user** with your Jetson Nano/ NX username and **192.xxx.xx.xx** with your Jetson Nano/ NX IP address
+
+**Note:** You can also connect to the nodes by replacing the IP address by their hostname
 
 ## Build a Kubernetes cluster with Jetson Mate
 Kubernetes is an enterprise-grade container-orchestration system designed from the start to be cloud-native. It has grown to be the de-facto cloud container platform, continuing to expand as it has embraced new technologies, including container-native virtualization and serverless computing.
