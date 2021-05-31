@@ -14,6 +14,8 @@ This wiki introduces the various different hardware and interfaces on the reTerm
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"></p>
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal.jpg" alt="pir" width="1000" height="auto"></p>
+
 ## 40-Pin Raspberry Pi Compatible Pins
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v1.png" alt="pir" width="1000" height="auto"></p>
@@ -194,8 +196,6 @@ chmod +x spidev_test
 If you see the following output, SPI is working properly
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SPI_test.jpg" alt="pir" width="1000" height="auto"></p>
-
-
 
 ## High-Speed Interface for Expansion Modules
 
@@ -672,6 +672,144 @@ The **USB Type-C Port** on the reTerminal can be used to **power the reTerminal 
 reTerminal has a **standard camera mount with a diameter of 1/4 inch**. So you can connect the reTerminal to a **standard tripod**.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/tripod.png" alt="pir" width="450" height="auto"></p>
+
+## Python Library for reTerminal
+
+We have prepared a **Python library** which enables you to use the onboard hardware on the reTerminal. Currently the **accelerometer, user LEDs, user buttons and buzzer** can be accessed using this Python library.
+
+### Installation
+
+Open a terminal window on the reTerminal and execute the following
+
+```sh
+sudo pip3 install seeed-python-reterminal
+```
+
+**Note:** The source code can be found [here](https://github.com/Seeed-Studio/Seeed_Python_ReTerminal)
+
+### Usage
+
+- **Step 1.** Create a new **python file** and open using **nano text editor**
+
+```sh
+nano test.py
+```
+
+- **Step 2.** Enter the python codes
+
+- **Step 3.** Press **CTRL + X** and then press **Y** to save the file
+
+- **Step 4.** Finally run the file
+
+```sh
+python3 test.py
+```
+
+You can follow the above steps to test for the below hardware functions. The included Python codes under each section can be directly entered into the test.py file and then execute the file
+
+#### User LEDs Test
+
+```python
+import seeed_python_reterminal.core as rt
+import time
+
+print("STA ON, USR OFF")
+rt.sta_led = True
+rt.usr_led = False
+time.sleep(1)
+
+print("STA OFF, USR ON")
+rt.sta_led = False
+rt.usr_led = True
+time.sleep(1)
+
+print("STA RED, USR OFF")
+rt.sta_led_green = False
+rt.sta_led_red = True
+rt.usr_led = False
+time.sleep(1)
+
+print("STA OFF, USR OFF")
+rt.sta_led = False
+rt.usr_led = False
+```
+
+#### Buzzer Test
+
+```python
+import seeed_python_reterminal.core as rt
+import time
+
+print("BUZZER ON")
+rt.buzzer = True
+time.sleep(1)
+
+print("BUZZER OFF")
+rt.buzzer = False
+```
+
+#### User Buttons Test
+
+```python
+import seeed_python_reterminal.core as rt
+import seeed_python_reterminal.button as rt_btn
+
+
+device = rt.get_button_device()
+while True:
+    for event in device.read_loop():
+        buttonEvent = rt_btn.ButtonEvent(event)
+        if buttonEvent.name != None:
+            print(f"name={str(buttonEvent.name)} value={buttonEvent.value}")
+```
+
+#### Accelerometer Test
+
+```python
+import seeed_python_reterminal.core as rt
+import seeed_python_reterminal.acceleration as rt_accel
+
+
+device = rt.get_acceleration_device()
+while True:
+    for event in device.read_loop():
+        accelEvent = rt_accel.AccelerationEvent(event)
+        if accelEvent.name != None:
+            print(f"name={str(accelEvent.name)} value={accelEvent.value}")
+```
+
+#### Accelerometer and Buttons Test
+
+```python
+import asyncio
+import seeed_python_reterminal.core as rt
+import seeed_python_reterminal.acceleration as rt_accel
+import seeed_python_reterminal.button as rt_btn
+
+
+async def accel_coroutine(device):
+    async for event in device.async_read_loop():
+        accelEvent = rt_accel.AccelerationEvent(event)
+        if accelEvent.name != None:
+            print(f"accel name={str(accelEvent.name)} value={accelEvent.value}")
+
+
+async def btn_coroutine(device):
+    async for event in device.async_read_loop():
+        buttonEvent = rt_btn.ButtonEvent(event)
+        if buttonEvent.name != None:
+            print(f"name={str(buttonEvent.name)} value={buttonEvent.value}")
+
+
+accel_device = rt.get_acceleration_device()
+btn_device = rt.get_button_device()
+
+asyncio.ensure_future(accel_coroutine(accel_device))
+asyncio.ensure_future(btn_coroutine(btn_device))
+
+loop = asyncio.get_event_loop()
+loop.run_forever()
+```
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

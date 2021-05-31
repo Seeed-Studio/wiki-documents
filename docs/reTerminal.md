@@ -198,6 +198,8 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"></p>
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal.jpg" alt="pir" width="1000" height="auto"></p>
+
 ## Pinout Diagram
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v1.png" alt="pir" width="1000" height="auto"></p>
@@ -505,13 +507,13 @@ git clone --depth 1 -b mipi_dsi https://github.com/Seeed-Studio/seeed-linux-dtov
 - **Step 2.** Enter the repo
 
 ```sh
-cd seeed-linux-dtoverlays/scripts
+cd seeed-linux-dtoverlays
 ```
 
 - **Step 3.** Type the following to install the drivers
 
 ```sh
-sudo ./reTerminal.sh
+sudo ./scripts/reTerminal.sh
 ```
 
 You will see the following output if you have successfully installed the drivers
