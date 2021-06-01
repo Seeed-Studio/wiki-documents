@@ -1,36 +1,37 @@
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-May-Week-2.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21-June-Week1.png)
 
-It's the second week of May and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the first week of June and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
-## Existing Wiki Updated 
-
-### ReSpeaker 2-Mics Pi HAT
-
-We have updated the getting started guide for [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) with new projects and more functionality! Click [here](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/) to learn more!
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/"><img src="https://files.seeedstudio.com/products/107100001/01.png" alt="pir"  width="600" height="auto"></a></p>
-
 ## New Wiki Added
 
-### TinyML with Wio Terminal
+### Getting Started with reTerminal
 
-We have had many guides for [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) so far, and now we are happy to bring you all our latest course for Wio Terminal which is based on TinyML. You can navigate to the following wiki pages to learn more:
+Introducing reTerminal, a new member of our reThings family. This future-ready Human-Machine Interface (HMI) device can easily and efficiently work with IoT and cloud systems to unlock endless scenarios at the edge.
 
-- [TinyML with Wio Terminal Course](https://wiki.seeedstudio.com/Wio-Terminal-TinyML/)
-- [Edge Impulse Projects](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/)
-- [TensorFlow Lite Micro Projects](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-TFLM-1/)
+reTerminal is powered by a Raspberry Pi Compute Module 4 (CM4) which is a Quad-Core Cortex-A72 CPU running at 1.5GHz and a 5-inch IPS capacitive multi-touch screen with a resolution of 1280 x 720. It has sufficient amount of RAM (4GB) to perform multitasking and also has sufficient amount of eMMC storage (32GB) to install an operating system, enabling fast boot up times and smooth overall experience. It has wireless connectivity with dual-band 2.4GHz/5GHz Wi-Fi and Bluetooth 5.0 BLE.
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-TinyML/"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Edge-Impulse/booze.jpg" alt="pir"  width="800" height="auto"></a></p>
+So far we have prepared two wiki documents for reTerminal and more will be cominmg along the way!
 
-### Dual Gigabit Ethernet Carrier Board for Raspberry Pi Compute Module 4
+- [Getting Started with reTerminal](https://wiki.seeedstudio.com/reTerminal)
+- [Hardware and Interfaces Usage](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage)
 
-We have released the [Dual Gigabit Carrier Board powered by Raspberry Pi Compute Module 4](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html) which is equipped with Dual Gigabit Ethernet ports and dual USB 3.0 ports, making it suitable for soft router applications, while keeping the hardware to minimal.
-You can follow [this link](https://wiki.seeedstudio.com/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/) to get started now!
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-TinyML/"><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal.jpg" alt="pir"  width="1000" height="auto"></a></p>
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/"><img src="https://files.seeedstudio.com/wiki/102110497/CM4-default.png" alt="pir"  width="450" height="auto"></a></p>
+### Getting Started with Wio RP2040 mini Dev Board
+
+Wio RP2040 mini Dev Board is a development board based on Wio RP2040 module , supporting MicroPython programming. It has a dual-core 133MHz RP2040 chip, which is a low-power microcontroller with wireless functions. With powerful performance and small size, it is a perfect option for various IoT project development.
+
+You can use the following wiki documents to get started with this board:
+
+- [Get Started with Wio RP2040 mini Dev Board](https://wiki.seeedstudio.com/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/)
+- [LAN Communications](https://wiki.seeedstudio.com/LAN_Communications/)
+- [Use MQTT to remotely light up LED lights](https://wiki.seeedstudio.com/Use_MQTT_to_remotely_light_up_LED_lights/)
+- [Use Socket to connect to the forum](https://wiki.seeedstudio.com/Use_Socket_to_connect_to_the_forum/)
+
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/"><img src="https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/board_4.png" alt="pir"  width="1000" height="auto"></a></p>
 
 ## What's More?
 
