@@ -475,7 +475,11 @@ You may need to do some hardware modifications to the board to achieve this and 
 
 - **Method 1:** Remove R4, R89, R126 and R144 resistors
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/method1-final-pic.png" alt="pir" width="1000" height="auto"></p>
+
 - **Method 2:** Replace R3, R88, R124 and R143 resistors with 100Ω resistors
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/method2-final-pic.png" alt="pir" width="1000" height="auto"></p>
 
 Method 1 will be easier to do, but you will not be able to perform "sudo shutdown" after doing this
 
