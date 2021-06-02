@@ -126,13 +126,13 @@ Buzzer and LED module are used for key prompt.
 ### Start the Arduino IDE
 
 1.Open the **Arduino IDE** on your PC.
-2.Click on `Tools` -> `Board` to select the correct Development Board Model. Select **Arduino/Genuino Uno** as Board.
+2.Click on `Tools` -> `Board`-> `Arduino AVR Boards`-> `Arduino Uno` to select the correct Development Board Model. Select **Arduino Uno** as Board.
 
-![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/board.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/uno_board.jpg)
 
-3.Click `Tools` -> `Port` to select the correct Port (the Serial Port showed in Device Manager in the previous step). In this case, `COM6` is selected. **For Mac OS users**, it should be `/dev/cu.SLAB_USBtoUART`.
+3.Click `Tools` -> `Port` to select the correct Port (the Serial Port showed in Device Manager in the previous step). In this case, `COM11` is selected. **For Mac OS users**, it should be `/dev/cu.SLAB_USBtoUART`.
 
-![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/port.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/port.jpg)
 
 
 4.Create a new Arduino file and name it `Hello.ino`, then copy the following code into it:
