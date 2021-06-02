@@ -41,7 +41,7 @@ With the help of TinyML technology, simple sensors become smart. We can now teac
 
 IoT Plug and Play enables developers to integrate smart devices into solutions without complex manual configuration, reducing the barrier for beginner developers and saving the overall timeline of the project building.
 
-<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/qm_G5K7VzgY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/3Fp3W9VJUL4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/c/SeeedStudioSZ) to stay updated with our video releases on exciting products!
 
