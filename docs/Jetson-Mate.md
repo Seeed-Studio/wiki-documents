@@ -114,7 +114,7 @@ If you are using modules with eMMC storage, please use NVIDIA’s official SDK M
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/7.png" alt="pir" width="1000" height="auto"></p>
 
-- **Step 12.** After downloading and flashing the OS is finshed, you will see the following output
+- **Step 12.** After downloading and flashing the OS is finished, you will see the following output
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/8.png" alt="pir" width="1000" height="auto"></p>
 
@@ -466,7 +466,29 @@ get_available_gpus()
 ```
 
 All right, here's your show.
+
+## FAQ
+
+### Q1: How can I directly turn on the Jetson Mate from power without pushing the 'WAKE' Button?
+
+You may need to do some hardware modifications to the board to achieve this and there are two methods of doing this.
+
+- **Method 1:** Remove R4, R89, R126 and R144 resistors
+
+- **Method 2:** Replace R3, R88, R124 and R143 resistors with 100Ω resistors
+
+Method 1 will be easier to do, but you will not be able to perform "sudo shutdown" after doing this
+
+Method 2 will be a little more work than method 1, but you will be able to perform "sudo shutdown" with no issues
+
+**Note:** Please do the above modifications by referring to the PDF documents under the **Resources** section
+
 ## Resources
+
+- **[PDF]** [Jetson Mate Schematics](https://files.seeedstudio.com/wiki/Jetson-Mate/Jetson-Mate-Schematics-V1.0.pdf)
+- **[PDF]** [Jetson Mate PCB Top](https://files.seeedstudio.com/wiki/Jetson-Mate/Jetson-Mate-PCB-TOP-V1.0.pdf)
+- **[PDF]** [Jetson Mate PCB Bottom](https://files.seeedstudio.com/wiki/Jetson-Mate/Jetson-Mate-PCB-BOTTOM-V1.0.pdf)
+
 <iframe frameborder='0' height='385' scrolling='no' src='https://www.hackster.io/WhoseAI/set-up-a-jetson-nano-nx-cluster-in-one-systerm-ac4235/embed' width='350'></iframe>
 
 ## Tech Support
