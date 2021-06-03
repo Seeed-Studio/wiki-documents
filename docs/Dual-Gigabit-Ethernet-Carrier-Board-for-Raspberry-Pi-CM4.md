@@ -847,25 +847,19 @@ git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
 cd seeed-linux-dtoverlays
 ```
 
-- **Step 4.** Type the following to change the repo branch 
-
-```sh
-git checkout mipi_dsi
-```
-
-- **Step 5.** Type the following to install the scipt
+- **Step 4.** Type the following to install the scipt
 
 ```sh
 sudo ./scripts/cm4_lan7800.sh
 ```
 
-- **Step 6.** Reboot the carrier board
+- **Step 5.** Reboot the carrier board
 
 ```sh
 sudo reboot
 ```
 
-- **Step 7.** Type the following to check the status of the installation
+- **Step 6.** Type the following to check the status of the installation
 
 ```sh
 dmesg | grep lan
