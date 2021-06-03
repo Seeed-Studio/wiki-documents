@@ -93,6 +93,7 @@ Now we have successfully finished preparing the development environment
 ## Build the Project
 
 Next let's move on to building the project. The workflow is as follows:
+
 1. Design the UI on a **graphic designer software**
 2. Create a **.qml** file and build the UI based on the positions of the UI elements obtained from the graphic designer software
 3. Create another **.qml** for the full screen UI application 
