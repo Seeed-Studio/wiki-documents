@@ -874,5 +874,23 @@ You will see the output as follows
 
 Now you can click on the buttons and you will see the LEDs light up!
 
+### Debugging the App
+
+Let's go through the process of debugging your app while developing
+
+- **Step 1.** Log in to reTerminal via **SSH** using **Microsoft Visual Studio Code** as mentioned before 
+
+- **Step 2.** Log in to reTerminal via SSH using a SSH application such as [MobaXterm](https://mobaxterm.mobatek.net/) with **X11 server feature**
+
+**Note:** X11 is needed to forward the reTerminal display and pop up on the PC
+
+- **Step 3.** After writing all the codes on Microsoft Visual Studio Code to the reTerminal, run the **main.py file** using MobaXterm
+
+```sh
+python3 main.py
+```
+
+Finally you will see the output displayed on a new window. If there are any errors in the code, they will be dislpayed in the MobaXterm terminal window.
+
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
