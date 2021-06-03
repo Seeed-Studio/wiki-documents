@@ -657,6 +657,17 @@ minicom -D /dev/ttyACM0 -b 9600
 
 Now you have successfully logged into Raspberry Pi OS.
 
+### Q3: I cannot wake up the reTerminal LCD after sleep
+
+Open a terminal window after connecting through SSH or VNC and enter the following commands
+
+```sh
+DISPLAY=:0 xset dpms force off
+DISPLAY=:0 xset dpms force on
+```
+
+This will reinitialize the LCD on the reTerminal
+
 ## Resources
 
 - **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA_reTerminal-CM1432_SCH.pdf)
