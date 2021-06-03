@@ -498,10 +498,10 @@ raspberry
 
 reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, touch panel, accelerometer, light sensor, user LEDs, user buttons, RTC, buzzer, cryptographic co-processor**.
 
-- **Step 1.** Clone the following repo while switching to **mipi_dsi** branch
+- **Step 1.** Clone the following repo
 
 ```sh
-git clone --depth 1 -b mipi_dsi https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
 - **Step 2.** Enter the repo
