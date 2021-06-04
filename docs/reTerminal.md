@@ -200,6 +200,10 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal.jpg" alt="pir" width="1000" height="auto"></p>
 
+## Block Diagram
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram.jpg" alt="pir" width="1000" height="auto"></p>
+
 ## Pinout Diagram
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v1.png" alt="pir" width="1000" height="auto"></p>
