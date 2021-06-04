@@ -14,7 +14,7 @@ sku:
 
 This wiki explains how to build your own user interface using Qt for Python on the reTerminal. Here we have used PySide2 for the development. PySide2 is the official Python module from the Qt for Python project, which provides access to the complete Qt5 framework.Qt for Python allows you to build interactive user interfaces in a more user friendly way! It is also very flexible to use and has a short learning curve. 
 
-By following the guide below, you will be able to create an application to control the STA and USR LEDs on the reTerminal. So let's get started!
+By following the guide below, you will be able to create an application to control the STA and USR LEDs on the reTerminal just by clicking buttons on the LCD. So let's get started!
 
 ## Prepare Development Environment
 
@@ -52,7 +52,7 @@ Now we have finished installing the necessary packages on the reTerminal
 
 - **Step 1.** Download and install [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
-**Note:** Download the installer which is suitable for youe operating system
+**Note:** Download the installer which is suitable for your operating system
 
 - **Step 2.** Click on the **Extensions** tab on the left navigation menu and type **remote development** in the search box 
 
@@ -582,6 +582,7 @@ class Setting(QObject):
     def usrGreenOff(self):     
         os.system("sudo sh -c 'echo 0 > /sys/class/leds/usr_led0/brightness'")
 
+    #close
     @Slot()
     def closeWindow(self):
         sys.exit()
@@ -744,6 +745,10 @@ Item {
         palette.button: "red"
         palette.buttonText: "white"
         text: "X"
+        onClicked:
+        {
+            _Setting.closeWindow()
+        }
     }
 
     Text {
@@ -814,6 +819,25 @@ if __name__ == '__main__':
 
 **Note:** Here **url** points to the location of the fullscreen app that we created before
 
+The final **main.py** will look like below
+
+```py
+from PySide2.QtQml import QQmlApplicationEngine
+from PySide2.QtWidgets import *
+from PySide2.QtCore import *
+from ledControl import Setting
+
+if __name__ == '__main__':
+    app = QApplication([])
+    engine = QQmlApplicationEngine()
+    url = QUrl("./App.qml")
+    context = engine.rootContext()
+    seting = Setting()
+    context.setContextProperty("_Setting", seting)
+    engine.load(url)
+    app.exec_()
+```
+
 ### Prepare a Script to Run the Python file
 
 - **Step 1.** Open the Root folder that we created before and create a new **.sh file** under that folder
@@ -824,7 +848,7 @@ if __name__ == '__main__':
 
 ```sh
 #!/bin/bash
-cd $HOME/ledapp
+cd $HOME/ledApp
 DISPLAY=:0 python3 main.py
 ```
 
@@ -837,7 +861,7 @@ example:
 cd /ledApp
 ```
 
-- **Step 3.** Make the led_start.sh an executable file
+- **Step 4.** Make the led_start.sh an executable file
 
 ```sh
 chmod +x led_start.sh
@@ -863,11 +887,24 @@ Categories=Application;Development;
 
 **Note:** **Exec** is the location of the script that we created before
 
+- **Step 3.** Open a terminal window inside the reTerminal and navigate to the root directory of the app
+
+```sh
+example:
+cd /ledApp
+```
+
+- **Step 4.** Make the led_start.sh an executable file
+
+```sh
+chmod +x led.desktop
+```
+
 ### Launch the App
 
 - **Step 1.** Navigate to the **ledApp folder** using the reTerminal LCD
 
-- **Step 2.** Double click on the **led.desktop** file
+- **Step 2.** Double click on the **LED Test** file
 
 You will see the output as follows
 
@@ -892,6 +929,10 @@ python3 main.py
 ```
 
 Finally you will see the output displayed on a new window. If there are any errors in the code, they will be dislpayed in the MobaXterm terminal window.
+
+## Resources
+
+- **[GitHub]** [Python_ReTerminalQt5_LED_UI](https://github.com/lakshanthad/Python_ReTerminalQt5_LED_UI)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
