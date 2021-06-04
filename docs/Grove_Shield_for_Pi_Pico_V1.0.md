@@ -86,25 +86,15 @@ Fedora:
 ```
 sudo dnf install thonny
 ```
-
-
-
-- Step 2. Download the Pico backend wheel, [thonny_rpi_pico-0.2-py3-none-any.whl](https://github.com/raspberrypi/thonny-pico/releases/download/v0.2/thonny_rpi_pico-0.2-py3-none-any.whl), this wheel file is a firmware for pico which can be installed into an existing Thonny installation(version 3.3.0b6 or later).
-
-
-- Step 3. Start Thonny and navigate to "Tools -> Manage plug-ins" and click on the link to "Install from local file" in the right hand panel, and select the Pico backend wheel. Hit the "close" button to finish.
-
-![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Thonny.png)
-
-- Step 4. **Quit and restart Thonny**.
-- Step 5. Connect your computer and the Raspberry Pi Pico together, then open up the **Run** menu and select **Run**->"**Select Interpreter**", picking "**MicoPython(Raspberry Pi Pico)**" from the drop down, and select the com port of your Pi Pico.
+- Step 2. Start Thonny and Connect your computer and the Raspberry Pi Pico together, then open up the **Run** menu and select **Run**->"**Select Interpreter**", picking "**MicoPython(Raspberry Pi Pico)**" from the drop down, and select the com port of your Pi Pico.
+If you can't find "Micopython (Raspberry Pico)" in Select Interpreter, please download the latest version of Thonny.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
 ![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
 
 Hit "ok" if your Raspberry Pi Pico is plugged in and running MicroPython Thonny should automatically connect to the Repl.
 
-- Step 6. Copy below code to the Thonny IDE, and click the green run button. 
+- Step 3. Copy below code to the Thonny IDE, and click the green run button. 
 ```
 from machine import Pin,PWM,ADC
 from time import sleep
