@@ -526,7 +526,39 @@ You will see the following output if you have successfully installed the drivers
 sudo reboot
 ```
 
-## FAQ
+### Q1: How can I flash Raspberry Pi OS which is originally shipped with reTerminal?
+
+If you have flashed to a different OS and want to switch back to the default Raspberry Pi OS which is shipped with reTerminal, you can follow the steps below
+
+- **Step 1.** Download the Raspberry Pi OS by visiting the links below
+
+
+  - [2021-06-02-Raspbian-32-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal/image_2021-06-02-Raspbian-reTerminal.zip)
+  - [2021-06-02-Raspbian-64-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal-arm64/2021-06-02-Raspbian-reTerminal-arm64.zip)
+
+**Note:** reTerminal is originally shipped with 32-bit OS. However, you can download a 64-bit version as well
+
+- **Step 2.** Extract the **.zip file**
+
+- **Step 3.** Open Raspberry Pi Imager software
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"></p>
+
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+
+- **Step 5.** Click **CHOOSE OS** and select **Use custom**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/factory-os.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 6.** Navigate to the previously extracted image, select it and click **open**
+
+- **Step 7.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+
+- **Step 8.** Finally, click **WRITE**
 
 ### Q1: How can I flash OS if I replace the CM4 with non-eMMC version
 
