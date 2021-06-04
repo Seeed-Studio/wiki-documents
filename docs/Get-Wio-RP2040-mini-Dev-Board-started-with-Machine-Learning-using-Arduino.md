@@ -5,7 +5,7 @@ Let's see how to get Wio RP2040 mini Dev Board started with Machine learning at 
 - Software
 - Start with Arduino and Edge Impulse
 - Deploy model to Wio RP2040 mini Dev Board
-## Hardware Overview[¶](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#hardware-overview)
+## Hardware Overview
 ​
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/wio_rp2040.jpg)![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/light_sensor.jpg)
@@ -27,22 +27,22 @@ Connect Light Sensor with Wio RP2040 mini Dev Board:
 1. [Edge Impulse](https://www.edgeimpulse.com/)
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/edge_impulse.jpg)
-## How to Get Started With Arduino[¶](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#how-to-get-started-with-arduino)
-### Install the Arduino IDE[¶](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#install-the-arduino-ide)
+## How to Get Started With Arduino
+### Install the Arduino IDE
 
 - Arduino IDE is an integrated development environment for Arduino, which is used for single-chip microcomputer software programming, downloading, testing and so on.
 - Download and Install [Arduino IDE](https://www.arduino.cc/en/Main/Software) for your desired operating system here.
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/download.jpg#clientId=u81f94eaa-8d7a-4&from=paste&height=25&id=u09b2e849&margin=%5Bobject%20Object%5D&originHeight=49&originWidth=700&originalType=url&status=done&style=none&taskId=u840c42a3-c351-4623-93e0-c7b0d8981d8&width=350)
-### Install the USB driver[¶](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#install-the-usb-driver)
+### Install the USB driver
 
 - Arduino connects to the PC via a USB cable. The USB driver depends on the type of USB chip you're using on your Arduino. Note: USB chips are usually printed on the back of the development board.
 - Download the [CP2102 USB Driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers). Note: Download according to your OS.
 - After the driver installation is completed, connect Arduino to the USB port of PC with a USB cable.
-   - **For Windows users:** You can see it in** My Computer -> Properties -> Hardware -> Device Management**. A COM will appear.
+   - **For Windows users:** You can see it in **My Computer -> Properties -> Hardware -> Device Management**. A COM will appear.
    - **For Mac OS users:** You can navigate to  on the top left corner, and choose About this Mac -> System Report... -> USB. A CP2102 USB Driver should appear.
 - If the driver is not installed, or if the driver is installed incorrectly (not matching the chip model), it will appear as an "unknown device" in the device manager. At this point, the driver should be reinstalled.
-### Start the Arduino IDE[¶](https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/#start-the-arduino-ide)
+### Start the Arduino IDE
 
 1. Open the **Arduino IDE** on your PC. 
 1. Click on **Tools -> Board-> Boards Manager**，then search "Mbed OS Boards",install "Arduino Mbed OS Boards".
@@ -86,9 +86,9 @@ npm install -g edge-impulse-cli
 ```
 **Note:**
 Problems with installing the CLI? Please check [Installation and troubleshooting](https://docs.edgeimpulse.com/docs/cli-installation) for more reference.
-## Start with Arduino and Edge Impulse  [¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#connecting-to-edge-impulse)
+## Start with Arduino and Edge Impulse  
 With all the software in place, it's time to connect the development board to Arduino and Edge Impulse.
-### 1. Connect the development board to your computer[¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#1-connect-the-development-board-to-your-computer)
+### 1. Connect the development board to your computer
 Connect Wio RP2040 mini Dev Board to your computer. 
 ### 2. Create a new project on Edge Impulse
 I have created a new project named "paper_rock" on **Edge Impulse**.
@@ -113,7 +113,7 @@ void loop() {
     }
 }
 ```
-### 4.Setting Keys on command prompt[¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#2-setting-keys)
+### 4.Setting Keys on command prompt
 From a **command prompt or terminal** run:
 ```
  edge-impulse-data-forwarder
@@ -121,12 +121,12 @@ From a **command prompt or terminal** run:
 **NOTE:** When connecting to a new device, run edge-impulse-daemon --clean to remove previous cached.
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/command.jpg)
-### 5. Verifying that the device is connected[¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#3-verifying-that-the-device-is-connected)
+### 5. Verifying that the device is connected
 You can see your device appear in the Data acquisition tab of **Edge Impulse.**
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/data_collection.jpg)
 
 For your first project, let's quickly train and deploy a simple neural network for classifying paper-rock gestures with just a single light sensor. 
-## Training data acquisition[¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#training-data-acquisition)
+## Training data acquisition
 Go to the Data acquisition tab. Set sample length to about 10000 ms or 10 seconds and create 10 samples for each gesture, waving the hand in the vicinity of Wio RP2040 mini Dev Board. We have three labels here: "rock", "paper", "background";
 
 rock:
@@ -146,7 +146,7 @@ background: just let it idle on the table.
 Record around 100s of data per class. This is a small dataset, but we also have a tiny neural network, so underfitting is more likely than overfitting in this particular case.
 ​
 
-## Building a machine learning model[¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#building-a-machine-learning-model)
+## Building a machine learning model
 After you collected the samples it is time to design an "Impulse". The impulse here is the word Edge Impulse used to denote data processing – training pipeline. Press on Create Impulse and set Window length to 1000 ms. and Window length increase to 50 ms.
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/impulse.jpg)
 These settings mean that each time an inference is performed we're going to take sensor measurements for 1000 ms. - how many measurements your device is going to take depends on the frequency. During data collection, you set the sampling frequency to 40 Hz, or 40 times per 1 second. So, to sum it up, your device is going to gather 40 data samples within 1000 ms. time window and then take these values, preprocess them and feed them to the neural network to get inference result. Of course, we use the same window size during the training. 
@@ -161,13 +161,14 @@ Of course, you can either change the model architecture or training settings to 
 After the training, you can test the model using the Live classification tab, which will gather a data sample from the device and classify it with the model hosted on Edge Impulse. We test with three different gestures and see the accuracy is satisfactory as far as proof of concept goes.
 ​
 
-## Deploying to Wio RP2040 mini Dev Board[¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#deploying-to-wio-terminal)
+## Deploying to Wio RP2040 mini Dev Board
 The next step is deployment on the device. After clicking on the Deployment tab, choose Arduino library and download it.
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/deploy.jpg)
+
 Extract the archive and place it in your Arduino libraries folder. Open Arduino IDE and choose static buffer sketch (located in File -> Examples -> name of your project -> static_buffer), which already has all the boilerplate code for classification with your model in place. Neat!
 ​
 
-There is little change with the original static_buffer, so you can replace it with the following complete code, remember to include your own model name.
+There is a little change with the original static_buffer, so you can replace it with the following complete code, remember to include your own model name.
 
 
 ### Complete Code
@@ -267,7 +268,7 @@ void loop()
 Now, you can try your model.
 You probably knew it is possible to recognize gestures with a camera sensor, even if an image is down-scaled a lot. But recognizing gestures with just 1 pixel is an entirely different level!
 ![show2.gif](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/newshow.gif)
-## Reference[¶](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/#reference)
+## Reference
 
 - [Edge Impulse Public project](https://studio.edgeimpulse.com/public/34448/latest)
 
