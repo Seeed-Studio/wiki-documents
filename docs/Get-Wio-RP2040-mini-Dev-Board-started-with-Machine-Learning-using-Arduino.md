@@ -11,7 +11,8 @@ Let's see how to get Wio RP2040 mini Dev Board started with Machine learning at 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/wio_rp2040.jpg)![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/light_sensor.jpg)
 
 1. [Wio RP2040 mini Dev Board](https://www.seeedstudio.com/Wio-RP2040-mini-Dev-Board-p-4933.html)
-1. [Grove - Light Sensor:  101020132  ](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
+
+2. [Grove - Light Sensor:  101020132  ](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
 
 We need to preprocess the light sensor with a black sticker to make sure we just get the light from above the light sensor.
 ![sticker.jpg](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/sticker.jpg)
@@ -24,13 +25,15 @@ Connect Light Sensor with Wio RP2040 mini Dev Board:
 ## Software Overview
 
 1. Arduino
-1. [Edge Impulse](https://www.edgeimpulse.com/)
+
+2. [Edge Impulse](https://www.edgeimpulse.com/)
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/edge_impulse.jpg)
 ## How to Get Started With Arduino
 ### Install the Arduino IDE
 
 - Arduino IDE is an integrated development environment for Arduino, which is used for single-chip microcomputer software programming, downloading, testing and so on.
+
 - Download and Install [Arduino IDE](https://www.arduino.cc/en/Main/Software) for your desired operating system here.
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/download.jpg#clientId=u81f94eaa-8d7a-4&from=paste&height=25&id=u09b2e849&margin=%5Bobject%20Object%5D&originHeight=49&originWidth=700&originalType=url&status=done&style=none&taskId=u840c42a3-c351-4623-93e0-c7b0d8981d8&width=350)
@@ -45,7 +48,8 @@ Connect Light Sensor with Wio RP2040 mini Dev Board:
 ### Start the Arduino IDE
 
 1. Open the **Arduino IDE** on your PC. 
-1. Click on **Tools -> Board-> Boards Manager**，then search "Mbed OS Boards",install "Arduino Mbed OS Boards".
+
+2. Click on **Tools -> Board-> Boards Manager**，then search "Mbed OS Boards",install "Arduino Mbed OS Boards".
 
 ![search_board.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/search_board.jpg)
 
@@ -55,15 +59,15 @@ Connect Light Sensor with Wio RP2040 mini Dev Board:
 ​
 
 
-3. Keep pressing the button "**BOOT**"  while connecting the board to the PC via a USB cable, until an external drive named "RPI" appears in your PC. 
+4. Keep pressing the button "**BOOT**"  while connecting the board to the PC via a USB cable, until an external drive named "RPI" appears in your PC. 
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/boot.jpg)
 
-4. Upload any sketch. If upload done, we can see the port named "Raspberry Pi Pico". 
+5. Upload any sketch. If upload done, we can see the port named "Raspberry Pi Pico". 
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/port.jpg)
 
-5. Click **Tools -> Port** to select the correct Port. In this case, COM9 is selected.
+6. Click **Tools -> Port** to select the correct Port. In this case, COM9 is selected.
 
 
 
@@ -78,9 +82,12 @@ To set Wio RP2040 mini Dev Board up in Edge Impulse, you will need to install th
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/vs2019.png)![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-learning-using-Arduino/dektop_C.jpg)
 
 2. Install Miniconda (Python virtual environment manager), which you can download from the official website.  
-2. [Node.js v12](https://nodejs.org/en/) or higher.
-2. [Arduino CLI](https://arduino.github.io/arduino-cli/latest/)
-2. The Edge Impulse CLI and a serial monitor. Install by opening a command prompt or terminal and run:
+
+3. [Node.js v12](https://nodejs.org/en/) or higher.
+
+4. [Arduino CLI](https://arduino.github.io/arduino-cli/latest/)
+
+5. The Edge Impulse CLI and a serial monitor. Install by opening a command prompt or terminal and run:
 ```
 npm install -g edge-impulse-cli  
 ```
