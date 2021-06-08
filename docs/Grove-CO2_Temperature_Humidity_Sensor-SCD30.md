@@ -189,7 +189,7 @@ In addition to the Non-Dispersive Infrared(NDIR) measurement technology for CO2 
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 
 
-- **Step 1.** Download the [Grove Multi Switch](https://github.com/Seeed-Studio/Seeed_SCD30) Library from Github.
+- **Step 1.** Download the [Seeed SCD30 Library](https://github.com/Seeed-Studio/Seeed_SCD30) Library from Github.
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
