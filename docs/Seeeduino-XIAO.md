@@ -51,6 +51,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 |Analog I/O Pins|11|
 |I2C interface|1|
 |SPI interface|1|
+|QTouch|7 (A0,A1,A6,A7,A8,A9,A10)|
 |UART interface|1|
 |Power supply and downloading interface| Type-C|
 |Power|3.3V/5V DC|
@@ -61,7 +62,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 ## **Hardware Overview**
 
 
-![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout.jpg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg)
 
 ![](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/img/new1.png)
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino%20XIAO%20pinout%202.png)
@@ -251,6 +252,10 @@ void loop (void) {
    delay(2000);
 }
 ```
+#### **QTouch**
+
+For how to use QTouch, we provide an example project: [How to Make a Fruit Piano on Seeeduino XIAO’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/).
+
 
 #### **Analog Input and Output**
 
