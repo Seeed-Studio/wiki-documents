@@ -1973,6 +1973,8 @@ Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio
 
 - [LSTM for live IoT data prediction](https://github.com/256ericpan/LSTM_IoT)
 
+- [No-code Programming for Biology Beginner's Guide](https://www.biomaker.org/nocode-programming-for-biology-handbook)
+
 
 
 ## Tech Support
