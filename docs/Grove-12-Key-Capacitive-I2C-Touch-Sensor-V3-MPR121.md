@@ -107,11 +107,11 @@ This is the introduction Video of this product, simple demos, you can have a try
 
 **Leaf Piano**: We made a piano using a touch sensor, as well as leaves for piano keys.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/leaf-piano-5261a6/embed' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/leaf-piano-5261a6/embed' width='350'></iframe>
 
 **Play with Scratch**: How to play a scratch game with a Touch Sensor?
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/play-with-scratch-b3f9fc/embed' width='350'></iframe>
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/play-mario-using-new-grove-touch-sensor-b3f9fc/embed' width='350'></iframe>
 
 
 ## Tech Support

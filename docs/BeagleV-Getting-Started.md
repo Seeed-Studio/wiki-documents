@@ -20,6 +20,9 @@ sku:
           </div>
     </div>
 
+!!!Note
+        Follow [this link](https://forum.beagleboard.org/c/beaglev) to access the public BeagleV™ - StarLight forum where we will post updates as we are getting closer to launch
+
 BeagleV™ - StarLight is the first affordable RISC-V computer designed to run Linux. It is fully open-source with open-source software, open hardware design and RISC-V open architecture. It is a joint effort by Seeed Studio, BeagleBoard.org® and StarFive.
 
 It is powered by RISC-V SiFive U74 Dual-Core 64-bit RV64GC ISA SoC running at 1.0GHz with 4GB/ 8GB LPDDR4 RAM variants and has rich I/O peripherals such as USB 3.0 ports, 40 pin GPIO header, Gigabit Ethernet Connector, Micro-SD card slot and much more. BeagleV™ - StarLight also has rich AI features with Neural Network Engine and NVDLA Engine. It has onboard audio and video processing capabilities and has MIPI-CSI and MIPI-DSI connectors for video hardware. It has wireless capabilities with Wi-Fi and BLE and has a wide software compatibility including support for Fedora.

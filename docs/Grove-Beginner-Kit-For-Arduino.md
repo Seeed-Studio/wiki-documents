@@ -1201,7 +1201,7 @@ Use Grove cable to connect the OLED to Seeeduino Lotus's **I2C** interface (Note
 !!!Note 
     - If you breakout other modoule to use the OLED and it do not work, or you want to use fastest OLED I2C (default: 40KHZ), please follow this instrcution:
 
-  Clink "This PC" -> Documents -> Arduino -> libraries -> U8g2 -> src -> U8x8lib.cpp -> Sliding to 1334 line -> delete or disable this line -> save the file.
+  Click "This PC" -> Documents -> Arduino -> libraries -> U8g2 -> src -> U8x8lib.cpp -> Sliding to 1334 line -> delete or disable this line -> save the file.
 
   ```CPP
   Wire.setClock(u8x8->bus_clock);   // just delete or disable this line
@@ -1972,6 +1972,8 @@ Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio
 ## More Learning
 
 - [LSTM for live IoT data prediction](https://github.com/256ericpan/LSTM_IoT)
+
+- [No-code Programming for Biology Beginner's Guide](https://www.biomaker.org/nocode-programming-for-biology-handbook)
 
 
 
