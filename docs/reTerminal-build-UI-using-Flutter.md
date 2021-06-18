@@ -99,7 +99,7 @@ Now we have finished installing the necessary tools on the reTerminal
 
 ### Install Development Tools on Host PC
 
-Next we need to prepare our host PC for development. Here we will install **Flutter SDK** which contains necessary packages for Flutter development, **Microsoft Visual Studio code** for code editing and **Android Emulator** to run and test the codes.
+Next we need to prepare our host PC for development. Here we will install **Flutter SDK** which contains necessary packages for Flutter development, **Android Studio** for code editing and **Android Emulator** to run and test the codes.
 
 - **Step 1.** Download and install [Flutter SDK](https://flutter.dev/docs/get-started/install) according to your operating system
 
@@ -111,32 +111,38 @@ flutter --version
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/flutter-version.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 3.** Download and install [Microsoft Visual Studio Code](https://code.visualstudio.com/) according to your operating system
+- **Step 3.** Download and install [Android Studio](https://developer.android.com/studio) according to your operating system
 
 
-- **Step 4.** Click on the **Extensions** tab on the left navigation menu and type **flutter** in the search box 
+- **Step 4.** Open Android Studio and navigate to `Configure > Plugins`
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/flutter-extension.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-6.png" alt="pir" width="650" height="auto"></p>
 
-- **Step 5.** Select **Flutter** and click **Install**
+- **Step 5.** Under **Marketplace**, type **flutter** in the search box and click **Install**
 
-**Note:** This will automatically install the **Dart Extension** as well
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-7.png" alt="pir" width="650" height="auto"></p>
 
-- **Step 6.** Download and install [Android Studio](https://developer.android.com/studio) according to your operating system
+- **Step 6.** Click **Install** in the prompt window to install **Dart** plugin as well
 
-- **Step 7.** Open Android Studio and navigate to `Configure > AVD Manager`
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-8.png" alt="pir" width="650" height="auto"></p>
+
+- **Step 7.** Click **Restart IDE** to restart IDE with the installed plugins
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-9.png" alt="pir" width="650" height="auto"></p>
+
+- **Step 8.** Once the IDE opens again, navigate to `Configure > AVD Manager`
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/android-studio-open.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 8.** Click **Create Virtual Device**
+- **Step 9.** Click **Create Virtual Device**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-1.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 9.** Click **New Hardware Profile**
+- **Step 10.** Click **New Hardware Profile**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-2.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 10.** Configure the settings as follows
+- **Step 11.** Configure the settings as follows
 
 
     - Device Name: reTerminal 
@@ -152,19 +158,17 @@ flutter --version
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-3.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 11.** Click **Finish** and then click **Next**
+- **Step 12.** Click **Finish** and then click **Next**
 
-- **Step 12.** Select the latest Android Image and click **Next**
+- **Step 13.** Select the latest Android Image and click **Next**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-4.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 13.** Under **Emulated Performance**, select **Hardware - GLES 2.0** for accelerated performance
+- **Step 14.** Under **Emulated Performance**, select **Hardware - GLES 2.0** for accelerated performance
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-5.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 14.** Finally click **Finish**
-
-**Note:** Later we will use Visual Studio Code to open this emulator to run and test our app
+- **Step 15.** Finally click **Finish**
 
 Now we have successfully finished preparing the development environment
 
@@ -172,123 +176,54 @@ Now we have successfully finished preparing the development environment
 
 Next let's move on to building the project. The workflow is as follows:
 
-1. Design the UI on a **graphic designer software**
-2. Create a **sample Flutter project** using Microsoft Visual Studio Code and run it on the **Android Emulator**
-3. Modify the codes to realize the outlook of our app while running the **Android Emulator** in real-time as we edit
-4. Attach buttons on UI to GPIO pins of reTerminal to **control GPIO pins using Flutter**
+1. Create a **sample Flutter project** using **Android Studio** and run it on the **Android Emulator**
+2. Modify the codes to realize the outlook of our app while running the **Android Emulator** in real-time as we edit
+3. Attach buttons on UI to GPIO pins of reTerminal to **control GPIO pins using Flutter**
 4. Build the project and transfer to reTerminal
 
-## Design the UI
-
-First we need to design the UI. To do this, we will use a free online graphic designer software called **Gravit Designer**
-
-- **Step 1.** Click [this link](https://www.designer.io/) to open Gravit Designer
-
-- **Step 2.** Click **Get Started**, create a free account or directly log in with Facebook or Google
-
-- **Step 3.** Set the canvas size as **1280 x 720px** and click **Create!**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/gravit-dimensions.png" alt="pir" width="800" height="auto"></p>
-
-**Note:** We set it to 1280x720px because that's the resolution of the reTerminal LCD
-
-- **Step 4.** Select the **Rectangle** shape
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/create-rect.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 5.** Draw a rectangle for the **title bar of the UI** by holding down on the left mouse button, drag the mouse and release
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/rect-draw.jpg" alt="pir" width="800" height="auto"></p>
-
-- **Step 6.** Draw a rectangle for the **title bar of the UI** by holding down on the left mouse button, drag the mouse and release
-
-- **Step 7.** Draw the following shapes for the **buttons of the UI**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/designer-1.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 8.** Select the shape and under **INSPECTOR** tab, select **Fills**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/rect-color.png" alt="pir" width="500" height="auto"></p>
-
-- **Step 9.** Click on a color to fill the selected shape
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/gravit-2.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 10.** Fill the remaining shapes as follows
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/gravit-3.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 11.** Click on the **Text tool**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/gravit-4.png" alt="pir" width="550" height="auto"></p>
-
-- **Step 12.** Place a text block and type "LIVING ROOM"
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/gravit-5.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 13.** Click on the text block, change the size and color
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki3/gravit-text-3.png" alt="pir" width="350" height="auto"></p>
-
-- **Step 14.** Repeat the same to obtain the following
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/gravit-6.png" alt="pir" width="800" height="auto"></p>
-
-Now we have finished designing the UI
-
-- **Note:** Later we will add a **bulb icon** in the middle of the UI using **Google Material Icons**
-
-## Create a Sample Flutter Application
+### Create a Sample Flutter Application
 
 Now let's create a sample flutter app and run it on Android Emulator for testing
 
-- **Step 1.** Create a **new folder** on your PC
+- **Step 1.** Open Android Studio and click **Create New Flutter Project**
 
-- **Step 2.** Open **Microsoft Visual Studio Code** and navigate to `File > Open Folder...`
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-10.png" alt="pir" width="550" height="auto"></p>
 
-- **Step 3.** Select the folder that we created before and click **Select Folder**
+- **Step 2.** The **Flutter SDK path** will be automatically configured
 
-- **Step 4.** On the top menu bar of VSCode, navigate to `Terminal > New Terminal`
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-11.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 5.** Run the following command on the terminal window of VSCode
+**Note:** If the Flutter SDK path is not listed in this window, you can manually point to the location of the Flutter SDK
 
-```sh
-flutter create testapp
-```
+- **Step 3.** Fill the details for the project as follows and click **Finish**
 
-**Note:** This will create a sample Flutter project with **testapp** as the project name
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-12.png" alt="pir" width="800" height="auto"></p>
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-1.png" alt="pir" width="800" height="auto"></p>
+Now your sample project will open with **main.dart**
 
-- **Step 6.** Navigate to `lib > main.dart`
+- **Step 4.** Click **no device selected** button and select the Android Device that we created before
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-2.png" alt="pir" width="800" height="auto"></p>
-
-**Note:** This is the main code with all the functions for this application
-
-- **Step 7.** At the bottom of the VSCode window, click on the tab on the right side of **Flutter: 2.2.2**
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-3.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 8.** Select the Android Device that we created before
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-4.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-13.1.jpg" alt="pir" width="800" height="auto"></p>
 
 You will now see the following output
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-5.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 9.** Navigate to `Run > Run Without Debugging` on VSCode
+- **Step 4.** Click the **play button** to run the application
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-6.JPG" alt="pir" width="650" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-14.png" alt="pir" width="800" height="auto"></p>
 
 You will now see the following application running on the Android Emulator
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-7.png" alt="pir" width="800" height="auto"></p>
 
-## Build UI for Your Flutter Application
+### Build UI for Your Flutter Application
 
-Now that we have learnt how to create a Flutter application and run on an emulator, let's dive into creating our own Flutter application. First we will build the UI for our application.
+Now that we have learnt how to create a Flutter application and run on an emulator, let's dive into creating our own Flutter application. We will be building the below UI for a smart home application.
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-13.png" alt="pir" width="800" height="auto"></p>
+
+First we will build the UI for our application.
 
 - **Step 1.** Navigate to the **main.dart** file from the previous project
 
@@ -427,7 +362,7 @@ class MyApp extends StatelessWidget {
 
 - **Step 12.** Click on the line which contains "title" and you will see a **small yellow bulb** appear at the left corner. Click on it and select **Wrap with Center** to align the text to the center of the AppBar
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-8.jpg" alt="pir" width="450" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-15.png" alt="pir" width="550" height="auto"></p>
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -682,7 +617,7 @@ class MyApp extends StatelessWidget {
 
 Now we have finished designing the UI for our application.
 
-## Integrate GPIO Control Into Flutter Application
+### Integrate GPIO Control Into Flutter Application
 
 Next we will move on to integrating the GPIO control into our Flutter application. Here we will use a GPIO library called [flutter_gpiod](https://pub.dev/packages/flutter_gpiod/versions/0.4.0-nullsafety)
 
@@ -791,7 +726,7 @@ class MyApp extends StatelessWidget {
 
 Now we have finished integrating the GPIO control to the Flutter application
 
-## Build the Application and Transfer to reTerminal
+### Build the Application and Transfer to reTerminal
 
 Next we will build our Flutter application and transfer it to the reTerminal
 
@@ -817,7 +752,7 @@ flutter build bundle
 scp -r ./build/flutter_assets pi@<ip_address_of_reTerminal>:/home/pi/testapp
 ```
 
-## LED Connection with reTerminal
+### LED Connection with reTerminal
 
 Now we need to connect an LED to GPIO 24 to test our application. Follow the connection diagram as follows
 
@@ -825,7 +760,7 @@ Now we need to connect an LED to GPIO 24 to test our application. Follow the con
 
 **Note:** A resistor is needed between the GPIO pin and the LED or otherwise the LED will burn out.
 
-## Launch the App on reTerminal
+## Launch the Application on reTerminal
 
 - **Step 1.** Type the following on the command-line of reTerminal
 
@@ -843,6 +778,9 @@ You can also extend this by adding a relay to the GPIO pins and control home app
 
 - **[GitHub]** [flutter-pi](https://github.com/ardera/flutter-pi)
 - **[Webpage]** [Official Flutter Documentation](https://flutter.dev/docs)
+- **[GitHub]** [Flutter Demo Source Code](https://github.com/lakshanthad/Flutter_reTerminal_LED_UI)
+
+
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
