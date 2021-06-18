@@ -237,7 +237,7 @@ void display_ap()
    
 }
 ```
-### ![image.png](https://files.seeedstudio.com/wiki/IoT-with-wireless-Wio-RP2040-board/wifi.jpg)
+![image.png](https://files.seeedstudio.com/wiki/IoT-with-wireless-Wio-RP2040-board/wifi.jpg)
 
 ### 2. Sensor
 
@@ -332,7 +332,7 @@ void loop() {
     delay(1500);
 }
 ```
-### ![image.png](https://files.seeedstudio.com/wiki/IoT-with-wireless-Wio-RP2040-board/sensor.jpg)
+![image.png](https://files.seeedstudio.com/wiki/IoT-with-wireless-Wio-RP2040-board/sensor.jpg)
 
 ### 3. MQTT
 ```python
