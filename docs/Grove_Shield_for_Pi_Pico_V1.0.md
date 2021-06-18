@@ -375,7 +375,7 @@ Then please download the [LCD1602.py](http://47.106.166.129/Embeded/pico-micropy
 
 Input **LCD1602.py** in File name column, click "ok", then the file is saved at File->Open->MicroPython device.
 !!!Note
-        In this example, the version of LCD1602 we are using is a monochrome backlit version. If you need to control the full-color backlit version of LCD1602, check out the functions in this library file to learn how to use it.
+        In this example, the version of LCD1602 we are using is a monochrome backlit version, If you need to control the full-color backlit version of LCD1602, check out the functions in this library file to learn how to use it.
 
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/lcdlightsound.png)
