@@ -327,6 +327,7 @@ nav:
           - Getting Started with reTerminal: reTerminal.md
           - Hardware and Interfaces Usage: reTerminal-hardware-interfaces-usage.md
           - Build Your Own UI Using Qt for Python: reTerminal-build-UI-using-Qt-for-Python.md
+          - Build Your Own UI Using Flutter: reTerminal-build-UI-using-Flutter.md
 
       - reServer:
           - Getting Started with reServer: reServer-Getting-Started.md
@@ -408,6 +409,8 @@ nav:
               - Use Socket to connect to the forum: Use_Socket_to_connect_to_the_forum.md
               - Starting Machine Learning with Wio RP2040 board: Get-Wio-RP2040-mini-Dev-Board-started-with-Machine-Learning-using-Arduino.md
               - Wireless Fall Detection Device: Wireless-Fall-Detection-Device.md
+              - IoT with wireless Wio RP2040 board. Know the Surroundings around You: IoT-with-wireless-Wio-RP2040-board-Know-the-Surroundings-around-You.md
+
           - Wio Introduction: Wio.md
           - Wio Link: Wio_Link.md
           - Wio Link Bootcamp Kit: Wio_Link_Bootcamp_Kit.md
