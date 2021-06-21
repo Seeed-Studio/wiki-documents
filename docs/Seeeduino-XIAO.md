@@ -445,6 +445,13 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
 
 - **[LBR]** [Seeeduino Eagle Libraries](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO.lbr)
 
+## Course Resources
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO.jpg"/></div> 
+
+- **[PDF]** [Seeeduino XIAO in Action——Minitype ＆ Wearable Projects Step by Step](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype＆Wearable-Projects-Step-by-Step.pdf)
+- **[ZIP]** [Codes](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Codes.rar)
+- **[ZIP]** [Document](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Document.rar)
+
 
 ## Tech Support
 
