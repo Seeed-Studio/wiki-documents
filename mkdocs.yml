@@ -328,6 +328,9 @@ nav:
           - Hardware and Interfaces Usage: reTerminal-hardware-interfaces-usage.md
           - Build Your Own UI Using Qt for Python: reTerminal-build-UI-using-Qt-for-Python.md
 
+      - reServer:
+          - Getting Started with reServer: reServer-Getting-Started.md
+          
       - ReSpeaker:
           - ReSpeaker Introduction: ReSpeaker.md
           - ReSpeaker Solutions: ReSpeaker_Solutions.md
