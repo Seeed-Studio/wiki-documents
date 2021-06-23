@@ -467,26 +467,6 @@ get_available_gpus()
 
 All right, here's your show.
 
-## FAQ
-
-### Q1: How can I directly turn on the Jetson Mate from power without pushing the 'WAKE' Button?
-
-You may need to do some hardware modifications to the board to achieve this and there are two methods of doing this.
-
-- **Method 1:** Remove R4, R89, R126 and R144 resistors
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/method1-final-pic.png" alt="pir" width="1000" height="auto"></p>
-
-- **Method 2:** Replace R3, R88, R124 and R143 resistors with 100Ω resistors
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/method2-final-pic.png" alt="pir" width="1000" height="auto"></p>
-
-Method 1 will be easier to do, but you will not be able to perform "sudo shutdown" after doing this
-
-Method 2 will be a little more work than method 1, but you will be able to perform "sudo shutdown" with no issues
-
-**Note:** Please do the above modifications by referring to the PDF documents under the **Resources** section
-
 ## Resources
 
 - **[PDF]** [Jetson Mate Schematics](https://files.seeedstudio.com/wiki/Jetson-Mate/Jetson-Mate-Schematics-V1.0.pdf)
