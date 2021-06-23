@@ -241,9 +241,9 @@ You will see the Raspberry Pi OS boot in to Desktop
 
 Now we will update all the packages and also the Raspberry Pi OS to the latest version
 
-- **Step 1.** Open the **on-screen virtual keyboard** by touching on the **Raspberry Pi icon** at the top left corner and navigating to `Accessories > Keyboard`
+- **Step 1.** Open the **on-screen virtual keyboard** by touching on the **Raspberry Pi icon** at the top left corner and navigating to `Universal Access > Onboard`
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/keyboard-2.jpg" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/onboard-keyboard.png" alt="pir" width="800" height="auto"></p>
 
 - **Step 2.** If you have a **Wi-Fi connection**, click the **Wi-Fi icon** on the top right corner, select your Wi-Fi network and enter the password using the on-screen virtual keyboard
 
