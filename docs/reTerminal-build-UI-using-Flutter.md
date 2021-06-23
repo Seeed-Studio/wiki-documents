@@ -774,6 +774,12 @@ When you press the **ON** and **OFF** buttons, you will notice the LED which is 
 
 You can also extend this by adding a relay to the GPIO pins and control home appliances and build a complete smart home solution on the reTerminal!
 
+## Bonus Demo 
+
+If you want to experience a more interesting demo with Flutter, you can checkout [this GitHub repo](https://github.com/lakshanthad/Flutter_reTerminal_Smart_Home_UI)
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/smart_home_demo.gif" alt="pir" width="800" height="auto"></p>
+
 ## Resources
 
 - **[GitHub]** [flutter-pi](https://github.com/ardera/flutter-pi)
