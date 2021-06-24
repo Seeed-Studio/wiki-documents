@@ -285,6 +285,9 @@ Install a pod-network add-on to the control plane node. Use calico as the pod-ne
 ```
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
+> If you are in China, follow this instead:
+kubectl apply -f https://gitee.com/wj204811/wj204811/raw/master/kube-flannel.yml
+
 Make sure that all pods are up and running:
 ```shell
 kubectl get pods --all-namespaces
