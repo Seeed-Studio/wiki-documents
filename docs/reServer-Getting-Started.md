@@ -251,7 +251,7 @@ Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to tw
 There are two different versions of reServer, Basic version and High performance version, which have different hardware configurations.
 ### Basic version
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/products/102110559/09-%E4%BD%8E%E9%85%8D.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/products/102110559/09%20%E4%BD%8E%E9%85%8D.png" alt="pir" width="1000" height="auto"></p>
 
 ### High performance version
 
@@ -333,7 +333,7 @@ There are three methods for reServer to connect to a display while the third met
 **Method 3.** USB Type-C(Available with High-performing versions only)
 
 Basic version
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20basic%20display.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/DIsplay%20Basic%20version.png" alt="pir" width="800" height="auto"></p>
 
 High performance version
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20display.png" alt="pir" width="800" height="auto"></p>
@@ -341,7 +341,8 @@ High performance version
 #### Keyboard and Mouse Connection
 Connect keyboard and mouse through USB ports. There are one USB 3.2 port and one USB 2.0 port for Basic versions while there are one USB 3.2 port and two USB 2.0 ports for High-performing versions. 
 Basic version
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20basic%20usb.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/USB%20Basic%20version.png" alt="pir" width="800" height="auto"></p>
+
 High performance version
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20usb.png" alt="pir" width="800" height="auto"></p>
 
@@ -349,7 +350,7 @@ High performance version
 For Basic versions, the Audio Jack is on the left side I/O panel, while, for High-performing versions, it's on the right side I/O panel for High-performing versions
 
 Basic version
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20basic%20audio.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/Audio%20Basic%20version.png" alt="pir" width="800" height="auto"></p>
 
 High performance version
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20audio.png" alt="pir" width="800" height="auto"></p>
@@ -360,7 +361,7 @@ There are two methods to power up reServer, and the second one is only for High-
 **Method 2.** Connect USB Type-C charging cable(Not included in reServer) to the Thunderbolt 4 USB Type-C port(This port is only available with High-performing versions)
 
 Basic version
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20basic%20power.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/Power%20Basic%20version.png" alt="pir" width="800" height="auto"></p>
 
 High performance version
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20power.png" alt="pir" width="800" height="auto"></p>
