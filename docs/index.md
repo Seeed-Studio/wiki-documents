@@ -1,7 +1,7 @@
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-June-Week1.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21-June-Week4.png)
 
-It's the first week of June and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the fourth week of June and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
@@ -9,29 +9,36 @@ We will bring you all these wiki updates in a weekly basis. So stay tuned with u
 
 ### Getting Started with reTerminal
 
-Introducing reTerminal, a new member of our reThings family. This future-ready Human-Machine Interface (HMI) device can easily and efficiently work with IoT and cloud systems to unlock endless scenarios at the edge.
+Introducing [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html), a new member of our reThings family. This future-ready Human-Machine Interface (HMI) device can easily and efficiently work with IoT and cloud systems to unlock endless scenarios at the edge.
 
 reTerminal is powered by a Raspberry Pi Compute Module 4 (CM4) which is a Quad-Core Cortex-A72 CPU running at 1.5GHz and a 5-inch IPS capacitive multi-touch screen with a resolution of 1280 x 720. It has sufficient amount of RAM (4GB) to perform multitasking and also has sufficient amount of eMMC storage (32GB) to install an operating system, enabling fast boot up times and smooth overall experience. It has wireless connectivity with dual-band 2.4GHz/5GHz Wi-Fi and Bluetooth 5.0 BLE.
 
-So far we have prepared two wiki documents for reTerminal and more will be cominmg along the way!
+So far we have prepared four wiki documents for reTerminal and more will be cominmg along the way!
 
 - [Getting Started with reTerminal](https://wiki.seeedstudio.com/reTerminal)
 - [Hardware and Interfaces Usage](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage)
+- [Build Your Own UI Using Qt for Python](https://wiki.seeedstudio.com/reTerminal-build-UI-using-Qt-for-Python)
+- [Build Your Own UI Using Flutter](https://wiki.seeedstudio.com/reTerminal-build-UI-using-Flutter)
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Wio-Terminal-TinyML/"><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal.jpg" alt="pir"  width="1000" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/reTerminal"><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir"  width="1000" height="auto"></a></p>
 
-### Getting Started with Wio RP2040 mini Dev Board
+### Getting Started with reServer
 
-Wio RP2040 mini Dev Board is a development board based on Wio RP2040 module , supporting MicroPython programming. It has a dual-core 133MHz RP2040 chip, which is a low-power microcontroller with wireless functions. With powerful performance and small size, it is a perfect option for various IoT project development.
+[reServer](https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html), as a milestone product of reThings family, is extremely compact and powerful. This smart tiny server is able to work easily and efficiently from the edge to the cloud.
 
-You can use the following wiki documents to get started with this board:
+reServer is based on an ODYSSEY X86 v2 board and powered by the latest Intel® Core™ 11th Gen. processor and Intel® UHD Graphics or Intel® Iris Xe Graphics, which delivers high CPU and AI performance for various applications. It has two high-speed 2.5-Gigabit Ethernet ports and supports hybrid connectivity including 5G, LoRaWAN, BLE and WiFi. Meanwhile, reServer is of compact design to work efficiently in almost any scenario. The neat structure of reServer also makes it simple to access to the hard drives, memory and PCIe slots which allows easy installation, upgrades and maintenance.
 
-- [Get Started with Wio RP2040 mini Dev Board](https://wiki.seeedstudio.com/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/)
-- [LAN Communications](https://wiki.seeedstudio.com/LAN_Communications/)
-- [Use MQTT to remotely light up LED lights](https://wiki.seeedstudio.com/Use_MQTT_to_remotely_light_up_LED_lights/)
-- [Use Socket to connect to the forum](https://wiki.seeedstudio.com/Use_Socket_to_connect_to_the_forum/)
+We have prepared a [wiki document](https://wiki.seeedstudio.com/reServer-Getting-Started/) to help you get started with the reServer in the quickest and easiest way!
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/"><img src="https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/board_4.png" alt="pir"  width="1000" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/reServer-Getting-Started"><img src="https://files.seeedstudio.com/products/102110559/09-%E9%AB%98%E9%85%8D.png" alt="pir"  width="1000" height="auto"></a></p>
+
+### IoT with Wio RP2040 Board
+
+Do you really know the surroundings around you? Yes? No? Maybe? How is the air quality? How is the surrounding noise? What is the temperature and humidity?
+
+We have prepared a [wiki](https://wiki.seeedstudio.com/IoT-with-wireless-Wio-RP2040-board-Know-the-Surroundings-around-You) to help you build a device to understand your surroundings in depth, while utilizing the wireless functionality and IoT on the [Wio RP2040 mini Dev Board](https://www.seeedstudio.com/Wio-RP2040-mini-Dev-Board-p-4933.html)!
+
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/IoT-with-wireless-Wio-RP2040-board-Know-the-Surroundings-around-You"><img src="https://files.seeedstudio.com/wiki/IoT-with-wireless-Wio-RP2040-board/wiring.jpg" alt="pir"  width="1000" height="auto"></a></p>
 
 ## What's More?
 
