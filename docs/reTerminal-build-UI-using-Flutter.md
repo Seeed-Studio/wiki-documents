@@ -303,7 +303,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-**Note:** Here after you type "Colors.", VSCode will recommend the available colors. Also you can hover the mouse over to check the different color variations assigned by numbers enclosed by [ ].
+**Note:** Here after you type "Colors.", Android Studio will recommend the available colors. Also you can hover the mouse over to check the different color variations assigned by numbers enclosed by [ ].
 
 - **Step 9.** Add an AppBar widget inside the Scaffold widget
 
@@ -730,23 +730,25 @@ Now we have finished integrating the GPIO control to the Flutter application
 
 Next we will build our Flutter application and transfer it to the reTerminal
 
-- **Step 1.** Open a terminal window inside VSCode as shown before and type the following to prepare for the build 
+- **Step 1.** Open a terminal window inside Android Studio by navigating to `View > Tool Windows > Terminal`
+
+- **Step 2.** Type the following to prepare for the build 
 
 ```sh 
 flutter clean
 ```
 
-- **Step 2.** Build the project 
+- **Step 3.** Build the project 
 
 ```sh
 flutter build bundle
 ```
 
-- **Step 3.** Turn on the reTerminal
+- **Step 4.** Turn on the reTerminal
 
 **Note:** You will notice that the reTerminal is booted into command-line mode
 
-- **Step 4.** Transfer the built project to reTerminal
+- **Step 5.** Transfer the built project to reTerminal
 
 ```sh
 scp -r ./build/flutter_assets pi@<ip_address_of_reTerminal>:/home/pi/testapp
