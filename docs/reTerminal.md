@@ -18,7 +18,7 @@ reTerminal consists of a high-speed expansion interface and rich I/O for more ex
 
 reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to do is connect it to power and start building your IoT, HMI and Edge AI applications right away!
 
-<p style="text-align:center;"><a href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style="text-align:center;"><a href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png"></a></p>
 
 ## Features
 

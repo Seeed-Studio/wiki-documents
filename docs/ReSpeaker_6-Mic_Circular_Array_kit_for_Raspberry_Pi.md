@@ -357,12 +357,6 @@ python examples/respeaker_4mic_array.py
 
 You will see LEDs light and run. And you can refer to the `python examples/respeaker_4mic_array.py` file to make your own effects.
 
-## Respeakerd Aduio Process
-
-Respeakerd is the server application for the microphone array solutions of SEEED, based on librespeaker which combines the audio front-end processing algorithms.
-
-The guide of respeakerd can be found at [here](https://github.com/respeaker/respeakerd/tree/master). Download that repository to your Pi. Don't forget to do `Alexa authorization` and update avs `sudo pip install -U avs` before you run python client of respeakerd `python ~/respeakerd/clients/Python/demo_pi_vep_alexa.py`.
-
 ## Realtime Sound Source Localization and Tracking
 
 [ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.

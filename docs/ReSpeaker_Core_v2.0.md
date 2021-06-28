@@ -670,68 +670,6 @@ aplay hello3.wav
 
 So far we learned the basic operations of the ReSpeaker Core v2.0 board, let's move forward. We can use ReSpeaker Core v2.0 to build our own AVS(Alexa Voice Service) device or Dueros(Voice assistance of Baidu) device.
 
-
-
-
-### Out of Box Demo
-
-This part including a close-sourced solution based on librespeaker. The librespeaker is an audio processing library which can perform:
-
-- Noise suppression
-- Direction of arrival calculation
-- Beamforming
-- Hotword searching
-- Acoustic echo cancellation
-
-It reads the microphone stream from linux sound server, e.g. PulseAudio. It exposes a few APIs which enable users to get indicated when hotword is said and the processed microphone data in PCM format, which then can be sent to cloud services like Alexa for further processing.
-
-Before experiencing this powerful solution, please make sure you have done all the things below.
-
-- System image burning - this demo needs the lxqt version system image
-- Get serial console via OTG USB port
-- Setup Wi-Fi / ethernet
-- SSH
-- VNC
-
-OK, let's play.
-
-Actually it's simple and easy. We've made a one-click installation script. For more detail about this solution and step by step configuration, please refer to [here](https://github.com/respeaker/respeakerd)
-
-**Step 1. Download packages**
-```
-curl https://raw.githubusercontent.com/respeaker/respeakerd/master/scripts/install_all.sh|bash
-```
-
-When prompt, type in the sudo password for user respeaker: respeaker. Wait the script install some packages.
-
-
-**Step 2. Authorize Alexa**
-
-Connect to the board via [VNC](https://github.com/respeaker/get_started_with_respeaker/blob/master/docs/ReSpeaker_Core_V2/getting_started.md#ssh--vnc). In the VNC desktop, open the Internet Browser, and tap `127.0.0.1:3000` at the URL input field . The web browser will display a login page. Sign in with your Amazon account:
-
-![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/aus-1.png)
-
-After succeed you will see:
-
-![](https://github.com/respeaker/get_started_with_respeaker/raw/master/img/aus-2.png)
-
-Now you can close the VNC client. The following commands can be executed in the SSH (If you prefer the VNC desktop, the terminal in VNC desktop also works).
-
-
-**Step 3. Run the demo**
-
-When finished the steps above, run:
-
-```
-python /home/respeaker/respeakerd/clients/Python/demo_respeaker_v2_vep_alexa_with_light.py
-```
-
-Say `snowboy`, wake up Alexa, Enjoy！
-
-<div class="admonition note" >
-<p class="admonition-title">Note</p>
-One more thing, do you see the colorful LEDs on the back of ReSpeaker Core v2.0? Look carefully at the green LED, haha, you find it. Yes the green led just point to the voice directly, as you known, DOA.</div>
-
 ## Play with Wio Link
 
 Please follow [ReSpeaker Core V2 & Wio Link Tutorial](https://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/) to use the ReSpeaker Core V2 to control Wio Link through IFTTT.
@@ -950,15 +888,6 @@ Light value is 13
 Light value is 44
 Light value is 31  
 ```
-
-## Respeakerd Aduio Process
-
-Respeakerd is the server application for the microphone array solutions of SEEED, based on librespeaker which combines the audio front-end processing algorithms.
-
-The guide of respeakerd can be found at [here](https://github.com/respeaker/respeakerd/tree/master). Download that repository to your Pi. Don't forget to do `Alexa authorization` and update avs `sudo pip install -U avs` before you run python client of respeakerd `python ~/respeakerd/clients/Python/demo_pi_vep_alexa.py`.
-
-
-
 
 ## FAQs
 
