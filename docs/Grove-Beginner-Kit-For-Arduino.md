@@ -1941,6 +1941,23 @@ After you’re done with your design, check out the [Seeed Fusion PCBA service](
 
 Seeed Studio has its very own [Open Parts Library (OPL)](https://www.seeedstudio.com/opl.html) which is a collection of over 10,000 commonly used components specifically sourced for the Seeed Fusion PCBA Service. To speed up the process of PCB design, Seeed is building the component libraries for KiCad and Eagle. When all components are sourced from Seeed’s PCBA OPL and used with the [Seeed Fusion PCB Assembly (PCBA) service](https://www.seeedstudio.com/fusion_pcb.html), the entire PCBA production time can be reduced from 20 working days to a mere 7 days.
 
+## FAQ
+
+### 1. How to remove the individual electronic modules for use?
+![image.png](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/remove1.jpg)
+
+Looking closely at the Grove Beginner Kit For Arduino you will see that there are 3 small holes between each individual module and the backplane. All you need to do is cut the PCB backplane around the module from the small holes using a pair of diagonal pliers.
+
+![image.png](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/remove2.jpg)
+
+---
+
+**Note: carefully cut along the periphery of the small hole, do not cut to the small hole (to prevent internal wiring short circuit and thus damage the module); if you accidentally cut to the small hole, please use a knife to clean the small hole to prevent short circuit**
+
+---
+
+​![image.png](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/remove3.jpg)
+
 
 ## Schematic Online Viewer
 
