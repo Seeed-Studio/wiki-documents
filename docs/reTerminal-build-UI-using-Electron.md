@@ -28,61 +28,19 @@ First, we will install **Node.js** along with **npm** on the reTerminal. npm is 
 
 ```sh
 sudo apt update
-sudo apt upgrade 
+sudo apt full-upgrade 
 ```
 
-- **Step 3.** Check the ARM architecture of reTerminal
+- **Step 3.** Download the script to install Node.js
 
 ```sh
-uname -m 
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 ```
 
-- **Step 4.** Visit [this page](https://nodejs.org/en/download/) and copy the link that corresponds to the ARM architecture
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/node-1.jpg" alt="pir" width="800" height="auto"></p>
-
-- **Step 5.** Type the following to download the file 
+- **Step 4.** Install Node.js
 
 ```sh
-wget [copied link before]
-```
-
-```sh
-Example:
-wget https://nodejs.org/dist/v14.17.1/node-v14.17.1-linux-armv7l.tar.xz
-```
-
-- **Step 6.** Extract the file
-
-```sh
-tar -xJf [.tar.xz file name]
-```
-
-```sh
-Example:
-tar -xJf node-v14.17.1-linux-armv7l.tar.xz
-```
-
-**Note:** Press the **TAB** key after typing **node** to autocomplete the full name of the file
-
-- **Step 7.** Go into the folder that we extracted 
-
-```sh
-cd [folder that we extracted]
-```
-
-```sh
-Example:
-cd node-v14.17.1-linux-armv7l
-```
-
-- **Step 8.** Copy the files to PATH
-
-```sh
-sudo cp -R bin/* /usr/local/bin/
-sudo cp -R include/* /usr/local/include/
-sudo cp -R lib/* /usr/local/lib/
-sudo cp -R share/* /usr/local/share/
+sudo apt install -y nodejs
 ```
 
 Node.js is now installed on the reTerminal. To check whether the installation is sucessful, run the following commands to check the version of **Node.js** and **npm**
