@@ -257,6 +257,8 @@ There are two different versions of reServer, Basic version and High performance
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/products/102110559/09%20%E4%BD%8E%E9%85%8D.png" alt="pir" width="1000" height="auto"></p>
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reServer%20mainboard%20.png" alt="pir" width="1000" height="auto"></p>
+
 ### High performance version
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/products/102110559/09-%E9%AB%98%E9%85%8D.png" alt="pir" width="1000" height="auto"></p>
@@ -299,12 +301,15 @@ You might follow the **Assembly Guide Manual** attached at the end of this page 
 
 **All versions of reServer have installed 2230 Dual Band WiFi 6 AX201(CNVio) Module at M.2 E-Key 2242/2280(PCIe 3.0x4)**. 
 If you want to replace the pre-installed WiFi Module, feel free to follow the steps below. 
+
 - **Step 1.** Remove the SSD from M.2 M-Key slot.
+
 - **Step 2.** Take off the WiFi antenna cable and remove the pre-installed WiFi Module from M.2 E-Key.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20E-Key.png" alt="pir" width="800" height="auto"></p> 
 
 - **Step 3.** Install the new WiFi Module and connect the WiFi antenna cable back to it.
+
 - **Step 4.** Install the SSD back to M.2 M-Key.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20E-Key%20antenna.png" alt="pir" width="800" height="auto"></p> 
@@ -317,11 +322,13 @@ If you want to replace the pre-installed WiFi Module, feel free to follow the st
 
 reServer supports installing 4G/5G/LoRaWAN Module at M.2 B-Key 2242/2252/2280(PCIe 3.0 x2; USB2.0 x1). **(4G/5G/LoRaWAN Module is not included in reServer)**
 Please feel free to follow the steps to add 4G/5G/LoRaWAN Module.
+
 - **Step 1.** Install 4G/5G/LoRaWAN Module to M.2 B-Key.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20B-Key.png" alt="pir" width="800" height="auto"></p> 
 
 - **Step 2.** Connect the antenna cable to the Module.
+
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20B-Key%20antenna.png" alt="pir" width="800" height="auto"></p> 
 
 **Note:** You have to insert a standard SIM card into the micro SIM card slot to enable 5G/4G.
@@ -331,9 +338,13 @@ Please feel free to follow the steps to add 4G/5G/LoRaWAN Module.
 reServer supports installing two 3.5"/2.5" internal hard disk drives to acquire more storage. **(The HDDs are not included in reServer)**
 Please follow the steps to install the HDDs.
 - **Step 1.** Remove the screws and pull out the brackets 
+
 - **Step 2.** Attach the HHDs to the brackets with screws
+
 - **Step 3.** Push the HDD brackets down to connect the HHDs with the SATA ports.
+
 - **Step 4.** Fix the HDD brackets with screws
+
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reServer/wiki/07.png" alt="pir" width="" height="auto"></p> 
 
 ### Hardware Connection
@@ -344,8 +355,10 @@ There are two versions of reServer. Please note that different versions might ha
 #### Display Connection
 
 There are three methods for reServer to connect to a display while the third method is only for High-performing versions.
-**Method 1.** HDMI Port
+**Method 1.** HDMI Port、
+
 **Method 2.** DP Port
+
 **Method 3.** USB Type-C(Available with High-performing versions only)
 
 Basic version
@@ -376,7 +389,9 @@ High performance version
 #### Power Connection
 
 There are two methods to power up reServer, and the second one is only for High-performing versions.
+
 **Method 1.** Simply connect AC-DC power adapter(included in the product box) with AC power cord(Out of the product box but still in the package), then connect it to 12V DC Jack of reServer.
+
 **Method 2.** Connect USB Type-C charging cable(Not included in reServer) to the Thunderbolt 4 USB Type-C port(This port is only available with High-performing versions)
 
 Basic version
