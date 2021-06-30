@@ -16,9 +16,9 @@ This wiki explains how to build your own user interface using Electron. Electron
 
 By following the guide below, you will be able to create an application to control the GPIO pins on the reTerminal just by clicking buttons on the LCD. So let's get started!
 
-## Prepare Development Environment
+## Prepare Development Environment 
 
-### Install the Necessary Packages on reTerminal
+### On reTerminal
 
 First, we will install **Node.js** along with **npm** on the reTerminal. npm is a package manager for Node.js packages.  
 
@@ -52,7 +52,7 @@ npm -v
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/node-2.png" alt="pir" width="300" height="auto"></p>
 
-### Set Remote Development Tools on Host PC
+### On Host PC
 
 Now, we will set up Microsoft Visual Studio Code for our development.
 
@@ -82,11 +82,19 @@ pi@192.xxx.xx.xx
 
 Now you have sucessfully logged in to reTerminal using SSH and have successfully finished preparing the development environment
 
-## Sample Electron Application
+## Smart Light Electron Application
 
-### Create the Application
+Now we will build a **Smart Light Electron Appication** that can be used to control the GPIO on the reTerminal by pressing buttons on the LCD. You can then connect relays to the GPIO and control home appliances as well!
 
-First we will create a simple electron application.
+### Hardware Connections
+
+We will connect an **LED** to the **GPIO 24** of the reTerminal for testing purposes. Later you can add a relay and control home appliances using the GPIO!
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-15.png" alt="pir" width="1000" height="auto"></p>
+
+**Note:** A resistor is needed between the GPIO pin and the LED or otherwise the LED will burn out.
+
+### Create and Initialize the Application
 
 - **Step 1.** Open VSCode on the Host PC and login to reTerminal via SSH as explained before
 
@@ -134,369 +142,6 @@ You will also see the **node_modules** folder generated with the required packag
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-8.png" alt="pir" width="500" height="auto"></p>
 
-- **Step 7.** Inside our main app directory, create a new file called **index.html** and copy the following codes
-
-```html
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Test Application</title>
-    </head>
-    <body>
-        <b>Hello World</b>
-    </body>
-</html>
-```
-
-**Note:** This HTML file is responsible to display the UI elements on the screen
-
-- **Step 8.** Inside our main app directory, create a new file called **main.js** and copy the following codes
-
-```javascript
-const { app, BrowserWindow } = require('electron');
-
-app.on('ready', function() {
-    var mainWindow = new BrowserWindow({
-        show: false,
-    });
-    mainWindow.maximize();
-    mainWindow.loadFile('index.html');
-    mainWindow.show();
-});
-```
-
-**Note:** This Javascript file is responsible to create a window for our app and display the load the HTML file
-
-Now we have created our test app and it's time to run the app
-
-### Run the Application
-
-- **Step 1.** Open terminal from reTerminal via built-in LCD, connected display or VNC and navigate to our app directory
-
-```sh
-Example:
-cd /Desktop/testapp
-```
-
-- **Step 2.** Run the application 
-
-```sh
-npm test
-```
-
-You will see the following output if you have sucessfully run the app
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-9.png" alt="pir" width="1000" height="auto"></p>
-
-## Smart Light Electron Application
-
-Now that we have created a simple electron application, we will extend this by building a **Smart Light Electron Appication** that can be used to control the GPIO on the reTerminal by pressing buttons on the LCD. You can then connect relays to the GPIO and control home appliances as well!
-
-Here we will use the same project that we used in our previous example and extend it.
-
-### Set Up Hot Reload
-
-Before we move on to creating our application, we will set up **hot reload on Electron** so that the application updates as you save the files. You will not need to run **npm test** everytime you change the contents inside your project.
-
-- **Step 1.** Install **electron-reloader**
-
-```sh
-npm install --save-dev electron-reloader
-```
-
-- **Step 2.** Add the following line at the end of **main.js** file
-
-```javascript
-try {
-  require('electron-reloader')(module)
-} catch (_) {}
-```
-
-### Create the HTML (Basic UI)
-
-We will use the HTML file to create the basic user interface without any styling
-
-- **Step 1.** Open the previous HTML file and add the following inside the **< head >** tag to load the **material icons** and **google fonts** api
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Test Application</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-</head>
-```
-
-- **Step 2.** Delete **Hello World** inside the **< body >** tag and add a heading for the application
-
-```html
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Test Application</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    </head>
-    <body>
-        <h1 class="heading">SMART LAMP</h1>
-    </body>
-</html>
-```
-
-**Note:** Here we use the **class** attribute inside the **h1** tag to add styling to the heading later in our **.css** file. We will add more **class** attributes for other elements as well.
-
-- **Step 3.** Add a **lightbulb icon** from the **material icons api**
-
-```html
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Test Application</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    </head>
-    <body>
-        <h1 class="heading">SMART LAMP</h1>
-        <i class="material-icons">lightbulb</i>
-    </body>
-</html>
-```
-
-- **Step 4.** Add two breaks two add two empty lines
-
-```html
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Test Application</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    </head>
-    <body>
-        <h1 class="heading">SMART LAMP</h1>
-        <i class="material-icons">lightbulb</i>
-        <br>
-        <br>
-    </body>
-</html>
-```
-
-- **Step 5.** Add two buttons that correponds to **ON** and **OFF**
-
-```html
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Test Application</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    </head>
-    <body>
-        <h1 class="heading">SMART LAMP</h1>
-        <i class="material-icons">lightbulb</i>
-        <br>
-        <br>
-        <button class="button1">ON</button>
-        <br>
-        <button class="button2">OFF</button>
-    </body>
-</html>
-```
-
-**Note:** Add a break between the two buttons
-
-- **Step 6.** Add a **close button** before the heading and add a break
-
-```html
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Test Application</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    </head>
-    <body>
-        <button class="button3">X</button>
-        <br>
-        <h1 class="heading">SMART LAMP</h1>
-        <i class="material-icons">lightbulb</i>
-        <br>
-        <br>
-        <button class="button1">ON</button>
-        <br>
-        <button class="button2">OFF</button>
-    </body>
-</html>
-```
-
-Now we have finished creating the HTML file.
-
-- **Step 7.** Run **npm test** to see the following output
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-15.png" alt="pir" width="1000" height="auto"></p>
-
-**Note:** You can keep the app open, continue making changes to the files and the app will automatically show the changes as you update and save the files.
-
-### Create the CSS (Styling)
-
-We will use the CSS file to add different styling to the user interface created using the HTML file
-
-- **Step 1.** Create a new file called **style.css** inside our main app directory
-
-- **Step 2.** Open the **HTML file** that we created before and include the **CSS file** inside the **< head >** tag
-
-```html
-    <head>
-        <meta charset="UTF-8">
-        <title>Test Application</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="style.css">
-    </head>
-```
-
-- **Step 3.** Open the **style.css** file and add a background color for the body of our app
-
-```css
-body {
-    background-color:rgb(141, 141, 141);
-}
-```
-
-**Note:** You can hover over the word **rgb** and select the color of your choice!
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-11.png" alt="pir" width="650" height="auto"></p>
-
-- **Step 4.** Add styling to the **h1** tag we created before. Here we will use the name of the **class** attribute inside the h1 tag
-
-```css
-.heading {
-    font-size: 60px;
-    text-align: center;
-    font-family: "Roboto", "Courier New", monospace;
-    color: rgb(255, 255, 255);
-}
-```
-
-**Note:** Here we change font size, font style, align text and change the color of the text
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-12.png" alt="pir" width="1000" height="auto"></p>
-
-- **Step 5.** Add styling to the **light bulb**. Here the class is **material-icons**
-
-```css
-.material-icons{
-    font-size: 250px;
-    color: rgb(204, 202, 71);
-    display: flex;
-    justify-content: center;
-}
-```
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-13.png" alt="pir" width="1000" height="auto"></p>
-
-- **Step 6.** Add styling to the **ON** button. Here the class is **button1**
-
-```css
-.button1 {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 35px;
-    text-align: center;
-    outline: none;
-    color: rgb(255, 255, 255);
-    background-color:rgb(76, 175, 80);
-    border: none;
-    border-radius: 15px;
-    width: 20%;
-    margin:auto;
-    display:grid;
-  }
-```
-
-- **Step 7.** Add button press and hover effect to **ON** button
-
-```css
-.button1:active {
-  box-shadow: 0 5px rgb(104, 99, 99);
-  transform: translateY(4px);
-}
-
-.button1:hover {background-color: rgb(62, 142, 65)}
-```
-
-- **Step 8.** Add styling to the **OFF** button. Here the class is **button2**
-
-```css
-.button2 {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 35px;
-    text-align: center;
-    outline: none;
-    color: rgb(255, 255, 255);
-    background-color:rgb(207, 85, 85);
-    border: none;
-    border-radius: 15px;
-    width: 20%;
-    margin:auto;
-    display:grid;
-  }
-```
-
-- **Step 9.** Add button press and hover effect to **OFF** button
-
-```css
-.button2:active {
-  box-shadow: 0 5px rgb(104, 99, 99);
-  transform: translateY(4px);
-}
-  
-.button2:hover {background-color: rgb(179, 44, 44)}
-```
-
-- **Step 10.** Add styling to the **close button**
-
-```css
-.button3 {
-  padding: 8px 25px;
-  font-size: 20px;
-  text-align: center;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background-color:rgb(179, 44, 44);
-  border: none;
-  width: 6%;
-  margin:auto;
-  display:grid;
-  float: right;
-}
-```
-
-The final output of the app will be as follows
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-16.png" alt="pir" width="1000" height="auto"></p>
-
-### Add GPIO Functions
-
-Now let's add GPIO functionality to our app so that we can control the 40-pin GPIO on the reTerminal by pressing the **ON** and **OFF** buttons
-
-#### Connect LED to GPIO 
-
-We will connect an **LED** to the **GPIO 24** of the reTerminal for testing purposes. Later you can add a relay and control home appliances using the GPIO!
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-15.png" alt="pir" width="1000" height="auto"></p>
-
-**Note:** A resistor is needed between the GPIO pin and the LED or otherwise the LED will burn out.
-
 #### Install onoff npm Module
 
 The onoff npm module allows you to access and control the GPIO on the reTerminal using the Electron app
@@ -527,170 +172,223 @@ npm install --save-dev electron-rebuild
 
 **Note:** Whenever you install a new npm package, rerun electron-rebuild
 
-#### Add GPIO functions to index.html
+### Create the HTML (Basic UI)
 
-Now we need to bind the button presses to the GPIOs on the reTerminal
+We will use the HTML file to create the basic user interface without any styling. This HTML file is responsible to display the UI elements on the screen.
 
-- **Step 1.** Open the **index.html** file
-
-- **Step 2.** Add a **onclick** attribute to the two buttons, close button and assign functions, namely **buttonclick1()**, **buttonclick2()** and **buttonclick3()**
+Inside our main app directory, create a new file called **index.html** and copy the following codes
 
 ```html
-    <body>
-        <button class="button3" onclick="buttonclick3()">X</button>
-        <br>
-        <h1 class="heading">SMART LAMP</h1> 
-        <i class="material-icons">lightbulb</i>
-        <br>
-        <br>
-        <button class="button1" onclick="buttonclick1()">ON</button>
-        <br>
-        <button class="button2" onclick="buttonclick2()">OFF</button>
-    </body>
-```
-
-- **Step 3.** Add a **< script >** tag to embed **Javascript code** inside the **< head>** tag of the HTML file 
-
-```html
+<!doctype html>
+<html>
     <head>
+        <!-- Specify the character encoding for the HTML document -->
         <meta charset="UTF-8">
+        <!-- App title bar -->
         <title>Test Application</title>
+        <!-- Load the material icons api -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Load the google fonts api -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <!-- Load style.css with UI styling -->
         <link rel="stylesheet" href="style.css">
+        <!-- Embed  JavaScript code -->
         <script>
-
-        </script>
-    </head>
-```
-
-- **Step 4.** Add **ipcRenderer module** inside the **script** tag
-
-```html
-        <script>
+            // Load ipcRenderer module
             const { ipcRenderer } = require('electron');
-        </script>
-```
-
-**Note:** The ipcRenderer module is an EventEmitter. It provides a few methods so you can send messages from the render process (web page - html/css) to the main process (main.js). You can also receive replies from the main process
-
-- **Step 5.** Add the functions to turn on the GPIO
-
-```html
-        <script>
-            const { ipcRenderer } = require('electron');
+            // Function to turn ON the GPIO on button press
             function buttonclick1()
             {
-                ipcRenderer.send("msg",1)
+                // This will send 1 as a message to the main process with "msg" as the channel name
+                ipcRenderer.send("msg1",1)
             }
-        </script>
-```
-
-**Note:** Here the **shareData()** function is included in the **onclick** attribute inside the button we created before. **ipcRenderer.send("msg",1)** will send **1** as a message with **"msg"** as the channel name. Later we will write codes inside the **main.js** file to receive this message.
-
-- **Step 6.** Add the functions to turn off the GPIO
-
-```html
-        <script>
-            const { ipcRenderer } = require('electron');
-            function buttonclick1()
-            {
-                ipcRenderer.send("msg",1)
-            }
-    
+            
+            // Function to turn OFF the GPIO on button press
             function buttonclick2()
             {
-                ipcRenderer.send("msg1",0)
-            }
-        </script>
-```
-
-- **Step 7.** Add the functions to close the app
-
-```html
-        <script>
-            const { ipcRenderer } = require('electron');
-            function buttonclick1()
-            {
-                ipcRenderer.send("msg",1)
-            }
-    
-            function buttonclick2()
-            {
-                ipcRenderer.send("msg1",0)
+                ipcRenderer.send("msg2",0)
             }
 
+            // Function to close the app on button press
             function buttonclick3()
             {
                 ipcRenderer.send("close-me")
             }
         </script>
+    </head>
+    <body>
+        <!-- Application close button -->
+        <button class="button3" onclick="buttonclick3()">X</button>
+        <br>
+        <!-- Application heading -->
+        <h1>SMART LAMP</h1>
+        <!-- Lightbulb icon from the material icons api -->
+        <i class="material-icons">lightbulb</i>
+        <br>
+        <!-- Empty lines -->
+        <br>
+        <!-- ON button with class attribute for styling 
+        and onclick attribute for button click event -->
+        <button class="button1" onclick="buttonclick1()">ON</button>
+        <br>
+        <button class="button2" onclick="buttonclick2()">OFF</button>
+    </body>
+</html>
 ```
 
-#### Add GPIO functions to main.js
+**Note:** The **ipcRenderer module** is an EventEmitter. It provides a few methods so you can send messages from the render process (web page - html/css) to the main process (main.js). You can also receive replies from the main process.
 
-Now we will receive the messages sent from the **ipcRenderer module** within the HTML file and then use the message to turn ON/OFF the GPIO. Here we will use a module called **ipcMain** to receive the messages sent fromt the renderer process (web page).
+Now we have finished creating the HTML file.
 
-- **Step 1.** Open the **main.js** file
+Run **npm test** to see the following output
 
-- **Step 2.** Include the **onoff** npm module and initialize **GPIO 24** as an **output**
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-15.png" alt="pir" width="1000" height="auto"></p>
 
-```javascript
-var Gpio = require('onoff').Gpio;
-var LED = new Gpio(24, 'out');
+### Create the CSS (Styling)
+
+We will use the CSS file to add different styling to the user interface created using the HTML file
+
+Inside our main app directory, create a new file called **style.css** and copy the following codes
+
+```css
+/* Styling for the body of the app */
+body {
+    background-color: rgb(141, 141, 141);
+}
+
+/* Styling for heading of the app */
+h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: "Roboto", "Courier New", monospace;
+    color: rgb(255, 255, 255);
+}
+
+/* Styling for the light bulb */
+.material-icons{
+    font-size: 250px;
+    color: rgb(204, 202, 71);
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the ON button */
+.button1 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 35px;
+    text-align: center;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:rgb(76, 175, 80);
+    border: none;
+    border-radius: 15px;
+    width: 20%;
+    margin:auto;
+    display:grid;
+  }
+
+/* Button press effect for ON button */
+.button1:active {
+  box-shadow: 0 5px rgb(104, 99, 99);
+  transform: translateY(4px);
+}
+
+/* Hover effect for ON button */
+.button1:hover {background-color: rgb(62, 142, 65)}
+
+/* Styling for OFF button */
+.button2 {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 35px;
+    text-align: center;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:rgb(207, 85, 85);
+    border: none;
+    border-radius: 15px;
+    width: 20%;
+    margin:auto;
+    display:grid;
+}
+
+/* Button press effect for OFF button */
+.button2:active {
+  box-shadow: 0 5px rgb(104, 99, 99);
+  transform: translateY(4px);
+}
+  
+/* Hover effect for OFF button */  
+.button2:hover {background-color: rgb(179, 44, 44)}
+
+/* Styling for Close button */
+.button3 {
+  padding: 8px 25px;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background-color:rgb(179, 44, 44);
+  border: none;
+  width: 6%;
+  margin:auto;
+  display:grid;
+  float: right;
+}
 ```
 
-- **Step 3.** Include **ipcMain module**
+The final output of the app will be as follows
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-16.png" alt="pir" width="1000" height="auto"></p>
+
+### Create the Javascript (Load and Execute the App)
+
+We will use the Javascript file to create the application window, display the load the HTML file, and add GPIO functionality.
+
+Inside our main app directory, create a new file called **main.js** and copy the following codes
 
 ```javascript
+var Gpio = require('onoff').Gpio; //include onoff module to interact with the GPIO
+var LED = new Gpio(24, 'out'); //initialize GPIO 24 as an output
+
+// Include app, BrowserWindow and ipcMain module
 const { app, BrowserWindow, ipcMain } = require('electron')
-```
-
-- **Step 4.** Use **ipcMain module** to receive the messages from the **ipcRenderer module** and turn ON/OFF the GPIO and close the app
-
-```javascript
-const { app, BrowserWindow, ipcMain } = require('electron')
-ipcMain.on("msg",(event,data)=>{
-  LED.writeSync(data);
-})
-
+/* Use ipcMain module to receive the messages from the ipcRenderer module and 
+turn ON the GPIO*/
 ipcMain.on("msg1",(event,data)=>{
   LED.writeSync(data);
 })
 
+/* Use ipcMain module to receive the messages from the ipcRenderer module and 
+turn OFF the GPIO */
+ipcMain.on("msg2",(event,data)=>{
+  LED.writeSync(data);
+})
+
+/* Use ipcMain module to receive the messages from the ipcRenderer module and 
+close the app */
 ipcMain.on("close-me", (event, arg) => {
     app.quit()
 })
-```
 
-- **Step 5.** Add the following codes inside the **BrowserWindow** function to enable the communication between the main and rendered process.
-
-```javascript
+// Create application window
 app.on('ready', function() {
     var mainWindow = new BrowserWindow({
-        webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false
-          }
-    });
-    mainWindow.loadFile('index.html');
-});
-```
-
-- **Step 6.** Make the app fullscreen
-
-```javascript
-app.on('ready', function() {
-    var mainWindow = new BrowserWindow({
+        // Make the app fullscreen
         "fullscreen": true,
         webPreferences: {
+            // enable the communication between the main and rendered process
             nodeIntegration: true,
             contextIsolation: false
           }
     });
+    // Load the HTML page with CSS styling
     mainWindow.loadFile('index.html');
 });
 ```
+
+**Note:** The **ipcMain** provides a few methods so you can receive the messages sent fromt the renderer process (web page).
 
 ### Test the App
 
@@ -770,7 +468,7 @@ You will see the output as follows
 
 Now you can click on the buttons and you will see the LED light up!
 
-### Debug the App
+## Debug the App
 
 Let's go through the process of debugging your app while developing
 
@@ -787,6 +485,28 @@ npm test
 ```
 
 Finally you will see the output displayed on a new window. If there are any errors in the code, they will be dislpayed in the MobaXterm terminal window.
+
+## FAQ
+
+### Q: How to set up automatic updates to the app as we save it? 
+
+For this you can set up the Hot Reload feature using electron-reloader npm module 
+
+- **Step 1.** Install **electron-reloader**
+
+```sh
+npm install --save-dev electron-reloader
+```
+
+- **Step 2.** Add the following line at the end of **main.js** file
+
+```javascript
+try {
+  require('electron-reloader')(module)
+} catch (_) {}
+```
+
+Now run the file once using **npm test** and the application will update as you save the files. You will not need to run **npm test** everytime you change the contents inside your project.
 
 ## Resources
 
