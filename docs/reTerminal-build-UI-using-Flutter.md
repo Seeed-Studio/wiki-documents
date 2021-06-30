@@ -22,7 +22,7 @@ By following the guide below, you will be able to create an application to contr
 
 ## Prepare Development Environment
 
-### Install Necessary Tools on reTerminal
+### On reTerminal
 
 First we need to install **flutter-pi** on the reTerminal.
 
@@ -97,7 +97,7 @@ sudo reboot
 
 Now we have finished installing the necessary tools on the reTerminal
 
-### Install Development Tools on Host PC
+### On Host PC
 
 Next we need to prepare our host PC for development. Here we will install **Flutter SDK** which contains necessary packages for Flutter development, **Android Studio** for code editing and **Android Emulator** to run and test the codes.
 
@@ -172,18 +172,17 @@ flutter --version
 
 Now we have successfully finished preparing the development environment
 
-## Build the Project
+## Smart Lamp Flutter Application
 
-Next let's move on to building the project. The workflow is as follows:
+### Hardware Connections
 
-1. Create a **sample Flutter project** using **Android Studio** and run it on the **Android Emulator**
-2. Modify the codes to realize the outlook of our app while running the **Android Emulator** in real-time as we edit
-3. Attach buttons on UI to GPIO pins of reTerminal to **control GPIO pins using Flutter**
-4. Build the project and transfer to reTerminal
+We will connect an LED to the GPIO 24 of the reTerminal for testing purposes. Later you can add a relay and control home appliances using the GPIO!
 
-### Create a Sample Flutter Application
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-15.png" alt="pir" width="800" height="auto"></p>
 
-Now let's create a sample flutter app and run it on Android Emulator for testing
+**Note:** A resistor is needed between the GPIO pin and the LED or otherwise the LED will burn out.
+
+### Create and Initialize the Application
 
 - **Step 1.** Open Android Studio and click **Create New Flutter Project**
 
@@ -201,404 +200,107 @@ Now let's create a sample flutter app and run it on Android Emulator for testing
 
 Now your sample project will open with **main.dart**
 
-- **Step 4.** Click **no device selected** button and select the Android Device that we created before
+### Create the main.dart (main app)
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-13.1.jpg" alt="pir" width="800" height="auto"></p>
+We will use the **main.dart** file inside the **lib** folder to create the Flutter application
 
-You will now see the following output
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-5.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 4.** Click the **play button** to run the application
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-14.png" alt="pir" width="800" height="auto"></p>
-
-You will now see the following application running on the Android Emulator
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-7.png" alt="pir" width="800" height="auto"></p>
-
-### Build UI for Your Flutter Application
-
-Now that we have learnt how to create a Flutter application and run on an emulator, let's dive into creating our own Flutter application. We will be building the below UI for a smart home application.
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-13.png" alt="pir" width="800" height="auto"></p>
-
-First we will build the UI for our application.
-
-- **Step 1.** Navigate to the **main.dart** file from the previous project
-
-**Note:** We will be modifying the codes from the previous project for our application
-
-- **Step 2.** Delete all the codes from the **main.dart** file
-
-- **Step 3.** Start by importing the necessary libraries inside the main.dart file 
+Open the **main.dart** file and copy the following codes
 
 ```dart
+//library imports
 import 'package:flutter/material.dart';
-```
+import 'package:flutter_gpiod/flutter_gpiod.dart';
 
-- **Step 4.** Add the entry point for the app
-
-```dart
+//entry point for the app
 void main() {
   runApp(MyApp());
 }
-```
 
-**Note:** This will be the main function that will run **MyApp**
-
-- **Step 5.** Add the main application widget
-
-```dart
+// This is the main application widget.
 class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
+  // Function for GPIO control
+  void ledState(state) {
+    // Retrieve the list of GPIO chips.
+    final chips = FlutterGpiod.instance.chips;
 
-  }
-}
-```
-
-**Note:** Here we are using a StatelessWidget. Stateless widgets are useful when part of the user interface you are describing does not depend on anything other than the configuration information in the object itself and the BuildContext in which the widget is inflated. We will be using widgets throughout our Flutter application.
-
-- **Step 6.** Add a MaterialApp widget inside the main stateless widget
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp();
-  }
-}
-```
-
-**Note:** MaterialApp widget is a widget that wraps a number of widgets that are commonly required for material design applications. 
-
-- **Step 7.** Add a Scaffold widget inside the MaterialApp widget
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(),
+    // Retrieve the line with index 24 of the first chip.
+    // This is BCM pin 24 for the Raspberry Pi.
+    final chip = chips.singleWhere(
+          (chip) => chip.label == 'pinctrl-bcm2711',
+      orElse: () =>
+          chips.singleWhere((chip) => chip.label == 'pinctrl-bcm2835'),
     );
+
+    final line2 = chip.lines[24];
+
+    // Request BCM 24 as output.
+    line2.requestOutput(consumer: "flutter_gpiod test", initialValue: false);
+    line2.setValue(state);
+    line2.release();
   }
-}
-```
 
-**Note:** A Scaffold Widget provides a framework which implements the basic material design visual layout structure of the flutter app. It provides APIs for showing drawers, snack bars and bottom sheets
-
-- **Step 8.** Change the background color of the app
-
-```dart
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // MaterialApp widget
     return MaterialApp(
+      // Hide the debug banner at the top right corner
+      debugShowCheckedModeBanner: false,
+      // Scaffold widget
       home: Scaffold(
+        // background color of the app.
+        // Here after you type "Colors.", Android Studio will recommend the available colors. 
+        // Also you can hover the mouse over to check the different color variations assigned 
+        // by numbers enclosed by [ ].
         backgroundColor: Colors.grey[700],
-      ),
-    );
-  }
-}
-```
-
-**Note:** Here after you type "Colors.", Android Studio will recommend the available colors. Also you can hover the mouse over to check the different color variations assigned by numbers enclosed by [ ].
-
-- **Step 9.** Add an AppBar widget inside the Scaffold widget
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(),
-      ),
-    );
-  }
-}
-```
-
-**Note:** Appbar is a widget that contains the toolbar in flutter application.
-
-- **Step 10.** Change the background color of the AppBar
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
+        // AppBar widget
         appBar: AppBar(
+          // background color of the appbar
           backgroundColor: Colors.black,
-        ),
-      ),
-    );
-  }
-}
-```
-
-- **Step 11.** Add text inside the AppBar widget
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text('LIVING ROOM'),
-        ),
-      ),
-    );
-  }
-}
-```
-
-- **Step 12.** Click on the line which contains "title" and you will see a **small yellow bulb** appear at the left corner. Click on it and select **Wrap with Center** to align the text to the center of the AppBar
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-15.png" alt="pir" width="550" height="auto"></p>
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(child: Text('LIVING ROOM')),
-        ),
-      ),
-    );
-  }
-}
-```
-
-So far the output on the Android Emulator will be as follows
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-9.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 13.** Add a Row widge inside the body
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(child: Text('LIVING ROOM')),
-        ),
-        body: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [],
-        ),
-      ),
-    );
-  }
-}
-```
-
-**Note::** Row widget is used to display its children in a horizontal array. We will use the UI elements inside this widget
-
-- **Step 14.** Add an ElevatedButton widget inside the children of Row widget with text inside the button
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(child: Text('LIVING ROOM')),
-        ),
-        body: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ElevatedButton(
-              child: Text('ON'),
-              onPressed: () {},
+          // center align text inside appbar widget
+          title: Center(
+            child: Text(
+              'LIVING ROOM',
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-
-**Note::** ElevatedButton widget consist of a button that can be used to press and react accordingly
-
-- **Step 15.** Add different styling to the button such as color, padding and size of text
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(child: Text('LIVING ROOM')),
-        ),
-        body: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ElevatedButton(
-              child: Text('ON'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.orange[700],
-                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                  textStyle:
-                      TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-
-- **Step 16.** Center the Row widget as explained before
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(child: Text('LIVING ROOM')),
-        ),
-        body: Center(
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              ElevatedButton(
-                child: Text('ON'),
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.orange[700],
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                    textStyle:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
-              ),
-            ],
           ),
         ),
-      ),
-    );
-  }
-}
-```
-
-So far the output on the Android Emulator will be as follows
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-11.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 17.** Add a another ElavatedButton widget inside the Row widget for the **OFF** button
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(child: Text('LIVING ROOM')),
-        ),
         body: Center(
+          // Row widge
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
+              // ON Button function
               ElevatedButton(
                 child: Text('ON'),
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.orange[700],
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                    textStyle:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
-              ),
-              ElevatedButton(
-                child: Text('OFF'),
                 onPressed: () {
+                  print('ON');
+                  ledState(true);
                 },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.orange[300],
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                    textStyle:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-```
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-12.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 18.** Add a **Google Material Icon** of a Light Bulb between these two buttons
-
-```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey[700],
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Center(child: Text('LIVING ROOM')),
-        ),
-        body: Center(
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              ElevatedButton(
-                child: Text('ON'),
-                onPressed: () {},
+                // ON Button styling
                 style: ElevatedButton.styleFrom(
                     primary: Colors.orange[700],
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                     textStyle:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
+                    TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
               ),
+              // Google Material Icon of a Light Bulb
               Icon(
                 Icons.lightbulb_outline,
                 color: Colors.white,
                 size: 200,
               ),
+              // OFF Button function
               ElevatedButton(
                 child: Text('OFF'),
                 onPressed: () {
+                  print('OFF');
+                  ledState(false);
                 },
+                // OFF Button styling
                 style: ElevatedButton.styleFrom(
                     primary: Colors.orange[300],
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                     textStyle:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
+                    TextStyle(fontSize: 40, fontWeight: FontWeight.normal)),
               ),
             ],
           ),
@@ -609,17 +311,31 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-13.png" alt="pir" width="800" height="auto"></p>
+#### Flutter Widgets Used
 
-**Note:** You can change the color and size properties of the icon. Also, to dive into more Google Material Icons, follow [this link](https://fonts.google.com/icons), search for a button, choose the button and view the flutter code for the button
+Flutter widgets are built using a modern framework that takes inspiration from React. The central idea is that you build your UI out of widgets. Widgets describe what their view should look like given their current configuration and state.
+
+**StatelessWidget:** Stateless widgets are useful when part of the user interface you are describing does not depend on anything other than the configuration information in the object itself and the BuildContext in which the widget is inflated.
+
+**MaterialApp:** MaterialApp widget is a widget that wraps a number of widgets that are commonly required for material design applications. 
+
+**Scaffold:** A Scaffold Widget provides a framework which implements the basic material design visual layout structure of the flutter app. It provides APIs for showing drawers, snack bars and bottom sheets
+
+**Appbar:** Appbar is a widget that contains the toolbar in flutter application.
+
+**Row:** Row widget is used to display its children in a horizontal array. We will use the UI elements inside this widget
+
+**ElevatedButton:** ElevatedButton widget consist of a button that can be used to press and react accordingly
+
+#### Google Material Icons
+
+We have used a **lightbuilb** icon inside the app from **Google Material Icons**. To dive into more Google Material Icons, follow [this link](https://fonts.google.com/icons), search for a button, choose the button and view the flutter code for the button
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-14.png" alt="pir" width="800" height="auto"></p>
 
-Now we have finished designing the UI for our application.
+### Install the GPIO Library
 
-### Integrate GPIO Control Into Flutter Application
-
-Next we will move on to integrating the GPIO control into our Flutter application. Here we will use a GPIO library called [flutter_gpiod](https://pub.dev/packages/flutter_gpiod/versions/0.4.0-nullsafety)
+Next we will move on to installing the GPIO control library into our Flutter application. Here we will use a GPIO library called [flutter_gpiod](https://pub.dev/packages/flutter_gpiod/versions/0.4.0-nullsafety)
 
 - **Step 1.** To install the GPIO library, go into the **pubspec.yaml** file inside your Flutter project and add the following under **dependencies:**
 
@@ -628,103 +344,29 @@ dependencies:
   flutter_gpiod: ^0.4.0-nullsafety
 ```
 
-- **Step 2.** Go back to the **main.dart** file and add the GPIO library to import it
+- **Step 2.** Save the file and click on **Pub get**
 
-```dart
-import 'package:flutter_gpiod/flutter_gpiod.dart';
-```
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-17.jpg" alt="pir" width="520" height="auto"></p>
 
-- **Step 3.** Add a function inside the main application widget that we created before. This function should be placed before **@override**
+### Test the App
 
-```dart
-class MyApp extends StatelessWidget {
-  void ledState(state) {}
-  @override
+- **Step 1.** Open the **main.dart** file
 
-  Widget build(BuildContext context) {
-```
+- **Step 2.** click **no device selected** button and select the Android Device that we created before
 
-- **Step 4.** Retrieve the list of GPIO chips
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-13.1.jpg" alt="pir" width="800" height="auto"></p>
 
-```dart
-class MyApp extends StatelessWidget {
-  void ledState(state) {
-    final chips = FlutterGpiod.instance.chips;
-  }
+You will now see the following output
 
-  @override
-  Widget build(BuildContext context) {
-```
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-5.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 5.** Retrieve the line with index 24 of the first chip
+- **Step 3.** Click the **play button** to run the application
 
-```dart
-class MyApp extends StatelessWidget {
-  void ledState(state) {
-    final chips = FlutterGpiod.instance.chips;
-    final chip = chips.singleWhere(
-      (chip) => chip.label == 'pinctrl-bcm2711',
-      orElse: () =>
-          chips.singleWhere((chip) => chip.label == 'pinctrl-bcm2835'),
-    );
-    final line2 = chip.lines[24];
-  }
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/avd-14.png" alt="pir" width="800" height="auto"></p>
 
-  @override
-  Widget build(BuildContext context) {
-```
+You will now see the following application running on the Android Emulator
 
-**Note:** We do this to control GPIO 24 of the reTerminal. You can change this to any GPIO pin number
-
-- **Step 6.** Set GPIO 24 as output
-
-```dart
-class MyApp extends StatelessWidget {
-  void ledState(state) {
-    final chips = FlutterGpiod.instance.chips;
-    final chip = chips.singleWhere(
-      (chip) => chip.label == 'pinctrl-bcm2711',
-      orElse: () =>
-          chips.singleWhere((chip) => chip.label == 'pinctrl-bcm2835'),
-    );
-    final line2 = chip.lines[24];
-
-    line2.requestOutput(consumer: "flutter_gpiod test", initialValue: false);
-    line2.setValue(state);
-    line2.release();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-```
-
-**Note:** Next we will call this function to turn ON/OFF the GPIO pin
-
-- **Step 7.** Inside the **ON** ElevatedButton widget, call the above function to turn on the GPIO pin. Also add a print('ON') statement for debugging purposes
-
-```dart
-              ElevatedButton(
-                child: Text('ON'),
-                onPressed: () {
-                  print('ON');
-                  ledState(true);
-                },
-              ),
-```
-
-- **Step 8.** Repeat the same for the **OFF** ElevatedButton widget
-
-```dart
-              ElevatedButton(
-                child: Text('ON'),
-                onPressed: () {
-                  print('OFF');
-                  ledState(false);
-                },
-              ),
-```
-
-Now we have finished integrating the GPIO control to the Flutter application
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-13.png" alt="pir" width="800" height="auto"></p>
 
 ### Build the Application and Transfer to reTerminal
 
@@ -754,13 +396,7 @@ flutter build bundle
 scp -r ./build/flutter_assets pi@<ip_address_of_reTerminal>:/home/pi/testapp
 ```
 
-### LED Connection with reTerminal
 
-Now we need to connect an LED to GPIO 24 to test our application. Follow the connection diagram as follows
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-15.png" alt="pir" width="800" height="auto"></p>
-
-**Note:** A resistor is needed between the GPIO pin and the LED or otherwise the LED will burn out.
 
 ## Launch the Application on reTerminal
 
@@ -787,8 +423,6 @@ If you want to experience a more interesting demo with Flutter, you can checkout
 - **[GitHub]** [flutter-pi](https://github.com/ardera/flutter-pi)
 - **[Webpage]** [Official Flutter Documentation](https://flutter.dev/docs)
 - **[GitHub]** [Flutter Demo Source Code](https://github.com/lakshanthad/Flutter_reTerminal_LED_UI)
-
-
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
