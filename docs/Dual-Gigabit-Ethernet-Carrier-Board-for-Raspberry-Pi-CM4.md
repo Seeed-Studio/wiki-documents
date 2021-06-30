@@ -1077,7 +1077,7 @@ If you see the following output, SPI is working properly
 
 ## Resources
 
-- **[PDF]** [Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4 Schematics](https://files.seeedstudio.com/wiki/102110497/Rapberry%20Pi%20CM4%20Dual%20GbE%20Carrier%20Board%20V1.0_SCH.pdf)
+- **[PDF]** [Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4 Schematics](https://files.seeedstudio.com/wiki/102110497/RapberryPi-CM4-Dual-GbE-Carrier-Board-V1.1_SCH.pdf)
 
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
