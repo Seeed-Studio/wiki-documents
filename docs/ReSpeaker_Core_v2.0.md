@@ -1132,8 +1132,6 @@ The root cause is that the old SD cards do not work with linux system. Please ch
 ## Resources
 - **[Algorithms]** [Audio front-end processing algorithms including AEC, Beamforming, NS and KWS](https://github.com/respeaker/respeakerd)
 - **[Google Assistant]** [Google Assistant Demo](https://github.com/respeaker/googleassistant_respeakerd)
-- **[Alexa]** [Alexa Voice Service C++ SDK for ReSpeaker Core v2.0](https://github.com/respeaker/avs-device-sdk)
-- **[Alexa/DuerOS]** [Alexa Voice Service & DuerOS Python SDK](https://github.com/respeaker/avs)
 - **[Microsoft]** [Microsoft Speech Translation Demo](https://github.com/respeaker/Python-Speech-Translate)
 - **[Pixel]** [RGB LEDs library](https://github.com/respeaker/pixel_ring)
 - **[PDF]** [Download PDF of This Wiki](https://files.seeedstudio.com/wiki/Respeaker_V2/res/ReSpeaker_Core_v2.pdf)
