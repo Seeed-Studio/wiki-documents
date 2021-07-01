@@ -18,7 +18,7 @@ By following the guide below, you will be able to create an application to contr
 
 ## Prepare Development Environment
 
-### Install the Necessary Packages on reTerminal
+### On reTerminal
 
 - **Step 1.** Access reTerminal using the **onboard LCD, external display or SSH** as explained [here](https://wiki.seeedstudio.com/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet) and type the following on a terminal window
 
@@ -48,7 +48,7 @@ sudo make install
 
 Now we have finished installing the necessary packages on the reTerminal
 
-### Set Remote Development Tools on Host PC
+### On Host PC
 
 - **Step 1.** Download and install [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
@@ -98,10 +98,9 @@ Next let's move on to building the project. The workflow is as follows:
 2. Create a **.qml** file and build the UI based on the positions of the UI elements obtained from the graphic designer software
 3. Create another **.qml** for the full screen UI application 
 4. Create a **python** file and write the functions that will be used to control the LEDs
-5. Modify the **.qml** file in **2** above and build a relationship between the buttons on the UI and the python functions from the **python** file
-6. Create a **Python** file to run the app
-7. Create a **script** to run the python file
-8. Create a **Desktop shortcut** to open the created app by double clicking on an icon
+5. Create a **Python** file to run the app
+6. Create a **script** to run the python file
+7. Create a **Desktop shortcut** to open the created app by double clicking on an icon
 
 The files we need to create are as follows:
 
@@ -198,86 +197,52 @@ Now we will transfer the design from Gravit Designer to qml and build the UI
 
 **Note:** Make sure the first letter is **Upper Case**
 
-- **Step 5.** Enter the **.qml file** and type the following to import the necessary libraries
+- **Step 5.** Enter the **.qml file** and copy the following codes
 
 ```qml
+// import libraries
 import QtQuick 2.8
 import QtQuick.Controls 2.1
-```
 
-- **Step 6.** Add an **Item type** and define a width and height
-
-```qml
+/* The Item type is the base type for all visual items in Qt Quick. Here 1280 and 720 are chosen 
+for the dimensions because the resolution of reTerminal LCD is 1280x720 */
 Item {
-    width: 1280
-    height: 720
-```
-
-**Note:** The **Item type** is the base type for all visual items in Qt Quick. Here 1280 and 720 are chosen for the dimensions because the resolution of reTerminal LCD is 1280x720. The id is used to identity the qml 
-
-- **Step 7.** Add an **id** field inside the **Item type** to label it.
-
-```qml
-Item {
+    // identify the qml
     id: ledControl
+    // define width and height of the app
     width: 1280
     height: 720
-```
 
-**Note:** It's a good practice to add the **id** field to all QML Types so that you can keep everything organized
-
-
-- **Step 8.** Inside this Item type, add a **Rectangle type** for the title block
-
-```qml
+    // Rectangle block for the heading
     Rectangle {
         id: titleBlock
-
+        x: 0 // Rectangle block position in x-axis
+        y: 0 // Rectangle block position in y-axis
+        width: 1280 // Rectangle block width
+        height: 175 // Rectangle block height
+        color: "green" // Rectangle block color
+        /* You can also enter **hexadecimal values** for the color field */
     }
-```
 
-**Note:** The **Rectangle type** paints a filled rectangle with an optional border
-
-- **Step 9.** Go back to the **Gravit Designer**, select the **title block** and obtain the **position and size** from the **INSPECTOR** tab
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki3/build-ui-4.5.png" alt="pir" width="350" height="auto"></p>
-
-- **Step 10.** Come back to the **.qml file** and enter the properties inside the Rectangle type
-
-```qml
-    Rectangle {
-        id: titleBlock
-        x: 0
-        y: 0
-        width: 1280
-        height: 175
-        color: "green"
-    }
-```
-
-**Note:** You can also enter **hexadecimal values** for the color field
-
-- **Step 11.** Add a **Button type** for the left top button (ON) in the UI and fill the properties by referring to **Gravit Designer**
-
-```qml
+    // left top button (ON)
     Button {
         id: staGreenOn
         x: 159
         y: 272
         width: 200
         height: 91
-        text: "ON"
-        font.pointSize: 28
-        palette.button: "green"
-        palette.buttonText: "white"
+        text: "ON" // text inside the button
+        font.pointSize: 28 // text font
+        palette.button: "green" // button color
+        palette.buttonText: "white" // text color
+        // Used to access the button control class in the Python file and turn on the LED
+        onClicked:
+        {
+            _Setting.staGreenOn()
+        }
     }
-```
 
-**Note:** Here **palette.button** is for the button color and **palette.buttonText** is the text color inside the button
-
-- **Step 12.** Repeat the same for the **remaining five ON/OFF buttons**
-
-```qml
+    // left bottom button (OFF)
     Button {
         id: staGreenOff
         x: 159
@@ -288,8 +253,13 @@ Item {
         font.pointSize: 28
         palette.button: "green"
         palette.buttonText: "white"
+        onClicked:
+        {
+            _Setting.staGreenOff()
+        }
     }
 
+    // middle top button (ON)
     Button {
         id: staRedOn
         x: 540
@@ -300,8 +270,13 @@ Item {
         font.pointSize: 28
         palette.button: "red"
         palette.buttonText: "white"
+        onClicked:
+        {
+            _Setting.staRedOn()
+        }
     }
 
+    // middle bottom button (OFF)
     Button {
         id: staRedOff
         x: 540
@@ -312,8 +287,13 @@ Item {
         font.pointSize: 28
         palette.button: "red"
         palette.buttonText: "white"
+        onClicked:
+        {
+            _Setting.staRedOff()
+        }
     }
 
+    // right top button (ON)
     Button {
         id: usrGreenOn
         x: 918
@@ -324,8 +304,13 @@ Item {
         font.pointSize: 28
         palette.button: "green"
         palette.buttonText: "white"
+        onClicked:
+        {
+            _Setting.usrGreenOn()
+        }
     }
 
+    // right bottom button (OFF)
     Button {
         id: usrGreenOff
         x: 918
@@ -336,12 +321,13 @@ Item {
         font.pointSize: 28
         palette.button: "green"
         palette.buttonText: "white"
+        onClicked:
+        {
+            _Setting.usrGreenOff()
+        }
     }
-```
 
-- **Step 13.** Add a **Button type** for the **Close Button**
-
-```qml
+    // close button
     Button {
         id: close
         x: 1200
@@ -351,28 +337,13 @@ Item {
         palette.button: "red"
         palette.buttonText: "white"
         text: "X"
+        onClicked:
+        {
+            _Setting.closeWindow()
+        }
     }
-```
 
-- **Step 14.** Add a **Text type** for the title text
-
-```qml
-    Text {
-        id: title
-    }
-```
-
-**Note:** The **Text type** specifies how to add formatted text to a scene
-
-- **Step 15.** Obtain the **text properties** from **Gravit Designer** as explained before
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki3/buildui-5.jpg" alt="pir" width="350" height="auto"></p>
-
-- **Step 16.** Obtain the **text properties** from **Gravit Designer** as explained before
-
-- **Step 17.** Enter the properties inside the Text type
-
-```qml
+    // heading
     Text {
         id: title
         x: 500
@@ -381,11 +352,8 @@ Item {
         text: "LED TEST"
         font.pixelSize: 60
     }
-```
 
-- **Step 18.** Repeat the same for the remaining text blocks
-
-```qml
+    // STA GREEN text
     Text {
         id: staGreen
         x: 135
@@ -394,6 +362,7 @@ Item {
         font.pixelSize: 45
     }
 
+    // STA RED text
     Text {
         id: staRed
         x: 547
@@ -402,6 +371,7 @@ Item {
         font.pixelSize: 45
     }
 
+    // USR GREEN text
     Text {
         id: usrGreen
         x: 891
@@ -409,13 +379,20 @@ Item {
         text: "USR GREEN"
         font.pixelSize: 45
     }
-```
-
-- **Step 19.** Finally close the paranthesis to include all the above-mentioned QML Types inside the initial **Item Type**
-
-```qml
 }
 ```
+
+#### Obtain Location and Size of Shapes
+
+Inside the **Gravit Designer**, select a shape block and obtain the **position and size** from the **INSPECTOR** tab
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki3/build-ui-4.5.png" alt="pir" width="350" height="auto"></p>
+
+#### Obtain Location and Size of Text
+
+Inside the **Gravit Designer**, select a text block and obtain the **position and size** from the **INSPECTOR** tab
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki3/buildui-5.jpg" alt="pir" width="350" height="auto"></p>
 
 ### Build the Fullscreen UI
 
@@ -425,56 +402,24 @@ Next, let's build the fullscreen UI
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki3/buildui-6.png" alt="pir" width="400" height="auto"></p>
 
-- **Step 2.** Open the file and include the following library
+- **Step 2.** Open the **.qml file** and copy the following codes
 
 ```qml
-import QtQuick.Controls 2.1
-```
-
-- **Step 3.** Add an **ApplicationWindow type** and define the height and width of the application. Also make the visibility as "FullScreen" to run the app in fullscreen mode
-
-```qml
-ApplicationWindow {
-    id: fullScreenUI
-    width: 1280
-    height: 720
-    visible: true
-    visibility: "FullScreen"
-```
-
-**Note:** ApplicationWindow is a window which makes it convenient to add a menu bar, header and a footer item to the window. Later this file will be run to open the UI
-
-- **Step 4.** Initialize the first window of the app
-
-```qml
-    property var iniITEM: "LedGui.qml"
-```
-
-**Note:** This is the .qml file that we created before
-
-- **Step 5.** Add a **StackView Type**
-
-```qml
-    StackView {
-        id: stack
-        initialItem: iniITEM
-    }
-```
-
-The final **App.qml** file should look like below 
-
-```qml
+// import library
 import QtQuick.Controls 2.1
 
+// properties of the application window containing UI elements
 ApplicationWindow {
     id: application
-    width: 1280
-    height: 720
+    width: 1280 
+    height: 720 
     visible: true
     visibility: "FullScreen"
 
+    // initialize the first window of the application
     property var iniITEM: "LedGui.qml"
 
+    // stack-based navigation model
     StackView {
         id: stackview
         initialItem: iniITEM
@@ -492,81 +437,28 @@ Next we will create a python file to obtain the methods to control the LEDs on t
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/python-1.png" alt="pir" width="400" height="auto"></p>
 
-- **Step 2.** Enter the **.py** file and include the necessary libraries
+- **Step 2.** Enter the **.py** file and copy the following codes
 
 ```py
-import sys
-import os
-from PySide2.QtCore import *
-```
-
-- **Step 3.** Create a class
-
-```py
-class Setting(QObject):
-```
-
-- **Step 4.** Include the following inside the class to control the **STA GREEN** LED
-
-```py
-    @Slot()
-    def staGreenOn(self):     
-        os.system("sudo sh -c 'echo 255 > /sys/class/leds/usr_led2/brightness'")
-    @Slot()
-    def staGreenOff(self):     
-        os.system("sudo sh -c 'echo 0 > /sys/class/leds/usr_led2/brightness'")
-```
-
-**Note:** Here the value 255 is written into the **brightness** file to turn on the LED and the value 0 is written into the **brightness** file to turn off the LED
-
-- **Step 5.** Include the following inside the class to control the **STA RED** LED
-
-```py
-    @Slot()
-    def staRedOn(self):     
-        os.system("sudo sh -c 'echo 255 > /sys/class/leds/usr_led1/brightness'")
-    @Slot()
-    def staRedOff(self):     
-        os.system("sudo sh -c 'echo 0 > /sys/class/leds/usr_led1/brightness'")
-```
-
-- **Step 6.** Include the following inside the class to control the **USR GREEN** LED
-
-```py
-    @Slot()
-    def usrGreenOn(self):     
-        os.system("sudo sh -c 'echo 255 > /sys/class/leds/usr_led0/brightness'")
-    @Slot()
-    def usrGreenOff(self):     
-        os.system("sudo sh -c 'echo 0 > /sys/class/leds/usr_led0/brightness'")
-```
-
-- **Step 6.** Include the following inside the class for the **Close Button**
-
-```py
-    @Slot()
-    def closeWindow(self):
-        sys.exit()
-```
-
-The final **ledControl.py** file should look like below 
-
-```py
+# import libraries
 import sys
 import os
 from PySide2.QtCore import *
 
+# class to handle button controls
 class Setting(QObject):
 
-    #staGreen
+    # staGreen ON/OFF
     @Slot()
-    def staGreenOn(self):     
+    def staGreenOn(self):   
+        # turn ON  
         os.system("sudo sh -c 'echo 255 > /sys/class/leds/usr_led2/brightness'")
     @Slot()
     def staGreenOff(self):     
+        # turn OFF  
         os.system("sudo sh -c 'echo 0 > /sys/class/leds/usr_led2/brightness'")
 
-    #staRed
+    # staRed
     @Slot()
     def staRedOn(self):     
         os.system("sudo sh -c 'echo 255 > /sys/class/leds/usr_led1/brightness'")
@@ -574,7 +466,7 @@ class Setting(QObject):
     def staRedOff(self):     
         os.system("sudo sh -c 'echo 0 > /sys/class/leds/usr_led1/brightness'")
 
-    #usrGreen
+    # usrGreen
     @Slot()
     def usrGreenOn(self):     
         os.system("sudo sh -c 'echo 255 > /sys/class/leds/usr_led0/brightness'")
@@ -582,209 +474,13 @@ class Setting(QObject):
     def usrGreenOff(self):     
         os.system("sudo sh -c 'echo 0 > /sys/class/leds/usr_led0/brightness'")
 
-    #close
+    # close
     @Slot()
     def closeWindow(self):
         sys.exit()
 ```
 
 Now we have completed the python file used to control the LEDs
-
-### Build Relationship Between Buttons on UI and LEDs
-
-Next we will use the previously created **LedGui.qml** file and add the relation for buttons to control the LEDs
-
-- **Step 1.** Open the **LedGui.qml** file created before
-
-- **Step 2.** Add the **onClicked:** field under the left top button (ON) as follows
-
-```qml
-    Button {
-        id: staGreenOn
-        x: 159
-        y: 272
-        width: 200
-        height: 91
-        text: "ON"
-        font.pointSize: 28
-        palette.button: "green"
-        palette.buttonText: "white"
-        onClicked:
-        {
-            _Setting.staGreenOn()
-        }
-    }
-```
-
-**Note:** **_Setting.staGreenOn()** is used to access the class in the Python file and turn on the LED
-
-- **Step 3.** Repeat the same for the remaning ON/OFF buttons and the close button
-
-The final **LedGui.qml** will look like below
-
-```qml
-import QtQuick 2.8
-import QtQuick.Controls 2.1
-
-Item {
-    id: ledControl
-    width: 1280
-    height: 720
-
-    Rectangle {
-        id: titleBlock
-        x: 0
-        y: 0
-        width: 1280
-        height: 175
-        color: "green"
-    }
-
-    Button {
-        id: staGreenOn
-        x: 159
-        y: 272
-        width: 200
-        height: 91
-        text: "ON"
-        font.pointSize: 28
-        palette.button: "green"
-        palette.buttonText: "white"
-        onClicked:
-        {
-            _Setting.staGreenOn()
-        }
-    }
-
-    Button {
-        id: staGreenOff
-        x: 159
-        y: 496
-        width: 200
-        height: 91
-        text: "OFF"
-        font.pointSize: 28
-        palette.button: "green"
-        palette.buttonText: "white"
-        onClicked:
-        {
-            _Setting.staGreenOff()
-        }
-    }
-
-    Button {
-        id: staRedOn
-        x: 540
-        y: 272
-        width: 200
-        height: 91
-        text: "ON"
-        font.pointSize: 28
-        palette.button: "red"
-        palette.buttonText: "white"
-        onClicked:
-        {
-            _Setting.staRedOn()
-        }
-    }
-
-    Button {
-        id: staRedOff
-        x: 540
-        y: 496
-        width: 200
-        height: 91
-        text: "OFF"
-        font.pointSize: 28
-        palette.button: "red"
-        palette.buttonText: "white"
-        onClicked:
-        {
-            _Setting.staRedOff()
-        }
-    }
-
-    Button {
-        id: usrGreenOn
-        x: 918
-        y: 272
-        width: 200
-        height: 91
-        text: "ON"
-        font.pointSize: 28
-        palette.button: "green"
-        palette.buttonText: "white"
-        onClicked:
-        {
-            _Setting.usrGreenOn()
-        }
-    }
-
-    Button {
-        id: usrGreenOff
-        x: 918
-        y: 496
-        width: 200
-        height: 91
-        text: "OFF"
-        font.pointSize: 28
-        palette.button: "green"
-        palette.buttonText: "white"
-        onClicked:
-        {
-            _Setting.usrGreenOff()
-        }
-    }
-
-    Button {
-        id: close
-        x: 1200
-        y: 0
-        width: 80
-        height: 31
-        palette.button: "red"
-        palette.buttonText: "white"
-        text: "X"
-        onClicked:
-        {
-            _Setting.closeWindow()
-        }
-    }
-
-    Text {
-        id: title
-        x: 500
-        y: 37
-        color: "white"
-        text: "LED TEST"
-        font.pixelSize: 60
-    }
-
-    Text {
-        id: staGreen
-        x: 135
-        y: 400
-        text: "STA GREEN"
-        font.pixelSize: 45
-    }
-
-    Text {
-        id: staRed
-        x: 547
-        y: 400
-        text: "STA RED"
-        font.pixelSize: 45
-    }
-
-    Text {
-        id: usrGreen
-        x: 891
-        y: 400
-        text: "USR GREEN"
-        font.pixelSize: 45
-    }
-}
-```
 
 ### Prepare Python File to Run the APP
 
@@ -794,42 +490,20 @@ Now we need to create a Python file that can be used to run the app that we have
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildui-7.png" alt="pir" width="400" height="auto"></p>
 
-- **Step 2.** Enter the created file and include the necessary libraries
+- **Step 2.** Enter the created file and copy the following codes
 
 ```py
-from PySide2.QtQml import QQmlApplicationEngine
-from PySide2.QtWidgets import *
-from PySide2.QtCore import *
-from ledControl import Setting
-```
-
-- **Step 3.** Type the following to launch the app
-
-```py
-if __name__ == '__main__':
-    app = QApplication([])
-    engine = QQmlApplicationEngine()
-    url = QUrl("./App.qml")
-    context = engine.rootContext()
-    seting = Setting()
-    context.setContextProperty("_Setting", seting)
-    engine.load(url)
-    app.exec_()
-```
-
-**Note:** Here **url** points to the location of the fullscreen app that we created before
-
-The final **main.py** will look like below
-
-```py
+# import libraries
 from PySide2.QtQml import QQmlApplicationEngine
 from PySide2.QtWidgets import *
 from PySide2.QtCore import *
 from ledControl import Setting
 
+# launch the app
 if __name__ == '__main__':
     app = QApplication([])
     engine = QQmlApplicationEngine()
+    # location of the fullscreen app that we created before
     url = QUrl("./App.qml")
     context = engine.rootContext()
     seting = Setting()
