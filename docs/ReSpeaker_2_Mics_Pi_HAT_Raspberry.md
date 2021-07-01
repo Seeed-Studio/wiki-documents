@@ -22,7 +22,7 @@ Make sure that you are running [the latest Raspberry Pi OS](https://www.raspberr
 
 ```
 sudo apt-get update
-git clone https://github.com/HinTak/seeed-voicecard
+git clone https://github.com/respeaker/seeed-voicecard.git
 cd seeed-voicecard
 sudo ./install.sh
 sudo reboot now

@@ -13,20 +13,20 @@ sku: 103030216
 ReSpeaker 4-Mic Array for Raspberry Pi is a quad-microphone expansion board for Raspberry Pi designed for AI and voice applications. This means that we can build a more powerful and flexible voice product that integrates Amazon Alexa Voice Service, Google Assistant, and so on.
 
 
-Different from [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html), this board is developed based on AC108, a highly integrated quad-channel ADC with I2S/TDM output transition for high definition voice capture, which allows the device to pick up sounds in a 3 meters radius. Besides, this 4-Mics version provides a super cool LED ring, which contains 12 APA102 programable LEDs. With that 4 microphones and the LED ring, Raspberry Pi would have the ability to do VAD(Voice Activity Detection), estimate DOA(Direction of Arrival), do KWS(Keyword Search) and show the direction via LED ring, just like Amazon Echo or Google Home.
+Different from [ReSpeaker 2-Mics Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html), this board is developed based on AC108, a highly integrated quad-channel ADC with I2S/TDM output transition for high definition voice capture, which allows the device to pick up sounds in a 3 meters radius. Additionally, this 4-Mics version features an LED ring with 12 APA102 programable LEDs. With that 4 microphones and the LED ring, Raspberry Pi would have the ability to do VAD(Voice Activity Detection), estimate DOA(Direction of Arrival), do KWS(Keyword Search) and show the direction via LED ring, just like Amazon Echo or Google Home.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/uAQf0RKBNHo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/IkSfBSf1IRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html)
 
 ## Features
 
-* Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+* Raspberry Pi compatible (supports Raspberry Pi Zero and Zero W, Raspberry PiB+, Raspberry Pi 2B, Raspberry Pi 3B, Raspberry Pi 3B+, Raspberry Pi3 A+ and Raspberry Pi 4)
 * 4 Microphones
 * 3 meters radius voice capture
 * 2 Grove Interfaces
 * 12 APA102 User LEDs
-* Software Algorithm: VAD(Voice Activity Detection), DOA(Direction of Arrival) and KWS(Keyword Search)
+* Software Algorithms: VAD(Voice Activity Detection), DOA(Direction of Arrival) and KWS(Keyword Search)
 
 Note: There is no audio output interface on ReSpeaker 4-Mic Array for Raspberry Pi. It is only for voice capture. We can use the [headphone jack](https://www.raspberrypi.org/documentation/configuration/audio-config.md) on Raspberry Pi for audio output.
 
@@ -41,12 +41,12 @@ Note: There is no audio output interface on ReSpeaker 4-Mic Array for Raspberry 
 
 - MIC: 4 analog microphones
 - LED: 12 APA102 programable RGB LEDs, connected to SPI interface
-- Raspberry Pi 40-Pin Headers: support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B and Raspberry Pi 3 B+
+- Raspberry Pi 40-Pin Headers: compatible with Raspberry Pi Zero and Zero W, Raspberry PiB+, Raspberry Pi 2B, Raspberry Pi 3B, Raspberry Pi 3B+, Raspberry Pi3 A+ and Raspberry Pi 4
 - AC108: highly integrated quad-channel ADC with I2S/TDM output transition
 - I2C: Grove I2C port, connected to I2C-1
 - GPIO12: Grove digital port, connected to GPIO12 & GPIO13
 
-Note: If we want to use the APA102 RGB LEDs, please write HIGH to `GPIO5` first to enable VCC of the LEDs.
+Note: If you use the APA102 RGB LEDs, make sure to write HIGH to `GPIO5` first to enable VCC of the LEDs.
 
 
 ## Getting Started
@@ -55,39 +55,36 @@ Note: If we want to use the APA102 RGB LEDs, please write HIGH to `GPIO5` first 
 
 Mount ReSpeaker 4-Mic Array on Raspberry Pi, make sure that the pins are properly aligned when stacking the ReSpeaker 4-Mic Array for Raspberry Pi.
 
-Note: Hot-plugging ReSpeaker 4-Mic Array is not allowed.It will damage the respeaker.
+Note: Hot-plugging ReSpeaker 4-Mic Array is not allowed. It will damage the respeaker.
 
 ![connection pic1](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/connect1.jpg)
 ![connection pic2](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/connect2.jpg)
 
 **Install driver**
 
-The AC108 codec is not supported by Pi kernel builds currently, we have to build it manually.
+Make sure that you are running [the latest Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2021.06.30)*
 
-- Step 1. Please Make sure running [the lastest Raspbian Operating System(debian 9)](https://www.raspberrypi.org/downloads/raspbian/) on Pi. *(updated at 2018.11.13)*
+- Step 1. Get the Seeed voice card source code, install and reboot.
 
-- Step 2. Get the seeed voice card source code.
-
-```sh
-$ sudo apt-get update
-$ sudo apt-get upgrade
-$ git clone https://github.com/respeaker/seeed-voicecard.git
-$ cd seeed-voicecard
-$ sudo ./install.sh  
-$ reboot
+```
+sudo apt-get update
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh
+sudo reboot now
 ```
 
-- Step 3. Then select the headphone jack on Raspberry Pi for audio output:
+- Step 2. Then select audio output on Raspberry Pi:
 
 ```sh
 sudo raspi-config
-# Select 7 Advanced Options
-# Select A4 Audio
-# Select 1 Force 3.5mm ('headphone') jack
+# Select 1 System options
+# Select S2 Audio
+# Select your preferred Audio output device
 # Select Finish
 ```
 
-- Step 4. Check that the sound card name looks like this:
+- Step 3. Check that the sound card name looks like this:
 
 ```sh
 pi@raspberrypi:~ $ arecord -L
@@ -125,7 +122,7 @@ usbstream:CARD=ALSA
 
 If we want to change the `alsa` settings, we can use `sudo alsactl --file=ac108_asound.state store` to save it. And when we need to use the settings again, copy it to: `sudo cp ~/seeed-voicecard/ac108_asound.state /var/lib/alsa/asound.state`
 
-- Step 5. Open Audacity and select **AC108 & 4 channels** as input and **bcm2835 alsa: - (hw:0:0)** as output to test:
+- Step 4. Open Audacity and select **AC108 & 4 channels** as input and **bcm2835 alsa: - (hw:0:0)** as output to test:
 
 ```sh
 $ sudo apt update
@@ -135,15 +132,33 @@ $ audacity                      // run audacity
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/audacity.png)
 
-- Step 6. Or we could record with `arecord` and play with `aplay`:
+- Alternatively if you use Lite Raspbian Pi OS image and don't have GUI, you can record with `arecord` and play with `aplay`:
 
 ```
+sudo apt-get install sox                             //for audio conversion
 arecord -Dac108 -f S32_LE -r 16000 -c 4 hello.wav    // only support 4 channels
+sox hello.wav -c 2 stereo.wav                        // convert to stereo
 aplay hello.wav                                      // make sure default device
                                                      // Audio will come out via audio jack of Raspberry Pi
 ```
 
-**Play with APA102 LEDs**
+
+## Usage overview 
+
+To run the following examples, clone https://github.com/respeaker/4mics_hat.git repository to your Raspberry Pi 
+
+```
+git clone https://github.com/respeaker/4mics_hat.git
+```
+
+All the Python scripts, mentioned in the examples below can be found inside this repository. To install the necessary dependencies, from mic_hat repository folder, run
+
+```
+sudo apt-get install portaudio19-dev libatlas-base-dev
+pip3 install -r requirements.txt
+```
+
+**APA102 LEDs**
 
 Each on-board APA102 LED has an additional driver chip. The driver chip takes care of receiving the desired colour via its input lines and then holding this colour until a new command is received.
 
@@ -155,156 +170,52 @@ Each on-board APA102 LED has an additional driver chip. The driver chip takes ca
     - Go to "SPI"
     - Enable SPI
     - Exit the tool
-- Step 2. Get APA102 LEDs Library and examples
 
-```sh
-pi@raspberrypi:~ $ cd /home/pi
-pi@raspberrypi:~ $ git clone https://github.com/respeaker/4mics_hat.git
-pi@raspberrypi:~ $ cd /home/pi/4mics_hat
-pi@raspberrypi:~/4mics_hat $ sudo apt install python-virtualenv          # install python virtualenv tool
-pi@raspberrypi:~/4mics_hat $ virtualenv --system-site-packages ~/env     # create a virtual python environment
-pi@raspberrypi:~/4mics_hat $ source ~/env/bin/activate                   # activate the virtual environment
-(env) pi@raspberrypi:~/4mics_hat $ pip install spidev gpiozero           # install spidev and gpiozero
-```
 
-- Step 3. Then run the example code under virtualenv, now we can see the LEDs blink like Google Assistant.
+- Step 2. Then run the example code, now we can see the LEDs blink like Alexa Assistant.
 
 ```
-(env) pi@raspberrypi:~/4mics_hat $ python pixels_demo.py
+python3 interfaces/pixels.py
 ```
 
-## Extract Voice
+### Record sound with Python
 
-We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice.
+We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to record sound with Python.
 
-- Step 1, We need to run the following script to get the device index number of 4 Mic pi hat:
+First, run the following script to get the device index number of 2 Mic pi hat:
 
-```sh
-$ sudo pip install pyaudio
-$ cd ~
-$ nano get_index.py
+```
+python3 recording_examples/get_device_index.py
 ```
 
-- Step 2, copy below code and paste on get_index.py.
-
-```Python
-import pyaudio
-
-p = pyaudio.PyAudio()
-info = p.get_host_api_info_by_index(0)
-numdevices = info.get('deviceCount')
-
-for i in range(0, numdevices):
-        if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
-            print "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
-```
-
-- Step 3, press Ctrl + X to exit and press Y to save.
-
-- Step 4, run 'sudo python get_index.py' and we will see the device ID as below.
+You will see the device ID as below.
 
 ```
 Input Device id  2  -  seeed-4mic-voicecard: - (hw:1,0)
 ```
 
-- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script record.py to record a speech.
+To record the sound, open ```recording_examples/record.py``` file with nano or other text editor and change  `RESPEAKER_INDEX = 2` to index number of ReSpeaker on your system. Then run python script record.py to make a recording:
 
-```Python
-import pyaudio
-import wave
-
-RESPEAKER_RATE = 16000
-RESPEAKER_CHANNELS = 4 
-RESPEAKER_WIDTH = 2
-# run getDeviceInfo.py to get index
-RESPEAKER_INDEX = 2  # refer to input device id
-CHUNK = 1024
-RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = "output.wav"
-
-p = pyaudio.PyAudio()
-
-stream = p.open(
-            rate=RESPEAKER_RATE,
-            format=p.get_format_from_width(RESPEAKER_WIDTH),
-            channels=RESPEAKER_CHANNELS,
-            input=True,
-            input_device_index=RESPEAKER_INDEX,)
-
-print("* recording")
-
-frames = []
-
-for i in range(0, int(RESPEAKER_RATE / CHUNK * RECORD_SECONDS)):
-    data = stream.read(CHUNK)
-    frames.append(data)
-
-print("* done recording")
-
-stream.stop_stream()
-stream.close()
-p.terminate()
-
-wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-wf.setnchannels(RESPEAKER_CHANNELS)
-wf.setsampwidth(p.get_sample_size(p.get_format_from_width(RESPEAKER_WIDTH)))
-wf.setframerate(RESPEAKER_RATE)
-wf.writeframes(b''.join(frames))
-wf.close()
+```
+python3 recording_examples/record.py
 ```
 
-- Step 6. If you want to extract channel 0 data from 4 channels, please follow below code. For other channel X, please change [0::4] to [X::4].
+- Step 6. If you want to extract channel 0 data from 4 channels, have a look at the content of ``` record_one_channel.py```. For other channel X, please change [0::4] to [X::4].
 
-```python
-import pyaudio
-import wave
-import numpy as np
+```
+python3 recording_examples/record_one_channel.py
+```
 
-RESPEAKER_RATE = 16000
-RESPEAKER_CHANNELS = 4
-RESPEAKER_WIDTH = 2
-# run getDeviceInfo.py to get index
-RESPEAKER_INDEX = 2  # refer to input device id
-CHUNK = 1024
-RECORD_SECONDS = 3
-WAVE_OUTPUT_FILENAME = "output.wav"
+To play the recorded samples you can either use aplay system utility, for example
 
-p = pyaudio.PyAudio()
-
-stream = p.open(
-            rate=RESPEAKER_RATE,
-            format=p.get_format_from_width(RESPEAKER_WIDTH),
-            channels=RESPEAKER_CHANNELS,
-            input=True,
-            input_device_index=RESPEAKER_INDEX,)
-
-print("* recording")
-
-frames = [] 
-
-for i in range(0, int(RESPEAKER_RATE / CHUNK * RECORD_SECONDS)):
-    data = stream.read(CHUNK)
-    # extract channel 0 data from 4 channels, if you want to extract channel 1, please change to [1::4]
-    a = np.fromstring(data,dtype=np.int16)[0::4]
-    frames.append(a.tostring())
-
-print("* done recording")
-
-stream.stop_stream()
-stream.close()
-p.terminate()
-
-wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-wf.setnchannels(1)
-wf.setsampwidth(p.get_sample_size(p.get_format_from_width(RESPEAKER_WIDTH)))
-wf.setframerate(RESPEAKER_RATE)
-wf.writeframes(b''.join(frames))
-wf.close()
+```bash
+aplay -f cd -Dhw:0 output.wav #for Stereo sound
+aplay -D plughw:0,0 output_one_channel.wav #for Mono sound from one channel
 ```
 
 ## Real-time Sound Source Localization and Tracking
 
-[ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to performing sound source localization, tracking, separation and post-filtering. Let's have fun with it.
+[ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to performing sound source localization, tracking, separation and post-filtering.
 
 - Step 1. Get ODAS and build it.
 
@@ -351,7 +262,7 @@ Picovoice is an end-to-end platform for building voice products on your terms. I
 **Step 2.** Open Terminal and type following command to install `pyaudio` driver.
 
 ```sh
-$ sudo pip3 install pyaudio
+pip3 install pyaudio
 ```
 
 **Note**: Please make sure you have `pip3` installed in your Raspberry Pi
@@ -359,17 +270,17 @@ $ sudo pip3 install pyaudio
 **Step 3.** Type the following command on the terminal to **install the Picovoice demo for ReSpeaker 4-Mic Array**.
 
 ```sh
-$ sudo pip3 install pvrespeakerdemo
+pip3 install pvrespeakerdemo
 ```
 
 ### Demo Usage
 
-The demo utilises the ReSpeaker 4-Mic array on a Raspberry Pi with Picovoice technology to control the LEDs. **This demo is triggered by the wake word "`Picovoice`" and will be ready to take follow-on actions, such as turning LEDs on and off, and changing LED colors.**
+The demo utilizes the ReSpeaker 4-Mic array on a Raspberry Pi with Picovoice technology to control the LEDs. **This demo is triggered by the wake word "`Picovoice`" and will be ready to take follow-on actions, such as turning LEDs on and off, and changing LED colors.**
 
 After the installation is finished, type this command to run the demo in the terminal:
 
 ```sh
-$ picovoice_respeaker_demo
+picovoice_respeaker_demo
 ```
 
 ### Voice Commands
@@ -453,9 +364,9 @@ The lighting commands are defined by a Picovoice *Speech-to-Intent context*. You
 
 <p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/Dfn3wBE2pwY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-To demonstrate the Picovoice's cabability we have also prepared a multi wake word examples using ReSpeaker 4-Mic Array with Raspberry Pi! Different wake word can set to execute certain tasks.
+To demonstrate the Picovoice's capability we have also prepared a multi wake word examples using ReSpeaker 4-Mic Array with Raspberry Pi! Different wake word can set to execute certain tasks.
 
-*This package contains a commandline demo for controlling ReSpeaker 4-mic microphone array LEDs using Porcupine.*
+*This package contains a command line demo for controlling ReSpeaker 4-mic microphone array LEDs using Porcupine.*
 
 ### Porcupine
 
@@ -475,7 +386,7 @@ applications. It is
 Running the following command in terminal to install demo driver:
 
 ```sh
-$ sudo pip3 install ppnrespeakerdemo
+pip3 install ppnrespeakerdemo
 ```
 
 #### Multi Wake Word Usage
@@ -483,7 +394,7 @@ $ sudo pip3 install ppnrespeakerdemo
 Run the following in terminal after the driver installation:
 
 ```sh
-$ porcupine_respeaker_demo
+porcupine_respeaker_demo
 ```
 
 Wait for the demo to initialize and print `[Listening]` in the terminal. Say:
