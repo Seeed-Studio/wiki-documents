@@ -891,117 +891,9 @@ Light value is 31
 
 ## FAQs
 
-**Q1: How to change the senstivity of the wake up word?**
+**Q1: How to record and play with Audacity?**
 
-**A1:** 
-
-
-<div class="admonition note" >
-<p class="admonition-title">Note</p>
-This way to adjust the sensitivity is only for the Out of box demo. 
-</div>
-
-
-When you finish the Out of box demo, you may find the `Snowboy` is hard to wake up. You can modify the following file to adjust the sensitivity.
-
-
-```
-sudo nano /usr/local/bin/respeakerd_safe
-```
-
-You will see the following code. 
-
-```PYTHON
-#!/bin/bash
-
-pulseaudio --check
-
-while [ $? == 1 ]; do
-    sleep 1
-    pulseaudio --check
-done
-
-sleep 5
-
-/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch"
-```
-
-Find the `snowboy_sensitivity="0.4"`, the default valnue is `0.4`. The sensitivity range is 0.1-0.9, the larger the number, the higher the sensitivity. However, the probability of false triggering is also higher. For example, change the `0.4` to `0.6`, then press ++ctrl+x++ to save and quit. 
-
-Then tap
-```
-sudo reboot
-```
-
-
-Call `snowboy` to check.
-
-
-**Q2: How to change the wake up words?**
-
-**A2**
-
-step 1. Please go to the official web of [Snowboy](https://snowboy.kitt.ai/dashboard). Login in with your google ID or Github ID or just create one. 
-
-
-step 2. Then click `Create Hotword`, or just pick an existing `pmdl` file to download.
-
-Step 3. Copy the `pmdl` file into the following location of ReSpeaker Core v2.0 `/usr/local/etc/respeakerd/resources/`. You can use the command below to see.
-
-```
-cd /usr/local/etc/respeakerd/resources/
-ls
-
-```
-
-![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Q2.png)
-
-
-Step 4. Choose the hot word by modifying the congfig file.
-
-```
-sudo nano /usr/local/bin/respeakerd_safe
-
-```
-
-Find the `snowboy_model_path="/usr/local/etc/respeakerd/resources/snowboy.umdl"`, in this demo we use `jiojio.pmdl`, so we change it to `snowboy_model_path="/usr/local/etc/respeakerd/resources/jiojio.pmdl"`.
-You can change it with your own file.Then it should be something like:
-
-
-```PYTHON
-#!/bin/bash
-
-pulseaudio --check
-
-while [ $? == 1 ]; do
-    sleep 1
-    pulseaudio --check
-done
-
-sleep 5
-
-/usr/local/bin/respeakerd --snowboy_res_path="/usr/local/etc/respeakerd/resources/common.res" --snowboy_model_path="/usr/local/etc/respeakerd/resources/jiojio.pmdl" --snowboy_sensitivity="0.4" --source="alsa_input.platform-sound_0.seeed-8ch"
-```
-
-Then save and exit.And reboot with:
-
-```
-sudo reboot
-```
-
-Once the ReSpeaker Core v2.0 reboot, you can wake up it with your own hot word.
-
-
-Tip!!!
-​    The defualt file is **umdl** which is released by the snowboy company,and the file you created is **pmdl** which means personal.
-
-
-
-
-
-**Q3: How to record and play with Audacity?**
-
-  **A3:** The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
+  **A1:** The **lxqt** version has pre-installed Audacity, Please click the **Bird button** at the lower left corner, and you will find it at the **Sound & Video -> Audacity**.
 
   When you opened the Audacity, please click the little black arrow to choose the record and play device and set as the picture below.
 
@@ -1017,9 +909,9 @@ Tip!!!
 
   ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/audacity_playback.png)
 
-**Q4: How to access the AP of ReSpeaker Core v2.0?**
+**Q2: How to access the AP of ReSpeaker Core v2.0?**
 
-**A4:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
+**A2:** You can use two wires cable to power the ReSpeaker Core v2.0. When the system is running, the Respeaker Core v2.0 can act as an AP. You can use your computer to
 access this AP. As the picture show. You can follow the steps to configure the WiFi of ReSpeaker Core v2.0.
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Ap.png)
@@ -1042,9 +934,9 @@ And the user name of ReSpeaker Core v2.0 is **respeaker**, the password is **res
 
 - **Step 3.** When you get into the Serial Console， you can [setup the WiFi](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#a-wi-fi-setting-up)
 
-**Q5: How to adjust the volume?**
+**Q3: How to adjust the volume?**
 
-**A5:** You can use Alsamixer to adjust the playback volume and capture sensitivity.
+**A3:** You can use Alsamixer to adjust the playback volume and capture sensitivity.
 
 - **Step 1.** Tap the following code to open Alsamixer:
 
@@ -1058,8 +950,8 @@ And you can adjust the value by pressing the **Up** or **Down** key.
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Alexamixer.png)
 
-**Q6: How to use the user button?**
-**A6:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
+**Q4: How to use the user button?**
+**A4:** As you can see, there is an user button at the back of ReSpeaker Core v2.0. Here we provide a python demo to show how to use it.
 
 - **Step 1.** Tap the command below:
 
@@ -1088,17 +980,17 @@ Then you will see the result is something like that:
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/userbutton.png)
 
-**Q7: The computer can not recognize the ReSpeaker Core v2.0, driver problem?**
+**Q5: The computer can not recognize the ReSpeaker Core v2.0, driver problem?**
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/CDC_Driver.png)
 
-**A7:** This may happen when you connect the ReSpeaker Core v2.0 with you computer via OTG or UART.
+**A5:** This may happen when you connect the ReSpeaker Core v2.0 with you computer via OTG or UART.
 This is because the CDC Serial driver has a conflict with other OTG driver. Please uninstall the conflicted driver
  and connect the ReSpeaker Core v2.0 again.
 
-**Q8: What if I want to use the external antenna?**
+**Q6: What if I want to use the external antenna?**
 
-**A8:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
+**A6:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
 Instead of the on-board antenna, you can use an external antenna. To do so, you need to remove one resistance and solder it
 on the new pads, as shown below：
 
@@ -1108,9 +1000,9 @@ on the new pads, as shown below：
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ant.png)
 
 
-**Q9: How to build my owner flasher firmware? So I can burn my owner firmware to rest of ReSpeaker Core v2.0.**
+**Q7: How to build my owner flasher firmware? So I can burn my owner firmware to rest of ReSpeaker Core v2.0.**
 
-**A9:** please run the image builder on RAM>2G ARM debian system.
+**A7:** please run the image builder on RAM>2G ARM debian system.
 
 Here are the detail instructions.
 
@@ -1118,9 +1010,9 @@ Here are the detail instructions.
 - Step 2. modify the upload path @ /publish/respeaker.io_stable.sh
 - Step 3. sudo ./publish/respeaker.io_stable.sh
 
-**Q10: When plug the burned SD card to ReSpeaker Core v2.0, there is no COM port in device manager and no display on HDMI interface.**
+**Q8: When plug the burned SD card to ReSpeaker Core v2.0, there is no COM port in device manager and no display on HDMI interface.**
 
-**A10:** Please use the USb to TTL adaptor to connect to UART directly, you will see the below errors. 
+**A8:** Please use the USb to TTL adaptor to connect to UART directly, you will see the below errors. 
 
 ```
 [    2.119560] mmcblk0: timed out sending SET_BLOCK_COUNT command, card status 0x400900
