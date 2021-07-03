@@ -28,7 +28,7 @@ sudo ./install.sh
 sudo reboot now
 ```
 
-- Step 2. Check that the sound card name matches the source code seeed-voicecard by command aplay -l and arecord -l.
+- Step 2. Check that the sound card name matches the source code seeed-voicecard by command ```aplay -l``` and ```arecord -l```.
 
 ```
 pi@raspberrypi:~/seeed-voicecard $ aplay -l
