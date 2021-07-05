@@ -110,7 +110,7 @@ Put the Seeeduino XIAO on the expansion board, the XIAO green LED should light u
 
 
 !!!Note
-    Please plug the Seeeduino XIAO on the expansion board first, then plug Type-C, in case damage the board and Seeeduino XIAO. 
+    Please plug the Seeeduino XIAO on the expansion board first, then plug Type-C, Remember pluing Seeeduino XIAO into the **middle of the two female header connectors**, otherwise you will damage the Seeeduino XIAO and the expansion board.
 
 
 ## **Battery usage**
