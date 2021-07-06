@@ -10,10 +10,10 @@ Many seniors live alone in apartments or smaller homes after their children have
 
 ## Hardware
 
--  [Grove - 3-Axis Digital Accelerometer (LIS3DHTR)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR-p-4533.html) 
+-  [Grove - 3-Axis Digital Accelerometer (LIS3DHTR)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-16g.html) 
 -  [Wio RP2040 mini Dev Board](https://www.seeedstudio.com/Wio-RP2040-mini-Dev-Board-p-4933.html) to complete this project. 
 
-[Grove - 3-Axis Digital Accelerometer (LIS3DHTR)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR-p-4533.html) can be used as a sensor to detect falls, and [Wio RP2040 mini Dev Board](https://www.seeedstudio.com/Wio-RP2040-mini-Dev-Board-p-4933.html) can be used to process data and send distress information wirelessly. In addition, you need a computer and WiFi.
+[Grove - 3-Axis Digital Accelerometer (LIS3DHTR)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-16g.html) can be used as a sensor to detect falls, and [Wio RP2040 mini Dev Board](https://www.seeedstudio.com/Wio-RP2040-mini-Dev-Board-p-4933.html) can be used to process data and send distress information wirelessly. In addition, you need a computer and WiFi.
 ​
 
 ### Wiring Diagram
