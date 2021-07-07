@@ -329,6 +329,8 @@ nav:
           - Build Your Own UI Using Qt for Python: reTerminal-build-UI-using-Qt-for-Python.md
           - Build Your Own UI Using Flutter: reTerminal-build-UI-using-Flutter.md
           - Build Your Own UI Using Electron: reTerminal-build-UI-using-Electron.md
+          - Machine Learning Applications:
+             - Getting started with Google MediaPipe: reTerminal_ML_MediaPipe.md          
 
       - reServer:
           - Getting Started with reServer: reServer-Getting-Started.md
