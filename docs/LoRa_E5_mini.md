@@ -51,7 +51,7 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 
 ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/hardware%20overview/4041615358935_.pic_hd.jpg)
 
-![](https://files.seeedstudio.com/products/113100022/4601617173003_.pic_hd.jpg)
+![](https://files.seeedstudio.com/products/317990687/image/3001615286723_.pic_hd.jpg)
 
 
 
@@ -190,9 +190,9 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 **LoRa-E5 module ONLY transmits through RFO_HP:**
 
-- Receive: PA4=1, PB5=0
+- Receive: PA4=1, PA5=0
 
-- Transmit(high output power, SMPS mode): PA4=0, PB5=1
+- Transmit(high output power, SMPS mode): PA4=0, PA5=1
 
 
 
@@ -289,6 +289,12 @@ Rx: +DR: EU868
 Tx: AT+CH=NUM,0-2
 Rx: +CH: NUM, 0-2
 
+// If you are using US915 FSB2
+// Tx: AT+DR=US915
+// Rx: +DR: US915
+// Tx: AT+CH=NUM,8-15
+// Rx: +CH: NUM, 8-15
+
 Tx: AT+MODE=LWOTAA
 Rx: +MODE: LWOTAA
 
@@ -330,7 +336,7 @@ This section is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRa
 !!!Attention
        Please read [Erase Factory AT Firmware](https://wiki.seeedstudio.com/LoRa_E5_mini/#21-erase-factory-at-firmware) section first, as if we need to erase the Factory AT Firmware before we program with SDK. After erasing the Factory AT Firmware it CANNOT be recovered.
 
-#### 2.1 Preparasions
+#### 2.1 Preparations
 
 Softwares:
 
@@ -358,13 +364,13 @@ Hardwares:
 |RF_CTRL1|PC4|PA4|
 |RF_CTRL2|PC5|PA5|
 |RF_CTRL3|PC3|None|
-|BUT1|PA0|PB13|
+|BUT1|PA0|PB13 (Boot Button)|
 |BUT2|PA1|None|
 |BUT3|PC6|None|
 |LED1|PB15|None|
 |LED2|PB9|PB5|
 |LED3|PB11|None|
-|DBG1|PB12|PA0|
+|DBG1|PB12|PA0 (D0 Button)|
 |DBG2|PB13|PB10|
 |DBG3|PB14|PB3|
 |DBG4|PB10|PB4|
@@ -376,13 +382,11 @@ Hardwares:
 
 - Open the `LoRaWAN_End_Node` example with `STM32CubeIDE`, by double click file `LoRaWAN_End_Node\STM32CubeIDE\.project`
 
-- Click `Build Debug` for this example, it should works without any errors
+- Click `Build Debug` for this example, it should work without any errors
 
 ![build](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/build.png)
 
 #### 2.4 Modify your Device EUI, Application EUI, Application KEY and your LoRawan Region
-
-![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/5611616569871_.pic_hd.jpg)
 
 - Please follow the [guide](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-ttn) here to setup your TTN application, get your Application EUI and copy it to the macro definition `LORAWAN_JOIN_EUI` in `LoRaWAN/App/se-identity.h` , for example, my Application EUI is `70 B3 D5 7E D0 03 F0 6A` :
 
@@ -396,7 +400,7 @@ Hardwares:
 
 ```
 
-- Also, you can modify your Device EUI and Application Key, by setting the macro definition `LORAWAN_DEVICE_EUI` and `LORAWAN_APP_KEY` in `LoRaWAN/App/se-identity.h` , don't forget to ensure `LORAWAN_DEVICE_EUI` and `LORAWAN_APP_KEY` are the same as the `Device EUI` and `App Key` in TTN console.
+- Also, you can modify your Device EUI and Application Key, by setting the macro definition `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` in `LoRaWAN/App/se-identity.h` , don't forget to ensure `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` are the same as the `Device EUI` and `App Key` in TTN console.
 
 ```C
 // LoRaWAN/App/se-identity.h
@@ -407,12 +411,12 @@ Hardwares:
 #define LORAWAN_DEVICE_EUI                                 { 0x00, 0x80, 0xE1, 0x15, 0x00, 0x07, 0x4C, 0xD5 }
 
 /*!
- * Application root key
+ * Network root key
  */
-#define LORAWAN_APP_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_NWK_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
 ```
 
-![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/key.png)
+![](https://github.com/seeed-lora/LoRa-E5-LoRaWAN-End-Node/blob/master/Doc/key.png?raw=true)
 
 - The default LoRaWAN Region is `EU868`, you can modify it, by setting the macro definition `ACTIVE_REGION` in `LoRaWAN/App/lora_app.h`
 
@@ -485,17 +489,27 @@ MW_RADIO_VERSION:   V0.6.1
 
 - Cheers! You have already connected LoRa-E5 to LoRaWAN Network! Can't wait to see you develop some wonderful LoRaWAN End Node applications!
 
+## Application Notes
+
+- LoRa-E5 only supports high power output mode, so you can't use these macro defnitions in `radio_board_if.h` :
+
+```
+#define RBI_CONF_RFO     RBI_CONF_RFO_LP_HP
+// or
+#define RBI_CONF_RFO     RBI_CONF_RFO_LP
+```
+
 More demos coming soon...
 
 ## Resources
 
 LoRa-E5 mini Datasheet:
 
-- <p><a href="https://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.brd">LoRa-E5 mini v1.0.brd</a></p>
+- <p><a href="http://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.brd">LoRa-E5 mini v1.0.brd</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.pdf">LoRa-E5 mini v1.0.pdf</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.sch">LoRa-E5 mini v1.0.sch</a></p>
+- <p><a href="http://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.sch">LoRa-E5 mini v1.0.sch</a></p>
 
 LoRa-E5 Datasheet: 
 
