@@ -1,7 +1,7 @@
 # Weekly Wiki
-![](https://files.seeedstudio.com/wiki/IMAGES/21-June-Week4.png)
+![](https://files.seeedstudio.com/wiki/IMAGES/21-July-Week-2.png)
 
-It's the fourth week of June and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
+It's the second week of July and we are back with "Seeed Weekly Wiki Updates" as promised. This week was also filled with a lot of fun stuff at Seeed and we are happy to update you all with what we have done at Seeed Wiki. 
 As you all know, Seeed Wiki is a dedicated platform where we provide the proper guidance and support you need when getting started with our products. We put a lot of effort to make this platform more user friendly because we want to enable the learning of electronics in a more systematic approach.  
 We will bring you all these wiki updates in a weekly basis. So stay tuned with us and don't forget to visit this page again next week!
 
@@ -19,26 +19,26 @@ So far we have prepared four wiki documents for reTerminal and more will be comi
 - [Hardware and Interfaces Usage](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage)
 - [Build Your Own UI Using Qt for Python](https://wiki.seeedstudio.com/reTerminal-build-UI-using-Qt-for-Python)
 - [Build Your Own UI Using Flutter](https://wiki.seeedstudio.com/reTerminal-build-UI-using-Flutter)
+- [Build Your Own UI Using Electron](https://wiki.seeedstudio.com/reTerminal-build-UI-using-Electron)
+- [Getting Started with MediaPipe on reTerminal](https://wiki.seeedstudio.com/reTerminal_ML_MediaPipe)
 
 <p style="text-align:center;"><a href="https://wiki.seeedstudio.com/reTerminal"><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir"  width="1000" height="auto"></a></p>
 
-### Getting Started with reServer
+### Grove - OLED Display 1.12 (SH1107) V3.0 
 
-[reServer](https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html), as a milestone product of reThings family, is extremely compact and powerful. This smart tiny server is able to work easily and efficiently from the edge to the cloud.
+The [Grove - OLED Display 1.12 V3.0 (SH1107)](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) is a monochrome display with 128*128 resolution. Compared with LCDs, there are many advantages on OLED(Organic Light Emitting Diode) like self-emission, high contrast ratio, slim/thin outline, wide viewing angle and low power consumption. The display works on both 3.3V and 5V supply voltage. You can use either I2C or SPI interface to light up the display with your microcontroller to display words, images, and whatever you want.
 
-reServer is based on an ODYSSEY X86 v2 board and powered by the latest Intel® Core™ 11th Gen. processor and Intel® UHD Graphics or Intel® Iris Xe Graphics, which delivers high CPU and AI performance for various applications. It has two high-speed 2.5-Gigabit Ethernet ports and supports hybrid connectivity including 5G, LoRaWAN, BLE and WiFi. Meanwhile, reServer is of compact design to work efficiently in almost any scenario. The neat structure of reServer also makes it simple to access to the hard drives, memory and PCIe slots which allows easy installation, upgrades and maintenance.
+Click [here](https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-(SH1107)_V3.0) to get started with this display!
 
-We have prepared a [wiki document](https://wiki.seeedstudio.com/reServer-Getting-Started/) to help you get started with the reServer in the quickest and easiest way!
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-(SH1107)_V3.0"><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/img/10402050_Main-02.png" alt="pir"  width="500" height="auto"></a></p>
 
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/reServer-Getting-Started"><img src="https://files.seeedstudio.com/products/102110559/09-%E9%AB%98%E9%85%8D.png" alt="pir"  width="1000" height="auto"></a></p>
+### Grove - OLED Yellow&Blue Display 0.96 (SSD1315)
 
-### IoT with Wio RP2040 Board
+The [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) is a blue and yellow two-colour display with 128*64 resolution. The display works on both 3.3V and 5V supply voltage. You can use either I2C or SPI interface to light up the display with your microcontroller to display words, images, and whatever you want.
 
-Do you really know the surroundings around you? Yes? No? Maybe? How is the air quality? How is the surrounding noise? What is the temperature and humidity?
+Click [here](https://wiki.seeedstudio.com/Grove-OLED-Yellow&Blue-Display-0.96-(SSD1315)_V1.0) to learn more!
 
-We have prepared a [wiki](https://wiki.seeedstudio.com/IoT-with-wireless-Wio-RP2040-board-Know-the-Surroundings-around-You) to help you build a device to understand your surroundings in depth, while utilizing the wireless functionality and IoT on the [Wio RP2040 mini Dev Board](https://www.seeedstudio.com/Wio-RP2040-mini-Dev-Board-p-4933.html)!
-
-<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/IoT-with-wireless-Wio-RP2040-board-Know-the-Surroundings-around-You"><img src="https://files.seeedstudio.com/wiki/IoT-with-wireless-Wio-RP2040-board/wiring.jpg" alt="pir"  width="1000" height="auto"></a></p>
+<p style="text-align:center;"><a href="https://wiki.seeedstudio.com/Grove-OLED-Yellow&Blue-Display-0.96-(SSD1315)_V1.0"><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Yellow&Blue-Display-0.96-(SSD1315)_V1.0/img/10402049_Preview-07.png" alt="pir"  width="500" height="auto"></a></p>
 
 ## What's More?
 
