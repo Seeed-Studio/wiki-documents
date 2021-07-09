@@ -743,7 +743,9 @@ nav:
           - Grove - LED Strip Driver: Grove-LED_Strip_Driver.md
           - Grove - OLED Display 0.96 inch: Grove-OLED_Display_0.96inch.md
           - Grove - OLED Display 0.96" (SSD1315): Grove-OLED-Display-0.96-SSD1315.md
+          - Grove - OLED Yellow&Blue Display 0.96(SSD1315) - SPI/IIC -3.3V/5V: Grove-OLED-Yellow&Blue-Display-0.96-(SSD1315)_V1.0.md
           - Grove - OLED Display 1.12&#34;: Grove-OLED_Display_1.12inch.md
+          - Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC -3.3V/5V: Grove-OLED-Display-1.12-(SH1107)_V3.0.md
           - Grove - Red LED: Grove-Red_LED.md
           - I2C LCD: I2C_LCD.md
           - Grove - Red LED Matrix w/Driver: Grove-Red_LED_Matrix_w_Driver.md
