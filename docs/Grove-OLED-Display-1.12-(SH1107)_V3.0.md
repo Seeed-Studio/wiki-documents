@@ -330,19 +330,5 @@ Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki)
 * **[PDF]** [Grove-OLED Display 1.12inch V3.0 Sch](https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/res/Grove%20OLED%20Display%201.12%20(SH1107)%20v3.0.pdf)
 * **[Datasheet]** [SH1107_datasheet](https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/res/SH1107V2.1.pdf)
 
-## Project
-
-**Smart Crops: Implementing IoT in Conventional Agriculture!** Our mission with nature is to preserve it, designing and implementing technologies and monitoring methods with the help of IoT via Helium.
-
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/smart-crops-implementing-iot-in-conventional-agriculture-3674a6/embed' width='350'></iframe>
-
-**Automated Plant Watering System** A device that waters plants and monitors temprature using an ESP8266 and Android app.
-
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ammarshahid572/automated-plant-watering-system-cb23d9/embed' width='350'></iframe>
-
-**Flying BeagleBone Green** BBBmini is a state of the art Linux autopilot / flightcontroller Cape for the BeagleBone. It can be used for Copter, Planes or Rovers.
-
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/mirkix/flying-beaglebone-green-448b60/embed' width='350'></iframe>
-
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
