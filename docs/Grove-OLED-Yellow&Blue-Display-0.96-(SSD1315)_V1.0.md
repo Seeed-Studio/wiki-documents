@@ -134,7 +134,7 @@ void loop(void) {
 
 - **Step 3.** Follow the picture to connect the display and Seeeduino with wires.
 
-![](https://files.seeedstudio.com/wiki/Grove-OLED-Yellow&Blue-Display-0.96-(SSD1315)_V1.0/img/02.png)
+![](https://files.seeedstudio.com/wiki/Grove-OLED-Yellow&Blue-Display-0.96-(SSD1315)_V1.0/img/02s.png)
 
 - **Step 4.** Connect Seeeduino to a PC via a USB cable.
 
