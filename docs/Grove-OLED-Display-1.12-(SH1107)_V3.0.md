@@ -296,6 +296,8 @@ sudo chmod 777 badapple.sh
 ./badapple.sh
 ```
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mHhZgUNkPM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## U8g2 Library Introduction
 
 U8g2 is a monochrome graphics library for embedded devices. U8g2 supports monochrome OLEDs and LCDs, which include our chip SSD1327/SH1107G.
