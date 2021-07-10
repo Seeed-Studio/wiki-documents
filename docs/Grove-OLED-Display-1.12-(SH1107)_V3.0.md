@@ -265,6 +265,30 @@ sudo reboot
 sudo apt-get install wget gcc make unzip -y
 ```
 
+Install WiringPi Library
+
+*If you use WiringPi, you need to update WiringPi to version 2.52. This library may not be updated. Other libraries are recommended*
+```shell
+cd
+sudo apt-get install wiringpi
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+gpio -v
+```
+
+Install bcm2835
+
+```shell
+cd
+wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.60.tar.gz
+tar zxvf bcm2835-1.60.tar.gz 
+cd bcm2835-1.60/
+sudo ./configure
+sudo make && sudo make check && sudo make install
+```
+
+For more information and the newest libraries please refer to website：[bcm2835](http://www.airspayce.com/mikem/bcm2835/)
+
 - **Step 3.** Download the demo codes
 
 **1.** For [**I2C**](https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/demo/RaspberryPiI2C.zip)
