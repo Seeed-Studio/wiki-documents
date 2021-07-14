@@ -402,7 +402,27 @@ dmesg | grep tty
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 9.** Connect to the serial device by typing the following
+- **Step 9.** Navigate to minicom set up
+
+```sh
+sudo minicom -s
+```
+
+- **Step 10.** Select **Serial port setup**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/serial-port.png" alt="pir" width="300" height="auto"></p>
+
+- **Step 11.** Press **F** to turn off **Hardware Flow Control** and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/hw_flow_control.png" alt="pir" width="800" height="auto"></p>
+
+- **Step 12.** Select **Save setup as dfl** and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/dfl_save.png" alt="pir" width="300" height="auto"></p>
+
+- **Step 13.** Select **Exit** to exit from minicom configuration window
+
+- **Step 14.** Connect to the serial device by typing the following
 
 ```sh 
 minicom -D /dev/ttyACM0 -b 115200
@@ -412,31 +432,31 @@ minicom -D /dev/ttyACM0 -b 115200
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_2.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 10.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the BeagleV™ - StarLight and you will see the startup information as follows
+- **Step 15.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the BeagleV™ - StarLight and you will see the startup information as follows
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_3.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 11.** Press any key as soon as it starts up to enter the **upgrade menu**. In this menu, you can update uboot
+- **Step 16.** Press any key as soon as it starts up to enter the **upgrade menu**. In this menu, you can update uboot
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_4.png" alt="pir" width="1000" height="auto"></p>
 
-- **Step 12.** Type "0" and press **Enter** to update uboot
+- **Step 17.** Type "0" and press **Enter** to update uboot
 
-- **Step 13.** Press **Ctrl+A** and then press **s** to enter **upload mode**
+- **Step 18.** Press **Ctrl+A** and then press **s** to enter **upload mode**
 
-- **Step 14.** Select **xmodem** and press **Enter**
+- **Step 19.** Select **xmodem** and press **Enter**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-xmodem-select.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 15.** Select **Goto** from the bottom tab menu and press **Enter**
+- **Step 20.** Select **Goto** from the bottom tab menu and press **Enter**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-goto.png" alt="pir" width="750" height="auto"></p>
 
-- **Step 16.** Enter the directory path and press **Enter**
+- **Step 21.** Enter the directory path and press **Enter**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-directory-path.png" alt="pir" width="750" height="auto"></p>
 
-- **Step 17.** Select **fw_payload.bin.out** by navigating using **arrow keys** ,press **Space** and press **Enter**
+- **Step 22.** Select **fw_payload.bin.out** by navigating using **arrow keys** ,press **Space** and press **Enter**
 
 If you see the following output, that means you have successfully transferred the **fw_payload.bin.out** file to BeagleV™ - Starlight.
 
