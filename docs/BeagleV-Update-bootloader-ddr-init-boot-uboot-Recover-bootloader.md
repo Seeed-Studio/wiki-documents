@@ -191,49 +191,69 @@ dmesg | grep tty
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 6.** Connect to the serial device by typing the following
+- **Step 6.** Navigate to minicom set up
 
-```sh 
-minicom -D /dev/ttyACM0 -b 115200
+```sh
+sudo minicom -s
 ```
 
+- **Step 7.** Select **Serial port setup**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/serial-port.png" alt="pir" width="300" height="auto"></p>
+
+- **Step 8.** Press **F** to turn off **Hardware Flow Control** and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/hw_flow_control.png" alt="pir" width="800" height="auto"></p>
+
+- **Step 9.** Select **Save setup as dfl** and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/dfl_save.png" alt="pir" width="300" height="auto"></p>
+
+- **Step 10.** Select **Exit** to exit from minicom configuration window
+
+
+- **Step 11.** Connect to the serial device by typing the following
+
+```sh
+minicom -D /dev/ttyACM0 -b 115200
+```
 **Note:** The baud rate is set to 115200
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_2.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 7.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the BeagleV™ - StarLight and you will see the startup information as follows
+- **Step 12.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the BeagleV™ - StarLight and you will see the startup information as follows
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_3.png" alt="pir" width="600" height="auto"></p>
 
-- **Step 8.** Press any key as soon as it starts up to enter the **upgrade menu**. In this menu, you can only update uboot
+- **Step 13.** Press any key as soon as it starts up to enter the **upgrade menu**. In this menu, you can only update uboot
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_4.png" alt="pir" width="1000" height="auto"></p>
 
-- **Step 9.** Type **root@s5t** and press **Enter** to enter the extended version of the upgrade menu. In this menu, you can update uboot, bootloader and ddr init boot
+- **Step 14.** Type **root@s5t** and press **Enter** to enter the extended version of the upgrade menu. In this menu, you can update uboot, bootloader and ddr init boot
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_5.1.jpg" alt="pir" width="1000" height="auto"></p>
 
-- **Step 10.** Type "0" and press **Enter** to update the bootloader
+- **Step 15.** Type "0" and press **Enter** to update the bootloader
 
-- **Step 11.** Press **Ctrl+A** and then press **s** to enter **upload mode**
+- **Step 16.** Press **Ctrl+A** and then press **s** to enter **upload mode**
 
-- **Step 12.** Select **xmodem** and press **Enter**
+- **Step 17.** Select **xmodem** and press **Enter**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-xmodem-select.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 13.** Select **Goto** from the bottom tab menu and press **Enter**
+- **Step 18.** Select **Goto** from the bottom tab menu and press **Enter**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-goto.png" alt="pir" width="750" height="auto"></p>
 
-- **Step 14.** Enter the directory path and press **Enter**
+- **Step 19.** Enter the directory path and press **Enter**
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/minicom-directory-path.png" alt="pir" width="750" height="auto"></p>
 
-- **Step 15.** Select `bootloader-BEAGLEV-210209.bin.out` by navigating using **arrow keys** ,press **Space** and press **Enter**
+- **Step 20.** Select `bootloader-BEAGLEV-210209.bin.out` by navigating using **arrow keys** ,press **Space** and press **Enter**
 
 If you see the following output, that means you have successfully transferred the `bootloader-BEAGLEV-210209.bin.out` file to BeagleV™ - Starlight.
 
-- **Step 16.** Repeat the **steps 13 - 18** to update the **ddr init boot** as well according to the following:
+- **Step 21** Repeat the **steps 13 - 18** to update the **ddr init boot** as well according to the following:
 
 > <p style="font-size:16px">Type ‘1’ - update ddr init boot `[Filename: ddrinit-2133-210302.bin.out]` <br>
 
