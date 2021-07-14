@@ -204,7 +204,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 ## Block Diagram
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram.jpg" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram-v1.3.png" alt="pir" width="1000" height="auto"></p>
 
 ## Pinout Diagram
 
@@ -708,9 +708,9 @@ This will reinitialize the LCD on the reTerminal
 
 ## Resources
 
-- **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA_reTerminal-CM1432_SCH.pdf)
+- **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.pdf)
 
-- **[ZIP]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/202003183_PCBA-reTerminal.zip)
+- **[ZIP]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.zip)
 
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
