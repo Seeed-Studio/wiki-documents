@@ -345,6 +345,7 @@ Now you have connected with the BeagleV™ - StarLight via serial communication 
 
 ##### For Mac/Linux
 
+
 - **Step 1.** Insert the micro-SD card with the Fedora image from before into BeagleV™ - StarLight
 
 - **Step 2.** Connect one end of the USB Type-C cable to the USB Type-C port on the BeagleV™ - StarLight and connect the other end of the cable to the power adapter
@@ -375,9 +376,29 @@ sudo apt-get install minicom
 dmesg | grep tty
 ```
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="850" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_1.png" alt="pir" width="800" height="auto"></p>
 
-- **Step 9.** Connect to the serial device by typing the following
+- **Step 9.** Navigate to minicom set up
+
+```sh
+sudo minicom -s
+```
+
+- **Step 10.** Select **Serial port setup**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/serial-port.png" alt="pir" width="300" height="auto"></p>
+
+- **Step 11.** Press **F** to turn off **Hardware Flow Control** and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/hw_flow_control.png" alt="pir" width="800" height="auto"></p>
+
+- **Step 12.** Select **Save setup as dfl** and press **Enter**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/dfl_save.png" alt="pir" width="300" height="auto"></p>
+
+- **Step 13.** Select **Exit from Minicom**
+
+- **Step 14.** Connect to the serial device by typing the following
 
 ```sh 
 minicom -D /dev/ttyACM0 -b 115200
@@ -387,9 +408,9 @@ minicom -D /dev/ttyACM0 -b 115200
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/minicom_2.png" alt="pir" width="650" height="auto"></p>
 
-- **Step 10.** Turn on the power from the wall power socket to power on the BeagleV™ - StarLight
+- **Step 15.** Turn on the power from the wall power socket to power on the BeagleV™ - StarLight
 
-- **Step 11.** Type username and password in the prompt as follows:
+- **Step 16.** Type username and password in the prompt as follows:
 
 ```sh
 Username: riscv
