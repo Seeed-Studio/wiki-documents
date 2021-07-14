@@ -420,7 +420,7 @@ sudo minicom -s
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/dfl_save.png" alt="pir" width="300" height="auto"></p>
 
-- **Step 13.** Select **Exit** to exit from minicom configuration window
+- **Step 13.** Select **Exit from Minicom**
 
 - **Step 14.** Connect to the serial device by typing the following
 
