@@ -49,7 +49,7 @@ The following is list of solutions currently tested on reTerminal:
     <td><p style="text-align:center;"><img src="https://google.github.io/mediapipe/images/mobile/pose_tracking_android_gpu_small.gif" alt="pir" width="600" height="auto"></p></td>
     <td>Model complexity: 1  &nbsp  11.8 FPS 85 ms. per inference
         Model complexity: 2  &nbsp  6.1 FPS 163 ms. per inference
-        Model complexity: 3  &nbsp  11.8 FPS 85 ms. per inference
+        Model complexity: 3  &nbsp  -- FPS -- ms. per inference
     </td>
   </tr>
 </tbody>
