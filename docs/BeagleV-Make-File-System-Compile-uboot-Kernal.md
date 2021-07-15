@@ -281,11 +281,13 @@ git clone https://github.com/starfive-tech/u-boot
 
 ```sh
 cd u-boot
-make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_beagle_v_smode_defconfig
+make -jx ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_beagle_v_smode_defconfig
 ```
 
+**Note:** Here you need to change the **-jx** value according to the **number of cores in your CPU**. If your **CPU has 8 cores**, change this to **-j8**
+
 ```sh
-make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv u-boot.bin u-boot.dtb
+make -jx ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv u-boot.bin u-boot.dtb
 ```
 
 There will be these 2 files generated after compilation inside the **u-boot** directory: **u-boot.bin** and **u-boot.dtb**
@@ -293,6 +295,15 @@ There will be these 2 files generated after compilation inside the **u-boot** di
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/uboot-compile2.png" alt="pir" width="800" height="auto"></p>
 
 **Note:** The **u-boot.dtb** file will be used later in this guide when we try to move rootfs, uboot and kernel to BeagleV, whereas both **u-boot.dtb** and **u-boot.bin** will be used next for **OpenSBI compilation**
+
+- **Step 4.** Export the **u-boot path**
+
+```sh
+export U_BOOT_PATH=~/u-boot
+```
+
+**Note:** Change the path to the path of u-boot from the previous step
+
 
 ## Compile OpenSBI
 
@@ -312,14 +323,14 @@ cd ~ # home directory
 - **Step 2.** Download the source code for OpenSBI compilation
 
 ```sh
-git clone https://github.com/starfive-tech/opensbi
+git clone https://github.com/riscv/opensbi
 ```
 
 - **Step 3.** Inside **opensbi** directory, type the following to **compile openSBI**
 
 ```sh
 cd opensbi
-make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv PLATFORM=starfive/vic7100 FW_PAYLOAD_PATH={U-BOOT_PATH}/u-boot.bin FW_PAYLOAD_FDT_PATH={U-BOOT_PATH}/u-boot.dtb 
+make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv PLATFORM=generic FW_PAYLOAD_PATH=${U_BOOT_PATH}/u-boot.bin FW_FDT_PATH=${U_BOOT_PATH}/u-boot.dtb
 ```
 
 **Note:** Modify the path to the path of **u-boot** from before
@@ -497,8 +508,6 @@ make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv menuconfig
 ```sh
 make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv -jx
 ```
-
-**Note:** Here you need to change the **-jx** value according to the **number of cores in your CPU**. If your **CPU has 8 cores**, change this to **-j8**. This process will take some time and therefore please wait patiently
 
 You will see the following output after compilation
 
