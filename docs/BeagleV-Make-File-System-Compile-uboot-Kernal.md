@@ -281,13 +281,13 @@ git clone https://github.com/starfive-tech/u-boot
 
 ```sh
 cd u-boot
-make -jx ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_beagle_v_smode_defconfig
+make -jx ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- starfive_jh7100_beagle_v_smode_defconfig
 ```
 
 **Note:** Here you need to change the **-jx** value according to the **number of cores in your CPU**. If your **CPU has 8 cores**, change this to **-j8**
 
 ```sh
-make -jx ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv u-boot.bin u-boot.dtb
+make -jx ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- u-boot.bin u-boot.dtb
 ```
 
 There will be these 2 files generated after compilation inside the **u-boot** directory: **u-boot.bin** and **u-boot.dtb**
@@ -335,14 +335,14 @@ make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv PLATFORM=generic FW_PAYLOAD_PAT
 
 **Note:** Modify the path to the path of **u-boot** from before
 
-The file will be generated in the directory **opensbi/build/platform/starfive/vic7100/firmware** as **fw_payload.bin** after compilation and the size is about 700+K
+The file will be generated in the directory **opensbi/build/platform/generic/firmware** as **fw_payload.bin** after compilation and the size is about 700+K
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki_2/u-boot-new.png" alt="pir" width="850" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/fw_payload_path.png" alt="pir" width="850" height="auto"></p>
 
 - **Step 4.** Navigate to the directory containing **fw_payload.bin**
 
 ```sh
-cd opensbi/build/platform/starfive/vic7100/firmware
+cd opensbi/build/platform/generic/firmware
 ```
 
 - **Step 5** Copy the file **fw_payload.bin** to a different location
@@ -494,7 +494,7 @@ git clone https://github.com/starfive-tech/linux
 
 ```sh
 cd linux
-make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_vic7100_evb_sd_net_fedora_defconfig
+make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv starfive_jh7100_starlight_fedora_defconfig
 ```
 
 - **Step 4.** Type the following to set **additional configuration settings** for compiling Linux Kernel. If you did step 3, this step is not necessary.
