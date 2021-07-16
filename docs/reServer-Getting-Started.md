@@ -34,7 +34,7 @@ Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to tw
 
 <table style="undefined;table-layout: fixed; width: 1173px">
 <colgroup>
-<col style="width: 30px">
+<col style="width: 100px">
 <col style="width: 100px">
 <col style="width: 150px">
 <col style="width: 150px">
@@ -265,7 +265,7 @@ Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to tw
 
 <table style="undefined;table-layout: fixed; width: 1354px">
 <colgroup>
-<col style="width: 30px">
+<col style="width: 100px">
 <col style="width: 170px">
 <col style="width: 170px">
 <col style="width: 170px">
