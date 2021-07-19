@@ -358,12 +358,12 @@ dmesg | grep tty
 
 ```sh
 ./jh7100-recover -D /dev/ttyUSB1 \
--r vic_second_boot.bin \
--b bootloader-BEAGLEV-210209.bin.out \
--d ddrinit-2133-210302.bin.out 
+-r jh7100_recovery_boot.bin \
+-b bootloader-BEAGLEV-buildroot.bin.out \
+-d ddrinit-2133-buildroot.bin.out
 ```
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki-3/bootloader-mode-wait.png" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/wiki-3/bootloader-wait.png" alt="pir" width="800" height="auto"></p>
 
 **Note:** You may change the serial port according to yours and also the file locations if you haven't moved them into the **JH71xx-tools** directory
 
