@@ -532,6 +532,8 @@ You will see the following output if you have successfully installed the drivers
 sudo reboot
 ```
 
+## FAQ
+
 ### Q1: How can I flash Raspberry Pi OS which is originally shipped with reTerminal?
 
 If you have flashed to a different OS and want to switch back to the default Raspberry Pi OS which is shipped with reTerminal, you can follow the steps below
