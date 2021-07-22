@@ -549,6 +549,7 @@ nav:
           - Grove - VOC and eCO2 Gas Sensor(SGP30): Grove-VOC_and_eCO2_Gas_Sensor-SGP30.md
           - Grove - Alcohol Sensor: Grove-Alcohol_Sensor.md
           - Grove - CO2 Sensor: Grove-CO2_Sensor.md
+          - Grove - CO2 & Temperature & Humidity Sensor - SCD4: Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD4.md
           - Grove - HCHO Sensor: Grove-HCHO_Sensor.md
           - Grove - Air Quality Sensor v1.3: Grove-Air_Quality_Sensor_v1.3.md
 
