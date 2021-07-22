@@ -188,6 +188,11 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>Recommended</td>
     <td>5V@4A DC</td>
   </tr>
+    <tr>
+    <td>Temperature</td>
+    <td>Operating Temperature</td>
+    <td>0 - 70°C</td>
+  </tr>
   <tr>
     <td>Mechanical</td>
     <td>Dimensions</td>
