@@ -16,7 +16,7 @@ All in all, it is designed in a tiny size as small as a thumb(20x17.5mm) and can
 There are 14 GPIO PINs on XIAO RP2040, on which there are 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface.
 
 
-<p style=":center"><a href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
 
 ## **Features**
 
@@ -32,10 +32,11 @@ There are 14 GPIO PINs on XIAO RP2040, on which there are 11 digital pins, 4 ana
 |Item|Value|
 |---|---|
 |CPU|Dual-core ARM Cortex M0+ processor up to 133MHz|
-|Flash Memory|4MB|
+|Flash Memory|2MB|
 |SRAM|264KB|
 |Digital I/O Pins|11|
-|Analog I/O Pins|11|
+|Analog I/O Pins|4|
+|PWM Pins|11|
 |I2C interface|1|
 |SPI interface|1|
 |UART interface|1|
@@ -348,3 +349,4 @@ void loop() {
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+<p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
