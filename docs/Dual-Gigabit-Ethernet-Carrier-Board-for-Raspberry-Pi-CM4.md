@@ -894,7 +894,7 @@ If you want to connect a display through DSI interface, and a camera through CSI
 - **Step 2.** Enable the display and camera by executing the following inside the terminal window of Raspberry Pi OS
 
 ```sh
-sudo wget https://datasheets.raspberrypi.org/cmio/dt-blob-disp1-cam1.bin -O /boot/dt-blob.bins
+sudo wget https://datasheets.raspberrypi.org/cmio/dt-blob-disp1-cam1.bin -O /boot/dt-blob.bin
 ```
 
 **Note:** Here the configuration method is chosen from [cmio-display](https://github.com/raspberrypi/documentation/blob/master/hardware/computemodule/cmio-display.md) and [raspistill](https://www.raspberrypi.org/documentation/configuration/camera.md)
