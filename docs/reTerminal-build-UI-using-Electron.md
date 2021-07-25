@@ -508,6 +508,12 @@ try {
 
 Now run the file once using **npm test** and the application will update as you save the files. You will not need to run **npm test** everytime you change the contents inside your project.
 
+## Bonus Demo
+
+If you want to experience a more interesting demo with Electron, you can checkout [this GitHub repo](https://github.com/lakshanthad/Electron_reterminal_hardware)
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/electron-reterminal-hw-demo.jpg" alt="pir" width="1000" height="auto"></p>
+
 ## Resources
 
 - **[GitHub]** [Electron_reTerminal_Smart_Lamp_UI](https://github.com/lakshanthad/Electron_reTerminal_Smart_Lamp_UI)
