@@ -13,14 +13,14 @@ sku: 101020753
 
 The Grove - TDS Sensor detects the Total Dissolved Solids (TDS) levels in the water which can be used to indicate the water quality. The Grove - TDS Sensor can be applied in water quality applications such as TDS meter, well water, aquarium, hydroponics, etc.
 
-It supports 3.3/5V input voltage and 0 ~ 2.3V Output Voltage making it easy to be compatible with all Arduino Boards. The sensor also provides a waterproof probe, making the testing process much easier to handle.
+It supports 3.3 / 5V input voltage and 0 ~ 2.3V Output Voltage making it easy to be compatible with all Arduino Boards. The sensor also provides a waterproof probe, making the testing process much easier to handle.
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Feature
 
 - Analog Signal, easy to implement
-- Support 3.3/5V Input Voltage
-- Good Arduino Compatibility, where 0 ~ 2.3V Output Voltage can be easily implemented in 3.3/5V control system
+- Support 3.3 / 5V Input Voltage
+- Good Arduino Compatibility, where 0 ~ 2.3V Output Voltage can be easily implemented in 3.3 / 5V control system
 - Waterproof TDS Probe
 
 ## Specification
