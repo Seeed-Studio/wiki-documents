@@ -608,7 +608,7 @@ Finally you will see the output displayed on a new window. If there are any erro
 
 If you want to experience a more interesting demo with Qt for Python, you can checkout [this GitHub repo](https://github.com/Seeed-Studio/Seeed_Python_ReTerminalQt5Examples)
 
-<p style="text-align:center;"><img src="https://camo.githubusercontent.com/4bd97c9bf234ae300ddcbbb73b4b4f507a247c7f2a2d682d8ae991cc2c70459f/68747470733a2f2f66696c65732e736565656473747564696f2e636f6d2f77696b692f52655465726d696e616c2f51742d44656d6f2e676966" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Qt-Demo.gif" alt="pir" width="1000" height="auto"></p>
 
 ## Resources
 
