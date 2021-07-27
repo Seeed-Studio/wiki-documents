@@ -19,6 +19,13 @@ This device is based on SI1145, a new sensor from SiLabs. The Si1145 is a low-po
 
 Grove - Sunlight Sensor include an on-bard Grove connector, which help you to connect it your Arduino easily. You can use this device for making some project which need to detect the light, such as a simple UV detector.
 
+## Version
+
+| Product Version                  | Changes                                                            | Released Date |
+|----------------------------------|--------------------------------------------------------------------|---------------|
+| Grove - Sunlight Sensor v1.0     | Initial                                                            | Feb 12 2020   |
+| Grove - Sunlight Sensor v2.0     | replace Si1145 with Si1151-AB00-GMR                                | Jul 27 2021   |
+
 ## Features
 ---
 - Digital light sensor
@@ -282,6 +289,8 @@ UV intensity can nearly double with reflection from snow or other bright surface
 - [Spectrum](https://en.wikipedia.org/wiki/Spectrum)
 - [Lumen (unit)](https://en.wikipedia.org/wiki/Lumen_(unit))
 - [Ultraviolet index](https://en.wikipedia.org/wiki/Ultraviolet_index)
+- [Grove - Sunlight Sensor v2.0](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/res/v2.0/Grove-SunlightSensorv2.0.zip)
+- [SI1151-AB00-GMR Datasheet](https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/res/v2.0/SI1151-AB00-GMR.pdf)
 
 ## Project
 
