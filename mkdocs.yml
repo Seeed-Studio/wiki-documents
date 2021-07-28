@@ -200,11 +200,6 @@ nav:
           - ODYSSEY STM32MP157C: ODYSSEY-STM32MP157C.md
           - SEEED SOM STM32MP157C: SEEED-SOM-STM32MP157C.md
 
-      - BeagleV™ - StarLight:
-          - Getting Started with BeagleV™ - StarLight: BeagleV-Getting-Started.md
-          - Make File System, Compile u-boot & Linux Kernel: BeagleV-Make-File-System-Compile-uboot-Kernal.md
-          - Update bootloader, ddr init boot, u-boot and Recover bootloader: BeagleV-Update-bootloader-ddr-init-boot-uboot-Recover-bootloader.md
-
       - Seeeduino XIAO:
           - Grove Shield for Seeeduino XIAO with embedded battery management chip: Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip.md
           - Seeeduino XIAO Expansion board: Seeeduino-XIAO-Expansion-Board.md
