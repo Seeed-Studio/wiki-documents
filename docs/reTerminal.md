@@ -191,7 +191,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <tr>
     <td>Temperature</td>
     <td>Operating Temperature</td>
-    <td>0 - 70°C</td>
+    <td>0 - 70°C( For the LCD Screen: 0 - 60°C)</td>
   </tr>
   <tr>
     <td>Mechanical</td>
