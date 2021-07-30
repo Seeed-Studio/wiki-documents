@@ -723,6 +723,7 @@ You can boot an OS from USB Flash Drive by following the steps below. Here we ch
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"></p>
 
+- **Step 2.** Remove the 2 screws to disassemble the heatsink and also the remaining 4 screws to take apart the entire case
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-3.jpg" alt="pir" width="500" height="auto"></p>
 
