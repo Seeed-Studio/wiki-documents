@@ -314,10 +314,6 @@ nav:
             - How to Use Wio Terminal as RTL8720DN Dev Board: Wio-Terminal-8720-dev.md
             - How to measure noise levels with Wio Terminal: Wio-Terminal-Sound-Meter.md
             - Pressure sensor using the Wio terminal: Barometric-Pressure-sensor-using-the-Wio-terminal.md
-            - Distinguishing Alcohol(old): Wio-Terminal-Edge-Impulse-Distinguish-Alochol.md
-            - Continuous Motion Recognition(old): Wio-Terminal-Continuous-Motion-Recognition.md
-            - Edge Impulse Getting Started(old): Wio-Terminal-Edge-Impulse.md
-            - Tensorflow Lite Getting Started(old): Wio-Terminal-TensorFlow.md
 
       - reTerminal:
           - Getting Started with reTerminal: reTerminal.md
@@ -350,8 +346,6 @@ nav:
           - ReSpeaker Mic Array: ReSpeaker_Mic_Array.md
           - ReSpeaker Mic Array v2.0: ReSpeaker_Mic_Array_v2.0.md
           - ReSpeaker USB Mic Array: ReSpeaker-USB-Mic-Array.md
-          - Snips Voice Interaction Satellite Kit: Snips_Voice_Interaction_Satellite_Kit.md
-          - Snips Voice Interaction Base Kit: Snips_Voice_Interaction_Base_Kit.md
 
       - NVIDIA:
           - Jetson Mate: Jetson-Mate.md
