@@ -48,7 +48,6 @@ Note: There is no audio output interface on ReSpeaker 4-Mic Array for Raspberry 
 
 Note: If you use the APA102 RGB LEDs, make sure to write HIGH to `GPIO5` first to enable VCC of the LEDs.
 
-
 ## Getting Started
 
 **Connect ReSpeaker 4-Mic Array to Raspberry Pi**
@@ -138,7 +137,7 @@ $ audacity                      // run audacity
 sudo apt-get install sox                             //for audio conversion
 arecord -Dac108 -f S32_LE -r 16000 -c 4 hello.wav    // only support 4 channels
 sox hello.wav -c 2 stereo.wav                        // convert to stereo
-aplay hello.wav                                      // make sure default device
+aplay stereo.wav                                      // make sure default device
                                                      // Audio will come out via audio jack of Raspberry Pi
 ```
 
@@ -477,6 +476,10 @@ A4: Please run below command to solve the issue.
 ```sh
 sudo apt-get install portaudio19-dev
 ```
+
+**Q5: ...WARNING: memory leak will occur if overlay removed... message in journalctl**
+
+A5: There is a genuine one-off small memory loss when the driver is first loaded (after boot up). However, since it is per boot or per load, and the typical user only needs to load the driver once per boot, losing track of a few bytes per boot does not matter. So this is just an small issue unlikely to affect any users in a real way, other than seeing a worrying message about memory loss per boot.
 
 
 ## Resources

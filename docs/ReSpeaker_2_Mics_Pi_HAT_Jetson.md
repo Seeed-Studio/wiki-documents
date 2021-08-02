@@ -1,5 +1,3 @@
-## Get Started with Nvidia Jetson Nano
-
 ### Driver installation and configuration 
 
 **1. Connect ReSpeaker 2-Mics Pi HAT to Jetson Nano**

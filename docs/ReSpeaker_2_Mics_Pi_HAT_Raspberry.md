@@ -1,5 +1,3 @@
-## Getting Started
-
 ### Driver installation and configuration 
 
 **1. Connect ReSpeaker 2-Mics Pi HAT to Raspberry Pi**

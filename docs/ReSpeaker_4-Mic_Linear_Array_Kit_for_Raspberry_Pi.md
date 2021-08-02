@@ -25,15 +25,17 @@ Raspberry Pi consists of two boards, one is
 voice accessory HAT, another is four
 microphones linear array.
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ReSpeaker 4-Mic Linear Array Kit for
 Raspberry Pi support 8 input & 8 output
-channels in Raspbian system. The first 6
-input channel for microphone
-recording(only first 4 input channels are
+channels in Raspberry Pi OS. The first 6
+input channels for microphone
+recording (only first 4 input channels are
 valid capture data), rest of 2 input channel
 are echo channel of playback. The first 2
-output channel for playing, rest of 6 output
-channel are dummy.
+output channel are for sound output, the rest of 6 output
+channels are dummy.
 
 
 
@@ -47,10 +49,8 @@ channel are dummy.
 - 8 input and 8 output channels
 - Four microphones array
 - Grove support
-- Raspberry Pi compatible(Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
+- Raspberry Pi compatible (Support Raspberry Pi Zero and Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ and Raspberry Pi 4)
 - Headset and speaker voice output
-
-
 
 ## Specification
 
@@ -78,9 +78,6 @@ channel are dummy.
 - Car voice assistant
 - Other scenarios need voice command
 
-
-
-
 ## Hardware Overview
 
 **System Diagram**
@@ -103,28 +100,7 @@ channel are dummy.
 
 ## Getting Started
 
-### Hardware
-
-**Prerequisites**
-
-
-ReSpeaker 4-Mic Linear Array Kit    x1
-
-[Raspberry Pi 3B or 3B+](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B%2B-p-3037.html?utm_source=homepage&utm_medium=homepagebanner&utm_campaign=hp_0605)              x1
-
-[Micro-USB Cable](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)                     x1
-
-PC                                  x1
-
-Earphone or Speaker                 x1
-
-
-!!!Tips
-        Actually the ReSpeaker 4-Mic Circular Array support Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B and Raspberry Pi 3 model B+ and Raspberry Pi 3 A+, in this wiki we are using Raspberry Pi 3.
-
-
-**Connection**
-
+**Connect ReSpeaker 4-Mic Array to Raspberry Pi**
 
 **Step 1.**  Connect the *ReSpeaker Voice Accessory HAT* with *ReSpeaker 4-Mic linear Array* via the Ribbon Cable
 
@@ -134,53 +110,10 @@ Earphone or Speaker                 x1
 
 **Step 4.**  Connect the *Raspberry Pi* with the *PC* via the micro-USB cable
 
-
 ![Pics here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/4-mic.jpg)
 
 
 ### Software
-
-**Prerequisites**
-
-*Plan A*
-
-[PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-
-You need to use *Putty* or other *ssh* tools to connect with your raspberry pi. Before started, please make sure:
-
-1- Open *ssh* fuction of your pi to let the putty in. If you do not know how to open *ssh*, please google `how to setup ssh raspberry pi`   
-
-2- Your raspberry pi and your PC are working on the same WiFi net. If you do not know how to config WiFi, please google `how to setup wifi raspberry pi`
-
-3- Get the ip address of your raspberry pi, if you do not know how to get the ip address please refer to [raspberry offical documentation](https://www.raspberrypi.org/documentation/remote-access/ip-address.md)
-
-4- Use the ip address to connect the raspberry pi with your PC via putty ssh serve.
-
-![pic](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/img/putty.png)
-
-Then please tap the host name and the password. the default ID is `pi` and the password is `raspberry`.
-
-```
-login as: pi
-pi@192.168.43.210's password:raspberry
-
-```
-
-Now you are in, and you can tap the command in putty and play with your raspberry.
-
-
-[VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
-
-To make this kit work with alexa or dueros, you need to open a web site to get the authorization. So you need to use *VNC Viewer* to log in your amazon or baidu account. So please make sure you have open the *VNC* service of your raspberry.
-
-Or you can just consider plan B. 
-
-
-*Plan B*
-
-
-If you are tired of all above, you can just use a HDMI Monitor and plug the USB Keyboard and USB mouse in to your raspberry, it works too, simple and easy.
-
 
 **Step 1. Install seeed-voicecard**
 
@@ -188,7 +121,6 @@ Get the seeed voice card source code. and install all linux kernel drivers.
 
 ```
 sudo apt-get update
-sudo apt-get upgrade
 git clone https://github.com/respeaker/seeed-voicecard.git
 cd seeed-voicecard
 sudo ./install.sh  
@@ -308,15 +240,10 @@ arecord -Dac108 -f S32_LE -r 16000 -c 8 a.wav
 aplay -D ac101 a.wav
 #Do not use -D plughw:1,0 directly except your wave file is single channel only.
 
-#Doing capture && playback the same time
-arecord -D hw:1,0 -f S32_LE -r 16000 -c 8 to_be_record.wav &
-#mono_to_play.wav is a mono channel wave file to play
-aplay -D plughw:1,0 -r 16000 mono_to_play.wav
-
 ```
 
 !!!Note
-        Limit for developer using 4-Mic linear Array Kit(or 4-Mic Linear Array Kit) doing capture & playback the same time:
+        Limit for developer using 4-Mic Linear Array Kit doing capture & playback the same time:
             
         -1. capture must be start first, or else the capture channels will possibly be disorder.
             
@@ -343,134 +270,54 @@ $ audacity                      // run audacity
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/audacity.png)
 
 
+## Usage overview 
 
-## Extract Voice
+To run the following examples, clone https://github.com/respeaker/4mics_hat.git repository to your Raspberry Pi 
 
-We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to extract voice.
-
-- Step 1, We need to run the following script to get the device index number of 4 Mic pi hat:
-
-```Python
-sudo pip install pyaudio
-cd ~
-nano get_index.py
+```
+git clone https://github.com/respeaker/4mics_hat.git
 ```
 
-- Step 2, copy below code and paste on get_index.py.
+All the Python scripts, mentioned in the examples below can be found inside this repository. To install the necessary dependencies, from mic_hat repository folder, run
 
-```Python
-import pyaudio
-
-p = pyaudio.PyAudio()
-info = p.get_host_api_info_by_index(0)
-numdevices = info.get('deviceCount')
-
-for i in range(0, numdevices):
-        if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
-            print "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
+```
+sudo apt-get install portaudio19-dev libatlas-base-dev
+pip3 install -r requirements.txt
 ```
 
-- Step 3, press Ctrl + X to exit and press Y to save.
+### Record sound with Python
 
-- Step 4, run 'sudo python get_index.py' and we will see the device ID as below.
+We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to record sound with Python.
+
+First, run the following script to get the device index number of 2 Mic pi hat:
+
+```
+python3 recording_examples/get_device_index.py
+```
+
+You will see the device ID as below.
 
 ```
 Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
 ```
 
-- Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script record.py to record a speech.
+To record the sound, open ```recording_examples/record.py``` file with nano or other text editor and change  `RESPEAKER_INDEX = 2` to index number of ReSpeaker on your system. Then run python script record.py to make a recording:
 
-```Python
-import pyaudio
-import wave
-
-RESPEAKER_RATE = 16000
-RESPEAKER_CHANNELS = 8 
-RESPEAKER_WIDTH = 2
-# run getDeviceInfo.py to get index
-RESPEAKER_INDEX = 2  # refer to input device id
-CHUNK = 1024
-RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = "output.wav"
-
-p = pyaudio.PyAudio()
-
-stream = p.open(
-            rate=RESPEAKER_RATE,
-            format=p.get_format_from_width(RESPEAKER_WIDTH),
-            channels=RESPEAKER_CHANNELS,
-            input=True,
-            input_device_index=RESPEAKER_INDEX,)
-
-print("* recording")
-
-frames = []
-
-for i in range(0, int(RESPEAKER_RATE / CHUNK * RECORD_SECONDS)):
-    data = stream.read(CHUNK)
-    frames.append(data)
-
-print("* done recording")
-
-stream.stop_stream()
-stream.close()
-p.terminate()
-
-wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-wf.setnchannels(RESPEAKER_CHANNELS)
-wf.setsampwidth(p.get_sample_size(p.get_format_from_width(RESPEAKER_WIDTH)))
-wf.setframerate(RESPEAKER_RATE)
-wf.writeframes(b''.join(frames))
-wf.close()
+```
+python3 recording_examples/record.py
 ```
 
-- Step 6. If you want to extract channel 0 data from 8 channels, please follow below code. For other channel X, please change [0::8] to [X::8].
+- Step 6. If you want to extract channel 0 data from 8 channels, have a look at the content of ``` record_one_channel.py```. For other channel X, please change [0::8] to [X::8].
 
-```python
-import pyaudio
-import wave
-import numpy as np
+```
+python3 recording_examples/record_one_channel.py
+```
 
-RESPEAKER_RATE = 16000
-RESPEAKER_CHANNELS = 8
-RESPEAKER_WIDTH = 2
-# run getDeviceInfo.py to get index
-RESPEAKER_INDEX = 2  # refer to input device id
-CHUNK = 1024
-RECORD_SECONDS = 3
-WAVE_OUTPUT_FILENAME = "output.wav"
+To play the recorded samples you can either use aplay system utility, for example
 
-p = pyaudio.PyAudio()
-
-stream = p.open(
-            rate=RESPEAKER_RATE,
-            format=p.get_format_from_width(RESPEAKER_WIDTH),
-            channels=RESPEAKER_CHANNELS,
-            input=True,
-            input_device_index=RESPEAKER_INDEX,)
-
-print("* recording")
-
-frames = [] 
-
-for i in range(0, int(RESPEAKER_RATE / CHUNK * RECORD_SECONDS)):
-    data = stream.read(CHUNK)
-    # extract channel 0 data from 8 channels, if you want to extract channel 1, please change to [1::8]
-    a = np.fromstring(data,dtype=np.int16)[0::8]
-    frames.append(a.tostring())
-
-print("* done recording")
-
-stream.stop_stream()
-stream.close()
-p.terminate()
-
-wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-wf.setnchannels(1)
-wf.setsampwidth(p.get_sample_size(p.get_format_from_width(RESPEAKER_WIDTH)))
-wf.setframerate(RESPEAKER_RATE)
-wf.writeframes(b''.join(frames))
-wf.close()
+```bash
+aplay -f cd -Dhw:0 output.wav #for Stereo sound
+aplay -D plughw:0,0 output_one_channel.wav #for Mono sound from one channel
 ```
 
 
@@ -498,9 +345,7 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 
 ## Projects
 
-**Mojing Mojing - A Smart Mirror with ReSpeaker!**: A smart mirror with voice interface control via ReSpeaker. We also connect with Wio Link to control other objects! Based on Raspberry Pi. 
-
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20/embed' width='350'></iframe>
+[Mojing Mojing - A Smart Mirror with ReSpeaker!](https://www.hackster.io/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20): A smart mirror with voice interface control via ReSpeaker. We also connect with Wio Link to control other objects! Based on Raspberry Pi. 
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
