@@ -650,6 +650,15 @@ make
 
 - Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web/releases)  and open it.
 
+```
+sudo apt install nodejs
+sudo apt install npm
+git clone https://github.com/introlab/odas_web
+cd odas_web
+npm install
+npm start
+```
+
 - Step 3. The odascore will be at **odas/bin/odaslive**, the **config file** is [odas.cfg](https://raw.githubusercontent.com/respeaker/usb_4_mic_array/master/odas.cfg). 
 
 - Step 4. Upgrade mic array with 6_channels_firmware.bin which includes 4 channels raw audio data.
