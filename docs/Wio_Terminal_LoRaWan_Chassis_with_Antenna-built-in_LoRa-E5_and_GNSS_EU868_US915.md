@@ -49,68 +49,24 @@ By connecting Wio Terminal LoRaWan Chassis with Antenna-built-in LoRa-E5 and GNS
 
 ## Specification
 
-<table class="tg">
-<thead>
-<tr><th class="tg-f2tp" colspan="2">General Parameters</th></tr>
-</thead>
-<tbody>
-<tr>
-<td class="tg-uu1j">Voltage <span>Supply: </span></td>
-<td class="tg-uu1j">3.3V/5V</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Power <span>Output: </span></td>
-<td class="tg-uu1j">Up to +20 dBm at 3.3V</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Working Frequency</td>
-<td class="tg-uu1j">868/915MHz</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Protocol</td>
-<td class="tg-uu1j">LoRaWAN</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Sensitivity</td>
-<td class="tg-uu1j">-116.5dBm ~ -136dBm</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Modulation</td>
-<td class="tg-uu1j">LoRa, (G)FSK, (G)MSK and BPSK</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Current</td>
-<td class="tg-uu1j">Only 60uA in sleep mode</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Size</td>
-<td class="tg-uu1j">20*40mm</td>
-</tr>
-<tr>
-<td class="tg-uu1j">Working Temperature</td>
-<td class="tg-uu1j">-40℃ ~ 85℃</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div></div>
-<div></div>
-<div></div>
+|                    | General Parameters    |
+|--------------------|-----------------------|
+| Voltage Supply:    | 3.3V/5V               |
+| Power Output:      | Up to +20 dBm at 3.3V |
+| Working Frequency  | 868/915MHz            |
+| Protocol           | LoRaWAN               |
+| Sensitivity        | -116.5dBm ~ -136dBm   |
+| Modulation         | LoRa, (G)FSK, (G)MSK and BPSK |
+| Current            | Only 60uA in sleep mode |
+| Size               | 20*40mm               |
+| Working Temperature | -40℃ ~ 85℃ |
 
+## Part List
 
-<table class="tg">
-<thead>
-<tr><th class="tg-f2tp" colspan="2">Part List:</th></tr>
-</thead>
-<tbody>
-<tr>
-<td class="tg-uu1j" colspan="2">Wio Terminal LoRaWan Chassis with Antenna-built-in LoRa-E5 and GNSS, EU868/US915 PCBA *1</td>
-</tr>
-<tr>
-<td class="tg-uu1j" colspan="2">Grove Universal Cable *1</td>
-</tr>
-</tbody>
-</table>
+|        Products         |        Quantity         |
+|-----------------------|----------------------|
+| Wio Terminal LoRaWan Chassis with Antenna-built-in LoRa-E5 and GNSS, EU868/US915  | *1 |
+| Antenna | *1  |
 
 ## Application
 
