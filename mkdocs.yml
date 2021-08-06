@@ -299,6 +299,7 @@ nav:
             - Overview: Wio-Terminal-Grove.md
           - Wio Terminal Battery Chassis: Wio-Terminal-Battery-Chassis.md
           - Wio Terminal Chassis Battery(650mAh): Wio-Terminal-Chassis-Battery(650mAh).md 
+          - Wio Terminal LoRaWan Chassis with Antenna-built-in LoRa-E5 and GNSS, EU868/US915: Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915.md
           - Demo:
             - Wio Terminal Displaying Gyro: Wio-Terminal-Displaying-Gyro.md
             - Wio Terminal Storing Data: Wio-Terminal-Storting-Analog-Data.md
