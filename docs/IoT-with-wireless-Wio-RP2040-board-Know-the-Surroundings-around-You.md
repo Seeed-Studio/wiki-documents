@@ -127,6 +127,17 @@ Here, the deployment of the MQTT client is completed.
 
 ## Code
 
+!!!Note
+    These codes is written for *UART* mode **NOT** *SPI* mode, we will update the codes for SPI later. 
+    If you want to have a try, here is the *SPI* Pin:
+    ```
+    MISO:8 
+    MOSI:11 
+    CLK:10 
+    CS:9  
+    HandShake：21
+    ```
+
 ### 1. Wi-Fi 
 
 ```python
