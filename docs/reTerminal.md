@@ -621,7 +621,7 @@ If you have a **USB to Serial Converter**, you can use the following steps to lo
 
 Connect jumper wires from a USB to Serial Converter to the **UART pins** on the 40-pin GPIO header of the reTerminal as follows
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/UART-connect.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/UART-connect-1.png" alt="pir" width="1000" height="auto"></p>
 
 Now let's configure the software on the computer. Please follow according to your operating system
 
