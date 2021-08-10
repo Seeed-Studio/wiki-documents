@@ -244,37 +244,6 @@ You will see the Raspberry Pi OS boot in to Desktop
 
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"></p>
 
-#### Update Packages and Raspberry Pi OS
-
-Now we will update all the packages and also the Raspberry Pi OS to the latest version
-
-- **Step 1.** Open the **on-screen virtual keyboard** by touching on the **Raspberry Pi icon** at the top left corner and navigating to `Universal Access > Onboard`
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/onboard-keyboard.png" alt="pir" width="800" height="auto"></p>
-
-- **Step 2.** If you have a **Wi-Fi connection**, click the **Wi-Fi icon** on the top right corner, select your Wi-Fi network and enter the password using the on-screen virtual keyboard
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wifi.jpg" alt="pir" width="400" height="auto"></p>
-
-- **Step 3.** If you don't have a **Wi-Fi connection**, you can connect an ethernet cable from your router to the ethernet port of the reTerminal
-
-- **Step 4.** Open a **terminal window** by touching on the **Raspberry Pi icon** at the top left corner and navigating to `Accessories > Terminal`
-
-- **Step 5.** Update all packages and the Raspberry Pi OS to the latest versions
-
-```sh
-sudo apt update
-sudo apt full-upgrade
-```
-
-- **Step 6.** Reboot reTerminal
-
-```sh
-sudo reboot
-```
-
-Now your Raspberry Pi OS and all the necessary packages are up to update!
-
 **Note:** If you want to experience the Raspberry Pi OS on a bigger screen, you can connect a display to the micro-HDMI port of the reTerminal and also connect a keyboard and a mouse to the USB ports of the reTerminal.
 
 ## Getting Started with reTerminal (Extended)
@@ -808,6 +777,49 @@ Now it will take a few seconds to transfer the necessary files to the reTerminal
 - **Step 16.** Connect a bootable USB Flash Drive with a suitable OS inside, connect to one of the USB Ports on the reTerminal and turn on reTerminal
 
 Now you will see reTerminal booting from the connected USB Drive
+
+### Q5: How to upgrade Raspberry Pi OS and the installed packages
+
+We will update all the packages and also the Raspberry Pi OS to the latest version
+
+- **Step 1.** Open a terminal window on the reTerminal and type the following
+
+```sh
+sudo apt update
+sudo apt full-upgrade
+```
+
+Now we will install drivers for the **5-inch LCD, touch panel, accelerometer, light sensor, user LEDs, user buttons, RTC, buzzer, cryptographic co-processor**.
+
+- **Step 2.** Clone the following repo
+
+```sh
+git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+```
+
+- **Step 3.** Enter the repo
+
+```sh
+cd seeed-linux-dtoverlays
+```
+
+- **Step 4.** Type the following to install the drivers
+
+```sh
+sudo ./scripts/reTerminal.sh
+```
+
+You will see the following output if you have successfully installed the drivers
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"></p>
+
+- **Step 5.** Reboot the reTerminal
+
+```sh
+sudo reboot
+```
+
+Now your Raspberry Pi OS and all the necessary packages are up to update!
 
 ## Resources
 
