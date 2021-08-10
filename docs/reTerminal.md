@@ -789,31 +789,13 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-Now we will install drivers for the **5-inch LCD, touch panel, accelerometer, light sensor, user LEDs, user buttons, RTC, buzzer, cryptographic co-processor**.
-
-- **Step 2.** Clone the following repo
+- **Step 2.** Reinstall kernel headers
 
 ```sh
-git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+sudo apt install raspberrypi-kernel-headers
 ```
 
-- **Step 3.** Enter the repo
-
-```sh
-cd seeed-linux-dtoverlays
-```
-
-- **Step 4.** Type the following to install the drivers
-
-```sh
-sudo ./scripts/reTerminal.sh
-```
-
-You will see the following output if you have successfully installed the drivers
-
-<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"></p>
-
-- **Step 5.** Reboot the reTerminal
+- **Step 3.** Reboot the reTerminal
 
 ```sh
 sudo reboot
