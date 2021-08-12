@@ -36,11 +36,11 @@ Frankly speaking, it's about 60 Grove modules support the Grove Base Hat for Ras
 |Item|Value|
 |---|---|
 |Operating Voltage|3.3V|
-|MCU|STM32|
+|MCU|STM32/MM32|
 |ADC|12-bit 8 channel|
 |Grove Port|    6 Digital <br> 4 Analog <br> 3 I2C <br> 1 PWM  <br> 1UART|
 |Raspberry pi communication bus|I2C|
-|I2C Address|0x04|
+|I2C Address|0x04/0x08|
 
 
 !!!Attention
@@ -159,6 +159,9 @@ We use SWD port to burn the firmware to this hat. In addition, you can see 3 GPI
 
 
 ### Software
+
+!!! attention 
+     Due to chip shortage, we have replaced STM32 with MM32 in the latest version of the product, and the I2C address of the corresponding product has been changed from 0x04 to 0x08 in the old version, please change the I2C address in adc.py from 0x04 to 0x08 when using the library file provided by seed for development.
 
 In this section we will introduce how to install the **seeed grove.py** library and how to use I2C, PWM, Digital and analog port of the Grove Base Hat for Raspberry Pi.
 
