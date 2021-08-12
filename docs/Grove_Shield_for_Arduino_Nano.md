@@ -20,7 +20,7 @@ Grove Shield for Arduino Nano provides you a simple way to connect with Arduino 
 
 | Parameter             | Value/Range  |
 |-----------------------|--------------|
-| Operating voltage     | 5V       |
+| Operating voltage     | 3.3V/5V       |
 | Operation Temperature | -25℃ to +85℃ |
 | Analog Ports          | 3           |
 | Digital Ports         | 3          |
@@ -28,14 +28,37 @@ Grove Shield for Arduino Nano provides you a simple way to connect with Arduino 
 | I2C Ports             | 1            |
 | Size                  | 45mm x40mm   |
 
+We have updated Grove Shield to V1.1, supports the Arduino Nano 33 series development board.
+
+![enter image description here](https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/change.png)
+
+
+V1.1 Change Note:
+
+Add VCC 3.3V/5V Switch
+
+
 ## Compatible Boards
 
-The Base Shield is tested and fully compatible with following boards:
+V1.0 Support List:
 
 - [Seeeduino nano](https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html)
 - Arduino nano
 
+V1.1 Support List:
 
+- Arduino Nano
+- Seeeduino Nano
+- Arduino Nano Every
+- Arduino Nano 33 IoT*
+- Arduino Nano 33 BLE*
+- Arduino Nano 33 BLE Sense*
+
+!!!Attention
+
+    To work with Arduino 33 serial boards, please switch the VCC power to 3.3V. If the VCC power supply is switched to 5V, the development board may be damaged!   
+
+    
 ## Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/Grove-Shoeld-for-Arduino-Nano-back-rr.jpg)
