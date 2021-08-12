@@ -65,7 +65,7 @@ The main control board has built-in MicroPython firmware, so users can directly 
 
 - Wio RP2040 mini Dev Board x 1
 - Computer x 1
-- USB Type-Ccable x 1
+- USB Type-C cable x 1
 
 Connect the Wio RP2040 mini Dev Board to the computer via the USB cable, and the red LED power indicator on the board should light up.
 ## Software
