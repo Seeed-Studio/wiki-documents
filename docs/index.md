@@ -37,6 +37,12 @@ Also, don't forget to subscribe to our [YouTube Channel](http://www.youtube.com/
 
 <p style="text-align:center;"><a href="http://www.youtube.com/c/SeeedStudioSZ"><img src="https://files.seeedstudio.com/wiki/IMAGE/Youtube%20Subs.png" alt="pir"  width="180" height="auto"></a></p>
 
+### Seeed on Discord
+
+Recently we started an official Discord channel with the intention of connecting the whole Seeed community. Click [here](https://discord.gg/QqMgVwHT3X) to join our channel, or scan the QR code below!
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/IMAGES/21-August-week-2/discord-qr.png" alt="pir"  width="300" height="auto"></p>
+
 <hr>
 
 If you have any questions or comments, please don't hesistate to hop on to our [forum](https://forum.seeedstudio.com/latest) and discuss with us directly!
