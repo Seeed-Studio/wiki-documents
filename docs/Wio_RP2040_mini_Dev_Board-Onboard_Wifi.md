@@ -58,7 +58,7 @@ The board has rich interfaces, including 28 GPIO PINs (19 PINs support PIO and P
 		I/O pins: The MCU runs at 3.3V. If the voltage input connected to the general-purpose I/O pin is higher than 3.3V, it may cause damage to the chip. Please pay attention to use, do not lift the shielding cover.
 
 ## Getting Started
-The main control board has built-in MicroPython firmware, so users can directly connect to the Thonny code editor. If your firmware is damaged or you want to replace it with other firmware, you can download [firmware.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware.uf2) to the computer. Press and hold the BOOT button of the RP2040 main control board and then connect with the USB cable. At this time, the computer will have an extra removable disk, and then drag the firmware you downloaded to the removable disk to complete the firmware update.
+The main control board has built-in MicroPython firmware, so users can directly connect to the Thonny code editor. If your firmware is damaged or you want to replace it with other firmware, you can download [firmware.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware-v1.15.1.uf2) to the computer. Press and hold the BOOT button of the RP2040 main control board and then connect with the USB cable. At this time, the computer will have an extra removable disk, and then drag the firmware you downloaded to the removable disk to complete the firmware update.
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/board_5.png)
 ### Hardware requirements
