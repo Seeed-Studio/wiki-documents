@@ -555,13 +555,13 @@ cd /sys/class/leds/usr_buzzer
 - **Step 3.** Turn on the buzzer
 
 ```sh
-cat 1 > brightness
+echo 1 > brightness
 ```
 
 - **Step 4.** Turn off the buzzer
 
 ```sh
-cat 0 > brightness
+echo 0 > brightness
 ```
 
 ## USB 2.0 Ports
