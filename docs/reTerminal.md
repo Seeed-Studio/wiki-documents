@@ -700,7 +700,7 @@ You can boot an OS from USB Flash Drive by following the steps below. Here we ch
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/flip-switch.jpg" alt="pir" width="700" height="auto"></p>
 
-- **Step 4.** Open a **Terminal** window inside reTerminal and type the following to update the **packages list**
+- **Step 4.** Open a **Terminal** window inside the Host PC after connecting to reTerminal and type the following to update the **packages list**
 
 ```sh
 sudo apt update
