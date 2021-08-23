@@ -13,7 +13,7 @@ import usocket
 from machine import Pin, I2C, ADC, UART, SPI, PWM
 from time import sleep
 
-N1 = network.WLAN_UART(network.STA_IF)
+N1 = network.WLAN_SPI(network.STA_IF)
 N1.active(True)
 
 print("API list:")

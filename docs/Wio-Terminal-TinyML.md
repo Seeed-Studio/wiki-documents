@@ -41,14 +41,28 @@ You can download the course in PDF format and course materials by clicking on th
 
 [Tensorflow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers/get_started) on the other hand, while having steeer learning curve, allows you to implement your own model training and inference pipeline.
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/tensorflow-lite-logo-social.png"/></div> 
-TinyML with Wio Terminal course
+
+## TinyML with Wio Terminal course
 <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/1.png"/></div> 
+
 ##### Download PDF:
 [PDF of the TinyML with Wio Terminal course](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/TinyML_with_Wio_Terminal_Course_v1-3.pdf)
+
 ##### Download course materials:
 [Seeed_Arduino_WioTerminal_TinyML_Course-1.0.zip](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course/archive/refs/tags/1.0.zip)
+
 ##### Github repository with course materials:
 [Github of the TinyML with Wio Terminal course](https://github.com/Seeed-Studio/Seeed_Arduino_WioTerminal_TinyML_Course)
+
+## No-code Programming to Get Started with TinyML
+
+<div align=center><img width = 200 src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/cc_tinyml_2.png"></div>
+
+Designed to introduce beginners to the basics of Embedded Machine Learning with Wio Terminal  and Codecraft graphical programming.
+
+##### Download PDF:
+
+[PDF of No-code Programming to Get Started with TinyML course](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/No-code_Programming_to_Get_Started_with_TinyML.pdf)
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

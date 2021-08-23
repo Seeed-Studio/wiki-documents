@@ -77,7 +77,7 @@ If you need use the back of the Xiao Grove Shield provisions pads for a Flash me
 <p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO.png" border=0 /></a></p> 
 
 #### External headers-pin description for Grove-Shield for Seeeduino XIAO
-<p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/pinout.png" border=0 /></a></p> 
+<p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO (xin).png.jpg" border=0 /></a></p> 
 
 #### External headers-pin description for Grove-Doppler Radar
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/pin-1.png)
