@@ -151,7 +151,7 @@ PURPLE = (180, 0, 255)
 WHITE = (255, 255, 255)
 led = WS2812(13,10)#WS2812(pin_num,led_count)
 
-N1 = network.WLAN_UART(network.STA_IF)
+N1 = network.WLAN_SPI(network.STA_IF)
 N1.active(True)
 N1.connect("CHCK","depot0510")
 sleep(1)

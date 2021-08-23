@@ -300,7 +300,7 @@ i2c = I2C(0,sda = Pin(4),scl= Pin(5))
 ax = AccelerationAdxl345(i2c)
 ax.acc_adxl345_init()
 
-N1 = network.WLAN_UART(network.STA_IF)
+N1 = network.WLAN_SPI(network.STA_IF)
 N1.active(True)
 N1.connect("CHCK","depot0510")
 sleep(1)
