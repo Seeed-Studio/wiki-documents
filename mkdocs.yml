@@ -443,7 +443,9 @@ nav:
           - USB To Uart 5V/3V3: USB_To_Uart_5V_3V3.md
 
   - Software:
-      - OpenWrt: OpenWrt-Getting-Started.md
+      - OpenWrt:
+          - Getting Started: OpenWrt-Getting-Started.md
+          - Plex Media Server on Docker: OpenWrt-Plex-Media-Server-on-Docker.md
       - PlatformIO: Software-PlatformIO.md
       - Firmata Tutorial - How to Use Firmata on Arduino Compatible Boards: ODYSSEY-X86J4105-Firmata.md
       - Arduino FreeRTOS Tutorial - How to use FreeRTOS to Multi-tasking in Arduino: Software-FreeRTOS.md

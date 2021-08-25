@@ -10,7 +10,7 @@ sku:
 
  <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/RF_Transmitter_and_Receiver_LinkP_Kit-315MHz_433MHz/img/114992732_Front-05.png" alt="pir" width="600" height="auto"></p>
 
-This is an ultra-long-distance 318MHz or 433MHz radio frequency link set, with VCO and PLL technology, stable frequency and strong anti-interference ability. You can directly use it for your projects, such as wireless data transmission and remote control.
+This is an ultra-long-distance 315MHz or 433MHz radio frequency link set, with VCO and PLL technology, stable frequency and strong anti-interference ability. You can directly use it for your projects, such as wireless data transmission and remote control.
 
 <p style="text-align:center;"><a href="https://www.seeedstudio.com/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz-p-5077.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png"></a></p>
 
