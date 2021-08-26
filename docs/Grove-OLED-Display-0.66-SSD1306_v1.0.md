@@ -16,7 +16,7 @@ As a new version, the Grove - OLED Display 0.66" (SSD1306) has a smaller screen 
 You can use I2C interface to light up the mini display with your microcontroller to display words, images or whatever you want. 0.66" display screen helps you to show the information in a smaller place and you can use it as Arduino OLED display, Raspberry Pi PLED display, etc.
 
 This Grove-OLED Display supports the U8g2 monochrome displays library written by Olikraus. The library is so convenient and well compatible that it can support SSD1306 and other chips like SSD1315. So get you one now and have fun with this tiny screen!
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-0-66-SSD1306-v1-0-p-5096.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Feature
 
@@ -67,7 +67,7 @@ This Grove-OLED Display supports the U8g2 monochrome displays library written by
 | Seeeduino V4.2 | Base Shield | Grove - OLED Display 0.66"|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/1629856731(1).png)
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0-66-SSD1306-v1-0-p-5096.html)|
 
 >In addition, you can consider our new [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), which is equivalent to the combination of Seeeduino V4.2 and Baseshield.
 
