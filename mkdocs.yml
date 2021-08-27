@@ -239,7 +239,7 @@ nav:
             - Connecting to Google Cloud IoT: Connect-Wio-Terminal-to-Google-Cloud-IoT-Core.md
             - Ethernet: Wio-Terminal-Ethernet.md
             - Connecting to Blynk: Wio-Terminal-Blynk.md
-            - WT OTA for Blynk:
+            - WT OTA for Blynk: Blynk-wireless-OTA-functionality-to-Wio-Termina.md
           - Bluetooth:
             - Overview: Wio-Terminal-Bluetooth-Overview.md
             - Client and Server introduction: Wio-terminal-BLE-introduction.md
