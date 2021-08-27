@@ -27,15 +27,17 @@ Then edit the name and select the device and connection mode, in this case "Seee
 Make a note of BLYNK_TEMPLATE_ID and BLYNK_DEVICE_NAME.
 In the example, they are:
 
+```C++
 #define BLYNK_TEMPLATE_ID "TMPLCc16MxA1"
-
 #define BLYNK_DEVICE_NAME "WioTerminal"
+```
 
 ![](https://files.seeedstudio.com/wiki/Blynk-wireless-OTA-functionality-to-Wio-Termina/3.png)
 
 Then click the save button in the upper right corner.
 
 ## Set up the Arduino IDE and tune the code
+
 Next, download and open the sample code in the Ardunio IDE.
 
 [**Edgent_Wio_Terminal_0-2.zip**](https://files.seeedstudio.com/wiki/Blynk-wireless-OTA-functionality-to-Wio-Termina/Edgent_Wio_Terminal_0-2.zip)
@@ -48,13 +50,13 @@ Select the Wio Terminal device from the development board options ( [**see the W
 Add [**blynk-library**](https://github.com/blynkkk/blynk-library)
 
 Search for and add the following library files in the Ardunio IDE library manager:
- *   Seeed Arduino rpcunified
- *   Seeed Arduino rpcWiFi
- *   Seeed Arduino SFUD
- *   Seeed Arduino FS
- *   Seeed Arduino mbedtls
- *   ArduinoOTA
- *   ArduinoHttpClient
+- Seeed Arduino rpcunified
+- Seeed Arduino rpcWiFi
+- Seeed Arduino SFUD
+- Seeed Arduino FS
+- Seeed Arduino mbedtls
+- ArduinoOTA
+- ArduinoHttpClient
 
 In lines 16 and 17 of the code, fill in the ID and NAME that the system just generated:
 
