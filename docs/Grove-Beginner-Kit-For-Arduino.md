@@ -1986,7 +1986,7 @@ Looking closely at the Grove Beginner Kit For Arduino you will see that there ar
 
 7. [**Grove Beginner Kit For Arduino FCC + SDOC Certificates**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/FCC-SDOC-Certificates.zip)
 
-8. [**Grove Beginner Kit For Arduino Codecraft Graphical Programming Course web v7**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Codecraft-Graphical-Programming-Course-web-v7.pdf)
+8. [**Grove Beginner Kit For Arduino Codecraft Graphical Programming Course web v7**](https://files.seeedstudio.com/Seeed_EDU/Course_documents/Grove-Beginner-Kit-For-Arduino-Codecraft-Graphical-Programming-Course.zip)
 
 ## More Learning
 
