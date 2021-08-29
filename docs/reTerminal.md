@@ -539,30 +539,46 @@ sudo nano /boot/config.txt
 
 - **Step 3.** Reboot reTerminal
 
+```sh
+sudo reboot
+```
+
 - **Step 4.** Make STM32 enter **boot mode** through **i2c-tools**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
 
-If the above command returns with no errors, that means you have the new version of the board. However, if the command returns errors, that means you are using the old version of the board.
+- **Step 5.** List the connected I2C devices
 
-- **Step 5.** Open the configuration file that we used before
+```sh
+i2cdetect -y 1
+```
+
+If you can see the I2C address **0x56** as the table below, you have the **new version** of the board.
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-new-board.png" alt="pir" width="600" height="auto"></p>
+
+However, if you can see the I2C address **0x45** as the table below, you have the **old version** of the board
+
+<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-old-board.png" alt="pir" width="600" height="auto"></p>
+
+- **Step 6.** Open the configuration file that we used before
 
 ```sh
 sudo nano /boot/config.txt
 ```
 
-- **Step 6.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal** to load the drivers again
+- **Step 7.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal** to load the drivers again
 
 ```sh
 dtoverlay=reTerminal
 ```
 
-- **Step 7.** Reboot reTerminal
+- **Step 8.** Power off reTerminal
 
 ```sh
-sudo reboot
+sudo poweroff
 ```
 
 #### Connect to STM32 using CM4 and flash the firmware
@@ -582,6 +598,10 @@ sudo nano /boot/config.txt
 ```
 
 - **Step 3.** Reboot reTerminal
+
+```sh
+sudo poweroff
+```
 
 - **Step 4.** Make a new directory inside reTerminal
 
@@ -684,37 +704,55 @@ git clone http://openocd.zylin.com/openocd
 cd openocd
 ```
 
-- **Step 4.** Enter the following 
+- **Step 4.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases/tag/2021-08-20-reTerminal-V1.7) and download the **STM32G030F6_R2.bin** file
+
+**Note:** You can click on it to start downloading
+
+- **Step 5.** Open command prompt on PC and navigate to the location of the downloaded files before
+
+```sh
+cd C:\Users\user\Downloads
+```
+
+- **Step 6.** Transfer the files to the **openocd** directory on the reTerminal we created before
+
+```sh
+scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
+```
+
+**Note:** **pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
+
+- **Step 7.** Come back to terminal window on reterminal and enter the following inside the **openocd** directory
 
 ```sh
 ./bootstrap
 ```
 
-- **Step 5.** Next the following 
+- **Step 8.** Enter the following 
 
 ```sh
 ./configure --enable-sysfsgpio --enable-bcm2835gpio
 ```
 
-- **Step 6.** Compile it
+- **Step 9.** Compile it
 
 ```sh
 make
 ```
 
-- **Step 7.** Install it
+- **Step 10.** Install it
 
 ```sh
 sudo make install
 ```
 
-- **Step 8.** Follow the connection below to connect the pins from STM32 to 40-Pin GPIO
+- **Step 11.** Follow the connection below to connect the pins from STM32 to 40-Pin GPIO
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/STM32-connection.jpg" alt="pir" width="600" height="auto"></p>
 
 **Note:** The STM32 pins are located at the back of reTerminal PCBA.
 
-- **Step 9.** While keeping the connection, enter the following command to flash the firmware to STM32
+- **Step 12.** While keeping the connection, enter the following command to flash the firmware to STM32
 
 ```sh
 openocd -f interface/sysfsgpio-raspberrypi.cfg -c "transport select swd" -f target/stm32g0x.cfg -c "program STM32G030F6_R2.bin verify 0x08000000;shutdown"
@@ -722,7 +760,7 @@ openocd -f interface/sysfsgpio-raspberrypi.cfg -c "transport select swd" -f targ
 
 **Note:** Normally it takes about 3 seconds to finish flashing. So you need to **hold** the above connection for about **3 seconds** until the flashing process is complete
 
-- **Step 10.** Disconect the connections and reboot the reTerminal
+- **Step 13.** Disconect the connections and reboot the reTerminal
 
 ```sh
 sudo reboot
