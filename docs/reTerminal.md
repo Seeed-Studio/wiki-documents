@@ -929,9 +929,9 @@ Now let's configure the software on the computer. Please follow according to you
 
 - **Step 2.** Open **Device Manager** by typing **Device Manager** in the windows search box
 
-- **Step 3.** Click on the drop-down arrow from **Ports (COM & LPT)** and find the name of the connected serial port (ex: **COM4**)
+- **Step 3.** Click on the drop-down arrow from **Ports (COM & LPT)** and find the name of the connected serial port (ex: **COM7**)
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/device_manager1.png" alt="pir" width="320" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/COM7-dev-show.jpg" alt="pir" width="320" height="auto"></p>
 
 - **Step 4.** Download and install **Putty** by visiting [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
@@ -943,10 +943,10 @@ Now let's configure the software on the computer. Please follow according to you
 
 - **Step 7.** Configure the settings as follows:
 
-    - Serial line: COM4 (choose your COM port)
+    - Serial line: COM7 (choose your COM port)
     - Speed: 9600
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/Putty_Serial_1.png" alt="pir" width="450" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/COM7-Putty-connect.jpg" alt="pir" width="450" height="auto"></p>
 
 - **Step 8.** Click **Open**
 
