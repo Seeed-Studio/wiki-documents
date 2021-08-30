@@ -609,7 +609,7 @@ sudo poweroff
 mkdir STM32
 ```
 
-- **Step 5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases/tag/2021-08-20-reTerminal-V1.7) and download **stm32flash** file and the **STM32G030F6_R2.bin** file.
+- **Step 5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download **stm32flash** file and the **STM32G030F6_R2.bin** file from the **latest release** version.
 
 **Note:** You can click on them to start downloading
 
@@ -704,7 +704,7 @@ git clone http://openocd.zylin.com/openocd
 cd openocd
 ```
 
-- **Step 4.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases/tag/2021-08-20-reTerminal-V1.7) and download the **STM32G030F6_R2.bin** file
+- **Step 4.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download the **STM32G030F6_R2.bin** file from the **latest release** version.
 
 **Note:** You can click on it to start downloading
 
