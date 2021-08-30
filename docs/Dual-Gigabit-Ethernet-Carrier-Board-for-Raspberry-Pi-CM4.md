@@ -128,7 +128,8 @@ Compute Module 4 natively has only a **USB 2.0 interface**. However, we have use
 
 Additionally there is a **USB 3.0 9-pin header** and you can connect even more USB devices using this header.
 
-You can first connect a [9-Pin Female to 20-Pin Female Adapter](https://www.amazon.com/SIENOC-Female-Motherboard-Housing-Adapter/dp/B00EOI3VC8/ref=sr_1_4?dchild=1&keywords=9+pin+to+20+pin&qid=1630315040&sr=8-4) to the 9-Pin header on this board and then connect a [20-Pin Male to USB3.0 Adapter](https://www.amazon.com/Motherboard-Adapter-Header-Convert-Female/dp/B071NZHWHG/ref=sr_1_9?dchild=1&keywords=20-pin+usb3.0&qid=1630315493&sr=8-9) to the previous 20-pin female header.
+You can first connect a [9-Pin Female to 20-Pin Female Adapter](https://www.amazon.com/SIENOC-Female-Motherboard-Housing-Adapter/dp/B00EOI3VC8/ref=sr_1_4?dchild=1&keywords=9+pin+to+20+pin&qid=1630315040&sr=8-4) to the 9-Pin header on this board and then connect a [20-Pin Male to USB3.0 Adapter](https://www.amazon.com/Motherboard-Adapter-Header-Convert-Female/dp/B071NZHWHG/ref=sr_1_9?dchild=1&keywords=20-pin+usb3.0&qid=1630315493&sr=8-9) to the previous 20-pin female header. We need these 2 products because currently **9-Pin to USB3.0 Adapter** is not available in the market, and only **9-Pin to USB2.0 Adapter** is available.
+
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/9-Pin-USB.jpg" alt="pir" width="1000" height="auto"></p>
 
