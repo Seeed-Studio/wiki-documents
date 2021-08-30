@@ -1093,19 +1093,25 @@ cd recovery
 
 The pieeprom.bin file is now ready to be flashed to the Compute Module 4
 
-- **Step 13.** Run the usbboot tool to flash the bootloader EEPROM
+- **Step 13.** Navigate back to the **usbboot** directory
+
+```sh 
+cd ..
+```
+
+- **Step 14.** Run the usbboot tool to flash the bootloader EEPROM
 
 ```sh 
 sudo ./rpiboot -d recovery
 ```
 
-- **Step 14.** Connect reTerminal to the PC via USB Type-C cable 
+- **Step 15.** Connect reTerminal to the PC via USB Type-C cable 
 
 Now it will take a few seconds to transfer the necessary files to the reTerminal. 
 
-- **Step 15.** Turn off reTerminal, flip the Boot Mode switch back to the original position and assemble the reTerminal shell
+- **Step 16.** Turn off reTerminal, flip the Boot Mode switch back to the original position and assemble the reTerminal shell
 
-- **Step 16.** Connect a bootable USB Flash Drive with a suitable OS inside, connect to one of the USB Ports on the reTerminal and turn on reTerminal
+- **Step 17.** Connect a bootable USB Flash Drive with a suitable OS inside, connect to one of the USB Ports on the reTerminal and turn on reTerminal
 
 Now you will see reTerminal booting from the connected USB Drive
 
