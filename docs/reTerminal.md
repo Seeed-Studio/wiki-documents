@@ -514,10 +514,10 @@ It is very important to make sure that you have the latest firmware flashed on t
 
 There are 2 methods of flashing the STM32 chip.
 
-- Method 1: Directly connect to STM32 chip using the CM4 on the reTerminal and flash the firmware
-- Method 2: Physically connect the STM32 chip pins to the 40-Pin reTerminal GPIO using jumper wires and then use OpenOCD to flash the firmware
+- **Method 1:** Directly connect to STM32 chip using the CM4 on the reTerminal and flash the firmware
+- **Method 2:** Physically connect the STM32 chip pins to the 40-Pin reTerminal GPIO using jumper wires and then use OpenOCD to flash the firmware
 
-Method 1 works if you have the new version of the reTerminal and on the other hand, method 2 is only needed if you have the old version of the board.
+**Method 1** works if you have the **new version (v1.7 or higher)** of the reTerminal and on the other hand, **method 2** is only needed if you have the **old version (lower than v1.7)** of the board.
 
 #### Decide Which Flashing Method to Use
 
@@ -555,11 +555,11 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 i2cdetect -y 1
 ```
 
-If you can see the I2C address **0x56** as the table below, you have the **new version** of the board.
+If you can see the I2C address **0x56** as the table below, you have the **new version (v1.7 or higher)** of the board.
 
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-new-board.png" alt="pir" width="600" height="auto"></p>
 
-However, if you can see the I2C address **0x45** as the table below, you have the **old version** of the board
+However, if you can see the I2C address **0x45** as the table below, you have the **old version (lower than v1.7)** of the board
 
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-old-board.png" alt="pir" width="600" height="auto"></p>
 
@@ -583,7 +583,7 @@ sudo poweroff
 
 #### Connect to STM32 using CM4 and flash the firmware
 
-If you have the new version of the board, please follow this method.
+If you have the **new version (v1.7 or higher)** of the board, please follow this method.
 
 - **Step 1.** Enter terminal window of reTerminal and type the following to open the configuration file
 
@@ -600,7 +600,7 @@ sudo nano /boot/config.txt
 - **Step 3.** Reboot reTerminal
 
 ```sh
-sudo poweroff
+sudo reboot
 ```
 
 - **Step 4.** Make a new directory inside reTerminal
@@ -683,7 +683,7 @@ Now you have successfully flashed the firmware to STM32!
 
 #### Connect to STM32 using jumper wires and OpenOCD
 
-If you have the old version of the board, please follow this method.
+If you have the **old version (lower than v1.7)** of the board, please follow this method.
 
 - **Step 1.** Enter terminal window of reTerminal and type the following to update the packages list
 
@@ -819,8 +819,8 @@ If you have flashed to a different OS and want to switch back to the default Ras
 - **Step 1.** Download the Raspberry Pi OS by visiting the links below
 
 
-  - [2021-06-02-Raspbian-32-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal/image_2021-06-02-Raspbian-reTerminal.zip)
-  - [2021-06-02-Raspbian-64-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal-arm64/2021-06-02-Raspbian-reTerminal-arm64.zip)
+  - [2021-06-02-Raspbian(modified)-32-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal/image_2021-06-02-Raspbian-reTerminal.zip)
+  - [2021-06-02-Raspbian(modified)-64-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal-arm64/2021-06-02-Raspbian-reTerminal-arm64.zip)
 
 **Note:** reTerminal is originally shipped with 32-bit OS. However, you can download a 64-bit version as well
 
