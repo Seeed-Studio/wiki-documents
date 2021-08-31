@@ -236,17 +236,51 @@ You need to prepare the following hardware before getting started with reTermina
 
 reTerminal comes with Raspberry Pi OS pre-installed out-of-the-box. So we can turn on the reTerminal and log in to Raspberry Pi OS straight away!
 
-Connect one end of a USB Type-C cable to the reTerminal and the other end to a power adapter (5V/4A)
+- **Step 1.** Connect one end of a USB Type-C cable to the reTerminal and the other end to a power adapter (5V/4A)
 
-You will see the Raspberry Pi OS boot in to Desktop
+- **Step 2.** Once the Raspberry Pi OS is booted up, press **OK** for the **Warning** window
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/RPI-Desktop-1.jpg" alt="pir" width="800" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-1-new-1.png" alt="pir" width="800" height="auto"></p>
+
+- **Step 3.** In the **Welcome to Raspberry Pi** window, press **Next** to get started with the initial set up
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-2-new.png" alt="pir" width="400" height="auto"></p>
+
+- **Step 4.** Choose your **country, language, timezone** and press **Next**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-3-new.png" alt="pir" width="400" height="auto"></p>
+
+- **Step 5.** To change the password, first click on **Raspberry Pi** icon, navigate to `Universal Access > Onboard` to open the on-screen keyboard
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-4-new.png" alt="pir" width="400" height="auto"></p>
+
+- **Step 6.** Enter your desired password and click **Next**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-5-new.png" alt="pir" width="400" height="auto"></p>
+
+**Note:** If you want to keep the default password as **raspberry**, you can leave this blank and click **Next**
+
+- **Step 7.** Click **Next** for the following
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-6-new.png" alt="pir" width="400" height="auto"></p>
+
+- **Step 8.** If you want to connect to a WiFi network, you can choose a network, connect to it and press **Next**. However, if you want to set it later, you can press **Skip**
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-7-new.png" alt="pir" width="400" height="auto"></p>
+
+- **Step 9.** **This step is very important.** You should make sure to press **Skip** to skip updating the software. However, if you want to update the software, you can follow [this wiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-8-new.png" alt="pir" width="400" height="auto"></p>
+
+- **Step 10.** Finally press **Done** to finish the set up
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-9-new.png" alt="pir" width="400" height="auto"></p>
 
 **Note:** The button on the top left corner can be used to turn on the reTerminal after shutting down using software
 
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"></p>
 
-**Note:** If you want to experience the Raspberry Pi OS on a bigger screen, you can connect a display to the micro-HDMI port of the reTerminal and also connect a keyboard and a mouse to the USB ports of the reTerminal.
+**Tip:** If you want to experience the Raspberry Pi OS on a bigger screen, you can connect a display to the micro-HDMI port of the reTerminal and also connect a keyboard and a mouse to the USB ports of the reTerminal.
 
 ## Getting Started with reTerminal (Extended)
 
