@@ -43,7 +43,7 @@ While Grove - Thermal Imaging Camera is a thermal sensor **(MLX90640)** , carryi
 |Item|Grove - Thermal Imaging Camera - MLX90640|Grove - Thermal Imaging Camera - MLX90641|
 |----|-----|------|
 |Thermal sensor|32X24 array MLX90640|16x12 array MLX90641|
-|Operating Voltage|3V - 6V|3.3V - 5V
+|Operating Voltage|3.3V - 5V|3.3V - 5V
 |Current consumption|~18mA|~18mA|
 |FOV(Field of View)|110°x75°|110°x75°|
 |Temperature Measurement Range|-40°C - 300°C|-40°C - 300°C
