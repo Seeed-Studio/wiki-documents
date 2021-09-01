@@ -12,13 +12,13 @@ sku:
 
 ## Introduction
 
-Buildroot is an easy-to-use tool that simplifies and automates the process of building a complete Linux system for an embedded system, using cross-compilation. 
+[Buildroot](https://buildroot.org) is an easy-to-use tool that simplifies and automates the process of building a complete Linux system for an embedded system, using cross-compilation. 
 
 In order to achieve this, Buildroot is able to generate a cross-compilation toolchain, a root filesystem, a Linux kernel image and a bootloader for your target. Buildroot can be used for any combination of these options, independently (you can for example use an existing cross-compilation toolchain, and build only your root filesystem with Buildroot).
 
 It has a simple structure that makes it easy to understand and extend. It relies only on the well-known Makefile language. Buildroot is an open source project and many developers contribute to it daily. 
 
-By following the guide below, you will be able to build your own reTerminal firmware using buildroot. So let's get started!
+By following the guide below, you will be able to build your own [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) firmware using buildroot. So let's get started!
 
 ## Compile Buildroot Source Code
 
