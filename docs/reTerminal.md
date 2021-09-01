@@ -542,6 +542,10 @@ You will see the following output if you have successfully installed the drivers
 sudo reboot
 ```
 
+## FAQ
+
+For Frequently Asked Questions, [click here](https://wiki.seeedstudio.com/reTerminal-FAQ) to visit the FAQs for reTerminal Usage wiki
+
 ## Resources
 
 - **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.pdf)
