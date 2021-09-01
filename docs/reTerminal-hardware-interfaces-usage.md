@@ -98,9 +98,9 @@ echo 23 > unexport
 i2cdetect -l
 ```
 
-<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-detect-y.png" alt="pir" width="750" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/i2cdetect-l.png" alt="pir" width="750" height="auto"></p>
 
-- **Step 6.**  Immediately scan the standard addresses on I2C bus 1 (i2c-1), using the default method for each address
+- **Step 6.**  Scan the standard addresses on I2C bus 1 (i2c-1)
 
 ```sh
 i2cdetect -y 1
@@ -110,46 +110,7 @@ i2cdetect -y 1
 
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-detect-2.png" alt="pir" width="600" height="auto"></p>
 
-The above picture shows a device detected with an I2C address of 0x5c
-
-- **Step 7.** Read the contents of the register by typing the following
-
-```sh
-i2cget -f -y 1 0x5c 0x0f
-```
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/I2C_3.png" alt="pir" width="350" height="auto"></p>
-
-- -y disables interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this  flag is used, it will perform the operation directly
-- 1 represents the I2C bus number
-- 0x5c represents the I2C device address
-- 0x0f represents the memory address 
-<br>
-
-- **Step 8.** Write data to register by typing the following
-
-```sh
-i2cset -y 1 0x5c 0x11 0x10
-```
-
-- -y disables interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this  flag is used, it will perform the operation directly
-- 1 represents the I2C bus number
-- 0x5c represents the I2C device address
-- 0x11 represents the memory address
-- 0x10 represents the specific content in the memory address 
-<br>
-
-- **Step 9.** Read all register values by typing the following
-
-```sh
-i2cdump -y 1 0x5c
-```
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/BeagleV/I2C_4.png" alt="pir" width="800" height="auto"></p>
-
-- -y disables interactive mode. By default, i2cdetect will wait for a confirmation from the user before messing with the I2C bus. When this  flag is used, it will perform the operation directly
-- 1 represents the I2C bus number
-- 0x5c represents the I2C device address 
+The above picture shows I2C devices detected with addresses 0x20, 0x51, 0x45, 0x19, 0x29 and 0x5c
 
 ### Usage - SPI
 
@@ -383,7 +344,7 @@ sudo -i
 - **Step 2.** Enter the following directory
 
 ```sh
-/sys/class/leds
+cd /sys/class/leds
 ```
 
 - **Step 3.** Enter the following directory to control the **Green Color USR LED**
@@ -443,6 +404,28 @@ reTerminal has security features such as a **Microchip ATECC608A cryptographic c
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Encrypt_sch.jpg" alt="pir" width="800" height="auto"></p>
 
 **Tip:** Click [here](https://files.seeedstudio.com/wiki/ReTerminal/Encrypt_sch.jpg) for a higher resolution image
+
+### Usage
+
+- **Step 1.** List all the available I2C busses
+
+```sh
+i2cdetect -l
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/i2cdetect-l.png" alt="pir" width="750" height="auto"></p>
+
+- **Step 2.**  Scan the standard addresses on I2C bus 3 (i2c-3)
+
+```sh
+i2cdetect -y 3
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/i2cdetect-y3.png" alt="pir" width="530" height="auto"></p>
+
+**Note:** 3 represents the I2C bus number 
+
+The device with I2C address **0x60** is the encryption co-processor
 
 ## RTC
 
@@ -588,7 +571,7 @@ lsusb
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/USB-connected.png" alt="pir" width="850" height="auto"></p>
 
-- **Step 3.** Type the following to gather more information about the connected USB device such as the mount point
+- **Step 3.** Type the following to gather more information about the connected USB device such as the drive size, partitions, mount point, etc
 
 ```sh
 lsblk
