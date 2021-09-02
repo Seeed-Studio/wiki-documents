@@ -10,7 +10,7 @@ tags:
 
 ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/XIAO_Preview-07.png)
 
-The XIAO RP2040 is as small as the Seeeduino XIAO but more powerful than Seeeduino XIAO. On one hand, it carries the powerful Dual-core RP2040 processor that can flexible clock running up to 133 MHz which is a low-power microcontrollers. On the XIAO RP2040 there is also 264KB of SRAM, and 2MB of on-board Flash memory which can provide more program to save and run. On the other hand, this little board has good performance in processing but needs less power.  
+The XIAO RP2040 is as small as the Seeeduino XIAO but it's more powerful. On one hand, it carries the powerful Dual-core RP2040 processor that can flexible clock running up to 133 MHz which is a low-power microcontrollers. On the XIAO RP2040 there is also 264KB of SRAM, and 2MB of on-board Flash memory which can provide more program to save and run. On the other hand, this little board has good performance in processing but needs less power.  
 All in all, it is designed in a tiny size as small as a thumb(20x17.5mm) and can be used for wearable devices and small projects.
 
 There are 14 GPIO PINs on XIAO RP2040, on which there are 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface.
@@ -45,9 +45,7 @@ There are 14 GPIO PINs on XIAO RP2040, on which there are 11 digital pins, 4 ana
 |Dimensions|20×17.5×3.5mm|
 
 
-
 ## **Hardware Overview**
-
 
 ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/bigger-one.jpg)
 
@@ -75,9 +73,9 @@ At this point, the chip enters Bootloader mode and the burn port appears again. 
 
 ### **Reset**
 
-If you want to reset the Seeeduino XIAO, perform the following steps:
+If you want to reset the XIAO RP2040, perform the following steps:
 
-- Connect the Seeeduino XIAO to your computer.
+- Connect the XIAO RP2040 to your computer.
 - Press the "R" pins **once**.
 
 Please note: The behavior of the built-in programmable Single-colour LEDs(two are blue, one is green) are reversed to the one on an Arduino. On the XIAO RP2040, the pin has to be pulled low to enable.
@@ -88,9 +86,9 @@ Please note: The behavior of the built-in programmable Single-colour LEDs(two ar
 
 ### **Getting Started**
 
-#### **Playing with Arduino**
+### **Playing with Arduino**
 
-##### **Hardware**
+### **Hardware**
 
 Materials required
 
@@ -99,12 +97,12 @@ Materials required
 - USB typc cable x1
 
 !!!Tip
-    Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1](https://www.seeedstudio.com/Type-C-Extension-Cable-with-Switch-p-4734.html).
+    Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 
 - Step 1. Prepare a XIAO RP2040 and a Type-C cable.
 - Step 2. First hold down the BOOT button, Then connect the XIAO RP2040 to your computer.Then the red power LED should go on.
 
-##### **Software**
+### **Software**
 
 !!!Note
     If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
@@ -159,7 +157,7 @@ A few seconds after the upload finishes, you should see the pin 25 (USER) LED on
 !!!Note
     If uploading the Arduino program fails, try holding down the "BOOT" button and then clicking the "RUN" button. At this point, XIAO RP2040 will enter boot mode (your computer will load a removable disk), and you will be able to upload the Arduino program again.
 
-##### **Pin Multuiplexing**
+### **Pin Multuiplexing**
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
 
@@ -167,7 +165,7 @@ We don't need to configure the pins ourselves, after using the pins, you can cal
 
  - Use pin 0 as the digital pin:
 
-!!!Warning:
+!!!warning:
     Please note that the operating voltage of the XIAO RP2040 is 3.3V, if you connect the sensor to 5V incorrectly, the motherboard may not work properly.
 
 ```c++
@@ -198,6 +196,7 @@ void loop() {
 }
 ```
 **AnalogRead**
+
  - Use pin 0 as the analog pin:
 
 ```c++
@@ -224,6 +223,7 @@ int sensorValue = analogRead(sensorPin);
 ```
 
 **Serial**
+
  - Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
 
 ```c++
