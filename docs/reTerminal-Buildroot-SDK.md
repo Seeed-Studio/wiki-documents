@@ -6,35 +6,45 @@ wikiurl:
 sku: 
 ---
 
-# Generate reTerminal Firmware using Buildroot
+# reTerminal Buildroot SDK 
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/thumb.jpg" alt="pir" width="500" height="auto"></p>
 
 ## Introduction
 
-[Buildroot](https://buildroot.org) is an easy-to-use tool that simplifies and automates the process of building a complete Linux system for an embedded system, using cross-compilation. 
+[Buildroot](https://buildroot.org) is an easy-to-use tool that simplifies and automates the process of building a complete Linux system for an embedded system, using cross-compilation.
 
 In order to achieve this, Buildroot is able to generate a cross-compilation toolchain, a root filesystem, a Linux kernel image and a bootloader for your target. Buildroot can be used for any combination of these options, independently (you can for example use an existing cross-compilation toolchain, and build only your root filesystem with Buildroot).
 
 It has a simple structure that makes it easy to understand and extend. It relies only on the well-known Makefile language. Buildroot is an open source project and many developers contribute to it daily. 
 
-By following the guide below, you will be able to build your own [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) firmware using buildroot. So let's get started!
+By following the guide below, you will be able to build your own [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) system image using Buildroot. So let's get started!
 
 ## Compile Buildroot Source Code
 
 ### Manual Compilation on Local Machine
 
-Now we will move on to manually compiling the firmware for reTerminal using Buildroot.
+Now we will move on to manually compiling the system image for reTerminal using Buildroot.
 
 **note:** This guide was written after testing on a host PC with Ubuntu 20.04 installed. However, it will work for other Linux systems.
 
-- **Step 1.** On the host PC, open a terminal window and clone the following GitHub repo
+- **Step 1.** Prepare the development environment on the host PC by installing the following packages (git, gcc and make)
+
+```sh
+sudo apt update
+sudo apt install git
+sudo apt install build-essential
+```
+
+**Note:** If you already have the above packages installed. You can skip it.
+
+- **Step 2.** Clone the following GitHub repo
 
 ```sh
 git clone --depth=1 https://github.com/Seeed-Studio/seeed-linux-buildroot.git -b master
 ```
 
-- **Step 2.** Navigate to the **seeed-linux-buildroot** directory
+- **Step 3.** Navigate to the **seeed-linux-buildroot** directory
 
 ```sh
 cd seeed-linux-buildroot
@@ -75,7 +85,7 @@ Once the compilation is successful, navigate to `seeed-linux-buildroot/output/im
 
 ### Download Already Compiled Image
 
-If you want to download a reTerminal firmware image which is already compiled using Buildroot, you can proceed to the steps below.
+If you want to download a reTerminal system image which is already compiled using Buildroot, you can proceed to the steps below.
 
 - **Step 1.** Open [this link](https://github.com/Seeed-Studio/seeed-linux-buildroot/actions) to enter the **Actions** page of **seeed-linux-buildroot** GitHub repo
 
@@ -98,6 +108,14 @@ Follow the steps in [this wiki](https://wiki.seeedstudio.com/reTerminal/#getting
 **Note:** When you open **Raspberry Pi Imager**, click **CHOOSE OS**, select **Use custom** and choose the downloaded **sdcard.img** file.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/RPi-imager-1.png" alt="pir" width="600" height="auto"></p>
+
+## First Boot on reTerminal
+
+After we flash the system image to the reTerminal, power on the reTerminal. Here you will see the kernel log pop up on the reTerminal LCD and at last a demo application will open which is made using Qt.
+
+The boot up time of the default system image is around 30 seconds
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/bootup.gif" alt="pir" width="1000" height="auto"></p>
 
 ## Analyze Buildroot Image
 
@@ -129,38 +147,12 @@ make graph-depends
 
 After the above commands, the dependency diagrams will be generated at `seeed-linux-buildroot > output > graphs` as:
 
-- [graph-depends.pdf](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-depends.pdf)
-- [graph-depends.dot](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-depends.dot)
+- graph-depends.pdf
+- graph-depends.dot
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-depends-img.png" alt="pir" width="1000" height="auto"></p>
+[![](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-depends-img.png)](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-depends-img.png)
 
-### Generate Analysis of the Compilation Time
-
-Buildroot can also generate an analysis of the compilation time.
-
-Type the following command
-
-```sh
-make graph-build
-```
-
-After the above command, the visual analysis files will be generated at `seeed-linux-buildroot > output > graphs` as:
-
-- [build.pie-steps.pdf](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.pie-steps.pdf)
-- [build.pie-packages.pdf](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.pie-packages.pdf)
-- [build.hist-name.pdf](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.hist-name.pdf)
-- [build.hist-duration.pdf](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.hist-duration.pdf)
-- [build.hist-build.pdf](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.hist-build.pdf)
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.pie-steps-img.png" alt="pir" width="1000" height="auto"></p>
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.pie-packages-img.png" alt="pir" width="1000" height="auto"></p>
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.hist-name-img.png" alt="pir" width="1000" height="auto"></p>
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.hist-duration-img.png" alt="pir" width="1000" height="auto"></p>
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/build.hist-build-img.png" alt="pir" width="1000" height="auto"></p>
+**Note:** Click on the above image to view an enlarged version
 
 ### Generate Analysis of Size of the Resources Consumed by the Compilation
 
@@ -174,17 +166,80 @@ make graph-size
 
 After the above command, the visual analysis files will be generated at `seeed-linux-buildroot > output > graphs` as:
 
-- [graph-size.pdf](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-size.pdf)
-- [file-size-stats.csv](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/file-size-stats.csv)
-- [package-size-stats.csv](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/package-size-stats.csv)
+- graph-size.pdf
+- file-size-stats.csv
+- package-size-stats.csv
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-size-img.png" alt="pir" width="1000" height="auto"></p>
+[![](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-size-img.png)](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-size-img.png)
+
+**Note:** Click on the above image to view an enlarged version
 
 ## Test Buildroot Image
 
-To test the above Buildroot image with reTerminal, you can visit the [reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) and perform the same steps with the Buildroot image.
+To test the above Buildroot image with reTerminal, you can visit the [reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) and refer to the steps mentioned. However, some steps may not work the same for the Buildroot image and therefore you can refer to a few pointers mentioned below:
 
-**Note:** Wherever you have to use **sudo** in the above wiki, you need to enter **su -** when using the Buildroot image to switch to the **root** user
+### GPIO Usage
+
+- Replace **sudo -i** with **su -** to enable root account privileges
+- Follow the other steps as mentioned
+
+### I2C Usage
+
+- You don't need to turn on I2C for the Buildroot image because **I2C is enabled by default**
+- Follow the other steps as mentioned
+
+### SPI Usage
+
+- To turn on SPI, open **config.txt** by **vi /boot/config.txt** command
+- Add **dtparam=spi=on** at the end (press **i** to enter edit mode)
+- Press **ESC** to quit from edit mode
+- Save the file by typing **:wq**
+- Reboot
+- spidev_test tool has problem when running. This will be updated once it is fixed.
+
+### CSI camera
+
+- The CSI camera interface is not tested yet. This will be updated once it is tested.
+
+### Touch Panel, Accelerometer, Buttons
+
+- You don't need to install **evtest tool** because it is already installed 
+- Before running **evtest** you need to change to root by typing **su -**
+- Follow the other steps as mentioned
+
+### 3 User Programmable LEDs
+
+- Replace **sudo -i** with **su -** to enable root account privileges
+- Follow the other steps as mentioned
+
+### RTC
+
+- First type **su -** to enable root account
+- Then type **hwclock**
+
+### Light Sensor
+
+- Replace **sudo -i** with **su -** to enable root account privileges
+- Follow the other steps as mentioned
+
+### Buzzer
+
+- Replace **sudo -i** with **su -** to enable root account privileges
+- Follow the other steps as mentioned
+
+### Micro-HDMI Port
+
+- Hot-plug doesn’t work at the moment. This will be updated once it is fixed.
+- So you need to first connect to HDMI display and then turn on reTerminal
+- Note that **arandr** package is not available for Buildroot system image
+
+### Python Library for reTerminal
+
+- This library will be added later to the Buildroot image
+- First type **su -** to enable root account
+- The type **pip3 install seeed-python-reterminal**
+- use **vi** as text editor when creating the Python files
+- Accel + button demo has a problem. This will be updated once it is fixed.
 
 ## Resources
 

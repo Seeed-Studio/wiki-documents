@@ -324,10 +324,11 @@ nav:
           - Build Your Own UI Using Flutter: reTerminal-build-UI-using-Flutter.md
           - Build Your Own UI Using Electron: reTerminal-build-UI-using-Electron.md
           - Build Your Own UI Using LVGL: reTerminal-build-UI-using-LVGL.md
-          - Generate reTerminal Firmware using Buildroot: reTerminal-Generate-Firmware-using-Buildroot.md
           - Machine Learning Applications:
             - Getting started with Google MediaPipe: reTerminal_ML_MediaPipe.md          
-            - Getting started with TensorFlow Lite: reTerminal_ML_TFLite.md   
+            - Getting started with TensorFlow Lite: reTerminal_ML_TFLite.md
+          - Embedded Linux Systems:
+            - Buildroot: reTerminal-Buildroot-SDK.md
 
       - reServer:
           - Getting Started with reServer: reServer-Getting-Started.md
