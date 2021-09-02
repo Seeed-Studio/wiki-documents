@@ -1,5 +1,5 @@
 ---
-name: Build Your Own UI Using Qt for Python
+name: reTerminal Buildroot SDK 
 category: reTerminal
 bzurl: 
 wikiurl: 
