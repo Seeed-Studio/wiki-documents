@@ -204,6 +204,8 @@ nav:
           - Seeeduino XIAO Expansion board: Seeeduino-XIAO-Expansion-Board.md
           - Seeeduino XIAO: Seeeduino-XIAO.md
           - XIAO RP2040: XIAO-RP2040.md
+          - XIAO RP2040 with MicroPython: XIAO-RP2040-with-MicroPython.md
+          - XIAO RP2040 with CircuitPython: XIAO-RP2040-with-CircuitPython.md
           - Seeeduino XIAO by Nanase: Seeeduino-XIAO-by-Nanase.md
           - Seeeduino XIAO with CircuitPython: Seeeduino-XIAO-CircuitPython.md
           - Seeeduino XIAO with TinyUSB: Seeeduino-XIAO-TinyUSB.md
