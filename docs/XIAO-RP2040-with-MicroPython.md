@@ -37,9 +37,13 @@ Now that you have Thonny installed, open the application. You should see the mai
 ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_7.png)
 
 The main interface of Thonny is very simple, divided into the following four parts:
+
 - 1.Toolbar: basic common tools, such as new, open, save, run the current script, stop, etc.
+
 - 2.Code editor: Thonny's core area, where we will write Python/MicroPython code.  
+
 - 3.Shell: We can run commands here, and the results of the commands will be displayed in the Shell immediately. We also can see outputs of our code in the Shell window.
+
 - 4.Interpreter: Here you can select the type of interpreter to compile the program. Click Python 3.7.9, find MicroPython (Raspberry pi Pico) in the pop-up menu, and click OK to switch the interpreter to Pico interpreter. You can also click "Tools>>>Options>>>Interpreter" to select.
 
 ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png)
@@ -51,10 +55,6 @@ The main interface of Thonny is very simple, divided into the following four par
 Use the data cable to connect the development board to the computer, and then click the "Restart backend" button on the toolbar. If XIAO RP2040 is successfully connected to the computer, you will see the MicroPython version information and device name in the Shell. 
 
 ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_10.png)
-
-Use the data cable to connect the development board to the computer, and then click the "Restart backend" button on the toolbar. If Wio RP2040 is successfully connected to the computer, you will see the MicroPython version information and device name in the Shell. 
-
-![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_11.png)
 
 ### **Light up the onboard LED light**
 
