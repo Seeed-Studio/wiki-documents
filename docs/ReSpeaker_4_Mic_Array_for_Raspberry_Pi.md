@@ -440,46 +440,31 @@ If you encounter technical problems using Picovoice, please visit **[Picovoice](
 
 ## FAQ
 
-**Q1: How to change the Raspbian Mirrors source?**
+**Q1: We can hear the voice by `aplay` from the 3.5mm audio jack but we can't hear the voice when running ns_kws_doa_alexa_with_light.py**
 
-A1: Please refer to [Raspbian Mirrors](http://www.raspbian.org/RaspbianMirrors) and follow below instructions to modify the source at beginning.
-
-```sh
-pi@raspberrypi ~ $ sudo nano /etc/apt/sources.list
-```
-
-For example, we suggest using the tsinghua source for China users. So please modify the sources.list as below.
-
-```sh
-deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
-```
-
-**Q2: We can hear the voice by `aplay` from the 3.5mm audio jack but we can't hear the voice when running ns_kws_doa_alexa_with_light.py**
-
-A2: We have 3 players (mpv, mpg123 and gstreamer) to use. SpeechSynthesizer and Alerts prefer mpg123 which is more responsive. AudioPlayer likes gstreamer > mpv > mpg123. Gstreamer supports more audio format and works well on raspberry pi. We can also specify the player of AudioPlayer using the environment variable PLAYER. So please try below commands to enable the voice.
+A1: We have 3 players (mpv, mpg123 and gstreamer) to use. SpeechSynthesizer and Alerts prefer mpg123 which is more responsive. AudioPlayer likes gstreamer > mpv > mpg123. Gstreamer supports more audio format and works well on raspberry pi. We can also specify the player of AudioPlayer using the environment variable PLAYER. So please try below commands to enable the voice.
 
 ```sh
 sudo apt install mpg123
 PLAYER=mpg123 python ns_kws_doa_alexa_with_light.py
 ```
 
-**Q3: There is no response When we run kws_doa.py and say snow boy**
+**Q2: There is no response When we run kws_doa.py and say snow boy**
 
-A3: Please run audacity to make sure 4 channels are good. If there is one channel without data, there will be no response when we say snow boy.
+A2: Please run audacity to make sure 4 channels are good. If there is one channel without data, there will be no response when we say snow boy.
 
 
-**Q4: #include "portaudio.h" Error when run "sudo pip install pyaudio".**
+**Q3: #include "portaudio.h" Error when run "sudo pip install pyaudio".**
 
-A4: Please run below command to solve the issue. 
+A3: Please run below command to solve the issue. 
 
 ```sh
 sudo apt-get install portaudio19-dev
 ```
 
-**Q5: ...WARNING: memory leak will occur if overlay removed... message in journalctl**
+**Q4: ...WARNING: memory leak will occur if overlay removed... message in journalctl**
 
-A5: There is a genuine one-off small memory loss when the driver is first loaded (after boot up). However, since it is per boot or per load, and the typical user only needs to load the driver once per boot, losing track of a few bytes per boot does not matter. So this is just an small issue unlikely to affect any users in a real way, other than seeing a worrying message about memory loss per boot.
+A4: There is a genuine one-off small memory loss when the driver is first loaded (after boot up). However, since it is per boot or per load, and the typical user only needs to load the driver once per boot, losing track of a few bytes per boot does not matter. So this is just an small issue unlikely to affect any users in a real way, other than seeing a worrying message about memory loss per boot.
 
 
 ## Resources
