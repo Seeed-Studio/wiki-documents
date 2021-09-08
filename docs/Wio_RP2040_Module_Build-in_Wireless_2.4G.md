@@ -47,8 +47,19 @@ The module has rich interfaces, including 28 GPIO PINs (19 PINs support PIO and 
 		I/O pins: The MCU runs at 3.3V. If the voltage input connected to the general-purpose I/O pin is higher than 3.3V, it may cause damage to the chip. Please pay attention to use, do not lift the shielding cover.
 
 ## Getting Started
-If you want to upload the MicroPython firmware for this module, you can download [firmware.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware-v1.15.1.uf2) to the computer, then pull the BOOT pin low and connect the MicroUSB female socket according to the following wiring diagram, and finally, you can connect to the computer through the data cable. At this time, the computer will have an extra removable disk, and then move the firmware you downloaded to the removable disk to complete the firmware update.
+If you want to upload the MicroPython firmware for this module, you can download [firmware-v1.15.1.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware-v1.15.1.uf2) to the computer, then pull the BOOT pin low and connect the MicroUSB female socket according to the following wiring diagram, and finally, you can connect to the computer through the data cable. At this time, the computer will have an extra removable disk, and then move the firmware you downloaded to the removable disk to complete the firmware update.
 ![enter image description here](https://files.seeedstudio.com/wiki/Wio_RP2040_Module-Build-in_Wireless_2.4G/image.png)
+
+
+| Firmware version          | Update Log  | Download|
+|-----------------------|--------------|---------|
+|V1.15.1|The first official version|[firmware-v1.15.1.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware-v1.15.1.uf2)|
+|V1.15.2|Fix the stability of the Socket and add up the error message of connection failure|[firmware-v1.15.2.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/v1.15.2.uf2)|
+|V1.15.3|Rename the original function 'wait_msg()' to 'check_msg()' function, and add new 'wait_msg()' function.The main difference between them is that original 'wait_msg' function will block the program from executing when it hasn’t 'waite' for the data. And yet the 'check_msg()' function will only detect whether the data is received. When it does, it will execute the callback, and if it doesn't,the program will still continue to execute.|[firmware-v1.15.3.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/1.15.3.uf2)|
+
+
+!!!note: The firmware version used in the wiki tutorial is V1.15.1.
+If you use a new version of the firmware, please refer to the firmware update log to modify the sample code.
 
 
 ### Software
