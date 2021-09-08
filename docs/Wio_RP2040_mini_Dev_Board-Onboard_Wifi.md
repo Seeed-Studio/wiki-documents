@@ -58,7 +58,7 @@ The board has rich interfaces, including 28 GPIO PINs (19 PINs support PIO and P
 		I/O pins: The MCU runs at 3.3V. If the voltage input connected to the general-purpose I/O pin is higher than 3.3V, it may cause damage to the chip. Please pay attention to use, do not lift the shielding cover.
 
 ## Getting Started
-The main control board has built-in MicroPython firmware, so users can directly connect to the Thonny code editor. If your firmware is damaged or you want to replace it with other firmware, you can download [firmware.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware-v1.15.1.uf2) to the computer. Press and hold the BOOT button of the RP2040 main control board and then connect with the USB cable. At this time, the computer will have an extra removable disk, and then drag the firmware you downloaded to the removable disk to complete the firmware update.
+The main control board has built-in MicroPython firmware, so users can directly connect to the Thonny code editor. If your firmware is damaged or you want to replace it with other firmware, you can download [firmware-v1.15.1.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware-v1.15.1.uf2) to the computer. Press and hold the BOOT button of the RP2040 main control board and then connect with the USB cable. At this time, the computer will have an extra removable disk, and then drag the firmware you downloaded to the removable disk to complete the firmware update.
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/board_5.png)
 ### Hardware requirements
@@ -68,6 +68,20 @@ The main control board has built-in MicroPython firmware, so users can directly 
 - USB Type-C cable x 1
 
 Connect the Wio RP2040 mini Dev Board to the computer via the USB cable, and the red LED power indicator on the board should light up.
+
+| Firmware version            | Update Log  | Download|
+|-----------------------|--------------|---------|
+|V1.15.1|The first official version|[firmware-v1.15.1.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/firmware-v1.15.1.uf2)|
+|V1.15.2|Fix the stability of the Socket and add up the error message of connection failure|[firmware-v1.15.2.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/v1.15.2.uf2)|
+|V1.15.3|Rename the original function 'wait_msg()' to 'check_msg()' function, and add new 'wait_msg()' function.The main difference between them is that original 'wait_msg' function will block the program from executing when it hasn’t 'waite' for the data. And yet the 'check_msg()' function will only detect whether the data is received. When it does, it will execute the callback, and if it doesn't,the program will still continue to execute.|[firmware-v1.15.3.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/1.15.3.uf2)|
+
+
+!!!Note
+       The firmware version used in the wiki tutorial is V1.15.1.
+       If you use a new version of the firmware, please refer to the firmware update log to modify the sample code.
+
+
+
 ## Software
 #### 1. Install Thonny 
 Easy to get started. Thonny comes with Python 3.7 built-in, so just one simple installer is needed and you're ready to learn to program. First, click [Thonny.org](https://thonny.org/) to enter the download page. In the upper right corner of the page, select the Thonny installation package according to your operating system to download.  Double-click the installation package you downloaded to open it, and install it according to the steps.
