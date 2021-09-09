@@ -331,6 +331,7 @@ nav:
             - Getting started with TensorFlow Lite: reTerminal_ML_TFLite.md
           - Embedded Linux Systems:
             - Buildroot: reTerminal-Buildroot-SDK.md
+            - Yocto: reTerminal-Yocto.md
 
       - reServer:
           - Getting Started with reServer: reServer-Getting-Started.md
