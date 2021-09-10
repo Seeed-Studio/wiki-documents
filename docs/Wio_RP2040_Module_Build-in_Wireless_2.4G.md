@@ -58,7 +58,7 @@ If you want to upload the MicroPython firmware for this module, you can download
 |V1.15.3|Rename the original function 'wait_msg()' to 'check_msg()' function, and add new 'wait_msg()' function.The main difference between them is that original 'wait_msg' function will block the program from executing when it hasn’t 'waite' for the data. And yet the 'check_msg()' function will only detect whether the data is received. When it does, it will execute the callback, and if it doesn't,the program will still continue to execute.|[firmware-v1.15.3.uf2](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/1.15.3.uf2)|
 
 
-!!!note: The firmware version used in the wiki tutorial is V1.15.1.
+!!!Note: The firmware version used in the wiki tutorial is V1.15.1.
 If you use a new version of the firmware, please refer to the firmware update log to modify the sample code.
 
 
