@@ -411,6 +411,7 @@ nav:
               - LAN Communications: LAN_Communications.md
               - Use MQTT to remotely light up LED lights: Use_MQTT_to_remotely_light_up_LED_lights.md
               - Use Socket to connect to the forum: Use_Socket_to_connect_to_the_forum.md
+              - Wio RP2040 mini Dev Board with Arduino: Wio-RP2040-with-Arduino-WIFI.md
               - Wireless Fall Detection Device: Wireless-Fall-Detection-Device.md
               - Wireless desktop atmosphere lamp: Wireless-desktop-atmosphere-lamp.md
           - Wio Introduction: Wio.md
