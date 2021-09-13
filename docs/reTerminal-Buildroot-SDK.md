@@ -176,70 +176,7 @@ After the above command, the visual analysis files will be generated at `seeed-l
 
 ## Test Buildroot Image
 
-To test the above Buildroot image with reTerminal, you can visit the [reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) and refer to the steps mentioned. However, some steps may not work the same for the Buildroot image and therefore you can refer to a few pointers mentioned below:
-
-### GPIO Usage
-
-- Replace **sudo -i** with **su -** to enable root account privileges
-- Follow the other steps as mentioned
-
-### I2C Usage
-
-- You don't need to turn on I2C for the Buildroot image because **I2C is enabled by default**
-- Follow the other steps as mentioned
-
-### SPI Usage
-
-- To turn on SPI, open **config.txt** by **vi /boot/config.txt** command
-- Add **dtparam=spi=on** at the end (press **i** to enter edit mode)
-- Press **ESC** to quit from edit mode
-- Save the file by typing **:wq**
-- Reboot
-- spidev_test tool has problem when running. This will be updated once it is fixed.
-
-### CSI camera
-
-- The CSI camera interface is not tested yet. This will be updated once it is tested.
-
-### Touch Panel, Accelerometer, Buttons
-
-- You don't need to install **evtest tool** because it is already installed 
-- Before running **evtest** you need to change to root by typing **su -**
-- Follow the other steps as mentioned
-
-### 3 User Programmable LEDs
-
-- Replace **sudo -i** with **su -** to enable root account privileges
-- Follow the other steps as mentioned
-
-### RTC
-
-- First type **su -** to enable root account
-- Then type **hwclock**
-
-### Light Sensor
-
-- Replace **sudo -i** with **su -** to enable root account privileges
-- Follow the other steps as mentioned
-
-### Buzzer
-
-- Replace **sudo -i** with **su -** to enable root account privileges
-- Follow the other steps as mentioned
-
-### Micro-HDMI Port
-
-- Hot-plug doesn’t work at the moment. This will be updated once it is fixed.
-- So you need to first connect to HDMI display and then turn on reTerminal
-- Note that **arandr** package is not available for Buildroot system image
-
-### Python Library for reTerminal
-
-- This library will be added later to the Buildroot image
-- First type **su -** to enable root account
-- The type **pip3 install seeed-python-reterminal**
-- use **vi** as text editor when creating the Python files
-- Accel + button demo has a problem. This will be updated once it is fixed.
+To test the above Buildroot image with reTerminal, you can visit the [reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) and refer to the steps mentioned. 
 
 ## Resources
 

@@ -8,7 +8,9 @@ sku:
 
 # Hardware and Interfaces Usage
 
-This wiki introduces the various different hardware and interfaces on the reTerminal and how to use them to expand your project ideas.
+This wiki introduces the various different hardware and interfaces on the reTerminal and how to use them to expand your project ideas. 
+
+**Note:** For some hardware and interfaces, the usage instructions will be different from each other when running the Raspberry Pi OS image, [Buildroot image](https://wiki.seeedstudio.com/reTerminal-Buildroot-SDK) and the [Yocto image](https://wiki.seeedstudio.com/reTerminal-Yocto). The default steps will be for the Raspberry Pi OS image. However, if the instructions for Buildroot image and the Yocto image are different, they are clearly noted.
 
 ## Hardware Overview
 
@@ -80,6 +82,16 @@ cd ..
 echo 23 > unexport
 ```
 
+#### Usage on Buildroot image
+
+- Replace **sudo -i** with **su -** to enable **root** account privileges
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- **sudo -i** is not needed because we already log in as **root**
+- Follow the other steps as mentioned above
+
 ### Usage - I2C
 
 - **Step 1.** Turn on the reTerminal, click on the Raspberry Pi icon on Raspberry Pi Desktop UI and navigate to `Preferences > Raspberry Pi Configuration`
@@ -111,6 +123,15 @@ i2cdetect -y 1
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-detect-2.png" alt="pir" width="600" height="auto"></p>
 
 The above picture shows I2C devices detected with addresses 0x20, 0x51, 0x45, 0x19, 0x29 and 0x5c
+
+#### Usage on Buildroot image
+
+- You don't need to turn on I2C for the Buildroot image because **I2C is enabled by default**
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- I2C is not enabled when turned on. It only works with **modprobe i2c-dev** after each boot. This will be updated once it is fixed.
 
 ### Usage - SPI
 
@@ -157,6 +178,15 @@ chmod +x spidev_test
 If you see the following output, SPI is working properly
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/SPI_test.jpg" alt="pir" width="1000" height="auto"></p>
+
+#### Usage on Buildroot/ Yocto image
+
+- To turn on SPI, open **config.txt** by **vi /boot/config.txt** command
+- Add **dtparam=spi=on** at the end (press **i** to enter edit mode)
+- Press **ESC** to quit from edit mode
+- Save the file by typing **:wq**
+- Reboot
+- spidev_test tool has problem when running. This will be updated once it is fixed.
 
 ## High-Speed Interface for Expansion Modules
 
@@ -229,6 +259,10 @@ raspivid -o Desktop/video.h264
 
 You can learn more about camera usage by visiting [official Raspberry Pi documentation](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3)
 
+#### Usage on Buildroot/ Yocto image
+
+- The CSI camera interface is not tested yet. This will be updated once it is tested.
+
 ## 5-Inch LCD
 
 The inbuilt 5-inch LCD on the reTerminal is connected to the **30-pin DSI interface** on the carrier board inside. This LCD supports **5-point multi-touch** and in order to enable this feature, the LCD is connected to another **TP interface** on the carrier board.
@@ -266,6 +300,17 @@ evtest
 - **Step 4.** Touch randomly on the reTerminal LCD and you will see the following output
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/tp-2.png" alt="pir" width="850" height="auto"></p>
+
+#### Usage on Buildroot image
+
+- You don't need to install **evtest tool** because it is already installed 
+- Before running **evtest** you need to change to root by typing **su -**
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- You don't need to install **evtest tool** because it is already installed 
+- Follow the other steps as mentioned above
 
 ### Connect other devices to FPC connector via I2C
 
@@ -320,6 +365,17 @@ dtoverlay=reTerminal,key0=0x100,key1=0x101,key2=0x102,key3=0x103
 ```
 
 **Note:** Here the hexadecimal numbers 100,101,102 and 103 are assigned to key0, key1, key2. key3 respectively
+
+#### Usage on Buildroot image
+
+- You don't need to install **evtest tool** because it is already installed 
+- Before running **evtest** you need to change to root by typing **su -**
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- You don't need to install **evtest tool** because it is already installed 
+- Follow the other steps as mentioned above
 
 ## 3 User Programmable LEDs
 
@@ -385,6 +441,16 @@ cd usr_led2
 
 - **Step 9.** Repeat steps 4 - 5 to control the LED
 
+#### Usage on Buildroot image
+
+- Replace **sudo -i** with **su -** to enable **root** account privileges
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- **sudo -i** is not needed because we already log in as **root**
+- Follow the other steps as mentioned above
+
 ## Gigabit Ethernet Port
 
 reTerminal has a Gigabit Ethernet Connector (RJ45) onboard. This port is connected to the **Gigabit Ethernet PHY** of the CM4 module which is based on **Broadcom BCM54210PE**. It is also **IEEE 1588-2008 compliant**. 
@@ -427,6 +493,14 @@ i2cdetect -y 3
 
 The device with I2C address **0x60** is the encryption co-processor
 
+#### Usage on Buildroot image
+
+- Works as above
+
+#### Usage on Yocto image
+
+- I2C is not enabled when turned on. It only works with **modprobe i2c-dev** after each boot. This will be updated once it is fixed.
+
 ## RTC
 
 The in-built RTC on the reTerminal is based on **NXP Semiconductors PCF8563T** and uses a **CR1220 battery** to power it on. It has a low backup current; typical 0.25μA at VDD = 3.0 V and a temperature = 25°C. It can be used for projects where you need to implement time keeping functions.
@@ -448,6 +522,16 @@ sudo hwclock
 ```
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/hwclock.png" alt="pir" width="370" height="auto"></p>
+
+#### Usage on Buildroot image
+
+- First type **su -** to enable **root** account
+- Then type **hwclock**
+
+#### Usage on Yocto image
+
+- **sudo** is not needed because we already log in as **root**
+- Just type **hwclock**
 
 ## Light Sensor
 
@@ -487,6 +571,16 @@ The light sensor is connected to the reTerminal via **I2C communication protocol
 
 After that follow the steps from the previous topic on how to use I2C
 
+#### Usage on Buildroot image
+
+- Replace **sudo -i** with **su -** to enable **root** account privileges
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- **sudo -i** is not needed because we already log in as **root**
+- Follow the other steps as mentioned above
+
 ## Accelerometer
 
 The in-built **STMicroelectronics LIS3DHTR 3-axis accelerometer** can be used to realize many different applications with the reTerminal. You can use it to automatically change screen orientation as you rotate the reTerminal and much more.
@@ -510,6 +604,17 @@ evtest
 - **Step 2.** Type **1** and you will see the X,Y,Z acceleration values
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/accel-test.png" alt="pir" width="700" height="auto"></p>
+
+#### Usage on Buildroot image
+
+- You don't need to install **evtest tool** because it is already installed 
+- Before running **evtest** you need to change to **root** by typing **su -**
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- You don't need to install **evtest tool** because it is already installed 
+- Follow the other steps as mentioned above
 
 ## Buzzer
 
@@ -546,6 +651,16 @@ echo 1 > brightness
 ```sh
 echo 0 > brightness
 ```
+
+#### Usage on Buildroot image
+
+- Replace **sudo -i** with **su -** to enable **root** account privileges
+- Follow the other steps as mentioned above
+
+#### Usage on Yocto image
+
+- **sudo -i** is not needed because we already log in as **root**
+- Follow the other steps as mentioned
 
 ## USB 2.0 Ports
 
@@ -643,6 +758,12 @@ sudo apt install arandr
 - **Step 7.** Click on the **tick mark** to apply the settings
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/screen-apply.png" alt="pir" width="1000" height="auto"></p>
+
+#### Usage on Buildroot/ Yocto image
+
+- Hot-plug doesn’t work at the moment. This will be updated once it is fixed.
+- So you need to first connect to HDMI display and then turn on reTerminal
+- Note that **arandr** package is not available for Buildroot system image
 
 ## USB Type-C Port
 
@@ -793,6 +914,18 @@ asyncio.ensure_future(btn_coroutine(btn_device))
 loop = asyncio.get_event_loop()
 loop.run_forever()
 ```
+
+#### Usage on Buildroot image
+
+- This library will be added later to the Buildroot image
+- First type **su -** to enable root account
+- The type **pip3 install seeed-python-reterminal**
+- use **vi** as text editor when creating the Python files
+- Accel + button demo has a problem. This will be updated once it is fixed
+
+#### Usage on Yocto image
+
+- Eventhough Python is installed, pip is not installed. We will later pack this library inside this system image
 
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

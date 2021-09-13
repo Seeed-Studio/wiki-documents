@@ -480,74 +480,7 @@ The boot up time of the default system image is around 17 seconds
 
 ## Test Yocto Image
 
-To test the above Yocto image with reTerminal, you can visit the [reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) and refer to the steps mentioned. However, some steps may not work the same for the Yocto image and therefore you can refer to a few pointers mentioned below:
-
-### GPIO Usage
-
-- **sudo -i** is not needed because we already log in as **root**
-- Follow the other steps as mentioned
-
-### I2C Usage
-
-- I2C is not enabled when turned on. It only works with **modprobe i2c-dev** after each boot. This will be updated once it is fixed.
-
-### SPI Usage
-
-- To turn on SPI, open **config.txt** by **vi /boot/config.txt** command
-- Add **dtparam=spi=on** at the end (press **i** to enter edit mode)
-- Press **ESC** to quit from edit mode
-- Save the file by typing **:wq**
-- Reboot
-- spidev_test tool has problem when running. This will be updated once it is fixed.
-
-### CSI camera
-
-- The CSI camera interface is not tested yet. This will be updated once it is tested.
-
-### Touch Panel, Accelerometer, Buttons
-
-- You don't need to install **evtest tool** because it is already installed 
-- Follow the other steps as mentioned
-
-### 3 User Programmable LEDs
-
-- **sudo -i** is not needed because we already log in as **root**
-- Follow the other steps as mentioned
-
-### Encryption Co-Processor
-
-- I2C is not enabled when turned on. It only works with **modprobe i2c-dev** after each boot. This will be updated once it is fixed.
-
-### RTC
-
-- **sudo** is not needed because we already log in as **root**
-- Just type **hwclock**
-
-### Light Sensor
-
-- **sudo -i** is not needed because we already log in as **root**
-- Follow the other steps as mentioned
-
-### Buzzer
-
-- **sudo -i** is not needed because we already log in as **root**
-- Follow the other steps as mentioned
-
-### Micro-HDMI Port
-
-- Hot-plug doesn’t work at the moment. This will be updated once it is fixed.
-- So you need to first connect to HDMI display and then turn on reTerminal
-- Note that **arandr** package is not available for Yocto system image
-
-### Python Library for reTerminal
-
-- Eventhough Python is installed, pip is not installed. We will later pack [this library](https://github.com/Seeed-Studio/Seeed_Python_ReTerminal) inside this system image
-
-### Qt App Demo 
-
-- **SHUTDOWN button** in Qt app doesnt completely shutdown reTerminal. It get stuck in **Unmounting remote filesystems**. 
-- However when **poweroff** command is used, it shutdown successfully
-- This will be updated once it is fixed.
+To test the above Yocto image with reTerminal, you can visit the [reTerminal Hardware and Interfaces Usage wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) and refer to the steps mentioned. 
 
 ## Resources
 
