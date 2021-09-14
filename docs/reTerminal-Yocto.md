@@ -175,7 +175,7 @@ After compilation is finished, go to the **build** directory and run the followi
 cd tmp/deploy/images/raspberrypi4-64/;ls -lh rpi-test-image*.wic.bz2
 ```
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/compiled-image-location.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/Yocto-bitbake-image-location.png" alt="pir" width="1000" height="auto"></p>
 
 As shown in the image above, **rpi-test-image-raspberrypi4-64-20210831080948.rootfs.wic.bz2** is the generated system image
 
@@ -183,72 +183,159 @@ As shown in the image above, **rpi-test-image-raspberrypi4-64-20210831080948.roo
 
 Refer to the following to get familiarized with some useful Bitbake commands
 
-<table>
-<thead>
-  <tr>
-    <th>bitbake command</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>bitbake &lt;image&gt;</td>
-    <td>Bake an image (add -k to continue building even errors are found in the tasks execution)</td>
-  </tr>
-  <tr>
-    <td>bitbake &lt;package&gt; -c &lt;task&gt;</td>
-    <td>Execute a particular package's task. Default Tasks names: <br>fetch, unpack, patch, configure, compile, install, package, package_write, and build.<br><br>Example: To (force) compiling a kernel and then build, type:<br><br>$ bitbake  linux-imx -f -c compile<br><br>$ bitbake linux-imx</td>
-  </tr>
-  <tr>
-    <td>bitbake &lt;image &gt; -g -u depexp<br></td>
-    <td>Show the package dependency for image.<br><br><br><br>Example: To show all packages included on fsl-image-gui<br><br>$ bitbake fsl-image-gui -g -u depexp<br><br>NOTE: This command will open a UI window, so it must be execute on a console inside the host machine (either virtual or native).</td>
-  </tr>
-  <tr>
-    <td>bitbake &lt;package&gt; -c  devshell</td>
-    <td>Open a new shell where with neccesary system values already defined for package</td>
-  </tr>
-  <tr>
-    <td>hob</td>
-    <td>bitbake frontend/GUI.</td>
-  </tr>
-  <tr>
-    <td>bitbake &lt;package&gt; -c listtasks</td>
-    <td>List all tasks for package</td>
-  </tr>
-  <tr>
-    <td>bitbake virtual/kernel -c menuconfig</td>
-    <td>Interactive kernel configuration</td>
-  </tr>
-  <tr>
-    <td>bitbake &lt;image&gt; -c fetchall</td>
-    <td>Fetch sources for a particular image</td>
-  </tr>
-  <tr>
-    <td>bitbake-layers show-layers</td>
-    <td>Show layers</td>
-  </tr>
-  <tr>
-    <td>bitbake-layers show-recipes "*-image-*"</td>
-    <td>Show possible images to bake. Without "*-images-*", it shows ALL recipes</td>
-  </tr>
-  <tr>
-    <td>bitbake -g &lt;image&gt; &amp;&amp; cat pn-depends.dot | grep <br>-v -e '-native' | grep -v digraph | grep -v -e <br>'-image' | awk '{print $1}' | sort | uniq</td>
-    <td>Show image's packages</td>
-  </tr>
-  <tr>
-    <td>bitbake -g &lt;pkg&gt; &amp;&amp; cat pn-depends.dot | grep<br> -v -e '-native' | grep -v digraph | grep -v -e<br> '-image' | awk '{print $1}' | sort | uniq</td>
-    <td>Show package's dependencies</td>
-  </tr>
-  <tr>
-    <td>bitbake –v &lt;image&gt; 2&gt;&amp;1 | tee image_build.log</td>
-    <td>Print (on console) and store verbose baking</td>
-  </tr>
-  <tr>
-    <td>bitbake -s | grep &lt;pkg&gt;</td>
-    <td>Check if certain package is present on current Yocto Setup</td>
-  </tr>
-</tbody>
-</table>
+##### Start compiling the image
+
+- bitbake < image > 
+
+This command will start compiling the image. You can add -k to continue compiling even errors are found. While the target that failed and anything depending on it cannot be built, as much as possible will be built before stopping. 
+
+Example 1:
+
+```sh
+bitbake rpi-test-image
+```
+
+Example 2:
+
+```sh
+bitbake rpi-test-image -k
+```
+
+##### Show packages in the image
+
+- bitbake -g < image > && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+
+This will save the packages inside the image into a file named **pn-buildlist** and then list them on console
+
+Example: 
+
+```sh
+bitbake -g rpi-test-image && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/image-packages.png" alt="pir" width="800" height="auto"></p>
+
+##### Show package dependencies 
+
+- bitbake -g < package > && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+
+This will save the package dependencies into a file named **pn-buildlist** and then list them on console
+
+Example:
+
+```sh
+bitbake -g i2c-tools && cat pn-buildlist | grep -v -e '-native' | grep -v digraph | grep -v -e '-image' | awk '{print $1}' | sort | uniq
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/package-depends.png" alt="pir" width="800" height="auto"></p>
+
+##### Task dependency explorer UI
+
+- bitbake < image > -g -u taskexp
+
+This is will helpful to show the Task Dependency Explorer UI. It shows dependencies between tasks
+
+Example:
+
+```sh
+bitbake rpi-test-image -g -u taskexp
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/task-explorer-ui.png" alt="pir" width="800" height="auto"></p>
+
+##### Launch devshell for a package
+
+- bitbake < package > -c devshell 
+
+This will open a new shell where with the neccesary system values already defined for the package
+
+Example:
+
+```sh
+bitbake evtest -c devshell
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/devshell.png" alt="pir" width="800" height="auto"></p>
+
+##### List package tasks
+
+- bitbake <package> -c listtasks
+
+This will list all tasks for a package
+
+Example:
+
+```sh
+bitbake evtest -c listtasks
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/tasks.png" alt="pir" width="800" height="auto"></p>
+
+##### Interactive kernel configuration
+
+- bitbake virtual/kernel -c menuconfig
+
+This will open an interactive kernel configuration window where you can change the settings according to your needs
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/kernel-config.png" alt="pir" width="800" height="auto"></p>
+
+##### Show layers
+
+- bitbake-layers show-layers
+
+This will show a list of the layers currently in use, and their priorities. If a package exists in two or more layers, it will be built from the layer with higher priority
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/layers.png" alt="pir" width="800" height="auto"></p>
+
+##### Show recipes
+
+- bitbake-layers show-recipes
+
+This will show all the available recipes
+
+If you type the following, you can check for the recipe that we used previously, which is **rpi-test-image**
+
+```sh
+bitbake-layers show-recipes | grep rpi
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/rpi-test.png" alt="pir" width="800" height="auto"></p>
+
+##### Check for package
+
+- bitbake -s | grep <pkg>
+
+This will check if a certain package is present on current Yocto Setup
+
+```sh
+bitbake -s | grep openssl
+```
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Yocto/bitbake-commands/check-package.png" alt="pir" width="800" height="auto"></p>
+
+##### Save verbose build log
+
+- bitbake -v < image > 2>&1 | tee image_build.log 
+
+This will print (on console) as the image starts building and store the output in **image_build.log** with verbose mode
+
+Example:
+
+```sh
+bitbake -v rpi-test-image 2>&1 | tee image_build.log 
+```
+
+##### Clean the build environment
+
+- bitbake -c cleanall [package]
+
+This will remove everything in the work directory, state cache, and all previously downloaded source files related to the package. This will be helpful if you are running into build problems for a particular package
+
+Example:
+
+```
+bitbake -c cleanall i2c-tools
+```
 
 ### Manual Compilation on Local Machine - Using Toaster (GUI)
 
@@ -477,6 +564,10 @@ After we flash the system image to the reTerminal, power on the reTerminal. Here
 The boot up time of the default system image is around 17 seconds
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/bootup.gif" alt="pir" width="1000" height="auto"></p>
+
+## Login to reTerminal from PC via Serial Console
+
+It is recommended to login to the OS inside the reTerminal using a serial console connection. Check [this wiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q5-how-can-i-log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-a-usb-to-serial-converter) to make the hardware connections and login as **root**
 
 ## Test Yocto Image
 
