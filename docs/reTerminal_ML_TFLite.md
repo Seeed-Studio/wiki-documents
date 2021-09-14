@@ -116,6 +116,15 @@ It is possible to use TFLite Converter to convert any Tensorflow model into .tfl
     ~11 FPS
     </td>    
   </tr>
+  <tr>
+    <td>Face anti-spoofing</td>
+    <td><p style="text-align:center;"><img src="https://files.seeedstudio.com/ml/face_anti-spoofing/face_anti-spoofing.gif" alt="pir" width="600" height="auto"></p></td>
+    <td>Demo: Multi-stage inference: MobileNet YOLOv3 alpha 0.25 -> MobileNet v1 alpha 0.25<br />
+    <a href="https://github.com/Seeed-Studio/Seeed_Python_MachineLearning/blob/main/jupyter_notebooks/aXeleRate_face_anti_spoofing.ipynb" target="_top">Jupyter Notebook</a>
+    <a href="https://github.com/AIWintermuteAI/aXeleRate/tree/master/example_scripts/tensorflow_lite/classifier" target="_top">Example scripts</a>  
+    ~23 FPS (ARM NN)
+    </td>    
+  </tr>
 </tbody>
 </table>
 
