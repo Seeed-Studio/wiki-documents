@@ -1,7 +1,7 @@
 
 # **Wio RP2040 mini Dev Board with Arduino**
 
-Here we gonna use Wio RP2040 mini Dev Board to transmit data in MQTT with Arduino. 
+Here we gonna use Wio RP2040 mini Dev Board to transmit data through MQTT and NetAssist with Arduino. 
 
 
 ## **Hardware**
@@ -10,13 +10,13 @@ Materials required
 
 - [Wio RP2040 mini Dev Board](https://www.seeedstudio.com/Wio-RP2040-mini-Dev-Board-p-4933.html) x1
 - Computer x1
-- USB typc cable x1
+- USB typc C cable x1
 
 !!!Tip
-    Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+    Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 
 - Step 1. Prepare a Wio RP2040 mini Dev Board and a Type-C cable.
-- Step 2. **Press and hold** the 'boot' button while you are going to connect the board to compuetr. 
+- Step 2. **Press and hold** the 'boot' button while you are going to connect the board to computer. 
 - Step 3. Connect and check if a disk appears on the computer.
 
 If all goes well, the red power LED on Wio RP2040 mini Dev Board should be turn on and a disk should appear on the computer.
@@ -26,13 +26,13 @@ If all goes well, the red power LED on Wio RP2040 mini Dev Board should be turn 
 
 Before we start to upload the code and transmit data, you may want to set up the server first.
 
-### **Cominicate with MQTT**
+### **Communicate with MQTT**
 
-MQTT is a Client Server publish/subscribe messaging transport protocol. Clients can use it as a publisher, a subscriber or both.
+MQTT is a Client-Server publish/subscribe messaging transport protocol. Clients can use it as a publisher, a subscriber, or both.
 
 #### **Configure the MQTT server**
 
-Download the MQTTX server software and install it on the computer, and then configure the MQTT server.
+Download the [MQTTX server software](https://github.com/emqx/MQTTX/blob/master/README.md) and install it on the computer, and then configure the MQTT server.
 
 ---
 
@@ -55,7 +55,7 @@ After the connection is successful, there will be a pop-up in the upper right co
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/demo_13.png)
 
-Then set the topic and message below. In this project, we use MQTT to receive or send the massage with Wio RP2040 mini Dev Board. 
+Then set the topic and message below. In this project, we use MQTT to receive or send the messages with Wio RP2040 mini Dev Board. 
 
 Fill in the 'topic' as "temperature".
 
@@ -64,7 +64,9 @@ Fill in the 'topic' as "temperature".
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window5.png)
 
-**Preparations have been completed, the MQTT server is set up.**
+Preparations have been completed and the MQTT server is set up. Now we are going to upload the code.
+
+#### **Arduino code with MQTT**
 
 !!!Note
     If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
@@ -88,13 +90,13 @@ You can download [MQTT.ino](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_D
 
 - **Step 3. Add Wio RP2040 mini Dev Board to your Arduino IDE**
 
-Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below: 
+Click on **File > Preference**, and fill Additional Boards Manager URLs with the URL below: 
 
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window2.png)
 
-Click **Tools-> Board-> Boards Manager...**, print keyword "**XIAO RP2040**" in the searching blank. Find the "Seeed XIAO RP2040" and install it.
+Click **Tools-> Board-> Boards Manager...**, and write the keyword "**XIAO RP2040**" in the searching blank. Find the "Seeed XIAO RP2040" and install it.
 
 ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl2.png)
 
@@ -104,9 +106,9 @@ After installing the board, click **Tools-> Board**, find "**Wio RP2040 Mini Dev
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window3.png)
 
-Once the board is connected to the computer, there is **no need** to select port. Because the computer will write **.uf2 file** to the board at the first uploading, after that it will automaticcally select the port.
+Once the board is connected to the computer, there is **no need** to select a port. Because the computer will write a **.uf2 file** to the board at the first uploading, after that it will automatically select the port.
        
-- **Step 5.Upload the program**
+- **Step 5. Upload the program**
 You can now upload the code and open MQTTX to see the results.
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window6.png)
@@ -119,26 +121,28 @@ If you send some messages through MQTT, you may see it on Serial Monitor in Ardu
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window8.png)
 
-### **Cominicate with NetAssist**
+### **Communicate with NetAssist**
 
-Now we try using computer to build a TCP server to send or receive massages through [NetAssist](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/NetAssist.exe).
+Now we try using a computer to build a TCP server to send or receive messages through [NetAssist](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/NetAssist.exe).
 
 #### **Configure the TCP server**
 
-- Double click downloaded '.exe' file and open NetAssist.
+- Double click the downloaded '.exe' file and open NetAssist.
 
 - Select 'TCP Server' in the upper left corner to set the 'Protocol'.
 
 - Fill in the 'Local host addr' and 'Local host port' below.
  
-- Once all set up, click 'Open' to enter the Server.
+- Once all is set up, click 'Open' to enter the Server.
 
 !!!Note
-    The **'Local host addr'** and **'Local host port'** here are improtant as well as the **'topic'** in MQTT. You wouldn't get the massage unless these parameters are the same as the code.
+    The **'Local host addr'** and **'Local host port'** here are improtant as well as the **'topic'** in MQTT. You wouldn't get the message unless these parameters are the same as the code.
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window9.png)
 
-**Preparations have been completed, the TCP server is set up.**
+Preparations have been completed and the MQTT server is set up. Now we are going to upload the code.
+
+#### **Arduino code with NetAssist**
 
 !!!Note
     If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
@@ -162,7 +166,7 @@ You can download [Socket.ino](https://files.seeedstudio.com/wiki/Wio_RP2040_mini
 
 - **Step 3. Add Wio RP2040 mini Dev Board to your Arduino IDE**
 
-Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below: 
+Click on **File > Preference**, and fill Additional Boards Manager URLs with the URL below: 
 
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
@@ -178,9 +182,9 @@ After installing the board, click **Tools-> Board**, find "**Wio RP2040 Mini Dev
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window3.png)
 
-Once the board is connected to the computer, there is **no need** to select port. Because the computer will write **.uf2 file** to the board at the first uploading, after that it will automaticcally select the port.
+Once the board is connected to the computer, there is **no need** to select a port. Because the computer will write **.uf2 file** to the board at the first uploading, after that it will automatically select the port.
        
-- **Step 5.Upload the program**
+- **Step 5. Upload the program**
 You can now upload the code and open NetAssist to see the results.
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window13.png)
@@ -192,36 +196,3 @@ If you send some messages through NetAssist, you may see it on NetAssist, as lon
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window12.png)
 
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/window11.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
