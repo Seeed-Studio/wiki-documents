@@ -512,6 +512,7 @@ nav:
           - Grove - Temperature Sensor V1.2: Grove-Temperature_Sensor_V1.2.md
           - Grove - Temperature&Humidity Sensor Pro(DHT22): Grove-Temperature_and_Humidity_Sensor_Pro.md
           - Grove - Temperature&amp;Humidity Sensor(DHT11): Grove-TemperatureAndHumidity_Sensor.md
+          - Grove - Temperature&amp;Humidity Sensor(DHT20): Grove-Temperature-Humidity-Sensor-DH20.md
           - Grove - Temperature&amp;Humidity Sensor (HDC1000): Grove-TemperatureAndHumidity_Sensor-HDC1000.md
           - Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0: Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0.md
           - Grove - Thermal Imaging Camera IR Array: Grove-Thermal-Imaging-Camera-IR-Array.md
