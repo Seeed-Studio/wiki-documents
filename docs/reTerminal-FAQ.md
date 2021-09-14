@@ -321,8 +321,8 @@ If you have flashed to a different OS and want to switch back to the default Ras
 - **Step 1.** Download the Raspberry Pi OS by visiting the links below
 
 
-  - [2021-06-02-Raspbian(modified)-32-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal/image_2021-06-02-Raspbian-reTerminal.zip)
-  - [2021-06-02-Raspbian(modified)-64-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-06-02-Raspbian-reTerminal-arm64/2021-06-02-Raspbian-reTerminal-arm64.zip)
+  - [2021-09-14-Raspbian(modified)-32-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-09-14-Raspbian-reTerminal/image_2021-09-14-Raspbian-reTerminal.zip)
+  - [2021-09-14-Raspbian(modified)-64-bit](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2021-09-14-Raspbian-reTerminal-arm64/image_2021-09-14-Raspbian-reTerminal-arm64.zip)
 
 **Note:** reTerminal is originally shipped with 32-bit OS. However, you can download a 64-bit version as well
 
