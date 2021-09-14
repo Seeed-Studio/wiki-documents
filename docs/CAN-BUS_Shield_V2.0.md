@@ -97,6 +97,9 @@ If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](ht
 
 **CS pin**
 
+!!!Attention
+    When we produced the new batch of CAN-BUS Shield V2, the wire of the back pads was embedded inside the PCB, although the wire between the pads is now not visible on the outside, the inside is still connected, if you want to change the wiring of the pads, you still need to cut the wiring in the PCB first.
+
 SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
 
 - Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
