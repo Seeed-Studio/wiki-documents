@@ -204,7 +204,7 @@ After basic hardware connecting like the figure above, we can try to plug Grove 
 
 You may want a clearer visual:
 
-![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/shiyitu1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/shiyitu3.jpg)
 
 #### Software
 
@@ -225,33 +225,23 @@ You may want a clearer visual:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny3.png)
 
-```c++
-from lcd1602 import LCD1602
-from dht11 import *
-from machine import I2C,Pin,ADC
-from utime import sleep
-
-i2c = I2C(1,scl=Pin(7), sda=Pin(6), freq=400000)
-d = LCD1602(i2c, 2, 16)
-d.display()
-dht = DHT(18)
-
-while True:
-    temp,humid = dht.readTempHumid()#temp:  humid:
-    sleep(1)
-    d.clear()
-    d.setCursor(0,0)
-    d.print("Temp:"+str(temp))
-    d.setCursor(0,1)
-    d.print("Humid:"+str(humid))
-    sleep(1)
-```
-
 - **Step 2.** Upload the code.
+
+```c++
+from machine import I2C
+from dht20 import DHT20
+i2c = I2C(0)
+dht20 = DHT20(i2c)
+while True:
+    temper = dht20.dht20_temperature()
+    humidity = dht20.dht20_humidity()
+    print("temper : " + str(temper))
+    print("humidity : " + str(humidity))
+```
 
 - **Step 3.** The result should look like:
 
-![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonnyresult1.png)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/shiyitu2.jpg)
 
 
 
