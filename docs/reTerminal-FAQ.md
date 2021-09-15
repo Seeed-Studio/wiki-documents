@@ -83,6 +83,8 @@ dtoverlay=reTerminal
 sudo poweroff
 ```
 
+**Note:** If you are already running **STM32 v1.8 firmware**, once you enter **boot mode** through **i2c-tools**, the only way to come out of boot mode is to flash the STM32 firmware.
+
 ### Connect to STM32 using CM4 and flash the firmware
 
 If you have the **new version (v1.7 or higher)** of the board, please follow this method.
