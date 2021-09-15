@@ -189,28 +189,11 @@ The values are based on the current environment.
 
 This is the basic hardware connecting.
 
-### Example with Grove Display
+### Software
 
-**Materials required**
+- **Step 1.** We need to use third-party library to control **Grove - Temperature & Humidity Sensor V2.0**
 
- - RaspberryPi Pico
- - Grove Shield for Pi Pico v1.0
- - Grove - Temperature & Humidity Sensor V2.0
- - [Grove - 16x2 LCD (White on Blue)](https://www.seeedstudio.com/Grove-16x2-LCD-White-on-Blue.html)
-
-**Connection**
-
-After basic hardware connecting like the figure above, we can try to plug Grove - 16x2 LCD (White on Blue) into the D18 port of Grove Shield.
-
-You may want a clearer visual:
-
-![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/shiyitu3.jpg)
-
-#### Software
-
-- **Step 1.** We need to use third-party librarys to control **Grove - 16 x 2 LCD** and **Grove - Temperature & Humidity Sensor V2.0**
-
-1. Download [lcd1602.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/lcd1602.py) and [dht20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht20.py) libraries and save it to the computer.
+1. Download [dht20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht20.py) library and save it to the computer.
 
 2. Use Thonny to open the files, click on the "file" option at the top left, and then select "save as".
 
@@ -223,7 +206,7 @@ You may want a clearer visual:
 !!!Note
          Once we saving, Thonny will ask to name the file. Here we type "lcd1602.py" as its name, and we also need to type the extension of the file, or it can not be used.
 
-![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny3.png)
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/zhanshitu5.png)
 
 - **Step 2.** Upload the code.
 
@@ -241,8 +224,7 @@ while True:
 
 - **Step 3.** The result should look like:
 
-![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/shiyitu2.jpg)
-
+![](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/zhanshitu6.png)
 
 
                                                     
