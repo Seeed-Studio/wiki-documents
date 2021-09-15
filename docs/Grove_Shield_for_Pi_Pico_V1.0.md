@@ -48,7 +48,7 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 - **Dimension**: 56mm * 56mm  
 
 ## Getting Started 
-### Project 1 
+### Project of Different Sounds of Buzzer
 #### Materials Required
 
 - Step 1. Prepare the below stuffs:
@@ -116,7 +116,7 @@ while True:
 ```
 Rotate Grove-Rotary-Angle-Sensor, you will hear different sounds from the buzzer.
 
-### project 2
+### Project of Detecting Temperature and Humidity
 
 #### Materials Required
 
@@ -126,6 +126,9 @@ Rotate Grove-Rotary-Angle-Sensor, you will hear different sounds from the buzzer
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/img/Grove-OLED-Displey-0.96-SSD1315-thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/list.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
+
+!!!Note 
+       In this kit, we have upgraded the Grove Temperature Humidity Sensor(DHT11) to [Grove Temperature Humidity Sensor(DHT20)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html). If you want to get started with Grove Temperature Humidity Sensor(DHT20), you can click [here](https://wiki.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DH20/).
 
 - Step 2. Connect Grove OLED Display 0.96" to port I2C1 of Base Shield.
 - Step 3. Connect Grove Temperature Humidity Sensor DHT11 to port D18 of Base Shield.
@@ -187,7 +190,7 @@ Then you can get the temperature and humidity displayed on the OLED as below.
 
 
 
-### project 3
+### Project of Controling Led and Relay
 
 #### Materials Required
 
@@ -239,7 +242,7 @@ Then you can press the grove button, you can control the led and relay open and 
 
 
 
-### project 4
+### Project of Flashing Colors
 
 #### Materials Required
 
@@ -315,7 +318,7 @@ Then you can get the RGB LED WS2813 mini flash beautiful color as below.
 
 
 
-### project 5
+### Project of Detecting Sound and Light
 
 #### Materials Required 
 
@@ -402,7 +405,7 @@ Then you can get the sound sensor and light sensor data as below.
 
 
 
-### project 6
+### Project of Detecting Motion
 
 #### Materials Required 
 
