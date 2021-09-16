@@ -8,7 +8,7 @@ sku:
 
 # Getting Started with Dual Gigabit Ethernet Carrier Board for Raspberry Pi Compute Module 4
 
- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/CM4-default.png" alt="pir" width="600" height="auto"></p>
+ <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/thumb.png" alt="pir" width="600" height="auto"></p>
 
 The Dual Gigabit Carrier Board powered by Raspberry Pi Compute Module 4 is equipped with Dual Gigabit Ethernet ports and dual USB 3.0 ports, making it suitable for soft router applications, while keeping the hardware to minimal.
 
@@ -53,7 +53,7 @@ It features a variety of I/O peripherals such as MIPI CSI, MIPI DSI, micro-HDMI 
 
 ## Hardware Overview
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/hw-overview.png" alt="pir" width="900" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/hw-overview.png" alt="pir" width="900" height="auto"></p>
 
 ## Hardware Introduction
 
@@ -120,7 +120,7 @@ There is an **8-pin FPC** interface on this carrier board with **1.0mm Pitch H2.
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_Schematics.png" alt="pir" width="550" height="auto"></p>
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_connection.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/FPC_connect.png" alt="pir" width="1000" height="auto"></p>
 
 ### Dual USB 3.0 Ports and 9-Pin Header
 
@@ -162,13 +162,13 @@ There is a micro HDMI port on the carrier board and you can use it to connect to
 
 There is a **4-pin interface** on the carrier board for **UART communications**. You can use this interface and **log in** to the **Raspberry Pi OS** directly using a **USB to Serial Adapter Cable**. It has the pins: **TX, RX, 3V3, GND**.
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/UART_connection.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/UART.png" alt="pir" width="1000" height="auto"></p>
 
 ### Boot Mode Pin
 
 This **3-pin interface** is used when you want to make the carrier board as a **USB Device**. Once you short the **GND** and **BOOT** pins, you can access the **eMMC storage** or the **micro-SD card storage** using a **HOST PC**.
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/eMMC_boot.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/boot-pins.png" alt="pir" width="1000" height="auto"></p>
 
 ### Reset Button
 
@@ -276,7 +276,7 @@ If you have a Compute Module 4 with eMMC, then you can directly flash the Raspbe
 
 - **Step 2.** Connect a jumper wire between **Boot** and **GND** pins as follows to enable the programming mode
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/eMMC_boot.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/boot-pins.png" alt="pir" width="1000" height="auto"></p>
 
 - **Step 3.** Connect Carrier Board to the PC via USB Type-C cable 
 
@@ -352,7 +352,7 @@ sudo ./rpiboot
 ```
 - **Step 8.** Connect a jumper wire between **Boot** and **GND** pins as follows to enable the programming mode
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/eMMC_boot.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/boot-pins.png" alt="pir" width="1000" height="auto"></p>
 
 - **Step 9.** Connect Carrier Board to the PC via USB Type-C cable 
 
@@ -658,7 +658,7 @@ This is to enable UART communication between PC and Carrier Board
 
 - **Step 7.** Connect the jumper wires from the USB to Serial Converter to the **UART IO pin header** on the Carrier Board as follows
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/UART_connection.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/UART.png" alt="pir" width="1000" height="auto"></p>
 
 - **Step 8.** Connect the USB to Serial Converter to the PC
 
@@ -720,7 +720,7 @@ enable_uart=1
 
 - **Step 7.** Connect the jumper wires from the USB to Serial Converter to the **UART IO pin header** on the Carrier Board
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/UART_connection.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/UART.png" alt="pir" width="1000" height="auto"></p>
 
 - **Step 8.** Connect the USB to Serial Converter to the PC
 
@@ -917,7 +917,7 @@ If you want to connect an **I2C device** to the **FPC interface**, please follow
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_I2C.png" alt="pir" width="1000" height="auto"></p>
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_connection.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/FPC_connect.png" alt="pir" width="1000" height="auto"></p>
 
 #### Software Set Up
 
@@ -1013,7 +1013,7 @@ If you want to connect an **SPI device** to the **FPC interface**, please follow
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_SPI.png" alt="pir" width="1000" height="auto"></p>
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/FPC_connection.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/102110497/latest-board/FPC_connect.png" alt="pir" width="1000" height="auto"></p>
 
 #### Software Set Up
 
