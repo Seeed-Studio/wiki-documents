@@ -8,7 +8,7 @@ surveyurl: https://www.research.net/r/can_bus_shield
 sku: 113030021
 ---
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Can_bus_shield_all.jpg"/></div>
+<div align=center><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/shiyitu1.png"/></div>
 
 **CAN-BUS** is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.
 
@@ -104,15 +104,15 @@ SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to *
 
 - Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
 
-![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/hardware_overview_pins_setting.png)
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/zhanshitu1.png)
 
  - Step2: Cut the wire between pad9 and the middle pad.
 
-![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/cut%20this%20wire%20with%20box%20cutter.png)
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/zhanshitu2.png)
 
  - Step3:Solder the middle pad and pad 10.
 
-![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/sodder%20the%20middle%20pad%20and%20pad%2010.png)
+![](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/zhanshitu3.png)
 
 
 !!!warning
