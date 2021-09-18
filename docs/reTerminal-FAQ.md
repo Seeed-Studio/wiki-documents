@@ -10,311 +10,7 @@ sku:
 
 This document contains all the frequently asked questions related to reTerminal. This will be very helpful if you are suffering from any issues when using the reTerminal.
 
-## Q1: How can I update the STM32 firmware for reTerminal LCD
-
-It is very important to make sure that you have the latest firmware flashed on to the STM32G030 chip on the reTerminal. STM32G030 is responsible to drive the LCD on the reTerminal. Updating the STM32 chip to the latest version will be helpful to solve most of the issues that you face with the reTerminal LCD.
-
-There are 2 methods of flashing the STM32 chip.
-
-- **Method 1:** Directly connect to STM32 chip using the CM4 on the reTerminal and flash the firmware
-- **Method 2:** Physically connect the STM32 chip pins to the 40-Pin reTerminal GPIO using jumper wires and then use OpenOCD to flash the firmware
-
-**Method 1** works if you have the **new version (v1.7 or higher)** of the reTerminal and on the other hand, **method 2** is only needed if you have the **old version (lower than v1.7)** of the board.
-
-### Decide Which Flashing Method to Use
-
-Now let's go through the following steps to identify which version of the board we have so that we can choose the appropriate flashing method.
-
-- **Step 1.** Enter terminal window of reTerminal and type the following to open the configuration file
-
-```sh
-sudo nano /boot/config.txt
-```
-
-- **Step 2.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
-
-```sh
-#dtoverlay=reTerminal
-```
-
-**Note:** This will unload all the reTerminal drivers. So when you turn on the reTerminal next time, none of the drivers will be loaded.
-
-- **Step 3.** Reboot reTerminal
-
-```sh
-sudo reboot
-```
-
-- **Step 4.** Make STM32 enter **boot mode** through **i2c-tools**
-
-```sh
-i2ctransfer -y 1 w2@0x45 0x9b 0x01
-```
-
-- **Step 5.** List the connected I2C devices
-
-```sh
-i2cdetect -y 1
-```
-
-If you can see the I2C address **0x56** as the table below, you have the **new version (v1.7 or higher)** of the board.
-
-<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-new-board.png" alt="pir" width="600" height="auto"></p>
-
-However, if you can see the I2C address **0x45** as the table below, you have the **old version (lower than v1.7)** of the board
-
-<p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-old-board.png" alt="pir" width="600" height="auto"></p>
-
-- **Step 6.** Open the configuration file that we used before
-
-```sh
-sudo nano /boot/config.txt
-```
-
-- **Step 7.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal** to load the drivers again
-
-```sh
-dtoverlay=reTerminal
-```
-
-- **Step 8.** Power off reTerminal
-
-```sh
-sudo poweroff
-```
-
-**Note:** If you are already running **STM32 v1.8 firmware**, once you enter **boot mode** through **i2c-tools**, the only way to come out of boot mode is to flash the STM32 firmware.
-
-### Connect to STM32 using CM4 and flash the firmware
-
-If you have the **new version (v1.7 or higher)** of the board, please follow this method.
-
-- **Step 1.** Enter terminal window of reTerminal and type the following to open the configuration file
-
-```sh
-sudo nano /boot/config.txt
-```
-
-- **Step 2.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
-
-```sh
-#dtoverlay=reTerminal
-```
-
-- **Step 3.** Reboot reTerminal
-
-```sh
-sudo reboot
-```
-
-- **Step 4.** Make a new directory inside reTerminal
-
-```sh
-mkdir STM32
-```
-
-- **Step 5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download **stm32flash** file and the **STM32G030F6_R2.bin** file from the **latest release** version.
-
-**Note:** You can click on them to start downloading
-
-- **Step 6.** Open command prompt on PC and navigate to the location of the downloaded files before
-
-```sh
-cd C:\Users\user\Downloads
-```
-
-- **Step 7.** Transfer the files to the **STM32** directory on the reTerminal we created before
-
-```sh
-scp -r .\stm32flash .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\STM32
-```
-
-**Note:** **pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
-
-- **Step 8.** Inside the terminal window of reTerminal, enter the **STM32** directory
-
-```sh
-cd STM32
-```
-
-Then you will see the files that we copied earlier
-
-- **Step 9.** Make the flash tool **executable**
-
-```sh
-chmod +x stm32flash
-```
-
-- **Step 10.** Make STM32 enter **boot mode** through **i2c-tools**
-
-```sh
-i2ctransfer -y 1 w2@0x45 0x9b 0x01
-```
-
-- **Step 11.** Erase the flash in the STM32 chip using **stm32flash tool**
-
-```sh
-./stm32flash -a 0x56 -o /dev/i2c-1
-```
-
-- **Step 12.** Flash the firmware to STM32 using stm32flash tool
-
-```sh
-./stm32flash -a 0x56 -w STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
-```
-
-**Note:** **STM32G030F6_R2.bin** is the file name of the new firmware
-
-- **Step 13.** Open the configuration file that we used before
-
-```sh
-sudo nano /boot/config.txt
-```
-
-- **Step 14.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
-
-```sh
-dtoverlay=reTerminal
-```
-
-- **Step 15.** Reboot reTerminal
-
-```sh
-sudo reboot
-```
-
-Now you have successfully flashed the firmware to STM32!
-
-### Connect to STM32 using jumper wires and OpenOCD
-
-If you have the **old version (lower than v1.7)** of the board, please follow this method.
-
-- **Step 1.** Enter terminal window of reTerminal and type the following to update the packages list
-
-```sh
-sudo apt-get update
-```
-
-- **Step 2.** Install the following packages
-
-```sh
-sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev
-```
-
-- **Step 3.** Clone the following repo and navigate to it
-
-```sh
-git clone http://openocd.zylin.com/openocd
-cd openocd
-```
-
-- **Step 4.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download the **STM32G030F6_R2.bin** file from the **latest release** version.
-
-**Note:** You can click on it to start downloading
-
-- **Step 5.** Open command prompt on PC and navigate to the location of the downloaded files before
-
-```sh
-cd C:\Users\user\Downloads
-```
-
-- **Step 6.** Transfer the files to the **openocd** directory on the reTerminal we created before
-
-```sh
-scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
-```
-
-**Note:** **pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
-
-- **Step 7.** Come back to terminal window on reterminal and enter the following inside the **openocd** directory
-
-```sh
-./bootstrap
-```
-
-- **Step 8.** Enter the following 
-
-```sh
-./configure --enable-sysfsgpio --enable-bcm2835gpio
-```
-
-- **Step 9.** Compile it
-
-```sh
-make
-```
-
-- **Step 10.** Install it
-
-```sh
-sudo make install
-```
-
-- **Step 11.** Follow the connection below to connect the pins from STM32 to 40-Pin GPIO
-
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/STM32-connection.jpg" alt="pir" width="600" height="auto"></p>
-
-**Note:** The STM32 pins are located at the back of reTerminal PCBA.
-
-- **Step 12.** While keeping the connection, enter the following command to flash the firmware to STM32
-
-```sh
-openocd -f interface/sysfsgpio-raspberrypi.cfg -c "transport select swd" -f target/stm32g0x.cfg -c "program STM32G030F6_R2.bin verify 0x08000000;shutdown"
-```
-
-**Note:** Normally it takes about 3 seconds to finish flashing. So you need to **hold** the above connection for about **3 seconds** until the flashing process is complete
-
-- **Step 13.** Disconect the connections and **physically disconnect the power cord directly** without **poweroff** command
-
-**Note:** If you don't physically unplug the power cord, STM32 firmware will not load successfully
-
-Now you have successfully flashed the firmware to STM32!
-
-### Check the installed STM32G030 firmware version
-
-Now let's check the installed STM32 firmware version
-
-- **Step 1.** Enter terminal window of reTerminal and type the following to open the configuration file
-
-```sh
-sudo nano /boot/config.txt
-```
-
-- **Step 2.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
-
-```sh
-#dtoverlay=reTerminal
-```
-
-- **Step 3.** Reboot reTerminal
-
-- **Step 4.** Enter the following inside terminal window of reTerminal to check the STM32 firmware version
-
-```sh
-i2ctransfer -y 1 w1@0x45 0x97 r2
-```
-
-If the output looks like **0x01 0x07**, that means you are using firmware version 1.7
-
-- **Step 5.** Open the configuration file that we used before
-
-```sh
-sudo nano /boot/config.txt
-```
-
-- **Step 6.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
-
-```sh
-dtoverlay=reTerminal
-```
-
-- **Step 7.** Reboot reTerminal
-
-```sh
-sudo reboot
-```
-
-## Q2: How can I flash Raspberry Pi OS which is originally shipped with reTerminal?
+## Q1: How can I flash Raspberry Pi OS which is originally shipped with reTerminal?
 
 If you have flashed to a different OS and want to switch back to the default Raspberry Pi OS which is shipped with reTerminal, you can follow the steps below
 
@@ -348,7 +44,7 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 
 - **Step 8.** Finally, click **WRITE**
 
-## Q3: How to upgrade Raspberry Pi OS and the installed packages
+## Q2: How to upgrade Raspberry Pi OS and the installed packages
 
 We will update all the packages and also the Raspberry Pi OS to the latest version
 
@@ -373,7 +69,7 @@ sudo reboot
 
 Now your Raspberry Pi OS and all the necessary packages are up to update!
 
-## Q4: How can I flash OS if I replace the CM4 with non-eMMC version
+## Q3: How can I flash OS if I replace the CM4 with non-eMMC version
 
 If you want to use a Compute Module 4 without eMMC on the reTerminal, then you need to insert a micro-SD and flash the OS of your choice. Follow the steps below according to your operating system.
 
@@ -415,7 +111,7 @@ Please wait a few minutes until the flashing process is complete.
 
 **Note:** You need to open the shell of the reTerminal to access the micro-sd card slot
 
-## Q5: How can I log in to Raspberry Pi OS/ Ubuntu OS or other OS using a USB to serial converter
+## Q4: How can I log in to Raspberry Pi OS/ Ubuntu OS or other OS using a USB to serial converter
 
 If you have a **USB to Serial Converter**, you can use the following steps to log in to Raspberry Pi OS
 
@@ -502,7 +198,7 @@ minicom -D /dev/ttyACM0 -b 9600
 
 Now you have successfully logged into Raspberry Pi OS.
 
-## Q6: I cannot wake up the reTerminal LCD after sleep
+## Q5: I cannot wake up the reTerminal LCD after sleep
 
 Open a terminal window after connecting through SSH or VNC and enter the following commands
 
@@ -513,7 +209,7 @@ DISPLAY=:0 xset dpms force on
 
 This will reinitialize the LCD on the reTerminal
 
-## Q7: How can I boot an OS from USB Flash Drive
+## Q6: How can I boot an OS from USB Flash Drive
 
 You can boot an OS from USB Flash Drive by following the steps below. Here we change the boot order to **USB Boot > eMMC Boot**, which means, if the USB Boot fails, it will boot from eMMC.
 
