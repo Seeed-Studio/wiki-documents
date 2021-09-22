@@ -64,16 +64,14 @@ Now we will move on to manually compiling the system image for reTerminal using 
 
 Follow the steps below to start compiling with the default reTerminal configuration
 
-- **Step 1.** Prepare the development environment on the host PC by installing the following packages (git, gcc, make and chrpath)
+- **Step 1.** Prepare the development environment on the host PC by installing the following packages
 
 ```sh
 sudo apt update
-sudo apt install git
-sudo apt install build-essential
-sudo apt install chrpath
+sudo apt install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat
 ```
 
-**Note:** If you already have the above packages installed. You can skip it.
+**Note:** If the host PC is running a different Linux distribution, please check [here](https://www.yoctoproject.org/docs/1.8/ref-manual/ref-manual.html#required-packages-for-the-host-development-system)
 
 - **Step 2.** Clone the following GitHub repo
 
