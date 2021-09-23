@@ -8,7 +8,7 @@ sku:
 
 # Getting Started with reTerminal
 
- <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/CM4_wiki/wiki_thumb.png" alt="pir" width="600" height="auto"></p>
+ <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki_thumb.png" alt="pir" width="600" height="auto"></p>
 
 Introducing reTerminal, a new member of our reThings family. This future-ready Human-Machine Interface (HMI) device can easily and efficiently work with IoT and cloud systems to unlock endless scenarios at the edge.
 
@@ -548,9 +548,13 @@ For Frequently Asked Questions, [click here](https://wiki.seeedstudio.com/reTerm
 
 ## Resources
 
-- **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.pdf)
+- **[PDF]** [reTerminal Schematics v1.6](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.6_SCH.pdf)
 
-- **[ZIP]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.zip)
+- **[ZIP]** [reTerminal Schematics v1.6](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.6_SCH.zip)
+
+- **[PDF]** [reTerminal Schematics v1.3](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.pdf)
+
+- **[ZIP]** [reTerminal Schematics v1.3](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.zip)
 
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
