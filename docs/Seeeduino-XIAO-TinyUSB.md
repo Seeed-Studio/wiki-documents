@@ -8,6 +8,9 @@ This functionality is dependent on [Adafruit TinyUSB Library for Arduino](https:
 
 ## Installing the Adafruit TinyUSB Library for Arduino
 
+!!! Note！
+  Due to a major update to the "Adafruit TinyUSB Library for Arduino" library, versions V1.0.0 and above cannot be used with Seeeduino XIAO, please use the V0.10.5 version of the library if you need use this library.
+
 1. Visit the [Adafruit TinyUSB Library for Arduino](https://github.com/adafruit/Adafruit_TinyUSB_Arduino) repositories and download the entire repo to your local drive.
 
 2. Now, the  library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Adafruit_TinyUSB_Arduino` file that you've have just downloaded.
