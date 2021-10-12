@@ -20,7 +20,7 @@ This wiki introduces the various different hardware and interfaces on the reTerm
 
 ## 40-Pin Raspberry Pi Compatible Pins
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v1.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v2.jpg" alt="pir" width="1000" height="auto"></p>
 
 The **40-pins** consist of **26 GPIO, up to 5 × I2C, up to 5 × SPI, up to 5 × UART, 1 x PCM, 1 x PWM, 1 × SDIO interface, 1 × DPI (Parallel RGB Display), up to 3× GPCLK outputs and 1 USB interface**.
 

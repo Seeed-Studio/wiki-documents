@@ -215,7 +215,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 **Note:** Please make sure to keep the reTerminal in the orientation as illustrated below. Here the LCD is facing right side and the back is facing left side.
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v1.png" alt="pir" width="1000" height="auto"></p>
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v2.jpg" alt="pir" width="1000" height="auto"></p>
 
 ## Quick Start with reTerminal
 
