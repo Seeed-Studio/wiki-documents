@@ -86,7 +86,7 @@ Please wait a few minutes until the flashing process is complete.
 
 ##### For Mac/Linux
 
-- **Step 1.** Download the **latest OpenWrt Image** compiled by Seeed for this board from [here]()
+- **Step 1.** Download the **latest OpenWrt Image** compiled by Seeed for this board from [here](https://1drv.ms/u/s!AqG2uRmVUhlSh0NHMLMmQKLyASvi?e=mup3cd)
 
 **Note:** Choose **openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz** file
 
