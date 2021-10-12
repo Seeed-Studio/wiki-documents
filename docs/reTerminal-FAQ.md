@@ -165,19 +165,25 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 
 **Note:** **STM32G030F6_R2.bin** is the file name of the new firmware
 
-- **Step 13.** Open the configuration file that we used before
+- **Step 13.** Modify the OPTR register as follows
+
+```sh
+i2ctransfer -y 1 w2@0x45 0x9b 0x00
+```
+
+- **Step 14.** Open the configuration file that we used before
 
 ```sh
 sudo nano /boot/config.txt
 ```
 
-- **Step 14.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
+- **Step 15.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
 
 ```sh
 dtoverlay=reTerminal
 ```
 
-- **Step 15.** Reboot reTerminal
+- **Step 16.** Reboot reTerminal
 
 ```sh
 sudo reboot
