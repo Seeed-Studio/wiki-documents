@@ -90,7 +90,7 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 <div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Installing-OS/latest-BIOS.png"/></div>
 
-- **Latest BIOS:**
+### Latest BIOS Firmware
 
 **[SD-BS-CJ41G-300-101-H 08/16/2021 15:00:00](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-300-101-H.zip)**
 
@@ -210,21 +210,33 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 
 1. Download the firmware files.
 
-2. Save them in the root location of a FAT32 format USB drive.
+2. Save them in the root location of a FAT32 formatted USB drive.
 
-3. Start ODYSSEY-X86 and boot up from the USB drive. Wait and it will automatically start the flashing process.
+3. Start ODYSSEY-X86 and press **F7** to enter **Boot Select Mode**
 
-4. Reboot the device when it's done.
+4. Choose the connected flash drive (if there are 2 options for the flash drive, choose the one that starts with **UEFI**) 
+
+5. Wait and it will automatically start the flashing process.
+
+6. Reboot the device when it's done.
+
+<p style="text-align:center;"><iframe width="720" height="480" src="https://www.youtube.com/embed/r7M4T-HOZ20" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 ### Latest EC Firmware
 
-[**SD-EC-CJ41G-M-101-O 08/16/2021 15:00:00**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-O.zip)
+[**SD-EC-CJ41G-M-101-Q 10/12/2021 17:00:00**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-Q.zip)
 
-- **SHA256:** a08605b8b76bda6a50b64e64c4a9b256297d393f7139ffb2525cc93b28556f13
+- **SHA256:** 6009005FF61A64A580F0862343CED1E1E8B4DE8625E326510582063D6E20BCE4
 
 1. **Fixing bug**: Increase overall stability.
 
 >**History EC Firmware:**
+
+[**SD-EC-CJ41G-M-101-O 08/16/2021 15:00:00**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-O.zip)
+
+> - **SHA256:** a08605b8b76bda6a50b64e64c4a9b256297d393f7139ffb2525cc93b28556f13
+
+> 1. **Fixing bug**: Increase overall stability.
 
 > [**SD-EC-CJ41G-M-101-M 04/16/2021 01:20:07**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-EC-CJ41G-M-101-M.zip)
 
