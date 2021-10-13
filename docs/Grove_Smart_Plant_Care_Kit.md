@@ -132,11 +132,5 @@ Part list in [PDF format](https://files.seeedstudio.com/wiki/Grove_Smart_Plant_C
 
 **Note** that you can use [Base shield](/Base_Shield_V2 "Base_Shield_V2") for connecting modules quickly.
 
-##  Demos
-
-**Note** that this section will show you a demo which implemented some realistic functions.
-
-- [Manual to build a Grove Smart Plant Care Kit.](https://files.seeedstudio.com/wiki/Grove_Smart_Plant_Care_Kit/res/Grove_Smart_Plant_Care_Kit_Manual_Final_S.pdf)
-
 ## Tech Support
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
