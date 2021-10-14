@@ -296,6 +296,7 @@ nav:
               - Audio scene recognition: Wio-Terminal-TinyML-EI-3.md
               - People counting with Ultrasonic sensor: Wio-Terminal-TinyML-EI-4.md              
               - Distinguishing Beverage: Wio-Terminal-TinyML-EI-5.md
+              - LoRa Node with AIoTs_GPS_state_tester: AIoTs_GPS_state_tester.md
             - TensorFlow Lite Micro Projects:
               - TensorFlow Lite Micro Getting Started: Wio-Terminal-TinyML-TFLM-1.md
               - Weather Prediction with BME280: Wio-Terminal-TinyML-TFLM-2.md
