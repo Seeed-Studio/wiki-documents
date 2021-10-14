@@ -127,6 +127,8 @@ In this project, The data will display on [TheThingsNetwork](https://www.thethin
 
 Step 1: Load into [TTN website](https://id.thethingsnetwork.org/oidc/interaction/3v59Li6ZEHe8cq1O0Ft1w) and create your account, then go to gateways start to set up your device.
 
+![](https://files.seeedstudio.com/wiki/Alots/Alots24.png)
+
 Step 2: Add the gateway device:
 
 - Owner
@@ -134,11 +136,21 @@ Step 2: Add the gateway device:
 - Gateway EUI
 - Gateway Name
 
+![](https://files.seeedstudio.com/wiki/Alots/Alots25.png)
+
+![](https://files.seeedstudio.com/wiki/Alots/Alots26.png)
+
+![](https://files.seeedstudio.com/wiki/Alots/Alots27.png)
+
 Step 3: Add Application:
 
 - Owner
 - Application ID
 - Application name
+
+![](https://files.seeedstudio.com/wiki/Alots/Alots28.png)
+
+![](https://files.seeedstudio.com/wiki/Alots/Alots29.png)
 
 Step 4：Add the LoRa node:
 
@@ -153,7 +165,13 @@ Step 4：Add the LoRa node:
 - AppKey
 - End Device ID
 
+![](https://files.seeedstudio.com/wiki/Alots/Alots30.png)
+
+![](https://files.seeedstudio.com/wiki/Alots/Alots31.png)
+
 Step 5: Add the code for decoding data:
+
+![](https://files.seeedstudio.com/wiki/Alots/Alots32.png)
 
 ``` c++
 function Decoder(bytes, port) {
@@ -173,4 +191,7 @@ Step 6: Check the result on TheThingsNetwork
 
 Finally, go to the gateway, then click "Live data".
 
+![](https://files.seeedstudio.com/wiki/Alots/Alots33.png)
+
 Each LoRa device has a unique serial number. After you connect the LoRa device to the Wio terminal, there will display the DEVEUI, APPEUI, and APPKEY on the first page. It is requeired to fill the LoRa ID and gateway ID in the server.
+![](https://files.seeedstudio.com/wiki/Alots/Alots34.png)
