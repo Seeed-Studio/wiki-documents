@@ -270,6 +270,10 @@ openocd -f interface/sysfsgpio-raspberrypi.cfg -c "transport select swd" -f targ
 
 **Note:** Normally it takes about 3 seconds to finish flashing. So you need to **hold** the above connection for about **3 seconds** until the flashing process is complete
 
+If you see the following log, that means the STM32 firmware is successfully flashed!
+
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/openocd-log.jpg" alt="pir" width="350" height="auto"></p>
+
 - **Step 13.** Disconect the connections and **physically disconnect the power cord directly** without **poweroff** command
 
 **Note:** If you don't physically unplug the power cord, STM32 firmware will not load successfully
