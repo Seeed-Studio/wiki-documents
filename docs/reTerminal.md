@@ -184,9 +184,13 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>POE</td>
   </tr>
   <tr>
-    <td>Power</td>
-    <td>Recommended</td>
-    <td>5V@4A DC or 5V@3A DC</td>
+    <td rowspan="2">Power</td>
+    <td>Voltage</td>
+    <td>5V DC</td>
+  </tr>
+  <tr>
+    <td>Current</td>
+    <td>3A(Minimum)</td>
   </tr>
     <tr>
     <td>Temperature</td>
@@ -194,9 +198,13 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>0 - 70°C( For the LCD Screen: 0 - 60°C)</td>
   </tr>
   <tr>
-    <td>Mechanical</td>
+    <td rowspan="2">Mechanical</td>
     <td>Dimensions</td>
     <td>140mm x 95mm x 21mm</td>
+  </tr>
+  <tr>
+    <td>Weight</td>
+    <td>285g</td>
   </tr>
 </tbody>
 </table>
