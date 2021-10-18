@@ -125,13 +125,27 @@ It is possible to use TFLite Converter to convert any Tensorflow model into .tfl
     ~23 FPS (ARM NN)
     </td>    
   </tr>
+    <tr>
+    <td>Face Recognition</td>
+    <td><p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/reTerminal_ML/face_recognition.gif" alt="pir" width="600" height="auto"></p></td>
+    <td>Demo: Multi-stage inference: Ultra Light Face Detector with Landmark Detection -> MobileFaceNet<br />
+    <a href="WIP" target="_top">Jupyter Notebook</a>
+    <a href="https://github.com/Seeed-Studio/Seeed_Python_MachineLearning/tree/main/examples/armnn/face_recognition" target="_top">Example scripts</a>  
+    ~15 FPS (ARM NN)
+    </td>    
+  </tr>
 </tbody>
 </table>
 
 ## Further optimization
 
 The FPS and inference results in the Example table are given for INT8 quantized models inference in Tensorflow Lite, unless stated otherwise. <br />
-Since reTerminal is Raspberry Pi 4 based, it has no additional hardware accelerators for neural network inference, thus only standard optimization methods for CPU inference can be applied. Below is the brief overview of CPU inference optimization methods:
+Since reTerminal is Raspberry Pi 4 based, it has no additional hardware accelerators for neural network inference, thus only standard optimization methods for CPU inference can be applied. 
+The video overview of this topic is presented here:
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/BEDEscDQFxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Below is the brief overview of CPU inference optimization methods:
 
 1) **Designing smaller networks**. If the goal is simple enough (image classification of < 100 classes or object detection of < 10 classes or similar), a smaller network can achieve acceptable accuracy and run very fast. For example, MobileNet v1 alpha 0.25 YOLOv2 network trained to detect only one class of objects (human faces) achieves 62.5 FPS without any further optimization.
 
