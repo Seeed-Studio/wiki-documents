@@ -64,7 +64,7 @@ Grove Formaldehyde Sensor can detect formaldehyde around 0~1000 ppb with low cro
 
 - **Step 2.** Set the button on the Grove-Formaldehyde Sensor to the **"1"** position.
 
-![](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/hardware.png)
+![](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/hardware1.png)
 
 - **Step 3.** Plug Grove - Base Shield into Seeeduino and set Grove-Formaldehyde Sensor to **I²C** port of Grove-Base Shield
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
