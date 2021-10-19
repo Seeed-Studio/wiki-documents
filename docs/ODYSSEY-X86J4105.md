@@ -51,6 +51,9 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 !!!Note
         If you are using 3.5inch HDD drives with the ODYSSEY – X86J4105, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A. 
 
+!!!Note
+        You can power the X86 using a power bank, but you need to make sure to use a power bank with USB PD protocol and connect via USB C. Also, you can seamlessly switch between USB C power and DC power with no issue.
+
 ## Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/X86-08-n.png)
