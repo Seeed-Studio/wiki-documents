@@ -627,6 +627,10 @@ Now it will take a few seconds to transfer the necessary files to the reTerminal
 
 Now you will see reTerminal booting from the connected USB Drive
 
+## Q8: Why there is black glue around the chips on the CM4?
+
+We have specially applied **epoxy resin underfill adhesive** (which looks like black glue) around the chips on the CM4 to make sure the ICs are protected well. This also makes the whole CM4 more reliable.
+
 ## Resources
 
 - **[PDF]** [reTerminal Schematics](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.pdf)
