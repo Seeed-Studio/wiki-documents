@@ -12,6 +12,8 @@ This document contains all the frequently asked questions related to reTerminal.
 
 ## Q1: How can I update the STM32 firmware for reTerminal LCD
 
+**Note:** If your reTerminal is manufactured after 26/09/2021, the STM32 comes with V1.8 firmware pre-installed.
+
 It is very important to make sure that you have the latest firmware flashed on to the STM32G030 chip on the reTerminal. STM32G030 is responsible to drive the LCD on the reTerminal. Updating the STM32 chip to the latest version will be helpful to solve most of the issues that you face with the reTerminal LCD.
 
 There are 2 methods of flashing the STM32 chip.
@@ -19,7 +21,7 @@ There are 2 methods of flashing the STM32 chip.
 - **Method 1:** Directly connect to STM32 chip using the CM4 on the reTerminal and flash the firmware
 - **Method 2:** Physically connect the STM32 chip pins to the 40-Pin reTerminal GPIO using jumper wires and then use OpenOCD to flash the firmware
 
-**Method 1** works if you have the **new version (v1.7 or higher)** of the reTerminal and on the other hand, **method 2** is only needed if you have the **old version (lower than v1.7)** of the board.
+**Method 1** works if you have the **new version (v1.7 or higher)** of the STM32 firmware on the reTerminal and on the other hand, **method 2** is only needed if you have the **old version (lower than v1.7)** of the STM32 firmware on the board.
 
 ### Decide Which Flashing Method to Use
 
@@ -57,11 +59,11 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 i2cdetect -y 1
 ```
 
-If you can see the I2C address **0x56** as the table below, you have the **new version (v1.7 or higher)** of the board.
+If you can see the I2C address **0x56** as the table below, you have the **new version (v1.7 or higher)** of the STM32 firmware on the board.
 
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-new-board.png" alt="pir" width="600" height="auto"></p>
 
-However, if you can see the I2C address **0x45** as the table below, you have the **old version (lower than v1.7)** of the board
+However, if you can see the I2C address **0x45** as the table below, you have the **old version (lower than v1.7)** of the STM32 firmware on the board
 
 <p style="text-align:center;"><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-old-board.png" alt="pir" width="600" height="auto"></p>
 
@@ -87,7 +89,7 @@ sudo poweroff
 
 ### Connect to STM32 using CM4 and flash the firmware
 
-If you have the **new version (v1.7 or higher)** of the board, please follow this method.
+If you have the **new version (v1.7 or higher)** of the STM32 firmware on the board, please follow this method.
 
 - **Step 1.** Enter terminal window of reTerminal and type the following to open the configuration file
 
@@ -193,7 +195,7 @@ Now you have successfully flashed the firmware to STM32!
 
 ### Connect to STM32 using jumper wires and OpenOCD
 
-If you have the **old version (lower than v1.7)** of the board, please follow this method.
+If you have the **old version (lower than v1.7)** of the STM32 firmware on the board, please follow this method.
 
 - **Step 1.** Enter terminal window of reTerminal and type the following to update the packages list
 
