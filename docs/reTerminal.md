@@ -138,7 +138,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
   </tr>
   <tr>
     <td>Internal IO<br>Expansion</td>
-    <td>Microchip MCP23008-E</td>
+    <td>Microchip MCP23008-E/ PCA9554</td>
   </tr>
   <tr>
     <td>Buzzer</td>
