@@ -235,7 +235,7 @@ You need to prepare the following hardware before getting started with reTermina
 
 - reTerminal
 - Ethernet cable or Wi-Fi connection
-- Power adapter (5V/4A) 
+- Power adapter (5V/3A) 
 - USB Type-C cable
 
 ### Software Set Up
