@@ -13,7 +13,7 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 
 Grove Formaldehyde Sensor can detect formaldehyde around 0~1000 ppb with low cross-sensitivity to alcohol and high stability of 6 years lifetime. Built-in RHT sensor ensures it maintains fine performance under different temperatures and humidity and it transmits data through UART and I2C ports.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+<p style=":center"><a href="https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
 
 ## Features
 
@@ -60,7 +60,7 @@ Grove Formaldehyde Sensor can detect formaldehyde around 0~1000 ppb with low cro
 | Seeeduino V4.2 | Base Shield|  Grove-Formaldehyde Sensor|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|   (待补)    |
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|   [Get One Now](https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html)    |
 
 - **Step 2.** Set the button on the Grove-Formaldehyde Sensor to the **"1"** position.
 
@@ -157,7 +157,7 @@ void loop() {
 | Raspberry pi | Grove Base Hat for Raspberry Pi | Grove-Formaldehyde Sensor|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[待补]()|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[[Get One Now]](https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html)|
 
 
 - **Step 2.** Plug the Grove Base Hat for Raspberry Pi into Raspberry Pi.
