@@ -157,7 +157,7 @@ void loop() {
 | Raspberry pi | Grove Base Hat for Raspberry Pi | Grove-Formaldehyde Sensor|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[[Get One Now]](https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html)|
 
 
 - **Step 2.** Plug the Grove Base Hat for Raspberry Pi into Raspberry Pi.
