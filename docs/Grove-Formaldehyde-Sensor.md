@@ -13,7 +13,7 @@ tags: io_3v3, io_5v, plat_duino, plat_pi
 
 Grove Formaldehyde Sensor can detect formaldehyde around 0~1000 ppb with low cross-sensitivity to alcohol and high stability of 6 years lifetime. Built-in RHT sensor ensures it maintains fine performance under different temperatures and humidity and it transmits data through UART and I2C ports.
 
-<p style=":center"><a href="https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border=0 /></a></p>
+[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html)
 
 ## Features
 
