@@ -1,8 +1,8 @@
-# LoRa Node with AIoTs_GPS_state_tester
+# LoRa Node with AIoTs GPS state tester on Wio Terminal
 
 ## Introduction
 
-The AIoTs GPS & state tester is basic on Wio Terminal Chassis-LoRa-E5 and GNSS to develop. It compares with the traditional IoTs has more conciseness and intelligence. The traditional one basically just receives some data then does a command action regardless of the data whether is correct. And yet the AIoTs using neural network algorithm is able to filter the useless data to get the correct ones. 
+The AIoTs GPS & state tester is basic on Wio Terminal Chassis-LoRa-E5 and GNSS to develop. It compares with the traditional IoTs has more conciseness and intelligence. The traditional one basically just receives some data then does a command action regardless of the data whether is correct. And yet the AIoTs using neural network algorithm is able to filter the useless data to get the correct ones.
 
 In this project, it will be used a built-in 3 axis accelerometer sensor and the neural network algorithm to build up an intelligent recognition system. Based on the movement of Wio Terminal, it can show you its state in real-time. Generally, the example project here included three trained states which are Stop(WT idle state), Turn(rolling-over WT device), and Wave(take WT to wave your hand). It is encouraged that you go to [Edge Impulse](https://www.edgeimpulse.com/) website to add more training action.
 
@@ -42,6 +42,10 @@ Require library:
 
 ### Edge Impulse training
 
+#### Set up
+
+First you need to have your own Edge Impulse account and creat a project.
+
 - **Step 1**. Open the [Edge Impulse website](https://studio.edgeimpulse.com/login?next=%2Fstudio%2Fselect-project%3Fautoredirect%3D1), and register an account.
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots1.png)
@@ -52,9 +56,11 @@ Require library:
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots3.png)
 
+#### Connecting Wio Terminal to your PC on website
+
 - **Step 3**. Download the [wio-terminal-ei-1.4.0.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_edgeimpulse/releases/tag/1.4.0) for connecting to the website.
 
-Double dropping down the left button on Wio terminal, you will see a driver popup on the computer. Then you can draw the [wio-terminal-ei-1.4.0.uf2]() firmware to the driver, the driver will disappear which means the firmware has been programmed.
+Double dropping down the left button on Wio terminal connected to your PC, you will see a driver popup on the computer. Then you can draw the [wio-terminal-ei-1.4.0.uf2]() firmware to the driver, the driver will disappear which means the firmware has been programmed.
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots5.png)
 
@@ -66,6 +72,10 @@ When this popup, it means connection is done and the data acquisition can be act
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots6.png)
 
+#### Collecting Data
+
+Now you can collect data on Edge Impluse.
+
 - **Step 5**. Enter "Label", "Sample length (ms.)" and click "Start sampling"
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots8.png)
@@ -74,11 +84,15 @@ It is recommended that samples the data more than 10 times.
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots9.png)
 
+#### Generating a machine learning model
+
+Once the data has been collected, you can use it to train your ML model.
+
 - **Step 6**. After sampling the data, click "create impulse" to process the data.
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots10.png)
 
-The processing blcok and learning block we selected as the website recommended. Once blcoks are set up, click "Save Impluse" to store the impulse.
+The processing blcok and learning block we selected as the website recommended. Once blcoks were set up, click "Save Impluse" to store the impulse.
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots11.png)
 
@@ -88,7 +102,7 @@ The processing blcok and learning block we selected as the website recommended. 
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots13.png)
 
-Click "Generate feature" and the page should like:
+Click "Generate feature" and the result should like:
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots15.png)
 
@@ -99,6 +113,10 @@ Click "Generate feature" and the page should like:
 When you see the output, it means job done.
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots17.png)
+
+#### Deploy your Machine Learning model
+
+Now you can deploy your ML model to your Wio Terminal.
 
 - **Step 9**. Select and click "Deployment" page. Then chose "Arduino Library", to the bottom select "build" to create the library. It will automatically download a zip file that includes the third-party library.
 
@@ -132,20 +150,20 @@ Finally, the result should be something like:
 !!!Note
 If you want to know more about the Edge Impulse or there is something that still unclear, please go to [Wio Terminal Edge Impulse Getting Started](https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-1/) to get more information.
 
-## TheThingsNetwork Console Configuration Setup
+## Display your data on TheThingsNetwork
 
 In this project, the data can be displayed on [TheThingsNetwork](https://www.thethingsnetwork.org/) platform, the instruction shown as below:
 
-**Step 1**: Load into [TTN website](https://id.thethingsnetwork.org/oidc/interaction/3v59Li6ZEHe8cq1O0Ft1w) and create your account, then go to gateways (set up by yourself or purchased) start to set up your device.
+-  Load into [TTN website](https://id.thethingsnetwork.org/oidc/interaction/3v59Li6ZEHe8cq1O0Ft1w) and create your account, then go to gateways (set up by yourself or purchased) start to set up your device.
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots24.png)
 
-**Step 2**: Add the gateway device:
+- Add the gateway device:
 
-- Owner
-- Gateway ID
-- Gateway EUI
-- Gateway Name
+  - Owner
+  - Gateway ID
+  - Gateway EUI
+  - Gateway Name
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots25.png)
 
@@ -153,34 +171,34 @@ In this project, the data can be displayed on [TheThingsNetwork](https://www.the
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots27.png)
 
-**Step 3**: Add Application:
+- Add Application:
 
-- Owner
-- Application ID
-- Application name
+  - Owner
+  - Application ID
+  - Application name
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots28.png)
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots29.png)
 
-**Step 4**：Add the LoRa node:
+- Add the LoRa node:
 
-- Brand (Select Sense CAP)
-- Model (Select LoRa-E5)
-- Hardware Ver (Default)
-- Firmware Ver (Default)
-- Profile (The Region is according to your location)
-- Frequency plan
-- AppEUI
-- DEVEUI
-- AppKey
-- End Device ID
+  - Brand (Select Sense CAP)
+  - Model (Select LoRa-E5)
+  - Hardware Ver (Default)
+  - Firmware Ver (Default)
+  - Profile (The Region is according to your location)
+  - Frequency plan
+  - AppEUI
+  - DEVEUI
+  - AppKey
+  - End Device ID
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots30.png)
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots31.png)
 
-**Step 5**: Add the code for decoding data:
+- Add the code for decoding data:
 
 ![](https://files.seeedstudio.com/wiki/Alots/Alots32.png)
 
@@ -198,7 +216,7 @@ function Decoder(bytes, port) {
 }
 ```
 
-**Step 6**: Check the result on TheThingsNetwork
+- Check the result on TheThingsNetwork
 
 Finally, go to the gateway, then click "Live data".
 
