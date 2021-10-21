@@ -37,7 +37,9 @@ The following is list of solutions currently tested on reTerminal:
   <tr>
     <td>Face Detection</td>
     <td> <p style="text-align:center;"><img src="https://google.github.io/mediapipe/images/mobile/face_detection_android_gpu_small.gif" alt="pir" width="600" height="auto"></p></td>
-    <td>67 FPS, 15 ms. per inference</td>
+    <td>Model complexity: 0  &nbsp  71.4 FPS 14 ms. per inference
+        Model complexity: 1  &nbsp  21.2 FPS 47 ms. per inference
+    </td>
   </tr>
   <tr>
     <td>Face Mesh</td>
@@ -50,6 +52,13 @@ The following is list of solutions currently tested on reTerminal:
     <td>Model complexity: 1  &nbsp  11.8 FPS 85 ms. per inference
         Model complexity: 2  &nbsp  6.1 FPS 163 ms. per inference
         Model complexity: 3  &nbsp  -- FPS -- ms. per inference
+    </td>
+  </tr>
+  <tr>
+    <td>Pose</td>
+    <td><p style="text-align:center;"><img src="https://google.github.io/mediapipe/images/mobile/hand_tracking_3d_android_gpu.gif" alt="pir" width="600" height="auto"></p></td>
+    <td>Model complexity: 0  &nbsp  8.9 FPS 112 ms. per inference
+        Model complexity: 1  &nbsp  4.4 FPS 226 ms. per inference
     </td>
   </tr>
 </tbody>
@@ -72,7 +81,7 @@ Pre-built wheels for Python 3.7 64bit OS were not available at the moment of wri
 
 ```
 sudo apt install ffmpeg python3-opencv
-wget www.files.seeedstudio.com/ml/mediapipe/mediapipe-0.8-cp37-cp37m-linux_aarch64.whl
+wget https://files.seeedstudio.com/ml/mediapipe/mediapipe-0.8-cp37-cp37m-linux_aarch64.whl
 pip3 install mediapipe-0.8-cp37-cp37m-linux_aarch64.whl
 ```
 
@@ -87,7 +96,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 ['/home/pi/.local/lib/python3.7/site-packages/mediapipe']
 >>> 
 ```
-
 
 ## Links to samples
 
