@@ -1,4 +1,4 @@
-# LoRa Node with AIoTs GPS state tester on Wio Terminal
+# LoRa Node with AIoTs GPS on Wio Terminal
 
 ## Introduction
 
