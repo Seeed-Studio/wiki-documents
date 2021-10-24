@@ -37,28 +37,29 @@ The following is list of solutions currently tested on reTerminal:
   <tr>
     <td>Face Detection</td>
     <td> <p style="text-align:center;"><img src="https://google.github.io/mediapipe/images/mobile/face_detection_android_gpu_small.gif" alt="pir" width="600" height="auto"></p></td>
-    <td>Model complexity: 0  &nbsp  71.4 FPS 14 ms. per inference
+    <td>Model complexity: 0  &nbsp  71.4 FPS 14 ms. per inference <br /> 
         Model complexity: 1  &nbsp  21.2 FPS 47 ms. per inference
     </td>
   </tr>
   <tr>
     <td>Face Mesh</td>
     <td><p style="text-align:center;"><img src="https://google.github.io/mediapipe/images/mobile/face_mesh_android_gpu_small.gif" alt="pir" width="600" height="auto"></p> </td>
-     <td>20 FPS, 50 ms. per inference with tracking &nbsp &nbsp &nbsp &nbsp 16.1 FPS 60 ms. without tracking  </td>   
+     <td>20 FPS, 50 ms. per inference with tracking &nbsp <br />  
+     16.1 FPS 60 ms. without tracking  </td>   
   </tr>
   <tr>
     <td>Pose</td>
     <td><p style="text-align:center;"><img src="https://google.github.io/mediapipe/images/mobile/pose_tracking_android_gpu_small.gif" alt="pir" width="600" height="auto"></p></td>
-    <td>Model complexity: 1  &nbsp  11.8 FPS 85 ms. per inference
-        Model complexity: 2  &nbsp  6.1 FPS 163 ms. per inference
+    <td>Model complexity: 1  &nbsp  11.8 FPS 85 ms. per inference <br /> 
+        Model complexity: 2  &nbsp  6.1 FPS 163 ms. per inference <br /> 
         Model complexity: 3  &nbsp  -- FPS -- ms. per inference
     </td>
   </tr>
   <tr>
     <td>Pose</td>
     <td><p style="text-align:center;"><img src="https://google.github.io/mediapipe/images/mobile/hand_tracking_3d_android_gpu.gif" alt="pir" width="600" height="auto"></p></td>
-    <td>Model complexity: 0  &nbsp  8.9 FPS 112 ms. per inference
-        Model complexity: 1  &nbsp  4.4 FPS 226 ms. per inference
+    <td>Model complexity: 0  &nbsp  8.9 FPS 112 ms. per inference <br /> 
+        Model complexity: 1  &nbsp  4.4 FPS 226 ms. per inference <br /> 
     </td>
   </tr>
 </tbody>
