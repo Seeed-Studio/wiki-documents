@@ -6,19 +6,15 @@ This article introduces how to install the official [Arduino Tensorflow Lite lib
 
 For more information, please visit [TensorFlow Lite For Microcontrollers](https://www.tensorflow.org/lite/microcontrollers).
 
-Make sure to use 1.8.1dev version of Seeed SAMD boards definitions, see how to check and update board definitions in Get started with Wio Terminal.
+Make sure to use 1.8.2 version of Seeed SAMD boards definitions, see how to check and update board definitions in Get started with Wio Terminal.
 
 ## Install the Arduino TensorFlow Lite Library
 
-1. Navigate to `Sketch` -> `Include Library` -> `Manager Libraries...` and a Library Manager will appear.
+The version of Tensorflow Lite library for Arduino IDE, that can be downloaded from Arduino IDE Library Manager is outdated at the moment (October 2021). Therefore, a development version from the official Tensorflow Lite for Microcontrollers repository needs to be used.
 
-![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/20200221164034.jpg)
+```git clone https://github.com/tensorflow/tflite-micro-arduino-examples Arduino_TensorFlowLite```
 
-2. In the Library Manager, Search the keywords **Arduino TensorFlow Lite** and the library will appear. Under **Select Version**, select the one that is **NOT** precompiled and click Install.
-
-The examples were tested with latest version with 2.4.0-ALPHA.
-
-![](https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-TFLM-1/tf.PNG)
+in your Arduino sketches/libraries folder. You can find more details on installing latest development version of library in [TensorFlow Lite Micro Library for Arduino repository](https://github.com/tensorflow/tflite-micro-arduino-examples).
 
 ## Running the Arduino TensorFlow Lite Hello World Example
 
