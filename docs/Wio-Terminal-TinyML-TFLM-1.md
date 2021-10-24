@@ -16,6 +16,8 @@ The version of Tensorflow Lite library for Arduino IDE, that can be downloaded f
 
 in your Arduino sketches/libraries folder. You can find more details on installing latest development version of library in [TensorFlow Lite Micro Library for Arduino repository](https://github.com/tensorflow/tflite-micro-arduino-examples).
 
+The projects described here were testes with commit 219ac1dfed8a8ba0edfdbaae51aed5dc9b208c0c of TensorFlow Lite Micro Library for Arduino repository.
+
 ## Running the Arduino TensorFlow Lite Hello World Example
 
 The example is designed to demonstrate the absolute basics of using TensorFlow Lite for Microcontrollers. It includes the full end-to-end workflow of training a model, converting it for use with TensorFlow Lite, and running inference on a microcontroller.
