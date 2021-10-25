@@ -564,6 +564,8 @@ For Frequently Asked Questions, [click here](https://wiki.seeedstudio.com/reTerm
 
 - **[ZIP]** [reTerminal Schematics v1.3](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.zip)
 
+- **[STP]** [reTerminal 3D Model](https://files.seeedstudio.com/wiki/ReTerminal/resources/reTerminal-3d-model.stp)
+
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
 - **[Web Page]** [Raspberry Pi Official Documentation](https://www.raspberrypi.org/documentation/)
