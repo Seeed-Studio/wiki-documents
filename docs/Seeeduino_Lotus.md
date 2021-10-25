@@ -194,10 +194,7 @@ A few seconds after the upload finishes, you should see the pin 13 (L) LED on th
 
 * **Datasheet**
     * [ATmega328P](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/ATmega328.pdf)
-    * [ATmega16U2](https://files.seeedstudio.com/wiki/SeeeduinoV4/res/ATmega16u2.pdf)
-
-* **Bootloader**    
-    * [Seeeduino Lotus Bootloader](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/res/Seeeduino_Lotus_v1.0_pdf.pdf)
+    * [ATmega16U2](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/ATmega16u2.pdf)
 
 * **References**
     * [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
