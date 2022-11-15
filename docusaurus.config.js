@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Seeed Studio Wiki',
+  tagline: 'The IoT Hardware Development Documentation',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/docusaurus_wiki/',
   onBrokenLinks: 'throw',
@@ -59,10 +59,10 @@ const config = {
 
     ({
       navbar: {
-        title: 'My Site',
+        // title: 'My Site',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Seeed Studio',
+          src: 'https://statics3.seeedstudio.com/assets/img/common/logo_2018_horizontal.png',
         },
         items: [
           {
@@ -71,9 +71,9 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: 'https://www.seeedstudio.com/blog/', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
             position: 'right',
           },
@@ -95,16 +95,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Form',
+                href: 'https://forum.seeedstudio.com/',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/QqMgVwHT3X',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/seeedstudio',
               },
             ],
           },
@@ -113,7 +113,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'https://www.seeedstudio.com/blog/',
               },
               {
                 label: 'GitHub',
@@ -122,7 +122,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Seeed Studio, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
