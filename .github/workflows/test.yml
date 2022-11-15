@@ -1,0 +1,50 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: test_ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1.0.0
+
+      - name: Checkout
+        uses: actions/checkout@master
+        
+      - name: INSTALL SSH KEY
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PC }} 
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
+      - name: GIT CLONE
+        run: |
+            sudo apt-get update
+            sudo apt-get install \
+                  git -y 
+            git config --global user.name 'tianrking'
+            git config --global user.email 'tian.r.king@gmail.com'
+            git clone git@github.com:tianrking/docusaurus_wiki.git ~/docusaurus_wiki
+            
+      - name: NPM RUN for HTML BUILD
+        run: |
+            cd  ~/docusaurus_wiki
+            npm install docusaurus
+            npm run build
+      
+      - name: PUBLISH to WEBSITE
+        run: |
+            cd  ~/docusaurus_wiki/build
+            git init
+            git remote add github git@github.com:tianrking/docusaurus_wiki.git
+            git checkout -b HTML 
+            git add .
+            git commit -m "Update"
+            git push -u github HTML -f
+          
+
+          
