@@ -21,13 +21,11 @@ const sidebars = {
   // But you can create a sidebar manually
 
   tutorialSidebar: [
-    // 'intro',
-    // 'License',
-    // 'hello',
+    'intro',
     {
       type: 'category',
       label: 'Grove',
-      items: ['Grove/A'],
+      items: ['Grove/Grove_System'],
     },
     'About',
     'License',
