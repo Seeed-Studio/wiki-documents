@@ -6,7 +6,7 @@ nointro:
 <iframe width="800" height="450" src="https://www.youtube.com/embed/1Rc_OiebDPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Learn more about Grove System [here](/Grove_System/). The following category of Grove modules are available:
+Learn more about Grove System [here](/docs/Grove/Grove_System/). The following category of Grove modules are available:
 
 - [Grove - Sensor](https://wiki.seeedstudio.com/Sensor/)
 - [Grove - Actuator](https://wiki.seeedstudio.com/Actuator/)

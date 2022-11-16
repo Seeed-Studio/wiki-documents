@@ -25,7 +25,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'Grove',
-      items: ['Grove/Grove_System'],
+      items: [
+        'Grove/Grove',
+        'Grove/Grove_System'
+      ],
     },
     'About',
     'License',
