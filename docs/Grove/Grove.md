@@ -1,6 +1,11 @@
 ---
 name: Grove Introduction
 nointro:
+authors:
+  name: Gao Wei
+  title: Docusaurus Core Team
+  url: https://github.com/wgao19
+  image_url: https://github.com/wgao19.png
 ---
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/1Rc_OiebDPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -13,8 +18,6 @@ Learn more about Grove System [here](/docs/Grove/Grove_System/). The following c
 - [Grove - Display](https://wiki.seeedstudio.com/Display/)
 - [Grove - Communication](https://wiki.seeedstudio.com/Communication/)
 - [Grove - Others](https://wiki.seeedstudio.com/Others/)
-
-
 
 
 ## Tech Support
