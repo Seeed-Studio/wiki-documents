@@ -21,7 +21,9 @@ const sidebars = {
   // But you can create a sidebar manually
 
   tutorialSidebar: [
-    'intro',
+    // 'intro',
+
+    // 'About',
     {
       type: 'category',
       label: 'Grove',
