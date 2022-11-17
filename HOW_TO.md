@@ -1,14 +1,30 @@
 
+###
+
+export PATH=$PATH:/home/w0x7ce/Desktop/node-v18.12.1-linux-x64/bin
+
 ### Installation
 
+[INSTALL LATEST LTS NODE](https://github.com/nodejs/release#release-schedule)
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
-$ yarn
+
+```bash
+sudo apt remove cmdtest
+sudo apt update && sudo apt install yarn
 ```
 
 ### Local Development
 
 ```
-$ yarn start
+yarn
+```
+
+```
+yarn start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
