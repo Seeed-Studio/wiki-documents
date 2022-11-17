@@ -1,0 +1,17 @@
+name: daily
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker-practice/actions-setup-docker@master
+      
+      - name: CRAWL CONFIG
+        run : |
+          
+
+    
+      - name: CRAWL
+        run : |
+            docker run -it --env-file=.env -e "CONFIG=$(cat .git/config.json | jq -r tostring)" algolia/docsearch-scraper
