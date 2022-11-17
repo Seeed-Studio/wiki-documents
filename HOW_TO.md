@@ -58,3 +58,15 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 ```bash
 yarn add @docusaurus/theme-mermaid
 ```
+
+### MDX
+
+```bash
+yarn add remark-math@3 rehype-katex@4
+```
+
+### algolia
+
+```bash
+yarn add @docusaurus/theme-search-algolia
+```
