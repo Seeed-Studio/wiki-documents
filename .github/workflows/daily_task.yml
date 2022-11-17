@@ -1,4 +1,4 @@
-name: Daily_Task
+name: daily_task
 
 on:
   push:
@@ -11,7 +11,6 @@ on:
 
 jobs:
   lint:
-    name: Daily_Task
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.0.0
@@ -20,24 +19,7 @@ jobs:
       - uses: docker-practice/actions-setup-docker@master
       - run: |
           set -x
-          docker version
-      
-
-      - name: SET CONFIG
-        run : |
-          echo "{
-                    "index_name": "example",
-                    "start_urls": ["https://c1ev0ps.github.io/docusaurus_wiki"],
-                    "selectors": {
-                      "lvl0": "header h1",
-                      "lvl1": "header h2",
-                      "lvl2": "header h3",
-                      "lvl3": "header h4",
-                      "lvl4": "header h5",
-                      "lvl5": "p",
-                      "text": "p"
-                    }
-                  }" > ~/config.json
+          docker versionnn
             
             
       - name: Crawl Data
