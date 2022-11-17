@@ -152,7 +152,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: 'a2761291fdfe389c56720a86986d1952',
   
-        indexName: 'w0x7ce_test',
+        indexName: 'example',
   
         // Optional: see doc section below
         contextualSearch: true,

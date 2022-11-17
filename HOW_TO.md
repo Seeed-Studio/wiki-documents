@@ -69,4 +69,5 @@ yarn add remark-math@3 rehype-katex@4
 
 ```bash
 yarn add @docusaurus/theme-search-algolia
+docker run -it --env-file=.env -e "CONFIG=$(cat .git/config.json | jq -r tostring)" algolia/docsearch-scraper
 ```
