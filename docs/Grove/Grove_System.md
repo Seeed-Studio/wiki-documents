@@ -36,29 +36,23 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 Here are some project made with Grove for your reference, more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](https://www.instructables.com/howto/Grove/).
 
 |Automated Watering|IoT Jar Notifier|Magic Mirror|
-|------------------|--------------------------|-----------------------|
+|:------------------:|:--------------------------:|:-----------------------:|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/planting.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/notifier.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Magic_mirror.png)|
 |[MAKE IT NOW!](https://www.instructables.com/id/Automated-Watering-of-Potted-Plants-with-Intel-Edi/)|[MAKE IT NOW!](https://www.instructables.com/id/IoT-Jar-Chandelier-Physical-Gmail-Twitter-Facebook/)|[MAKE IT NOW!](https://www.instructables.com/id/Magic-Mirror-Mini-Android-Powered/)|
-
-
+|||
 | Crazy Caterpillar|Voice-Control IR Remote Controller| Plant Watering Device |
-|------------------|--------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Crazy_Caterpiller.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Learnable_IR_Remote.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/6.jpg)|
 |[MAKE IT NOW!](https://www.instructables.com/id/Crazy-Caterpillar-an-Arduino-Robot/)|[MAKE IT NOW!](https://www.instructables.com/id/Make-a-Voice-Control-IR-Remote-Controller-by-Ardui/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-an-Automatic-Plant-Watering-Device/)|
-
+|||
 | Wi-Fi Speaker | DIY a toy car |Temperature-controlled USB Fan|
-|------------------|--------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Temperature_controlled_fan.png)|
 |[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Wi-Fi-Speaker/)|[MAKE IT NOW!](https://www.instructables.com/id/Make-a-mini-toy-car-with-Arduino/)|[MAKE IT NOW!](https://www.instructables.com/id/Temperature-controlled-USB-fan-MilCandy/)|
-
+|||
 | Pokemon Go SAFETY BADGE |LED Clay Ornament| Quality of Life Meter |
-|------------------|--------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/10.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/LED_Clay_Ornament.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/12.jpg)|
 |[MAKE IT NOW!](https://www.instructables.com/id/5-Minutes-to-DIY-Your-Own-Pokemon-Go-SAFETY-BADGE/)|[MAKE IT NOW!](https://www.instructables.com/id/LED-Clay-Ornament/)|[MAKE IT NOW!](https://www.instructables.com/id/Quality-of-Life-Meter-Mk2-Smarter-and-Connected/)|
-
-
+|||
 |Grove Minimal Thermometer|More Humane Moisture Sensor| PI Game Box |
-|------------------|--------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Grove_Minimal_Thermometer.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/More_Humane_Moisture_Sensor.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/15.jpg)|
 |[MAKE IT NOW!](https://www.instructables.com/id/Grove-Minimal-Thermometer/)|[MAKE IT NOW!](https://www.instructables.com/id/More-Humane-Moisture-sensor/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Raspberry-Game-2048/)|
 
@@ -68,7 +62,7 @@ Here are some project made with Grove for your reference, more projects please r
 There're 5 size of Grove.
 
 | 1X1 | 1X2 | 1X3 | 2X2 | 2X3 |
-|---|-----|------|-----|----|
+|:---:|:-----:|:------:|:-----:|:----:|
 |20x20mm|20x40mm|20x60mm|40x40mm|40x60mm|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size1x1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size1x2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size1x3.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size2x2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size2x3.jpg)|
 
@@ -274,10 +268,8 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |-----------|--------------------------|----------------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/101020017.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Button/image/Button_p_s.png)|
 | [More Details](https://www.seeedstudio.com/Grove-Red-LED.html) | [More Details](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) | [More Details](https://www.seeedstudio.com/Grove-Button-P.html) |
-
-
+|||
 | Grove - Micro Switch| Grove - Encoder | Grove - I2C Touch Sensor |
-|-----------|--------------------------|----------------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/basic_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Touch_Sensor/img/45d_small.jpg)|
 | [More Details](https://www.seeedstudio.com/Grove-Micro-Switch.html) | [More Details](https://www.seeedstudio.com/Grove-Encoder-p-1352.html) | [More Details](https://www.seeedstudio.com/Grove-I2C-Touch-Sensor-p-840.html) |
 
@@ -287,10 +279,8 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |-----------|--------------------------|----------------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/img/Grove-OLED-Displey-0.96-SSD1315-thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_2.13/img/thumbnail.jpg)|
 | [More Details](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) | [More Details](https://www.seeedstudio.com/Grove-OLED-Display-1-12-V2.html) | [More Details](https://www.seeedstudio.com/Grove-Triple-Color-E-Ink-Display-2-13-p-2889.html) |
-
-
+|||
 |Tripple Color E-Ink Diaplay 1.54"|0.54 Red Dual Alphanumeric Display|4 Digit Display|
-|-----------|--------------------------|----------------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/img/front-s.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-4-Digit_Display/img/Thumbnail.png)|
 | [More Details](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html) | [More Details](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html) | [More Details](https://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html) |
 
@@ -301,14 +291,12 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Single-Axis-Analog-Accelerometer-100g-ADXL1001/img/Grove---Single-Axis-Analog-Accelerometer-100g-ADXL1001-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_3.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-Single-Axis-Analog-Accelerometer-100g-ADXL1001-p-4035.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B1400g%29-p-1897.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
-
+|||
 | 3-Axis Digital Compass | 3-Axis Digital Compass V2 | 3-Axis Analog Accelerometer |
-|--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/img/45d_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_6.JPG)|
 |[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html)|[More Details](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-p-1086.html)|
-
+|||
 | 3-Axis Digital Acc(±16g) | 6-Axis Acc&Compass v2.0 | 6-Axis Acc&Gyroscope |
-|--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/motion_9.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer(%C2%B116g)-p-1156.html)|[More Details](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)|[More Details](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Gyroscope-p-2606.html)|
 
@@ -319,16 +307,12 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/V2/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_5.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-UART-WiFi-V2-ESP8285.html)|[More Details](https://www.seeedstudio.com/Grove-433MHz-Simple-RF-link-kit-p-1062.html)|[More Details](https://www.seeedstudio.com/Grove-125KHz-RFID-Reader-p-1008.html)|
-
-
+|||
 |BLE|BLE (dual model) |BLE Shield|
-|--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_6.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/img/small.png)|
 |[More Details](https://www.seeedstudio.com/Grove-BLE-p-1929.html)|[More Details](https://www.seeedstudio.com/Grove-BLE-(dual-model)-p-2407.html)|[More Details](https://www.seeedstudio.com/Seeed-Blueseeed-Shield-HM11.html)|
-
-
+|||
 |NFC Antenna| Grove - NFC | Grove - NFC Tag |
-|--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/comu_9.jpg)|
 |[More Details](https://www.seeedstudio.com/NFC-Antenna-p-1805.html)|[More Details](https://www.seeedstudio.com/Grove-NFC-p-1804.html)|[More Details](https://www.seeedstudio.com/Grove-NFC-Tag-p-1866.html)|
 
@@ -340,16 +324,12 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/thumbnial.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/V2.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_3.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|[More Details](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)|[More Details](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)|
-
-
+|||
 |Round Force Sensor|Air Quality Sensor v1.3| Gas Sensor(O2) |
-|--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/Grove_Air_Quality_Sensor_small.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_6.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-Round-Force-Sensor-FSR402.html)|[More Details](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)|[More Details](https://www.seeedstudio.com/Grove-Gas-Sensor(O2)-p-1541.html)|
-
-
+|||
 | Dust Sensor | Moisture Sensor |Integrated Pressure Sensor Kit|
-|--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_7.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/env_8.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-thumbnail.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-Dust-Sensor-p-1050.html)|[More Details](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|[More Details](https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html)|
 
@@ -361,10 +341,8 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 |--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_3.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove%C2%A0-%C2%A0I2C%C2%A0Mini%C2%A0Motor%C2%A0Driver-p-2508.html)|[More Details](https://www.seeedstudio.com/Grove-I2C-Motor-Driver-p-907.html)|[More Details](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
-
-
+|||
 |Line Finder v1.1| Ultrasonic Ranger | 80cm Infrared Proximity Sensor |
-|--------------------------|---------------------------|-----------------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Line_Finder/img/line_finder_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/robot_6.jpg)|
 |[More Details](https://www.seeedstudio.com/Grove-Line-Finder-v1-1.html)|[More Details](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|[More Details](https://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)|
 

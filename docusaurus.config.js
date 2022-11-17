@@ -147,12 +147,12 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'YOUR_APP_ID',
+        appId: '8182LB8Y0D',
   
         // Public API key: it is safe to commit it
-        apiKey: 'YOUR_SEARCH_API_KEY',
+        apiKey: 'a2761291fdfe389c56720a86986d1952',
   
-        indexName: 'YOUR_INDEX_NAME',
+        indexName: 'w0x7ce_test',
   
         // Optional: see doc section below
         contextualSearch: true,
@@ -167,6 +167,11 @@ const config = {
         searchPagePath: 'search',
   
         //... other Algolia params
+      },
+      mermaid: {
+        options: {
+          maxTextSize: 50,
+        },
       },
     }),
 };
