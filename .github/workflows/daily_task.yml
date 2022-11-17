@@ -1,12 +1,12 @@
-name: daily_task
+name: daily
 on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: INSTALL DOCKER
-      - uses: docker-practice/actions-setup-docker@master
-      - run: |
-          set -x
-          docker versionnn
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
