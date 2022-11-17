@@ -91,3 +91,8 @@ yarn add remark-math@3 rehype-katex@4
 yarn add remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0
 ```
 
+### plugin-content-docs
+
+```bash
+yarn add @docusaurus/plugin-content-docs
+```
