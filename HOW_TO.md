@@ -77,5 +77,4 @@ sudo ./0install.sh install local
 
 ```bash
 yarn add @docusaurus/theme-search-algolia
-docker run -it --env-file=.env -e "CONFIG=$(cat .git/config.json | jq -r tostring)" algolia/docsearch-scraper
 ```

@@ -23,7 +23,7 @@ const sidebars = {
   tutorialSidebar: [
     // 'intro',
 
-    'About',
+    // 'About',
     {
       type: 'category',
       label: 'Grove',
