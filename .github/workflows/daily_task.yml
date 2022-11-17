@@ -5,8 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      - uses: docker-practice/actions-setup-docker@master
+      - name: CRAWL CONFIG
+        run : |
+            echo "{
+  "index_name": "example",
+  "start_urls": ["https://c1ev0ps.github.io/docusaurus_wiki"],
+  "selectors": {
+    "lvl0": "header h1",
+    "lvl1": "header h2",
+    "lvl2": "header h3",
+    "lvl3": "header h4",
+    "lvl4": "header h5",
+    "lvl5": "p",
+    "text": "p"
+  }
+}" > ~/config.json
+    
+    - name: CRAWL
+      run : |
+          docker run -it --env-file=.env -e "CONFIG=$(cat .git/config.json | jq -r tostring)" algolia/docsearch-scraper
