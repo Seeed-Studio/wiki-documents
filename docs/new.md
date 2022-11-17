@@ -1,18 +1,12 @@
 ---
-name: 
-category: 
-bzurl: 
-prodimagename:
-surveyurl: 
-sku: 
-tags:
+
 ---
 
 > 产品图：
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/seeed_logo/Logo.png"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/seeed_logo/Logo.png"/></div>
 
 > 购买链接附上：
-<p style=":center"><a href="购买链接" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<p><a href="购买链接" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
 
 [TOC]
 
@@ -67,7 +61,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 > 在下方可以放上引脚图。
 
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg"/></div>
 
 ## Getting Started
 
@@ -103,7 +97,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 > 请大概介绍产品使用的库，比如是基于什么编写的，是否可以直接通过Arduino IDE下载？除了这种方法以外请附上GitHub的下载链接。
 
-<p style=":center"><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div align=center><img width = 300 src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></div></a></p>
+<p><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div><img src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></div></a></p>
 
 ### Function
 
@@ -120,17 +114,17 @@ Before we get started developing a sketch, let's look at the available functions
 
 Since you have downloaded the zip Library, open your Arduino IDE, click on **Sketch > Include Library > Add .ZIP Library**. Choose the zip file you just downloaded，and if the library install correct, you will see **Library added to your libraries** in the notice window. Which means the library is installed successfully.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png"/></div>
 
 - **Method Two**
 
 The library manager was added starting with Arduino IDE versions 1.5 and greater (1.6.x). It is found in the 'Sketch' menu under 'Include Library', 'Manage Libraries...'
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/seeed_logo/Library.jpg"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/seeed_logo/Library.jpg"/></div>
 
 When you open the Library Manager you will find a large list of libraries ready for one-click install. To find a library for your product, search for the product name or a keyword such as 'k type' or 'digitizer', and the library you want should show up. Click on the desired library, and the 'Install' button will appear. Click that button, and the library should install automatically. When installation finishes, close the Library Manager.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/seeed_logo/library_manager.jpg"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/seeed_logo/library_manager.jpg"/></div>
 
 ### Default Variables
 > 请介绍出现的全局变量
@@ -143,13 +137,13 @@ For the sake of product continuity, we may optimize and upgrade the product libr
 
 We will be the first to update GitHub when the library is optimized. You can delete the original library folder in your computer's folder, then download the latest version from GitHub, unzip it and put it in the Arduino IDE library directory. (**...\Arduino\libraries. ....** is the path you setup Arduino)
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Location_lib.png"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Location_lib.png"/></div>
 
 - **Method Two**
 
 Update the latest version of the library through the Library Manager in the Arduino IDE.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/seeed_logo/update_lib.jpg"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/seeed_logo/update_lib.jpg"/></div>
 
 ## Arduino / XIAO Example
 
@@ -161,12 +155,12 @@ Now that we have our library installed and we understand the basic functions, le
 
 **Step 2.** You need to Install an Arduino Software.
 
-<p style=":center"><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" /></div></a></p>
+<p><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" /></div></a></p>
 
 
 **Step 3.** Launch the Arduino application.
 
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg"/></div>
+<div><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg"/></div>
 
 **Step 3.** Select your development board model and add it to the Arduino IDE.
 
@@ -189,7 +183,7 @@ Now that we have our library installed and we understand the basic functions, le
 
 |              |              |
 |--------------|--------------|
-|<div align=center><img width = 210 src="图片链接"/></div>| <div align=center><img width = 210 src="图片链接"/></div>
+|<div><img src="图片链接"/></div>| <div><img src="图片链接"/></div>
 |[**Get ONE Now**](购买链接)|[**Get ONE Now**](购买链接)|
 
 
@@ -217,7 +211,7 @@ Opening your serial monitor to a baud rate of 9600 should show the distance betw
 
 |              |              |
 |--------------|--------------|
-|<div align=center><img width = 210 src="图片链接"/></div>| <div align=center><img width = 210 src="图片链接"/></div>
+|<div><img src="图片链接"/></div>| <div><img src="图片链接"/></div>
 |[**Get ONE Now**](购买链接)|[**Get ONE Now**](购买链接)|
 
 ```c++
@@ -243,7 +237,7 @@ Opening your serial monitor to a baud rate of 9600 should show the distance betw
 
 > 然后加一些简单的介绍作为开场。
 
-<p style=":center"><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div align=center><img width = 300 src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></div></a></p>
+<p><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div><img src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></div></a></p>
 
 ### Function
 
@@ -330,7 +324,7 @@ Now that we have our library installed and we understand the basic functions, le
 
 |              |              |
 |--------------|--------------|
-|<div align=center><img width = 210 src="图片链接"/></div>| <div align=center><img width = 210 src="图片链接"/></div>
+|<div><img src="图片链接"/></div>| <div><img src="图片链接"/></div>
 |[**Get ONE Now**](购买链接)|[**Get ONE Now**](购买链接)|
 
 
@@ -357,7 +351,7 @@ Now that we have our library installed and we understand the basic functions, le
 
 |              |              |
 |--------------|--------------|
-|<div align=center><img width = 210 src="图片链接"/></div>| <div align=center><img width = 210 src="图片链接"/></div>
+|<div><img src="图片链接"/></div>| <div><img src="图片链接"/></div>
 |[**Get ONE Now**](购买链接)|[**Get ONE Now**](购买链接)|
 
 ```c++
@@ -388,5 +382,5 @@ Now that we have our library installed and we understand the basic functions, le
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
 
 
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+<br /><p><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 

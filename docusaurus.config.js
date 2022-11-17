@@ -100,7 +100,11 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: 'https://www.seeedstudio.com/blog/', label: 'Blog', position: 'left'},
+          {to: 'https://www.seeedstudio.com/', label: 'Bazaar', position: 'left'},
+          {to: 'https://www.seeedstudio.com/fusion.html', label: 'Fusion', position: 'left'},
+          {to: 'https://www.seeedstudio.com/odm', label: 'Services', position: 'left'},
+          {to: 'https://forum.seeedstudio.com/', label: 'Forum', position: 'left'},
+          {to: 'https://solution.seeedstudio.com/', label: 'Solution', position: 'left'},
           {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
@@ -108,6 +112,7 @@ const config = {
           },
         ],
       },
+      
       footer: {
         style: 'dark',
         links: [
