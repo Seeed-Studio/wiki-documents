@@ -11,7 +11,7 @@ on:
 
 jobs:
   lint:
-    name: test_ci
+    name: Daily_Task
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.0.0
