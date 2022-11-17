@@ -65,6 +65,14 @@ yarn add @docusaurus/theme-mermaid
 yarn add remark-math@3 rehype-katex@4
 ```
 
+### jq
+
+```bash
+curl -O https://get.0install.net/0install.sh && chmod +x 0install.sh
+sudo ./0install.sh install local
+0install add jq https://apps.0install.net/utils/jq.xml
+```
+
 ### algolia
 
 ```bash
