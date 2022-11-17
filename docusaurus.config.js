@@ -3,11 +3,14 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Seeed Studio Wiki',
   tagline: 'The IoT Hardware Development Documentation',
+  
   url: 'https://c1ev0ps.github.io',
   baseUrl: '/docusaurus_wiki/',
   onBrokenLinks: 'throw',
@@ -51,6 +54,10 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:

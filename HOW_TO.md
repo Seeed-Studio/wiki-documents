@@ -78,3 +78,15 @@ sudo ./0install.sh install local
 ```bash
 yarn add @docusaurus/theme-search-algolia
 ```
+
+### MDX Plugins
+
+```bash
+yarn add remark-math@3 rehype-katex@4
+```
+
+### Math
+
+```bash
+yarn add remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0
+```
