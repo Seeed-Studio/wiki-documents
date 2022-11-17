@@ -54,7 +54,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-
+          
           remarkPlugins: [math],
           rehypePlugins: [katex],
 
@@ -82,6 +82,11 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       navbar: {
         // title: 'My Site',
         logo: {
