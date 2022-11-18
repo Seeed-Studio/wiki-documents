@@ -1,8 +1,11 @@
 ---
 sidebar_position: 6
+
 ---
 
 ## **IMPORTANT NOTICE AND DISCLAIMER**
+
+
 
 1. Descriptions of circuits, software and other related information in this document are provided only to illustrate the operation of semiconductor products and application examples. You are fully responsible for the incorporation of these circuits, software, and information in the design of your equipment. Seeed Studio assumes no responsibility for any losses incurred by you or third parties arising from the use of these circuits, software, or information.
 
