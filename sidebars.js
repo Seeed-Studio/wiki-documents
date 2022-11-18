@@ -29,7 +29,8 @@ const sidebars = {
       label: 'Grove',
       items: [
         'Grove/Grove',
-        'Grove/Grove_System'
+        'Grove/Grove_System',
+        'Grove/Grove_A'
       ],
     },
     'About',
