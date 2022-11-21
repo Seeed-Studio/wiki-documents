@@ -118,3 +118,11 @@ git config --global http.lowSpeedTime 999999
 git clone --depth=1 http://xxx.git
 git fetch --unshallow
 ```
+
+### gitignore
+
+```bash
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+```
