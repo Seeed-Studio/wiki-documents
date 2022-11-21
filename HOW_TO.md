@@ -97,6 +97,13 @@ yarn add remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0
 yarn add @docusaurus/plugin-content-docs
 ```
 
+### plugin-pwa
+
+```bash
+yarn add @docusaurus/plugin-debug
+yarn add @docusaurus/plugin-pwa
+```
+
 ## GIT 
 
 ### Cache

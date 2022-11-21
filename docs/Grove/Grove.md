@@ -1,11 +1,13 @@
 ---
-name: Grove Introduction
+title: Grove Introduction
 nointro:
-authors:
-  name: Gao Wei
-  title: Docusaurus Core Team
-  url: https://github.com/wgao19
-  image_url: https://github.com/wgao19.png
+keywords:
+  - docs
+  - docusaurus
+image: https://i.imgur.com/mErPwqL.png
+last_update:
+  date: 1/1/2020
+  author: w0x7ce
 ---
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/1Rc_OiebDPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

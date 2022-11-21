@@ -17,6 +17,8 @@
   "dependencies": {
     "@docusaurus/core": "2.2.0",
     "@docusaurus/plugin-content-docs": "^2.2.0",
+    "@docusaurus/plugin-debug": "^2.2.0",
+    "@docusaurus/plugin-pwa": "^2.2.0",
     "@docusaurus/preset-classic": "2.2.0",
     "@docusaurus/theme-mermaid": "^2.2.0",
     "@docusaurus/theme-search-algolia": "^2.2.0",

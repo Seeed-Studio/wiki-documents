@@ -53,6 +53,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+
           sidebarPath: require.resolve('./sidebars.js'),
           
           remarkPlugins: [math],
@@ -60,9 +61,31 @@ const config = {
 
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+          editLocalizedFiles: false,
+          editCurrentVersion: false,
+
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          disableVersioning: false,
+          includeCurrentVersion: true,
+          lastVersion: undefined,
+
+          include: ['**/*.md', '**/*.mdx'],
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+          ],
+
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+
+        
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -76,7 +99,38 @@ const config = {
       }),
     ],
   ],
-
+  
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/docusaurus.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json', // your PWA manifest
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: 'rgb(37, 194, 160)',
+          },
+        ],
+      },
+    ],
+  ],
+  
   themeConfig:
     
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -201,6 +255,8 @@ const config = {
       },
 
     }),
+  
+  
 };
 
 module.exports = config;
