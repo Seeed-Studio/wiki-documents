@@ -78,17 +78,17 @@ jobs:
               git add .
               git commit -m "Update"
               git push -u github HTML -f
+
+        - uses: docker-practice/actions-setup-docker@master
+
+        - name: Generate SEARCH CONFIG
+          run: |
+              docker run -it --env-file=${{ secrets.ENV }}  -e "CONFIG=$(cat ${{ secrets.CRAWL_JSON }} | jq -r tostring)" algolia/docsearch-scraper
   
   job2:
     runs-on: ubuntu-latest
     needs: job1
-    steps:
-
-      - uses: docker-practice/actions-setup-docker@master
-
-      - name: Generate SEARCH CONFIG
-        run: |
-            docker run -it --env-file=${{ secrets.ENV }}  -e "CONFIG=$(cat ${{ secrets.CRAWL_JSON }} | jq -r tostring)" algolia/docsearch-scraper
+   
 
 
 
