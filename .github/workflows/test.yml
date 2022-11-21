@@ -41,6 +41,7 @@ jobs:
             cd  ~/docusaurus_wiki
             sudo apt remove cmdtest
             sudo apt update && sudo apt install yarn
+            yarn add docusaurus
             yarn build
       
       - name: PUBLISH to WEBSITE
