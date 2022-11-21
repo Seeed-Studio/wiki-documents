@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - "ISSUE_TEMPLATE/**"
       - ".github/**.md"
-      = ".gitignore"
+      - ".gitignore"
       - "demo/**"
       - "docker/**"
       - "HOW_TO.md"
