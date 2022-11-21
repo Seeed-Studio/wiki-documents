@@ -96,3 +96,25 @@ yarn add remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0
 ```bash
 yarn add @docusaurus/plugin-content-docs
 ```
+
+## GIT 
+
+### Cache
+
+```bash
+git config --global http.postBuffer 524288000
+```
+
+### Speed
+
+```bash
+git config --global http.lowSpeedLimit 0
+git config --global http.lowSpeedTime 999999
+```
+
+### depth
+
+```bash
+git clone --depth=1 http://xxx.git
+git fetch --unshallow
+```
