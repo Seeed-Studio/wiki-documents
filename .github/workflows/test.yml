@@ -80,9 +80,8 @@ jobs:
               git push -u github HTML -f
   
   job2:
-    needs: job1
-    name: search
     runs-on: ubuntu-latest
+    needs: job1
     steps:
 
       - uses: docker-practice/actions-setup-docker@master
