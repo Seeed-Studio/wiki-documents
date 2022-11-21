@@ -35,6 +35,7 @@ const sidebars = {
     },
     'About',
     'License',
+    
   ],
 
 };
