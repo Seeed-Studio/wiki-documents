@@ -73,6 +73,8 @@ jobs:
             yarn add @docusaurus/plugin-content-docs
             yarn add @docusaurus/plugin-debug
             yarn add @docusaurus/plugin-pwa
+            yarn add --dev @docusaurus/eslint-plugin
+            yarn add @docusaurus/theme-live-codeblock
             yarn build
       
       - name: PUBLISH to WEBSITE
