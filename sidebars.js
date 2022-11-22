@@ -32,7 +32,26 @@ const sidebars = {
         'Grove/Grove_System',
         'Grove/Grove_A'
       ],
+    
     },
+
+    {
+      type: 'category',
+      label: 'Platform',
+      items: [
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO',
+          items: [
+            'Platfrom/SeeedStudio XIAO/XIAO_ESP32C3_Getting_Started'
+          ],
+        
+        },
+  
+      ],
+    
+    },
+
     'About',
     'License',
     

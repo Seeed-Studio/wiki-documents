@@ -1,7 +1,6 @@
 ---
-description: Create a doc page with rich content.
+description: Getting Started with Seeed Studio XIAO ESP32C3
 title: Getting Started with Seeed Studio XIAO ESP32C3
-slug: /A
 image: https://avatars.githubusercontent.com/u/10758833
 last_update:
   date: 11/21/2022
