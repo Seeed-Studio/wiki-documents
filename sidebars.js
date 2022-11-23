@@ -45,13 +45,14 @@ const sidebars = {
           label: 'reTerminal',
           items: 
           [
+            'Platform/reTerminal/reTerminal',
             {
               type: 'category',
-              label: 'reTerminal',
+              label: 'Home_Assistant',
               items: 
               [
-
-                'Platform/reTerminal/reTerminal'
+                
+                'Platform/reTerminal/Home_Assistant/reTerminal_Home_Assistant',
 
               ],
             },
