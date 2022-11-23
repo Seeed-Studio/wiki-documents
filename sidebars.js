@@ -46,6 +46,7 @@ const sidebars = {
           items: 
           [
             'Platform/reTerminal/reTerminal',
+            'Platform/reTerminal/reTerminal-FAQ',
             {
               type: 'category',
               label: 'Home_Assistant',
