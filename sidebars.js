@@ -42,6 +42,24 @@ const sidebars = {
       [
         {
           type: 'category',
+          label: 'reTerminal',
+          items: 
+          [
+            {
+              type: 'category',
+              label: 'reTerminal',
+              items: 
+              [
+
+                'Platform/reTerminal/reTerminal'
+
+              ],
+            },
+
+          ],
+        },
+        {
+          type: 'category',
           label: 'SeeedStudio XIAO',
           items: 
           [
