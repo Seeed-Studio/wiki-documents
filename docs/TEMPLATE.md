@@ -69,3 +69,37 @@ slug: /bonjour
 ```
 
 :::
+
+
+<div style={{textAlign: 'center'}}>
+
+![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg)
+
+</div>
+
+<center>
+
+| 1X1 | 1X2 | 1X3 | 2X2 | 2X3 |
+|:---:|:-----:|:------:|:-----:|:----:|
+|20x20mm|20x40mm|20x60mm|40x40mm|40x60mm|
+
+</center>
+
+### code
+
+[Support language](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
+
+```jsx title="demo.js"
+  function HelloCodeTitle(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+```
+
+```jsx
+
+  ```jsx title="/src/components/HelloCodeTitle.js"
+  function HelloCodeTitle(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+
+```
