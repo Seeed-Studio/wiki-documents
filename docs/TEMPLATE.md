@@ -70,6 +70,7 @@ slug: /bonjour
 
 :::
 
+## Center align content
 
 <div style={{textAlign: 'center'}}>
 
@@ -84,6 +85,15 @@ slug: /bonjour
 |20x20mm|20x40mm|20x60mm|40x40mm|40x60mm|
 
 </center>
+
+## links between documents and tags
+
+Eg. In **reTerminal.md** need to link to **#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g** tag in **reTerminal-FAQ.md**
+
+```markdown
+[More Info](Platform/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
+```
+[More Info](Platform/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
 
 ### code
 
