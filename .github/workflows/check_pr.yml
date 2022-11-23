@@ -1,21 +1,6 @@
-name: Test
+name: Deploy
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "ISSUE_TEMPLATE/**"
-      - ".github/**.md"
-      - ".gitignore"
-      - "demo/**"
-      - "docker/**"
-      - "HOW_TO.md"
-      - "TASK.md"
-      - "SECURITY.md"
-      - "README.md"
-      - "README_zh-CN.md"
-
   pull_request:
     paths-ignore:
       - "ISSUE_TEMPLATE/**"
@@ -28,10 +13,6 @@ on:
       - "SECURITY.md"
       - "README.md"
       - "README_zh-CN.md"
-      
-  schedule:
-    #UTC 0 
-    - cron: '0 0 * * *'
 
 jobs:
   lint:
@@ -42,21 +23,13 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@master
-        
-      - name: INSTALL SSH KEY
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PC }} 
-          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
 
       - name: GIT CLONE
         run: |
             sudo apt-get update
             sudo apt-get install \
                   git -y 
-            git config --global user.name 'tianrking'
-            git config --global user.email 'tian.r.king@gmail.com'
-            git clone git@github.com:tianrking/docusaurus_wiki.git ~/docusaurus_wiki
+            git clone https://github.com/c1ev0ps/docusaurus_wiki.git ~/docusaurus_wiki
             
       - name: NPM RUN for HTML BUILD
         run: |
@@ -76,32 +49,5 @@ jobs:
             yarn add --dev @docusaurus/eslint-plugin
             yarn add @docusaurus/theme-live-codeblock
             yarn build
-      
-      - name: PUBLISH to WEBSITE
-        run: |
-            cd  ~/docusaurus_wiki/build
-            git init
-            git remote add github git@github.com:tianrking/docusaurus_wiki.git
-            git checkout -b HTML 
-            git add .
-            git commit -m "Update"
-            git push -u github HTML -f
-
-      # - uses: docker-practice/actions-setup-docker@master
-      
-      # - name: SET ENV
-      #   run: |
-      #       echo ${{ secrets.ENV }} >> ~/.env
-
-      # - name: Generate SEARCH CONFIG
-      #   run: |
-      #       docker run -it --env-file=~/.env  -e "CONFIG=$(cat ${{ secrets.CRAWL_JSON }} | jq -r tostring)" algolia/docsearch-scraper
-  
-  # job2:
-  #   runs-on: ubuntu-latest
-  #   needs: job1
-   
-
-
 
           
