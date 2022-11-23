@@ -224,7 +224,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: 'a2761291fdfe389c56720a86986d1952',
   
-        indexName: 'example',
+        indexName: 'wiki',
   
         // Optional: see doc section below
         contextualSearch: false,
