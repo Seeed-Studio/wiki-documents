@@ -43,8 +43,11 @@ In this wiki, we need to prepare the following materials:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition3.png" style={{width:400, height:'auto'}}/></div>
 
-!!!note:
-    It will be better if you use hot melt adhesive to reinforce welds.
+:::note:
+
+It will be better if you use hot melt adhesive to reinforce welds.
+
+:::
 
 - **Step 6**. Assemble all components:
 
@@ -216,8 +219,11 @@ Move back to Edge Impulse "Data acquisition" page, the outcome should be like th
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition16.png" style={{width:800, height:'auto'}}/></div>
 
-!!!note:
-     In Step 8. the split time is 1 second which means you at least do one swing of up and down in one second in Step 7. Otherwise, the results will not be accurate. Meanwhile, you can adjust the split time according to your own motion speed.
+:::note:
+
+In Step 8. the split time is 1 second which means you at least do one swing of up and down in one second in Step 7. Otherwise, the results will not be accurate. Meanwhile, you can adjust the split time according to your own motion speed.
+
+:::
 
 - **Step 10.** Rebalance the dataset, Click **Dashboard** and drop down page to find **Perform train** / **test split**
 
@@ -257,8 +263,11 @@ Click Model testing -> Click Classify all
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition23.png" style={{width:800, height:'auto'}}/></div>
 
-!!!note:
-     If your accuracy is low, you can check you dataset by increasing the training set and extending the sample time
+:::note:
+
+If your accuracy is low, you can check you dataset by increasing the training set and extending the sample time
+
+:::
 
 - **Step 15.** Build Arduino library
 
