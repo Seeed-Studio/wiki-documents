@@ -72,7 +72,8 @@ const sidebars = {
       ],
     
     },
-
+    
+    "A_Comparison_of_Different_Grove_Temperature_Sensors",
     'About',
     'License',
     
