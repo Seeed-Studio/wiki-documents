@@ -8,7 +8,6 @@ keywords:
 - docs
 - docusaurus
 image: https://avatars.githubusercontent.com/u/10758833
-slug: /A
 last_update:
   date: 11/23/2022
   author: mouseart
