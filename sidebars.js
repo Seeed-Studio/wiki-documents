@@ -38,12 +38,33 @@ const sidebars = {
     {
       type: 'category',
       label: 'Platform',
-      items: [
+      items: 
+      [
         {
           type: 'category',
           label: 'SeeedStudio XIAO',
-          items: [
-            'Platfrom/SeeedStudio XIAO/XIAO_ESP32C3_Getting_Started'
+          items: 
+          [
+            {
+              type: 'category',
+              label: 'SeeedStudio XIAO ESP32C3',
+              items: 
+              [
+
+                'Platfrom/SeeedStudio XIAO/SeeedStudio XIAO ESP32C3/XIAO_ESP32C3_Getting_Started'
+
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SeeedStudio XIAO nRF52840',
+              items: 
+              [
+
+                'Platfrom/SeeedStudio XIAO/SeeedStudio XIAO nRF52840/XIAOEI'
+
+              ],
+            }
           ],
         
         },
