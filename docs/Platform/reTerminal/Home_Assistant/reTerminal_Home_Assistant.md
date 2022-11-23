@@ -1,7 +1,7 @@
 ---
 description: reTerminal-Home-Assistant
 title: reTerminal Home Assistant
-image: https://avatars.githubusercontent.com/u/4452826?s=400&v=4
+image: https://avatars.githubusercontent.com/u/4452826?s=400&amp;v=4
 last_update:
   date: 11/23/2022
   author: Peter Pan
@@ -9,7 +9,7 @@ last_update:
 
 # Getting Started with Home Assistant on reTerminal
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/94.jpg"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/94.jpg" /></center>
 
 ## Introduction
 
@@ -19,33 +19,28 @@ This wiki will walkthrough step-by-step on how you can turn your ordinary house 
 
 [Home Assistant](https://www.home-assistant.io) is a free and open-source software for home automation designed to be a central control system for smart home devices, which can be referred to as a smart home hub. It offers you home automation without needing the cloud, which means your home automation system is not dependent on remote servers or an internet connection. This local control means, you can have far better security than cloud connected devices. Also, it offers greater reliability when it comes to keep it running 24x7. 
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/1.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/1.png" /></center>
 
 It is flexible to use and very easy to get started even for beginners with the great documentation offered by Home Assistant. Also, there is an active community on [Home Assistant Forum](https://community.home-assistant.io) with many members who will be there to help you if you come across any issues when building and running Home Assistant.
-
 After setting up Home Assistant, it can be accessed through a web-based user interface by using companion apps for Android and iOS, or by voice commands via a supported virtual assistant such as Google Assistant or Amazon Alexa.
-
 If you want to quickly experience a demo on your web browser, please [click here](https://demo.home-assistant.io).
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/3.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/3.png" /></center>
 
 ## Different installation methods
 
 Home Assistant is supported to run on different hardware such as a Raspberry Pi, ODROID, ASUS Tinkerboard, Intel NUC, Windows/ Linux/ Mac PCs. And with this, comes different methods of installation on different hardware. To learn more about all these installation methods please visit [this page](https://www.home-assistant.io/installation).
-
 As you can see below, there are 4 main types of installation methods and not all Home Assistant features are supported by all installation methods.
 
-<center><img width="650" src="https://files.seeedstudio.com/wiki/Home-Assistant/2.png"/></center>
+<center><img width={650} src="https://files.seeedstudio.com/wiki/Home-Assistant/2.png" /></center>
 
 ## Installation Method for reTerminal
-
 According to Home Assistant, the two recommended methods of Home Assistant installation are **OS and Container method**. However we will not be using these 2 methods to install on reTerminal. Why is that?
 
 ### Why not Home Assistant Operating System?
-
 If we install Home Assistant Operating System on reTerminal, we cannot view the Home Assistant Dashboard UI on reTerminal LCD. This is because, Home Assistant OS will only output a CLI interface to any connected display like below.
 
-<center><img width="600" src="https://files.seeedstudio.com/wiki/Home-Assistant/5.png"/></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/Home-Assistant/5.png" /></center>
 
 So the dashboard UI can only be accessed via **homeassistant.local:8123** on another device. However, if you want to install like this and do not want to view the dashboard on reTerminal LCD, you can follow [this guide](https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-operating-system). It follows the same installation methods as a Raspberry Pi because reTerminal is based on Raspberry Pi Compute Module 4.
 
@@ -121,7 +116,7 @@ Docker version 20.10.18, build b40c2f6
 
 - **Step 10.** Visit [Home Assistant OS Agent page](https://github.com/home-assistant/os-agent/releases), under the latest release, right click on file that ends with ***linux_armv7.deb** and copy the link
 
-<center><img width="550" src="https://files.seeedstudio.com/wiki/Home-Assistant/4.jpg"/></center>
+<center><img width={550} src="https://files.seeedstudio.com/wiki/Home-Assistant/4.jpg" /></center>
 
 - **Step 11.** Download the file by entering in following format
 
@@ -167,11 +162,11 @@ sudo apt --fix-broken install
 
 - **Step 16.** In the **Package configuration** window, select **raspberrypi4** and press **ENTER**
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/6.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/6.png" /></center>
 
 The output will be as follows
 
-<center><img width="550" src="https://files.seeedstudio.com/wiki/Home-Assistant/7.png"/></center>
+<center><img width={550} src="https://files.seeedstudio.com/wiki/Home-Assistant/7.png" /></center>
 
 Now to check whether all the services are installed and are up and running, we need to install [Portainer](https://www.portainer.io), which is a Docker management platform. Here we will see all our containers running.
 
@@ -195,19 +190,19 @@ homeassistant.local:9000
 
 - **Step 20.** Create a user by entering a username and a password 
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/8.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/8.png" /></center>
 
 - **Step 21.** On Portainer dashboard, click primary
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/10.jpg"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/10.jpg" /></center>
 
 - **Step 22.** Click Containers
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/11.jpg"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/11.jpg" /></center>
 
 If you see the following containers up and running, that means Home Assistant is installed successfully
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/12.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/12.png" /></center>
 
 ## View Home Assistant Dashboard UI on web browser
 
@@ -221,11 +216,11 @@ It will take some time to finish the initial start up process
 
 - **Step 2.** Once finished starting up, create an account and follow through the initial set up instuctions 
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" /></center>
 
 After that you will see your welcome dashboard as follows
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/15.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/15.png" /></center>
 
 ## View Home Assistant Dashboard UI in Kiosk mode on reTerminal
 
@@ -261,11 +256,12 @@ Now when reTerminal boots up, Home Assistant dashboard UI will open in full-scre
 
 After integrating smart lights, temperature, humidity sensors, CCTV and more, a complete Smart Home dashboard on Home Assistant will look like below 
 
-<center><img width="1000" src="https://files.seeedstudio.com/wiki/Home-Assistant/16.png"/></center>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/16.png" /></center>
 
-<video style="display:block;max-width:100%" id="video" controls="" preload="none" poster="https://files.seeedstudio.com/wiki/Home-Assistant/thumb.png">
-      <source id="mp4" src="https://files.seeedstudio.com/wiki/Home-Assistant/HA-dashboard.mp4" type="video/mp4">
-</videos>
+<video style={{display: 'block', maxWidth: '100%'}} id="video" controls preload="none" poster="https://files.seeedstudio.com/wiki/Home-Assistant/thumb.png">
+  <source id="mp4" src="https://files.seeedstudio.com/wiki/Home-Assistant/HA-dashboard.mp4" type="video/mp4" />
+</video>
+
 
 # Tech support
 
