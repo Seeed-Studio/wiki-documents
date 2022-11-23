@@ -51,7 +51,7 @@ const sidebars = {
               items: 
               [
 
-                'Platfrom/SeeedStudio XIAO/SeeedStudio XIAO ESP32C3/XIAO_ESP32C3_Getting_Started'
+                'Platform/SeeedStudio XIAO/SeeedStudio XIAO ESP32C3/XIAO_ESP32C3_Getting_Started'
 
               ],
             },
@@ -61,7 +61,7 @@ const sidebars = {
               items: 
               [
 
-                'Platfrom/SeeedStudio XIAO/SeeedStudio XIAO nRF52840/XIAOEI'
+                'Platform/SeeedStudio XIAO/SeeedStudio XIAO nRF52840/XIAOEI'
 
               ],
             }
