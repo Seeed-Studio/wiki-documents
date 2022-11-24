@@ -137,6 +137,7 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
+
       docs: {
         sidebar: {
           hideable: true,
@@ -236,7 +237,7 @@ const config = {
         searchParameters: {},
   
         // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'false',
+        searchPagePath: 'search',
   
         //... other Algolia params
       },
