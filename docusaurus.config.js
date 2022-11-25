@@ -82,7 +82,7 @@ const config = {
           ],
 
           editUrl:
-            'https://github.com/c1ev0ps/docusaurus_wiki/blob/main/',
+            'https://github.com/c1ev0ps/docusaurus_wiki/edit/main/',
         },
 
         
@@ -91,7 +91,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/c1ev0ps/docusaurus_wiki/blob/main/',
+            'https://github.com/c1ev0ps/docusaurus_wiki/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
