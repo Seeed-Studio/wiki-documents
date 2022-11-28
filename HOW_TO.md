@@ -135,10 +135,13 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### Custom Deployment (We Used)
 
-#### SSH 
+#### SSH KEY
 
-[Add SSH KEY](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[GENERATE SSH KEY](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
+[Add SSH KEY](https://github.com/settings/keys)
+
+[Github Actions](https://github.com/c1ev0ps/docusaurus_wiki/settings/secrets/actions)
 
 
 
