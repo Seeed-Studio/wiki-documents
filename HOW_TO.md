@@ -141,7 +141,5 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 [Add SSH KEY](https://github.com/settings/keys)
 
-[Github Actions](https://github.com/c1ev0ps/docusaurus_wiki/settings/secrets/actions)
-
-
+[Github Actions](https://github.com/{$USER}/{Workspace}/settings/secrets/actions)
 

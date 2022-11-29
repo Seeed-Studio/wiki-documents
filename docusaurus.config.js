@@ -137,6 +137,12 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
+      giscus: {
+        repo: 'xxx',
+        repoId: 'xxx',
+        category: 'Announcements',
+        categoryId: 'xxx'
+      },
 
       docs: {
         sidebar: {

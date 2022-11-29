@@ -11,6 +11,9 @@ image: https://avatars.githubusercontent.com/u/10758833
 last_update:
   date: 11/21/2022
   author: w0x7ce
+
+no_comments: false # for Disqus
+
 ---
 
 # Hello from Seeed Studio
