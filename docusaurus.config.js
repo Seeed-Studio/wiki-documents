@@ -138,10 +138,10 @@ const config = {
 
     ({
       giscus: {
-        repo: 'xxx',
-        repoId: 'xxx',
+        repo: 'c1ev0ps/docusaurus_wiki',
+        repoId: 'R_kgDOIabZbQ',
         category: 'Announcements',
-        categoryId: 'xxx'
+        categoryId: 'Wiki'
       },
 
       docs: {

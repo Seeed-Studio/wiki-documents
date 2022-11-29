@@ -1,9 +1,9 @@
-name: Deploy
+name: Dev
 
 on:
   push:
     branches:
-      - main
+      - test
       
     paths-ignore:
       - "ISSUE_TEMPLATE/**"
@@ -70,7 +70,7 @@ jobs:
             cd  ~/docusaurus_wiki/build
             git init
             git remote add github git@github.com:tianrking/docusaurus_wiki.git
-            git checkout -b HTML 
+            git checkout -b HTML_test
             git add .
             git commit -m "Update"
             git push -u github HTML -f
