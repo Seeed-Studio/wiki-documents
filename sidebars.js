@@ -70,7 +70,26 @@ const sidebars = {
         },
   
       ],
-    
+
+    },
+
+    {
+      type: 'category',
+      label: 'Industrial IoT',
+      items: 
+      [
+        {
+          type: 'category',
+          label: 'SenseCAP - The Sensor Prototype Kit',
+          items: 
+          [
+            'Industrial IoT/SenseCAP - The Sensor Prototype Kit/K1100-Getting-Started'
+          ],
+          
+        },
+  
+      ],
+
     },
 
     'About',
