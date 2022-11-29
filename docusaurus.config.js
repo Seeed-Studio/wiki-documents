@@ -141,7 +141,7 @@ const config = {
         repo: 'c1ev0ps/docusaurus_wiki',
         repoId: 'R_kgDOIabZbQ',
         category: 'Q&A',
-        categoryId: 'Q&A',
+        categoryId: 'null',
         theme: 'light_high_contrast',
         darkTheme: 'dark_tritanopia'
       },
