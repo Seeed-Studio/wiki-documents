@@ -140,8 +140,8 @@ const config = {
       giscus: {
         repo: 'c1ev0ps/docusaurus_wiki',
         repoId: 'R_kgDOIabZbQ',
-        category: 'Announcements',
-        categoryId: 'Wiki',
+        category: 'Q&A',
+        categoryId: 'Q&A',
         theme: 'light_high_contrast',
         darkTheme: 'dark_tritanopia'
       },

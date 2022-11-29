@@ -29,7 +29,7 @@ export const Comment = () => {
             reactionsEnabled="1"
             emitMetadata="0"
             inputPosition="bottom"
-            lang="zh-CN"
+            lang="en"
             loading="lazy"
             {...giscus}
             theme={giscusTheme}
