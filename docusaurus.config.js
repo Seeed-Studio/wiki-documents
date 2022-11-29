@@ -141,7 +141,9 @@ const config = {
         repo: 'c1ev0ps/docusaurus_wiki',
         repoId: 'R_kgDOIabZbQ',
         category: 'Announcements',
-        categoryId: 'Wiki'
+        categoryId: 'Wiki',
+        theme: 'light_high_contrast',
+        darkTheme: 'dark_tritanopia'
       },
 
       docs: {
