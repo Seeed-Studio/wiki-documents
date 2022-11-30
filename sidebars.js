@@ -111,6 +111,7 @@ const sidebars = {
       ],
 
     },
+
     "reComputer_Jetson_Series_Hardware_Layout",
     "A_Comparison_of_Different_Grove_Temperature_Sensors",
     'About',
