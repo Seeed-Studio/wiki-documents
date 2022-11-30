@@ -82,7 +82,7 @@ const config = {
           ],
 
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/c1ev0ps/docusaurus_wiki/edit/main/',
         },
 
         
@@ -91,7 +91,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/c1ev0ps/docusaurus_wiki/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -137,6 +137,15 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
+      giscus: {
+        repo: 'c1ev0ps/docusaurus_wiki',
+        repoId: 'R_kgDOIabZbQ',
+        category: 'Q&A',
+        categoryId: 'DIC_kwDOIabZbc4CSlHH',
+        theme: 'light_high_contrast',
+        darkTheme: 'dark_tritanopia'
+      },
+
       docs: {
         sidebar: {
           hideable: true,
@@ -206,7 +215,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/c1ev0ps/docusaurus_wiki',
               },
             ],
           },
@@ -224,7 +233,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: 'a2761291fdfe389c56720a86986d1952',
   
-        indexName: 'example',
+        indexName: 'wiki',
   
         // Optional: see doc section below
         contextualSearch: false,
@@ -236,7 +245,7 @@ const config = {
         searchParameters: {},
   
         // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'false',
+        searchPagePath: 'search',
   
         //... other Algolia params
       },

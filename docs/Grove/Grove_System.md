@@ -35,6 +35,8 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 
 Here are some project made with Grove for your reference, more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](https://www.instructables.com/howto/Grove/).
 
+<div style={{textAlign: 'center'}}>
+
 |Automated Watering|IoT Jar Notifier|Magic Mirror|
 |:------------------:|:--------------------------:|:-----------------------:|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/planting.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/notifier.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Magic_mirror.png)|
@@ -56,16 +58,20 @@ Here are some project made with Grove for your reference, more projects please r
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/Grove_Minimal_Thermometer.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/More_Humane_Moisture_Sensor.png)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/project_images/15.jpg)|
 |[MAKE IT NOW!](https://www.instructables.com/id/Grove-Minimal-Thermometer/)|[MAKE IT NOW!](https://www.instructables.com/id/More-Humane-Moisture-sensor/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Raspberry-Game-2048/)|
 
+</div>
 
 ## Size of Grove
 
 There're 5 size of Grove.
+
+<div style={{textAlign: 'center'}}>
 
 | 1X1 | 1X2 | 1X3 | 2X2 | 2X3 |
 |:---:|:-----:|:------:|:-----:|:----:|
 |20x20mm|20x40mm|20x60mm|40x40mm|40x60mm|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size1x1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size1x2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size1x3.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size2x2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/size2x3.jpg)|
 
+</div>
 
 Here are the dimensions.
 

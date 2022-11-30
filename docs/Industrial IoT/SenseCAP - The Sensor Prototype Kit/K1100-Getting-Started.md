@@ -3,7 +3,7 @@ description: Create a doc page with rich content.
 title: Contents & Framework
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
 last_update:
-  date: 11/23/2022
+  date: 11/30/2022
   author: MengDu
 ---
 
@@ -720,24 +720,5 @@ Please do not hesitate to submit the issue into our [forum](https://forum.seeeds
 
 - The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
 - LoRaWAN® is a mark used under license from the LoRa Alliance®.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <style dangerouslySetInnerHTML={{__html: "\ntd, th {\n   border: none!important;\n}\n\n/* .item a {\n    text-decoration: none;\n    display: inline-block;\n} */\n\n.item {\n    margin-left: 0;\n}\ntable tr:nth-child(2n) {\n    background-color: unset;\n}\ntable tr {\n    background-color: var(--ifm-table-background);\n    border-top: none;\n}\n\n" }} />

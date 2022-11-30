@@ -80,9 +80,11 @@ You need to prepare the following:
 - 1 x Computer
 - 1 x USB Type-C cable
 
-!!!Tip
+:::tip
 
-    Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1 ](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+
+:::
 
 - **Step 1.** Connect XIAO ESP32C3 to your computer via a USB Type-C cable.
 

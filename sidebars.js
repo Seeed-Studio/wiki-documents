@@ -42,6 +42,26 @@ const sidebars = {
       [
         {
           type: 'category',
+          label: 'reTerminal',
+          items: 
+          [
+            'Platform/reTerminal/reTerminal',
+            'Platform/reTerminal/reTerminal-FAQ',
+            {
+              type: 'category',
+              label: 'Home_Assistant',
+              items: 
+              [
+                
+                'Platform/reTerminal/Home_Assistant/reTerminal_Home_Assistant',
+
+              ],
+            },
+
+          ],
+        },
+        {
+          type: 'category',
           label: 'SeeedStudio XIAO',
           items: 
           [
@@ -51,7 +71,7 @@ const sidebars = {
               items: 
               [
 
-                'Platfrom/SeeedStudio XIAO/SeeedStudio XIAO ESP32C3/XIAO_ESP32C3_Getting_Started'
+                'Platform/SeeedStudio XIAO/SeeedStudio XIAO ESP32C3/XIAO_ESP32C3_Getting_Started'
 
               ],
             },
@@ -61,7 +81,7 @@ const sidebars = {
               items: 
               [
 
-                'Platfrom/SeeedStudio XIAO/SeeedStudio XIAO nRF52840/XIAOEI'
+                'Platform/SeeedStudio XIAO/SeeedStudio XIAO nRF52840/XIAOEI'
 
               ],
             }
@@ -91,7 +111,8 @@ const sidebars = {
       ],
 
     },
-
+    "reComputer_Jetson_Series_Hardware_Layout",
+    "A_Comparison_of_Different_Grove_Temperature_Sensors",
     'About',
     'License',
     

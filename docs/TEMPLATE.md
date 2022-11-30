@@ -11,6 +11,9 @@ image: https://avatars.githubusercontent.com/u/10758833
 last_update:
   date: 11/21/2022
   author: w0x7ce
+
+no_comments: false # for Disqus
+
 ---
 
 # Hello from Seeed Studio
@@ -69,3 +72,47 @@ slug: /bonjour
 ```
 
 :::
+
+## Center align content
+
+<div style={{textAlign: 'center'}}>
+
+![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg)
+
+</div>
+
+<center>
+
+| 1X1 | 1X2 | 1X3 | 2X2 | 2X3 |
+|:---:|:-----:|:------:|:-----:|:----:|
+|20x20mm|20x40mm|20x60mm|40x40mm|40x60mm|
+
+</center>
+
+## links between documents and tags
+
+Eg. In **reTerminal.md** need to link to **#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g** tag in **reTerminal-FAQ.md**
+
+```markdown
+[More Info](Platform/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
+```
+[More Info](Platform/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
+
+### code
+
+[Support language](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
+
+```jsx title="demo.js"
+  function HelloCodeTitle(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+```
+
+```jsx
+
+  ```jsx title="/src/components/HelloCodeTitle.js"
+  function HelloCodeTitle(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }
+
+```

@@ -3,7 +3,7 @@
 
 export PATH=$PATH:/home/w0x7ce/Desktop/node-v18.12.1-linux-x64/bin
 
-### Installation
+## Installation
 
 [INSTALL LATEST LTS NODE](https://github.com/nodejs/release#release-schedule)
 
@@ -17,19 +17,19 @@ sudo apt remove cmdtest
 sudo apt update && sudo apt install yarn
 ```
 
-### Local Development
+### Auto Install
 
-```
+```bash
 yarn
 ```
+This command will help you install all the dependences in package.json
 
-```
+
+```bash
 yarn start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
 
 ```
 yarn build
@@ -37,21 +37,7 @@ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Custom Install & Plugin Install
 
 ### Mermaid
 
@@ -98,32 +84,62 @@ yarn add @docusaurus/plugin-debug
 yarn add @docusaurus/plugin-pwa
 ```
 
-## GIT 
+### Git 
 
-### Cache
+#### Cache
 
 ```bash
 git config --global http.postBuffer 524288000
 ```
 
-### Speed
+#### Speed
 
 ```bash
 git config --global http.lowSpeedLimit 0
 git config --global http.lowSpeedTime 999999
 ```
 
-### depth
+#### depth
 
 ```bash
 git clone --depth=1 http://xxx.git
 git fetch --unshallow
 ```
 
-### gitignore
+#### gitignore
 
 ```bash
 git rm -r --cached .
 git add .
 git commit -m 'update .gitignore'
 ```
+
+
+## Develop
+
+### Offical Function
+
+Using SSH:
+
+```bash
+USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Custom Deployment (We Used)
+
+#### SSH KEY
+
+[GENERATE SSH KEY](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+[Add SSH KEY](https://github.com/settings/keys)
+
+[Github Actions](https://github.com/{$USER}/{Workspace}/settings/secrets/actions)
+

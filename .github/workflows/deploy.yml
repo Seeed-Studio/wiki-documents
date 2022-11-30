@@ -1,22 +1,10 @@
-name: Test
+name: Deploy
 
 on:
   push:
     branches:
       - main
-    paths-ignore:
-      - "ISSUE_TEMPLATE/**"
-      - ".github/**.md"
-      - ".gitignore"
-      - "demo/**"
-      - "docker/**"
-      - "HOW_TO.md"
-      - "TASK.md"
-      - "SECURITY.md"
-      - "README.md"
-      - "README_zh-CN.md"
-
-  pull_request:
+      
     paths-ignore:
       - "ISSUE_TEMPLATE/**"
       - ".github/**.md"
@@ -87,20 +75,7 @@ jobs:
             git commit -m "Update"
             git push -u github HTML -f
 
-      # - uses: docker-practice/actions-setup-docker@master
-      
-      # - name: SET ENV
-      #   run: |
-      #       echo ${{ secrets.ENV }} >> ~/.env
 
-      # - name: Generate SEARCH CONFIG
-      #   run: |
-      #       docker run -it --env-file=~/.env  -e "CONFIG=$(cat ${{ secrets.CRAWL_JSON }} | jq -r tostring)" algolia/docsearch-scraper
-  
-  # job2:
-  #   runs-on: ubuntu-latest
-  #   needs: job1
-   
 
 
 
