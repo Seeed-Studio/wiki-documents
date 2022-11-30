@@ -26,10 +26,7 @@
     "@giscus/react": "^2.2.4",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
-<<<<<<< HEAD
-=======
     "disqus-react": "^1.1.5",
->>>>>>> 3123d439d4aa63d21548b0de6748ca059805f279
     "docusaurus": "^1.14.7",
     "docusaurus-pdf": "^1.2.0",
     "hast-util-is-element": "1.1.0",
