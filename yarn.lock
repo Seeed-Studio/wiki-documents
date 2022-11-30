@@ -6592,14 +6592,14 @@ gifsicle@^4.0.0:
     bin-wrapper "^4.0.0"
     execa "^1.0.0"
     logalot "^2.0.0"
-
+    
 giscus@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/giscus/-/giscus-1.2.4.tgz#6454e28fca1d385480fd9ab296371678b920bed1"
   integrity sha512-c//t+vrEDNJ3jcM2TLz6UG7gZHyRDdYtj2PV0TaKk8eKMfq4OB8K1BFclaQ0UbUh6UN6hp89BNJTTcnibkiILA==
   dependencies:
     lit "^2.4.1"
-
+    
 github-slugger@^1.3.0, github-slugger@^1.4.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.5.0.tgz#17891bbc73232051474d68bd867a34625c955f7d"

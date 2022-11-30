@@ -90,8 +90,28 @@ const sidebars = {
         },
   
       ],
-    
+
     },
+
+    {
+      type: 'category',
+      label: 'Industrial IoT',
+      items: 
+      [
+        {
+          type: 'category',
+          label: 'SenseCAP - The Sensor Prototype Kit',
+          items: 
+          [
+            'Industrial IoT/SenseCAP - The Sensor Prototype Kit/K1100-Getting-Started'
+          ],
+          
+        },
+  
+      ],
+
+    },
+
     "reComputer_Jetson_Series_Hardware_Layout",
     "A_Comparison_of_Different_Grove_Temperature_Sensors",
     'About',
