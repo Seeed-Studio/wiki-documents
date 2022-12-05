@@ -54,6 +54,8 @@ const config = {
       ({
         docs: {
 
+          routeBasePath: '/',
+
           sidebarPath: require.resolve('./sidebars.js'),
           
           remarkPlugins: [math],
@@ -185,7 +187,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/About',
+                to: '/About',
               },
             ],
           },
