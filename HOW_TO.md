@@ -31,11 +31,15 @@ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-```
+```bash
 yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+```bash title='Signed'
+Signed-off-by: w0x7ce <tian.r.king@gmail.com>
+```
 
 ## Custom Install & Plugin Install
 
