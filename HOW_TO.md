@@ -38,7 +38,7 @@ yarn build
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ```bash title='Signed'
-Signed-off-by: w0x7ce <tian.r.king@gmail.com>
+Signed-off-by: tianrking <tian.r.king@gmail.com>
 ```
 
 ## Custom Install & Plugin Install
