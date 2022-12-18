@@ -9,7 +9,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Seeed Studio Wiki',
-  tagline: 'The IoT Hardware Development Documentation',
+  tagline: 'The open documentation platform for Seeed Studio.',
   
   url: 'https://c1ev0ps.github.io',
   baseUrl: '/docusaurus_wiki/',
@@ -259,7 +259,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+          'We are looking forward to your contribution! Welcome come to our <a target="_blank" rel="https://github.com/orgs/c1ev0ps/projects/3/views/1" href="#">Task Project</a>',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,
