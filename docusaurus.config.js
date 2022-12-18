@@ -27,7 +27,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en',  'fa'],
+    locales: ['en',  'zh-CN'],
     path: 'i18n',
     localeConfigs: {
       en: {
@@ -36,13 +36,6 @@ const config = {
         htmlLang: 'en-US',
         calendar: 'gregory',
         path: 'en',
-      },
-      fa: {
-        label: 'فارسی',
-        direction: 'rtl',
-        htmlLang: 'fa-IR',
-        calendar: 'persian',
-        path: 'fa',
       },
     },
   },
@@ -171,11 +164,17 @@ const config = {
           {to: 'https://www.seeedstudio.com/odm', label: 'Services', position: 'left'},
           {to: 'https://forum.seeedstudio.com/', label: 'Forum', position: 'left'},
           {to: 'https://solution.seeedstudio.com/', label: 'Solution', position: 'left'},
+          {to: 'https://www.sensecapmx.com/', label: 'Sensecap', position: 'left'},
           {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          
         ],
       },
       
