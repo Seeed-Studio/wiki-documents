@@ -103,7 +103,7 @@ const sidebars = {
           label: 'SenseCAP - The Sensor Prototype Kit',
           items: 
           [
-            'Industrial IoT/SenseCAP - The Sensor Prototype Kit/K1100-Getting-Started'
+            'Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started'
           ],
           
         },
@@ -118,6 +118,8 @@ const sidebars = {
     'License',
     
   ],
+
+  apiSidebar: ['Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started'],
 
 };
 

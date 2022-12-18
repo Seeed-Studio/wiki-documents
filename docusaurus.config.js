@@ -164,7 +164,7 @@ const config = {
           {to: 'https://www.seeedstudio.com/odm', label: 'Services', position: 'left'},
           {to: 'https://forum.seeedstudio.com/', label: 'Forum', position: 'left'},
           {to: 'https://solution.seeedstudio.com/', label: 'Solution', position: 'left'},
-          {to: 'https://www.sensecapmx.com/', label: 'Sensecap', position: 'left'},
+          {to: 'Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started', label: 'Sensecap', position: 'left'},
           {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
