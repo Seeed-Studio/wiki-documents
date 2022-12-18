@@ -147,3 +147,25 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 [Github Actions](https://github.com/{$USER}/{Workspace}/settings/secrets/actions)
 
+### Problems
+
+1. [ERROR] Error: ENOSPC: System limit for number of file watchers reached
+
+ - insert the new value into the system config
+
+    ```bash
+    echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+    ```
+
+ - check that the new value was applied
+
+    ```bash
+    cat /proc/sys/fs/inotify/max_user_watches
+    ```
+
+ - config variable name (not runnable)
+
+    ```bash
+    fs.inotify.max_user_watches=524288
+    ```
