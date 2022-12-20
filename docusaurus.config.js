@@ -161,13 +161,13 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'SenseCAP/SenseCAP_Getting_Started',
+            docId: 'SenseCAP/SenseCAP_Introdution',
             position: 'left',
             label: 'SenseCAP',
           },
           {
             type: 'doc',
-            docId: 'Maker/Maker_Getting_Started',
+            docId: 'Maker/Maker_Introduction',
             position: 'left',
             label: 'Maker',
           },

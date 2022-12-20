@@ -51,11 +51,56 @@ const sidebars = {
     },
 
     {
+      type: 'category',
+      label: 'Wio Terminal',
+      items: [
+        'Wio_Terminal/Wio_Terminal_Getting_Started',
+      ],
+    
+    },
+
+    {
 
       type: 'category',
       label: 'Seeed Studio XIAO',
       items: [
         'SeeedStudio_XIAO/SeeedStudio_XIAO_Getting_Started',
+      ],
+    
+    },
+
+    {
+      type: 'category',
+      label: 'micro:bit',
+      items: [
+        'micro_bit/micro_bit_Getting_Started',
+      ],
+    
+    },
+
+    {
+      type: 'category',
+      label: 'LoRa®',
+      items: [
+        'LoRaWAN/LoRaWAN_Getting_Started',
+      ],
+    
+    },
+
+    {
+      type: 'category',
+      label: 'Shield',
+      items: [
+        'shield/shield_Getting_Started',
+      ],
+    
+    },
+
+    {
+      type: 'category',
+      label: 'BeagleBone®',
+      items: [
+        'Beagle_Bone/Beagle_Bone_Getting_Started',
       ],
     
     },
@@ -81,6 +126,33 @@ const sidebars = {
     },
 
     {
+      type: 'category',
+      label: 'reSpeaker',
+      items: [
+        'reSpeaker/reSpeaker_Getting_Started',
+      ],
+    
+    },
+
+    {
+      type: 'category',
+      label: 'ODYSSEY',
+      items: [
+        'ODYSSEY/ODYSSEY_Getting_Started',
+      ],
+    
+    },
+
+    {
+      type: 'category',
+      label: 'H68K',
+      items: [
+        'reSpeaker/reSpeaker_Getting_Started',
+      ],
+    
+    },
+
+    {
 
       type: 'category',
       label: 'NVIDIA',
@@ -100,15 +172,27 @@ const sidebars = {
     
     },
 
-    'About',
-    'License',
+    {
+      type: 'category',
+      label: 'Others',
+      items: [
+        'Others/Others_Product',
+      ],
+    
+    },
+
+  //  'About',
+  //  'License',
     
   ],
 
   SenseCAPSidebar: 
+
+
   
     [
-      
+      'SenseCAP/SenseCAP_Introdution',
+
       {
 
         type: 'category',
@@ -116,6 +200,29 @@ const sidebars = {
         items: [
           'SenseCAP/SenseCAP_Getting_Started',
         ],
+        
+      
+      },
+
+      {
+
+        type: 'category',
+        label: 'SenseCAP Probe Accessories',
+        items: [
+          'SenseCAP_Probe_Accessories/Liquid_level_sensor',
+        ],
+        
+      
+      },
+
+      {
+
+        type: 'category',
+        label: 'SenseCAP the Sensor Prototype Kit',
+        items: [
+          'SenseCAP_The_Sensor_Prototype_Kit/Contents',
+        ],
+        
       
       },
 
@@ -125,13 +232,22 @@ const sidebars = {
   MakerSidebar: 
   
     [
-      
+      'Maker/Maker_Introduction',
       {
 
         type: 'category',
         label: 'Maker',
         items: [
           'Maker/Maker_Getting_Started',
+        ],
+      
+      },
+
+      {
+        type: 'category',
+        label: 'Tutorials',
+        items: [
+          'Maker/Tutorials/Tutorials_Introduction',
         ],
       
       },
