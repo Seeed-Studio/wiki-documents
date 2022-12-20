@@ -155,16 +155,24 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'About',
+            docId: 'weekly_wiki',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Product',
           },
-          {to: 'https://www.seeedstudio.com/', label: 'Bazaar', position: 'left'},
-          {to: 'https://www.seeedstudio.com/fusion.html', label: 'Fusion', position: 'left'},
-          {to: 'https://www.seeedstudio.com/odm', label: 'Services', position: 'left'},
-          {to: 'https://forum.seeedstudio.com/', label: 'Forum', position: 'left'},
-          {to: 'https://solution.seeedstudio.com/', label: 'Solution', position: 'left'},
-          {to: 'Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started', label: 'Sensecap', position: 'left'},
+          {
+            type: 'doc',
+            docId: 'SenseCAP/SenseCAP_Getting_Started',
+            position: 'left',
+            label: 'SenseCAP',
+          },
+          {
+            type: 'doc',
+            docId: 'Maker/Maker_Getting_Started',
+            position: 'left',
+            label: 'Maker',
+          },
+        //  {to: 'https://solution.seeedstudio.com/', label: 'Solution', position: 'left'}, 
+        // {to: 'Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started', label: 'Sensecap', position: 'left'},
           {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',

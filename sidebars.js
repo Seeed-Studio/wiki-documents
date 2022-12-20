@@ -20,11 +20,26 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-  tutorialSidebar: [
+  ProductSidebar: [
     // 'intro',
 
     // 'About',
+
+    'weekly_wiki',
+
     {
+
+      
+      type: 'category',
+      label: 'Arduino',
+      items: [
+        'Arduino/Arduino_Getting_Started',
+      ],
+    
+    },
+
+    {
+
       type: 'category',
       label: 'Grove',
       items: [
@@ -36,90 +51,93 @@ const sidebars = {
     },
 
     {
+
       type: 'category',
-      label: 'Platform',
-      items: 
-      [
-        {
-          type: 'category',
-          label: 'reTerminal',
-          items: 
-          [
-            'Platform/reTerminal/reTerminal',
-            'Platform/reTerminal/reTerminal-FAQ',
-            {
-              type: 'category',
-              label: 'Home_Assistant',
-              items: 
-              [
-                
-                'Platform/reTerminal/Home_Assistant/reTerminal_Home_Assistant',
-
-              ],
-            },
-
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SeeedStudio XIAO',
-          items: 
-          [
-            {
-              type: 'category',
-              label: 'SeeedStudio XIAO ESP32C3',
-              items: 
-              [
-
-                'Platform/SeeedStudio XIAO/SeeedStudio XIAO ESP32C3/XIAO_ESP32C3_Getting_Started'
-
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SeeedStudio XIAO nRF52840',
-              items: 
-              [
-
-                'Platform/SeeedStudio XIAO/SeeedStudio XIAO nRF52840/XIAOEI'
-
-              ],
-            }
-          ],
-        
-        },
-  
+      label: 'Seeed Studio XIAO',
+      items: [
+        'SeeedStudio_XIAO/SeeedStudio_XIAO_Getting_Started',
       ],
-
+    
     },
 
     {
-      type: 'category',
-      label: 'Industrial IoT',
-      items: 
-      [
-        {
-          type: 'category',
-          label: 'SenseCAP - The Sensor Prototype Kit',
-          items: 
-          [
-            'Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started'
-          ],
-          
-        },
-  
-      ],
 
+      type: 'category',
+      label: 'Raspberry Pi',
+      items: [
+        'Raspberry_Pi/Raspberry_Pi_Getting_Started',
+      ],
+    
     },
 
-    "reComputer_Jetson_Series_Hardware_Layout",
-    "A_Comparison_of_Different_Grove_Temperature_Sensors",
+    {
+
+      type: 'category',
+      label: 'reTerminal',
+      items: [
+        'reTerminal/reTerminal_Getting_Started',
+      ],
+    
+    },
+
+    {
+
+      type: 'category',
+      label: 'NVIDIA',
+      items: [
+        'NVIDIA/NVIDIA_Getting_Started',
+      ],
+    
+    },
+
+    {
+
+      type: 'category',
+      label: 'reServer',
+      items: [
+        'reServer/reServer_Getting_Started',
+      ],
+    
+    },
+
     'About',
     'License',
     
   ],
 
-  apiSidebar: ['Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started'],
+  SenseCAPSidebar: 
+  
+    [
+      
+      {
+
+        type: 'category',
+        label: 'SenseCAP',
+        items: [
+          'SenseCAP/SenseCAP_Getting_Started',
+        ],
+      
+      },
+
+
+    ],
+
+  MakerSidebar: 
+  
+    [
+      
+      {
+
+        type: 'category',
+        label: 'Maker',
+        items: [
+          'Maker/Maker_Getting_Started',
+        ],
+      
+      },
+
+
+    ],
 
 };
 
