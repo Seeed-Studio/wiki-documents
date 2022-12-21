@@ -244,10 +244,49 @@ const sidebars = {
       },
 
       {
+
         type: 'category',
         label: 'Tutorials',
         items: [
           'Maker/Tutorials/Tutorials_Introduction',
+        ],
+      
+      },
+
+      {
+
+        type: 'category',
+        label: 'Software',
+        items: [
+          'Maker/Software/Software_Introduction',
+        ],
+      
+      },
+
+      {
+        type: 'category',
+        label: 'Arduino',
+        items: [
+          'Maker/Arduino/Arduino_Introduction',
+        ],
+      
+      },
+
+      {
+        type: 'category',
+        label: 'Raspberry Pi',
+        items: [
+          'Maker/Raspberry_Pi/Raspberry_Pi_Introduction',
+        ],
+      
+      },
+
+
+      {
+        type: 'category',
+        label: 'NVIDIA Jetson',
+        items: [
+          'Maker/NVIDIA/NVIDIA_Introduction',
         ],
       
       },
