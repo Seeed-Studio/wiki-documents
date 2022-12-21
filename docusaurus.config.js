@@ -171,8 +171,62 @@ const config = {
             position: 'left',
             label: 'Maker',
           },
-        //  {to: 'https://solution.seeedstudio.com/', label: 'Solution', position: 'left'}, 
-        // {to: 'Industrial_IoT/SenseCAP_The_Sensor_Prototype_Kit/K1100_Getting_Started', label: 'Sensecap', position: 'left'},
+
+          {
+          type: 'dropdown',
+          label: 'SEEED',
+          position: 'left',
+          items: [
+            {
+              label: 'Bazaar',
+              to: 'https://www.seeedstudio.com/',
+            },
+            {
+              label: 'Fusion',
+              to: 'https://www.seeedstudio.com/fusion.html',
+            },
+            {
+              label: 'Service',
+              to: 'https://www.seeedstudio.com/odm',
+            },
+            {
+              label: 'Forum',
+              to: 'https://forum.seeedstudio.com/',
+            },
+            {
+              label: 'Solution',
+              to: 'https://solution.seeedstudio.com/',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Ecosystem',
+          position: 'left',
+          items: [
+            {
+              label: 'Discord',
+              to: 'https://discord.com/invite/QqMgVwHT3X',
+            },
+            {
+              label: 'Twitter',
+              to: 'https://twitter.com/seeedstudio',
+            },
+            {
+              label: 'Hackster',
+              to: 'https://www.hackster.io/seeed',
+            },
+            {
+              label: 'Youtube',
+              to: 'http://www.youtube.com/c/SeeedStudioSZ',
+            },
+            {
+              label: 'LinkedIn',
+              to: 'https://www.linkedin.com/company/seeedstudio',
+            },
+          ],
+        },
+
           {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
