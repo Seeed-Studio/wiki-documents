@@ -1,0 +1,56 @@
+name: update_search
+
+on:
+  push:
+    branches:
+      - main
+      
+    paths-ignore:
+      - "ISSUE_TEMPLATE/**"
+      - ".github/**.md"
+      - ".gitignore"
+      - "demo/**"
+      - "docker/**"
+      - "HOW_TO.md"
+      - "TASK.md"
+      - "SECURITY.md"
+      - "README.md"
+      - "README_zh-CN.md"
+      
+  schedule:
+    #UTC 0 
+    - cron: '0 0 * * *'
+
+jobs:
+  lint:
+    name: update_search
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1.0.0
+
+      - name: Checkout
+        uses: actions/checkout@master
+        
+      - name: INSTALL SSH KEY
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PC }} 
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
+      - name: GIT CLONE
+        run: |
+            sudo apt-get update
+            sudo apt-get install \
+                  git -y 
+            git config --global user.name 'tianrking'
+            git config --global user.email 'tian.r.king@gmail.com'
+            
+            
+      - name: T1
+        run: |
+            echo ${{ secrets.AG_SEARCH_KEY }}
+            echo ${{ secrets.AG_SEARCH_KEY }} > ~/.env
+            docker run -it --env-file=~/.env -e "CONFIG=$(echo ${{ secrets.AA_JSON }}  | jq -r tostring)" algolia/docsearch-scraper
+            
+            
+            
