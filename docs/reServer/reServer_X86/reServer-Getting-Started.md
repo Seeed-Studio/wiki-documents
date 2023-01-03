@@ -547,7 +547,7 @@ For all versions of reServer, Windows 10 Enterprise(Unactivated) has been pre-in
 ## Resources
 
 - **[PDF]** [reServer Assembly Guide](https://files.seeedstudio.com/wiki/reServer/Assembly%20Guide%20of%20reServer.pdf)
-- **[PDF]** [ Atmel-SAMD21-datasheet](files.seeedstudio.com/wiki/reServer/wiki/Atmel-SAMD21-datasheet.pdf)
+- **[PDF]** [ Atmel-SAMD21-datasheet](https://files.seeedstudio.com/wiki/reServer/wiki/Atmel-SAMD21-datasheet.pdf)
 
 ## Tech Support
 
