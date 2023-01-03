@@ -161,6 +161,7 @@ const sidebars = {
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-pfSense',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-TrueNAS',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-Android',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-AzureIOT'
           ]
         },
 
