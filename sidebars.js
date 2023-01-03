@@ -211,7 +211,15 @@ const sidebars = {
       type: 'category',
       label: 'NVIDIA',
       items: [
-        'NVIDIA/NVIDIA_Getting_Started',
+        // 'NVIDIA/NVIDIA_Getting_Started',
+        {
+          type: 'category',
+          label: 'Getting Start & Projects',
+          items: [
+            'NVIDIA/NVIDIA_Getting_Started',
+          ],
+    
+        },
       ],
 
     },
@@ -236,7 +244,7 @@ const sidebars = {
           label: 'reServer Nvidia Jetson',
           items: [
             'reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
-
+            'reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
           ],
         },
         
