@@ -152,6 +152,7 @@ const sidebars = {
           items: [
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-OS',
           ]
         },
 
