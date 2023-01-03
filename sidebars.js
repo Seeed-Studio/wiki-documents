@@ -221,7 +221,15 @@ const sidebars = {
       type: 'category',
       label: 'reServer',
       items: [
-        'reServer/reServer_Getting_Started',
+        // 'reServer/reServer_Getting_Started',
+        {
+          type: 'category',
+          label: 'reServer_X86',
+          items: [
+            'reServer/reServer_X86/reServer-Getting-Started',
+          ],
+        },
+        
       ],
 
     },
