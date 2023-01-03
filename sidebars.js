@@ -145,6 +145,15 @@ const sidebars = {
       type: 'category',
       label: 'ODYSSEY',
       items: [
+
+        {
+          type: 'category',
+          label: 'ODYSSEY_X86J4105',
+          items: [
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
+          ]
+        },
+
         'ODYSSEY/ODYSSEY_Getting_Started',
         'ODYSSEY/SEEED-SOM-STM32MP157C',
         'ODYSSEY/ODYSSEY-STM32MP157C',
