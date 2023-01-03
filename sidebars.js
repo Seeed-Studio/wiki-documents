@@ -146,6 +146,8 @@ const sidebars = {
       label: 'ODYSSEY',
       items: [
         'ODYSSEY/ODYSSEY_Getting_Started',
+        // 'ODYSSEY/_SEEED-SOM-STM32MP157C'
+        'ODYSSEY/ODYSSEY-STM32MP157C',
       ],
 
     },
