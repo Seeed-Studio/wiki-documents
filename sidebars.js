@@ -212,6 +212,7 @@ const sidebars = {
       label: 'NVIDIA',
       items: [
         // 'NVIDIA/NVIDIA_Getting_Started',
+        'NVIDIA/reComputer_Jetson_Series_Introduction',
         {
           type: 'category',
           label: 'Getting Start & Projects',
