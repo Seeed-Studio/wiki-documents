@@ -159,6 +159,7 @@ const sidebars = {
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-openwrt',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-OPNsense',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-pfSense',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-TrueNAS',
           ]
         },
 
