@@ -161,6 +161,7 @@ const sidebars = {
               label: 'Home Assistant',
               items: [
                 'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/ODYSSEY-X86-Home-Assistant',
+                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Home-Assistant-Customize',
               ]
             },
 
