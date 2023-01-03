@@ -224,10 +224,19 @@ const sidebars = {
         // 'reServer/reServer_Getting_Started',
         {
           type: 'category',
-          label: 'reServer_X86',
+          label: 'reServer X86',
           items: [
             'reServer/reServer_X86/reServer-Getting-Started',
             'reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'reServer Nvidia Jetson',
+          items: [
+            'reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
+
           ],
         },
         
