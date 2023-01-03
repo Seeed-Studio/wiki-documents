@@ -198,9 +198,10 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'H68K',
+      label: 'LinkStar-H68K',
       items: [
         'LinkStar-H68K/Linkstar_Datasheet',
+        'LinkStar-H68K/linkstar-install-system',
       ],
 
     },
