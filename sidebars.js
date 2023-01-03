@@ -52,6 +52,13 @@ const sidebars = {
           items: [
             'Grove/Temperature/Sensor_temperature',
           ]
+        },
+        {
+          type:  'category',
+          label: 'Distance',
+          items: [
+            'Grove/Distance/Sensor_distance',
+          ]
         }
       ],
 
