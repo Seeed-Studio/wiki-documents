@@ -164,6 +164,7 @@ const sidebars = {
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
             'ODYSSEY/ODYSSEY_X86J4105/Jellyfin-on-Docker-Ubuntu-X86',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-openwrt',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-OPNsense',
           ]
         },
 
