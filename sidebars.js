@@ -279,7 +279,6 @@ const sidebars = {
 
       },
 
-
     ],
 
   MakerSidebar:
