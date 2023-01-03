@@ -200,7 +200,7 @@ const sidebars = {
       type: 'category',
       label: 'H68K',
       items: [
-        'reSpeaker/reSpeaker_Getting_Started',
+        'LinkStar-H68K/Linkstar_Datasheet',
       ],
 
     },
