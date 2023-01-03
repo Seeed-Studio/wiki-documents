@@ -227,6 +227,7 @@ const sidebars = {
           label: 'reServer_X86',
           items: [
             'reServer/reServer_X86/reServer-Getting-Started',
+            'reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
           ],
         },
         
