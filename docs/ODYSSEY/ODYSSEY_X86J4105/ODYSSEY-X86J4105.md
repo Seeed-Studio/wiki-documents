@@ -1,6 +1,6 @@
 ---
 description: ODYSSEY - X86J4105
-title: ODYSSEY - X86J4105
+title: Getting Started
 tags:
   - ODYSSEY
   - Getting started
