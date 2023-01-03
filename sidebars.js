@@ -165,7 +165,8 @@ const sidebars = {
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-FreeNAS',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Intel-OpenVINO',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-NCS2',
-            'ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105'
+            'ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
           ]
         },
 
