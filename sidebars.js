@@ -162,6 +162,7 @@ const sidebars = {
               items: [
                 'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/ODYSSEY-X86-Home-Assistant',
                 'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Home-Assistant-Customize',
+                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Connect-Grove-to-Home-Assistant-ESPHome',
               ]
             },
 
