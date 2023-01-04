@@ -220,6 +220,7 @@ And if there's an object approaching the radar or passing by, the outcome will a
 
 ## Resources
 
+- **[CODE]** [GitHub](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar)
 - **[ZIP]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip)
 - **[PDF]** [Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 
