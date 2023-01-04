@@ -236,6 +236,7 @@ const sidebars = {
             'NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
             'NVIDIA/Getting_Start_Projects/Security_Scan',
             'NVIDIA/Getting_Start_Projects/HardHat',
+            'NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
           ],
         },
       ],
