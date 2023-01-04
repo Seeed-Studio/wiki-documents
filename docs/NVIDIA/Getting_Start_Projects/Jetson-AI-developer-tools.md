@@ -1,8 +1,6 @@
-Jetson AI Developer Tools
-
 ---
-description: Getting Started with Docker
-title: Getting Started with Docker
+description: Jetson AI Developer Tools
+title: Jetson AI Developer Tools
 tags:
   - Nvidia
   - reComputer
