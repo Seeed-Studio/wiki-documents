@@ -51,6 +51,26 @@ const sidebars = {
           label: 'Temperature',
           items: [
             'Grove/Temperature/Sensor_temperature',
+            'Grove/Temperature/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor',
+            'Grove/Temperature/Grove-CO2&Temperature&HumiditySensor-SCD41',
+            'Grove/Temperature/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
+            'Grove/Temperature/Grove-TempAndHumi_Sensor-SHT31',
+            'Grove/Temperature/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
+            // 'Grove/Temperature/Grove-Temperature_Sensor',
+            'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
+            'Grove/Temperature/Grove-Temperature_and_Humidity_Sensor_Pro',
+            'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor',
+            'Grove/Temperature/Grove-Temperature-Humidity-Sensor-DH20',
+            'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor-HDC1000',
+            'Grove/Temperature/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
+            'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
+            'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
+            // 'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
+            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
+            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
+            // 'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
+            // 'Grove/Temperature/Grove-High_Temperature_Sensor',
+            // 'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
           ]
         },
         {
@@ -65,8 +85,6 @@ const sidebars = {
             'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X', 
             'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor', 
             'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
-
-
           ]
         }
       ],
@@ -171,7 +189,7 @@ const sidebars = {
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-OS',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Updating-Firmware',
             'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
-            
+
             {
               type: 'category',
               label: 'Home Assistant',
@@ -227,7 +245,31 @@ const sidebars = {
       type: 'category',
       label: 'NVIDIA',
       items: [
-        'NVIDIA/NVIDIA_Getting_Started',
+        // 'NVIDIA/NVIDIA_Getting_Started',
+        'NVIDIA/reComputer_Jetson_Series_Introduction',
+        'NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
+        'NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
+
+        {
+          type: 'category',
+          label: 'Getting Start & Projects',
+          items: [
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
+            'NVIDIA/Getting_Start_Projects/jetson-docker-getting-started',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',
+            'NVIDIA/Getting_Start_Projects/Jetson-AI-developer-tools',
+            'NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
+            'NVIDIA/Getting_Start_Projects/Security_Scan',
+            'NVIDIA/Getting_Start_Projects/HardHat',
+            'NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
+            'NVIDIA/Getting_Start_Projects/No-code-Edge-AI-Tool',
+            'NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+            'NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
+            'NVIDIA/Getting_Start_Projects/YOLOv5-Object-Detection-Jetson',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
+          ],
+        },
       ],
 
     },

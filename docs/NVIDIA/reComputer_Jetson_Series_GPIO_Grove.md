@@ -1,18 +1,18 @@
 ---
-description: reComputer for Jetson Series 
+description: Create a doc page with rich content.
 title: GPIO and Grove for reComputer Series
 tags:
   - Nvidia
   - reComputer
-  - Getting started
 keywords:
   - Nvidia
   - reComputer
-  - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
 last_update:
-  date: 01/03/2023
+  date: 11/21/2022
   author: w0x7ce
+
+no_comments: false # for Disqus
 
 ---
 
@@ -25,7 +25,6 @@ The GPIO (General Purpose Input/Output) ports are located on the top edge of the
 The figure below is the pin description of the 40-pin GPIO on the Jetson-10-1-A carrier board.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/59.png" alt="pir" width={500} height="auto" /></p>
-
 
 You might want to check out the details about expansion pins and learn how to configure them, in the [Configuring Jetson Expansion Header](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/hw_setup_jetson_io.html#) documentation of the NVIDIA Jetson Linux Developer Guide, you'll learn how to operate Jetson-IO and add support for custom hardware.
 

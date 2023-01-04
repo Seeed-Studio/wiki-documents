@@ -8,6 +8,7 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+
   title: 'Seeed Studio Wiki',
   tagline: 'The open documentation platform for Seeed Studio.',
   
@@ -18,6 +19,17 @@ const config = {
   favicon: 'img/favicon.ico',
   
   scripts: [
+    {
+      src: 'https://viewer.altium.com/client/static/js/embed.js',
+      async: true,
+    },
+  ],
+
+  scripts: [
+    // String format.
+    // 'https://viewer.altium.com/client/static/js/embed.js',
+    
+    // Object format.
     {
       src: 'https://viewer.altium.com/client/static/js/embed.js',
       async: true,
