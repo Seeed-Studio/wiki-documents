@@ -78,7 +78,13 @@ const sidebars = {
           label: 'Distance',
           items: [
             'Grove/Distance/Sensor_distance',
-            'Grove/Distance/Grove-TF_Mini_LiDAR',
+            'Grove/Distance/Grove-TF_Mini_LiDAR', 
+            'Grove/Distance/Grove-Ultrasonic_Ranger', 
+            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2', 
+            'Grove/Distance/Grove-Doppler-Radar', 
+            'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X', 
+            'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor', 
+            'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
           ]
         }
       ],
