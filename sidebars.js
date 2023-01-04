@@ -229,6 +229,7 @@ const sidebars = {
           label: 'Getting Start & Projects',
           items: [
             'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
           ],
         },
       ],
