@@ -80,7 +80,6 @@ const sidebars = {
       label: 'Seeed Studio XIAO',
       items: [
         'SeeedStudio_XIAO/SeeedStudio_XIAO_Getting_Started',
-        'SeeedStudio_XIAO/XIAO-RP2040',
       ],
 
     },
@@ -220,7 +219,17 @@ const sidebars = {
       type: 'category',
       label: 'NVIDIA',
       items: [
-        'NVIDIA/NVIDIA_Getting_Started',
+        // 'NVIDIA/NVIDIA_Getting_Started',
+        'NVIDIA/reComputer_Jetson_Series_Introduction',
+        'NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
+        'NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
+        {
+          type: 'category',
+          label: 'Getting Start & Projects',
+          items: [
+            'NVIDIA/NVIDIA_Getting_Started',
+          ],
+        },
       ],
 
     },
