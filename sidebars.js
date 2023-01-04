@@ -52,6 +52,14 @@ const sidebars = {
           items: [
             'Grove/Temperature/Sensor_temperature',
           ]
+        },
+        {
+          type: 'category',
+          label: 'Distance',
+          items: [
+            'Grove/Distance/Sensor_distance',
+            'Grove/Distance/Grove-TF_Mini_LiDAR', 
+          ]
         }
       ],
 
@@ -212,17 +220,7 @@ const sidebars = {
       type: 'category',
       label: 'NVIDIA',
       items: [
-        // 'NVIDIA/NVIDIA_Getting_Started',
-        'NVIDIA/reComputer_Jetson_Series_Introduction',
-        'NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
-        'NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
-        {
-          type: 'category',
-          label: 'Getting Start & Projects',
-          items: [
-            'NVIDIA/NVIDIA_Getting_Started',
-          ],
-        },
+        'NVIDIA/NVIDIA_Getting_Started',
       ],
 
     },
@@ -232,25 +230,7 @@ const sidebars = {
       type: 'category',
       label: 'reServer',
       items: [
-        // 'reServer/reServer_Getting_Started',
-        {
-          type: 'category',
-          label: 'reServer X86',
-          items: [
-            'reServer/reServer_X86/reServer-Getting-Started',
-            'reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'reServer Nvidia Jetson',
-          items: [
-            'reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
-            'reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
-          ],
-        },
-        
+        'reServer/reServer_Getting_Started',
       ],
 
     },
