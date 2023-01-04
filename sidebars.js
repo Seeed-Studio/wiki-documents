@@ -234,6 +234,7 @@ const sidebars = {
             'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',
             'NVIDIA/Getting_Start_Projects/Jetson-AI-developer-tools',
             'NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
+            'NVIDIA/Getting_Start_Projects/Security_Scan',
           ],
         },
       ],
