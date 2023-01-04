@@ -241,6 +241,7 @@ const sidebars = {
             'NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
             'NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
             'NVIDIA/Getting_Start_Projects/YOLOv5-Object-Detection-Jetson',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
           ],
         },
       ],
