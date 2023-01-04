@@ -52,7 +52,33 @@ const sidebars = {
           items: [
             'Grove/Temperature/Sensor_temperature',
           ]
-        }
+        },
+        {
+          type: 'category',
+          label: 'Gas',
+          items: [
+            'Grove/Gas/Grove-Gas_Sensor',
+            'Grove/Gas/Grove-Gas_Sensor-MQ2',
+            'Grove/Gas/Grove-Gas_Sensor-MQ3',
+            'Grove/Gas/Grove-Gas_Sensor-MQ5',
+            'Grove/Gas/Grove-Gas_Sensor-MQ9',
+            'Grove/Gas/Grove-Gas_Sensor-O2',
+            'Grove/Gas/Grove-Gas_Sensor-O2-MIX8410',
+          ],
+
+        },
+        {
+          type: 'category',
+          label: 'Barometer',
+          items: [
+            'Grove/Barometer/Grove-Barometer_Sensor',
+            'Grove/Barometer/Grove-Barometer_Sensor-BME280',
+            'Grove/Barometer/Grove-Barometer_Sensor-BMP180',
+            'Grove/Barometer/Grove-Barometer_Sensor-BMP280',
+            'Grove/Barometer/Grove-Barometer-High-Accuracy',
+          ],
+
+        },
       ],
 
     },
