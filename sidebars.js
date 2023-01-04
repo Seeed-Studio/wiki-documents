@@ -223,11 +223,12 @@ const sidebars = {
         'NVIDIA/reComputer_Jetson_Series_Introduction',
         'NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
         'NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
+
         {
           type: 'category',
           label: 'Getting Start & Projects',
           items: [
-            'NVIDIA/NVIDIA_Getting_Started',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
           ],
         },
       ],
