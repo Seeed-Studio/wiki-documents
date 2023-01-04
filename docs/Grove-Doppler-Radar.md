@@ -123,7 +123,7 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 
 
-- **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip).
+- **Step 1.** Download the [Demo code](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar/archive/refs/tags/v1.0.1.zip).
 
 - **Step 2.** Copy the whole **Seeed_Arduino_DopplerRadar** file and paste it into your Arduino IDE library file.
 
@@ -221,7 +221,7 @@ And if there's an object approaching the radar or passing by, the outcome will a
 ## Resources
 
 - **[CODE]** [GitHub](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar)
-- **[ZIP]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip)
+- **[ZIP]** [Demo Code library](https://github.com/Seeed-Studio/Seeed_Arduino_DopplerRadar/archive/refs/tags/v1.0.1.zip)
 - **[PDF]** [Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 
 ## Tech Support
