@@ -72,6 +72,7 @@ const sidebars = {
       label: 'Seeed Studio XIAO',
       items: [
         'SeeedStudio_XIAO/SeeedStudio_XIAO_Getting_Started',
+        'SeeedStudio_XIAO/XIAO-RP2040',
       ],
 
     },

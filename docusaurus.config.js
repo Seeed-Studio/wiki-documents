@@ -8,6 +8,7 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+
   title: 'Seeed Studio Wiki',
   tagline: 'The open documentation platform for Seeed Studio.',
   
@@ -16,6 +17,17 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+
+  scripts: [
+    // String format.
+    // 'https://viewer.altium.com/client/static/js/embed.js',
+    
+    // Object format.
+    {
+      src: 'https://viewer.altium.com/client/static/js/embed.js',
+      async: true,
+    },
+  ],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

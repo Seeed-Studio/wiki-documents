@@ -4,11 +4,9 @@ title: GPIO and Grove for reComputer Series
 tags:
   - Nvidia
   - reComputer
-  - Getting started
 keywords:
   - Nvidia
   - reComputer
-  - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
 last_update:
   date: 01/03/2023
