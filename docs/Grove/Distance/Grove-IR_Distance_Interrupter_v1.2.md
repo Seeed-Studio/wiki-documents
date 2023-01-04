@@ -107,8 +107,8 @@ Let us see how to implement few basic applications with this module:
 
 -   Grove - IR Distance Interrupter v1.2 × 1
 -   Arduino UNO (other models also are fine) × 1
--   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
--   [Grove - Base Shield](/Base_Shield_V2) × 1
+-   Grove cable × 1
+-   Grove - Base Shield × 1
 
 #### Connections
 
@@ -158,14 +158,14 @@ void loop()  {
 #### Material required
 
 -   Raspberry Pi (other models also are fine) × 1
--   [GrovePi](https://www.seeedstudio.com/depot/GrovePi-p-1672.html?cPath=73) or [Grovepi+](https://www.seeedstudio.com/depot/GrovePi-p-2241.html?cPath=122_154_158) × 1
--   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+-   GrovePi × 1
+-   Grove cable × 1
 
 #### Hardware Connections and Software Work
 
 1.You should have a Raspberry Pi and a GrovePi or GrovePi+. In this demo, we use GrovePi.
 
-2.We assume you have built the development environment successful. If not, follow [this tutorial](/GrovePi_Plus).
+2.We assume you have built the development environment successful.
 
 3.Connection: 
 
