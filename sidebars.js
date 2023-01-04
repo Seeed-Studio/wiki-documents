@@ -59,6 +59,11 @@ const sidebars = {
           items: [
             'Grove/Distance/Sensor_distance',
             'Grove/Distance/Grove-TF_Mini_LiDAR', 
+            'Grove/Distance/Grove-Ultrasonic_Ranger', 
+            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2', 
+            'Grove/Distance/Grove-Doppler-Radar', 
+
+
           ]
         }
       ],
