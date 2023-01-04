@@ -239,6 +239,7 @@ const sidebars = {
             'NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
             'NVIDIA/Getting_Start_Projects/No-code-Edge-AI-Tool',
             'NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+            'NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
           ],
         },
       ],
