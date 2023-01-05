@@ -91,16 +91,18 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Distance',
+          label: 'Proximity',
           items: [
-            'Grove/Distance/Sensor_distance',
-            'Grove/Distance/Grove-TF_Mini_LiDAR',
-            'Grove/Distance/Grove-Ultrasonic_Ranger',
-            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2',
-            'Grove/Distance/Grove-Doppler-Radar',
-            'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
-            'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor',
-            'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
+            'Grove/Proximity/Sensor_distance',
+            'Grove/Proximity/Grove-TF_Mini_LiDAR', 
+            'Grove/Proximity/Grove-Ultrasonic_Ranger', 
+            'Grove/Proximity/Grove-IR_Distance_Interrupter_v1.2', 
+            'Grove/Proximity/Grove-Doppler-Radar', 
+            'Grove/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X', 
+            'Grove/Proximity/Grove-80cm_Infrared_Proximity_Sensor', 
+            'Grove/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
+            'Grove/Proximity/Grove-Adjustable_PIR_Motion_Sensor', 
+            'Grove/Proximity/Grove-Gesture_v1.0', 
           ]
         },
         {
