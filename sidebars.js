@@ -270,6 +270,14 @@ const sidebars = {
             'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
           ],
         },
+        {
+          type: 'category',
+          label: 'Flash NVIDIA JetPack™ OS',
+          items: [
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1010_J101_Flash_Jetpack',
+          ],
+    
+        },
       ],
 
     },
