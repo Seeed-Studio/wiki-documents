@@ -2,11 +2,11 @@
 description: Memory Expansion
 title: Memory Expansion
 tags:
-  - Demo
-  - Getting started
+  - Nvidia
+  - reComputer
 keywords:
-  - docs
-  - docusaurus
+  - Nvidia
+  - reComputer
 image: https://avatars.githubusercontent.com/u/10758833
 last_update:
   date: 01/05/2023

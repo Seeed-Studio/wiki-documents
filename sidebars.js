@@ -303,6 +303,7 @@ const sidebars = {
           label: 'Usefull_Tools',
           items: [
             'NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
+            'NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
           ],
     
         },
