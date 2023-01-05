@@ -56,7 +56,7 @@ const sidebars = {
             'Grove/Temperature/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
             'Grove/Temperature/Grove-TempAndHumi_Sensor-SHT31',
             'Grove/Temperature/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
-            'Grove/Temperature/Grove-Temperature_Sensor',
+            // 'Grove/Temperature/Grove-Temperature_Sensor',
             'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
             'Grove/Temperature/Grove-Temperature_and_Humidity_Sensor_Pro',
             'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor',
