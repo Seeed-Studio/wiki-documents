@@ -25,7 +25,7 @@ const sidebars = {
 
     // 'About',
     'Getting-Started',
-    'Weekly_Wiki',
+    'weekly_wiki',
     {
       type: 'category',
       label: 'Wiki Platform Overview',

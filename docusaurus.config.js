@@ -18,12 +18,6 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   
-  scripts: [
-    {
-      src: 'https://viewer.altium.com/client/static/js/embed.js', 
-      async: true,
-    },
-  ],
 
   scripts: [
     // String format.
