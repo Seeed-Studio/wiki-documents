@@ -60,16 +60,17 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 | RTC              | JST 1.0 CR2032 3V                                                                                                                                      |
 | TPM              | Built-in TPM (2.0)                                                                                                                                  |
 | Power Connector           |DC Jack 5.5/2.1mm or Type-C PD                                                                 |
-|Power Supply (for bare board)| <div >DC Jack Input: Min:12V @ 300mA - 1.2A, Max:19V @ 200mA - 0.7A <br />Type-C Input: Min: 15V @ 0.27A, Max:15V @ 0.93A </div>
-|
-| Dimensions       | 110x110mm                                                                                                                                               |
-| Certifications   | FCC, CE                                                                                                                                                 |
+|Power Supply (for bare board)| <div >DC Jack Input: Min:12V @ 300mA - 1.2A, Max:19V @ 200mA - 0.7A <br />Type-C Input: Min: 15V @ 0.27A, Max:15V @ 0.93A </div>|
+| Dimensions       | 110x110mm |
+| Certifications   | FCC, CE |
 
-!!!Note
-        If you are using 3.5inch HDD drives with the ODYSSEY – X86J4105, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A. 
+:::note
+If you are using 3.5inch HDD drives with the ODYSSEY – X86J4105, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A. 
+:::
 
-!!!Note
-        You can power the X86 using a power bank, but you need to make sure to use a power bank with USB PD protocol and connect via USB C. Also, you can seamlessly switch between USB C power and DC power with no issue.
+:::tip
+You can power the X86 using a power bank, but you need to make sure to use a power bank with USB PD protocol and connect via USB C. Also, you can seamlessly switch between USB C power and DC power with no issue.
+:::
 
 ## Hardware Overview
 
@@ -125,7 +126,9 @@ Connect bootable USB drive into one of the USB ports on ODYSSEY - X86J4105.
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/USB.png)
 
-**Note:** please visit Creating Bootable USB and Installing OS for more information about creating a bootable USB Drive.
+:::note
+Please visit Creating Bootable USB and Installing OS for more information about creating a bootable USB Drive.
+:::
 
 #### Step 2
 
@@ -143,7 +146,9 @@ Select the connected USB Drive as the 1st boot drive and press Enter.
 
 Follow the instructions on the installation to complete installing the operating system.
 
-**Note:** To access the BIOS setup, keep pressing **DEL** key when booting up.
+:::note
+To access the BIOS setup, keep pressing **DEL** key when booting up.
+:::
 
 ### Connecting Antennas
 
@@ -151,7 +156,9 @@ Connect two antennas into the two sockets on the board.
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/WiFi.png)
 
-Note: One Antenna is for Wi-Fi and Bluetooth, and the other is for strong 5G Connectivity.
+:::note
+One Antenna is for Wi-Fi and Bluetooth, and the other is for strong 5G Connectivity.
+:::
 
 ### Adding 4G Cellular Connectivity
 
