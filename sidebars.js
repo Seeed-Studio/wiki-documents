@@ -24,8 +24,9 @@ const sidebars = {
     // 'intro',
 
     // 'About',
-
+    'Getting-Started',
     'weekly_wiki',
+   
 
     {
 
