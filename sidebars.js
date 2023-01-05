@@ -276,6 +276,7 @@ const sidebars = {
           items: [
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1010_J101_Flash_Jetpack',
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J2021_J202_Flash_Jetpack',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1020_A206_Flash_JetPack',
           ],
     
         },
