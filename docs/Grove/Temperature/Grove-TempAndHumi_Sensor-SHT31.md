@@ -53,11 +53,13 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 - Highly abstracted development library
 - I2C Address  0x44
 
-!!!Note
+:::note
     If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
+:::
 
-!!!Tip
+:::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+:::
 
 ## Specifications
 
@@ -80,8 +82,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
-!!!Caution
+:::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::
 
 ### Play With Arduino
 
@@ -104,13 +107,13 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-TempAndHumi_Sensor-SHT31/img/Grove-TempAndHumi_Sensor-SHT31-components_1200_s.jpg" /></div>
 
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-Do not touch, shake or let this product vibrate while using. Otherwise, it will affect the accuracy of data measured.
-</div>
+:::caution
+ Do not touch, shake or let this product vibrate while using. Otherwise, it will affect the accuracy of data measured.
+:::
 
-!!!Note
+:::note
  If we don't have Grove Base Shield, We also can directly Grove - Temperature&Humidity Sensor(SHT31) to Seeeduino as below.
+:::
 
 | Seeeduino       | Grove - Temperature&Humidity Sensor(SHT31) |
 |---------------|-------------------------|
@@ -175,7 +178,7 @@ The result should be like:
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html)|
 
 - **Step 2.** Plug the Grove Base Hat into Raspberry.
-- **Step 3.** Connect the Grove - Temperature&Humidity Sensor (SHT31) to the **I^2^C** port of the Base Hat.
+- **Step 3.** Connect the Grove - Temperature&Humidity Sensor (SHT31) to the **I2C** port of the Base Hat.
 - **Step 4.** Connect the Raspberry Pi to PC through USB cable.
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-TempAndHumi_Sensor-SHT31/img/SHT31_Hat.jpg" /></div>
@@ -276,8 +279,9 @@ if __name__ == "__main__":
 
 ```
 
-!!!success
-     If everything goes well, you will be able to see temperature and humidity
+:::tipsuccess
+If everything goes well, you will be able to see temperature and humidity
+:::
 
 ```python
 

@@ -54,8 +54,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |Respond Time 1/e(63%)| 6| - |20| S|
 |Signal pin mode|-|Digital|-|-|
 
-!!!Tip
+:::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+:::
 
 ## Platforms Supported
 
@@ -63,13 +64,15 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
-!!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::caution
+The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::
 
 ## Getting Started
 
-!!!Note
-    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::note
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::
 
 ### Play With Arduino
 
@@ -82,10 +85,11 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/img/Thumbnail.jpg" /></div>|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html" target="_blank">Get One Now</a>|
 
-!!!note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+:::note
+ **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
 
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy 
+**2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy
+:::
 
 - **Step 1.** Connect Grove - Temperature&Humidity Sensor Pro to port **D2** of Grove-Base Shield.
 
@@ -95,8 +99,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/img/connect_arduino.jpg" /></div>
 
-!!!Note
+:::note
  If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
+:::
 
 | Seeeduino       | Temperature&Humidity Sensor Pro |
 |---------------|-------------------------|
@@ -115,8 +120,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/img/path.png" /></div>
 
-!!!Note
-    This Grove - Temperature&Humidity Sensor Pro and our another product [Grove-Temperature and Humidity Sensor](https://wiki.seeedstudio.com/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680/) are sharing this library. No matter which product you are using, make sure that you have made the definition line of the sensor of your board into effect and commented out the definition lines of other specs. For example, the sensor we used on Grove - Temperature and Humidity Sensor Pro is DHT 22. So the definition part of the sensor spec should be:
+:::note
+This Grove - Temperature&Humidity Sensor Pro and our another product [Grove-Temperature and Humidity Sensor](https://wiki.seeedstudio.com/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680/) are sharing this library. No matter which product you are using, make sure that you have made the definition line of the sensor of your board into effect and commented out the definition lines of other specs. For example, the sensor we used on Grove - Temperature and Humidity Sensor Pro is DHT 22. So the definition part of the sensor spec should be:
+:::
 
 ```
 //#define DHTTYPE DHT11   // DHT 11
@@ -149,13 +155,15 @@ The result should be like:
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/img/Temp&Hum_Pro_Hat.jpg" /></div>
 
-!!! Note
-    For step 3 you are able to connect the temperature and humidity sensor pro to **any GPIO Port** but make sure you change the command with the corresponding port number.
+:::note
+For step 3 you are able to connect the temperature and humidity sensor pro to **any GPIO Port** but make sure you change the command with the corresponding port number.
+:::
 
 #### Software
 
-!!! attention
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::caution
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library.
@@ -200,8 +208,9 @@ if __name__ == '__main__':
     main()
 ```
 
-!!!success
-    If everything goes well, you will be able to see the following result by running python dht_simpleread.py
+:::tipsuccess
+If everything goes well, you will be able to see the following result by running python dht_simpleread.py
+:::
 
 ```python
 
@@ -243,12 +252,12 @@ If this is the first time you use GrovePi, please do this part step by step. If 
 
 - **Step 1.** Setting Up The Software. In the command line, type the following commands:
 
-!!! attention
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
+:::caution
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
+:::
 
 ```
 sudo curl -kL dexterindustries.com/update_grovepi | bash
-
 ```
 
 ```
@@ -267,13 +276,15 @@ For more detail about this part, please refer to [Setting Software](https://www.
 
 - **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the newest firmware of GrovePi.
 
-!!!Note
-    We firmly suggest you to update the firmware, or for some sensors you may get errors.
+:::note
+We firmly suggest you to update the firmware, or for some sensors you may get errors.
+:::
 
 - **Step 3.** Configure the parameter
 
-!!! attention
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::caution
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::
 
 ```
 
@@ -282,11 +293,10 @@ sudo nano grove_dht_pro.py
 
 ```
 
-!!!Note
-    The Grove - Temperature&Humidity Sensor and the Grove - Temperature&Humidity Sensor pro share the same python code which named
-    `grove_dht_pro.py`.  The only difference is that for the sentence `[temp,humidity] = grovepi.dht(sensor,blue)`. We use the parameter
-    `blue` for Grove - Temperature&Humidity Sensor while we use `white` for the Grove - Temperature&Humidity Sensor pro. The default value
-    is blue, so for this sensor you need to change the code.
+:::note
+The Grove - Temperature&Humidity Sensor and the Grove - Temperature&Humidity Sensor pro share the same python code which named
+`grove_dht_pro.py`.  The only difference is that for the sentence `[temp,humidity] = grovepi.dht(sensor,blue)`. We use the parameter`blue` for Grove - Temperature&Humidity Sensor while we use `white` for the Grove - Temperature&Humidity Sensor pro. The default value is blue, so for this sensor you need to change the code.
+:::
 
 Change the default parameter `[temp,humidity] = grovepi.dht(sensor,blue)` into `[temp,humidity] = grovepi.dht(sensor,white)`. Then the code should be like:
 
