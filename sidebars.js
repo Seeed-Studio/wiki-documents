@@ -65,12 +65,15 @@ const sidebars = {
             'Grove/Temperature/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
             'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
             'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
-            // 'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
-            // 'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
-            // 'Grove/Temperature/Grove-High_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+            'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
+            'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
+            'Grove/Temperature/Grove-High_Temperature_Sensor',
+            'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+            'Grove/Temperature/Grove-I2C_Thermocouple_Amplifier-MCP9600',
+            'Grove/Temperature/One-Wire-Temperature-Sensor-DS18B20',
+            'Grove/Temperature/Grove-SHT4x',
           ]
         },
         {
@@ -86,7 +89,15 @@ const sidebars = {
             'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor', 
             'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
           ]
-        }
+        },
+        {
+          type: 'category',
+          label: 'Light',
+          items: [
+            'Grove/Light/Sensor_light',
+            // 'Grove/Light/',
+          ],
+        },
       ],
 
     },
