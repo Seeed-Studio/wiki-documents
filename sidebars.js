@@ -27,7 +27,7 @@ const sidebars = {
     'Getting_Started',
     'weekly_wiki',
 
-    
+
     {
       type: 'category',
       label: 'Wiki Platform Overview',
@@ -119,6 +119,8 @@ const sidebars = {
             'Grove/Light/Grove-Infrared_Receiver',
             'Grove/Light/Grove-Line_Finder',
             'Grove/Light/Grove-Flame_Sensor',
+            //'Grove/Light/Grove-Infrared_Reflective_Sensor',
+            //'Grove/Light/Grove-I2C_Color_Sensor',
 
           ],
         },
