@@ -1,6 +1,6 @@
 ---
-description: weekly wiki
-title: weekly wiki
+description: Weekly Wiki
+title: Weekly Wiki
 keywords:
 - weeely wiki
 image: https://avatars.githubusercontent.com/u/10758833

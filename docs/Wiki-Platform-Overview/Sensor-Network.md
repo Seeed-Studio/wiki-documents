@@ -1,8 +1,8 @@
 ---
-description: Quick Guide for Seeed Studio Wiki Platform
-title: Getting Started
+description: Sensor Network
+title: Sensor Network
 keywords:
-- weeely wiki
+- Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 01/20/2023
