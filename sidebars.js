@@ -96,6 +96,8 @@ const sidebars = {
           items: [
             'Grove/Light/Sensor_light',
             'Grove/Light/Grove-Digital_Light_Sensor',
+            'Grove/Light/Grove-Heelight_Sensor',
+            'Grove/Light/Grove-Light_Sensor',
 
           ],
         },
@@ -306,7 +308,7 @@ const sidebars = {
           items: [
             'NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
           ],
-    
+
         },
 
         {
@@ -317,7 +319,7 @@ const sidebars = {
             'NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
             'NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
           ],
-    
+
         },
 
         {
@@ -327,7 +329,7 @@ const sidebars = {
           items: [
             'NVIDIA/Drivers/J101_Enable_SD_Card',
           ],
-    
+
         },
 
       ],
