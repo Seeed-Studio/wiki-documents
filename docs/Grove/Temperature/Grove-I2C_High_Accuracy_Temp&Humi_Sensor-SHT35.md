@@ -53,8 +53,8 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |Specified Humidity Range|0%RH to +100%RH|
 |Humidity Resolution|0.01%RH|
 |Humidity Accuracy Tolerance|±1.5 %RH|
-|Interface|I^2^C|
-|I^2^C Address|0x45(default) / 0x44(optional)|
+|Interface|I2C|
+|I2C Address|0x45(default) / 0x44(optional)|
 
 ## Applications
 
@@ -85,8 +85,9 @@ This module is based on **SHT35**, the input voltage of this chip range from 2.1
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
-!!!Caution
+:::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::
 
 ## Getting Started
 
@@ -101,12 +102,13 @@ This module is based on **SHT35**, the input voltage of this chip range from 2.1
 |<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/thumbnail.jpg" /></div>|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp%26Humi-Sensor%28SHT35%29-p-3182.html" target="_blank">Get One Now</a>|
 
-!!!note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+:::note
+**1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
 
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+**2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+:::
 
-- **Step 1.** Connect the Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) to port **I^2^C** of Grove-Base Shield.
+- **Step 1.** Connect the Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) to port **I2C** of Grove-Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
@@ -114,8 +116,9 @@ This module is based on **SHT35**, the input voltage of this chip range from 2.1
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/connect.jpg" /></div>
 
-!!!Note
-        If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+:::note
+If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+:::
 
 | Seeeduino      |  Grove Cable       | Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) |
 |--------------- |--------------------|-----|
@@ -126,8 +129,9 @@ This module is based on **SHT35**, the input voltage of this chip range from 2.1
 
 #### Software
 
-!!!Attention
+:::caution
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::
 
 - **Step 1.** Download the [Grove-SHT35 Sensor](https://github.com/Seeed-Studio/Seeed_SHT35) Library from Github.
 
@@ -206,15 +210,17 @@ void loop()
 }
 ```
 
-!!!Attention
+:::caution
         The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.
+:::
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **115200**.
 
-!!!success
+:::tipsuccess
      If every thing goes well, when you open the Serial Monitor , it may show as below:
+:::
 
 ```C++
 serial start!!
@@ -250,7 +256,7 @@ humidity =51.09
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp%26Humi-Sensor%28SHT35%29-p-3182.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
-- **Step 3**. Connect the Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) to **I^2^C** port of the Base Hat.
+- **Step 3**. Connect the Grove - I2C High Accuracy Temp&Humi Sensor(SHT35) to **I2C** port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/With_Hat.jpg" /></div>
@@ -335,8 +341,9 @@ if __name__ == "__main__":
 
 ```
 
-!!!success
+:::tipsuccess
     If everything goes well, you will be able to see the following result
+:::
 
 ```python
 

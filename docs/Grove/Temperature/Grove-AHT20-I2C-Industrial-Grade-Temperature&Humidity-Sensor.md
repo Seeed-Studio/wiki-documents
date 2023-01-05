@@ -75,8 +75,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-AHT20_I2C_Industrial_Grade_Temperature_and_Humidity_Sensor/hardware-connection.jpg" /></div>
 
-!!!Tip
-    Please plug the USB cable，Grove-AHT20 Temperature&Humidity Sensor Interface into Seeeduino Lotus V1.1 Interface gently, otherwise you may damage the port.
+:::tip
+Please plug the USB cable，Grove-AHT20 Temperature&Humidity Sensor Interface into Seeeduino Lotus V1.1 Interface gently, otherwise you may damage the port.
+:::
 
 - **Step 1.** Plug Grove-AHT20 Temperature&Humidity Sensor into **I2C** interface of Seeeduino Lotus V1.1 with a Grove Cable.
 
@@ -88,8 +89,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 ### Software
 
-!!!Attention
+:::caution
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::
 
 - **Step 1.** Download the [Demo code](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/archive/master.zip).
 
@@ -140,8 +142,9 @@ void loop()
 // END FILE
 ```
 
-!!!Success
+:::tipsuccess
   If everything goes well, you can go to **Serial Monitor** to see an outcome as following:
+:::
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-AHT20_I2C_Industrial_Grade_Temperature_and_Humidity_Sensor/outcome_aht20.png" /></div>
 

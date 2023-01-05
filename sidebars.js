@@ -56,7 +56,7 @@ const sidebars = {
             'Grove/Temperature/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
             'Grove/Temperature/Grove-TempAndHumi_Sensor-SHT31',
             'Grove/Temperature/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
-            // 'Grove/Temperature/Grove-Temperature_Sensor',
+            'Grove/Temperature/Grove-Temperature_Sensor',
             'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
             'Grove/Temperature/Grove-Temperature_and_Humidity_Sensor_Pro',
             'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor',
@@ -65,12 +65,15 @@ const sidebars = {
             'Grove/Temperature/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
             'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
             'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
-            // 'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
-            // 'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
-            // 'Grove/Temperature/Grove-High_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+            'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
+            'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
+            'Grove/Temperature/Grove-High_Temperature_Sensor',
+            'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+            'Grove/Temperature/Grove-I2C_Thermocouple_Amplifier-MCP9600',
+            'Grove/Temperature/One-Wire-Temperature-Sensor-DS18B20',
+            'Grove/Temperature/Grove-SHT4x',
           ]
         },
         {
@@ -78,13 +81,13 @@ const sidebars = {
           label: 'Distance',
           items: [
             'Grove/Distance/Sensor_distance',
-            'Grove/Distance/Grove-TF_Mini_LiDAR', 
-            'Grove/Distance/Grove-Ultrasonic_Ranger', 
-            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2', 
-            'Grove/Distance/Grove-Doppler-Radar', 
-            'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X', 
-            'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor', 
-            'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
+            'Grove/Distance/Grove-TF_Mini_LiDAR',
+            'Grove/Distance/Grove-Ultrasonic_Ranger',
+            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2',
+            'Grove/Distance/Grove-Doppler-Radar',
+            'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
+            'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor',
+            'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
           ]
         }
       ],
@@ -283,7 +286,7 @@ const sidebars = {
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
             'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
           ],
-    
+
         },
       ],
 
