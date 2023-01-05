@@ -29,13 +29,13 @@ const sidebars = {
 
     {
 
-      
+
       type: 'category',
       label: 'Arduino',
       items: [
         'Arduino/Arduino_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -45,9 +45,50 @@ const sidebars = {
       items: [
         'Grove/Grove',
         'Grove/Grove_System',
-        'Grove/Grove_A'
+        'Grove/Grove_A',
+        {
+          type: 'category',
+          label: 'Temperature',
+          items: [
+            'Grove/Temperature/Sensor_temperature',
+            'Grove/Temperature/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor',
+            'Grove/Temperature/Grove-CO2&Temperature&HumiditySensor-SCD41',
+            'Grove/Temperature/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
+            'Grove/Temperature/Grove-TempAndHumi_Sensor-SHT31',
+            'Grove/Temperature/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
+            // 'Grove/Temperature/Grove-Temperature_Sensor',
+            'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
+            'Grove/Temperature/Grove-Temperature_and_Humidity_Sensor_Pro',
+            'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor',
+            'Grove/Temperature/Grove-Temperature-Humidity-Sensor-DH20',
+            'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor-HDC1000',
+            'Grove/Temperature/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
+            'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
+            'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
+            // 'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
+            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
+            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
+            // 'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
+            // 'Grove/Temperature/Grove-High_Temperature_Sensor',
+            // 'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Distance',
+          items: [
+            'Grove/Distance/Sensor_distance',
+            'Grove/Distance/Grove-TF_Mini_LiDAR', 
+            'Grove/Distance/Grove-Ultrasonic_Ranger', 
+            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2', 
+            'Grove/Distance/Grove-Doppler-Radar', 
+            'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X', 
+            'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor', 
+            'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
+          ]
+        }
       ],
-    
+
     },
 
     {
@@ -56,7 +97,7 @@ const sidebars = {
       items: [
         'Wio_Terminal/Wio_Terminal_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -66,7 +107,7 @@ const sidebars = {
       items: [
         'SeeedStudio_XIAO/SeeedStudio_XIAO_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -75,7 +116,7 @@ const sidebars = {
       items: [
         'micro_bit/micro_bit_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -84,7 +125,7 @@ const sidebars = {
       items: [
         'LoRaWAN/LoRaWAN_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -93,7 +134,7 @@ const sidebars = {
       items: [
         'shield/shield_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -102,7 +143,7 @@ const sidebars = {
       items: [
         'Beagle_Bone/Beagle_Bone_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -112,7 +153,7 @@ const sidebars = {
       items: [
         'Raspberry_Pi/Raspberry_Pi_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -122,7 +163,7 @@ const sidebars = {
       items: [
         'reTerminal/reTerminal_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -131,25 +172,72 @@ const sidebars = {
       items: [
         'reSpeaker/reSpeaker_Getting_Started',
       ],
-    
+
     },
 
     {
       type: 'category',
       label: 'ODYSSEY',
       items: [
+
+        {
+          type: 'category',
+          label: 'ODYSSEY_X86J4105',
+          items: [
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-OS',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Updating-Firmware',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
+
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/ODYSSEY-X86-Home-Assistant',
+                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Home-Assistant-Customize',
+                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Connect-Grove-to-Home-Assistant-ESPHome',
+              ]
+            },
+
+            'ODYSSEY/ODYSSEY_X86J4105/Jellyfin-on-Docker-Ubuntu-X86',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-openwrt',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-OPNsense',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-pfSense',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-TrueNAS',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-Android',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-AzureIOT',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-FreeNAS',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Intel-OpenVINO',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-NCS2',
+            'ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
+            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
+
+            {
+              type: 'category',
+              label: 'Projects',
+              items: [
+                'ODYSSEY/ODYSSEY_X86J4105/Projects/ODYSSEY-X86J4105-Frigate',
+              ]
+            },
+          ]
+        },
+
         'ODYSSEY/ODYSSEY_Getting_Started',
+        'ODYSSEY/SEEED-SOM-STM32MP157C',
+        'ODYSSEY/ODYSSEY-STM32MP157C',
       ],
-    
+
     },
 
     {
       type: 'category',
-      label: 'H68K',
+      label: 'LinkStar-H68K',
       items: [
-        'reSpeaker/reSpeaker_Getting_Started',
+        'LinkStar-H68K/Linkstar_Datasheet',
+        'LinkStar-H68K/linkstar-install-system',
       ],
-    
+
     },
 
     {
@@ -157,9 +245,33 @@ const sidebars = {
       type: 'category',
       label: 'NVIDIA',
       items: [
-        'NVIDIA/NVIDIA_Getting_Started',
+        // 'NVIDIA/NVIDIA_Getting_Started',
+        'NVIDIA/reComputer_Jetson_Series_Introduction',
+        'NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
+        'NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
+
+        {
+          type: 'category',
+          label: 'Getting Start & Projects',
+          items: [
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
+            'NVIDIA/Getting_Start_Projects/jetson-docker-getting-started',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',
+            'NVIDIA/Getting_Start_Projects/Jetson-AI-developer-tools',
+            'NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
+            'NVIDIA/Getting_Start_Projects/Security_Scan',
+            'NVIDIA/Getting_Start_Projects/HardHat',
+            'NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
+            'NVIDIA/Getting_Start_Projects/No-code-Edge-AI-Tool',
+            'NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+            'NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
+            'NVIDIA/Getting_Start_Projects/YOLOv5-Object-Detection-Jetson',
+            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
+          ],
+        },
       ],
-    
+
     },
 
     {
@@ -169,7 +281,7 @@ const sidebars = {
       items: [
         'reServer/reServer_Getting_Started',
       ],
-    
+
     },
 
     {
@@ -178,18 +290,18 @@ const sidebars = {
       items: [
         'Others/Others_Product',
       ],
-    
+
     },
 
-  //  'About',
-  //  'License',
-    
+    //  'About',
+    //  'License',
+
   ],
 
-  SenseCAPSidebar: 
+  SenseCAPSidebar:
 
 
-  
+
     [
       'SenseCAP/SenseCAP_Introdution',
 
@@ -200,8 +312,8 @@ const sidebars = {
         items: [
           'SenseCAP/SenseCAP_Getting_Started',
         ],
-        
-      
+
+
       },
 
       {
@@ -211,8 +323,8 @@ const sidebars = {
         items: [
           'SenseCAP_Probe_Accessories/Liquid_level_sensor',
         ],
-        
-      
+
+
       },
 
       {
@@ -222,15 +334,14 @@ const sidebars = {
         items: [
           'SenseCAP_The_Sensor_Prototype_Kit/Contents',
         ],
-        
-      
-      },
 
+
+      },
 
     ],
 
-  MakerSidebar: 
-  
+  MakerSidebar:
+
     [
       'Maker/Maker_Introduction',
       {
@@ -240,7 +351,7 @@ const sidebars = {
         items: [
           'Maker/Maker_Getting_Started',
         ],
-      
+
       },
 
       {
@@ -250,7 +361,7 @@ const sidebars = {
         items: [
           'Maker/Tutorials/Tutorials_Introduction',
         ],
-      
+
       },
 
       {
@@ -260,7 +371,7 @@ const sidebars = {
         items: [
           'Maker/Software/Software_Introduction',
         ],
-      
+
       },
 
       {
@@ -269,7 +380,7 @@ const sidebars = {
         items: [
           'Maker/Arduino/Arduino_Introduction',
         ],
-      
+
       },
 
       {
@@ -278,7 +389,7 @@ const sidebars = {
         items: [
           'Maker/Raspberry_Pi/Raspberry_Pi_Introduction',
         ],
-      
+
       },
 
 
@@ -288,7 +399,7 @@ const sidebars = {
         items: [
           'Maker/NVIDIA/NVIDIA_Introduction',
         ],
-      
+
       },
 
 

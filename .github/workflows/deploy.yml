@@ -63,6 +63,7 @@ jobs:
             yarn add @docusaurus/plugin-pwa
             yarn add --dev @docusaurus/eslint-plugin
             yarn add @docusaurus/theme-live-codeblock
+            yarn add docusaurus-plugin-image-zoom
             yarn build
       
       - name: PUBLISH to WEBSITE

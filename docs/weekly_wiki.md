@@ -24,3 +24,11 @@ Today is when when when and a brand new week has begun! Check out what Seeed did
 If you have any questions or comments, please don't hesistate to hop on to our [forum](https://forum.seeedstudio.com/latest) and discuss with us directly! We greatly value your feedback and opinions because we always grow and prosper together with our users and the community!
 
 See you next week!
+
+:::tip
+
+will show up on the table of contents on the upper right
+
+So that your users will know what this page is all about without scrolling down or even without reading too much.
+
+:::

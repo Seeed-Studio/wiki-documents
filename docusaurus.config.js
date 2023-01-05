@@ -8,6 +8,7 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+
   title: 'Seeed Studio Wiki',
   tagline: 'The open documentation platform for Seeed Studio.',
   
@@ -16,6 +17,24 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  
+  scripts: [
+    {
+      src: 'https://viewer.altium.com/client/static/js/embed.js',
+      async: true,
+    },
+  ],
+
+  scripts: [
+    // String format.
+    // 'https://viewer.altium.com/client/static/js/embed.js',
+    
+    // Object format.
+    {
+      src: 'https://viewer.altium.com/client/static/js/embed.js',
+      async: true,
+    },
+  ],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -124,7 +143,7 @@ const config = {
         ],
       },
     ],
-    
+    'docusaurus-plugin-image-zoom',
   ],
   
   themeConfig:
@@ -132,6 +151,18 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
+
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
+        },
+        // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+        // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
+        config: {}
+      },
+
       giscus: {
         repo: 'c1ev0ps/docusaurus_wiki',
         repoId: 'R_kgDOIabZbQ',
