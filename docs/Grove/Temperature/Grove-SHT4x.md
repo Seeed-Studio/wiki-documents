@@ -1,6 +1,6 @@
 ---
-name: Grove - Temperature & Humidity Sensor(SHT4x)
 description: Grove - Temperature & Humidity Sensor(SHT4x)
+title: Grove - Temperature & Humidity Sensor(SHT4x)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

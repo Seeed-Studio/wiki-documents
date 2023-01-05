@@ -27,7 +27,7 @@ const sidebars = {
     'Getting_Started',
     'weekly_wiki',
 
-    
+
     {
       type: 'category',
       label: 'Wiki Platform Overview',
@@ -94,13 +94,13 @@ const sidebars = {
           label: 'Distance',
           items: [
             'Grove/Distance/Sensor_distance',
-            'Grove/Distance/Grove-TF_Mini_LiDAR', 
-            'Grove/Distance/Grove-Ultrasonic_Ranger', 
-            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2', 
-            'Grove/Distance/Grove-Doppler-Radar', 
-            'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X', 
-            'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor', 
-            'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
+            'Grove/Distance/Grove-TF_Mini_LiDAR',
+            'Grove/Distance/Grove-Ultrasonic_Ranger',
+            'Grove/Distance/Grove-IR_Distance_Interrupter_v1.2',
+            'Grove/Distance/Grove-Doppler-Radar',
+            'Grove/Distance/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
+            'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor',
+            'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
           ]
         },
         {
@@ -108,7 +108,20 @@ const sidebars = {
           label: 'Light',
           items: [
             'Grove/Light/Sensor_light',
-            // 'Grove/Light/',
+            'Grove/Light/Grove-Digital_Light_Sensor',
+            'Grove/Light/Grove-Heelight_Sensor',
+            'Grove/Light/Grove-Light_Sensor',
+            'Grove/Light/Grove-Sunlight_Sensor',
+            'Grove/Light/Grove-UV_Sensor',
+            'Grove/Light/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931',
+            'Grove/Light/Grove-I2C_UV_Sensor-VEML6070',
+            'Grove/Light/Grove-Luminance_Sensor',
+            'Grove/Light/Grove-Infrared_Receiver',
+            'Grove/Light/Grove-Line_Finder',
+            'Grove/Light/Grove-Flame_Sensor',
+            //'Grove/Light/Grove-Infrared_Reflective_Sensor',
+            //'Grove/Light/Grove-I2C_Color_Sensor',
+
           ],
         },
       ],
@@ -308,7 +321,7 @@ const sidebars = {
             'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
             'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
           ],
-    
+
         },
 
         {
@@ -318,7 +331,7 @@ const sidebars = {
           items: [
             'NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
           ],
-    
+
         },
 
         {
@@ -329,7 +342,7 @@ const sidebars = {
             'NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
             'NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
           ],
-    
+
         },
 
         {
@@ -339,7 +352,7 @@ const sidebars = {
           items: [
             'NVIDIA/Drivers/J101_Enable_SD_Card',
           ],
-    
+
         },
 
       ],

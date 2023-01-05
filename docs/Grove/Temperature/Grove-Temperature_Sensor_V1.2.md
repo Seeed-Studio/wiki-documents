@@ -45,8 +45,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 - Operating temperature range: -40 ~ +125 ℃
 - Nominal B-Constant： 4250 ~ 4299K
 
-!!!Tip
-    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+:::tip
+More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+:::
 
 ## Platforms Supported
 
@@ -56,16 +57,18 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |---|---|---|
 |<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/ArduPy-Logo.png" /></div>|
 
-!!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::caution
+The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::
 
 ## Getting Started
 
 ---
 After this section, you can make Grove - Temperature Sensor V1.1/1.2 run with only few steps.
 
-!!!Note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::note
+If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::
 
 ### Play With Arduino
 
@@ -86,8 +89,9 @@ After this section, you can make Grove - Temperature Sensor V1.1/1.2 run with on
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/connect_Arduino.jpg" /></div>
 
-!!!Note
+:::note
  If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Seeeduino as below.
+:::
 
 | Seeeduino       | Grove - Temperature Sensor |
 |---------------|-------------------------|
@@ -162,13 +166,15 @@ The result should be like:
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Temperature_Hat.jpg" /></div>
 
-!!! Note
-    For step 3 you are able to connect the temperature sensor to **any analog Port** but make sure you change the command with the corresponding port number.
+:::note
+For step 3 you are able to connect the temperature sensor to **any analog Port** but make sure you change the command with the corresponding port number.
+:::
 
 #### Software
 
-!!! attention
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::caution
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library.
@@ -210,8 +216,9 @@ if __name__ == '__main__':
     main()
 ```
 
-!!!success
+:::tipsuccess
     If everything goes well, you will be able to see the following result
+:::
 
 ```python
 pi@raspberrypi:~/grove.py/grove $ python3 grove_temperature_sensor.py 0
@@ -232,8 +239,9 @@ KeyboardInterrupt
 
 You can quit this program by simply press ++ctrl+c++.
 
-!!!Notice
-        You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+:::note
+You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
+:::
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
@@ -260,14 +268,16 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the newest firmware of GrovePi.
 
-!!!Tip
-    In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
+:::tip
+In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
 
-!!!Note
-    We firmly suggest you to update the firmware, or for some sensors you may get errors.
+:::note
+We firmly suggest you to update the firmware, or for some sensors you may get errors.
+:::
 
-!!! attention
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::caution
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::
 
 - **Step 3.** Git clone the Github repository.
 
