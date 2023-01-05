@@ -24,8 +24,21 @@ const sidebars = {
     // 'intro',
 
     // 'About',
-
+    'Getting_Started',
     'weekly_wiki',
+
+    
+    {
+      type: 'category',
+      label: 'Wiki Platform Overview',
+      items: [
+        'Wiki-Platform-Overview/Sensor-Network',
+        'Wiki-Platform-Overview/Edge-Computing',
+        'Wiki-Platform-Overview/CloudnChain',
+        'Wiki-Platform-Overview/Solutions',
+      ],
+
+    },
 
     {
 

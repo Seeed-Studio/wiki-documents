@@ -18,12 +18,6 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   
-  scripts: [
-    {
-      src: 'https://viewer.altium.com/client/static/js/embed.js',
-      async: true,
-    },
-  ],
 
   scripts: [
     // String format.
@@ -186,78 +180,36 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'weekly_wiki',
+            docId: 'Getting_Started',
             position: 'left',
-            label: 'Product',
+            label: 'A',
           },
           {
             type: 'doc',
-            docId: 'SenseCAP/SenseCAP_Introdution',
+            docId: 'Wiki-Platform-Overview/Sensor-Network',
             position: 'left',
-            label: 'SenseCAP',
+            label: 'B',
           },
           {
             type: 'doc',
-            docId: 'Maker/Maker_Introduction',
+            docId: 'Wiki-Platform-Overview/Edge-Computing',
             position: 'left',
-            label: 'Maker',
+            label: 'C',
           },
-
           {
-          type: 'dropdown',
-          label: 'SEEED',
-          position: 'left',
-          items: [
-            {
-              label: 'Bazaar',
-              to: 'https://www.seeedstudio.com/',
-            },
-            {
-              label: 'Fusion',
-              to: 'https://www.seeedstudio.com/fusion.html',
-            },
-            {
-              label: 'Service',
-              to: 'https://www.seeedstudio.com/odm',
-            },
-            {
-              label: 'Forum',
-              to: 'https://forum.seeedstudio.com/',
-            },
-            {
-              label: 'Solution',
-              to: 'https://solution.seeedstudio.com/',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Ecosystem',
-          position: 'left',
-          items: [
-            {
-              label: 'Discord',
-              to: 'https://discord.com/invite/QqMgVwHT3X',
-            },
-            {
-              label: 'Twitter',
-              to: 'https://twitter.com/seeedstudio',
-            },
-            {
-              label: 'Hackster',
-              to: 'https://www.hackster.io/seeed',
-            },
-            {
-              label: 'Youtube',
-              to: 'http://www.youtube.com/c/SeeedStudioSZ',
-            },
-            {
-              label: 'LinkedIn',
-              to: 'https://www.linkedin.com/company/seeedstudio',
-            },
-          ],
-        },
-
+            type: 'doc',
+            docId: 'Wiki-Platform-Overview/CloudnChain',
+            position: 'left',
+            label: 'D',
+          },
+          {
+            type: 'doc',
+            docId: 'Wiki-Platform-Overview/Solutions',
+            position: 'left',
+            label: 'E',
+          },
+        
+        
           {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
