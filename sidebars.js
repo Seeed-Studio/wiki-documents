@@ -297,6 +297,16 @@ const sidebars = {
     
         },
 
+        {
+
+          type: 'category',
+          label: 'Usefull_Tools',
+          items: [
+            'NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
+          ],
+    
+        },
+
       ],
 
     },
