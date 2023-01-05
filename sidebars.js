@@ -89,7 +89,7 @@ const sidebars = {
             'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor',
             'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
           ]
-        },
+        }
         {
           type: 'category',
           label: 'Light',
