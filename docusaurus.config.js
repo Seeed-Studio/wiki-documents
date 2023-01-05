@@ -180,7 +180,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Getting-Started',
+            docId: 'Getting_Started',
             position: 'left',
             label: 'A',
           },

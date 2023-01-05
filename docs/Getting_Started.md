@@ -1,9 +1,8 @@
 ---
-description: Cloud & Chain
-title: Cloud & Chain
+description: Quick Guide for Seeed Studio Wiki Platform
+title: Getting Started
 keywords:
-- Cloud
-- Chain
+- weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 01/20/2023
