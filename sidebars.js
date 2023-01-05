@@ -279,6 +279,7 @@ const sidebars = {
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1020_A206_Flash_JetPack',
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203_Flash_System',
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203E_Flash_System',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205_Flash_System',
           ],
     
         },
