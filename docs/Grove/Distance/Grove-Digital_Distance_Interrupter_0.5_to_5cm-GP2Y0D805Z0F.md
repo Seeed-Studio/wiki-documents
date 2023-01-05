@@ -55,16 +55,16 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
-!!!Caution
+:::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
-
+:::
 
 
 ## Getting Started
 
-!!!Note
+:::note
     If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
-
+:::
 
 
 ### Play With Arduino
@@ -79,11 +79,11 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0.5-to-5cm%28GP2Y0D805Z0F%29-p-3084.html" target="_blank">Get One Now</a>|
 
 
-!!!note
+:::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
     
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
-
+:::
 
 
 - **Step 1.** Plug Grove - Digital Distance Interrupter 0.5 to 5cm to port **D2** of Grove-Base Shield.
@@ -97,9 +97,9 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 
 
 
-!!!Note
+:::note
 	If we don't have Grove Base Shield, We also can directly connect Grove-Mech keycap to Seeeduino as below.
-
+:::
 
 | Seeeduino     | Grove - Digital Distance Interrupter 0.5 to 5cm|
 |---------------|-------------------------|

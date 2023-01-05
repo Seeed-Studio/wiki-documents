@@ -81,17 +81,17 @@ IIC Address|0x29
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
-!!!Caution
+:::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
-
+:::
 
 
 
 ## Getting Started
 
-!!!Note
+:::note
     If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
-
+:::
 
 
 ### Play With Arduino
@@ -107,11 +107,11 @@ IIC Address|0x29
 
 
 
-!!!note
+:::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
     
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy 
-
+:::
 
 - **Step 1.** Connect Grove - Time of Flight Distance Sensor to port **IIC** of Grove-Base Shield.
 
@@ -123,9 +123,9 @@ IIC Address|0x29
 
 
 
-!!!Note
+:::note
 	If we don't have Grove Base Shield, We also can directly connect Grove - Temperature and Humidity Sensor Pro to Seeeduino as below.
-
+:::
 
 | Seeeduino       | Grove - Time of Flight Distance Sensor |
 |---------------|-------------------------|
@@ -141,9 +141,9 @@ IIC Address|0x29
 
 - **Step 2.** Extract the `Grove-Ranging-sensor-VL53L0X-master.zip` file into the `Arduino library folder`.
 
-!!!Note
+:::note
 		For example, I download this library into `D:\Software\WorkWork\arduino-1.8.5\libraries`,so only need to extract the zip file here. All in all, please make sure the `Grove-Ranging-sensor-VL53L0X-master` folder is in your Arduino library folder, like the picture below.
-
+:::
 
 ![](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/img/folder.png) 
 
@@ -155,9 +155,9 @@ IIC Address|0x29
 
 Choose different example according to your own needs. Then double click the `xxx.ino` file to open the Arduino IDE.
 
-!!!Attention
+:::note
 		We use `high_accuracy_ranging.ino` in this demo.
-
+:::
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 

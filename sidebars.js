@@ -294,9 +294,42 @@ const sidebars = {
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205_Flash_System',
             'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
             'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
           ],
 
         },
+
+        {
+
+          type: 'category',
+          label: 'NVIDIA Orin series',
+          items: [
+            'NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
+          ],
+    
+        },
+
+        {
+
+          type: 'category',
+          label: 'Usefull_Tools',
+          items: [
+            'NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
+            'NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
+          ],
+    
+        },
+
+        {
+
+          type: 'category',
+          label: 'Drivers',
+          items: [
+            'NVIDIA/Drivers/J101_Enable_SD_Card',
+          ],
+    
+        },
+
       ],
 
     },
