@@ -286,6 +286,17 @@ const sidebars = {
           ],
     
         },
+
+        {
+
+          type: 'category',
+          label: 'NVIDIA Orin series',
+          items: [
+            'NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
+          ],
+    
+        },
+
       ],
 
     },
