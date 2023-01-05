@@ -89,7 +89,7 @@ const sidebars = {
             'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor',
             'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
           ]
-        }
+        },
         {
           type: 'category',
           label: 'Light',
@@ -98,6 +98,11 @@ const sidebars = {
             'Grove/Light/Grove-Digital_Light_Sensor',
             'Grove/Light/Grove-Heelight_Sensor',
             'Grove/Light/Grove-Light_Sensor',
+            'Grove/Light/Grove-Sunlight_Sensor',
+            'Grove/Light/Grove-UV_Sensor',
+            'Grove/Light/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931',
+            'Grove/Light/Grove-I2C_UV_Sensor-VEML6070',
+            'Grove/Light/Grove-Luminance_Sensor',
 
           ],
         },
