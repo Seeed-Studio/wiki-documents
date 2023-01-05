@@ -47,7 +47,7 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 - User-Selectable Measurement Resolution
   - +0.5°C, +0.25°C, +0.125°C, +0.0625°C
 - User-Programmable Temperature Alert Output
-- I^2^C interface
+- I2C interface
 
 ## Specification
 
@@ -55,8 +55,8 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |---|---|
 |Working voltage|3.3V/5V|
 |Operating range|-40°C to +125°C|
-|Digital interface|I^2^C standard 400 kHz|
-|I^2^C address|0x18(default)/ 0x18~0x1F(optional)|
+|Digital interface|I2C standard 400 kHz|
+|I2C address|0x18(default)/ 0x18~0x1F(optional)|
 
 ## Applications
 
@@ -79,11 +79,11 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 **I2C Address**
 
 We offer 3 sets of pads on the back of the PCB. The default AD0~AD2 are all connected to the Low level pads, you can cut those pads and solder them to the other side(High level).
-The I^2^C address is a 7bits address <mark>0011A<sub>0</sub>A<sub>1</sub>A<sub>2</sub></mark>. <mark>0011</mark> is the address code,  which is the factory setting, we can not change it.
-<mark>A<sub>0</sub>A<sub>1</sub>A<sub>2</sub></mark> is the slave address, we can change it. The defaut setting is A<sub>0</sub>=0/A<sub>1</sub>=0/A<sub>2</sub>=0, so the default I^2^C
+The I2C address is a 7bits address <mark>0011A<sub>0</sub>A<sub>1</sub>A<sub>2</sub></mark>. <mark>0011</mark> is the address code,  which is the factory setting, we can not change it.
+<mark>A<sub>0</sub>A<sub>1</sub>A<sub>2</sub></mark> is the slave address, we can change it. The defaut setting is A<sub>0</sub>=0/A<sub>1</sub>=0/A<sub>2</sub>=0, so the default I2C
 address is <mark>0011000</mark>. Normaly the address should be 8bits, so we need to add one bit 0 to the MSB(Most Significant Bit), then we get <mark>0001,1000</mark>. This is a binary address,
 we often use the hexadecimal address in the code, so let's convert the binary address to a hexadecimal address, here we get <mark>0x18</mark>. By the same token, if we solder all the pads to the
- high level, we will get <mark>0001,1111</mark>, which is <mark>0x1F</mark>. So the I^2^C address range from 0x18 to 0x1F, among them, you can choose whatever you want, just make sure you will change
+ high level, we will get <mark>0001,1111</mark>, which is <mark>0x1F</mark>. So the I2C address range from 0x18 to 0x1F, among them, you can choose whatever you want, just make sure you will change
 the I2C address in the file **Seeed_MCP9808.h** in the **Grove_Temperature_sensor_MCP9808-master** library.
 
 ```c++
@@ -126,7 +126,7 @@ As you can see, the <span style={{textDecoration: 'overline'}}>ALE</span>
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/img/schamitc.jpg" /></div>
 
-This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** and **Q5** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
+This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I2C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** and **Q5** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
 :::tip
         In this section we only show you part of the schematic, for the full document please refer to the [Resources](https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/#resources)
