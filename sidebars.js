@@ -66,12 +66,15 @@ const sidebars = {
             'Grove/Temperature/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
             'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
             'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
-            // 'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
-            // 'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
-            // 'Grove/Temperature/Grove-High_Temperature_Sensor',
-            // 'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+            'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
+            'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
+            'Grove/Temperature/Grove-High_Temperature_Sensor',
+            'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+            'Grove/Temperature/Grove-I2C_Thermocouple_Amplifier-MCP9600',
+            'Grove/Temperature/One-Wire-Temperature-Sensor-DS18B20',
+            'Grove/Temperature/Grove-SHT4x',
           ]
         },
         {
@@ -87,7 +90,15 @@ const sidebars = {
             'Grove/Distance/Grove-80cm_Infrared_Proximity_Sensor', 
             'Grove/Distance/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
           ]
-        }
+        },
+        {
+          type: 'category',
+          label: 'Light',
+          items: [
+            'Grove/Light/Sensor_light',
+            // 'Grove/Light/',
+          ],
+        },
       ],
 
     },
@@ -271,6 +282,54 @@ const sidebars = {
             'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
           ],
         },
+        {
+          type: 'category',
+          label: 'Flash NVIDIA JetPack™ OS',
+          items: [
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1010_J101_Flash_Jetpack',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J2021_J202_Flash_Jetpack',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1020_A206_Flash_JetPack',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203_Flash_System',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203E_Flash_System',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205_Flash_System',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
+            'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
+          ],
+    
+        },
+
+        {
+
+          type: 'category',
+          label: 'NVIDIA Orin series',
+          items: [
+            'NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
+          ],
+    
+        },
+
+        {
+
+          type: 'category',
+          label: 'Usefull_Tools',
+          items: [
+            'NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
+            'NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
+          ],
+    
+        },
+
+        {
+
+          type: 'category',
+          label: 'Drivers',
+          items: [
+            'NVIDIA/Drivers/J101_Enable_SD_Card',
+          ],
+    
+        },
+
       ],
 
     },
