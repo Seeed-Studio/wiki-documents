@@ -1,6 +1,6 @@
 ---
-name: Grove - Luminance Sensor
 description: Grove - Luminance Sensor
+title: Grove - Luminance Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

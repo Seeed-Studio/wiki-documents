@@ -1,6 +1,6 @@
 ---
-name: Grove - UV Sensor
 description: Grove - UV Sensor
+title: Grove - UV Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

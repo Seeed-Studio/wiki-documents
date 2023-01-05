@@ -1,6 +1,6 @@
 ---
-name: Grove - Digital Light Sensor
 description: Grove - Digital Light Sensor
+title: Grove - Digital Light Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

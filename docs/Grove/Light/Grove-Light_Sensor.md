@@ -1,6 +1,6 @@
 ---
-name: Grove - Light Sensor
 description: Grove - Light Sensor
+title: Grove - Light Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

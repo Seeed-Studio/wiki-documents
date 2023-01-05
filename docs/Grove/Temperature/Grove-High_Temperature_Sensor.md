@@ -1,6 +1,6 @@
 ---
-name: Grove - High Temperature Sensor
 description: Grove - High Temperature Sensor
+title: Grove - High Temperature Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

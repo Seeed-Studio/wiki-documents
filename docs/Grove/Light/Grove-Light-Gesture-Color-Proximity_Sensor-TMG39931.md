@@ -1,6 +1,6 @@
 ---
-name: Grove - Light Gesture Color Proximity Sensor (TMG39931)
 description: Grove - Light Gesture Color Proximity Sensor (TMG39931)
+title: Grove - Light Gesture Color Proximity Sensor (TMG39931)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

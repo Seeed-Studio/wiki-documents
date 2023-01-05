@@ -1,6 +1,6 @@
 ---
-name: Grove - 1-Wire Thermocouple Amplifier(MAX31850K)
 description: Grove - 1-Wire Thermocouple Amplifier(MAX31850K)
+title: Grove - 1-Wire Thermocouple Amplifier(MAX31850K)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

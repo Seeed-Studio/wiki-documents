@@ -1,6 +1,6 @@
 ---
-name: Grove - Heelight Sensor
 description: Grove - Heelight Sensor
+title: Grove - Heelight Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

@@ -103,6 +103,9 @@ const sidebars = {
             'Grove/Light/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931',
             'Grove/Light/Grove-I2C_UV_Sensor-VEML6070',
             'Grove/Light/Grove-Luminance_Sensor',
+            'Grove/Light/Grove-Infrared_Receiver',
+            'Grove/Light/Grove-Line_Finder',
+            'Grove/Light/Grove-Flame_Sensor',
 
           ],
         },
