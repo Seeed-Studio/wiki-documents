@@ -100,7 +100,6 @@ const sidebars = {
             'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
             'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
 
-
             // 'Grove/Temperature/Sensor_temperature',
           ]
         },
