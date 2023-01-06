@@ -1,6 +1,6 @@
 ---
-name: Grove - Infrared Temperature Sensor Array(AMG8833)
 description: Grove - Infrared Temperature Sensor Array(AMG8833)
+title: Grove - Infrared Temperature Sensor Array(AMG8833)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

@@ -1,6 +1,6 @@
 ---
-name: Grove - Infrared Temperature Sensor
 description: Grove - Infrared Temperature Sensor
+title: Grove - Infrared Temperature Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

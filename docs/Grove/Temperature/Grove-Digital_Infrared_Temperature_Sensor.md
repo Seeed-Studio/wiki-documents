@@ -1,6 +1,6 @@
 ---
-name: Grove - Digital Infrared Temperature Sensor
 description: Grove - Digital Infrared Temperature Sensor
+title: Grove - Digital Infrared Temperature Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

@@ -27,8 +27,9 @@ While Grove - Thermal Imaging Camera is a thermal sensor **(MLX90640)** , carryi
 |Grove - Thermal Imaging Camera / IR Array **MLX90641** 110 degree **[*New*]**|03-June-2020|[Buy it](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90641-110-degree-p-4612.html)|
 |Grove - Thermal Imaging Camera / IR Array **MLX90640** 110 degree|12-Nov-2019|[Buy it](https://www.seeedstudio.com/Grove-Thermal-Imaging-Camera-IR-Array-MLX90640-110-degree-p-4334.html)|
 
-!!! Note
-    This wiki fits both types of the Thermal Imageing Camera IR Array MLX90641 and MLX90640.
+:::note
+This wiki fits both types of the Thermal Imageing Camera IR Array MLX90641 and MLX90640.
+:::
 
 ## Features
 
@@ -77,8 +78,9 @@ While Grove - Thermal Imaging Camera is a thermal sensor **(MLX90640)** , carryi
 
 **Step 2.** Download the [Library](https://github.com/Seeed-Studio/Seeed_Arduino_MLX9064x/archive/master.zip) and copy the whole **Seeed_Arduino_MLX9064x** file and paste it into your Arduino IDE library file.
 
-!!!Note
-       If it is your first time playing Wio Terminal and not sure which interface to plug on Wio Terminal, please refer to **[Get Started with Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)**.
+:::note
+If it is your first time playing Wio Terminal and not sure which interface to plug on Wio Terminal, please refer to **[Get Started with Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)**.
+:::
 
 **Step 3.** Copy the Software Code 1 below into your Arduino IDE and upload it for visualization format displayed via **Serial Port.**
 
@@ -270,8 +272,9 @@ boolean isConnected() {
 }
 ```
 
-!!!Note
-      Upload the software code 1 above into your Arduino IDE and open the **Serial Port**, you will see an outcome of visualization format as following:
+:::note
+Upload the software code 1 above into your Arduino IDE and open the **Serial Port**, you will see an outcome of visualization format as following:
+:::
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/20200702112317.png" /><figcaption><b /> <i /></figcaption>
 </div>
@@ -640,8 +643,9 @@ void DrawLegend() {
 }
 ```
 
-!!!Success
+:::tipsuccess
  The outcome of visualization will display on the screen of Wio Terminal if everything goes well
+:::
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/thermal-sensor-90641.gif" /><figcaption><b /> <i /></figcaption></div>
 
@@ -705,11 +709,13 @@ You may get the result like this:
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/90641-raspi.png" /></div>
 
-!!!Success
+:::tipsuccess
      The outcome will be displayed as above if everything goes well.
+:::
 
-!!!Note
+:::note
      An upgrated UI of outcome on Raspberry Pi has been released as following:
+:::
 
 - **Step 1** Install pyqt5:
 
@@ -736,8 +742,9 @@ sudo reboot
 sudo ircamera I2C MLX90641
 ```
 
-!!!Success
+:::tipsuccess
      The outcome will be displayed as following if everything goes well.
+:::
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-Thermal-Imaging-Camera-IR-Array/img/outcome_UI.png" /><figcaption><b /> <i /></figcaption></div>
 

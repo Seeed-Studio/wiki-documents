@@ -73,8 +73,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
-!!!Caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoretical compatibility. We only provide software library or code examples for the Arduino platform in most cases. It is not possible to provide software library/demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::caution
+The platforms mentioned above as supported is/are an indication of the module's software or theoretical compatibility. We only provide software library or code examples for the Arduino platform in most cases. It is not possible to provide software library/demo code for all possible MCU platforms. Hence, users have to write their own software library.
+:::
 
 ## Getting Started
 
@@ -99,8 +100,9 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 #### Software
 
-!!!Note
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::note
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::
 
 Compared with DHT11, the DHT20 Temperature and Humidity Sensor has clear changes in supply voltage, measurement range of temperature and humidity, precision and quality of output signal.
 
@@ -208,8 +210,9 @@ This is the basic hardware connecting.
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny2.png" /></div>
 
-!!!Note
-         Once we saving, Thonny will ask to name the file. Here we type "lcd1602.py" as its name, and we also need to type the extension of the file, or it can not be used.
+:::note
+Once we saving, Thonny will ask to name the file. Here we type "lcd1602.py" as its name, and we also need to type the extension of the file, or it can not be used.
+:::
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/zhanshitu5.png" /></div>
 
