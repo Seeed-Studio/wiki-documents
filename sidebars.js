@@ -134,9 +134,9 @@ const sidebars = {
             'Grove/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
             'Grove/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
             // 'Grove/Biometric/Grove-EMG_Detector',
-            // 'Grove/Biometric/',
-            // 'Grove/Biometric/',
-            // 'Grove/Biometric/',
+            'Grove/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
+            'Grove/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
+            'Grove/Biometric/Grove-Capacitive-Fingerprint-Sensor',
             // 'Grove/Biometric/',
             // 'Grove/Biometric/',
 
