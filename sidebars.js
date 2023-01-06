@@ -94,15 +94,15 @@ const sidebars = {
           label: 'Proximity',
           items: [
             'Grove/Proximity/Sensor_distance',
-            'Grove/Proximity/Grove-TF_Mini_LiDAR', 
-            'Grove/Proximity/Grove-Ultrasonic_Ranger', 
-            'Grove/Proximity/Grove-IR_Distance_Interrupter_v1.2', 
-            'Grove/Proximity/Grove-Doppler-Radar', 
-            'Grove/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X', 
-            'Grove/Proximity/Grove-80cm_Infrared_Proximity_Sensor', 
-            'Grove/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F', 
-            'Grove/Proximity/Grove-Adjustable_PIR_Motion_Sensor', 
-            'Grove/Proximity/Grove-Gesture_v1.0', 
+            'Grove/Proximity/Grove-TF_Mini_LiDAR',
+            'Grove/Proximity/Grove-Ultrasonic_Ranger',
+            'Grove/Proximity/Grove-IR_Distance_Interrupter_v1.2',
+            'Grove/Proximity/Grove-Doppler-Radar',
+            'Grove/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
+            'Grove/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
+            'Grove/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
+            'Grove/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+            'Grove/Proximity/Grove-Gesture_v1.0',
           ]
         },
         {
@@ -123,6 +123,22 @@ const sidebars = {
             'Grove/Light/Grove-Flame_Sensor',
             //'Grove/Light/Grove-Infrared_Reflective_Sensor',
             //'Grove/Light/Grove-I2C_Color_Sensor',
+
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Biometric',
+          items: [
+            'Grove/Biometric/Sensor_biomedicine',
+            'Grove/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
+            'Grove/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
+            // 'Grove/Biometric/Grove-EMG_Detector',
+            // 'Grove/Biometric/',
+            // 'Grove/Biometric/',
+            // 'Grove/Biometric/',
+            // 'Grove/Biometric/',
+            // 'Grove/Biometric/',
 
           ],
         },
