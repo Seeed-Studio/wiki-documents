@@ -182,31 +182,31 @@ const config = {
             type: 'doc',
             docId: 'Getting_Started',
             position: 'left',
-            label: 'A',
+            label: 'Getting Started',
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Sensor-Network',
             position: 'left',
-            label: 'B',
+            label: '1',
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Edge-Computing',
             position: 'left',
-            label: 'C',
+            label: '2',
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/CloudnChain',
             position: 'left',
-            label: 'D',
+            label: '3',
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Solutions',
             position: 'left',
-            label: 'E',
+            label: '4',
           },
         
         
