@@ -207,13 +207,9 @@ python grove_gsr_sensor.py 0
 
 ```
 
-```
-
-
 :::tipsuccess
 If everything goes well, you will be able to see the following result
 :::
-
 
 ```python
 
@@ -237,11 +233,9 @@ GSR value: 371
   File "grove_gsr_sensor.py", line 66, in main
     time.sleep(.3)
 KeyboardInterrupt
-
-
 ```
 
-You can quit this program by simply press ++ctrl+c++.
+You can quit this program by simply press `ctrl`+`c`.
 
 :::note
 You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.

@@ -30,7 +30,7 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 Specifications
 -------------
 
-<table border="1" cellspacing="0" width="80%">
+<table border="1" cellspacing="0" width="60%">
 <tr>
 <th scope="col">
 Item
