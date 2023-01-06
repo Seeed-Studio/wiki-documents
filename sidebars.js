@@ -118,6 +118,42 @@ const sidebars = {
 
           ]
         },
+        {
+          type: 'category',
+          label: 'Communication',
+          items: [
+            'Grove/Communication/Sensor_communication',
+            'Grove/Communication/GPS-Modules-Selection-Guide',
+            'Grove/Communication/Grove-125KHz_RFID_Reader',
+            // 'Grove/Communication/Grove-315MHz_RF_Kit',
+            // 'Grove/Communication/Grove-433MHz_Simple_RF_Link_Kit',
+            // 'Grove/Communication/Grove-BLE-dual_model-v1.0',
+            // 'Grove/Communication/Grove-Bee_Socket',
+            // 'Grove/Communication/Grove-DMX512',
+            'Grove/Communication/Grove-GPS',  
+            'Grove/Communication/Grove-GPS-Air530', 
+            'Grove/Communication/Grove_High_Precision_RTC', 
+            // 'Grove/Communication/Grove-I2C_ADC', 
+            'Grove/Communication/Grove-I2C_FM_Receiver', 
+            'Grove/Communication/Grove-I2C_FM_Receiver_v1.1', 
+            'Grove/Communication/Grove_LoRa_Radio', 
+            'Grove/Communication/Grove_NFC', 
+            'Grove/Communication/Grove_NFC_Tag',
+            'Grove/Communication/Grove-Protoshield',  
+            'Grove/Communication/Grove-RJ45_Adapter',  
+            'Grove/Communication/Grove-Screw_Terminal',  
+            // 'Grove/Communication/Grove-Serial_Bluetooth_v3.0',
+            'Grove/Communication/Grove-Serial_RF_Pro',
+            'Grove/Communication/Grove-UART_Wifi',
+            'Grove/Communication/Grove-UART_Wifi_V2',
+            'Grove/Communication/Grove-BLE_v1',
+            // 'Grove/Communication/Grove_LoRa_E5_New_Version',
+
+
+
+
+          ]
+        },
 
         {
           type: 'category',
