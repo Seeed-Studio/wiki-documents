@@ -107,6 +107,20 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Sound',
+          items: [
+            'Grove/Sound/Sensor_sound',
+            'Grove/Sound/Grove-Sound_Sensor',
+            'Grove/Sound/Grove-Loudness_Sensor',
+            'Grove/Sound/Grove-Speech_Recognizer',
+            'Grove/Sound/Grove-Sound_Recorder',
+            'Grove/Sound/Grove-Analog-Microphone',
+
+          ]
+        },
+
+        {
+          type: 'category',
           label: 'Light',
           items: [
             'Grove/Light/Sensor_light',
