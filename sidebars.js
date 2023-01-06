@@ -61,32 +61,47 @@ const sidebars = {
         'Grove/Grove_A',
         {
           type: 'category',
+          label: 'All_in_one',
+          items: [
+            'Grove/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
+
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Temp&Humi',
+          items: [
+            'Grove/Temp&Humi/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor',
+            'Grove/Temp&Humi/Grove-CO2&Temperature&HumiditySensor-SCD41',
+            'Grove/Temp&Humi/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
+            'Grove/Temp&Humi/Grove-TempAndHumi_Sensor-SHT31',
+            'Grove/Temp&Humi/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
+            'Grove/Temp&Humi/Grove-Temperature_and_Humidity_Sensor_Pro',
+            'Grove/Temp&Humi/Grove-TemperatureAndHumidity_Sensor',
+            'Grove/Temp&Humi/Grove-Temperature-Humidity-Sensor-DH20',
+            'Grove/Temp&Humi/Grove-TemperatureAndHumidity_Sensor-HDC1000',
+            'Grove/Temp&Humi/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
+            'Grove/Temp&Humi/Grove-SHT4x',
+          ]
+        },
+        {
+          type: 'category',
           label: 'Temperature',
           items: [
-            'Grove/Temperature/Sensor_temperature',
-            'Grove/Temperature/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor',
-            'Grove/Temperature/Grove-CO2&Temperature&HumiditySensor-SCD41',
-            'Grove/Temperature/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
-            'Grove/Temperature/Grove-TempAndHumi_Sensor-SHT31',
-            'Grove/Temperature/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
-            // 'Grove/Temperature/Grove-Temperature_Sensor',
-            'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
-            'Grove/Temperature/Grove-Temperature_and_Humidity_Sensor_Pro',
-            'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor',
-            'Grove/Temperature/Grove-Temperature-Humidity-Sensor-DH20',
-            'Grove/Temperature/Grove-TemperatureAndHumidity_Sensor-HDC1000',
-            'Grove/Temperature/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
-            'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
-            'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
-            'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
-            'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
-            'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
-            'Grove/Temperature/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
-            'Grove/Temperature/Grove-High_Temperature_Sensor',
             'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
             'Grove/Temperature/Grove-I2C_Thermocouple_Amplifier-MCP9600',
             'Grove/Temperature/One-Wire-Temperature-Sensor-DS18B20',
-            'Grove/Temperature/Grove-SHT4x',
+            'Grove/Temperature/Grove-High_Temperature_Sensor',
+            'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
+            'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
+            'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
+            // 'Grove/Temperature/Grove-Temperature_Sensor',
+            'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
+            'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
+
+
+            // 'Grove/Temperature/Sensor_temperature',
           ]
         },
         {
