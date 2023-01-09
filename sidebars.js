@@ -227,11 +227,6 @@ const sidebars = {
           items: [
             'Grove/Current/Grove-10A_DC_Current_Sensor-ACS725',
             'Grove/Current/Grove-5A_DC_AC_Current_Sensor-ACS70331',
-            // 'Grove/Current/',
-            // 'Grove/Current/',
-            // 'Grove/Current/',
-            // 'Grove/Current/',
-            // 'Grove/Current/',
           ],
         },
       ],
