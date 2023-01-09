@@ -176,6 +176,27 @@ const sidebars = {
 
           ]
         },
+        {
+          type: 'category',
+          label: 'Input_Output',
+          items: [
+            'Grove/Input_Output/Grove-Differential_Amplifier_v1.2',
+            'Grove/Input_Output/Grove-I2C_Hub',
+            'Grove/Input_Output/Grove-I2C-Hub-6Port',
+            'Grove/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
+            'Grove/Input_Output/Grove-AND',
+            'Grove/Input_Output/Grove-OR',
+            'Grove/Input_Output/Grove-DC_Jack_Power',
+            'Grove/Input_Output/Grove-Qwiic-Hub',
+            'Grove/Input_Output/Grove-NunChuck',
+            'Grove/Input_Output/Grove-PS_2_Adapter',
+            'Grove/Input_Output/Grove-Mini_Camera',
+            'Grove/Input_Output/Grove-Serial_Camera',
+         
+         
+         
+          ]
+        },
 
         {
           type: 'category',

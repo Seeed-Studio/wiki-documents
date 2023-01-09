@@ -6,7 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Sensor_communication/
 last_update:
-  date: 01/06/2022
+  date: 01/09/2022
   author: gunengyu
 ---
 
