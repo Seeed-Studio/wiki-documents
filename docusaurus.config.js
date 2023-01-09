@@ -183,35 +183,35 @@ const config = {
             type: 'doc',
             docId: 'Getting_Started',
             position: 'left',
-            label: 'getting started',
+            label: 'Getting Started',
             className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Sensor-Network',
             position: 'left',
-            label: 'sensor network',
+            label: 'Sensor Network',
             className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Edge-Computing',
             position: 'left',
-            label: 'edge computing',
+            label: 'Edge Computing',
             className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/CloudnChain',
             position: 'left',
-            label: 'cloud and chain',
+            label: 'Cloud & Chain',
             className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Solutions',
             position: 'left',
-            label: 'solutions',
+            label: 'Solutions',
             className:'navbar_doc_items'
           },
           {
@@ -230,7 +230,7 @@ const config = {
             items: [
               {
                 label: 'Edge Solutions',
-                to: 'https://wiki.iota.org/shimmer/',
+                to: './',
                 target: '_blank',
               },
               {
