@@ -214,6 +214,13 @@ const sidebars = {
 
           ],
         },
+        {
+          type: 'category',
+          label: 'Time',
+          items: [
+            'Grove/Time/Grove-RTC',
+          ],
+        },
       ],
 
     },
