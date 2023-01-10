@@ -61,6 +61,7 @@ const sidebars = {
         'Arduino/Seeeduino_Stalker_V3.1',
         'Arduino/Seeeduino_Stalker_v3_enclosure',
         'Arduino/Seeeduino_v4.0',
+        'Arduino/Seeeduino_v4.2',
       ],
 
     },
