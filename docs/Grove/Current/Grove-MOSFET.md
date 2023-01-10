@@ -29,8 +29,9 @@ Grove – MOSFET enables you to control higher voltage project, say 15V DC, with
 |Vin      |   5 ~ 15V|
 |MOSFET Model| CJQ4435|
 
-!!!Tip
-    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+:::tip
+More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+:::
 
 ## Platforms Supported
 
@@ -216,8 +217,8 @@ sudo python grove_mosfet.py
 
 - **Step 4.** We will see the output display on terminal as below.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-MOSFET/img/pi_result.png" /></div>
-
+<div><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-MOSFET/img/pi_result.png" /></div>
+|
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-MOSFET/res/Grove-MOSFET_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
