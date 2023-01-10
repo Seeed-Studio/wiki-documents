@@ -509,7 +509,8 @@ SpecifyfolderPlay(1,5);
 *   Other attention:
 <dl><dd>Each song has its length of time, so if you want to appoint songs one by one, there've two ways you can choose:
 </dd></dl>
-```
+
+```cpp
 delay(length of time);  // delay the length of time until the song is played out
 
 while(QueryPlayStatus() != 0);  //  Return: 0: played out;       1:  not play out
@@ -517,7 +518,8 @@ while(QueryPlayStatus() != 0);  //  Return: 0: played out;       1:  not play ou
 
 <dl><dd>Normally, we can use the latter. For example:
 </dd></dl>
-```
+
+```cpp
 SpecifyMusicPlay(1);
 while(QueryPlayStatus() != 0);
 SpecifyMusicPlay(2);
