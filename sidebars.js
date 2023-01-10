@@ -64,6 +64,11 @@ const sidebars = {
         'Arduino/SeeedStudio-GD32-RISC-V-Dev-Board',
         'Arduino/Seeeduino-Crypto-ATmega4809-ECC608',
         'Arduino/Sidekick_Basic_Kit_for_Arduino_V2',
+        'Arduino/Sidekick_Basic_Kit_for_TI_LaunchPad',
+        'Arduino/UartSBee_V4',
+        'Arduino/UartSBee_v5',
+        'Arduino/Grove_Speech_Recognizer_Kit_for_Arduino',
+        'Arduino/Grove_Starter_kit_for_Arduino_101',
       ],
 
     },
