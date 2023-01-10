@@ -339,7 +339,15 @@ const sidebars = {
       type: 'category',
       label: 'Raspberry Pi',
       items: [
-        'Raspberry_Pi/Raspberry_Pi_Getting_Started',
+        'Raspberry_Pi/Raspberry_Pi',
+        // {
+        //   type: 'category',
+        //   label: 'Device',
+        //   items: [
+        //     'Raspberry_Pi/Device/',
+        //     'Raspberry_Pi/Device/',
+        //   ]
+        // },
       ],
 
     },

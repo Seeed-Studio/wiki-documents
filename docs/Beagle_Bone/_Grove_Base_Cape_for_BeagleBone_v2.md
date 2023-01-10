@@ -100,7 +100,7 @@ In this section, we will show you a basic example to use this board. You can fin
 
 ### Suggested reading
 
-* [BeagleBone® Green](/BeagleBone_Green)
+* [BeagleBone® Green](/Beagle_Bone/BeagleBone_Green)
 
 * [BeagleBone® community](https://beagleboard.org/)
 
