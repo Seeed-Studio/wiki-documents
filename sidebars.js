@@ -69,6 +69,7 @@ const sidebars = {
         'Arduino/UartSBee_v5',
         'Arduino/Grove_Speech_Recognizer_Kit_for_Arduino',
         'Arduino/Grove_Starter_kit_for_Arduino_101',
+        'Arduino/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible',
       ],
 
     },
