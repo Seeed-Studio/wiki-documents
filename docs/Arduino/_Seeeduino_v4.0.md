@@ -229,31 +229,33 @@ In this example we will show you how to use the popular [ESP8266 WiFi module](ht
 Connect your ESP8266 WiFi module to the Seeeduino board as follows (See the photo below for a schematic):
 
 <table>
-<tr>
-<th>Seeeduino Pin</th>
-<th>ESP8266 Pin</th>
-</tr>
-<tr>
-<td>GND</td>
-<td>GND</td>
-</tr>
-<tr>
-<td>TX</td>
-<td>RX</td>
-</tr>
-<tr>
-<td>RX</td>
-<td>TX</td>
-</tr>
-<tr>
-<td>CH_PD</td>
-<td>VCC</td>
-</tr>
-<tr>
-<td>VCC</td>
-<td>VCC</td>
-</tr>
+  <tbody><tr>
+      <th>Seeeduino Pin</th>
+      <th>ESP8266 Pin</th>
+    </tr>
+    <tr>
+      <td>GND</td>
+      <td>GND</td>
+    </tr>
+    <tr>
+      <td>TX</td>
+      <td>RX</td>
+    </tr>
+    <tr>
+      <td>RX</td>
+      <td>TX</td>
+    </tr>
+    <tr>
+      <td>CH_PD</td>
+      <td>VCC</td>
+    </tr>
+    <tr>
+      <td>VCC</td>
+      <td>VCC</td>
+    </tr>
+  </tbody>
 </table>
+
 
 !!!Note
      Seeeduino V4.0 and ESP8266 Schematic. SW2 shows the setting at 5V but please slide it over to 3V3.
@@ -271,12 +273,12 @@ Connect your ESP8266 WiFi module to the Seeeduino board as follows (See the phot
 void setup()
 {
 
-    }
+}
 
-    void loop()
+void loop()
 {
 
-    }
+}
 ```
 
 
@@ -293,25 +295,30 @@ void setup()
 
 Below is a list of changes that have been made to the Seeeduino board over all the versions.
 
-<table >
-<tr>
-<th> Revision
-</th>
-<th> Descriptions
-</th>
-<th> Release Date
-</th></tr>
-<tr style="font-size: 90%">
-<td width="300px"> Seeeduino V0.9
-</td>
-<td width="500px"> Initial public release
-</td>
-<td width="200px">
-</td></tr>
-<tr style="font-size: 90%">
-<td> Seeeduino v1.1
-</td>
-<td>
+<table>
+  <tbody><tr>
+      <th> Revision
+      </th>
+      <th> Descriptions
+      </th>
+      <th> Release Date
+      </th></tr>
+    <tr style={{fontSize: '90%'}}>
+      <td width="300px"> Seeeduino V0.9
+      </td>
+      <td width="500px"> Initial public release
+      </td>
+      <td width="200px">
+      </td></tr>
+    <tr style={{fontSize: '90%'}}>
+      <td> Seeeduino v1.1
+      </td>
+      <td>
+      </td>
+      </tr>
+    </tbody>
+</table>
+
 
 1.  Fixed bug - unnessesary via on Pin4 wire.
 2.  Fixed bug - Lable mistakenly covered by switches.
