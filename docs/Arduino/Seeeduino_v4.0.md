@@ -1,4 +1,20 @@
 ---
+description: Seeeduino v4.0
+title: Seeeduino v4.0
+tags:
+  - Arduino
+keywords:
+  - Arduino
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 01/10/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
+---
+
+<!-- ---
 name:  Seeeduino v4.0‏‎
 category: Arduino
 bzurl:
@@ -9,12 +25,13 @@ surveyurl: https://www.research.net/r/Seeeduino_v4-0
 sku:
 tags:
 
----
+--- -->
 
-<p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/ARD128D2P_1_02.jpg" border=0 /></a></p> 
+<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/ARD128D2P_1_02.jpg" border={0} /></a></p>
 
 
-<p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-V4-p-669.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> 
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Seeeduino-V4-p-669.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
+
 
 The Seeeduino v4.0 is an ATMEGA328 Microcontroller development board. The ATMEGA328P-MU is a high performance, low power AVR 8-Bit Microcontroller. The Seeeduino v4.0 has 14 digital input/output pins (6 of which can be used as PWM outputs) and 6 analog pins. The board also features an ATMEGA16U2 microcontroller which acts as a UART-to-USB converter chip which means that the board can basically work like an FTDI chip.
 
@@ -250,7 +267,7 @@ Connect your ESP8266 WiFi module to the Seeeduino board as follows (See the phot
 **2.** Open the Arduino IDE
 **3.** Upload a blank program to your board, or make sure that the program it has does not user any Serial functions.
 
-```C++
+```cpp
 void setup()
 {
 
@@ -303,6 +320,7 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 5.  Grouped new 100mil grid pins.
 6.  Replaced reset buttons with metal ones.
 7.  Rearranged texts and lables for clearer indications.
+
 </td>
 <td>
 </td></tr>
@@ -317,6 +335,7 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 4.  150mA driver capacity under 3.3V
 5.  1.0mm slim PCB for lighter weighs
 6.  Extra row reserved for pin headers
+
 </td>
 <td>
 </td></tr>
@@ -331,6 +350,7 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 4.  Reset easier
 5.  Real Quartz Crystal
 6.  Extern power Diode change to 1N4004(more power on Vin pin)
+
 </td>
 <td> Dec 16, 2010
 </td></tr>
@@ -339,7 +359,9 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 </td>
 <td>
 
+
 1.  Upgraded to Stronger mini USB connector.
+
 </td>
 <td> Jan 12, 2011
 </td></tr>
@@ -349,6 +371,7 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 <td>
 
 1.  change JST connector to DC Jack connector
+
 </td>
 <td> Jan 1, 2012
 </td></tr>
@@ -365,6 +388,7 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 4.  Micro USB
 
 5.  UNO bootloader
+
 </td>
 <td> Sep 1, 2014
 </td></tr></table>
@@ -378,8 +402,9 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino_v4.0_Eagle.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino_v4.0_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
+
 
 
 ##   Resources/References
@@ -392,4 +417,6 @@ Below is a list of changes that have been made to the Seeeduino board over all t
 -  **[Datasheet]** [ATMEGA16U2 Summary](http://www.atmel.com/Images/7799S.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
