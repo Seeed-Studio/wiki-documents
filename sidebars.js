@@ -58,6 +58,7 @@ const sidebars = {
         'Arduino/Seeeduino_Mega',
         // 'Arduino/Seeeduino_Mega_Protoshield_Kit',
         'Arduino/Seeeduino-Nano',
+        'Arduino/Seeeduino_Stalker_V3.1',
       ],
 
     },
