@@ -228,6 +228,20 @@ const sidebars = {
           items: [
             'Grove/Current/Grove-10A_DC_Current_Sensor-ACS725',
             'Grove/Current/Grove-5A_DC_AC_Current_Sensor-ACS70331',
+            'Grove/Current/Grove-2.5A-DC-Current-Sensor-ACS70331',
+            'Grove/Current/Grove-Electricity_Sensor',
+            'Grove/Current/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941',
+            'Grove/Current/Grove-MOSFET',
+            'Grove/Current/Grove-SPDT_Relay_30A',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Switch&Button',
+          items: [
+            'Grove/Switch&Button/Grove-6-Position_DIP_Switch',
+            'Grove/Switch&Button/Grove-Button',
+
           ],
         },
       ],

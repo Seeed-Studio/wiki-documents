@@ -5,7 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 1/4/2022
+  date: 1/9/2022
   author: jianjing Huang
 ---
 
@@ -391,7 +391,7 @@ void loop()
 Here comes the current value:  
 
 <div><p style={{textAlign: 'center'}}>
-  I<sub>p</sub> = (V<sub>IOUT</sub> - V<sub>IOUT(Q)</sub>)/ Sens
+  I<sub>p</sub> = (V<sub>IOUT</sub> - V<sub>IOUT(Q)</sub>) / Sens
 </p></div>
 
 Now, Let's review the figure 5, we will explain why the current value of the output is not 0 when the actual current value in the circuit to be tested is 0.  As you can see in the figure 5, the **initialValue** is 595.70mV, which is the **V<sub>IOUT</sub>**; the current is -4561.48mA, which is the **I<sub>p</sub>**. As for the **V<sub>IOUT(Q)</sub>**, it is the **Vref** we set in the code.
