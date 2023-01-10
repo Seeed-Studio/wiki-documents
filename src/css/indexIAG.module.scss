@@ -1,0 +1,108 @@
+.container {
+  margin: 0 auto;
+  padding: 60px 0;
+  font-family: 'Whitney SSm A', 'Whitney SSm B', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+  background-color: #fff;
+
+  .item {
+    display: inline-block;
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    // padding-bottom: 20px;
+    //
+    border-radius: 4px;
+    vertical-align: top;
+
+    .item_container {
+      border: 1px solid #ddd;
+      box-shadow: 0 8px 48px 4px rgb(86 91 115 / 15%);
+      background-color: #fff;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .header {
+      height: 65px;
+      line-height: 65px;
+      position: relative;
+      text-align: left;
+      font-size: 20px;
+      color: #ffffff;
+      letter-spacing: 0;
+      text-align: justify;
+      padding: 0 22px;
+      font-weight: 700;
+      background-image: url('../../assets/texture.png');
+      background-size: 100% 100%;
+    }
+
+    .wrapper {
+      min-height: 180px;
+      padding-bottom: 30px;
+
+      .child_item {
+        line-height: 30px;
+        padding: 10px;
+        text-align: left;
+        margin: 0;
+        width: 50%;
+        display: inline-block;
+
+        &.full {
+          width: 100%;
+        }
+
+        a {
+          font-size: 15px;
+          color: #646464;
+          letter-spacing: 0;
+          text-align: justify;
+          padding: 0;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover {
+            color: #23527c;
+            text-decoration: underline;
+          }
+        }
+
+        .right_img {
+          background-image: url('../../assets/right.png');
+          background-size: 100% 100%;
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+}
+
+.main_container {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 30px 0;
+
+    .item {
+      width: 100%;
+    }
+
+    .child_item {
+      width: 100% !important;
+    }
+  }
+}

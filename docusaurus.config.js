@@ -138,6 +138,7 @@ const config = {
       },
     ],
     'docusaurus-plugin-image-zoom',
+    'docusaurus-plugin-sass'
   ],
   
   themeConfig:
@@ -183,33 +184,36 @@ const config = {
             docId: 'Getting_Started',
             position: 'left',
             label: 'Getting Started',
+            className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Sensor-Network',
             position: 'left',
-            label: '1',
+            label: 'Sensor Network',
+            className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Edge-Computing',
             position: 'left',
-            label: '2',
+            label: 'Edge Computing',
+            className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/CloudnChain',
             position: 'left',
-            label: '3',
+            label: 'Cloud & Chain',
+            className:'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Wiki-Platform-Overview/Solutions',
             position: 'left',
-            label: '4',
+            label: 'Solutions',
+            className:'navbar_doc_items'
           },
-        
-        
           {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
@@ -219,7 +223,23 @@ const config = {
             type: 'localeDropdown',
             position: 'right',
           },
-          
+          {
+            type: 'dropdown',
+            label: 'IOTA',
+            position: 'right',
+            items: [
+              {
+                label: 'Edge Solutions',
+                to: './',
+                target: '_blank',
+              },
+              {
+                label: 'Build Your Own',
+                to: '/indexIAG',
+                target: '_blank',
+              },
+            ],
+          },
         ],
       },
       
