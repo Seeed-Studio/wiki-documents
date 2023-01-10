@@ -234,6 +234,15 @@ const sidebars = {
             'Grove/Current/Grove-SPDT_Relay_30A',
           ],
         },
+        {
+          type: 'category',
+          label: 'Switch&Button',
+          items: [
+            'Grove/Switch&Button/Grove-6-Position_DIP_Switch',
+            'Grove/Switch&Button/Grove-Button',
+
+          ],
+        },
       ],
 
     },
