@@ -65,6 +65,7 @@ const sidebars = {
         'Arduino/Seeeduino-Crypto-ATmega4809-ECC608',
         'Arduino/Sidekick_Basic_Kit_for_Arduino_V2',
         'Arduino/Sidekick_Basic_Kit_for_TI_LaunchPad',
+        'Arduino/UartSBee_V4',
       ],
 
     },
