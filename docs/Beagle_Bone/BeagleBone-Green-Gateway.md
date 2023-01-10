@@ -1,6 +1,6 @@
 ---
-description: SeeedStudio BeagleBone® Green
-title: SeeedStudio BeagleBone® Green
+description: SeeedStudio BeagleBone® Green Gateway
+title: SeeedStudio BeagleBone® Green Gateway
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
@@ -9,31 +9,38 @@ last_update:
   author: jianjing Huang
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cover.jpg" /></div>
 
-Seeed Studio BeagleBone® Green is a low cost, open-source, community supported development platform for developers and hobbyists. It is a joint effort by [BeagleBoard.org](https://beagleboard.org/) and Seeed Studio. It is based on the classical open-source hardware design of [BeagleBone® Black](https://beagleboard.org/black) and developed into this differentiated version. The Seeed Studio BeagleBone® Green includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI is removed to make room for these Grove connectors.
+![BeagleBoneGreenGateway](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/102110381-wiki.png)
 
-Boot Linux in under 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
+**Seeed Studio BeagleBone® Green Gateway** is a low cost, open-source, community supported development platform for developers and hobbyists. It is a joint effort by [BeagleBoard.org](https://beagleboard.org/) and Seeed Studio. It is based on the classical open-source hardware design of [BeagleBone® Black](https://beagleboard.org/black) and developed into this differentiated version. The Seeed Studio BeagleBone® Green Gateway includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI and Ethernet are removed to make room for these wireless features and Grove connectors.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-p-2504.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+The **Seeed Studio BeagleBone® Green Gateway** is a combination of Seeed Studio BeagleBone® Green and Seeed Studio SeeedStudio BeagleBone® Green Gateway, equipped with both **Ethernet and Wireless connectivity**.
 
-<p style={{textAlign: 'center'}}><a href="https://www.amazon.com/dp/B01AIC5AP4" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/amaon.png"  width="300" height="48"  border="0"/></a></p>
+Boot Linux in less 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
+
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Gateway-p-4586.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
 
 ## Features
 
-* **Fully Compatible with BeagleBone® Black**
-* **Processor: AM335x 1GHz ARMR Cortex-A8**
+* **Fully Compatible with BeagleBone® Black and Seeed Studio BeagleBone® Green**
+* **Processor: AM3358 1GHz ARM® Cortex-A8**
+  * 2×32-bit 200-MHz programmable real-time units (PRUs)
   * 512MB DDR3 RAM
+  * 4KB EEPROM
   * 4GB 8-bit eMMC on-board flash storage
   * 3D graphics accelerator
   * NEON floating-point accelerator
-  * 2x PRU 32-bit microcontrollers
+
 * **Connectivity**
+  * Ethernet 10/100M bit
+  * WiFi 802.11 b/g/n 2.4GHz
   * USB client for power & communications
   * USB host
-  * Ethernet
+  * SD/MMC Connector for microSD
+  * Bluetooth 4.1 with BLE
   * 2x 46 pin headers
   * 2x Grove connectors (I2C and UART)
+  * DC Jack for power, 12V
 * **Software Compatibility**
   * Debian
   * Android
@@ -45,16 +52,18 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 
 |Item|Value|
 |----|------|
-|Processor| AM335x 1GHz ARMR Cortex-A8|
+|Processor| AM3358 1GHz ARMR Cortex-A8|
 |RAM| 512MB DDR3|
 |on-board Flash Storage |4GB eMMC|
 |CPU Supports |NEON floating-point & 3D graphics accelerator|
-|Micro USB Supports |powering & communications|
-|USB |Host 1|
-|Grove Connectors |2 (One I2C and One UART) |
+|Micro USB Supports |Powering & Communications|
+|USB | USB 2.0 Host x2|
 |GPIO |2 x 46 pin headers|
 |Ethernet |1|
-|Operating Temperature |0 ~ 75 |
+|Wireless Connectivity|Wi-Fi 802.11b/g/n 2.4GHz and Bluetooth 4.1 LE|
+|Grove Connectors| Grove I2C x 1 and Grove UART x 1|
+|Operating Temperature |0 ~ 70 |
+|Buttons | 3 |
 
 ## Application Ideas
 
@@ -66,81 +75,90 @@ Boot Linux in under 10 seconds and get started on development in less than 5 min
 * Sensor Hub
 * Robot
 
-Here are some funny projects for your reference.
+### Community Projects
 
-|Home Center|Retro Lamp|Drive a Motor|
-|---------------|-----|--------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project1.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project2.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project3.jpg" /></div>|
-|[MAKE IT NOW!](https://www.instructables.com/id/Home-Control-Center-Using-BeagleBone-Green-Wireles/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Retro-Wooden-Lamp-with-BBG/)|[MAKE IT NOW!](https://www.instructables.com/id/A-BeagleBone-Tutorial-Getting-Started-With-Motor-B/)|
+As SeeedStudio BeagleBone® Green Gateway is the combination of SeeedStudio BeagleBone® Green and SeeedStudio BeagleBone® Green Wireless, most of their projects can be easily modifed to work with SeeedStudio BeagleBone® Green Gateway!
 
-|Seeed Studio BeagleBone® Green Acrylic Case|GPIO Control|Smart Light|
+Here are some tutorials from the communities using the Seeed Studio BeagleBone® Green Wireless for their projects, feel free to get inspired and use Seeed Studio BeagleBone® Green Gateway instead!
+
+|#1 The Breath LED|#2 Storm on your table|#3 Speak Louuuuuudly|
 |---------------|-----|--------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project4.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project5.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project6.png" /></div>|
-|[MAKE IT NOW!](https://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[MAKE IT NOW!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
+|![](https://statics3.seeedstudio.com/seeed/img/2016-06/OHfZigwiAdjKOyhXkxIsIzGW.jpg)|![](https://statics3.seeedstudio.com/seeed/img/2016-06/auGIP35SMMZsK87FELS1pkRF.jpg)|![](https://statics3.seeedstudio.com/seeed/img/2016-06/GmpI3336wzuJ3teZ3O4GXMSB.jpg)|
+|[MAKE IT NOW!](https://community.seeedstudio.com/BBGW-starter-tutorial%231-The-breath-LED-p-1641.html)|[MAKE IT NOW!](https://community.seeedstudio.com/BBGW-starter-tutorial%232%3A-storm-on-your-table-p-1643.html)|[MAKE IT NOW!](https://community.seeedstudio.com/BBGW-starter-tutorial%233-Speak-louuuuuudly-p-1644.html)|
+
+|#4 How hot is it today?|#5 Where are you?|#6 My Little alarm clock|
+|---------------|-----|--------------|
+|![](https://statics3.seeedstudio.com/seeed/img/2016-06/THIPlcFCtqtxnSWBkiJPf59M.jpg)|![](https://statics3.seeedstudio.com/seeed/img/2016-06/tOZJ1MeVXARwuqxTkfYD2aUx.jpg)|![](https://statics3.seeedstudio.com/seeed/img/2016-06/tuZhqFgoabZkjJFpHBUzeKrO.jpg)|
+|[MAKE IT NOW!](https://community.seeedstudio.com/BBGW-starter-tutorial%234%3AHow-hot-is-it-today%3F-Ask-BBGW!-p-1645.html)|[MAKE IT NOW!](https://community.seeedstudio.com/BBGW-starter-tutorial%235-Where-are-you%3F-p-1648.html)|[MAKE IT NOW!](https://community.seeedstudio.com/BBGW-starter-tutorial%236-My-little-alarm-clock-p-1646.html)|
+
+**Seeed Studio BeagleBone® Green Wireless Irrigation Control**: Seeed Studio BeagleBone® Green Wireless Irrigation Control using HTML5, WebSockets, and Ecmascript 6.
+
+<iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/Greg-R/beaglebone-green-wireless-irrigation-control-ce7c4b/embed' width='350'></iframe>
+
+### Other Projects
+
+|Bluetooth Device Detection|Home Control Center|SAP HCP IoT Service|
+|---------------|-----|--------------|
+|![](https://statics3.seeedstudio.com/upload/img/community/20160526075527-90edbd.png)|![](https://statics3.seeedstudio.com/upload/img/community/20160524014508-4a47a0.png)|![](https://statics3.seeedstudio.com/upload/img/community/20160523121641-1ed045.png)|
+|[MAKE IT NOW!](https://community.seeedstudio.com/Bluetooth-Device-Detection-with-the-BeagleBone-Green-Wireless-p-1601.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Home-Control-Center-using-BeagleBone-Green-Wireless-p-1596.html)|[MAKE IT NOW!](https://community.seeedstudio.com/SAP-HCP-IOT-SERVICE-WITH-WIOLINK-p-1581.html)|
 
 ## Hardware Overview
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/10201002703.jpg" /></div>
+![BeagleBoneGreenGateway](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/BBGG-hardware.png)
 
-* **USB Host** - USB Host
-* **DC Power and USB Client** - Power the board and act as client
-* **LEDs**
-  * **D2** is configured at boot to blink in a heartbeat pattern
-  * **D3** is configured at boot to light during microSD card accesses
-  * **D4** is configured at boot to light during CPU activity
-  * **D5** is configured at boot to light during eMMC accesses
-* **Boot button**
-  * When there's a SD card insert, the system will boot from SD card first, if you want to boot from eMMC, press this button and then power on.
-  * Use as a normal button after boot, connect to **GPIO_72**
-* **I2C Grove Interface** - Connected to **I2C2**
-* **Uart Grove Interface** - Connected to **UART2**
-* **Serial Debug** - Connect to **UART0**, PIN1~PIN6: GND, NC, NC, RX, TX, NC, note that pin1 is near to the USB.
+## Dimensions
 
-**Pin map**
+The Dimensions for Seeed Studio BeagleBone® Green Gateway is:
+
+* **89.0mm x 54.6mm x 19.6mm**
+
+![BeagleBoneGreenGateway](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/dimensions.png)
+
+## Pin Map
 
 Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 
-**65 Possible Digital I/Os**
+### 65 Possible Digital I/Os
 
 :::note
     In GPIO mode, each digital I/O can produce interrupts.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_IO.png" /></div>
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_IO.png)
 
-**PWMs and Timers**
+### PWMs and Timers
 
 :::note
 Up to 8 digital I/O pins can be configured with pulse-width modulators (PWM) to produce signals to control motors or create pseudo analog voltage levels, without taking up any extra CPU cycles.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_TIMER.png" /></div>
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_TIMER.png)
 
-**Analog Inputs**
+### Analog Inputs
 
 :::note
 Make sure you don't input more than 1.8V to the analog input pins. This is a single 12-bit analog-to-digital converter with 8 channels, 7 of which are made available on the headers.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_ANALOG.png" /></div>
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_ANALOG.png)
 
-**UART**
+### UART
 
 :::note
 There is a dedicated header for getting to the UART0 pins and connecting a debug cable. Five additional serial ports are brought to the expansion headers, but one of them only has a single direction brought to the headers.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_UART.png" /></div>
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_UART.png)
 
-**I2C**
+### I2C
 
 :::note
 The first I2C bus is utilized for reading EEPROMS on cape add-on boards and can't be used for other digital I/O operations without interfering with that function, but you can still use it to add other I2C devices at available addresses. The second I2C bus is available for you to configure and use.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_I2C.png" /></div>
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_I2C.png)
 
-**SPI**
+### SPI
 
 :::note
     For shifting out data fast, you might consider using one of the SPI ports.
@@ -148,19 +166,7 @@ The first I2C bus is utilized for reading EEPROMS on cape add-on boards and can'
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_SPI.png)
 
-## Mechincal Drawing
-
-![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/BBG_drawing_1.png)
-
-![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/BBG_drawing_2.png)
-
-<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=26887ef4-fe20-4d82-b4dc-25f58774d64f" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="800" height="450" allowfullscreen></iframe>
-
 ## Getting Started
-
-:::note
-This chapter is writing under Win10. The steps are familiar for the other operate systems.
-:::
 
 **STEP1. Plug in your Seeed Studio BeagleBone® Green via USB**
 
@@ -187,7 +193,7 @@ Install the drivers for your operating system to give you network-over-USB acces
 |Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|Driver installation isn't required, but you might find a few udev rules helpful.|
 
 :::note
-    For Windows system, please note that:
+    For window system, please note that:
 
 * Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"
 * To check if you're running 32 or 64-bit Windows see [this](https://support.microsoft.com/kb/827218).
@@ -196,30 +202,80 @@ Install the drivers for your operating system to give you network-over-USB acces
 * These drivers have been tested to work up to Windows 10
 :::
 
-:::note
-Additional FTDI USB to serial/JTAG information and drivers are available from [https://www.ftdichip.com/Drivers/VCP.htm](https://www.ftdichip.com/Drivers/VCP.htm).
-:::
-
-:::note
-Additional USB to virtual Ethernet information and drivers are available from [https://www.linux-usb.org/gadget/](https://www.linux-usb.org/gadget/) and [https://joshuawise.com/horndis](https://joshuawise.com/horndis).
-:::
-
 **STEP3. Browse to your Beagle**
 
 Using either Chrome or Firefox (Internet Explorer will NOT work), browse to the web server running on your board. It will load a presentation showing you the capabilities of the board. Use the arrow keys on your keyboard to navigate the presentation.
 
 Click [http://192.168.7.2](http://192.168.7.2) to launch to your Seeed Studio BeagleBone® Green.
+
 Older software images require you to EJECT the BeagleBone® drive to start the network. With the latest software image, that step is no longer required.
 
 [![Click to view larger image](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
 **STEP4. Cloud9 IDE**
 
-To begin editing programs that live on your board, you can use the Cloud9 IDE by click
+To begin editing programs that live on your board, you can use the Cloud9 IDE by clicking:
 
 [![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cloud9.png)](http://192.168.7.2:3000/ide.html)
 
-## Update to latest software
+**STEP5. Connecting to Wi-Fi**
+
+You can use `connmanctl` to connect to nearby Wi-Fi:
+
+```sh
+debian@beaglebone:~$ connmanctl
+connmanctl> scan wifi
+Scan completed for wifi
+connmanctl> services
+    se.101               wifi_1862e41aec0d_73652e313031_managed_psk
+    STU-EE               wifi_1862e41aec0d_5354552d4545_managed_psk
+connmanctl> agent on
+Agent registered
+connmanctl> connect wifi_1862e41aec0d_5354552d4545_managed_psk
+Agent RequestInput wifi_1862e41aec0d_5354552d4545_managed_psk
+  Passphrase = [ Type=psk, Requirement=mandatory, Alternates=[ WPS ] ]
+  WPS = [ Type=wpspin, Requirement=alternate ]
+Passphrase? PASSWORD
+Connected wifi_1862e41aec0d_5354552d4545_managed_psk
+connmanctl> quit
+```
+
+**STEP6. Connecting to Bluetooth**
+
+To connect to the nearby bluetooth, you will need to install `BlueZ`:
+
+```sh
+sudo apt install bluez
+```
+
+:::note
+    Run `sudo apt update` first if having errors.
+:::
+
+And run the following commands to connect to nearby Bluetooth:
+
+```sh
+bb-wl18xx-bluetooth
+bluetoothctl
+```
+
+Once within the `bluetoothctl` interface, run `scan on` to list all nearby Bluetooth:
+
+```sh
+scan on
+```
+
+Copy the **device MAC address**, then connect to the device with the following command:
+
+```sh
+pair A4:xx:xx:xx:xx:30
+trust A4:xx:xx:xx:xx:30
+connect A4:xx:xx:xx:xx:30
+```
+
+Now your Seeed Studio BeagleBone® Green Gateway is connected to your bluetooth device. Type `quit` back to the terminal. Play music on Seeed Studio BeagleBone® Green Gateway, then you will hear music on your bluetooth speaker device.
+
+## Update to the Latest Software
 
 You need to update the board to latest software to keep a better performance, here we will show you how to make it step by step.
 
@@ -227,46 +283,27 @@ You need to update the board to latest software to keep a better performance, he
 
 First of all, you have to download the suitable image here.
 
-[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://beagleboard.org/latest-images)
+[![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/BBGG-download.png)](https://beagleboard.org/latest-images)
 
 :::note
-Due to sizing necessities, this download may take about 30 minutes or more.
+    Due to sizing necessities, this download may take about 30 minutes or more.
 :::
 
 The file you download will have an **.img.xz** extension. This is a compressed sector-by-sector image of the SD card.
 
-**STEP2. Install compression utility and decompress the image**
+**STEP2. Install the Image Burner**
 
-Download and install [7-zip.](http://www.7-zip.org/download.html)
+Download the Open Source Flash burner [balenaEtcher](https://www.balena.io/etcher/). Download the version according to your operating system(Windows/macOS/Linux).
 
-:::note
-    Choose a version that suitable for your system.
-:::
+<div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/etcher.jpg"/></div>
 
-Use 7-zip to decompress the SD card **.img file**
+**STEP3. Writing the OS Image into SD Card**
 
-**STEP3. Install SD card programming utility**
+Select the downloaded image, select the MicroSD card and Flash!
 
-Download and install [Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download). Be sure to download the binary distribution.
+<div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/bbgg-flash.png"/></div>
 
-**STEP4. Write the image to your SD card**
-
-You need a SD adapter to connect your microSD card to your computer at the first. Then use the software Image Write for Windows to write the decompressed image to your SD card.
-
-![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image.png)
-
-Click on **Write** button, then the process is started.
-
-![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/win32_disk_image_process.png)
-
-:::note
-
-* You may see a warning about damaging your device. This is fine to accept as long as you are pointing to your SD card for writing.
-* You should not have your BeagleBone® connected to your computer at this time.
-* This process may need up to 10 minutes.
-:::
-
-**STEP5. Boot your board off of the SD card**
+**STEP4. Boot your board off of the SD card**
 
 Insert SD card into your (powered-down first) board. Then the board will boot from the SD card.
 
@@ -285,9 +322,9 @@ Change to:
     ##enable BeagleBone® Black: eMMC Flasher:
     cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh
 
-Then you will find the 4 user led light as below
+Then you will find the user leds light as below
 
-![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/flashing.gif)
+![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/BBGG.gif)
 
 :::note
 If you don't find the upper tracing light, please press the RESET button to reset the board.
@@ -295,11 +332,11 @@ If you don't find the upper tracing light, please press the RESET button to rese
 
 When the flashing is complete, all 4 USRx LEDs will be **off**. The latest Debian flasher images automatically power down the board upon completion. This can take up to **10 minutes**. Power-down your board, remove the SD card and apply power again to be complete.
 
-## Grove for Seeed Studio BeagleBone® Green
+## Grove for Seeed Studio BeagleBone® Green Gateway
 
-Grove is a modular, standardized connecter prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down.  Some of the other prototype systems out there takes the level down to building blocks.   Good stuff to be learned that way, but the Grove system allows you to build real systems.   It requires some learning and expertise to hook things up.
+Grove is a modular, standardized connecter prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down. Some of the other prototype systems out there takes the level down to building blocks. Good stuff to be learned that way, but the Grove system allows you to build real systems. It requires some learning and expertise to hook things up.
 
-Below listed the Grove modules that work well with Seeed Studio BeagleBone® Green.
+Below listed the Grove modules that work well with Seeed Studio BeagleBone® Green Gateway.
 
 |SKU        |Name|Interface|link|
 |-----------|-----|-----|----------|
@@ -334,9 +371,9 @@ Below listed the Grove modules that work well with Seeed Studio BeagleBone® Gre
 |101020015 |Grove - Temperature Sensor |Analog| [link](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
 |101020019 |Grove - Temperature&Humidity Sensor Pro |Analog| [link](https://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
 
-## Cape for Seeed Studio BeagleBone® Green
+## Cape for Seeed Studio BeagleBone® Green Gateway
 
-You will need some expansion board when you start a project. There're many cape for Seeed Studio BeagleBone® Green already, they include LCD display, motor driver as well as HDMI expansion etc. Below is some of them recommend.
+You will need some expansion board when you start a project. There're many cape for Seeed Studio BeagleBone® Green Gateway already, they include LCD display, motor driver as well as HDMI expansion etc. Below is some of them recommend.
 
 |Grove Cape| Motor Bridge Cape|HDMI Cape|
 |------------|----------------|----------|
@@ -350,53 +387,30 @@ You will need some expansion board when you start a project. There're many cape 
 
 ## FAQ
 
-**1. What is the different between Seeed Studio BeagleBone® Green 1 and Seeed Studio BeagleBone® Green 2?**
-
- We have updated the eMMC on Seeed Studio Beaglebone® Green in 2016. So the previous firmware for Seeed Studio BeagleBone® Green 1 is not workable on Seeed Studio BeagleBone® Green 2, but the new firmware is ok on Seeed Studio BeagleBone® Green 1 and Seeed Studio BeagleBone® Green 2.
-
-![](https://files.seeedstudio.com/wiki/BeagleBone_Green/bbg12.png)
-
- **2. Sometimes the Seeed Studio BeagleBone® Green's network port does not work and must be restarted to resume work. Occasionally this happens.**
-
-Please replace a stable power supply and try again. Usually mobile phone USB power adapter is more stable than that computer USB. Or you can remove the capacitor C162.
-
- ![](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/Capatictor.png)
-
-**3: What is the operating temperature range of the Seeed Studio BeagleBone® Green?**
-
-BeagleBone® Green works in the temperature range of 0-75 Deg Celsius.
+1. 2 x 46 Pin headers and 2x Grove connectors are the same as Seeed Studio BeagleBone® Green and Seeed Studio BeagleBone® Green Wireless, with the same considerations, as followed:
+   * Maximum input voltage for AD analog interface is 1.8V.
+   * Please do not input more than 3.3V, otherwise it may damage the CPU.
+   * The external I2C RTC battery power connector can only be connected to a 3V button battery, the voltage must not exceed 5V.
 
 ## References
 
 There're many references to help you to get more information about the board.
 
 * [BeagleBoard Main Page](https://beagleboard.org/)
-* [Seeed Studio BeagleBone® Green info at BeagleBoard page](https://beagleboard.org/green)
 * [BeagleBoard Getting Started](https://beagleboard.org/getting-started)
 * [Troubleshooting](https://beagleboard.org/getting-started#troubleshooting)
 * [Hardware documentation](https://beagleboard.org/getting-started#hardware)
 * [Projects of BeagleBoard](https://beagleboard.org/project)
-* [CE certification of Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/CE.zip)
-* [FCC certification of Seeed Studio BeagleBone® Green](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/FCC.zip)
-
-## Schematic Online Viewer
-
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
 
 ## Resources
 
-* **[PDF]** [Seeed Studio BeagleBone® Green SRM(v1a)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V1a_20151009.pdf)
-* **[PDF]** [Seeed Studio BeagleBone® Green SRM(v3)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG_SRM_V3_20150804.pdf)
-* **[PDF]** [Seeed Studio BeagleBone® Green Schematics v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.pdf)
-* **[ZIP]** [Seeed Studio BeagleBone® Green Schematics v1.1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_REV1.1_SCH.zip)
-* **[PDF]** [Seeed Studio BeagleBone® Green Schematics v1](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1.pdf)
-* **[Zip]** [Seeed Studio BeagleBone® Green Schematics(OrCAD) v1c](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1c.zip)
-* **[RAR]** [Seeed Studio BeagleBone® Green Schematics(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BEAGLEBONE_GREEN_V1_166%28sch%29.rar)
-* **[RAR]** [Seeed Studio BeagleBone® Green PCB(OrCAD)](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BeagleBone_Green_v1.166%28board%29.rar)
+-----
+
+* **[PDF]** [Seeed Studio BeagleBone® Green Gateway Schematic](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.pdf)
+
+* **[ZIP]** [Seeed Studio BeagleBone® Green Gateway Schematic](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip)
+
 * **[Zip]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
-* **[3D]** [Seeed Studio BeagleBone® Green 3D Model](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG.zip)
-* **[PDF]** [Seeed Studio BeagleBone® Green Mechincal Drawing](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)
 
 ## Tech Support
 
