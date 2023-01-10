@@ -297,7 +297,17 @@ const sidebars = {
       type: 'category',
       label: 'BeagleBone®',
       items: [
-        'Beagle_Bone/Beagle_Bone_Getting_Started',
+        'Beagle_Bone/BeagleBone',
+        'Beagle_Bone/BeagleBone_Solutions',
+        'Beagle_Bone/BeagleBone_Blue',
+        'Beagle_Bone/Beaglebone_Case',
+        'Beagle_Bone/BeagleBone_Green',
+        // 'Beagle_Bone/',
+        // 'Beagle_Bone/',
+        // 'Beagle_Bone/',
+        // 'Beagle_Bone/',
+        // 'Beagle_Bone/',
+        // 'Beagle_Bone/',
       ],
 
     },
