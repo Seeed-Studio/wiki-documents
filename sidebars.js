@@ -345,14 +345,14 @@ const sidebars = {
       label: 'Raspberry Pi',
       items: [
         'Raspberry_Pi/Raspberry_Pi',
-        // {
-        //   type: 'category',
-        //   label: 'Device',
-        //   items: [
-        //     'Raspberry_Pi/Device/',
-        //     'Raspberry_Pi/Device/',
-        //   ]
-        // },
+        {
+          type: 'category',
+          label: 'Device',
+          items: [
+            'Raspberry_Pi/Device/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+            'Raspberry_Pi/Device/Raspberry-OpenWrt-Getting-Started',
+          ]
+        },
       ],
 
     },
