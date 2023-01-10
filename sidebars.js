@@ -66,6 +66,7 @@ const sidebars = {
         'Arduino/Sidekick_Basic_Kit_for_Arduino_V2',
         'Arduino/Sidekick_Basic_Kit_for_TI_LaunchPad',
         'Arduino/UartSBee_V4',
+        'Arduino/UartSBee_v5',
       ],
 
     },
