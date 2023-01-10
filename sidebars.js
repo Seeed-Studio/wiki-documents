@@ -41,8 +41,7 @@ const sidebars = {
     },
 
     {
-
-
+      
       type: 'category',
       label: 'Arduino',
       items: [
@@ -63,6 +62,7 @@ const sidebars = {
         // 'Arduino/Seeeduino_v4.0',
         'Arduino/Seeeduino_v4.2',
         'Arduino/SeeedStudio-GD32-RISC-V-Dev-Board',
+        'Arduino/Seeeduino-Crypto-ATmega4809-ECC608',
       ],
 
     },
