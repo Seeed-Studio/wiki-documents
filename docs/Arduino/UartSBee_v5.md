@@ -36,7 +36,7 @@ sku: 103100001
 
 **UartSBee v5 is the Mesh Bee programmer version based on UartSBee v4.**
 
-Please refer to [UartSBee v4's wiki page](/UartSBee_V4 "UartSBee V4") for general help topics. In this wiki we focus on the difference between v4 and v5.
+Please refer to [UartSBee v4's wiki page](./Arduino/UartSBee_V4 "UartSBee V4") for general help topics. In this wiki we focus on the difference between v4 and v5.
 
 Added Features
 --------------
@@ -62,7 +62,7 @@ Resources
 ---------
 
 -   [Eagle file for UartSBee v5](https://files.seeedstudio.com/wiki/UartSBee_v5/res/UartSBee_v5_eagle_file.zip)
--   [How to program Mesh Bee](/Mesh_Bee "Mesh Bee")
+-   [How to program Mesh Bee](#/Mesh_Bee "Mesh Bee")
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/UartSBee_v5 -->
 
