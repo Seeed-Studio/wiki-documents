@@ -47,6 +47,7 @@ const sidebars = {
       label: 'Arduino',
       items: [
         'Arduino/Arduino_Getting_Started',
+        'Arduino/Arduino',
       ],
 
     },
