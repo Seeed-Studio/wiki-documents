@@ -281,7 +281,10 @@ const sidebars = {
       type: 'category',
       label: 'micro:bit',
       items: [
-        'micro_bit/micro_bit_Getting_Started',
+        // 'micro_bit/micro_bit_Getting_Started',
+          'micro_bit/microbit_wiki_page',
+          'micro_bit/Grove_Inventor_Kit_for_microbit',
+
       ],
 
     },
