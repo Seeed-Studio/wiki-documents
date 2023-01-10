@@ -320,7 +320,22 @@ const sidebars = {
       type: 'category',
       label: 'BeagleBone®',
       items: [
-        'Beagle_Bone/Beagle_Bone_Getting_Started',
+        'Beagle_Bone/BeagleBone',
+        'Beagle_Bone/BeagleBone_Solutions',
+        'Beagle_Bone/BeagleBone_Blue',
+        'Beagle_Bone/Beaglebone_Case',
+        'Beagle_Bone/BeagleBone_Green',
+        'Beagle_Bone/BeagleBone_Green_HDMI_Cape',
+        'Beagle_Bone/BeagleBone_Green_Wireless',
+        'Beagle_Bone/BeagleBone-Green-Gateway',
+        // 'Beagle_Bone/Grove_Base_Cape_for_BeagleBone_v2',
+        'Beagle_Bone/Grove_Cape_for_BeagleBone_Series',
+        // 'Beagle_Bone/Grove_Starter_Kit_for_BeagleBone_Green',
+        'Beagle_Bone/Motor_Bridge_Cape_v1.0',
+        'Beagle_Bone/Skeleton_box_for_Beaglebone',
+        'Beagle_Bone/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
+
+
       ],
 
     },
@@ -330,7 +345,15 @@ const sidebars = {
       type: 'category',
       label: 'Raspberry Pi',
       items: [
-        'Raspberry_Pi/Raspberry_Pi_Getting_Started',
+        'Raspberry_Pi/Raspberry_Pi',
+        {
+          type: 'category',
+          label: 'Device',
+          items: [
+            'Raspberry_Pi/Device/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+            'Raspberry_Pi/Device/Raspberry-OpenWrt-Getting-Started',
+          ]
+        },
       ],
 
     },
