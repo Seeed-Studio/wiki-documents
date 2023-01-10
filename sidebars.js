@@ -64,6 +64,7 @@ const sidebars = {
         'Arduino/SeeedStudio-GD32-RISC-V-Dev-Board',
         'Arduino/Seeeduino-Crypto-ATmega4809-ECC608',
         'Arduino/Sidekick_Basic_Kit_for_Arduino_V2',
+        'Arduino/Sidekick_Basic_Kit_for_TI_LaunchPad',
       ],
 
     },
