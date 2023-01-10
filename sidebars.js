@@ -48,6 +48,16 @@ const sidebars = {
       items: [
         'Arduino/Arduino_Getting_Started',
         'Arduino/Arduino',
+        'Arduino/Seeeduino_Cloud',
+        'Arduino/Seeeduino_Ethernet',
+        'Arduino/Seeeduino_GPRS',
+        'Arduino/Seeeduino_Lite',
+        'Arduino/Seeeduino_LoRAWAN',
+        'Arduino/Seeeduino_Lotus_Cortex-M0',
+        // 'Arduino/Seeeduino_Lotus',
+        'Arduino/Seeeduino_Mega',
+        // 'Arduino/Seeeduino_Mega_Protoshield_Kit',
+        'Arduino/Seeeduino-Nano',
       ],
 
     },
