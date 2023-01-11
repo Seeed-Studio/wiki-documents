@@ -2,7 +2,7 @@
 description: Raspberry Pi Introduction
 title: Raspberry Pi Introduction
 keywords:
-- Grove
+- Raspberry Pi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/10/2022

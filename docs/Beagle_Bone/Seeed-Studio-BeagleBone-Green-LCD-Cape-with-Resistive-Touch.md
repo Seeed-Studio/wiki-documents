@@ -2,7 +2,7 @@
 description: Seeed Studio BeagleBone® Green LCD Cape with Resistive Touch
 title: Seeed Studio BeagleBone® Green LCD Cape with Resistive Touch
 keywords:
-- Grove
+- Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/10/2022

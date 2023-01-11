@@ -354,6 +354,28 @@ const sidebars = {
             'Raspberry_Pi/Device/Raspberry-OpenWrt-Getting-Started',
           ]
         },
+        {
+          type: 'category',
+          label: 'Pi_HAT',
+          items: [
+            'Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi',
+            'Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi_Zero',
+            'Raspberry_Pi/Pi_HAT/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130',
+            'Raspberry_Pi/Pi_HAT/Grove_Base_HAT',
+            'Raspberry_Pi/Pi_HAT/GrovePi_Plus',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+            //   'Raspberry_Pi/Pi_HAT/',
+          ]
+        },
       ],
 
     },

@@ -2,7 +2,7 @@
 description: Build mini router with Dual Gigabit Ethernet Carrier Board
 title: Build mini router with Dual Gigabit Ethernet Carrier Board
 keywords:
-- Grove
+- Device
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/10/2022
