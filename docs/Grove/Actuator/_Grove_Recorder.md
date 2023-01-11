@@ -134,7 +134,7 @@ Below is an illustration of a Grove circuit built using the [Grove - USB Power](
 
 ![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Play_Grove-Recoder.JPG)
 
-If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module instead.
+If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power](/Grove/Input_Output/Grove-DC_Jack_Power "Grove - DC Jack Power") module instead.
 
 ##  Availability
 ---
