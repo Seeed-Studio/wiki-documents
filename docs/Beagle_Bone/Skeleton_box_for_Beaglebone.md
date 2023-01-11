@@ -2,7 +2,7 @@
 description: Skeleton box for BeagleBone®
 title: Skeleton box for BeagleBone®
 keywords:
-- Grove
+- Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/10/2022

@@ -2,7 +2,7 @@
 description: Seeed Studio BeagleBone® Green LCD Cape with Resistive Touch
 title: Seeed Studio BeagleBone® Green LCD Cape with Resistive Touch
 keywords:
-- Grove
+- Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/10/2022
@@ -137,3 +137,10 @@ For display devices using BeagleBone® HDMI, uncomment `disable_uboot_overlay_vi
 ---------
 
 - **[Schematic]** [Schematic files](https://statics3.seeedstudio.com/assets/file/bazaar/product/5INCH_BBG_00A2_SCH.pdf)
+
+## Tech Support
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/) .
+<div>
+  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+</div>

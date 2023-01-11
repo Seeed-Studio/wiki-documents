@@ -783,3 +783,6 @@ temperature: 31.0 C     humidity: 87.0 %RH
 ## Tech Support
 
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+<div>
+  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+</div>

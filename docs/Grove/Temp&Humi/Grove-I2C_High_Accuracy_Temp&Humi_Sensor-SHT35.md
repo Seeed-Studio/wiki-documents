@@ -390,4 +390,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 ## Tech Support
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/). -->
+Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+<div>
+  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+</div>

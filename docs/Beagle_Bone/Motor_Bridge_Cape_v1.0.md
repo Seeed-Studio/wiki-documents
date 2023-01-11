@@ -2,7 +2,7 @@
 description: Motor Bridge Cape v1.0
 title: Motor Bridge Cape v1.0
 keywords:
-- Grove
+- Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/10/2022
