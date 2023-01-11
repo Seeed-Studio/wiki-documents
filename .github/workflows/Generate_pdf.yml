@@ -1,4 +1,4 @@
-name: Deploy
+name: Generate_pdf
 
 on:
   pull_request:
@@ -35,7 +35,7 @@ on:
 
 jobs:
   lint:
-    name: test_ci
+    name: Generate_pdf
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.0.0
