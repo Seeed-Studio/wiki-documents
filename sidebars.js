@@ -377,7 +377,7 @@ const sidebars = {
       type: 'category',
       label: 'Seeeduino Series',
       items: [
-        'Sensor/Seeeduino_Series/wiki'
+        'Sensor/Seeeduino_Series/Seeeduino_v4.2',
       ],
 
     },
