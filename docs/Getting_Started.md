@@ -9,7 +9,7 @@ last_update:
   author: Matthew
 ---
 
-<div align="center"><img width="auto" src="https://files.seeedstudio.com/wiki/seeed_logo/Logo.png" /></div>
+<div align="center"><img width="auto" src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" /></div>
 
 <strong><font color={'8DC215'} size={"5"}>Quick Guide for Seeed Studio Wiki Platform</font></strong>
 
