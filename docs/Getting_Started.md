@@ -9,18 +9,17 @@ last_update:
   author: Matthew
 ---
 
-<div align="center"><img width="auto" src="https://files.seeedstudio.com/wiki/seeed_logo/Logo.png" /></div>
+<div align="center"><img width="auto" src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" /></div>
 
 <strong><font color={'8DC215'} size={"5"}>Quick Guide for Seeed Studio Wiki Platform</font></strong>
 
 Seeed Studio has dedicated to realizing interactive digital replica of our physical world, as being an IoT hardware partner since 2008. This is an open platform collecting all the wikis published by Seeed Studio, to show you the full picture of our efforts, natural environments digitization and outcome production.
 
-You can constantly receive updated data from sensors and <strong><font color={'8DC215'} size={"4"}>sensors network</font></strong>, access computational resources with different <strong><font color={'8DC215'} size={"4"}>edge computing</font></strong> power, display and manage information on <strong><font color={'8DC215'} size={"4"}>cloud and chain</font></strong> in ways. 
+You can constantly receive updated data from sensors and <strong><font color={'8DC215'} size={"4"}>sensors network</font></strong>, access computational resources with different <strong><font color={'8DC215'} size={"4"}>edge computing</font></strong> power, display and manage information on <strong><font color={'8DC215'} size={"4"}>cloud and chain</font></strong> in ways.
 
 We here also present you our current accomplishments and <strong><font color={'8DC215'} size={"4"}>solutions</font></strong> and we are looking for your contributions.
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">What does Wiki Platform Cover?</font>
-
 
 The wiki contents have been divided into four topics as shown on the top navigation. Each topic contains two large portions, facing two different situations. You will find documentation about concentrated, computational equipment for advanced applications, and industrial IoT scenarios, meanwhile, we offer documents about open development tools to help you build your own.
 
@@ -42,7 +41,6 @@ You can also find our current accomplishments and **industry solutions** in the 
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices Attached</font>
 
-
 - Each development board or device under each topic has a corresponding set of **functional electricals**, including their attached **extension boards**, and **accessories**.
 
 1. You can find extension boards, **Grove** sensors, Grove communication, Grove accessories and other functional electricals for attaching microcontrollers like **Arduino** in the "Sensor Network" topic.
@@ -50,7 +48,6 @@ You can also find our current accomplishments and **industry solutions** in the 
 2. You can find extension boards, accessories for attaching development boards or devices like **Raspberry Pi** in the "Edge Computing" topic.
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Application with Software</font>
-
 
 - Each development board or device under each topic has a corresponding set of applications. 
 
@@ -70,11 +67,9 @@ You can also find our current accomplishments and **industry solutions** in the 
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Seeed Studio Elderly</font>
 
-
 - The Seeed Studio products possess the **aging ones** and you can find them under each topic.
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">Seeed Studio Contributor</font>
-
 
 - Want to contribute and build the Seeed Studio Wiki platform together? Welcome to our Github(链接) directly or check more information in the "Solutions" Topic(链接).
 

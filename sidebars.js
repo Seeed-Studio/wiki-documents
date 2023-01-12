@@ -20,514 +20,701 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-  ProductSidebar: [
-    // 'intro',
+ProductSidebar: [
 
-    // 'About',
-    'Getting_Started',
-    'weekly_wiki',
+'Getting_Started',
+'weekly_wiki',
 
+{
 
+  type: 'doc',
+  label: '--Sensor--',
+  id: 'Sensor_Network',
+
+},
+
+{
+
+  type: 'category',
+  label: 'Grove',
+  items: [
     {
       type: 'category',
-      label: 'Wiki Platform Overview',
+      label: 'Grove Sensor',
       items: [
-        'Wiki-Platform-Overview/Sensor-Network',
-        'Wiki-Platform-Overview/Edge-Computing',
-        'Wiki-Platform-Overview/CloudnChain',
-        'Wiki-Platform-Overview/Solutions',
-      ],
 
-    },
-
-    {
-
-      type: 'category',
-      label: 'Arduino',
-      items: [
-        'Arduino/Arduino_Getting_Started',
-        'Arduino/Arduino',
-        'Arduino/Seeeduino_Cloud',
-        'Arduino/Seeeduino_Ethernet',
-        'Arduino/Seeeduino_GPRS',
-        'Arduino/Seeeduino_Lite',
-        'Arduino/Seeeduino_LoRAWAN',
-        'Arduino/Seeeduino_Lotus_Cortex-M0',
-        // 'Arduino/Seeeduino_Lotus',
-        'Arduino/Seeeduino_Mega',
-        // 'Arduino/Seeeduino_Mega_Protoshield_Kit',
-        'Arduino/Seeeduino-Nano',
-        'Arduino/Seeeduino_Stalker_V3.1',
-        'Arduino/Seeeduino_Stalker_v3_enclosure',
-        // 'Arduino/Seeeduino_v4.0',
-        'Arduino/Seeeduino_v4.2',
-        'Arduino/SeeedStudio-GD32-RISC-V-Dev-Board',
-        'Arduino/Seeeduino-Crypto-ATmega4809-ECC608',
-        'Arduino/Sidekick_Basic_Kit_for_Arduino_V2',
-        'Arduino/Sidekick_Basic_Kit_for_TI_LaunchPad',
-        'Arduino/UartSBee_V4',
-        'Arduino/UartSBee_v5',
-        'Arduino/Grove_Speech_Recognizer_Kit_for_Arduino',
-        'Arduino/Grove_Starter_kit_for_Arduino_101',
-        'Arduino/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible',
-      ],
-
-    },
-
-    {
-
-      type: 'category',
-      label: 'Grove',
-      items: [
-        'Grove/Grove',
-        'Grove/Grove_System',
-        'Grove/Grove_A',
         {
           type: 'category',
-          label: 'All_in_one',
+          label: 'All in one',
           items: [
-            'Grove/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
-
+            'Sensor/Grove/Grove_Sensors/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
+    
           ],
         },
+
         {
           type: 'category',
-          label: 'Temp&Humi',
+          label: 'Temp & Humi',
           items: [
-            'Grove/Temp&Humi/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor',
-            'Grove/Temp&Humi/Grove-CO2&Temperature&HumiditySensor-SCD41',
-            'Grove/Temp&Humi/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
-            'Grove/Temp&Humi/Grove-TempAndHumi_Sensor-SHT31',
-            'Grove/Temp&Humi/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
-            'Grove/Temp&Humi/Grove-Temperature_and_Humidity_Sensor_Pro',
-            'Grove/Temp&Humi/Grove-TemperatureAndHumidity_Sensor',
-            'Grove/Temp&Humi/Grove-Temperature-Humidity-Sensor-DH20',
-            'Grove/Temp&Humi/Grove-TemperatureAndHumidity_Sensor-HDC1000',
-            'Grove/Temp&Humi/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
-            'Grove/Temp&Humi/Grove-SHT4x',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-CO2&Temperature&HumiditySensor-SCD41',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TempAndHumi_Sensor-SHT31',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-I2C_High_Accuracy_Temp&Humi_Sensor-SHT35',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-Temperature_and_Humidity_Sensor_Pro',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TemperatureAndHumidity_Sensor',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-Temperature-Humidity-Sensor-DH20',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TemperatureAndHumidity_Sensor-HDC1000',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
+            'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-SHT4x',
           ]
         },
+
         {
           type: 'category',
           label: 'Temperature',
           items: [
-            'Grove/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
-            'Grove/Temperature/Grove-I2C_Thermocouple_Amplifier-MCP9600',
-            'Grove/Temperature/One-Wire-Temperature-Sensor-DS18B20',
-            'Grove/Temperature/Grove-High_Temperature_Sensor',
-            'Grove/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
-            'Grove/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
-            'Grove/Temperature/Grove-Infrared_Temperature_Sensor',
-            'Grove/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
-            // 'Grove/Temperature/Grove-Temperature_Sensor',
-            'Grove/Temperature/Grove-Temperature_Sensor_V1.2',
-            'Grove/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
-
-            // 'Grove/Temperature/Sensor_temperature',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-I2C_Thermocouple_Amplifier-MCP9600',
+            'Sensor/Grove/Grove_Sensors/Temperature/One-Wire-Temperature-Sensor-DS18B20',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-High_Temperature_Sensor',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-Thermal-Imaging-Camera-IR-Array',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-Infrared_Temperature_Sensor',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
+            // 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor_V1.2',
+            'Sensor/Grove/Grove_Sensors/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
+    
+            // 'Sensor/Grove/Grove_Sensors/Temperature/Sensor_temperature',
           ]
         },
+
         {
           type: 'category',
-          label: 'Soli_Humidity',
+          label: 'Soli Humidity',
           items: [
-            'Grove/Soli_Humidity/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant',
-            'Grove/Soli_Humidity/Grove-Moisture_Sensor',
+            'Sensor/Grove/Grove_Sensors/Soli_Humidity/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant',
+            'Sensor/Grove/Grove_Sensors/Soli_Humidity/Grove-Moisture_Sensor',
           ]
         },
         {
           type: 'category',
           label: 'Proximity',
           items: [
-            'Grove/Proximity/Sensor_distance',
-            'Grove/Proximity/Grove-TF_Mini_LiDAR',
-            'Grove/Proximity/Grove-Ultrasonic_Ranger',
-            'Grove/Proximity/Grove-IR_Distance_Interrupter_v1.2',
-            'Grove/Proximity/Grove-Doppler-Radar',
-            'Grove/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
-            'Grove/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
-            'Grove/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
-            'Grove/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
-            'Grove/Proximity/Grove-Gesture_v1.0',
+            'Sensor/Grove/Grove_Sensors/Proximity/Sensor_distance',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-TF_Mini_LiDAR',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Ranger',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-IR_Distance_Interrupter_v1.2',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-Doppler-Radar',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+            'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
           ]
+        },
+        {
+          type: 'category',
+          label: 'Light',
+          items: [
+            'Sensor/Grove/Grove_Sensors/Light/Sensor_light',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Digital_Light_Sensor',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Heelight_Sensor',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Sunlight_Sensor',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-UV_Sensor',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-I2C_UV_Sensor-VEML6070',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Luminance_Sensor',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Infrared_Receiver',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Line_Finder',
+            'Sensor/Grove/Grove_Sensors/Light/Grove-Flame_Sensor',
+            //'Sensor/Grove/Grove_Sensors/Light/Grove-Infrared_Reflective_Sensor',
+            //'Sensor/Grove/Grove_Sensors/Light/Grove-I2C_Color_Sensor',
+
+          ],
         },
         {
           type: 'category',
           label: 'Sound',
           items: [
-            'Grove/Sound/Sensor_sound',
-            'Grove/Sound/Grove-Sound_Sensor',
-            'Grove/Sound/Grove-Loudness_Sensor',
-            'Grove/Sound/Grove-Speech_Recognizer',
-            'Grove/Sound/Grove-Sound_Recorder',
-            'Grove/Sound/Grove-Analog-Microphone',
-
+            'Sensor/Grove/Grove_Sensors/Sound/Sensor_sound',
+            'Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor',
+            'Sensor/Grove/Grove_Sensors/Sound/Grove-Loudness_Sensor',
+            'Sensor/Grove/Grove_Sensors/Sound/Grove-Speech_Recognizer',
+            'Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Recorder',
+            'Sensor/Grove/Grove_Sensors/Sound/Grove-Analog-Microphone',
           ]
-        },
-        {
-          type: 'category',
-          label: 'Communication',
-          items: [
-            'Grove/Communication/Sensor_communication',
-            'Grove/Communication/GPS-Modules-Selection-Guide',
-            'Grove/Communication/Grove-125KHz_RFID_Reader',
-            // 'Grove/Communication/Grove-315MHz_RF_Kit',
-            // 'Grove/Communication/Grove-433MHz_Simple_RF_Link_Kit',
-            // 'Grove/Communication/Grove-BLE-dual_model-v1.0',
-            // 'Grove/Communication/Grove-Bee_Socket',
-            // 'Grove/Communication/Grove-DMX512',
-            'Grove/Communication/Grove-GPS',
-            'Grove/Communication/Grove-GPS-Air530',
-            'Grove/Communication/Grove_High_Precision_RTC',
-            // 'Grove/Communication/Grove-I2C_ADC', 
-            'Grove/Communication/Grove-I2C_FM_Receiver',
-            'Grove/Communication/Grove-I2C_FM_Receiver_v1.1',
-            'Grove/Communication/Grove_LoRa_Radio',
-            'Grove/Communication/Grove_NFC',
-            'Grove/Communication/Grove_NFC_Tag',
-            'Grove/Communication/Grove-Protoshield',
-            'Grove/Communication/Grove-RJ45_Adapter',
-            'Grove/Communication/Grove-Screw_Terminal',
-            // 'Grove/Communication/Grove-Serial_Bluetooth_v3.0',
-            'Grove/Communication/Grove-Serial_RF_Pro',
-            'Grove/Communication/Grove-UART_Wifi',
-            'Grove/Communication/Grove-UART_Wifi_V2',
-            'Grove/Communication/Grove-BLE_v1',
-            // 'Grove/Communication/Grove_LoRa_E5_New_Version',
-
-
-
-
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Input_Output',
-          items: [
-            // 'Grove/Input_Output/Grove-Differential_Amplifier_v1.2',
-            'Grove/Input_Output/Grove-I2C_Hub',
-            'Grove/Input_Output/Grove-I2C-Hub-6Port',
-            'Grove/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
-            // 'Grove/Input_Output/Grove-AND',
-            // 'Grove/Input_Output/Grove-OR',
-            // 'Grove/Input_Output/Grove-DC_Jack_Power',  
-            'Grove/Input_Output/Grove-Qwiic-Hub',
-            // 'Grove/Input_Output/Grove-NunChuck',
-            'Grove/Input_Output/Grove-PS_2_Adapter',
-            'Grove/Input_Output/Grove-Mini_Camera',
-            // 'Grove/Input_Output/Grove-Serial_Camera',
-         
-         
-
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Actuator',
-          items: [
-            // 'Grove/Actuator/Grove-2-Coil_Latching_Relay',
-            // 'Grove/Actuator/Grove-Buzzer',
-            'Grove/Actuator/Grove-Passive-Buzzer',
-            // 'Grove/Actuator/Grove-Chainable_RGB_LED',
-            // 'Grove/Actuator/Grove-Dry-Reed_Relay',
-            'Grove/Actuator/Grove-EL_Driver',
-            'Grove/Actuator/Grove-Haptic_Motor',
-            // 'Grove/Actuator/Grove-I2C_Motor_Driver',
-            // 'Grove/Actuator/Grove-I2C_Motor_Driver_V1.2',
-            'Grove/Actuator/Grove-I2C_Motor_Driver_V1.3',
-            'Grove/Actuator/Grove-I2C-Motor-Driver-L298P',
-            'Grove/Actuator/Grove-Infrared_Emitter',
-            'Grove/Actuator/Grove-LED_Matrix_Driver_v1.0',
-            'Grove/Actuator/Grove-MP3_v2.0',
-            'Grove/Actuator/Grove-MP3-v3',
-            // 'Grove/Actuator/Grove-Mini_Fan',
-            // 'Grove/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
-            // 'Grove/Actuator/Grove_Recorder',
-            'Grove/Actuator/Grove-Recorder_v3.0',
-            // 'Grove/Actuator/Grove-Relay', 
-            'Grove/Actuator/Grove-4-Channel_SPDT_Relay',
-            'Grove/Actuator/Grove-2-Channel_SPDT_Relay',
-            'Grove/Actuator/Grove-Solid_State_Relay',
-            'Grove/Actuator/Grove-Solid_State_Relay_V2',
-            'Grove/Actuator/Grove-2-Channel_Solid_State_Relay',
-            'Grove/Actuator/Grove-4-Channel_Solid_State_Relay',
-            'Grove/Actuator/Grove-8-Channel_Solid_State_Relay',
-            'Grove/Actuator/Grove-Optocoupler_Relay-M281',
-            'Grove/Actuator/Grove-Serial_MP3_Player',
-            'Grove/Actuator/Grove-Servo',
-            'Grove/Actuator/Grove-Speaker',
-            'Grove/Actuator/Grove-Speaker-Plus',
-            // 'Grove/Actuator/Grove-Variable_Color_LED',
-            'Grove/Actuator/Grove-Vibration_Motor',
-            // 'Grove/Actuator/Grove-Water_Atomization',
-            'Grove/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
-            'Grove/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
-    
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'Light',
-          items: [
-            'Grove/Light/Sensor_light',
-            'Grove/Light/Grove-Digital_Light_Sensor',
-            'Grove/Light/Grove-Heelight_Sensor',
-            'Grove/Light/Grove-Light_Sensor',
-            'Grove/Light/Grove-Sunlight_Sensor',
-            'Grove/Light/Grove-UV_Sensor',
-            'Grove/Light/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931',
-            'Grove/Light/Grove-I2C_UV_Sensor-VEML6070',
-            'Grove/Light/Grove-Luminance_Sensor',
-            'Grove/Light/Grove-Infrared_Receiver',
-            'Grove/Light/Grove-Line_Finder',
-            'Grove/Light/Grove-Flame_Sensor',
-            //'Grove/Light/Grove-Infrared_Reflective_Sensor',
-            //'Grove/Light/Grove-I2C_Color_Sensor',
-
-          ],
         },
         {
           type: 'category',
           label: 'Biometric',
           items: [
-            'Grove/Biometric/Sensor_biomedicine',
-            'Grove/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
-            'Grove/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
-            // 'Grove/Biometric/Grove-EMG_Detector',
-            'Grove/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
-            'Grove/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
-            'Grove/Biometric/Grove-Capacitive-Fingerprint-Sensor',
-            'Grove/Biometric/Grove-Fingerprint_Sensor',
-            'Grove/Biometric/Grove-GSR_Sensor',
-
+            'Sensor/Grove/Grove_Sensors/Biometric/Sensor_biomedicine',
+            'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
+            'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
+            // 'Sensor/Grove/Grove_Sensors/Biometric/Grove-EMG_Detector',
+            'Sensor/Grove/Grove_Sensors/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
+            'Sensor/Grove/Grove_Sensors/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
+            'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
+            'Sensor/Grove/Grove_Sensors/Biometric/Grove-Fingerprint_Sensor',
+            'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
           ],
         },
+
+      ]
+},
+
         {
           type: 'category',
-          label: 'Time',
+          label: 'Grove Sensor Network',
           items: [
-            'Grove/Time/Grove-RTC',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Current',
-          items: [
-            'Grove/Current/Grove-10A_DC_Current_Sensor-ACS725',
-            'Grove/Current/Grove-5A_DC_AC_Current_Sensor-ACS70331',
-            'Grove/Current/Grove-2.5A-DC-Current-Sensor-ACS70331',
-            'Grove/Current/Grove-Electricity_Sensor',
-            'Grove/Current/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941',
-            'Grove/Current/Grove-MOSFET',
-            'Grove/Current/Grove-SPDT_Relay_30A',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Switch&Button',
-          items: [
-            'Grove/Switch&Button/Grove-6-Position_DIP_Switch',
-            'Grove/Switch&Button/Grove-Button',
-
-          ],
-        },
-      ],
-
-    },
-
-    {
-      type: 'category',
-      label: 'Wio Terminal',
-      items: [
-        'Wio_Terminal/Wio_Terminal_Getting_Started',
-      ],
-
-    },
-
-    {
-
-      type: 'category',
-      label: 'Seeed Studio XIAO',
-      items: [
-        'SeeedStudio_XIAO/SeeedStudio_XIAO_Getting_Started',
-      ],
-
-    },
-
-    {
-      type: 'category',
-      label: 'micro:bit',
-      items: [
-        // 'micro_bit/micro_bit_Getting_Started',
-          'micro_bit/microbit_wiki_page',
-          'micro_bit/Grove_Inventor_Kit_for_microbit',
-
-      ],
-
-    },
-
-    {
-      type: 'category',
-      label: 'LoRa®',
-      items: [
-        'LoRaWAN/LoRaWAN_Getting_Started',
-      ],
-
-    },
-
-    {
-      type: 'category',
-      label: 'Shield',
-      items: [
-        'shield/shield_Getting_Started',
-      ],
-
-    },
-
-    {
-      type: 'category',
-      label: 'BeagleBone®',
-      items: [
-        'Beagle_Bone/BeagleBone',
-        'Beagle_Bone/BeagleBone_Solutions',
-        'Beagle_Bone/BeagleBone_Blue',
-        'Beagle_Bone/Beaglebone_Case',
-        'Beagle_Bone/BeagleBone_Green',
-        'Beagle_Bone/BeagleBone_Green_HDMI_Cape',
-        'Beagle_Bone/BeagleBone_Green_Wireless',
-        'Beagle_Bone/BeagleBone-Green-Gateway',
-        // 'Beagle_Bone/Grove_Base_Cape_for_BeagleBone_v2',
-        'Beagle_Bone/Grove_Cape_for_BeagleBone_Series',
-        // 'Beagle_Bone/Grove_Starter_Kit_for_BeagleBone_Green',
-        'Beagle_Bone/Motor_Bridge_Cape_v1.0',
-        'Beagle_Bone/Skeleton_box_for_Beaglebone',
-        'Beagle_Bone/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-125KHz_RFID_Reader',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-315MHz_RF_Kit',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-433MHz_Simple_RF_Link_Kit',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE-dual_model-v1.0',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Bee_Socket',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-DMX512',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-GPS',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-GPS-Air530',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_High_Precision_RTC',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_ADC', 
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_FM_Receiver',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_FM_Receiver_v1.1',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_Radio',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_NFC',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_NFC_Tag',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Protoshield',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-RJ45_Adapter',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Screw_Terminal',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Serial_Bluetooth_v3.0',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Serial_RF_Pro',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi_V2',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE_v1',
+            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_E5_New_Version',
 
 
-      ],
 
-    },
 
-    {
-
-      type: 'category',
-      label: 'Raspberry Pi',
-      items: [
-        'Raspberry_Pi/Raspberry_Pi',
-        {
-          type: 'category',
-          label: 'Device',
-          items: [
-            'Raspberry_Pi/Device/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
-            'Raspberry_Pi/Device/Raspberry-OpenWrt-Getting-Started',
           ]
         },
-        {
-          type: 'category',
-          label: 'Pi_HAT',
-          items: [
-            'Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi',
-            'Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi_Zero',
-            'Raspberry_Pi/Pi_HAT/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130',
-            'Raspberry_Pi/Pi_HAT/Grove_Base_HAT',
-            'Raspberry_Pi/Pi_HAT/GrovePi_Plus',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-            //   'Raspberry_Pi/Pi_HAT/',
-          ]
-        },
-      ],
-
-    },
-
-    {
-
-      type: 'category',
-      label: 'reTerminal',
-      items: [
-        'reTerminal/reTerminal_Getting_Started',
-      ],
-
-    },
-
-    {
-      type: 'category',
-      label: 'reSpeaker',
-      items: [
-        'reSpeaker/reSpeaker_Getting_Started',
-      ],
-
-    },
-
-    {
-      type: 'category',
-      label: 'ODYSSEY',
-      items: [
 
         {
           type: 'category',
-          label: 'ODYSSEY_X86J4105',
+          label: 'Grove Accessories',
           items: [
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-OS',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Updating-Firmware',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
 
             {
               type: 'category',
-              label: 'Home Assistant',
+              label: 'Input Output',
               items: [
-                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/ODYSSEY-X86-Home-Assistant',
-                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Home-Assistant-Customize',
-                'ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Connect-Grove-to-Home-Assistant-ESPHome',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-AND',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-OR',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-DC_Jack_Power',  
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Qwiic-Hub',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NunChuck',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
               ]
             },
-
-            'ODYSSEY/ODYSSEY_X86J4105/Jellyfin-on-Docker-Ubuntu-X86',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-openwrt',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-OPNsense',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-pfSense',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-TrueNAS',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-Android',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-AzureIOT',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-FreeNAS',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Intel-OpenVINO',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-NCS2',
-            'ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
-            'ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
 
             {
               type: 'category',
-              label: 'Projects',
+              label: 'Actuator',
               items: [
-                'ODYSSEY/ODYSSEY_X86J4105/Projects/ODYSSEY-X86J4105-Frigate',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-2-Coil_Latching_Relay',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Passive-Buzzer',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Chainable_RGB_LED',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Dry-Reed_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-EL_Driver',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Haptic_Motor',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver_V1.2',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver_V1.3',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C-Motor-Driver-L298P',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Infrared_Emitter',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-LED_Matrix_Driver_v1.0',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3_v2.0',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3-v3',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_Fan',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Recorder_v3.0',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay', 
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-4-Channel_SPDT_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-2-Channel_SPDT_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Solid_State_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Solid_State_Relay_V2',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-2-Channel_Solid_State_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-4-Channel_Solid_State_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-8-Channel_Solid_State_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Optocoupler_Relay-M281',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Serial_MP3_Player',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Servo',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Speaker',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Speaker-Plus',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Variable_Color_LED',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Vibration_Motor',
+                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
+        
               ]
             },
+
+            {
+              type: 'category',
+              label: 'Time',
+              items: [
+                'Sensor/Grove/Grove_Accessories/Time/Grove-RTC',
+              ],
+            },
+            
+            {
+              type: 'category',
+              label: 'Current',
+              items: [
+                'Sensor/Grove/Grove_Accessories/Current/Grove-10A_DC_Current_Sensor-ACS725',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-5A_DC_AC_Current_Sensor-ACS70331',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-2.5A-DC-Current-Sensor-ACS70331',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-Electricity_Sensor',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-MOSFET',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-SPDT_Relay_30A',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Switch&Button',
+              items: [
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-6-Position_DIP_Switch',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
+              ],
+            },
+
           ]
         },
 
-        'ODYSSEY/ODYSSEY_Getting_Started',
-        'ODYSSEY/SEEED-SOM-STM32MP157C',
-        'ODYSSEY/ODYSSEY-STM32MP157C',
+  ],
+},
+
+{
+
+  type: 'category',
+  label: 'mmWave radar sensor',
+  items: [
+'Sensor/mmWave_radar_sensor/wiki'
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'SeeedStudio XIAO',
+  items: [
+    {
+     type: 'category',
+    label: 'SeeedStudio XIAO nRF52840(Sense)',
+    items: [
+      {
+        type: 'category',
+       label: 'Application',
+       items: [
+      'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840/XIAOEI'
+       ],
+       },
+      ],
+    },
+    {
+      type: 'category',
+     label: 'SeeedStudio XIAO ESP32C3',
+     items: [
+       'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started'
+       ],
+     },
+  ],
+},
+
+{
+
+    type: 'category',
+    label: 'Wio Terminal',
+    items: [
+  'Sensor/Wio_Terminal/wiki'
+      ],
+  
+},
+
+{
+
+  type: 'category',
+  label: 'Wio Series',
+  items: [
+'Sensor/Wio_Series/wiki'
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'Seeeduino Series',
+  items: [
+'Sensor/Seeeduino_Series/wiki'
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'Arch',
+  items: [
+'Sensor/Arch/wiki'
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'Azure Sphere MT3620 Development Kit',
+  items: [
+'Sensor/Azure_Sphere_MT3620_Development_Kit/wiki'
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'IOT BUTTON FOR AWS',
+  items: [
+'Sensor/IOT_Button_For_AWS/wiki'
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'Pi Pico',
+  items: [
+'Sensor/Pi_Pico/wiki'
+    ],
+
+},
+
+{
+
+  type: 'doc',
+  label: '--Network--',
+  id: 'Sensor_Network',
+
+},
+
+{
+
+  type: 'category',
+  label: 'SenseCAP',
+  items: [
+    'Network/SenseCAP/wiki',
+    ],
+
+},
+
+// {
+// 有问题
+//   type: 'category',
+//   label: 'LinkStar',
+//   items: [
+//     'Network/LinkStar/Linkstar_Datasheet',
+//     'Network/LinkStar/linkstar-install-system',
+//     ],
+
+// },
+
+{
+
+  type: 'category',
+  label: 'reRouter',
+  items: [
+    'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+    'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
+    ],
+
+},
+
+{
+
+  type: 'doc',
+  label: '--Edge--',
+  id: 'Edge_Computing',
+
+},
+
+{
+
+  type: 'category',
+  label: 'reTerminal',
+  items: [
+    'Edge/reTerminal/reTerminal',
+    ],
+//这里有东西没搬
+},
+
+{
+
+  type: 'category',
+  label: 'reServer',
+  items: [
+    'Edge/reServer/reServer_Getting_Started',
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'reComputer',
+  items: [
+    'Edge/reComputer/wiki',
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'Edge Series',
+  items: [
+    'Edge/Edge_Series/wiki',
+    ],
+
+},
+
+{
+  type: 'category',
+  label: 'BeagleBone®',
+  items: [
+    'Edge/Beagle_Bone/BeagleBone',
+    'Edge/Beagle_Bone/BeagleBone_Solutions',
+    'Edge/Beagle_Bone/BeagleBone_Blue',
+    'Edge/Beagle_Bone/Beaglebone_Case',
+    'Edge/Beagle_Bone/BeagleBone_Green',
+    'Edge/Beagle_Bone/BeagleBone_Green_HDMI_Cape',
+    'Edge/Beagle_Bone/BeagleBone_Green_Wireless',
+    'Edge/Beagle_Bone/BeagleBone-Green-Gateway',
+    // 'Edge/Beagle_Bone/Grove_Base_Cape_for_BeagleBone_v2',
+    'Edge/Beagle_Bone/Grove_Cape_for_BeagleBone_Series',
+    // 'Edge/Beagle_Bone/Grove_Starter_Kit_for_BeagleBone_Green',
+    'Edge/Beagle_Bone/Motor_Bridge_Cape_v1.0',
+    'Edge/Beagle_Bone/Skeleton_box_for_Beaglebone',
+    'Edge/Beagle_Bone/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
+  ],
+},
+
+{
+  type: 'category',
+  label: 'ODYSSEY',
+  items: [
+    'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+
+    {
+      type: 'category',
+      label: 'ODYSSEY_X86J4105',
+      items: [
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-OS',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Updating-Firmware',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
+
+        {
+          type: 'category',
+          label: 'Home Assistant',
+          items: [
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/ODYSSEY-X86-Home-Assistant',
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Home-Assistant-Customize',
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Connect-Grove-to-Home-Assistant-ESPHome',
+          ]
+        },
+
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/Jellyfin-on-Docker-Ubuntu-X86',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-openwrt',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-OPNsense',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-pfSense',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-TrueNAS',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-Android',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-AzureIOT',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-FreeNAS',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Intel-OpenVINO',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-NCS2',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
+        'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
+
+        {
+          type: 'category',
+          label: 'Projects',
+          items: [
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/Projects/ODYSSEY-X86J4105-Frigate',
+          ]
+        },
+      ]
+    },
+
+    {
+      type: 'category',
+      label: 'ODYSSEY_STM32MP157C',
+      items: [
+    'Edge/ODYSSEY/ODYSSEY_STM32MP157C/SEEED-SOM-STM32MP157C',
+    'Edge/ODYSSEY/ODYSSEY_STM32MP157C/ODYSSEY-STM32MP157C',
+      ],
+    },
+  ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'Quantum Development Board',
+  items: [
+    'Edge/Quantum_Development_Board/wiki',
+    ],
+
+},
+
+{
+
+  type: 'doc',
+  label: '--Cloud and Chain--',
+  id: 'CloudnChain',
+
+},
+
+{
+
+  type: 'category',
+  label: 'SenseCAP Cloud',
+  items: [
+    'Cloud_Chain/SenseCAP_M4/wiki',
+    ],
+
+},
+
+{
+
+  type: 'html',
+  value: '-- Top Brand --',
+},
+
+{
+
+  type: 'category',
+  label: 'Arduino',
+  items: [
+    'Top_Brand/Arduino/shield/shield_Getting_Started',
+    ],
+
+},
+
+{
+
+  type: 'category',
+  label: 'Raspberry Pi',
+  items: [
+    {
+      type: 'category',
+      label: 'Pi_HAT',
+      items: [
+        'Top_Brand/Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi',
+        'Top_Brand/Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi_Zero',
+        'Top_Brand/Raspberry_Pi/Pi_HAT/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130',
+        'Top_Brand/Raspberry_Pi/Pi_HAT/Grove_Base_HAT',
+        'Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+        //   'Top_Brand/Raspberry_Pi/Pi_HAT/',
+      ]
+    },
+    ],
+
+},
+
+
+{
+
+  type: 'category',
+  label: 'NVIDIA',
+  items: [
+    // 'Top_Brand/NVIDIA/NVIDIA_Getting_Started',
+    'Top_Brand/NVIDIA/reComputer_Jetson_Series_Introduction',
+    'Top_Brand/NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
+    'Top_Brand/NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
+
+    {
+      type: 'category',
+      label: 'Getting Start & Projects',
+      items: [
+        'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/jetson-docker-getting-started',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/Jetson-AI-developer-tools',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/Security_Scan',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/HardHat',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/No-code-Edge-AI-Tool',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/YOLOv5-Object-Detection-Jetson',
+        'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Flash NVIDIA JetPack™ OS',
+      items: [
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1010_J101_Flash_Jetpack',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J2021_J202_Flash_Jetpack',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1020_A206_Flash_JetPack',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203_Flash_System',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203E_Flash_System',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205_Flash_System',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
+        'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
       ],
 
     },
 
     {
+
       type: 'category',
-      label: 'LinkStar-H68K',
+      label: 'NVIDIA Orin series',
       items: [
-        'LinkStar-H68K/Linkstar_Datasheet',
-        'LinkStar-H68K/linkstar-install-system',
+        'Top_Brand/NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
       ],
 
     },
@@ -535,81 +722,10 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'NVIDIA',
+      label: 'Usefull_Tools',
       items: [
-        // 'NVIDIA/NVIDIA_Getting_Started',
-        'NVIDIA/reComputer_Jetson_Series_Introduction',
-        'NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
-        'NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
-
-        {
-          type: 'category',
-          label: 'Getting Start & Projects',
-          items: [
-            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
-            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
-            'NVIDIA/Getting_Start_Projects/jetson-docker-getting-started',
-            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',
-            'NVIDIA/Getting_Start_Projects/Jetson-AI-developer-tools',
-            'NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
-            'NVIDIA/Getting_Start_Projects/Security_Scan',
-            'NVIDIA/Getting_Start_Projects/HardHat',
-            'NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
-            'NVIDIA/Getting_Start_Projects/No-code-Edge-AI-Tool',
-            'NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
-            'NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
-            'NVIDIA/Getting_Start_Projects/YOLOv5-Object-Detection-Jetson',
-            'NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Flash NVIDIA JetPack™ OS',
-          items: [
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1010_J101_Flash_Jetpack',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J2021_J202_Flash_Jetpack',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1020_A206_Flash_JetPack',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203_Flash_System',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203E_Flash_System',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205_Flash_System',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
-            'NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
-          ],
-
-        },
-
-        {
-
-          type: 'category',
-          label: 'NVIDIA Orin series',
-          items: [
-            'NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
-          ],
-
-        },
-
-        {
-
-          type: 'category',
-          label: 'Usefull_Tools',
-          items: [
-            'NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
-            'NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
-          ],
-
-        },
-
-        {
-
-          type: 'category',
-          label: 'Drivers',
-          items: [
-            'NVIDIA/Drivers/J101_Enable_SD_Card',
-          ],
-
-        },
-
+        'Top_Brand/NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
+        'Top_Brand/NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
       ],
 
     },
@@ -617,134 +733,34 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'reServer',
+      label: 'Drivers',
       items: [
-        'reServer/reServer_Getting_Started',
+        'Top_Brand/NVIDIA/Drivers/J101_Enable_SD_Card',
       ],
 
     },
-
-    {
-      type: 'category',
-      label: 'Others',
-      items: [
-        'Others/Others_Product',
-      ],
-
-    },
-
-    //  'About',
-    //  'License',
 
   ],
 
-  SenseCAPSidebar:
+},
 
+{
 
-
-    [
-      'SenseCAP/SenseCAP_Introdution',
-
-      {
-
-        type: 'category',
-        label: 'SenseCAP',
-        items: [
-          'SenseCAP/SenseCAP_Getting_Started',
-        ],
-
-
-      },
-
-      {
-
-        type: 'category',
-        label: 'SenseCAP Probe Accessories',
-        items: [
-          'SenseCAP_Probe_Accessories/Liquid_level_sensor',
-        ],
-
-
-      },
-
-      {
-
-        type: 'category',
-        label: 'SenseCAP the Sensor Prototype Kit',
-        items: [
-          'SenseCAP_The_Sensor_Prototype_Kit/Contents',
-        ],
-
-
-      },
-
+  type: 'category',
+  label: 'Micro:bit',
+  items: [
+    'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
+    'Top_Brand/Micro_bit/microbit_wiki_page',
     ],
 
-  MakerSidebar:
+},
 
-    [
-      'Maker/Maker_Introduction',
-      {
+      'About',
+      'License',
 
-        type: 'category',
-        label: 'Maker',
-        items: [
-          'Maker/Maker_Getting_Started',
-        ],
-
-      },
-
-      {
-
-        type: 'category',
-        label: 'Tutorials',
-        items: [
-          'Maker/Tutorials/Tutorials_Introduction',
-        ],
-
-      },
-
-      {
-
-        type: 'category',
-        label: 'Software',
-        items: [
-          'Maker/Software/Software_Introduction',
-        ],
-
-      },
-
-      {
-        type: 'category',
-        label: 'Arduino',
-        items: [
-          'Maker/Arduino/Arduino_Introduction',
-        ],
-
-      },
-
-      {
-        type: 'category',
-        label: 'Raspberry Pi',
-        items: [
-          'Maker/Raspberry_Pi/Raspberry_Pi_Introduction',
-        ],
-
-      },
-
-
-      {
-        type: 'category',
-        label: 'NVIDIA Jetson',
-        items: [
-          'Maker/NVIDIA/NVIDIA_Introduction',
-        ],
-
-      },
-
-
-    ],
+  ],
 
 };
+
 
 module.exports = sidebars;
