@@ -387,7 +387,7 @@ const sidebars = {
       type: 'category',
       label: 'Arch',
       items: [
-        'Sensor/Arch/wiki'
+        'Sensor/Arch/Arch_Mix',
       ],
 
     },
