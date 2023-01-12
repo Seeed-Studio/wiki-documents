@@ -176,7 +176,8 @@ const config = {
         // title: 'My Site',
         logo: {
           alt: 'Seeed Studio',
-          src: 'https://statics3.seeedstudio.com/assets/img/common/logo_2018_horizontal.png',
+          src: 'https://files.seeedstudio.com/wiki/wiki-platform/S.png',
+          className: 'navbar_logo_items'
         },
         items: [
           {
@@ -188,28 +189,28 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'Wiki-Platform-Overview/Sensor-Network',
+            docId: 'Sensor_Network',
             position: 'left',
             label: 'Sensor Network',
             className:'navbar_doc_items'
           },
           {
             type: 'doc',
-            docId: 'Wiki-Platform-Overview/Edge-Computing',
+            docId: 'Edge_Computing',
             position: 'left',
             label: 'Edge Computing',
             className:'navbar_doc_items'
           },
           {
             type: 'doc',
-            docId: 'Wiki-Platform-Overview/CloudnChain',
+            docId: 'CloudnChain',
             position: 'left',
             label: 'Cloud & Chain',
             className:'navbar_doc_items'
           },
           {
             type: 'doc',
-            docId: 'Wiki-Platform-Overview/Solutions',
+            docId: 'Solutions',
             position: 'left',
             label: 'Solutions',
             className:'navbar_doc_items'
@@ -218,27 +219,30 @@ const config = {
             href: 'https://github.com/c1ev0ps/docusaurus_wiki',
             label: 'GitHub',
             position: 'right',
+            className:'navbar_doc_items'
           },
           {
             type: 'localeDropdown',
             position: 'right',
+            className:'navbar_doc_items'
           },
           {
             type: 'dropdown',
-            label: 'IOTA',
+            label: 'Page',
             position: 'right',
             items: [
               {
-                label: 'Edge Solutions',
-                to: './',
-                target: '_blank',
-              },
-              {
-                label: 'Build Your Own',
+                label: 'SenseCAP',
                 to: '/indexIAG',
                 target: '_blank',
               },
+              {
+                label: 'Initial',
+                to: './',
+                target: '_blank',
+              },
             ],
+            className:'navbar_doc_items'
           },
         ],
       },
