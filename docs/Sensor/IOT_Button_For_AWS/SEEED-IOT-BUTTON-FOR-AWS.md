@@ -2,7 +2,7 @@
 description: SEEED IOT BUTTON FOR AWS
 title: SEEED IOT BUTTON FOR AWS
 keywords:
-- Azure_Sphere_MT3620_Development_Kit
+- IOT_Button_For_AWS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/13/2022
