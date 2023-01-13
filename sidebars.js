@@ -397,7 +397,11 @@ const sidebars = {
       type: 'category',
       label: 'Azure Sphere MT3620 Development Kit',
       items: [
-        'Sensor/Azure_Sphere_MT3620_Development_Kit/wiki'
+        'Sensor/Azure_Sphere_MT3620_Development_Kit/Azure_Sphere_MT3620_Development_Kit',
+        'Sensor/Azure_Sphere_MT3620_Development_Kit/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit',
+        'Sensor/Azure_Sphere_MT3620_Development_Kit/MT3620_Ethernet_Shield_v1.0',
+        'Sensor/Azure_Sphere_MT3620_Development_Kit/MT3620_Mini_Dev_Board',
+        'Sensor/Azure_Sphere_MT3620_Development_Kit/MT3620_Grove_Breakout',
       ],
 
     },
