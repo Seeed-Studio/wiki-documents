@@ -492,6 +492,37 @@ const sidebars = {
       ],
 
     },
+    {
+
+      type: 'category',
+      label: 'Software',
+      items: [
+        {
+
+          type: 'category',
+          label: 'OpenWrt',
+          items: [
+            'Software/OpenWrt/OpenWrt-Getting-Started',
+            'Software/OpenWrt/OpenWrt-Plex-Media-Server-on-Docker',
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Mender',
+          items: [
+            'Software/Mender/Mender-Client-ODYSSEY-X86',
+            'Software/Mender/Mender-Server-ODYSSEY-X86',
+            'Software/Mender/Mender-Client-reTerminal',
+            'Software/Mender/Mender-Client-dual-GbE-CM4',
+          ],
+
+        },
+      ],
+
+    },
+
 
     // {
 
