@@ -519,6 +519,16 @@ const sidebars = {
           ],
 
         },
+        {
+
+          type: 'category',
+          label: 'Allxon',
+          items: [
+            'Software/Allxon/Allxon-Jetson-Getting-Started',
+            'Software/Allxon/Update-Jetson-Linux-OTA-Using-Allxon',
+          ],
+
+        },
       ],
 
     },
