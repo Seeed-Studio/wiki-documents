@@ -529,6 +529,15 @@ const sidebars = {
           ],
 
         },
+        {
+
+          type: 'category',
+          label: 'balenaOS',
+          items: [
+            'Software/balenaOS/BalenaOS-X86-Getting-Started',
+          ],
+
+        },
       ],
 
     },
