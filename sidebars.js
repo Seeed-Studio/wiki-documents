@@ -25,12 +25,30 @@ const sidebars = {
     'Getting_Started',
     'weekly_wiki',
 
+    // {
+
+    //   type: 'doc',
+    //   label: '--Sensor--',
+    //   id: 'Sensor_Network',
+
+    // },
+
     {
-
-      type: 'doc',
-      label: '--Sensor--',
-      id: 'Sensor_Network',
-
+      type: 'html',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Sensor </strong></div>
+    </div>
+    `,
     },
 
     {
@@ -475,12 +493,30 @@ const sidebars = {
 
     },
 
+    // {
+
+    //   type: 'doc',
+    //   label: '--Network--',
+    //   id: 'Sensor_Network',
+
+    // },
+
     {
-
-      type: 'doc',
-      label: '--Network--',
-      id: 'Sensor_Network',
-
+      type: 'html',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Network </strong></div>
+    </div>
+    `,
     },
 
     {
@@ -515,12 +551,30 @@ const sidebars = {
 
     },
 
+    // {
+
+    //   type: 'doc',
+    //   label: '--Edge--',
+    //   id: 'Edge_Computing',
+
+    // },
+
     {
-
-      type: 'doc',
-      label: '--Edge--',
-      id: 'Edge_Computing',
-
+      type: 'html',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Edge </strong></div>
+    </div>
+    `,
     },
 
     {
@@ -655,12 +709,30 @@ const sidebars = {
 
     },
 
+    // {
+
+    //   type: 'doc',
+    //   label: '--Cloud and Chain--',
+    //   id: 'CloudnChain',
+
+    // },
+
     {
-
-      type: 'doc',
-      label: '--Cloud and Chain--',
-      id: 'CloudnChain',
-
+      type: 'html',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Cloud and Chain </strong></div>
+    </div>
+    `,
     },
 
     {
@@ -674,9 +746,21 @@ const sidebars = {
     },
 
     {
-
       type: 'html',
-      value: '-- Top Brand --',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Top Brand </strong></div>
+    </div>
+    `,
     },
 
     {
