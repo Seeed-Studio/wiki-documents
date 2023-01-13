@@ -19,55 +19,36 @@ You can constantly receive updated data from sensors and <strong><font color={'8
 
 We here also present you our current accomplishments and <strong><font color={'8DC215'} size={"4"}>solutions</font></strong> and we are looking for your contributions.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started7.png" alt="pir" width={600} height="auto" /></p>
+
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">What does Wiki Platform Cover?</font>
 
-The wiki contents have been divided into four topics as shown on the top navigation. Each topic contains two large portions, facing two different situations. You will find documentation about concentrated, computational equipment for advanced applications, and industrial IoT scenarios, meanwhile, we offer documents about open development tools to help you build your own.
+The wiki contents have been divided into **four topics** as shown on the top navigation. Each topic contains **two large portions**, facing two different situations. You will find documentation about concentrated, computational equipment for **practical purpose**, and industrial IoT scenarios, meanwhile, we offer documents about open development tools to help you **build your own**.
 
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Industrial IoT Platform</font>
+### <font color="{'D29291'}" size="{&quot;5&quot;}">IoT Platform & Sensor Foundation</font>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started1.png" alt="pir" width={600} height="auto" /></p>
 
-SenseCAP production launches a complete industrial IoT system, and you will be able to find **high-isolated SenseCAP Node Series** for sensing and their attached **SenseCAP Gateway** in the "Sensor Network" topic.
-
-You can utilize **SenseCAP Cloud, Chain and Cloud AI training** to manage your data information that these products are all collected in the "Cloud & Chain" topic.
-
-You can also find our current accomplishments and **industry solutions** in the "Solutions" topic.
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices</font>
 
-
-1. You will be able to find sensor-connection-required **microcontrollers** like the XIAO series introduced in the "Sensor Network" topic.
-
-2. Divided through different computing power, **SBC(Single Board Computer) development boards** like ODYSSEY Series and **integrated devices** like reComputer Series have been placed in the "Edge Computing" topic.
-
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices Attached</font>
-
-- Each development board or device under each topic has a corresponding set of **functional electricals**, including their attached **extension boards**, and **accessories**.
-
-1. You can find extension boards, **Grove** sensors, Grove communication, Grove accessories and other functional electricals for attaching microcontrollers like **Arduino** in the "Sensor Network" topic.
-
-2. You can find extension boards, accessories for attaching development boards or devices like **Raspberry Pi** in the "Edge Computing" topic.
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started2.png" alt="pir" width={600} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Application with Software</font>
 
-- Each development board or device under each topic has a corresponding set of applications. 
-
-1. For example, you can **build your own easy IoT scenarios** or **embedded TinyML applications** with microcontrollers in the "Sensor Network" topic.
-
-2. You can also utilize computational equipment with different computing power, **install OS**, **deploying different software** to realize different scene assumptions in the "Edge Computing" topic.
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started3.png" alt="pir" width={600} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Kit with Courses</font>
 
-
-- The kits launched by Seeed Studio are always coming with **free courses** and you can find them in the "Sensor Network" and the "Edge Computing" topic.
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started4.png" alt="pir" width={300} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Tutorials</font>
 
-
-- Each development board or device has a corresponding set of **other intriguing usages** and you can find them under each topic.
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started5.png" alt="pir" width={300} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Seeed Studio Elderly</font>
 
-- The Seeed Studio products possess the **aging ones** and you can find them under each topic.
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started6.png" alt="pir" width={300} height="auto" /></p>
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">Seeed Studio Contributor</font>
 
