@@ -32,23 +32,23 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices</font>
 
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started2.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started2.png" alt="pir" width={600} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Application with Software</font>
 
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started3.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started3.png" alt="pir" width={600} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Kit with Courses</font>
 
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started4.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started4.png" alt="pir" width={300} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Tutorials</font>
 
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started5.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started5.png" alt="pir" width={300} height="auto" /></p>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Seeed Studio Elderly</font>
 
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started6.png" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started6.png" alt="pir" width={300} height="auto" /></p>
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">Seeed Studio Contributor</font>
 
