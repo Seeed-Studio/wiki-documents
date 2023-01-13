@@ -17,15 +17,13 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 
 ## Build Your Own(Easy IoT)
 
-- Without complicated instruments, we can sense and monitor the physical world just using microcontrollers and simple functional elecrtricals.
+<strong><font color={'8DC215'} size={"4"}>Without complicated instruments, we can sense and monitor the physical world just using microcontrollers and simple functional elecrtricals. That is, in this portion you can find:</font></strong>
 
-1. This portion contains the product documentation about Grove sensors and other functional electricals, along with microtrollers and attached extension board, accessories, etc.
-
-2. You can follow the application wiki to implement IoT(Internet of Things) in accessible scenes or acknowledge the embedded Machine Learning methods.
-
-3. There are free courses kits launched by Seeed Studio. And there are more intriguing tutorials  awating you to discover.
-
-4. You can always contact Seeed Studio Fusion service.
+- Grove sensors and other functional electricals
+- Microtrollers and attached extension board, accessories, etc
+- Application for IoT or embedded ML methods acknowledge
+- Kit with free courses and more intriguing tutorials
+- Fusion service
 
 ### Sensors
 
