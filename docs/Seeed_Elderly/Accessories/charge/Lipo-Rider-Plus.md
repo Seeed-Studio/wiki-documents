@@ -12,7 +12,7 @@ last_update:
 
 <div align="center">
 <figure>
-<img src="https://static-cdn.seeedstudio.site/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/l/i/lipo-rider-plus-v1.0-preview.jpg" alt="Lipo Rider Plus'' OUTCOME" title="demo" />
+<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/l/i/lipo-rider-plus-v1.0-preview.jpg" alt="Lipo Rider Plus'' OUTCOME" title="demo" />
 <figcaption><b></b><i></i></figcaption>
 </figure>
 </div>

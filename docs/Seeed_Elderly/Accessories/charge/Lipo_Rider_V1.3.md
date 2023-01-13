@@ -40,12 +40,12 @@ Application Ideas
 - Green Power and backup supply for distributed outdoor sensor network
 - Charger for Lithium batteries
 
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<ol><li>Live exposed electronic components.</li>
-<li>The board may get hot when supplying large loads.</li>
-<li>Potential short circuit or electric shock, especially if device gets wet when placed outdoors for solar power collection.</li></ol>
-</div>
+:::caution
+
+1. Live exposed electronic components.
+2. The board may get hot when supplying large loads.
+3. Potential short circuit or electric shock, especially if device gets wet when placed outdoors for solar power collection.
+:::
 
 Hardware Overview
 -----------------
