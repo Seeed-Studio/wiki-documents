@@ -458,7 +458,8 @@ const sidebars = {
       type: 'category',
       label: 'IOT BUTTON FOR AWS',
       items: [
-        'Sensor/IOT_Button_For_AWS/wiki'
+        // 'Sensor/IOT_Button_For_AWS/wiki',
+        'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
       ],
 
     },
