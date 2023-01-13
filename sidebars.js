@@ -469,7 +469,8 @@ const sidebars = {
       type: 'category',
       label: 'Pi Pico',
       items: [
-        'Sensor/Pi_Pico/wiki'
+        // 'Sensor/Pi_Pico/wiki',
+        'Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico',
       ],
 
     },
@@ -740,13 +741,7 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
           ]
         },
-        {
-          type: 'category',
-          label: 'Pico Shield',
-          items: [
-            'Top_Brand/Raspberry_Pi/Pico_Shield/Grove-Starter-Kit-for-Raspberry-Pi-Pico',
-          ]
-        },
+
 
       ],
 
