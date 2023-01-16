@@ -538,6 +538,15 @@ const sidebars = {
           ],
 
         },
+        {
+
+          type: 'category',
+          label: 'alwaysAI',
+          items: [
+            'Software/alwaysAI/alwaysAI-Jetson-Getting-Started',
+          ],
+
+        },
       ],
 
     },
