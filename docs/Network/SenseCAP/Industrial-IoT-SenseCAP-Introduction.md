@@ -1,18 +1,15 @@
 ---
-description: The introdcution for SenseCAP
-title: Introduction
-
+description: SenseCAP Introduction
+title: SenseCAP Introduction
 keywords:
-  - docs
-image: https://avatars.githubusercontent.com/u/10758833
+- SenseCAP
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 12/20/2022
-  author: Matthew
-
-no_comments: false # for Disqus
-
+  date: 1/16/2022
+  author: jianjing Huang
 ---
 
+# Industrial IoT SenseCAP Introduction
 
 As [Seeed Industrial IoT product](https://solution.seeedstudio.com/) category now includes many new products catering to different IoT scenarios, we've noticed some customers don't know which products to choose for meeting their needs in particular IoT applications.
 
