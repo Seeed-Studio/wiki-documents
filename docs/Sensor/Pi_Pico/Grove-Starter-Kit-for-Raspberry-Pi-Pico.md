@@ -2,7 +2,7 @@
 description: Grove Shield for Pi Pico v1.0
 title: Grove Shield for Pi Pico v1.0
 keywords:
-- Accessories
+- Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/11/2022

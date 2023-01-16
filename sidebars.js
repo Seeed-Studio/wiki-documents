@@ -492,6 +492,65 @@ const sidebars = {
       ],
 
     },
+    {
+
+      type: 'category',
+      label: 'Software',
+      items: [
+        {
+
+          type: 'category',
+          label: 'OpenWrt',
+          items: [
+            'Software/OpenWrt/OpenWrt-Getting-Started',
+            'Software/OpenWrt/OpenWrt-Plex-Media-Server-on-Docker',
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Mender',
+          items: [
+            'Software/Mender/Mender-Client-ODYSSEY-X86',
+            'Software/Mender/Mender-Server-ODYSSEY-X86',
+            'Software/Mender/Mender-Client-reTerminal',
+            'Software/Mender/Mender-Client-dual-GbE-CM4',
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Allxon',
+          items: [
+            'Software/Allxon/Allxon-Jetson-Getting-Started',
+            'Software/Allxon/Update-Jetson-Linux-OTA-Using-Allxon',
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'balenaOS',
+          items: [
+            'Software/balenaOS/BalenaOS-X86-Getting-Started',
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'alwaysAI',
+          items: [
+            'Software/alwaysAI/alwaysAI-Jetson-Getting-Started',
+          ],
+
+        },
+      ],
+
+    },
+
 
     // {
 
@@ -927,6 +986,63 @@ const sidebars = {
 
     'About',
     'License',
+
+    // {
+
+    //   type: 'category',
+    //   label: 'Seeed_Elderly',
+    //   items: [
+
+    //     {
+
+    //       type: 'category',
+    //       label: 'Accessories',
+    //       items: [
+    //         'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
+    //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
+    //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
+    //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
+    //         'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
+    //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
+    //         'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
+
+    //       ],
+
+    //     },
+
+    //     {
+    //       type: 'category',
+    //       label: 'reSpeaker',
+    //       items: [
+    //         //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Solutions',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
+    //         {
+    //           type: 'category',
+    //           label: 'ReSpeaker 2-Mics Pi HAT',
+    //           items: [
+    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
+    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
+    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
+    //           ]
+    //         },
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Drive_Unit',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Mic_Array',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Mic_Array_v2.0',
+    //         'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+
+    //       ],
+
+    //     },
+    //   ],
+
+    // },
 
   ],
 
