@@ -378,7 +378,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/TinyML-Edge Impulse/XIAO-RP2040-EI',
               ]
             },
-          ], 
+          ],
         },
         {
           type: 'category',
@@ -406,13 +406,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-TensorFLow_Lite/XIAO-BLE-Sense-TFLite-Mic',
               ]
             },
-    
+
             {
               type: 'category',
               label: 'TinyML for Edge Impulse',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-Edge_Impulse/XIAOEI',
-               
+
               ]
             },
           ]
@@ -440,11 +440,11 @@ const sidebars = {
           label: 'SeeedStudio XIAO Kit',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Kit/XIAO-Kit-Courses',
-           
+
           ]
         },
       ],
-    
+
     },
 
     {
@@ -462,6 +462,18 @@ const sidebars = {
             'Sensor/Wio_Terminal/Bluetooth/Wio-terminal-BLE-introduction',
             'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Web-Bluetooth',
             'Sensor/Wio_Terminal/Bluetooth/BLE-ibeacon-using-Wio-terminal',
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Audio',
+          items: [
+            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Overview',
+            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Play-Record',
+            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-GUI',
 
           ],
 
