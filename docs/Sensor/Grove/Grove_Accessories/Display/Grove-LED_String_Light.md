@@ -53,7 +53,7 @@ Follow these steps to build a sample circuit using this module:
 
 <!-- 链接有问题*   If using with a light sensor connected directly to the input side of the circuit, you should see the LED light up in bright light. If you want the lights to light up in the dark, add a [Grove - NOT](/Grove-NOT "Grove - NOT") module between the light sensor and the power module. -->
 
-*   If using with a sound sensor, you should see the LEDs light up on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the lights should be ON at all times except when there is a sound, add a [Grove - NOT](/Grove-NOT "Grove - NOT") module between the sound sensor and the power module.
+<!-- 链接有问题*   If using with a sound sensor, you should see the LEDs light up on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the lights should be ON at all times except when there is a sound, add a [Grove - NOT](/Grove-NOT "Grove - NOT") module between the sound sensor and the power module. -->
 
 <!-- 链接有问题*   If using with a momentary switch like the one on the [Grove - Button](/Grove-Button/) module, simply press the button to light up the string lights. -->
 
