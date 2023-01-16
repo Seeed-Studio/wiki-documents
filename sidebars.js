@@ -375,7 +375,20 @@ const sidebars = {
       type: 'category',
       label: 'Wio Terminal',
       items: [
-        'Sensor/Wio_Terminal/wiki'
+        // 'Sensor/Wio_Terminal/wiki',
+        {
+
+          type: 'category',
+          label: 'Bluetooth',
+          items: [
+            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Bluetooth-Overview',
+            'Sensor/Wio_Terminal/Bluetooth/Wio-terminal-BLE-introduction',
+            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Web-Bluetooth',
+            'Sensor/Wio_Terminal/Bluetooth/BLE-ibeacon-using-Wio-terminal',
+
+          ],
+
+        },
       ],
 
     },
