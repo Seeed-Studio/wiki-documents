@@ -595,7 +595,30 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP',
       items: [
-        'Network/SenseCAP/wiki',
+        // 'Network/SenseCAP/wiki',
+        'Network/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
+        'Network/SenseCAP/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
+        'Network/SenseCAP/SenseCAP-Sensor-Hub-Data-Logger',
+        'Network/SenseCAP/SenseCAP-One-Series-Meteorological-Sensors',
+        'Network/SenseCAP/Train-Deploy-AI-Model-A1101',
+        'Network/SenseCAP/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+        {
+
+          type: 'category',
+          label: 'Sensor Probe & Accessories',
+          items: [
+            'Network/SenseCAP/Sensor_Probe&Accessories/Liquid-Level-Sensor',
+            'Network/SenseCAP/Sensor_Probe&Accessories/Water-Leak-Detector',
+            'Network/SenseCAP/Sensor_Probe&Accessories/Industrial-ph-Sensor',
+            'Network/SenseCAP/Sensor_Probe&Accessories/Soil-Moisture-Temperature-EC-Sensor',
+            'Network/SenseCAP/Sensor_Probe&Accessories/Soil-Moisture-Temperature-Sensor',
+            'Network/SenseCAP/Sensor_Probe&Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
+            'Network/SenseCAP/Sensor_Probe&Accessories/Optical-Rain-Gauge-RG-9',
+            'Network/SenseCAP/Sensor_Probe&Accessories/SenseCAP-SOLO-CO2-Sensor',
+            'Network/SenseCAP/Sensor_Probe&Accessories/ORCH-S4-Weather-Station',
+          ],
+
+        },
       ],
 
     },
