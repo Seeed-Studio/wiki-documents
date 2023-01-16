@@ -17,8 +17,8 @@ last_update:
 Seeed Studio Grove Base for XIAO is a plug-and-play Grove extension board for **[Seeed Studio XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO/)**. With the on-board battery management chip and battery bonding pad, you could easily power your Seeed Studio XIAO with lithium battery and recharge it. 8 Grove connectors onboard includes two Grove I2C and one UART. It acts as a bridge for Seeed Studio XIAO and Seeed's Grove system. Flash SPI bonding pad allows you add Flash to Seeed Studio XIAO to expand its memory space, providing Seeed Studio XIAO with more possibilities.
 
 With the on-board battery management chip and battery bonding pad, you could easily power your Seeed Studio XIAO with lithium 3.7V battery and recharge it, making your projects, especially wearables ones, more flexible and in portable. You could even break the board through the onboard PCB stamp holds according to your actual needs of the project (only 25*39mm in dimension after break-off), making it smaller than smaller and the weight would be reduced from 13g to 10g as well!
-
-<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/01.png" border={0} /></a></p>
+<!-- 图有问题 
+<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/01.png" border={0} /></a></p> -->
 
 
 As an extension board, the Seeed Studio Grove Base for XIAO also pulls all 14 pinout from Seeed Studio XIAO, and its on-board power switch and charging status indicator light makes it more user-friendly. The Shield even reserves the SPI-Flash bonding pad for an advanced developer who may need to add Flash to Seeed Studio XIAO to expand its memory space, providing Seeed Studio XIAO with more possibilities.
@@ -73,17 +73,17 @@ As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Gro
 
 ### Hardware Overview
 
-<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/hardware-overview.png" border={0} /></a></p>
+<!-- <p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/hardware-overview.png" border={0} /></a></p> 图有问题-->
 
 
 If you need use the back of the Seeed Studio XIAO Grove Shield provisions pads for a Flash memory in SOIC8 package, please soldering the PIN1.
 
-<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO.png" border={0} /></a></p>
+<!-- 图有问题<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO.png" border={0} /></a></p> -->
 
 
 #### External headers-pin description for Grove-Shield for Seeed Studio XIAO
 
-<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO (xin).png.jpg" border={0} /></a></p>
+<!-- 图有问题<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO (xin).png.jpg" border={0} /></a></p> -->
 
 
 #### External headers-pin description for Grove-Doppler Radar
