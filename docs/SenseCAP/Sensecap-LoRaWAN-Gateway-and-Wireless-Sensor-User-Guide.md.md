@@ -1,13 +1,9 @@
 ---
-description: Create a doc page with rich content.
-title: A doc with tags
-tags:
-  - Demo
-  - Getting started
+description: Sensecap LoRaWAN User Guide
+title: Sensecap LoRaWAN User Guide
 keywords:
-  - docs
-  - docusaurus
-image: https://avatars.githubusercontent.com/u/10758833
+  - SenseCAP
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 11/21/2022
   author: w0x7ce
@@ -28,7 +24,7 @@ So that your users will know what this page is all about without scrolling down 
 
 :::
 
-## Only h2 and h3 will be in the TOC by default.
+## Only h2 and h3 will be in the TOC by default
 
 :::note
 You can configure the TOC heading levels either per-document or in the theme configuration.
@@ -96,6 +92,7 @@ Eg. In **reTerminal.md** need to link to **#q13-how-to-check-if-the-encryption-c
 ```markdown
 [More Info](Edge/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
 ```
+
 [More Info](Edge/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
 
 ### code
