@@ -547,6 +547,18 @@ const sidebars = {
           ],
 
         },
+        'Software/Software-PlatformIO',
+        'Software/ODYSSEY-X86J4105-Firmata',
+        'Software/Software-FreeRTOS',
+        'Software/Software-SWD',
+        'Software/Arduino_Software_I2C_user_guide',
+        'Software/Software-Serial',
+        'Software/Software-SPI',
+        'Software/Software-Static-Library',
+        'Software/Arduino-AWS-IOT-Bridge',
+        'Software/Arduino-DAPLink',
+        'Software/Flashing-Arduino-Bootloader-DAPLink',
+        'Software/Compiling_MicroPython_for_embedded_devices',
       ],
 
     },
