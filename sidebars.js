@@ -342,32 +342,109 @@ const sidebars = {
 
     },
 
-    {
 
+
+    {
       type: 'category',
       label: 'SeeedStudio XIAO',
       items: [
         {
           type: 'category',
-          label: 'SeeedStudio XIAO nRF52840(Sense)',
+          label: 'SeeedStudio XIAO SAMD21',
           items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyML',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-DAPLink',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO RP2040',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
             {
               type: 'category',
-              label: 'Application',
+              label: 'TinyML-Edge Impulse',
               items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840/XIAOEI'
-              ],
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/TinyML-Edge Impulse/XIAO-RP2040-EI',
+              ]
             },
-          ],
+          ], 
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO nRF52840 (Sense)',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
+            {
+              type: 'category',
+              label: 'Bluetooth Usage on SeeedStudio XIAO nRF52840 (Sense)',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth_Usage_on_SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth_Usage_on_SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Bluetooth-Usage',
+              ]
+            },
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
+            {
+              type: 'category',
+              label: 'TinyML for TensorFLow Lite',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-TensorFLow_Lite/XIAO-BLE-Sense-TFLite-Getting-Started',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-TensorFLow_Lite/XIAO-BLE-Sense-TFLite-Mic',
+              ]
+            },
+    
+            {
+              type: 'category',
+              label: 'TinyML for Edge Impulse',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-Edge_Impulse/XIAOEI',
+               
+              ]
+            },
+          ]
         },
         {
           type: 'category',
           label: 'SeeedStudio XIAO ESP32C3',
           items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started'
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
           ],
         },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO Expansion board',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO Kit',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Kit/XIAO-Kit-Courses',
+           
+          ]
+        },
       ],
+    
     },
 
     {
