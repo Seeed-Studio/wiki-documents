@@ -86,7 +86,7 @@ Get started
 
 This section will show you how to build an IDE environment for building applications with Grove - Mouse Encoder.
 
-Refer to [Seeeduino V4.2](/Seeeduino_v4.2#Getting_Started_on_Windows)(It is exchangeable with Arduino board) for how to build a complete an IDE for your applications, or read [Arduino guide](https://www.arduino.cc/en/Guide/HomePage) if you use Arduino original board.
+<!-- 图有问题 Refer to [Seeeduino V4.2](/Seeeduino_v4.2#Getting_Started_on_Windows)(It is exchangeable with Arduino board) for how to build a complete an IDE for your applications, or read [Arduino guide](https://www.arduino.cc/en/Guide/HomePage) if you use Arduino original board. -->
 
 <div className="admonition note">
   <p className="admonition-title">Notes</p>

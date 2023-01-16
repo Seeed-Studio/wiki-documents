@@ -172,13 +172,13 @@ Follow these steps to build a sample Grove circuit using this module but without
 
 In terms of choosing a power module, you can use either the Grove - USB Power module or the Grove - DC Jack Power module for building standalone Grove circuits.
 
-### With [Arduino](/Arduino "Arduino")
+<!-- 链接有问题### With [Arduino](/Arduino "Arduino") -->
 
 #### As a Voltage Divider
 
 Follow these simple steps to make the slide potentiometer module function as a voltage divider:
 
-1.When using the module in conjunction with an [Arduino](/Arduino "Arduino") or a [Seeeduino](/Seeeduino_v4.2 "Seeeduino"), use the Grove - Base Shield and connect the Grove - Slide Potentiometer module to the shield using a designated Grove Interface (e.g. Analog Port 0 as shown below).
+<!-- 链接有问题1.When using the module in conjunction with an [Arduino](/Arduino "Arduino") or a [Seeeduino](/Seeeduino_v4.2 "Seeeduino"), use the Grove - Base Shield and connect the Grove - Slide Potentiometer module to the shield using a designated Grove Interface (e.g. Analog Port 0 as shown below). -->
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/img/Sliding2.JPG) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/img/Sliding2.JPG" alt="pir" width={600} height="auto" /></p>
@@ -381,7 +381,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus).
+<!-- 链接有问题2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus). -->
 
 3.Connection
 
