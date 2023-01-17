@@ -231,20 +231,20 @@ const sidebars = {
               ]
             },
             {
-              type: 'category',
-              label: 'Liquid',
-              items: [
-                'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
-                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
-                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
-                'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
-                'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
-                'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
-                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
-                'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
-              ],
-    
-            },
+          type: 'category',
+          label: 'Liquid',
+          items: [
+            'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
+            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
+            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
+            'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
+            'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
+            'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
+            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
+            'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
+          ],
+
+        },
             {
               type: 'category',
               label: 'Biometric',
@@ -260,26 +260,11 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
               ],
             },
-            {
-              type: 'category',
-              label: 'Motion',
-              items: [
-                'Sensor/Grove/Grove_Sensors/Motion/Sensor_motion',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Digital-PIR-Sensor',
-                //'Sensor/Grove/Grove_Sensors/Motion/Grove-Collision_Sensor',
-                //'Sensor/Grove/Grove_Sensors/Motion/Grove-Tilt_Switch',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Mini_Track_Ball',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Mouse_Encoder',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Piezo_Vibration_Sensor',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Optical_Rotary_Encoder-TCUT1600X01',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Vibration_Sensor_SW-420',
-                'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
-              ],
-            },
 
-          ]
+          ],
+
+
+
         },
 
         {
@@ -323,7 +308,37 @@ const sidebars = {
           type: 'category',
           label: 'Grove Accessories',
           items: [
-
+            {
+              type: 'category',
+              label: 'Display',
+              items: [
+                'Sensor/Grove/Grove_Accessories/Display/Grove-4-Digit_Display',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-0.54_inch_Red_Dual_Alphanumeric_Display',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-0.54_inch_Red_Quad_Alphanumeric_Display',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-16x2_LCD_Series',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Circular_LED',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-LCD_RGB_Backlight',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-LED_Bar',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-RGB_LED_Stick-10-WS2813_Mini',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-LED_ring',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-LED_Socket_Kit',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-LED_String_Light',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-LED_Strip_Driver',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-OLED-Display-0.66-SSD1306_v1.0',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-OLED_Display_0.96inch',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-OLED-Display-0.96-SSD1315',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-OLED_Display_1.12inch',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-OLED-Display-1.12-SH1107_V3.0',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Red_LED',
+                'Sensor/Grove/Grove_Accessories/Display/I2C_LCD',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-RGB_LED_Matrix_w-Driver',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-LED_Matrix_Driver-HT16K33',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Red_LED_Matrix_w_Driver',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_2_13',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_1_54',
+              ],
+            },
             {
               type: 'category',
               label: 'Input Output',
@@ -747,20 +762,87 @@ const sidebars = {
           ],
 
         },
-        'Software/Software-PlatformIO',
-        'Software/ODYSSEY-X86J4105-Firmata',
-        'Software/Software-FreeRTOS',
-        'Software/Software-SWD',
-        'Software/Arduino_Software_I2C_user_guide',
-        'Software/Software-Serial',
-        'Software/Software-SPI',
-        'Software/Software-Static-Library',
-        'Software/Arduino-AWS-IOT-Bridge',
-        'Software/Arduino-DAPLink',
-        'Software/Flashing-Arduino-Bootloader-DAPLink',
-        'Software/Compiling_MicroPython_for_embedded_devices',
       ],
 
+    },
+
+    {
+
+      type: 'category',
+      label: 'SenseCAP_the_Sensor_Prototype_Kit',
+      items: [
+    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
+    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',
+      {
+    
+      type: 'category',
+      label: 'LoRaWAN',
+      items: [
+        {
+    
+          type: 'category',
+          label: 'SenseCAP',
+          items: [
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_sensecap_node-red',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_Azure_IoT_Central',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_PowerBI',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_influxdb',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_twilio',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_datacake',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_grafana',
+    
+            ],
+        
+        },
+        {
+    
+          type: 'category',
+          label: 'Programme with Arduino',
+          items: [
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
+            ],
+        
+        },
+        {
+    
+          type: 'category',
+          label: 'Helium',
+          items: [
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Helium-Introduction',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connecting-to-Helium',
+        {
+    
+          type: 'category',
+          label: 'Azure',
+          items: [
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Integrate-into-Azure-IoT-Hub',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Configuring-Web-APP-Visualization',
+            ],
+        },
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Integrate_into_Google_Sheets_via_Helium',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connect_AWS_via_helium',
+            ],
+        
+        },
+        {
+    
+          type: 'category',
+          label: 'TTN',
+          items: [
+            'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/TTN-Introduction',
+            'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/Connecting-to-TTN',
+            ],
+        
+        },
+        ],
+    
+      },
+    ],
     },
 
 
@@ -795,30 +877,7 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP',
       items: [
-        // 'Network/SenseCAP/wiki',
-        'Network/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
-        'Network/SenseCAP/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
-        'Network/SenseCAP/SenseCAP-Sensor-Hub-Data-Logger',
-        'Network/SenseCAP/SenseCAP-One-Series-Meteorological-Sensors',
-        'Network/SenseCAP/Train-Deploy-AI-Model-A1101',
-        'Network/SenseCAP/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
-        {
-
-          type: 'category',
-          label: 'Sensor Probe & Accessories',
-          items: [
-            'Network/SenseCAP/Sensor_Probe&Accessories/Liquid-Level-Sensor',
-            'Network/SenseCAP/Sensor_Probe&Accessories/Water-Leak-Detector',
-            'Network/SenseCAP/Sensor_Probe&Accessories/Industrial-ph-Sensor',
-            'Network/SenseCAP/Sensor_Probe&Accessories/Soil-Moisture-Temperature-EC-Sensor',
-            'Network/SenseCAP/Sensor_Probe&Accessories/Soil-Moisture-Temperature-Sensor',
-            'Network/SenseCAP/Sensor_Probe&Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
-            'Network/SenseCAP/Sensor_Probe&Accessories/Optical-Rain-Gauge-RG-9',
-            'Network/SenseCAP/Sensor_Probe&Accessories/SenseCAP-SOLO-CO2-Sensor',
-            'Network/SenseCAP/Sensor_Probe&Accessories/ORCH-S4-Weather-Station',
-          ],
-
-        },
+        'Network/SenseCAP/wiki',
       ],
 
     },
