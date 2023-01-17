@@ -153,7 +153,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Air_Quality_Sensor_v1.3',
               ],
-    
+
             },
             {
               type: 'category',
@@ -168,7 +168,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Integrated-Pressure-Sensor-Kit',
               ],
-    
+
             },
             {
               type: 'category',
@@ -231,20 +231,20 @@ const sidebars = {
               ]
             },
             {
-          type: 'category',
-          label: 'Liquid',
-          items: [
-            'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
-          ],
+              type: 'category',
+              label: 'Liquid',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
+              ],
 
-        },
+            },
             {
               type: 'category',
               label: 'Biometric',
@@ -491,7 +491,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/TinyML-Edge Impulse/XIAO-RP2040-EI',
               ]
             },
-          ], 
+          ],
         },
         {
           type: 'category',
@@ -519,13 +519,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-TensorFLow_Lite/XIAO-BLE-Sense-TFLite-Mic',
               ]
             },
-    
+
             {
               type: 'category',
               label: 'TinyML for Edge Impulse',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-Edge_Impulse/XIAOEI',
-               
+
               ]
             },
           ]
@@ -553,11 +553,11 @@ const sidebars = {
           label: 'SeeedStudio XIAO Kit',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Kit/XIAO-Kit-Courses',
-           
+
           ]
         },
       ],
-    
+
     },
 
     {
@@ -565,7 +565,131 @@ const sidebars = {
       type: 'category',
       label: 'Wio Terminal',
       items: [
-        'Sensor/Wio_Terminal/wiki'
+        // 'Sensor/Wio_Terminal/wiki',
+        {
+
+          type: 'category',
+          label: 'Bluetooth',
+          items: [
+            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Bluetooth-Overview',
+            'Sensor/Wio_Terminal/Bluetooth/Wio-terminal-BLE-introduction',
+            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Web-Bluetooth',
+            'Sensor/Wio_Terminal/Bluetooth/BLE-ibeacon-using-Wio-terminal',
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Audio',
+          items: [
+            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Overview',
+            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Play-Record',
+            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-GUI',
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'IMU',
+          items: [
+            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Overview',
+            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Basic',
+            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Tapping',
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Configurable Buttons',
+          items: [
+
+            'Sensor/Wio_Terminal/Configurable_Buttons/Wio-Terminal-Buttons',
+
+          ],
+
+        },
+
+        {
+          type: 'category',
+          label: '5 Way Switch',
+          items: [
+            'Sensor/Wio_Terminal/five_Way_Switch/Wio-Terminal-Switch',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Light Sensor',
+          items: [
+            'Sensor/Wio_Terminal/Light_Sensor/Wio-Terminal-Light',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Infrared Emitter',
+          items: [
+            'Sensor/Wio_Terminal/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Microphone',
+          items: [
+            'Sensor/Wio_Terminal/Microphone/Wio-Terminal-Mic',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Buzzer',
+          items: [
+            'Sensor/Wio_Terminal/Buzzer/Wio-Terminal-Buzzer',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'RTC',
+          items: [
+            'Sensor/Wio_Terminal/RTC/Wio-Terminal-RTC',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'File System',
+          items: [
+            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-Overview',
+            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-ReadWrite',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'USB Host',
+          items: [
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Overview',
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Keyboard',
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Mouse',
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Xbox',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'USB Client',
+          items: [
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Overview',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Mouse',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-MIDI',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-HMI-Usermode-SDK',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-DAPLink',
+          ],
+        },
       ],
 
     },
@@ -746,78 +870,78 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP_the_Sensor_Prototype_Kit',
       items: [
-    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
-    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',
-      {
-    
-      type: 'category',
-      label: 'LoRaWAN',
-      items: [
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',
         {
-    
+
           type: 'category',
-          label: 'SenseCAP',
+          label: 'LoRaWAN',
           items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_sensecap_node-red',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_Azure_IoT_Central',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_PowerBI',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_influxdb',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_twilio',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_datacake',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_grafana',
-    
-            ],
-        
+            {
+
+              type: 'category',
+              label: 'SenseCAP',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_sensecap_node-red',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_Azure_IoT_Central',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_PowerBI',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_influxdb',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_twilio',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_datacake',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_grafana',
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Programme with Arduino',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Helium',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Helium-Introduction',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connecting-to-Helium',
+                {
+
+                  type: 'category',
+                  label: 'Azure',
+                  items: [
+                    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Integrate-into-Azure-IoT-Hub',
+                    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Configuring-Web-APP-Visualization',
+                  ],
+                },
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Integrate_into_Google_Sheets_via_Helium',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connect_AWS_via_helium',
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'TTN',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/TTN-Introduction',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/Connecting-to-TTN',
+              ],
+
+            },
+          ],
+
         },
-        {
-    
-          type: 'category',
-          label: 'Programme with Arduino',
-          items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
-            ],
-        
-        },
-        {
-    
-          type: 'category',
-          label: 'Helium',
-          items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Helium-Introduction',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connecting-to-Helium',
-        {
-    
-          type: 'category',
-          label: 'Azure',
-          items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Integrate-into-Azure-IoT-Hub',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Configuring-Web-APP-Visualization',
-            ],
-        },
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Integrate_into_Google_Sheets_via_Helium',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connect_AWS_via_helium',
-            ],
-        
-        },
-        {
-    
-          type: 'category',
-          label: 'TTN',
-          items: [
-            'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/TTN-Introduction',
-            'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/Connecting-to-TTN',
-            ],
-        
-        },
-        ],
-    
-      },
-    ],
+      ],
     },
 
 

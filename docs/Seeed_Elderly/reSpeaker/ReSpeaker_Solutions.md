@@ -5,14 +5,16 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 1/11/2022
+  date: 1/11/2023
   author: jianjing Huang
 ---
 
 # **ReSpeaker**
+
 ## The Open Voice Ecosystem for Developers
 
 [![All ReSpeaker Dev Boards](https://files.seeedstudio.com/wiki/ReSpeakerSolutions/img/FullReSpeakerLine.png)](https://www.seeedstudio.com/series/Respeaker-10.html)
+
 ## **Enabling Voice Interface**
 
 The ReSpeaker series is a family of development boards designed to enable a future where voice interface is part of everyday human-device interaction. Designed to be easily integrated (and customized) into products, but also to allow other services and products to be easily integrated into it, ReSpeaker is constantly adding new features and integrations along with examples on how to implement them. Many of these features will be for more than just making smart speakers. We hope you can work with us to create better voice solutions for offices, buildings, retail, entertainment, conservation, and more.
@@ -23,6 +25,7 @@ Example:
 <iframe width="800" height="450" src="https://www.youtube.com/embed/tdIsCRXKoVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## **Integrate Quickly with Our SDKs & HDKs**
+
 In a rush to provide a proof of concept? Is your time to market sensitive? Our Software and Hardware Development Kits include many tools to speed up your development and help you deliver on schedule.
 
 ### **SDK**
@@ -76,6 +79,7 @@ We can also manufacture your customized ReSpeaker as well as any other items you
 If you have questions please reach us at iot@seeed.cc.
 
 ## **What's New?**
+
 Check out our most recent blogs on the ReSpeaker line!
 
 **A ReSpeaker Core V2.0 Walks Into a Bar...**
