@@ -646,7 +646,50 @@ const sidebars = {
             'Sensor/Wio_Terminal/Microphone/Wio-Terminal-Mic',
           ],
         },
-
+        {
+          type: 'category',
+          label: 'Buzzer',
+          items: [
+            'Sensor/Wio_Terminal/Buzzer/Wio-Terminal-Buzzer',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'RTC',
+          items: [
+            'Sensor/Wio_Terminal/RTC/Wio-Terminal-RTC',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'File System',
+          items: [
+            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-Overview',
+            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-ReadWrite',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'USB Host',
+          items: [
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Overview',
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Keyboard',
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Mouse',
+            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Xbox',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'USB Client',
+          items: [
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Overview',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Mouse',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-MIDI',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-HMI-Usermode-SDK',
+            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-DAPLink',
+          ],
+        },
       ],
 
     },
