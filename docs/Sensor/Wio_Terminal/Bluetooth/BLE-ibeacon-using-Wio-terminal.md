@@ -35,8 +35,9 @@ In this tutorial we are going to build a BLE Ibeacon using Wio terminal, in addi
 
 - Download the [**nRF Connect APP**](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en_US) on the smartphone
 
-!!!note
-    If you are unfamiliar on how to use nRF connect APP, please view this [**tutorial**](https://wiki.seeedstudio.com/Wio-terminal-BLE-introduction/#nrf-connect-app-usage).
+:::note
+If you are unfamiliar on how to use nRF connect APP, please view this [**tutorial**](https://wiki.seeedstudio.com/Wio-terminal-BLE-introduction/#nrf-connect-app-usage).
+:::
 
 ## Instruction
 
@@ -50,8 +51,9 @@ This is a simple test for scan the Wio terminal iBeacon device and presents the 
 
 <div align="center"><img width ="{400}" src="https://files.seeedstudio.com/wiki/wio%20terminal%20bluetooth/nRF_interface.jpg"/></div>
 
-!!!Note
+:::note
     In this test the device did not named, so it will display N/A.
+:::
 
 **Test code**
 

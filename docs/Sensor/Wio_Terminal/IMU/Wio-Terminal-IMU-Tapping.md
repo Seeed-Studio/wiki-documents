@@ -1,8 +1,19 @@
+---
+description: Tapping
+title: Tapping
+keywords:
+- Wio_terminal IMU
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/17/2023
+  author: jianjing Huang
+---
+
 # Wio Terminal Sensing Tapping Motion Demo
 
 This repo demonstrates how Wio Terminal used the built-in acclerator to sense the Single-click tapping or Double-click tapping motion!
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/2019-12-10%2010-33-58.2019-12-10%2010_35_11.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/2019-12-10%2010-33-58.2019-12-10%2010_35_11.gif"/></div>
 
 ## 3-Axis Accelerator Initialization
 

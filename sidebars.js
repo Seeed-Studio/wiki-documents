@@ -153,7 +153,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Air_Quality_Sensor_v1.3',
               ],
-    
+
             },
             {
               type: 'category',
@@ -168,7 +168,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Integrated-Pressure-Sensor-Kit',
               ],
-    
+
             },
             {
               type: 'category',
@@ -231,20 +231,20 @@ const sidebars = {
               ]
             },
             {
-          type: 'category',
-          label: 'Liquid',
-          items: [
-            'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
-            'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
-          ],
+              type: 'category',
+              label: 'Liquid',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
+              ],
 
-        },
+            },
             {
               type: 'category',
               label: 'Biometric',
@@ -591,6 +591,62 @@ const sidebars = {
           ],
 
         },
+        {
+
+          type: 'category',
+          label: 'IMU',
+          items: [
+            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Overview',
+            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Basic',
+            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Tapping',
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Configurable Buttons',
+          items: [
+
+            'Sensor/Wio_Terminal/Configurable_Buttons/Wio-Terminal-Buttons',
+
+          ],
+
+        },
+
+        {
+          type: 'category',
+          label: '5 Way Switch',
+          items: [
+            'Sensor/Wio_Terminal/five_Way_Switch/Wio-Terminal-Switch',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Light Sensor',
+          items: [
+            'Sensor/Wio_Terminal/Light_Sensor/Wio-Terminal-Light',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Infrared Emitter',
+          items: [
+            'Sensor/Wio_Terminal/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Microphone',
+          items: [
+            'Sensor/Wio_Terminal/Microphone/Wio-Terminal-Mic',
+          ],
+        },
+
       ],
 
     },
@@ -771,78 +827,78 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP_the_Sensor_Prototype_Kit',
       items: [
-    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
-    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',
-      {
-    
-      type: 'category',
-      label: 'LoRaWAN',
-      items: [
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
+        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',
         {
-    
+
           type: 'category',
-          label: 'SenseCAP',
+          label: 'LoRaWAN',
           items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_sensecap_node-red',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_Azure_IoT_Central',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_PowerBI',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_influxdb',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_twilio',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_datacake',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_grafana',
-    
-            ],
-        
+            {
+
+              type: 'category',
+              label: 'SenseCAP',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_sensecap_node-red',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_Azure_IoT_Central',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_PowerBI',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_influxdb',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_twilio',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_datacake',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_grafana',
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Programme with Arduino',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Helium',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Helium-Introduction',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connecting-to-Helium',
+                {
+
+                  type: 'category',
+                  label: 'Azure',
+                  items: [
+                    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Integrate-into-Azure-IoT-Hub',
+                    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Configuring-Web-APP-Visualization',
+                  ],
+                },
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Integrate_into_Google_Sheets_via_Helium',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connect_AWS_via_helium',
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'TTN',
+              items: [
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/TTN-Introduction',
+                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/Connecting-to-TTN',
+              ],
+
+            },
+          ],
+
         },
-        {
-    
-          type: 'category',
-          label: 'Programme with Arduino',
-          items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
-            ],
-        
-        },
-        {
-    
-          type: 'category',
-          label: 'Helium',
-          items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Helium-Introduction',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connecting-to-Helium',
-        {
-    
-          type: 'category',
-          label: 'Azure',
-          items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Integrate-into-Azure-IoT-Hub',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Configuring-Web-APP-Visualization',
-            ],
-        },
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Integrate_into_Google_Sheets_via_Helium',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connect_AWS_via_helium',
-            ],
-        
-        },
-        {
-    
-          type: 'category',
-          label: 'TTN',
-          items: [
-            'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/TTN-Introduction',
-            'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/Connecting-to-TTN',
-            ],
-        
-        },
-        ],
-    
-      },
-    ],
+      ],
     },
 
 
