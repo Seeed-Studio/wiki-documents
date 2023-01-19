@@ -232,6 +232,20 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Touch',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Touch_Sensor',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Rotary_Angle_Sensor',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Round_Force_Sensor_FSR402',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-2_Channel_Inductive_Sensor-LDC1612',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-',
+
+              ]
+            },
+            {
+              type: 'category',
               label: 'Liquid',
               items: [
                 'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
