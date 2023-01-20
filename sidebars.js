@@ -134,6 +134,15 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Air Quality',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Laser_PM2.5_Sensor-HM3301',
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Dust_Sensor',
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Air_Quality_Sensor_v1.3',
+              ]
+            },
+            {
+              type: 'category',
               label: 'Gas',
               items: [
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor',
@@ -151,7 +160,6 @@ const sidebars = {
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Alcohol_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
-                'Sensor/Grove/Grove_Sensors/Gas/Grove-Air_Quality_Sensor_v1.3',
               ],
 
             },
