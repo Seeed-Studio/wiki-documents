@@ -228,6 +228,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Speech_Recognizer',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Recorder',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Analog-Microphone',
+                // 'Sensor/Grove/Grove_Sensors/Sound/Grove-Recorder_v2.0',
               ]
             },
             {
