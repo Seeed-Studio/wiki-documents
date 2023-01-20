@@ -320,6 +320,8 @@ const sidebars = {
             'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi_V2',
             'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE_v1',
             // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_E5_New_Version',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Node',
+
 
 
 
@@ -453,6 +455,13 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-6-Position_DIP_Switch',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Case',
+              items: [
+                'Sensor/Grove/Grove_Accessories/Case/Grove-Wrapper',
               ],
             },
 
