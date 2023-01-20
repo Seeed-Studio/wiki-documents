@@ -566,6 +566,60 @@ const sidebars = {
       label: 'Wio Terminal',
       items: [
         // 'Sensor/Wio_Terminal/wiki',
+        'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
+        {
+
+          type: 'category',
+          label: 'LCD',
+          items: [
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Overview',
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Basic',
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Graphics',
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Fonts',
+            // 'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Anti-aliased-Fonts',
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Linecharts',
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Histogram',
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-APIs',
+            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LVGL',
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'IO',
+          items: [
+            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Overview',
+            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Analog',
+            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Digital',
+            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-I2C',
+            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-SPI',
+
+
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Network',
+          items: [
+            'Sensor/Wio_Terminal/Network/Wio-Terminal-Network-Overview',
+            'Sensor/Wio_Terminal/Network/Wio-Terminal-Wi-Fi',
+            'Sensor/Wio_Terminal/Network/Wio-Terminal-Advanced-Wi-Fi',
+            'Sensor/Wio_Terminal/Network/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central',
+            'Sensor/Wio_Terminal/Network/Wio-Terminal-Azure-IOT',
+            'Sensor/Wio_Terminal/Network/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
+            'Sensor/Wio_Terminal/Network/Azure_IoT_CC',
+            'Sensor/Wio_Terminal/Network/Wio-Terminal-Ethernet',
+            'Sensor/Wio_Terminal/Network/Wio-Terminal-Blynk',
+            'Sensor/Wio_Terminal/Network/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
+
+          ],
+
+        },
         {
 
           type: 'category',
