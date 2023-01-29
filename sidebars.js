@@ -65,6 +65,7 @@ const sidebars = {
               type: 'category',
               label: 'All in one',
               items: [
+                'Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
 
               ],
@@ -211,6 +212,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-IMU_10DOF_v2.0',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-IMU_9DOF_v2.0',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-IMU_9DOF-lcm20600+AK09918',
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-Single_Axis_Analog_Gyro',
               ],
             },
             {
@@ -337,6 +339,7 @@ const sidebars = {
                 // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE-dual_model-v1.0',
                 // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth_v3.0',
                 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE_v1',
+                'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth',
 
               ]
             },
@@ -445,6 +448,8 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Red_LED_Matrix_w_Driver',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_2_13',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_1_54',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Serial_LCD_V1.0',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-BlinkM',
               ],
             },
             {
