@@ -1,6 +1,6 @@
 ---
 description:  Grove - Line Finder
-title:  Grove - Line Finder
+title:  Grove - Line Finder- Grove - Flame Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

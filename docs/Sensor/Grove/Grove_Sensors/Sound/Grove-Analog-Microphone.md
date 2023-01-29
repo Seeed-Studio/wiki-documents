@@ -1,5 +1,7 @@
 ---
-title: Grove-Analog-Microphone
+title: Grove - Analog Microphone
+
+
 nointro:
 keywords:
   - docs
@@ -18,8 +20,6 @@ Grove - Analog Microphone is an ideal choice of sound sensors where excellent a
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
 
-
-
 ## Features
 
 - High-performance SiSonic MEMS technology
@@ -31,19 +31,19 @@ Grove - Analog Microphone is an ideal choice of sound sensors where excellent a
 :::
 
 ## Applications
+
 - Sound sensor
 - Collecting of sound signal
 - Voice recognition
 - Recording
 
-
 ## Specifications
 
 |Item|Value|
 |-----|------|
-|Dimensions	|20mm x 20mm|
-|Operating Voltage	|3.3V|
-|Operating Current|	5mA|
+|Dimensions |20mm x 20mm|
+|Operating Voltage |3.3V|
+|Operating Current| 5mA|
 |Operating Temperature Range|-40 °C to 100 °C|
 
 :::tip
@@ -52,7 +52,6 @@ Grove - Analog Microphone is an ideal choice of sound sensors where excellent a
 
 ## Platforms Supported
 
-
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
@@ -60,7 +59,6 @@ Grove - Analog Microphone is an ideal choice of sound sensors where excellent a
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
-
 
 ## Getting Started
 
@@ -78,12 +76,12 @@ Grove - Analog Microphone is an ideal choice of sound sensors where excellent a
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)|
 
 - **Step 1.** Connect Grove-Sound Sensor to port **A0** of Grove-Base Shield.
-- **Step 2.** Plug Grove - Base Shield into Seeeduino and connect Seeeduino to PC via a USB cable.    
+- **Step 2.** Plug Grove - Base Shield into Seeeduino and connect Seeeduino to PC via a USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/hardware_connection.jpg)
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Sound Sensor to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove-Sound Sensor to Seeeduino as below.
 :::
 
 | Seeeduino     | Grove-Sound Sensor      |
@@ -270,17 +268,14 @@ void display(uint8_t mode)
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/res/202002902_Grove-Analog_Microphone_v1.0_SCH&PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
 - [**ZIP**] [Grove-Analog_Microphone_v1.0_SCH&PCB.zip](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/res/202002902_Grove-Analog_Microphone_v1.0_SCH&PCB.zip)
 - [**PDF**] [SMD Mic OMNI-22DB_Specification.pdf](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/res/SMD_Mic_OMNI-22DB_Specification.pdf)
 
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -1,5 +1,5 @@
 ---
-title: Grove-Sound_Recorder
+title: Grove - Sound Recorder
 nointro:
 keywords:
   - docs
@@ -16,24 +16,23 @@ The Grove-Sound Recorder is based on [APR9600](https://files.seeedstudio.com/wik
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Sound-Recorder-p-904.html)
 
-
 Features
 --------
 
--   Grove compatible interface
--   Can be controlled both manually or by MCU
--   Non-volatile Flash memory technology, No battery backup required
--   User-friendly, easy-to-use operation
--   Low Power consumption
--   Sample rate and duration changeable by replacing a single resistor.
+- Grove compatible interface
+- Can be controlled both manually or by MCU
+- Non-volatile Flash memory technology, No battery backup required
+- User-friendly, easy-to-use operation
+- Low Power consumption
+- Sample rate and duration changeable by replacing a single resistor.
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
-    
+
 Application Ideas
 -----------------
 
--   Toys
+- Toys
 
 Specifications
 --------------
@@ -178,9 +177,8 @@ Step 2: Prepare the software. In order to control select the section to Record/P
 When controlled by MCU, Section_1 can not be selected.
 </div>
 
-*Not interested in such a table, it is confusing! Just want the code?* 
+*Not interested in such a table, it is confusing! Just want the code?*
 Download the following code to your Arduino/Seeeduino.
-
 
 ```
 /****************************************************************************/
@@ -278,7 +276,7 @@ After download the firmware to your Arduino/Seeeduino, make sure the connector "
 
 Switch the SW1 to Rec, and type in the command with any serial port transceiver. OCTOPUS for example. Type in the command "2rb" first to begin to record the section_2, type in "2rs" to stop the recording. Note that the recording will automatic terminate after about about 15s if no "2rs" was typed in.
 
-![](https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/img/2rb.jpg) 
+![](https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/img/2rb.jpg)
 
 ![](https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/img/2b.jpg)
 
@@ -300,27 +298,23 @@ You can control the quality/duration trade off by controlling the sampling frequ
 
 The R7 is 24K when it is shipped to your hand, you can change it to 38K/44K to get a longer duration of recording, with the tradeoff of lower sample rate.
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/res/Sound_Recorder_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 Resources
 ---------
 
--   [Grove-Sound Recorder Eagle File](https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/res/Sound_Recorder_Eagle_File.zip)
--   [APR9600 Datasheet](https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/res/Datasheet_of_APR9600.pdf)
--   [User contributed software Library that works(Use Old Arduino IDE / Software)](https://github.com/wendellinfinity/GroveSoundRecorder)
-
-
+- [Grove-Sound Recorder Eagle File](https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/res/Sound_Recorder_Eagle_File.zip)
+- [APR9600 Datasheet](https://files.seeedstudio.com/wiki/Grove-Sound_Recorder/res/Datasheet_of_APR9600.pdf)
+- [User contributed software Library that works(Use Old Arduino IDE / Software)](https://github.com/wendellinfinity/GroveSoundRecorder)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Sound_Recorder -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

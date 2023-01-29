@@ -1,5 +1,5 @@
 ---
-title: Grove-TF_Mini_LiDAR
+title: Grove - TF Mini LiDAR
 nointro:
 keywords:
   - docs
@@ -12,7 +12,6 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR.JPG" alt="pir" width={600} height="auto" /></p>
 
-
 This product is based on ToF (Time of Flight) principle and integrated with unique optical and electrical designs, so as to achieve stable, precise, high sensitivity and high-speed distance detection.
 
 ToF is the abbreviation of Time of Flight technology, and its operating principle is as follows: a modulated near-infrared light is sent from the sensor and reflected by an object; the distance to the object to be shot can be converted with the sensor by calculating the time difference or phase difference between the light sending and the light reflection, so as to produce the depth information.
@@ -23,15 +22,14 @@ ToF is the abbreviation of Time of Flight technology, and its operating principl
     Prevent dust or any other foreign matter from entering the lens; otherwise it may affect the light transmission.
 :::
 
-
 ## Version
 
 | Product Version              | Changes                                                                                                                                                                                    | Released Date |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Grove-TF Mini LiDAR V1.0 | Initial | Nov 2017      |
 
-
 ## Specification
+
 ---
 | Product   Name                              | TFmini                           |
 |---------------------------------------------|----------------------------------|
@@ -70,7 +68,9 @@ Platforms Supported
 :::
 
 ## Getting Started
+
 ---
+
 ### Play With Arduino
 
 #### Hardware
@@ -88,10 +88,9 @@ Platforms Supported
 
 ![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/hardware_connection2.jpg)
 
-
 #### Software
 
-- **Step 1**. The Grove-TF Mini LiDAR is a hexadecimal output data. Each frame data is encoded with 9 bytes, including 1 distance data (Dist). Each distance data has corresponding signal strength information (Strength). The frame end is the data parity bit. 
+- **Step 1**. The Grove-TF Mini LiDAR is a hexadecimal output data. Each frame data is encoded with 9 bytes, including 1 distance data (Dist). Each distance data has corresponding signal strength information (Strength). The frame end is the data parity bit.
 
 | Byte  | Data encoding interpretation                |
 |-------|---------------------------------------------|
@@ -104,7 +103,6 @@ Platforms Supported
 | Byte7 | Integration time.                           |
 | Byte8 | Reserved bytes.                             |
 | Byte9 | Checksum parity.                             |
-
 
 - **Step 2**. Copy the code into Arduino IDE and upload.
 
@@ -162,15 +160,13 @@ void loop() {
 }
 ```
 
-- **Step 3**. We will see the distance display on terminal. The **blue curve** is the distance and the **red** is Strength. 
+- **Step 3**. We will see the distance display on terminal. The **blue curve** is the distance and the **red** is Strength.
 
-![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/curve.png) 
+![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/curve.png)
 
 :::note
       You could delete **Line 41** to **Line 43** of the demo code if only the **Distance** is required:
 :::
-
-
 
 ```C++
 SERIAL.print("strength = ");
@@ -199,19 +195,18 @@ SERIAL.print(SeeedTFLidar.get_strength()); //output signal strength value
 </figure>
 </div>
 
-
 :::tip
      Please refer to the pinout instruction above before you starting to connect Wio Terminal with Jumpers.
 :::
-
 
 **Step 1** Plug Grove-TF-Mini-LiDAR to Wio Terminal via Jumpers and also connect Wio Terminal to PC through a USB cable.
 
 **Step 2** Download the [Demo code](https://github.com/Seeed-Studio/Seeed_Arduino_Linechart/archive/master.zip) and copy the whole **Seeed_Arduino_Linechart** file and paste it into your Arduino IDE library file.
 
-**Step 3** Copy the demo code into your Arduino IDE. 
+**Step 3** Copy the demo code into your Arduino IDE.
 
 #### Software
+
 ```C++
 #include"seeed_line_chart.h" //include the library
 #include "TFLidar.h"
@@ -309,7 +304,9 @@ void display(uint16_t lidar_data,uint8_t mode){
 ![](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Outcome_wio.jpg)
 
 ## Resources
+
 ---
+
 - **[Datasheet]** [Grove-TF-Mini-LiDAR
 ](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/res/SJ-PM-TF-Luna-A03-Product-Manual.pdf)
 - **[Datasheet]** [Grove-TF-Luna-LiDAR
@@ -318,6 +315,7 @@ void display(uint16_t lidar_data,uint8_t mode){
 - **[ZIP]** [Seeed_Arduino_Linechart](https://github.com/Seeed-Studio/Seeed_Arduino_Linechart/archive/master.zip)
 
 ## Tech Support
+
 <div>
   Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

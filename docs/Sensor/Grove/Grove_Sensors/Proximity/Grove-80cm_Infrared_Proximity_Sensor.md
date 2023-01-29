@@ -1,5 +1,5 @@
 ---
-title: Grove-80cm_Infrared_Proximity_Sensor
+title:  Grove - 80cm Infrared Proximity Sensor
 nointro:
 keywords:
   - docs
@@ -16,13 +16,12 @@ The 80cm Infrared Proximity Sensor is a General Purpose Type Distance Measuring 
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-80cm-Infrared-Proximity-Sensor-p-788.html)
 
-
 Features
 --------
 
--   Easy to use
--   Wide supply voltage range: 2.5V–7V
--   Grove Interface
+- Easy to use
+- Wide supply voltage range: 2.5V–7V
+- Grove Interface
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -31,9 +30,9 @@ Features
 Application Ideas
 -----------------
 
--   Waterdrop conservation
--   Toys
--   Robotics
+- Waterdrop conservation
+- Toys
+- Robotics
 
 Specifications
 -------------
@@ -115,18 +114,18 @@ Usage
 
 The Infrared Proximity sensor is easy to use. The relationship between the voltage reading and the distance as shown below. When we read the voltage, which indicate the distance from the object in front to this sensor.
 
--   Connect the 3-pin connector to the sensor, and connect the 4-pin connector to the A1 port of the **Grove-Base Shield**.
+- Connect the 3-pin connector to the sensor, and connect the 4-pin connector to the A1 port of the **Grove-Base Shield**.
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 This sensor is quite small and use a tiny connector called the Japan Solderless Terminal (JST) connector. These connectors have three wires: Ground, Vcc, and the Output signal. Because this sensor fires continuously and doesn't need any clock to initiate a reading cycle, it is easy to interface with any microcontroller. For Arduino & Seeeduino, we prepared a 4-pin to 3-pin wire to convert the 3-pin connecter on the sensor to 4-pin connecter on the Grove Base Shield, to compatible with the Seeeduino Grove interface.
 </div>
 
--   Connect Arduino/Seeeduino via a USB cable.
+- Connect Arduino/Seeeduino via a USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/img/80cm_Infrared.jpg)
 
--   Copy and paste code below to a new Arduino sketch.
+- Copy and paste code below to a new Arduino sketch.
 
 ```
     #define IR_PROXIMITY_SENSOR A1 // Analog input pin that  is attached to the sensor
@@ -171,8 +170,8 @@ This sensor is quite small and use a tiny connector called the Japan Solderless 
     }
 ```
 
--   Upload the code.
--   Open the Serial Monitor, you can get the voltage. you can calculate or find the distance to the reflective object according to the below figures.
+- Upload the code.
+- Open the Serial Monitor, you can get the voltage. you can calculate or find the distance to the reflective object according to the below figures.
 
 ![](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/img/Infrared_Proximity.jpg)
 
@@ -190,17 +189,18 @@ Because of some basic trigonometry within the triangle from the emitter to refle
 
 3.Connection
 
--   Plug the sensor to grovepi socket D4 by using a grove cable.
+- Plug the sensor to grovepi socket D4 by using a grove cable.
 
 4.Navigate to the demos' directory:
 
        cd yourpath/GrovePi/Software/Python/
 
--   To see the code
+- To see the code
 
 ```
     nano grove_infrared_distance_interrupt.py    # "Ctrl+x" to exit #
 ```
+
 ```
     import time
     import grovepi
@@ -227,6 +227,7 @@ Because of some basic trigonometry within the triangle from the emitter to refle
 ```
 
 5.Run the demo.
+
 ```
     sudo python grove_infrared_distance_interrupt.py
 ```
@@ -242,12 +243,10 @@ The angles in this triangle vary based on the distance to the object. The receiv
 
 This new method of ranging is almost immune to interference from ambient light and offers amazing indifference to the color of object being detected. Detecting a black wall in full sunlight is now possible.
 
-
 Resources
 ---------
 
 - [GP2Y0A21YK datasheet](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/res/GP2Y0A21YK.pdf)
-
 
 ## Project
 
@@ -258,8 +257,8 @@ Resources
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_80cm_Infrared_Proximity_Sensor -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

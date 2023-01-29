@@ -1,5 +1,5 @@
 ---
-title: Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F
+title: Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)
 nointro:
 keywords:
   - docs
@@ -13,24 +13,19 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/img/main.JPG)
 
-
 Grove - Digital Distance Interrupter 0.5 to 5cm is an infrared distance sensing module based on GP2Y0D805Z0F. Normaly the output of this sensor is 1(High), when the object enters the measurement range of the sensor, it will be triggered and output a 0(LOW).At the same time the on-board LED will light up. As the name suggests, the measurement range is from 0.5cm to 5cm.
-
 
 There are two types of  Grove - Digital Distance Interrupter 0.5 to 5cm: Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)  and [Grove - Digital Distance Interrupter 0.5 to 5cm(GP2Y0D805Z0F)(P)](https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0.5-to-5cm%28GP2Y0D805Z0F%29%28P%29-p-3085.html). For the version without letter P, the lens and the grove interface are at the same side; for the version with letter P, the lens and the grove interface are at the different sides.
 
-GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated combination of PD(photo diode) , IRED (infrared emitting diode) and signal processing circuit. The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method. 
-
+GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated combination of PD(photo diode) , IRED (infrared emitting diode) and signal processing circuit. The variety of the reflectivity of the object, the environmental temperature and the operating duration are not influenced easily to the distance detection because of adopting the triangulation method.
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0.5-to-5cm%28GP2Y0D805Z0F%29-p-3084.html" target="_blank"><img src=https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
-
 
 ## Features
 
 - Easy to use
 - Integrated indicator LED  
 - Digital output
-
 
 ## Specification
 
@@ -40,16 +35,12 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 |Trigger Range|0.5cm - 5cm |
 |Working temperature|-10℃ -- 60℃|
 
-
-
 ## Applications
 
 - Touch-less switch (Sanitary equipment, Control of illumination, etc.)
 - Robot cleaner
 
-
 ## Platforms Supported
-
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -59,13 +50,11 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
 ## Getting Started
 
 :::note
     If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
-
 
 ### Play With Arduino
 
@@ -78,13 +67,11 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/img/thumnail.jpg)|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Digital-Distance-Interrupter-0.5-to-5cm%28GP2Y0D805Z0F%29-p-3084.html" target="_blank">Get One Now</a>|
 
-
 :::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
-    
+
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
-
 
 - **Step 1.** Plug Grove - Digital Distance Interrupter 0.5 to 5cm to port **D2** of Grove-Base Shield.
 
@@ -92,13 +79,10 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-
 ![](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/img/connect.jpg)
 
-
-
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Mech keycap to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove-Mech keycap to Seeeduino as below.
 :::
 
 | Seeeduino     | Grove - Digital Distance Interrupter 0.5 to 5cm|
@@ -107,8 +91,6 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 | GND           | Black                   |
 | Not Conencted | White                   |
 | D2            | Yellow                  |
-
-
 
 #### Software
 
@@ -148,22 +130,22 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 
 void setup()
 {
-	Serial.begin(115200);
-	pinMode(SENSOR,INPUT);
+ Serial.begin(115200);
+ pinMode(SENSOR,INPUT);
 }
 
 
 void loop()
 {
-	short val=0;
-	val=digitalRead(SENSOR);
-	Serial.print("val=");
-	Serial.println((int)val);
-	if(0==val)
-	{
-		Serial.println("Sensor is triggered!!");
-	}
-	delay(100);
+ short val=0;
+ val=digitalRead(SENSOR);
+ Serial.print("val=");
+ Serial.println((int)val);
+ if(0==val)
+ {
+  Serial.println("Sensor is triggered!!");
+ }
+ delay(100);
 }
 
 ```
@@ -196,26 +178,19 @@ val=1
 
 Normaly the output of this sensor is 1(High), when the object enters the measurement range of the sensor, it will be triggered and output a 0(LOW)
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/res/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
-
 
 ## Resources
 
 - **[Zip]** [Grove - Digital Distance Interrupter 0.5 to 5cm eagle file](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/res/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F.zip)
 - **[PDF]** [GP2Y0D805Z0F Datasheet](https://files.seeedstudio.com/wiki/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/res/GP2Y0D805Z0F.pdf)
 
-
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

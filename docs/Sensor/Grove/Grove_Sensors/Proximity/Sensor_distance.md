@@ -1,5 +1,5 @@
 ---
-title: Sensor_distance
+title: Sensor - Distance(introduction)
 nointro:
 keywords:
   - docs
@@ -24,11 +24,8 @@ A distance sensor uses ultrasonic or laser to measure the distance among objects
 
 Thanks to its diode-pumped ERBUM: the high efficiency of glass solid-state lasers, the ELEM-DP 10k laser rangefinder module provides a continuous high pulse repetition rate of 10 Hz or 20 Hz. This feature makes this compact laser rangefinder ideal for measuring or tracking the distance of fast moving objects such as aircrafts.
 
-
-
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Sensor_distance/IMG/distance-sensor.png" /><figcaption><b>Figure 1</b>. <i>Distance Sensor ( Image from Direct Industry, 2020 )</i></figcaption>
 </div>
-
 
 ### How does a distance sensor work
 
@@ -38,18 +35,16 @@ The distance detects the amount of physical changes (time difference, angle diff
 
 There are a numerous use of these distance sensors. Particularly, using these kinds of sensors, human beings can be monitored and benifitted or even saved from different conditions. Therefore the distance sensors play important roles in various sectors, which include daily life, industry, medical, military and etc.
 
-
 | Field of application                                          | Content |
 |--------------------------------|-----------------------------------------|
 | Daily Life  | The distance sensors are generally located on both sides of the handset or in the groove of the handset. When the user is answering or making a call, the mobile phone is close to the head, and the distance sensor can measure the distance between them to a certain extent, then notify the screen backlight to turn off, and turn on the backlight again when taken away, which is more convenient for the user Save more power.|
 | Industry | Railway contact network measurement; Building limit measurement; Measurement of unsuitable objects; Industrial automation and production intelligent management; Automobile speed and flow statistics; Industrial monitoring signal trigger control; XY positioning of tower crane; Monitoring of ship's safe docking position; Container positioning; Overhead cable measurement, Height limitation measurement; Measure the width of the box on the conveyor belt.  |
 | Medical treatment| Rope displacement sensor for remote surgical tool positioning and bed positioning in X-ray / CT scan.|
-| Military | Mostly used in field environment (mountain conditions, canyon depth and etc.), aircraft height detection and some are used for mine depth and material height measurement. While aircraft height measurement is mainly utilized to detect the height from the ground when taking off and landing, real-time displayed on the control panel.| 
+| Military | Mostly used in field environment (mountain conditions, canyon depth and etc.), aircraft height detection and some are used for mine depth and material height measurement. While aircraft height measurement is mainly utilized to detect the height from the ground when taking off and landing, real-time displayed on the control panel.|
 
 ## Distance Sensors at Seeed
+
 ### Which One is Your Preference
-
-
 
 |Name|Thumbnail|Operate voltage|Measurement Range|Working Temperature|Click to buy|
 |----|-----|-----|------|------|------|
@@ -69,10 +64,8 @@ For more detailed information of individuals, please visit their own pages via t
 
 ## Resource
 
-  - Reference
-      - [Distance Sensor: ELEM-DP 10k ](https://www.directindustry-china.cn/prod/jenoptik-i-defense-civil-systems/product-65823-2021371.html)
-      
-      
+- Reference
+  - [Distance Sensor: ELEM-DP 10k](https://www.directindustry-china.cn/prod/jenoptik-i-defense-civil-systems/product-65823-2021371.html)
 
 ## Project
 
@@ -81,8 +74,8 @@ For more detailed information of individuals, please visit their own pages via t
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/stairs-hackers/hacking-the-stairs-at-seeed-s-new-office-9ef30b/embed' width='350'></iframe>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

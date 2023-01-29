@@ -17,7 +17,7 @@ last_update:
 :::note
 
 - Around 85% of all Grove modules is supported by Grove - Wrapper.
-- Grove - Wrapper series have two size of wrappers, each gets four colors, and there are totally eight SKUs that are listed at [Specifications](/Grove-Wrapper#Parts_list) section.
+- Grove - Wrapper series have two size of wrappers, each gets four colors, and there are totally eight SKUs that are listed at Specifications section.
 :::
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Grove%20-%20Wrapper.html)
@@ -69,42 +69,42 @@ last_update:
 **Different type of wrapper and corresponding SKU**
 
 <table>
-<tr>
-<td> **Product name** </td>
-<td> **SKU**
-</td></tr>
-<tr>
-<td> Red Grove Wrapper 1*1(4 PCS pack)  </td>
-<td> 110070020
-</td></tr>
-<tr>
-<td> Yellow Grove Wrapper 1*1(4 PCS pack)  </td>
-<td> 110070021
-</td></tr>
-<tr>
-<td> Blue Grove Wrapper 1*1(4 PCS pack)  </td>
-<td> 110070022
-</td></tr>
-<tr>
-<td> Green Grove Wrapper 1*1(4 PCS pack) </td>
-<td> 110070023
-</td></tr>
-<tr>
-<td> Red Grove Wrapper 1*2(4 PCS pack)  </td>
-<td> 110070024
-</td></tr>
-<tr>
-<td> Yellow Grove Wrapper 1*2(4 PCS pack)  </td>
-<td> 110070025
-</td></tr>
-<tr>
-<td> Blue Grove Wrapper 1*2(4 PCS pack)  </td>
-<td> 110070026
-</td></tr>
-<tr>
-<td> Green Grove Wrapper 1*2(4 PCS pack) </td>
-<td> 110070027
-</td></tr></table>
+  <tbody><tr>
+      <td> Product name </td>
+      <td> SKU
+      </td></tr>
+    <tr>
+      <td> Red Grove Wrapper 1*1(4 PCS pack)</td>
+      <td> 110070020
+      </td></tr>
+    <tr>
+      <td> Yellow Grove Wrapper 1*1(4 PCS pack)</td>
+      <td> 110070021
+      </td></tr>
+    <tr>
+      <td> Blue Grove Wrapper 1*1(4 PCS pack)</td>
+      <td> 110070022
+      </td></tr>
+    <tr>
+      <td> Green Grove Wrapper 1*1(4 PCS pack) </td>
+      <td> 110070023
+      </td></tr>
+    <tr>
+      <td> Red Grove Wrapper 1*2(4 PCS pack)</td>
+      <td> 110070024
+      </td></tr>
+    <tr>
+      <td> Yellow Grove Wrapper 1*2(4 PCS pack)</td>
+      <td> 110070025
+      </td></tr>
+    <tr>
+      <td> Blue Grove Wrapper 1*2(4 PCS pack)</td>
+      <td> 110070026
+      </td></tr>
+    <tr>
+      <td> Green Grove Wrapper 1*2(4 PCS pack) </td>
+      <td> 110070027
+      </td></tr></tbody></table>
 
 ## Hardware Overview
 

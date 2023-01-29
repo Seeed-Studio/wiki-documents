@@ -69,7 +69,14 @@ const sidebars = {
 
               ],
             },
+            {
+              type: 'category',
+              label: 'Vision AI',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
 
+              ],
+            },
             {
               type: 'category',
               label: 'Temp & Humi',
@@ -121,15 +128,15 @@ const sidebars = {
               label: 'Proximity',
               items: [
                 'Sensor/Grove/Grove_Sensors/Proximity/Sensor_distance',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-TF_Mini_LiDAR',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Ranger',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-IR_Distance_Interrupter_v1.2',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-TF_Mini_LiDAR',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Doppler-Radar',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
               ]
             },
             {
@@ -145,21 +152,22 @@ const sidebars = {
               type: 'category',
               label: 'Gas',
               items: [
+                'Sensor/Grove/Grove_Sensors/Gas/Sensor_gas',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel-Gas-Sensor-V2',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ2',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ3',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ5',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ9',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-O2',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-O2-MIX8410',
-                //'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
-                'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel-Gas-Sensor-V2',
-                'Sensor/Grove/Grove_Sensors/Gas/Sensor_gas',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Oxygen-Sensor-Pro',
-                'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Alcohol_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
+                //'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
+
               ],
 
             },
@@ -167,12 +175,12 @@ const sidebars = {
               type: 'category',
               label: 'Barometer',
               items: [
+                'Sensor/Grove/Grove_Sensors/Barometer/Sensor_barometer',
+                'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer-High-Accuracy',
                 //'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BME280',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BMP180',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BMP280',
-                'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer-High-Accuracy',
-                'Sensor/Grove/Grove_Sensors/Barometer/Sensor_barometer',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Integrated-Pressure-Sensor-Kit',
               ],
@@ -183,7 +191,7 @@ const sidebars = {
               label: 'Accelerometer',
               items: [
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Sensor_accelerometer',
-                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400',
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Analog_Accelerometer',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Compass_V1.0',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digitial_Compass_v2.0',
@@ -195,7 +203,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer_40g-ADXL357',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer_200g-ADXL372',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Gyro',
-                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g',
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-6-Axis_AccelerometerAndCompass_V2.0',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-6-Axis_AccelerometerAndGyroscope',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-6-Axis_Accelerometer&Gyroscope_BMI088',
@@ -226,6 +234,22 @@ const sidebars = {
 
               ],
             },
+            {
+              type: 'category',
+              label: 'Biometric',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Biometric/Sensor_biomedicine',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
+                // 'Sensor/Grove/Grove_Sensors/Biometric/Grove-EMG_Detector',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Fingerprint_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
+              ],
+            },
+
             {
               type: 'category',
               label: 'Sound',
@@ -270,18 +294,22 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Biometric',
+              label: 'Motion',
               items: [
-                'Sensor/Grove/Grove_Sensors/Biometric/Sensor_biomedicine',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
-                // 'Sensor/Grove/Grove_Sensors/Biometric/Grove-EMG_Detector',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Fingerprint_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
+                'Sensor/Grove/Grove_Sensors/Motion/Sensor_motion',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Digital-PIR-Sensor',
+                // 'Sensor/Grove/Grove_Sensors/Motion/Grove-Collision_Sensor',
+                // 'Sensor/Grove/Grove_Sensors/Motion/Grove-Tilt_Switch',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Mini_Track_Ball',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Mouse_Encoder',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Piezo_Vibration_Sensor',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Optical_Rotary_Encoder-TCUT1600X01',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Vibration_Sensor_SW-420',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
               ],
+
             },
 
           ],
@@ -294,40 +322,99 @@ const sidebars = {
           type: 'category',
           label: 'Grove Sensor Network',
           items: [
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-125KHz_RFID_Reader',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-315MHz_RF_Kit',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-433MHz_Simple_RF_Link_Kit',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE-dual_model-v1.0',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Bee_Socket',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-DMX512',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-GPS',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-GPS-Air530',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_High_Precision_RTC',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_ADC', 
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_FM_Receiver',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_FM_Receiver_v1.1',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_Radio',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_NFC',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_NFC_Tag',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Protoshield',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-RJ45_Adapter',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Screw_Terminal',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Serial_Bluetooth_v3.0',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Serial_RF_Pro',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi_V2',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE_v1',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_E5_New_Version',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Node',
+            // {
+            //   type: 'category',
+            //   label: 'LoRa',
+            //   items: [
+            //     // 'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
 
+            //   ]
+            // },
+            {
+              type: 'category',
+              label: 'Bluetooth',
+              items: [
+                // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE-dual_model-v1.0',
+                // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth_v3.0',
+                'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE_v1',
 
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Wi-Fi',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/Wi-Fi/Grove-UART_Wifi',
+                'Sensor/Grove/Grove_Sensors_Network/Wi-Fi/Grove-UART_Wifi_V2',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'NFC',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC',
+                'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC_Tag',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'GPS',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/GPS/Grove-GPS',
+                'Sensor/Grove/Grove_Sensors_Network/GPS/Grove-GPS-Air530',
+              ]
+            },
+            // {
+            //   type: 'category',
+            //   label: 'BEE',
+            //   items: [
+            //     // 'Sensor/Grove/Grove_Sensors_Network/BEE/Grove-Bee_Socket',
 
+            //   ]
+            // },
+            {
+              type: 'category',
+              label: 'RF',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove-125KHz_RFID_Reader',
+                // 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-315MHz_RF_Kit',
+                // 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit',
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove_LoRa_Radio',
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove-Serial_RF_Pro',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Standard Protocol',
+              items: [
+                // 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-DMX512',
+                // 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_ADC', 
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver_v1.1',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Protoshield',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-RJ45_Adapter',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Node',
 
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Communication',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
+                'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
+
+                'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_High_Precision_RTC',
+                'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Screw_Terminal',
+
+              ]
+            },
 
           ]
         },
+
+
+
 
         {
           type: 'category',
@@ -954,7 +1041,7 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'SenseCAP_the_Sensor_Prototype_Kit',
+      label: 'SenseCAP the Sensor Prototype Kit',
       items: [
         'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
         'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',

@@ -1,5 +1,5 @@
 ---
-title: Sensor_sound
+title: Sensor - Sound(introduction)
 nointro:
 keywords:
   - docs
@@ -27,7 +27,6 @@ This unique "sound camera" is called SeeSV-S205, with an ordinary camera in the 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Sensor_sound/IMG/sound sensor.jpg" /><figcaption><b>Figure 1</b>. <i>SeeSV-S205 Sound Camera ( Image from SinaTech, 2013 )</i></figcaption>
 </div>
 
-
 ### How does a sound sensor work
 
 The sound sensor has a built-in condenser electret microphone that is sensitive to sound. Sound waves cause the electret film in the microphone to vibrate, resulting in a change in capacitance and a small voltage corresponding to the change. And this voltage is then converted into a 0-5V voltage, which is accepted by the data collector after A / D conversion and transmitted to the computer.
@@ -37,25 +36,22 @@ The sound sensor has a built-in condenser electret microphone that is sensitive 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Sensor_sound/IMG/birthday cake.png" /><figcaption><b>Figure 2</b>. <i> Working principle of a Sound &amp; Light Interactive Cake  ( Image from Dfrobot, 2019 )</i></figcaption>
 </div>
 
-
 There is a black pickup head (MIC) on the sound sensor. When birthday song plays loudly in front of the black pickup head, the sound sensor can feel the vibration of the sound, which generates electrical signals, and lit up the lights on the cake.
 
 ## Field of Applications
 
 There are a numerous use of these sound sensors. Particularly, using these kinds of sensors, human beings can be monitored and benifitted or even saved from different conditions. Therefore the sound sensors play important roles in various sectors, which include daily life, industry, medical, military and etc.
 
-
 | Field of application                                          | Content |
 |--------------------------------|-----------------------------------------|
 | Daily Life  | The sensor samples the sound signal and applies it to microphones, recorders, mobile phones and other devices. The audio control lamp is equipped with an audio sensor. As long as someone makes a friction sound for 1 second, the wall lamp will automatically turn on for about ten seconds; the voice control TV can store the voices of two people.|
 | Industry | The acoustic wave sensor utilizes the positive and reverse piezoelectric effect of the conversion between electrical energy and mechanical energy of lead zirconate titanate PZT piezoelectric ceramic to measure distance. An electrical signal is added to the piezoelectric ceramic, it generates mechanical vibration and emits ultrasound. When an obstacle is encountered on the way, the ultrasound will be reflected back immediately, and there will be an electrical signal output when it acts on its ceramic. Consequently the distance between the car and the obstacle is calculated and displayed via measuring the time differences.  |
 | Medical treatment| The working principle of traditional hearing aids is: the microphone (microphone) converts the received sound signal into an electrical signal and sends it to the amplifier. The amplifier amplifies the electrical signal and sends it to the receiver (headphone), which converts the electrical signal into sound signal. The sound signal at this time is much stronger than the signal received by the microphone, so that the hearing loss of the deaf can be compensated to varying degrees.|
-| Military | The sound sensor uses sound waves to determine the chemical composition of the material in the closed container to strengthen the security of the port; The sound sensor system can locate and classify the sniper firepower, and provide the azimuth, elevation, and Range, caliber and error distance.| 
+| Military | The sound sensor uses sound waves to determine the chemical composition of the material in the closed container to strengthen the security of the port; The sound sensor system can locate and classify the sniper firepower, and provide the azimuth, elevation, and Range, caliber and error distance.|
 
 ## Sound Sensors at Seeed
+
 ### Which One is Your Preference
-
-
 
 |Name|Thumbnail|Operate voltage|Measurement Range|Sensitivity|Output|Signal Frequency|Click to buy|
 |----|-----|-----|------|------|------|-----|------|
@@ -73,10 +69,9 @@ For more detailed information of individuals, please visit their own pages via t
 
 ## Resource
 
-  - Reference
-      - [Magic sound camera: composed of camera sound sensor](http://tech.sina.com.cn/digi/dc/2013-05-14/00188334966.shtml)
-      - [Boson:Sound Sensor](http://wiki.dfrobot.com.cn/index.php?title=%E5%A3%B0%E9%9F%B3%E4%BC%A0%E6%84%9F%E5%99%A8) 
-      
+- Reference
+  - [Magic sound camera: composed of camera sound sensor](http://tech.sina.com.cn/digi/dc/2013-05-14/00188334966.shtml)
+  - [Boson:Sound Sensor](http://wiki.dfrobot.com.cn/index.php?title=%E5%A3%B0%E9%9F%B3%E4%BC%A0%E6%84%9F%E5%99%A8)
 
 ## Project
 
@@ -89,8 +84,8 @@ For more detailed information of individuals, please visit their own pages via t
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/coding-with-da-vince/the-da-vinci-code-3b91a8/embed' width='350'></iframe>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
