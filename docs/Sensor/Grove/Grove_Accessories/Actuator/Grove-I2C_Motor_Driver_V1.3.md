@@ -1,5 +1,5 @@
 ---
-title: Grove-I2C_Motor_Driver_V1.3
+title: Grove - I2C Motor Driver V1.3
 nointro:
 keywords:
   - docs
@@ -26,17 +26,17 @@ Contrast to the [Grove - I2C motor driver V1.2](https://wiki.seeedstudio.com/Gro
 | v1.2     | Modify the I2C address set by hardware          | July 2nd, 2012 |
 | v1.3     | Modify the firmware to support off-line Stepper | Feb 18th, 2013 |
 
-
 ## Features
 
--   Grove Compatible
--   I2C Interface
--   Adjustable motor speed and rotation direction
--   Changeable slave address by hardware
+- Grove Compatible
+- I2C Interface
+- Adjustable motor speed and rotation direction
+- Changeable slave address by hardware
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 ## Specifications
 
 <table border="1" cellspacing="0" width="80%">
@@ -151,16 +151,15 @@ Input voltage on screw terminals is regulated to 5V and connected to I2C +5V via
 
 ## Application Ideas
 
--   Robots
--   Homebuilt RC cars
--   Case fans
--   High power LED illumination
+- Robots
+- Homebuilt RC cars
+- Case fans
+- High power LED illumination
 
 <div class="admonition danger">
 <p class="admonition-title">Caution</p>
 The board will be very hot while operating over 1Amp. Do keep your hands off!
 </div>
-
 
 ## Getting Started
 
@@ -183,7 +182,6 @@ The I2C Motor Driver can control motor which is based on the chip L298. The L298
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2CMotorDriver_New_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-I2C-Motor-Driver-p-907.html)|
 
-
 - **Step 2.** Set the address of the I2C Motor Driver
 
 - Set the address by dial switch is a new function added to the new I2C Motor Driver.
@@ -198,7 +196,7 @@ The I2C Motor Driver can control motor which is based on the chip L298. The L298
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2CMotorDriver-4.jpg)
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove - I2C Motor Driver V1.3 to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove - I2C Motor Driver V1.3 to Seeeduino as below.
 :::
 | Seeeduino       | Grove - I2C Motor Driver V1.3 |
 |-----------------|-------------------------|
@@ -209,7 +207,7 @@ The I2C Motor Driver can control motor which is based on the chip L298. The L298
 
 #### Software
 
-- **Step 1.** Download the  [ Grove_I2C_Motor_Driver_v1_3 Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3/archive/master.zip) from Github.
+- **Step 1.** Download the  [Grove_I2C_Motor_Driver_v1_3 Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3/archive/master.zip) from Github.
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
@@ -243,13 +241,11 @@ With speed() function, you are able to drive one motor at the speed you want.
 
 - **motor_id** represents which motor to use. You can fill MOTOR1 or MOTOR2.
 
-
-- **_speed** represents the speed you set to the motor. You can fill -100~100 here. When _speed>0, DC motor runs clockwise, while _speed<0, DC motor runs anticlockwise. And the bigger the absolute value of _speed, the faster the speed of DC motor.
+- **_speed** represents the speed you set to the motor. You can fill -100~100 here. When _speed>0, DC motor runs clockwise, while_speed<0, DC motor runs anticlockwise. And the bigger the absolute value of _speed, the faster the speed of DC motor.
 
 With stop() function, you are able to stop a running DC motor.
 
 - **motor_id** represents which motor to use. You can fill MOTOR1 or MOTOR2.
-
 
 **Drive a Stepper Motor**
 
@@ -261,7 +257,6 @@ The connection between [24BYJ48](https://www.seeedstudio.com/depot/high-quality-
 
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_Connector.jpg)
 
-
 - We provide one function to drive a stepper motor.
 
 ```c
@@ -269,7 +264,7 @@ The connection between [24BYJ48](https://www.seeedstudio.com/depot/high-quality-
 void StepperRun(int _step);
 ```
 
-- **_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step>0, stepper motor runs clockwise, while _step<0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if _step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
+- **_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step>0, stepper motor runs clockwise, while_step<0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if_step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
 
 ### Play with Codecraft
 
@@ -301,9 +296,8 @@ Upload the program to your Arduino/Seeeduino.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/res/Grove-I2C_Motor_Driver_v1.3_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
+
 - **[Eagle]** [Grove - I2C Motor Driver V1.3 Schematic](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/res/Grove-I2C_Motor_Driver_v1.3_Eagle_File.zip)
 
 - **[PDF]** [Grove - I2C Motor Driver V1.3 PCB in PDF Format](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/res/Grove%20-%20I2C%20Motor%20Driver%20%20v1.3b%20PCB.pdf)
@@ -323,7 +317,8 @@ Upload the program to your Arduino/Seeeduino.
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver_V1.3 -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

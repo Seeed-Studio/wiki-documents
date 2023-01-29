@@ -403,10 +403,6 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
                 'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
-
-                'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_High_Precision_RTC',
-                'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Screw_Terminal',
-
               ]
             },
 
@@ -451,25 +447,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_1_54',
               ],
             },
-            {
-              type: 'category',
-              label: 'Input Output',
-              items: [
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-AND',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-OR',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-DC_Jack_Power',  
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Qwiic-Hub',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NunChuck',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
-              ]
-            },
-
             {
               type: 'category',
               label: 'Actuator',
@@ -520,6 +497,8 @@ const sidebars = {
               label: 'Time',
               items: [
                 'Sensor/Grove/Grove_Accessories/Time/Grove-RTC',
+                'Sensor/Grove/Grove_Accessories/Time/Grove_High_Precision_RTC',
+
               ],
             },
 
@@ -534,16 +513,37 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Current/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-MOSFET',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-SPDT_Relay_30A',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-Screw_Terminal',
+
               ],
             },
             {
               type: 'category',
-              label: 'Switch&Button',
+              label: 'Switch & Button',
               items: [
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-6-Position_DIP_Switch',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
               ],
             },
+            {
+              type: 'category',
+              label: 'Input Output',
+              items: [
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-AND',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-OR',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-DC_Jack_Power',  
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Qwiic-Hub',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NunChuck',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
+              ]
+            },
+
             {
               type: 'category',
               label: 'Case',

@@ -1,5 +1,5 @@
 ---
-title: Grove-I2C_Hub
+title: Grove - I2C Hub
 nointro:
 keywords:
   - docs
@@ -14,14 +14,12 @@ last_update:
 
 I2C Hub Grove is an extension Grove module for connecting multiply I2C devices to Grove Base Shield. It can use with [Universal 4 Pin to X2 4 Pin cable](https://www.seeedstudio.com/depot/universal-4-pin-to-x2-4-pin-cable-5-pcs-pack-p-847.html?cPath=178_179) and connects up to 3 I2C devices which may cover most developing purpose.
 
-
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)
 
 Features
 --------
 
--   Chainable
-
+- Chainable
 
 ## Specification
 
@@ -45,7 +43,7 @@ Platforms Supported
 Application Ideas
 -----------------
 
--   Using more I2C devices than you otherwise have room for on your Grove platform.
+- Using more I2C devices than you otherwise have room for on your Grove platform.
 
 Usage
 -----
@@ -65,8 +63,6 @@ Here we do not list a specific example.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-I2C_Hub/res/I2C_Hub_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
@@ -75,7 +71,8 @@ Resources
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Hub -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

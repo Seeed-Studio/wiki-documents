@@ -1,5 +1,5 @@
 ---
-title: Grove_Recorder
+title: Grove - Recorder
 nointro:
 keywords:
   - docs
@@ -16,22 +16,25 @@ Grove - Recorder is based on the ISD1820P chip, and can record 8-20 secs of audi
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Recorder-p-1825.html)
 
-##  Features
+## Features
+
 ---
-*   Low power consumption
 
-*   Non-volatile storage
+* Low power consumption
 
-*   User-friendly operation
+* Non-volatile storage
 
-*   Replace a single resistor to change recording duration and sampling frequency
+* User-friendly operation
 
-*   Add a resistor to set play cycle mode
+* Replace a single resistor to change recording duration and sampling frequency
 
-*   Ships with and connects to an 8Ω/2W mini-speaker (as shown in the picture)
-*   Uses Standard 4-pin [Grove Cables](/Grove_System/#grove-cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules or a micro-controller such as the [Seeeduino](/Seeeduino "Seeeduino").
+* Add a resistor to set play cycle mode
 
-##  Interface Function
+* Ships with and connects to an 8Ω/2W mini-speaker (as shown in the picture)
+* Uses Standard 4-pin [Grove Cables](/Grove_System/#grove-cables "GROVE System") to connect to other [Grove](/Grove "Grove") modules or a micro-controller such as the [Seeeduino](/Seeeduino "Seeeduino").
+
+## Interface Function
+
 ---
 ![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Recorder_Bottom1.jpg)
 ![](https://files.seeedstudio.com/wiki/Grove_Recorder/img/Recorder_Top1.jpg)
@@ -115,18 +118,19 @@ Grove - Recorder is based on the ISD1820P chip, and can record 8-20 secs of audi
 </dt><dt>⑧ REC IC：ISD1820P
 </dt></dl>
 
-##  Usage
+## Usage
+
 ---
 Follow these steps to build a sample circuit using the **Grove - Recorder** module:
 
-1.  Connect the recorder module to the output side of the Grove circuit (to the right of the power module). On the input side of the circuit, you may use a [Grove - Button](/Grove-Button "Grove - Button") or a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer") module.
-2.  Power up the circuit.
+1. Connect the recorder module to the output side of the Grove circuit (to the right of the power module). On the input side of the circuit, you may use a [Grove - Button](/Grove-Button "Grove - Button") or a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer") module.
+2. Power up the circuit.
 
-3.  Press and hold down the REC button on the recorder module and start recording the audio. The on-board red LED will turn ON. Continue to record the audio until the red LED gets turned OFF. The LED getting turned OFF is indicative of the fact that the recording time is now over.
+3. Press and hold down the REC button on the recorder module and start recording the audio. The on-board red LED will turn ON. Continue to record the audio until the red LED gets turned OFF. The LED getting turned OFF is indicative of the fact that the recording time is now over.
 
-4.  To play back the audio segment that has been recorded, press and hold down the [Grove - Button](/Grove-Button "Grove - Button"). You should now hear the audio segment you recorded being played back. Continue to press and hold down the [Grove - Button](/Grove-Button "Grove - Button") until you see the red LED on-board the recorder module flash. The flash indicates that playback of audio is now complete. If instead of a [Grove - Button](/Grove-Button "Grove - Button"), you are using a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer"), simply move the slider from GND to VCC position to hear the playback at any time.
+4. To play back the audio segment that has been recorded, press and hold down the [Grove - Button](/Grove-Button "Grove - Button"). You should now hear the audio segment you recorded being played back. Continue to press and hold down the [Grove - Button](/Grove-Button "Grove - Button") until you see the red LED on-board the recorder module flash. The flash indicates that playback of audio is now complete. If instead of a [Grove - Button](/Grove-Button "Grove - Button"), you are using a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer"), simply move the slider from GND to VCC position to hear the playback at any time.
 
-5.  To override the recorded audio, simply repeat step 3 above. The new message will override the old one.
+5. To override the recorded audio, simply repeat step 3 above. The new message will override the old one.
 
 Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack_V2 "Grove - Mixer Pack") power module:
 
@@ -136,32 +140,33 @@ Below is an illustration of a Grove circuit built using the [Grove - USB Power](
 
 If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power](/Grove/Input_Output/Grove-DC_Jack_Power "Grove - DC Jack Power") module instead.
 
-##  Availability
+## Availability
+
 ---
 This [Grove](/Grove "Grove") module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit "GROVE System"):
 
-*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
+* [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2")
 
 Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](https://www.seeedstudio.com/depot/Grove-Recorder-p-1825.html).
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove-Recorder_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##  Resources
 ---
-*   [Grove - Recorder v1.0 Schematics (Eagle files)](https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove-Recorder_v1.0.zip)
 
-*   [Grove - Recorder v1.0 Schematics (pdf)](https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove-Recorder_v1.0.pdf)
+* [Grove - Recorder v1.0 Schematics (Eagle files)](https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove-Recorder_v1.0.zip)
 
-*   [Datasheet ISD1820P.pdf (Chinese)](https://files.seeedstudio.com/wiki/Grove_Recorder/res/ISD1820P.pdf)
+* [Grove - Recorder v1.0 Schematics (pdf)](https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove-Recorder_v1.0.pdf)
+
+* [Datasheet ISD1820P.pdf (Chinese)](https://files.seeedstudio.com/wiki/Grove_Recorder/res/ISD1820P.pdf)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

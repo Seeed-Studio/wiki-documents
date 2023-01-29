@@ -1,5 +1,5 @@
 ---
-title: Grove-Differential_Amplifier_v1.2
+title: Grove - Differential Amplifier v1.2
 nointro:
 keywords:
   - docs
@@ -13,17 +13,16 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/img/Grove-Differential_Amplifier_v1.2.jpg)
 
-This Grove is designed for precise differential-input amplification. Input the differential signals of your sensor to this module through the male pins, then your Arduino will get a precisely amplified output from the Grove interface. The gain scale factor is selectable. You can get a 35 times or 1085 times amplification via a switch on the board. 
+This Grove is designed for precise differential-input amplification. Input the differential signals of your sensor to this module through the male pins, then your Arduino will get a precisely amplified output from the Grove interface. The gain scale factor is selectable. You can get a 35 times or 1085 times amplification via a switch on the board.
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Differential-Amplifier-p-1284.html)
-
 
 Features
 -------
 
--   High amplifying precision
--   Selectable scale factor
--   Can be conveniently read by Arduino
+- High amplifying precision
+- Selectable scale factor
+- Can be conveniently read by Arduino
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -32,10 +31,10 @@ Features
 Applications
 -----------
 
--   Data acquisition
--   Battery operated systems
--   Pressure and temperature bridge amplifiers
--   General purpose instrumentation
+- Data acquisition
+- Battery operated systems
+- Pressure and temperature bridge amplifiers
+- General purpose instrumentation
 
 Specifications
 -------------
@@ -208,13 +207,10 @@ Copy and paste the demo code below to Arduino IDE and upload it.
 
 You can view the amplified signals via serial monitor. For the value of the input signal, you need to use the multimeter to measure the voltage difference between VIN+ and VIN-.
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Differential_Amplifier_v1.2/res/Grove-Differential_Amplifier_v1.2_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 Resources
 --------
@@ -226,7 +222,8 @@ Resources
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Differential_Amplifier_v1.2 -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

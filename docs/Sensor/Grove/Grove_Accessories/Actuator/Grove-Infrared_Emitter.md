@@ -1,5 +1,5 @@
 ---
-title: Grove-Infrared_Emitter
+title: Grove - Infrared Emitter
 nointro:
 keywords:
   - docs
@@ -14,19 +14,15 @@ last_update:
 
 The Infrared Emitter is used to transmit infrared signals through an infrared LED, while there is an **Infrared receiver** to get the signals on the other side. An infrared LED is like any other LED, with its color centered around 940nm. We can not only use the emitter to transmit data or commands, but also to emulate remotes to control your home appliance using an Arduino. The Infrared Emitter can transmit signals reliable up to 10 meters. Beyond 10 meters, the receiver may not get the signals. We often use the two Groves-the [Infrared Receiver](https://wiki.seeedstudio.com/Grove-Infrared_Receiver) and the Grove - Infrared Emitter to work together.
 
-
-
-
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width={210} height={41} border={0} /></a></p>
-
 
 ## Version
 
-Product Version | Changes |	Released Date
+Product Version | Changes | Released Date
 --|--|--
-Grove - Infrared Emitter v1.0	| Initial |	Nov. 01 2015
-Grove - Infrared Emitter v1.1	| Change the Infrared transmitting tube location  |	Jul. 24 2016
-Grove - Infrared Emitter v1.2	| Change the valnue of C1 to make the power more stable  |	Dec. 14 2016
+Grove - Infrared Emitter v1.0 | Initial | Nov. 01 2015
+Grove - Infrared Emitter v1.1 | Change the Infrared transmitting tube location  | Jul. 24 2016
+Grove - Infrared Emitter v1.2 | Change the valnue of C1 to make the power more stable  | Dec. 14 2016
 
 ## Application
 
@@ -48,7 +44,7 @@ Grove - Infrared Emitter v1.2	| Change the valnue of C1 to make the power more s
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
-:::    
+:::
 
 ## Platforms Supported
 
@@ -60,12 +56,9 @@ Grove - Infrared Emitter v1.2	| Change the valnue of C1 to make the power more s
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
-
 ## Getting Started
 
 The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will receive them.
-
 
 ### Play With Arduino
 
@@ -83,22 +76,18 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)|
 
 - **Step 2.** Connect Grove - Infrared Emitter to port **D3** of one Grove-Base Shield.
-              
+
 - **Step 3.** Connect Grove - Infrared Receiver to port **D2** of the other Grove-Base Shield.
 
 - **Step 4.** Plug Grove - Base Shield into Seeeduino.
 
 - **Step 5.** Connect Seeeduino to PC via a USB cable.
 
-
-
 ![](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/connect.jpg)
 
-
 :::note
-	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 :::
-
 
 | Seeeduino       | Grove - Infrared Emitter |
 |---------------|-------------------------|
@@ -107,15 +96,12 @@ The Grove - Infrared Emitter can send data while Grove - Infrared Receiver will 
 | Not Conencted | White                   |
 | D3            | Yellow                  |
 
-
 | Seeeduino       | Grove - Infrared Receiver |
 |---------------|-------------------------|
 | 5V           | Red                     |
 | GND           | Black                   |
 | Not Conencted | White                   |
 | D2            | Yellow                  |
-
-
 
 #### Software
 
@@ -171,7 +157,6 @@ Copy the following **Receive Example Code** to the Arduino IDE:
 
 **Receive Example Code:**
 
-
 ```cpp
 /* rawR&cv.ino Example sketch for IRLib2
  *  Illustrate how to capture raw timing values for an unknow protocol.
@@ -216,11 +201,9 @@ For the **Send Example**, the Serial should be like this:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/send.png" /></div>
 
-
 For the **Receive Example**, the Serial Monitor should be like this:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/recv.png" /></div>
-
 
 > For more advanced usage of the library, please check [Seeed_Arduino_IR](https://github.com/Seeed-Studio/Seeed_Arduino_IR).
 
@@ -228,7 +211,6 @@ For the **Receive Example**, the Serial Monitor should be like this:
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/res/Grove-Infrared_Emitter_eagle_files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Resources
 
@@ -242,11 +224,9 @@ For the **Receive Example**, the Serial Monitor should be like this:
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ctroberts/ir-launchpad-to-launchpad-communication-0dd109/embed' width='350'></iframe>
 
-
-
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

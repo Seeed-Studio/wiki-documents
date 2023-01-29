@@ -1,5 +1,5 @@
 ---
-title: Grove-Dry-Reed_Relay
+title: Grove - Dry-Reed Relay
 nointro:
 keywords:
   - docs
@@ -14,21 +14,20 @@ last_update:
 
 The **Grove-Dry Reed Relay** is a relay module which works through magnetizing the vibration reed via the current in the coils. Compared to electromagnetic relays, the contacts completely sealed is the biggest feature of the Dry-Reed Relay. Besides, it features simplicity in construct, compactness, fast speed and long life, which make it widely applied in many fields such as microelectronic detection, Automatic Control etc.
 
-
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Dry-Reed-Relay-p-1412.html)
 
 Features
 -------
 
--   Grove Interface
--   High Speed
--   Good stability
--   Long contact life
--   Contact fully sealed
+- Grove Interface
+- High Speed
+- Good stability
+- Long contact life
+- Contact fully sealed
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
-:::   
+:::
 Specifications
 -------------
 
@@ -200,10 +199,10 @@ The Dry-Reed Relay can support up to 60VDC 1A load. You can use it to control re
 
 The usage of this Dry-reed relay is quite alike that of common relays.
 
--   Connect electric light to Grove - Dry-Reed Relay and power for electric light.
--   Connect Grove - Dry-Reed Relay to port D2 of [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield") and plug it into Arduino/Seeeduino.
+- Connect electric light to Grove - Dry-Reed Relay and power for electric light.
+- Connect Grove - Dry-Reed Relay to port D2 of [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield") and plug it into Arduino/Seeeduino.
 
--   Upload the below code.
+- Upload the below code.
 
 ```
     int Relay = 2;
@@ -223,7 +222,7 @@ The usage of this Dry-reed relay is quite alike that of common relays.
     }
 ```
 
--   The electric light will light up for seconds ,then off for seconds, repeatedly.For the special applications, you may need to write the code by yourself.
+- The electric light will light up for seconds ,then off for seconds, repeatedly.For the special applications, you may need to write the code by yourself.
 
 ### With Raspberry Pi
 
@@ -236,17 +235,20 @@ The usage of this Dry-reed relay is quite alike that of common relays.
 
 3.Connection
 
--   Plug the sensor to grovepi socket D4 by using a grove cable.
+- Plug the sensor to grovepi socket D4 by using a grove cable.
 
 4.Navigate to the demos' directory:
+
 ```
     cd yourpath/GrovePi/Software/Python/
 ```
 
--   To see the code
+- To see the code
+
 ```
     nano grove_relay.py   # "Ctrl+x" to exit #
 ```
+
 ```
     import time
     import grovepi
@@ -277,17 +279,15 @@ The usage of this Dry-reed relay is quite alike that of common relays.
 ```
 
 5.Run the demo.
+
 ```
     sudo python3 grove_relay.py
 ```
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Dry-Reed_Relay/res/Grove-Dry-Reed_Relay_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 Resources
 --------
@@ -298,7 +298,8 @@ Resources
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Dry-Reed_Relay -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Grove-I2C_Motor_Driver_V1.2
+title: Grove - I2C Motor Driver V1.2
 nointro:
 keywords:
   - docs
@@ -17,7 +17,8 @@ The easy software interface is not the only easy-to-use feature because the Grov
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/twig-i2c-motor-driver-p-907.html)
 
-##   Version Tracker
+## Version Tracker
+
 ---
 <table width="494">
 <tr>
@@ -42,19 +43,22 @@ The easy software interface is not the only easy-to-use feature because the Grov
 <td> July 2th, 2012
 </td></tr></table>
 
-##  Feature
+## Feature
+
 ---
-*   Grove Compatiple
 
-*   I2C Interface
+* Grove Compatiple
 
-*   Motor's speed and direction can control
+* I2C Interface
 
-*   Number of channels: 2
+* Motor's speed and direction can control
 
-*   Changeable slave address by Hardware
+* Number of channels: 2
 
-##   Specifications
+* Changeable slave address by Hardware
+
+## Specifications
+
 ---
 <table  cellspacing="0" width="80%">
 <tr>
@@ -108,7 +112,8 @@ The easy software interface is not the only easy-to-use feature because the Grov
 <td> /
 </td></tr></table>
 
-##  Interface Function
+## Interface Function
+
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-1.jpg)
 
@@ -120,34 +125,41 @@ The easy software interface is not the only easy-to-use feature because the Grov
 
 **NOTE:** Input voltage on screw terminals is regulated to 5v and connected to I2C +5v via a jumper (J4). Remove jumper if both external power via the screw terminals and power via the I2C header is used. Use jumper if 5v should be supplied to the I2C bus.
 
-##   Application Ideas
+## Application Ideas
+
 ---
 This motor driver can be used to drive any brushed electronic motor as long as it doesn't consume more than 2A at 5v. Two motors can be driven simultaneously while set to a different speed and direction. The speed can be set fully proportional and is controlled by the ATmega8 on the board using PWM. It is set by I2C commands sent from Arduino or Seeeduino.
 It is perfect for applications like robots, homebuilt RC cars, case fans, high power LED illumination or any other project that involves proportional load control.
 
-##   Cautions
+## Cautions
+
 ---
-*   The board will be very hot if while operating over 1Amps. Do keep off your hands!
 
-*   Arduino IDE(1.0 Or higher version) are supported.
+* The board will be very hot if while operating over 1Amps. Do keep off your hands!
 
-##   Usage
+* Arduino IDE(1.0 Or higher version) are supported.
+
+## Usage
+
 ---
 The I2C Motor Driver can control motor which is based on the chip L298, The L298 isn’t just a dual motor driver, it is a dual H-bridge. An h-bridge is basically a specific setup of transistors that allow you to switch direction of current. So hooked up to a motor, that means you can have it spin in both directions, and with PWM input, you can use your Arduino to make them spin at any speed. Because the L298 has 2 H-bridges, you can not only make a robot go forwards and backwards, but also turn around by having each wheel spin in a different direction.
 
 Now, let's use the I2C Motor Driver to control two DC motors or a stepper rotating in the positive or opposite direction.
 
-###  Set the address of the I2C Motor Driver
+### Set the address of the I2C Motor Driver
 
-*   Set the address by dial switch as a new function added to the new I2C Motor Driver.
+* Set the address by dial switch as a new function added to the new I2C Motor Driver.
 
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-9.jpg)
 
-*   Then keep the address setup in the program is same to the address setup on the I2C motor driver. The default address setup in the program is 0x0f.
+* Then keep the address setup in the program is same to the address setup on the I2C motor driver. The default address setup in the program is 0x0f.
+
 ```
 #define I2CMotorDriverAdd         0x0f   // Set the address of the I2CMotorDriver
 ```
+
 ###
+
 How to drive 2 DC motors
 
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-4.jpg)
@@ -159,8 +171,8 @@ How to drive 2 DC motors
     </dd></dl>
 </div>
 
-
 And then program your Arduino as below:
+
 ```
 #include <Wire.h>
 .......
@@ -187,9 +199,10 @@ void loop()  {
 
 In this program, Arduino first set the speed of the 2 DC motors with the _MotorSpeedSetAB()_command, and then set the DC motors work directions with _MotorDirectionSet()_ command. please refer to the [Function Reference](/Grove-I2C_Motor_Driver_V1.2#Function_Reference) for details, you can download all the demo code in the [Resource](/Grove-I2C_Motor_Driver_V1.2#Resources).
 
-###  How to drive a 4-wire stepper
+### How to drive a 4-wire stepper
 
 The I2C motor Driver can be also used to drive a 4-wire stepper. connect your stepper to the Output Pins of I2C motor driver, and then connect motor driver to your Arduino/Seeeduino with I2C bus. Program your Arduino as blows:
+
 ```
 #include <Wire.h>
 .......
@@ -230,9 +243,10 @@ This connected 4-wire stepper will rotate, you can adjust the rotate speed or st
 
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/2.gif)
 
-##  Function Reference
+## Function Reference
+
 ---
-**1. void MotorSpeedSetAB(unsigned char MotorSpeedA , unsigned char MotorSpeedB) **
+**1. void MotorSpeedSetAB(unsigned char MotorSpeedA , unsigned char MotorSpeedB)**
 
 _Description: defines the speed of motor 1 and motor 2_
 
@@ -247,11 +261,12 @@ Serial.println("sent DC speed 100");
 MotorSpeedSetAB(100,100);//defines the speed of motor 1 and motor 2;
 delay(10); //this delay needed
 ```
+
 **2. void MotorPWMFrequenceSet(unsigned char Frequence)**
 
 _Description:set the prescale frequency of PWM, 0x03 default._
 
-_Frequence: the prescale frequency of PWM. _
+_Frequence: the prescale frequency of PWM._
 
 **3. void MotorDirectionSet(unsigned char Direction)**
 
@@ -278,21 +293,23 @@ _Description: Adjust the direction and speed together of Motors._
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Grove-I2C_Motor_Driver_Source_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-##   Resources
 ---
-*   [Grove - I2C Motor Driver Eagle File](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Grove-I2C_Motor_Driver_Source_File.zip)
 
-*   [I2C Motor DriverV1.2 Demo Code](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/I2CMotorDriver12Demo.zip)
+* [Grove - I2C Motor Driver Eagle File](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Grove-I2C_Motor_Driver_Source_File.zip)
 
-*   [L298 Datasheet ](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/L298datasheet.pdf)
+* [I2C Motor DriverV1.2 Demo Code](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/I2CMotorDriver12Demo.zip)
 
-*   [78M05 Datssheet ](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/ST_78M05DataSheet.pdf)
+* [L298 Datasheet](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/L298datasheet.pdf)
 
-*   [File:Burn Firmware for Atmega8 using ISP](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Burn_firmware_for_Atmega8_using_ISP.zip)
+* [78M05 Datssheet](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/ST_78M05DataSheet.pdf)
+
+* [File:Burn Firmware for Atmega8 using ISP](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/res/Burn_firmware_for_Atmega8_using_ISP.zip)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Grove-2-Coil_Latching_Relay
+title: Grove - 2-Coil Latching Relay
 nointro:
 keywords:
   - docs
@@ -19,9 +19,9 @@ This module is based on 2-Coil Latching Relay. Contrast to the ordinary relay, t
 Features
 -------
 
--   Grove Connector
--   Low power consumption
--   Dual Switch
+- Grove Connector
+- Low power consumption
+- Dual Switch
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -150,8 +150,6 @@ Platforms Supported
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
-
 Before usage
 ------------
 
@@ -159,9 +157,9 @@ Before usage
 
 We suggest you to read those knowledge before using the Gas sensor, it'll help you to learn more about Arduino and our products, and also it'll let you to use open souse hardware more easier.
 
--   [Getting Started with Arduino](/Getting_Started_with_Seeeduino)
--   [What is Grove system](/Grove_System)
--   [Why i need a Base shield?](/Base_Shield_V2)
+- [Getting Started with Arduino](/Getting_Started_with_Seeeduino)
+- [What is Grove system](/Grove_System)
+- [Why i need a Base shield?](/Base_Shield_V2)
 
 After reading that you will know how to use Base shield with Grove products to work well with Arduino. Let's start it !
 
@@ -169,10 +167,9 @@ After reading that you will know how to use Base shield with Grove products to w
 
 This tutorial will include some necessary products:
 
--   [Arduino UNO R3](https://www.seeedstudio.com/depot/Arduino-Uno-Rev3-p-694.html) or [Seeeduino v4](https://www.seeedstudio.com/depot/Seeeduino-V4-p-669.html)
--   [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
--   Grove - 2-Coil Latching Relay
-
+- [Arduino UNO R3](https://www.seeedstudio.com/depot/Arduino-Uno-Rev3-p-694.html) or [Seeeduino v4](https://www.seeedstudio.com/depot/Seeeduino-V4-p-669.html)
+- [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
+- Grove - 2-Coil Latching Relay
 
 Getting Started
 -----
@@ -183,8 +180,8 @@ The latching relay only draws power during the changing of state. A rising/falli
 
 Let's begin to use it.
 
--   Connect the module to D3 port of [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield").
--   The relay hold in "set" status(Comm and NO connected) in default, when there is a rising edge on the SIG pin. It turns the "reset" state(Comm and NC connected). The reference code is shown below:
+- Connect the module to D3 port of [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield").
+- The relay hold in "set" status(Comm and NO connected) in default, when there is a rising edge on the SIG pin. It turns the "reset" state(Comm and NC connected). The reference code is shown below:
 
 ```c
 #define LatchingRelay 3
@@ -203,7 +200,7 @@ void loop()
 }
 ```
 
--   The relay hold in "reset" status(Comm and NC Connected), when there is a falling edge on the SIG pin. It turns the "set" state(Comm and NO connected). The reference code is shown below:
+- The relay hold in "reset" status(Comm and NC Connected), when there is a falling edge on the SIG pin. It turns the "set" state(Comm and NO connected). The reference code is shown below:
 
 ```c
 #define LatchingRelay 3
@@ -222,7 +219,7 @@ void loop()
 }
 ```
 
--   This module consumes little power when working state doesn't change. After setting the relay state, you do not need to supply power for the Latching Relay any more, which makes it especially low power consumption.
+- This module consumes little power when working state doesn't change. After setting the relay state, you do not need to supply power for the Latching Relay any more, which makes it especially low power consumption.
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -231,13 +228,11 @@ Relay is on the "reset" status when being released from stock.
 
 ![](https://files.seeedstudio.com/wiki/Grove-2-Coil_Latching_Relay/img/Latching_Relay_Diagram.jpg)
 
-
 <div class="admonition note">
 <p class="admonition-title">Notes</p>
 <p> 1. The two-way relays are controlled at the same time.</p>
 <p> 2. The NO(NC) indicator will flash once when switch to "set"("reset") status.</p>
 </div>
-
 
 ### With Raspberry Pi
 
@@ -247,14 +242,15 @@ Relay is on the "reset" status when being released from stock.
 
 3.Connection
 
--   Plug the sensor to grovepi socket D4 by using a grove cable.
+- Plug the sensor to grovepi socket D4 by using a grove cable.
 
 4.Navigate to the demos' directory:
 
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
--   To see the code
+
+- To see the code
 
 ```
 nano grove_2_coil_latching_relay.py   # "Ctrl+x" to exit #
@@ -290,17 +286,15 @@ while True:
 ```
 
 5.Run the demo.
+
 ```
 sudo python grove_2_coil_latching_relay.py
 ```
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-2-Coil_Latching_Relay/res/Grove-2-Coil_Latching_Relay_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 Resources
 --------
@@ -311,7 +305,8 @@ Resources
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_2-Coil_Latching_Relay -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

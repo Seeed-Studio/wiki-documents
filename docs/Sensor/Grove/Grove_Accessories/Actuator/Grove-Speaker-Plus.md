@@ -1,5 +1,5 @@
 ---
-title: Grove-Speaker-Plus
+title: Grove - Speaker Plus
 nointro:
 keywords:
   - docs
@@ -36,9 +36,8 @@ Specifications
 
 | Parameters           | Values |
 |------|-----|
-| Dimensions | 130mm x90mm x12mm| 
+| Dimensions | 130mm x90mm x12mm|
 |Weight   |G.W 12g|
-
 
 Platforms Supported
 -------------------
@@ -50,6 +49,7 @@ Platforms Supported
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
+
 ## Getting Started
 
 #### Materials Requied
@@ -58,7 +58,6 @@ Platforms Supported
 |--------------|--------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/Seeeduino_Lotus.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Speaker_Plus/IMG/small.png)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Speaker-Plus-p-4592.html)|
-
 
 #### Hardware Connection
 
@@ -80,7 +79,7 @@ You can supply different frequency signal to this module with Arduino. Arduino g
 
 |Note|Corresponding frequency|Half cycle|
 |---|---|----|
-|1| 261.6255653	|1911.128216|
+|1| 261.6255653 |1911.128216|
 |1.5|277.182631|1803.864832|
 |2|293.6647679|1702.621678|
 |2.5|311.1269837|1607.060866|
@@ -140,6 +139,7 @@ void sound(uint8_t note_index)
     }
 }
 ```
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 Due to the influence of the capacitance, the module can only output the bass signal, and the treble is unable to emit.
@@ -154,16 +154,15 @@ Due to the influence of the capacitance, the module can only output the bass sig
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Speaker_Plus/202002903_Grove-Speaker_Plus_v1.0_SCH&PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 --------
 
--   [How to generate different tone with MCU](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Tone.pdf)
--   [LM386 Low Voltage Audio Power Amplifier Datasheet](https://files.seeedstudio.com/wiki/Grove-Speaker/res/LM386_Low_Voltage_Audio_Power_Amplifier_Datasheet.pdf)
+- [How to generate different tone with MCU](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Tone.pdf)
+- [LM386 Low Voltage Audio Power Amplifier Datasheet](https://files.seeedstudio.com/wiki/Grove-Speaker/res/LM386_Low_Voltage_Audio_Power_Amplifier_Datasheet.pdf)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

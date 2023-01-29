@@ -1,5 +1,5 @@
 ---
-title: Grove-Serial_Camera
+title: Grove - Serial Camera
 nointro:
 keywords:
   - docs
@@ -19,11 +19,11 @@ The Serial Camera is a JPEG color camera module easy for MCU use.It has integrat
 Features
 --------
 
--   Grove Interface
--   JPEG compressed image without Thumbnail Information
--   5V power supply
--   Small and compact
--   Protocol control
+- Grove Interface
+- JPEG compressed image without Thumbnail Information
+- 5V power supply
+- Small and compact
+- Protocol control
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -100,13 +100,13 @@ Platforms Supported
 
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
-::: 
+:::
 
 Application Ideas
 -----------------
 
--   Digital Cameras with the [SD card shield](https://www.seeedstudio.com/depot/sd-card-shield-p-492.html?cPath=109)
--   Video monitoring system
+- Digital Cameras with the [SD card shield](https://www.seeedstudio.com/depot/sd-card-shield-p-492.html?cPath=109)
+- Video monitoring system
 
 Usage
 -----
@@ -155,15 +155,15 @@ Usage
 Resources
 ---------
 
--   [VC0703 debug tool](https://files.seeedstudio.com/wiki/Grove-Serial_Camera/res/VC0703COMTOOL.rar)
--   [Manual for serial camera.pdf](https://files.seeedstudio.com/wiki/Grove-Serial_Camera/res/Manual_for_serial_camera.pdf)
--   [Grove - Serial Camera Library](https://files.seeedstudio.com/wiki/Grove-Serial_Camera/res/SerialCameral_DemoCode.zip)
-
+- [VC0703 debug tool](https://files.seeedstudio.com/wiki/Grove-Serial_Camera/res/VC0703COMTOOL.rar)
+- [Manual for serial camera.pdf](https://files.seeedstudio.com/wiki/Grove-Serial_Camera/res/Manual_for_serial_camera.pdf)
+- [Grove - Serial Camera Library](https://files.seeedstudio.com/wiki/Grove-Serial_Camera/res/SerialCameral_DemoCode.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Serial_Camera -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

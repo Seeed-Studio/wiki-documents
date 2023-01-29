@@ -1,5 +1,5 @@
 ---
-title: Grove-NunChuck
+title:  Grove - NunChuck
 nointro:
 keywords:
   - docs
@@ -14,7 +14,6 @@ last_update:
 
 The **Grove - NunChuck** is a small PCB that adapts the Wii Nunchuck connector to standard Grove connector. The power, ground and two-wire interface of the Nunchuck are all broken out to a 4-pin 0.1" pitch header.
 This “Grove - NunChuck”, let you play with the Wii Nunchuck and other Wii remote peripherals without needing you to cut cables. Just plug it into the Wii Nunchuck, then into the  Grove - Base Shield.
-
 
 There is [Wiichuck- A Wii-Nunchuck break out board](https://www.seeedstudio.com/depot/wiichuck-a-wiinunchuck-break-out-board-p-586.html?cPath=175_177), they are similar.
 
@@ -31,7 +30,8 @@ Resource File: [Grove - NunChuck Eagle File](https://files.seeedstudio.com/wiki/
 If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or [wish](http://wish.seeedstudio.com) to discuss.
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -1,5 +1,5 @@
 ---
-title: Grove-Qwiic-Hub
+title:  Grove - Qwiic Hub
 nointro:
 keywords:
   - docs
@@ -16,7 +16,6 @@ Grove - Qwiic Hub allows you to either use Qwiic (STEMMA QT) modules on Grove co
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Qwiic-Hub-p-4531.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
 
-
 ## Features
 
 - Interaction connector of Grove interface and Qwiic(STEMMA QT) interface
@@ -32,10 +31,10 @@ Grove - Qwiic Hub allows you to either use Qwiic (STEMMA QT) modules on Grove co
 |Appearance size|25.4x17.8mm|
 
 ## Platform Supported
+
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
-
 
 ## Application Ideas
 
@@ -74,15 +73,13 @@ This scenario describe the Adafruit STEMMA QT board connects with a bunch of [I2
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/products/103020292/doc/Grove-Qwiic_Hub_Hardware.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resource
 
 **[PDF]** [Hardware schematic](https://files.seeedstudio.com/products/103020292/doc/Grove-Qwiic-Hub_v1.0_SCH_190808.pdf)
 
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

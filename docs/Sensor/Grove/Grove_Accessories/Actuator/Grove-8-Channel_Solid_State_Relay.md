@@ -1,5 +1,5 @@
 ---
-title: Grove-8-Channel_Solid_State_Relay
+title: Grove - 8-Channel Solid State Relay
 nointro:
 keywords:
   - docs
@@ -13,15 +13,11 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/main.jpg)
 
-
 Instead of using coil, packaged solid-state relays(SSR) use power semiconductor devices such as thyristors and transistors, which provide a much faster switching speed than the mechanical relays. The **Grove - 8-Channel Solid State Relay** is based on the high-quality **G3MC202P** module, which allows you to use a 5VDC to control MAX. 240VAC. With the help of Grove interface, it becomes very convenient to use the SSR with your arduino.
 
-
-We use an on-board [STM32F030F4P6](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf) to control the channels separately. The command from Arduino or other boards is transmit via the I2C interface, the on-board STM32F030F4P6 will parse the command, so that you can control the switch you want. 
-
+We use an on-board [STM32F030F4P6](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf) to control the channels separately. The command from Arduino or other boards is transmit via the I2C interface, the on-board STM32F030F4P6 will parse the command, so that you can control the switch you want.
 
 According to different application scenarios, we have prepared a series of solid state relays for you.
-
 
 [Grove - Solid State Relay V2](https://wiki.seeedstudio.com/Grove-Solid_State_Relay_V2)
 
@@ -31,10 +27,7 @@ According to different application scenarios, we have prepared a series of solid
 
 [Grove - 8-Channel Solid State Relay](https://wiki.seeedstudio.com/Grove-8-Channel_Solid_State_Relay)
 
-
-
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-8-Channel-Solid-State-Relay-p-3131.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
 
 ## Features
 
@@ -42,22 +35,19 @@ According to different application scenarios, we have prepared a series of solid
 + Long lasting
 + Optional I2c address
 
-- Advantages over mechanical relays:
++ Advantages over mechanical relays:
 
-    - Solid-state relays have much faster switching speeds compared with electromechanical relays, and have no physical contacts to wear out
-    - Totally silent operation
-    - No physical contacts means no sparking, allows it to be used in explosive environments, where it is critical that no spark is generated during switching
-    - Increased lifetime, even if it is activated many times, as there are no moving parts to wear and no contacts to pit or build up carbon
-    - Compact, thin-profile SSR of monoblock construction with an all-in-one lead frame incorporates a PCB, terminals and heat sink, which is much smaller than mechanical relays, and can integrate more channels
+  + Solid-state relays have much faster switching speeds compared with electromechanical relays, and have no physical contacts to wear out
+  + Totally silent operation
+  + No physical contacts means no sparking, allows it to be used in explosive environments, where it is critical that no spark is generated during switching
+  + Increased lifetime, even if it is activated many times, as there are no moving parts to wear and no contacts to pit or build up carbon
+  + Compact, thin-profile SSR of monoblock construction with an all-in-one lead frame incorporates a PCB, terminals and heat sink, which is much smaller than mechanical relays, and can integrate more channels
 
++ Disadvantages:
 
-
-- Disadvantages:
-
-    - When closed, higher resistance (generating heat), and increased electrical noise
-    - When open, lower resistance, and reverse leakage current
-    - Only works for AC laod
-
+  + When closed, higher resistance (generating heat), and increased electrical noise
+  + When open, lower resistance, and reverse leakage current
+  + Only works for AC laod
 
 ## Specification
 
@@ -82,21 +72,17 @@ According to different application scenarios, we have prepared a series of solid
 |Zero Cross|support|
 |Certification|UL /  CSA|
 
-
 :::note
         You may pay attention to the **Leakage current**, 1.5mA is strong enough to drive Low power LED, so when the relay is off, the LED may still emits a faint light.
 :::
 
-
 ## Applications
 
-- Operations that require low-latency switching, e.g. stage light control
-- Devices that require high stability, e.g. medical devices, traffic signals
-- Situations that require explosion-proof, anticorrosion, moisture-proof, e.g. coal, chemical industries.
-
++ Operations that require low-latency switching, e.g. stage light control
++ Devices that require high stability, e.g. medical devices, traffic signals
++ Situations that require explosion-proof, anticorrosion, moisture-proof, e.g. coal, chemical industries.
 
 ## Hardware Overview
-
 
 ### Pin Map
 
@@ -104,10 +90,9 @@ According to different application scenarios, we have prepared a series of solid
 
 ![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/pin_map_back.jpg)
 
-
 :::note
     - The switch 1-8 have the same pin fuction, so for the other switches, you can refer to **LOAD1**/**LOAD2**.
-    - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the 
+    - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the
     **BOOT** High.
 :::
 
@@ -115,29 +100,22 @@ According to different application scenarios, we have prepared a series of solid
 
 **Relay control**
 
-
 ![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/img/schematic_.jpg)
 
 **K1** is the Relay module, When a  5V voltage is applied between the **INT+** and **INT-**, the relay will be turned on. Then the **LOAD1** will connect to the **LOAD2**.We use a NPN transistors **Q1**(BC817-40) to control the voltage between the **INT+** and **INT-**.
 
-
 The **CTR** is the control signal from the Arduino or other board. It is pulled down by the 10k R2, if there is no signal, the 'Gate'(port 1) of **Q1** will be 0v, and Q1 is turned off, so that the K1 will be turned off. If **CTR** becomes 5v, then the Q1 will be turned on. **INT-** of k1 will be connected to the GND of the system, for the K1 there will be 5V between **INT+** and **INT-**, so the K1 will be turned on, and the **LOAD1** will connect to **LOAD2**.
-
-
 
 **Bi-directional level shifter circuit**
 ![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/schematic_1.jpg)
 
-
 This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q17** and **Q18** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
-
 
 :::note
         In this section we only show you part of the schematic, for the full document please refer to the [Resources](/#resources)
 :::
 
 ## Platforms Supported
-
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -147,10 +125,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
-
 ## Getting Started
-
 
 ### Play With Arduino
 
@@ -165,21 +140,17 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 :::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
-    
+
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
 
++ **Step 1.** Connect the Grove - 8-Channel Solid State Relay to the **I^2^C** port of the Base Shield.
 
++ **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
-- **Step 1.** Connect the Grove - 8-Channel Solid State Relay to the **I^2^C** port of the Base Shield.
-
-- **Step 2.** Plug Grove - Base Shield into Seeeduino.
-
-- **Step 3.** Connect Seeeduino to PC via a USB cable.
-
++ **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/connect.jpg)
-
 
 :::note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -192,26 +163,19 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 | SDA           | White                   |
 | SCL           | Yellow                  |
 
-
-
-
-
-
 #### Software
 
 :::note
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
++ **Step 1.** Download the [Multi_Channel_Relay_Arduino](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library) Library from Github.
 
-- **Step 1.** Download the [Multi_Channel_Relay_Arduino](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library) Library from Github.
++ **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-
-- **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> eight_channel_relay_control**. 
++ **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> eight_channel_relay_control**.
 
 ![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/path.jpg)
-
 
 Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
@@ -329,9 +293,9 @@ void loop()
 }
 ```
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
++ **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time.
++ **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time.
 
 :::tip
      If every thing goes well, you will get the result. Meanwhile, you will see the on-board LEDs alternately lit and extinguished.
@@ -361,9 +325,7 @@ Channel 2 on
 
 ```
 
-
 ![](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/img/gif.gif)
-
 
 :::note
         We do not add load in this demo, if you want to check how to add load, please check the [Grove - 2-Channel Solid State Relay](https://wiki.seeedstudio.com/Grove-2-Channel_Solid_State_Relay).
@@ -411,8 +373,6 @@ Channel 2 on
     </tr>
   </tbody></table>
 
-
-
 In case you want to change the address, you need to set the address before use. For example, we want to change it into 0x2f. We can use the following code.
 
 ```C++
@@ -449,7 +409,7 @@ void setup()
 
 **Q1: How to burn the firmware?**
 
-**A1:** We recommend you use the J-Link burner and the WSD interface to burn the firmware. 
+**A1:** We recommend you use the J-Link burner and the WSD interface to burn the firmware.
 
 You can download the firmware here:
 
@@ -459,27 +419,20 @@ We recommed you use the J-flash for the software:
 
 [J-flash](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack)
 
-
 ![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/J-flash.jpg)
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove%20-%208-Channel%20Solid%20State%20Relay.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
-
 ## Resources
 
-- **[Zip]** [Grove-8-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove%20-%208-Channel%20Solid%20State%20Relay.zip)
-- **[Zip]** [Multi Channel Relay Arduino Library](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library/archive/master.zip)
-- **[Bin]** [Factory firmware](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove-8-Channel-Solid-Relay-Firmware.bin)
-- **[PDF]** [Datasheet of G3MC202P](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/res/G3MC202p.pdf)
-- **[PDF]** [Datasheet of STM32](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf)
-
++ **[Zip]** [Grove-8-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove%20-%208-Channel%20Solid%20State%20Relay.zip)
++ **[Zip]** [Multi Channel Relay Arduino Library](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library/archive/master.zip)
++ **[Bin]** [Factory firmware](https://files.seeedstudio.com/wiki/Grove-8-Channel_Solid_State_Relay/res/Grove-8-Channel-Solid-Relay-Firmware.bin)
++ **[PDF]** [Datasheet of G3MC202P](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay_V2/res/G3MC202p.pdf)
++ **[PDF]** [Datasheet of STM32](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf)
 
 ## Project
 
@@ -487,9 +440,9 @@ This is the introduction Video of this product, simple demos, you can have a try
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5uBLf_a0DNc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

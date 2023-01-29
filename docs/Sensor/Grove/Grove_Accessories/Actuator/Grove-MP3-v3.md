@@ -1,5 +1,5 @@
 ---
-title: Grove-MP3-v3
+title: Grove - MP3 v3.0
 nointro:
 keywords:
   - docs
@@ -18,7 +18,6 @@ The Grove - MP3 is a 20x40mm super mini Music module based on WT2003S-20SS audio
 As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3 V2. Compared with Grove MP3 V2, the V3 added a JST2.0 speaker port, so that you can output the audio via speaker and 3.5mm earphone at the same time.
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-MP3-V3-p-4297.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
 
 ## Feature
 
@@ -39,7 +38,6 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
 |Output|Speaker/3.5mm Audio Jack|
 |Resolution|Support 32-level volume adjustment|
 
-
 ## Hardware Overview
 
 <div align="center">
@@ -48,22 +46,17 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
   </figure>
 </div>
 
-
-
 ## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
-
 ## Getting Started
 
 ### Play With Arduino
 
-
 **Materials required**
-
 
 | Seeeduino V4.2 | Base Shield | Grove - MP3 V3 -Music Player|
 |--------------|-------------|-----------------|
@@ -87,6 +80,7 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
 :::tip
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+
 - **Step 1.** Copy your `.mp3` music file to the tf card and save them in the root location in the tf card.
 
 - **Step 2.** Download the [Seeed_Serial_MP3](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player) Library from Github.
@@ -94,6 +88,7 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
 :::note
         Refer How to install library to [install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) for Arduino.
 :::
+
 - **Step 3.** Restart the Arduino IDE. Open **WT2003S_Terminal_Player** example via the path: **File** → **Examples** → **Seeed_Serial_MP3_Player** → **WT2003S_Terminal_Player**. You can play `.mp3` format music file using this moudle, and use 3.5mm Audio Jack, Speaker via JST2.0 speaker port or even output both in the same time.
 
 The WT2003S_Terminal_Player Example code is as follow:
@@ -339,7 +334,6 @@ void printMenu(void) {
 }
 ```
 
-
 - **Step 3.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 4.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.
@@ -347,6 +341,7 @@ void printMenu(void) {
 - **Step 5.** The result should look like below. Follow the command list to play music or use other useful features.
 
 ![](https://files.seeedstudio.com/wiki/Grove-MP3-V3/img/result.jpg)
+
 ## FAQ
 
 **Q1#** TF card cannot be recognized.
@@ -359,7 +354,8 @@ void printMenu(void) {
 - **[PDF]** [WT2003S Datasheet](https://files.seeedstudio.com/wiki/Grove-MP3-V3/res/Grove-MP3.zip)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
