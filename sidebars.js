@@ -760,50 +760,101 @@ const sidebars = {
       label: 'Wio Series',
       items: [
         // 'Sensor/Wio_Series/wiki',
+        'Sensor/Wio_Series/Wio',
         {
           type: 'category',
-          label: 'Wio_Tracker',
+          label: 'Wio Tracker',
           items: [
-            'Sensor/Wio_Series/Wio_Tracker/Wio_Tracker',
-            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat.1',
-            'Sensor/Wio_Series/Wio_Tracker/LTE_Cat_1_Pi_HAT',
-            'Sensor/Wio_Series/Wio_Tracker/wio_gps_board',
-            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
-            'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
+            'Sensor/Wio_Series/Wio Tracker/Wio_Tracker',
+            'Sensor/Wio_Series/Wio Tracker/Wio_LTE_Cat.1',
+            'Sensor/Wio_Series/Wio Tracker/LTE_Cat_1_Pi_HAT',
+            'Sensor/Wio_Series/Wio Tracker/wio_gps_board',
+            'Sensor/Wio_Series/Wio Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
+            'Sensor/Wio_Series/Wio Tracker/Wio-Extension-RTC',
+            // 'Sensor/Wio_Series/Wio Tracker/Grove_Starter_Kit_for_Wio_LTE', 
 
-
+          ],
+        },
+ 
+        {
+          type: 'category',
+          label: 'Wio-E5',
+          items: [
+            'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
+            'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
+            'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
           ],
         },
         {
           type: 'category',
-          label: 'Wio',
+          label: 'Wio WM1302',
           items: [
-            'Sensor/Wio_Series/Wio/Wio_RP2040_Module_Build-in_Wireless_2.4G',
-            'Sensor/Wio_Series/Wio/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
-            'Sensor/Wio_Series/Wio/LAN_Communications',
-            'Sensor/Wio_Series/Wio/Use_MQTT_to_remotely_light_up_LED_lights',
-            'Sensor/Wio_Series/Wio/Use_Socket_to_connect_to_the_forum',
-            'Sensor/Wio_Series/Wio/Wio-RP2040-with-Arduino-WIFI',
-            'Sensor/Wio_Series/Wio/Wireless-Fall-Detection-Device',
-            'Sensor/Wio_Series/Wio/Wireless-desktop-atmosphere-lamp',
-            'Sensor/Wio_Series/Wio/Wio',
-            'Sensor/Wio_Series/Wio/Wio_Link',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Bootcamp_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Deluxe_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Deluxe_Plus_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Environment_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Event_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Starter_Kit',
-            'Sensor/Wio_Series/Wio/Wio_Node',
-            // 'Sensor/Wio_Series/Wio/Grove_Starter_Kit_for_Wio_LTE', 
-            'Sensor/Wio_Series/Wio/Grove-Shield-for-Wio-Lite',
-            'Sensor/Wio_Series/Wio/Wio-Lite-W600',
-            'Sensor/Wio_Series/Wio/Wio-Lite-MG126',
-            'Sensor/Wio_Series/Wio/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
+            'Sensor/Wio_Series/Wio WM1302/WM1302_module',
+            'Sensor/Wio_Series/Wio WM1302/WM1302_Pi_HAT',
+          ],  
+        },
+        {
+          type: 'category',
+          label: 'Wio RP2040',
+          items: [
+            {
+              type: 'category',
+              label: 'Wio RP2040 Module',
+              items: [
+                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 Module/Wio_RP2040_Module_Build-in_Wireless_2.4G',
+              ],  
+            },
+            {
+              type: 'category',
+              label: 'Wio RP2040 mini Dev Board',
+              items: [
+                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
+                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Wio-RP2040-with-Arduino-WIFI',
+                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/LAN_Communications',
+                {
+                  type: 'category',
+                  label: 'Application',
+                  items: [
+                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Use_MQTT_to_remotely_light_up_LED_lights',
+                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Use_Socket_to_connect_to_the_forum',
+                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Wireless-Fall-Detection-Device',
+                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Wireless-desktop-atmosphere-lamp',
+                  ],  
+                },
+              ],  
+            },
+          ],  
+        },
+        {
+          type: 'category',
+          label: 'Wio Link',
+          items: [
+            'Sensor/Wio_Series/Wio Link/Wio_Link',
+           // 'Sensor/Wio_Series/Wio Link/Wio_Link_Bootcamp_Kit',
+          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Deluxe_Kit',
+          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Deluxe_Plus_Kit',
+          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Environment_Kit',
+          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Event_Kit',
+          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Starter_Kit',
+          ],  
+        },
+        {
+          type: 'category',
+          label: 'Wio Lite',
+          items: [
+            'Sensor/Wio_Series/Wio Lite/Wio-Lite-W600',
+            'Sensor/Wio_Series/Wio Lite/Wio-Lite-MG126',
+            'Sensor/Wio_Series/Wio Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
+            'Sensor/Wio_Series/Wio Lite/Grove-Shield-for-Wio-Lite',
+          ],  
+        },
+        {
+          type: 'category',
+          label: 'Wio Node',
+          items: [
+            'Sensor/Wio_Series/Wio Node/Wio_Node',
 
-
-
-          ],
+          ],  
         },
       ],
 
@@ -816,7 +867,23 @@ const sidebars = {
       type: 'category',
       label: 'Seeeduino Series',
       items: [
-        'Sensor/Seeeduino_Series/Seeeduino_v4.2',
+        'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
+        'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
+        {
+
+          type: 'category',
+          label: 'Seeeduino',
+          items: [
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.0',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2_Atmega-168P',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v2.21',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
+          ],
+    
+        },
       ],
 
     },

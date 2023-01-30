@@ -1,5 +1,5 @@
 ---
-title: Wireless-desktop-atmosphere-lamp
+title: Wireless desktop atmosphere lamp
 nointro:
 keywords:
   - docs

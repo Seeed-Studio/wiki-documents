@@ -1,5 +1,5 @@
 ---
-title: wio_gps_board
+title: Wio Tracker - GPS, BT3.0, GSM, Arduino Compatible
 nointro:
 keywords:
   - docs

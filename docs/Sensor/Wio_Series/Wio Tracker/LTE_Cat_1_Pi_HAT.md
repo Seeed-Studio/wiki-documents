@@ -1,5 +1,5 @@
 ---
-title: LTE_Cat_1_Pi_HAT
+title: LTE Cat 1 Pi HAT
 nointro:
 keywords:
   - docs

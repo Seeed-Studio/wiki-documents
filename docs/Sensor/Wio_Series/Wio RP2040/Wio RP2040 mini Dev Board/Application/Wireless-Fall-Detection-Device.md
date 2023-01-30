@@ -1,5 +1,5 @@
 ---
-title: Wireless-Fall-Detection-Device
+title: Wireless Fall Detection Device
 nointro:
 keywords:
   - docs
