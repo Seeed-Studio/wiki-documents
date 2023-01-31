@@ -1,5 +1,5 @@
 ---
-title: Grove-Buzzer
+title: Grove - Buzzer
 nointro:
 keywords:
   - docs
@@ -19,12 +19,10 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 
 ## Version
 
-
 | Product Version              | Changes                                                                                                                                                                                    | Released Date |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Grove-Buzzer V1.0| Initial                                                                                                                                                                                    | Nov 25 2010      |
 | Grove-Buzzer V1.1 | Add S9013 Transistor                                                                                                                                                                                    | May 30 2014      |
-
 
 ## Features
 
@@ -34,6 +32,7 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 ## Specifications
 
 | Items              | Specification |
@@ -44,7 +43,6 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 
 ## Platforms Supported
 
-
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
@@ -53,7 +51,7 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-##  Getting Started
+## Getting Started
 
 ### Play With Arduino
 
@@ -73,7 +71,7 @@ The Grove - Buzzer module has a [piezo buzzer](https://en.wikipedia.org/wiki/Buz
 ![](https://files.seeedstudio.com/wiki/Grove_Buzzer/img/seeeduino_buzzer.jpg)
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove-buzzer to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove-buzzer to Seeeduino as below.
 :::
 | Seeeduino       | Grove-Buzzer |
 |---------------|-------------------------|
@@ -129,6 +127,7 @@ Upload the program to your Arduino/Seeeduino.
 :::success
     When the code finishes uploaded, you will hear the buzzer sound intermittently.
 :::
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -145,15 +144,14 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect1.jpg)
 
-
 #### Software
 
-:::attention 
+:::attention
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -167,7 +165,6 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py/grove
 python3 grove_pwm_buzzer.py
 ```
-
 
 Following is the grove_led.py code.
 
@@ -214,10 +211,10 @@ if __name__ == '__main__':
 
 
 ```
+
 :::success
     If everything goes well, the buzzer will ring a few times and then stop, the program will automatically exit.
- :::    
-
+ :::
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
@@ -238,7 +235,7 @@ if __name__ == '__main__':
 
 #### Software
 
-:::attention 
+:::attention
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
@@ -250,6 +247,7 @@ cd ~
 git clone https://github.com/DexterInd/GrovePi.git
 
 ```
+
 - **Step 3.** Excute below commands.
 
 ```
@@ -297,7 +295,6 @@ stop
 start
 stop
 ```
-
 
 ### Play With TI LaunchPad
 
@@ -380,13 +377,14 @@ void playNote(char note, int duration) {
 ```
 
 # Grove - Buzzer Schematic Files v1.0
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Buzzer/resources/Grove_-_Buzzer_v1.0_Source_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 # Grove - Buzzer Schematic Files v1.1
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Buzzer/resources/Grove-Buzzer_V1.1_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Resources
 
@@ -400,7 +398,7 @@ void playNote(char note, int duration) {
 
 Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!
 
-The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
+The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.
 
 ## Proejcts
 
@@ -412,9 +410,8 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/exp0nge/water-waste-monitor-98378e/embed' width='350'></iframe>
 
-
 **Buzzer Grove module**:
- 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XBqvG6R1ueA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ug8dJHPmdMA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -424,7 +421,8 @@ The Wooden Laser Gun and the Gun Target are all based on an Arduino board called
 </div>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

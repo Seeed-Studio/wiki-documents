@@ -1,5 +1,5 @@
 ---
-title: Grove-Servo
+title: Grove - Servo
 nointro:
 keywords:
   - docs
@@ -19,12 +19,14 @@ But if you feel more like a proto servo, check out EMAX 9g ES08A High Sensitive 
 
 Feature
 ---
-*   Small module
-*   Grove Compatible Interface
-*   Easy to use
+
+* Small module
+* Grove Compatible Interface
+* Easy to use
 
 Specification
 ---
+
 <table cellSpacing={0} width="80%">
   <tbody><tr>
       <th scope="col"> Item
@@ -76,7 +78,6 @@ Specification
       <td> g
       </td></tr></tbody></table>
 
-
 Platforms Supported
 -------------------
 
@@ -101,15 +102,14 @@ Here we will show you how this Grove - Servo works via a simple demo. First of a
 
 The Servo has three wires: power, ground, and signal. The power wire is typically red, and should be connected to the 5V pin on the Arduino/Seeeduino board. The ground wire is typically black or brown and should be connected to a ground pin on the Arduino board. The signal pin is typically yellow, orange or white and should be connected to  **D5** on the Arduino board. We can change to the digital port as we like. But don't forget to change the port number in the definition of the demo code at the same time.
 
--   Connect the module to **D5** port of Base Shield.
--   Plug Grove- Base Shield into Arduino.
--   Connect Arduino to PC via a USB cable.
-
+* Connect the module to **D5** port of Base Shield.
+* Plug Grove- Base Shield into Arduino.
+* Connect Arduino to PC via a USB cable.
 
 #### Software
 
-- Let's sweep the shaft of a servo back and forth across 180 degrees by using [Adruino Servo Library](https://arduino.cc/en/Reference/Servo).
-- Open the code directly by the path: **File -> Examples ->Servo->Sweep**.
+* Let's sweep the shaft of a servo back and forth across 180 degrees by using [Adruino Servo Library](https://arduino.cc/en/Reference/Servo).
+* Open the code directly by the path: **File -> Examples ->Servo->Sweep**.
 
   ![](https://files.seeedstudio.com/wiki/Grove-Servo/img/library%20example.jpg)
 
@@ -147,7 +147,7 @@ void loop() {
 }
 ```
 
-- Upload the sketch. We can see the servo sweep.
+* Upload the sketch. We can see the servo sweep.
 
 ### Play with Codecraft
 
@@ -180,17 +180,16 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Hardware
 
-- **Step 1**. Things used in this project:
+* **Step 1**. Things used in this project:
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Servo|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
 
-- **Step 2**. Plug the Grove Base Hat into Raspberry.
-- **Step 3**. Connect the Grove - Servo to port 12 of the Base Hat.
-- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
-
+* **Step 2**. Plug the Grove Base Hat into Raspberry.
+* **Step 3**. Connect the Grove - Servo to port 12 of the Base Hat.
+* **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Servo/img/Servo_Hat.jpg)
 
@@ -203,8 +202,8 @@ Upload the program to your Arduino/Seeeduino.
 :::tip
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
-- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+* **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+* **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -212,7 +211,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **Step 3**. Excute below commands to run the code.
+* **Step 3**. Excute below commands to run the code.
 
 ```
 cd grove.py/grove
@@ -280,6 +279,7 @@ if __name__ == '__main__':
 :::tip
     If everything goes well, you will be able to see the servo sweep.
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python3 grove_servo.py 12
@@ -315,29 +315,27 @@ KeyboardInterrupt
 
 ```
 
-
 You can quit this program by simply press ++ctrl+c++.
-
 
 ## Resources
 
-- **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
-- **[Library]**[Arduino Tutorial - Servo Library](https://www.arduino.cc/en/Reference/Servo)
-- **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Servo/res/Servo.zip)
-- **[Demo]** [Digital/Analog Clock - Arduino + PaperCraft](https://www.instructables.com/id/DigitalAnalog-Clock-Arduino-PaperCraft/?ALLSTEPS)
-- **[Demo]** [Low Cost Hobby Servo XY Table](https://www.instructables.com/id/Low-Cost-Hobby-Servo-XY-Table/?ALLSTEPS)
+* **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
+* **[Library]**[Arduino Tutorial - Servo Library](https://www.arduino.cc/en/Reference/Servo)
+* **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Servo/res/Servo.zip)
+* **[Demo]** [Digital/Analog Clock - Arduino + PaperCraft](https://www.instructables.com/id/DigitalAnalog-Clock-Arduino-PaperCraft/?ALLSTEPS)
+* **[Demo]** [Low Cost Hobby Servo XY Table](https://www.instructables.com/id/Low-Cost-Hobby-Servo-XY-Table/?ALLSTEPS)
 
 ## Projects
 
 **Servomotor Grove module**:
- 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XNPn7AUmgqU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GTej6Lv8us" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

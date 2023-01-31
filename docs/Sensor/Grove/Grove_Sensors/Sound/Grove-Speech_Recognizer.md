@@ -1,5 +1,5 @@
 ---
-title: Grove-Speech_Recognizer
+title:  Grove - Speech Recognizer
 nointro:
 keywords:
   - docs
@@ -23,7 +23,6 @@ This speech recognizer can recognize 22 pieces of commands including 'start', 's
 Here are some notes that you must know before using it:
 Awaken Word: Hicell (Please pronounce it as one word)
 When it recognizes the awaken word, LED turn red, then you can say the command word, if it recognize the command word, LED will turn blue.
-
 
 :::note
     The firmware of the module was wrote by the third party vendor, it's not open source.
@@ -60,22 +59,21 @@ When it recognizes the awaken word, LED turn red, then you can say the command w
 
 ## Specification
 
-| Item  |	Min	|Typ	| Max	| Condition |
+| Item  | Min |Typ | Max | Condition |
 |---|-------|-----|--------|-----------|
-| Operating Voltage |3V	    |3.3V	|5V	|25 ℃|
-|Operating Current  |25mA   |26.5mA |80mA@playing	|VCC = 3.3V 25℃|
-|Operating Current  |	25mA |	26.5mA	|130mA@playing|	VCC = 5V 25℃|
-|Operating Temperature|	0℃	|25℃	|85℃	| |
-|Size	| |	40*20mm		| | |
-|Weigth	| |	5g		| |
-|Flash	| |	2Mbytes	| |
+| Operating Voltage |3V     |3.3V |5V |25 ℃|
+|Operating Current  |25mA   |26.5mA |80mA@playing |VCC = 3.3V 25℃|
+|Operating Current  | 25mA | 26.5mA |130mA@playing| VCC = 5V 25℃|
+|Operating Temperature| 0℃ |25℃ |85℃ | |
+|Size | | 40*20mm  | | |
+|Weigth | | 5g  | |
+|Flash | | 2Mbytes | |
 |Microphone Sensitivity |-43dB | -40dB | -37dB | VCC = 5V 25℃ |
 |Microphone SNR | 58dB  || | |
 |Microphone Directivity | |Omni-directional | | |
-|Speaker Power| | |1W	|VCC = 5V 25℃|
+|Speaker Power| | |1W |VCC = 5V 25℃|
 |Processor core| |Cortex-M0| | |
 |Processor Frequency | |32.768MHz|50MHz|VCC = 5V 25℃|
-
 
 ## Hardware Overview
 
@@ -92,28 +90,28 @@ When it recognizes the awaken word, LED turn red, then you can say the command w
 
 | Command | Value |
 |-------------|--------|
-|Turn on the light	|1|
-|Turn off the light	|2|
-|Play music	|3|
-|Pause 	|4|
-|Next 	|5|
-|Previous 	|6|
-|Up 	|7|
-|Down	|8|
-|Turn on the TV	|9|
-|Turn off the TV	|10|
-|Increase temperature	|11|
-|Decrease temperature	|12|
-|What’s the time	|13|
-|Open the door	|14|
-|Close the door	|15|
-|Left	|16|
-|Right 	|17|
-|Stop 	|18|
-|Start	|19|
-|Mode 1	|20|
-|Mode 2	|21|
-|Go	|22|
+|Turn on the light |1|
+|Turn off the light |2|
+|Play music |3|
+|Pause  |4|
+|Next  |5|
+|Previous  |6|
+|Up  |7|
+|Down |8|
+|Turn on the TV |9|
+|Turn off the TV |10|
+|Increase temperature |11|
+|Decrease temperature |12|
+|What’s the time |13|
+|Open the door |14|
+|Close the door |15|
+|Left |16|
+|Right  |17|
+|Stop  |18|
+|Start |19|
+|Mode 1 |20|
+|Mode 2 |21|
+|Go |22|
 
 ## Getting Started
 
@@ -124,13 +122,11 @@ Here we will show you how this Grove - Speech Recognizer works via a simple demo
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/stuff1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Light-Sensor%28P%29-p-1253.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
-
 **Hardware Connection**
 
 Thanks to the benefit of Grove series module, you don't need to make soldering or bread board, what you need to do is connect the modules to the right port of Base Shield. For this demo, we connect Grove - Speech Recognizer to D2.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/connect.jpeg)
-
 
 **Software**
 
@@ -207,7 +203,6 @@ If the blue led is light(last about 1s), that means the command was recognized c
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/monitor.png)
 
-
 ### Play with Codecraft
 
 #### Hardware
@@ -241,8 +236,6 @@ Upload the program to your Arduino/Seeeduino.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
 * [Schematics in Eagle](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/eagle.zip)
@@ -250,9 +243,11 @@ Upload the program to your Arduino/Seeeduino.
 * [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/res/Grove_Speech_Recognizer_CDC_File.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 
 ## Upgradable to Industrial Sensors
+
 With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) and [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), you can easily turn the Grove into a LoRaWAN® sensor. Seeed not only helps you with prototyping but also offers you the possibility to expand your project with the SenseCAP series of robust [industrial sensors](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
@@ -260,8 +255,8 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

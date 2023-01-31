@@ -1,5 +1,5 @@
 ---
-title: Grove-I2C_Motor_Driver
+title: Grove - I2C Motor Driver
 nointro:
 keywords:
   - docs
@@ -36,14 +36,11 @@ last_update:
   </tbody>
 </table>
 
-
-
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
-
-

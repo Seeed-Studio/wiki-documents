@@ -1,5 +1,5 @@
 ---
-title: Grove-Passive-Buzzer
+title: Grove - Passive Buzzer
 nointro:
 keywords:
   - docs
@@ -12,11 +12,9 @@ last_update:
 
 ![](https://files.seeedstudio.com/products/107020109/img/107020109_wiki.png)
 
-
 This is a 3-5V passive buzzer. You can change the PMW frequency to award different beep sound to get a "buzzer music". Also, the buzzer can be set as an alarm for security applications. So get one and start your own project!
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Passive-Buzzer-p-4525.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
-
 
 ## Features
 
@@ -31,7 +29,7 @@ This is a 3-5V passive buzzer. You can change the PMW frequency to award differe
 |Resonant Frequency|2700 Hz|
 |sound output|> 80dB|
 |Working temperature|-20-70 °C|
-|Dimensions|20mm * 20mm * 10mm|
+|Dimensions|20mm *20mm* 10mm|
 |Weight|3g|
 |Battery|Exclude|
 
@@ -52,12 +50,9 @@ This is a 3-5V passive buzzer. You can change the PMW frequency to award differe
 |![](https://files.seeedstudio.com/products/102010328/img/seeeduino-XIAO-thumbnail.jpg)|![](https://files.seeedstudio.com/products/103020232/img/103020232-thumbnail.png)|![](https://files.seeedstudio.com/products/107020109/img/107020109wiki210x157.jpg)|
 |[Get one now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get one now](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Get one now](https://www.seeedstudio.com/Grove-Passive-Buzzer-p-4525.html)|
 
-
-
 #### Hardware Connection
 
 ![](https://files.seeedstudio.com/products/107020109/img/wiki_buzzer_xiao.jpg)
-
 
 The Grove interface on the breadboard and on the Grove Passive Buzzer are connected by the Grove cable.
 
@@ -88,8 +83,8 @@ void loop()
 
 - **Step2** After uploading the code tp the board, you will hear thr buzzer beep.
 
-
 #### Code example2 - Use buzzer to play music
+
 ```c++
  //set the corresponding notes with frequency
  #define NOTE_D0 0
@@ -201,7 +196,7 @@ void loop()
 
 - **Step3** After uploading the code to the board, you can hear a music from the buzzer.
 
-### Play with Raspberry Pi 
+### Play with Raspberry Pi
 
 #### Materials Requied
 
@@ -222,9 +217,10 @@ Connect the Buzzer with "PWM" on the Grove Base Hat.
 
 One-click installation, quick start, what ever you call, with the single command below, we can install/update all dependencies and latest grove.py.
 
-:::attention 
+:::attention
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
 :::
+
 ```python
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
 ```
@@ -240,9 +236,9 @@ curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo b
         ``` -
 :::
 
-Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step. 
+Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step.
 
-:::attention 
+:::attention
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
@@ -257,14 +253,12 @@ sudo pip3 install .
 
 - **Step 2** Create a python file for the code.
 
-
 ```
 cd grove.py
 nano example.py
 ```
 
 - **Step 3** Copy the following code to the python file
-
 
 ```
 #!/usr/bin/env python
@@ -292,28 +286,26 @@ if __name__ == '__main__':
 
 - **Step 4** Run the program
 
-
 ```
 sudo chmod +x example.py
 sudo ./example.py
 ```
-If everything goes well, you can hear"do,re,mi,fa,so.la.xi".
 
+If everything goes well, you can hear"do,re,mi,fa,so.la.xi".
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/products/107020109/document/Grove_Passive_Buzzer_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resource
 
- - **[PDF]** [MLT_8530_DATASHEET](https://files.seeedstudio.com/products/107020109/document/MLT_8530_datasheet.pdf)
- - **[PDF]** [Hardware schematic](https://files.seeedstudio.com/products/107020109/document/Grove_Passive_Buzzer_SCH_190925.pdf)
-
+- **[PDF]** [MLT_8530_DATASHEET](https://files.seeedstudio.com/products/107020109/document/MLT_8530_datasheet.pdf)
+- **[PDF]** [Hardware schematic](https://files.seeedstudio.com/products/107020109/document/Grove_Passive_Buzzer_SCH_190925.pdf)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

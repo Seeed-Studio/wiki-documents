@@ -1,5 +1,5 @@
 ---
-title: Grove-Water_Atomizationn
+title: Grove - Water Atomization
 nointro:
 keywords:
   - docs
@@ -19,10 +19,10 @@ Grove - Water Atomization is a fine Grove module for you to develop an atomizer 
 Features
 --------
 
--   Heated with ultrasound.
--   Easy to prototype a new application.
--   Well applied to vast applications.
--   For various interesting, smart and fashionable applications.
+- Heated with ultrasound.
+- Easy to prototype a new application.
+- Well applied to vast applications.
+- For various interesting, smart and fashionable applications.
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -30,10 +30,10 @@ Features
 Application ideas
 -----------------
 
--   Humidifier.
--   Scent emitter in different situations.
--   For smart-house applications.
--   For smart objects on consumer electronic products.
+- Humidifier.
+- Scent emitter in different situations.
+- For smart-house applications.
+- For smart objects on consumer electronic products.
 
 Specifications
 --------------
@@ -63,13 +63,13 @@ Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/img/Water_Atomization_hardware_overview_1200.jpg)
 
-**Grove interface**   
+**Grove interface**
 Connect main control board such as Seeeduino board with driver board.
 
-**Transducer interface**   
+**Transducer interface**
 Connect ultrasonic transducer to with driver board.
 
-**Grove wire**   
+**Grove wire**
 Connect main control board with driver board.
 
 ### **Parts list**
@@ -113,7 +113,6 @@ We have chosen Seeeduino in this case.
   We also need a Grove - Touch Sensor in this demo and also connect it to D5.
 :::
 
-
 1.Copy code below to Arduino IDE editor.
 
 ```
@@ -150,7 +149,6 @@ void loop() {
 :::note
   The bottom side is the side with hollow which is supposed to face downside. Let bottom of transducer plate sink into the water and keep top side above water. The function of tissue is lead water to the transducer and keep upper side of transducer above water.
 :::
-
 
 3.Upload code to main control board.
 
@@ -198,15 +196,12 @@ Upload the program to your Arduino/Seeeduino.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Schematic_file_in_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
 - [Schematic files in Eagle](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Schematic_file_in_Eagle.zip)
 - [Schematic files in PDF](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Schematic_file_in_PDF.zip)
 - [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Water_Atomization/res/Grove_Water_Atomization_CDC_File.zip)
-
 
 ## Project
 
@@ -217,7 +212,8 @@ Resources
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Water_Atomization -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

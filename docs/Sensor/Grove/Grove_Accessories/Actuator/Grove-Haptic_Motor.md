@@ -1,5 +1,5 @@
 ---
-title: Grove-Haptic_Motor
+title: Grove - Haptic Motor
 nointro:
 keywords:
   - docs
@@ -18,17 +18,16 @@ Grove - Haptic motor is a grove module integrated with [DRV2605L](http://www.ti.
 
 ## Features
 
--   More vibration effects.
--   Quicken your project prototyping process.
--   Easy-to-use library with 123 kinds of vibrating modes.
--   Powerful driver to implanting more advanced functions.
+- More vibration effects.
+- Quicken your project prototyping process.
+- Easy-to-use library with 123 kinds of vibrating modes.
+- Powerful driver to implanting more advanced functions.
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
 
 ## Specifications
-
 
 | Parameter                      | Value          |
 |--------------------------------|----------------|
@@ -43,7 +42,6 @@ Grove - Haptic motor is a grove module integrated with [DRV2605L](http://www.ti.
 
 # Platforms Supported
 
-
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
@@ -54,13 +52,12 @@ Grove - Haptic motor is a grove module integrated with [DRV2605L](http://www.ti.
 
 ## Application ideas
 
--   Mobile phone, tablets.
--   Wearable devices.
--   Remote controls, touch-enabled devices.
--   Industrial human-machine interfaces.
+- Mobile phone, tablets.
+- Wearable devices.
+- Remote controls, touch-enabled devices.
+- Industrial human-machine interfaces.
 
 ## Hardware Overview
-
 
 **Front view:**
 ![](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/img/bazaar884534_1.jpg)
@@ -92,7 +89,7 @@ Grove - Haptic motor is a grove module integrated with [DRV2605L](http://www.ti.
 ![](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/img/Grove_haptic_motor_connection.jpg)
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Haptic motor to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove - Haptic motor to Seeeduino as below.
 :::
 
 | Seeeduino       | Grove - Haptic motor |
@@ -148,24 +145,21 @@ void loop()
 
 ![](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/img/Grove_Haptic_Motor_cautions.png)
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/res/Grove_Haptic_Motor_v0.9_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
--  **[Library]** [Grove-Haptic Motor Library](https://github.com/Seeed-Studio/Grove_Haptic_Motor)
--  **[Eagle]** [Grove-Haptic Motor Schematic](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/res/Grove_Haptic_Motor_v0.9_Eagle.zip) 
+- **[Library]** [Grove-Haptic Motor Library](https://github.com/Seeed-Studio/Grove_Haptic_Motor)
+- **[Eagle]** [Grove-Haptic Motor Schematic](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/res/Grove_Haptic_Motor_v0.9_Eagle.zip)
 - **[PDF]** [Grove-Haptic Motor Schematic](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/res/Grove_Haptic_Motor_v0.9_SCH.pdf).
--  **[Datasheet]** [More about drive circuit DRV2605L](http://www.ti.com/product/DRV2605L).
-
+- **[Datasheet]** [More about drive circuit DRV2605L](http://www.ti.com/product/DRV2605L).
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

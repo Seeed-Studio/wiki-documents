@@ -1,6 +1,6 @@
 ---
-description: Grove - 2.5A DC Current Sensor (ACS725)
-title: Grove - 2.5A DC Current Sensor (ACS725)
+description: Grove - 2.5A DC Current Sensor(ACS70331)
+title: Grove - 2.5A DC Current Sensor(ACS70331)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

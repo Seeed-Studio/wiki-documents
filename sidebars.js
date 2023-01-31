@@ -66,11 +66,20 @@ const sidebars = {
               type: 'category',
               label: 'All in one',
               items: [
+                'Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
 
               ],
             },
+            {
+              type: 'category',
+              label: 'Vision AI',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
+                'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
 
+              ],
+            },
             {
               type: 'category',
               label: 'Temp & Humi',
@@ -122,15 +131,15 @@ const sidebars = {
               label: 'Proximity',
               items: [
                 'Sensor/Grove/Grove_Sensors/Proximity/Sensor_distance',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-TF_Mini_LiDAR',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Ranger',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-IR_Distance_Interrupter_v1.2',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-TF_Mini_LiDAR',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Doppler-Radar',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
               ]
             },
             {
@@ -146,21 +155,22 @@ const sidebars = {
               type: 'category',
               label: 'Gas',
               items: [
+                'Sensor/Grove/Grove_Sensors/Gas/Sensor_gas',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel-Gas-Sensor-V2',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ2',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ3',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ5',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ9',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-O2',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-O2-MIX8410',
-                //'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
-                'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel-Gas-Sensor-V2',
-                'Sensor/Grove/Grove_Sensors/Gas/Sensor_gas',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Oxygen-Sensor-Pro',
-                'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Alcohol_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
+                //'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
+
               ],
 
             },
@@ -168,12 +178,12 @@ const sidebars = {
               type: 'category',
               label: 'Barometer',
               items: [
+                'Sensor/Grove/Grove_Sensors/Barometer/Sensor_barometer',
+                'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer-High-Accuracy',
                 //'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BME280',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BMP180',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BMP280',
-                'Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer-High-Accuracy',
-                'Sensor/Grove/Grove_Sensors/Barometer/Sensor_barometer',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Integrated-Pressure-Sensor-Kit',
               ],
@@ -184,7 +194,7 @@ const sidebars = {
               label: 'Accelerometer',
               items: [
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Sensor_accelerometer',
-                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400',
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Analog_Accelerometer',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Compass_V1.0',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digitial_Compass_v2.0',
@@ -196,7 +206,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer_40g-ADXL357',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer_200g-ADXL372',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Gyro',
-                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g',
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-6-Axis_AccelerometerAndCompass_V2.0',
                 //'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-6-Axis_AccelerometerAndGyroscope',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-6-Axis_Accelerometer&Gyroscope_BMI088',
@@ -204,6 +214,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-IMU_10DOF_v2.0',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-IMU_9DOF_v2.0',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-IMU_9DOF-lcm20600+AK09918',
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-Single_Axis_Analog_Gyro',
               ],
             },
             {
@@ -227,6 +238,22 @@ const sidebars = {
 
               ],
             },
+            {
+              type: 'category',
+              label: 'Biometric',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Biometric/Sensor_biomedicine',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
+                // 'Sensor/Grove/Grove_Sensors/Biometric/Grove-EMG_Detector',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Fingerprint_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
+              ],
+            },
+
             {
               type: 'category',
               label: 'Sound',
@@ -271,18 +298,23 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Biometric',
+              label: 'Motion',
               items: [
-                'Sensor/Grove/Grove_Sensors/Biometric/Sensor_biomedicine',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
-                // 'Sensor/Grove/Grove_Sensors/Biometric/Grove-EMG_Detector',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Fingerprint_Sensor',
-                'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
+                'Sensor/Grove/Grove_Sensors/Motion/Sensor_motion',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Digital-PIR-Sensor',
+                // 'Sensor/Grove/Grove_Sensors/Motion/Grove-Collision_Sensor',
+                // 'Sensor/Grove/Grove_Sensors/Motion/Grove-Tilt_Switch',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Mini_Track_Ball',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Mouse_Encoder',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Piezo_Vibration_Sensor',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Optical_Rotary_Encoder-TCUT1600X01',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Vibration_Sensor_SW-420',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
               ],
+
             },
 
           ],
@@ -295,40 +327,96 @@ const sidebars = {
           type: 'category',
           label: 'Grove Sensor Network',
           items: [
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-125KHz_RFID_Reader',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-315MHz_RF_Kit',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-433MHz_Simple_RF_Link_Kit',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE-dual_model-v1.0',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Bee_Socket',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-DMX512',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-GPS',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-GPS-Air530',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_High_Precision_RTC',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_ADC', 
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_FM_Receiver',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-I2C_FM_Receiver_v1.1',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_Radio',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_NFC',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_NFC_Tag',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Protoshield',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-RJ45_Adapter',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Screw_Terminal',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Serial_Bluetooth_v3.0',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Serial_RF_Pro',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi_V2',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE_v1',
-            // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_E5_New_Version',
-            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Node',
+            // {
+            //   type: 'category',
+            //   label: 'LoRa',
+            //   items: [
+            //     // 'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
 
+            //   ]
+            // },
+            {
+              type: 'category',
+              label: 'Bluetooth',
+              items: [
+                // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE-dual_model-v1.0',
+                // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth_v3.0',
+                'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE_v1',
+                'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth',
 
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Wi-Fi',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/Wi-Fi/Grove-UART_Wifi',
+                'Sensor/Grove/Grove_Sensors_Network/Wi-Fi/Grove-UART_Wifi_V2',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'NFC',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC',
+                'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC_Tag',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'GPS',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/GPS/Grove-GPS',
+                'Sensor/Grove/Grove_Sensors_Network/GPS/Grove-GPS-Air530',
+              ]
+            },
+            // {
+            //   type: 'category',
+            //   label: 'BEE',
+            //   items: [
+            //     // 'Sensor/Grove/Grove_Sensors_Network/BEE/Grove-Bee_Socket',
 
+            //   ]
+            // },
+            {
+              type: 'category',
+              label: 'RF',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove-125KHz_RFID_Reader',
+                // 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-315MHz_RF_Kit',
+                // 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit',
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove_LoRa_Radio',
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove-Serial_RF_Pro',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Standard Protocol',
+              items: [
+                // 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-DMX512',
+                // 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_ADC', 
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver_v1.1',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Protoshield',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-RJ45_Adapter',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Node',
 
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Communication',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
+                'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
+              ]
+            },
 
           ]
         },
+
+
+
 
         {
           type: 'category',
@@ -363,27 +451,10 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Red_LED_Matrix_w_Driver',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_2_13',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_1_54',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Serial_LCD_V1.0',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-BlinkM',
               ],
             },
-            {
-              type: 'category',
-              label: 'Input Output',
-              items: [
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-AND',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-OR',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-DC_Jack_Power',  
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Qwiic-Hub',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NunChuck',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
-                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
-              ]
-            },
-
             {
               type: 'category',
               label: 'Actuator',
@@ -434,6 +505,8 @@ const sidebars = {
               label: 'Time',
               items: [
                 'Sensor/Grove/Grove_Accessories/Time/Grove-RTC',
+                'Sensor/Grove/Grove_Accessories/Time/Grove_High_Precision_RTC',
+
               ],
             },
 
@@ -448,16 +521,38 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Current/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-MOSFET',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-SPDT_Relay_30A',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-Screw_Terminal',
+
               ],
             },
             {
               type: 'category',
-              label: 'Switch&Button',
+              label: 'Switch & Button',
               items: [
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-6-Position_DIP_Switch',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Switch-P',
               ],
             },
+            {
+              type: 'category',
+              label: 'Input Output',
+              items: [
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-AND',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-OR',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-DC_Jack_Power',  
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Qwiic-Hub',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NunChuck',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
+                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
+              ]
+            },
+
             {
               type: 'category',
               label: 'Case',
@@ -488,7 +583,7 @@ const sidebars = {
 
     },
 
-{
+    {
       type: 'category',
       label: 'SeeedStudio XIAO',
       items: [
@@ -501,7 +596,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',   
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
             {
               type: 'category',
               label: 'Embedded ML',
@@ -608,291 +703,313 @@ const sidebars = {
       items: [
         // 'Sensor/Wio_Terminal/wiki',
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
+        'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         {
 
           type: 'category',
-          label: 'LCD',
-          items: [
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Overview',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Basic',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Graphics',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Fonts',
-            // 'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Anti-aliased-Fonts',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Linecharts',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Histogram',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-APIs',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LVGL',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'IO',
-          items: [
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Overview',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Analog',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Digital',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-I2C',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-SPI',
-
-
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Network',
-          items: [
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Network-Overview',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Wi-Fi',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Advanced-Wi-Fi',
-            'Sensor/Wio_Terminal/Network/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Azure-IOT',
-            'Sensor/Wio_Terminal/Network/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
-            'Sensor/Wio_Terminal/Network/Azure_IoT_CC',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Ethernet',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Blynk',
-            'Sensor/Wio_Terminal/Network/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Bluetooth',
-          items: [
-            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Bluetooth-Overview',
-            'Sensor/Wio_Terminal/Bluetooth/Wio-terminal-BLE-introduction',
-            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Web-Bluetooth',
-            'Sensor/Wio_Terminal/Bluetooth/BLE-ibeacon-using-Wio-terminal',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Audio',
-          items: [
-            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Overview',
-            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Play-Record',
-            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-GUI',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'IMU',
-          items: [
-            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Overview',
-            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Basic',
-            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Tapping',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Configurable Buttons',
-          items: [
-
-            'Sensor/Wio_Terminal/Configurable_Buttons/Wio-Terminal-Buttons',
-
-          ],
-
-        },
-
-        {
-          type: 'category',
-          label: '5 Way Switch',
-          items: [
-            'Sensor/Wio_Terminal/five_Way_Switch/Wio-Terminal-Switch',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Light Sensor',
-          items: [
-            'Sensor/Wio_Terminal/Light_Sensor/Wio-Terminal-Light',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Infrared Emitter',
-          items: [
-            'Sensor/Wio_Terminal/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Microphone',
-          items: [
-            'Sensor/Wio_Terminal/Microphone/Wio-Terminal-Mic',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Buzzer',
-          items: [
-            'Sensor/Wio_Terminal/Buzzer/Wio-Terminal-Buzzer',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'RTC',
-          items: [
-            'Sensor/Wio_Terminal/RTC/Wio-Terminal-RTC',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'File System',
-          items: [
-            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-Overview',
-            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-ReadWrite',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'USB Host',
-          items: [
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Overview',
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Keyboard',
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Mouse',
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Xbox',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'USB Client',
-          items: [
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Overview',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Mouse',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-MIDI',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-HMI-Usermode-SDK',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-DAPLink',
-          ],
-        },
-      ],
-
-    },
-
-    {
-
-      type: 'category',
-      label: 'Wio Series',
-      items: [
-        // 'Sensor/Wio_Series/wiki',
-        'Sensor/Wio_Series/Wio',
-        {
-          type: 'category',
-          label: 'Wio Tracker',
-          items: [
-            'Sensor/Wio_Series/Wio Tracker/Wio_Tracker',
-            'Sensor/Wio_Series/Wio Tracker/Wio_LTE_Cat.1',
-            'Sensor/Wio_Series/Wio Tracker/LTE_Cat_1_Pi_HAT',
-            'Sensor/Wio_Series/Wio Tracker/wio_gps_board',
-            'Sensor/Wio_Series/Wio Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
-            'Sensor/Wio_Series/Wio Tracker/Wio-Extension-RTC',
-            // 'Sensor/Wio_Series/Wio Tracker/Grove_Starter_Kit_for_Wio_LTE', 
-
-          ],
-        },
- 
-        {
-          type: 'category',
-          label: 'Wio-E5',
-          items: [
-            'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
-            'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
-            'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Wio WM1302',
-          items: [
-            'Sensor/Wio_Series/Wio WM1302/WM1302_module',
-            'Sensor/Wio_Series/Wio WM1302/WM1302_Pi_HAT',
-          ],  
-        },
-        {
-          type: 'category',
-          label: 'Wio RP2040',
+          label: 'Hardware Overview',
           items: [
             {
+
               type: 'category',
-              label: 'Wio RP2040 Module',
+              label: 'LCD Usage',
               items: [
-                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 Module/Wio_RP2040_Module_Build-in_Wireless_2.4G',
-              ],  
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Basic',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Graphics',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Fonts',
+                // 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
+                // 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Linecharts',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Histogram',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-APIs',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LVGL',
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Input/Output',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Analog',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Digital',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-I2C',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-SPI',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-Grove',
+
+
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'IMU Usage',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Basic',
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Tapping',
+
+              ],
+
             },
             {
               type: 'category',
-              label: 'Wio RP2040 mini Dev Board',
+              label: 'SD Card',
               items: [
-                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
-                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Wio-RP2040-with-Arduino-WIFI',
-                'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/LAN_Communications',
+                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-ReadWrite',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wi-Fi',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Network-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Wi-Fi',
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Advanced-Wi-Fi',
+              ],
+            },
+            {
+
+              type: 'category',
+              label: 'Bluetooth',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Bluetooth-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-terminal-BLE-introduction',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Web-Bluetooth',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/BLE-ibeacon-using-Wio-terminal',
+
+              ],
+
+            },
+            {
+              type: 'category',
+              label: 'RTC',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/RTC/Wio-Terminal-RTC',
+              ],
+            },
+            {
+
+              type: 'category',
+              label: 'Buttons',
+              items: [
+
+                'Sensor/Wio_Terminal/Hardware_Overview/Buttons/Wio-Terminal-Buttons',
+
+              ],
+
+            },
+
+            {
+              type: 'category',
+              label: '5 Way Switch',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/five_Way_Switch/Wio-Terminal-Switch',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Light Sensor',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Light_Sensor/Wio-Terminal-Light',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Infrared Emitter',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Microphone',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Microphone/Wio-Terminal-Mic',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Buzzer',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Buzzer/Wio-Terminal-Buzzer',
+              ],
+            },
+
+
+
+
+          ]
+        },
+        {
+
+          type: 'category',
+          label: 'Application',
+          items: [
+
+            {
+
+              type: 'category',
+              label: 'Easy IoT',
+              items: [
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Wio-Terminal-Azure-IOT',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Get-Started-with-Wio-Terminal-and-Wappsto-IoT',
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Embedded ML ',
+              items: [
+                {
+
+                  type: 'category',
+                  label: 'Projects based Edge Impulse ',
+                  items: [
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-1',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-2',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-3',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-4',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-5',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-6',
+                  ],
+
+                },
                 {
                   type: 'category',
-                  label: 'Application',
+                  label: 'Projects based TensorFlow Lite',
                   items: [
-                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Use_MQTT_to_remotely_light_up_LED_lights',
-                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Use_Socket_to_connect_to_the_forum',
-                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Wireless-Fall-Detection-Device',
-                    'Sensor/Wio_Series/Wio RP2040/Wio RP2040 mini Dev Board/Application/Wireless-desktop-atmosphere-lamp',
-                  ],  
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-1',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-2',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-3',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-Gesture-Recognition',
+                  ]
+
                 },
-              ],  
+                'Sensor/Wio_Terminal/Application/Embedded_ML/AIoTs_GPS_state_tester',
+
+              ],
+
             },
-          ],  
-        },
-        {
-          type: 'category',
-          label: 'Wio Link',
-          items: [
-            'Sensor/Wio_Series/Wio Link/Wio_Link',
-           // 'Sensor/Wio_Series/Wio Link/Wio_Link_Bootcamp_Kit',
-          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Deluxe_Kit',
-          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Deluxe_Plus_Kit',
-          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Environment_Kit',
-          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Event_Kit',
-          // 'Sensor/Wio_Series/Wio Link/Wio_Link_Starter_Kit',
-          ],  
-        },
-        {
-          type: 'category',
-          label: 'Wio Lite',
-          items: [
-            'Sensor/Wio_Series/Wio Lite/Wio-Lite-W600',
-            'Sensor/Wio_Series/Wio Lite/Wio-Lite-MG126',
-            'Sensor/Wio_Series/Wio Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
-            'Sensor/Wio_Series/Wio Lite/Grove-Shield-for-Wio-Lite',
-          ],  
+
+
+
+          ],
+
         },
         {
 
           type: 'category',
-          label: 'Wio Node',
+          label: 'Extension Board',
           items: [
-            'Sensor/Wio_Series/Wio Node/Wio_Node',
-          ],  
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Battery-Chassis',
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Chassis-Battery_650mAh',
+            'Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915',
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet',
+            {
+
+              type: 'category',
+              label: 'Audio Extension Board',
+              items: [
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview',
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Play-Record',
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-GUI',
+
+              ],
+
+            },
+
+
+          ]
+
         },
+        {
+
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML-Kit-Course',
+            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML',
+            'Sensor/Wio_Terminal/Kit_with_Courses/Introduction_to_Artificial_Intelligence_for_Makers',
+
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Tutorial',
+          items: [
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
+            'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
+            'Sensor/Wio_Terminal/Tutorial/Edge_Impulse_CC',
+            {
+
+              type: 'category',
+              label: 'Blynk for Wio Terminal',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Wio-Terminal-Blynk',
+                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
+
+              ],
+
+            },
+            {
+              type: 'category',
+              label: 'Wio Terminal USB Host',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Overview',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Keyboard',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Mouse',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Xbox',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wio Terminal USB Client',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Overview',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Mouse',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-MIDI',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-HMI-Usermode-SDK',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-DAPLink',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-Reading-Raspberry-Pi',
+              ],
+            },
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Gyro',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Storting-Analog-Data',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Photos',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Interactive-Face',
+            'Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
+            'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
+            'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
+
+          ],
+
+        },
+
       ],
+
     },
+
 
 
     {
@@ -914,7 +1031,7 @@ const sidebars = {
             'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
             'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
           ],
-    
+
         },
       ],
     },
@@ -1026,7 +1143,7 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'SenseCAP_the_Sensor_Prototype_Kit',
+      label: 'SenseCAP the Sensor Prototype Kit',
       items: [
         'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
         'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',
@@ -1600,4 +1717,3 @@ const sidebars = {
 };
 
 module.exports = sidebars;
-

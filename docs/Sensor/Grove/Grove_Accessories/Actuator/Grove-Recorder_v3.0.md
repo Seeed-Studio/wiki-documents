@@ -1,5 +1,5 @@
 ---
-title: Grove-Recorder_v3.0
+title: Grove - Recorder V3
 nointro:
 keywords:
   - docs
@@ -22,7 +22,7 @@ Secondly, if you have ever used previous version, you would know that if you wan
 
 * MCU from ISD1820PY to ISD 9160FI
 * Record and playback button
-* Record switch 
+* Record switch
 * 2Mbytes flash
 
 ## Features
@@ -35,7 +35,8 @@ Secondly, if you have ever used previous version, you would know that if you wan
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
-:::   
+:::
+
 ## Platform Support
 
 |Arduino|Wio|BeagleBone|Raspberry Pi|LinkIt|
@@ -46,13 +47,13 @@ Secondly, if you have ever used previous version, you would know that if you wan
 
 * Working Voltage: 3.3/5V
 * Working Current (@5V, 25℃)
-    * Standby: 25-30mA
-    * Recording: 29-35mA
-    * Playing: 110-150mA
+  * Standby: 25-30mA
+  * Recording: 29-35mA
+  * Playing: 110-150mA
 * Working Current (@3.3V, 25℃)
-    * Standby: 23-25mA
-    * Recording: 25-30mA
-    * Playing: 70-150mA
+  * Standby: 23-25mA
+  * Recording: 25-30mA
+  * Playing: 70-150mA
 * Working Temperature: 0~85℃
 * Size: 40x20mm
 * Weight: 31.5g
@@ -65,7 +66,7 @@ Secondly, if you have ever used previous version, you would know that if you wan
 
 2.Microphone
 
-3.Voice Control 
+3.Voice Control
 
 4.Button
 
@@ -93,19 +94,17 @@ Here we will show you how this Grove - Recorder V3.0 works via a simple demo. Fi
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/stuff.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
-
-###Hardware Connection
+### Hardware Connection
 Thanks to the benefit of Grove series module, you don't need to make soldering or bread board, what you need to do is connect the modules to the right port of Base Shield. For this demo, we connect Grove - Recorder to D2.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/connection.jpeg)
 
-
 ## Standalone
 
-This module can work standalone without coding. 
+This module can work standalone without coding.
 
-* **Record** - Press the button until the LED light, and it's recording, release the button when finish recording. 
-* **Play** - Press and release the button to play the voice that had been recorded. 
+* **Record** - Press the button until the LED light, and it's recording, release the button when finish recording.
+* **Play** - Press and release the button to play the voice that had been recorded.
 
 If you want to control the module by code. please go ahead.
 
@@ -164,6 +163,7 @@ void loop()
 ```
 
 ## Enter Command
+
 You can enter some command in Serial monitor:
 
 * **Start recording** - Enter a 'r'
@@ -202,16 +202,15 @@ Upload the program to your Arduino/Seeeduino.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Recorder_V3/res/eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
 * [Schematics in PDF](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/res/Grove%20-%20Recorder%20v3.0a.pdf)
 * [Schematics in Eagle](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/res/eagle.zip)
-*	[Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove_Recorder_CDC_File.zip)
+* [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove_Recorder/res/Grove_Recorder_CDC_File.zip)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

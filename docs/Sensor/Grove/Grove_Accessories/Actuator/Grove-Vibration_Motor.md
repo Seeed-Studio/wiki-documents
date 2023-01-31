@@ -1,5 +1,5 @@
 ---
-title: Grove-Vibration_Motor
+title: Grove - Vibration Motor
 nointro:
 keywords:
   - docs
@@ -26,14 +26,15 @@ This is a mini vibration motor suitable as a non-audible indicator. When the inp
 
 ## Features
 
--   Grove compatible
--   Non-audible
--   Low power consumption
--   High reliability
+- Grove compatible
+- Non-audible
+- Low power consumption
+- High reliability
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 ## Specifications
 
 <table border="1" cellspacing="0" width="80%">
@@ -99,6 +100,7 @@ Rated speed
 :::note
     If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+
 ### Play With Arduino
 
 To make it vibrate is just as easy as to turn on an LED. Here is an example showing how to turn on the vibration motor.
@@ -119,7 +121,7 @@ To make it vibrate is just as easy as to turn on an LED. Here is an example show
 ![](https://files.seeedstudio.com/wiki/Grove-Vibration_Motor/img/vibration_motor.png)
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Vibration Motor to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove - Vibration Motor to Seeeduino as below.
 :::
 | Seeeduino       | Grove - Vibration Motor |
 |---------------|-------------------------|
@@ -178,6 +180,7 @@ Upload the program to your Arduino/Seeeduino.
 :::tip
     When the code finishes uploaded, you will feel the vibration motor vibration.
 :::
+
 ### Play With Raspberry Pi
 
 #### Hardware
@@ -242,13 +245,10 @@ while True:
 sudo python grove_vibration_motor.py
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Vibration_Motor/res/Grove-Vibration_Motor_Eagle_Files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -260,25 +260,23 @@ sudo python grove_vibration_motor.py
 
 - **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_Vibration_Motor/resource/Grove_Vibration_Motor_CDC_File.zip)
 
-
-
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Vibration_Motor -->
 
-## Project 
+## Project
 
 **Grove - Introduction in a Vibration Motor - only for adults**: Beginner-Example
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ingo-lohs/grove-introduction-in-a-vibration-motor-only-for-adults-2acfc2/embed' width='350'></iframe>
 
-
 **Inspired by OVERWATCH, we have made a very cool Wooden Laser Gun toy for fun these day!**
 
-The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.    
+The Wooden Laser Gun and the Gun Target are all based on an Arduino board called Seeeduino Lotus. The laser emitter on the Laser Gun is controlled to fire laser pulse to "activate" the Gun Target. And there are 3 light sensors on the Gun Target to detect the laser pulse. It seems very simple right? If you are interested in our project, please make one for yourself or your child! It's worth to spend one day DIY it as a Xmas present.
 
 [![](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/gun.jpg)](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

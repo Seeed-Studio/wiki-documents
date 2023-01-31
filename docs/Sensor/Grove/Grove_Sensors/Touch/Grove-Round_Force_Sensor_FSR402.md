@@ -1,6 +1,6 @@
 ---
-description: Grove-Round Force Sensor(FSR402)
-title: Grove-Round Force Sensor(FSR402)
+description: Grove - Round Force Sensor FSR402
+title: Grove - Round Force Sensor FSR402
 keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

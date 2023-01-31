@@ -1,5 +1,5 @@
 ---
-title: Grove-Ultrasonic_Ranger
+title: Grove - Ultrasonic Ranger
 nointro:
 keywords:
   - docs
@@ -15,11 +15,9 @@ last_update:
 This Grove - Ultrasonic ranger is a non-contact distance measurement module which works at 40KHz. When we provide a pulse trigger signal with more than 10uS through signal pin, the Grove_Ultrasonic_Ranger will issue 8 cycles of 40kHz cycle level and detect the echo. The pulse width of the echo signal is proportional to the measured distance. Here is the formula: Distance = echo signal high time * Sound speed (340M/S)/2. Grove_Ultrasonic_Ranger's trig and echo signal share 1 SIG pin.
 
 :::warning
-	Do not hot plug Grove-Ultrasonic-Ranger, otherwise it will damage the sensor. The measured area must be no less than 0.5 square meters and smooth.
+ Do not hot plug Grove-Ultrasonic-Ranger, otherwise it will damage the sensor. The measured area must be no less than 0.5 square meters and smooth.
 :::
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
-
-
 
 ## Version
 
@@ -30,13 +28,13 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 
 ## Specification
 
-|Parameter|	Value/Range|
+|Parameter| Value/Range|
 |:------|:------------------|
-|Operating voltage|	3.2~5.2V|
-|Operating current|	8mA|
-|Ultrasonic frequency|	40kHz|
-|Measuring range|	2-350cm|
-|Resolution|	1cm|
+|Operating voltage| 3.2~5.2V|
+|Operating current| 8mA|
+|Ultrasonic frequency| 40kHz|
+|Measuring range| 2-350cm|
+|Resolution| 1cm|
 |Output|PWM|
 |Size|50mm X 25mm X 16mm|
 |Weight|13g|
@@ -44,7 +42,6 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 |Working temperature|-10~60 degree C|
 |Trigger signal|10uS TTL|
 |Echo signal|TTL|
-
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -59,7 +56,6 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 :::note
     The platforms mentioned above as supported is/are an indication of the module's software or theoretical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
-
 
 ## Getting Started
 
@@ -87,7 +83,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 ![](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/arduino%20connection.jpg)
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove_Ultrasonic_Ranger to Seeeduino as below.
 :::
 
 | Seeeduino       | Grove-Ultrasonic Ranger |
@@ -99,7 +95,7 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 
 #### Software
 
-- **Step 1.** Download the  [ UltrasonicRanger Library](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip)  from Github.
+- **Step 1.** Download the  [UltrasonicRanger Library](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger/archive/master.zip)  from Github.
 
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
@@ -111,23 +107,23 @@ This Grove - Ultrasonic ranger is a non-contact distance measurement module whic
 Ultrasonic ultrasonic(7);
 void setup()
 {
-	Serial.begin(9600);
+ Serial.begin(9600);
 }
 void loop()
 {
-	long RangeInInches;
-	long RangeInCentimeters;
+ long RangeInInches;
+ long RangeInCentimeters;
 
-	Serial.println("The distance to obstacles in front is: ");
-	RangeInInches = ultrasonic.MeasureInInches();
-	Serial.print(RangeInInches);//0~157 inches
-	Serial.println(" inch");
-	delay(250);
+ Serial.println("The distance to obstacles in front is: ");
+ RangeInInches = ultrasonic.MeasureInInches();
+ Serial.print(RangeInInches);//0~157 inches
+ Serial.println(" inch");
+ delay(250);
 
-	RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
-	Serial.print(RangeInCentimeters);//0~400cm
-	Serial.println(" cm");
-	delay(250);
+ RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
+ Serial.print(RangeInCentimeters);//0~400cm
+ Serial.println(" cm");
+ delay(250);
 }
 ```
 
@@ -184,17 +180,13 @@ Upload the program to your Arduino/Seeeduino.
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
-
-
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 
 - **Step 3**. Connect the Grove - Ultrasonic Ranger to port D5 of the Base Hat.
 
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect2.jpg)
-
 
 :::note
     For step 3 you are able to connect the ultrasonic ranger to **any GPIO Port** but make sure you change the command with the corresponding port number.
@@ -202,13 +194,13 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-:::note 
+:::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```sh
 cd ~
@@ -336,7 +328,6 @@ You can quit this program by simply press ++ctrl+c++.
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Ultrasonic_small.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)|
 
-
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 
 - **Step 3.** Connect Grove-Ultrasonic ranger to **D4** port of GrovePi_Plus.
@@ -347,7 +338,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 #### Software
 
-:::note 
+:::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
@@ -361,8 +352,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
--	**Step 3.** Excute below commands to use the ultrasonic_ranger to meansure the distance.
-
+- **Step 3.** Excute below commands to use the ultrasonic_ranger to meansure the distance.
 
 ```
 cd ~/GrovePi/Software/Python
@@ -516,7 +506,7 @@ The distance to obstacles in front is: 2 inches
 
 **Q3: Can we connect mulitule ultrasonic to one arduino?**
 
-- A4: Yes, Here is the example, one sensor is connected to D2 and other to D3. 
+- A4: Yes, Here is the example, one sensor is connected to D2 and other to D3.
 
 ```c++
 #include "Ultrasonic.h"
@@ -557,17 +547,15 @@ void loop()
 - **[Example]** [Example_Measure_distance_and_led_display](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/res/Example_Measure_distance_and_led_display.zip)
 - **[Example]** [Example_Measure_and_display_the_distance](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/res/Example_Measure_and_display_the_distance.zip)
 
-## Project 
+## Project
 
 **Hacking the Stairs at Seeed's New Office**: Turn the stairs at the office into an interactive installation, and even a cool way to convey the message "STAFF ONLY" to visitors.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/stairs-hackers/hacking-the-stairs-at-seeed-s-new-office-9ef30b/embed' width='350'></iframe>
 
-
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

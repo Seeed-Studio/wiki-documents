@@ -1,6 +1,6 @@
 ---
-name: Sensor - Light
-description: Sensor - Light(MAX31850K)
+title: Sensor - Light(introduction)
+description: Sensor - Light(introduction)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

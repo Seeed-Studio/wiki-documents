@@ -1,5 +1,5 @@
 ---
-title: Grove-LED_Matrix_Driver_v1.0
+title: Grove - LED Matrix Driver v1.0
 nointro:
 keywords:
   - docs
@@ -23,18 +23,17 @@ Each dot(i.e pixel) support dual color LEDs. It can produce three colors totally
 This Grove module does not support changing the input current of each LED separately.
 :::
 
-
 Features
 --------
 
--   Grove compatible and easy to use
--   Highly abstracted and complete API
--   Support dual-color LED-pixel. Three colors totally (the third color is a mix of two primary color)
--   Interface: UART(SoftSerial in Arduino)
+- Grove compatible and easy to use
+- Highly abstracted and complete API
+- Support dual-color LED-pixel. Three colors totally (the third color is a mix of two primary color)
+- Interface: UART(SoftSerial in Arduino)
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
-::: 
+:::
   
 Specifications
 --------------
@@ -69,8 +68,8 @@ Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_components_described_1200_s.jpg)
 
--   **Grove socket**, to connect this product to main control board.
--   **LED matrix port(DBSTAR\_HUB 08A )**, to connect LED matrix. If you can not find a connector like this, you can user jumper wires as an alternative.
+- **Grove socket**, to connect this product to main control board.
+- **LED matrix port(DBSTAR\_HUB 08A )**, to connect LED matrix. If you can not find a connector like this, you can user jumper wires as an alternative.
 
 ### **Package includes**(main parts)
 
@@ -88,14 +87,14 @@ Now let us run some basic examples with this module.
 
 #### Material required
 
--   Grove - LED Matrix Driver v1.0 × 1
--   32×64 LED matrix with one red and one green LEDs in matrix dots (single color LED matrix will also be fine) × 1
--   Power line (ribbon shape) for × 1
--   5 Volts(output) Adapter to regulate input voltage for LED matrix × 1
--   8-pin(female) ribbon cable × 1
--   Arduino UNO (other Arduino models will also be fine) × 1
--   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
--   Grove - Base Shield × 1
+- Grove - LED Matrix Driver v1.0 × 1
+- 32×64 LED matrix with one red and one green LEDs in matrix dots (single color LED matrix will also be fine) × 1
+- Power line (ribbon shape) for × 1
+- 5 Volts(output) Adapter to regulate input voltage for LED matrix × 1
+- 8-pin(female) ribbon cable × 1
+- Arduino UNO (other Arduino models will also be fine) × 1
+- [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+- Grove - Base Shield × 1
 
 #### Connections
 
@@ -114,31 +113,28 @@ You can find more demo sketch at <https://github.com/Seeed-Studio/Grove_LED_Matr
 <iframe frameBorder={0} height={500} src="https://codebender.cc/embed/sketch:300168" width="50%">
 </iframe>
 
-
 2. Download and upload the code. If you do not know how to upload an Arduino sketch, please visit <https://www.arduino.cc/en/Guide/Windows> for Windows user or <https://www.arduino.cc/en/Guide/MacOSX> for Mac user. You can see the result as below.
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_wiki_demo_result_view_s.jpg)
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/Grove_LED_Matrix_Driver_v1.0_Schematics.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
--   [Schematic file](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/Grove_LED_Matrix_Driver_v1.0_Schematics.zip)
--   [STM32F103C8T6 Datasheet](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/STM32F03C8T6.pdf)
--   [Library on Github](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver)
--   [Firmware for this product](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver/tree/master/Firmware)
+- [Schematic file](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/Grove_LED_Matrix_Driver_v1.0_Schematics.zip)
+- [STM32F103C8T6 Datasheet](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/res/STM32F03C8T6.pdf)
+- [Library on Github](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver)
+- [Firmware for this product](https://github.com/Seeed-Studio/Grove_LED_Matrix_Driver/tree/master/Firmware)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_LED_Matrix_Driver_v1.0 -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Grove-EL_Driver
+title: Grove - EL Driver
 nointro:
 keywords:
   - docs
@@ -13,7 +13,6 @@ last_update:
 
 Grove - EL Driver is designed for driving EL Wires. It integrates a very small inverter to drive the EL Wire, so you can easily light up the EL Wire with just one single Grove cable.
 
-
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-EL-Driver-p-2269.html)
 
 Version Tracker
@@ -23,23 +22,22 @@ Version Tracker
 |----------|------------------------|--------------|
 | v1.0     | Initial public release | Dec 11, 2014 |
 
-
 #### **Supported EL Wires:**
 
--   [EL Wire-Green 3m](https://www.seeedstudio.com/depot/EL-WireGreen-3m-p-1102.html)
--   [EL Wire-Red 3m](https://www.seeedstudio.com/depot/EL-WireRed-3m-p-1129.html)
--   [EL Wire-Blue 3m](https://www.seeedstudio.com/depot/EL-WireBlue-3m-p-1128.html)
--   [EL Wire-Yellow 3m](https://www.seeedstudio.com/depot/EL-WireYellow-3m-p-1127.html)
--   [EL Wire-White 3m](https://www.seeedstudio.com/depot/EL-WireWhite-3m-p-1130.html)
+- [EL Wire-Green 3m](https://www.seeedstudio.com/depot/EL-WireGreen-3m-p-1102.html)
+- [EL Wire-Red 3m](https://www.seeedstudio.com/depot/EL-WireRed-3m-p-1129.html)
+- [EL Wire-Blue 3m](https://www.seeedstudio.com/depot/EL-WireBlue-3m-p-1128.html)
+- [EL Wire-Yellow 3m](https://www.seeedstudio.com/depot/EL-WireYellow-3m-p-1127.html)
+- [EL Wire-White 3m](https://www.seeedstudio.com/depot/EL-WireWhite-3m-p-1130.html)
 
 Features
 --------
 
--   Grove compatible interface
--   3.3V/5V Compatible
--   Integrated Inverter Transformer
--   Input Current: 300mA Max (According to the load)
--   Supported max EL Capacitance: 15nF
+- Grove compatible interface
+- 3.3V/5V Compatible
+- Integrated Inverter Transformer
+- Input Current: 300mA Max (According to the load)
+- Supported max EL Capacitance: 15nF
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -83,7 +81,6 @@ void loop() {
 
 ![](https://files.seeedstudio.com/wiki/Grove-EL_Driver/img/Grove-EL_Driver_usage.jpg)
 
-
 ### Play with Codecraft
 
 #### Hardware
@@ -117,19 +114,18 @@ Upload the program to your Arduino/Seeeduino.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 Resources
 ---------
 
--   [sch_pcb_eagle](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.zip)
--   [sch_pdf](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.pdf)
--   [CodeCraft Library](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/EL%20Driver.zip)
-
+- [sch_pcb_eagle](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.zip)
+- [sch_pdf](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/Grove-EL_Driver_v1.0.pdf)
+- [CodeCraft Library](https://files.seeedstudio.com/wiki/Grove-EL_Driver/res/EL%20Driver.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_EL_Driver -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

@@ -1,6 +1,6 @@
 ---
 description: Sensor - Motion
-title: Sensor - Motion
+title: Sensor - Motion(introduction)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
@@ -14,6 +14,7 @@ Here at Seeed, we have released varity of motion detection related Sensors and t
 
 :::note "THIS PAGE IS UNDER CONSTRUCTION"
 :::
+
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).

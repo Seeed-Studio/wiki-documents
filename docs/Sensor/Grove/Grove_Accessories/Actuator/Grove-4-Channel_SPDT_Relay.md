@@ -1,5 +1,5 @@
 ---
-title: Grove-4-Channel_SPDT_Relay
+title: Grove - 4-Channel SPDT Relay
 nointro:
 keywords:
   - docs
@@ -19,13 +19,11 @@ We use an on-board STM32F030F4P6 to control the channels separately. The command
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-4-Channel-SPDT-Relay-p-3119.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
 
-
 ## Pre-reading
 
 An introduction of **What is a Grove Relay Module** and **How does a Relay work** is strongly recommended reading ahead if you are not familiar with them. Please visit our **[blog](https://www.seeedstudio.com/blog/2020/01/03/arduino-tutorial-control-high-voltage-devices-with-relay-modules/)** below for detailed information:
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/blog/2020/01/03/arduino-tutorial-control-high-voltage-devices-with-relay-modules/" target="_blank"><img src="https://blog.seeedstudio.com/wp-content/uploads/2020/01/image-50-768x384.png" border={0} /></a></p>
-
 
 ## Features
 
@@ -34,8 +32,7 @@ An introduction of **What is a Grove Relay Module** and **How does a Relay work*
 + Low power consumption
 + Long lasting
 + Optional I2c address
-    - 0x00 ~ 0x7F
-
+  + 0x00 ~ 0x7F
 
 ## Specification
 
@@ -58,24 +55,21 @@ An introduction of **What is a Grove Relay Module** and **How does a Relay work*
 |Available I^2^C Address |0x00 ~ 0x7F|
 |Output interface|3 Pins DIP Female Screw Terminal-Green|
 
-
 :::tip
         For the load parameter, we provide two sets of certification data. Actually, the max. laod is 10A 250VAC/10A 30VDC.
 :::
 
 ## Applications
 
-- Domestic appliance
-- office machine
-- Remote control TV receiver
-- monitor display
-- audio equipment high rushing current use application
-
++ Domestic appliance
++ office machine
++ Remote control TV receiver
++ monitor display
++ audio equipment high rushing current use application
 
 ## Getting Started
 
 ### Platforms Supported
-
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -98,7 +92,7 @@ An introduction of **What is a Grove Relay Module** and **How does a Relay work*
 
 :::note
      * Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy.
-    
+
      * Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
 
@@ -106,7 +100,6 @@ An introduction of **What is a Grove Relay Module** and **How does a Relay work*
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/8.22%E8%BF%9E%E6%8E%A51.jpg" /><figcaption><b /><i /></figcaption>
 </div>
-
 
 :::note
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
@@ -124,22 +117,19 @@ An introduction of **What is a Grove Relay Module** and **How does a Relay work*
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_front.jpg" /><figcaption><b /><i /></figcaption>
 </div>
 
-
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/pin_map_back.jpg" /><figcaption><b /><i /></figcaption>
 </div>
 
-
 :::note
     - The switch 1-4 have the same pin fuction, so for the other switches, you can refer to **NC1**/**COM1**/**NO1**.
-    - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the 
+    - On the back of the PCB, there are two interfaces: SWD and I^2^C. The SWD interface is used by default when programming firmware, if you want to use the I^2^C(actually work as the boot UART), you should set the
     **BOOT** High.
 :::
-- **Step 1.** Connect the Grove - 4-Channel SPDT Relay to the **I^2^C** port of the Base Shield.
++ **Step 1.** Connect the Grove - 4-Channel SPDT Relay to the **I^2^C** port of the Base Shield.
 
-- **Step 2.** Plug Grove - Base Shield into Seeeduino.
++ **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
-- **Step 3.** Connect Seeeduino to PC via a USB cable.
-
++ **Step 3.** Connect Seeeduino to PC via a USB cable.
 
 #### Software
 
@@ -147,17 +137,14 @@ An introduction of **What is a Grove Relay Module** and **How does a Relay work*
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
++ **Step 1.** Download the [Multi_Channel_Relay_Arduino](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library) Library from Github.
 
-- **Step 1.** Download the [Multi_Channel_Relay_Arduino](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library) Library from Github.
++ **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-
-- **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> four_channel_relay_control**. 
++ **Step 3.** Restart the Arduino IDE. Open example via the path: **File --> Examples --> Multi Channel Relay Arduino Library --> four_channel_relay_control**.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/path.jpg" /><figcaption><b /><i /></figcaption>
 </div>
-
-
 
 Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
@@ -251,9 +238,9 @@ void loop()
         The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first methods.
 :::
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
++ **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time.
++ **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time.
 
 :::tip
      If every thing goes well, you will get the result. Meanwhile, you will see the on-board LEDs alternately lit and extinguished.
@@ -283,7 +270,6 @@ Channel 2 on
 :::
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/_DAS5552.MOV_20180822_104218.gif" /><figcaption><b /><i /></figcaption>
 </div>
-
 
 :::note
         We do not add load in this demo, if you want to check how to add load, please check the [Grove - 2-Channel SPDT Relay](https://wiki.seeedstudio.com/Grove-2-Channel_SPDT_Relay/).
@@ -330,8 +316,6 @@ Channel 2 on
     </tr>
   </tbody></table>
 
-
-
 In case you want to change the address, you need to set the address before use. For example, we want to change it into 0x2f. We can use the following code.
 
 ```C++
@@ -366,7 +350,7 @@ void setup()
 
 **Q1: How to burn the firmware?**
 
-**A1:** We recommend you use the J-Link burner and the WSD interface to burn the firmware. 
+**A1:** We recommend you use the J-Link burner and the WSD interface to burn the firmware.
 
 You can download the firmware here:
 
@@ -376,12 +360,9 @@ We recommed you use the J-flash for the software:
 
 [J-flash](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack)
 
-
 ![](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/J-flash.jpg)
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel_SPDT_Relay.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
@@ -393,13 +374,13 @@ Because ST32 series chips are out of stock globally, prices have increased sever
 
 ## Resources
 
-- **[Zip]** [Grove-4-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel_SPDT_Relay.zip)
-- **[Bin]** [STM32F030F4P6TR-Firmware](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
-- **[Bin]** [MM32F031F6P6-Firmware](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/firmware-spdt-4-channels.ino.bin)
-- **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/SRD_05VDC-SL-C.pdf)
-- **[PDF]** [Datasheet of S9013](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Transistors_NPN_25V-500mA.pdf)
-- **[PDF]** [Datasheet of STM32](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf)
-- **[PDF]** [MM32F031F6P6_Datasheet.pdf](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/MM32F031F6P6_Datasheet.pdf)
++ **[Zip]** [Grove-4-Channel SPDT Relay eagle files](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel_SPDT_Relay.zip)
++ **[Bin]** [STM32F030F4P6TR-Firmware](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/Grove-4-Channel-SPDT-Relay-Firmware.bin)
++ **[Bin]** [MM32F031F6P6-Firmware](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/firmware-spdt-4-channels.ino.bin)
++ **[PDF]** [Datasheet of SRD 05VDC-SL-C Relay](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/SRD_05VDC-SL-C.pdf)
++ **[PDF]** [Datasheet of S9013](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/res/Transistors_NPN_25V-500mA.pdf)
++ **[PDF]** [Datasheet of STM32](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/STM32F030F4P6.pdf)
++ **[PDF]** [MM32F031F6P6_Datasheet.pdf](https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/res/MM32F031F6P6_Datasheet.pdf)
 
 ## Project
 
@@ -416,7 +397,8 @@ This is the introduction Video of this product, simple demos, you can have a try
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5NBdUr5D-8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Grove-16-Channel_PWM_Driver-PCA9685
+title: Grove - 16 Channel PWM Driver (PCA9685)
 nointro:
 keywords:
   - docs
@@ -14,9 +14,7 @@ last_update:
 
 The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channel, 12 bit I2C PWM driver. This board can drive up to 16 servos with the external power supply. You can control this board with Arduino easily via the I2C Grove interface. In addition, you can use this board as a LED controller.
 
-
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-(PCA9685)-p-3221.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
 
 ## Version
 
@@ -24,14 +22,12 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 |------------------|-------------------------------------------------------------------------------------------------------|---------------|
 | Grove - 16-Channel PWM Driver (PCA9685) | Initial                                                                                               | Sep 2018      |
 
-
 ## Feature
 
 - 1 MHz Fast-mode Plus compatible I2C-bus
 - 6 hardware address pins allow 62 PCA9685 devices to be connected to the same I2C-bus
 - Low standby current
 - Noise filter on SDA/SCL inputs
-
 
 ## Specification
 
@@ -45,20 +41,17 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 |Operating temperature|-40～85℃|
 |Interface|I2C|
 |I2C Address Range|0x40 ~ 0x7f(default)|
-|Size|L: 60mm W: 40mm H: 18mm| 
+|Size|L: 60mm W: 40mm H: 18mm|
 |Weight|14.3g|
 |Package size|L: 135mm W: 85mm H: 19mm|
 |Gross Weight|21g|
 
 ## Typical applications
 
-
 - Servos driver
 - RGB or RGBA LED driver
 
-
 ## Hardware Overview
-
 
 ### Pin Out
 
@@ -69,6 +62,7 @@ The  Grove - 16-Channel PWM Driver is based on NXP PCA9685, which is a 16-Channe
 :::
 
 ### Hardware Detail
+
 ___
 **I2C Interface**
 
@@ -90,9 +84,8 @@ Provide 5V DC power for the servo.
 ___
 **PWM Out**
 
-There are 16 groups of Pins(1 - 16) on this board, each group of pins contains one PWM signal pin, one 5V power supply pin and one pin for ground. 
+There are 16 groups of Pins(1 - 16) on this board, each group of pins contains one PWM signal pin, one 5V power supply pin and one pin for ground.
 ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/pin-out/pin-out-0.jpg)
-
 
 ---
 **I2C Address**
@@ -108,14 +101,10 @@ As shown in the figure above, all address pads are connected to the high level b
 
 ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/i2c_ad_1.jpg)
 
-
 The address consists of 7 bits and the highest bit is fixed at 1. When we are converting the address to a hexadecimal number, we need to add a 0 to the left of the highest bit.
 
 So the default address is **111 1111**, when we add a 0, it becomes **0111 1111** which is 0x7f.  
 And if we connect all the address pads to the ground, it turns to be **100 0000**, when we add a 0, it becomes **0100 0000**. Which is 0x40.
-
-
-
 
 ## Working Principle
 
@@ -125,18 +114,13 @@ And if we connect all the address pads to the ground, it turns to be **100 0000*
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
-
-
 ## Getting Started
 
-
 ### Play With Arduino
-
 
 #### Hardware
 
 **Materials required**
-
 
 | Seeeduino V4.2 | Base Shield| Grove - 16-Channel PWM Driver| LED|
 |--------------|-------------|-----------------|---------------|
@@ -144,8 +128,8 @@ And if we connect all the address pads to the ground, it turns to be **100 0000*
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-16-Channel-PWM-Driver-PCA968-p-3221.html)|[Get ONE Now](https://www.seeedstudio.com/3mm-LED-Red-25-PCs-p-1588.html)
 
 :::note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
-    
+    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 
     **3** You also need prepare at least 2 jumper wires, in case you do not have, you can click [here](https://www.seeedstudio.com/20-pin-dual-female-splittable-jumper-wire-300mm-p-629.html) to buy.
@@ -168,7 +152,6 @@ If you want to use servo, you can connect as shown below:
 
 ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/connect2.jpg)
 
-
 #### Software
 
 :::caution
@@ -179,16 +162,14 @@ If you want to use servo, you can connect as shown below:
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
-    1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Seeed_PCA9685 --> led**. 
+    1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Seeed_PCA9685 --> led**.
     ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/ard1.jpg)
-    
+
     2. Open it in your computer by click the **basic_demo.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_PCA9685\examples\led\led.ino**, **XXXX** is the location you installed the Arduino IDE.
     ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/ard2.jpg)
-    
-    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```C++
 
@@ -228,11 +209,8 @@ void loop()
 
 ## Schematic Online Viewer
 
-
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/res/Grove%20-%2016-Channel%20PWM%20Driver%20(PCA9685).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -242,11 +220,9 @@ void loop()
 
 - **[PDF]** [Datasheet PCA9685](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/res/PCA9685.pdf)
 
-
-
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

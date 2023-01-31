@@ -1,5 +1,5 @@
 ---
-title: Grove-IR_Distance_Interrupter_v1.2
+title: Grove - IR Distance Interrupter v1.2
 nointro:
 keywords:
   - docs
@@ -20,18 +20,15 @@ With this sensor, you can build the following (but not limited to) applications:
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)
 
-
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 This product is mildly sensitive to non-IR radiations also and hence any bright light on photosensor impairs or disturbs IR light detection.
 </div>
 
-
 <div className="admonition tip">
   <p className="admonition-title">Tip</p>
   The instructions to use this product are same as <span style={{fontWeight: 'bold'}}>Grove - Infrared Reflective Sensor's</span>. You can use this product directly if you have used Grove - Infrared Reflective Sensor.
 </div>
-
 
 Version Tracker
 ---------------
@@ -41,20 +38,19 @@ Version Tracker
 | Versions older than v1.2                              | June 2012‎    | Not supported  |
 | Grove - IR Distance Interrupter v1.2(current version) | April 2016   | Supported      |
 
-
 Features
 --------
 
--   Grove compatible and easy to use
--   Highly sensitive and reliable
--   Longer detectable distance
--   Adjustable sensitivity for various occasions
--   More durable
+- Grove compatible and easy to use
+- Highly sensitive and reliable
+- Longer detectable distance
+- Adjustable sensitivity for various occasions
+- More durable
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
-    
+
 Specifications
 --------------
 
@@ -78,16 +74,15 @@ Platforms Supported
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
 Hardware Overview
 -----------------
 
 ![](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/img/hardware_overview.png)
 
--   **ITR9909 Reflective photosensor**, Highly sensitive reflective photosensor.
--   **LM393 operational amplifier**, rail-to-rail operational amplifier.
--   **LED Indicator**, The LED will turn on when the received infrared light intensity exceeds a preset level.
--   **Light sensitivity adjusting potentiometer** , adjust the sensitivity of reflective photosensor to light.
+- **ITR9909 Reflective photosensor**, Highly sensitive reflective photosensor.
+- **LM393 operational amplifier**, rail-to-rail operational amplifier.
+- **LED Indicator**, The LED will turn on when the received infrared light intensity exceeds a preset level.
+- **Light sensitivity adjusting potentiometer** , adjust the sensitivity of reflective photosensor to light.
 
 ### **Package includes**
 
@@ -105,10 +100,10 @@ Let us see how to implement few basic applications with this module:
 
 #### Material required
 
--   Grove - IR Distance Interrupter v1.2 × 1
--   Arduino UNO (other models also are fine) × 1
--   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
--   Grove - Base Shield × 1
+- Grove - IR Distance Interrupter v1.2 × 1
+- Arduino UNO (other models also are fine) × 1
+- [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+- Grove - Base Shield × 1
 
 #### Connections
 
@@ -118,7 +113,7 @@ Let us see how to implement few basic applications with this module:
 
 ![](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/img/Reflective_photosensor3.jpg)
 
-3.Adjust the potentiometer with a screwdriver to change the sensitivity of reflective photosensor, until the LED indicator glows. As your rotate clockwise, the reflective photosensor will be more sensitive to light. 
+3.Adjust the potentiometer with a screwdriver to change the sensitivity of reflective photosensor, until the LED indicator glows. As your rotate clockwise, the reflective photosensor will be more sensitive to light.
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -157,9 +152,9 @@ void loop()  {
 
 #### Material required
 
--   Raspberry Pi (other models also are fine) × 1
--   [GrovePi](https://www.seeedstudio.com/depot/GrovePi-p-1672.html?cPath=73) or [Grovepi+](https://www.seeedstudio.com/depot/GrovePi-p-2241.html?cPath=122_154_158) × 1
--   [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+- Raspberry Pi (other models also are fine) × 1
+- [GrovePi](https://www.seeedstudio.com/depot/GrovePi-p-1672.html?cPath=73) or [Grovepi+](https://www.seeedstudio.com/depot/GrovePi-p-2241.html?cPath=122_154_158) × 1
+- [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
 
 #### Hardware Connections and Software Work
 
@@ -167,16 +162,18 @@ void loop()  {
 
 2.We assume you have built the development environment successful. If not, follow this tutorial
 
-3.Connection: 
+3.Connection:
 
 Plug Grove - IR Distance Interrupter into port D4 on GrovePi with [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57).
 
 4.Navigate to the demos' directory, run the following command in a terminal.
+
 ```
     cd yourpath/GrovePi/Software/Python/
 ```
 
 Run the command in a terminal:
+
 ```
     nano grove\_infrared\_distance\_interrupt.py
 ```
@@ -209,32 +206,30 @@ while True:
 ```
 
 5.Run the demo, run following command in terminal.
+
 ```
     sudo python grove\_infrared\_distance\_interrupt.py
 ```
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/Eagle_files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
--   [Grove - IR Distance Interrupter v1.2 Eagle file](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/Eagle_files.zip)
--   [Reflective Photosensor Datasheet(ITR9909)](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/ITR9909_datasheet.pdf)
--   [LM393 Datasheet](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/LM393.pdf)
--   [LMV358 Datasheet](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/LMV358_datasheet.pdf)
--   [Infrared Reflective Sensor Source Files](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/Grove-Infrared_Reflective_Sensor_v1.0_SourceFile.zip)
+- [Grove - IR Distance Interrupter v1.2 Eagle file](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/Eagle_files.zip)
+- [Reflective Photosensor Datasheet(ITR9909)](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/ITR9909_datasheet.pdf)
+- [LM393 Datasheet](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/LM393.pdf)
+- [LMV358 Datasheet](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/LMV358_datasheet.pdf)
+- [Infrared Reflective Sensor Source Files](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/res/Grove-Infrared_Reflective_Sensor_v1.0_SourceFile.zip)
 
-This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2
+This Markdown file was created from <https://www.seeedstudio.com/wiki/Grove_-_IR_Distance_Interrupter_v1.2>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

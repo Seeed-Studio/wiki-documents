@@ -1,5 +1,5 @@
 ---
-title: Grove-Loudness_Sensor
+title: Grove - Loudness Sensor
 nointro:
 keywords:
   - docs
@@ -18,19 +18,17 @@ The Grove - Loudness Sensor is designed to detect the sound of environment. Base
 
 <p style={{}}><a href="https://www.seeedstudio.com/Grove-Loudness-Sensor-p-1382.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
 
-
 ## Version
 
 | Product Version              | Changes                                   | Released Date |
 |------------------------------|-------------------------------------------|---------------|
-|Grove-Loudness Sensor V0.9b   | Initial                                   | Dec 2012      |     
-
+|Grove-Loudness Sensor V0.9b   | Initial                                   | Dec 2012      |
 
 ## Features
 
--   Grove Interface
--   Easy to use
--   Basic Grove element
+- Grove Interface
+- Easy to use
+- Basic Grove element
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -45,7 +43,6 @@ The Grove - Loudness Sensor is designed to detect the sound of environment. Base
 | Sensitivity           | -60~-56dBV/Pa           |
 | Signal-to-noise Ratio | >58 dB                 |
 | Output Signal range   | Analog Signal (0-1023) |
-
 
 ## Platforms Supported
 
@@ -81,7 +78,7 @@ The Grove - Loudness Sensor is designed to detect the sound of environment. Base
 ![](https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/img/seeeduino_loudness.jpg)
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove-Loudness Sensor to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove-Loudness Sensor to Seeeduino as below.
 :::
 
 | Seeeduino |  Grove-Loudness Sensor |
@@ -89,12 +86,11 @@ The Grove - Loudness Sensor is designed to detect the sound of environment. Base
 | 5V        | Red             |
 | GND       | Black           |
 | NC        | White           |
-| A0        | Yellow          | 
+| A0        | Yellow          |
 
 **Software**
 
 - **Step 1.** Please copy below code to Arduio IDE and upload to arduino. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
 
 ```
 int loudness;
@@ -117,8 +113,6 @@ void loop()
 
 ![](https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/img/seeeduino_serial.png)
 
-
-
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -135,11 +129,10 @@ void loop()
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 ![](https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/img/withrpi_basehat.jpg)
 
-
 #### Software
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -153,7 +146,6 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py/grove
 python grove_loudness_sensor.py 0
 ```
-
 
 Following is the grove_water_sensor.py code.
 
@@ -198,10 +190,10 @@ if __name__ == '__main__':
 
 ```
 
-
 :::success
     If everything goes well, you will be able to see the following result:
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_loudness_sensor.py 0
@@ -225,7 +217,6 @@ KeyboardInterrupt
 
 You can use this sensor to detect the loudness. Press ++ctrl+c++ to quit.
 
-
 :::note
         You may have noticed that for the analog port, the silkscreen pin number is something like **A1, A0**, however in the command we use parameter **0** and **1**, just the same as digital port. So please make sure you plug the module into the correct port, otherwise there may be pin conflicts.
 :::
@@ -240,7 +231,6 @@ You can use this sensor to detect the loudness. Press ++ctrl+c++ to quit.
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/img/LoudnessSensor_s.jpg)|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Loudness-Sensor-p-1382.html)|
-
 
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 - **Step 3.** Connect Grove-Loudness Sensor to **A0** port of GrovePi_Plus.
@@ -260,7 +250,6 @@ git clone https://github.com/DexterInd/GrovePi.git
 ```
 
 - **Step 3.** Excute below commands to monitor the loudness.
-
 
 ```python
 cd ~/GrovePi/Software/Python
@@ -304,15 +293,12 @@ sensor_value = 131
 ## FAQ
 
 - Q1: What is the difference between Grove-Loudness sensor and Grove - Sound Sensor?
-    - A1: The Grove-Loudness sensor have screw potentiometer to adjust the output gain. 
-
+  - A1: The Grove-Loudness sensor have screw potentiometer to adjust the output gain.
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/res/Grove%20-%20Loudness%20Sensor%20Eagle%20File_v0.9b.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -330,6 +316,7 @@ sensor_value = 131
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/coding-with-da-vince/the-da-vinci-code-3b91a8/embed' width='350'></iframe>
 
 ## Upgradable to Industrial Sensors
+
 With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) and [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), you can easily turn the Grove into a LoRaWAN® sensor. Seeed not only helps you with prototyping but also offers you the possibility to expand your project with the SenseCAP series of robust [industrial sensors](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
@@ -337,8 +324,8 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

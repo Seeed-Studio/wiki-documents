@@ -1,5 +1,5 @@
 ---
-title: Grove-Variable_Color_LED
+title: Grove - Variable Color LED
 nointro:
 keywords:
   - docs
@@ -13,29 +13,26 @@ last_update:
 
 This Grove consists of one 8mm RGB LED. It operates at 5V DC. When SIG pin is logic HIGH, the RGB LED will light up. Perfect for use on Seeeduino digital outputs, or also can be controlled by pulse-width modulation. And it uses three adjustable resistor to change the color of the RGB LED.
 
-
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html)
-
 
 Features
 --------
 
--   Grove compatible
--   Color adjustable
+- Grove compatible
+- Color adjustable
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
-:::   
+:::
 Application Ideas
 -----------------
 
--   Toys
--   Decoration
+- Toys
+- Decoration
 
 :::caution
     Be gentle while adjusting the R, G and B adjustable resistances in case of over-turning.
 :::
-
 
 Specifications
 -------------
@@ -66,7 +63,7 @@ The following sketch demonstrates a simple application of controlling its bright
 
 ![](https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/img/Grove-Variable_Color_LED.jpg)
 
--   Copy and paste code below to a new Arduino sketch.
+- Copy and paste code below to a new Arduino sketch.
 
 Demo code like:
 
@@ -95,26 +92,24 @@ void loop()  {
     }
 }
 ```
--   Upload the code.Adjust the three adjustable resistances, I am sure you will like it. Have a try!
 
+- Upload the code.Adjust the three adjustable resistances, I am sure you will like it. Have a try!
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/res/Variable_Color_LED_eagle_file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
--   [Variable Color LED eagle_file](https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/res/Variable_Color_LED_eagle_file.zip)
-
+- [Variable Color LED eagle_file](https://files.seeedstudio.com/wiki/Grove-Variable_Color_LED/res/Variable_Color_LED_eagle_file.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Variable_Color_LED -->
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

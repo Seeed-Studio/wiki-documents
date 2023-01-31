@@ -1,5 +1,5 @@
 ---
-title: Grove-Chainable_RGB_LED
+title: Grove - Chainable RGB LED
 nointro:
 keywords:
   - docs
@@ -14,10 +14,9 @@ last_update:
 
 **Grove - Chainable RGB LED** is based on P9813 chip which is a full-color LED driver. It provides 3 constant-current drivers as well as modulated output of 256 shades of gray. It communicates with a MCU using 2-wire transmission (Data and Clock). This 2-wire transmission can be used to cascade additional **Grove - Chainable RGB LED** modules. The built-in clock regeneration enhances the transmission distance. This Grove module is suitable for any colorful LED based projects.
 
-
-
 Version
 ---
+
 | Revision | Descriptions                                              | Release      |How to Buy|
 |----------|-----------------------------------------------------------|--------------|--------------|
 | v1    | Initial public release (beta)                             | May 5, 2011  |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)|
@@ -26,9 +25,9 @@ Version
 Specifications
 -------------
 
--   Operating Voltage: 5V
--   Operating Current: 20mA
--   Communication Protocol: Serial
+- Operating Voltage: 5V
+- Operating Current: 20mA
+- Communication Protocol: Serial
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -54,8 +53,8 @@ When you get Grove - Chainble RGB LED, you may think how I can light up it. Now 
 
 To complete this demo, you can use one or more Grove - Chainable RGB LED. Note that the IN interface of one Grove - Chainable RGB LED should be connect to D7/D8 of [Grove - Base Shield](/Base_Shield_V2 "Grove - Base Shield") and its OUT interface connect to IN interface of another Grove - Chainable RGB LED, chainable more LED in this way.
 
--   Download [Chainable LED Library](https://github.com/pjpmarques/ChainableLED) and install it to Arduino Library. There is the course about [how to install Arduino Library](/How_to_install_Arduino_Library) in wiki page.
--   Open the example CycleThroughColors by the path:File->Examples->ChainableLED_master and upload it to Seeeduino.
+- Download [Chainable LED Library](https://github.com/pjpmarques/ChainableLED) and install it to Arduino Library. There is the course about [how to install Arduino Library](/How_to_install_Arduino_Library) in wiki page.
+- Open the example CycleThroughColors by the path:File->Examples->ChainableLED_master and upload it to Seeeduino.
 
 ```
 
@@ -211,7 +210,7 @@ Upload the program to your Arduino/Seeeduino.
 
 3.Connection
 
--   Plug the sensor to grovepi socket D7 by using a grove cable.
+- Plug the sensor to grovepi socket D7 by using a grove cable.
 
 4.Navigate to the demos' directory:
 
@@ -219,10 +218,12 @@ Upload the program to your Arduino/Seeeduino.
     cd yourpath/GrovePi/Software/Python/
 ```
 
--   To see the code
+- To see the code
+
 ```
      nano grove_chainable_rgb_led.py   # "Ctrl+x" to exit #
 ```
+
 ```
     import time
     import grovepi
@@ -594,14 +595,14 @@ Upload the program to your Arduino/Seeeduino.
         print "Error"
 ```
 
--   Notice that there's something you have to concern of:
+- Notice that there's something you have to concern of:
 
 ```
     pin = 7         #setting up the output pin
     numleds = 1     #how many leds you plug
 ```
 
--   Also all methods you can see in grovepi.py is:
+- Also all methods you can see in grovepi.py is:
 
 ```
     storeColor(red, green, blue)
@@ -613,11 +614,13 @@ Upload the program to your Arduino/Seeeduino.
 ```
 
 5.Run the demo.
+
 ```
     sudo python3 grove_chainable_rgb_led.py
 ```
 
 6.This demo may not work if your grovepi dosen't have the newest firmware, update the firmware.
+
 ```
     cd yourpath/GrovePi/Firmware
     sudo ./firmware_update.sh
@@ -766,29 +769,27 @@ if __name__ == "__main__":
 **Step6:** Run the code. You'll find the RGB LED is changing color every 2 seconds.
 
 # Chainable RGB LED eagle file V1
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Chainable_RGB_LED_eagle_file%20V1%20(2).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 # Chainable RGB LED eagle file V2
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Grove%20-%20Chainable%20RGB%20LED%20v2.0%20(1).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 # Resources
+
 ---------
 
--   **[Library]**[Chainable RGB LED Library for the P9813](https://github.com/pjpmarques/ChainableLED)
--   **[Library]**[Github repository for Chainable RGB LED Library (new)](https://github.com/Seeed-Studio/Grove_Chainable_RGB_LED)
--   **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Chainable%20RGB%20LED.zip)
--   **[Eagle]**[Chainable RGB LED eagle file V1](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Chainable_RGB_LED_eagle_file%20V1.zip)
--   **[Eagle]**[Chainable RGB LED eagle file V2](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Grove%20-%20Chainable%20RGB%20LED%20v2.0.zip)
--   **[Datasheet]**[P9813 Datasheet](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/P9813_datasheet.pdf)
-
+- **[Library]**[Chainable RGB LED Library for the P9813](https://github.com/pjpmarques/ChainableLED)
+- **[Library]**[Github repository for Chainable RGB LED Library (new)](https://github.com/Seeed-Studio/Grove_Chainable_RGB_LED)
+- **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Chainable%20RGB%20LED.zip)
+- **[Eagle]**[Chainable RGB LED eagle file V1](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Chainable_RGB_LED_eagle_file%20V1.zip)
+- **[Eagle]**[Chainable RGB LED eagle file V2](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/Grove%20-%20Chainable%20RGB%20LED%20v2.0.zip)
+- **[Datasheet]**[P9813 Datasheet](https://files.seeedstudio.com/wiki/Grove-Chainable_RGB_LED/res/P9813_datasheet.pdf)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Chainable_RGB_LED -->
-
 
 ## Projects
 
@@ -804,7 +805,8 @@ if __name__ == "__main__":
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/limanchen/security-access-using-seeeduino-lotus-7eb90f/embed' width='350'></iframe>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
