@@ -2,7 +2,7 @@
 description: Vision AI Train Own Model
 title: Vision AI Train Own Model
 keywords:
-- SenseCap
+- Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/13/2023

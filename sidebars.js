@@ -75,6 +75,7 @@ const sidebars = {
               label: 'Vision AI',
               items: [
                 'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
+                'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
 
               ],
             },
@@ -308,6 +309,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Piezo_Vibration_Sensor',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Optical_Rotary_Encoder-TCUT1600X01',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Vibration_Sensor_SW-420',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
               ],
@@ -528,6 +530,7 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-6-Position_DIP_Switch',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Switch-P',
               ],
             },
             {
@@ -691,20 +694,209 @@ const sidebars = {
       items: [
         // 'Sensor/Wio_Terminal/wiki',
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
+        'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         {
 
           type: 'category',
-          label: 'LCD',
+          label: 'Hardware Overview',
           items: [
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Overview',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Basic',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Graphics',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Fonts',
-            // 'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Anti-aliased-Fonts',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Linecharts',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-Histogram',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LCD-APIs',
-            'Sensor/Wio_Terminal/LCD/Wio-Terminal-LVGL',
+            {
+
+              type: 'category',
+              label: 'LCD Usage',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Basic',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Graphics',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Fonts',
+                // 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
+                // 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Linecharts',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Histogram',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-APIs',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LVGL',
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Input/Output',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Analog',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Digital',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-I2C',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-SPI',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-Grove',
+
+
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'IMU Usage',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Basic',
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Tapping',
+
+              ],
+
+            },
+            {
+              type: 'category',
+              label: 'SD Card',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-ReadWrite',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wi-Fi',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Network-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Wi-Fi',
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Advanced-Wi-Fi',
+              ],
+            },
+            {
+
+              type: 'category',
+              label: 'Bluetooth',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Bluetooth-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-terminal-BLE-introduction',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Web-Bluetooth',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/BLE-ibeacon-using-Wio-terminal',
+
+              ],
+
+            },
+            {
+              type: 'category',
+              label: 'RTC',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/RTC/Wio-Terminal-RTC',
+              ],
+            },
+            {
+
+              type: 'category',
+              label: 'Buttons',
+              items: [
+
+                'Sensor/Wio_Terminal/Hardware_Overview/Buttons/Wio-Terminal-Buttons',
+
+              ],
+
+            },
+
+            {
+              type: 'category',
+              label: '5 Way Switch',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/five_Way_Switch/Wio-Terminal-Switch',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Light Sensor',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Light_Sensor/Wio-Terminal-Light',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Infrared Emitter',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Microphone',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Microphone/Wio-Terminal-Mic',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Buzzer',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Buzzer/Wio-Terminal-Buzzer',
+              ],
+            },
+
+
+
+
+          ]
+        },
+        {
+
+          type: 'category',
+          label: 'Application',
+          items: [
+
+            {
+
+              type: 'category',
+              label: 'Easy IoT',
+              items: [
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Wio-Terminal-Azure-IOT',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Get-Started-with-Wio-Terminal-and-Wappsto-IoT',
+
+              ],
+
+            },
+            {
+
+              type: 'category',
+              label: 'Embedded ML ',
+              items: [
+                {
+
+                  type: 'category',
+                  label: 'Projects based Edge Impulse ',
+                  items: [
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-1',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-2',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-3',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-4',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-5',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-6',
+                  ],
+
+                },
+                {
+                  type: 'category',
+                  label: 'Projects based TensorFlow Lite',
+                  items: [
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-1',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-2',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-3',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-Gesture-Recognition',
+                  ]
+
+                },
+                'Sensor/Wio_Terminal/Application/Embedded_ML/AIoTs_GPS_state_tester',
+
+              ],
+
+            },
+
+
 
           ],
 
@@ -712,15 +904,37 @@ const sidebars = {
         {
 
           type: 'category',
-          label: 'IO',
+          label: 'Extension Board',
           items: [
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Overview',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Analog',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-Digital',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-I2C',
-            'Sensor/Wio_Terminal/IO/Wio-Terminal-IO-SPI',
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Battery-Chassis',
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Chassis-Battery_650mAh',
+            'Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915',
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet',
+            {
+
+              type: 'category',
+              label: 'Audio Extension Board',
+              items: [
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview',
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Play-Record',
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-GUI',
+
+              ],
+
+            },
 
 
+          ]
+
+        },
+        {
+
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML-Kit-Course',
+            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML',
+            'Sensor/Wio_Terminal/Kit_with_Courses/Introduction_to_Artificial_Intelligence_for_Makers',
 
           ],
 
@@ -728,149 +942,64 @@ const sidebars = {
         {
 
           type: 'category',
-          label: 'Network',
+          label: 'Tutorial',
           items: [
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Network-Overview',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Wi-Fi',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Advanced-Wi-Fi',
-            'Sensor/Wio_Terminal/Network/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Azure-IOT',
-            'Sensor/Wio_Terminal/Network/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
-            'Sensor/Wio_Terminal/Network/Azure_IoT_CC',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Ethernet',
-            'Sensor/Wio_Terminal/Network/Wio-Terminal-Blynk',
-            'Sensor/Wio_Terminal/Network/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
+            'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
+            'Sensor/Wio_Terminal/Tutorial/Edge_Impulse_CC',
+            {
 
-          ],
+              type: 'category',
+              label: 'Blynk for Wio Terminal',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Wio-Terminal-Blynk',
+                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
 
-        },
-        {
+              ],
 
-          type: 'category',
-          label: 'Bluetooth',
-          items: [
-            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Bluetooth-Overview',
-            'Sensor/Wio_Terminal/Bluetooth/Wio-terminal-BLE-introduction',
-            'Sensor/Wio_Terminal/Bluetooth/Wio-Terminal-Web-Bluetooth',
-            'Sensor/Wio_Terminal/Bluetooth/BLE-ibeacon-using-Wio-terminal',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Audio',
-          items: [
-            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Overview',
-            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-Play-Record',
-            'Sensor/Wio_Terminal/Audio/Wio-Terminal-Audio-GUI',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'IMU',
-          items: [
-            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Overview',
-            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Basic',
-            'Sensor/Wio_Terminal/IMU/Wio-Terminal-IMU-Tapping',
-
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Configurable Buttons',
-          items: [
-
-            'Sensor/Wio_Terminal/Configurable_Buttons/Wio-Terminal-Buttons',
+            },
+            {
+              type: 'category',
+              label: 'Wio Terminal USB Host',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Overview',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Keyboard',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Mouse',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Xbox',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wio Terminal USB Client',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Overview',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Mouse',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-MIDI',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-HMI-Usermode-SDK',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-DAPLink',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-Reading-Raspberry-Pi',
+              ],
+            },
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Gyro',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Storting-Analog-Data',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Photos',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Interactive-Face',
+            'Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-8720-dev',
 
           ],
 
         },
 
-        {
-          type: 'category',
-          label: '5 Way Switch',
-          items: [
-            'Sensor/Wio_Terminal/five_Way_Switch/Wio-Terminal-Switch',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Light Sensor',
-          items: [
-            'Sensor/Wio_Terminal/Light_Sensor/Wio-Terminal-Light',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Infrared Emitter',
-          items: [
-            'Sensor/Wio_Terminal/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Microphone',
-          items: [
-            'Sensor/Wio_Terminal/Microphone/Wio-Terminal-Mic',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Buzzer',
-          items: [
-            'Sensor/Wio_Terminal/Buzzer/Wio-Terminal-Buzzer',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'RTC',
-          items: [
-            'Sensor/Wio_Terminal/RTC/Wio-Terminal-RTC',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'File System',
-          items: [
-            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-Overview',
-            'Sensor/Wio_Terminal/File_System/Wio-Terminal-FS-ReadWrite',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'USB Host',
-          items: [
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Overview',
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Keyboard',
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Mouse',
-            'Sensor/Wio_Terminal/USB_Host/Wio-Terminal-USBH-Xbox',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'USB Client',
-          items: [
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Overview',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-Mouse',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-USBCLIENT-MIDI',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-HMI-Usermode-SDK',
-            'Sensor/Wio_Terminal/USB_Client/Wio-Terminal-DAPLink',
-          ],
-        },
       ],
 
     },
+
+
 
     {
 
