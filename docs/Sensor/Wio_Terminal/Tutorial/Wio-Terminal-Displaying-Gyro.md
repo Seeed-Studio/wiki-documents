@@ -1,6 +1,17 @@
+---
+description:  Wio Terminal Displaying Gyro
+title:  Wio Terminal Displaying Gyro
+keywords:
+- Wio_terminal Tutorial
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/31/2023
+  author: jianjing Huang
+---
+
 # Wio Terminal Displaying Accelerator Readings
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/C0279.2019-11-28%2018_25_43.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/C0279.2019-11-28%2018_25_43.gif" /></div>
 
 ## Overview
 
@@ -112,7 +123,7 @@ auto content = line_chart(20, header.height()); //(x,ywhere the line graph begin
             .draw(&spr);
 ```
 
-## Complete code 
+## Complete code
 
 ```cpp
 #include"LIS3DHTR.h" //include the accelerator library

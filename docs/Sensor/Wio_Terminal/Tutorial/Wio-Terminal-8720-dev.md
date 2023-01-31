@@ -1,6 +1,17 @@
+---
+description:  How to Use Wio Terminal as RTL8720DN Dev Board
+title:  How to Use Wio Terminal as RTL8720DN Dev Board
+keywords:
+- Wio_terminal Tutorial
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/31/2023
+  author: jianjing Huang
+---
+
 # How to Use Wio Terminal as RTL8720DN Dev Board
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/BLE.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/BLE.gif" /></div>
 
 Wio Terminal is equipped with the Atmel SAMD51 core with the Realtek RTL8720DN wireless core. Won't it be cool if you can also use Wio Terminal as a simple RTL8720DN dev board. In this wiki, you will learn how to use Wio Terminal as a RTL8720DN dev board to develop the Wi-Fi and Bluetooth connectivity!
 
@@ -18,7 +29,7 @@ https://github.com/ambiot/ambd_arduino/raw/master/Arduino_package/package_realte
 
 2.Click on **Tools** > **Board** > **Board Manager** and Search **realtek** in the Boards Manager
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/realtek-board.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/realtek-board.png" /></div>
 
 ## Communication Program Between SAMD51 and RTL8720DN
 
@@ -46,26 +57,27 @@ Let's take an example to walk through the procedures!
 
 - Once uploaded the program, navigate to **Tools** -> **Board** and select board as **RTL8722DM** as followed:
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/8720-board.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/8720-board.png" /></div>
 
 - Navigate to **Files** -> **Examples** and under **Examples for RTL8720DM**, you can choose examples for RTL8720DN. Let me just take ScanNetworks as example.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/8720-example.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/8720-example.png" /></div>
 
-!!!Note
-        If using Wi-Fi related examples, please check [here](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/) first to erase RTL8720DN core firmware first.
+:::note
+If using Wi-Fi related examples, please check [here](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/) first to erase RTL8720DN core firmware first.
+:::
 
 - Make sure that the Wio Terminal is in the **RTL8720DN Burning Firmware Mode** as followed. Select board as **RTL8722DM** and click upload.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/burn.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/burn.png" /></div>
 
 - Once uploaded the Wi-Fi example into the RTL8720DN core. Reset Wio Terminal and switch to **USB to Serial Mode** by pressing the middle button of Wio Terminal.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/USB-serial.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/USB-serial.png" /></div>
 
 - Now, if you open the Serial Monitor you should be able to see results printing from the RTL8720DN core! Now you can use Wio Terminal's RTL8720DN core as a dev board!
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/result.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/result.png" /></div>
 
 ## Bluetooth Example
 
@@ -81,8 +93,9 @@ Let's also have a Bluetooth example.
 
 - Now, if you open the Serial Monitor you should be able to see results printing from the RTL8720DN core! Now you can use Wio Terminal's RTL8720DN core as a dev board!
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/BLE.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-8720-dev/BLE.png" /></div>
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/)<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

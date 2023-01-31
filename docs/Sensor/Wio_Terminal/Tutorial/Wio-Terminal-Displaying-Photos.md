@@ -1,6 +1,17 @@
+---
+description:  Wio Terminal Displaying Photos
+title:  Wio Terminal Displaying Photos
+keywords:
+- Wio_terminal Tutorial
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/31/2023
+  author: jianjing Huang
+---
+
 # Wio Terminal Displaying photos
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/products.2019-11-26%2017_40_45.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/products.2019-11-26%2017_40_45.gif" /></div>
 
 ## Overview
 

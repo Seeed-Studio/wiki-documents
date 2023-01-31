@@ -1,5 +1,5 @@
 ---
-title: Wio_RP2040_Module_Build-in_Wireless_2.4G
+title: Wio RP2040 Module
 nointro:
 keywords:
   - docs

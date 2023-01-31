@@ -1,23 +1,33 @@
-# How to measure noise levels with Wio Terminal 
+---
+description: How to measure noise levels with Wio Terminal
+title:  How to measure noise levels with Wio Terminal
+keywords:
+- Wio_terminal Tutorial
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/31/2023
+  author: jianjing Huang
+---
 
+# How to measure noise levels with Wio Terminal
 
 ## Overview
 
-This example showing how perfectly display the Decibel Meter on the Wio Terminal. 
+This example showing how perfectly display the Decibel Meter on the Wio Terminal.
 
-## Part list 
+## Part list
 
 - [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
 - [**ReSpeaker 2-Mics Pi HAT**](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)
 
-
-!!!Note
-    Please visit the [**Audio Overview**](https://wiki.seeedstudio.com/Wio-Terminal-Audio-Overview/) for the **Hardware Connection**.
+:::note
+Please visit the [**Audio Overview**](https://wiki.seeedstudio.com/Wio-Terminal-Audio-Overview/) for the **Hardware Connection**.
+:::
 
 ## Features
 
 - The dB can be presented in the dial plate, reading and line-chart respectively.
-- It has a guide to introduce what the number of dB mean. 
+- It has a guide to introduce what the number of dB mean.
 
 ## Getting Started
 
@@ -37,10 +47,9 @@ To get started with the Audio library for Wio Terminal, please follow through th
 
 This example is display the dB value on the arduino Monitor, so we can have a test dB code.
 
-!!!Note
-    The code is quite long, so you can just click 'copy to clipboard' then put on the Arduino IDE.
-
-
+:::note
+The code is quite long, so you can just click 'copy to clipboard' then put on the Arduino IDE.
+:::
 
 ```cpp
 #include <Audio.h>
@@ -95,20 +104,15 @@ void loop() {
 ```
 
 The value of dB is presented.
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Sound-Meter/sound-Meter-value_gGIF.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Sound-Meter/sound-Meter-value_gGIF.gif" /></div>
 
-
-
-## The Decibel Meter Demo 
+## The Decibel Meter Demo
 
 This example detects dB using the mic on ReSpeaker 2-Mic Hat, The around evirnment is detected, then displayed on the display.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Sound-Meter/sound-Meter_gGIF.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Sound-Meter/sound-Meter_gGIF.gif" /></div>
 
 ## Complete Code
-
-
-
 
 ```cpp
 
@@ -431,5 +435,3 @@ void plotNeedle(int value, byte ms_delay) {
 }
 
 ```
-
-

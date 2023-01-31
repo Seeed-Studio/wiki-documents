@@ -1,6 +1,17 @@
+---
+description: Wio Terminal Interactive Faces Demo
+title: Wio Terminal Interactive Faces Demo
+keywords:
+- Wio_terminal Tutorial
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/31/2023
+  author: jianjing Huang
+---
+
 # Wio Terminal Interactive Emoji faces
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/C0274.2019-11-26%2014_50_05.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/C0274.2019-11-26%2014_50_05.gif" /></div>
 
 ## Overview
 

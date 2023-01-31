@@ -1,5 +1,5 @@
 ---
-title: Wio RP2040 mini Dev Board - Onboard Wifi
+title: Get Started with Wio RP2040 mini Dev Board
 nointro:
 keywords:
   - docs

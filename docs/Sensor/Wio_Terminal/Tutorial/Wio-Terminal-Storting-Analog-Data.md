@@ -1,6 +1,17 @@
+---
+description:  Wio Terminal Storing Data
+title:  Wio Terminal Storing Data
+keywords:
+- Wio_terminal Tutorial
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/31/2023
+  author: jianjing Huang
+---
+
 # Wio Terminal displaying and storing analog data
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/C0282.2019-11-28%2018_28_03.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/C0282.2019-11-28%2018_28_03.gif" /></div>
 
 ## Overview
 
@@ -30,7 +41,7 @@ This example demonstrates using the line graph functions to display the Grove - 
 
 - **To initialize LCD and Analog port**
 
-<div align=center><img width=350 src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2020-03-03_12-28-29.jpg"/></div>
+<div align="center"><img width={350} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Xnip2020-03-03_12-28-29.jpg" /></div>
 
 As we can see, Wio Terminal has two Grove ports, one is default I2C port and the other is configurable Digital D0, D1 or Analog A0 and A1 ports, as well as UART ports. In this case, analog port is needed so defined as analog input.
 

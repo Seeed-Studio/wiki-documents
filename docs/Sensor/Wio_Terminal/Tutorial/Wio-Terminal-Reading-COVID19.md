@@ -1,6 +1,17 @@
+---
+description:  Reading Coronavirus Live Data using Wio Terminal
+title:  Reading Coronavirus Live Data using Wio Terminal
+keywords:
+- Wio_terminal Tutorial
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/31/2023
+  author: jianjing Huang
+---
+
 # Reading Coronavirus COVID-19 Live Data using Wio Terminal
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/COVID-19.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/COVID-19.gif" /></div>
 
 This wiki is a modification of [Reading Github Repository Stats from Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Reading-Github/), where it is modified to access to [Coronavirus COVID19 API](https://covid19api.com/) and parse the data and display Live COVID-19 data on the LCD screen.
 
@@ -24,7 +35,7 @@ This wiki is a modification of [Reading Github Repository Stats from Wio Termina
 
 - Visit the [ArduinoJson](https://github.com/bblanchon/ArduinoJson) repositories and download the entire repo to your local drive.
 
-    - Now, the ArduinoJson library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `ArduinoJson` file that you've have just downloaded.
+  - Now, the ArduinoJson library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `ArduinoJson` file that you've have just downloaded.
 
 - For more information about Https connection, please visit [**here**](https://wiki.seeedstudio.com/Wio-Terminal-Wi-Fi/#wi-fi-https-connection-example-code).
 
@@ -39,7 +50,6 @@ This wiki is a modification of [Reading Github Repository Stats from Wio Termina
 ## Complete Code
 
 **Note:** Change the `ssid` and `password` to your Network Wi-Fi.
-
 
 ```cpp
 #include "rpcWiFi.h"

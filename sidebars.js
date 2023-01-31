@@ -22,6 +22,7 @@ const sidebars = {
 
   ProductSidebar: [
 
+
     'Getting_Started',
     'weekly_wiki',
 
@@ -582,8 +583,6 @@ const sidebars = {
 
     },
 
-
-
     {
       type: 'category',
       label: 'SeeedStudio XIAO',
@@ -598,10 +597,24 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyML',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-DAPLink',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
+            {
+              type: 'category',
+              label: 'Embedded ML',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Embedded ML/Seeeduino-XIAO-TinyML',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'TuTorial',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/Seeeduino-XIAO-DAPLink',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
+              ]
+            },
+
           ],
+
         },
         {
           type: 'category',
@@ -613,9 +626,9 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
             {
               type: 'category',
-              label: 'TinyML-Edge Impulse',
+              label: 'Embedded ML',
               items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/TinyML-Edge Impulse/XIAO-RP2040-EI',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/Embedded ML/XIAO-RP2040-EI',
               ]
             },
           ],
@@ -625,14 +638,6 @@ const sidebars = {
           label: 'SeeedStudio XIAO nRF52840 (Sense)',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
-            {
-              type: 'category',
-              label: 'Bluetooth Usage on SeeedStudio XIAO nRF52840 (Sense)',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth_Usage_on_SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Bluetooth_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth_Usage_on_SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Bluetooth-Usage',
-              ]
-            },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
@@ -640,19 +645,19 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
             {
               type: 'category',
-              label: 'TinyML for TensorFLow Lite',
+              label: 'Bluetooth Libraries',
               items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-TensorFLow_Lite/XIAO-BLE-Sense-TFLite-Getting-Started',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-TensorFLow_Lite/XIAO-BLE-Sense-TFLite-Mic',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth-Usage',
               ]
             },
-
             {
               type: 'category',
-              label: 'TinyML for Edge Impulse',
+              label: 'Embedded ML',
               items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/TinyML-Edge_Impulse/XIAOEI',
-
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Getting-Started',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Mic',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
               ]
             },
           ]
@@ -677,15 +682,19 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO Kit',
+          label: 'Kit with Courses',
           items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Kit/XIAO-Kit-Courses',
+            'Sensor/SeeedStudio_XIAO/Kit with Courses/XIAO-Kit-Courses',
 
           ]
         },
       ],
-
     },
+
+
+
+
+
 
     {
 
@@ -989,7 +998,9 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-8720-dev',
+            'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
+            'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
 
           ],
 
@@ -1002,70 +1013,27 @@ const sidebars = {
 
 
     {
-
-      type: 'category',
-      label: 'Wio Series',
-      items: [
-        // 'Sensor/Wio_Series/wiki',
-        {
-          type: 'category',
-          label: 'Wio_Tracker',
-          items: [
-            'Sensor/Wio_Series/Wio_Tracker/Wio_Tracker',
-            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat.1',
-            'Sensor/Wio_Series/Wio_Tracker/LTE_Cat_1_Pi_HAT',
-            'Sensor/Wio_Series/Wio_Tracker/wio_gps_board',
-            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
-            'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
-
-
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Wio',
-          items: [
-            'Sensor/Wio_Series/Wio/Wio_RP2040_Module_Build-in_Wireless_2.4G',
-            'Sensor/Wio_Series/Wio/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
-            'Sensor/Wio_Series/Wio/LAN_Communications',
-            'Sensor/Wio_Series/Wio/Use_MQTT_to_remotely_light_up_LED_lights',
-            'Sensor/Wio_Series/Wio/Use_Socket_to_connect_to_the_forum',
-            'Sensor/Wio_Series/Wio/Wio-RP2040-with-Arduino-WIFI',
-            'Sensor/Wio_Series/Wio/Wireless-Fall-Detection-Device',
-            'Sensor/Wio_Series/Wio/Wireless-desktop-atmosphere-lamp',
-            'Sensor/Wio_Series/Wio/Wio',
-            'Sensor/Wio_Series/Wio/Wio_Link',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Bootcamp_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Deluxe_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Deluxe_Plus_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Environment_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Event_Kit',
-            // 'Sensor/Wio_Series/Wio/Wio_Link_Starter_Kit',
-            'Sensor/Wio_Series/Wio/Wio_Node',
-            // 'Sensor/Wio_Series/Wio/Grove_Starter_Kit_for_Wio_LTE', 
-            'Sensor/Wio_Series/Wio/Grove-Shield-for-Wio-Lite',
-            'Sensor/Wio_Series/Wio/Wio-Lite-W600',
-            'Sensor/Wio_Series/Wio/Wio-Lite-MG126',
-            'Sensor/Wio_Series/Wio/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
-
-
-
-          ],
-        },
-      ],
-
-    },
-
-
-
-    {
-
       type: 'category',
       label: 'Seeeduino Series',
       items: [
-        'Sensor/Seeeduino_Series/Seeeduino_v4.2',
-      ],
+        'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
+        'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
+        {
 
+          type: 'category',
+          label: 'Seeeduino',
+          items: [
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.0',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2_Atmega-168P',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v2.21',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
+            'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
+          ],
+
+        },
+      ],
     },
 
     {
@@ -1747,6 +1715,5 @@ const sidebars = {
   ],
 
 };
-
 
 module.exports = sidebars;
