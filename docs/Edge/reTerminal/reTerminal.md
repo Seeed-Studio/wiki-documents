@@ -21,13 +21,13 @@ reTerminal consists of a high-speed expansion interface and rich I/O for more ex
 
 reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to do is connect it to power and start building your IoT, HMI and Edge AI applications right away!
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png"></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png"/></a></p>
 
 | Released Date | Pre-Installed OS | Pre-Installed STM32 Firmware | Board Version | Additional Information |
 |---|---|---|---|---|
 | 06/15/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.0 | v1.3 | Initial |
 | 08/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.1 | v1.4 |  |
-| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | Change IO Expansion Chip from MCP23008-E to PCA9554, <br>Change Encryption Microchip from ATECC608A-SSHDA-B to ATECC608A-TNGTLSS-G [More Info](../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
+| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | Change IO Expansion Chip from MCP23008-E to PCA9554, <br />Change Encryption Microchip from ATECC608A-SSHDA-B to ATECC608A-TNGTLSS-G [More Info](../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
 | 11/02/2021 | 2021-09-14-Raspbian(modified)-32-bit | V1.8 | v1.6 |  |
 
 ## Features
@@ -44,179 +44,179 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 ## Specifications
 
-<table style="undefined;table-layout: fixed; width: 743px">
-<colgroup>
-<col style="width: 146px">
-<col style="width: 198px">
-<col style="width: 399px">
-</colgroup>
-<thead>
-  <tr>
-    <th colspan="2">Specification</th>
-    <th>Details</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="2">Platform</td>
-    <td>Processor</td>
-    <td>Broadcom BCM2711 quad-core Cortex-A72 (ARM v8)</td>
-  </tr>
-  <tr>
-    <td>Frequency</td>
-    <td>64-bit SoC @ 1.5GHz</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Memory</td>
-    <td>Capacity</td>
-    <td>4GB</td>
-  </tr>
-  <tr>
-    <td>Technology</td>
-    <td>LPDDR4 with on-die ECC</td>
-  </tr>
-  <tr>
-    <td>eMMC</td>
-    <td>Capacity</td>
-    <td>32GB</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Wireless</td>
-    <td>Wi-Fi</td>
-    <td>2.4GHz and 5.0GHz IEEE 802.11b/g/n/ac</td>
-  </tr>
-  <tr>
-    <td>Bluetooth</td>
-    <td>Bluetooth 5.0, BLE</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Display</td>
-    <td>LCD</td>
-    <td>5-inch 720x1280 LCD</td>
-  </tr>
-  <tr>
-    <td>Touch Panel</td>
-    <td>Capacitive touch panel (support multi-touch)</td>
-  </tr>
-  <tr>
-    <td rowspan="5">Video</td>
-    <td>HDMI</td>
-    <td>1 x Micro HDMI output (up to 4Kp60 supported)</td>
-  </tr>
-  <tr>
-    <td>CSI</td>
-    <td>1 x 2-lane MIPI CSI camera interface</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Multimedia</td>
-    <td>H.265 (4Kp60 decode)</td>
-  </tr>
-  <tr>
-    <td>H.264 (1080p60 decode,1080p30 encode)</td>
-  </tr>
-  <tr>
-    <td>OpenGL ES 3.0 graphics</td>
-  </tr>
-  <tr>
-    <td rowspan="10">Built-In Modules</td>
-    <td rowspan="2">Real-Time Clock</td>
-    <td>NXP Semiconductors PCF8563T</td>
-  </tr>
-  <tr>
-    <td>Low backup current; typical 0.25μA at VDD = 3.0 V and Temperature = 25 ℃</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Accelerometer</td>
-    <td>STMicroelectronics LIS3DHTR</td>
-  </tr>
-  <tr>
-    <td>16-bit, ±2g/±4g/±8g/±16g dynamically selectable full scale</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Encryption</td>
-    <td>Microchip ATECC608A</td>
-  </tr>
-  <tr>
-    <td>Secure Hardware-Based Key Storage, Asymmetric Sign, Verify, Key Agreement</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Light Sensor</td>
-    <td>Levelek LTR-303ALS-01</td>
-  </tr>
-  <tr>
-    <td>Digital light sensor</td>
-  </tr>
-  <tr>
-    <td>Internal IO<br>Expansion</td>
-    <td>Microchip MCP23008-E/ PCA9554</td>
-  </tr>
-  <tr>
-    <td>Buzzer</td>
-    <td>≥85dB @10cm 2700±300Hz</td>
-  </tr>
-  <tr>
-    <td rowspan="12">External I/O</td>
-    <td rowspan="8">GPIOs</td>
-    <td>Up to 5 × UART</td>
-  </tr>
-  <tr>
-    <td>Up to 5 × I2C</td>
-  </tr>
-  <tr>
-    <td>Up to 5 × SPI</td>
-  </tr>
-  <tr>
-    <td>1 × SDIO interface</td>
-  </tr>
-  <tr>
-    <td>1 × DPI (Parallel RGB Display)</td>
-  </tr>
-  <tr>
-    <td>1 × PCM</td>
-  </tr>
-  <tr>
-    <td>1 × PWM channel</td>
-  </tr>
-  <tr>
-    <td>Up to 3× GPCLK outputs</td>
-  </tr>
-  <tr>
-    <td rowspan="4">Vertical expansion<br>interface</td>
-    <td>1 × PCIe 1-lane Host, Gen 2 (5Gbps)</td>
-  </tr>
-  <tr>
-    <td>1 × USB 2.0 port (highspeed)</td>
-  </tr>
-  <tr>
-    <td>26 x GPIOs</td>
-  </tr>
-  <tr>
-    <td>POE</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Power</td>
-    <td>Voltage</td>
-    <td>5V DC</td>
-  </tr>
-  <tr>
-    <td>Current</td>
-    <td>3A(Minimum)</td>
-  </tr>
+<table style={{tableLayout: 'fixed', width: 743}}>
+  <colgroup>
+    <col style={{width: 146}} />
+    <col style={{width: 198}} />
+    <col style={{width: 399}} />
+  </colgroup>
+  <thead>
     <tr>
-    <td>Temperature</td>
-    <td>Operating Temperature</td>
-    <td>0 - 70°C( For the LCD Screen: 0 - 60°C)</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Mechanical</td>
-    <td>Dimensions</td>
-    <td>140mm x 95mm x 21mm</td>
-  </tr>
-  <tr>
-    <td>Weight</td>
-    <td>285g</td>
-  </tr>
-</tbody>
+      <th colSpan={2}>Specification</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={2}>Platform</td>
+      <td>Processor</td>
+      <td>Broadcom BCM2711 quad-core Cortex-A72 (ARM v8)</td>
+    </tr>
+    <tr>
+      <td>Frequency</td>
+      <td>64-bit SoC @ 1.5GHz</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Memory</td>
+      <td>Capacity</td>
+      <td>4GB</td>
+    </tr>
+    <tr>
+      <td>Technology</td>
+      <td>LPDDR4 with on-die ECC</td>
+    </tr>
+    <tr>
+      <td>eMMC</td>
+      <td>Capacity</td>
+      <td>32GB</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Wireless</td>
+      <td>Wi-Fi</td>
+      <td>2.4GHz and 5.0GHz IEEE 802.11b/g/n/ac</td>
+    </tr>
+    <tr>
+      <td>Bluetooth</td>
+      <td>Bluetooth 5.0, BLE</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Display</td>
+      <td>LCD</td>
+      <td>5-inch 720x1280 LCD</td>
+    </tr>
+    <tr>
+      <td>Touch Panel</td>
+      <td>Capacitive touch panel (support multi-touch)</td>
+    </tr>
+    <tr>
+      <td rowSpan={5}>Video</td>
+      <td>HDMI</td>
+      <td>1 x Micro HDMI output (up to 4Kp60 supported)</td>
+    </tr>
+    <tr>
+      <td>CSI</td>
+      <td>1 x 2-lane MIPI CSI camera interface</td>
+    </tr>
+    <tr>
+      <td rowSpan={3}>Multimedia</td>
+      <td>H.265 (4Kp60 decode)</td>
+    </tr>
+    <tr>
+      <td>H.264 (1080p60 decode,1080p30 encode)</td>
+    </tr>
+    <tr>
+      <td>OpenGL ES 3.0 graphics</td>
+    </tr>
+    <tr>
+      <td rowSpan={10}>Built-In Modules</td>
+      <td rowSpan={2}>Real-Time Clock</td>
+      <td>NXP Semiconductors PCF8563T</td>
+    </tr>
+    <tr>
+      <td>Low backup current; typical 0.25μA at VDD = 3.0 V and Temperature = 25 ℃</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Accelerometer</td>
+      <td>STMicroelectronics LIS3DHTR</td>
+    </tr>
+    <tr>
+      <td>16-bit, ±2g/±4g/±8g/±16g dynamically selectable full scale</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Encryption</td>
+      <td>Microchip ATECC608A</td>
+    </tr>
+    <tr>
+      <td>Secure Hardware-Based Key Storage, Asymmetric Sign, Verify, Key Agreement</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Light Sensor</td>
+      <td>Levelek LTR-303ALS-01</td>
+    </tr>
+    <tr>
+      <td>Digital light sensor</td>
+    </tr>
+    <tr>
+      <td>Internal IO<br />Expansion</td>
+      <td>Microchip MCP23008-E/ PCA9554</td>
+    </tr>
+    <tr>
+      <td>Buzzer</td>
+      <td>≥85dB @10cm 2700±300Hz</td>
+    </tr>
+    <tr>
+      <td rowSpan={12}>External I/O</td>
+      <td rowSpan={8}>GPIOs</td>
+      <td>Up to 5 × UART</td>
+    </tr>
+    <tr>
+      <td>Up to 5 × I2C</td>
+    </tr>
+    <tr>
+      <td>Up to 5 × SPI</td>
+    </tr>
+    <tr>
+      <td>1 × SDIO interface</td>
+    </tr>
+    <tr>
+      <td>1 × DPI (Parallel RGB Display)</td>
+    </tr>
+    <tr>
+      <td>1 × PCM</td>
+    </tr>
+    <tr>
+      <td>1 × PWM channel</td>
+    </tr>
+    <tr>
+      <td>Up to 3× GPCLK outputs</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>Vertical expansion<br />interface</td>
+      <td>1 × PCIe 1-lane Host, Gen 2 (5Gbps)</td>
+    </tr>
+    <tr>
+      <td>1 × USB 2.0 port (highspeed)</td>
+    </tr>
+    <tr>
+      <td>26 x GPIOs</td>
+    </tr>
+    <tr>
+      <td>POE</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Power</td>
+      <td>Voltage</td>
+      <td>5V DC</td>
+    </tr>
+    <tr>
+      <td>Current</td>
+      <td>3A(Minimum)</td>
+    </tr>
+    <tr>
+      <td>Temperature</td>
+      <td>Operating Temperature</td>
+      <td>0 - 70°C( For the LCD Screen: 0 - 60°C)</td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Mechanical</td>
+      <td>Dimensions</td>
+      <td>140mm x 95mm x 21mm</td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td>285g</td>
+    </tr>
+  </tbody>
 </table>
 
 ## Hardware Overview

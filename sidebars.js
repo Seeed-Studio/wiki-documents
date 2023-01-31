@@ -1311,6 +1311,19 @@ const sidebars = {
       label: 'reTerminal',
       items: [
         'Edge/reTerminal/reTerminal',
+        'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
+        'Edge/reTerminal/reTerminal-FAQ',
+        {
+          type: 'category',
+          label: 'reTerminal',
+          items: [
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Electron',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
+            'Edge/reTerminal/Application/Mender-Client-reTerminal',
+          ]
+        }
       ],
       //这里有东西没搬
     },

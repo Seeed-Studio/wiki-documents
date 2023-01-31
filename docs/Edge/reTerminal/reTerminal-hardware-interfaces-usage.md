@@ -338,7 +338,7 @@ There are 4 user programmable buttons at the front of the reTerminal. These butt
 
 ### Usage
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/key-label.jpg" alt="pir" width="500 height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/key-label.jpg" alt="pir" width="500" height="auto"/></p>
 
 - **Step 1.** Open the evtest tool
 
