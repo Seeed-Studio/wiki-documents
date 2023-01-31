@@ -22,6 +22,7 @@ const sidebars = {
 
   ProductSidebar: [
 
+
     'Getting_Started',
     'weekly_wiki',
 
@@ -134,6 +135,15 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Air Quality',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Laser_PM2.5_Sensor-HM3301',
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Dust_Sensor',
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Air_Quality_Sensor_v1.3',
+              ]
+            },
+            {
+              type: 'category',
               label: 'Gas',
               items: [
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor',
@@ -151,7 +161,6 @@ const sidebars = {
                 //'Sensor/Grove/Grove_Sensors/Gas/Grove-Alcohol_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
-                'Sensor/Grove/Grove_Sensors/Gas/Grove-Air_Quality_Sensor_v1.3',
               ],
 
             },
@@ -228,6 +237,21 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Speech_Recognizer',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Recorder',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Analog-Microphone',
+                // 'Sensor/Grove/Grove_Sensors/Sound/Grove-Recorder_v2.0',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Touch',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Touch_Sensor',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Rotary_Angle_Sensor',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Round_Force_Sensor_FSR402',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-2_Channel_Inductive_Sensor-LDC1612',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-',
+
               ]
             },
             {
@@ -297,6 +321,8 @@ const sidebars = {
             'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-UART_Wifi_V2',
             'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-BLE_v1',
             // 'Sensor/Grove/Grove_Sensors_Network/Communication/Grove_LoRa_E5_New_Version',
+            'Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Node',
+
 
 
 
@@ -432,6 +458,13 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
               ],
             },
+            {
+              type: 'category',
+              label: 'Case',
+              items: [
+                'Sensor/Grove/Grove_Accessories/Case/Grove-Wrapper',
+              ],
+            },
 
           ]
         },
@@ -455,9 +488,7 @@ const sidebars = {
 
     },
 
-
-
-    {
+{
       type: 'category',
       label: 'SeeedStudio XIAO',
       items: [
@@ -563,8 +594,12 @@ const sidebars = {
           ]
         },
       ],
-
     },
+
+
+
+
+
 
     {
 
@@ -849,21 +884,18 @@ const sidebars = {
           ],  
         },
         {
+
           type: 'category',
           label: 'Wio Node',
           items: [
             'Sensor/Wio_Series/Wio Node/Wio_Node',
-
           ],  
         },
       ],
-
     },
 
 
-
     {
-
       type: 'category',
       label: 'Seeeduino Series',
       items: [
@@ -885,7 +917,6 @@ const sidebars = {
     
         },
       ],
-
     },
 
     {
@@ -1568,5 +1599,5 @@ const sidebars = {
 
 };
 
-
 module.exports = sidebars;
+
