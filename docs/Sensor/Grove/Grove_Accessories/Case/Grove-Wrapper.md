@@ -14,11 +14,13 @@ last_update:
 
 **Grove - Wrapper** is a kind of wrapper to fix and protect Grove modules. It will save you a lot of work on aligning your modules, and it will easy for you to show your project. For example, it will simpler to take pictures for showing your product on the Internet, and it will give a clear and clean scene if you use Grove - Wrapper to demo your project. What is more, it is expandable for Lego, mechanical parts, and so on, this will introduce more flavor into your works and make your project adapt to various circumstances. The design of Grove - Wrapper also make it easy to assemble and disassemble modules.
 
-// :::note
-// 
-// - Around 85% of all Grove modules is supported by Grove - Wrapper.
-// - Grove - Wrapper series have two size of wrappers, each gets four colors, and there are totally eight SKUs that are listed at [Specifications](/Grove-Wrapper#Parts_list) section.
-// ::: 链接出错
+<!-- :::note
+
+ - Around 85% of all Grove modules is supported by Grove - Wrapper.
+ - Grove - Wrapper series have two size of wrappers, each gets four colors, and there are totally eight SKUs that are listed at [Specifications](/Grove-Wrapper#Parts_list) section.
+ ::: 链接出错
+ 
+ -->
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Grove%20-%20Wrapper.html)
 
