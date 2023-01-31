@@ -1,15 +1,17 @@
 ---
-description: reTerminal
-title: reTerminal
-image: https://avatars.githubusercontent.com/u/4452826?s=400&v=4
+description: Getting Started with reTerminal
+title: Getting Started with reTerminal
+keywords:
+  - Edge
+  - reTerminal 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 11/23/2022
-  author: Peter Pan
+  date: 1/31/2023
+  author: jianjing Huang
 ---
-
 # Getting Started with reTerminal
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki_thumb.png" alt="pir" width="600" height="auto"/></center>
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki_thumb.png" alt="pir" width="600" height="auto"/></p>
 
 Introducing reTerminal, a new member of our reThings family. This future-ready Human-Machine Interface (HMI) device can easily and efficiently work with IoT and cloud systems to unlock endless scenarios at the edge.
 
@@ -19,17 +21,16 @@ reTerminal consists of a high-speed expansion interface and rich I/O for more ex
 
 reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to do is connect it to power and start building your IoT, HMI and Edge AI applications right away!
 
-<center><a href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png"/></a></center>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png"></a></p>
 
 | Released Date | Pre-Installed OS | Pre-Installed STM32 Firmware | Board Version | Additional Information |
 |---|---|---|---|---|
 | 06/15/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.0 | v1.3 | Initial |
 | 08/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.1 | v1.4 |  |
-| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | Change IO Expansion Chip from MCP23008-E to PCA9554 <br/> Change Encryption Microchip from ATECC608A-SSHDA-B to ATECC608A-TNGTLSS-G [More Info](../reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
+| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | Change IO Expansion Chip from MCP23008-E to PCA9554, <br>Change Encryption Microchip from ATECC608A-SSHDA-B to ATECC608A-TNGTLSS-G [More Info](../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
 | 11/02/2021 | 2021-09-14-Raspbian(modified)-32-bit | V1.8 | v1.6 |  |
 
-
- ## Features
+## Features
 
 - Integrated modular design with high stability and expandability
 - Powered by Raspberry Pi Computer Module 4 with 4GB RAM & 32GB eMMC
@@ -43,7 +44,12 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 ## Specifications
 
-<table style={{tableLayout: 'fixed', width: '743px'}}>
+<table style="undefined;table-layout: fixed; width: 743px">
+<colgroup>
+<col style="width: 146px">
+<col style="width: 198px">
+<col style="width: 399px">
+</colgroup>
 <thead>
   <tr>
     <th colspan="2">Specification</th>
@@ -141,7 +147,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>Digital light sensor</td>
   </tr>
   <tr>
-    <td>Internal IO<br/>Expansion</td>
+    <td>Internal IO<br>Expansion</td>
     <td>Microchip MCP23008-E/ PCA9554</td>
   </tr>
   <tr>
@@ -175,7 +181,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
     <td>Up to 3× GPCLK outputs</td>
   </tr>
   <tr>
-    <td rowspan="4">Vertical expansion<br/>interface</td>
+    <td rowspan="4">Vertical expansion<br>interface</td>
     <td>1 × PCIe 1-lane Host, Gen 2 (5Gbps)</td>
   </tr>
   <tr>
@@ -215,22 +221,23 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 
 ## Hardware Overview
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"/></p>
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal-v1.3.jpg" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal-v1.3.jpg" alt="pir" width="1000" height="auto"/></p>
 
 ## Block Diagram
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram-v1.3.png" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram-v1.3.png" alt="pir" width="1000" height="auto"/></p>
 
 ## Pinout Diagram
 
 **Note:** Please make sure to keep the reTerminal in the orientation as illustrated below. Here the LCD is facing right side and the back is facing left side.
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v2.jpg" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v2.jpg" alt="pir" width="1000" height="auto"/></p>
 
-!!!Note
-    Please carefully pay attention to the orientation of the reTerminal in the above diagram. The LCD and the onboard buttons are on the right side whereas the back of reTerminal is on the left side. Also the whole device is flipped upside down.
+:::note
+Please carefully pay attention to the orientation of the reTerminal in the above diagram. The LCD and the onboard buttons are on the right side whereas the back of reTerminal is on the left side. Also the whole device is flipped upside down.
+:::
 
 ## Quick Start with reTerminal
 
@@ -242,12 +249,12 @@ You need to prepare the following hardware before getting started with reTermina
 
 - reTerminal
 - Ethernet cable or Wi-Fi connection
-- Power adapter (5V/3A) 
+- Power adapter (5V/3A)
 - USB Type-C cable
 
 ### Software Set Up
 
-#### Log in to Raspberry Pi OS 
+#### Log in to Raspberry Pi OS
 
 reTerminal comes with Raspberry Pi OS pre-installed out-of-the-box. So we can turn on the reTerminal and log in to Raspberry Pi OS straight away!
 
@@ -255,45 +262,45 @@ reTerminal comes with Raspberry Pi OS pre-installed out-of-the-box. So we can tu
 
 - **Step 2.** Once the Raspberry Pi OS is booted up, press **OK** for the **Warning** window
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-1-new-1.png" alt="pir" width="800" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-1-new-1.png" alt="pir" width="800" height="auto"/></p>
 
 - **Step 3.** In the **Welcome to Raspberry Pi** window, press **Next** to get started with the initial set up
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-2-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-2-new.png" alt="pir" width="400" height="auto"/></p>
 
 - **Step 4.** Choose your **country, language, timezone** and press **Next**
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-3-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-3-new.png" alt="pir" width="400" height="auto"/></p>
 
 - **Step 5.** To change the password, first click on **Raspberry Pi** icon, navigate to `Universal Access > Onboard` to open the on-screen keyboard
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-4-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-4-new.png" alt="pir" width="400" height="auto"/></p>
 
 - **Step 6.** Enter your desired password and click **Next**
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-5-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-5-new.png" alt="pir" width="400" height="auto"/></p>
 
 **Note:** If you want to keep the default password as **raspberry**, you can leave this blank and click **Next**
 
 - **Step 7.** Click **Next** for the following
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-6-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-6-new.png" alt="pir" width="400" height="auto"/></p>
 
 - **Step 8.** If you want to connect to a WiFi network, you can choose a network, connect to it and press **Next**. However, if you want to set it later, you can press **Skip**
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-7-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-7-new.png" alt="pir" width="400" height="auto"/></p>
 
 - **Step 9.** **This step is very important.** You should make sure to press **Skip** to skip updating the software. However, if you want to update the software, you can follow [this wiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-8-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-8-new.png" alt="pir" width="400" height="auto"/></p>
 
 - **Step 10.** Finally press **Done** to finish the set up
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-9-new.png" alt="pir" width="400" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-9-new.png" alt="pir" width="400" height="auto"/></p>
 
 **Note:** The button on the top left corner can be used to turn on the reTerminal after shutting down using software
 
-<center><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"/></p>
 
 **Tip:** If you want to experience the Raspberry Pi OS on a bigger screen, you can connect a display to the micro-HDMI port of the reTerminal and also connect a keyboard and a mouse to the USB ports of the reTerminal.
 
@@ -312,7 +319,7 @@ You need to prepare the following hardware
 - USB to serial converter (optional)
 - Ethernet cable (optional)
 - Wi-Fi connection (optional)
-- Power adapter (5V/3A) 
+- Power adapter (5V/3A)
 - USB Type-C cable
 
 ### Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC
@@ -321,27 +328,27 @@ We can flash **Raspberry Pi OS/ 64-bit Ubuntu OS or other OS** on to the **eMMC 
 
 - **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"/></p>
 
 - **Step 2.** Remove the 2 screws to disassemble the heatsink
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/remove-screw-heatsink-2.jpg" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/remove-screw-heatsink-2.jpg" alt="pir" width="600" height="auto"/></p>
 
 - **Step 3.** Flip down the **boot mode switch** according to the below diagram
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/boot-switch-2.jpg" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/boot-switch-2.jpg" alt="pir" width="600" height="auto"/></p>
 
 Now let's move on to software set up. Follow the steps according to your desired operating system
 
-##### For Windows 
+##### For Windows
 
 - **Step 1.** Download the **rpiboot setup installer** by click **[this link](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** to install the necessary drivers and the boot tool
 
-- **Step 2.** Connect reTerminal to the PC via USB Type-C cable 
+- **Step 2.** Connect reTerminal to the PC via USB Type-C cable
 
 Windows will now find the hardware and install the necessary drivers
 
-- **Step 3.** Search for **rpiboot** tool that we installed before and open it 
+- **Step 3.** Search for **rpiboot** tool that we installed before and open it
 
 - **Step 4.** Open **file explorer** and you will see the eMMC of the Computer Module 4 shown as a **USB mass storage device**
 
@@ -349,38 +356,40 @@ Windows will now find the hardware and install the necessary drivers
 
 - **Step 6.** Open Raspberry Pi Imager software
 
-<center><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 7.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-<center><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 
 - **Step 8.** Click **CHOOSE OS** and select your preferred OS
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
 **NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 9.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
 - **Step 10.** Finally, click **WRITE**
 
-<center><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-Please wait a few minutes until the flashing process is complete. 
+Please wait a few minutes until the flashing process is complete.
+
 - **Step 11.** Flip the **Boot Mode switch** back to the original position and assemble the reTerminal shell
 
 Now you can skip to **[here](#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)**
 
 ##### For MAC
 
-!!! attention
-    **You need to install [homebrew](https://brew.sh/) before proceed the following steps.**
-    Please open a terminal and type ```brew -V``` to check if you have setup the correct homebrew environment, you should see the version of the homebrew environment you have installed.
+:::caution
+**You need to install [homebrew](https://brew.sh/) before proceed the following steps.**
+Please open a terminal and type ```brew -V``` to check if you have setup the correct homebrew environment, you should see the version of the homebrew environment you have installed.
+:::
 
 - **Step 1.** Clone the **usbboot** repository
 
@@ -413,39 +422,40 @@ make
 sudo ./rpiboot
 ```
 
-- **Step 6.** Connect reTerminal to the your Mac computer via USB Type-C cable 
+- **Step 6.** Connect reTerminal to the your Mac computer via USB Type-C cable
 
 - **Step 7.** Download and Install **Raspberry Pi Imager** Application by visiting [this link](https://www.raspberrypi.org/software/)
 
 - **Step 8.** Open the **Raspberry Pi Imager** Application
 
-<center><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 9.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-<center><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 
 - **Step 10.** Click **CHOOSE OS** and select your preferred OS
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
 **NOTE:** You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 11.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
 - **Step 12.** Finally, click **WRITE**
 
-<center><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
 
 - **Step 13.** Flip the **Boot Mode switch** back to the original postion and assemble the reTerminal shell
 
 Now you can skip to **[here](#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)**
+
 ##### For Linux
 
 We will use Git to obtain the **rpiboot** source code, so make sure Git is installed
@@ -456,15 +466,15 @@ We will use Git to obtain the **rpiboot** source code, so make sure Git is insta
 sudo apt-get update
 ```
 
-- **Step 2.** Install **Git** by the following command 
+- **Step 2.** Install **Git** by the following command
 
-```sh 
+```sh
 sudo apt install git pkg-config make gcc libusb-1.0-0-dev
 ```
 
-- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this 
+- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this
 
-```sh 
+```sh
 sudo date MMDDhhmm
 ```
 
@@ -472,50 +482,50 @@ sudo date MMDDhhmm
 
 - **Step 4.** Clone the **usbboot** tool repository
 
-```sh 
+```sh
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
 - **Step 5.** Build and install the usbboot tool
 
-```sh 
+```sh
 make
 ```
 
 - **Step 6.** Run the usbboot tool and it will wait for a connection
 
-```sh 
+```sh
 sudo ./rpiboot
 ```
 
-- **Step 7.** Connect reTerminal to the PC via USB Type-C cable 
+- **Step 7.** Connect reTerminal to the PC via USB Type-C cable
 
 - **Step 8.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
 
 - **Step 9.** Open Raspberry Pi Imager software
 
-<center><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 10.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-<center><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 
 - **Step 11.** Click **CHOOSE OS** and select your preferred OS
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
 **NOTE:** You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
 - **Step 13.** Finally, click **WRITE**
 
-<center><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
 
@@ -539,7 +549,7 @@ If you want to log in to the Raspberry Pi OS using **SSH over Wi-Fi/ Ethernet**,
 
 - **Step 4.** Select **Enable** which is next to **SSH** and click **OK**
 
-<center><img src="https://files.seeedstudio.com/wiki/ReTerminal/ssh-select-2.jpg" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/ssh-select-2.jpg" alt="pir" width="1000" height="auto"/></p>
 
 Now let's configure the software on the computer. Please follow according to your operating system
 
@@ -553,7 +563,7 @@ ssh pi@raspberrypi.local
 
 - **Step 2.** Type **yes** for the prompt
 
-<center><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows-prompt.png" alt="pir" width="750" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows-prompt.png" alt="pir" width="750" height="auto"/></p>
 
 - **Step 3.** Enter the password as follows
 
@@ -563,11 +573,11 @@ raspberry
 
 - **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
-<center><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
 ##### For Mac/Linux
 
-- **Step 1.** Open **Terminal** on the computer and type the following 
+- **Step 1.** Open **Terminal** on the computer and type the following
 
 ```sh
 ssh pi@raspberrypi.local
@@ -588,10 +598,9 @@ raspberry
 
 - **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
-<center><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
 ### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
-
 
 reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, touch panel, accelerometer, light sensor, user LEDs, user buttons, RTC, buzzer, cryptographic co-processor**.
 
@@ -616,7 +625,7 @@ sudo ./scripts/reTerminal.sh
 
 You will see the following output if you have successfully installed the drivers
 
-<center><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"/></center>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 4.** Reboot the reTerminal
 
@@ -624,7 +633,7 @@ You will see the following output if you have successfully installed the drivers
 sudo reboot
 ```
 
-###  reTerminal Disassemble Guide
+### reTerminal Disassemble Guide
 
 Please check the video below on how to disassemble reTerminal:
 
@@ -650,9 +659,7 @@ For Frequently Asked Questions, [click here](https://wiki.seeedstudio.com/reTerm
 
 - **[Web Page]** [Raspberry Pi Official Documentation](https://www.raspberrypi.org/documentation/)
 
+## Tech Support
 
-# Tech support
-
-Please submit any technical issues into our [forum](https://forum.seeedstudio.com/)
-
-<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

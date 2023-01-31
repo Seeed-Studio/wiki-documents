@@ -403,14 +403,14 @@ const sidebars = {
 
               ]
             },
-            {
-              type: 'category',
-              label: 'Communication',
-              items: [
-                'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
-                'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
-              ]
-            },
+            // {
+            //   type: 'category',
+            //   label: 'Communication',
+            //   items: [
+            //     'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
+            //     'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
+            //   ]
+            // },
 
           ]
         },
@@ -998,6 +998,7 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-8720-dev',
             'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
             'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
