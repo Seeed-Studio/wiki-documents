@@ -1,5 +1,5 @@
 ---
-title: Wio_LTE_Cat_M1_NB-IoT_Tracker
+title: Wio LTE Cat M1/NB-IoT Tracker
 nointro:
 keywords:
   - docs

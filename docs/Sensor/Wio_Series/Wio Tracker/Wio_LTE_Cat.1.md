@@ -1,5 +1,5 @@
 ---
-title: Wio_LTE_Cat.1
+title: Wio LTE Cat.1
 nointro:
 keywords:
   - docs

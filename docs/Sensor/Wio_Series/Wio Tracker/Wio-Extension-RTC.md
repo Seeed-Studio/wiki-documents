@@ -1,5 +1,5 @@
 ---
-title: Wio-Extension-RTC
+title: Wio Extension RTC (Real Time Clock)
 nointro:
 keywords:
   - docs
