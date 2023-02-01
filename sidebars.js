@@ -1352,7 +1352,15 @@ const sidebars = {
             // 'Edge/reTerminal/OS_Installation/',
 
           ]
-        }
+        },
+        {
+          type: 'category',
+          label: 'Extension Board',
+          items: [
+            'Edge/reTerminal/Extension_Board/reTerminalBridge',
+            'Edge/reTerminal/Extension_Board/reTerminal_Mount_Options',
+          ]
+        },
       ],
       //这里有东西没搬
     },
