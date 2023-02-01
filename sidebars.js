@@ -1342,6 +1342,17 @@ const sidebars = {
 
           ],
         },
+        {
+          type: 'category',
+          label: 'OS Installation',
+          items: [
+            'Edge/reTerminal/OS_Installation/reTerminal-Buildroot-SDK',
+            'Edge/reTerminal/OS_Installation/reTerminal-Yocto',
+            'Edge/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal',
+            // 'Edge/reTerminal/OS_Installation/',
+
+          ]
+        }
       ],
       //这里有东西没搬
     },
