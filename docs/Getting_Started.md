@@ -9,8 +9,6 @@ last_update:
   author: Matthew
 ---
 
-<div align="center"><img width="auto" src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" /></div>
-
 <strong><font color={'8DC215'} size={"5"}>Quick Guide for Seeed Studio Wiki Platform</font></strong>
 
 Seeed Studio has dedicated to realizing interactive digital replica of our physical world, as being an IoT hardware partner since 2008. This is an open platform collecting all the wikis published by Seeed Studio, to show you the full picture of our efforts, natural environments digitization and outcome production.
@@ -27,8 +25,38 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">IoT Platform & Sensor Foundation</font>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started1.png" alt="pir" width={600} height="auto" /></p>
-
+ <div class="start_card_container">
+    <a class="start_card_item" href="/learn/about-iota/an-introduction-to-iota/">
+        <div class="start_card_wrapper">
+            <div class="start_card_title">What is IOTA?</div>
+            <div class="start_card_content">An open, feeless and scalable distributed ledger, designed to support data and
+                value transfer.</div>
+        </div>
+    </a>
+    <a class="start_card_item" href="/learn/about-iota/an-introduction-to-iota/">
+        <div class="start_card_wrapper">
+            <div class="start_card_title">What is IOTA?</div>
+            <div class="start_card_content">An open, feeless and scalable distributed ledger, designed to support data and
+                value transfer.</div>
+        </div>
+    </a>
+  </div>
+  <div class="start_card_container">
+    <a class="start_card_item" href="/learn/about-iota/an-introduction-to-iota/">
+        <div class="start_card_wrapper">
+            <div class="start_card_title">What is IOTA?</div>
+            <div class="start_card_content">An open, feeless and scalable distributed ledger, designed to support data and
+                value transfer.</div>
+        </div>
+    </a>
+    <a class="start_card_item" href="/learn/about-iota/an-introduction-to-iota/">
+        <div class="start_card_wrapper">
+            <div class="start_card_title">What is IOTA?</div>
+            <div class="content">An open, feeless and scalable distributed ledger, designed to support data and
+                value transfer.</div>
+        </div>
+    </a>
+  </div>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices</font>
 
