@@ -9,7 +9,7 @@ last_update:
   author: Matthew
 ---
 
-<div align="center"><img width="auto" src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" /></div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
 <strong><font color={'8DC215'} size={"5"}>Quick Guide for Seeed Studio Wiki Platform</font></strong>
 
@@ -19,7 +19,7 @@ You can constantly receive updated data from sensors and <strong><font color={'8
 
 We here also present you our current accomplishments and <strong><font color={'8DC215'} size={"4"}>solutions</font></strong> and we are looking for your contributions.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started7.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">What does Wiki Platform Cover?</font>
 
@@ -27,28 +27,133 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">IoT Platform & Sensor Foundation</font>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started1.png" alt="pir" width={600} height="auto" /></p>
+ <div class="start_card_container">
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Sensor Node</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Gateway</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial sensors</font> info in “Sensor Network” topic
+</div>
+        </div>
+    </a>
+        <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove sensors & Network</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove accessories</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>Grove ecosystem</font> info in “Sensor Network” topic
+</div>
+        </div>
+    </a>
+  </div>
 
+ <div class="start_card_container">
+<a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Cloud</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Chain & Cloud AI training</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial Cloud</font> info in “Cloud & Chain” topic
+</div>
+        </div>
+    </a>
+
+
+<a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"7"}>Solutions</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial IoT</font> info in “solution” topic
+</div>
+        </div>
+    </a>
+  </div>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices</font>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started2.png" alt="pir" width={600} height="auto" /></p>
+ <div class="start_card_container">
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"6"}>Microcontrollers</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Extension board</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Accessories</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>micro MCU board</font> info in “Sensor Network” topic
+</div>
+        </div>
+    </a>
+        <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"6"}>SBC & Devices</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Extension board</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Accessories</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>Different <font color={'8DC215'} size={"3"}>computing boards</font> info in “Edge Computing” topic
+</div>
+        </div>
+    </a>
+  </div>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Application with Software</font>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started3.png" alt="pir" width={600} height="auto" /></p>
+ <div class="start_card_container">
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Easy IoT Applications</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Embedded ML Scenarios</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>MCU board utilization</font> info in “Sensor Network” topic
+</div>
+        </div>
+    </a>
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Devices OS Installation</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Software Development</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>devices software</font> info in “Edge Computing” topic
+</div>
+        </div>
+    </a>
+  </div>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Kit with Courses</font>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started4.png" alt="pir" width={300} height="auto" /></p>
+ <div class="start_card_container">
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Assembled Kit</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Attached Free Courses</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>More <font color={'8DC215'} size={"3"}>kits and free courses</font> info in</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>"Sensor Network" topic</font></div>
+        </div>
+    </a>
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Assembled Kit</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Attached Free Courses</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>More <font color={'8DC215'} size={"3"}>kits and free courses</font> info in</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>"Edge Computing" topic</font></div>
+        </div>
+    </a>
+  </div>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Tutorials</font>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started5.png" alt="pir" width={300} height="auto" /></p>
+ <div class="start_card_container">
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Find development boards</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>intriguing usages</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>in each topic</font></div>
+        </div>
+    </a>
+  </div>
 
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Seeed Studio Elderly</font>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started6.png" alt="pir" width={300} height="auto" /></p>
+ <div class="start_card_container">
+    <a class="start_card_item" href="/Getting_Started">
+        <div class="start_card_wrapper">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Seeed Studio</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>adgeful production</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>in each topic</font></div>
+        </div>
+    </a>
+  </div>
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">Seeed Studio Contributor</font>
 

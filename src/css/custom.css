@@ -38,3 +38,30 @@
 width:auto;
 height:auto;
 }
+
+/* Getting_Started.md文件样式 */
+.start_card_container {
+  display: flex;
+  justify-content: space-around;
+}
+.start_card_item {
+  border-radius: 30px/30px;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 30px;
+  border: 2px solid #fff;
+  margin:0 20px;
+  margin-bottom: 30px;
+  box-sizing: content-box;
+}
+
+.start_card_item:hover {
+  border:2px solid #8DC21F;
+  color:#fff;
+  text-decoration: none;
+}
+.start_card_wrapper{
+
+}
