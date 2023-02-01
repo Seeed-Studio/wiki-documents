@@ -1086,16 +1086,7 @@ const sidebars = {
       type: 'category',
       label: 'Software',
       items: [
-        {
 
-          type: 'category',
-          label: 'OpenWrt',
-          items: [
-            'Software/OpenWrt/OpenWrt-Getting-Started',
-            'Software/OpenWrt/OpenWrt-Plex-Media-Server-on-Docker',
-          ],
-
-        },
         {
 
           type: 'category',
@@ -1103,7 +1094,6 @@ const sidebars = {
           items: [
 
             'Software/Mender/Mender-Client-reTerminal',
-            'Software/Mender/Mender-Client-dual-GbE-CM4',
           ],
 
         },
@@ -1257,16 +1247,49 @@ const sidebars = {
     //     ],
 
     // },
+    {
+      type: 'category',
+      label: 'LinkStar',
+      items: [
+        'Network/LinkStar/Linkstar_Datasheet',
+        'Network/LinkStar/linkstar-install-system',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Network/LinkStar/Application/h68k-ha-esphome',
+
+          ]
+        }
+      ]
+    },
 
     {
 
       type: 'category',
       label: 'reRouter',
       items: [
-        'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
         'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
+        'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Network/reRouter/Application/OpenWrt-Getting-Started',
+            'Network/reRouter/Application/OpenWrt-Plex-Media-Server-on-Docker',
+            'Network/reRouter/Application/Mender-Client-dual-GbE-CM4',
+          ]
+        }
       ],
 
+    },
+    {
+      type: 'category',
+      label: 'TTN Gateway',
+      items: [
+        'Network/TTN_Gateway/The-Things-Indoor-Gateway',
+
+      ]
     },
 
     // {
