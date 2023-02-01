@@ -403,14 +403,14 @@ const sidebars = {
 
               ]
             },
-            // {
-            //   type: 'category',
-            //   label: 'Communication',
-            //   items: [
-            //     'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
-            //     'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
-            //   ]
-            // },
+            {
+              type: 'category',
+              label: 'Communication',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
+                'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
+              ]
+            },
 
           ]
         },
@@ -998,7 +998,6 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-8720-dev',
             'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
             'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
@@ -1315,13 +1314,22 @@ const sidebars = {
         'Edge/reTerminal/reTerminal-FAQ',
         {
           type: 'category',
-          label: 'reTerminal',
+          label: 'Application',
           items: [
             'Edge/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
             'Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter',
             'Edge/reTerminal/Application/reTerminal-build-UI-using-Electron',
             'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
             'Edge/reTerminal/Application/Mender-Client-reTerminal',
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
+                'Edge/reTerminal/Application/Home_Assistant/Home-Assistant-Customize',
+
+              ]
+            }
           ]
         }
       ],

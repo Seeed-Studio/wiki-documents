@@ -1,15 +1,11 @@
 ---
-description: FAQs for reTerminal Usage
-title: FAQs for reTerminal Usage
-keywords:
-  - Edge
-  - reTerminal 
+description: reTerminal-FAQ
+title: reTerminal FAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 1/31/2023
   author: jianjing Huang
 ---
-
 
 # FAQs for reTerminal Usage
 
@@ -17,9 +13,7 @@ This document contains all the frequently asked questions related to reTerminal.
 
 ## Q1: How can I update the STM32 firmware for reTerminal LCD
 
-:::note
-If your reTerminal is manufactured after 26/09/2021, the STM32 comes with V1.8 firmware pre-installed.
-:::
+**Note:** If your reTerminal is manufactured after 26/09/2021, the STM32 comes with V1.8 firmware pre-installed.
 
 It is very important to make sure that you have the latest firmware flashed on to the STM32G030 chip on the reTerminal. STM32G030 is responsible to drive the LCD on the reTerminal. Updating the STM32 chip to the latest version will be helpful to solve most of the issues that you face with the reTerminal LCD.
 
@@ -34,56 +28,33 @@ There are 2 methods of flashing the STM32 chip.
 
 Now let's go through the following steps to identify which version of the board we have so that we can choose the appropriate flashing method.
 
-- **Step 1.** Open **Terminal** on the PC  and Login to the reTerminal via SSH.
-
-:::note
-The default user is **pi** and hostname is "raspberrypi.local", please fill in according to your actual situation.
-:::
+- **Step 1.** Enter terminal window of reTerminal and type the following to open the configuration file
 
 ```sh
-ssh pi@raspberrypi.local
+sudo nano /boot/config.txt
 ```
 
-- **Step 2.** Type **yes** for the following message
-
-```sh
-ECDSA key fingerprint is SHA256:XXXXXXX.
-Are you sure you want to continue connecting (yes/no/[fingerprint])?
-```
-
-- **Step 3.** When it asks for the password, type the following
-
-:::note
-The default password is **raspberry**, please fill in according to your actual situation.
-:::
-
-```sh
-raspberry
-```
-
-- **Step 4.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
+- **Step 2.** At the very bottom of this file, comment out the line which says **dtoverlay=reTerminal**
 
 ```sh
 #dtoverlay=reTerminal
 ```
 
-:::note
-This will unload all the reTerminal drivers. So when you turn on the reTerminal next time, none of the drivers will be loaded.
-:::
+**Note:** This will unload all the reTerminal drivers. So when you turn on the reTerminal next time, none of the drivers will be loaded.
 
-- **Step 5.** Reboot reTerminal
+- **Step 3.** Reboot reTerminal
 
 ```sh
 sudo reboot
 ```
 
-- **Step 6.** Make STM32 enter **boot mode** through **i2c-tools**
+- **Step 4.** Make STM32 enter **boot mode** through **i2c-tools**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
 ```
 
-- **Step 7.** List the connected I2C devices
+- **Step 5.** List the connected I2C devices
 
 ```sh
 i2cdetect -y 1
@@ -91,35 +62,33 @@ i2cdetect -y 1
 
 If you can see the I2C address **0x56** as the table below, you have the **new version (v1.7 or higher)** of the STM32 firmware on the board.
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-new-board.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-new-board.png" alt="pir" width={600} height="auto" /></p>
 
 However, if you can see the I2C address **0x45** as the table below, you have the **old version (lower than v1.7)** of the STM32 firmware on the board
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-old-board.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-old-board.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 8.** Open the configuration file that we used before
+- **Step 6.** Open the configuration file that we used before
 
 ```sh
 sudo nano /boot/config.txt
 ```
 
-- **Step 9.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal** to load the drivers again
+- **Step 7.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal** to load the drivers again
 
 ```sh
 dtoverlay=reTerminal
 ```
 
-- **Step 10.** Power off reTerminal
+- **Step 8.** Power off reTerminal
 
 ```sh
 sudo poweroff
 ```
 
-:::note
-If you are already running **STM32 v1.8 firmware**, once you enter **boot mode** through **i2c-tools**, the only way to come out of boot mode is to flash the STM32 firmware.
-:::
+**Note:** If you are already running **STM32 v1.8 firmware**, once you enter **boot mode** through **i2c-tools**, the only way to come out of boot mode is to flash the STM32 firmware.
 
-### **Method 1**: Connect to STM32 using CM4 and flash the firmware
+### Connect to STM32 using CM4 and flash the firmware
 
 If you have the **new version (v1.7 or higher)** of the STM32 firmware on the board, please follow this method.
 
@@ -149,9 +118,7 @@ mkdir STM32
 
 - **Step 5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download **stm32flash** file and the **STM32G030F6_R2.bin** file from the **latest release** version.
 
-:::note
-    You can click on them to start downloading
-:::
+**Note:** You can click on them to start downloading
 
 - **Step 6.** Open command prompt on PC and navigate to the location of the downloaded files before
 
@@ -162,12 +129,10 @@ cd C:\Users\user\Downloads
 - **Step 7.** Transfer the files to the **STM32** directory on the reTerminal we created before
 
 ```sh
-scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\STM32
+scp -r .\stm32flash .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\STM32
 ```
 
-:::note
-**pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
-:::
+**Note:** **pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
 
 - **Step 8.** Inside the terminal window of reTerminal, enter the **STM32** directory
 
@@ -177,14 +142,10 @@ cd STM32
 
 Then you will see the files that we copied earlier
 
-- **Step 9.** Install  **stm32flash tool**
+- **Step 9.** Make the flash tool **executable**
 
 ```sh
-sudo apt-get install git
-git clone https://github.com/Seeed-Projects/stm32flash
-cd stm32flash
-make -j4
-sudo make install
+chmod +x stm32flash
 ```
 
 - **Step 10.** Make STM32 enter **boot mode** through **i2c-tools**
@@ -196,18 +157,16 @@ i2ctransfer -y 1 w2@0x45 0x9b 0x01
 - **Step 11.** Erase the flash in the STM32 chip using **stm32flash tool**
 
 ```sh
-stm32flash -a 0x56 -o /dev/i2c-1
+./stm32flash -a 0x56 -o /dev/i2c-1
 ```
 
 - **Step 12.** Flash the firmware to STM32 using stm32flash tool
 
 ```sh
-stm32flash -a 0x56 -w STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
+./stm32flash -a 0x56 -w STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
 ```
 
-:::note
-**STM32G030F6_R2.bin** is the file name of the new firmware
-:::
+**Note:** **STM32G030F6_R2.bin** is the file name of the new firmware
 
 - **Step 13.** Modify the OPTR register as follows
 
@@ -235,7 +194,7 @@ sudo reboot
 
 Now you have successfully flashed the firmware to STM32!
 
-### **Method 2**: Connect to STM32 using jumper wires and OpenOCD
+### Connect to STM32 using jumper wires and OpenOCD
 
 If you have the **old version (lower than v1.7)** of the STM32 firmware on the board, please follow this method.
 
@@ -260,9 +219,7 @@ cd openocd
 
 - **Step 4.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download the **STM32G030F6_R2.bin** file from the **latest release** version.
 
-:::note
-    You can click on it to start downloading
-:::
+**Note:** You can click on it to start downloading
 
 - **Step 5.** Open command prompt on PC and navigate to the location of the downloaded files before
 
@@ -276,9 +233,7 @@ cd C:\Users\user\Downloads
 scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
 ```
 
-:::note
-**pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
-:::
+**Note:** **pi** is the username and **192.168.x.xx** is the IP address of reTerminal. You can replace this with hostname of reTerminal as well.
 
 - **Step 7.** Come back to terminal window on reterminal and enter the following inside the **openocd** directory
 
@@ -306,11 +261,9 @@ sudo make install
 
 - **Step 11.** Follow the connection below to connect the pins from STM32 to 40-Pin GPIO
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/pinout-stm32.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/pinout-stm32.png" alt="pir" width={600} height="auto" /></p>
 
-:::note
-    The STM32 pins are located at the back of reTerminal PCBA.
-:::
+**Note:** The STM32 pins are located at the back of reTerminal PCBA.
 
 - **Step 12.** While keeping the connection, enter the following command to flash the firmware to STM32
 
@@ -318,19 +271,15 @@ sudo make install
 openocd -f interface/sysfsgpio-raspberrypi.cfg -c "transport select swd" -f target/stm32g0x.cfg -c "program STM32G030F6_R2.bin verify 0x08000000;shutdown"
 ```
 
-:::note
-Normally it takes about 3 seconds to finish flashing. So you need to **hold** the above connection for about **3 seconds** until the flashing process is complete
-:::
+**Note:** Normally it takes about 3 seconds to finish flashing. So you need to **hold** the above connection for about **3 seconds** until the flashing process is complete
 
 If you see the following log, that means the STM32 firmware is successfully flashed!
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/openocd-log.jpg" alt="pir" width="350" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/openocd-log.jpg" alt="pir" width={350} height="auto" /></p>
 
 - **Step 13.** Disconect the connections and **physically disconnect the power cord directly** without **poweroff** command
 
-:::note
-    If you don't physically unplug the power cord, STM32 firmware will not load successfully
-:::
+**Note:** If you don't physically unplug the power cord, STM32 firmware will not load successfully
 
 Now you have successfully flashed the firmware to STM32!
 
@@ -387,25 +336,23 @@ If you have flashed to a different OS and want to switch back to the default Ras
   - [32-bit 2022-07-21-Raspbian-reTerminal](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/32bit-20220721T012743Z-001.zip)
   - [64-bit 2022-07-21-Raspbian-reTerminal](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/64bit-20220721T012743Z-001.zip)
 
-:::note
-    reTerminal is originally shipped with 32-bit OS. However, you can download a 64-bit version as well
-:::
+**Note:** reTerminal is originally shipped with 32-bit OS. However, you can download a 64-bit version as well
 
 - **Step 2.** Extract the **.zip file**
 
 - **Step 3.** Open Raspberry Pi Imager software
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width={600} height="auto" /></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 
 - **Step 5.** Click **CHOOSE OS** and select **Use custom**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/factory-os.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/factory-os.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 6.** Navigate to the previously extracted image, select it and click **open**
 
@@ -446,45 +393,39 @@ If you want to use a Compute Module 4 without eMMC on the reTerminal, then you n
 
 - **Step 2.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
 
-:::note
-     You can choose to download for either **Windows, Mac or Ubuntu**
-:::
+**Note:** You can choose to download for either **Windows, Mac or Ubuntu**
 
 - **Step 3.** Open Raspberry Pi Imager software
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width={600} height="auto" /></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 
 - **Step 5.** Click **CHOOSE OS** and select your preferred OS
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width={600} height="auto" /></p>
 
-:::note
-You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
-:::
+**NOTE:** You can select OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width={1000} height="auto" /></p>
 
 - **Step 6.** Click **CHOOSE STORAGE** and select the connected micro-sd card
 
 - **Step 7.** Finally, click **WRITE**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width={600} height="auto" /></p>
 
 Please wait a few minutes until the flashing process is complete.
 
 - **Step 8.** Eject the micro-SD card from computer and insert it into the reTerminal.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/micro-sd.jpg" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/micro-sd.jpg" alt="pir" width={600} height="auto" /></p>
 
-:::note
-     You need to open the shell of the reTerminal to access the micro-sd card slot
-:::
+**Note:** You need to open the shell of the reTerminal to access the micro-sd card slot
 
 ## Q5: How can I log in to Raspberry Pi OS/ Ubuntu OS or other OS using a USB to serial converter
 
@@ -492,7 +433,7 @@ If you have a **USB to Serial Converter**, you can use the following steps to lo
 
 Connect jumper wires from a USB to Serial Converter to the **UART pins** on the 40-pin GPIO header of the reTerminal as follows
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/USB-UART.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/USB-UART.png" alt="pir" width={1000} height="auto" /></p>
 
 Now let's configure the software on the computer. Please follow according to your operating system
 
@@ -504,13 +445,11 @@ Now let's configure the software on the computer. Please follow according to you
 
 - **Step 3.** Click on the drop-down arrow from **Ports (COM & LPT)** and find the name of the connected serial port (ex: **COM7**)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/COM7-dev-show.jpg" alt="pir" width="320" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/COM7-dev-show.jpg" alt="pir" width={320} height="auto" /></p>
 
 - **Step 4.** Download and install **Putty** by visiting [this link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-:::note
-Putty is an SSH and telnet client where you can use it to connect to the reTerminal via SSH. You can skip this step if you already have Putty installed
-:::
+**Note:** Putty is an SSH and telnet client where you can use it to connect to the reTerminal via SSH. You can skip this step if you already have Putty installed
 
 - **Step 5.** Open Putty to connect the PC to the reTerminal
 
@@ -521,7 +460,7 @@ Putty is an SSH and telnet client where you can use it to connect to the reTermi
   - Serial line: COM7 (choose your COM port)
   - Speed: 9600
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/COM7-Putty-connect.jpg" alt="pir" width="450" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/COM7-Putty-connect.jpg" alt="pir" width={450} height="auto" /></p>
 
 - **Step 8.** Click **Open**
 
@@ -534,7 +473,7 @@ Putty is an SSH and telnet client where you can use it to connect to the reTermi
 
 - **Step 10.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png" alt="pir" width="900" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi.png" alt="pir" width={900} height="auto" /></p>
 
 ### For Mac/Linux
 
@@ -560,8 +499,8 @@ sudo apt-get install minicom
 dmesg | grep tty
 ```
 
-> <p style={{fontSize: 16}}>Ex: <br />
-  [ 1562.048241] cdc_acm 1-3:1.0: ttyACM0: USB ACM device</p>
+> <p style={{fontSize: 16}}>Ex: <br/>
+    [ 1562.048241] cdc_acm 1-3:1.0: ttyACM0: USB ACM device</p>
 
 - **Step 6.** Connect to the serial device by typing the following
 
@@ -569,9 +508,7 @@ dmesg | grep tty
 minicom -D /dev/ttyACM0 -b 9600
 ```
 
-:::note
-    The baud rate is set to 9600
-:::
+**Note:** The baud rate is set to 9600
 
 - **Step 7.** After the hardware connections mentioned above, turn on the power from the wall power socket to power on the reTerminal
 
@@ -592,21 +529,19 @@ This will reinitialize the LCD on the reTerminal
 
 You can boot an OS from USB Flash Drive by following the steps below. Here we change the boot order to **USB Boot > eMMC Boot**, which means, if the USB Boot fails, it will boot from eMMC.
 
-:::note
-    You will have to use Ubuntu or MacOS as host PC for this method.
-:::
+**Note:** You will have to use Ubuntu or MacOS as host PC for this method.
 
 - **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width={450} height="auto" /></p>
 
 - **Step 2.** Remove the 2 screws to disassemble the heatsink and also the remaining 4 screws to take apart the entire case
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-3.jpg" alt="pir" width="500" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-3.jpg" alt="pir" width={500} height="auto" /></p>
 
 - **Step 3.** Flip down the **boot mode switch** according to the below diagram
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flip-switch.jpg" alt="pir" width="700" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flip-switch.jpg" alt="pir" width={700} height="auto" /></p>
 
 - **Step 4.** Open a **Terminal** window inside the Host PC after connecting to reTerminal and type the following to update the **packages list**
 
@@ -626,9 +561,7 @@ sudo apt install git
 sudo date MMDDhhmm
 ```
 
-:::note
-Where **MM** is the month, **DD** is the date, and **hh** and **mm** are hours and minutes respectively.
-:::
+**NOTE:** Where **MM** is the month, **DD** is the date, and **hh** and **mm** are hours and minutes respectively.
 
 - **Step 7.** Clone and enter the **usbboot** tool repository
 
@@ -661,9 +594,7 @@ sudo nano recovery/boot.conf
 BOOT_ORDER=0xf15
 ```
 
-:::note
-     Here if USB Boot fails, it switches to eMMC boot
-:::
+**Note:** Here if USB Boot fails, it switches to eMMC boot
 
 - **Step 12.** Run the following to update the EEPROM image
 
@@ -711,11 +642,11 @@ First of all check whether which chip is installed on your reTerminal.
 
 If you see 0x20 I2C address, the reTerminal is equipped with MCP23008 chip
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/IO-extend/0x20.png" alt="pir" width="500" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/IO-extend/0x20.png" alt="pir" width={500} height="auto" /></p>
 
 If you see 0x38 I2C address, the reTerminal is equipped with PCA9554 chip
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/IO-extend/0x38.jpg" alt="pir" width="500" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/IO-extend/0x38.jpg" alt="pir" width={500} height="auto" /></p>
 
 For reTerminal with MCP23008 chip, you need to do the following.
 
@@ -746,19 +677,19 @@ sudo reboot
 
 - **Step 3.** Now, reTerminal will boot into Ubuntu Desktop, but in wrong orientation
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-portrait.jpg" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-portrait.jpg" alt="pir" width={1000} height="auto" /></p>
 
 - **Step 4.** Click the **power icon** on top right corner and click **Settings**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-settings-2.jpg" alt="pir" width="350" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-settings-2.jpg" alt="pir" width={350} height="auto" /></p>
 
 - **Step 5.** Select **Displays** and choose **Portrait Left** under **Orientation** and click **Apply**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-portrait-left-2.jpg" alt="pir" width="400" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-portrait-left-2.jpg" alt="pir" width={400} height="auto" /></p>
 
 Finally you will see the Ubuntu Desktop in proper orientation!
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-landscape.jpg" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/ubuntu-landscape.jpg" alt="pir" width={1000} height="auto" /></p>
 
 ## Q11: The screen orientation is incorrect after installing Raspberry Pi OS Bullseye
 
@@ -852,9 +783,9 @@ Now the LEDs and Buzzer will work as normal.
 | Sept 2021 - January 2022 | ATECC608A-SSHDA-B or ATECC608A-TNGTLSS-G |
 | After 02/01/2022 | ATECC608A-TNGTLSS-G |
 
- To check which Encryption chip by type  `i2cdetect -y 3` command in Terminal, If you see ```0x35``` in the output table then the reTerminal is equipped with ATECC608A-TNGTLSS-G chip, otherwise it is equipped with ATECC608A-SSHDA-B.
+ To check which Encryption chip by type  ```i2cdetect -y 3``` command in Terminal, If you see ```0x35``` in the output table then the reTerminal is equipped with ATECC608A-TNGTLSS-G chip, otherwise it is equipped with ATECC608A-SSHDA-B.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/i2cdetect_03.png" alt="pir" width="500" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/i2cdetect_03.png" alt="pir" width={500} height="auto" /></p>
 
 ## Resources
 
@@ -866,7 +797,8 @@ Now the LEDs and Buzzer will work as normal.
 
 - **[Web Page]** [Raspberry Pi Official Documentation](https://www.raspberrypi.org/documentation/)
 
-## Tech Support
+# Tech support
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issues into our [forum](https://forum.seeedstudio.com/)
+
+<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

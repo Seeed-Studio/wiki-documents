@@ -27,7 +27,7 @@ reTerminal is shipped with Raspberry Pi OS out-of-the-box. So, all you have to d
 |---|---|---|---|---|
 | 06/15/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.0 | v1.3 | Initial |
 | 08/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.1 | v1.4 |  |
-| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | Change IO Expansion Chip from MCP23008-E to PCA9554, <br />Change Encryption Microchip from ATECC608A-SSHDA-B to ATECC608A-TNGTLSS-G [More Info](../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
+| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | Change IO Expansion Chip from MCP23008-E to PCA9554, <br />Change Encryption Microchip from ATECC608A-SSHDA-B to ATECC608A-TNGTLSS-G [More Info](#../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
 | 11/02/2021 | 2021-09-14-Raspbian(modified)-32-bit | V1.8 | v1.6 |  |
 
 ## Features
