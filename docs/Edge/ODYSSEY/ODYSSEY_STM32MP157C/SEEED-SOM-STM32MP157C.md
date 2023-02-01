@@ -1,6 +1,6 @@
 ---
 description: Seeed SOM – STM32MP157C 
-title: Seeed SOM – STM32MP157C 
+title: Seeed Studio SOM STM32MP157C
 tags:
   - ODYSSEY
   - Getting started
@@ -13,8 +13,6 @@ last_update:
   author: w0x7ce
 
 ---
-
-# Seeed SOM – STM32MP157C 
 
 ![](https://files.seeedstudio.com/wiki/STM32_SoM.png/SoM_thumb.png)
 
@@ -46,7 +44,7 @@ SOM - STM32MP157C is the SOM based on STM32MP157C, STM32MP157C is a dual-core ar
 |Peripheral Interface|3 x board-to-board 70-Pin connector|
 |dimension|38mm x 38mm|
 
-## Hardware 
+## Hardware
 
 Here are the hardware details for Seeed SoM - STM32MP157C:
 
@@ -734,7 +732,6 @@ Here are the hardware details for Seeed SoM - STM32MP157C:
 - **7.70-PIN connector:** You can find the function for each pin from the table below:
 
 <table style={{tableLayout: 'fixed', width: 597}}>
-
 
 <!-- <colgroup>
 <col style="width: 90px">
@@ -2330,14 +2327,17 @@ Here are the hardware details for Seeed SoM - STM32MP157C:
 </table>
 
 ## Resourses
+
 -----
+
 - **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/stm32mp157c.pdf)
 - **[PDF]** [Seeed STM32MP157C SOM Connecter Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/SMD+BTB+CONN%3B70P-0.4-L15.52%C3%97W2.97%C3%97H1.14mm_Specification.pdf)
 - **[PDF]** [Seeed STM32MP157C SOM v1.0 bottom.pdf](https://files.seeedstudio.com/wiki/SEEED-SOM-STM32MP157C/res/Seeed_SoM-STM32MP157C_v1.0_bottom.pdf)
 - **[SCH]** [Seeed STM32MP157C SOM](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

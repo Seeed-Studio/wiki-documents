@@ -1101,8 +1101,7 @@ const sidebars = {
           type: 'category',
           label: 'Mender',
           items: [
-            'Software/Mender/Mender-Client-ODYSSEY-X86',
-            'Software/Mender/Mender-Server-ODYSSEY-X86',
+
             'Software/Mender/Mender-Client-reTerminal',
             'Software/Mender/Mender-Client-dual-GbE-CM4',
           ],
@@ -1118,15 +1117,7 @@ const sidebars = {
           ],
 
         },
-        {
 
-          type: 'category',
-          label: 'balenaOS',
-          items: [
-            'Software/balenaOS/BalenaOS-X86-Getting-Started',
-          ],
-
-        },
         {
 
           type: 'category',
@@ -1511,46 +1502,71 @@ const sidebars = {
       type: 'category',
       label: 'ODYSSEY',
       items: [
-        'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+        // 'Edge/ODYSSEY/ODYSSEY_Getting_Started',
 
         {
           type: 'category',
-          label: 'ODYSSEY_X86J4105',
+          label: 'ODYSSEY X86J4105',
           items: [
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-OS',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Updating-Firmware',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
-
-            {
-              type: 'category',
-              label: 'Home Assistant',
-              items: [
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/ODYSSEY-X86-Home-Assistant',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Home-Assistant-Customize',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Connect-Grove-to-Home-Assistant-ESPHome',
-              ]
-            },
-
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/Jellyfin-on-Docker-Ubuntu-X86',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-openwrt',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-OPNsense',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-pfSense',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-TrueNAS',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-Android',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-AzureIOT',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-FreeNAS',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Intel-OpenVINO',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-NCS2',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
-
             {
               type: 'category',
-              label: 'Projects',
+              label: 'Application',
               items: [
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Projects/ODYSSEY-X86J4105-Frigate',
+                {
+                  type: 'category',
+                  label: 'Home Assistant for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Home-Assistant-Customize',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Azure IoT for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Azure_IoT_for_ODYSSEY/ODYSSEY-X86J4105-AzureIOT',
+
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Mender for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Client-ODYSSEY-X86',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Server-ODYSSEY-X86',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Computer Version',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Intel-OpenVINO',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-NCS2',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Frigate',
+                  ]
+                },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'OS Installation',
+              items: [
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-OS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Updating-Firmware',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/Jellyfin-on-Docker-Ubuntu-X86',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-openwrt',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-OPNsense',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-pfSense',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-TrueNAS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-Android',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-FreeNAS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/BalenaOS-X86-Getting-Started',
               ]
             },
           ]
@@ -1558,10 +1574,10 @@ const sidebars = {
 
         {
           type: 'category',
-          label: 'ODYSSEY_STM32MP157C',
+          label: 'ODYSSEY STM32MP157C',
           items: [
-            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/SEEED-SOM-STM32MP157C',
             'Edge/ODYSSEY/ODYSSEY_STM32MP157C/ODYSSEY-STM32MP157C',
+            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/SEEED-SOM-STM32MP157C',
           ],
         },
       ],
@@ -1573,7 +1589,7 @@ const sidebars = {
       type: 'category',
       label: 'Quantum Development Board',
       items: [
-        'Edge/Quantum_Development_Board/wiki',
+        'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
 
     },
