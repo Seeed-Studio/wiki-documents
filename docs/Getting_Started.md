@@ -32,16 +32,16 @@ The wiki contents have been divided into **four topics** as shown on the top nav
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Sensor Node</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Gateway</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial sensors</font> info in “Sensor Network” topic
-</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial sensors</font> info in</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
         <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove sensors & Network</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove accessories</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>Grove ecosystem</font> info in “Sensor Network” topic
-</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>Grove ecosystem</font> info in</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
   </div>
@@ -49,10 +49,10 @@ The wiki contents have been divided into **four topics** as shown on the top nav
  <div class="start_card_container">
 <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Cloud</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Chain & Cloud AI training</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial Cloud</font> info in “Cloud & Chain” topic
-</div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Cloud</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial Cloud</font> info in</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>“Cloud & Chain” topic</div>
         </div>
     </a>
 
@@ -60,7 +60,9 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"7"}>Solutions</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial IoT</font> info in “solution” topic
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial IoT</font> info in
+</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>“solution” topic
 </div>
         </div>
     </a>
@@ -72,19 +74,17 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"6"}>Microcontrollers</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Extension board</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Accessories</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>micro MCU board</font> info in “Sensor Network” topic
-</div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>- Extensions & Accessories</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>micro MCU boards</font> info in</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
         <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"6"}>SBC & Devices</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Extension board</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Accessories</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>Different <font color={'8DC215'} size={"3"}>computing boards</font> info in “Edge Computing” topic
-</div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>- Extensions & Accessories</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>Different <font color={'8DC215'} size={"3"}>computing boards</font> info in</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>“Edge Computing” topic</div>
         </div>
     </a>
   </div>
@@ -94,18 +94,18 @@ The wiki contents have been divided into **four topics** as shown on the top nav
  <div class="start_card_container">
     <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Easy IoT Applications</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Embedded ML Scenarios</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>MCU board utilization</font> info in “Sensor Network” topic
-</div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Easy IoT Applications</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>MCU board utilization</font> info in</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
     <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Devices OS Installation</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Software Development</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>devices software</font> info in “Edge Computing” topic
-</div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>OS Installation</font></div>
+            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>devices software</font> info in</div>
+            <div class="start_card_content" style={{textAlign: 'center'}}> “Edge Computing” topic</div>
         </div>
     </a>
   </div>
@@ -115,18 +115,18 @@ The wiki contents have been divided into **four topics** as shown on the top nav
  <div class="start_card_container">
     <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Assembled Kit</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Attached Free Courses</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>More <font color={'8DC215'} size={"3"}>kits and free courses</font> info in</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>"Sensor Network" topic</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Kit with MCU Boards</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>- Free Courses</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>More <font color={'8DC215'} size={"3"}>others and free courses</font> info in</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>"Sensor Network" topic</font></div>
         </div>
     </a>
     <a class="start_card_item" href="/Getting_Started">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Assembled Kit</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Attached Free Courses</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>More <font color={'8DC215'} size={"3"}>kits and free courses</font> info in</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>"Edge Computing" topic</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Kit with SBC Boards</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>- Free Courses</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>More <font color={'8DC215'} size={"3"}>others and free courses</font> info in</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>"Edge Computing" topic</font></div>
         </div>
     </a>
   </div>

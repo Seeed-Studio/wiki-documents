@@ -46,6 +46,8 @@ height:auto;
 }
 .start_card_item {
   border-radius: 30px/30px;
+  width:300px;
+  height:130px;
   background: #000;
   color: #fff;
   display: inline-block;
