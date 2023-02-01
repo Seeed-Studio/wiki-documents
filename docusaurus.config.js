@@ -16,7 +16,7 @@ const config = {
   baseUrl: '/docusaurus_wiki/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/S.png',
   
 
   scripts: [

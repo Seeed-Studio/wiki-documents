@@ -19,7 +19,7 @@ You can constantly receive updated data from sensors and <strong><font color={'8
 
 We here also present you our current accomplishments and <strong><font color={'8DC215'} size={"4"}>solutions</font></strong> and we are looking for your contributions.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/getting_started7.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">What does Wiki Platform Cover?</font>
 
