@@ -1,6 +1,6 @@
 ---
-description:  Build Your Own UI Using Electron
-title:  Build Your Own UI Using Electron
+description:  Electron for reTerminal
+title:  Electron for reTerminal
 keywords:
   - Edge
   - reTerminal Application
@@ -10,8 +10,6 @@ last_update:
   author: jianjing Huang
 ---
 
-
-# Build Your Own UI Using Electron
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-17.png" alt="pir" width="1000" height="auto"/></p>
 

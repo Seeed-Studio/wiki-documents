@@ -1,6 +1,6 @@
 ---
-description:  Build Your Own UI Using Qt for Python
-title:  Build Your Own UI Using Qt for Python
+description:  Qt for reTerminal with Python
+title:  Qt for reTerminal with Python
 keywords:
   - Edge
   - reTerminal Application
@@ -11,7 +11,6 @@ last_update:
 ---
 
 
-# Build Your Own UI Using Qt for Python
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/final-output.png" alt="pir" width="1000" height="auto"/></p>
 

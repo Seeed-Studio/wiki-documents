@@ -1,6 +1,6 @@
 ---
-description:  Build Your Own UI Using Flutter
-title:  Build Your Own UI Using Flutter
+description:  Flutter for reTerminal
+title:  Flutter for reTerminal
 keywords:
   - Edge
   - reTerminal Application
@@ -10,8 +10,6 @@ last_update:
   author: jianjing Huang
 ---
 
-
-# Build Your Own UI Using Flutter
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/vs-13.png" alt="pir" width="800" height="auto"/></p>
 

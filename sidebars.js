@@ -1320,6 +1320,7 @@ const sidebars = {
             'Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter',
             'Edge/reTerminal/Application/reTerminal-build-UI-using-Electron',
             'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
+            'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
             'Edge/reTerminal/Application/Mender-Client-reTerminal',
             {
               type: 'category',
@@ -1368,9 +1369,13 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'reServer',
+      label: 'reComputer',
       items: [
-        'Edge/reServer/reServer_Getting_Started',
+        'Edge/reComputer/reComputer_Jetson_Series_Introduction',
+        'Edge/reComputer/reComputer_Jetson_Series_Initiation',
+        'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
+        'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
+
       ],
 
     },
@@ -1378,12 +1383,13 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'reComputer',
+      label: 'reServer',
       items: [
-        'Edge/reComputer/wiki',
+        'Edge/reServer/reServer_Getting_Started',
       ],
 
     },
+
 
     {
 
@@ -1616,15 +1622,10 @@ const sidebars = {
       label: 'NVIDIA',
       items: [
         // 'Top_Brand/NVIDIA/NVIDIA_Getting_Started',
-        'Top_Brand/NVIDIA/reComputer_Jetson_Series_Introduction',
-        'Top_Brand/NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
-        'Top_Brand/NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
-
         {
           type: 'category',
           label: 'Getting Start & Projects',
           items: [
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
             'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
             'Top_Brand/NVIDIA/Getting_Start_Projects/jetson-docker-getting-started',
             'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',

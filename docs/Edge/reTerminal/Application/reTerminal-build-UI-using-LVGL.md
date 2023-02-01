@@ -1,6 +1,6 @@
 ---
-description:  Build Your Own UI Using LVGL
-title:  Build Your Own UI Using LVGL
+description: LVGL for reTerminal
+title:  LVGL for reTerminal
 keywords:
   - Edge
   - reTerminal Application
@@ -10,8 +10,6 @@ last_update:
   author: jianjing Huang
 ---
 
-
-# Build Your Own UI Using LVGL
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl_banner.jpg" alt="pir" width="800" height="auto"/></p>
 
@@ -26,7 +24,8 @@ In this Wiki article we'll use PC simulator example with SDL2 and modify it slig
 
 #### Features
 
-* Powerful [building blocks](https://docs.lvgl.io/master/widgets/index.html): buttons, charts, lists, sliders, images, etc.
+- Powerful [building blocks](https://docs.lvgl.io/master/widgets/index.html): buttons, charts, lists, sliders, images, etc.
+
 - Advanced graphics engine: animations, anti-aliasing, opacity, smooth scrolling, blending modes, etc
 - Supports [various input devices](https://docs.lvgl.io/master/overview/indev.html): touchscreen, mouse, keyboard, encoder, buttons, etc.
 - Supports [multiple displays](https://docs.lvgl.io/master/overview/display.html)
