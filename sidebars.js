@@ -1074,16 +1074,16 @@ const sidebars = {
           ],
     
         },
-        {
+        //{
 
-          type: 'category',
-          label: 'Kit with Courses',
-          items: [
+          //type: 'category',
+          //label: 'Kit with Courses',
+          //items: [
             //'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
             //'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-          ],
+          //],
     
-        },
+        //},
        
       ],
       
