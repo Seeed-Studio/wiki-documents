@@ -5,7 +5,7 @@ keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 1/10/2022
+  date: 1/10/2023
   author: jianjing Huang
 ---
 

@@ -1433,7 +1433,25 @@ const sidebars = {
       type: 'category',
       label: 'reServer',
       items: [
-        'Edge/reServer/reServer_Getting_Started',
+        // 'Edge/reServer/reServer_Getting_Started',
+        {
+          type: 'category',
+          label: 'reServer X86',
+          items: [
+            'Edge/reServer/reServer_X86/reServer-Getting-Started',
+            'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+
+          ]
+        },
+        {
+          type: 'category',
+          label: 'reServer Nvidia Jetson',
+          items: [
+            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
+            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
+
+          ]
+        },
       ],
 
     },
@@ -1444,7 +1462,7 @@ const sidebars = {
       type: 'category',
       label: 'Edge Series',
       items: [
-        'Edge/Edge_Series/wiki',
+        'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
       ],
 
     },
@@ -1454,19 +1472,38 @@ const sidebars = {
       label: 'BeagleBone®',
       items: [
         'Edge/Beagle_Bone/BeagleBone',
-        'Edge/Beagle_Bone/BeagleBone_Solutions',
         'Edge/Beagle_Bone/BeagleBone_Blue',
-        'Edge/Beagle_Bone/Beaglebone_Case',
         'Edge/Beagle_Bone/BeagleBone_Green',
-        'Edge/Beagle_Bone/BeagleBone_Green_HDMI_Cape',
         'Edge/Beagle_Bone/BeagleBone_Green_Wireless',
         'Edge/Beagle_Bone/BeagleBone-Green-Gateway',
-        // 'Edge/Beagle_Bone/Grove_Base_Cape_for_BeagleBone_v2',
-        'Edge/Beagle_Bone/Grove_Cape_for_BeagleBone_Series',
-        // 'Edge/Beagle_Bone/Grove_Starter_Kit_for_BeagleBone_Green',
-        'Edge/Beagle_Bone/Motor_Bridge_Cape_v1.0',
-        'Edge/Beagle_Bone/Skeleton_box_for_Beaglebone',
-        'Edge/Beagle_Bone/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
+        'Edge/Beagle_Bone/Beaglebone_Case',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Edge/Beagle_Bone/Application/BeagleBone_Solutions',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Extension Board',
+          items: [
+            'Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series',
+            // 'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
+            'Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0',
+            'Edge/Beagle_Bone/Extension_Board/Skeleton_box_for_Beaglebone',
+            'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
+            'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',]
+        },
+        // {
+        //   type: 'category',
+        //   label: 'Kit with Courses',
+        //   items: [
+        //     // 'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
+        //     'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+        //   ]
+        // },
+
       ],
     },
 
