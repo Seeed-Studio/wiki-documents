@@ -28,7 +28,7 @@ So that your users will know what this page is all about without scrolling down 
 
 :::
 
-## Only h2 and h3 will be in the TOC by default.
+## Only h2 and h3 will be in the TOC by default
 
 :::note
 You can configure the TOC heading levels either per-document or in the theme configuration.
@@ -96,6 +96,7 @@ Eg. In **reTerminal.md** need to link to **#q13-how-to-check-if-the-encryption-c
 ```markdown
 [More Info](Edge/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
 ```
+
 [More Info](Edge/reTerminal/reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g)
 
 ### code

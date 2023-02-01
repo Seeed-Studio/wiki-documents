@@ -22,10 +22,7 @@ wikiurl:
 sku: 
 --- -->
 
-# Getting Started with reServer
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102110559/上架01.png" alt="pir" width={600} height="auto" /></p>
-
 
 reServer, as a milestone product of reThings family, is extremely compact and powerful. This smart tiny server is able to work easily and efficiently from the edge to the cloud.
 
@@ -34,7 +31,6 @@ reServer is based on an ODYSSEY X86 v2 board and powered by the latest Intel® C
 Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to two 3.5"/2.5" SATA internal hard disk drives to acquire more storage. It also has M.2 connectors to connect to various SSDs for faster read and write speeds.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
 
 ## Features
 
@@ -368,8 +364,6 @@ Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to tw
 </tbody>
 </table>
 
-
-
 ## Hardware Overview
 
 There are two different versions of reServer, Basic version and High performance version, which have different hardware configurations.
@@ -378,19 +372,16 @@ There are two different versions of reServer, Basic version and High performance
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102110559/09%20%E4%BD%8E%E9%85%8D.png" alt="pir" width={1000} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reServer%20mainboard%20.png" alt="pir" width={1000} height="auto" /></p>
 
 ### High performance version
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102110559/09-%E9%AB%98%E9%85%8D.png" alt="pir" width={1000} height="auto" /></p>
 
-
 ## Dimensions
 
 Both versions have the same dimensions.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102110559/10-%E4%BD%8E%E9%85%8D.png" alt="pir" width={1000} height="auto" /></p>
-
 
 ## Quick Start with reServer
 
@@ -413,20 +404,18 @@ You might follow the **Assembly Guide Manual** attached at the end of this page 
 
 #### DDR4 Installation
 
-**DDR4-3200MT/s has been pre-installed for all versions of reServer** but you can also add a new DDR4 to the other channel or replace the pre-installed one with your own to expand memory. The dual-channel SO-DIMM slots support DDR4-3200MT/s up to 64GB in total. 
+**DDR4-3200MT/s has been pre-installed for all versions of reServer** but you can also add a new DDR4 to the other channel or replace the pre-installed one with your own to expand memory. The dual-channel SO-DIMM slots support DDR4-3200MT/s up to 64GB in total.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/ddr4.png" alt="pir" width={800} height="auto" /></p>
-
 
 #### SSD Installation
 
-**A NVMe SSD has been pre-installed for all versions of reServer**, while, still, the M.2 M-Key 2242/2280(PCIe 3.0 x4) allows you to replace it with the SSD you desire. 
+**A NVMe SSD has been pre-installed for all versions of reServer**, while, still, the M.2 M-Key 2242/2280(PCIe 3.0 x4) allows you to replace it with the SSD you desire.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20M-Key.png" alt="pir" width={800} height="auto" /></p>
-
 
 #### WiFi Module Installation
 
-**All versions of reServer have installed 2230 Dual Band WiFi 6 AX201(CNVio) Module at M.2 E-Key 2242/2280(PCIe 3.0x4)**. 
-If you want to replace the pre-installed WiFi Module, feel free to follow the steps below. 
+**All versions of reServer have installed 2230 Dual Band WiFi 6 AX201(CNVio) Module at M.2 E-Key 2242/2280(PCIe 3.0x4)**.
+If you want to replace the pre-installed WiFi Module, feel free to follow the steps below.
 
 - **Step 1.** Remove the SSD from M.2 M-Key slot.
 
@@ -434,18 +423,14 @@ If you want to replace the pre-installed WiFi Module, feel free to follow the st
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20E-Key.png" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 3.** Install the new WiFi Module and connect the WiFi antenna cable back to it.
 
 - **Step 4.** Install the SSD back to M.2 M-Key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20E-Key%20antenna.png" alt="pir" width={800} height="auto" /></p>
 
-
-
-**Note:** reServer is shipped with two 2.4/5GHz WiFi Antennas, you can attach the antenna to the adapter which connects with the antenna cable of the WiFi module inside the reServer to achieve better WiFi connectivity. 
+**Note:** reServer is shipped with two 2.4/5GHz WiFi Antennas, you can attach the antenna to the adapter which connects with the antenna cable of the WiFi module inside the reServer to achieve better WiFi connectivity.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/antenna.png" alt="pir" width={800} height="auto" /></p>
-
 
 #### 4G/5G/LoRaWAN Module Installation
 
@@ -455,12 +440,10 @@ Please feel free to follow the steps to add 4G/5G/LoRaWAN Module.
 - **Step 1.** Install 4G/5G/LoRaWAN Module to M.2 B-Key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20B-Key.png" alt="pir" width={800} height="auto" /></p>
- 
 
 - **Step 2.** Connect the antenna cable to the Module.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20B-Key%20antenna.png" alt="pir" width={800} height="auto" /></p>
-
 
 **Note:** You have to insert a standard SIM card into the micro SIM card slot to enable 5G/4G.
 
@@ -468,7 +451,8 @@ Please feel free to follow the steps to add 4G/5G/LoRaWAN Module.
 
 reServer supports installing two 3.5"/2.5" internal hard disk drives to acquire more storage. **(The HDDs are not included in reServer)**
 Please follow the steps to install the HDDs.
-- **Step 1.** Remove the screws and pull out the brackets 
+
+- **Step 1.** Remove the screws and pull out the brackets
 
 - **Step 2.** Attach the HHDs to the brackets with screws
 
@@ -478,11 +462,10 @@ Please follow the steps to install the HDDs.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/07.png" alt="pir" width height="auto" /></p>
 
-
 ### Hardware Connection
 
-For this part, we will introduce the interface connection of reServer. 
-There are two versions of reServer. Please note that different versions might have different interfaces. 
+For this part, we will introduce the interface connection of reServer.
+There are two versions of reServer. Please note that different versions might have different interfaces.
 
 #### Display Connection
 
@@ -499,16 +482,14 @@ Basic version
 High performance version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20display.png" alt="pir" width={800} height="auto" /></p>
 
-
 #### Keyboard and Mouse Connection
 
-Connect keyboard and mouse through USB ports. There are one USB 3.2 port and one USB 2.0 port for Basic versions while there are one USB 3.2 port and two USB 2.0 ports for High-performing versions. 
+Connect keyboard and mouse through USB ports. There are one USB 3.2 port and one USB 2.0 port for Basic versions while there are one USB 3.2 port and two USB 2.0 ports for High-performing versions.
 Basic version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/USB%20Basic%20version.png" alt="pir" width={800} height="auto" /></p>
 
 High performance version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20usb.png" alt="pir" width={800} height="auto" /></p>
-
 
 #### Audio Connection
 
@@ -517,10 +498,8 @@ For Basic versions, the Audio Jack is on the left side I/O panel, while, for Hig
 Basic version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/Audio%20Basic%20version.png" alt="pir" width={800} height="auto" /></p>
 
-
 High performance version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20audio.png" alt="pir" width={800} height="auto" /></p>
-
 
 #### Power Connection
 
@@ -533,24 +512,20 @@ There are two methods to power up reServer, and the second one is only for High-
 Basic version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/Power%20Basic%20version.png" alt="pir" width={800} height="auto" /></p>
 
-
 High performance version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/reserver%20high%20power.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Operation System Installation
 
 For all versions of reServer, Windows 10 Enterprise(Unactivated) has been pre-installed, you can simply boot it up and activate the OS. However, reServer still supports other Windows OS and, also, Linux OS, so you can cover the pre-installed OS with the one you want.
 
-
-
 ## Resources
 
 - **[PDF]** [reServer Assembly Guide](https://files.seeedstudio.com/wiki/reServer/Assembly%20Guide%20of%20reServer.pdf)
-- **[PDF]** [ Atmel-SAMD21-datasheet](https://files.seeedstudio.com/wiki/reServer/wiki/Atmel-SAMD21-datasheet.pdf)
+- **[PDF]** [Atmel-SAMD21-datasheet](https://files.seeedstudio.com/wiki/reServer/wiki/Atmel-SAMD21-datasheet.pdf)
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -1,6 +1,6 @@
 ---
 description: ODYSSEY - X86J4105
-title: LTE Modules
+title: LTE Modules for ODYSSEY
 tags:
   - ODYSSEY
 keywords:
@@ -12,7 +12,6 @@ last_update:
 
 ---
 
-# How to Use LTE Modules on ODYSSEY-X86J4105 as 4G Wi-Fi Router
 
 This wiki will walk you through how to use the LTE module on ODYSSEY-X86 on both Windows and Linux OS. In this example, the LTE module is [Quectel EM06-E LTE Cat 6 M.2 Module](https://www.seeedstudio.com/Quectel-EM06-E-LTE-Cat6-Module-p-4567.html) which is in the M.2 form factor.
 
@@ -38,23 +37,23 @@ Once connected the LTE module and booted Windows. It should automatically instal
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/Windows.png" /></div>
 
-
 ### Wi-Fi Hotspot under Windows
 
 Once it's connected to the Internet with the LTE module, you can use the Hotspot feature from Windows to create a Wi-Fi:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/WindowsHS.png" /></div>
 
-
-!!!Note
-        Make sure that the Intel Network card also has antennas connected on it.
+:::note
+Make sure that the Intel Network card also has antennas connected on it.
+:::
 
 ### Linux
 
 For Linux, it is also very simple. Run the broadband configurations:
 
-!!!Note
+:::note
         Ubuntu 18.04 is used for reference.
+:::
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/1.png" /></div>
 
@@ -65,16 +64,13 @@ Choose your plan (Default):
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/3.png" /></div>
 
-
 Confirm details and click apply:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/4.png" /></div>
 
-
 Now, the LTE module is all done and can use to browse Internet!
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/5.png" /></div>
-
 
 ### Wi-Fi Hotspot under Linux
 
@@ -90,11 +86,9 @@ The following window will appear:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/HS-1.png" /></div>
 
-
 - Select `Wi-Fi` as connection type:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/HS-2.png" /></div>
-
 
 - Configure Wi-Fi settings as follow, make sure that **mode** is `Hotspot`:
 
@@ -105,7 +99,6 @@ The following window will appear:
   <br />
   <div align="center"><img src="https://files.seeedstudio.com/wiki/LTE-Modules/HS-5.png" /></div>
 </div>
-
 
 - For the Wi-Fi to be identified by other device, you must connect the Wi-Fi by itself. Under Wi-Fi, select `Connect To Hidden Network`. Choose the network that we just created, and connect.
 
