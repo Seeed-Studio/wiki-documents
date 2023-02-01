@@ -1329,9 +1329,19 @@ const sidebars = {
                 'Edge/reTerminal/Application/Home_Assistant/Home-Assistant-Customize',
 
               ]
-            }
-          ]
-        }
+            },
+            {
+              type: 'category',
+              label: 'Embedded ML',
+              items: [
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
+                // 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+
+              ]
+            },
+
+          ],
+        },
       ],
       //这里有东西没搬
     },
