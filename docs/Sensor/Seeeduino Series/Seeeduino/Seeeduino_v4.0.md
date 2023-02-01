@@ -13,7 +13,7 @@ last_update:
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/ARD128D2P_1_02.jpg)
 
 <!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/Seeeduino-V4-p-669.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>  -->
-[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)
+[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Seeeduino-V4-p-669.html)
 The Seeeduino v4.0 is an ATMEGA328 Microcontroller development board. The ATMEGA328P-MU is a high performance, low power AVR 8-Bit Microcontroller. The Seeeduino v4.0 has 14 digital input/output pins (6 of which can be used as PWM outputs) and 6 analog pins. The board also features an ATMEGA16U2 microcontroller which acts as a UART-to-USB converter chip which means that the board can basically work like an FTDI chip.
 
 The Seeeduino v4.0 inherits all of Arduino Duemilanove's and Uno's features but also adds some of its own. This board is compatible to Duemilanove's and Uno's pin layout, and the Duemilanove's screw holes and board dimensions.  
