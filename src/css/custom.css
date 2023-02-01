@@ -45,6 +45,7 @@ height:auto;
   justify-content: space-around;
 }
 .start_card_item {
+  border-radius: 30px/30px;
   background: #000;
   color: #fff;
   display: inline-block;
@@ -57,7 +58,7 @@ height:auto;
 }
 
 .start_card_item:hover {
-  border:2px solid red;
+  border:2px solid #8DC21F;
   color:#fff;
   text-decoration: none;
 }
