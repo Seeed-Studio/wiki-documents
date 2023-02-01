@@ -1375,7 +1375,55 @@ const sidebars = {
         'Edge/reComputer/reComputer_Jetson_Series_Initiation',
         'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
         'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Edge/reComputer/Application/Jetson-Nano-MaskCam',
+            'Edge/reComputer/Application/Security_Scan',
+            'Edge/reComputer/Application/HardHat',
+            'Edge/reComputer/Application/DeciAI-Getting-Started',
+            'Edge/reComputer/Application/No-code-Edge-AI-Tool',
+            'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+            'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
+            'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
+            'Edge/reComputer/Application/jetson-docker-getting-started',
+            'Edge/reComputer/Application/reComputer_Jetson_Series_Resource',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'JetPack™ OS Installation',
+          items: [
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
+          ]
 
+        },
+        {
+          type: 'category',
+          label: ' Carrier Board for Jetson Moudule',
+          items: [
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System',
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate',
+
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorials',
+          items: [
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
+            'Edge/reComputer/Tutorials/J1010_Boot_From_SD_Card',
+            'Edge/reComputer/Tutorials/J101_Enable_SD_Card',
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
+            'Edge/reComputer/Tutorials/Jetson-AI-developer-tools',
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
+          ]
+
+        },
       ],
 
     },
@@ -1622,37 +1670,14 @@ const sidebars = {
       label: 'NVIDIA',
       items: [
         // 'Top_Brand/NVIDIA/NVIDIA_Getting_Started',
-        {
-          type: 'category',
-          label: 'Getting Start & Projects',
-          items: [
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/jetson-docker-getting-started',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Jetson-AI-developer-tools',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Security_Scan',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/HardHat',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/No-code-Edge-AI-Tool',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/YOLOv5-Object-Detection-Jetson',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
-          ],
-        },
+
         {
           type: 'category',
           label: 'Flash NVIDIA JetPack™ OS',
           items: [
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1010_J101_Flash_Jetpack',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J2021_J202_Flash_Jetpack',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1020_A206_Flash_JetPack',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203_Flash_System',
+
             'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203E_Flash_System',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205_Flash_System',
             'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
             'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
           ],
 
@@ -1667,28 +1692,6 @@ const sidebars = {
           ],
 
         },
-
-        {
-
-          type: 'category',
-          label: 'Usefull_Tools',
-          items: [
-            'Top_Brand/NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
-            'Top_Brand/NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
-          ],
-
-        },
-
-        {
-
-          type: 'category',
-          label: 'Drivers',
-          items: [
-            'Top_Brand/NVIDIA/Drivers/J101_Enable_SD_Card',
-          ],
-
-        },
-
       ],
 
     },

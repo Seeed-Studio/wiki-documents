@@ -3,7 +3,7 @@ description: Create a doc page with rich content.
 title: GPIO and Grove for reComputer Series
 keywords:
   - Edge
-  - reComputer
+  - reComputer 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 11/21/2022

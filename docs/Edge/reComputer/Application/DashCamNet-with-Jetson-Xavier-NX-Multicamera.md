@@ -1,13 +1,10 @@
 ---
 description: DashCamNet with Jetson Xavier NX Multicamera
 title: DashCamNet with Jetson Xavier NX Multicamera
-tags:
-  - Nvidia
-  - reComputer
 keywords:
-  - Nvidia
+  - Edge
   - reComputer
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 01/04/2023
   author: w0x7ce
@@ -32,7 +29,6 @@ Credit to NVIDIA's [repository](https://developer.nvidia.com/blog/creating-a-rea
 
 <p style={{textAlign: 'center'}}><img src="https://developer.nvidia.com/sites/default/files/akamai/metropolis-and-iva-tao-toolkit-sw-stack-update-diagram-1875240-r7.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 ## Materials Requirement
 
 ### Hardware Setup
@@ -44,7 +40,6 @@ Credit to NVIDIA's [repository](https://developer.nvidia.com/blog/creating-a-rea
 - USB Webcam / Raspberry Pi  Camera V2.1 / [IMX219-130 8MP cameras](https://www.seeedstudio.com/IMX219-130-Camera-130-FOV-Applicable-for-Jetson-Nano-p-4606.html) / [High quality 12.3MP IMX477 cameras](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
 
 <p style={{textAlign: 'center'}}><img src="https://images.prismic.io/rpf-products/ffa68a46-fd44-4995-9ad4-ac846a5563f1_Camera%20V2%20Hero.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&q=50&w=600&h=400" alt="pir" width={300} height="auto" /></p>
-
 
 - Display with HDMI, DP or eDP interface
 - PC with Linux distribution operating system
@@ -177,8 +172,7 @@ Restart the Docker daemon to complete the installation after setting the default
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Multicamera-Jetson3.3/NGC.png" alt="pir" width={800} height="auto" /></p>
 
-
-- **Step 2**. Transfer the zip file to a directory where you have permissions and unzip it and finally execute the binary. 
+- **Step 2**. Transfer the zip file to a directory where you have permissions and unzip it and finally execute the binary.
 
 You can also download, unzip, and install from the command line by moving to a directory where you have execute permissions and then running the following command:
 
@@ -214,11 +208,9 @@ It is required API key to configure NGC CLI, we can generate it through the NGC 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Multicamera-Jetson3.3/image-20220302020851671.png" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 2**. Register an account as a NVIDIA developer.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Multicamera-Jetson3.3/image-20220302021137914.png" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 3**. Choose an account to proceed.
 
@@ -228,21 +220,17 @@ It is required API key to configure NGC CLI, we can generate it through the NGC 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Multicamera-Jetson3.3/image-20220302021332972.png" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 5**. Select "Get API Key".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Multicamera-Jetson3.3/image-20220302021429846.png" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 6**. Click "Generate API Key".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Multicamera-Jetson3.3/image-20220302021504292.png" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 7**. The API Key will show at the bottom of the page.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Multicamera-Jetson3.3/image-20220302021630443.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Install the TAO Toolkit
 
@@ -256,20 +244,20 @@ TAO Toolkit is a Python pip package that is hosted on the NVIDIA PyIndex. The pa
 
 #### **Virtual Environment - Virtualenv**
 
-A Virtual Environment is an isolated working copy of Python which allows you to work on a specific project without worry of affecting other projects. For example, you can work on a project which requires Django 1.3 while processing a project which requires Django 1.0. You can click [here](http://pypi.python.org/pypi/virtualenv) to create isolated Python enviroments. 
+A Virtual Environment is an isolated working copy of Python which allows you to work on a specific project without worry of affecting other projects. For example, you can work on a project which requires Django 1.3 while processing a project which requires Django 1.0. You can click [here](http://pypi.python.org/pypi/virtualenv) to create isolated Python enviroments.
 
 It is highly recommanded to configure a virtual environment first and then install the TAO Toolkit.
 
 - You can install virtualenv via pip:
 
 ```shell
-$ pip install virtualenv
+pip install virtualenv
 ```
 
 - Create a virtual environment:
 
 ```shell
-$ virtualenv venv
+virtualenv venv
 ```
 
 It creates a copy of Python in whichever directory you ran the command in, placing it in a folder named `venv`.
@@ -277,13 +265,13 @@ It creates a copy of Python in whichever directory you ran the command in, placi
 - Activate the virtual environment:
 
 ```shell
-$ source venv/bin/activate
+source venv/bin/activate
 ```
 
 - If you are done working in the virtual environment for the moment, you can deactivate it:
 
 ```shell
-$ deactivate
+deactivate
 ```
 
 This puts you back to the system’s default Python interpreter with all its installed libraries.
@@ -297,9 +285,9 @@ After a while, though, you might end up with a lot of virtual environments litte
 You can install (make sure **virtualenv** is already installed) :
 
    ```
-   $ pip install virtualenvwrapper
-   $ export WORKON_HOME=~/Envs
-   $ source /usr/local/bin/virtualenvwrapper.sh
+   pip install virtualenvwrapper
+   export WORKON_HOME=~/Envs
+   source /usr/local/bin/virtualenvwrapper.sh
    ```
 
 If you want to see more information about it, please refer to [Full virtualenvwrapper install instructions](http://virtualenvwrapper.readthedocs.org/en/latest/install.html).)
@@ -468,7 +456,6 @@ This is the result of multi-camera shown up like:
 
 <video id="video" controls src="https://user-images.githubusercontent.com/26127866/134721058-8378697f-bbf0-4505-be75-f3dba3080c71.mp4" preload="none">
 </video>
-
 
 *More*
 
