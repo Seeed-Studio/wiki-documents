@@ -1,10 +1,10 @@
 ---
 description: reTerminal-FAQ
-title: reTerminal FAQ
-image: https://avatars.githubusercontent.com/u/4452826?s=400&v=4
+title: FAQs for reTerminal Usage
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 11/23/2022
-  author: Peter Pan
+  date: 1/31/2023
+  author: jianjing Huang
 ---
 
 # FAQs for reTerminal Usage
@@ -63,7 +63,7 @@ i2cdetect -y 1
 If you can see the I2C address **0x56** as the table below, you have the **new version (v1.7 or higher)** of the STM32 firmware on the board.
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-new-board.png" alt="pir" width={600} height="auto" /></p>
- 
+
 However, if you can see the I2C address **0x45** as the table below, you have the **old version (lower than v1.7)** of the STM32 firmware on the board
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/i2c-old-board.png" alt="pir" width={600} height="auto" /></p>
@@ -241,7 +241,7 @@ scp -r .\STM32G030F6_R2.bin pi@192.168.x.xx:\home\pi\openocd
 ./bootstrap
 ```
 
-- **Step 8.** Enter the following 
+- **Step 8.** Enter the following
 
 ```sh
 ./configure --enable-sysfsgpio --enable-bcm2835gpio
@@ -262,7 +262,6 @@ sudo make install
 - **Step 11.** Follow the connection below to connect the pins from STM32 to 40-Pin GPIO
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/pinout-stm32.png" alt="pir" width={600} height="auto" /></p>
-
 
 **Note:** The STM32 pins are located at the back of reTerminal PCBA.
 
@@ -458,8 +457,8 @@ Now let's configure the software on the computer. Please follow according to you
 
 - **Step 7.** Configure the settings as follows:
 
-    - Serial line: COM7 (choose your COM port)
-    - Speed: 9600
+  - Serial line: COM7 (choose your COM port)
+  - Speed: 9600
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/COM7-Putty-connect.jpg" alt="pir" width={450} height="auto" /></p>
 
@@ -500,14 +499,12 @@ sudo apt-get install minicom
 dmesg | grep tty
 ```
 
-
 > <p style={{fontSize: 16}}>Ex: <br/>
     [ 1562.048241] cdc_acm 1-3:1.0: ttyACM0: USB ACM device</p>
 
-
 - **Step 6.** Connect to the serial device by typing the following
 
-```sh 
+```sh
 minicom -D /dev/ttyACM0 -b 9600
 ```
 
@@ -532,7 +529,7 @@ This will reinitialize the LCD on the reTerminal
 
 You can boot an OS from USB Flash Drive by following the steps below. Here we change the boot order to **USB Boot > eMMC Boot**, which means, if the USB Boot fails, it will boot from eMMC.
 
-**Note:** You will have to use Ubuntu or MacOS as host PC for this method. 
+**Note:** You will have to use Ubuntu or MacOS as host PC for this method.
 
 - **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath
 
@@ -552,15 +549,15 @@ You can boot an OS from USB Flash Drive by following the steps below. Here we ch
 sudo apt update
 ```
 
-- **Step 5.** Install **Git** by the following command 
+- **Step 5.** Install **Git** by the following command
 
-```sh 
+```sh
 sudo apt install git
 ```
 
-- **Step 6.** Git might produce an error if the date is not set properly. Type the following to correct this 
+- **Step 6.** Git might produce an error if the date is not set properly. Type the following to correct this
 
-```sh 
+```sh
 sudo date MMDDhhmm
 ```
 
@@ -568,32 +565,32 @@ sudo date MMDDhhmm
 
 - **Step 7.** Clone and enter the **usbboot** tool repository
 
-```sh 
+```sh
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
 - **Step 8.** Enter the following to install **libusb**
 
-```sh 
+```sh
 sudo apt install libusb-1.0-0-dev
 ```
 
 - **Step 9.** Build and install the usbboot tool
 
-```sh 
+```sh
 make
 ```
 
 - **Step 10.** Open the bootloader configuration file
 
-```sh 
+```sh
 sudo nano recovery/boot.conf
 ```
 
 - **Step 11.** Change the **BOOT_ORDER** field to the following
 
-```sh 
+```sh
 BOOT_ORDER=0xf15
 ```
 
@@ -601,7 +598,7 @@ BOOT_ORDER=0xf15
 
 - **Step 12.** Run the following to update the EEPROM image
 
-```sh 
+```sh
 cd recovery
 ./update-pieeprom.sh
 ```
@@ -610,19 +607,19 @@ The pieeprom.bin file is now ready to be flashed to the Compute Module 4
 
 - **Step 13.** Navigate back to the **usbboot** directory
 
-```sh 
+```sh
 cd ..
 ```
 
 - **Step 14.** Run the usbboot tool to flash the bootloader EEPROM
 
-```sh 
+```sh
 sudo ./rpiboot -d recovery
 ```
 
-- **Step 15.** Connect reTerminal to the PC via USB Type-C cable 
+- **Step 15.** Connect reTerminal to the PC via USB Type-C cable
 
-Now it will take a few seconds to transfer the necessary files to the reTerminal. 
+Now it will take a few seconds to transfer the necessary files to the reTerminal.
 
 - **Step 16.** Turn off reTerminal, flip the Boot Mode switch back to the original position and assemble the reTerminal shell
 
@@ -664,7 +661,7 @@ For the reTerminal with the latest PCA9554 chip, you don't have to do any change
 
 - **Step 1.** Flash [Ubuntu Server 21.10](https://ubuntu.com/download/raspberry-pi/thank-you?version=21.10&architecture=server-arm64+raspi) to reTerminal eMMC storage
 
-**Note:** Refer to flashing instructions [here](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc). After opening **Raspberry Pi Imager**, navigate to `CHOOSE OS > Use custom` and select the above image to flash 
+**Note:** Refer to flashing instructions [here](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc). After opening **Raspberry Pi Imager**, navigate to `CHOOSE OS > Use custom` and select the above image to flash
 
 - **Step 2.** SSH into reTerminal and run the following commands one after the other. Make sure to use **ubuntu** as the username and **ubuntu** as the password
 
@@ -698,7 +695,7 @@ Finally you will see the Ubuntu Desktop in proper orientation!
 
 - **Step 1.** After flashing **Raspberry Pi OS Bullseye** to reTerminal eMMC, follow [this guide](https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) to install the necessary drivers
 
-- **Step 2.** Create a new file named **monitors.xml** under **.config** directory 
+- **Step 2.** Create a new file named **monitors.xml** under **.config** directory
 
 ```sh
 sudo vi ~/.config/monitors.xml
@@ -786,7 +783,6 @@ Now the LEDs and Buzzer will work as normal.
 | Sept 2021 - January 2022 | ATECC608A-SSHDA-B or ATECC608A-TNGTLSS-G |
 | After 02/01/2022 | ATECC608A-TNGTLSS-G |
 
-
  To check which Encryption chip by type  ```i2cdetect -y 3``` command in Terminal, If you see ```0x35``` in the output table then the reTerminal is equipped with ATECC608A-TNGTLSS-G chip, otherwise it is equipped with ATECC608A-SSHDA-B.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/i2cdetect_03.png" alt="pir" width={500} height="auto" /></p>
@@ -800,7 +796,6 @@ Now the LEDs and Buzzer will work as normal.
 - **[PDF]** [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
 - **[Web Page]** [Raspberry Pi Official Documentation](https://www.raspberrypi.org/documentation/)
-
 
 # Tech support
 

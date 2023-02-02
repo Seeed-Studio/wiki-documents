@@ -20,8 +20,6 @@ wikiurl:
 sku: 
 --- -->
 
-# Upgrading BIOS and Installing Drivers 
-
 <div className="tips" style={{display: 'table', tableLayout: 'fixed', backgroundColor: '#fbd373', height: 'auto', width: '100%'}}>
   <div className="left-icon" style={{display: 'table-cell', verticalAlign: 'middle', backgroundColor: '#FC4A1A', paddingTop: 10, boxSizing: 'border-box', height: 'auto', width: 38, textAlign: 'center'}}><img style={{width: 26, verticalAlign: 'middle'}} src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
   <div className="right-desc" style={{display: 'table-cell', verticalAlign: 'middle', paddingLeft: 15, boxSizing: 'border-box', width: 'calc(95% - 38px)'}}>
@@ -29,7 +27,6 @@ sku:
     <p style={{color: '#000000', fontSize: 14}}> It <b>wipes the old BIOS settings</b>, so you would need to <b>re-activate</b> your Windows(if using Windows) again (wipes the activation key, needs Internet to activate again). <br />
     </p></div>
 </div>
-
 
 ## Upgrading BIOS
 
@@ -43,10 +40,9 @@ It is recommended to keep your reServer BIOS firmware up-to-date in order to get
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reServer/update-bios-pics/BIOS-main.png" /></div>
 
-
 ### Steps to Upgrade
 
-- **Step 1.** Format flash drive as FAT32 
+- **Step 1.** Format flash drive as FAT32
 
 - **Step 2.** Extract **ODYSSEY-TGL-A_v1.7a.zip**
 
@@ -62,31 +58,25 @@ It is recommended to keep your reServer BIOS firmware up-to-date in order to get
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reServer/update-bios-pics/BIOS-EFI-start.png" /></div>
 
-
 - **Step 8.** The board will enter shell environment (just wait, do nothing)
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reServer/update-bios-pics/update-bios-2.jpg" /></div>
-
 
 - **Step 9.** Type **fs0:**
 
 <div align="center"><img width={260} src="https://files.seeedstudio.com/wiki/reServer/update-bios-pics/update-bios-3.jpg" /></div>
 
-
 - **Step 10.** Type **dir**, and make sure the file is right. If not right, try to type **fs1:** or **fs2:** or **fs3:** then **dir** to list the files inside
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reServer/update-bios-pics/dir-1.png" /></div>
-
 
 - **Step 11.** Type **update.nsh** to flash the BIOS
 
 <div align="center"><img width={260} src="https://files.seeedstudio.com/wiki/reServer/update-bios-pics/update.nsh.png" /></div>
 
-
 - **Step 12.** If the BIOS update was successful, you will see the following message
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/reServer/update-bios-pics/update-bios-6.jpg" /></div>
-
 
 - **Step 13.** Press the power button to turn OFF the board
 
@@ -108,17 +98,16 @@ It is recommended to keep your reServer BIOS firmware up-to-date in order to get
   </div>
 </div>
 
-
 ## Installing Drivers
 
-If you are using Windows on the reServer, it is recommended to install the relevant drivers for better functionality of the system. 
+If you are using Windows on the reServer, it is recommended to install the relevant drivers for better functionality of the system.
 
 The drivers include:
 
 - Realtek High Definition Audio Driver
 - Intel® Chipset Device Software
-- Intel® Graphics Driver 
-- Intel® HID Event Filter driver 
+- Intel® Graphics Driver
+- Intel® HID Event Filter driver
 - Intel® Converged Security and Management Engine Driver
 - Intel® Serial IO Host Controller Driver
 - WiFi Driver
@@ -147,7 +136,7 @@ Please follow the below steps to install the above drivers
 
 - **Step 3.** Double click **SetupChipset.exe**
 
-### Intel® Graphics Driver 
+### Intel® Graphics Driver
 
 - **Step 1.** Extract **Graphics Driver.zip**
 

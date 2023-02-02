@@ -23,21 +23,15 @@ sku: 102110777
 tags:
 --- -->
 
-# Install System for LinkStar - H68K
-
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/OVerview.jpg" /></div>
 
-
 <p style={{}}><a href="https://www.seeedstudio.com/LinkStar-H68K-1432-p-5501.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
-
 
 ## Introduction
 
 LinkStar-H68K router equips quad-core Cortex-A55 RK3568 chip, featuring 4 Ethernet interfaces for dual-2.5G and dual-1G, along with Wi-Fi 6 technology(optional), while providing high storage capacity and media player functionality. In this wiki we will show you how to install operating system with TF card or eMMC.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/LinkStar/25.png" /></div>
-
-
 
 ## Select the system you need for LinkStar
 
@@ -76,10 +70,11 @@ Please prepare the equipment required above, firmware update packages can be dow
 |  balenaEtcher  | - | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Flash-to-TF-card-tool/) |
 |  OpenWRT R22.11.18  | Add Docker support. | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Openwrt/) |
 
-!!!Attention
-    When using a TF card with LinkStar, it is important to note that it may be incompatible with some **high-speed cards**. If you are using a high speed card, you may experience data loading errors, boot-up errors or malfunctions during power-up and loading of the system due to the speed of the card.
+:::caution
+When using a TF card with LinkStar, it is important to note that it may be incompatible with some **high-speed cards**. If you are using a high speed card, you may experience data loading errors, boot-up errors or malfunctions during power-up and loading of the system due to the speed of the card.
 
-    The advantage of using a TF card is that different networks can be configured with different TF cards. It is also possible to have multiple systems - different systems can be used by replacing different TF cards.
+The advantage of using a TF card is that different networks can be configured with different TF cards. It is also possible to have multiple systems - different systems can be used by replacing different TF cards.
+:::
 
 #### Procedure
 
@@ -93,24 +88,21 @@ Open the balenaEtcher which has been installed in advance.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LinkStar/11.png" /></div>
 
-
 Select the OpenWRT firmware you downloaded, it should end in **.img**.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/12.png" /></div>
-
 
 Select the drive you want to flash the system to.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LinkStar/13.png" /></div>
 
-
 Click the **Flash** button and the software will flash the system into your TF.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LinkStar/14.png" /></div>
 
-
-!!!Attention
-    Some computers may prompt whether the USB device is not recognised after flashing the system and whether to format it, please **do not** reformat the card or the system inside will be erased.
+:::caution
+Some computers may prompt whether the USB device is not recognised after flashing the system and whether to format it, please **do not** reformat the card or the system inside will be erased.
+:::
 
 **Step 3.** Boot OpenWRT from the TF card
 
@@ -118,23 +110,21 @@ Remove the TF card from the card reader and insert it into the TF card slot of t
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/LinkStar/15.png" /></div>
 
-
 Then power up the LinkStar, you can choose to power it via **USB-C-5V** or via **DC-12V**.
 
 When powered on, the LinkStar's power on button will light up in white. Press the power on button and the unit will power up and enter the system.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/LinkStar/16.png" /></div>
 
-
 **Step 4.** Manage the OpenWRT backend
 
 Use a network cable to connect to the ETH1/ETH2/ETH3 network port of the LinkStar. Then enter the address: `192.168.100.1` into your browser to access the admin backend.
 
-!!!Attention
-    ETH0 is the WAN port and the other network ports are LAN ports. If you want to manage LinkStar's OpenWRT via a network cable, then connect the network cable to a LAN port other than ETH0.
+:::caution
+ETH0 is the WAN port and the other network ports are LAN ports. If you want to manage LinkStar's OpenWRT via a network cable, then connect the network cable to a LAN port other than ETH0.
+:::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/LinkStar/17.png" /></div>
-
 
 The initial account and password for the system are as follows.
 
@@ -163,8 +153,9 @@ Please prepare the equipment required above, firmware update packages can be dow
 | Flash to eMMC tool & driver | - | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Flash-to-eMMC-tool/) |
 |  Android TV R22.11.17 (Optional)  | Remote control support (not for sale at this time) | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Android/) |
 
-!!!Attention
-    If you are installing OpenWRT from another system, you will need to flash your Android system to eMMC before you can complete the OpenWRT installation, then you may need to download the Android package.
+:::caution
+If you are installing OpenWRT from another system, you will need to flash your Android system to eMMC before you can complete the OpenWRT installation, then you may need to download the Android package.
+:::
 
 #### Procedure
 
@@ -178,33 +169,27 @@ In the driver installation software that launches, click on "驱动安装" (Driv
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/LinkStar/2.png" /></div>
 
-
 **Step 2.** Put the device into Maskrom mode
 
 Go to the **RKDevTool_Release_v2.84** folder and double click to open the **RKDevTool.exe** file.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/3.png" /></div>
 
-
 At this point it should say "No Devices Found" at the bottom of the software.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/4.png" /></div>
-
 
 Press the **Update keyhole** button continuously with the card pick-up pin and do not release it.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LinkStar/5.png" /></div>
 
-
 Keep your hands on the LinkStar and connect it to your computer using a USB-C type cable. Afterwards you can release the button.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LinkStar/6.png" /></div>
 
-
 At this point watch the software again and it will show from "No Devices Found" to "Found One MASKROM Device".
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/7.png" /></div>
-
 
 **Step 3.** Erase firmware
 
@@ -212,16 +197,13 @@ Click on "Upgrade Firmware", then click on "Firmware" and select the **LinkStar-
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/8.png" /></div>
 
-
 After importing the file, click on "EraseFlash".
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/9.png" /></div>
 
-
 Wait for the operation to complete and click "确定" (OK).
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/10.png" /></div>
-
 
 <!-- **Step 4.** Flash Android (Optional)
 
@@ -244,34 +226,29 @@ Once the system flash is complete, the LInkStar will automatically reboot and on
 
 At this point, please turn off and power off the LinkStar and retry the **step2** to put LinkStar into **Maskrom mode**. -->
 
-
 **Step 4.** Flash OpenWRT
 
-!!! NOTE:
-    if you follow along the steps from above your LinkStar H68K should be still in MASKROOM Mode, if not please repeat and follow along the steps from **Step 2** again. 
+:::note
+if you follow along the steps from above your LinkStar H68K should be still in MASKROOM Mode, if not please repeat and follow along the steps from **Step 2** again.
+:::
 
 Click on "Download Image" in the top left corner of the software, then select the **H68K-Boot-Loader_xxx.bin** file for the first **Boot** option line.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/18.png" /></div>
 
-
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/19.png" /></div>
-
 
 Then in the second line of **system** options, select the system image for OpenWRT. It should be a file ending in **.img**.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/20.png" /></div>
 
-
 Then click on the "Run" button below.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/21.png" /></div>
 
-
 Wait for the "Download image OK" prompt, then the system has been successfully installed into LInkStar's eMMC.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/22.png" /></div>
-
 
 Once the system flash is complete, the LinkStar H68K should automatically reboot and once rebooted it will enter the OpenWRT system.
 
@@ -279,11 +256,11 @@ Once the system flash is complete, the LinkStar H68K should automatically reboot
 
 Use a network cable to connect to the ETH1/ETH2/ETH3 network port of the LinkStar. Then enter the address: `192.168.100.1` into your browser to access the admin backend.
 
-!!!Attention
-    ETH0 is the WAN port and the other network ports are LAN ports. If you want to manage LinkStar's OpenWRT via a network cable, then connect the network cable to a LAN port other than ETH0.
+:::caution
+ETH0 is the WAN port and the other network ports are LAN ports. If you want to manage LinkStar's OpenWRT via a network cable, then connect the network cable to a LAN port other than ETH0.
+:::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/LinkStar/17.png" /></div>
-
 
 The initial account and password for the system are as follows.
 
@@ -312,8 +289,9 @@ Please have the above devices and software ready, firmware update packages can b
 | Ubuntu 18.04 v0.323 | Add support for remote controls (not for sale at this time) | Coming soon  |
 | Ubuntu 20.04 R22.11.04 | Add support for wifi AP256 | Coming soon  |
 
-!!!Attention
-    The image provided here does not support Card-Flashing.
+:::caution
+The image provided here does not support Card-Flashing.
+:::
 
 #### Procedure
 
@@ -325,11 +303,9 @@ Go to the **Rockchip_DriverAssitant_v5.1.1** folder and double click to open the
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/1.png" /></div>
 
-
 In the driver installation software that launches, click on "驱动安装" (Driver Installation).
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/LinkStar/2.png" /></div>
-
 
 **Step 2.** Put the device into Maskrom mode
 
@@ -337,26 +313,21 @@ Go to the **RKDevTool_Release_v2.84** folder and double click to open the **RKDe
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/3.png" /></div>
 
-
 At this point it should say "No Devices Found" at the bottom of the software.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/4.png" /></div>
-
 
 Press the **Update keyhole** button continuously with the card pick-up pin and do not release it.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LinkStar/5.png" /></div>
 
-
 Keep your hands on the LinkStar and connect it to your computer using a USB-C type cable. Afterwards you can release the button.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/LinkStar/6.png" /></div>
 
-
 At this point watch the software again and it will show from "No Devices Found" to "Found One MASKROM Device".
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/7.png" /></div>
-
 
 **Step 3.** Flash Firmware
 
@@ -364,16 +335,13 @@ Click on "Upgrade Firmware", then click on "Firmware" and select the system imag
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/8.png" /></div>
 
-
 After importing the file, click on "Upgrade".
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/23.png" /></div>
 
-
 Wait for the prompt to appear that the "Reset Device Success", at which point the system has finished flashing.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/LinkStar/24.png" /></div>
-
 
 Once the system flash is complete, the LInkStar will automatically reboot and once rebooted it will enter the system.
 
@@ -382,4 +350,3 @@ Once the system flash is complete, the LInkStar will automatically reboot and on
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
-
