@@ -5,6 +5,23 @@ oldwikiname:  How To Choose The Right Cable
 prodimagename:
 surveyurl: https://www.research.net/r/How_To_Choose_The_Right_Cable
 ---
+
+---
+description: A Handy Serial Library
+title: A Handy Serial Library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
+---
+
 ##   A Bad Example
 
 Here we will introduce a variety of cables that Seeed offers. When you make a demo, it's hard to avoid jumping a wire. To be honest, I hate jump a wire, it's really a mess. But sometimes you had to jump a wire, you couldn't make a PCB for an easy application.

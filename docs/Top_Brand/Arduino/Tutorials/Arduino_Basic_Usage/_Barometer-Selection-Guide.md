@@ -1,3 +1,19 @@
+---
+description: A Handy Serial Library
+title: A Handy Serial Library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
+---
+
 # Seeed Barometer Selection Guide
 
 We have released various types of barometer sensors in the recent years. You may find it difficult to make a choice between them. We feel your pain and let's take a close look at them and workout which one is best suited for you!

@@ -1,3 +1,19 @@
+---
+description: A Handy Serial Library
+title: A Handy Serial Library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
+---
+
 We have released various types of GPS Modules in recent years. Let's take a close look at them and figure out which one is best suited for you!
 
 For all the GPS or Communication modules in our bazaar, please click [Seeed Studio Bazaar](https://www.seeedstudio.com/) to check.

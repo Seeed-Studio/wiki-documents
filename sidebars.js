@@ -1552,6 +1552,25 @@ const sidebars = {
       label: 'Arduino',
       items: [
         'Top_Brand/Arduino/shield/shield_Getting_Started',
+        {
+          type: 'category',
+          label: 'Tutorials',
+          items: [
+            {
+              type: 'category',
+              label: 'Arduino_Basic_Usage',
+              items: [
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/A_Handy_Serial_Library',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Download-Arduino-and-install-Arduino_Driver',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Seeed_Arduino_Boards',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Upload_Code',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Use_External_Editor',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Sketchbook_of_Sidekick_Advanced_Kit',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Sketchbook_of_Sidekick_Advanced_Kit',
+              ]
+            },
+          ]
+        },
       ],
 
     },

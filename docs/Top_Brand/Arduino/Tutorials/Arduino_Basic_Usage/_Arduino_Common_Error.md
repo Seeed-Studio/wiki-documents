@@ -5,6 +5,23 @@ oldwikiname:  Arduino Common Error
 prodimagename:
 surveyurl: https://www.research.net/r/Arduino_Common_Error
 ---
+
+---
+description: A Handy Serial Library
+title: A Handy Serial Library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
+---
+
 For a beginner, sometime we will meet some compilation or upload errors. Here we summarize some common errors and solutions, hope this can help.
 
 ** Q1：**

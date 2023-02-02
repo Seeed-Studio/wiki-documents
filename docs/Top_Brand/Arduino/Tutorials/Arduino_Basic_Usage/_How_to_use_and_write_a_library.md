@@ -1,10 +1,19 @@
 ---
-name: How to use and write a library
-category: Tutorial
-oldwikiname:  How to use and write a library
-prodimagename:
-surveyurl: https://www.research.net/r/How_to_use_and_write_a_library
+description: How to use and write a library
+title: How to use and write a library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
 ---
+
 Arduino popularity largely dependent on a large number of excellent and easy to use Library. The Arduino Library using object-oriented C + + class library from, you can use it easily without knowing the implementation details of the Library.
 
 You can fine Arduino Library in the path: \arduino-1.0.5\libraries. And there’s an example in it, which have some demo to help you understand and use the Library.
@@ -12,7 +21,7 @@ It’ very easy to use a Library, here we introduce how to write a Library.
 
 Then let’s go, we write a simple calculate Library here. Include the following function:
 
-```
+```c++
 int sum(int a, int b);
 int minus(int a, int b);
 ```
@@ -21,7 +30,7 @@ Yes, It’s very simple, it’s obvious that the first function return the sum o
 Firstly, we built a folder named Calc, it’s also the name of the Library.
 Then we built a Calc.h file, and fill it:
 
-```
+```c++
 #ifndef __CALC_H__
 #define __CALC_H__
 
@@ -108,4 +117,6 @@ Thus, we finish our Calc Library, and it works fine. If you want to try at the l
 [download pdf file](https://files.seeedstudio.com/wiki/How_to_use_and_write_a_library/res/How_to_use_and_write_a_library.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -4,6 +4,22 @@ category: Tutorial
 
 ---
 
+---
+description: A Handy Serial Library
+title: A Handy Serial Library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
+---
+
 
 Temperature is a very important physical parameter to our daily lives. The measurement of temperature can be critical in industry applications and experimental test in labs, some home appliance also require measuring temperature for temperature control. 
 The Grove family provides up to ten types of sensors that can be used to measure temperature. They all featured with high reliability and the easy-to-use Grove interface, but they do have their differences and may be used for different projects and applications. 

@@ -1,10 +1,19 @@
 ---
-name: How To Use Sketchbook
-category: Tutorial
-oldwikiname:  How To Use Sketchbook
-prodimagename:
-surveyurl: https://www.research.net/r/How_To_Use_Sketchbook
+description: How To Use Sketchbook
+title: How To Use Sketchbook
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
 ---
+
 In another document, we have made a detailed introduction about Library, we know that Library really very easy to use! Download a Library, put it to the Arduino libraries directory, open the example and it works.
 
 However, sometimes we will encounter this problem: You made an interesting demo, this demo needs to contain some libraries, and you would like to share this demo, so you need to send the code to some guys, but there is often a compilation error problem: missing certain library. So you need to send the library to him. If your demo needs a lot of library, these will much more problem.

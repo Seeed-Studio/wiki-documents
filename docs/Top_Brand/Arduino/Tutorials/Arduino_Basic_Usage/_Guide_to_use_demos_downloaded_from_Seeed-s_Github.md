@@ -1,4 +1,4 @@
----
+UIQ--
 name: Guide to use demos downloaded from Seeed's Github
 category: Tutorial
 bzurl:  
@@ -6,6 +6,22 @@ oldwikiname: Guide to use demos downloaded from Seeed's Github
 prodimagename:
 surveyurl: https://www.research.net/r/Guide_to_use_demos_downloaded_from_Seeed-s_Github
 sku:
+---
+
+---
+description: A Handy Serial Library
+title: A Handy Serial Library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/01/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
 ---
 
 It is necessary to use demos from Seeeduino Github frequently and there some slight difficult for a novice to run the demo well.

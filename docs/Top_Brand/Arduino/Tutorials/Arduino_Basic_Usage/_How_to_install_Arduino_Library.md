@@ -1,11 +1,24 @@
 ---
-name: How to install an Arduino library
-category: Tutorial
+description: How to install an Arduino library
+title: How to install an Arduino library
+tags:
+  - Tutorial
+keywords:
+  - Tutorial
+image: https://avatars.githubusercontent.com/u/10758833
+last_update:
+  date: 02/02/2023
+  author: w0x7ce
+
+no_comments: false # for Disqus
+
 ---
 
-!!!Note
-    This tutorial is based on Arduino 1.6.9.
 
+:::note
+
+    This tutorial is based on Arduino 1.6.9.
+:::
 
 Here we will show you how to install an Arduino library. You should notice that almost all of our library was stored at [Github](https://github.com/Seeed-Studio). We will provide Arduino library when a product need a library. For some simple product, there is no need to write a library such as Grove - Button.
 
@@ -45,16 +58,6 @@ Sometimes you can not add a ZIP library correctly, because the root folder of th
 
 ![](https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Location_lib.png)
 
-
-
-
-
-
-
-
-
-
-
 ### Check
 Then let's check if the library install correctly.
 
@@ -64,4 +67,6 @@ When you add a library successfully, there will be a demo in the Example. In thi
 ![enter image description here](https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/successlly.png)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+<br />
+<p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
