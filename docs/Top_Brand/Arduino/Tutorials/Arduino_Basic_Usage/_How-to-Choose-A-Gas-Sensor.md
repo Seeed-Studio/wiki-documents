@@ -30,6 +30,7 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
   vertical-align:top}
 .tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
 </style>
+
 <table class="tg" style="undefined;table-layout: fixed; width: 800px">
 <colgroup>
 <col style="width: 119px">
@@ -243,23 +244,12 @@ It’s obvious that different sensor can detect the same gas. Such as MQ-2, MQ-3
 
 And sometimes, we want to test many gases in one sensor, so how should we choose it ?
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-l5ls{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;font-weight:bold;text-align:center;
-  vertical-align:top}
-.tg .tg-q7v3{background-color:#ffffff;border-color:#000000;color:#000000;font-size:16px;text-align:center;vertical-align:top}
-</style>
+
+
 <table class="tg" style="undefined;table-layout: fixed; width: 799px">
-<colgroup>
-<col style="width: 281px">
-<col style="width: 127px">
-<col style="width: 191px">
-<col style="width: 200px">
-</colgroup>
+
+
+
 <thead>
   <tr>
     <th class="tg-l5ls">Product Name</th>
@@ -457,4 +447,6 @@ Following is the link of all gases to Bazaar, choose the one you needed!
 
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

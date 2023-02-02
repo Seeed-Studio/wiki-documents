@@ -40,11 +40,9 @@ public:
     int minus(int a, int b);                // return difference
 };
 #endif
-</pre>
+```
 
-Then Calc.cpp:
-
-<pre>
+```c++ title="Calc.cpp"
 #include "Calc.h"
 
 int Calc::sum(int a, int b)
@@ -60,7 +58,7 @@ int minus(int a, int b)
 
 To help users to understand the use of the Library, we built an examples folder. And there’s a demo named cale_test, code folowing:
 
-```
+```c++
 // demo of calc library
 #include &lt;Calc.h&gt;
 
@@ -86,7 +84,7 @@ void loop()
 When using the Arduino IDE, you will see some library functions will be displayed in red, while others do not. Obviously, let the function name and the header file names as well as some macro definitions displayed in red makes the code look more beautiful, and easy to check for errors.
 To help us create this library can be displayed on the IDE into the red; you need to add a keyboards.txt file in Calc folder, keyboards.txt as follows:
 
-```
+```c++
 #######################################
 # Syntax Coloring Map For Calc
 #######################################

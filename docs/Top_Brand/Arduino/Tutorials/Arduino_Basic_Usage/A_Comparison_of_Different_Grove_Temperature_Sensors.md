@@ -1,19 +1,13 @@
 ---
-name: A Comparison of Different Grove Temperature Sensors
-category: Tutorial
-
----
-
----
-description: A Handy Serial Library
-title: A Handy Serial Library
+description: A Comparison of Different Grove Temperature Sensors
+title: A Comparison of Different Grove Temperature Sensors
 tags:
   - Tutorial
 keywords:
   - Tutorial
 image: https://avatars.githubusercontent.com/u/10758833
 last_update:
-  date: 02/01/2023
+  date: 02/02/2023
   author: w0x7ce
 
 no_comments: false # for Disqus
@@ -83,4 +77,6 @@ More details please download below list.
 |[GET ONE NOW!](https://www.seeedstudio.com/Grove-Barometer-Sensor-(BMP180)-p-1840.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-TempHumiBarometer-Sensor-BME280-p-2653.html)|
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
