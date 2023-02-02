@@ -1098,6 +1098,16 @@ const sidebars = {
       label: 'Arch',
       items: [
         'Sensor/Arch/Arch_Mix',
+        'Sensor/Arch/Arch_V1.1',
+        'Sensor/Arch/Arch_Pro',
+        'Sensor/Arch/Arch_BLE',
+        //'Sensor/Arch/Arch_Link',
+        //'Sensor/Arch/Arch_GPRS',
+        //'Sensor/Arch/Arch_GPRS_V2',
+        'Sensor/Arch/Arch_Max',
+        'Sensor/Arch/Arch_Max_v1.1',
+        'Sensor/Arch/Heart-Sound_Sensor',
+        'Sensor/Arch/Grove-Starter_Kit_for_mbed',
       ],
 
     },
