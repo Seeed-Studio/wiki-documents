@@ -1288,7 +1288,59 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP',
       items: [
-        'Network/SenseCAP/wiki',
+        'Network/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
+
+        {
+          type: 'category',
+          label: 'SenseCAP Node',
+          items: [
+            'Network/SenseCAP/SenseCAP_Node/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
+            'Network/SenseCAP/SenseCAP_Node/SenseCAP-SOLO-CO2-Sensor',
+            {
+              type: 'category',
+              label: 'SenseCAP A1101',
+              items: [
+                'Network/SenseCAP/SenseCAP_Node/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SenseCAP Weather Station',
+              items: [
+                'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
+                'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/ORCH-S4-Weather-Station',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SenseCAP Probe',
+          items: [
+            'Network/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+            'Network/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Accessories',
+          items: [
+            'Network/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
+            'Network/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Extra tutorial / FAQ',
+          items: [
+            'Network/SenseCAP/Extra_Tutorial_FAQ/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+          ],
+        },
+
+
       ],
 
     },
@@ -1900,6 +1952,73 @@ const sidebars = {
     // },
 
   ],
+
+  SenseCAPSidebar: [
+    {
+
+      type: 'category',
+      label: 'SenseCAP',
+      items: [
+        'Network/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
+
+        {
+          type: 'category',
+          label: 'SenseCAP Node',
+          items: [
+            'Network/SenseCAP/SenseCAP_Node/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
+            'Network/SenseCAP/SenseCAP_Node/SenseCAP-SOLO-CO2-Sensor',
+            {
+              type: 'category',
+              label: 'SenseCAP A1101',
+              items: [
+                'Network/SenseCAP/SenseCAP_Node/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SenseCAP Weather Station',
+              items: [
+                'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
+                'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/ORCH-S4-Weather-Station',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SenseCAP Probe',
+          items: [
+            'Network/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+            'Network/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Accessories',
+          items: [
+            'Network/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
+            'Network/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Extra tutorial / FAQ',
+          items: [
+            'Network/SenseCAP/Extra_Tutorial_FAQ/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+          ],
+        },
+
+
+      ],
+
+    },
+
+  ],
+
+
 
 };
 
