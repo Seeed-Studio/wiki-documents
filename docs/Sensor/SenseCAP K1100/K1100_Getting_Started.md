@@ -1,6 +1,6 @@
 ---
-description: Create a doc page with rich content.
-title: Contents & Framework
+description: The Sensor Prototype Kit Introduction
+title: The Sensor Prototype Kit Introduction
 # slug: /ABC
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
 last_update:

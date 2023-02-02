@@ -1115,13 +1115,13 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'Azure Sphere MT3620 Development Kit',
+      label: 'Azure Sphere MT3620',
       items: [
-        'Sensor/Azure_Sphere_MT3620_Development_Kit/Azure_Sphere_MT3620_Development_Kit',
-        'Sensor/Azure_Sphere_MT3620_Development_Kit/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit',
-        'Sensor/Azure_Sphere_MT3620_Development_Kit/MT3620_Ethernet_Shield_v1.0',
-        'Sensor/Azure_Sphere_MT3620_Development_Kit/MT3620_Mini_Dev_Board',
-        'Sensor/Azure_Sphere_MT3620_Development_Kit/MT3620_Grove_Breakout',
+        'Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit',
+        'Sensor/Azure Sphere MT3620/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit',
+        'Sensor/Azure Sphere MT3620/MT3620_Ethernet_Shield_v1.0',
+        'Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board',
+        'Sensor/Azure Sphere MT3620/MT3620_Grove_Breakout',
       ],
 
     },
@@ -1190,75 +1190,127 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'SenseCAP the Sensor Prototype Kit',
+      label: 'SenseCAP K1100',
       items: [
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100_Getting_Started',
-        'Sensor/SenseCAP_the_Sensor_Prototype_Kit/K1100-quickstart',
+        'Sensor/SenseCAP K1100/K1100_Getting_Started',
+        'Sensor/SenseCAP K1100/K1100-quickstart',
         {
 
           type: 'category',
-          label: 'LoRaWAN',
+          label: 'LoRaWAN-Network Application',
           items: [
             {
 
               type: 'category',
-              label: 'SenseCAP',
+              label: 'SenseCAP & Node-Red for Cloud Services',
               items: [
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_sensecap_node-red',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_Azure_IoT_Central',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_PowerBI',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_influxdb',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_twilio',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_datacake',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/SenseCAP/K1100_SenseCAP_to_grafana',
-
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_sensecap_node-red',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_Azure_IoT_Central',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_datacake',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_grafana',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_influxdb',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_PowerBI',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_twilio',
+                
               ],
 
             },
             {
 
               type: 'category',
-              label: 'Programme with Arduino',
+              label: 'Sensors Basic Usage with Arduino',
               items: [
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Programme with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
-              ],
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
 
+            ],
             },
             {
 
               type: 'category',
-              label: 'Helium',
+              label: 'Helium Cloud Services',
               items: [
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Helium-Introduction',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connecting-to-Helium',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Connect_AWS_via_helium',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium-Introduction',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Integrate_into_Google_Sheets_via_Helium',
                 {
 
                   type: 'category',
-                  label: 'Azure',
+                  label: 'Helium Connected & Azure Integrated',
                   items: [
-                    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Integrate-into-Azure-IoT-Hub',
-                    'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Azure/Configuring-Web-APP-Visualization',
+                    'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium Connected & Azure Integrated/Configuring-Web-APP-Visualization',
+                    'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium Connected & Azure Integrated/Connecting-to-Helium',
+                    'Sensor/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium Connected & Azure Integrated/Integrate-into-Azure-IoT-Hub',
                   ],
                 },
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Integrate_into_Google_Sheets_via_Helium',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/Helium/Connect_AWS_via_helium',
+                
               ],
 
             },
             {
 
               type: 'category',
-              label: 'TTN',
+              label: 'TTN Cloud Services',
               items: [
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/TTN-Introduction',
-                'Sensor/SenseCAP_the_Sensor_Prototype_Kit/LoRaWAN/TTN/Connecting-to-TTN',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/TTN Cloud Services/Connecting-to-TTN',
+                'Sensor/SenseCAP K1100/LoRaWAN-Network Application/TTN Cloud Services/TTN-Introduction',
               ],
 
+            },
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Contributors Project',
+          items: [
+            'Sensor/SenseCAP K1100/Contributors Project/IoT-into-the-wild-contest',
+            'Sensor/SenseCAP K1100/Contributors Project/K1111-Quick-Start-Guide',
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Embedded ML Application',
+          items: [
+            'Sensor/SenseCAP K1100/Embedded ML Application/K1111-Edge-Impulse',
+            'Sensor/SenseCAP K1100/Embedded ML Application/Train-Deploy-AI-Model-Grove-Vision-AI',
+          ],
+
+        },
+        {
+
+          type: 'category',
+          label: 'Wi-Fi-Network Application',
+          items: [
+            'Sensor/SenseCAP K1100/Wi-Fi-Network Application/Wio-Terminal-Advanced-WiFi',
+            {
+
+              type: 'category',
+              label: 'Azure IoT Platform Usage',
+              items: [
+                'Sensor/SenseCAP K1100/Wi-Fi-Network Application/Azure IoT Platform Usage/Connect-Wio-Terminal-to-Azure-IoT-Central',
+                'Sensor/SenseCAP K1100/Wi-Fi-Network Application/Azure IoT Platform Usage/Develop-in-Microsoft-Azure-IoT-Central',
+                'Sensor/SenseCAP K1100/Wi-Fi-Network Application/Azure IoT Platform Usage/K1100_Azure_to_PowerBI',
+            ],
+      
+            },
+            {
+
+              type: 'category',
+              label: 'Cloud Service',
+              items: [
+                'Sensor/SenseCAP K1100/Wi-Fi-Network Application/Cloud Service/Connect-Wio-Terminal-to-Google-Cloud',
+                'Sensor/SenseCAP K1100/Wi-Fi-Network Application/Cloud Service/Getting_started_with_Ubidots',
+                'Sensor/SenseCAP K1100/Wi-Fi-Network Application/Cloud Service/Quick-Start-to-using-Blynk',
+            ],
+      
             },
           ],
 
