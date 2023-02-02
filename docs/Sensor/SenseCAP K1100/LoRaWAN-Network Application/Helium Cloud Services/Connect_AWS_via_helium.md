@@ -1,6 +1,6 @@
 ---
-description: Helium To AWS IOT
-title: Helium To AWS IOT
+description: AWS IoT Platform Integrated
+title: AWS IoT Platform Integrated
 keywords:
 - SenseCap
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
