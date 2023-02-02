@@ -1,6 +1,6 @@
 ---
-description: No-code Start With K1100 & SenseCraft
-title: No-code Start With K1100 & SenseCraft
+description: Quick & No-code Initiation with SenseCraft
+title: Quick & No-code Initiation with SenseCraft
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

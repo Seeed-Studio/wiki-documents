@@ -1,6 +1,6 @@
 ---
-description: Connecting-to-TTN
-title: Connecting-to-TTN
+description: Connect to TTN
+title: Connect to TTN
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

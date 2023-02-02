@@ -1,6 +1,6 @@
 ---
-description: Wio Terminal Built-in & Edge Impulse
-title: Wio Terminal Built-in & Edge Impulse
+description: Built-in Sensors with Edge Impulse
+title: Built-in Sensors with Edge Impulse
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
