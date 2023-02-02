@@ -10,7 +10,7 @@ const katex = require('rehype-katex');
 const config = {
 
   title: 'Seeed Studio Wiki',
-  tagline: 'The open documentation platform for Seeed Studio.',
+  tagline: 'The Seeed Studio Files Management Platform, Opening up and Cooperation.',
   
   url: 'https://c1ev0ps.github.io',
   baseUrl: '/docusaurus_wiki/',
