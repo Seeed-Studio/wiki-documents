@@ -1142,25 +1142,14 @@ const sidebars = {
       type: 'category',
       label: 'Software',
       items: [
-        {
 
-          type: 'category',
-          label: 'OpenWrt',
-          items: [
-            'Software/OpenWrt/OpenWrt-Getting-Started',
-            'Software/OpenWrt/OpenWrt-Plex-Media-Server-on-Docker',
-          ],
-
-        },
         {
 
           type: 'category',
           label: 'Mender',
           items: [
-            'Software/Mender/Mender-Client-ODYSSEY-X86',
-            'Software/Mender/Mender-Server-ODYSSEY-X86',
+
             'Software/Mender/Mender-Client-reTerminal',
-            'Software/Mender/Mender-Client-dual-GbE-CM4',
           ],
 
         },
@@ -1174,15 +1163,7 @@ const sidebars = {
           ],
 
         },
-        {
 
-          type: 'category',
-          label: 'balenaOS',
-          items: [
-            'Software/balenaOS/BalenaOS-X86-Getting-Started',
-          ],
-
-        },
         {
 
           type: 'category',
@@ -1322,16 +1303,49 @@ const sidebars = {
     //     ],
 
     // },
+    {
+      type: 'category',
+      label: 'LinkStar',
+      items: [
+        'Network/LinkStar/Linkstar_Datasheet',
+        'Network/LinkStar/linkstar-install-system',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Network/LinkStar/Application/h68k-ha-esphome',
+
+          ]
+        }
+      ]
+    },
 
     {
 
       type: 'category',
       label: 'reRouter',
       items: [
-        'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
         'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
+        'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Network/reRouter/Application/OpenWrt-Getting-Started',
+            'Network/reRouter/Application/OpenWrt-Plex-Media-Server-on-Docker',
+            'Network/reRouter/Application/Mender-Client-dual-GbE-CM4',
+          ]
+        }
       ],
 
+    },
+    {
+      type: 'category',
+      label: 'TTN Gateway',
+      items: [
+        'Network/TTN_Gateway/The-Things-Indoor-Gateway',
+
+      ]
     },
 
     // {
@@ -1366,6 +1380,58 @@ const sidebars = {
       label: 'reTerminal',
       items: [
         'Edge/reTerminal/reTerminal',
+        'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
+        'Edge/reTerminal/reTerminal-FAQ',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Electron',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
+            'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
+            'Edge/reTerminal/Application/Mender-Client-reTerminal',
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
+                'Edge/reTerminal/Application/Home_Assistant/Home-Assistant-Customize',
+
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Embedded ML',
+              items: [
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
+                // 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+
+              ]
+            },
+
+          ],
+        },
+        {
+          type: 'category',
+          label: 'OS Installation',
+          items: [
+            'Edge/reTerminal/OS_Installation/reTerminal-Buildroot-SDK',
+            'Edge/reTerminal/OS_Installation/reTerminal-Yocto',
+            'Edge/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal',
+            // 'Edge/reTerminal/OS_Installation/',
+
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Extension Board',
+          items: [
+            'Edge/reTerminal/Extension_Board/reTerminalBridge',
+            'Edge/reTerminal/Extension_Board/reTerminal_Mount_Options',
+          ]
+        },
       ],
       //这里有东西没搬
     },
@@ -1373,9 +1439,61 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'reServer',
+      label: 'reComputer',
       items: [
-        'Edge/reServer/reServer_Getting_Started',
+        'Edge/reComputer/reComputer_Jetson_Series_Introduction',
+        'Edge/reComputer/reComputer_Jetson_Series_Initiation',
+        'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
+        'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Edge/reComputer/Application/Jetson-Nano-MaskCam',
+            'Edge/reComputer/Application/Security_Scan',
+            'Edge/reComputer/Application/HardHat',
+            'Edge/reComputer/Application/DeciAI-Getting-Started',
+            'Edge/reComputer/Application/No-code-Edge-AI-Tool',
+            'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+            'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
+            'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
+            'Edge/reComputer/Application/jetson-docker-getting-started',
+            'Edge/reComputer/Application/reComputer_Jetson_Series_Resource',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'JetPack™ OS Installation',
+          items: [
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
+          ]
+
+        },
+        {
+          type: 'category',
+          label: ' Carrier Board for Jetson Moudule',
+          items: [
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System',
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate',
+
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorials',
+          items: [
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
+            'Edge/reComputer/Tutorials/J1010_Boot_From_SD_Card',
+            'Edge/reComputer/Tutorials/J101_Enable_SD_Card',
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
+            'Edge/reComputer/Tutorials/Jetson-AI-developer-tools',
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
+          ]
+
+        },
       ],
 
     },
@@ -1383,19 +1501,38 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'reComputer',
+      label: 'reServer',
       items: [
-        'Edge/reComputer/wiki',
+        // 'Edge/reServer/reServer_Getting_Started',
+        {
+          type: 'category',
+          label: 'reServer X86',
+          items: [
+            'Edge/reServer/reServer_X86/reServer-Getting-Started',
+            'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+
+          ]
+        },
+        {
+          type: 'category',
+          label: 'reServer Nvidia Jetson',
+          items: [
+            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
+            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
+
+          ]
+        },
       ],
 
     },
+
 
     {
 
       type: 'category',
       label: 'Edge Series',
       items: [
-        'Edge/Edge_Series/wiki',
+        'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
       ],
 
     },
@@ -1405,19 +1542,38 @@ const sidebars = {
       label: 'BeagleBone®',
       items: [
         'Edge/Beagle_Bone/BeagleBone',
-        'Edge/Beagle_Bone/BeagleBone_Solutions',
         'Edge/Beagle_Bone/BeagleBone_Blue',
-        'Edge/Beagle_Bone/Beaglebone_Case',
         'Edge/Beagle_Bone/BeagleBone_Green',
-        'Edge/Beagle_Bone/BeagleBone_Green_HDMI_Cape',
         'Edge/Beagle_Bone/BeagleBone_Green_Wireless',
         'Edge/Beagle_Bone/BeagleBone-Green-Gateway',
-        // 'Edge/Beagle_Bone/Grove_Base_Cape_for_BeagleBone_v2',
-        'Edge/Beagle_Bone/Grove_Cape_for_BeagleBone_Series',
-        // 'Edge/Beagle_Bone/Grove_Starter_Kit_for_BeagleBone_Green',
-        'Edge/Beagle_Bone/Motor_Bridge_Cape_v1.0',
-        'Edge/Beagle_Bone/Skeleton_box_for_Beaglebone',
-        'Edge/Beagle_Bone/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
+        'Edge/Beagle_Bone/Beaglebone_Case',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Edge/Beagle_Bone/Application/BeagleBone_Solutions',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Extension Board',
+          items: [
+            'Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series',
+            // 'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
+            'Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0',
+            'Edge/Beagle_Bone/Extension_Board/Skeleton_box_for_Beaglebone',
+            'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
+            'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',]
+        },
+        // {
+        //   type: 'category',
+        //   label: 'Kit with Courses',
+        //   items: [
+        //     // 'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
+        //     'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+        //   ]
+        // },
+
       ],
     },
 
@@ -1425,46 +1581,71 @@ const sidebars = {
       type: 'category',
       label: 'ODYSSEY',
       items: [
-        'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+        // 'Edge/ODYSSEY/ODYSSEY_Getting_Started',
 
         {
           type: 'category',
-          label: 'ODYSSEY_X86J4105',
+          label: 'ODYSSEY X86J4105',
           items: [
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-OS',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Updating-Firmware',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
-
-            {
-              type: 'category',
-              label: 'Home Assistant',
-              items: [
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/ODYSSEY-X86-Home-Assistant',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Home-Assistant-Customize',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Home-Assistant/Connect-Grove-to-Home-Assistant-ESPHome',
-              ]
-            },
-
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/Jellyfin-on-Docker-Ubuntu-X86',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-openwrt',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-OPNsense',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-pfSense',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86-TrueNAS',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-Android',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-AzureIOT',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Installing-FreeNAS',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Intel-OpenVINO',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-NCS2',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
-
             {
               type: 'category',
-              label: 'Projects',
+              label: 'Application',
               items: [
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/Projects/ODYSSEY-X86J4105-Frigate',
+                {
+                  type: 'category',
+                  label: 'Home Assistant for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Home-Assistant-Customize',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Azure IoT for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Azure_IoT_for_ODYSSEY/ODYSSEY-X86J4105-AzureIOT',
+
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Mender for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Client-ODYSSEY-X86',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Server-ODYSSEY-X86',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Computer Version',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Intel-OpenVINO',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-NCS2',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Frigate',
+                  ]
+                },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'OS Installation',
+              items: [
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-OS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Updating-Firmware',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/Jellyfin-on-Docker-Ubuntu-X86',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-openwrt',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-OPNsense',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-pfSense',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-TrueNAS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-Android',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-FreeNAS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/BalenaOS-X86-Getting-Started',
               ]
             },
           ]
@@ -1472,10 +1653,10 @@ const sidebars = {
 
         {
           type: 'category',
-          label: 'ODYSSEY_STM32MP157C',
+          label: 'ODYSSEY STM32MP157C',
           items: [
-            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/SEEED-SOM-STM32MP157C',
             'Edge/ODYSSEY/ODYSSEY_STM32MP157C/ODYSSEY-STM32MP157C',
+            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/SEEED-SOM-STM32MP157C',
           ],
         },
       ],
@@ -1487,7 +1668,7 @@ const sidebars = {
       type: 'category',
       label: 'Quantum Development Board',
       items: [
-        'Edge/Quantum_Development_Board/wiki',
+        'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
 
     },
@@ -1640,42 +1821,14 @@ const sidebars = {
       label: 'NVIDIA',
       items: [
         // 'Top_Brand/NVIDIA/NVIDIA_Getting_Started',
-        'Top_Brand/NVIDIA/reComputer_Jetson_Series_Introduction',
-        'Top_Brand/NVIDIA/reComputer_Jetson_Series_Hardware_Layout',
-        'Top_Brand/NVIDIA/reComputer_Jetson_Series_GPIO_Grove',
 
-        {
-          type: 'category',
-          label: 'Getting Start & Projects',
-          items: [
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Initiation',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Tutorials_Exercise',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/jetson-docker-getting-started',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Resource',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Jetson-AI-developer-tools',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Jetson-Nano-MaskCam',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Security_Scan',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/HardHat',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/DeciAI-Getting-Started',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/No-code-Edge-AI-Tool',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/Traffic-Management-DeepStream-SDK',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/YOLOv5-Object-Detection-Jetson',
-            'Top_Brand/NVIDIA/Getting_Start_Projects/reComputer_Jetson_Series_Projects',
-          ],
-        },
         {
           type: 'category',
           label: 'Flash NVIDIA JetPack™ OS',
           items: [
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1010_J101_Flash_Jetpack',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J2021_J202_Flash_Jetpack',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_J1020_A206_Flash_JetPack',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203_Flash_System',
+
             'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203E_Flash_System',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205_Flash_System',
             'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson-Mate',
             'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
           ],
 
@@ -1690,28 +1843,6 @@ const sidebars = {
           ],
 
         },
-
-        {
-
-          type: 'category',
-          label: 'Usefull_Tools',
-          items: [
-            'Top_Brand/NVIDIA/Usefull_Tools/reComputer_Jetson_Memory_Expansion',
-            'Top_Brand/NVIDIA/Usefull_Tools/J1010_Boot_From_SD_Card',
-          ],
-
-        },
-
-        {
-
-          type: 'category',
-          label: 'Drivers',
-          items: [
-            'Top_Brand/NVIDIA/Drivers/J101_Enable_SD_Card',
-          ],
-
-        },
-
       ],
 
     },

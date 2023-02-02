@@ -19,7 +19,6 @@ This wiki introduces how to add different accessories to ODYSSEY - X86J4105 to b
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/driver-installed-2.png" /></div>
 
-
 ## 1. Adding Additional Storage via PCIe to SATA III (HDD Hard Drives)
 
 On ODYSSEY-X86J4105, there is **1 M.2 SATA SSD, 1 M.2 PCIe SSD and 1 SATA III connectors with 3 SATA III power connectors.** For standard use, these connectors are enough. However, for more of a industrial usage would prefer using HDD instead of SSD. This demonstrates how to attach more than 1 HDD to ODYSSEY-X86J4105.
@@ -41,7 +40,6 @@ To attach more HDD to ODYSSEY-X86J4105, we need an extra component, a M.2 PCIe t
   <br />
 </div>
 
-
 - You can have maximum of 3 HDD hard drives connected to the ODYSSEY-X86J4105. Boot up the devices and check if the hard drives shown up in the operating system.
 
 ### Result
@@ -51,7 +49,6 @@ Once booted in the OS, you should be able to see the hard drives.
   <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/HDD-OS.png" /></div>
   <br />
 </div>
-
 
 Now you don't have to worry about the storage issue no more!
 
@@ -87,7 +84,6 @@ Some configurations in the BIOS are needed for enabling GPU:
   <br />
 </div>
 
-
 Save the BIOS settings and power off the device.
 
 ### Hardware Instructions
@@ -103,11 +99,11 @@ Save the BIOS settings and power off the device.
   <br />
 </div>
 
-
 - Connect the HDMI to the GPU instead of the ODYSSEY-X86J4105.
 
-!!!Note
-        Please be careful during the hardware connection. Make sure everything is connected correctly before turning on power or you may in danger of damaging components.
+:::note
+Please be careful during the hardware connection. Make sure everything is connected correctly before turning on power or you may in danger of damaging components.
+:::
 
 ### Installing GPU's Driver
 
@@ -124,7 +120,6 @@ lspci | grep -i vga
   <br />
 </div>
 
-
 Here we can see two GPUs, one is the on-board GPU and the other is the external GPU(GTX 750).
 
 2.First, we need to disable the **nouveau** services on Ubuntu. In Terminal, use `nano` or `vim` to open the `/etc/modprobe.d/blacklist.conf`.
@@ -138,29 +133,28 @@ sudo nano /etc/modprobe.d/blacklist.conf
   <br />
 </div>
 
-
 3.Add the following code at the end and save the changes.
 
 ```bash
 blacklist nouveau
 options nouveau modeset=0
 ```
+
 <div>
   <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/block-2.png" /></div>
   <br />
 </div>
-
 
 4.Run the following command to update:
 
 ```bash
 sudo update-initramfs -u
 ```
+
 <div>
   <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/block-3.png" /></div>
   <br />
 </div>
-
 
 5.Reboot the device to take on changes and can run the following command, if nothing appears then the service is disabled.
 
@@ -178,7 +172,6 @@ ubuntu-drivers devices
   <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/drivers.png" /></div>
   <br />
 </div>
-
 
 This will determine the GPU model and recommend the drivers for it. Here recommended the nvidia-driver-435 for the external GPU.
 
@@ -199,7 +192,6 @@ nvidia-smi
   <br />
 </div>
 
-
 Or simply go to the settings:
 
 <div>
@@ -207,10 +199,10 @@ Or simply go to the settings:
   <br />
 </div>
 
-
 Now enjoy the boosted up ODYSSEY-X86J4105 and all set to dive in the field of AI where it requires a lot of GPU power!
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
