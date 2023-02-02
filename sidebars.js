@@ -1985,13 +1985,13 @@ const sidebars = {
     'About',
     'License',
 
-    // {
+     {
 
-    //   type: 'category',
-    //   label: 'Seeed_Elderly',
-    //   items: [
+       type: 'category',
+       label: 'Seeed_Elderly',
+       items: [
 
-    //     {
+         {
 
     //       type: 'category',
     //       label: 'Accessories',
@@ -2008,41 +2008,98 @@ const sidebars = {
 
     //     },
 
-    //     {
-    //       type: 'category',
-    //       label: 'reSpeaker',
-    //       items: [
-    //         //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Solutions',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
-    //         {
-    //           type: 'category',
-    //           label: 'ReSpeaker 2-Mics Pi HAT',
-    //           items: [
-    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
-    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
-    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
-    //           ]
-    //         },
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Drive_Unit',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Mic_Array',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Mic_Array_v2.0',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+        
+           type: 'category',
+           label: 'reSpeaker',
+           items: [
+             //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
+             'Seeed_Elderly/reSpeaker/ReSpeaker',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
+             {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Seeed_Elderly/reSpeaker/Application/ReSpeaker_Solutions',
+                'Seeed_Elderly/reSpeaker/Application/Google_Assistant',
+                'Seeed_Elderly/reSpeaker/Application/Voice_Interaction',
+                'Seeed_Elderly/reSpeaker/Application/ReSpeaker_Core_V2_&_Wio_Link',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Extension Board',
+              items: [
+                'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Drive_Unit',
+                'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v2.0',
+                'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array',
+              ]
+            },
+             {
+               type: 'category',
+               label: 'ReSpeaker 2-Mics Pi HAT',
+               items: [
+                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
+                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
+                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
+               ]
+             },
+             'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
+             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
 
-    //       ],
+           ],
+           
 
-    //     },
-    //   ],
+         },
+         {
+          type: 'category',
+          label: 'Discrete Product',
+          items: [
+            'Seeed_Elderly/Discrete Product/ESP32_Breakout_Kit',
+            'Seeed_Elderly/Discrete Product/IoT_Fast_Prototyping_Kit S5D9',
+            'Seeed_Elderly/Discrete Product/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition',
+            'Seeed_Elderly/Discrete Product/Atmel_AVRISP_STK500_USB_ISP_Programmer',
+            'Seeed_Elderly/Discrete Product/AT_Command_Tester',
+            'Seeed_Elderly/Discrete Product/AT_Command_Tester_Application',
+            'Seeed_Elderly/Discrete Product/Tiny_BLE',
+            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform_2.0',
+            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform',
+            'Seeed_Elderly/Discrete Product/Mini_GSM_GPRS_GPS_Breakout_SIM808',
+            'Seeed_Elderly/Discrete Product/Nose_LED_Kit',
+            'Seeed_Elderly/Discrete Product/Serial_port_bluetooth_module_Master-Slave',
+            'Seeed_Elderly/Discrete Product/Sidekick_Advanced_Kit',
+            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver',
+            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver_v2.3',
+            'Seeed_Elderly/Discrete Product/UartSB_Frame',
+            'Seeed_Elderly/Discrete Product/4WD_Driver_Platform_V1.0',
+            'Seeed_Elderly/Discrete Product/4WD_Mecanum_Wheel_Robot_Kit_Series',
+            'Seeed_Elderly/Discrete Product/Hercules_Dual_15A_6-20V_Motor_Controller',
+            'Seeed_Elderly/Discrete Product/Basic_Fastener_Kit',
+            'Seeed_Elderly/Discrete Product/Sidekick_Basic_Kit_for_TI_LaunchPad',
+            'Seeed_Elderly/Discrete Product/Grove Maker Kit for Intel Joule',
+            'Seeed_Elderly/Discrete Product/Grove_Shield_for_Intel_Joule',
+            'Seeed_Elderly/Discrete Product/Grove_Base_BoosterPack',
+            'Seeed_Elderly/Discrete Product/Grove_Base_Shield_for_Photon',
+            'Seeed_Elderly/Discrete Product/Tricycle_Bot',
+            'Seeed_Elderly/Discrete Product/mbed_Shield',
+            'Seeed_Elderly/Discrete Product/BLE_Carbon',
+            'Seeed_Elderly/Discrete Product/BLE_Micro',
+            'Seeed_Elderly/Discrete Product/BLE_Nitrogen',
+            'Seeed_Elderly/Discrete Product/Fubarino_SD',
+            'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
+            'Seeed_Elderly/Discrete Product/Matrix_Clock',
+          ]
+        },
+       ],
 
-    // },
+     },
+ 
 
   ],
+  
 
   SenseCAPSidebar: [
     {
