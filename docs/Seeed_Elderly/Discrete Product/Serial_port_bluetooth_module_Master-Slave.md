@@ -56,8 +56,6 @@ and blue led blinks 1time/2s in interval. While disconnected only blue led blink
 
 ##   Cautions  
 
-<font color="red">
-</font>
 
 *   While using with Seeeduino / Arduino, set the operation voltage to 5V. Else use a proper logic level converter.
 *   While using with UartSBee, set the operation voltage to 5V
@@ -507,7 +505,7 @@ and blue led blinks 1time/2s in interval. While disconnected only blue led blink
 <td> Enable been inquired
 </td></tr></table>
 
-When **+INQ=1** command is successful, the <span style="color:red"> red </span> and <span style="color:green">green</span> LEDS blink alternatively.
+When **+INQ=1** command is successful, the  red and  green LEDS blink alternatively.
 
 **2. Bluetooth module returns inquiring result**
 
@@ -605,7 +603,7 @@ If you want to make some awesome projects by Serial port bluetooth module, here'
 This is an interesting demo make by Arduino and [Grove](https://seeeddoc.github.io/Grove_System/).
 This is a complete tutorial about how to control multiple servo motors from android app.
 
-[<font color="#FF0000">**I want to make it.**</font>](https://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html)
+[**I want to make it.**](https://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html)
 
 ###   Share Your Awesome Projects with Us
 
