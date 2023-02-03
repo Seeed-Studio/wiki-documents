@@ -1,6 +1,6 @@
 ---
-description: Mini AI Computer T906
-title: Mini AI Computer T906
+description: T906 Mini PC
+title: T906 Mini PC
 tags:
   - Nvidia
   - reComputer

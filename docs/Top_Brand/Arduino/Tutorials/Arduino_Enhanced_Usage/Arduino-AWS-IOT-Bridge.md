@@ -1,6 +1,6 @@
 ---
-description: How to Bridge Mosiquitto MQTT Broker to AWS IoT with Arduino Boards
-title: How to Bridge Mosiquitto MQTT Broker to AWS IoT with Arduino Boards
+description: Bridge Mosiquitto MQTT Broker to AWS IoT with Arduino Boards
+title: Bridge Mosiquitto MQTT Broker to AWS IoT with Arduino Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

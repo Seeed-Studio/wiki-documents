@@ -1,8 +1,6 @@
 ---
-description: A205E Carrier Board | A205E Mini PC
-title: A205E Carrier Board | A205E Mini PC
-  - Nvidia
-  - reComputer
+description: A205E Mini PC
+title: A205E Mini PC
 keywords:
   - Nvidia
   - reComputer

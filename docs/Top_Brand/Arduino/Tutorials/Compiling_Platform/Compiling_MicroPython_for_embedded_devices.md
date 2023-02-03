@@ -1,6 +1,6 @@
 ---
-description: Compiling MicroPython for embedded devices
-title: Compiling MicroPython for embedded devices
+description: MicroPython for Arduino-supported Boards
+title: MicroPython for Arduino-supported Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

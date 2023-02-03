@@ -1,6 +1,6 @@
 ---
-description: Arduino Software Serial User Guide
-title: Arduino Software Serial User Guide
+description: Serial User Guide for Arduino Boards
+title: Serial User Guide for Arduino Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

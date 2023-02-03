@@ -1,6 +1,6 @@
 ---
-description: PlatformIO
-title: PlatformIO
+description: PlatformIO for Arduino-supported Boards
+title: PlatformIO for Arduino-supported Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
