@@ -1,6 +1,6 @@
 ---
-description: A203 Mini PC
-title: A203 Mini PC
+description: A203E Mini PC
+title: A203E Mini PC
 tags:
   - Nvidia
   - reComputer
