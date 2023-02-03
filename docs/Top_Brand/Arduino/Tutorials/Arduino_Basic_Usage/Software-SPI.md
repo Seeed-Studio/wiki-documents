@@ -1,6 +1,6 @@
 ---
-description:  Arduino Software SPI User Guide
-title:  Arduino Software SPI User Guide
+description:  SPI User Guide for Arduino Boards
+title:  SPI User Guide for Arduino Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

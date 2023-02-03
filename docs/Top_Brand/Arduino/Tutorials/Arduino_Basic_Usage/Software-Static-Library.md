@@ -1,6 +1,6 @@
 ---
-description:  Arduino Tutorials - How to Use Static (Pre-compiled) Libraries in Arduino
-title:  Arduino Tutorials - How to Use Static (Pre-compiled) Libraries in Arduino
+description: Pre-compiled Arduino Libraries Usage
+title:  Pre-compiled Arduino Libraries Usage
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

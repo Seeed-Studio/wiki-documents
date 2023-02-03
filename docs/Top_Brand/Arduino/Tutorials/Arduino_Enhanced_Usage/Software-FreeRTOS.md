@@ -1,6 +1,6 @@
 ---
-description:  Arduino FreeRTOS Tutorial - How to use FreeRTOS to Multi-tasking in Arduino
-title:  Arduino FreeRTOS Tutorial - How to use FreeRTOS to Multi-tasking in Arduino
+description: FreeRTOS for Arduino Boards
+title:  FreeRTOS for Arduino Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
