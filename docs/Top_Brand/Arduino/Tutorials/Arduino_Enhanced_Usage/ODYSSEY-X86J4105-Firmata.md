@@ -1,6 +1,6 @@
 ---
-description: Firmata Tutorial - How to Use Firmata on Arduino Compatible Boards
-title: Firmata Tutorial - How to Use Firmata on Arduino Compatible Boards
+description: Firmata for Arduino Compatible Boards
+title: Firmata for Arduino Compatible Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

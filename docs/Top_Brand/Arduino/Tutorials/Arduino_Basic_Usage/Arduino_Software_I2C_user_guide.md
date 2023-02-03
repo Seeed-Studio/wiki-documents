@@ -1,6 +1,6 @@
 ---
-description: Arduino Software I2C user guide
-title: Arduino Software I2C user guide
+description: I2C User Guide for Arduino Boards
+title: I2C User Guide for Arduino Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
