@@ -1147,6 +1147,187 @@ const sidebars = {
       ],
 
     },
+
+    {
+
+      type: 'category',
+      label: 'Beyond Grove',
+      items: [
+        {
+
+          type: 'category',
+          label: 'Sensors',
+          items: [
+            'Sensor/Beyond_Grove/Sensors/Ultra_Sonic_range_measurement_module',
+            'Sensor/Beyond_Grove/Sensors/Water-Flow-Sensor',
+            'Sensor/Beyond_Grove/Sensors/Weight_Sensor_Load_Cell_0-500g',
+            'Sensor/Beyond_Grove/Sensors/G1_Water_Flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/G1_and_2_inch_Water_Flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/G1-8_Water_Flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/G3-4_Water_Flow_sensor',
+            'Sensor/Beyond_Grove/Sensors/M11_1.25_Water_flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/PIR_Motion_Sensor_Large_Lens_version',
+            'Sensor/Beyond_Grove/Sensors/Photo_Reflective_Sensor',
+            'Sensor/Beyond_Grove/Sensors/Photo_interrupter_OS25B10',
+            'Sensor/Beyond_Grove/Sensors/Piezo_Sensor-MiniSense_100',
+            'Sensor/Beyond_Grove/Sensors/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz',
+            'Sensor/Beyond_Grove/Sensors/Gear_Stepper_Motor_Driver_Pack',
+          ],
+          
+    
+        },
+
+        {
+
+          type: 'category',
+          label: 'Sensor Network',
+          items: [
+            'Sensor/Beyond_Grove/Sensor_Network/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder',
+            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_RF_link_kit',
+            // 'Sensor/Beyond_Grove/Sensor_Network/315MHz_Simple_RF_Link_Kit',
+            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_Wireless_car_key_fob_with_key_chain',
+            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_remote_relay_switch_kits-2_channels',
+            'Sensor/Beyond_Grove/Sensor_Network/433Mhz_RF_Link_Kit',
+            'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
+            'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
+            // 'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
+
+          ],
+          
+    
+        },
+        {
+
+          type: 'category',
+          label: 'Accessories',
+          items: [
+            {
+
+              type: 'category',
+              label: 'Charge',
+              items: [
+                'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
+                'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
+                'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
+                'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
+                'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
+                // 'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
+                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
+                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
+                // 'Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70',
+                'Sensor/Beyond_Grove/Accessories/Charge/1.5W_Solar_Panel_81x137',
+                // 'Sensor/Beyond_Grove/Accessories/Charge/1w_Solar_Panel_80x100',
+                'Sensor/Beyond_Grove/Accessories/Charge/2.5W_Solar_Panel_116x160',
+                'Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160',
+                'Sensor/Beyond_Grove/Accessories/Charge/3.6V_Micro_hydro_generator',
+                'Sensor/Beyond_Grove/Accessories/Charge/Bicycle_Dynamo_With_Bracket-6V_3W',
+                'Sensor/Beyond_Grove/Accessories/Charge/Battery_kit_3.7V_520_mAh',
+                'Sensor/Beyond_Grove/Accessories/Charge/Logic_DC_Jack',
+                'Sensor/Beyond_Grove/Accessories/Charge/Qi_Wireless_Charger_Transmitter',
+
+
+    
+              ],
+              
+        
+            },
+            {
+
+              type: 'category',
+              label: 'Input/Output',
+              items: [
+                'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
+                'Sensor/Beyond_Grove/Accessories/Input _Output/125Khz_RFID_module-UART',
+                'Sensor/Beyond_Grove/Accessories/Input _Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
+                'Sensor/Beyond_Grove/Accessories/Input _Output/AVR_USB_Programmer',
+                'Sensor/Beyond_Grove/Accessories/Input _Output/Scream_out_loud-110dBA_fixed_tone_Siren',
+                'Sensor/Beyond_Grove/Accessories/Input _Output/2.8inch-TFT_Touch_Shield_V1.0',
+                'Sensor/Beyond_Grove/Accessories/Input _Output/Bus_Pirate_v3_assembled',
+              ],
+              
+        
+            },
+            {
+
+              type: 'category',
+              label: 'Current',
+              items: [
+                'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
+                'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
+                'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
+
+
+              ],
+              
+        
+            },
+            {
+
+              type: 'category',
+              label: 'Case',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Current/Bracket_for_Infrared_Proximity_Sensor',
+                'Sensor/Beyond_Grove/Accessories/Current/Shield-MaTrix-V0.9b',
+
+
+              ],
+              
+        
+            },
+            {
+
+              type: 'category',
+              label: 'LED',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Current/FSM-55',
+              ],
+              
+            },
+            {
+
+              type: 'category',
+              label: 'Tools',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Current/FSM-55',
+                'Sensor/Beyond_Grove/Accessories/Current/Bluetooth_Multimeter',
+                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano',
+                // 'Sensor/Beyond_Grove/Accessories/Current/Dfu-util',
+                'Sensor/Beyond_Grove/Accessories/Current/Replacement_LCD_Screen_for_DSO_nano',
+                // 'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Development',
+                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-OpenOCD_gdb',
+                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Qemu_gdb',
+                // 'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-gcc',
+                // 'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad',
+                // 'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad_Manual_by_the_community',
+                'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware',
+                // 'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Calibration',
+                'Sensor/Beyond_Grove/Accessories/Current/Mini_Soldering_Iron',
+                'Sensor/Beyond_Grove/Accessories/Current/RF_Explorer_Software',
+                // 'Sensor/Beyond_Grove/Accessories/Current/5V-3.3V_Breadboard_Power_Supply',
+                // 'Sensor/Beyond_Grove/Accessories/Current/5V-3.3V_Breadboard_Power_Supply_v1.1',
+              ],
+              
+            },
+            {
+
+              type: 'category',
+              label: 'Display',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Current/LCD_16-2_Characters-Green_Yellow_back_light',
+                'Sensor/Beyond_Grove/Accessories/Current/LCD_8-2_Characters-Blue_back_light',
+                'Sensor/Beyond_Grove/Accessories/Current/M11_1.25_Water_flow_Sensor',
+              ],
+              
+            },
+
+          ],
+          
+    
+        },
+      ],
+
+    },
+
     {
 
       type: 'category',
