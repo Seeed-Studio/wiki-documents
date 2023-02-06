@@ -1877,10 +1877,16 @@ const sidebars = {
         'Top_Brand/Raspberry_Pi/Raspberry_Pi',
         {
           type: 'category',
-          label: 'Device',
+          label: 'Official Raspberry Pi Module',
           items: [
-            'Top_Brand/Raspberry_Pi/Device/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
-            'Top_Brand/Raspberry_Pi/Device/Raspberry-OpenWrt-Getting-Started',
+        'feature',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Official Raspberry Pi Board',
+          items: [
+        'feature',
           ]
         },
         {
@@ -1916,7 +1922,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Kit',
+          label: 'Kit with Courses',
           items: [
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
           ]
