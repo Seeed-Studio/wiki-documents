@@ -1148,6 +1148,7 @@ const sidebars = {
 
     },
 
+
     {
 
       type: 'category',
@@ -1328,45 +1329,6 @@ const sidebars = {
 
     },
 
-    {
-
-      type: 'category',
-      label: 'Software',
-      items: [
-
-        {
-
-          type: 'category',
-          label: 'Mender',
-          items: [
-
-            'Software/Mender/Mender-Client-reTerminal',
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Allxon',
-          items: [
-            'Software/Allxon/Allxon-Jetson-Getting-Started',
-            'Software/Allxon/Update-Jetson-Linux-OTA-Using-Allxon',
-          ],
-
-        },
-
-        {
-
-          type: 'category',
-          label: 'alwaysAI',
-          items: [
-            'Software/alwaysAI/alwaysAI-Jetson-Getting-Started',
-          ],
-
-        },
-      ],
-
-    },
 
     {
 
@@ -1694,7 +1656,7 @@ const sidebars = {
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
                 'Edge/reTerminal/Application/Home_Assistant/Home-Assistant-Customize',
 
-              ]
+              ],
             },
             {
               type: 'category',
@@ -2053,8 +2015,36 @@ const sidebars = {
                 // 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Barometer-Selection-Guide',
                 // 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Seeed_Relay_Page',
                 // 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/How-to-Choose-A-Gas-Sensor',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Software-Serial',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Arduino_Software_I2C_user_guide',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Software-SPI',
+                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Software-Static-Library',
               ]
             },
+
+            {
+              type: 'category',
+              label: 'Arduino Enhanced Usage',
+              items: [
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/ODYSSEY-X86J4105-Firmata',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-FreeRTOS',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-SWD',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-AWS-IOT-Bridge',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-DAPLink',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Flashing-Arduino-Bootloader-DAPLink',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Compiling Platform',
+              items: [
+                'Top_Brand/Arduino/Tutorials/Compiling_Platform/Compiling_MicroPython_for_embedded_devices',
+                'Top_Brand/Arduino/Tutorials/Compiling_Platform/Software-PlatformIO',
+              ],
+            },
+
+
           ]
         },
       ],
@@ -2069,10 +2059,16 @@ const sidebars = {
         'Top_Brand/Raspberry_Pi/Raspberry_Pi',
         {
           type: 'category',
-          label: 'Device',
+          label: 'Official Raspberry Pi Module',
           items: [
-            'Top_Brand/Raspberry_Pi/Device/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
-            'Top_Brand/Raspberry_Pi/Device/Raspberry-OpenWrt-Getting-Started',
+        'feature',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Official Raspberry Pi Board',
+          items: [
+        'feature',
           ]
         },
         {
@@ -2108,7 +2104,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Kit',
+          label: 'Kit with Courses',
           items: [
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
           ]
@@ -2129,12 +2125,12 @@ const sidebars = {
 
         {
           type: 'category',
-          label: 'Flash NVIDIA JetPack™ OS',
+          label: 'Mini PC',
           items: [
 
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A203E_Flash_System',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/reComputer_A205E_Flash_System',
-            'Top_Brand/NVIDIA/Flash_NVIDIA_JetPack_OS/Jetson_Xavier_AGX_H01_Driver_Installation',
+            'Top_Brand/NVIDIA/Mini_PC/reComputer_A203E_Flash_System',
+            'Top_Brand/NVIDIA/Mini_PC/reComputer_A205E_Flash_System',
+            'Top_Brand/NVIDIA/Mini_PC/Mini_AI_Computer_T906',
           ],
 
         },
@@ -2142,12 +2138,26 @@ const sidebars = {
         {
 
           type: 'category',
-          label: 'NVIDIA Orin series',
+          label: 'NVIDIA Jetson Alternative',
           items: [
-            'Top_Brand/NVIDIA/NVIDIA_Orin_series/Mini_AI_Computer_T906',
+            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
           ],
-
+  
         },
+
+        {
+
+          type: 'category',
+          label: 'Software',
+          items: [
+            'Top_Brand/NVIDIA/Software/Allxon-Jetson-Getting-Started',
+            'Top_Brand/NVIDIA/Software/Update-Jetson-Linux-OTA-Using-Allxon',
+            'Top_Brand/NVIDIA/Software/alwaysAI-Jetson-Getting-Started',
+          ],
+  
+        },
+
+
       ],
 
     },
