@@ -25,481 +25,665 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 - Kit with free courses and more intriguing tutorials
 - Fusion service
 
-### Sensors
+### Sensors -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Grove Ecosystem</h2></th>
-        <th width = {"20%"}><strong>Temp & Humi</strong></th>
-        <th width = {"20%"}><strong>Temperature</strong></th>
-        <th width = {"20%"}><strong>All in one</strong></th>
-        <th width = {"20%"}><strong>Vision AI</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th><strong>Soli Humidity</strong></th>
-        <th><strong>Proximity</strong></th>
-        <th><strong>Air Quality</strong></th>
-        <th><strong>Gas</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-        <tr>
-        <th><strong>Barometer</strong></th>
-        <th><strong>Accelerometer</strong></th>
-        <th><strong>Light</strong></th>
-        <th><strong>Biometric</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th><strong>Sound</strong></th>
-        <th><strong>Touch</strong></th>
-        <th><strong>Liquid</strong></th>
-        <th><strong>Motion</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<!-- Grove Sensor -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Grove Sensor Network</h2></th>
-        <th width = {"20%"}><strong>LoRa®</strong></th>
-        <th width = {"20%"}><strong>Bluetooth</strong></th>
-        <th width = {"20%"}><strong>Wi-Fi</strong></th>
-        <th width = {"20%"}><strong>NFC</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th><strong>GPS</strong></th>
-        <th><strong>BEE</strong></th>
-        <th><strong>RF</strong></th>
-        <th><strong>Standard Protocol</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8"><h2>Sensing Nodes</h2></th>
-        <th width = {"80%"}>mmWave radar sensor</th>
-    </tr>
-    <tr>
-        <th align={"left"} width = {"80%"}>mmWave Human Static Presence Module Lite <br/>
-mmWave Fall Detection Sensor <br/>
-mmWave Human Static Presence Sensor <br/>
-mmWave Sleep Breathing Monitoring Module <br/>
-mmWave Breathing and Heartbeat Module <br/>
-mmWave Fall Detection Module Pro <br/>
-Microwave Sensor - 24GHz Doppler Radar Motion Sensor</th>
-    </tr>
-</tbody></table>
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Sensors</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
 
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Seeed Elderly</h2></th>
-        <th width = {"20%"}><strong>Temp & Humi</strong></th>
-        <th width = {"20%"}><strong>Temperature</strong></th>
-        <th width = {"20%"}><strong>All in one</strong></th>
-        <th width = {"20%"}><strong>Vision AI</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
 
-### Microcontrollers
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Open Source Controllers</h2></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO SAMD21</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO  RP2040</strong></th>
-        <th width = {"20%"}><strong>Seeed Studio XIAO nRF52840 (Sense)</strong></th>
-        <th width = {"20%"}><strong>Seeed Studio XIAO ESP32C3</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>Seeeduino Series </strong></th>
-        <th width = {"20%"}><strong>Micro:bit</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-  <table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Proprietary Controllers</h2></th>
-        <th width = {"20%"}><strong>Azure Sphere</strong></th>
-        <th width = {"20%"}><strong>AWS IoT</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temp & Humi</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temperature</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>All in one</font></div>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Vision AI</font></div>
+    </a>
+</div>
 
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Seeed Elderly</h2></th>
-        <th width = {"20%"}><strong>Wio Link(Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Seeeduino v4.0(series)</strong></th>
-        <th width = {"20%"}><strong>Mesh Bee(series)</strong></th>
-        <th width = {"20%"}><strong>Bluetooth V4.0 HM-11 BLE Module</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th>Wio Series</th>
-        <th>Seeeduino Series</th>
-        <th>Micro:bit</th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-### Application
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th width = {"20%"} rowspan="8"><h2>Easy IoT</h2></th>
-        <th width = {"100%"}>SenseCAP K1100 Prototype</th>
-    </tr>
-    <tr>
-        <th align={"left"} width = {"100%"}>LoRa Communication Utilization: <br/>
-mmWave Fall Detection Sensor <br/>
-mmWave Human Static Presence Sensor <br/>
-Wi-Fi Communication Utilization: <br/>
-mmWave Breathing and Heartbeat Module <br/>
-mmWave Fall Detection Module Pro <br/>
-Microwave Sensor - 24GHz Doppler Radar Motion Sensor</th>
-    </tr>
-    <tr>
-        <th width = {"100%"}>Wio Terminal(Wio Series)</th>
-    </tr>
-    <tr>
-        <th align={"left"} width = {"100%"}>1 <br/>
-mmWave Fall Detection Sensor <br/>
-mmWave Human Static Presence Sensor <br/>
-2 <br/>
-mmWave Breathing and Heartbeat Module <br/>
-mmWave Fall Detection Module Pro <br/>
-Microwave Sensor - 24GHz Doppler Radar Motion Sensor</th>
-    </tr>
-</tbody></table>
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th width = {"20%"} rowspan="8"><h2>Embedded ML (TinyML)</h2></th>
-        <th width = {"100%"}>SeeedStudio XIAO Series</th>
-    </tr>
-    <tr>
-        <th align={"left"} width = {"100%"}>LoRa Communication Utilization: <br/>
-mmWave Fall Detection Sensor <br/>
-mmWave Human Static Presence Sensor <br/>
-Wi-Fi Communication Utilization: <br/>
-mmWave Breathing and Heartbeat Module <br/>
-mmWave Fall Detection Module Pro <br/>
-Microwave Sensor - 24GHz Doppler Radar Motion Sensor</th>
-    </tr>
-    <tr>
-        <th width = {"100%"}>Wio Terminal(Wio Series)</th>
-    </tr>
-    <tr>
-        <th align={"left"} width = {"100%"}>1 <br/>
-mmWave Fall Detection Sensor <br/>
-mmWave Human Static Presence Sensor <br/>
-2 <br/>
-mmWave Breathing and Heartbeat Module <br/>
-mmWave Fall Detection Module Pro <br/>
-Microwave Sensor - 24GHz Doppler Radar Motion Sensor</th>
-    </tr>
-</tbody></table>
-
-### Extension Board
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Arduino/Seeedstudio Shield</h2></th>
-        <th width = {"20%"}><strong>Wio Link(Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Seeeduino v4.0(series)</strong></th>
-        <th width = {"20%"}><strong>Mesh Bee(series)</strong></th>
-        <th width = {"20%"}><strong>Bluetooth V4.0 HM-11 BLE Module</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Extension Boards</h2></th>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO Series</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Seeed Elderly</h2></th>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO Series</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-### Accessories
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Grove Accessories</h2></th>
-        <th width = {"20%"}><strong>Display</strong></th>
-        <th width = {"20%"}><strong>Time</strong></th>
-        <th width = {"20%"}><strong>Current</strong></th>
-        <th width = {"20%"}><strong>Actuator</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}><strong>Switch & Button</strong></th>
-        <th width = {"20%"}><strong>Input / Output</strong></th>
-        <th width = {"20%"}><strong>Case</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2">1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Soli Humidity</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Proximity</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Air Quality</font></div>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gas</font></div>
+    </a>
+</div>
 
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Accessories</h2></th>
-        <th width = {"20%"}><strong>Display</strong></th>
-        <th width = {"20%"}><strong>LED</strong></th>
-        <th width = {"20%"}><strong>Current</strong></th>
-        <th width = {"20%"}><strong>Charge</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}><strong>Input / Output</strong></th>
-        <th width = {"20%"}><strong>Tools</strong></th>
-        <th width = {"20%"}><strong>Case</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2">1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-### Tutorials
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Kit with Courses</h2></th>
-        <th colspan = "2" width = {"40%"}><strong>Arduino</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>Wio Terminal</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"40%"}><strong>Seeed Studio XIAO</strong></th>
-        <th width = {"20%"}><strong>Micro:bit</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"40%"}>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Barometer</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Accelerometer</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Light</font></div>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Biometric</font></div>
+    </a>
+</div>
 
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Seeed Elderly</h2></th>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO Series</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sound</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Touch</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Liquid</font></div>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Motion</font></div>
+    </a>
+</div>
 
-### Fusion
+<!-- Grove Sensor Network -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Arduino</h2></th>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO Series</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
-
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Wio Terminal</h2></th>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO Series</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"6"}>Grove Sensor Network</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
 
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Wio RP2040</h2></th>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO Series</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>LoRa®</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Bluetooth</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Wi-Fi</font></div>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>NFC</font></div>
+    </a>
+</div>
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>Fun Fact</h2></th>
-        <th width = {"20%"}><strong>Wio Terminal (Wio Series)</strong></th>
-        <th width = {"20%"}><strong>Wio Series</strong></th>
-        <th width = {"20%"}><strong>SeeedStudio XIAO Series</strong></th>
-        <th width = {"20%"}><strong>Pi Pico</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>GPS</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>RF</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Standard Protocol !!</font></div>
+    </a>
+    <a class="intro_item">
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Standard Protocol !!</font></div>
+    </a>
+</div>
+
+<!-- Sensing Nodes -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"6"}>Sensing Nodes</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>mmWave radar sensor</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+    </a>
+</div>
+
+
+<!-- Beyond Grove / Seeed Elderly -->
+
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Beyond Grove / Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Sensors</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Sensors Network</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+
+### Microcontrollers -->
+
+<!-- Open Source Controllers -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Open Source Controllers</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO RP2040</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO nRF52840</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal(Wio Series)</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeeduino Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Arch</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<!-- Proprietary Controllers -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"6"}>Proprietary Controllers</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Azure Sphere</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>AWS IoT</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Micro:bit</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>rePhone</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Xadow</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>BEE Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>NPi-i</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Air Serial</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>W600</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Artik</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Linklt</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Rainbowduino</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Skeleton Bot</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Others</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+
+<!-- Application -->
+
+### Application -->
+
+### Easy IoT Application 🌲
+
+<!-- Easy IoT Application -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Easy IoT Application</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP K1100</font></div>
+            <span><font color={'FFFFFF'} size={"2"}> LoRaWAN-Network Application </font></span> ｜
+            <span><font color={'FFFFFF'} size={"2"}> Wi-Fi-Network Application	</font></span>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a> |
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio RP2040</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<!-- Embedded ML Scenarios -->
+
+### Embeddel ML Scenarios 💻
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Embedded ML Scenarios</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal</font></div>
+            <span><font color={'FFFFFF'} size={"2"}> Projects based Edge Impulse </font></span> ｜
+            <span><font color={'FFFFFF'} size={"2"}> Projects based TensorFlow Lite	</font></span>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a> |
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO RP2040</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO nRF52840</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<!-- Extensions -->
+
+### Extensions -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Shield for Arduino / Seeeduino</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>production production production production</font></div>
+    </a>
+</div>
+
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Wio Terminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Seeed Studio XIAO</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Pi Pico</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Wio Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+
+### Accessories -->
+
+<!-- Grove Accessories -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"6"}>Grove Accessories</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalablabalablabalablabalablabalablabalabla</font></div>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Display</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Actuator</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Time</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Current</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Switch & Button</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Input / Output</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Case</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<!-- Beyond Grove / Seeed Elderly -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Beyond Grove / Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>balablabalabalablabalabalablabalabalablabalabalablabalabalablabalabalablabala</font></div>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Display</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Charge</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>GPS</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Current</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>LED</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Input / Output</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Case</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Tools</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<!-- Kit with Courses -->
+
+### Kit with Courses -->
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Arduino</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Wio Terminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Seeed Studio XIAO</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Micro:bit</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
+
+### Tutorials -->
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Arduino Boards</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Wio Terminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <br/>
+    </a>
+</div>
