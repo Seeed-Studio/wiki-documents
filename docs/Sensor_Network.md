@@ -41,18 +41,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temp & Humi</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temperature</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item">
@@ -67,12 +67,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Soli Humidity</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Proximity</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item">
@@ -87,12 +87,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Barometer</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Accelerometer</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item">
@@ -107,12 +107,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sound</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Touch</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item">
@@ -136,18 +136,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>LoRa®</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Bluetooth</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item">
@@ -161,12 +161,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>GPS</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>RF</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item">
@@ -190,14 +190,14 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>mmWave radar sensor</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
     </a>
 </div>
 
@@ -216,18 +216,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Sensors</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Sensors Network</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -248,18 +248,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  SHT35</font></span></a>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO RP2040</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -267,12 +267,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO nRF52840</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -280,12 +280,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal(Wio Series)</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Series</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -293,12 +293,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeeduino Series</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Arch</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -316,17 +316,17 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Azure Sphere</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>AWS IoT</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Micro:bit</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -343,22 +343,22 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>rePhone</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Xadow</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>BEE Series</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>NPi-i</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -366,22 +366,22 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Air Serial</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>W600</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Artik</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Linklt</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -389,17 +389,17 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Rainbowduino</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Skeleton Bot</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Others</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -427,20 +427,20 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <span><font color={'FFFFFF'} size={"2"}> LoRaWAN-Network Application </font></span> ｜
             <span><font color={'FFFFFF'} size={"2"}> Wi-Fi-Network Application	</font></span>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a> |
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a> |
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
     </a>
 </div>
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio RP2040</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -463,20 +463,20 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <span><font color={'FFFFFF'} size={"2"}> Projects based Edge Impulse </font></span> ｜
             <span><font color={'FFFFFF'} size={"2"}> Projects based TensorFlow Lite	</font></span>
             <br/>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a> |
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a> |
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
     </a>
 </div>
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO RP2040</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -484,12 +484,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO nRF52840</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -510,12 +510,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Wio Terminal</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Seeed Studio XIAO</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -523,12 +523,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Pi Pico</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Extensions for Wio Series</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -548,22 +548,22 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Display</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Actuator</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Time</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Current</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -571,17 +571,17 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Switch & Button</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Input / Output</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Case</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -599,22 +599,22 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Display</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Charge</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>GPS</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Current</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -623,22 +623,22 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>LED</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Input / Output</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Case</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Tools</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -650,12 +650,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Arduino</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Wio Terminal</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -663,12 +663,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Seeed Studio XIAO</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Micro:bit</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
@@ -678,12 +678,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Arduino Boards</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Wio Terminal</font></div>
-            <a href="/Getting_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
             <br/>
     </a>
 </div>
