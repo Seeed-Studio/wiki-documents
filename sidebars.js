@@ -2299,7 +2299,7 @@ const sidebars = {
               type: 'category',
               label: 'Program with rePhone',
               items: [
-                //'Seeed_Elderly/rePhone/Program with rePhone/Arduino_IDE_for_RePhone_Kit',
+                'Seeed_Elderly/rePhone/Program with rePhone/Arduino_IDE_for_RePhone_Kit',
                 //'Seeed_Elderly/rePhone/Program with rePhone/Eclipse_IDE_for_RePhone_Kit',
                 //'Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone',
                 //'Seeed_Elderly/rePhone/Program with rePhone/Lua_for_RePhone',
