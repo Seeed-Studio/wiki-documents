@@ -2314,10 +2314,10 @@ const sidebars = {
           label: 'LinkIt',
           items: [
             'Seeed_Elderly/LinkIt/LinkIt',
-            //'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
+            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
             'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
             'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
-            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
+            //'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
             'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
             'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
             //'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
