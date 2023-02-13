@@ -2294,6 +2294,28 @@ const sidebars = {
         },
 
 
+    // {
+
+    //   type: 'category',
+    //   label: 'SenseCAP Cloud',
+    //   items: [
+    //     'Cloud_Chain/SenseCAP_M4/wiki',
+    //   ],
+
+    // },
+        {
+          type: 'html',
+          value: `
+          <div class="download_container">
+          <a class="download_item" href="https://files.seeedstudio.com/wiki/One-Click-Download-PDF/c1ev0ps.github.io-docusaurus_wiki-Network-SenseCAP-Industrial-IoT-SenseCAP-Introduction.pdf" target="_blank">
+              <div class="download_wrapper">
+                  <div class="download_title" style={{textAlign:'center'}}><font color={'8DC213'} size={"6"}> Download PDF 📖</font></div>
+              </div>
+          </a>
+          </div>
+        `,
+        },
+
       ],
 
     },
