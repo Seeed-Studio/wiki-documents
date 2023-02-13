@@ -17,13 +17,11 @@ last_update:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/004(1).jpg" /></div>
 
-
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html?queryID=a88444c7c4ccfa5dddd4d2a84db3dd5e&objectID=5370&indexName=bazaar_retailer_products" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html?queryID=a88444c7c4ccfa5dddd4d2a84db3dd5e&objectID=5370&indexName=bazaar_retailer_products)
 We are proud to bring you **SenseCraft**, which allows our users to experience a better way to send data to the cloud in the shortest possible time and with very little hands-on cost.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/step.png" /></div>
-
 
 This is only possible with the help of our completely in-house designed **SenseCAP** platform. SenseCAP provides an easy-to-use cloud platform. Users can scan the QR code with the **SenseCAP Mate App** to bind the device with its respective account to manage the devices, in the LoRaWAN® network coverage environment and check Sensor Node data on the SenseCAP Portal. SenseCAP Portal provides API for users to further develop based on the data on the Portal.
 
@@ -31,10 +29,8 @@ If you don't have LoRaWAN® coverage around you for the time being, don't worry,
 
 We can't wait to share our current project progress with you, and we welcome all users to experience our project!
 
-
-
-
 ## Upgradable to Industrial Sensors
+
 With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) and [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), you can easily turn the Grove into a LoRaWAN® sensor. Seeed not only helps you with prototyping but also offers you the possibility to expand your project with the SenseCAP series of robust [industrial sensors](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
@@ -76,7 +72,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
     </tr>
   </tbody></table>
 
-
 ## Overview
 
 With IoT functionality as one of the features of the SenseCAP K1100 kit, it is necessary to take a look at the logic of its implementation before we start.
@@ -85,11 +80,9 @@ To summarise, we offer two paths for our users to experience IoT, one is LoRa® 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/lora.png" /></div>
 
-
 If you want to use LoRa®, then you will need to prepare a suitable LoRa® gateway in advance and connect the data to the SenseCAP platform by using a Grove Wio E5 module, connected to a LoRaWAN®.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/wifi.png" /></div>
-
 
 If you want to use WiFi, then you need to have stable WiFi network coverage in your environment. Simply enter your WiFi and password in the profile, along with information such as the key provided by the IoT platform, to achieve an exceptional IoT experience.
 
@@ -103,8 +96,7 @@ You can download and update the latest version in our **SenseCraft distribution*
   <p style={{}}><a href="https://github.com/Seeed-Studio/SenseCraft/releases" target="_blank" /></p><div align="center"><a href="https://github.com/Seeed-Studio/SenseCraft/releases" target="_blank"><img width={300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
-
-Of course, you can also download the latest .uf2 file directly by clicking here. 
+Of course, you can also download the latest .uf2 file directly by clicking here.
 
 <table align="center">
   <tbody><tr>
@@ -113,16 +105,14 @@ Of course, you can also download the latest .uf2 file directly by clicking here.
     </tr>
   </tbody></table>
 
-
 After downloading SenseCraft to your local disk, please follow the instructions below to flash it into Wio Terminal.
 
 Connect the Wio Terminal to PC and turn in ON, Enter **Bootloader Mode** by sliding down the power switch further away from "ON" position, release, slide again and release.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Bootloader.png" /></div>
 
-
 :::note
-	Once Wio Terminal is in the Bootloader mode, the blue LED will start to breathe in a way that is different from blinking.
+Once Wio Terminal is in the Bootloader mode, the blue LED will start to breathe in a way that is different from blinking.
 :::
 
 Open File Explorer on your PC and you will see a new external drive, named **Arduino**, drag the previously downloaded **.uf2** file into this **Arduino** drive.
@@ -131,21 +121,17 @@ Once the SenseCraft flash is complete, the external memory named Arduino will au
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/38.png" /></div>
 
-
-
 ## Navigate the UI using buttons
 
 Before you get into learning the operating interface, you need to get used to the Button logic we have designed for Wio Terminal. In this way, you will be able to select and operate pages very smoothly according to the fixed Button logic.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/button.png" /></div>
 
-
 First are the three buttons located above the Wio Terminal. They correspond to the display screens of the three main functions. They are **Sense**, **Process** and **Uplink** respectively.
 
 No matter where you are, when you press the three buttons at the top, you will be able to go back to these three screens.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100/101.png" /></div>
-
 
 Then there is the five-way directional button located at the bottom right of Wio Terminal, which allows you to perform the following operations:
 
@@ -154,7 +140,6 @@ Then there is the five-way directional button located at the bottom right of Wio
 - **Up:** Go back to the previous page
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/40.png" /></div>
-
 
 When a green box appears on the page, it indicates that the content is in the selected state.
 
@@ -166,7 +151,6 @@ As mentioned above, we have prepared three pages for SenseCraft, representing th
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/39.png" /></div>
 
-
 The main function of the **Sense** page is the sensor data display. You can observe the working status and sensor values of the built-in sensors in Wio Terminal from the Sense page.
 
 Of course, if you try to connect the Grove sensors in the kit to the Grove connector on the **right** side of the Wio Terminal, you will find that the Wio Terminal will automatically detect the type of sensors and read their values.
@@ -175,21 +159,17 @@ Of course, if you try to connect the Grove sensors in the kit to the Grove conne
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/41.png" /></div>
 
-
 The main function of the **Process** page is to show the process of data processing. We have currently developed log output for this page for the recognition and model processing of the Grove Vision AI module.
 
 In the future, we will give Wio Terminal more powerful data filtering and processing capabilities for this page.
-
 
 ### Uplink
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/42.png" /></div>
 
-
 The main function of the **Uplink** page is to upload data to the cloud. Users can configure which IoT method you want to use, LoRa® or WiFi, on this page.
 
 Here, you can freely configure your exclusive IoT features, freely switch between different networks and platforms, and create its value for this set of devices.
-
 
 ## Display of data from built-in sensors
 
@@ -203,10 +183,9 @@ At this moment you do not need to do anything, the value of the built-in sensor 
 
 ## Send sensor data to SenseCAP via LoRa®
 
-**Step 1.** Press the rightmost top button to enter the **Network** tab. 
+**Step 1.** Press the rightmost top button to enter the **Network** tab.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/42.png" /></div>
-
 
 You will notice that LoRa® is already highlighted.
 
@@ -214,16 +193,13 @@ You will notice that LoRa® is already highlighted.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/44.png" /></div>
 
-
 **Step 3.** Scroll through the LoRaWAN® frequency bands displayed on the screen and select the frequency band according to your region.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/45.png" /></div>
 
-
 Now it will prompt you to bind the Wio-E5 with the SenseCAP platform.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/46.png" /></div>
-
 
 We offer two ways to bind your device in the SenseCAP platform.
 
@@ -236,20 +212,17 @@ If you want to use your cell phone to scan and bind your device, or view some of
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/K1100/2.jpg" /></div>
 
-
 Open the SenseCAP Mate APP after downloading the corresponding version of the APP according to all the mobile systems you use. if it is your first time to use the SenseCAP platform, please register an account first.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/K1100/7.jpg" /></div>
-
 
 :::note
     Please select the **Global** version when registering.
 :::
 
-In the page of registration information filling, the fields with * are required fields, and those without * can be filled in optionally. Click the Register button after everything is completed.
+In the page of registration information filling, the fields with *are required fields, and those without* can be filled in optionally. Click the Register button after everything is completed.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/K1100/8.jpg" /></div>
-
 
 Then please use the account you just registered to log into the APP.
 
@@ -261,20 +234,17 @@ Click the **+** in the upper right corner and select **Add device** to bind the 
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/K1100-quick-start/10.jpg" /></div>
 
-
 Align the box in the center of the camera with the QR code **on the back of** the Grove - Wio-E5 to scan the code to bind your kit. **Please note that the QR code on the front of the Wio E5 should not be scanned**.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/K1100-quick-start/49.png" /></div>
-
 
 After successful binding using the SenseCAP Mate App, you will see the sensor data displayed on the app.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/K1100/104.jpg" /></div>
 
-
 :::tip
-	The SenseCAP Mate App will not automatically refresh the data information, you will need to manually scroll down on the sensor page to refresh the data.
-	If you do not see new data for more than 10 minutes, you can try restarting the Wio Terminal by toggling down the side button once.
+ The SenseCAP Mate App will not automatically refresh the data information, you will need to manually scroll down on the sensor page to refresh the data.
+ If you do not see new data for more than 10 minutes, you can try restarting the Wio Terminal by toggling down the side button once.
 :::
 
 - **Option 2. Bind the device on the SenseCAP web platform**
@@ -283,16 +253,13 @@ Please use your browser to open the [SenseCAP Console](https://sensecap.seeed.cc
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100/3.png" /></div>
 
-
 Then log in to the SenseCAP console using the account you just registered.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100/4.png" /></div>
 
-
 Select the **Dashboard** screen and click **Bind Device**.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/K1100/5.png" /></div>
-
 
 Then on the next page you will need to fill in the **EUI**, **Code/KEY** and **Device Name**, and you can even set the location for the device. (Grove - Wio-E5 does not have a location function)
 
@@ -300,33 +267,27 @@ Some of the required information can be found on the sticker on the back of the 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100/6.png" /></div>
 
-
 After filling out the above content, click the **Confirm** button below to complete the device binding.
 
 After successful binding using the web platform you will see the sensor data displayed on the platform.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100/105.png" /></div>
 
-
 :::tip
-	SenseCAP on the web also does not have automatic data refresh and you will need to refresh your browser to see the latest data.
+ SenseCAP on the web also does not have automatic data refresh and you will need to refresh your browser to see the latest data.
 :::
 
 Once you have selected the band, you will need to wait a little while for the Grove Wio E5 to finish initialising.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/47.png" /></div>
 
-
-
 If the LoRaWAN® connection to SenseCAP platform is successful, you will see the following.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/48.png" /></div>
 
-
 If you are not connected to the Grove Wio E5 or if the LoRaWAN® is disconnected in the middle of the process, it will show a transmission failure.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/50.png" /></div>
-
 
 ## Send sensor data to Microsoft Azure IoT Central via WiFi
 
@@ -335,7 +296,6 @@ Here the device will use WiFi communication to send the sensor data to the cloud
 For reasons of space, please skip to this link for the introduction to this part of the chapter.
 
 - [Connect Wio Terminal to Microsoft Azure IoT Central](https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Azure-IoT-Central/)
-
 
 ## Send sensor data to Ubidots via WiFi
 
@@ -347,7 +307,6 @@ If this is your first time using Ubidots, please go to the [Ubidots website](htt
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_ubidots/3.png" /></div>
 
-
 Once you have registered, please login to Ubidots using your registered account.
 
 **Step 2.** Assign your unique **Ubidots TOKEN**
@@ -358,37 +317,33 @@ Go to you user dropdown and click on API credentials:
 
 <div align="center"><img width={250} src="https://files.seeedstudio.com/wiki/k1100_ubidots/4.png" /></div>
 
-
 **Tokens**: Temporary and revocable keys to be used in your API requests. Please save the TOKEN for now, we will use it later.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_ubidots/5.png" /></div>
 
-
 :::caution
-	All API calls only accept your **TOKEN**. Don’t try to use your API Key, it won’t work! You can also access all of your Ubidots API Keys section of the My Profile settings in your User Dropdown. Select **My Profile** –> **API Credentials** to review the list of API TOKENS relating to your specific Ubidots Account.
+All API calls only accept your **TOKEN**. Don’t try to use your API Key, it won’t work! You can also access all of your Ubidots API Keys section of the My Profile settings in your User Dropdown. Select **My Profile** –> **API Credentials** to review the list of API TOKENS relating to your specific Ubidots Account.
 :::
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_ubidots/6.png" /></div>
-
 
 **Step 3.** Be prepared with the necessary information
 
 To establish an MQTT connection, we will need to prepare the following information in advance.
 
 - **WiFi Name**
-	- Fill in the WiFi Name to which Wio Terminal can connect. Wio Terminal will search for WiFi within its surroundings and try to connect to it.
+  - Fill in the WiFi Name to which Wio Terminal can connect. Wio Terminal will search for WiFi within its surroundings and try to connect to it.
 - **Password for WiFi**
-	- Fill in the password for the WiFi to which Wio Terminal can connect.
+  - Fill in the password for the WiFi to which Wio Terminal can connect.
 - **MQTT client name**
-	- This is special because it is the ID with which your device will be identified by the broker so it **MUST** be unique. If your device tries to connect with the same ID that has already been taken by another device, the connection will be refused. Please create your own all alphanumeric 8-12+ character MQTT client name and input into the code accordingly.
-	Need some help creating a unique MQTT client name, check out this [random ascii builder](https://www.random.org/strings/), or simply use the MAC address of your device as every MAC address is globally unique.
+  - This is special because it is the ID with which your device will be identified by the broker so it **MUST** be unique. If your device tries to connect with the same ID that has already been taken by another device, the connection will be refused. Please create your own all alphanumeric 8-12+ character MQTT client name and input into the code accordingly.
+ Need some help creating a unique MQTT client name, check out this [random ascii builder](https://www.random.org/strings/), or simply use the MAC address of your device as every MAC address is globally unique.
 
-	<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/k1100_ubidots/7.png" /></div>
-
+ <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/k1100_ubidots/7.png" /></div>
 
 - **Ubidots TOKEN**
-	- This is the TOKEN generated in **step 2**.
+  - This is the TOKEN generated in **step 2**.
 - **Device label**
-	- This is the name of the device and the name of the device provided by the user will be used by Ubidots to identify the device. If the Device label don’t exist before the first dot is sent, Ubidots will create them automatically.
+  - This is the name of the device and the name of the device provided by the user will be used by Ubidots to identify the device. If the Device label don’t exist before the first dot is sent, Ubidots will create them automatically.
 
 Please have the above ready as we will use them in the next step.
 
@@ -396,9 +351,8 @@ Please have the above ready as we will use them in the next step.
 
 When we use the SenseCraft, an external drivers appears as soon as the Wio Terminal is connected to the computer.
 
-
 :::caution
-    This means that the USB stick appears when the Wio Terminal is connected to the computer, **without the need to toggle the side button twice extra**!
+This means that the USB stick appears when the Wio Terminal is connected to the computer, **without the need to toggle the side button twice extra**!
 :::
 Normally there is a file called **config.txt** on the external drivers, so open it.
 
@@ -423,17 +377,15 @@ DEVICE_LABEL=Wio-Terminal
 ```
 
 :::caution
-	Once you have made your changes, **save** the config.txt file and **restart** Wio Terminal by flicking the side button down once.
+Once you have made your changes, **save** the config.txt file and **restart** Wio Terminal by flicking the side button down once.
 :::
 **Step 5.** Enter **Network** tab and select **WiFi**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/51.png" /></div>
 
-
 Now it will wait for the configuration to load.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/52.png" /></div>
-
 
 Once the loaded WiFi configuration is picked up, it will first connect with the WiFi network and then with the Ubidots platform. If the connection with Ubidots is successful, it will display the following.
 
@@ -447,20 +399,17 @@ Ubidots has a very simple interface and if you want to view information about yo
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_ubidots/16.png" /></div>
 
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_ubidots/11.png" /></div>
-
 
 Click on your device name here to be able to see all the history tabs.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/54.png" /></div>
 
-
 :::note
-    The free version of Ubidots only supports the creation of **one TOKEN** and **ten labels**. Once you have more than ten labels, the labels you have uploaded as well as the data will be discarded.
+The free version of Ubidots only supports the creation of **one TOKEN** and **ten labels**. Once you have more than ten labels, the labels you have uploaded as well as the data will be discarded.
 :::
 :::note
-    If you would like to use Ubidots for further independent development, please refer to our further [tutorials on Ubidots](https://wiki.seeedstudio.com/Getting_started_with_Ubidots/).
+If you would like to use Ubidots for further independent development, please refer to our further [tutorials on Ubidots](https://wiki.seeedstudio.com/Getting_started_with_Ubidots/).
 :::
 
 ## Connect the other Grove sensors in the kit
@@ -475,12 +424,12 @@ When connecting, you can use the Grove cable provided in the kit to connect one 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/55.png" /></div>
 
-
 The diagram above shows the Grove Vision AI as an example, indicating how the sensors in the kit are connected. Of course, the same applies to other sensors. (except for the Grove Wio E5)
 
 :::caution
-	Do not connect the Grove sensor in the kit to the Grove connector on the left side of the Wio Terminal. The Grove connector on the left is currently designed for the connection of the Grove Wio E5.
+Do not connect the Grove sensor in the kit to the Grove connector on the left side of the Wio Terminal. The Grove connector on the left is currently designed for the connection of the Grove Wio E5.
 :::
+
 ### View Grove sensor values
 
 Once you have connected the Grove sensor you will be able to view the Grove sensor values in the Sense page.
@@ -488,7 +437,6 @@ Once you have connected the Grove sensor you will be able to view the Grove sens
 You just need to press the **right** arrow button under the **Sense** page until the value of the external sensor appears. Usually, the value of the external sensor will be after the **IMU sensor**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/56.png" /></div>
-
 
 ### Uploading data from Grove sensors to the cloud
 
@@ -498,13 +446,11 @@ The detection of the sensor by SenseCraft is fully automatic, so we don't need t
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/57.png" /></div>
 
-
 Then, follow the steps in **[Send sensor data to SenseCAP via LoRa®](https://wiki.seeedstudio.com/K1100-quickstart/#send-sensor-data-to-sensecap-via-lora)**.
 
 - If you want to send data out via WiFi, then you do not need to connect anything else, please continue to refer to the contents of **[Send sensor data to Ubidots via WiFi](https://wiki.seeedstudio.com/K1100-quickstart/#send-sensor-data-to-ubidots-via-wifi)** for action.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/58.png" /></div>
-
 
 ## Advanced Play
 
@@ -528,11 +474,9 @@ The default selection under the Process screen is **Vision AI real-time analysis
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/59.png" /></div>
 
-
 Then you will be able to see Vision AI log on this page.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/61.png" /></div>
-
 
 ### TinyML Example
 
@@ -541,7 +485,6 @@ This is a feature designed for Wio Terminal in embedded machine learning. Under 
 **Step 1.** Please click on the second button above the Wio Terminal to access the **Process** screen.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/60.png" /></div>
-
 
 **Step 2.** Access the TinyML Example interface
 
@@ -559,7 +502,6 @@ Since the Light column is already highlighted, **middle press** on the 5-way but
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/63.png" /></div>
 
-
 ### Save to TF Card
 
 Considering that users may have the need to save offline to an TF card and only require subsequent data filtering or analysis, we have also designed the Wio Terminal with the ability to save data to a TF card.
@@ -568,33 +510,27 @@ When in graph visualization mode as described before, **middle press** again to 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/65.png" /></div>
 
-
 This is where the data from the sensor can be saved to an TF card. First insert an TF card to the Wio Terminal.
 
 After that, press the **middle button** to select **Save to TF card** and it will show the message **Saving has been started**. Once this message dissappears, the saving is finished and it will save the data as a **.csv file**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/64.png" /></div>
 
-
 If the storage on the TF card is full, it will notify as follows.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/66.png" /></div>
-
-
 
 ## What can I do next？
 
 Congratulations on successfully complete the steps listed in this quick starter guide, we just observed the data transferred from sensor device into SenseCAP Console / Ubidots view in least amount of time!
 
-
 Next, if you want to dive further into sensor programming as well as LoRaWAN®, cloud platforms and more, continue with our [SenseCAP - The Sensor Prototype Kit Overview](https://wiki.seeedstudio.com/K1100-Getting-Started/).
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1101/41.png" /></div>
 
-
 ## Resources
 
-- [GitHub][Seeed_Arduino_K1100 Source Code](https://github.com/Seeed-Studio/Seeed_Arduino_K1100)
+- **[GitHub]**[Seeed_Arduino_K1100 Source Code](https://github.com/Seeed-Studio/Seeed_Arduino_K1100)
 
 ## Troubleshooting
 
@@ -623,8 +559,6 @@ Slide the switch twice very quickly, as followed:
 
 <div align="center"><img width="{400}" src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Bootloader.png" /></div>
 
-
-
 At this point a disk called **Arduino** will appear on your computer, just copy the firmware (.uf2 file) to this disk. Once the firmware is installed, the disk will be automatically ejected and the Wio Terminal will reboot into the Setup Band interface.
 
 > Q6: If I change the Dev EUI, App EUI, App Key of Grove - Wio-E5, is there a way to retrieve it?
@@ -637,11 +571,9 @@ A: We have opened up the enquiry interface to our users, so that when you have c
       ```
     </your_code></your_eui></div>
 
-
 Please use the **EUI** and **Code** information marked on the back of the Grove - Wio-E5 to fill in the corresponding position on the above website to find out the corresponding three codes for your device by opening the website in your browser.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/K1100-quick-start/36.png" /></div>
-
 
 **Please take good care of the three codes, any loss caused by the loss of the codes will be the responsibility of the user.**
 
@@ -652,9 +584,9 @@ A: The answer to this is no. SenseCAP's triple code cannot be used to bind to ot
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 
 ## Statement
+
 - The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
-- LoRaWAN® is a mark used under license from the LoRa Alliance®. 
-
-
+- LoRaWAN® is a mark used under license from the LoRa Alliance®.

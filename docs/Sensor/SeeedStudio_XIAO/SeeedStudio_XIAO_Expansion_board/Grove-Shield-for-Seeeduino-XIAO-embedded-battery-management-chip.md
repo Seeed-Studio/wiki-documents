@@ -20,14 +20,14 @@ With the on-board battery management chip and battery bonding pad, you could eas
 <!-- 图有问题 
 <p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/01.png" border={0} /></a></p> -->
 
-
 As an extension board, the Seeed Studio Grove Base for XIAO also pulls all 14 pinout from Seeed Studio XIAO, and its on-board power switch and charging status indicator light makes it more user-friendly. The Shield even reserves the SPI-Flash bonding pad for an advanced developer who may need to add Flash to Seeed Studio XIAO to expand its memory space, providing Seeed Studio XIAO with more possibilities.
 
-As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Grove Shield for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) and [Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html). There is a slight difference between the pins and refer to the Pinout it is easy to manage.
+As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Grove Shield for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) and [Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html). There is a slight difference between the pins and refer to the Pinout it is easy to manage.
 
 :::note
-      This product does not include a Seeed Studio XIAO board, please click [here](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) if you need one.
+This product does not include a Seeed Studio XIAO board, please click [here](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) if you need one.
 :::
+
 ## Feature
 
 - On-board Lithium Battery Charging and Management Function
@@ -62,6 +62,7 @@ As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Gro
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
+
 ## Getting Started
 
 ### Materials Required
@@ -73,18 +74,15 @@ As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Gro
 
 ### Hardware Overview
 
-<!-- <p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/hardware-overview.png" border={0} /></a></p> 图有问题-->
-
+<!-- 图有问题<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/hardware-overview.png" border={0} /></a></p> -->
 
 If you need use the back of the Seeed Studio XIAO Grove Shield provisions pads for a Flash memory in SOIC8 package, please soldering the PIN1.
 
 <!-- 图有问题<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO.png" border={0} /></a></p> -->
 
-
 #### External headers-pin description for Grove-Shield for Seeed Studio XIAO
 
 <!-- 图有问题<p style={{textAlign: 'center'}}><a href="target=&quot;_blank&quot;"><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/Grove-shield-XIAO (xin).png.jpg" border={0} /></a></p> -->
-
 
 #### External headers-pin description for Grove-Doppler Radar
 
@@ -109,8 +107,9 @@ If you need use the back of the Seeed Studio XIAO Grove Shield provisions pads f
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/hardware_connection.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::tip
-    Please plug the USB cable， Doppler Radar Interface into Seeed Studio XIAO expansion board Interface gently, otherwise you may damage the port.
+Please plug the USB cable， Doppler Radar Interface into Seeed Studio XIAO expansion board Interface gently, otherwise you may damage the port.
 :::
+
 - **Step 1.** Plug Doppler Radar into Seeed Studio XIAO expansion board with a Grove Cable.
 
 - **Step 2.** Connect Seeed Studio XIAO to PC via a USB cable.
@@ -122,8 +121,9 @@ If you need use the back of the Seeed Studio XIAO Grove Shield provisions pads f
 ### Software
 
 :::note
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+
 - **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.rar).
 
 - **Step 2.** Copy the whole **Seeed_Arduino_DopplerRadar** file and paste it into your Arduino IDE library file.
@@ -205,7 +205,6 @@ void loop() {
   </figure>
 </div>
 
-
 And if there's an object approaching the radar or passing by, the outcome will alter as below:
 
 <div align="center">
@@ -215,17 +214,14 @@ And if there's an object approaching the radar or passing by, the outcome will a
   </figure>
 </div>
 
-
 :::note
-    The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, which equals to 0.52m/s, 3.6km/h and 2.23mph. Additionally, the results returned by function getSpeed() are multiples of 52cm/s and are absolute values accordingly.
+The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, which equals to 0.52m/s, 3.6km/h and 2.23mph. Additionally, the results returned by function getSpeed() are multiples of 52cm/s and are absolute values accordingly.
 :::
-ß
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/res/Grove_Shield_for_Seeeduino_XIAO_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Resources
 
@@ -243,4 +239,3 @@ And if there's an object approaching the radar or passing by, the outcome will a
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
-

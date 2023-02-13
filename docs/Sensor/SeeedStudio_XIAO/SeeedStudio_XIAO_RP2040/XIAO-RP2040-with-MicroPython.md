@@ -17,7 +17,6 @@ last_update:
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-
 ## **Getting Started**
 
 First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and upload a simple code from MicroPython to check whether the board is functioning well.
@@ -34,7 +33,6 @@ First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and 
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_6.png" /></div>
 
-
 - **Step 2**. Launch the Thonny
 
 - **Step 3**. Click **"Tools-->Options"** to open the settings.
@@ -45,28 +43,23 @@ First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and 
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_9.png" /></div>
 
-
 ### **Connect Seeed Studio XIAO RP2040 to the PC and Light it up**
 
 - **Step 1**. Press and hold the "BOOT" button and then connect the Seeed Studio XIAO RP2040 to the PC through the Type-C cable. If it works well, there is an "RPI-RP2" desk shown on the PC.
 
 <div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
-
 - **Step 2**. Click **Install or update MicroPython**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/installandupdate.png" /></div>
->
 
 It will then automatically search for the device and display it on the Target Volume. In the version selection in Micropython below, we just leave the default.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/chooseversion.png" /></div>
 
-
 Click on the Install button and close this page when the installation status says Done. The following information will be shown on the interface once the firmware is complete.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk3.png" /></div>
-
 
 - **Step 3**. Copy the following codes to Thonny.
 
@@ -91,11 +84,9 @@ tim.init(period=1000, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-
 If it works well, you will see the LED light turn on and off once a second. And the output of the increasing number will as well be displayed in the Shell.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_13.png" /></div>
-
 
 The connection is commplete and now we can proceed to the other projects.
 
@@ -109,16 +100,13 @@ There is an RGB LED equipped in the Seeed Studio XIAO RP2040 and we are going to
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
-
 Chose the "Raspberry Pi Pico" as the location we save.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk5.png" /></div>
 
-
 Make sure the saved file name is "ws2812.py", otherwise it will not work.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk6.png" /></div>
-
 
 - **Step 3**. Copy the following codes to Thonny.
 
@@ -152,11 +140,9 @@ while True:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-
 If it works well, you will see the RGB LED light convert and flash the lights. And the output of the text "Beautiful Color" will as well be displayed in the Shell.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_14.png" /></div>
-
 
 ## **Connect with Seeed Studio XIAO RP2040 with Display through IIC**
 
@@ -166,23 +152,19 @@ In this project, we are going to connect [Grove - OLED Display 0.96" (SSD1315)](
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_15.png" /></div>
 
-
 - **Step 1**. Download the [ssd1306.py](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/ssd1306.py) library and open it with Thonny.
 
 - **Step 2**. Click "File-->Save as" and save the library in the "Raspberry Pi Pico"
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk4.png" /></div>
 
-
 Chose the "Raspberry Pi Pico" as the location we save.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk5.png" /></div>
 
-
 Make sure the saved file name is "ssd1306.py", otherwise it will not work.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk8.png" /></div>
-
 
 - **Step 3**. Copy the following codes to Thonny.
 
@@ -205,11 +187,9 @@ while True:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk7.png" /></div>
 
-
 If it works well, you will see the text "Hello,World!" displayed on the screen.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_16.png" /></div>
-
 
 ## Additional Resources
 
