@@ -1663,7 +1663,7 @@ const sidebars = {
               label: 'Embedded ML',
               items: [
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
-                // 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
 
               ]
             },
@@ -1816,20 +1816,20 @@ const sidebars = {
           label: 'Extension Board',
           items: [
             'Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series',
-            // 'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
+            'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
             'Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0',
             'Edge/Beagle_Bone/Extension_Board/Skeleton_box_for_Beaglebone',
             'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
             'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',]
         },
-        // {
-        //   type: 'category',
-        //   label: 'Kit with Courses',
-        //   items: [
-        //     // 'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
-        //     'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-        //   ]
-        // },
+         {
+           type: 'category',
+           label: 'Kit with Courses',
+           items: [
+              'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
+             'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+           ]
+         },
 
       ],
     },

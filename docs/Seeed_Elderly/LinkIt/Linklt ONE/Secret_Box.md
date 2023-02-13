@@ -14,7 +14,7 @@ LinkIt ONE with Grove - Light Sensor, put into a box. when the box is opened, a 
 
 **Connection**
 
-*   [Grove - Light_Sensor](/Grove-Light_Sensor "Grove - Light Sensor") connect to A0.
+<!-- *   [Grove - Light_Sensor](/Grove-Light_Sensor "Grove - Light Sensor") connect to A0. -->
 
 *   GSM antenna
 
