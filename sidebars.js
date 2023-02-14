@@ -1426,8 +1426,8 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP K1100',
       items: [
-        'Network/SenseCAP K1100/K1100_Getting_Started',
-        'Network/SenseCAP K1100/K1100-quickstart',
+        'Network/SenseCAP_K1100/K1100_Getting_Started',
+        'Network/SenseCAP_K1100/K1100-quickstart',
         {
 
           type: 'category',
@@ -1438,12 +1438,12 @@ const sidebars = {
               type: 'category',
               label: 'Sensors Basic Usage with Arduino',
               items: [
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Sensors Basic Usage with Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
 
               ],
             },
@@ -1452,19 +1452,19 @@ const sidebars = {
               type: 'category',
               label: 'Helium Cloud Services',
               items: [
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium-Introduction',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium-Introduction',
                 {
 
                   type: 'category',
                   label: 'Helium Connected & Azure Integrated',
                   items: [
-                    'Network/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium Connected & Azure Integrated/Connecting-to-Helium',
-                    'Network/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium Connected & Azure Integrated/Integrate-into-Azure-IoT-Hub',
-                    'Network/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Helium Connected & Azure Integrated/Configuring-Web-APP-Visualization',
+                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Connecting-to-Helium',
+                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Integrate-into-Azure-IoT-Hub',
+                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Configuring-Web-APP-Visualization',
                   ],
                 },
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Integrate_into_Google_Sheets_via_Helium',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/Helium Cloud Services/Connect_AWS_via_helium',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Integrate_into_Google_Sheets_via_Helium',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Connect_AWS_via_helium',
               ],
 
             },
@@ -1473,8 +1473,8 @@ const sidebars = {
               type: 'category',
               label: 'TTN Cloud Services',
               items: [
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/TTN Cloud Services/TTN-Introduction',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/TTN Cloud Services/Connecting-to-TTN',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/TTN-Introduction',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/Connecting-to-TTN',
               ],
 
             },
@@ -1483,13 +1483,13 @@ const sidebars = {
               type: 'category',
               label: 'SenseCAP & Node-Red for Cloud Services',
               items: [
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_sensecap_node-red',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_Azure_IoT_Central',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_PowerBI',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_influxdb',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_twilio',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_datacake',
-                'Network/SenseCAP K1100/LoRaWAN-Network Application/SenseCAP & Node-Red for Cloud Services/K1100_SenseCAP_to_grafana',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_sensecap_node-red',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_Azure_IoT_Central',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_PowerBI',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_influxdb',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_twilio',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_datacake',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_grafana',
 
 
               ],
@@ -1503,15 +1503,15 @@ const sidebars = {
           type: 'category',
           label: 'Wi-Fi-Network Application',
           items: [
-            'Network/SenseCAP K1100/Wi-Fi-Network Application/Wio-Terminal-Advanced-WiFi',
+            'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Wio-Terminal-Advanced-WiFi',
             {
 
               type: 'category',
               label: 'Cloud Service',
               items: [
-                'Network/SenseCAP K1100/Wi-Fi-Network Application/Cloud Service/Getting_started_with_Ubidots',
-                'Network/SenseCAP K1100/Wi-Fi-Network Application/Cloud Service/Quick-Start-to-using-Blynk',
-                'Network/SenseCAP K1100/Wi-Fi-Network Application/Cloud Service/Connect-Wio-Terminal-to-Google-Cloud',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Getting_started_with_Ubidots',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Quick-Start-to-using-Blynk',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Connect-Wio-Terminal-to-Google-Cloud',
               ],
 
             },
@@ -1520,9 +1520,9 @@ const sidebars = {
               type: 'category',
               label: 'Azure IoT Platform Usage',
               items: [
-                'Network/SenseCAP K1100/Wi-Fi-Network Application/Azure IoT Platform Usage/Connect-Wio-Terminal-to-Azure-IoT-Central',
-                'Network/SenseCAP K1100/Wi-Fi-Network Application/Azure IoT Platform Usage/Develop-in-Microsoft-Azure-IoT-Central',
-                'Network/SenseCAP K1100/Wi-Fi-Network Application/Azure IoT Platform Usage/K1100_Azure_to_PowerBI',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/Connect-Wio-Terminal-to-Azure-IoT-Central',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/Develop-in-Microsoft-Azure-IoT-Central',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/K1100_Azure_to_PowerBI',
               ],
 
             },
@@ -1535,8 +1535,8 @@ const sidebars = {
           type: 'category',
           label: 'Embedded ML Application',
           items: [
-            'Network/SenseCAP K1100/Embedded ML Application/K1111-Edge-Impulse',
-            'Network/SenseCAP K1100/Embedded ML Application/Vision_AI_with_Customizable_Models',
+            'Network/SenseCAP_K1100/Embedded_ML_Application/K1111-Edge-Impulse',
+            'Network/SenseCAP_K1100/Embedded_ML_Application/Vision_AI_with_Customizable_Models',
           ],
 
         },
@@ -1545,8 +1545,8 @@ const sidebars = {
           type: 'category',
           label: 'Contributors Project',
           items: [
-            'Network/SenseCAP K1100/Contributors Project/IoT-into-the-wild-contest',
-            'Network/SenseCAP K1100/Contributors Project/K1111-Quick-Start-Guide',
+            'Network/SenseCAP_K1100/Contributors_Project/IoT-into-the-wild-contest',
+            'Network/SenseCAP_K1100/Contributors_Project/K1111-Quick-Start-Guide',
           ],
 
         },
@@ -1827,14 +1827,14 @@ const sidebars = {
             'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
             'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',]
         },
-         {
-           type: 'category',
-           label: 'Kit with Courses',
-           items: [
-              'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
-             'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-           ]
-         },
+        {
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
+            'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+          ]
+        },
 
       ],
     },
@@ -2197,37 +2197,37 @@ const sidebars = {
     'About',
     'License',
 
-     {
+    {
 
-       type: 'category',
-       label: 'Seeed_Elderly',
-       items: [
+      type: 'category',
+      label: 'Seeed_Elderly',
+      items: [
 
-         {
+        {
 
-    //       type: 'category',
-    //       label: 'Accessories',
-    //       items: [
-    //         'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
-    //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
-    //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
-    //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
-    //         'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
-    //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
-    //         'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
+          //       type: 'category',
+          //       label: 'Accessories',
+          //       items: [
+          //         'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
+          //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
+          //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
+          //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
+          //         'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
+          //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
+          //         'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
 
-    //       ],
+          //       ],
 
-    //     },
+          //     },
 
-        
-           type: 'category',
-           label: 'reSpeaker',
-           items: [
-             //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
-             'Seeed_Elderly/reSpeaker/ReSpeaker',
-             'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
-             {
+
+          type: 'category',
+          label: 'reSpeaker',
+          items: [
+            //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
+            'Seeed_Elderly/reSpeaker/ReSpeaker',
+            'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
+            {
               type: 'category',
               label: 'Application',
               items: [
@@ -2246,27 +2246,27 @@ const sidebars = {
                 'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array',
               ]
             },
-             {
-               type: 'category',
-               label: 'ReSpeaker 2-Mics Pi HAT',
-               items: [
-                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
-                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
-                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
-               ]
-             },
-             'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
-             'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
-             'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
-             'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
-             'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
-             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+            {
+              type: 'category',
+              label: 'ReSpeaker 2-Mics Pi HAT',
+              items: [
+                'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
+                'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
+                'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
+              ]
+            },
+            'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
+            'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
+            'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
+            'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
+            'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
+            'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
 
-           ],
-           
+          ],
 
-         },
-         {
+
+        },
+        {
           type: 'category',
           label: 'Discrete Product',
           items: [
@@ -2326,9 +2326,9 @@ const sidebars = {
                 //'Seeed_Elderly/rePhone/Program with rePhone/Lua_for_RePhone',
                 //'Seeed_Elderly/rePhone/Program with rePhone/RePhone_APIs-Audio',
 
-              ] 
+              ]
             },
-          ] 
+          ]
         },
         {
           type: 'category',
@@ -2361,9 +2361,9 @@ const sidebars = {
                 'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
                 //'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
                 'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
-              ] 
+              ]
             },
-          ] 
+          ]
         },
         {
           type: 'category',
@@ -2388,7 +2388,7 @@ const sidebars = {
             'Seeed_Elderly/Bee/Bluetooth_V4.0_HM_11_BLE_Module',
             'Seeed_Elderly/Bee/GPS_Bee_kit',
             //'Seeed_Elderly/Bee/Grove-Bee_Socket',
-          ] 
+          ]
         },
         {
           type: 'category',
@@ -2441,13 +2441,13 @@ const sidebars = {
             'Seeed_Elderly/Xadow/Xadow_Wearable_Kit_For_Edison',
           ]
         },
-       ],
+      ],
 
-     },
- 
+    },
+
 
   ],
-  
+
 
   SenseCAPSidebar: [
     {
@@ -2508,15 +2508,15 @@ const sidebars = {
         },
 
 
-    // {
+        // {
 
-    //   type: 'category',
-    //   label: 'SenseCAP Cloud',
-    //   items: [
-    //     'Cloud_Chain/SenseCAP_M4/wiki',
-    //   ],
+        //   type: 'category',
+        //   label: 'SenseCAP Cloud',
+        //   items: [
+        //     'Cloud_Chain/SenseCAP_M4/wiki',
+        //   ],
 
-    // },
+        // },
 
       ],
 

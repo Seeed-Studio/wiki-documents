@@ -22,148 +22,220 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 - Extension board or Carrier board for the devices
 - Tutorials
 
-### Device
+### Device -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Resources</h2></th>
-        <th colspan = "2" width = {"20%"}><strong>reComputer</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>reServer</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}><strong>reTerminal</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>Mini PC</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "4" width = {"20%"}><strong>Edge Series</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reTerminal </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware and Interfaces Usage </font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reComputer</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reComputer Series </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware Layout for reComputer Series </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> GPIO and Grove for reComputer Series </font></span></a>
+            <br/>
+    </a>
+</div>
 
-### Application
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reServer</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reServer X86 Series - Intel® Core™ </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reServer J2032 - NVIDIA® Jetson NX Xavier </font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Mini PC for Industrial</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203 - Jetpack 5.0, Jetson Xavier NX 8GB, RS232 </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205E - Jetpack 5.0, Jetson Xavier NX 8GB, 2xGbE</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> T906 - Jetpack 5.0, Jetson AGX Orin 32GB, 10Gps </font></span></a>
+            <br/>
+    </a>
+</div>
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h2>reTerminal</h2></th>
-        <th colspan = "4" width = {"80%"}><strong>introduction</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Edge Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-ESP-100 - ESP32-based/ RS485/ Ethernet </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-RPI-200 - Raspberry Pi CM4-based/ IEC </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeLogix-RPI-1000 - Raspberry Pi CM4-based</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>NVIDIA Jetson Alternative</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Xavier AGX H01</font></span></a>
+            <br/>
+    </a>
+</div>
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"20%"}><h3>reComputer <br/> - <br/> NVIDIA Jetson</h3></th>
-        <th colspan = "4" width = {"80%"}><strong>introduction</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+### Application / Software -->
 
-### OS Installation
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>reTerminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LVGL</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Flutter</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Electro</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grafana</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mender Client</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Qt with Python</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Google MediaPipe</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> TensorFlow Lite</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Home Assistant</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Customize Home Assistant</font></span></a>
+            <br/>
+    </a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Edge Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Codesys on EdgeBox-RPI-200 controller</font></span></a>
+            <br/>
+    </a>
+</div>
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Resources</h2></th>
-        <th colspan = "2" width = {"20%"}><strong>reComputer</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>reServer</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}><strong>reTerminal</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>Mini PC</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}><strong>Edge Series</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>NVIDIA Jetson Alternative</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>reComputer Application</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hard Hat Detection </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> No code Edge AI Tool </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MaskCam </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> DashCamNet with Jetson Xavier NX Multicamera </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Traffic Management DeepStream SDK </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Few-Shot Object Detection </font></span></a>
+            <br/>
+    </a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Software for reComputer</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Allxon </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Docker</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with alwaysAI </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Deci </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Update Jetson Linux Over-the-Air Using Allxon </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Resource </font></span></a>
+            <br/>
+    </a>
+</div>
 
-### Extension Boards / Carrier Boards
+### OS Installation / Firmware Updating -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Resources</h2></th>
-        <th colspan = "4" width = {"20%"}><strong>NVIDIA module carrier board</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "4" width = {"20%"}><strong>reTerminal</strong></th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Buildroot</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Yocto</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Stream-pi & OBS studio</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reComputer Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J1010 | J101 Original OS Installation</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J2021 | J202 Original OS Installation</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J1020 | A206 Original OS Installation</font></span></a>
+            <br/>
+    </a>
+</div>
 
-### Software
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reServer</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Upgrading BIOS and Installing Drivers</font></span></a>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Mini PC</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203 Original OS Installation</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205E Original OS Installation</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> T906 Original OS Installation</font></span></a>
+            <br/>
+    </a>
+</div>
 
-### Tutorials
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Edge Series</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>NVIDIA Jetson Alternative</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Xavier AGX H01 Original OS Installation</font></span></a>
+    </a>
+</div>
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>NVIDIA Jetson</h2></th>
-        <th colspan = "4" width = {"20%"}><strong>Introduction</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+### Extensions / Carrier Board -->
 
-## Build Your Own(Fundamental Development)
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>reTerminal Extensions</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reTerminal E10-1 -  Expand UPS, Gigabit Ethernet, LTE/4G/5G/LoRaWAN, RS485/232, CAN, SATA 2.0</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reTerminal E10-1 Mount Options</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>NVIDIA Jetson Extensions</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203</font></span></a>, support Jetson Nano / Xavier NX/TX2 NX
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205</font></span></a>, support Jetson Nano / Xavier NX/TX2 NX
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Mate Cluster</font></span></a>,  support 4 Jetson Nano/NX 
+            <br/>
+    </a>
+</div>
+
+### Tutorial / FAQ -->
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> FAQs for reTerminal Usage</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reComputer / NVIDIA Jetson</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Memory Expansion for NVIDIA Jetson boards</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Boot From SD Card on reComputer J1010</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Enable SD card on J101 carrier board</font></span></a>
+            <br/>
+    </a>
+</div>
+
+## Fundamental Development
 
 <strong><font color={'8DC215'} size={"4"}>This portion here includes the Single Board Computer for fundamental development. Here you can find:</font></strong>
 
@@ -176,158 +248,196 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 - Kit with courses based on the SBC
 - Tutorials
 
-### Single Board Computer
+### Single Board Computer -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Resource</h2></th>
-        <th colspan = "2" width = {"20%"}><strong>BeagleBone®</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>ODYSSEY X86J410</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th width = {"20%"}><strong>ODYSSEY STM32MP157C</strong></th>
-        <th width = {"20%"}><strong>reSpeaker</strong></th>
-        <th width = {"20%"}><strong>Quantum</strong></th>
-        <th width = {"20%"}><strong>Raspberry Pi</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}> BeagleBone® </font></span></a></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Blue </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Green </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Green Wireless </font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> ODYSSEY X86J4105 </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware for ODYSSEY X86J4105 </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> ODYSSEY STM32MP157C </font></span></a>
+            <br/>
+    </a>
+</div>
 
-### Application
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Quantum Development Board</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  Quantum Mini Linux Development Kit </font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi®</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi Introduction </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi 3 Model B </font></span></a>
+            <br/>
+    </a>
+</div>
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Resource</h2></th>
-        <th colspan = "4" width = {"20%"}><strong>ODYSSEY X86J4105</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-    <tr>
-        <th colspan = "2" width = {"20%"}><strong>BeagleBone®</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>reSpeaker</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Seeed Elderly Devices</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reSpeaker Series </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> NPi Sereis</font></span></a>
+    </a>
+</div>
 
-### OS Installation / Updating
+### Application / Software -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Resource</h2></th>
-        <th colspan = "4" width = {"20%"}><strong>ODYSSEY X86J4105</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSY Application</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Connect ODYSSEY to Azure IoT</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Computer Version with Intel OpenVINO Toolkit</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Computer Version with Frigate</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY Software</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Home Assistant on ODYSSEY</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Connect Grove Modules using ESPHome</font></span></a>
+            <br/>
+            Mender
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Client</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Server</font></span></a>
+            <br/>
+    </a>
+</div>
+
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BeagleBone®</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Solutions</font></span></a>
+    </a>
+</div>
+
+### OS Installation / Firmware Updating -->
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY X86J4105</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>, 
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Updating Firmware</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> OpenWRT</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> OPNsense</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> pfSense</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jellyfin</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> TrueNAS</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> FreeNAS</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Android-x86</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> balenaOS</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
+    </a>
+</div>
 
 ### Extension Boards
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Pi HAT / Raspberry Pi</h2></th>
-        <th colspan = "4" width = {"30%"}><strong>Introduction</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Raspberry Pi - Pi HAT</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Base HAT </font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove AI HAT</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> RS-485 Pi HAT</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> 8-Channel 12-Bit ADC HAT</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reSpeaker Pi HAT</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Find out more</font></span></a>
+    </a>
+</div>
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"10%"}><h2>BeagleBone®</h2></th>
-        <th colspan = "4" width = {"60%"}><strong>Introduction</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>BeagleBone®</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Green HDMI Cape</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Motor Bridge Cape v1.0 for BeagleBone®</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Green LCD Cape with Resistive Touch</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>reSpeaker</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Drive Unit for reSpeaker Series</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mic Array for reSpeaker Series</font></span></a>
+            <br/>
+    </a>
+</div>
 
 ### Assessories
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Resource</h2></th>
-        <th colspan = "2" width = {"20%"}><strong>Functional Components</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>Cases</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Raspberry Pi</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Skeleton box for Raspberry Pi</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry PI B Plus Case</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>ODYSSEY X86J4105</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Coral Mini PCIe Accelerator</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LTE Modules</font></span></a>
+            <br/>
+    </a>
+</div>
 
-### Kit with Courses
+### Kit with Courses -->
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Kit with Courses</h2></th>
-        <th colspan = "2" width = {"20%"}><strong>Raspberry Pi</strong></th>
-        <th colspan = "2" width = {"20%"}><strong>BeagleBone® Green</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Base Kit for Raspberry Pi</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LoRa/LoRaWAN® Gateway Kit</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Starter Kit for IoT based on Raspberry Pi</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BeagleBone®</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Starter Kit for Seeed Studio BeagleBone® Green</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove IoT Starter AWS IoT Kit for BeagleBone Green </font></span></a>
+            <br/>
+    </a>
+</div>
 
 ### Tutorials
 
-<table align={"center"} width = {"100%"}>
-  <tbody>
-    <tr>
-        <th rowspan="8" width = {"5%"}><h2>Tutorials</h2></th>
-        <th colspan = "4" width = {"20%"}><strong>ODYSSEY</strong></th>
-    </tr>
-    <tr>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-        <th>1<br/>2</th>
-    </tr>
-  </tbody></table>
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Remotely connect to Raspberry Pi/reComputer</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Update eeprom on Raspberry pi CM4</font></span></a>
+    </a>
+</div>
 
-This portion here
 
 
 
