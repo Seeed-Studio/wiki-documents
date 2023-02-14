@@ -259,7 +259,7 @@ const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F,
 
 :::caution
 For **XIAO nRF52840**, please select **Seeed nRF52 mbed-enabled Boards**, otherwise an error may be reported when running programs.
-    <div align="center"><img width ="{700}" src="https://files.seeedstudio.com/wiki/XIAO-BLE/SeeednRFmbed.png"/></div>
+<div align="center"><img width ="{700}" src="https://files.seeedstudio.com/wiki/XIAO-BLE/SeeednRFmbed.png"/></div>
 :::
 
 **Step 4.** Install the Arduino code library.
