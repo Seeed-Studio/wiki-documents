@@ -38,7 +38,6 @@ You may use the following for reference:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/DAPLink/daplink-xiao.jpg" /></div>
 
-
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).

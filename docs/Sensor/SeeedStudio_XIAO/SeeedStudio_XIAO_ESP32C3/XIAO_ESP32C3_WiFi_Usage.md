@@ -14,17 +14,16 @@ last_update:
 Seeed Studio XIAO ESP32C3 supports WiFi connectivity with IEEE 802.11b/g/n. This wiki will introduce the basics of WiFi usage on this board.
 
 > ⚠️ Please be careful when you try to use the board as a hotspot(access point). There may be a overheat problem and cause burns.
+
 ## Hardware set up
 
 - **Step 1.** Connect the included **WiFi/ Bluetooth antenna** to the **IPEX connector** on the board
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-6.png" alt="pir" width={130} height="auto" /></div>
 
-
 - **Step 2.** Connect XIAO ESP32C3 to your computer via a USB Type-C cable
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" alt="pir" width={120} height="auto" /></div>
-
 
 ## Scan WiFi networks (Station Mode)
 
@@ -82,8 +81,6 @@ void loop()
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-1.jpg" alt="pir" width={500} height="auto" /></div>
 
-
-
 ## Connect to a WiFi network
 
 In this example, we are going to use XIAO ESP32C3 to connect to a WiFI network.
@@ -129,7 +126,6 @@ void loop()
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-2.jpg" alt="pir" width={500} height="auto" /></div>
 
-
 ## Use as an Access Point
 
 In this example, we are going to use XIAO ESP32C3 as a WiFi access point where other devices can be connected to it. This is similar to WiFi hotspot feature on mobile phones.
@@ -172,17 +168,13 @@ void loop()
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-3.png" alt="pir" width={700} height="auto" /></div>
 
-
 **Step 3.** Scan for WiFi networks on a PC or mobile phone and you will be able to connect to this newly created network using the password we specified in the code
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-4.png" alt="pir" width="{300}" height="auto" /></div>
 
-
-
 Now you will see that the **Number of Host Connections** on serial monitor has been updated to **1**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-5.png" alt="pir" width={700} height="auto" /></div>
-
 
 ## XIAO ESP32C3 & Home Assistant
 

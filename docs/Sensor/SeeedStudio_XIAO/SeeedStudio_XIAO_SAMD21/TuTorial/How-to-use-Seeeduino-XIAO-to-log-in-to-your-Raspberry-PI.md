@@ -23,8 +23,7 @@ Sometimes when we use Raspberry Pi, these situations can be very disturbing to u
 
 - [Jumper cable x3](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)
 
-- [Type-C cable x1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A.html)
-
+- [Type-C cable x1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)
 
 ### Hardware Connection
 
@@ -40,7 +39,6 @@ Sometimes when we use Raspberry Pi, these situations can be very disturbing to u
 
 <!-- ![](https://files.seeedstudio.com/products/102010328/img/pin-with-marks.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102010328/img/pin-with-marks.png" alt="pir" width={600} height="auto" /></p>
-
 
 ## Software
 
@@ -101,25 +99,14 @@ void loop() {
   <img src="https://files.seeedstudio.com/products/102010328/img/Putty%20config.png" />
 </p>
 
-
 - **Step 3.** Then you will see the startup information in the terminal window.
 
 <p align="center">
   <img src="https://files.seeedstudio.com/products/102010328/img/Terminal.png" />
 </p>
 
-
 Now you have access to Raspberry Pi through Seeed Studio XIAO SAMD21!
 
 <p align="center">
   <img src="https://files.seeedstudio.com/products/102010328/img/new%20pins.gif" />
 </p>
-
-
-
-
-
-
-
-
-

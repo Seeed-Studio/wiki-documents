@@ -29,7 +29,7 @@ last_update:
 ## Arduino Library Overview
 
 :::tip
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
+If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
 :::
 To use the Bluetooth functionality of Seeed Studio XIAO nRF52840, we need to use the official Arduino BLE library.
 
@@ -37,13 +37,11 @@ To use the Bluetooth functionality of Seeed Studio XIAO nRF52840, we need to use
   <p style={{}}><a href="https://github.com/arduino-libraries/ArduinoBLE" target="_blank" /></p><div align="center"><a href="https://github.com/arduino-libraries/ArduinoBLE" target="_blank"><img width={300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
-
 If you want to apply the Demo with 24GHz Sleep Breathing Radar, you may also need to download supported library as well.
 
 <div>
   <p style={{}}><a href="https://github.com/limengdu/Seeed_24GHz_SleepBreathingRadar_BLE" target="_blank" /></p><div align="center"><a href="https://github.com/limengdu/Seeed_24GHz_SleepBreathingRadar_BLE" target="_blank"><img width={300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
-
 
 ### Function
 
@@ -59,18 +57,15 @@ Since you have downloaded the zip Library, open your Arduino IDE, click on **Ske
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" /></div>
 
-
 - **Method Two** (Only the ArduinoBLE library can be installed.)
 
 The library manager was added starting with Arduino IDE versions 1.5 and greater (1.6.x). It is found in the 'Sketch' menu under 'Include Library', 'Manage Libraries...'
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/seeed_logo/Library.jpg" /></div>
 
-
 When you open the Library Manager you will find a large list of libraries ready for one-click install. To find a library for your product, search for the product name or a keyword such as 'k type' or 'digitizer', and the library you want should show up. Click on the desired library, and the 'Install' button will appear. Click that button, and the library should install automatically. When installation finishes, close the Library Manager.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/SeeednRFmbed.png" /></div>
-
 
 ## Application examples
 
@@ -85,7 +80,6 @@ Now that we have our library installed and we understand the basic functions, le
 > For the boards libraries installation, please refer to [this tutorial](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup) to finish installation.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528404.png" /></div>
-
 
 ### Demo 1 Control built-in LED using a smartphone
 
@@ -167,6 +161,7 @@ void loop() {
 ```
 
 The key to the implementation of this example is the following paragraph.
+
 ```c++
   while (central.connected()) {
         if (switchCharacteristic.written()) {
@@ -187,38 +182,37 @@ Opening your serial monitor to a baud rate of 9600 and the led should be on or o
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-BLE/2.png" /></div>
 
-
 At this point, control of the Seeed Studio XIAO nRF52840 light can be completed using the mobile app via Bluetooth, as described below.
 
 <table align="center">
-	<tr>
-	    <th align="center">iPhone</th>
-	    <th align="center">Android</th>  
+ <tr>
+     <th align="center">iPhone</th>
+     <th align="center">Android</th>  
       <th align="center">Description</th>
-	</tr>
-	<tr>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone1.jpg"/></td>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and1.jpeg"/></td>
+ </tr>
+ <tr>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone1.jpg"/></td>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and1.jpeg"/></td>
       <td align="center">Open the software, search for a Bluetooth device called <strong>LED</strong> and click on Connect. Some devices may appear as <strong>Arduino</strong>.</td>
-	</tr>
-	<tr>
-	    <td><img width ={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone2.jpg"/></td>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and2.jpeg"/></td>
+ </tr>
+ <tr>
+     <td><img width ={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone2.jpg"/></td>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and2.jpeg"/></td>
       <td align="center">Go to the Seeed Studio XIAO nRF52840 Bluetooth interface and click on the device to display the device details.</td>
-	</tr>
-	<tr>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone4.jpg"/></td>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and3.jpeg"/></td>
+ </tr>
+ <tr>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone4.jpg"/></td>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and3.jpeg"/></td>
       <td align="center">Fill in the data to be sent to the Seeed Studio XIAO nRF52840, send 1 to turn on the light, send 0 to turn off the light.</td>
-	</tr>
-	<tr>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/iPhone5.jpg"/></td>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and4.jpeg"/></td>
+ </tr>
+ <tr>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/iPhone5.jpg"/></td>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and4.jpeg"/></td>
       <td align="center">Back in the Bluetooth control interface, you can see that the value has changed and the Seeed Studio XIAO nRF52840 red light is on (or off).</td>
-	</tr>
-	<tr>
+ </tr>
+ <tr>
       <td colspan="3"><img width = {800} src="https://files.seeedstudio.com/wiki/XIAO-BLE/3.png"/></td>
-	</tr>
+ </tr>
 </table>
 
 ### Demo 2 Use XIAO BLE to Obtain Data of 24GHz Sleep Detect Module via BLE
@@ -228,7 +222,6 @@ In this example, we will describe how to obtain the values of the sensors and se
 Follow the image below to connect the Seeed Studio XIAO nRF52840 board and 24GHz Respiratory Sleep Detection Module. For further information, you can click [here](https://wiki.seeedstudio.com/Radar_MR24BSD1).
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/60GHzradar/20.png" /></div>
-
 
 Please open the example code in the library and upload it to Seeed Studio XIAO nRF52840.
 
@@ -321,41 +314,40 @@ Opening your serial monitor to a baud rate of 9600 should show the distance betw
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-BLE/4.png" /></div>
 
-
 Next, we can obtain the live data sent by Bluetooth by following the steps below.
 
 <table align="center">
-	<tr>
-	    <th align="center">iPhone</th>
-	    <th align="center">Android</th>  
+ <tr>
+     <th align="center">iPhone</th>
+     <th align="center">Android</th>  
       <th align="center">Description</th>
-	</tr>
-	<tr>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone1.jpg"/></td>
-	    <td><img width ={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and5.jpeg"/></td>
+ </tr>
+ <tr>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone1.jpg"/></td>
+     <td><img width ={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and5.jpeg"/></td>
       <td align="center">Open the software, search for a Bluetooth device called <strong>Seeed Studio XIAO nRF52840</strong> and click on Connect. Some devices may appear as <strong>Arduino</strong>.</td>
-	</tr>
-	<tr>
-	    <td>=<img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone2.jpg"/></td>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and2.jpeg"/></td>
+ </tr>
+ <tr>
+     <td>=<img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/IPhone2.jpg"/></td>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and2.jpeg"/></td>
       <td align="center">Go to the Seeed Studio XIAO nRF52840 Bluetooth interface and click on the device to display the device details.</td>
-	</tr>
-	<tr>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/iPhone8.jpg"/></td>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and6.jpeg"/></td>
+ </tr>
+ <tr>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/iPhone8.jpg"/></td>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and6.jpeg"/></td>
       <td align="center">Open the software's live update data.</td>
-	</tr>
-	<tr>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/iPhone7.jpg"/></td>
-	    <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and7.jpeg"/></td>
+ </tr>
+ <tr>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/iPhone7.jpg"/></td>
+     <td><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/and7.jpeg"/></td>
       <td align="center">Next, whenever the radar detects a sleep message, it is sent to the phone via Seeed Studio XIAO nRF52840's Bluetooth.</td>
-	</tr>
-	<tr>
+ </tr>
+ <tr>
       <td colspan="3"><img width = {600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/5.png"/></td>
-	</tr>
+ </tr>
 </table>
 
-### Demo 3 Two XIAO nRF52840 control LED via Bluetooth communication.
+### Demo 3 Two XIAO nRF52840 control LED via Bluetooth communication
 
 In this example, we will use two XIAO nRF52840, using their Bluetooth capabilities to communicate. One of the XIAOs acts as a host and is connected to the XIAO expansion board, sending control commands via the expansion board's buttons. The other XIAO acts as a slave.
 
@@ -575,15 +567,12 @@ Once the successful connection message is displayed in the serial monitor, you c
 
 Of course, if you don't have an extension board, you can also use your own buttons or other devices.
 
-
 ## What's more?
 
 If you want to try out more examples you can navigate to `File > Examples > INCOMPATIBLE > ArduinoBLE` and check all the examples under **ArduinoBLE**
-
 
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
-

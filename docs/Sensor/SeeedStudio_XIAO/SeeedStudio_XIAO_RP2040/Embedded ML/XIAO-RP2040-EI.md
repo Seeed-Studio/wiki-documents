@@ -9,7 +9,7 @@ last_update:
   author: shuxu hu
 ---
 
-# TinyML on SEEED XIAO RP2040 (Motion Recognition) 
+# TinyML on SEEED XIAO RP2040 (Motion Recognition)
 
 In this wiki, we will show you how to utilize the accelerometer on Seeed Studio XIAO RP2040 combined with Edge Impulse to enable motion recognition. The codes we present here are supported by latest version of  XIAO RP2040 Boards.
 
@@ -25,11 +25,9 @@ In this wiki, we need to prepare the following materials:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao_rp2040_ei_all_in_one.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 **Hardware Set up**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao_rp2040_ei_all_in_one_connect.jpg" alt="pir" width={400} height="auto" /></p>
-
 
 ### Software
 
@@ -46,7 +44,6 @@ First we are going run some demos to check whether the board and the display scr
 Open the Arduino IDE, navigate to Sketch -> Include Library -> Manage Libraries... and Search and Install `U8g2 library` in the Library Manager.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition29.png" alt="pir" width={400} height="auto" /></p>
-
 
 After the installation, copy the following code run it.
 
@@ -83,7 +80,6 @@ Then , open the serial monitor  you will see the output like this:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xiao_rp2040_ei_serial_monitor.jpg" alt="pir" width={400} height="auto" /></p>
 
-
 If all is fine, we can move on and connect Seeed Studio XIAO RP2040 to Edge Impulse.
 
 ## Connected with Edge Impulse
@@ -94,15 +90,11 @@ The precision of the training model is very important to the final result. If yo
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/01.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 2.** Choose "Accelerometer data" and click "Let’s get started!"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/02.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/03.jpg" alt="pir" width={800} height="auto" /></p>
-
-
 
 - **Step 3.** Install [Edge Impulse CLI](https://docs.edgeimpulse.com/docs/cli-installation) in your computer.
 
@@ -116,38 +108,33 @@ sudo edge-impulse-data-forwarder
 
 Name the accelerometer and the device.
 
-Move back to Edge Impulse "Data acquisition" page, the outcome should be like this if the connection is successful. You can find the Device of "XIAO RP2040" is shown on the right of the page. 
+Move back to Edge Impulse "Data acquisition" page, the outcome should be like this if the connection is successful. You can find the Device of "XIAO RP2040" is shown on the right of the page.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/04.jpg" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 6.**  Select the sensor as "3 axes". Name your label as `up` and `down`, modify Sample length (ms.) to 20000 and click start sampling.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/05.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 7.** Swing the [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/) up and down and keep the motion for 20 seconds. You can find the acquistion is shown up like this:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/06.jpg" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 8.** Split the data by clicking the raw data right top and choose "Split Sample". Click +Add Segment and then click the graph. Repeat it more than 20 time to add segments. Click Split and you will see the the sample data each for 1 second.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/07.jpg" alt="pir" width={800} height="auto" /></p>
 
-
-
 - **Step 9.** Repeat **Step 7.** and **Step 8.** and label data with different name to click different motion data, like `circle` and `line` and so on. The example provided is classifying up and down, left and right, and circle. You can change it as you may want to change here.
 
-    :::note:
-        In Step 8. the split time is 1 second which means you at least do one swing of up and down in one second in Step 7. Otherwise, the results will not be accurate. Meanwhile, you can adjust the split time according to your own motion speed.
-    :::
+:::note
+In Step 8. the split time is 1 second which means you at least do one swing of up and down in one second in Step 7. Otherwise, the results will not be accurate. Meanwhile, you can adjust the split time according to your own motion speed.
+:::
+
 - **Step 10.** Create Impulse
 
 Click **Create impulse** -> Add a processing block -> Choose **Spectral Analysis** -> Add a learning block -> Choose **Classification (Keras)** -> Save Impulse
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/08.jpg" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 11.** Spectral features
 
@@ -159,18 +146,13 @@ The output page should be like:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/09.jpg" alt="pir" width={800} height="auto" /></p>
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/10.jpg" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 12.** Training your model
 
 Click NN Classifier -> Click Start training -> Choose Unoptimized (float32)
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/11.jpg" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 13.** Model testing
 
@@ -182,20 +164,15 @@ We are also able to get the evaluation when downloading the model
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/12.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 14.** Build Arduino library
 
 Click Deployment -> Click Arduino Library -> Click **Build** -> Download the .ZIP file
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/13.jpg" alt="pir" width={800} height="auto" /></p>
 
-
-
 - **Step 15.** The name of .ZIP file is very important, it is set up as your name of the Edge Impulse project by default. Like here the project of the name is "RP2040". Select the file as ""Add the ".ZIP file" to your Arduino libraries
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/14.jpg" alt="pir" width={800} height="auto" /></p>
-
-
 
 - **Step 16.** Open Arduino -> Click Sketch -> Click **Include Library** ->
  **ADD .ZIP Library**
@@ -289,10 +266,9 @@ void loop()
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/EI/15.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 - **Step 17.** Move or hold the Seeed Studio XIAO RP2040 and check the results:
 
-Click the monitor on the top right corner of Arduino. 
+Click the monitor on the top right corner of Arduino.
 
 When you move the Seeed Studio XIAO RP2040 in the **circle and line** direction:
 
@@ -314,7 +290,6 @@ Congratulation! You acheve the end of the project. It is encouraged that you can
 
 - [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)
 - [Edge Impluse CLI](https://docs.edgeimpulse.com/docs/edge-impulse-cli/cli-installation)
-
 
 ## Tech Support
 <!-- 

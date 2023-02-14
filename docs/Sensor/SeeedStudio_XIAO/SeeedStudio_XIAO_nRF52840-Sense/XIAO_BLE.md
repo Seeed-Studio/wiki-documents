@@ -19,9 +19,9 @@ Compared to Seeed Studio XIAO RP2040,  Seeed Studio XIAO nRF52840 contains **ric
 
 Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansion board.
 
-
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
+
 ## Features
 
 - Powerful wireless capabilities: Bluetooth 5.0 with onboard antenna
@@ -54,12 +54,9 @@ Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansio
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/front-pinout-4.jpg" alt="pir" width={700} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https:///files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png" alt="pir" width={800} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https:///files.seeedstudio.com/wiki/XIAO-BLE/back-pinout-5.jpg" alt="pir" width={700} height="auto" /></p>
-
 
 ## Two Arduino Libraries
 
@@ -85,12 +82,11 @@ You need to prepare the following:
 
 :::tip
 
-    Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1 ](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 Connect the Seeed Studio XIAO nRF52840 (Sense) to your computer via a USB Type-C cable.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/bletpyecconnect.png" alt="pir" width={500} height="auto" /></p>
-
 
 ### Software setup
 
@@ -98,22 +94,18 @@ Connect the Seeed Studio XIAO nRF52840 (Sense) to your computer via a USB Type-C
 
 <p style={{textAlign: 'center'}}><a href="https://www.arduino.cc/en/software"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" alt="pir" width={700} height="auto" /></a></p>
 
-
 - **Step 2.** Launch the Arduino application
 
 - **Step 3.** Add Seeed Studio XIAO nRF52840 (Sense) board package to your Arduino IDE
 
 Navigate to **File > Preferences**, and fill **"Additional Boards Manager URLs"** with the url below:
-    *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
-
+    *<https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json>*
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width={700} height="auto" /></p>
-
 
 Navigate to **Tools > Board > Boards Manager...**, type the keyword "**seeed nrf52**" in the search box, select the latest version of the board you want, and install it. You can install both.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528401.png" alt="pir" width={700} height="auto" /></p>
-
 
 - **Step 4.** Select your board and port
 
@@ -123,18 +115,15 @@ After installing the board package, navigate to **Tools > Board** and choose the
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528402.png" alt="pir" width={700} height="auto" /></p>
 
-
 **Port**
 
 Navigate to **Tools > Port** and select the serial port name of the connected Seeed Studio XIAO nRF52840 (Sense). This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). The serial port of the connected Seeed Studio XIAO nRF52840 (Sense) usually contains parentheses that are written **Seeed Studio XIAO nRF52840** for **Seeed Studio XIAO nRF52840** or **Seeed Studio XIAO nRF52840 Sense** for **Seeed Studio XIAO nRF52840 Sense**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/port.png" alt="pir" width={550} height="auto" /></p>
 
-
 - **Step 5.** Navigate to **File > Examples > 01.Basics > Blink** to open **Blink** example
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={550} height="auto" /></p>
-
 
 - **Step 6.** Click the **Upload** button to upload the Blink example code to the board
 
@@ -175,12 +164,12 @@ The Seeed Studio XIAO nRF52840 is low power consumption and here we provide a me
 - **Step 1.** Use **JLink** Downloader to flash the [bootloader firmware](https://github.com/0hotpotman0/BLE_52840_Core/blob/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex) for Seeed Studio XIAO nRF52840 (Sense).
 
 :::note
-    If you are using the factory firmware of the Seeed Studio XIAO nRF52840 or have never made changes to the firmware of the Seeed Studio XIAO nRF52840, you can skip this step.
+If you are using the factory firmware of the Seeed Studio XIAO nRF52840 or have never made changes to the firmware of the Seeed Studio XIAO nRF52840, you can skip this step.
 :::
+
 - **Step 2.** Use the`Seeed nRF52 Boards` library here.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528403.png" alt="pir" width={800} height="auto" /></p>
-
 
 - **Step 3.** Upload the [deep_sleep demo](https://github.com/0hotpotman0/BLE_52840_Core/blob/main/libraries/Bluefruit52Lib/examples/Hardware/deep_Sleep/deep_Sleep.ino) here and run it with **Arduino**
 
@@ -190,11 +179,9 @@ The Seeed Studio XIAO nRF52840 is low power consumption and here we provide a me
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEpowerposition.png" alt="pir" width={500} height="auto" /></p>
 
-
 - **Step 6.** The output shows the current is at about **3 μA**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEpowerresult.jpg" alt="pir" width={500} height="auto" /></p>
-
 
 ## Battery Charging current
 
@@ -237,16 +224,13 @@ It is required to download the [Segger](https://www.segger.com/downloads/jlink/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD1.png" alt="pir" width={300} height="auto" /></p>
 
-
 - **Step 2.** Start the J-Flash and serach nRF52840, creating a new project:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD2.png" alt="pir" width={500} height="auto" /></p>
 
-
 - **Step 3.** Click "Target" and then select "Connect".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD3.png" alt="pir" width={500} height="auto" /></p>
-
 
 - **Step 4.** Draw the bin or [hex file](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex) to software. Then press F4 and F5 in that order. The reflashing is done.
 

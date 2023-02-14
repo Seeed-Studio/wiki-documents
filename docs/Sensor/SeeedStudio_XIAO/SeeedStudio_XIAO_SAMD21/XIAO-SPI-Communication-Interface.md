@@ -14,7 +14,7 @@ last_update:
 
 **Materials required**
 
-- [Seeed Studio XIAO ](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) x 1
+- [Seeed Studio XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) x 1
 
 - [Grove-High Precision pressure Sensor](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html)
 
@@ -26,7 +26,6 @@ last_update:
 
 - **Step 2.** Sensor's **CS** is connected to Seeed Studio XIAO 's **D3**.
 
-
 - **Step 3.** Sensor's **SDO** is connected to Seeed Studio XIAO 's **MISO**.
 
 - **Step 4.** Sensor's **SDI** is connected to Seeed Studio XIAO 's **MOSI**.
@@ -37,21 +36,19 @@ last_update:
 
 - **Step 7.** Connect Seeed Studio XIAO to PC via a Type-C cable.
 
-
 ### Software
 
 :::note
 
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
-
 - **Step 1.** Download the [DPS310-Pressure-Sensor](https://github.com/Infineon/DPS310-Pressure-Sensor.git) Library from Github.
-
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Copy the code into Arduino IDE and upload.
+
 ```c
 #include <Dps310.h>
 
@@ -157,6 +154,7 @@ void loop()
   delay(10000);
 }
 ```
+
 - **Step 4.** Click **Tools** > **Serial Monitor** , or press **Ctrl+Shift+M** together, open the serial monitor after uploading successfully, the output appears as follows:
 
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/spi.png) -->
