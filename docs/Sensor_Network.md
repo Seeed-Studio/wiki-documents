@@ -89,7 +89,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Proximity</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TOF</font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TOF</font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Infrared</font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Gesture</font></span></a>
@@ -112,9 +112,10 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> O₂ </font></span></a>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CO₂ </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HCHO </font></span></a>
-            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HCHO </font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SGP30 </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Multichannel Gas </font></span></a>
             <br/>
     </a>
 </div>
@@ -150,7 +151,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Line Finder </font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Luminance </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sunlight(Multiple) </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sunlight(Multiple Light) </font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Biometric</font></div>
@@ -804,7 +805,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dual</font></span></a>, 
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Quad </font></span></a>
-            <a><span><font color={'FFFFFF'} size={"2"}> Alphanumeric LED</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> Alpha-LED</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -838,6 +839,15 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>LED</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Red LED </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LED Bar </font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RGB LED Ring </font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Switch & Button</font></div>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Button </font></span></a>
             <br/>
@@ -848,7 +858,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Input / Output</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Differential Input - Amplified Output </font></span></a>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Differential - Amplified </font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 8 Channel I2C Multiplexer </font></span></a>
             <br/>
