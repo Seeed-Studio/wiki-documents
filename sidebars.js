@@ -2311,30 +2311,16 @@ const sidebars = {
       type: 'html',
       value: `
       <style>
-      .download_item {
-        width:300px;
-        height:30px;
-        display: inline-block;
-        text-decoration: none;
-        padding: 10px;
-        margin-top: 80px;
-        margin-bottom: 2px;
-        margin-left: 2px;
-        margin-right: 2px;
-        box-sizing: content-box;
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        color: #8DC21F;
+        margin-top: 100px;
       }
-      .download_item:hover {
-        /* border:2px solid #FFFFFF; */
-        color:#000000;
-        text-decoration: none;
-      }
-    </style>
-      <a class="download_item" href="https://files.seeedstudio.com/wiki/One-Click-Download-PDF/c1ev0ps.github.io-docusaurus_wiki-Network-SenseCAP-Industrial-IoT-SenseCAP-Introduction.pdf" target="_blank">
-          <div class="download_wrapper">
-              <div class="download_title" style={{textAlign:'center'}}><font color={'8DC213'} size={"6"}> Download PDF 📖</font></div>
-          </div>
-      </a>
-      </div>
+      </style>
+      <a class="sub_item" href="https://files.seeedstudio.com/wiki/One-Click-Download-PDF/c1ev0ps.github.io-docusaurus_wiki-Network-SenseCAP-Industrial-IoT-SenseCAP-Introduction.pdf" target="_blank"><span>Download PDF 📖</span></a>
     `,
     },
   ],
