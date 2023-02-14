@@ -120,7 +120,7 @@ We use **Network -> mqtt in** node and configure mqtt in the format of the Sense
 - Port: 1883
 - Protocol: MQTT V3.1.1
 - Client ID: The format is `org-<Organization ID>-<Random ID>`
-  <!-- 链接无法通过build - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/Sensor/SenseCAP%20K1100/LoRaWAN-Network%20Application/SenseCAP%20&%20Node-Red%20for%20Cloud%20Services/K1100_sensecap_node-red). -->
+  - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/Sensor/SenseCAP%20K1100/LoRaWAN-Network%20Application/SenseCAP%20&%20Node-Red%20for%20Cloud%20Services/K1100_sensecap_node-red).
   - `<Random ID>` uses your own randomly generated numbers or lowercase letters.
 
 - Topic Format: `/device_sensor_data/<OrgID>/<DeviceEUI>/<Channel>/<Reserved>/<MeasurementID>`
