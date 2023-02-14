@@ -971,14 +971,21 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 
 ### Tutorials -->
 
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Arduino Boards Tutorial</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Arduino boards tutorials.</font></div>
+    </a>
+</div>
+
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Arduino Boards</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"4"}>📖 Arduino Basic Usage</font></span></a>
-            <br/>
+            <div class="independent_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Basic Usage</font></span></a></div>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Download Arduino and install Arduino driver</font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to add Seeed Studio boards to Arduino IDE</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to use demos downloaded from Seeed Studio Github</font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to use and write a library</font></span></a>
             <br/>
@@ -988,9 +995,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Arduino Boards</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"4"}>📖 Arduino Enhanced Usage</font></span></a>
-            <br/>
+            <div class="independent_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Enhanced Usage</font></span></a></div>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Suli</font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeed Arduino Serial</font></span></a>
             <br/>
@@ -1001,6 +1006,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> FreeRTOS Tutorial - How to use FreeRTOS apply Multi-tasking</font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to Debug Arduino Boards using SWD Interface</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Flashing the Arduino Bootloader using DAP Link</font></span></a>
             <br/>
     </a>
 </div>
@@ -1026,15 +1033,47 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Wio Terminal Tutorial</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Wio Terminal tutorials.</font></div>
+    </a>
+</div>
+
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'center'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Wio Terminal</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}>Basic Usage of Wio Terminal</font></span></a></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to play retro games on Wio Terminal</font></span></a>
+            <br/>
+            USB Host for a <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Keyboard</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mouse</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Xbox</font></span></a>
+            <br/>
+            USB Client for a <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Keyboard</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mouse</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MIDI</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> HMI</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to display Gyro on Wio Terminal</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to use Wio Terminal to store data</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to use Wio Terminal to display photos</font></span></a>
             <br/>
     </a>
-    <a class="independent_item" style={{textAlign: 'center'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tutorials for Wio Terminal</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x</font></span></a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal Fun Projects</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Use Codecraft compling platform connect Azure IoT</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Wio Terminal Interactive Faces Demo</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Pressure sensor using the Wio terminal</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Reading Coronavirus Live Data using Wio Terminal</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to measure noise levels with Wio Terminal</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to Use Wio Terminal as RTL8720DN Dev Board</font></span></a>
             <br/>
     </a>
 </div>
