@@ -114,7 +114,7 @@ Now, this step is done. Let's move to the next step.
 
 ### Setup your BeagleBone Green
 
-Connect BBG to your PC via micro USB cable, and let BBG access the Internet. If this is your first time to use BBG/BBB, maybe you can follow [here](/BeagleBone_Green) to get started.
+<!-- Connect BBG to your PC via micro USB cable, and let BBG access the Internet. If this is your first time to use BBG/BBB, maybe you can follow [here](/BeagleBone_Green) to get started. -->
 
 Connect Grove modules to BBG as the picture below shows.
 
@@ -658,7 +658,7 @@ Resources
 <!-- - [Main Page for Grove IoT Starter Kits Powered by AWS](/Sensor/Seeeduino Series/Kit with Courses/Main Page for Grove IoT Starter Kits Powered by AWS) -->
 - [【Github】AWS SDK for BeagleBone Green kit](https://github.com/Seeed-Studio/AWS_SDK_for_BBG)
 - [【Github】Libraries for BeagleBone Green kit](https://github.com/Seeed-Studio/Grove_Starter_Kit_for_BBG)
-- [BeagleBone Green](/Edge/Beagle_Bone/BeagleBone_Green)
+<!-- - [BeagleBone Green](/Edge/Beagle_Bone/BeagleBone_Green) -->
 - [Main page of Beagleboard](https://beagleboard.org/getting-started)
 <!-- - [Grove - I2C ADC](/Sensor/Grove/Grove_Sensors_Network/Standard_Protocol) -->
 - [Grove - I2C Hub](/Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub)
