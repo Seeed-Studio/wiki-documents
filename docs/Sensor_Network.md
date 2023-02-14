@@ -39,7 +39,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temp & Humi</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>,
+            <a href="/Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-Temperature-Humidity-Sensor-DH20" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AHT20</font></span></a>,
