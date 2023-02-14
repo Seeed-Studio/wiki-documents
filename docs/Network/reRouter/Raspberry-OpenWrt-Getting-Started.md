@@ -1,6 +1,6 @@
 ---
-description: Build mini router with Dual Gigabit Ethernet Carrier Board
-title: Build mini router with Dual Gigabit Ethernet Carrier Board
+description: reRouter Introduction
+title: reRouter Introduction
 keywords:
 - Device
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

@@ -1,6 +1,6 @@
 ---
-description: Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4
-title: Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4
+description: reRouter carrier board
+title: reRouter carrier board
 keywords:
 - Device
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
