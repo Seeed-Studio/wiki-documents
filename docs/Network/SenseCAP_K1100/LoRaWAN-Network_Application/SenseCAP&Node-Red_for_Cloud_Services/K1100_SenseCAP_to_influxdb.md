@@ -1,6 +1,6 @@
 ---
-description: SenseCAP & Node-RED to Datacake
-title: SenseCAP & Node-RED to Datacake
+description: SenseCAP & Node-RED to InfluxDB
+title: SenseCAP & Node-RED to InfluxDB
 keywords:
 - SenseCap
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
@@ -8,7 +8,8 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 ---
-# Connecting SenseCAP to Datacake via Node-RED
+
+# Connecting SenseCAP to InfluxDB via Node-RED
 
 **SenseCAP K1100 - The Sensor Prototype Kit** represents Seeed Studio concentrating the essence of LoRa® communication on technology and edge intelligence products, for the easiest deploying and mastering of LoRa® and IoT applications.
 
@@ -60,15 +61,15 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
     </tr>
   </tbody></table>
 
-## Datacake
+## About InfluxDB
 
-Datacake is a multi-purpose, low-code IoT platform that requires no programming skills and minimal time to create custom IoT applications.
+**InfluxDB** is an open source time series database, focusing on high-performance reading, high-performance writing, efficient storage and real-time analysis of massive time series data. In addition to native protocols such as HTTP and UDP, it is also compatible with communication protocols of components such as CollectD, Graphite, OpenTSDB, and Prometheus. Widely used in DevOps monitoring, IoT monitoring, real-time analysis and other scenarios.
 
-The content of this chapter will continue to use the Node-RED introduced earlier and facilitate the management of the K1100 kit in Datacake through the use of Node-RED.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/1.png" /></div>
+
+The content of this chapter will continue to use the Node-RED introduced earlier and facilitate the management of the K1100 kit in InfluxDB through the use of Node-RED.
 
 If you haven't installed or don't know what Node-RED is, please refer to [Node-RED & SenseCAP Tutorials](https://wiki.seeedstudio.com/K1100_sensecap_node-red/).
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/1.png" alt="pir" width={600} height="auto" /></p>
 
 ## Create MQTT Node
 
@@ -84,7 +85,7 @@ We use **Network -> mqtt in** node and configure mqtt in the format of the Sense
 - Port: 1883
 - Protocol: MQTT V3.1.1
 - Client ID: The format is `org-<Organization ID>-<Random ID>`
-  - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/Sensor/SenseCAP%20K1100/LoRaWAN-Network%20Application/SenseCAP%20&%20Node-Red%20for%20Cloud%20Services/K1100_sensecap_node-red#get-the-sensecap-api).
+  - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_sensecap_node-red#get-the-sensecap-api).
   - `<Random ID>` uses your own randomly generated numbers or lowercase letters.
 
 - Topic Format: `/device_sensor_data/<OrgID>/<DeviceEUI>/<Channel>/<Reserved>/<MeasurementID>`
@@ -118,96 +119,92 @@ Once configured, please click the **Deploy** button in the top right corner to c
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_nodered_azure/1.png" /></div>
 
-## Configure Datacake
+## Configure InfluxDB
 
-**Step 1.** Register or login to Datacake
+**Step 1.** Register or login to InfluxDB
 
-If you have already registered with Datacake, then please login on the [Datacake website](https://datacake.co/).
+If you have already registered with InfluxDB, then please login on the [InfluxDB website](https://www.influxdata.com/).
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/3.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/2.png" /></div>
 
-If you do not use or have registered with Datacake, then please complete your registration and login [here](https://app.datacake.de/signup).
+If you do not use or have registered with InfluxDB, then please complete your registration and login [here](https://cloud2.influxdata.com/signup).
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/2.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/3.png" /></div>
 
-**Step 2.** New workspace
+:::tip
+When registering, a page may pop up asking you to choose the provider, you can choose according to your preference, or just pick one.
+:::
+   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/4.png" /></div>
 
-Once you have logged into Datacake, click on your account name in the top left hand corner and select **Add Workspace**. And come up with a name for your workspace.
+**Step 2.** Obtain API Token
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/8.png" /></div>
+As shown below, please click on **Bucket**.
 
-**Step 3.** New device
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_influxdb/5.png" /></div>
 
-After entering the newly created workspace, then create a new device.
+Then click on CREATE BUCKET.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/9.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/6.png" /></div>
 
-Select **API**.
+Enter the name in the new pop-up window and select the free data retention period - 30 days.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/4.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_influxdb/7.png" /></div>
 
-Select **New Product**. And name the product.
+Then, as shown below, please click on **API Tokens**.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/5.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/k1100_influxdb/8.png" /></div>
 
-In this section, we will choose the free option to complete.
+Then we choose to create a **Custom API Token**.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/7.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/9.png" /></div>
 
-**Step 4.** Configure the device
+Give **read** and **write** permissions to the Buckets we have just created and click the Create button below.
 
-Click into the new device you just created and select **Configuration**.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/10.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/10.png" /></div>
+Once it has been created, you can save it by copying the API Token to the pasteboard. Please save it to a safe location for now, we will use it in a later step.
 
-Locate "Fields" and click **Add Field**. Then enter the name of the data you want to manage in Datacake.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/11.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/11.png" /></div>
 
 :::note
- Note that the IDENTIFIER fields are all uppercase, and in the function node of Node RED that is configured later, the content passed in also needs to be uppercase.
+If you close the window here, you will not be able to get this API Token again.
 :::
-**Step 5.** Obtain the API token
-
-Click on your account name in the top left hand corner and select **Edit Profile**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/12.png" /></div>
-
-Then save the **API token** in the API, which we will use in Node RED in a moment.
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/13.png" /></div>
 
 ## Configure Node-RED
 
-**Step 1.** Download Datacake Paletts
+**Step 1.** Download InfluxDB Paletts
 
 Click on the upper-right menu bar and select Settings.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_nodered_azure/13.png" /></div>
 
-Search and install **node-red-contrib-datacake** in the **Paletts -> Install**.
+Search and install **node-red-contrib-influxdb** in the **Paletts -> Install**.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/14.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/12.png" /></div>
 
-Add **datacake - out** from the storage bar on the left，double-click it to enter the configuration page, then click the edit button to edit **datacake - out** node.
+Add **influx.batch** from the storage bar on the left，double-click it to enter the configuration page, then click the edit button to edit **influx.batch** node.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/15.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/13.png" /></div>
 
-**Step 2.** Edit **datacake - out** node
+**Step 2.** Edit **influx.batch** node:
 
-Please fill in the **API Token** with the API token we obtained in the previous configuration of Datacake. Then just click the Add button in the top right corner.
+- **Version**: 2.0.
+- **URL**: Obtained from the **Settings** -> **Orgnization Profile**.
+    <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/k1100_influxdb/14.png" /></div>
 
-Then select the name of the workspace we created earlier.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/15.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/16.png" /></div>
+- **TOKEN**:  Which you generate in **Obtain API Token** Section.
 
-The device will automatically be refreshed to the new device just created and the field drop down box will show the new field just created. If you don't want to set a field here, you can also modify the fieldName of the payload to configure the field via code.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/16.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/17.png" /></div>
+When you have finished click on the **Add** button in the top right hand corner to return to the properties page of the influx batch, at this point please fill in your Orgnization(The default is the email address you use to register with InfluxDB) and Bucket name.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/20.png" /></div>
 
 **Step 3.** Configure the function node
 
-Data reporting to Datacake needs to follow a specific data format, so it's necessary to add a function node to process the data format.
+Data reporting to InfluxDB needs to follow a specific data format, so it's necessary to add a function node to process the data format.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/18.png" /></div>
 
@@ -223,68 +220,105 @@ Drag out the function node from the function bar on the left, double-click it to
     var length = strs.length
     if (length >= 2) {
         var measurementId = strs[length - 1]
-        msg.payload = payload.value
-        if (measurementId == 4150) {
-            msg.fieldName = "ACCELX"
-        } else if (measurementId == 4151) {
-            msg.fieldName = "ACCELY"
-        } else if (measurementId == 4152) {
-            msg.fieldName = "ACCELZ"
-        } else if (measurementId == 4192) {
-            msg.fieldName = "VOLUME"
-        } else if (measurementId == 4193) {
-            msg.fieldName = "LIGHTINTENSITY"
+        var body = {}
+        var value = payload.value
+        if (measurementId == 4100) {
+            body.co2 = value
+            measurement = "co2"
         } else if (measurementId == 4103) {
-            msg.fieldName = "SOILMOISTURE"
+            body.soilmoisture = value
+            measurement = "soilmoisture"
+        } else if (measurementId == 4150) {
+            body.accelX = value
+            measurement = "accelX"
+        } else if (measurementId == 4151) {
+            body.accelY = value
+            measurement = "accelY"
+        } else if (measurementId == 4152) {
+            body.accelZ = value
+            measurement = "accelZ"
+        } else if (measurementId == 4192) {
+            body.soundintensity = value
+            measurement = "soundintensity"
+        } else if (measurementId == 4193) {
+            body.lightIntensity = value
+            measurement = "lightIntensity"
         } else if (measurementId == 4195) {
-            msg.fieldName = "TVOC"
-        } else if (measurementId == 4100) {
-            msg.fieldName = "CO2"
+            body.tvoc = value
+            measurement = "tvoc"
         } else if (measurementId == 4097) {
-            msg.fieldName = "AIRTEMPERATURE"
+            body.airtemperature = value
+            measurement = "airtemperature"
         } else if (measurementId == 4098) {
-            msg.fieldName = "AIRHUMIDITY"
+            body.airhumidity = value
+            measurement = "airhumidity"
         } else if (measurementId == 4175) {
-            msg.fieldName = "AIDETECTION1"
+            body.AIdetection_1 = value
+            measurement = "AIdetection_1"
         } else if (measurementId == 4176) {
-            msg.fieldName = "AIDETECTION2"
+            body.AIdetection_2 = value
+            measurement = "AIdetection_2"
         } else if (measurementId == 4177) {
-            msg.fieldName = "AIDETECTION3"
+            body.AIdetection_3 = value
+            measurement = "AIdetection_3"
         } else if (measurementId == 4178) {
-            msg.fieldName = "AIDETECTION4"
+            body.AIdetection_4 = value
+            measurement = "AIdetection_4"
         } else if (measurementId == 4179) {
-            msg.fieldName = "AIDETECTION5"
+            body.AIdetection_5 = value
+            measurement = "AIdetection_5"
         } else if (measurementId == 4180) {
-            msg.fieldName = "AIDETECTION6"
+            body.AIdetection_6 = value
+            measurement = "AIdetection_6"
         } else if (measurementId == 4181) {
-            msg.fieldName = "AIDETECTION7"
+            body.AIdetection_7 = value
+            measurement = "AIdetection_7"
         } else if (measurementId == 4182) {
-            msg.fieldName = "AIDETECTION8"
+            body.AIdetection_8 = value
+            measurement = "AIdetection_8"
         } else if (measurementId == 4183) {
-            msg.fieldName = "AIDETECTION9"
+            body.AIdetection_9 = value
+            measurement = "AIdetection_9"
         } else if (measurementId == 4184) {
-            msg.fieldName = "AIDETECTION10"
+            body.AIdetection_10 = value
+            measurement = "AIdetection_10"
         }
+        msg.payload = [{
+            measurement: measurement,
+            fields: body,
+            tags: {
+                device: "SenseCAP K1100"
+            },
+            timestamp: new Date()
+        }];
     }
     return msg;
 }
 ```
 
-**Step 4.** Deploy
-
 Then we connect all the nodes and click on the **Deploy** button and if everything is set up correctly you will be able to see the mqtt in node showing connected.
 
 If you want to see the logging information of the data, you can add a debug node after the function node.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/18.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/17.png" /></div>
 
 Once the Wio Terminal starts powering up and working and starts sending data to SenseCAP PaaS server, then we can check the data on Node-RED debug log.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/19.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/21.png" /></div>
 
-Back in the Datacake dashboard, you can see all the data information in the **History** section of this device.
+## Configure InfluxDB visual dashboards
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_datacake/20.png" /></div>
+To get a more visual view of the sensor data, we can draw some line graphs.
+
+Go back to InflucDB Cloud and click on **CREATE DASHBOARD** to **ADD CELL**.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/19.png" /></div>
+
+If SenseCAP has started sending data messages to InfluxDB, then you can see the sensor's label on this page. For the content of the data you want to display, we just tick the box.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/22.png" /></div>
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/23.png" /></div>
 
 ## Troubleshoot
 

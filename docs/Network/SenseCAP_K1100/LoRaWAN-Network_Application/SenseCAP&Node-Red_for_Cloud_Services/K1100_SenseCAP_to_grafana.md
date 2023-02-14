@@ -1,6 +1,6 @@
 ---
-description: SenseCAP & Node-RED to Power BI
-title: SenseCAP & Node-RED to Power BI
+description: SenseCAP & Node-RED to Grafana
+title: SenseCAP & Node-RED to Grafana
 keywords:
 - SenseCap
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
@@ -8,7 +8,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 ---
-# Connecting SenseCAP to Power BI via Node-RED
+# Connecting SenseCAP to Grafana via Node-RED
 
 **SenseCAP K1100 - The Sensor Prototype Kit** represents Seeed Studio concentrating the essence of LoRa® communication on technology and edge intelligence products, for the easiest deploying and mastering of LoRa® and IoT applications.
 
@@ -60,75 +60,21 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
     </tr>
   </tbody></table>
 
-## Power BI
+## Grafana
 
-Connect and analyze your entire data estate by combining Power BI with Azure analytics services—including Azure Synapse Analytics and Azure Data Lake Storage. Analyze petabytes of data, use advanced AI capabilities, apply additional data protection, and more easily share insights across your organization.
+Grafana is an open source solution for running data analytics, pulling up metrics that make sense of the massive amount of data & to monitor our apps with the help of cool customizable dashboards. Grafana connects with every possible data source, commonly referred to as databases such as Graphite, Prometheus, Influx DB, ElasticSearch, MySQL, PostgreSQL etc. Grafana being an open source solution also enables us to write plugins from scratch for integration with several different data sources. The tool helps us study, analyse & monitor data over a period of time, technically called time series analytics.
 
-In this tutorial we will guide you through how to import sensor data from **SenseCAP** into **Power BI** for more in-depth data processing by using Node RED.
+It helps us track the user behaviour, application behaviour, frequency of errors popping up in production or a pre-prod environment, type of errors popping up & the contextual scenarios by providing relative data.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_powerbi/powerbi_logo.png" /></div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/1.png" alt="pir" width={800} height="auto" /></p>
 
-## Preliminary preparation
+The content of this chapter will continue to use the Node-RED introduced earlier and use Grafana to visualize data from your InfluxDB 2.4 instance.
 
-To complete this tutorial, you need:
+Before doing so, please prepare the following.
 
-- If you haven't installed or don't know what Node-RED is, please refer to [Node-RED & SenseCAP Tutorials](https://wiki.seeedstudio.com/K1100_sensecap_node-red/).
-- A Power BI account. If you don't have a Power BI account, sign up for a [free Power BI Pro trial](https://app.powerbi.com/signupredirect?pbi_source=web) before you begin.
-- In any of the following wikis, you have successfully uploaded data to SenseCAP.
-  - [Send sensor data to SenseCAP via LoRa®](https://wiki.seeedstudio.com/K1100-quickstart/#send-sensor-data-to-sensecap-via-lora)
+1. If you haven't installed or don't know what Node-RED is, please refer to [Node-RED & SenseCAP Tutorials](https://wiki.seeedstudio.com/K1100_sensecap_node-red/).
 
-<!--## Create SenseCAP node
-
-**Step 1.** Start Node-RED
-
-Start Node-RED by typing the command `node-red` in the terminal and open a browser and enter the address **http://localhost:1880** in the address bar to access the editor of Node-RED.
-
-**Step 2.** Install the SenseCAP node
-
-Click on the upper-right menu bar and select Settings.
-
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/6.png"/></div>
-
-Search and install **node-red-sensecap-paas** in the **Paletts -> Install**.
-
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/1.png"/></div>
-
-**Step 3.** Configure SenseCAP node
-
-Add **sensecap.OpenStream** from the storage bar on the left，double-click it to enter the configuration page, then click the edit button to edit **sensecap.OpenStream** node.
-
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/2.png"/></div>
-
-Please edit your account.
-
-<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/7.png"/></div>
-
-In the new page, please fill in the following fields.
-
-- Name: Name this account.
-- Orgnization ID: From the **Organization Information** section, copy the Organization ID.
-
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/8.png"/></div>
-
-- API Key: Please click on **Security** -> **Access API keys** on the left side of the dashboard. Then Create an Access Key.
-
-<div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/9.png"/></div>
-
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/10.png"/></div>
-
-Then just click on the **Update** or **Save** button.
-
-On the screen for setting up nodes, please fill in the following fields.
-- Name: Name your node.
-- EUI: Please enter the EUI of your device, which can be found in the SenseCAP console.
-- Measurement ID: Sensor number. Information on sensor numbers can be found in the [SenseCAP Documentation Centre](https://sensecap-docs.seeed.cc/sensor_types_list.html).
-- Output Format: Select **Power BI**.
-
-<div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/5.png"/></div>
-
-!!!Note
-    Our recommendation is to fill in the Measurement ID, which will be a sensor value each time it is transmitted to Power BI. If this is left blank, multiple sensor values will be transmitted at the same time and Power BI will then get a messy data.
-    If you have a need to analyse values from multiple sensors at the same time, you can use multiple SenseCAP nodes.-->
+2. Start by deploying SenseCAP to InfluxDB's Node RED, details of which can be found in the wiki [Connect SenseCAP to InfluxDB via Node-RED](https://wiki.seeedstudio.com/K1100_SenseCAP_to_influxdb/).
 
 ## Create MQTT Node
 
@@ -144,7 +90,7 @@ We use **Network -> mqtt in** node and configure mqtt in the format of the Sense
 - Port: 1883
 - Protocol: MQTT V3.1.1
 - Client ID: The format is `org-<Organization ID>-<Random ID>`
-  - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/Sensor/SenseCAP%20K1100/LoRaWAN-Network%20Application/SenseCAP%20&%20Node-Red%20for%20Cloud%20Services/K1100_sensecap_node-red#get-the-sensecap-api).
+  - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_sensecap_node-red#get-the-sensecap-api).
   - `<Random ID>` uses your own randomly generated numbers or lowercase letters.
 
 - Topic Format: `/device_sensor_data/<OrgID>/<DeviceEUI>/<Channel>/<Reserved>/<MeasurementID>`
@@ -172,20 +118,96 @@ We use **Network -> mqtt in** node and configure mqtt in the format of the Sense
     </tr>
   </tbody></table>
 
-:::note
-We recommend that an mqtt in node only transmits the values of a single sensor to avoid data confusion caused by transmitting the values of multiple sensors at the same time.
-:::
-    <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/20.png" /></div>
-
 **Step 3.** Validate MQTT nodes
 
 Once configured, please click the **Deploy** button in the top right corner to check if the configuration was successful. If it is filled in correctly, then the word **Connected** will be displayed.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_nodered_azure/1.png" /></div>
 
-## Configure function node
+## Start InfluxDB OSS
 
-Data reporting to Power BI needs to follow a specific data format, so it's necessary to add a function node to process the data format.
+:::tip
+ You can refer to the detailed [tutorial](https://docs.influxdata.com/influxdb/v2.4/install/?t=Windows#start-influxdb) provided by InfuxDB to complete the installation and deployment of InfluxDB, which is compatible with different systems. The following will guide the installation using a Windows 11 system as an example.
+:::
+**Step 1.** Download the InfluxDB v2.4
+
+Please click [here](https://dl.influxdata.com/influxdb/releases/influxdb2-2.4.0-windows-amd64.zip) to download the InfluxDB v2.4 zip file.
+
+Expand the downloaded archive into `C:\Program Files\InfluxData\` and rename the files if desired.
+
+**Step 2.** Start InfluxDB
+
+In Powershell, navigate into `C:\Program Files\InfluxData\influxdb` and start InfluxDB by running the influxd daemon:
+
+```shell
+cd -Path 'C:\Program Files\InfluxData\influxdb'
+.\influxd
+```
+
+:::tip
+ Use Powershell or WSL to execute influx and influxd commands. The command line examples in this documentation use influx and influxd as if installed on the system `PATH`. If these binaries are not installed on your `PATH`, replace influx and influxd in the provided examples with `.\influx` and `.\influxd` respectively.
+:::
+By default, InfluxDB uses TCP port `8086` for client-server communication over the [InfluxDB HTTP API](https://docs.influxdata.com/influxdb/v2.4/reference/api/).
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/3.png" /></div>
+
+## Configure InfluxDB
+
+**Step 1.** Register an InfluxDB account
+
+Continue with the steps above and register an account on the page that opens.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/11.png" /></div>
+
+Please make a note of the **Organisation Name** you set here, we will use it later in the Node RED configuration.
+
+**Step 2.** Obtain URL
+
+By default, InfluxDB uses TCP port `8086` for client-server communication over the InfluxDB HTTP API.
+
+```
+http://localhost:8086/
+```
+
+For this section the InfluxDB URL is as follows, please note it down, we will use it later in the Node RED configuration.
+
+**Step 3.** Obtain API Token
+
+Go to the API Tokens page as shown below, create a new API interface for Node RED and write down the Token.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/12.png" /></div>
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/13.png" /></div>
+
+## Configure Node-RED
+
+**Step 1.** Download InfluxDB Paletts
+
+Click on the upper-right menu bar and select Settings.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_nodered_azure/13.png" /></div>
+
+Search and install **node-red-contrib-influxdb** in the **Paletts -> Install**.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/12.png" /></div>
+
+Add **influx.batch** from the storage bar on the left，double-click it to enter the configuration page, then click the edit button to edit **influx.batch** node.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/13.png" /></div>
+
+**Step 2.** Edit **influx.batch** node:
+
+- **Version**: 2.0.
+- **URL**: <http://localhost:8086/>
+- **TOKEN**:  Which you generate in **Obtain API Token** Section.
+
+When you have finished click on the **Add** button in the top right hand corner to return to the properties page of the influx batch, at this point please fill in your Orgnization Name and Bucket name.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/20.png" /></div>
+
+**Step 3.** Configure the function node
+
+Data reporting to InfluxDB needs to follow a specific data format, so it's necessary to add a function node to process the data format.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/18.png" /></div>
 
@@ -205,178 +227,149 @@ Drag out the function node from the function bar on the left, double-click it to
         var value = payload.value
         if (measurementId == 4100) {
             body.co2 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "co2"
         } else if (measurementId == 4103) {
             body.soilmoisture = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "soilmoisture"
         } else if (measurementId == 4150) {
             body.accelX = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "accelX"
         } else if (measurementId == 4151) {
             body.accelY = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "accelY"
         } else if (measurementId == 4152) {
             body.accelZ = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "accelZ"
         } else if (measurementId == 4192) {
             body.soundintensity = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "soundintensity"
         } else if (measurementId == 4193) {
             body.lightIntensity = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "lightIntensity"
         } else if (measurementId == 4195) {
             body.tvoc = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "tvoc"
         } else if (measurementId == 4097) {
             body.airtemperature = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "airtemperature"
         } else if (measurementId == 4098) {
             body.airhumidity = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "airhumidity"
         } else if (measurementId == 4175) {
             body.AIdetection_1 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_1"
         } else if (measurementId == 4176) {
             body.AIdetection_2 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_2"
         } else if (measurementId == 4177) {
             body.AIdetection_3 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_3"
         } else if (measurementId == 4178) {
             body.AIdetection_4 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_4"
         } else if (measurementId == 4179) {
             body.AIdetection_5 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_5"
         } else if (measurementId == 4180) {
             body.AIdetection_6 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_6"
         } else if (measurementId == 4181) {
             body.AIdetection_7 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_7"
         } else if (measurementId == 4182) {
             body.AIdetection_8 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_8"
         } else if (measurementId == 4183) {
             body.AIdetection_9 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_9"
         } else if (measurementId == 4184) {
             body.AIdetection_10 = value
-            body.timestamp = msg.payload.timestamp
+            measurement = "AIdetection_10"
         }
-        msg.payload = body;
+        msg.payload = [{
+            measurement: measurement,
+            fields: body,
+            tags: {
+                device: "SenseCAP K1100"
+            },
+            timestamp: new Date()
+        }];
     }
     return msg;
 }
 ```
 
-:::Tip
-    The above code is common to all sensors and you can choose to paste it all into a function node or intercept a section of one of the sensors you are using to use.
-    It is worth noting that the name of the sensor in the program needs to match the name set later in Power BI for the data stream to be transferred successfully. For example, in the above program the light sensor has the value name: **lightIntensity**.
-:::
-
-## Create the Power BI datasets
-
-**Step 1.** Sign in to your [Power BI account](https://app.powerbi.com/).
-
-**Step 2.** Create a workspace.
-
-Select **Workspaces**, and then select **Create a workspace**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_powerbi/23.png" /></div>
-
-On the Create a workspace page, enter **In-store analytics - checkout** as the Workspace name. Select **Save**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_powerbi/24.png" /></div>
-
-**Step 3.** Create a streaming dataset.
-
-On the workspace page, select **+ New** > **Streaming dataset**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_powerbi/25.png" /></div>
-
-On the New streaming dataset page, choose API, and then select Next.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_powerbi/26.png" /></div>
-
-Enter **Light-Sensor** as the Dataset name.
-
-Enter the Light values from stream in following table:
-
-| Value name                | Value type                   |
-|---------------------------|------------------------------|
-| Timestamp                 | DataTime                     |
-| lightIntensity            | Number                       |
-
-:::tip
-The Value name should be the same as the name of the function program in Node RED.
-:::
-    <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/21.png" /></div>
-
-You now have a streaming datasets. Please make a note of the **Push URL** you get here, we will use it in the next step.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/22.png" /></div>
-
-## Configure http request node
-
-Add **http request** from the storage bar on the left，double-click it to enter the configuration page, then click the edit button to edit **http request** node.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/16.png" /></div>
-
-Please copy the URL obtained in the previous section into the URL in the http request page.
-
-Just change the method to **POST** and save it.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/17.png" /></div>
-
-## Deploy and observe data
-
-**Step 1.** Deploy
-
 Then we connect all the nodes and click on the **Deploy** button and if everything is set up correctly you will be able to see the mqtt in node showing connected.
 
 If you want to see the logging information of the data, you can add a debug node after the function node.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/18.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/17.png" /></div>
 
 Once the Wio Terminal starts powering up and working and starts sending data to SenseCAP PaaS server, then we can check the data on Node-RED debug log.
 
-**Step 2.** Configure Power BI dashboards
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_influxdb/21.png" /></div>
 
-Select **Workspaces** > **In-store analytics - checkout**.
+## Configure Grafana
 
-Select **+ New** > **Dashboard**.
+**Step 1.** Install Grafana
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/k1100_powerbi/50.png" /></div>
+Grafana can be installed on many different operating systems. For a list of the minimum hardware and software requirements, as well as instructions on installing Grafana, refer to [Install Grafana](https://grafana.com/docs/grafana/v9.0/setup-grafana/installation/).
 
-Enter **Store analytics** as the dashboard name, and select **Create**.
+Take Windows 11 as an example, download the installation package from the [Grafana website](https://grafana.com/grafana/download?platform=windows) and double click to open it for installation.
 
-### Add line charts
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/16.png" /></div>
 
-Add a line chart tiles to show the Light value from the Wio Terminal buit-in sensors. Use the information in the following table to create the tiles. To add each tile, start by selecting **Edit** > **Add a tile**.
+**Step 2.** Sign in to Grafana
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_powerbi/51.png" /></div>
+Open your web browser and go to `http://localhost:3000/`. The default HTTP port that Grafana listens to is `3000` unless you have configured a different port.
 
-Select **Custom Streaming Data**, and then select **Next**.
+On the sign-in page, enter `admin` for the username and password.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/k1100_powerbi/52.png" /></div>
+Click **Sign in**. If successful, you will see a prompt to change the password.
 
-Configure the horizontal coordinate to display the timestamp and the vertical coordinate to display the data values on the value.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/17.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/15.png" /></div>
+**Step 3.** Add Data Source
 
-When the data stream starts to transfer, you will be able to see the dashboard as a line graph.
+On the main page, we click on the gear icon at the bottom left and then click on **Add data source**.
 
-You can also add more graphics or data analysis to suit your needs.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/18.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_to_powerbi/19.png" /></div>
+Select InfluxDB from the list of available data sources.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/7.png" /></div>
+
+**Step 3.** Configure InfluxDB Data Source
+
+On the Data Source configuration page, enter a name for your InfluxDB data source.
+
+Then, choose or enter the following:
+
+- **Query Language**: Flux
+- Under HTTP, do the following:
+  - **URL**: <http://localhost:8086/>
+- Under Auth, do the following:
+  - Close **Basic auth**.
+- Under InfluxDB Details, do the following:
+  - **Organization**: organization ID. The organisation ID can be viewed on the **About** page of InfuxDB.
+  - **Token**: Your InfluxDB API token.
+  - **Default Bucket**: The default bucket to use in Flux queries.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/14.png" /></div>
+
+Click **Save & Test**. Grafana attempts to connect to the InfluxDB 2.4 data source and returns the results of the test. If all goes well, you will see the following output message.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/k1100_sensecap_grafana/15.png" /></div>
+
+## Query and visualize data
+
+With your InfluxDB connection configured, use Grafana and Flux to query and visualize time series data stored in your InfluxDB instance.
+
+For more information about using Grafana, see the [Grafana documentation](https://grafana.com/docs/). If you’re just learning Flux, see [Get started with Flux](https://docs.influxdata.com/flux/v0.x/get-started/).
+
+We also welcome you to submit your data dashboards to us, and we look forward to your work!
 
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
-
-## Statement
-
-- The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
-- LoRaWAN® is a mark used under license from the LoRa Alliance®.
