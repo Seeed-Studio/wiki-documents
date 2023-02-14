@@ -135,7 +135,7 @@ It is possible to use TFLite Converter to convert any Tensorflow model into .tfl
       <td>Face Recognition</td>
       <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_ML/face_recognition.gif" alt="pir" width={600} height="auto" /></p></td>
       <td>Demo: Multi-stage inference: Ultra Light Face Detector with Landmark Detection -&gt; MobileFaceNet<br />
-        <a href="WIP" target="_top">Jupyter Notebook</a><br />
+         <a >Jupyter Notebook</a><br /> 
         <a href="https://github.com/Seeed-Studio/Seeed_Python_MachineLearning/tree/main/examples/armnn/face_recognition" target="_top">Example scripts</a>  <br />
         ~15 FPS (ARM NN)
       </td>
