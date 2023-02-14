@@ -38,6 +38,13 @@
 width:auto;
 height:auto;
 }
+/* Left Column */
+.download_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
 
 /* Getting_Started.md*/
 .start_card_container {
