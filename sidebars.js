@@ -1102,7 +1102,7 @@ const sidebars = {
         'Sensor/Arch/Arch_Pro',
         'Sensor/Arch/Arch_BLE',
         //'Sensor/Arch/Arch_Link',
-        //'Sensor/Arch/Arch_GPRS',
+        'Sensor/Arch/Arch_GPRS',
         //'Sensor/Arch/Arch_GPRS_V2',
         'Sensor/Arch/Arch_Max',
         'Sensor/Arch/Arch_Max_v1.1',
@@ -1994,7 +1994,17 @@ const sidebars = {
       type: 'category',
       label: 'Arduino',
       items: [
-        'Top_Brand/Arduino/shield/shield_Getting_Started',
+
+        'Top_Brand/Arduino/Arduino',
+        'Top_Brand/Arduino/Getting_Started_with_Arduino',
+        {
+          type: 'category',
+          label: 'shield',
+          items: [
+            'Top_Brand/Arduino/shield/shield_Getting_Started',
+
+          ]
+        },
         {
           type: 'category',
           label: 'Tutorials',
