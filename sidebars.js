@@ -1668,7 +1668,7 @@ const sidebars = {
               label: 'Embedded ML',
               items: [
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
-                // 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
 
               ]
             },
@@ -1821,20 +1821,20 @@ const sidebars = {
           label: 'Extension Board',
           items: [
             'Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series',
-            // 'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
+            'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
             'Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0',
             'Edge/Beagle_Bone/Extension_Board/Skeleton_box_for_Beaglebone',
             'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
             'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',]
         },
-        // {
-        //   type: 'category',
-        //   label: 'Kit with Courses',
-        //   items: [
-        //     // 'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
-        //     'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-        //   ]
-        // },
+         {
+           type: 'category',
+           label: 'Kit with Courses',
+           items: [
+              'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
+             'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+           ]
+         },
 
       ],
     },
@@ -2181,13 +2181,13 @@ const sidebars = {
     'About',
     'License',
 
-    // {
+     {
 
-    //   type: 'category',
-    //   label: 'Seeed_Elderly',
-    //   items: [
+       type: 'category',
+       label: 'Seeed_Elderly',
+       items: [
 
-    //     {
+         {
 
     //       type: 'category',
     //       label: 'Accessories',
@@ -2204,41 +2204,234 @@ const sidebars = {
 
     //     },
 
-    //     {
-    //       type: 'category',
-    //       label: 'reSpeaker',
-    //       items: [
-    //         //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Solutions',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
-    //         {
-    //           type: 'category',
-    //           label: 'ReSpeaker 2-Mics Pi HAT',
-    //           items: [
-    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
-    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
-    //             'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
-    //           ]
-    //         },
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Drive_Unit',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Mic_Array',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker_Mic_Array_v2.0',
-    //         'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+        
+           type: 'category',
+           label: 'reSpeaker',
+           items: [
+             //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
+             'Seeed_Elderly/reSpeaker/ReSpeaker',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
+             {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Seeed_Elderly/reSpeaker/Application/ReSpeaker_Solutions',
+                'Seeed_Elderly/reSpeaker/Application/Google_Assistant',
+                //'Seeed_Elderly/reSpeaker/Application/Voice_Interaction',
+                'Seeed_Elderly/reSpeaker/Application/ReSpeaker_Core_V2_&_Wio_Link',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Extension Board',
+              items: [
+                'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Drive_Unit',
+                'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v2.0',
+                'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array',
+              ]
+            },
+             {
+               type: 'category',
+               label: 'ReSpeaker 2-Mics Pi HAT',
+               items: [
+                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
+                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
+                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
+               ]
+             },
+             'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
+             'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
+             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
 
-    //       ],
+           ],
+           
 
-    //     },
-    //   ],
+         },
+         {
+          type: 'category',
+          label: 'Discrete Product',
+          items: [
+            'Seeed_Elderly/Discrete Product/ESP32_Breakout_Kit',
+            'Seeed_Elderly/Discrete Product/IoT_Fast_Prototyping_Kit S5D9',
+            //'Seeed_Elderly/Discrete Product/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition',
+            'Seeed_Elderly/Discrete Product/Atmel_AVRISP_STK500_USB_ISP_Programmer',
+            'Seeed_Elderly/Discrete Product/AT_Command_Tester',
+            'Seeed_Elderly/Discrete Product/AT_Command_Tester_Application',
+            'Seeed_Elderly/Discrete Product/Tiny_BLE',
+            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform_2.0',
+            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform',
+            'Seeed_Elderly/Discrete Product/Mini_GSM_GPRS_GPS_Breakout_SIM808',
+            'Seeed_Elderly/Discrete Product/Nose_LED_Kit',
+            'Seeed_Elderly/Discrete Product/Serial_port_bluetooth_module_Master-Slave',
+            'Seeed_Elderly/Discrete Product/Sidekick_Advanced_Kit',
+            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver',
+            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver_v2.3',
+            'Seeed_Elderly/Discrete Product/UartSB_Frame',
+            'Seeed_Elderly/Discrete Product/4WD_Driver_Platform_V1.0',
+            'Seeed_Elderly/Discrete Product/4WD_Mecanum_Wheel_Robot_Kit_Series',
+            'Seeed_Elderly/Discrete Product/Hercules_Dual_15A_6-20V_Motor_Controller',
+            'Seeed_Elderly/Discrete Product/Basic_Fastener_Kit',
+            'Seeed_Elderly/Discrete Product/Sidekick_Basic_Kit_for_TI_LaunchPad',
+            'Seeed_Elderly/Discrete Product/Grove Maker Kit for Intel Joule',
+            'Seeed_Elderly/Discrete Product/Grove_Shield_for_Intel_Joule',
+            //'Seeed_Elderly/Discrete Product/Grove_Base_BoosterPack',
+            //'Seeed_Elderly/Discrete Product/Grove_Base_Shield_for_Photon',
+            'Seeed_Elderly/Discrete Product/Tricycle_Bot',
+            'Seeed_Elderly/Discrete Product/mbed_Shield',
+            'Seeed_Elderly/Discrete Product/BLE_Carbon',
+            //'Seeed_Elderly/Discrete Product/BLE_Micro',
+            'Seeed_Elderly/Discrete Product/BLE_Nitrogen',
+            'Seeed_Elderly/Discrete Product/Fubarino_SD',
+            //'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
+            'Seeed_Elderly/Discrete Product/Matrix_Clock',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'rePhone',
+          items: [
+            'Seeed_Elderly/rePhone/RePhone',
+            //'Seeed_Elderly/rePhone/RePhone_Geo_Kit',
+            //'Seeed_Elderly/rePhone/RePhone_Lumi_Kit',
+            //'Seeed_Elderly/rePhone/RePhone_Strap_Kit_for_Pebble',
+            'Seeed_Elderly/rePhone/RePhone_core_2G-Atmel32u4',
+            'Seeed_Elderly/rePhone/Rephone_core_2G-AtmelSAMD21',
+            'Seeed_Elderly/rePhone/Retro Phone Kit',
+            {
+              type: 'category',
+              label: 'Program with rePhone',
+              items: [
+                'Seeed_Elderly/rePhone/Program with rePhone/Arduino_IDE_for_RePhone_Kit',
+                //'Seeed_Elderly/rePhone/Program with rePhone/Eclipse_IDE_for_RePhone_Kit',
+                //'Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone',
+                //'Seeed_Elderly/rePhone/Program with rePhone/Lua_for_RePhone',
+                //'Seeed_Elderly/rePhone/Program with rePhone/RePhone_APIs-Audio',
 
-    // },
+              ] 
+            },
+          ] 
+        },
+        {
+          type: 'category',
+          label: 'LinkIt',
+          items: [
+            'Seeed_Elderly/LinkIt/LinkIt',
+            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
+            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
+            'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
+            //'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
+            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
+            'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
+            //'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
+            'Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo',
+            {
+              type: 'category',
+              label: 'Linklt ONE',
+              items: [
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Analog_Interface',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Colorful_World',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Hello_World',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Light-Sensor',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Marquee',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt-ONE-Tutorial---Mini-Servo',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Push_Button',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-SMS_control_the_LED',
+                ///'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-The_Basics',
+                'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
+                //'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
+                'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
+              ] 
+            },
+          ] 
+        },
+        {
+          type: 'category',
+          label: 'Bee',
+          items: [
+            //'Seeed_Elderly/Bee/Mesh_Bee',
+            'Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node',
+            //'Seeed_Elderly/Bee/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products',
+            'Seeed_Elderly/Bee/Bees_Shield',
+            'Seeed_Elderly/Bee/UartSBee_V3.1',
+            'Seeed_Elderly/Bee/UartSBee_V4',
+            //'Seeed_Elderly/Bee/UartSBee_v5',
+            'Seeed_Elderly/Bee/BLE_Bee',
+            //'Seeed_Elderly/Bee/BLE_dual_Bee_v1.0',
+            //'Seeed_Elderly/Bee/Bluetooth_Bee_v2.0',
+            //'Seeed_Elderly/Bee/Bluetooth_Bee_Standalone',
+            'Seeed_Elderly/Bee/Wifi_Bee',
+            'Seeed_Elderly/Bee/Wifi_Bee_v2.0',
+            //'Seeed_Elderly/Bee/XBee_Shield',
+            'Seeed_Elderly/Bee/XBee_Shield_V2.0',
+            //'Seeed_Elderly/Bee/Atom_Node',
+            'Seeed_Elderly/Bee/Bluetooth_V4.0_HM_11_BLE_Module',
+            'Seeed_Elderly/Bee/GPS_Bee_kit',
+            //'Seeed_Elderly/Bee/Grove-Bee_Socket',
+          ] 
+        },
+        {
+          type: 'category',
+          label: 'Xadow',
+          items: [
+            'Seeed_Elderly/Xadow/Xadow_3_Aixs_Accelerometer',
+            'Seeed_Elderly/Xadow/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g',
+            //'Seeed_Elderly/Xadow/Xadow_BLE_Dual_Model_V1.0',
+            'Seeed_Elderly/Xadow/Xadow_BLE_Slave',
+            'Seeed_Elderly/Xadow/Xadow_Breakout',
+            'Seeed_Elderly/Xadow/Xadow_Buzzer',
+            'Seeed_Elderly/Xadow/Xadow_Compass',
+            'Seeed_Elderly/Xadow/Xadow_Edison_Kit',
+            'Seeed_Elderly/Xadow/Xadow_GPS',
+            'Seeed_Elderly/Xadow/Xadow_GPS_V2',
+            'Seeed_Elderly/Xadow/Xadow_Gesture_v1.0',
+            //'Seeed_Elderly/Xadow/Xadow_Grove_Adaptor',
+            'Seeed_Elderly/Xadow/Xadow_IMU_6DOF',
+            'Seeed_Elderly/Xadow/Xadow_IMU_9DOF',
+            'Seeed_Elderly/Xadow/Xadow_IMU_10DOF',
+            'Seeed_Elderly/Xadow/Xadow_LED_5x7',
+            'Seeed_Elderly/Xadow/Xadow_LED_5_multiply_7_v1.0',
+            'Seeed_Elderly/Xadow/Xadow_M0',
+            'Seeed_Elderly/Xadow/Xadow_Main_Board',
+            'Seeed_Elderly/Xadow/Xadow_Multichannel_Gas_Sensor',
+            'Seeed_Elderly/Xadow/Xado_OLED_128multiply64',
+            'Seeed_Elderly/Xadow/Xadow_RGB_OLED_96multiply64',
+            'Seeed_Elderly/Xadow/Xadow_RTC',
+            'Seeed_Elderly/Xadow/Xadow_Storage',
+            //'Seeed_Elderly/Xadow/Xadow_UV_Sensor',
+            'Seeed_Elderly/Xadow/Xadow_Vibrator_Motor',
+            'Seeed_Elderly/Xadow/Xadow_1.54_inch_Touchscreen',
+            'Seeed_Elderly/Xadow/Xadow_Audio',
+            'Seeed_Elderly/Xadow/Xadow_BLE',
+            'Seeed_Elderly/Xadow/Xadow_Barometer',
+            'Seeed_Elderly/Xadow/Xadow_Barometer_BMP180',
+            'Seeed_Elderly/Xadow/Xadow_Basic_Sensors',
+            'Seeed_Elderly/Xadow/Xadow_Duino',
+            'Seeed_Elderly/Xadow/Xadow_GSM_Breakout',
+            //'Seeed_Elderly/Xadow/Xadow_GSMPlusBLE',
+            'Seeed_Elderly/Xadow/Xadow_Metal_Frame',
+            'Seeed_Elderly/Xadow/Xadow_NFC',
+            'Seeed_Elderly/Xadow/Xadow_NFC_tag',
+            'Seeed_Elderly/Xadow/Xadow_NFC_v2',
+            'Seeed_Elderly/Xadow/Xadow_Pebble_Time_Adapter',
+            //'Seeed_Elderly/Xadow/Xadow_Q_Touch_Sensor',
+            //'Seeed_Elderly/Xadow/Xadow_Tutorial_Acceleration_Detector',
+            //'Seeed_Elderly/Xadow/Xadow_Tutorial_Communicate_via_BLE',
+            'Seeed_Elderly/Xadow/Xadow_Tutorial_Shaking_Shaking',
+            'Seeed_Elderly/Xadow/Xadow_Wearable_Kit_For_Edison',
+          ]
+        },
+       ],
+
+     },
+ 
 
   ],
+  
 
   SenseCAPSidebar: [
     {
@@ -2299,13 +2492,36 @@ const sidebars = {
         },
 
 
+    // {
+
+    //   type: 'category',
+    //   label: 'SenseCAP Cloud',
+    //   items: [
+    //     'Cloud_Chain/SenseCAP_M4/wiki',
+    //   ],
+
+    // },
+
       ],
 
     },
-
+    {
+      type: 'html',
+      value: `
+      <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        color: #8DC21F;
+        margin-top: 100px;
+      }
+      </style>
+      <a class="sub_item" href="https://files.seeedstudio.com/wiki/One-Click-Download-PDF/c1ev0ps.github.io-docusaurus_wiki-Network-SenseCAP-Industrial-IoT-SenseCAP-Introduction.pdf" target="_blank"><span>Download PDF 📖</span></a>
+    `,
+    },
   ],
-
-
 
 };
 
