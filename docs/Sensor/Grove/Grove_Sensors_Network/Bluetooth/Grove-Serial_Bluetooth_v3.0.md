@@ -28,7 +28,7 @@ Specifications
 - Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection
 
 :::tip
-    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
 Demonstration
 -------------
@@ -51,7 +51,7 @@ Two Bluethooth modules work as shown below:
 ![](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth_v3.0/img/Grove_serial_bluetooth_4_.jpg.png)
 
 1. Open Arduino IDE, open File -> Examples -> Bluetooth_Shield_V2_Demo_Code -> Slave_led, then you open the code of Slave and modify the code as well like above.
-2. Save the modification and click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
+2. Save the modification and click Upload to Upload the code, if you have any problem about how to start Arduino, please click <a href="/Sensor/Seeeduino Series/Getting_Started_with_Seeeduino"><span><font color={'8DC215'} size={"3"}> here </font></span></a> for some help.
 
 ### Check The Result
 

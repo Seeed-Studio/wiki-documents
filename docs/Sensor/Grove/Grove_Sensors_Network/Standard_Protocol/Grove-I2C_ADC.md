@@ -31,7 +31,7 @@ Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps y
 - Address changeable
 
 :::tip
-    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
 
 ## Specifications
@@ -54,7 +54,7 @@ Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps y
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
 
 :::caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 ## Hardware Overview
@@ -74,7 +74,7 @@ Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps y
 
 ---------------
 
-### With [Arduino](/Arduino "Arduino")
+### With [Arduino](/Top_Brand/Arduino/ "Arduino")
 
 Grove - I2C ADC has two interfaces: input socket(J2) and output socket(J1). Connect an analog sensor to its input socket and connect the I2C ADC to Arduino/Seeeduino also via Grove cables.
 
@@ -156,14 +156,14 @@ Afterwards, open the serial monitor and read the values:
 
 <div class="admonition note">
 <p class="admonition-title">note</p>
-The address of Grove - I2C ADC is changeable which means you can redefine its address. That requires some hardware modification on the board. If you are thinking about using more than one I2C ADCs at the same time, follow the instructions in the Reference part below to do so. The maximum number of I2C ADCs that can be used simultaneously is 9, but there are only 4 I2C sockets on <a href="/Base_Shield_V2">Grove - Base Shield V1.2</a>, so if you want to use more than 4 I2C ADC, take a <a href="/Grove-I2C_Hub">Grove - I2C Hub</a> to create more I2C sockets.
+The address of Grove - I2C ADC is changeable which means you can redefine its address. That requires some hardware modification on the board. If you are thinking about using more than one I2C ADCs at the same time, follow the instructions in the Reference part below to do so. The maximum number of I2C ADCs that can be used simultaneously is 9, but there are only 4 I2C sockets on Grove - Base Shield V1.2, so if you want to use more than 4 I2C ADC, take a <a href="/Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub">Grove - I2C Hub</a> to create more I2C sockets.
 </div>
 ### With Beaglebone Green
 
 To begin editing programs that live on BBG, you can use the Cloud9 IDE.
 As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone is a good start.
 
-If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green).
+If this is your first time to use Cloud9 IDE, please follow this [**link**](/Edge/Beagle_Bone/BeagleBone_Green).
 
 **Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](https://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
 

@@ -9,7 +9,8 @@ last_update:
   author: shuxu hu
 ---
 
-##  Welcome to MeshBee Wiki
+## Welcome to MeshBee Wiki
+
 ---
 This is a community resource, intended to bring together documentation, demo, and links to good sources of information about:
 
@@ -17,31 +18,32 @@ This is a community resource, intended to bring together documentation, demo, an
  2. MeshBee starter guide;
  3. MeshBee use cases and examples;
 
-
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Mesh_bee.jpg)
 
 Mesh Bee is a 2.4GHz wireless transceiver from seeed studio. It's based on NXP's newly JN516x series wireless microcontroller chip and supports ZigBee Pro network stack. The factory firmware wraps the complicated ZigBee stack operation into a few easy to use serial commands, and drives Mesh Bee into a transparent serial communication node that can be part of a simple point-to-point connection or a complex mesh network. Moreover, Mesh Bee is totally open hardware and open sourced, which means that you can customize the firmware on your requirements. You can use JN516x's ARM core to control things and JenOS to simplify your development. The development environment and tools from NXP are all free. Mesh Bee will bring you lots of fun.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Mesh%20Bee%20-%20Open%20Source%20Zigbee%20Pro%20Module%20with%20MCU%20(JN5168).html)
 
+## 2. Features
 
-##   2. Features
 ---
-*   Range: Indoor/Urban: up to 30m; Outdoor line-of-sight: up to 100m;
-*   Receiver Sensitivity: -95dBm
-*   Data Transmission Rate: 4800, 9600, 19200, 38400, 57600, 115200 (bps)
-*   Working Frequency: unlicensed 2.4GHz band
-*   Communication type: Point to Point or Start Network or Mesh Network
-*   OTA support: update node's firmware on-the-air
-*   Easy-to-Use Serial Interface and rich extendable ports
-*   Easy-to-Use AT Command: Setup ZigBee network, Set Serial Baud Rate, etc.
-*   Open source Hardware and Firmware
-*   Programmable 32-bit RISC CPU: 32M clock, 256KB Flash, 32KB RAM, 4KB EEPROM
-*   Socket compatible with the Xbee, so you can plug it into any Xbee socket as a quick replacement.
+
+* Range: Indoor/Urban: up to 30m; Outdoor line-of-sight: up to 100m;
+* Receiver Sensitivity: -95dBm
+* Data Transmission Rate: 4800, 9600, 19200, 38400, 57600, 115200 (bps)
+* Working Frequency: unlicensed 2.4GHz band
+* Communication type: Point to Point or Start Network or Mesh Network
+* OTA support: update node's firmware on-the-air
+* Easy-to-Use Serial Interface and rich extendable ports
+* Easy-to-Use AT Command: Setup ZigBee network, Set Serial Baud Rate, etc.
+* Open source Hardware and Firmware
+* Programmable 32-bit RISC CPU: 32M clock, 256KB Flash, 32KB RAM, 4KB EEPROM
+* Socket compatible with the Xbee, so you can plug it into any Xbee socket as a quick replacement.
 
 Note: Mesh Bee will not communicate with Xbee as the ZigBee stack versions they're using are different.
 
-##   3. Specification
+## 3. Specification
+
 ---
 <table>
 <tr>
@@ -120,7 +122,7 @@ Note: Mesh Bee will not communicate with Xbee as the ZigBee stack versions they'
 <td> RF4CE, JenNet-IP , ZigBee Pro
 </td></tr></table>
 
-###   3.1 Electrical Characteristics
+### 3.1 Electrical Characteristics
 
 <table >
 <tr>
@@ -201,7 +203,7 @@ Note: Mesh Bee will not communicate with Xbee as the ZigBee stack versions they'
 <td> °C
 </td></tr></table>
 
-##   4. Pin definition
+## 4. Pin definition
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Mesh_Bee_Pin.jpg)
 
@@ -400,38 +402,40 @@ Note: Only important alternate functions are listed, may have more, please refer
 
 Note2: SPI related pins can be used as digital IO only if you know how to disable the external flash driving.
 
-##   5. Usage
+## 5. Usage
+
 ---
-###   5.1 Hardware Installation
+
+### 5.1 Hardware Installation
 
 The Mesh Bee has a general Bee socket. So you can use it just like XBee or RFBee etc. One thing to notice is that, the pins are not 100% compatible with each other except for part of them.
-<!-- If you're newer to Bee series, please follow [this link](/Grove_Cape_for_BeagleBone_Series "Grove_Cape_for_BeagleBone_Series") to learn The Bee Series and [this link](/RFbee_V1.1-Wireless_Arduino_compatible_node#Usage "RFbee V1.1 - Wireless Arduino compatible node") to know how to install Bee with other hardware. -->
+If you're newer to Bee series, please follow [this link](/Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series "Grove_Cape_for_BeagleBone_Series") to learn The Bee Series and [this link](/Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node#Usage "RFbee V1.1 - Wireless Arduino compatible node") to know how to install Bee with other hardware.
 
-###   5.2 How to update firmware
+### 5.2 How to update firmware
 
 The default firmware pre-flashed in Mesh Bee is a co-ordinator firmware due to the manufacture and selling inconvenience. You should flash the router / end-device firmware by yourself. And it's simple enough for makers like you.
 
-<!-- JN516x has a specific firmware download interface with a UART and some other pins, so you need a **programmer** to flash it. We provide this with [UartSBee v5](/UartSBee_v5 "UartSBee v5"). UartSBee v5 has most of the features of v4 and in addition a programmer for Mesh Bee. -->
+JN516x has a specific firmware download interface with a UART and some other pins, so you need a **programmer** to flash it. We provide this with [UartSBee v5](/Seeed_Elderly/Bee/UartSBee_v5 "UartSBee v5"). UartSBee v5 has most of the features of v4 and in addition a programmer for Mesh Bee.
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/UartSBee_V05.jpg)
 
 To update firmware, follow the steps:
 
-- Step 1: Download the latest firmware from github;
+* Step 1: Download the latest firmware from github;
 
-  <!-- - [Mesh_Bee#9.1_Firmware_Downloads](/Mesh_Bee#9.1_Firmware_Downloads "Mesh Bee") -->
+  * [Mesh_Bee#9.1_Firmware_Downloads](/Seeed_Elderly/Bee/Mesh_Bee#91-firmware-downloads "Mesh Bee")
 
-- Step 2: Configure the UartSBee v5 with FT_Prog;
+* Step 2: Configure the UartSBee v5 with FT_Prog;
 
-  - Download FT_Prog: [File:FT Prog v2.8.2.0.zip](https://files.seeedstudio.com/wiki/Mesh_Bee/res/FT_Prog_v2.8.2.0.zip "File:FT Prog v2.8.2.0.zip") and install. (Windows only)
+  * Download FT_Prog: [File:FT Prog v2.8.2.0.zip](https://files.seeedstudio.com/wiki/Mesh_Bee/res/FT_Prog_v2.8.2.0.zip "File:FT Prog v2.8.2.0.zip") and install. (Windows only)
 
-  - Connect the UartSBee v5 to PC, open FT_Prog and configure it like this:
+  * Connect the UartSBee v5 to PC, open FT_Prog and configure it like this:
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/FT_Prog.jpg)
 
-- Step 3: Switch the SW1 to "3V3" and SW3 to "Prog" position;
+* Step 3: Switch the SW1 to "3V3" and SW3 to "Prog" position;
 
-- Step 4: Plug the Mesh Bee module into UartSBee v5 ;
+* Step 4: Plug the Mesh Bee module into UartSBee v5 ;
 
 -Step 5: Flash firmware with "Jennic Flash Programmer";
 
@@ -455,15 +459,15 @@ Open "FlashGUI.exe" -&gt; browser to the firmware bin file
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Flash_programmer3.png)
 
-###   5.3 AT commands &amp; Configuration
+### 5.3 AT commands &amp; Configuration
 
-####   5.3.1 AT commands
+#### 5.3.1 AT commands
 
 The Mesh Bee can be configured with AT commands by now. The binary API configuration method may be provided on your needs. So please post your requirements to the [discussion group](https://groups.google.com/forum/#!forum/seeedstudio-mesh-bee-discussion-group) if you need this feature. We'll make the developing decision based on your voices.
 
 **Download the AT command manual:** [File:AT command manual for Mesh Bee V1.0.pdf](https://files.seeedstudio.com/wiki/Mesh_Bee/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf "File:AT command manual for Mesh Bee V1.0.pdf")
 
-####   5.3.2 Configuration
+#### 5.3.2 Configuration
 
 The Mesh Bee supports ZigBee Pro standard which can construct a mesh network with a large number of nodes. You may need some ZigBee basics to configure it more effective. But here's a guide of how to form a simple point-to-point network. Everyone can make this without any ZigBee basic knowledge.
 
@@ -517,19 +521,19 @@ Connect the two nodes (co-ordinator &amp; end-device) with serial tool. Send dat
 
 The connection information will be saved persistently over power off.
 
-###   5.4 OTA guide
+### 5.4 OTA guide
 
 Mesh Bee supports updating firmware over-the-air. That is, once you finished the network configuration, the router/end-device's firmware can be updated by OTA.
 
 <big>Step 1: Flash a new firmware into co-ordinator's external flash. </big>
 
-<!-- To achieve this step all you should do is very mush similar to [5.2 How to update firmware](/Mesh_Bee#5.2_How_to_update_firmware "Mesh Bee"), the only difference is choosing "External" for "Flash Select". -->
+To achieve this step all you should do is very mush similar to [5.2 How to update firmware](/Seeed_Elderly/Bee/Mesh_Bee#52-how-to-update-firmware "Mesh Bee"), the only difference is choosing "External" for "Flash Select".
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Flash_External.jpg)
 
 <big>Step 2: Make sure that the network is correctly configured and nodes can communicate with others.</big>
 
-<!-- Configure the network nodes as described [5.3.2_Configuration](/Mesh_Bee#5.3.2_Configuration "Mesh Bee"). Send "ATLA" command to view the nodes on the network. -->
+Configure the network nodes as described [5.3.2_Configuration](/Seeed_Elderly/Bee/Mesh_Bee#53-at-commands--configuration "Mesh Bee"). Send "ATLA" command to view the nodes on the network.
 
 <big>Step 3: Trigger the OTA process. </big>
 
@@ -543,7 +547,7 @@ Send "ATDAxxxx" command to set the destination address (xxxx is the node's short
 
 When download is finished, the target node will reboot and the new firmware will take the place. You can send "ATLA" command to confirm the target's FW version.
 
-###   5.5 Example
+### 5.5 Example
 
 This example is only compatible with firmware v1.0, for later versions firmware, please refer to the Cook Book which can be downloaded in the Resources section.
 
@@ -555,23 +559,23 @@ This is a simple example about remote control with 2 Mesh Bee nodes.
 
 They are:
 
-*   [Seeeduino v3](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7) x2
+* [Seeeduino v3](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=6_7) x2
 
-*   XBee shield x2 , version 1/2, picture above shows [XBee Shield v1](https://www.seeedstudio.com/depot/xbee-shield-p-419.html?cPath=73) and [XBee Shield v2](https://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
+* XBee shield x2 , version 1/2, picture above shows [XBee Shield v1](https://www.seeedstudio.com/depot/xbee-shield-p-419.html?cPath=73) and [XBee Shield v2](https://www.seeedstudio.com/depot/xbee-shield-v20-p-1375.html?cPath=98_16)
 
-*   Mesh Bee x2 (pic above shows the prototype version, the release version maybe different in color)
+* Mesh Bee x2 (pic above shows the prototype version, the release version maybe different in color)
 
-*   UartSBee v5 x1
+* UartSBee v5 x1
 
-*   [Rotary Angle](https://www.seeedstudio.com/depot/grove-rotary-angle-sensor-p-770.html?cPath=85_52) x1
+* [Rotary Angle](https://www.seeedstudio.com/depot/grove-rotary-angle-sensor-p-770.html?cPath=85_52) x1
 
-*   [Servo](https://www.seeedstudio.com/depot/grove-servo-p-1241.html?cPath=39_41) x1
+* [Servo](https://www.seeedstudio.com/depot/grove-servo-p-1241.html?cPath=39_41) x1
 
-*   Cables
+* Cables
 
 <big>Step 2: Configure Mesh Bee nodes</big>
 
-<!-- Refer to [5.3.2_Configuration](/Mesh_Bee#5.3.2_Configuration "Mesh Bee") to configure a p2p connection. -->
+Refer to [5.3.2_Configuration](/Seeed_Elderly/Bee/Mesh_Bee#532-configuration "Mesh Bee") to configure a p2p connection.
 
 <big>Step 3: Assembly the Servo side (be controlled) </big>
 
@@ -766,7 +770,7 @@ boolean read_msg(unsigned char *cmd, unsigned int *msg)
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Example3.gif)
 
-###   5.6 Usage Note
+### 5.6 Usage Note
 
 ZigBee is a low-power &amp; low-speed networked transmission protocol. So it's not designed for high speed situation.
 
@@ -812,33 +816,33 @@ The data rate specification of Mesh Bee network with 2~3 nodes:
 
 The data rate will be lower for a bigger network.
 
-##   6. Development
+## 6. Development
 
 The biggest feature we want to introduce is Mesh Bee supports re-programming. What an excitement having a programmable ZigBee module with such a reasonable price.
 
 Mesh Bee uses the chip named JN5168 with a 32-bit RISC core and rich resources:
 
-*   Flash/RAM/EEPROM: 256kB/32kB/4kB
+* Flash/RAM/EEPROM: 256kB/32kB/4kB
 
-*   Master SPI port with three select outputs
+* Master SPI port with three select outputs
 
-*   Slave SPI port
+* Slave SPI port
 
-*   2x UART’s
+* 2x UART’s
 
-*   5x PWM (4x timer &amp; 1x counter)
+* 5x PWM (4x timer &amp; 1x counter)
 
-*   I2C
+* I2C
 
-*   4 channel 10-bit ADC
+* 4 channel 10-bit ADC
 
-*   Comparator
+* Comparator
 
-*   Battery &amp; temperature sensor
+* Battery &amp; temperature sensor
 
 With our UartSBee v5 you can easily re-program Mesh Bee. There's just a little step of learning some NXP documents before playing good.
 
-###   7.1 Software architecture:
+### 7.1 Software architecture
 
 This is the software architecture of Mesh Bee.
 
@@ -848,7 +852,7 @@ We introduced Suli too. Suli means Seeed Unified Library Interface. We'll switch
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/MeshBeeArchitecture0603.jpg)
 
-###   7.2 Development Environment
+### 7.2 Development Environment
 
 NXP provides full-scale development environment, tools and documents. The development environment consists of the SDK toolchain and the ZigBee stack SDK.
 
@@ -858,11 +862,11 @@ Note: Mesh Bee's factory firmware is developed on top of the Smart Energy profil
 
 To create the development environment you should download:
 
-*   JN-SW-4041    SDK Toolchain
+* JN-SW-4041    SDK Toolchain
 
-*   JN-SW-4064    ZigBee Smart Energy SDK
+* JN-SW-4064    ZigBee Smart Energy SDK
 
-*   JN-SW-4067-JN516x ZigBee Home Automation SDK
+* JN-SW-4067-JN516x ZigBee Home Automation SDK
 
 and then install them on a Windows PC (install JN-SW-4064 after JN-SW-4041).
 
@@ -870,7 +874,7 @@ To edit the .oscfgdiag file and .zpscfg file, you should install the eclipse plu
 
 Note2: The misfortune is only Windows toolchain is presented now. For linux and Mac users, a Windows VM may be your choice.
 
-###   7.3 Programming Guide
+### 7.3 Programming Guide
 
 Programming JN5168 needs some base knowledge, so it's hard to explain in a few words. Digging into the official documents maybe is a must.
 
@@ -878,56 +882,52 @@ NXP official resources:
 
 User Guides
 
-*   **JN-UG-3048	&lt;ZigBee PRO Stack User Guide&gt;	Introduces essential ZigBee PRO concepts and details the ZigBee PRO APIs for developing applications.**
+* **JN-UG-3048 &lt;ZigBee PRO Stack User Guide&gt; Introduces essential ZigBee PRO concepts and details the ZigBee PRO APIs for developing applications.**
 
-*   JN-UG-3059	&lt;ZigBee PRO Smart Energy API User Guide&gt;	Introduces ZigBee Smart Energy (SE) and details the SE API for developing applications.
+* JN-UG-3059 &lt;ZigBee PRO Smart Energy API User Guide&gt; Introduces ZigBee Smart Energy (SE) and details the SE API for developing applications.
 
-*   **JN-UG-3075	&lt;JenOS User Guide&gt;	      Details the JenOS APIs used in ZigBee PRO application code to manage OS resources.**
+* **JN-UG-3075 &lt;JenOS User Guide&gt;       Details the JenOS APIs used in ZigBee PRO application code to manage OS resources.**
 
-*   JN-UG-3077	&lt;ZigBee Cluster Library User Guide&gt;	Describes the NXP implementation of the ZigBee Cluster Library (ZCL).
+* JN-UG-3077 &lt;ZigBee Cluster Library User Guide&gt; Describes the NXP implementation of the ZigBee Cluster Library (ZCL).
 
 Application Notes
 
-*   JN-AN-1135	&lt;Smart Energy HAN Solutions Application Note&gt;	Provides and describes example Smart Energy Home Area Network solutions
+* JN-AN-1135 &lt;Smart Energy HAN Solutions Application Note&gt; Provides and describes example Smart Energy Home Area Network solutions
 
 Related Documentation
 
-*   **JN-DS-JN516x	&lt;JN516x Datasheet&gt;	Details the JN516x series of micro controllers.**
+* **JN-DS-JN516x &lt;JN516x Datasheet&gt; Details the JN516x series of micro controllers.**
 
-*   **JN-UG-3087	&lt;JN516x Integrated Peripherals API User Guide&gt;	Details the JN516x Integrated Peripherals API, used in application code to interact with JN516x on-chip peripherals.**
+* **JN-UG-3087 &lt;JN516x Integrated Peripherals API User Guide&gt; Details the JN516x Integrated Peripherals API, used in application code to interact with JN516x on-chip peripherals.**
 
 Download page: [http://www.nxp.com/techzones/wireless-connectivity/smart-energy.html](http://www.nxp.com/techzones/wireless-connectivity/smart-energy.html)
 
-###   7.4 Contribution
+### 7.4 Contribution
 
 [![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/MeshBeeFirmwareProject.png)](https://seeed-studio.github.io/Mesh_Bee/)
 
-##   8. Discussion Group
+## 8. Discussion Group
 
 We created a google group for Mesh Bee's general discussion and development related topics. Please follow this link to see what's happening there: [https://groups.google.com/forum/#!forum/seeedstudio-mesh-bee-discussion-group](https://groups.google.com/forum/#!forum/seeedstudio-mesh-bee-discussion-group)
-
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Mesh_Bee/res/Mesh_Bee_v1.0_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## 9. Resources
 
+* [Eagle file for Mesh Bee v1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/Mesh_Bee_v1.0_eagle.zip)
 
-##   9. Resources
+* [AT command manual for Mesh Bee V1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf)
 
-*   [Eagle file for Mesh Bee v1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/Mesh_Bee_v1.0_eagle.zip)
+* [JN5168 datasheet](https://files.seeedstudio.com/wiki/Mesh_Bee/res/JN516X.pdf)
 
-*   [AT command manual for Mesh Bee V1.0](https://files.seeedstudio.com/wiki/Mesh_Bee/res/AT_command_manual_for_Mesh_Bee_V1.0.pdf)
+* [Cook Book for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
 
-*   [JN5168 datasheet](https://files.seeedstudio.com/wiki/Mesh_Bee/res/JN516X.pdf)
+* [User Manual for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_User_Manual_v0.3.pdf)
 
-*   [Cook Book for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_Cook_Book.pdf)
-
-*   [User Manual for v1004](https://files.seeedstudio.com/wiki/Mesh_Bee/res/MeshBee_User_Manual_v0.3.pdf)
-
-###   9.1 Firmware Downloads
+### 9.1 Firmware Downloads
 
 **v1001 (factory firmware, the most stable version so far):**
 
@@ -951,9 +951,11 @@ End-device's firmware: [https://github.com/Seeed-Studio/Mesh_Bee/raw/v1.0.4/buil
 
 **More information about Mesh Bee's firmware:**
 
-*   [Mesh Bee firmware source code on Github](https://github.com/Seeed-Studio/Mesh_Bee)
+* [Mesh Bee firmware source code on Github](https://github.com/Seeed-Studio/Mesh_Bee)
 
 ## Tech Support
-<div>
-  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+
+  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+  <div>
+  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
