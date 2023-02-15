@@ -11,3 +11,5 @@ You can constantly receive updated data from sensors and sensors network, access
 We here present you our [current accomplishments](https://c1ev0ps.github.io/docusaurus_wiki/Getting_Started) and solutions and we are looking for your [contributions](/TASK.md).
 
 You can [set up](/HOW_TO.md) this platform locally.
+
+You can also check the progress of your work [here](https://github.com/orgs/c1ev0ps/projects/3).
