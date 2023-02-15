@@ -279,7 +279,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <a class="independent_item" style={{textAlign: 'center'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>mmWave Radar Sensor</font></div>
             <a href="/Sensor/mmWave_radar_sensor/Radar_MR24HPC1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Human Static Presence Module Lite - Configurable Parameter</font></span></a>
             <br/>
@@ -686,7 +686,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Publish Soon</font></span></a>
+            <a href="/Contributor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Publish Soon</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
@@ -708,7 +708,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Pulish Soon</font></span></a>
+            <a href="/Contributor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Pulish Soon</font></span></a>
             <br/>
     </a>
 </div>
@@ -926,7 +926,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 ### Kit with Courses -->
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Arduino</font></div>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Beginner Kit for Arduino </font></span></a>
             <br/>
@@ -935,7 +935,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Smart Plant Care Kit </font></span></a>
             <br/>
     </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Wio Terminal</font></div>
             <a href="/Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML" target="_blank"><span><font color={'FFFFFF'} size={"3"}> What is TinyML </font></span></a>
             <br/>
@@ -947,12 +947,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Seeed Studio XIAO</font></div>
             <a href="/Sensor/SeeedStudio_XIAO/Kit with Courses/XIAO-Kit-Courses" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio XIAO Kit with Courses </font></span></a>
             <br/>
     </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Micro:bit</font></div>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Inventor Kit for Micro:bit</font></span></a>
             <br/>
