@@ -2354,20 +2354,6 @@ const sidebars = {
 
         {
 
-          //       type: 'category',
-          //       label: 'Accessories',
-          //       items: [
-          //         'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
-          //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
-          //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
-          //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
-          //         'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
-          //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
-          //         'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
-
-          //       ],
-
-          //     },
 
 
           type: 'category',

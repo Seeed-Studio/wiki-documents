@@ -538,9 +538,9 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Linklt</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
+            <a href="/Seeed_Elderly/LinkIt/LinkIt" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Linklt ONE</font></span></a>
+            <a href="/Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Linklt ONE</font></span></a>
             <br/>
     </a>
 </div>
@@ -876,7 +876,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
             <a href="/Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Solar Panel </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DC framework </font></span></a>
+            <a href="/Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DC framework </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -954,7 +954,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Micro:bit</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Inventor Kit for Micro:bit</font></span></a>
+            <a href="/Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Inventor Kit for Micro:bit</font></span></a>
             <br/>
     </a>
 </div>
@@ -970,7 +970,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Basic Usage</font></span></a></div>
+            <div class="independent_title" style={{textAlign: 'center'}}><a href="/Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Download-Arduino-and-install-Arduino_Driver" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Basic Usage</font></span></a></div>
             <a href="/Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Download-Arduino-and-install-Arduino_Driver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Download Arduino and install Arduino driver</font></span></a>
             <br/>
             <a href="/Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Seeed_Arduino_Boards" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to add Seeed Studio boards to Arduino IDE</font></span></a>
