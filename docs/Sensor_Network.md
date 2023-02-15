@@ -195,7 +195,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Motion</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
+            <a href="/Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse </font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Vibration </font></span></a>,
@@ -217,7 +217,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>LoRa®</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wio-E5 </font></span></a>
+            <a href="Sensor/Wio_Series/Wio-E5/LoRa_E5_mini" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wio-E5 </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
