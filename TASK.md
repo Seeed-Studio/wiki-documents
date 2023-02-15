@@ -1,26 +1,38 @@
-## TASK
+# Seeed Studio Contributors Program (Task List)
 
-### WHAT IS THIS TASK
+Here you can find the task list offcially launched by Seeed Studio.
 
-### WHO ORGANIZED IT
+## Microcontroller Boards
 
-### WHAT ARE THE REWARDS
+Are you familiar with microcontrollers? Let see what you are capable of!
 
-1. BASIC：1
-2. CHANGE：2
+### Seeed Studio XIAOESP32C3
 
-## Existing Projects
+#### XIAO ESP32C3: Wi-Fi application. 
 
-1.
-2.
-3.
+The application direction is IoT, which uses XIAO ESP32 to connect Wi-Fi to manage devices in remote operation
 
-## List of projects to be completed
+- Basic implementation: Connect XIAO ESP32 with Wi-Fi enabled devices in homes to water plants or switch appliances on and off.
 
-- 1
-- 2
+#### XIAO ESP32C3: Chip Development
 
-|  TASK  | DESCRIPTION |
-|  ---- | ---- |
-| 1 | x |
-| 2 | x |
+The application direction is AI, which uses XIAO ESP32 to connect sensor to achieve the effect of AI
+
+- Use Edge Impulse to sensor data which is connect with XIAO ESP32, train a model and deploy in XIAO ESP32, enable the IO port or Wi-Fi function of the board to control electrical appliances
+
+## SBC Boards & Devices
+
+Are you familiar with SBC or devices? Let see what you are capable of!
+
+### reTerminal
+
+#### reTerminal: AI and IoT applications 
+
+- Achieve and connect [Azure](https://github.com/Azure-Samples/Custom-vision-service-iot-edge-raspberry-pi) in the field of transportation.
+
+## Documentation Translation
+
+We need your languages!
+
+### mmWaveradar files translation
+
