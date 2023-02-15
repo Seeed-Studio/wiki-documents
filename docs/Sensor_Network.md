@@ -195,12 +195,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Motion</font></div>
-            <a href="/Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
-<<<<<<< HEAD
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse </font></span></a>
-=======
-            <a href="/Sensor/Grove/Grove_Sensors/Motion/Grove-Mouse_Encoder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse </font></span></a>
->>>>>>> 125495762efd69c77343eafe391aa9216ef9a58b
             <br/>
             <a href="/Sensor/Grove/Grove_Sensors/Motion/Grove-Piezo_Vibration_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Vibration </font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Collision </font></span></a>
@@ -737,10 +733,10 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Wio Terminal - Extensions</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Audio Extension Board</font></span></a>, 
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Audio Extension Board</font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Ethernet Extension Board</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis</font></span></a>, 
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis</font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis with LoRaWAN</font></span></a>
             <br/>
     </a>
@@ -783,13 +779,13 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Display</font></div>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>OLED -</font></span></a>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>0.66"</font></span></a>, 
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 0.96"</font></span></a>, 
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>0.66"</font></span></a>,
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 0.96"</font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 1.12" </font></span></a>
             <br/>
             <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-LCD_RGB_Backlight" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LCD RGB Backlight </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dual</font></span></a>, 
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dual</font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Quad </font></span></a>
             <a><span><font color={'FFFFFF'} size={"2"}> Alpha-LED</font></span></a>
             <br/>
@@ -902,9 +898,9 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Input / Output</font></div>
             <a href="/Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3" target="_blank"><span><font color={'FFFFFF'} size={"2"}> USB To UART 5V/3V3</font></span></a>
             <br/>
-            <a href="/Sensor/Beyond_Grove/Accessories/Input _Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RFID module</font></span></a>
+<a href="/Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RFID module</font></span></a>
             <br/>
-            <a href="/Sensor/Beyond_Grove/Accessories/Input _Output/AVR_USB_Programmer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AVR USB Programmer</font></span></a>
+<a href="/Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AVR USB Programmer</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -1039,12 +1035,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="independent_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}>Basic Usage of Wio Terminal</font></span></a></div>
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to play retro games on Wio Terminal</font></span></a>
             <br/>
-            USB Host for a 
+            USB Host for a
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Keyboard" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Keyboard</font></span></a>,
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Mouse" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mouse</font></span></a>,
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Xbox" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Xbox</font></span></a>
             <br/>
-            USB Client for a 
+            USB Client for a
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Keyboard" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Keyboard</font></span></a>,
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Mouse" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mouse</font></span></a>,
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-MIDI" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MIDI</font></span></a>,
