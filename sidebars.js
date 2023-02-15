@@ -402,14 +402,16 @@ const sidebars = {
 
               ]
             },
-            {
-              type: 'category',
-              label: 'Communication',
-              items: [
-                'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
-                'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
-              ]
-            },
+
+            //暂时不展示，2.15 测试版
+            // {
+            //   type: 'category',
+            //   label: 'Communication',
+            //   items: [
+            //     'Sensor/Grove/Grove_Sensors_Network/Communication/Sensor_communication',
+            //     'Sensor/Grove/Grove_Sensors_Network/Communication/GPS-Modules-Selection-Guide',
+            //   ]
+            // },
 
           ]
         },
@@ -1831,13 +1833,22 @@ const sidebars = {
             'Edge/reComputer/Application/Jetson-Nano-MaskCam',
             'Edge/reComputer/Application/Security_Scan',
             'Edge/reComputer/Application/HardHat',
-            'Edge/reComputer/Application/DeciAI-Getting-Started',
             'Edge/reComputer/Application/No-code-Edge-AI-Tool',
             'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
             'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
             'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
-            'Edge/reComputer/Application/jetson-docker-getting-started',
-            'Edge/reComputer/Application/reComputer_Jetson_Series_Resource',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Software',
+          items: [
+            'Edge/reComputer/Software/jetson-docker-getting-started',
+            'Edge/reComputer/Software/DeciAI-Getting-Started',
+            'Edge/reComputer/Software/Allxon-Jetson-Getting-Started',
+            'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
+            'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
+            'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
           ]
         },
         {
@@ -2293,18 +2304,6 @@ const sidebars = {
 
         },
 
-        {
-
-          type: 'category',
-          label: 'Software',
-          items: [
-            'Top_Brand/NVIDIA/Software/Allxon-Jetson-Getting-Started',
-            'Top_Brand/NVIDIA/Software/Update-Jetson-Linux-OTA-Using-Allxon',
-            'Top_Brand/NVIDIA/Software/alwaysAI-Jetson-Getting-Started',
-          ],
-
-        },
-
 
       ],
 
@@ -2635,15 +2634,15 @@ const sidebars = {
         },
 
 
-        // {
+        {
 
-        //   type: 'category',
-        //   label: 'SenseCAP Cloud',
-        //   items: [
-        //     'Cloud_Chain/SenseCAP_M4/wiki',
-        //   ],
+          type: 'category',
+          label: 'SenseCAP Cloud',
+          items: [
+            'Cloud_Chain/SenseCAP_M4/wiki',
+          ],
 
-        // },
+        },
 
       ],
 
