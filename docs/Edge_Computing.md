@@ -287,7 +287,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi®</font></div>
             <a href="Top_Brand/Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Raspberry Pi Introduction </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Raspberry Pi 3 Model B </font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi 3 Model B </font></span></a>
             <br/>
     </a>
 </div>
@@ -325,7 +325,6 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
     </a>
 </div>
-
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -443,7 +442,3 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Update eeprom on Raspberry pi CM4</font></span></a>
     </a>
 </div>
-
-
-
-
