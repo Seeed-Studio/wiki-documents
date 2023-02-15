@@ -1,6 +1,6 @@
 ---
-description: Air602_WiFi_Development_Board
-title: Air602 WiFi Development Board
+description: W600 Module
+title: W600 Module
 keywords:
 - Air602_WiFi_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
@@ -9,32 +9,39 @@ last_update:
   author: Matthew
 ---
 
-[picture](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/main.jpg)
+![](https://files.seeedstudio.com/wiki/W600_Module/img/113020031-preview.png)
 
 
-This wiki works for both Air602 WiFi Development Board and Air602 WiFi Module.
-
-The Air602 is a 2.4G Wi-Fi module based on the embedded Wi-Fi SoC chip (W600) with a  12-pin Stamp Hole Expansion Interface. Miracly, it is even smaller than a stamp. It's only 12mm*10mm, small but complete, it offers a rich interface and complete functionality. This module support IEEE802.11b/g/n and AT command.
-
-The Air602 WiFi Development Board is based on Air602 Wi-Fi module and integrated USB interface and Antenna. If you plug this board into your computer, it will be recognized as an Ports (COM & LPT), so that you can code it with Serial port tool. This module support IEEE802.11b/g/n and AT command.
-
-<a href="https://www.seeedstudio.com/Air602-WiFi-Module-p-3139.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a>
 
 
-<a href="https://www.seeedstudio.com/Air602-WiFi-Development-Board-p-3140.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a>
+The W600 Module is a cost-effective 2.4GHz WiFi module support 802.11b/g/n. Seeed W600 Module is based on the W600 chip which features ARM Cortex-M3 with 1MB on-chip flash and freeRTOS kernel.
+ 
+ 
+We take the pins of the W600 chip out and put them on the back of the board, including I2S/I2C/SPI/GPIO/PWM/UART/SDIO. In addition, this module has an on-board PCB Antenna, no need to design the antenna separately, so you can quickly deploy the module to your own board. We also have made CE/FCC certification for this module and you can use it directly for business projects.
 
 
-<!-- 
+<a href="https://www.seeedstudio.com/W600-Module-p-4020.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a>
+
+
 
 ## Features
 
+
+• Integrated 32bit Embedded Cortex-M3 CPU, operating frequency 80MHz
+
+• Integrated 288KB RAM
+
+• Integrated 1MB FLASH
+
+
 **Interface**
 
-• USB interface
-
-• UART/SPI
-
 • Integrated GPIO device controller
+
+• Integrated 2 UART interface, support RTS/CTS, baud rate: 1200bps~2Mbps
+
+• Integrated one high speed SPI controller, operating frequency: 0~50MHz;
+
 
 **Wireless**
 
@@ -56,8 +63,9 @@ The Air602 WiFi Development Board is based on Air602 Wi-Fi module and integrated
 
 • Support for user‐programmable GPIO control
 
+• On-board Antenna
 
-
+<!-- 
 ## Specification
 
 |Category|Item|Parameter|
@@ -84,6 +92,11 @@ The Air602 WiFi Development Board is based on Air602 Wi-Fi module and integrated
 ||Interface Protocol| AT+ instruction set|
 
 
+!!!Note
+        For more detail about specifications, please check the W600 [Specification V1.0.0_EN.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Specification%20V1.0.0_EN.pdf) and [W600 HardwareDesignGuide_v1.0.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
+ 
+
+
 ## Typical Applications
 
 - intelligent home appliances
@@ -95,19 +108,37 @@ The Air602 WiFi Development Board is based on Air602 Wi-Fi module and integrated
 - other Internet of Things applications
 
 
-## Pin Out
+## Hardware Overview
 
 
-![](https://files.seeedstudio.com/wiki/Bazaar_file/113990576/PIN_MAP.jpg)
-![](https://files.seeedstudio.com/wiki/Bazaar_file/113990576/PIN_table.jpg)
-![](https://files.seeedstudio.com/wiki/Bazaar_file/113990576/PIN_MAP_B.jpg)
+### Block Diagram
+
+
+<div align="center">
+<figure>
+  <a href="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" alt="block diagram of W600 Module" title="block diagram of W600 Module" />
+  <figcaption><i>click to see the clearer original file</i></figcaption></a>
+</figure>
+</div>
+
+
+### Pinout
+
+
+<div align="center">
+<figure>
+  <a href="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" alt="pinout of W600 Module" title="pinout of W600 Module" />
+  <figcaption><i>click to see the clearer original file</i></figcaption></a>
+</figure>
+</div>
 
 
 
 ## Getting Started
 
-For the **Air602 WiFi Development Board**, you can just plug it into you computer, it will be recognized as an Ports (COM & LPT).
-For the **Air602 WiFi Module**, you need to use USB-to-Serial Tools to connect the RX/TX pins to your computer.
+
+To use the **W600 Module**, you need to use [USB-to-Serial Tools](https://www.seeedstudio.com/PL2303-USB-to-Serial-TTL-Module-Adapter-p-2358.html) to connect the RX/TX pins to your computer, also you need to power this module with the **3.3v** and **GND** pins. 
+
  
 !!!Note
         For mac, we found that some version of mac system can not recognize the on-board USB-to-Serial chip CH330N, please check here for solution [Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=aa548f2de0fb26380f50e0b328a49a80)
@@ -320,11 +351,15 @@ AT+PMTF
 AT+WJOIN
 ```
 
+!!!Note
+        For more detail about AT command, please check the [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
+
+
 ## Firmware Programming
 
 For the firmware programming please check here：
 
-[Air602 Firmware Programming Manual](https://wiki.seeedstudio.com/Air602_Firmware_Programming_Manual)
+[WM_W60X_SDK_User Manual_V1.0.0.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) and [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
 
 
 ## FAQ
@@ -364,18 +399,22 @@ AT+APLKSTT
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Air602_WiFi_Module/res/AIR602_lbr.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Module%20schemaic.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 
 ## Resouce
 
 
-- **[PDF]** [Air602 AT Command User Manual](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/res/Air602%20AT%20Command%20User%20Manual.pdf)
+- **[PDF]** [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
 
-- **[PDF]** [Air602 Hardware Design Manual](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/res/Air602%20Hardware%20Design%20Manual.pdf)
+- **[PDF]** [W600 HardwareDesignGuide_v1.0.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
 
-- **[ZIP]** [AIR602_lbr for eagle](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/res/AIR602_lbr.zip)
+- **[PDF]** [W60X_SDK_User Manual_V1.0.0.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) 
+
+- **[PDF]** [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
+
+- **[ZIP]** [W600 Module schematic files](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Module%20schemaic.zip)
 
 - **[ZIP]** [sscom](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip)
 

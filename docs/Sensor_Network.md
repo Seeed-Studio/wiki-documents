@@ -195,8 +195,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Motion</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse </font></span></a>
+            <a href="Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
+            <a href="Sensor/Grove/Grove_Sensors/Motion/Grove-Mouse_Encoder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse </font></span></a>
             <br/>
             <a href="/Sensor/Grove/Grove_Sensors/Motion/Grove-Piezo_Vibration_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Vibration </font></span></a>,
             <a href="/Sensor/Grove/Grove_Sensors/Motion/Grove-Collision_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Collision </font></span></a>
@@ -477,7 +477,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Seeed Elderly</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Seeed Studio ageful microcontrollers.</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here </font></span></a> to see the full picture.
+            <a href="/Seeed_Elderly/Discrete%20Product/UartSB_Frame" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here </font></span></a> to see the full picture.
     </a>
 </div>
 
@@ -520,25 +520,25 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Air Serial</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air602 WiFi Dev Board</font></span></a>,
+            <a href="/Seeed_Elderly/Air_Serial/Air602_WiFi_Development_Board" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air602 WiFi Dev Board</font></span></a>,
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air602 Firmware Manual</font></span></a>
+            <a href="/Seeed_Elderly/Air_Serial/Air602_Firmware_Programming_Manual" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air602 Firmware Manual</font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>W600</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> W600 Module</font></span></a>
+            <a href="/Seeed_Elderly/W600/W600_Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> W600 Module</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Artik</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
+            <a href="/Seeed_Elderly/Artik" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Eagleye 530s</font></span></a>
+            <a href="/Seeed_Elderly/Artik/Eagleye_530s" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Eagleye 530s</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Linklt</font></div>
-            <a href="/Seeed_Elderly/LinkIt/LinkIt" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
+            <a href="/Seeed_Elderly/LinkIt" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
             <a href="/Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Linklt ONE</font></span></a>
             <br/>
@@ -548,21 +548,21 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Rainbowduino</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Rainbowduino V3.0</font></span></a>
+            <a href="/Seeed_Elderly/Rainbowduino/Rainbowduino_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Rainbowduino V3.0</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ATmega328</font></span></a>
+            <a href="Seeed_Elderly/Rainbowduino/Rainbowduino_LED_driver_platform-ATmega328" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ATmega328</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Skeleton Bot</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
+            <a href="/Seeed_Elderly/Skeleton_Bot/Skeleton_Box" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mobile Robotic Platform</font></span></a>
+            <a href="/Seeed_Elderly/Skeleton_Bot/Skeleton_Bot-4WD_hercules_mobile_robotic_platform" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mobile Robotic Platform</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Others</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> More Discrete Product</font></span></a>
+            <a href="/Seeed_Elderly/Discrete Product/Hercules_Dual_15A_6-20V_Motor_Controller" target="_blank"><span><font color={'FFFFFF'} size={"3"}> More Discrete Product</font></span></a>
             <br/>
     </a>
 </div>
@@ -930,9 +930,9 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Arduino</font></div>
             <a href="Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove_Beginner_Kit_for_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Beginner Kit for Arduino </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Speech Recognizer Kit for Arduino </font></span></a>
+            <a href="/Top_Brand/Arduino/Kit with Courses/Grove_Speech_Recognizer_Kit_for_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Speech Recognizer Kit for Arduino </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Smart Plant Care Kit </font></span></a>
+            <a href="/Top_Brand/Arduino/Kit with Courses/Grove_Smart_Plant_Care_Kit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Smart Plant Care Kit </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -985,11 +985,11 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Enhanced Usage</font></span></a></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Suli</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeed Arduino Serial</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><a href="/Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-AWS-IOT-Bridge" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Enhanced Usage</font></span></a></div>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Suli" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Suli</font></span></a>,
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Seeed_Arduino_Serial" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeed Arduino Serial</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> I2C And I2C Address of Seeed Product</font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/I2C_And_I2C_Address_of_Seeed_Product" target="_blank"><span><font color={'FFFFFF'} size={"2"}> I2C And I2C Address of Seeed Product</font></span></a>
             <br/>
             <a href="/Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/ODYSSEY-X86J4105-Firmata" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Firmata Tutorial - How to Use Firmata on Arduino Compatible</font></span></a>
             <br/>
@@ -1032,7 +1032,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}>Basic Usage of Wio Terminal</font></span></a></div>
+            <div class="independent_title" style={{textAlign: 'center'}}><a><span><font color={'8DC215'} size={"5"}>Basic Usage of Wio Terminal</font></span></a></div>
             <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to play retro games on Wio Terminal</font></span></a>
             <br/>
             USB Host for a

@@ -10,4 +10,4 @@ last_update:
   author: Matthew
 ---
 
-wait
+Publish soon.
