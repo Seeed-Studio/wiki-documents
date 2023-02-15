@@ -25,12 +25,14 @@ The ecosystem of Wio Node also consists of Open Hardware **Wio Node board**, **O
 
 [![Get one now](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
 
-
 :::caution
-     The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator. 
+The Wio IFTTT function is EOL. But Wio APP is available. You can use the API from Wio APP to read sensor status and control the actuator.
 :::
+
 ## Features
+
 ----
+
 - No hardware programming or No breadboard or No jumper wires or No soldering required.
 - A lot of Grove modules are supported (Check the list in Mobile App).
 - Plug-n-Play Grove Modules
@@ -42,6 +44,7 @@ The ecosystem of Wio Node also consists of Open Hardware **Wio Node board**, **O
 - CE/FCC/TELEC Certified for core module ESP-WROOM-02
 
 ## Specifications
+
 ----
 |General|Value|Power Management|Value|
 |:---|---|:---|---:|
@@ -54,6 +57,7 @@ The ecosystem of Wio Node also consists of Open Hardware **Wio Node board**, **O
 |**Expansion Grove Connector2**|Analog/I2C1/D1|
 
 ## Application Ideas
+
 ----
 Wio Node is well designed to provide simple and economic Wi-Fi solutions for projects like:
 
@@ -62,7 +66,6 @@ Wio Node is well designed to provide simple and economic Wi-Fi solutions for pro
 - Funny Toys
 - Web of Things
 - Internet of Things
-
 
 In fact, there're many projects in our [**recipe**](https://community.seeedstudio.com/projects.html?t=Wio), come and visit it to find some interesting projects or even share you own projects, I am sure it will gain a lot of fans for you.
 
@@ -76,11 +79,12 @@ In fact, there're many projects in our [**recipe**](https://community.seeedstudi
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/4.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/5.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/6.png)|
 |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1081)    |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1059) |[MAKE IT NOW](https://community.seeedstudio.com/project_detail.html?id=1077)|
 
-
 :::note
-    Some of the recipes are made by Wio Link, you can replace it with a Wio Node.
+Some of the recipes are made by Wio Link, you can replace it with a Wio Node.
 :::
+
 ## Hardware Overview
+
 ----
 
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio_Node_illustrate.jpg)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio_Node_illustrate.jpg)
@@ -107,21 +111,23 @@ Near to the FUNCTION button there're 2 status Leds, a blue one and a red one. Th
 - blink quickly (on 100ms then off 100ms) OTA
 
 :::note
-    The BLUE led is attached to GPIO2 which is also the TX pin of UART1. When downloading firmware, the UART1 dumps the data transmitting on UART0 by instinct. So the BLUE led will blink while downloading firmware. After startup the GPIO2 will be configured as a GPIO not TX of UART1.
+The BLUE led is attached to GPIO2 which is also the TX pin of UART1. When downloading firmware, the UART1 dumps the data transmitting on UART0 by instinct. So the BLUE led will blink while downloading firmware. After startup the GPIO2 will be configured as a GPIO not TX of UART1.
 :::
 The RED led is another status led which indicates the power status of Grove modules. All the six Grove interface's VCC converge together and can be controlled with GPIO 15. When the node is in deep sleep mode, all the grove modules lose their power too. The RED led will light on when Grove modules are powered and will go off when Grove modules aren't powered.
 
+### Bonus
 
-### Bonus!
 Wio Node has an inbuilt LiPo battery charger, so you can charge 3.7v LiPo battery through JST 2.0 Port when USB is connecting.
 
 :::note
-    * Please handle the USB micro type-B socket gently, or you may break the socket apart from the board.
-    * Battery is not included in the package. But we have arranged plenty of choices for you in [Bazzar](https://www.seeedstudio.com/s/battery.html).
+
+- Please handle the USB micro type-B socket gently, or you may break the socket apart from the board.
+
+- Battery is not included in the package. But we have arranged plenty of choices for you in [Bazzar](https://www.seeedstudio.com/s/battery.html).
 :::
 
-
 ## Get Started
+
 ----
 Let us build a very basic LED application with Wio Node, in this application you will be able to control LED by your smartphone in about 5 minutes. Before we start, please make sure you have below things on hand:
 
@@ -131,10 +137,14 @@ Let us build a very basic LED application with Wio Node, in this application you
 |[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 :::note
-    * A smartphone is needed as well (Android OS version 4.1 or advanced, iOS version 7 or advanced)
-    * Grove - LED include a Grove cable already
-:::    
+
+- A smartphone is needed as well (Android OS version 4.1 or advanced, iOS version 7 or advanced)
+
+- Grove - LED include a Grove cable already
+:::
+
 ### **STEP 1:** Install Android/iOS App
+
 You need to install the Wio Link App to manage and configure your Wio Node devices.
 
 Download the Android or iOS App and install. Or you can go to app store of Apple or Google market and search "Wio Link", you will find it.
@@ -144,19 +154,21 @@ Download the Android or iOS App and install. Or you can go to app store of Apple
 |[Get Android App](https://play.google.com/store/apps/details?id=cc.seeed.iot.ap)|[Get iOS App](https://itunes.apple.com/us/app/wio-link/id1054893491?mt=8)|
 
 :::note
-    Make sure your Android OS version is 4.1 or advanced, iOS version is 7 or advanced.
+Make sure your Android OS version is 4.1 or advanced, iOS version is 7 or advanced.
 :::
+
 ### **STEP 2:** Create your Account
 
 - If it is your first time to use Wio APP, it may require GPS authorization, please approve it, then sign up.
 - If you already have an account, check the server location before logging in.
 
 :::note
-    Please pay attention to the server location, because wrong server location will lead to failure when connecting to Wio Node.
+Please pay attention to the server location, because wrong server location will lead to failure when connecting to Wio Node.
 :::
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/sign%20in%2Blog%20in%2Bchoose%20server.png)
 
 ### **STEP 3**: Connect Wio Node to Internet
+
 - Push and hold the CONFIG button until the blue LED turns into breathing mode (i.e. blinking with fade in & fade out effect). It means that Wio Node has turned to configuration mode successfully and can be detected by the Wio App.
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Confiture%20button.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Confiture%20button.png)
 - Push "Add your first Device".
@@ -175,7 +187,9 @@ Download the Android or iOS App and install. Or you can go to app store of Apple
 - Consider that you may need to connect more than 1 Wio Node in the future, a special name will make you distinguish them from each other easily.
 
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Connect%20to%20Wio%20node3.png)
+
 ### **STEP 4:** Virtually interconnect modules with Wio Node and update firmware
+
 - Click the Wio Node and you will be in the main interface.
 - There are 2 grove connectors, select the left one (D0).
 - Because LED is output devices. Choose output category
@@ -189,13 +203,14 @@ Download the Android or iOS App and install. Or you can go to app store of Apple
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20App/Wio_Node_Grove_LED.JPG)
 
 ### **STEP 5**: Test application using APIs
+
 - Now that  you have successfully connect the LED to Wio Node, click "View API" to check the API of Wio Node
 - Input "1" or "0" in the "Test Request" area, and click "Post" button and see what will happen.
 
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/change%20the%20valure%20to%20see%20what%20will%20happen.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/change%20the%20valure%20to%20see%20what%20will%20happen.png)
 
-
 ## Get started with IFTTT & DoButton
+
 -----
 Dont't know how to code? Don't worry, with the help of [IFTTT](https://en.wikipedia.org/wiki/IFTTT), even if you know nothing about coding, you are still able to build some simple projects.
 
@@ -208,16 +223,16 @@ If you don't have an IFTTT account, click [here](https://ifttt.com/join) to sign
 If you already have an IFTTT account,click [here](https://ifttt.com/recipes/search?q=seeed) to connect with Seeed, or search Seeed at IFTTT website. There you will find 9 recipes by Seeed to teach you how to us e IFTTT.
 [![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/IFTTT%20recipes.png)](https://files.seeedstudio.com/wiki/Wio_Node/pictures/IFTTT%20recipes.png)
 What is DoButton? DoButton is one of IFTTT's application that empowers you to create your own personalized button with just a tap, it is very suitable for building IoT projects and control it through your smartphone, here are two examples to show you how to use IFTTT&DoButton to make useful applications.
-### Example:
+
+### Example
 
 |**IFTTT**|**DoButton**|
 |:---|:---|
-|[**Recipe**][DIY an Automatic Garden Irrigation without coding](https://community.seeedstudio.com/project_detail.html?id=1080)|[**Recipe**][How to feed your pets when you're not home](https://community.seeedstudio.com/project_detail.html?id=1066)|
-|[**Video**][How to use ITFFF](https://vimeo.com/148590984)|[**Video**][How to use DoButton](https://vimeo.com/146988454)|
-
-
+|**[Recipe]**[DIY an Automatic Garden Irrigation without coding](https://community.seeedstudio.com/project_detail.html?id=1080)|**[Recipe]**[How to feed your pets when you're not home](https://community.seeedstudio.com/project_detail.html?id=1066)|
+|**[Video]**[How to use ITFFF](https://vimeo.com/148590984)|**[Video]**[How to use DoButton](https://vimeo.com/146988454)|
 
 ## Advanced Guide
+
 ----
 Feel those examples too simple? Wanna make more complicated proejects? Here are the best guides for advanced users to hack things with Wio nude. By these guides, advanced users are able to know more detail information about Wio Node, deploy private server, even write module driver for Wio Node.
 
@@ -230,13 +245,11 @@ The guide covers:
 - Advanced User Guide
 - How to write module driver for Wio Link?
 
-
 :::note
     The guide is writen for Wio Link, but applies to Wio Node as well.
 :::
 
-##Grove Support List
-
+## Grove Support List
 
 |SKU       |Name                                        |Interface |Driver                 |Link       |
 |----------|--------------------------------------------|----------|-------------------    |-----------|
@@ -312,9 +325,8 @@ The guide covers:
 |316010005 |    Grove - Servo                           |Digital   |itself                 | [link](https://www.seeedstudio.com/Grove-Servo-p-1241.html) |
 |101020067 |    Grove - CO2 Sensor                      |UART      |itself                 | [link](https://www.seeedstudio.com/Grove-CO2-Sensor-p-1863.html) |
 
-
-
 ## FAQ
+
 ----
 Here are some questions that we usually received from new users. If you have any other issues when you are using Wio Node or other Wio products, welcome to the [Community of Wio](https://community.seeedstudio.com/topics.html?t=Wio) where there are many professional users waiting to give you advices and also many advanced users providing plenty of ideas on how to use Wio products!
 
@@ -332,34 +344,32 @@ Here are some questions that we usually received from new users. If you have any
 
 **4. If I want to connect more than 1 I2C devices, what should I do?**
 
->We can not connect 2 Grove-I2C devices to Wio node 2 Grove-I2C Port at the same time. [Grove-I2C hub](https://www.seeedstudio.com/s/I2C%20hub.html) can branch 1 I2C port into 4. Come to [Bazzar](https://www.seeedstudio.com/s/I2C%20hub.html) to get one! 
+>We can not connect 2 Grove-I2C devices to Wio node 2 Grove-I2C Port at the same time. [Grove-I2C hub](https://www.seeedstudio.com/s/I2C%20hub.html) can branch 1 I2C port into 4. Come to [Bazzar](https://www.seeedstudio.com/s/I2C%20hub.html) to get one!
 
 **5. Can I change Wio Node into sleep mode?**
 
 >Yes, please check the last API, where you can command Wio Node into sleep mode.
-
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_Node/Recources/Wio_Node_Schematics.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
+
 ----
+
 - **Documentation and references**
-    - [API Reference](https://seeed-studio.github.io/Wio_Link/)
-    - [Server Deployment Guide](https://github.com/Seeed-Studio/Wio_Link/wiki/Server%20Deployment%20Guide)
-    - [How to write module driver for Wio Link](https://github.com/Seeed-Studio/Wio_Link/wiki/How-to-write-module-driver-for-Wio-Link%3F)
+  - [API Reference](https://seeed-studio.github.io/Wio_Link/)
+  - [Server Deployment Guide](https://github.com/Seeed-Studio/Wio_Link/wiki/Server%20Deployment%20Guide)
+  - [How to write module driver for Wio Link](https://github.com/Seeed-Studio/Wio_Link/wiki/How-to-write-module-driver-for-Wio-Link%3F)
 - **Software**
-    - [Sourcecode on **Github**](https://github.com/Seeed-Studio/Wio_Link)
+  - [Sourcecode on **Github**](https://github.com/Seeed-Studio/Wio_Link)
 - **Hardware**
-    - [Schematic File in **PDF**](https://files.seeedstudio.com/wiki/Wio_Node/Recources/Wio%20Node%20v1.0.pdf)
-    - [Schematic File in **Eagle**](https://files.seeedstudio.com/wiki/Wio_Node/Recources/Wio_Node_Schematics.zip)
+  - [Schematic File in **PDF**](https://files.seeedstudio.com/wiki/Wio_Node/Recources/Wio%20Node%20v1.0.pdf)
+  - [Schematic File in **Eagle**](https://files.seeedstudio.com/wiki/Wio_Node/Recources/Wio_Node_Schematics.zip)
 - **Certificate**
-    - [CE/FCC/TELEC Certified(only) for core module ESP-WROOM-02](https://files.seeedstudio.com/wiki/Wio_Node/Recources/CE-FCC-TELEC_Certified(only)_for_core_module_ESP-WROOM-02.zip)
+  - [CE/FCC/TELEC Certified(only) for core module ESP-WROOM-02](https://files.seeedstudio.com/wiki/Wio_Node/Recources/CE-FCC-TELEC_Certified(only)_for_core_module_ESP-WROOM-02.zip)
 
 ## Projects
 
@@ -368,7 +378,8 @@ Here are some questions that we usually received from new users. If you have any
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/idreams/smart-home-with-wio-link-wio-node-and-telegram-app-831f78/embed' width='350'></iframe>
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
