@@ -302,7 +302,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Sensor_motion',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Digital-PIR-Sensor',
-                // 'Sensor/Grove/Grove_Sensors/Motion/Grove-Collision_Sensor',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Collision_Sensor',
                 // 'Sensor/Grove/Grove_Sensors/Motion/Grove-Tilt_Switch',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Mini_Track_Ball',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Mouse_Encoder',
@@ -326,20 +326,20 @@ const sidebars = {
           type: 'category',
           label: 'Grove Sensor Network',
           items: [
-            // {
-            //   type: 'category',
-            //   label: 'LoRa',
-            //   items: [
-            //     // 'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
+            {
+              type: 'category',
+              label: 'LoRa',
+              items: [
+                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
 
-            //   ]
-            // },
+              ]
+            },
             {
               type: 'category',
               label: 'Bluetooth',
               items: [
-                // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE-dual_model-v1.0',
-                // 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth_v3.0',
+                'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE-dual_model-v1.0',
+                'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth_v3.0',
                 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE_v1',
                 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth',
 
@@ -393,7 +393,7 @@ const sidebars = {
               label: 'Standard Protocol',
               items: [
                 // 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-DMX512',
-                // 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_ADC', 
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_ADC',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver_v1.1',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Protoshield',
@@ -1157,7 +1157,7 @@ const sidebars = {
         'Sensor/Seeeduino Series/Seeeduino_GPRS',
         'Sensor/Seeeduino Series/Seeeduino_Lite',
         'Sensor/Seeeduino Series/Seeeduino_LoRAWAN',
-        //'Sensor/Seeeduino Series/Seeeduino_Lotus',
+        'Sensor/Seeeduino Series/Seeeduino_Lotus',
         'Sensor/Seeeduino Series/Seeeduino_Lotus_Cortex-M0-',
         'Sensor/Seeeduino Series/Seeeduino_Mega',
         //'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
@@ -1355,12 +1355,12 @@ const sidebars = {
               label: 'Input/Output',
               items: [
                 'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
-                'Sensor/Beyond_Grove/Accessories/Input _Output/125Khz_RFID_module-UART',
-                'Sensor/Beyond_Grove/Accessories/Input _Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
-                'Sensor/Beyond_Grove/Accessories/Input _Output/AVR_USB_Programmer',
-                'Sensor/Beyond_Grove/Accessories/Input _Output/Scream_out_loud-110dBA_fixed_tone_Siren',
-                'Sensor/Beyond_Grove/Accessories/Input _Output/2.8inch-TFT_Touch_Shield_V1.0',
-                'Sensor/Beyond_Grove/Accessories/Input _Output/Bus_Pirate_v3_assembled',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/125Khz_RFID_module-UART',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/Scream_out_loud-110dBA_fixed_tone_Siren',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/2.8inch-TFT_Touch_Shield_V1.0',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
               ],
 
 
@@ -2496,13 +2496,13 @@ const sidebars = {
           type: 'category',
           label: 'Bee',
           items: [
-            //'Seeed_Elderly/Bee/Mesh_Bee',
+            'Seeed_Elderly/Bee/Mesh_Bee',
             'Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node',
             //'Seeed_Elderly/Bee/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products',
             'Seeed_Elderly/Bee/Bees_Shield',
             'Seeed_Elderly/Bee/UartSBee_V3.1',
             'Seeed_Elderly/Bee/UartSBee_V4',
-            //'Seeed_Elderly/Bee/UartSBee_v5',
+            'Seeed_Elderly/Bee/UartSBee_v5',
             'Seeed_Elderly/Bee/BLE_Bee',
             //'Seeed_Elderly/Bee/BLE_dual_Bee_v1.0',
             //'Seeed_Elderly/Bee/Bluetooth_Bee_v2.0',
