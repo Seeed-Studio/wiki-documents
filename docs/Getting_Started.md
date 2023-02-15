@@ -28,7 +28,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">IoT Platform & Sensor Foundation</font>
 
  <div class="start_card_container">
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item" href="/Sensor_Network#industrial-iot">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Sensor Node</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Gateway</font></div>
@@ -36,7 +36,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
             <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
-        <a class="start_card_item" href="/Getting_Started">
+        <a class="start_card_item" href="/Sensor_Network#sensors---">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove sensors & Network</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove accessories</font></div>
@@ -47,7 +47,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
   </div>
 
  <div class="start_card_container">
-<a class="start_card_item" href="/Getting_Started">
+<a class="start_card_item" href="/CloudnChain">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Chain & Cloud AI training</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Cloud</font></div>
@@ -57,7 +57,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     </a>
 
 
-<a class="start_card_item" href="/Getting_Started">
+<a class="start_card_item" href="/Solutions">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"7"}>Solutions</font></div>
             <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial IoT</font> info in
@@ -71,7 +71,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices</font>
 
  <div class="start_card_container">
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item" href="/Sensor_Network#microcontrollers---">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"6"}>Microcontrollers</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>- Extensions & Accessories</font></div>
@@ -79,9 +79,13 @@ The wiki contents have been divided into **four topics** as shown on the top nav
             <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
-        <a class="start_card_item" href="/Getting_Started">
+        <a class="start_card_item">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"6"}>SBC & Devices</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}>
+            <a href="Edge_Computing#single-board-computer---"><span><font color={'FFFFFF'} size={"6"}>  SBC </font></span></a>
+            <a><span><font color={'FFFFFF'} size={"5"}>  or </font></span></a>
+            <a href="Edge_Computing#device---"><span><font color={'FFFFFF'} size={"6"}>  Device </font></span></a>
+            </div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>- Extensions & Accessories</font></div>
             <div class="start_card_content" style={{textAlign: 'center'}}>Different <font color={'8DC215'} size={"3"}>computing boards</font> info in</div>
             <div class="start_card_content" style={{textAlign: 'center'}}>“Edge Computing” topic</div>
@@ -92,7 +96,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Application with Software</font>
 
  <div class="start_card_container">
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item" href="/Sensor_Network#application---">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Embedded ML Scenarios</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Easy IoT Applications</font></div>
@@ -100,11 +104,13 @@ The wiki contents have been divided into **four topics** as shown on the top nav
             <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item" style={{textAlign: 'center'}}>
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Software Development</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>OS Installation</font></div>
-            <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>devices software</font> info in</div>
+            More <a href="/Edge_Computing#application--software----1"><span><font color={'8DC215'} size={"3"}> SBC </font></span></a>
+            or
+            <a href="/Edge_Computing#application--software---"><span><font color={'8DC215'} size={"3"}> Device </font></span></a> software info in
             <div class="start_card_content" style={{textAlign: 'center'}}> “Edge Computing” topic</div>
         </div>
     </a>
@@ -113,7 +119,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 ### <font color="{'D29291'}" size="{&quot;5&quot;}">Kit with Courses</font>
 
  <div class="start_card_container">
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item" href="/Sensor_Network#kit-with-courses---">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Kit with MCU Boards</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>- Free Courses</font></div>
@@ -121,7 +127,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>"Sensor Network" topic</font></div>
         </div>
     </a>
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item" href="/Edge_Computing#kit-with-courses---">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Kit with SBC Boards</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>- Free Courses</font></div>
@@ -131,26 +137,21 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     </a>
   </div>
 
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Tutorials</font>
+### <font color="{'D29291'}" size="{&quot;5&quot;}">Others you can find</font>
 
  <div class="start_card_container">
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Find development boards</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>intriguing usages</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>in each topic</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}> Development Boards / Devices</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Tutorials</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>find in each Topic & Portion</font></div>
         </div>
     </a>
-  </div>
-
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Seeed Studio Elderly</font>
-
- <div class="start_card_container">
-    <a class="start_card_item" href="/Getting_Started">
+    <a class="start_card_item">
         <div class="start_card_wrapper">
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Seeed Studio</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>adgeful production</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>in each topic</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Seeed Studio ageful production</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>find in each Topic & Portion</font></div>
         </div>
     </a>
   </div>
