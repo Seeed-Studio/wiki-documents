@@ -468,7 +468,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Recorder_v3.0',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay', 
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-4-Channel_SPDT_Relay',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-2-Channel_SPDT_Relay',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Solid_State_Relay',
@@ -545,7 +545,7 @@ const sidebars = {
               type: 'category',
               label: 'Input Output',
               items: [
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
@@ -1310,7 +1310,7 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensor_Network/433Mhz_RF_Link_Kit',
             'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
             'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
-            // 'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
+            'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
 
           ],
 
@@ -2220,14 +2220,15 @@ const sidebars = {
           type: 'category',
           label: 'Official Raspberry Pi Module',
           items: [
-            'feature',
+            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Module/Raspberry_pi_CM4_update_eeprom',
           ]
         },
         {
           type: 'category',
           label: 'Official Raspberry Pi Board',
           items: [
-            'feature',
+            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B',
+            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/remote_connect',
           ]
         },
         {
@@ -2326,7 +2327,7 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'Seeed_Elderly',
+      label: 'Seeed Elderly',
       items: [
 
         {
@@ -2513,6 +2514,7 @@ const sidebars = {
             //'Seeed_Elderly/Bee/Atom_Node',
             'Seeed_Elderly/Bee/Bluetooth_V4.0_HM_11_BLE_Module',
             'Seeed_Elderly/Bee/GPS_Bee_kit',
+            'Seeed_Elderly/Bee/Grove-XBee_Carrier',
             //'Seeed_Elderly/Bee/Grove-Bee_Socket',
           ]
         },
