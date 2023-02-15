@@ -466,7 +466,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Recorder_v3.0',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay', 
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-4-Channel_SPDT_Relay',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-2-Channel_SPDT_Relay',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Solid_State_Relay',
@@ -543,7 +543,7 @@ const sidebars = {
               type: 'category',
               label: 'Input Output',
               items: [
-                // 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Differential_Amplifier_v1.2',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
@@ -2216,7 +2216,8 @@ const sidebars = {
           type: 'category',
           label: 'Official Raspberry Pi Board',
           items: [
-            'feature',
+            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B',
+            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/remote_connect',
           ]
         },
         {

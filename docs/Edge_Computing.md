@@ -215,7 +215,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
             <a href="/Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205</font></span></a>, support Jetson Nano / Xavier NX/TX2 NX
             <br/>
-            <a href="/Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Mate Cluster</font></span></a>,  support 4 Jetson Nano/NX 
+            <a href="/Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Mate Cluster</font></span></a>,  support 4 Jetson Nano/NX
             <br/>
     </a>
 </div>
@@ -285,7 +285,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi®</font></div>
             <a href="Top_Brand/Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi Introduction </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi 3 Model B </font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi 3 Model B </font></span></a>
             <br/>
     </a>
 </div>
@@ -324,7 +324,6 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
-
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BeagleBone®</font></div>
@@ -337,7 +336,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY X86J4105</font></div>
-            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-OS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>, 
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-OS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>,
             <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Updating-Firmware" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Updating Firmware</font></span></a>
             <br/>
             <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-openwrt" target="_blank"><span><font color={'FFFFFF'} size={"3"}> OpenWRT</font></span></a>,
@@ -441,7 +440,3 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Update eeprom on Raspberry pi CM4</font></span></a>
     </a>
 </div>
-
-
-
-

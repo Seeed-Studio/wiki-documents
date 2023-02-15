@@ -11,15 +11,16 @@ last_update:
 ---
 ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit.jpg)
 
-**Wireless Sensor Node - Solar Kit** is an easy to use bundle created for experimenting with XBee and **XBee** compatible standalone wireless modules like RFBee and [Wifi Bee](/Wifi_Bee "Wifi Bee"). Every **maker** is confronted with the question of selection the right set of components to build **Wireless Sensor Node**. **Wireless Sensor Node - Solar Kit** fills this place very appropriately. The [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") provides LDO power supply, charger for LiPo Battery and programming port for **XBee** compatible modules. The **Solar Panel** provides the required charging voltage in remote areas. The **500 mAH LiPo Battery** provides the backup when the Sun is away. A properly designed and configured wireless module could provide very long hours of usage. For this, put the node to sleep when not transmitting the sensor value. This kit comes with a perfectly made **Transparent Box** , sets of **Screws** and **Plastic Rivets**.
+**Wireless Sensor Node - Solar Kit** is an easy to use bundle created for experimenting with XBee and **XBee** compatible standalone wireless modules like RFBee and [Wifi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee"). Every **maker** is confronted with the question of selection the right set of components to build **Wireless Sensor Node**. **Wireless Sensor Node - Solar Kit** fills this place very appropriately. The Grove - XBee Carrier provides LDO power supply, charger for LiPo Battery and programming port for **XBee** compatible modules. The **Solar Panel** provides the required charging voltage in remote areas. The **500 mAH LiPo Battery** provides the backup when the Sun is away. A properly designed and configured wireless module could provide very long hours of usage. For this, put the node to sleep when not transmitting the sensor value. This kit comes with a perfectly made **Transparent Box** , sets of **Screws** and **Plastic Rivets**.
 
-*   We suggest you to buy more than one kit to create a distributed array of Sensor Nodes.
+* We suggest you to buy more than one kit to create a distributed array of Sensor Nodes.
 
-*   [Bees Shield](/Bees_Shield "Bees Shield") along with **Seeeduino** and **Wifi Bee** can act as Wireless internet Gateway for these nodes.
+* Bees Shield along with **Seeeduino** and **Wifi Bee** can act as Wireless internet Gateway for these nodes.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wireless-Sensor-Node-Solar-Kit-p-919.html)
 
-##   Contents of the Kit
+## Contents of the Kit
+
 ---
 <table>
 <tr>
@@ -104,23 +105,28 @@ last_update:
 <td> 8
 </td></tr></table>
 
-##   Application Ideas
+## Application Ideas
+
 ---
-*   Distributed Wireles Sensor Nodes with **XBee** or **WifiBee** or **RFBee**.
 
-*   Build **Data Loggers** when connected with Wireless Gateway.
+* Distributed Wireles Sensor Nodes with **XBee** or **WifiBee** or **RFBee**.
 
-*   Intelligent Home Network
+* Build **Data Loggers** when connected with Wireless Gateway.
 
-*   Industrial Automation
+* Intelligent Home Network
 
-*   **SCADA** (Supervisory control and data acquisition.) systems
+* Industrial Automation
 
-##   Cautions
+* **SCADA** (Supervisory control and data acquisition.) systems
+
+## Cautions
+
 ---
-*   Insert the Bees in the right direction.
 
-##   Specification
+* Insert the Bees in the right direction.
+
+## Specification
+
 ---
 <table>
 <tr>
@@ -144,12 +150,12 @@ last_update:
 <td> 0.5Watt @ 5.5V
 </td></tr></table>
 
-##   Usage
+## Usage
+
 ---
 <div className="thumb tnone"><div className="thumbinner" style={{width: 302}}>![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Demo_Arrangement.jpg) <div className="thumbcaption">**Wireless Sensor Node Field Use - Charged by Solar Panel"**</div></div></div>
 
-
-###   Quick Start Guide
+### Quick Start Guide
 
 This section provides a Step-by-Step construction of a Wireless Sensor Node. Images are only for illustrating the procedure of that step. We have used two different setups of Grove - Xbee Carrier and Grove modules. So, just follow the procedure.
 
@@ -167,38 +173,40 @@ This section provides a Step-by-Step construction of a Wireless Sensor Node. Ima
 | 5.0  | Close the lid. USB socket and Power Switch are accessible from the side                                          | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Wires_Switch_USB_Side.jpg) |
 | 6.0  | Connect the USB cable and program the XBee                                                                       | ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_USBProgramming.jpg)        |
 
-###  Programming with various Bee Modules
+### Programming with various Bee Modules
 
 Information on how to setup / program Bee Modules are available in
 
-*   [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
+* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-*   [Wifi Bee Page ](/Wifi_Bee "Wifi Bee")
+* [Wifi Bee Page](/Wifi_Bee "Wifi Bee")
 
-##  Image Gallery
+## Image Gallery
+
 ---
 ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Bee_Stem_with_LiPOBattery_Being_Charged_By_SolarCell.jpg)
 
 **LiPo Being Charged by Solar Panel"**
 
-##   See Also
+## See Also
 
-*   [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
+* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-*   [Bees Shield](/Bees_Shield "Bees Shield")
+* [Bees Shield](/Bees_Shield "Bees Shield")
 
-*   [XBee](/XBee_Shield_V2.0 "XBee_Shield_V2.0")
+* [XBee](/XBee_Shield_V2.0 "XBee_Shield_V2.0")
 
-*   [Wifi Bee](/Wifi_Bee "Wifi Bee")
+* [Wifi Bee](/Wifi_Bee "Wifi Bee")
 
-*   [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
+* [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
 
-*   [UartSBee](/UartSBee_V3.1 "UartSBee_V3.1")
+* [UartSBee](/UartSBee_V3.1 "UartSBee_V3.1")
 
-*   [Seeeduino_V2.2](/Seeeduino_V2.2 "Seeeduino V2.2")
+* [Seeeduino_V2.2](/Seeeduino_V2.2 "Seeeduino V2.2")
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
