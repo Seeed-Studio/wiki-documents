@@ -27,18 +27,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reTerminal </font></span></a>
+            <a href="/Edge/reTerminal/reTerminal" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reTerminal </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware and Interfaces Usage </font></span></a>
+            <a href="/Edge/reTerminal/reTerminal-hardware-interfaces-usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware and Interfaces Usage </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reComputer</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reComputer Series </font></span></a>
+            <a href="/Edge/reComputer/reComputer_Jetson_Series_Initiation" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reComputer Series </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware Layout for reComputer Series </font></span></a>
+            <a href="/Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware Layout for reComputer Series </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> GPIO and Grove for reComputer Series </font></span></a>
+            <a href="/Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove" target="_blank"><span><font color={'FFFFFF'} size={"3"}> GPIO and Grove for reComputer Series </font></span></a>
             <br/>
     </a>
 </div>
@@ -46,18 +46,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reServer</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reServer X86 Series - Intel® Core™ </font></span></a>
+            <a href="/Edge/reServer/reServer_X86/reServer-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reServer X86 Series - Intel® Core™ </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reServer J2032 - NVIDIA® Jetson NX Xavier </font></span></a>
+            <a href="/Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reServer J2032 - NVIDIA® Jetson NX Xavier </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Mini PC for Industrial</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203 - Jetpack 5.0, Jetson Xavier NX 8GB, RS232 </font></span></a>
+            <a href="/Top_Brand/NVIDIA/Mini_PC/reComputer_A203E_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203 - Jetpack 5.0, Jetson Xavier NX 8GB, RS232 </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205E - Jetpack 5.0, Jetson Xavier NX 8GB, 2xGbE</font></span></a>
+            <a href="/Top_Brand/NVIDIA/Mini_PC/reComputer_A205E_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205E - Jetpack 5.0, Jetson Xavier NX 8GB, 2xGbE</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> T906 - Jetpack 5.0, Jetson AGX Orin 32GB, 10Gps </font></span></a>
+            <a href="/Top_Brand/NVIDIA/Mini_PC/Mini_AI_Computer_T906" target="_blank"><span><font color={'FFFFFF'} size={"3"}> T906 - Jetpack 5.0, Jetson AGX Orin 32GB, 10Gps </font></span></a>
             <br/>
     </a>
 </div>
@@ -65,16 +65,16 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Edge Series</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-ESP-100 - ESP32-based/ RS485/ Ethernet </font></span></a>
+            <a href="https://files.seeedstudio.com/wiki/edge_box_esp/EdgeBox-ESP-100-User_Manual.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-ESP-100 - ESP32-based/ RS485/ Ethernet </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-RPI-200 - Raspberry Pi CM4-based/ IEC </font></span></a>
+            <a href="https://files.seeedstudio.com/wiki/Edge_Box/EdgeBox-RPi-200_Edge_Computing_Controller_User_Manual.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-RPI-200 - Raspberry Pi CM4-based/ IEC </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeLogix-RPI-1000 - Raspberry Pi CM4-based</font></span></a>
+            <a href="https://files.seeedstudio.com/wiki/Edge_Logix/EdgeLogix-RPI-1000-Datasheet-V1.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeLogix-RPI-1000 - Raspberry Pi CM4-based</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>NVIDIA Jetson Alternative</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Xavier AGX H01</font></span></a>
+            <a href="/Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Xavier AGX H01</font></span></a>
             <br/>
     </a>
 </div>
@@ -84,26 +84,26 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>reTerminal</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LVGL</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Flutter</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Electro</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grafana</font></span></a>
+            <a href="/Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LVGL</font></span></a>,
+            <a href="/Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Flutter</font></span></a>,
+            <a href="/Edge/reTerminal/Application/reTerminal-build-UI-using-Electron" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Electro</font></span></a>,
+            <a href="/Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grafana</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mender Client</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Qt with Python</font></span></a>
+            <a href="/Edge/reTerminal/Application/Mender-Client-reTerminal" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mender Client</font></span></a>,
+            <a href="/Edge/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Qt with Python</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Google MediaPipe</font></span></a>
+            <a href="/Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Google MediaPipe</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> TensorFlow Lite</font></span></a>
+            <a href="/Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite" target="_blank"><span><font color={'FFFFFF'} size={"3"}> TensorFlow Lite</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Home Assistant</font></span></a>
+            <a href="/Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Home Assistant</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Customize Home Assistant</font></span></a>
+            <a href="/Edge/reTerminal/Application/Home_Assistant/Home-Assistant-Customize" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Customize Home Assistant</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Edge Series</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Codesys on EdgeBox-RPI-200 controller</font></span></a>
+            <a href="/Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Codesys on EdgeBox-RPI-200 controller</font></span></a>
             <br/>
     </a>
 </div>
@@ -111,32 +111,32 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>reComputer Application</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hard Hat Detection </font></span></a>
+            <a href="/Edge/reComputer/Application/HardHat" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hard Hat Detection </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> No code Edge AI Tool </font></span></a>
+            <a href="/Edge/reComputer/Application/No-code-Edge-AI-Tool" target="_blank"><span><font color={'FFFFFF'} size={"3"}> No code Edge AI Tool </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MaskCam </font></span></a>
+            <a href="/Edge/reComputer/Application/Jetson-Nano-MaskCam" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MaskCam </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> DashCamNet with Jetson Xavier NX Multicamera </font></span></a>
+            <a href="/Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera" target="_blank"><span><font color={'FFFFFF'} size={"3"}> DashCamNet with Jetson Xavier NX Multicamera </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Traffic Management DeepStream SDK </font></span></a>
+            <a href="/Edge/reComputer/Application/Traffic-Management-DeepStream-SDK" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Traffic Management DeepStream SDK </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Few-Shot Object Detection </font></span></a>
+            <a href="/Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Few-Shot Object Detection </font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Software for reComputer</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Allxon </font></span></a>
+            <a href="/Top_Brand/NVIDIA/Software/Allxon-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Allxon </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Docker</font></span></a>
+            <a href="/Edge/reComputer/Application/jetson-docker-getting-started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Docker</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with alwaysAI </font></span></a>
+            <a href="/Top_Brand/NVIDIA/Software/alwaysAI-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with alwaysAI </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Deci </font></span></a>
+            <a href="/Edge/reComputer/Application/DeciAI-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with Deci </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Update Jetson Linux Over-the-Air Using Allxon </font></span></a>
+            <a href="/Top_Brand/NVIDIA/Software/Update-Jetson-Linux-OTA-Using-Allxon" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Update Jetson Linux Over-the-Air Using Allxon </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Resource </font></span></a>
+            <a href="/Edge/reComputer/Application/reComputer_Jetson_Series_Resource" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Resource </font></span></a>
             <br/>
     </a>
 </div>
@@ -146,21 +146,21 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
+            <a href="/Edge/reTerminal/reTerminal-FAQ" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Buildroot</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Yocto</font></span></a>
+            <a href="/Edge/reTerminal/OS_Installation/reTerminal-Buildroot-SDK" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Buildroot</font></span></a>,
+            <a href="/Edge/reTerminal/OS_Installation/reTerminal-Yocto" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Yocto</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Stream-pi & OBS studio</font></span></a>
+            <a href="/Edge/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Stream-pi & OBS studio</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reComputer Series</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J1010 | J101 Original OS Installation</font></span></a>
+            <a href="/Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J1010 | J101 Original OS Installation</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J2021 | J202 Original OS Installation</font></span></a>
+            <a href="/Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J2021 | J202 Original OS Installation</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J1020 | A206 Original OS Installation</font></span></a>
+            <a href="/Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack" target="_blank"><span><font color={'FFFFFF'} size={"3"}> J1020 | A206 Original OS Installation</font></span></a>
             <br/>
     </a>
 </div>
@@ -168,17 +168,17 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reServer</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
+            <a href="/Edge/reServer/reServer_X86/reServer-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Upgrading BIOS and Installing Drivers</font></span></a>
+            <a href="/Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Upgrading BIOS and Installing Drivers</font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Mini PC</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203 Original OS Installation</font></span></a>
+            <a href="/Top_Brand/NVIDIA/Mini_PC/reComputer_A203E_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203 Original OS Installation</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205E Original OS Installation</font></span></a>
+            <a href="/Top_Brand/NVIDIA/Mini_PC/reComputer_A205E_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205E Original OS Installation</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> T906 Original OS Installation</font></span></a>
+            <a href="/Top_Brand/NVIDIA/Mini_PC/Mini_AI_Computer_T906" target="_blank"><span><font color={'FFFFFF'} size={"3"}> T906 Original OS Installation</font></span></a>
             <br/>
     </a>
 </div>
@@ -186,12 +186,16 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Edge Series</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>
+            <a href="https://files.seeedstudio.com/wiki/edge_box_esp/EdgeBox-ESP-100-User_Manual.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-ESP-100 - OS Installation </font></span></a>
+            <br/>
+            <a href="https://files.seeedstudio.com/wiki/Edge_Box/EdgeBox-RPi-200_Edge_Computing_Controller_User_Manual.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeBox-RPI-200 - OS Installation </font></span></a>
+            <br/>
+            <a href="https://files.seeedstudio.com/wiki/Edge_Logix/EdgeLogix-RPI-1000-Datasheet-V1.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}> EdgeLogix-RPI-1000 - OS Installation</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>NVIDIA Jetson Alternative</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Xavier AGX H01 Original OS Installation</font></span></a>
+            <a href="/Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Xavier AGX H01 Original OS Installation</font></span></a>
     </a>
 </div>
 
@@ -200,18 +204,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>reTerminal Extensions</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reTerminal E10-1 -  Expand UPS, Gigabit Ethernet, LTE/4G/5G/LoRaWAN, RS485/232, CAN, SATA 2.0</font></span></a>
+            <a href="/Edge/reTerminal/Extension_Board/reTerminalBridge" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reTerminal E10-1 -  Expand UPS, Gigabit Ethernet, LTE/4G/5G/LoRaWAN, RS485/232, CAN, SATA 2.0</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reTerminal E10-1 Mount Options</font></span></a>
+            <a href="/Edge/reTerminal/Extension_Board/reTerminal_Mount_Options" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reTerminal E10-1 Mount Options</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>NVIDIA Jetson Extensions</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203</font></span></a>, support Jetson Nano / Xavier NX/TX2 NX
+            <a href="/Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A203</font></span></a>, support Jetson Nano / Xavier NX/TX2 NX
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205</font></span></a>, support Jetson Nano / Xavier NX/TX2 NX
+            <a href="/Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"3"}> A205</font></span></a>, support Jetson Nano / Xavier NX/TX2 NX
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Mate Cluster</font></span></a>,  support 4 Jetson Nano/NX 
+            <a href="/Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jetson Mate Cluster</font></span></a>,  support 4 Jetson Nano/NX 
             <br/>
     </a>
 </div>
@@ -221,16 +225,16 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> FAQs for reTerminal Usage</font></span></a>
+            <a href="/Edge/reTerminal/reTerminal-FAQ" target="_blank"><span><font color={'FFFFFF'} size={"3"}> FAQs for reTerminal Usage</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reComputer / NVIDIA Jetson</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Memory Expansion for NVIDIA Jetson boards</font></span></a>
+            <a href="/Edge/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Memory Expansion for NVIDIA Jetson boards</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Boot From SD Card on reComputer J1010</font></span></a>
+            <a href="/Edge/reComputer/Tutorials/J1010_Boot_From_SD_Card" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Boot From SD Card on reComputer J1010</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Enable SD card on J101 carrier board</font></span></a>
+            <a href="/Edge/reComputer/Tutorials/J101_Enable_SD_Card" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Enable SD card on J101 carrier board</font></span></a>
             <br/>
     </a>
 </div>
@@ -253,20 +257,20 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><a href="Getting_Started" target="_blank"><span><font color={'8DC215'} size={"5"}> BeagleBone® </font></span></a></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Blue </font></span></a>
+            <a href="/Edge/Beagle_Bone/BeagleBone_Blue" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Blue </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Green </font></span></a>
+            <a href="/Edge/Beagle_Bone/BeagleBone_Green" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Green </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Green Wireless </font></span></a>
+            <a href="/Edge/Beagle_Bone/BeagleBone_Green_Wireless" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio BeagleBone® Green Wireless </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> ODYSSEY X86J4105 </font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105" target="_blank"><span><font color={'FFFFFF'} size={"3"}> ODYSSEY X86J4105 </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware for ODYSSEY X86J4105 </font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware for ODYSSEY X86J4105 </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> ODYSSEY STM32MP157C </font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_STM32MP157C/ODYSSEY-STM32MP157C" target="_blank"><span><font color={'FFFFFF'} size={"3"}> ODYSSEY STM32MP157C </font></span></a>
             <br/>
     </a>
 </div>
@@ -274,7 +278,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Quantum Development Board</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  Quantum Mini Linux Development Kit </font></span></a>
+            <a href="/Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  Quantum Mini Linux Development Kit </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>

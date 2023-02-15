@@ -64,8 +64,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
             <a href="/Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One" target="_blank"><span><font color={'FFFFFF'} size={"2"}>NOx/PM/VOC/RH/Temp</font></span></a>
             <br/>
-            <a href="/Sensor/Grove/Grove_Sensors/All_in_one/Grove-CO2-Temperature-Humidity-Sensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO2/Temp/Humi</font></span></a>,
-            <a href="/Sensor/Grove/Grove_Sensors/Light/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931" target="_blank"><span><font color={'FFFFFF'} size={"2"}> More... </font></span></a>
+            <a href="/Sensor/Grove/Grove_Sensors/All_in_one/Grove-CO2&Temperature&HumiditySensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO2/Temp/Humi</font></span></a>,
+            <a href="/Sensor/Grove/Grove_Sensors/All_in_one/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931" target="_blank"><span><font color={'FFFFFF'} size={"2"}> More... </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -122,9 +122,9 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Barometer</font></div>
-            <a href="Grove-Barometer-High-Accuracy" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HP206C  </font></span></a>
+            <a href="Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer-High-Accuracy" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HP206C  </font></span></a>
             <br/>
-            <a href="Grove-Barometer_Sensor-BME280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BME280  </font></span></a>,
+            <a href="/Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BME280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BME280  </font></span></a>,
             <a href="/Sensor/Grove/Grove_Sensors/Barometer/Grove-Barometer_Sensor-BMP280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BMP280  </font></span></a>
             <br/>
             <a href="/Sensor/Grove/Grove_Sensors/Barometer/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DPS310 </font></span></a>,
@@ -822,11 +822,11 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>LED</font></div>
-            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-Red_LED" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Red LED </font></span></a>
+            <a href="/Sensor/Grove/Grove_Accessories/LED/Grove-Red_LED" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Red LED </font></span></a>
             <br/>
-            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-LED_Bar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LED Bar </font></span></a>
+            <a href="/Sensor/Grove/Grove_Accessories/LED/Grove-LED_Bar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LED Bar </font></span></a>
             <br/>
-            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-LED_ring" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RGB LED Ring </font></span></a>
+            <a href="/Sensor/Grove/Grove_Accessories/LED/Grove-LED_ring" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RGB LED Ring </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -848,7 +848,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Case</font></div>
-            <a href="/Sensor/Grove/Grove_Accessories/Input_Output/Grove-Wrapper" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove - Wrapper</font></span></a>
+            <a href="/Sensor/Grove/Grove_Accessories/Case/Grove-Wrapper" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove - Wrapper</font></span></a>
             <br/>
     </a>
 </div>
@@ -949,7 +949,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Seeed Studio XIAO</font></div>
-            <a href="/Sensor/SeeedStudio_XIAO/XIAO-Kit-Courses" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio XIAO Kit with Courses </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/Kit with Courses/XIAO-Kit-Courses" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio XIAO Kit with Courses </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
