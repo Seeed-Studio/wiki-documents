@@ -216,34 +216,34 @@ const config = {
             className:'navbar_doc_items'
           },
           {
-            href: 'https://github.com/c1ev0ps/docusaurus_wiki',
-            label: 'GitHub',
+            to: 'https://github.com/c1ev0ps/docusaurus_wiki',
+            label: 'GitHub 💭',
             position: 'right',
             className:'navbar_doc_items'
           },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-            className:'navbar_doc_items'
-          },
-          {
-            type: 'dropdown',
-            label: 'Page',
-            position: 'right',
-            items: [
-              {
-                label: 'SenseCAP',
-                to: '/indexIAG',
-                target: '_blank',
-              },
-              {
-                label: 'Initial',
-                to: './',
-                target: '_blank',
-              },
-            ],
-            className:'navbar_doc_items'
-          },
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          //   className:'navbar_doc_items'
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Page',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       label: 'SenseCAP',
+          //       to: '/indexIAG',
+          //       target: '_blank',
+          //     },
+          //     {
+          //       label: 'Initial',
+          //       to: './',
+          //       target: '_blank',
+          //     },
+          //   ],
+          //   className:'navbar_doc_items'
+          // },
         ],
       },
       
@@ -251,41 +251,94 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Navigation',
             items: [
               {
-                label: 'Tutorial',
-                to: '/About',
+                label: 'Getting Started',
+                to: '/Getting_Started',
+              },
+              {
+                label: 'Sensor Network',
+                to: '/Sensor_Network',
+              },
+              {
+                label: 'Edge Computing',
+                to: '/Edge_Computing',
+              },
+              {
+                label: 'Cloud & Chain',
+                to: '/CloudnChain',
+              },
+              {
+                label: 'Solutions',
+                to: '/Solutions',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Ecosystem',
             items: [
-              {
-                label: 'Form',
-                href: 'https://forum.seeedstudio.com/',
-              },
               {
                 label: 'Discord',
-                href: 'https://discord.com/invite/QqMgVwHT3X',
+                to: 'https://discord.com/invite/QqMgVwHT3X',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/seeedstudio',
+                label: 'Project Hub',
+                to: 'https://project.seeedstudio.com/',
+              },
+              {
+                label: 'Partners',
+                to: 'https://www.seeedstudio.com/ecosystem/',
+              },
+              {
+                label: 'Distributors',
+                to: 'https://www.seeedstudio.com/distributors.html',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Quick Guide',
             items: [
               {
-                label: 'Blog',
-                to: 'https://www.seeedstudio.com/blog/',
+                label: 'Bazzar',
+                to: 'https://www.seeedstudio.com/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/c1ev0ps/docusaurus_wiki',
+                label: 'How to get help',
+                to: 'https://www.seeedstudio.com/get_help/HowToGetHelp',
+              },
+              {
+                label: 'FAQs',
+                to: 'https://support.seeedstudio.com/knowledgebase',
+              },
+              {
+                label: 'Forum',
+                to: 'https://forum.seeedstudio.com/',
+              },
+              {
+                label: 'Technical Support',
+                to: 'https://www.seeedstudio.com/get_help/TechnicalSupport',
+              },
+            ],
+          },
+          {
+            title: 'Company',
+            items: [
+              {
+                label: 'About Seeed',
+                to: 'https://www.seeedstudio.com/about-us/',
+              },
+              {
+                label: 'Join us',
+                to: 'https://www.seeedstudio.com/join-us/',
+              },
+              {
+                label: 'Contact Us',
+                to: 'https://www.seeedstudio.com/contacts',
+              },
+              {
+                label: 'Press',
+                to: 'https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/',
               },
             ],
           },
@@ -328,7 +381,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'We are looking forward to your contribution! Welcome come to our <a target="_blank" rel="https://github.com/orgs/c1ev0ps/projects/3/views/1" href="#">Task Project</a>',
+          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/c1ev0ps/projects/3/views/1" href="https://github.com/c1ev0ps/docusaurus_wiki/blob/main/TASK.md">task lists</a>！',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,
