@@ -6,6 +6,6 @@ Seeed Studio has dedicated to realizing interactive digital replica of our physi
 
 This is the Github source files for Seeed Studio.
 
-We here also present you our current accomplishments and <strong><font color={'8DC215'} size={"4"}>solutions</font></strong> and we are looking for your [contributions](/TASK.md).
+We are looking for your [contributions](/TASK.md).
 
 You can [set up](/HOW_TO.md) this platform locally.
