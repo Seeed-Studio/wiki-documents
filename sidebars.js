@@ -2130,7 +2130,29 @@ const sidebars = {
           label: 'shield',
           items: [
             'Top_Brand/Arduino/shield/shield_Getting_Started',
-
+            'Top_Brand/Arduino/shield/2.8inch_TFT_Touch_Shield_v2.0',
+            'Top_Brand/Arduino/shield/4A_Motor_Shield',
+            'Top_Brand/Arduino/shield/Base_Shield_V2',
+         //   'Top_Brand/Arduino/shield/Bluetooth_Shield_V2',
+            'Top_Brand/Arduino/shield/CAN-BUS_Shield_V2.0',
+            'Top_Brand/Arduino/shield/Camera_Shield',
+            'Top_Brand/Arduino/shield/Energy_Shield',
+            'Top_Brand/Arduino/shield/Motor_Shield_V2.0',
+            'Top_Brand/Arduino/shield/Brushless_Motor_Shield_TB6605FTG',
+         //   'Top_Brand/Arduino/shield/Music_Shield_V2.2',
+            'Top_Brand/Arduino/shield/NFC_Shield_V2.0',
+            'Top_Brand/Arduino/shield/Grove-Mega_Shield',
+            'Top_Brand/Arduino/shield/Protoshield_Kit_for_Arduino',
+            'Top_Brand/Arduino/shield/RS232_Shield',
+            'Top_Brand/Arduino/shield/Relay_Shield_v3',
+            'Top_Brand/Arduino/shield/SD_Card_shield_V4.0',
+            'Top_Brand/Arduino/shield/Solar_Charger_Shield_V2.2',
+            'Top_Brand/Arduino/shield/Spartan_Edge_Accelerator_Board',
+            'Top_Brand/Arduino/shield/W5500_Ethernet_Shield_v1.0',
+            'Top_Brand/Arduino/shield/Grove_Shield_for_Arduino_Nano',
+       //     'Top_Brand/Arduino/shield/RGBW_Stripe_WireLess_Shield_V1.0',
+            'Top_Brand/Arduino/shield/Renbotics_ServoShield_Rev',
+        //    'Top_Brand/Arduino/shield/WireLess_Gate_Shield_V1.0',
           ]
         },
         {
@@ -2351,20 +2373,6 @@ const sidebars = {
 
         {
 
-          //       type: 'category',
-          //       label: 'Accessories',
-          //       items: [
-          //         'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
-          //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
-          //         'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
-          //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
-          //         'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
-          //         'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
-          //         'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
-
-          //       ],
-
-          //     },
 
 
           type: 'category',
@@ -2412,45 +2420,7 @@ const sidebars = {
 
 
         },
-        {
-          type: 'category',
-          label: 'Discrete Product',
-          items: [
-            'Seeed_Elderly/Discrete Product/ESP32_Breakout_Kit',
-            'Seeed_Elderly/Discrete Product/IoT_Fast_Prototyping_Kit S5D9',
-            //'Seeed_Elderly/Discrete Product/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition',
-            'Seeed_Elderly/Discrete Product/Atmel_AVRISP_STK500_USB_ISP_Programmer',
-            'Seeed_Elderly/Discrete Product/AT_Command_Tester',
-            'Seeed_Elderly/Discrete Product/AT_Command_Tester_Application',
-            'Seeed_Elderly/Discrete Product/Tiny_BLE',
-            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform_2.0',
-            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform',
-            'Seeed_Elderly/Discrete Product/Mini_GSM_GPRS_GPS_Breakout_SIM808',
-            'Seeed_Elderly/Discrete Product/Nose_LED_Kit',
-            'Seeed_Elderly/Discrete Product/Serial_port_bluetooth_module_Master-Slave',
-            'Seeed_Elderly/Discrete Product/Sidekick_Advanced_Kit',
-            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver',
-            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver_v2.3',
-            'Seeed_Elderly/Discrete Product/UartSB_Frame',
-            'Seeed_Elderly/Discrete Product/4WD_Driver_Platform_V1.0',
-            'Seeed_Elderly/Discrete Product/4WD_Mecanum_Wheel_Robot_Kit_Series',
-            'Seeed_Elderly/Discrete Product/Hercules_Dual_15A_6-20V_Motor_Controller',
-            'Seeed_Elderly/Discrete Product/Basic_Fastener_Kit',
-            'Seeed_Elderly/Discrete Product/Sidekick_Basic_Kit_for_TI_LaunchPad',
-            'Seeed_Elderly/Discrete Product/Grove Maker Kit for Intel Joule',
-            'Seeed_Elderly/Discrete Product/Grove_Shield_for_Intel_Joule',
-            //'Seeed_Elderly/Discrete Product/Grove_Base_BoosterPack',
-            //'Seeed_Elderly/Discrete Product/Grove_Base_Shield_for_Photon',
-            'Seeed_Elderly/Discrete Product/Tricycle_Bot',
-            'Seeed_Elderly/Discrete Product/mbed_Shield',
-            'Seeed_Elderly/Discrete Product/BLE_Carbon',
-            //'Seeed_Elderly/Discrete Product/BLE_Micro',
-            'Seeed_Elderly/Discrete Product/BLE_Nitrogen',
-            'Seeed_Elderly/Discrete Product/Fubarino_SD',
-            //'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
-            'Seeed_Elderly/Discrete Product/Matrix_Clock',
-          ]
-        },
+        
         {
           type: 'category',
           label: 'rePhone',
@@ -2590,9 +2560,56 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Rainbowduino',
+          items: [
+            'Seeed_Elderly/Rainbowduino/Rainbowduino_v3.0',
+            'Seeed_Elderly/Rainbowduino/Rainbowduino_LED_driver_platform-ATmega328',
+          ]
+        },
+        {
+          type: 'category',
           label: 'NPi-i',
           items: [
             'Seeed_Elderly/NPi-i/NPi-i.MX6ULL-Dev-Board-Linux-SBC',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Discrete Product',
+          items: [
+            'Seeed_Elderly/Discrete Product/ESP32_Breakout_Kit',
+            'Seeed_Elderly/Discrete Product/UartSB_Frame',
+            'Seeed_Elderly/Discrete Product/IoT_Fast_Prototyping_Kit S5D9',
+            //'Seeed_Elderly/Discrete Product/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition',
+            'Seeed_Elderly/Discrete Product/Atmel_AVRISP_STK500_USB_ISP_Programmer',
+            'Seeed_Elderly/Discrete Product/AT_Command_Tester',
+            'Seeed_Elderly/Discrete Product/AT_Command_Tester_Application',
+            'Seeed_Elderly/Discrete Product/Tiny_BLE',
+            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform_2.0',
+            'Seeed_Elderly/Discrete Product/Edison_4WD_Auto_Robotic_Platform',
+            'Seeed_Elderly/Discrete Product/Mini_GSM_GPRS_GPS_Breakout_SIM808',
+            'Seeed_Elderly/Discrete Product/Nose_LED_Kit',
+            'Seeed_Elderly/Discrete Product/Serial_port_bluetooth_module_Master-Slave',
+            'Seeed_Elderly/Discrete Product/Sidekick_Advanced_Kit',
+            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver',
+            'Seeed_Elderly/Discrete Product/Stepper_Motor_Driver_v2.3',
+            'Seeed_Elderly/Discrete Product/4WD_Driver_Platform_V1.0',
+            'Seeed_Elderly/Discrete Product/4WD_Mecanum_Wheel_Robot_Kit_Series',
+            'Seeed_Elderly/Discrete Product/Hercules_Dual_15A_6-20V_Motor_Controller',
+            'Seeed_Elderly/Discrete Product/Basic_Fastener_Kit',
+            'Seeed_Elderly/Discrete Product/Sidekick_Basic_Kit_for_TI_LaunchPad',
+            'Seeed_Elderly/Discrete Product/Grove Maker Kit for Intel Joule',
+            'Seeed_Elderly/Discrete Product/Grove_Shield_for_Intel_Joule',
+            //'Seeed_Elderly/Discrete Product/Grove_Base_BoosterPack',
+            //'Seeed_Elderly/Discrete Product/Grove_Base_Shield_for_Photon',
+            'Seeed_Elderly/Discrete Product/Tricycle_Bot',
+            'Seeed_Elderly/Discrete Product/mbed_Shield',
+            'Seeed_Elderly/Discrete Product/BLE_Carbon',
+            //'Seeed_Elderly/Discrete Product/BLE_Micro',
+            'Seeed_Elderly/Discrete Product/BLE_Nitrogen',
+            'Seeed_Elderly/Discrete Product/Fubarino_SD',
+            //'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
+            'Seeed_Elderly/Discrete Product/Matrix_Clock',
           ]
         },
       ],

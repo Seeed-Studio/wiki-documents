@@ -354,7 +354,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Original OS Installation</font></span></a>
+            <a href="/Edge_Computing" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Original OS Installation</font></span></a>
     </a>
 </div>
 
@@ -366,7 +366,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Base HAT </font></span></a>,
             <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/Grove_AI_HAT_for_Edge_Computing" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove AI HAT</font></span></a>,
             <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/RS-485_Shield_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RS-485 Pi HAT</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 8-Channel 12-Bit ADC HAT</font></span></a>,
+            <a href="Top_Brand/Raspberry_Pi/Pi_HAT/eight-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 8-Channel 12-Bit ADC HAT</font></span></a>,
             <a href="/Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reSpeaker Pi HAT</font></span></a>
             <br/>
             <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/Grove_Base_HAT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Find out more</font></span></a>
@@ -437,8 +437,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Remotely connect to Raspberry Pi/reComputer</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/remote_connect" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Remotely connect to Raspberry Pi/reComputer</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Update eeprom on Raspberry pi CM4</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Module/Raspberry_pi_CM4_update_eeprom" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Update eeprom on Raspberry pi CM4</font></span></a>
     </a>
 </div>
