@@ -2139,7 +2139,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Arduino_Basic_Usage',
+              label: 'Arduino Basic Usage',
               items: [
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Download-Arduino-and-install-Arduino_Driver',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/A_Handy_Serial_Library',
@@ -2177,6 +2177,15 @@ const sidebars = {
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Flashing-Arduino-Bootloader-DAPLink',
               ],
             },
+            {
+              type: 'category',
+              label: ' Arduino Boards Projects',
+              items: [
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/IR_Remote',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Joystick_Control_RGB_Led',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Light_Sensor_and_LED_Bar',
+              ]
+            },
 
             {
               type: 'category',
@@ -2184,6 +2193,13 @@ const sidebars = {
               items: [
                 'Top_Brand/Arduino/Tutorials/Compiling_Platform/Compiling_MicroPython_for_embedded_devices',
                 'Top_Brand/Arduino/Tutorials/Compiling_Platform/Software-PlatformIO',
+                {
+                  type: 'category',
+                  label: 'Compiling Platform',
+                  items: [
+                    'Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Guide_for_Codecraft_using_Arduino',
+                  ]
+                },
               ],
             },
 
@@ -2260,6 +2276,7 @@ const sidebars = {
           items: [
             'Top_Brand/Raspberry_Pi/Accessories/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit',
             'Top_Brand/Raspberry_Pi/Accessories/Skeleton_box_for_Rasberry_Pi',
+            'Top_Brand/Raspberry_Pi/Accessories/Raspberry_PI_Bplus_Case',
           ]
         },
         {
@@ -2267,6 +2284,8 @@ const sidebars = {
           label: 'Kit with Courses',
           items: [
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
+            'Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit',
+            'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
           ]
         },
 
@@ -2449,7 +2468,7 @@ const sidebars = {
               items: [
                 'Seeed_Elderly/rePhone/Program with rePhone/Arduino_IDE_for_RePhone_Kit',
                 //'Seeed_Elderly/rePhone/Program with rePhone/Eclipse_IDE_for_RePhone_Kit',
-                //'Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone',
+                'Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone',
                 //'Seeed_Elderly/rePhone/Program with rePhone/Lua_for_RePhone',
                 //'Seeed_Elderly/rePhone/Program with rePhone/RePhone_APIs-Audio',
 
@@ -2567,6 +2586,13 @@ const sidebars = {
             //'Seeed_Elderly/Xadow/Xadow_Tutorial_Communicate_via_BLE',
             'Seeed_Elderly/Xadow/Xadow_Tutorial_Shaking_Shaking',
             'Seeed_Elderly/Xadow/Xadow_Wearable_Kit_For_Edison',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'NPi-i',
+          items: [
+            'Seeed_Elderly/NPi-i/NPi-i.MX6ULL-Dev-Board-Linux-SBC',
           ]
         },
       ],
