@@ -156,9 +156,16 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     </a>
   </div>
 
-## <font color="{'D29291'}" size="{&quot;6&quot;}">Seeed Studio Contributor</font>
+## <font color="{'D29291'}" size="{&quot;6&quot;}">Contributors</font>
 
-- Want to contribute and build the Seeed Studio Wiki platform together? Welcome to our Github(链接) directly or check more information in the "Solutions" Topic(链接).
+This  platfrom can be deployed locally and everything will be editable. 
+
+We want your skills, your language and language competence. We need your professions, your knowledge of hardware and development capabilities of software.
+
+We are facing the age of information explosion, we want to ensure your presentations are stored with us. Welcome to Seeed Studio Contributor Program! 
+
+Check our <strong><a href="https://github.com/c1ev0ps/docusaurus_wiki" target="_blank"><span><font color={'8DC215'} size={"3"}> Github source </font></span></a></strong> and  <strong><a href="https://github.com/c1ev0ps/docusaurus_wiki/blob/main/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> task list </font></span></a></strong>
+for more information.
 
 ## Weekly Wiki
 
