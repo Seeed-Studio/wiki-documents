@@ -37,7 +37,7 @@ Features
 - Working temperature: –5 ~ +65 Centigrade
 
 :::tip
-    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
 
 Platforms Supported
@@ -48,7 +48,7 @@ Platforms Supported
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
 
 :::caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 Hardware Overview
@@ -74,13 +74,14 @@ Hardware Installation
 
 ### Connecting Bluetooth to PC through UART Bee
 
-The Bluetooth provides a serial port with standard Grove socket, most USB-UART converter can be used. Here we use a [UartSBee V5](/UartSBee_v5) to connect Bluetooth and PC.
+The Bluetooth provides a serial port with standard Grove socket, most USB-UART converter can be used. Here we use a [UartSBee V5](/Seeed_Elderly/Bee/UartSBee_v5) to connect Bluetooth and PC.
 ![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0_ConnectToPC.jpg)
 
 ### Connecting Bluetooth to Arduino
 
-Since Arduino Uno have no Grove socket, we use [Seeeduino Lotus](/Seeeduino_Lotus) instead. You could use Arduino with **Grove Base Shield V2** as well.
+Since Arduino Uno have no Grove socket, we use <a href="/Sensor/Seeeduino Series/Seeeduino_Lotus"><span><font color={'8DC215'} size={"3"}> Seeeduino Lotus </font></span></a> instead. You could use Arduino with **Grove Base Shield V2** as well.
 As an example, D2 and D3 are used as software UART. So, plug the Grove cable into "D2" socket
+
 ![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0_ConnectToArduino.jpg)
 
 Software Instructions
@@ -94,7 +95,7 @@ Software Instructions
   - BLE Name HMSoft, Slave role, PinCode 000000
   - Baud: 115200, N, 8, 1;
 - AT Command format:
-  - Uppercase AT command format. string format, without any other symbol. (e.g. \\r or \\n).
+  - Uppercase AT command format. string format, without any other symbol. (e.g. //r or //n).
   - Any incorrect command would get no response.
 
 ### AT Commands
@@ -1135,7 +1136,7 @@ Power the Bluetooth and configure it as Peripheral role. Search LightBlue in App
 
 Are you ready to code? It’s time to do something after practice. Prepare a pair of Bluetooth, and Arduino or other platform to control them. Here we use two Arduino Uno. Set up the connection as mentioned in section “Hardware Installation”.
 
-The program of Central and Peripheral use the same code, the only difference is the micro define at the beginning of the program. To assign the Bluetooth to Central role, Just need to modify the text to “\#define MASTER 1”, or “\#define MASTER 1” if Peripheral role was assigned.
+The program of Central and Peripheral use the same code, the only difference is the micro define at the beginning of the program. To assign the Bluetooth to Central role, Just need to modify the text to “/#define MASTER 1”, or “/#define MASTER 1” if Peripheral role was assigned.
 
 The initialisation program flow please refer to the following flow chart. First of all we need to distinguish the presetting baud rate of the Bluetooth. After this, send commands to restore factory settings, and change baud rate from 115200 to 9600 since software serial will not working well at high baud rate. Then other parameters were configured to the Bluetooth with Reset command in the final.
 
@@ -1143,7 +1144,7 @@ The initialisation program flow please refer to the following flow chart. First 
 
 After the initialisation, the Central and Peripheral will do different things, the Central will send message to Peripheral interval and print what received from Peripheral while the Peripheral only responds the Central.
 
-Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code and open HM-13\_SW.ino with Arduino IDE, compile and download to Arduino Uno. Remember to configure the Bluetooth to different role by modify the macro at the beginning. If you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
+Click [here](https://github.com/Seeed-Studio/HM-13_SW) to download the test code and open HM-13/_SW.ino with Arduino IDE, compile and download to Arduino Uno. Remember to configure the Bluetooth to different role by modify the macro at the beginning. If you have any problem about how to start Arduino, please click <a href="/Sensor/Seeeduino Series/Getting_Started_with_Seeeduino"><span><font color={'8DC215'} size={"3"}> here </font></span></a> for some help.
 
 After downloading program, open two serial terminal windows, the LEDs on Bluetooth will flash, several seconds later, they stop to flash and keep on, this indicates that they connected to each other.
 According to the program is written, the Central sends message to the Peripheral continually and get feedback every time.
@@ -1162,8 +1163,8 @@ Resources
 
 - [HM-13 Bluetooth Module Datasheet](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Bluetooth_HM-13_en.pdf)
 - [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
-- [EAGLE\_Grove-BLE\_(dual\_model)\_v1.0\_sch\_pcb](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Eagle_Grove-BLE-dual_model-v1.0_sch_pcb.zip)
-- [PDF\_Grove-BLE\_(dual\_model)\_v1.0\_sch](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Grove-BLE-dual_model-v1.0.pdf)
+- [EAGLE/_Grove-BLE/_(dual/_model)/_v1.0/_sch/_pcb](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Eagle_Grove-BLE-dual_model-v1.0_sch_pcb.zip)
+- [PDF/_Grove-BLE/_(dual/_model)/_v1.0/_sch](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/res/Grove-BLE-dual_model-v1.0.pdf)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_BLE_(dual_model)_v1.0 -->
 

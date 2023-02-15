@@ -59,7 +59,7 @@ By connecting Grove - Wio-E5 to your development boards, your devices are able t
 
 ## Specification
 
-<style type="text/css" xml="space" dangerouslySetInnerHTML={{__html: "<!--\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-f2tp{background-color:#c0c0c0;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}\n.tg .tg-uu1j{background-color:#ffffff;border-color:#c0c0c0;color:#343434;text-align:left;vertical-align:top}\n-->" }} />
+<!-- <style type="text/css" xml="space" dangerouslySetInnerHTML={{__html: "<!--\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-f2tp{background-color:#c0c0c0;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}\n.tg .tg-uu1j{background-color:#ffffff;border-color:#c0c0c0;color:#343434;text-align:left;vertical-align:top}\n" }} /> -->
 
 <table class="tg">
 <thead>
@@ -105,7 +105,7 @@ By connecting Grove - Wio-E5 to your development boards, your devices are able t
 </tbody>
 </table>
 
-<style type="text/css" xml="space" dangerouslySetInnerHTML={{__html: "<!--\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-f2tp{background-color:#c0c0c0;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}\n.tg .tg-uu1j{background-color:#ffffff;border-color:#c0c0c0;color:#343434;text-align:left;vertical-align:top}\n-->" }} />
+<!-- <style type="text/css" xml="space" dangerouslySetInnerHTML={{__html: "<!--\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-f2tp{background-color:#c0c0c0;border-color:#c0c0c0;color:#ffffff;text-align:left;vertical-align:top}\n.tg .tg-uu1j{background-color:#ffffff;border-color:#c0c0c0;color:#343434;text-align:left;vertical-align:top}\n" }} /> -->
 
 <table class="tg">
 <thead>
@@ -137,9 +137,10 @@ Wio-E5 series has a built-in AT command firmware, which supports LoRaWAN® Class
 
 The AT command firmware contains a bootloader for DFU and the AT application. The "PB13/SPI_SCK/BOOT" pin is used to control Wio-E5 to stay in the bootloader or jump to the AT application. When PB13 is HIGH, the module will jump to AT application after reset, with a default baud rate of 9600. When PB13 is LOW (press the "Boot" button on Wio-E5 Dev Board or Wio-E5 mini), the module will stay in the bootloader, and keep transmitting "C" character every 1S at baud rate 115200.
 
-:::attention
-        - Factory AT Firmware is programmed with RDP(Read Protection) Level 1, developers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.
-        - The "PB13/SPI_SCK/BOOT" pin on the Wio-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when developing the low-power applications.
+:::cautionattention
+
+- Factory AT Firmware is programmed with RDP(Read Protection) Level 1, developers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.
+- The "PB13/SPI_SCK/BOOT" pin on the Wio-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when developing the low-power applications.
 :::
 
 **2. Clock Configuration**
@@ -168,9 +169,9 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino XIAO module via Grove - Wio-E5 module. These modules are able to collect temperature and humidity parameters from the environment and send them back to TTN. The flashing LED lights on the Seeeduino Xiao indicate the status of the temperature and humidity sensor as connecting to TTN cloud.
 
-:::attention
-        Please ensure the consistent of the frequency band among the end nodes, gateway, and TTN configuration you are using by following this instruction.
-        The frequency plan this demo applied is for **EU868**.
+:::cautionattention
+Please ensure the consistent of the frequency band among the end nodes, gateway, and TTN configuration you are using by following this instruction.
+The frequency plan this demo applied is for **EU868**.
 :::
 
 ### Hardware Required
@@ -180,9 +181,10 @@ Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino
 |  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|   <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/11302009_preview-34.png" alt="pir" width={600} height="auto" /></p>| <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" alt="pir" width={600} height="auto" /></p>|  <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/g/r/grove-temperature-humidity-sensor-dht11-preview.png" alt="pir" width={600} height="auto" /></p> |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
 
 :::note
-        If this is your first time using Seeeduino XIAO, please refer to [Seeeduino XIAO's wiki](https://wiki.seeedstudio.com/Seeeduino_Lotus/).
-        If this is your first time to use Arduino, [Arduino’s website](https://www.arduino.cc/) is a great resource for you to start your Arduino journey.
+If this is your first time using Seeeduino XIAO, please refer to [Seeeduino XIAO's wiki](https://wiki.seeedstudio.com/Seeeduino_Lotus/).
+If this is your first time to use Arduino, [Arduino’s website](https://www.arduino.cc/) is a great resource for you to start your Arduino journey.
 :::
+
 ### Hardware Connection
 
 - **Step 1.** Connect the Wio-E5 module directly to the "UART" slot.
@@ -194,8 +196,8 @@ Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino
 ### Software Preparation
 
 :::note
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
-        Click to learn about detail about [how to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+Click to learn about detail about [how to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)
 :::
 
 #### Download Library
@@ -232,7 +234,7 @@ static int led = 0;
 
 ```
 
-```cpp
+```c++
 static int at_send_check_response(char *p_ack, int timeout_ms, char*p_cmd, ...)
 {
     int ch;
@@ -444,33 +446,33 @@ void loop(void)
 
 - **Step 2.** After logging in, click your profile and select **Console**
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/1.png" alt="pir" width="1000" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/1.png" alt="pir" width={1000} height="auto" /></p>
 
 - **Step 3.** Select a cluster to start adding devices and gateways
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/2.png" alt="pir" width="600" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/2.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 4.** Click **Go to applications**
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/4.png" alt="pir" width="1000" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/4.png" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 5.** Click **+ Add application**
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/5.png" alt="pir" width="400" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/5.png" alt="pir" width="400" height="auto"/></p>
 
 - **Step 6.** Fill **Application ID** and click **Create application**
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/6.png" alt="pir" width="500" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/6.png" alt="pir" width="500" height="auto"/></p>
 
 **Note:** Here **Application name** and **Description** are not compulsory fields. If **Application name** is left blank, it will use the same name as **Application ID** by default
 
 The following is the newly created application
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/7.png" alt="pir" width="1000" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/7.png" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 7**: Navigate to `Payload formatters > Uplink`, select **Formatter Type** as **Javascript** and fill the **Formatter parameter** as follows
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Grove-E5/1.png" alt="pir" width="550" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-E5/1.png" alt="pir" width="550" height="auto"/></p>
 
 ```js
 function Decoder(bytes, port) {
@@ -505,21 +507,21 @@ Note down **DevEui** and **AppEUi** generated above
 
 - **Step 9**: Go back to the **Overview** page of the created application and click **+ Add end device**
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/7.png" alt="pir" width="1000" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/7.png" alt="pir" width="1000" height="auto"/></p>
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/8.png" alt="pir" width="500" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/8.png" alt="pir" width="500" height="auto"/></p>
 
 - **Step 10.** Click **Manually**, to enter the registration credentials manually
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/9.png" alt="pir" width="420" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/9.png" alt="pir" width="420" height="auto"/></p>
 
 - **Step 11.** Select the **Frequency plan** according to your region. Also make sure you use the same frequency as the gateway in which you will connect this device to. Select **MAC V1.0.2** as the **LoRaWAN® version** and **PHY V1.0.2 REV B** as the **Regional Parameters version**. These settings are according to the LoraWAN® stack of Wio-E5.
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/10.png" alt="pir" width="450" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/10.png" alt="pir" width="450" height="auto"/></p>
 
 - **Step 12.** Copy and paste the previously obtained information from **step 8** into **DevEUI** and **AppEUI** fields. **End device ID** field will be automatically filled when we fill **DevEUI**. For **AppKey** field, use: 2B7E151628AED2A6ABF7158809CF4F3C.  
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width="450" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width="450" height="auto"/></p>
 
 Finally click **Register end device**
 
@@ -527,17 +529,17 @@ Finally click **Register end device**
 
 If you see the following output on serial monitor after everything is setup, that means the Seeeduino XIAO is successfully connected with TTN and sending the temperature and humidity sensor data!
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/products/113020091/Screen%20Shot%202021-03-09%20at%203.20.00%20PM.png" alt="pir" width="500" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/113020091/Screen%20Shot%202021-03-09%20at%203.20.00%20PM.png" alt="pir" width="500" height="auto"/></p>
 
 - **Step 14.** Go back to the application page and navigate to **End devices**, select the created device and click **Live data**
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Grove-E5/2.png" alt="pir" width="1000" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-E5/2.png" alt="pir" width="1000" height="auto"/></p>
 
 Here you will see the temperature and humidity sensor data displayed in real-time!
 
 - **Step 15.** Navigate to `Messaging > Downlink`, type **01** under **Payload** and click **Schedule downlink** to **turn on** the **built-in yellow LED** on the Seeeduino XIAO.
 
-<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Grove-E5/3.png" alt="pir" width="550" height="auto"></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-E5/3.png" alt="pir" width="550" height="auto"/></p>
 
 - **Step 16.** Send the **Payload** as **00** to **turn off** the **built-in yellow LED**
 
@@ -546,6 +548,7 @@ Here you will see the temperature and humidity sensor data displayed in real-tim
 This is the example of how to build a Point-to-Point Transmission Application with Grove - Wio-E5 and Seeeduino XIAO.
 
 ### Preparations
+
 - Grove - Wio E5 *2
 - Seeeduino XIAO* 2
 - Seeeduino XIAO Expansion board *2
@@ -839,13 +842,16 @@ Certifications:
 Relevant SDK:
 
 - <p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p>
-<div id="gtx-trans" style="position: absolute; left: -36px; top: 48.875px;">
-<div class="gtx-trans-icon"></div>
+
+<div id="gtx-trans" style={{position: 'absolute', left: '-36px', top: '48.875px'}}>
+  <div className="gtx-trans-icon" />
 </div>
 
 ## Tech Support
+
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <div>
-  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+  <br />
+<p style={{textalign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
