@@ -757,9 +757,9 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Wio Series - Extensions</font></div>
-            <a href="/Sensor/Wio_Series/Wio Lite/Grove-Shield-for-Wio-Lite" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Shield for Wio Lite</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Shield for Wio Lite</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Series/Wio Tracker/Wio-Extension-RTC" target="_blank"><span><font color={'FFFFFF'} size={"3"}> RTC for Wio Tracker</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC" target="_blank"><span><font color={'FFFFFF'} size={"3"}> RTC for Wio Tracker</font></span></a>
             <br/>
     </a>
 </div>

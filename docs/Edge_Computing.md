@@ -27,7 +27,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
-            <a href="/Edge/reTerminal/reTerminal" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reTerminal </font></span></a>
+            <a href="/Edge/reTerminal" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started with reTerminal </font></span></a>
             <br/>
             <a href="/Edge/reTerminal/reTerminal-hardware-interfaces-usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Hardware and Interfaces Usage </font></span></a>
             <br/>
@@ -283,7 +283,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi®</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi Introduction </font></span></a>
+            <a href="Top_Brand/Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi Introduction </font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi 3 Model B </font></span></a>
             <br/>
@@ -293,7 +293,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Seeed Elderly Devices</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reSpeaker Series </font></span></a>
+            <a href="/Seeed_Elderly/reSpeaker" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reSpeaker Series </font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> NPi Sereis</font></span></a>
     </a>
@@ -304,22 +304,22 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSY Application</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Connect ODYSSEY to Azure IoT</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Azure_IoT_for_ODYSSEY/ODYSSEY-X86J4105-AzureIOT" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Connect ODYSSEY to Azure IoT</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Computer Version with Intel OpenVINO Toolkit</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Intel-OpenVINO" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Computer Version with Intel OpenVINO Toolkit</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Computer Version with Frigate</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Frigate" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Computer Version with Frigate</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY Software</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Home Assistant on ODYSSEY</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Home Assistant on ODYSSEY</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Connect Grove Modules using ESPHome</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Connect Grove Modules using ESPHome</font></span></a>
             <br/>
             Mender
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Client</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Server</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Client-ODYSSEY-X86" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Client</font></span></a>,
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Server-ODYSSEY-X86" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Server</font></span></a>
             <br/>
     </a>
 </div>
@@ -328,7 +328,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BeagleBone®</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Solutions</font></span></a>
+            <a href="/Edge/Beagle_Bone/Application/BeagleBone_Solutions" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Solutions</font></span></a>
     </a>
 </div>
 
@@ -337,18 +337,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY X86J4105</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>, 
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Updating Firmware</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-OS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Original OS Installation</font></span></a>, 
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Updating-Firmware" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Updating Firmware</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> OpenWRT</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> OPNsense</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> pfSense</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jellyfin</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-openwrt" target="_blank"><span><font color={'FFFFFF'} size={"3"}> OpenWRT</font></span></a>,
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-OPNsense" target="_blank"><span><font color={'FFFFFF'} size={"3"}> OPNsense</font></span></a>,
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-pfSense" target="_blank"><span><font color={'FFFFFF'} size={"3"}> pfSense</font></span></a>,
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/Jellyfin-on-Docker-Ubuntu-X86" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Jellyfin</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> TrueNAS</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> FreeNAS</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Android-x86</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> balenaOS</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-TrueNAS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> TrueNAS</font></span></a>,
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-FreeNAS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> FreeNAS</font></span></a>,
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-Android" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Android-x86</font></span></a>,
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/BalenaOS-X86-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> balenaOS</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
@@ -362,31 +362,31 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Raspberry Pi - Pi HAT</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Base HAT </font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove AI HAT</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> RS-485 Pi HAT</font></span></a>,
+            <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/Grove_Base_Hat_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Base HAT </font></span></a>,
+            <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/Grove_AI_HAT_for_Edge_Computing" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove AI HAT</font></span></a>,
+            <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/RS-485_Shield_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"3"}> RS-485 Pi HAT</font></span></a>,
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> 8-Channel 12-Bit ADC HAT</font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reSpeaker Pi HAT</font></span></a>
+            <a href="/Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"3"}> reSpeaker Pi HAT</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Find out more</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Pi_HAT/Grove_Base_HAT" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Find out more</font></span></a>
     </a>
 </div>
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>BeagleBone®</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Green HDMI Cape</font></span></a>
+            <a href="/Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Green HDMI Cape</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Motor Bridge Cape v1.0 for BeagleBone®</font></span></a>
+            <a href="/Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Motor Bridge Cape v1.0 for BeagleBone®</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Green LCD Cape with Resistive Touch</font></span></a>
+            <a href="/Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch" target="_blank"><span><font color={'FFFFFF'} size={"3"}> BeagleBone® Green LCD Cape with Resistive Touch</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>reSpeaker</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Drive Unit for reSpeaker Series</font></span></a>
+            <a href="/Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Drive_Unit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Drive Unit for reSpeaker Series</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mic Array for reSpeaker Series</font></span></a>
+            <a href="/Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mic Array for reSpeaker Series</font></span></a>
             <br/>
     </a>
 </div>
@@ -396,16 +396,16 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Raspberry Pi</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Skeleton box for Raspberry Pi</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Accessories/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Skeleton box for Raspberry Pi</font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry PI B Plus Case</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>ODYSSEY X86J4105</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Coral Mini PCIe Accelerator</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Coral Mini PCIe Accelerator</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LTE Modules</font></span></a>
+            <a href="/Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LTE Modules</font></span></a>
             <br/>
     </a>
 </div>
@@ -415,7 +415,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Base Kit for Raspberry Pi</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Base Kit for Raspberry Pi</font></span></a>
             <br/>
             <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LoRa/LoRaWAN® Gateway Kit</font></span></a>
             <br/>
@@ -424,9 +424,9 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BeagleBone®</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Starter Kit for Seeed Studio BeagleBone® Green</font></span></a>
+            <a href="/Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Starter Kit for Seeed Studio BeagleBone® Green</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove IoT Starter AWS IoT Kit for BeagleBone Green </font></span></a>
+            <a href="/Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove IoT Starter AWS IoT Kit for BeagleBone Green </font></span></a>
             <br/>
     </a>
 </div>
