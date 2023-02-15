@@ -447,24 +447,24 @@ const sidebars = {
               type: 'category',
               label: 'Actuator',
               items: [
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-2-Coil_Latching_Relay',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-2-Coil_Latching_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Passive-Buzzer',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Chainable_RGB_LED',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Dry-Reed_Relay',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Chainable_RGB_LED',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Dry-Reed_Relay',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-EL_Driver',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Haptic_Motor',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver_V1.2',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver_V1.2',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver_V1.3',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C-Motor-Driver-L298P',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Infrared_Emitter',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-LED_Matrix_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3_v2.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3-v3',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_Fan',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
-                // 'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_Fan',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Recorder_v3.0',
                 // 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay', 
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-4-Channel_SPDT_Relay',
@@ -2178,6 +2178,22 @@ const sidebars = {
 
 
           ]
+        },
+        {
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            {
+              type: 'category',
+              label: 'Grove Beginner Kit for Arduino',
+              items: [
+                'Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove-Beginner-Kit-For-Arduino',
+                'Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove-Beginner-Kit-for-Arduino-education-pack',
+                'Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove-Beginner-Kit-for-Arduino-Upverter-Guide',
+                'Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove_Beginner_Kit_for_Arduino',
+              ],
+            },
+          ],
         },
       ],
 
