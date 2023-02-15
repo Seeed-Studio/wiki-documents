@@ -283,8 +283,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>mmWave Radar Sensor</font></div>
             <a href="/Sensor/mmWave_radar_sensor/Radar_MR24HPC1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Human Static Presence Module Lite - Configurable Parameter</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Fall Detection Sensor </font></span></a>,
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Human Static Presence Sensor</font></span></a>
+            <a href="/Sensor/mmWave_radar_sensor/Radar_MR24FDB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Fall Detection Sensor </font></span></a>,
+            <a href="/Sensor/mmWave_radar_sensor/Radar_MR24HPB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Human Static Presence Sensor</font></span></a>
             <br/>
             <a href="/Sensor/mmWave_radar_sensor/Radar_MR24BSD1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 60GHz mmWave Sleep Breathing Monitoring Module</font></span></a>
             <br/>
@@ -303,7 +303,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Beyond Grove / Seeed Elderly</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> This is the introduction of Seeed Studio ageful sensors and communication modules.</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click HERE </font></span></a> to see the full picture.
+            <a href="/Sensor/Beyond_Grove/Sensors/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click HERE </font></span></a> to see the full picture.
     </a>
 </div>
 
@@ -461,14 +461,14 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Azure Sphere</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MT3620 Development Kit for Azure Sphere</font></span></a>
+            <a href="Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MT3620 Development Kit for Azure Sphere</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MT3620 Mini Dev Board for Azure Sphere</font></span></a>
+            <a href="Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MT3620 Mini Dev Board for Azure Sphere</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>AWS IoT</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio One-Click IoT Button For AWS</font></span></a>
+            <a href="Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio One-Click IoT Button For AWS</font></span></a>
             <br/>
     </a>
 </div>
@@ -632,11 +632,11 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio RP2040</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use MQTT to remotely light up LED lights</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_MQTT_to_remotely_light_up_LED_lights" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use MQTT to remotely light up LED lights</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use Socket to connect to the forum</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_Socket_to_connect_to_the_forum" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use Socket to connect to the forum</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wireless Fall Detection Device</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-Fall-Detection-Device" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wireless Fall Detection Device</font></span></a>
             <br/>
     </a>
 </div>
@@ -672,7 +672,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal</font></div>
             <span><font color={'FFFFFF'} size={"4"}> TinyML with TensorFlow Lite</font></span>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > TensorFlow Lite Micro Getting Started</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > TensorFlow Lite Micro Getting Started</font></span></a>
             <br/>
             <a href="/Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Weather Prediction</font></span></a>
             <br/>
@@ -733,11 +733,11 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Wio Terminal - Extensions</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Audio Extension Board</font></span></a>, 
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Ethernet Extension Board</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Audio Extension Board</font></span></a>, 
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Ethernet Extension Board</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis</font></span></a>, 
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis with LoRaWAN</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Battery-Chassis" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis</font></span></a>, 
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis with LoRaWAN</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
@@ -778,15 +778,15 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Display</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>OLED -</font></span></a>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>0.66"</font></span></a>, 
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 0.96"</font></span></a>, 
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 1.12" </font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}>OLED -</font></span></a>
+            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-OLED-Display-0.66-SSD1306_v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}>0.66"</font></span></a>, 
+            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-OLED-Display-0.96-SSD1315" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 0.96"</font></span></a>, 
+            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-OLED-Display-1.12-SH1107_V3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 1.12" </font></span></a>
             <br/>
             <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-LCD_RGB_Backlight" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LCD RGB Backlight </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dual</font></span></a>, 
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Quad </font></span></a>
+            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-0.54_inch_Red_Dual_Alphanumeric_Display" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dual</font></span></a>, 
+            <a href="/Sensor/Grove/Grove_Accessories/Display/Grove-0.54_inch_Red_Quad_Alphanumeric_Display" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Quad </font></span></a>
             <a><span><font color={'FFFFFF'} size={"2"}> Alpha-LED</font></span></a>
             <br/>
     </a>
