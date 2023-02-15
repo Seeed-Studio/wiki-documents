@@ -488,7 +488,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
             <a href="Seeed_Elderly/rePhone/Program with rePhone/Arduino_IDE_for_RePhone_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Arduino</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> JavaScript</font></span></a>
+            <a href="/Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone" target="_blank"><span><font color={'FFFFFF'} size={"2"}> JavaScript</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -1009,16 +1009,16 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <br/>
             <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Compiling_MicroPython_for_embedded_devices" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Compiling MicroPython for embedded devices </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Codecraft Platform for Arduino </font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Guide_for_Codecraft_using_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Codecraft Platform for Arduino </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}> Arduino Boards Fun Projects</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> IR Remote</font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/IR_Remote" target="_blank"><span><font color={'FFFFFF'} size={"3"}> IR Remote</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Joystick Control RGB Led</font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Joystick_Control_RGB_Led" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Joystick Control RGB Led</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Light Sensor and LED Bar</font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Light_Sensor_and_LED_Bar" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Light Sensor and LED Bar</font></span></a>
             <br/>
     </a>
 </div>

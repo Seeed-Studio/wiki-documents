@@ -18,9 +18,9 @@ This wiki is a User Guide to help you start your RePhone project with JavaScript
 Install Driver and Update Firmware
 ----------------------------------
 
-<!-- -   To **Install the Driver**, please refer to the **section 2 of [Arduino_IDE_for_RePhone_Kit](/Arduino_IDE_for_RePhone_Kit "Arduino IDE for RePhone Kit")** -->
+- To **Install the Driver**, please refer to the **section 2 of <a href="/Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone" ><span><font color={'000000'} size={"3"}> Arduino IDE for RePhone Kit</font></span></a>**
 
-<!-- -   To **Update Firmware**, please refer to **section 3 of [Arduino_IDE_for_RePhone_Kit](/Arduino_IDE_for_RePhone_Kit "Arduino IDE for RePhone Kit")** -->
+- To **Update Firmware**, please refer to **section 3 of <a href="/Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone" ><span><font color={'000000'} size={"3"}> Arduino IDE for RePhone Kit</font></span></a>**
 
 Download JavaScript for RePhone Application
 -------------------------------------------
@@ -34,7 +34,6 @@ Download JavaScript for RePhone Application
 ![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Connect_Xadow_GSMPlusBLE_to_PC.png)
 
 **Step 3.** Unzip the ***js_for_rephone_xxx.zip*** file into the 5MB disk of RePhone, you can also put some music files (mp3 format) into the disk. Here I have put the 'music1.mp3' and 'music2.mp3' in it.
-
 
 ![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Lua_1.png)
 
@@ -92,10 +91,11 @@ Resources
 
 - [Source Code of JavaScript for RePhone](https://github.com/Seeed-Studio/JavaScript_for_RePhone)
 
-
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/JavaScript_for_RePhone -->
 
 ## Tech Support
-<div>
-  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+
+  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+ <div>
+ <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
