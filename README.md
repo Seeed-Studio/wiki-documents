@@ -6,6 +6,8 @@ Seeed Studio has dedicated to realizing interactive digital replica of our physi
 
 This is the Github source files for Seeed Studio.
 
-We are looking for your [contributions](/TASK.md).
+You can constantly receive updated data from sensors and sensors network, access computational resources with different edge computing power, display and manage information on cloud and chain in ways.
+
+We here present you our [current accomplishments](https://c1ev0ps.github.io/docusaurus_wiki/Getting_Started) and solutions and we are looking for your [contributions](/TASK.md).
 
 You can [set up](/HOW_TO.md) this platform locally.
