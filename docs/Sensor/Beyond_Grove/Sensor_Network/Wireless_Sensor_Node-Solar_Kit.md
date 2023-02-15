@@ -22,88 +22,88 @@ last_update:
 ## Contents of the Kit
 
 ---
-<table>
-<tr>
-<th> Component
-</th>
-<th> Image
-</th>
-<th> Description
-</th>
-<th> Quantity
-</th></tr>
-<tr>
-<td> **Grove - XBee Carrier v0.9b**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Bee_Stem.jpg)
-</td>
-<td> Base board for XBee nodes
-</td>
-<td> 1
-</td></tr>
-<tr>
-<td> **Transparent Box**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_4_Box.jpg)
-</td>
-<td> Enclosure for Node Components
-</td>
-<td> 1
-</td></tr>
-<tr>
-<td> **0.5 W - 55x70 mm Solar Panel**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Solar_Panel.jpg)
-</td>
-<td> Charging Power Supply
-</td>
-<td> 1
-</td></tr>
-<tr>
-<td> **5 cm Grove Wire**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_5cm_Twig_Wires.jpg)
-</td>
-<td> 4 Wire Cable to attach Grove modules to Grove - XBee Carrier
-</td>
-<td> 2
-</td></tr>
-<tr>
-<td> **Mini USB Cable**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Mini_USB_Cable.jpg)
-</td>
-<td> Programming Cable
-</td>
-<td> 1
-</td></tr>
-<tr>
-<td> **XK 353545 500mAH LiPo Battery**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-LiPo_Battery.jpg)
-</td>
-<td> Lithium Ion Battery
-</td>
-<td> 1
-</td></tr>
-<tr>
-<td> **KA 2*6 Screws**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_4_Screws.jpg)
-</td>
-<td> Metal Screws for fixing Grove - XBee Carrier to Box
-</td>
-<td> 4
-</td></tr>
-<tr>
-<td> **2064 Rivets**
-</td>
-<td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_8_Plastic_Rivets.jpg)
-</td>
-<td> Plastic rivets for attaching Grove modules to Grove - XBee Carrier
-</td>
-<td> 8
-</td></tr></table>
+<!-- <table>
+  <tbody><tr>
+      <th> Component
+      </th>
+      <th> Image
+      </th>
+      <th> Description
+      </th>
+      <th> Quantity
+      </th></tr>
+    <tr>
+      <td> **Grove - XBee Carrier v0.9b**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Bee_Stem.jpg)
+      </td>
+      <td> Base board for XBee nodes
+      </td>
+      <td> 1
+      </td></tr>
+    <tr>
+      <td> **Transparent Box**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_4_Box.jpg)
+      </td>
+      <td> Enclosure for Node Components
+      </td>
+      <td> 1
+      </td></tr>
+    <tr>
+      <td> **0.5 W - 55x70 mm Solar Panel**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Solar_Panel.jpg)
+      </td>
+      <td> Charging Power Supply
+      </td>
+      <td> 1
+      </td></tr>
+    <tr>
+      <td> **5 cm Grove Wire**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_5cm_Twig_Wires.jpg)
+      </td>
+      <td> 4 Wire Cable to attach Grove modules to Grove - XBee Carrier
+      </td>
+      <td> 2
+      </td></tr>
+    <tr>
+      <td> **Mini USB Cable**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Mini_USB_Cable.jpg)
+      </td>
+      <td> Programming Cable
+      </td>
+      <td> 1
+      </td></tr>
+    <tr>
+      <td> **XK 353545 500mAH LiPo Battery**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-LiPo_Battery.jpg)
+      </td>
+      <td> Lithium Ion Battery
+      </td>
+      <td> 1
+      </td></tr>
+    <tr>
+      <td> **KA 2*6 Screws**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_4_Screws.jpg)
+      </td>
+      <td> Metal Screws for fixing Grove - XBee Carrier to Box
+      </td>
+      <td> 4
+      </td></tr>
+    <tr>
+      <td> **2064 Rivets**
+      </td>
+      <td> ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_8_Plastic_Rivets.jpg)
+      </td>
+      <td> Plastic rivets for attaching Grove modules to Grove - XBee Carrier
+      </td>
+      <td> 8
+      </td></tr></tbody></table> -->
 
 ## Application Ideas
 
@@ -153,7 +153,8 @@ last_update:
 ## Usage
 
 ---
-<div className="thumb tnone"><div className="thumbinner" style={{width: 302}}>![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Demo_Arrangement.jpg) <div className="thumbcaption">**Wireless Sensor Node Field Use - Charged by Solar Panel"**</div></div></div>
+**Wireless Sensor Node Field Use - Charged by Solar Panel"**
+![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit_Demo_Arrangement.jpg)
 
 ### Quick Start Guide
 
@@ -177,9 +178,9 @@ This section provides a Step-by-Step construction of a Wireless Sensor Node. Ima
 
 Information on how to setup / program Bee Modules are available in
 
-<!-- * [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") -->
+* [Grove - XBee_Carrier](/Seeed_Elderly/Bee/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-* [Wifi Bee Page](/Wifi_Bee "Wifi Bee")
+* [Wifi Bee Page](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee")
 
 ## Image Gallery
 
@@ -190,19 +191,19 @@ Information on how to setup / program Bee Modules are available in
 
 ## See Also
 
-* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
+* [Grove - XBee_Carrier](/Seeed_Elderly/Bee/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-* [Bees Shield](/Bees_Shield "Bees Shield")
+* [Bees Shield](/Seeed_Elderly/Bee/Bees_Shield "Bees Shield")
 
-* [XBee](/XBee_Shield_V2.0 "XBee_Shield_V2.0")
+* [XBee](/Seeed_Elderly/Bee/XBee_Shield_V2.0 "XBee_Shield_V2.0")
 
-* [Wifi Bee](/Wifi_Bee "Wifi Bee")
+* [Wifi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee")
 
-* [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
+* [RFBee](/Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
 
-* [UartSBee](/UartSBee_V3.1 "UartSBee_V3.1")
+* [UartSBee](/Seeed_Elderly/Bee/UartSBee_V3.1 "UartSBee_V3.1")
 
-* [Seeeduino_V2.2](/Seeeduino_V2.2 "Seeeduino V2.2")
+* <a href="/Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2" ><span><font color={'000000'} size={"3"}> Seeeduino V2.2</font></span></a>
 
 ## Tech Support
 

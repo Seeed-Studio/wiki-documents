@@ -320,7 +320,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Sensors Network</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wireless Sensor Node - Solar Kit</font></span></a>
+            <a href="/Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wireless Sensor Node - Solar Kit</font></span></a>
             <br/>
             <a href="/Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> WiFi Serial Transceiver Module</font></span></a>
             <br/>

@@ -60,7 +60,7 @@ This process requires to put the CM4 eMMC stroage into 'USB mass storage' mode, 
 
 **For reTerminal**
 
-* **Step 1:** Open the case and remove the heatsink of reTerminal to get access the boot selection switch, Please follow the steps from the [reTerminal Getting Started Wiki Page](/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc){target=_blank} until you have flipped the boot mode switch.
+* **Step 1:** Open the case and remove the heatsink of reTerminal to get access the boot selection switch, Please follow the steps from the [reTerminal Getting Started Wiki Page](/Edge/reTerminal/reTerminal_Getting_Started) until you have flipped the boot mode switch.
 
 **For reRouter**
 

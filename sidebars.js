@@ -2515,6 +2515,7 @@ const sidebars = {
             //'Seeed_Elderly/Bee/Atom_Node',
             'Seeed_Elderly/Bee/Bluetooth_V4.0_HM_11_BLE_Module',
             'Seeed_Elderly/Bee/GPS_Bee_kit',
+            'Seeed_Elderly/Bee/Grove-XBee_Carrier',
             //'Seeed_Elderly/Bee/Grove-Bee_Socket',
           ]
         },
