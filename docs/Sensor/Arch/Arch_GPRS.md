@@ -16,19 +16,19 @@ last_update:
 Arch GPRS is an [mbed](http://mbed.org/handbook/mbed-SDK) enabled development board that houses a cellular networking module along with a microcontroller. It is similar to the [Seeeduino Arch](https://seeeddoc.github.io/Seeeduino_Arch/)  in that it also uses the LPC11U24 Microcontroller. With the Arch GPRS, you can use the mbed C/C++ SDK, libraries and optimizing online development tools to rapidly build your prototype.
 The cellular networking module on the Arch GPRS is based on the EG-10 [GPRS](https://en.wikipedia.org/wiki/General_Packet_Radio_Service) modem. With this, data collection functions can be performed easily using the 2G GSM based cellular network.
 
-Arch GPRS has a standard **Arduino** interface as well as [Grove](/Grove)  connectors on board. It’s convenient to connect existing Shields and **Grove** products to Arch GPRS. You can even connect a solar panel directly to the board to allow for the battery to charge from it. A low-power design guarantees easy charging and long hour operations when outdoors.
+Arch GPRS has a standard **Arduino** interface as well as Grove connectors on board. It’s convenient to connect existing Shields and **Grove** products to Arch GPRS. You can even connect a solar panel directly to the board to allow for the battery to charge from it. A low-power design guarantees easy charging and long hour operations when outdoors.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png) ](https://www.seeedstudio.com/depot/Arch-GPRS-p-1657.html?cPath=73)
 
-##  Features ##
+## Features ##
 
--  mbed enabled
+- mbed enabled
 
-   - online development tools
+  - online development tools
 
-   - easy to use C/C++ SDK
+  - easy to use C/C++ SDK
 
-   - lots of published libraries, projects
+  - lots of published libraries, projects
 
 - NXP LPC11U24 Controller
 
@@ -38,19 +38,19 @@ Arch GPRS has a standard **Arduino** interface as well as [Grove](/Grove)  conne
 
   - USB Device, 2xSPI, UART, I2C
 
--  EG-10 Module  
+- EG-10 Module  
 
-   - Support wireless upgrade EG-10 firmware  
+  - Support wireless upgrade EG-10 firmware  
 
-   - Support external SIM card：1.8V/3.3V
+  - Support external SIM card：1.8V/3.3V
 
-   - Compatible standard AT Command
+  - Compatible standard AT Command
 
 - Equip with RTC function
 
 - Select automatically USB5V or Solar panel to charge a battery
 
-##  Specifications ##
+## Specifications ##
 
  |Item||Specification|
  |--|--|--|
@@ -66,7 +66,7 @@ Arch GPRS has a standard **Arduino** interface as well as [Grove](/Grove)  conne
 |  Function Support||Support for Data, Voice, SMS, and Fax|
  |EEPROM Capacity||256 KB|
 
-##  Interfaces ##
+## Interfaces ##
 
 ![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/Arch_GPRS_Interface_Function.jpg)
 
@@ -74,7 +74,7 @@ Yellow Area is very similar in fashion to an Arduino board, and in fact it is us
 
 The above picture is the front view of Arch GPRS, Microcontroller LPC11U24 in back has not been marked out.
 
-##  Getting Started ##
+## Getting Started ##
 
 Insert a SIM card into SIM Socket of Arch GPRS, you can dial a phone number or send messages.
 Now let's get started.
@@ -127,7 +127,7 @@ Now let's get started.
 
 Quick press Arch GPRS's button and wait a moment, you will hear Arch GPRS calling you.
 
-##  ARCH GPRS With Xively ##
+## ARCH GPRS With Xively ##
 
 ![](https://files.seeedstudio.com/wiki/Arch_GPRS/img/ARCH_GPRS_With_Xively.png)
 
@@ -157,26 +157,25 @@ Xively is an on-line database service allowing developers to connect sensor-deri
 
 If you use Seeeduino Arch on MAC or Linux, please read the application note --- [USB ISP programming](http://www.lpcware.com/content/nxpfile/an11305-usb-system-programming-lpc11u3xlpc11u2x).
 
-##  Programming Seeeduino Arch on Windows, Linux or Mac ##
+## Programming Seeeduino Arch on Windows, Linux or Mac ##
 
 Seeeduino Arch doesn't have an mbed interface. It uses USB In-System-Programming(ISP) to upgrade the firmware.
 
 To enter the USB ISP mode, connect the Arch with your computer and long press its button, and then a disk named "CRP DISABLD" will appear.
 
--  on windows
+- on windows
 
     1.delete firmware.bin in the "CRP DISABLD" disk.
 
     2.copy a new firmware into the disk.
 
-
--  on linux
+- on linux
 
     1.if the disk is not mounted, mount the disk at {mnt_dir}
 
     2.dd if={new_firmware.bin} of={mnt_dir}/firmware.bin conv=notrunc
 
--  on mac you'll need to use Terminal to run the following script to copy you're .bin file to your Arch
+- on mac you'll need to use Terminal to run the following script to copy you're .bin file to your Arch
 
     1.dd if={new_firmare.bin} of=/Volumes/CRP\ DISABLD/firmware.bin conv=notrunc**
 
@@ -186,23 +185,20 @@ To enter the USB ISP mode, connect the Arch with your computer and long press it
 
 Quick press the button to run the new firmware.
 
-##  See Also ##
+## See Also ##
 
 - [Arch GPRS V2](https://seeeddoc.github.io/Arch_GPRS_V2/)
 
-##  Notes ##
+## Notes ##
 
 Arch GPRS doesn't come with [an mbed interface](https://mbed.org/handbook/mbed-HDK). To output debug messages, please try [USBSerial](https://mbed.org/handbook/USBSerial).
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch_GPRS_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
-##  Resources ##
+## Resources ##
 
 - **[Eagle]** [Arch GPRS Eagle File](https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch_GPRS_Eagle_File.zip)
 - **[PDF]**[Arch GPRS pdf](https://files.seeedstudio.com/wiki/Arch_GPRS/res/Arch%20GPRS.pdf)
@@ -213,6 +209,7 @@ Arch GPRS doesn't come with [an mbed interface](https://mbed.org/handbook/mbed-H
 - **[Demo]**[demo](https://mbed.org/users/loovee/code/ARCH_GPRS_Demo/)
 
 ## Tech Support
+
 <div>
   Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

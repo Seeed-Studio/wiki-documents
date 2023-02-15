@@ -464,7 +464,7 @@ Use a software like serial debugging assistant to select the serial port where t
 <div align="center"><img width ="{300}" src="https://files.seeedstudio.com/wiki/60GHzradar/17.png"/></div>
 
 :::caution
-    24GHz radar needs 5V power supply, otherwise the radar may not work properly.
+24GHz radar needs 5V power supply, otherwise the radar may not work properly.
 :::
 
 After a successful connection, you will see the radar sending a steady stream of messages.

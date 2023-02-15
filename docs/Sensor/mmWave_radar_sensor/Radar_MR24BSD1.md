@@ -386,7 +386,7 @@ Upload program. Opening your serial monitor to a baud rate of 9600 should show t
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/2.png"/></div>
 
 :::tip
-    The values following the output data frame represent the calculated sign values.
+The values following the output data frame represent the calculated sign values.
 :::
 
 ### Demo 3 Get sleep detection data
@@ -507,8 +507,8 @@ unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
 The places we need to modify are the second element, the fourth to the last element. The header frame 0x55 is fixed and does not need to be modified. The second frame is the length frame, please modify it according to the length of the data you send. The third frame is fixed to 0x00. The fourth frame is the function code, the fifth frame is the address code 1, and so on.
 
 :::tip
-About the length frame calculation method:
-    Length = Data Length + Function Code + Address Code 1 + Address Code 2 + Data + Checksum. (Head frames are not counted)
+About the length frame calculation method:<br />
+Length = Data Length + Function Code + Address Code 1 + Address Code 2 + Data + Checksum. (Head frames are not counted)
 
 See Chapter 8 of the [user manual](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf) for more information on frame formats and rules.
 :::

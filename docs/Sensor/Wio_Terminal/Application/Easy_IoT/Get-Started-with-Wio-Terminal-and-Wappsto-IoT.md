@@ -35,25 +35,30 @@ You can operate the following function while you connecting the Wappsto. For fur
 
 1. Blank dashboard - Static clean canvas to mix and match widgets
 2. Fleet management - Dynamic clean canvas to mix and match widgets - easily switch between devices to get an overview of possible outliers.
-3. Geolocation dashboard - Map overview of devices, possible to filter based on device alarms.
+3. Geolocation dashboard - Map overview of devices, possible to filter based on device alarms.<br />
 ![](https://media-exp1.licdn.com/dms/image/C4E22AQEUQmsBHpzjaw/feedshare-shrink_2048_1536/0/1646730023138?e=1651708800&v=beta&t=cTkLbXeXVVgWV9a-Is62CDUlb3s4t-GqqSpBsusyy8A)
+<!-- 图片链接有问题 -->
 
-   - Geolocation using filtered lists filter:
+- Geolocation using filtered lists filter:
 ![](https://media-exp1.licdn.com/dms/image/C4E22AQHzGNNMQWDfLw/feedshare-shrink_2048_1536/0/1646902827428?e=1651708800&v=beta&t=hChKemrGzqtM53xwikfvONJu_2DyrCSMX17jMKXuybc)
+<!-- 图片链接有问题 -->
 
 #### Blank and fleet management dashboard widgets
 
 1. Filtered list - configure device value limits that trigger alarms and visual cues in the geolocation dashboard.
-![](https://media-exp1.licdn.com/dms/image/C4E22AQGPxAJgcCVbKw/feedshare-shrink_2048_1536/0/1646809215991?e=1651708800&v=beta&t=-XvhET6EEvVJetMns_UcJ9AY8hBIcVw_R8XEi0vUZhI)
+ ![](https://media-exp1.licdn.com/dms/image/C4E22AQGPxAJgcCVbKw/feedshare-shrink_2048_1536/0/1646809215991?e=1651708800&v=beta&t=-XvhET6EEvVJetMns_UcJ9AY8hBIcVw_R8XEi0vUZhI)
+<!-- 图片链接有问题 -->
 
 2. Historical location widget - Draws on a map based on device locations within a configured timeframe. (maximum 1 mark per minute and minimum 50 meters between marks)
 ![](https://media-exp1.licdn.com/dms/image/C4E22AQE8TWlSnbBS0Q/feedshare-shrink_2048_1536/0/1647252033404?e=2147483647&v=beta&t=YWuyjUFveAiTut4AwMgXFRZL5BiaqJYKV8MeYcwq31E)
 
 3. Chart widget - Choose and configure multiple data sources, timeframe, chart style and aggregation method. It can also be toggled to show live data.
 ![](https://media-exp1.licdn.com/dms/image/C4E22AQERLllOaWHaeA/feedshare-shrink_1280/0/1647331243930?e=1651708800&v=beta&t=wxkgoFKpxV8A2j-KsXqKRm6t6gnAEorUuR4UaSsu1pk)
+<!-- 图片链接有问题 -->
 
 4. Live data example:
 ![](https://media-exp1.licdn.com/dms/image/C4E22AQHexShrPAZxHw/feedshare-shrink_1280/0/1647856842400?e=1651708800&v=beta&t=CziKwYL3y3drg7PyCN-NcC3t6lRjqTxoMoguKy9h_yE)
+<!-- 图片链接有问题 -->
 
 5. Value list widget - Show live data in a box together with control / desired state values.
 ![](https://media-exp1.licdn.com/dms/image/C4E22AQHLKi07FF-vjg/feedshare-shrink_1280/0/1647414020945?e=2147483647&v=beta&t=5PjZ0-bA5knscCdfUufKY7b98tXlXbWtpIfFjsZ_ykg)
@@ -69,6 +74,7 @@ You can operate the following function while you connecting the Wappsto. For fur
 
 9. Current location widget - Show the current location of one or multiple devices alongside other widgets.
 ![](https://media-exp1.licdn.com/dms/image/C4D22AQFCTjZrX8RU4g/feedshare-shrink_2048_1536/0/1648046103353?e=1651708800&v=beta&t=CFn2wQhscrECrcNU65PcI7HpuK7NhHtZKVMXQ9VzoWA)
+<!-- 图片链接有问题 -->
 
 10. Log list widget - Show logs of one or more devices or values, alongside other widgets.
 ![](https://media-exp1.licdn.com/dms/image/C4E22AQEFmHPALVfFhw/feedshare-shrink_2048_1536/0/1648126885539?e=2147483647&v=beta&t=eKmZ70IIQZAq3DR96JXB_nsmSsvBqe8gKIJfG0XZXZs)
