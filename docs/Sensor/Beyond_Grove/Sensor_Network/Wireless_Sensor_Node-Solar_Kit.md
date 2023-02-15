@@ -177,7 +177,7 @@ This section provides a Step-by-Step construction of a Wireless Sensor Node. Ima
 
 Information on how to setup / program Bee Modules are available in
 
-* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
+<!-- * [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") -->
 
 * [Wifi Bee Page](/Wifi_Bee "Wifi Bee")
 

@@ -1308,7 +1308,7 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensor_Network/433Mhz_RF_Link_Kit',
             'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
             'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
-            // 'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
+            'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
 
           ],
 
@@ -2209,7 +2209,7 @@ const sidebars = {
           type: 'category',
           label: 'Official Raspberry Pi Module',
           items: [
-            'feature',
+            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Module/Raspberry_pi_CM4_update_eeprom',
           ]
         },
         {
@@ -2328,7 +2328,7 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'Seeed_Elderly',
+      label: 'Seeed Elderly',
       items: [
 
         {
