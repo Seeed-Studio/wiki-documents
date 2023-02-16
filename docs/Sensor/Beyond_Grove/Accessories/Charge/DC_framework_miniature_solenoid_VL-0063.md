@@ -12,9 +12,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><a><img src="https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/DC.png" border={0} /></a></p>
 
-
 <a href="https://www.seeedstudio.com/DC-framework-miniature-solenoid-VL-0063-p-1049.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png"/></a>
-
 
 This 14.8-Volt DC framework miniature solenoid is for instantaneous power work and great for projects! These types of solenoid are often used for small automation system,can be used as a remote control etc. However, they work great for almost any project requiring a DC solenoid.
 
@@ -25,8 +23,9 @@ This 14.8-Volt DC framework miniature solenoid is for instantaneous power work a
 * Low friction to ensure high efficiency and extend the life of
 * Simple and reliable design
 
-!!!Caution
-     The solenoid operating temperature should not exceed 80 ℃, or continuous working time less than 5 seconds.
+:::caution
+The solenoid operating temperature should not exceed 80 ℃, or continuous working time less than 5 seconds.
+:::
 
 ## Application Ideas
 
@@ -36,7 +35,7 @@ This 14.8-Volt DC framework miniature solenoid is for instantaneous power work a
 * Office equipment: fax machines, punch card machines, copiers, typewriters, cash registers, plotters
 * Transport equipment: automatic door locks, safety belt lock, automotive solenoid valve, parking facilities
 * Appliances: tape recorder, video recorder, keyboard, automatic knitting machine, karaoke machine
-*  ¸ Other: packaging machine, robot, farming equipment, stamping equipment, alarm, water solenoid valve
+* ¸ Other: packaging machine, robot, farming equipment, stamping equipment, alarm, water solenoid valve
 
 ## Specifications
 
@@ -76,6 +75,6 @@ Performance to show:
 
 ## Tech Support
 
-if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a>

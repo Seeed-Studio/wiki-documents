@@ -1331,7 +1331,7 @@ const sidebars = {
                 'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
                 'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
                 'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
-                // 'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
+                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
                 'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
                 'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
                 // 'Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70',
@@ -2133,13 +2133,13 @@ const sidebars = {
             'Top_Brand/Arduino/shield/2.8inch_TFT_Touch_Shield_v2.0',
             'Top_Brand/Arduino/shield/4A_Motor_Shield',
             'Top_Brand/Arduino/shield/Base_Shield_V2',
-         //   'Top_Brand/Arduino/shield/Bluetooth_Shield_V2',
+            //   'Top_Brand/Arduino/shield/Bluetooth_Shield_V2',
             'Top_Brand/Arduino/shield/CAN-BUS_Shield_V2.0',
             'Top_Brand/Arduino/shield/Camera_Shield',
             'Top_Brand/Arduino/shield/Energy_Shield',
             'Top_Brand/Arduino/shield/Motor_Shield_V2.0',
             'Top_Brand/Arduino/shield/Brushless_Motor_Shield_TB6605FTG',
-         //   'Top_Brand/Arduino/shield/Music_Shield_V2.2',
+            //   'Top_Brand/Arduino/shield/Music_Shield_V2.2',
             'Top_Brand/Arduino/shield/NFC_Shield_V2.0',
             'Top_Brand/Arduino/shield/Grove-Mega_Shield',
             'Top_Brand/Arduino/shield/Protoshield_Kit_for_Arduino',
@@ -2150,9 +2150,9 @@ const sidebars = {
             'Top_Brand/Arduino/shield/Spartan_Edge_Accelerator_Board',
             'Top_Brand/Arduino/shield/W5500_Ethernet_Shield_v1.0',
             'Top_Brand/Arduino/shield/Grove_Shield_for_Arduino_Nano',
-       //     'Top_Brand/Arduino/shield/RGBW_Stripe_WireLess_Shield_V1.0',
+            //     'Top_Brand/Arduino/shield/RGBW_Stripe_WireLess_Shield_V1.0',
             'Top_Brand/Arduino/shield/Renbotics_ServoShield_Rev',
-        //    'Top_Brand/Arduino/shield/WireLess_Gate_Shield_V1.0',
+            //    'Top_Brand/Arduino/shield/WireLess_Gate_Shield_V1.0',
           ]
         },
         {
@@ -2242,6 +2242,8 @@ const sidebars = {
                 'Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove_Beginner_Kit_for_Arduino',
               ],
             },
+            'Top_Brand/Arduino/Kit with Courses/Grove_Speech_Recognizer_Kit_for_Arduino',
+
           ],
         },
       ],
@@ -2420,7 +2422,7 @@ const sidebars = {
 
 
         },
-        
+
         {
           type: 'category',
           label: 'rePhone',
@@ -2564,6 +2566,14 @@ const sidebars = {
           items: [
             'Seeed_Elderly/Rainbowduino/Rainbowduino_v3.0',
             'Seeed_Elderly/Rainbowduino/Rainbowduino_LED_driver_platform-ATmega328',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Air Serial',
+          items: [
+            'Seeed_Elderly/Air_Serial/Air602_WiFi_Development_Board',
+            'Seeed_Elderly/Air_Serial/Air602_Firmware_Programming_Manual',
           ]
         },
         {
