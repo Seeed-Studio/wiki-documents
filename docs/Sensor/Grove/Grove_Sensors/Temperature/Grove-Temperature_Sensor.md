@@ -31,7 +31,7 @@ The Grove - Temperature Sensor uses a [Thermistor](http://www.legacydistribution
 
 ---
 
-### With [Arduino](/Arduino "Arduino")
+### With Arduino
 
 Here is an example to show you how to read temperature information from the sensor.
 
@@ -42,7 +42,7 @@ Here is an example to show you how to read temperature information from the sens
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Tempreture_Sensor_Connector.jpg" /></div>
 
-4. Upload Code below. Please click [here](/Upload_Code) if you do not know how to upload.
+4. Upload Code below. Please click [here](/Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Upload_Code/) if you do not know how to upload.
 
 ```
 /*
@@ -82,11 +82,11 @@ As a reference, the following is the resistance curve of TTC3A103*39H, the therm
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Twig-Temperature-Sensor-value.jpg" /></div>
 
-### With [Raspberry Pi](/GrovePi_Plus "GrovePi+")
+### With [Raspberry Pi](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/ "GrovePi+")
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus#Introducing_the_GrovePi.2B).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/#Introducing_the_GrovePi.2B).
 
 3.Connection
 
@@ -136,7 +136,7 @@ To begin editing programs that live on BBG, you can use the Cloud9 IDE.
 
 As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone is a good start.
 
-If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green#getting-started).
+If this is your first time to use Cloud9 IDE, please follow this [**link**](/Edge/Beagle_Bone/BeagleBone_Green/#getting-started).
 
 **Step1:** Click the "+" in the top-right to create a new file.
 

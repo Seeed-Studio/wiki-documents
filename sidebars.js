@@ -110,7 +110,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Infrared_Temperature_Sensor',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
-                // 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor',
+                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor_V1.2',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
 
@@ -382,8 +382,8 @@ const sidebars = {
               label: 'RF',
               items: [
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-125KHz_RFID_Reader',
-                // 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-315MHz_RF_Kit',
-                // 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit',
+                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-315MHz_RF_Kit',
+                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit',
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove_LoRa_Radio',
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-Serial_RF_Pro',
               ]
@@ -392,7 +392,7 @@ const sidebars = {
               type: 'category',
               label: 'Standard Protocol',
               items: [
-                // 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-DMX512',
+                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-DMX512',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_ADC',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver_v1.1',

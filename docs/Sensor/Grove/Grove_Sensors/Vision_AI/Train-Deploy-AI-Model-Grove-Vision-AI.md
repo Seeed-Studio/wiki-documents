@@ -1,6 +1,6 @@
 ---
-description: Vision AI Train Own Model
-title: Vision AI Train Own Model
+description: Fast training of models with Edge Impulse
+title: Fast training of models with Edge Impulse
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
@@ -237,7 +237,9 @@ After this you will see a new storage drive shown on your file explorer as **GRO
 
 - **Step 3.** Drag and drop the below **.uf2 files** to **GROVEAI** drive according to your device
 
-  - [Grove - Vision AI](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/capture_images_Grove_AI_firmware.uf2)
+  <!-- - [Grove - Vision AI](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/capture_images_Grove_AI_firmware.uf2) -->
+
+  - Grove - Vision AI
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -282,7 +284,9 @@ After you have finished recording images for the dataset, you need to make sure 
 - **Step 1.** Enter **Boot mode** on Grove - Vision AI Module as explained before
 
 - **Step 2.** Drag and drop the below **.uf2 files** to **GROVEAI** drive according to your device
-  - [Grove AI Vision](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/Grove_AI_default_firmware.uf2)
+  <!-- - [Grove AI Vision](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/Grove_AI_default_firmware.uf2) -->
+
+    - Grove AI Vision
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 

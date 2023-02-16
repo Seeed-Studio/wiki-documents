@@ -10,13 +10,8 @@ last_update:
 ---
 
 
-<!-- Grove - Node is a simple and flexible electronic module to connect physical objects. It's based on the idea of IFTTT (IF-This-Then-That). It has two Grove connectors to access a variety of [Grove](/Grove "Grove") modules. With pre-programming IFTTT firmware, it's easy to create physical objects with analog sensors and 0/1 actuators.
+ Grove - Node is a simple and flexible electronic module to connect physical objects. It's based on the idea of IFTTT (IF-This-Then-That). It has two Grove connectors to access a variety of Grove modules. With pre-programming IFTTT firmware, it's easy to create physical objects with analog sensors and 0/1 actuators.
 
-<<<<<<< HEAD:docs/Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Node.md
-Grove - Node is a simple and flexible electronic module to connect physical objects. It's based on the idea of IFTTT (IF-This-Then-That). It has two Grove connectors to access a variety of Grove modules. With pre-programming IFTTT firmware, it's easy to create physical objects with analog sensors and 0/1 actuators.
-=======
- -->
->>>>>>> eca57a545a5ee9050a783a30c0e5a300753038d1:docs/Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Node.md
 
 It integrates Bluetooth Low Energy (BLE) which makes it extremely easy to interact with phones and tablets. To extend its usability, a DFU bootloader is built in to reprogram it Over-The-Air through BLE. It supports ARM mbed platform to write new firmware with hundreds of libraries.
 
@@ -205,13 +200,9 @@ Second, we need an **output** Grove module as an actuator. The following Grove m
       <td colSpan={3} rowSpan={1}> Swith On/Off other circuits
       </td></tr></tbody></table>
 
-<<<<<<< HEAD:docs/Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Node.md
-For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a Grove-Light_Sensor and a Grove-Red_LED.
-=======
-<!-- For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a [Grove-Light_Sensor](/Grove-Light_Sensor "Grove - Light Sensor") and a [Grove-Red_LED](/Grove-Red_LED "Grove-Red_LED"). 链接出错
 
--->
->>>>>>> eca57a545a5ee9050a783a30c0e5a300753038d1:docs/Sensor/Grove/Grove_Sensors_Network/Communication/Grove-Node.md
+For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a [Grove-Light_Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor "Grove - Light Sensor") and a Grove-Red_LED. 
+
 
 Third, teach the Grove Node a logic.
 
