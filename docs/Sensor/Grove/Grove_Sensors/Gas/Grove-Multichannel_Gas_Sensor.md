@@ -42,9 +42,9 @@ The sensor value only reflects the approximated trend of gas concentration in a 
 
 We suggest you to read those knowledge before using the Gas sensor, it'll help you to learn more about Arduino and our products, and also it'll let you to use open souse hardware more easier.
 
--   [Getting Started with Arduino](#/Getting_Started_with_Seeeduino)
--   [What is Grove system](#/Grove_System)
--   [Why i need a Base shield?](#/Base_Shield_V2)
+-   Getting Started with Arduino
+-   What is Grove system
+-   Why i need a Base shield?
 
 After reading that you will know how to use Base shield with Grove products to work well with Arduino. Let's start it !
 
@@ -52,8 +52,8 @@ After reading that you will know how to use Base shield with Grove products to w
 
 This tutorial will include some necessary products:
 
--   [Arduino UNO R3](https://www.seeedstudio.com/depot/Arduino-Uno-Rev3-p-694.html) or [Seeeduino v4](https://www.seeedstudio.com/depot/Seeeduino-V4-p-669.html)
--   [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
+-   Arduino UNO R3 or Seeeduino v4
+-   Base Shield
 -   Grove - Multichannel Gas Sensor
 
 Hardware Overview

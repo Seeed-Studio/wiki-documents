@@ -75,7 +75,10 @@ Then open File -> examples -> Grove_3_Digital_Gyro -> ITG3200_gyro, you can open
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Gyro/img/ITG3200_gyro_ArduinoIde.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Gyro/img/ITG3200_gyro_ArduinoIde.jpg" alt="pir" width={600} height="auto" /></p>
 
-Click Upload to upload the code, if you have any problem about how to start Arduino, please click [here](#/Getting_Started_with_Seeeduino) for some help.
+
+<!-- Click Upload to upload the code, if you have any problem about how to start Arduino, please click [here](/Sensor/Seeeduino Series/Getting_Started_with_Seeeduino) for some help. -->
+
+
 
 ### Check the result
 

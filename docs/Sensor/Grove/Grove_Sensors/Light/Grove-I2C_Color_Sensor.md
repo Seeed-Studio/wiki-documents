@@ -17,13 +17,9 @@ This module is based on the color sensor TCS3414CS with digital output I2C. Base
 Please note that the latest version V2.0 has replaced the IC with TCS3472 and the old library has also been updated, If you are using the V2.0 version, please use the [new library](https://github.com/Seeed-Studio/Grove_I2C_Color_Sensor_TCS3472).
 :::
 
-Version
----
 
-| Revision | Descriptions                                              | Release      |How to buy|
-|----------|-----------------------------------------------------------|--------------|--------------|
-| v1.2    | Initial public release (beta)                             | Jan 17, 2013  |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/depot/grove-i2c-color-sensor-p-854.html)|
-| v2.0    | Replace TCS3472(EOL) with TCS34725FN and optimize PCB Layout |Apr 27,2017   |[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Grove-I2C-Color-Sensor-V2-p-2890.html)|
+
+
 
 Features
 --------
@@ -70,7 +66,7 @@ Following documents help in getting the user started with Grove.
 
 ### Hardware Connections
 
-Grove products have an eco system and all have the same connector which can plug onto the [Grove Base Shield](/Base_Shield_V2). Connect this module to the I2C port of Base Shield. However, you can also connect Grove - I2C Color Sensor to Arduino without Base Shield by jumper wires.
+Grove products have an eco system and all have the same connector which can plug onto the Grove Base Shield. Connect this module to the I2C port of Base Shield. However, you can also connect Grove - I2C Color Sensor to Arduino without Base Shield by jumper wires.
 
 | Arduino UNO | Grove - I2C Color Sensor |
 |-------------|--------------------------|
@@ -82,9 +78,9 @@ Grove products have an eco system and all have the same connector which can plug
 Software Installation
 ---------------------
 
-[Download Arduino and install Arduino driver](/Driver_for_Seeeduino)
+Download Arduino and install Arduino driver
 
-[Getting Started with Seeeduino/Arduino](/Getting_Started_with_Seeeduino)
+Getting Started with Seeeduino/Arduino
 
 Demos
 -----
@@ -140,7 +136,7 @@ void loop()
 
 ### Color Sensor Examples/Applications
 
-This example shows how to use features of Grove - I2C Color Sensor and display the detected color with a [Chainable RGB LED Grove](/Grove-Chainable_RGB_LED).
+This example shows how to use features of Grove - I2C Color Sensor and display the detected color with a [Chainable RGB LED Grove](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Chainable_RGB_LED/).
 
 :::note
 If you haven't downloaded  <a href="https://github.com/Seeed-Studio/Grove_Chainable_RGB_LED">Grove-Chainable RGB LED library</a> to your Arduino IDE before, please download and set up the library first.

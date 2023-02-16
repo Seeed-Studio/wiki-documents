@@ -77,7 +77,7 @@ Platforms Supported
 Demonstration
 -------------
 
-### With [Arduino](#/Arduino "Arduino")
+### With Arduino
 
 Here we are going to show you how to get raw data and data measured by "g" from this sensor. 
 
@@ -91,7 +91,7 @@ If you want to activate the Interrupt function of this module, you need to conne
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-1.5g/img/Digital_Accelerometer_Sensor_Connector1.5g.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-1.5g/img/Digital_Accelerometer_Sensor_Connector1.5g.jpg" alt="pir" width={600} height="auto" /></p>
 
-Install the library we provide in the [Resources](#/Grove-3-Axis_Digital_Accelerometer-1.5g#resources) section.
+Install the library we provide in the resources section.
 
 Open the code directly by the path:File -> Example ->DigitalAccelerometer_MMA7660FC ->MMA7660FC_Demo.
 
@@ -108,7 +108,7 @@ The outputs of this sensor consist of two parts: raw data and 3-axis acceleratio
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](#/GrovePi_Plus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/).
 
 3.Connection
 

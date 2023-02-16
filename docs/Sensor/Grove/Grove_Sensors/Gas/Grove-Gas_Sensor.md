@@ -15,10 +15,10 @@ The Grove - Gas Sensor module is useful for gas leakage detecting(in home and in
 
 Each Grove - Gas Sensor Kit consists of one gas sensor base and four detectors. You can switch the detector on the base according to specific target gases.
 
--   [Grove - Gas Sensor(MQ2)](#/Grove-Gas_Sensor-MQ2)：Combustible Gas, Smoke
--   [Grove - Gas Sensor(MQ3)](#/Grove-Gas_Sensor-MQ3)：Alcohol Vapor
--   [Grove - Gas Sensor(MQ5)](#/Grove-Gas_Sensor-MQ5)：LPG, Natural Gas, Town Gas
--   [Grove - Gas Sensor(MQ9)](#/Grove-Gas_Sensor-MQ9)：Carbon Monoxide, Coal Gas, Liquefied Gas
+-   [Grove - Gas Sensor(MQ2)](/Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ2)：Combustible Gas, Smoke
+-   [Grove - Gas Sensor(MQ3)](/Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ3)：Alcohol Vapor
+-   [Grove - Gas Sensor(MQ5)](/Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ5)：LPG, Natural Gas, Town Gas
+-   [Grove - Gas Sensor(MQ9)](/Sensor/Grove/Grove_Sensors/Gas/Grove-Gas_Sensor-MQ9)：Carbon Monoxide, Coal Gas, Liquefied Gas
 
 Specification
 -------------

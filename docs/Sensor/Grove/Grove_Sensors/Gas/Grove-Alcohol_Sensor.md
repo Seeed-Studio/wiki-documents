@@ -62,7 +62,7 @@ Usage
 
 ### Hardware Installation
 
-Grove products have a eco system and all have a same connector which can plug onto the [Grove Base Shield](#/Base_Shield_V2). Connect this module to the A0 port of Base Shield, however, you can also connect Gas sensor to Arduino without Base Shield by jumper wires.
+Grove products have a eco system and all have a same connector which can plug onto the Grove Base Shield. Connect this module to the A0 port of Base Shield, however, you can also connect Gas sensor to Arduino without Base Shield by jumper wires.
 
 | Arduino UNO | Alcohol Sensor |
 |-------------|----------------|
