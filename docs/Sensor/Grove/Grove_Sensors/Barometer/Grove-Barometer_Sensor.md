@@ -155,7 +155,7 @@ g
 Usage
 -----
 
-### With [Arduino](/Arduino "Arduino")
+### With Arduino
 
 Barometric condition is one of the criteria used to predict coming change in weather and deduce altitude above sea level. Here is a demo to show you how to read the barometric data from this Grove - Barometer Sensor.
 
@@ -233,7 +233,7 @@ The following is a reference graph plotting out the relationship between altitud
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](#/GrovePi_Plus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/).
 
 3.Connection
 
@@ -310,8 +310,9 @@ sudo python grove_i2c_barometic_sensor_example.py
 
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor/res/Grove-Barometer_Sensor_Eagle_File.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor/res/Grove-Barometer_Sensor_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
+
 
 
 Resources

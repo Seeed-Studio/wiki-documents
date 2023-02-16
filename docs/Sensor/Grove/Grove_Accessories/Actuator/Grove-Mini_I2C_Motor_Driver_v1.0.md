@@ -52,7 +52,6 @@ Here are some projects for your reference.
 | **Make a Mini Toy Car**                                              | **Make a Steampunk Style Award**                                       |
 |----------------------------------------------------------------------|------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/img/Mini_toy_car.jpg)   | ![](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/img/Seeed_award2015.jpg)  |
-| [Make it NOW!](https://community.seeedstudio.com/project_detail.html?id=392)       | [Make it NOW!](https://community.seeedstudio.com/project_detail.html?id=1131)        |
 
 Specifications
 --------------
@@ -282,7 +281,7 @@ If you are using an Arduino UNO or any others Arduino compatible boards that wit
 
 You will need a Grove Base Shield to connect the Grove easily.
 
-If this is your first time using Arduino or Seeeduino, Please put hand on [here](/Sensor/Seeeduino Series/Getting_Started_with_Seeeduino) to start your Arduino journey.
+If this is your first time using Arduino or Seeeduino, Please put hand on Getting_Started_with_Seeeduino to start your Arduino journey.
 
 ### Hardware Installation
 
@@ -415,7 +414,7 @@ void delayUntil(unsigned long elapsedTime)
 }
 ```
 
-Now click Upload(CTRL+U) to burn testing code. Please refer to [here](/Sensor/Seeeduino Series/Getting_Started_with_Seeeduino "Arduino Common Error") for any error prompt and you can also add comment on community.
+Now click Upload(CTRL+U) to burn testing code. Please refer to Getting_Started_with_Seeeduino for any error prompt and you can also add comment on community.
 
 ### Review Results
 

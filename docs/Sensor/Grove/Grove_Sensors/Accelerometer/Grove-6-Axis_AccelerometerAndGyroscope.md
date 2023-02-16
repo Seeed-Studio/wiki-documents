@@ -108,9 +108,9 @@ Refer to following guides to build an appropriate IDE:
 We have chosen Seeeduino and it is compatible with Arduino in this case. You can also use Arduino board instead.
 </div>
 
-[Getting Started on Windows](#/Seeeduino_v4.2#Getting_Started_on_Windows)
+- Getting Started on Windows
 
-[Getting Started on Mac OS X](#/Seeeduino_v4.2#Getting_Started_on_Mac_OS_X)
+- Getting Started on Mac OS X
 
 ### **Hardware connections**
 
@@ -127,7 +127,7 @@ We have chosen Seeeduino and it is compatible with Arduino in this case. You can
 
 ### **A little demo**
 
-Download the [library](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3) for Grove - 6-Axis Accelerometer&Gyroscope. Refer to [Guide to use demos downloaded from Seeed's Github](#/Guide_to_use_demos_downloaded_from_Seeed-s_Github) for quicker flashing your code to main controller board. There are three demo examples in total in sub directory ***examples***.
+Download the [library](https://github.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3) for Grove - 6-Axis Accelerometer&Gyroscope. Refer to Guide to use demos downloaded from Seeed's Github for quicker flashing your code to main controller board. There are three demo examples in total in sub directory ***examples***.
 
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndGyroscope/res/Grove%20-%206-Axis%20Accelerometer%26Gyroscope%20v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>

@@ -347,7 +347,7 @@ You can quit this program by simply press ++ctrl+c++.
 :::
 1.You should have a Raspberry Pi and a Grovepi or Grovepi+. 
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](#/GrovePi_Plus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/).
 
 3.Connection
 

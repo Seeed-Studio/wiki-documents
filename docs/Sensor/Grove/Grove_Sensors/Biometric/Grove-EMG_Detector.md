@@ -59,7 +59,7 @@ Hardware Overview
 Demonstration
 -------------
 
-This demonstration will show you how to use Grove - LCD RGB Backlight, we need a [Seeeduino V3.0](https://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html), a Grove - LED Bar and Grove - Base Shield.
+This demonstration will show you how to use Grove - LCD RGB Backlight, we need a Seeeduino V3.0, a Grove - LED Bar and Grove - Base Shield.
 
 ### Hardware Installation
 
@@ -73,7 +73,7 @@ Finally, tack the three electrodes to your muscle, and keep a distance between e
 
 You can download the demo code in github, click [here](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code/), then extract it to anywhere.
 
-Then upload the code to Seeeduino, if you have any problem about code uploading, please refer to [Getting Started With Seeeduino](/Getting_Started_with_Seeeduino)
+Then upload the code to Seeeduino, if you have any problem about code uploading, please refer to Getting Started With Seeeduino
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_ide.png" /></div>
 

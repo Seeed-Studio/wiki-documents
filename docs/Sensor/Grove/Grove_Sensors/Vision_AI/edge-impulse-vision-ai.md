@@ -1,6 +1,6 @@
 ---
-description: Grove - Vision AI Module
-title: Grove - Vision AI Module
+description: Getting started with Grove Vision AI
+title: Getting started with Grove Vision AI
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png

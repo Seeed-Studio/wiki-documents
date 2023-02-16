@@ -26,7 +26,7 @@ The Grove - LED String Light module is essentially an LED driver for the LED str
 
 *   JST 2.0 Interface used to connect the LED String lights with the driver module
 
-<!-- *   链接有问题Uses Standard 4-pin [Grove Cables](/Grove_System/#grove-cables) to connect to other [Grove](/Grove_System/) modules -->
+ *   Uses Standard 4-pin Grove Cables to connect to other Grove modules 
 
 ##  Interface Function
 ---
@@ -44,38 +44,38 @@ Follow these steps to build a sample circuit using this module:
 
 1.  First connect the LED string lights to the **Grove - LED String Light** module using the JST2.0 two-wire interface.
 
-<!-- 链接有问题 2.  Connect the LED string lights module to the output side of your circuit (to the right of the power module). On the input side of the circuit, you may use a range of sensor based input modules ([Grove - Light Sensor](/Grove-Light_Sensor/), [Grove - Sound Sensor](/Grove-Sound_Sensor/), [Grove - Button](/Grove-Button/) or [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer/). -->
+ 2.  Connect the LED string lights module to the output side of your circuit (to the right of the power module). On the input side of the circuit, you may use a range of sensor based input modules ([Grove - Light Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor/), [Grove - Sound Sensor](/Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor/), [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button/) or [Grove - Slide Potentiometer](/Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer/). 
 
 3.  Power up the circuit.
 
 4.  LED String lights light up when the input module supplies a trigger:
 
 
-<!-- 链接有问题*   If using with a light sensor connected directly to the input side of the circuit, you should see the LED light up in bright light. If you want the lights to light up in the dark, add a [Grove - NOT](/Grove-NOT "Grove - NOT") module between the light sensor and the power module. -->
+ If using with a light sensor connected directly to the input side of the circuit, you should see the LED light up in bright light. If you want the lights to light up in the dark, add a Grove - NOT module between the light sensor and the power module. 
 
-<!-- 链接有问题*   If using with a sound sensor, you should see the LEDs light up on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the lights should be ON at all times except when there is a sound, add a [Grove - NOT](/Grove-NOT "Grove - NOT") module between the sound sensor and the power module. -->
+If using with a sound sensor, you should see the LEDs light up on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the lights should be ON at all times except when there is a sound, add a Grove - NOT module between the sound sensor and the power module. 
 
-<!-- 链接有问题*   If using with a momentary switch like the one on the [Grove - Button](/Grove-Button/) module, simply press the button to light up the string lights. -->
+If using with a momentary switch like the one on the [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button/) module, simply press the button to light up the string lights. 
 
 *   If using with a slide potentiometer, move the slider from the GND position to VCC and see the brightness of the lights increase as the supplied voltage increases.
 <!-- </dd></dl>
 </dd></dl>
 </dd></dl> -->
 
-<!-- 链接有问题Below is an illustration of a Grove circuit built using the [Grove - USB Power](/Grove-Mixer_Pack_V2 "Grove - Mixer Pack") power module: -->
+Below is an illustration of a Grove circuit built using the Grove - USB Power power module: 
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/LED_String_Light_Photo.gif) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/LED_String_Light_Photo.gif" alt="pir" width={600} height="auto" /></p>
 
-<!-- 链接有问题If you do not have the Grove - USB Power module, use the [Grove - DC Jack Power](/Grove-DC_Jack_Power "Grove - DC Jack Power") module instead to turn ON the LED string lights. -->
+If you do not have the Grove - USB Power module, use the Grove - DC Jack Power module instead to turn ON the LED string lights. 
 
 ##  Availability
 ---
-<!-- This [Grove](/Grove_System/) module is available as part of the following [Grove Kit Series](/Grove_System/#grove-starter-kit)链接有问题: -->
+This Grove module is available as part of the following Grove Kit Series
 
 <!-- 链接有问题*   [Grove Mixer Pack V2](/Grove-Mixer_Pack_V2 "GROVE MIXER PACK V2") -->
 
-Alternatively, it can be bought stand-alone at the [Seeed Studio Bazaar](https://www.seeedstudio.com/depot/Grove-LED-String-Light-p-1821.html).
+Alternatively, it can be bought stand-alone at the Seeed Studio Bazaar.
 
 
 ## Schematic Online Viewer

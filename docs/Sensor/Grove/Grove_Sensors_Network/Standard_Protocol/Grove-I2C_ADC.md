@@ -61,7 +61,7 @@ The platforms mentioned above as supported is/are an indication of the module's 
 
 ------------------
 
-![](https://files.seeedstudio.com/wiki/Grove-I2C_ADC/img/IIC_ADC_Interface.png)
+<!-- ![](https://files.seeedstudio.com/wiki/Grove-I2C_ADC/img/IIC_ADC_Interface.png) -->
 **J1:** used to connect Arduino IIC Interface as Grove - I2C ADC output interface.
 
 **J2:** used to connect analog sensor as Grove - I2C ADC input interface.
@@ -74,7 +74,7 @@ The platforms mentioned above as supported is/are an indication of the module's 
 
 ---------------
 
-### With [Arduino](/Top_Brand/Arduino/ "Arduino")
+### With Arduino
 
 Grove - I2C ADC has two interfaces: input socket(J2) and output socket(J1). Connect an analog sensor to its input socket and connect the I2C ADC to Arduino/Seeeduino also via Grove cables.
 
