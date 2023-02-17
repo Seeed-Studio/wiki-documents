@@ -1,6 +1,6 @@
 ---
 description: Renbotics_ServoShield_Rev
-title: Renbotics ServoShield Rev
+title: Renbotics Servo Shield Rev
 tags:
   - Shield
 keywords:
@@ -14,44 +14,44 @@ no_comments: false # for Disqus
 
 ---
 
-<p style={{textAlign: 'center'}}><img src="http://bz.seeedstudio.com/depot/images/product/ServoShieldKitLarge.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/h/t/httpsstatics3.seeedstudio.comimagesproductservoshieldkitlarge.jpg" alt="pir" width={600} height="auto" /></p>
 
 The Renbotics ServoShield is an Arduino-compatible shield that uses two 4017 decade counters to drive up to 16 servos using only 4 pins (digital pins 6 to 9) and as little as one 8bit timer (Timer 2) in standard mode or two 16/8bit timers (Timer 1 and Timer 2 for Duemilanove or Timer 3 for Mega) in high accuracy mode. It also includes a 196 point breadboard style prototyping area.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Renbotics-ServoShield-V2.0-p-1299.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
-##   Features
+## Features
 
-*   16 Servo Channels
+* 16 Servo Channels
 
-*   Convenient screw terminal for servo power supply
+* Convenient screw terminal for servo power supply
 
-*   196 Point breadboard style prototyping area
+* 196 Point breadboard style prototyping area
 
-*   Compatible with Arduino Duemilanove and Arduino Mega
+* Compatible with Arduino Duemilanove and Arduino Mega
 
-*   Easy to use API
+* Easy to use API
 
-##   Application Ideas
+## Application Ideas
 
-*   Robotics
+* Robotics
 
-*   Animatronics
+* Animatronics
 
-*   Mechatronic Art
+* Mechatronic Art
 
+## Usage
 
-##   Usage
-
-###   Hardware Installation
+### Hardware Installation
 
 Accembled View:
 
 <p style={{textAlign: 'center'}}><img src="http://bz.seeedstudio.com/depot/images/product/StackedLarge.jpg" alt="pir" width={600} height="auto" /></p>
 
-###   Programming
+### Programming
 
 **Sample 1: Simple servo sweeper**
+
 ```cpp
 #include <ServoShield.h>
 ServoShield servos; //Create a ServoShield object
@@ -81,23 +81,21 @@ void loop()
 }
 ```
 
+## Bill of Materials (BOM) /parts list
 
-##   Bill of Materials (BOM) /parts list
+* 2 x 4017 Decade Counter DIP16
 
-*   2 x 4017 Decade Counter DIP16
+* 2 x 10nf Capacitors
 
-*   2 x 10nf Capacitors
+* 2 x 6 pin Female Shield Stacking Headers
 
-*   2 x 6 pin Female Shield Stacking Headers
+* 2 x 8 pin Female Shield Stacking Headers
 
-*   2 x 8 pin Female Shield Stacking Headers
+* 1 x 2 pin Screw Terminal
 
-*   1 x 2 pin Screw Terminal
+* 3 x 16 pin Male Breakaway Headers
 
-*   3 x 16 pin Male Breakaway Headers
-
-
-##   Version Tracker
+## Version Tracker
 
 <table>
 <tr>
@@ -115,15 +113,14 @@ void loop()
 <td width="200px"> Aug 23, 2009
 </td></tr></table>
 
+## Resources
 
+* [Manual Rev 1.5](https://www.seeedstudio.com/depot/datasheet/RenboticsServoShield1.5.pdf)
 
-##   Resources
-
-*   [Manual Rev 1.5](https://www.seeedstudio.com/depot/datasheet/RenboticsServoShield1.5.pdf)
-
-*   [Arduino Library Rev 1.3 (Updated 07-09-2009)](https://www.seeedstudio.com/depot/images/product/ServoShield.zip)
+* [Arduino Library Rev 1.3 (Updated 07-09-2009)](https://www.seeedstudio.com/depot/images/product/ServoShield.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

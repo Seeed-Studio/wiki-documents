@@ -16,53 +16,53 @@ no_comments: false # for Disqus
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-wiki.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 The Spartan Edge Accelerator Board (SEA Board in short) is a lightweight FPGA development board, it is based on the Xilinx Spartan-7 chip and follows the Arduino shield form factor. Hence, you can use it as an Arduino shield to driver an LCD and a camera or as a stand-alone FPGA development board. Besides, with the help of on-board ESP32 chip, the SEA board also enables your Arduino with WiFi and Bluetooth function.
 
+**Spartan-7** is the newest and most cost-effective FPGA chip among Xilinx’s FPGA family, offers the best in class performance per watt.
 
-
-**Spartan-7** is the newest and most cost-effective FPGA chip among Xilinx’s FPGA family, offers the best in class performance per watt. 
-
-
-On top of that, we provide the full FPGA APIs for Arduino, which means Arduino users are able to use the FPGA function without knowing anything about FPGA. This board will broaden Arduino’s capability in many ways like simple image processing and computer vision application, signal encryption and decryption, and signal sampling and processing. 
-
-
+On top of that, we provide the full FPGA APIs for Arduino, which means Arduino users are able to use the FPGA function without knowing anything about FPGA. This board will broaden Arduino’s capability in many ways like simple image processing and computer vision application, signal encryption and decryption, and signal sampling and processing.
 
 ## Features
 
-
 #### High-speed image processing
+
 - Integrated mipi, mini HDMI interface
 - Supports Raspberry Pi camera v1.0 (OV5640)
 - Maximum support for 30fps image transmission
 
 #### Encrypted Internet of Things
+
 - IoT WiFi and Bluetooth with ESP32
 - Support AWS, Azure and other cloud services
 - Support software encryption algorithm
 
 #### Multiple I/O port extensions
+
 - 20 user-defined extended I/O ports（Stand-alone mode）
 - 10 user-defined extended I/O ports（Arduino shield mode）
 - Full FPGA APIs for Arduino
 
 #### Onboard functional modules
+
 - 8-bit ADC & DAC
 - 6-axis accelerometer & gyroscope
 - 2 user RGB LEDs & buttons
 
 #### Two customized development modes
+
 - Arduino Shield Mode
 - FPGA Stand Alone Mode
 
 _Remarks: Users can choose different pin headers according to different needs and solder the pins according to their development needs._
 
 ## Target users
-- Arduino Developers 
+
+- Arduino Developers
 - IoT Developers
 - FPGA Developers
 
 ## Applicable Cases
+
 - MIPI camera input and HDMI output Vivado engineering
 - On-board LED, DIP switch, ADC and DAC reference case
 - Onboard gyroscope case
@@ -76,12 +76,12 @@ _Remarks: Users can choose different pin headers according to different needs an
 - AES encryption and decryption algorithm implementation in FPGA
 - Implementation of the PID algorithm in the FPGA
 
- 
 _New applications will be updated............._
 
 For more case resources, please visit [this Github page.](https://github.com/Pillar1989)
 
 ## Specifications
+
 <table align="center">
   <tbody>
   <tr>
@@ -226,17 +226,13 @@ For more case resources, please visit [this Github page.](https://github.com/Pil
   </tr>
   </tbody></table>
 
-
-
-:::Attention
+:::caution
 The SEA shield's IO voltage is 5V, and the FPGA's IO voltage is 3.3V, so we made a voltage divider to make the IOs voltage compatible. The 3.3V IO voltage of the SAM D21 series will be less than 3.3V after voltage division, which is not enough to drive the FPGA's IO. Therefore, at present, the SEA development board only supports the 5V IO Arduino board, such as [Arduino UNO](https://www.seeedstudio.com/Arduino-Uno-Rev3-p-2995.html) and [Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html).
 :::
-
 
 ## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-pin.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 <table align="center">
   <tbody>
@@ -278,7 +274,7 @@ The SEA shield's IO voltage is 5V, and the FPGA's IO voltage is 3.3V, so we made
   </tr>
   <tr>
     <td><h4>9</h4></td>
-    <td><h4>	CSI Interface ：MIPI Camera (compatible with Raspberry Pi Camera V1 - OV5640)</h4></td>
+    <td><h4> CSI Interface ：MIPI Camera (compatible with Raspberry Pi Camera V1 - OV5640)</h4></td>
   </tr>
   <tr>
     <td><h4>10</h4></td>
@@ -365,9 +361,7 @@ Spartan Edge Accelerator Board can work in two modes:
 - Arduino shield Mode
 - Stand-alone Mode
 
-
-In brief, it can work as a Arduino shield to bring the Arduino FPGA and Wireless features, it also can work as a FPGA development board without an Arduino. 
-
+In brief, it can work as a Arduino shield to bring the Arduino FPGA and Wireless features, it also can work as a FPGA development board without an Arduino.
 
 ### Arduino shield Mode
 
@@ -375,14 +369,12 @@ In this wiki, we use Seeeduino V4.2, you can also use Arduino UNO, they are full
 
 #### Hardware
 
-
 **Materials required**
 
-- [Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html) x1 
+- [Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html) x1
 - [Spartan Edge Accelerator Board](#A) x1
 - [Micro SD card or TF card](https://www.seeedstudio.com/micro-SD-Card-Card-with-Card-Reader-32GB-Class-10-p-4082.html) x1
 - [USB Type C data cable](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html) x1
-
 
 **Hardware Connection**
 
@@ -418,23 +410,17 @@ In this wiki, we use Seeeduino V4.2, you can also use Arduino UNO, they are full
   </tr>
 </tbody></table>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-combine-2.jpg" alt="pir" width={600} height="auto" /></p>
 
-:::Attention
+:::caution
 You can also power both the SEA board and the Arduino at the same time, but please make sure you have set the Power Mode Position to **OFF**. Only then, the system power will be isolated, and you can power the Arduino and SEA board separately.
 :::
 
-
-
 -------
-
 
 #### Spartan Edge Accelerator Board ESP32 Boot
 
-
 Firstly, to work with Arduino, we should load bitstream(FPGA Logic) from SD Card to the on-board FPGA(xc7s15). The following library will show you how to do this via on-board ESP32.
-
 
 a library for Spartan Edge Accelerator Board
 
@@ -442,24 +428,19 @@ The purpose of this library is to load bitstream(FPGA Logic) from SDCard to the 
 
 The software development environment is [Arduino IDE](https://www.arduino.cc/en/Main/Software) with [ESP32 Boards support](https://github.com/espressif/arduino-esp32).
 
-
-
 Since Version 1.6.4, Arduino allows installation of third-party platform packages using Boards Manager. We have packages available for Windows, Mac OS, and Linux (32 and 64 bit).
 
 - Install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [Arduino website](https://arduino.cc/en/main/software).
 - Start Arduino and open Preferences window.
-- Enter ```https://dl.espressif.com/dl/package_esp32_index.json``` into *Additional Board Manager URLs* field. You can add multiple URLs, separating them with commas.
-- Open Boards Manager from Tools > Board menu and install *esp32* platform (and don't forget to select your ESP32 board from Tools > Board menu after installation).
-- select ___tool->board->DOIT ESP32 DEVKIT___   
-
+- Enter ```https://dl.espressif.com/dl/package_esp32_index.json``` into _Additional Board Manager URLs_ field. You can add multiple URLs, separating them with commas.
+- Open Boards Manager from Tools > Board menu and install _esp32_ platform (and don't forget to select your ESP32 board from Tools > Board menu after installation).
+- select _**tool->board->DOIT ESP32 DEVKIT**_
 
 Stable release link: `https://dl.espressif.com/dl/package_esp32_index.json`  
 Development release link: `https://dl.espressif.com/dl/package_esp32_dev_index.json`  
 If you want more details, you can click the [link](https://github.com/espressif/arduino-esp32)
 
-
 ##### Library Usage
-
 
 - **1.Download the ESP32 Boot Library**
 
@@ -467,16 +448,13 @@ If you want more details, you can click the [link](https://github.com/espressif/
 
 Then add this library to your Arduino IDE.
 
-
 If you don't know how to install the library, please kindly check:  
- 
- [Installing Additional Arduino Libraries](https://www.arduino.cc/en/Guide/Libraries)
 
+ [Installing Additional Arduino Libraries](https://www.arduino.cc/en/Guide/Libraries)
 
  You can find two example folders in this library
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/example.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 <table align="center">
   <tbody>
@@ -494,23 +472,21 @@ If you don't know how to install the library, please kindly check:
   </tr>  
   </tbody></table>
 
-
 - **2.Prepare SDCard**  
   2.1 Format the SDCard with FAT16/FAT32 filesystem.  
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/format.jpg" alt="pir" width={600} height="auto" /></p>
 
-  2.2 Create a top level subfolder named __overlay__ in the SDCard.  
-  2.3 Put your bitstream or [sample bitstream](https://github.com/Pillar1989/Demo_project/tree/master/spi2gpio) files (must have a extend name .bit) into the folder __overlay__.  
+  2.2 Create a top level subfolder named **overlay** in the SDCard.  
+  2.3 Put your bitstream or [sample bitstream](https://github.com/Pillar1989/Demo_project/tree/master/spi2gpio) files (must have a extend name .bit) into the folder **overlay**.  
 
-:::Tip
+:::tip
 The sample bitsteam : GPIO extension controlled by SPI interface, with support of ADC/DAC/RGB-LED, see [source code](https://github.com/Pillar1989/Demo_project/tree/master/spi2gpio).
 :::
 
-  2.4 If you run example 01LoadDefaultBitstream, rename the bitstream file in __overlay__ to __default.bit__.  
+  2.4 If you run example 01LoadDefaultBitstream, rename the bitstream file in **overlay** to **default.bit**.  
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/folder.jpg" alt="pir" width={600} height="auto" /></p>
-
 
   2.5 If you run example 02LoadConfigBitstream, put [**board_config.ini**](https://github.com/Pillar1989/spartan-edge-esp32-boot/blob/master/extras/board_config.ini) into SDCard root folder.  
   2.6 Insert the SDCard to the Spartan (Edge Accelerator) Board.  
@@ -528,100 +504,72 @@ The sample bitsteam : GPIO extension controlled by SPI interface, with support o
   4.2 Press 'RST' button on Spartan Board to startup the example.  
   4.3 After the example bootup a few seconds, the FPGA_DONE(red color) LED on the board will light on.
 
-
-
-
 ------
 
 #### Spartan Edge Accelerator Board IO Example
 
-
 Then, the following tutorial will show you how to control the GPIO/ADC/DAC/RGB-LED resources of Spartan Edge Accelerator Board with Arduino.
 
-
 - Download the IO Example Library:
-
-
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/Pillar1989/spartan-edge-ioex/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/download-library-IO.png" /></a></p>
 
 - Add this library to your Arduino IDE. If you don't know how to install the library, please kindly check:  
- 
- 
+
  [Installing Additional Arduino Libraries](https://www.arduino.cc/en/Guide/Libraries)
-
-
 
 - Located to the `examples` folder, choose any example, double cilck the .ino file.
 
 - Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-
-
 ### Stand-alone Mode
-
 
 #### Hardware
 
-
 **Materials required**
-
 
 - [Spartan Edge Accelerator Board](#A) x1
 - [USB Type C data cable](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html) x1
 
-
 Just power the Spartan Edge Accelerator Board via the USB Type C cable.
-
 
 #### Software
 
 Spartan Edge Accelerator Board can also work as a traditional FPGA development board. The following traditional will show you how to use it at the stand-alone mode.
 
-
-
 In this section, you will learn about the Project mode features for project creation, source file management, design analysis, constraint definition, and synthesis and implementation run management. This could be used as a quick reference.
-
-
 
 First of all, you should download the vivado tutorial library, we will need some sorce files.
 
-
-
 <p style={{textAlign: 'center'}}><a href="https://github.com/swjtu-mxb/vivado-tutorial/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/SD-boot/Vivado-Tutorial-Library.png" /></a></p>
 
+- **Step 1: Creating a Project**
 
+  _Launching Vivado_
 
-- **Step 1: Creating a Project**   
-
-  *Launching Vivado*
-
-  *Creating a New Project*
+  _Creating a New Project_
 
 1. After Vivado opens, select **Create Project** on the Getting Started page.
 
 2. Click **Next** in the New Project wizard
 
-3. Specify the Project Name and Location (Select “**Create project subdirectory**” to create a folder for your project) 
+3. Specify the Project Name and Location (Select “**Create project subdirectory**” to create a folder for your project)
 
 4. Click **Next**.
 
 5. Select **RTL Project** as the **Project Type** and click **Next**.(Select **Do not specify sources at this time** and add your files soon afterwards)
 
-   *(The Vivado Design Suite allows for different design entry points depending on your source file types and design tasks. You can choose the suitable type of project.)*
+   _(The Vivado Design Suite allows for different design entry points depending on your source file types and design tasks. You can choose the suitable type of project.)_
 
 6. Select the **xc7s15ftgb196-1** part for project, and click Next, as shown in figure 1.
 
 7. Click **Finish**
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/1.png" alt="pir" width={600} height="auto" /></p>
 
 The Vivado IDE opens project_tutorial in the default layout, as shown in figure 2.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/2.png" alt="pir" width={600} height="auto" /></p>
-
 
 The **Flow Navigator** shows the basic design process clearly.
 
@@ -631,11 +579,9 @@ The **Design Runs** creates synth_1 and impl_1 by default.
 
 The **running status** of vivado is displayed in the upper right corner.
 
+- **Step 2: Add and Create Your Files**
 
-- **Step 2: Add and Create Your Files** 
-
-  *in this step, we add **test.v** , **test_pin.xdc** , **test_sim.v** in our project. These files are located in different folders of **vivado_tutorial/vivado_tutorial.srcs*** 
-
+  *in this step, we add **test.v** , **test_pin.xdc** , **test_sim.v** in our project. These files are located in different folders of **vivado_tutorial/vivado_tutorial.srcs***
 
 1. Click **Add Sources** in the **PROJECT MANAGER** of the Flow **Navigator** to add **RTL file**.
 
@@ -643,25 +589,19 @@ The **running status** of vivado is displayed in the upper right corner.
 
 3. Click the button and select options or click the options directly to add or create files, as shown in figure 3.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/3.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 4. Here, we add RTL files directly. Select **Add Files** and add file **test.v** in your directory, as shown in figure 4.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/4.png" alt="pir" width={600} height="auto" /></p>
-
 
 5. Click **Finish**.
 
 6. Click **Add Sources** in the **PROJECT MANAGER** of the Flow **Navigator** again to add **constraints file**.
 
-7. Select **Add or create constraints** and click Next. 
+7. Select **Add or create constraints** and click Next.
 
 8. Click **Add Files** and add your constraints file **test_pin.xdc** ,as shown in figure 5
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/5.png" alt="pir" width={600} height="auto" /></p>
 
@@ -669,21 +609,17 @@ The **running status** of vivado is displayed in the upper right corner.
 
 10. Click **Add Sources** in the **PROJECT MANAGER** of the Flow **Navigator** again to add **simulation file**.
 
-11. Select **Add or create simulation sources** and click Next. 
+11. Select **Add or create simulation sources** and click Next.
 
 12. Click **Add Files** and add your simulation file **test_sim.v** ,as shown in figure 6
 
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/6.png" alt="pir" width={600} height="auto" /></p>     
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/6.png" alt="pir" width={600} height="auto" /></p>
 
 13. Click **Finish**.
 
      Finally, the file we added will appear in the **Sources**, as shown in figure 7.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/7.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 - **Step 3: Elaborating the RTL Design**
 
@@ -693,7 +629,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 2. Ensure that the Layout Selector pull down menu in the main Toolbar has Default Layout selected. The Elaborated Design enables various analysis views including an RTL Netlist, Schematic, and Graphical Hierarchy. The views have a cross-select feature, which helps you to debug and optimize the RTL.
 
-3. Explore the logic hierarchy in the RTL Netlist window and examine the Schematic. You can traverse the schematic by double-clicking on cells to push into the hierarchy, or by using commands like the Expand Cone or Expand/Collapse from the Schematic popup menu. 
+3. Explore the logic hierarchy in the RTL Netlist window and examine the Schematic. You can traverse the schematic by double-clicking on cells to push into the hierarchy, or by using commands like the Expand Cone or Expand/Collapse from the Schematic popup menu.
 
 4. Select any logic instance in the Schematic and right-click to select the **Go to Source** or **Go to Definition** commands.
 
@@ -703,18 +639,13 @@ The **running status** of vivado is displayed in the upper right corner.
 
 7. Expand the Elaborated Design and the messages, as shown in figure 8.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/8.png" alt="pir" width={600} height="auto" /></p>
-
 
 8. Click one of the links and the Text Editor opens the RTL source file with the relevant line highlighted.
 9. Close the Text Editor windows.
 10. Close the Elaborated Design by clicking on the **X** on the right side of the Elaborated Design window banner, and click OK to confirm.
 
-
 - **Step 4: Using the IP Catalog**
-
 
   The Xilinx IP Catalog provides access to the Vivado IP configuration and generation features. You can sort and search the Catalog in a variety of ways. IP can be customized, generated, and instantiated.
 
@@ -726,12 +657,7 @@ The **running status** of vivado is displayed in the upper right corner.
 
 4. Close the IP Catalog tab by clicking on the X on the window tab.
 
-
-
 - **Step 5: Running Behavioral Simulation**
-
-
-
 
   The Vivado IDE integrates the Vivado Simulator, which enables you to add and manage simulation sources in the project. You can configure simulation options, and create and manage simulation source sets. You can run behavioral simulation on RTL sources, prior to synthesis.
 
@@ -739,26 +665,19 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/9.png" alt="pir" width={600} height="auto" /></p>
 
-
-
-
 2. Examine the settings available on the **Simulation** page, then click **Cancel** to close the dialog box.
 3. Click the **Run Simulation** command in the Flow Navigator, then click the **Run Behaviora Simulation** in the sub-menu, as shown in figure 10.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/10.png" alt="pir" width={600} height="auto" /></p>
-
 
 4. Drag the bar to the left and use these tools to zoom in or zoom out to see the appropriate image, as shown in figure 11 and figure 12.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/11.png" alt="pir" width={600} height="auto" /></p>
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/12.png" alt="pir" width={600} height="auto" /></p>
 
 5. Click **X** on the Right-Up corner of figure 13 and click **OK** to close the SIMULATION.
-   
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/13.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 6:  Reviewing Design Run Settings**
@@ -767,20 +686,15 @@ The **running status** of vivado is displayed in the upper right corner.
 
 1. In the Flow Navigator, under Project Manager, click the **Settings** command.
 
-2. Select the **Synthesis** page under Project Settings. For a complete description of these options, see the *Vivado Design Suite User Guide: Synthesis*([UG901](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug901-vivado-synthesis.pdf)).
+2. Select the **Synthesis** page under Project Settings. For a complete description of these options, see the _Vivado Design Suite User Guide: Synthesis_([UG901](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug901-vivado-synthesis.pdf)).
 
-3. Select the **Implementation** page under Project Settings. For a complete description of these options, see the *Vivado Design Suite User Guide: Implementation*([UG904](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug904-vivado-implementation.pdf )).
-
-
+3. Select the **Implementation** page under Project Settings. For a complete description of these options, see the _Vivado Design Suite User Guide: Implementation_([UG904](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug904-vivado-implementation.pdf )).
 
 - **Step 7: Synthesizing and Implementing the Design**
 
-
   After configuring the synthesis and implementation run options, you can **run synthesis** and **run implementation** in the **Design Runs** or click the button or click corresponding buttons in the **Flow Navigator** to do this. The **running status** of vivado is displayed in the upper right corner while Synthesizing and Implementing.
 
- 
-
-​	For this tutorial, we will run these steps in the Design Runs.
+​ For this tutorial, we will run these steps in the Design Runs.
 
 1. Right click the syth_1 and select **Launch Runs**, as shown in figure 14.
 
@@ -792,42 +706,29 @@ The **running status** of vivado is displayed in the upper right corner.
 
 3. Click  **Open Synthesized Design** for further design and analysis. You can see **Report Timing Summary** , **Report Utilization** and others, as shown in figure 16.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/16.png" alt="pir" width={600} height="auto" /></p>
-
 
 4. Run Implementation in the same way, as shown in figure 17.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/17.png" alt="pir" width={600} height="auto" /></p>
 
-
-5. Click **Open implemented Design** to see reports after implementation 
-
+5. Click **Open implemented Design** to see reports after implementation
 
 - **Step 8: Generating a Bitstream File**
 
-
   After **Implementing the Design,** we can see synthesis and implement Complete in the **Design Runs**,as shown in figure 18.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/18.png" alt="pir" width={600} height="auto" /></p>
 
  Click **Generate Bitstream** in the Flow Navigator.
 
+- **Step 9: Download the file**
 
-
-- **Step 9: Download the file** 
-
-
-
-  After **Generate Bitstream,** you have two ways to load the file to FPGA. 
+  After **Generate Bitstream,** you have two ways to load the file to FPGA.
 
   You can use the JTAG interface(on the Right-Up corner of figure 19) to load the bit file to FPGA  in vivado, or    use the ESP32 (on the Right-Down corner of figure 19) to load the bit file to FPGA.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/19.png" alt="pir" width={600} height="auto" /></p>
-
 
   **Follow below steps, to load bitstream to FPGA through JTAG interface**
 
@@ -839,27 +740,23 @@ The **running status** of vivado is displayed in the upper right corner.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/20.png" alt="pir" width={600} height="auto" /></p>
 
-
 1. After download the bit file, the **FPGA**_**DONE** **led** will light.
 
    *In this project, if you press any key or both of them(**USER1** and **USER2**),  **LED L1**  will go out.*
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/res/Spartan Edge Accelerator Board v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resources
-
 
 - **[PDF]** [Spartan-7 FPGAs Datasheet](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/res/Spartan-7%20FPGAs%20Data%20Sheet.pdf)
 - **[PDF]** [ESP32 Datasheet](https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/res/ESP32-datasheet.pdf)
 - **[PDF]** [Spartan-Edge-Accelerator-Board Eagle File](https://github.com/SeeedDocument/Spartan-Edge-Accelerator-Board/tree/master/res/Spartan%20Edge%20Accelerator%20Board%20v1.0/202002626_Spartan%20Edge%20Accelerator%20Board%20v1.0_SCH%20%26%20PCB)
 
-
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -21,6 +21,7 @@ This is the newly released SD card V4.0 shield. It provides a storage space for 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SD-Card-Shield-V4-p-1381.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Application Ideas
+
 -----------------
 
 If you want to make some awesome projects with SD Card Shield, here are some projects for your reference.
@@ -40,11 +41,11 @@ This project uses Grove - Water Sensor to create a simple but effective solution
 Features
 --------
 
--   Standard SD card, SDHC card and TF card compatible
--   UART Grove & I2C connection compatible
--   Fully supported SD Library
--   Minimal number of SPI port
--   Truly stackable
+- Standard SD card, SDHC card and TF card compatible
+- UART Grove & I2C connection compatible
+- Fully supported SD Library
+- Minimal number of SPI port
+- Truly stackable
 
 Specifications
 --------------
@@ -89,9 +90,9 @@ Specifications
   </tr>
   </tbody></table>
 
-
 Hardware Overview
 -----------------
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/Interface_FunctionV2.0.png" alt="pir" width={600} height="auto" /></p>
 
 **Pins usage on Arduino （with SD card）**
@@ -104,7 +105,7 @@ D12: SD_DO;
 
 D13: SD_CLK.
 
-:::Note
+:::note
 The SD card format can be FAT16 or FAT32.The size of SD card and the SDHC card more than 16GB is not supported.
 :::
 
@@ -118,7 +119,7 @@ The following is the installation of the SD card shield.
 1. Insert your SD card into the socket, Plug the SD Card Shield onto the Arduino .
 2. Connect the Arduino to PC using USB cable.
 
-:::Note
+:::note
 When you use a Micro SD card, please insert Micro SD card into the adopter, and then insert the Micro SD card Adopter into the socket as shown below.
 :::
 
@@ -154,7 +155,7 @@ When you complete the hardware installation, it should look like this
 
 4. If an error occurs, please recheck all the previous steps, and make sure the SD card is working. If none of that fixes the problem, try replacing the SD card.
 
-:::Note
+:::note
 Arduino default code returns SD size incorrectly if your SD is card more than 4G. The following code can solve this issue.
 :::
 
@@ -323,25 +324,20 @@ Arduino default code returns SD size incorrectly if your SD is card more than 4G
     }
 ```
 
-
 ## SD Card Shield v4.0 Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/PCBA-SD%20Card%20shield%20V4.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## SD Card Shield v4.0a Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shield_v4.0a.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## SD Card Shield v4.3 Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shield_v4.3_eagle_file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 Resources
 ---------
@@ -354,11 +350,10 @@ Resources
 
 - [SD Card Shield v4.3 Eagle file.zip](https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/res/SD_Card_Shield_v4.3_eagle_file.zip)
 
-
-
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/SD_Card_shield_V4.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

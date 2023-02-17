@@ -1,6 +1,6 @@
 ---
-description: Base_Shield_V2
-title: Base Shield V2
+description: Relay_Shield_v3
+title: Relay Shield v3
 tags:
   - Shield
 keywords:
@@ -22,9 +22,10 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Relay-Shield-v3.0-p-2440.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
-
 ## Features
+
 ---
+
 - Arudino Uno/Leonardo/Seeeduino compatible; Other board or microcontroller via jumper cables
 - Interface via digital I/O pins 4,5,6, and 7
 - Relay screw terminals
@@ -95,7 +96,7 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
     <td><h4>Cycle</h4></td>
   </tr>
     <tr>
-    <td><h4>ESD contact discharge	</h4></td>
+    <td><h4>ESD contact discharge </h4></td>
     <td><h4>-</h4></td>
     <td><h4>±4</h4></td>
     <td><h4>-</h4></td>
@@ -124,12 +125,14 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
   </tr>
   </tbody></table>
 
+:::caution
 
-:::Cautions
 1. Please place 2 layers of electrical tape on the top of the Arduino's usb connector. This will prevent the relay shield from making contact.
 2. Do not operate voltage more than 35V DC.
 :::
+
 ## Shield Interface Description
+
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Relay_Shield_v3.0.png" alt="pir" width={600} height="auto" /></p>
@@ -147,12 +150,14 @@ The Relay Shield features four high quality relays and provides NO/NC interfaces
 
 - **NO1 (Normally Open)**: This terminal will be connected to COM1 when the RELAY1 control pin (Digital 7 I/O pin) is set high and disconnected when the RELAY1 control pin is set low.
 
-**Terminals J2-4 are similar to J1 except that they control RELAY2-RELAY4 respectively. **
+**Terminals J2-4 are similar to J1 except that they control RELAY2-RELAY4 respectively.**
 
-:::Note
+:::note
 Only four Arduino Digital I/O pins, pins 4-7, are required to control the four different relays. Additionally the 5V and two GND Arduino pins are also required to power up the Relay Shield.
 :::
+
 ## Relays Operation/Tutorial
+
 ---
 Relays are basically electromagnetic switches: when the relay is energized by the control circuit (i.e. when a voltage and current is applied to the coil), the current and coil create a magnetic field which is able to attract the COM terminal towards the NO terminal, when the control circuit removes the applied voltage and current the COM terminal returns to contact the NC terminal due to a mechanical force (usually a spring).
 
@@ -182,11 +187,12 @@ Now that you know how a relay works internally, let us show you how to use the R
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Relay_Shield_Connector.jpg" alt="pir" width={600} height="auto" /></p>
 
-:::Note
+:::note
 The external power supply in the figure above can be a battery or power supply. The external supply must be able to provide enough current and be set to the correct voltage for the motor. In our testing, we used a lithium battery as the external power supply for the motor.
 :::
 
 4.Start the Arduino IDE and upload the following code to the Arduino board:
+
 ```CPP
 int MotorControl = 5;    // Digital Arduino Pin used to control the motor
 
@@ -242,23 +248,24 @@ void loop()  {
 ```
 
 ## Related Reading
+
 ---
-- [FAQ of Relay Shield ](http://support.seeedstudio.com/knowledgebase/articles/462030-relay-shield-sku-sld01101p)
 
-
+- [FAQ of Relay Shield](http://support.seeedstudio.com/knowledgebase/articles/462030-relay-shield-sku-sld01101p)
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/res/Relay_Shield_v3.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resource
+
 ---
+
 - [Relay Shield v3.0](https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/res/Relay_Shield_v3.0.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
