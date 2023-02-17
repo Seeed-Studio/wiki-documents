@@ -164,3 +164,33 @@ height:auto;
   color:#fff;
   text-decoration: none;
 }
+
+/* get one now button */
+
+.get_one_now_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.get_one_now_item {
+  border-radius: 10px/10px;
+  width: 195px;
+  height:28px;
+  background: #4EC354;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: content-box;
+}
+
+.get_one_now_item:hover {
+  border:2px solid #8DC21F;
+  color:#fff;
+  text-decoration: none;
+}

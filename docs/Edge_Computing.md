@@ -287,7 +287,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi®</font></div>
             <a href="Top_Brand/Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Raspberry Pi Introduction </font></span></a>
             <br/>
-            <a href="/Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry Pi 3 Model B </font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Raspberry Pi 3 Model B </font></span></a>
             <br/>
     </a>
 </div>
@@ -297,7 +297,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Seeed Elderly Devices</font></div>
             <a href="/Seeed_Elderly/reSpeaker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reSpeaker Series </font></span></a>
             <br/>
-            <a href="/Seeed_Elderly/NPi-i/NPi-i.MX6ULL-Dev-Board-Linux-SBC" target="_blank"><span><font color={'FFFFFF'} size={"3"}> NPi Sereis</font></span></a>
+            <a href="/Seeed_Elderly/NPi-i/NPi-i.MX6ULL-Dev-Board-Linux-SBC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> NPi Sereis</font></span></a>
      </a>
 </div>
 
@@ -399,7 +399,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Raspberry Pi</font></div>
             <a href="/Top_Brand/Raspberry_Pi/Accessories/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Skeleton box for Raspberry Pi</font></span></a>
             <br/>
-            <a href="/Top_Brand/Raspberry_Pi/Accessories/Raspberry_PI_Bplus_Case" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Raspberry PI B Plus Case</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Accessories/Raspberry_PI_Bplus_Case" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Raspberry PI B Plus Case</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -418,9 +418,9 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
             <a href="/Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Base Kit for Raspberry Pi</font></span></a>
             <br/>
-            <a href="/Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LoRa/LoRaWAN® Gateway Kit</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LoRa/LoRaWAN® Gateway Kit</font></span></a>
             <br/>
-            <a href="/Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Starter Kit for IoT based on Raspberry Pi</font></span></a>
+            <a href="/Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Starter Kit for IoT based on Raspberry Pi</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>

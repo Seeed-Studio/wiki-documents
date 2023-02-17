@@ -12,8 +12,7 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" alt="pir" width={600} height="auto" /></p>
 
-<!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> -->
-[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)
+
 Seeed Studio Grove Base for XIAO is a plug-and-play Grove extension board for **[Seeed Studio XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO/)**. With the on-board battery management chip and battery bonding pad, you could easily power your Seeed Studio XIAO with lithium battery and recharge it. 8 Grove connectors onboard includes two Grove I2C and one UART. It acts as a bridge for Seeed Studio XIAO and Seeed's Grove system. Flash SPI bonding pad allows you add Flash to Seeed Studio XIAO to expand its memory space, providing Seeed Studio XIAO with more possibilities.
 
 With the on-board battery management chip and battery bonding pad, you could easily power your Seeed Studio XIAO with lithium 3.7V battery and recharge it, making your projects, especially wearables ones, more flexible and in portable. You could even break the board through the onboard PCB stamp holds according to your actual needs of the project (only 25*39mm in dimension after break-off), making it smaller than smaller and the weight would be reduced from 13g to 10g as well!
@@ -27,6 +26,12 @@ As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Gro
 :::note
 This product does not include a Seeed Studio XIAO board, please click [here](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) if you need one.
 :::
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Feature
 
