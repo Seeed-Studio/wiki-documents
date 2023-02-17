@@ -20,6 +20,7 @@ The 4A Motor Shield is based on the Freescale MC33932 dual H-Bridge Power IC , w
 The on board DC/DC converter suport a very wide range of input voltage, and can provide a 5V power supply for the microcontroller board with 100mA maximun current.So, you just need one power supply to drive the motors and power up the logic circuit.  
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/4A-Motor-Shield-p-1954.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
 ## Specifications
 
 - Operating Voltage: 6V ~ 28V  
@@ -66,7 +67,6 @@ This demo enables the motor rotate in one direction for 2 sec, take a break for 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/4A_Motor_Shield/res/4A_MOTOR_Shield_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resources
 
 - [Schematic pdf](https://files.seeedstudio.com/wiki/4A_Motor_Shield/res/4A_MOTOR_Shield_v1.0.pdf)  
@@ -75,6 +75,7 @@ This demo enables the motor rotate in one direction for 2 sec, take a break for 
 - [MC33932 Datasheet](https://files.seeedstudio.com/wiki/4A_Motor_Shield/res/MC33932.pdf)  
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

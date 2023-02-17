@@ -1,6 +1,6 @@
 ---
-description: Base_Shield_V2
-title: Base Shield V2
+description: Solar Charger Shield V2.2
+title: Solar Charger Shield V2.2
 tags:
   - Shield
 keywords:
@@ -20,41 +20,48 @@ The solar charger is a stackable shield to Arduino compatible platforms, enables
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Solar-Charger-Shield-v2.2-p-2391.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
-##   Features
+## Features
+
 ---
 
-*   Short circuit protection
+* Short circuit protection
 
-*   3W Output Power when connecting battery
+* 3W Output Power when connecting battery
 
-*   Continuous Charge Current Up to 900mA
+* Continuous Charge Current Up to 900mA
 
-*   Battery status indication ( Red : Charging , Green: Charged )
+* Battery status indication ( Red : Charging , Green: Charged )
 
-*   Micro-USB Connector
+* Micro-USB Connector
 
-##   Specification
+## Specification
+
 ---
-*   Battery input voltage: 3.0~4.5V
 
-*   USB input voltage: 4.75~5.25V
+* Battery input voltage: 3.0~4.5V
 
-*   Solar input voltage: 4.8~6V
+* USB input voltage: 4.75~5.25V
 
-*   Maximum Output Power(with battery): 3W(600mA@5V)
+* Solar input voltage: 4.8~6V
 
-*   Ripple voltage：&lt;100mV @ 500mA
+* Maximum Output Power(with battery): 3W(600mA@5V)
 
-*   Dimensions: 68*53mm
+* Ripple voltage：&lt;100mV @ 500mA
 
-##   Applications
+* Dimensions: 68*53mm
+
+## Applications
+
 ---
-*   Wireless sensor unit
-*   Solar charge
-*   Tweet-a-volt-arduino
 
-##  Information on use of Solar panels for charging
+* Wireless sensor unit
+* Solar charge
+* Tweet-a-volt-arduino
+
+## Information on use of Solar panels for charging
+
 ---
+
 1) The solar charger shield produces charges under sunlight and light from filament bulbs. Its function is more effective in the former than in the latter. Solar panels require invisible radiations namely ultraviolet and infrared radiations for producing current.
 
 2) In order to test the system under filament bulb, hold the solar panel at a distance, less than 20cm(&lt; 0.5 feet). However, the charging may not be effective under filament bulbs.
@@ -67,14 +74,18 @@ The solar charger is a stackable shield to Arduino compatible platforms, enables
 
 6) Protect the surface of the solar panel from scratches
 
-##   Caution
+## Caution
+
 ---
+
 1) The solar charger shield is designed to protect any potential short circuit. However care must be taken to avoid any such situations.
 
 2) The solar shield should not be operated at voltages greater than 5V
 
-##   Usage
+## Usage
+
 ---
+
 1) Connect the Solar panel and the Li-Pol battery in their designated places as shown in the figure below:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar_Charger_Shield_v2.2_inputs.jpg" alt="pir" width={600} height="auto" /></p>
@@ -93,7 +104,8 @@ Solar_Charger_Shield_v2.2_inputs.jpg
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar-Charger-Shield-v2.2_power-arduino.jpg" alt="pir" width={600} height="auto" /></p>
 
-##   Testing the solar shield with a simple arduino program
+## Testing the solar shield with a simple arduino program
+
 ---
 This section will teach you how to measure the voltage of Lipo Battery.
 
@@ -101,9 +113,10 @@ In order to connect the VBAT pin to Analog pin A0, so that we can read the data 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/img/Solar_Charger_Shield_v2.2_shortR7.jpg" alt="pir" width={600} height="auto" /></p>
 
-###   Programming Example
+### Programming Example
 
 You can measure the voltage of Battery using the following example:
+
 ```cpp
 /*
  Solar charger shield voltage measurement example. Connect VBAT pin to analog pin A0.
@@ -146,24 +159,23 @@ void loop() {
 }
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/Solar_Charger_Shield_v2.2_sch_pcb.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##  Resources
 ---
-- [Solar Charger Shield v2.2 sch&amp;pcb](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/Solar_Charger_Shield_v2.2_sch_pcb.zip)
+* [Solar Charger Shield v2.2 sch&amp;pcb](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/Solar_Charger_Shield_v2.2_sch_pcb.zip)
 
-- [Solar Charger Shield v2.2.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/Solar%20Charger%20Shield%20v2.2.pdf)
-- [DSE-CN3065.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/DSE-CN3065.pdf)
+* [Solar Charger Shield v2.2.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/Solar%20Charger%20Shield%20v2.2.pdf)
+* [DSE-CN3065.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/DSE-CN3065.pdf)
 
-- [ETA1036.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/ETA1036.pdf)
+* [ETA1036.pdf](https://files.seeedstudio.com/wiki/Solar_Charger_Shield_V2.2/res/ETA1036.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -17,8 +17,6 @@ no_comments: false # for Disqus
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/Grove-Shoeld-for-Arduino-Nano-front.png" alt="pir" width={600} height="auto" /></p>
 Grove Shield for Arduino Nano provides you a simple way to connect with Arduino Nano and also Seeeduino Nano. This shield helps you get rid of breadboard and jumper wires by pulling out the pins of the motherboard and expands to 8 Grove connectors. This shield pulls out the pins of the motherboard and expands to 8 Grove connectors, including 3 Grove digital connectors, 3 Grove analog connectors, 1 Grove I2C connector, and 1 Grove UART connector.
 
-
-
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Shield-for-Arduino-Nano-p-4112.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Specification
@@ -55,7 +53,6 @@ Grove Shield for Arduino Nano provides you a simple way to connect with Arduino 
   </tr>
   </tbody></table>
 
-
 We have updated Grove Shield to V1.1, supports the Arduino Nano 33 series development board.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/change.png" alt="pir" width={600} height="auto" /></p>
@@ -63,7 +60,6 @@ We have updated Grove Shield to V1.1, supports the Arduino Nano 33 series develo
 V1.1 Change Note:
 
 Add VCC 3.3V/5V Switch
-
 
 ## Compatible Boards
 
@@ -81,11 +77,10 @@ V1.1 Support List:
 - Arduino Nano 33 BLE*
 - Arduino Nano 33 BLE Sense*
 
-!!!Attention
+:::caution
+To work with Arduino 33 serial boards, please switch the VCC power to 3.3V. If the VCC power supply is switched to 5V, the development board may be damaged!
+:::
 
-    To work with Arduino 33 serial boards, please switch the VCC power to 3.3V. If the VCC power supply is switched to 5V, the development board may be damaged!   
-
-    
 ## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/Grove-Shoeld-for-Arduino-Nano-back-rr.jpg" alt="pir" width={600} height="auto" /></p>
@@ -94,10 +89,6 @@ V1.1 Support List:
 - **2-Digital Ports**: include 3 digital ports, D2, D4, D6.
 - **3-UART Port**: 1 UART port.
 - **4-I2C Ports**: 1 I2C ports.
-
-
-
-
 
 ## Getting Started
 
@@ -127,7 +118,6 @@ V1.1 Support List:
   </tr>  
   </tbody></table>
 
-
 - Step 2. Connect Grove - Buzzer to port D4 of Grove Shield
 - Step 3. Connect Grove - Button to port D2 of Grove Shield
 - Step 4. Plug Grove Shield for Arduino Nano into Seeeduino nano
@@ -154,18 +144,15 @@ void loop()
     delay(10);
 }
 ```
+
 - Step 2. Press the button and we will hear the buzzer.
 
 ## FAQ
-
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/products/103100124/res/Grove Shield for Arduino Nano v1.0PCB&SCH.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -174,8 +161,8 @@ void loop()
 - **[SCH]** [Grove shield for Arduino Nano SCH](https://files.seeedstudio.com/products/103100124/res/Grove Shield for Arduino Nano.sch)
 - **[BRD]** [Grove shield for Arduino Nano BRD](https://files.seeedstudio.com/products/103100124/res/Grove Shield for Arduino Nano.brd)
 
-
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
