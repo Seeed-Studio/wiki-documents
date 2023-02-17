@@ -693,7 +693,7 @@ MQ2 Gas Sensor Reading is:  64
 ## Resources
 
 
--  **[Suggest Reading]** [How to choose a Gas Sensor](#/How_to_Chose_A_Gas_Sensor)
+<!-- -  **[Suggest Reading]** [How to choose a Gas Sensor](#/How_to_Chose_A_Gas_Sensor) -->
 -  **[References]** [What's LEL](https://en.wikipedia.org/wiki/Flammability_limit)
 -  **[Schematic]** [Grove Gas Sensor - EAGLE (Schematic and Board) files](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/res/Gas_Sensor_Eagle_files.zip)
 -  **[Schematic]** [Grove Gas Sensor - PDF Schematic](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/res/Gas_Sensor_Schematic.pdf)

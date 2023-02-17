@@ -25,9 +25,9 @@ last_update:
  - Grove - Wrapper series have two size of wrappers, each gets four colors, and there are totally eight SKUs that are listed at [Specifications](/Grove-Wrapper#Parts_list) section.
  ::: 链接出错
  
- -->
->>>>>>> eca57a545a5ee9050a783a30c0e5a300753038d1
 
+>>>>>>> eca57a545a5ee9050a783a30c0e5a300753038d1
+ -->
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/s/Grove%20-%20Wrapper.html)
 
 ## Features

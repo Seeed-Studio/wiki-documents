@@ -185,7 +185,7 @@ Because of some basic trigonometry within the triangle from the emitter to refle
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
 2.You should have completed configuring the development environment.
-<!-- otherwise follow [here](/GrovePi_Plus). -->
+otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/). 
 
 3.Connection
 

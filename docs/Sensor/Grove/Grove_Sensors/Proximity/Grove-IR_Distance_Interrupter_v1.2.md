@@ -102,7 +102,7 @@ Let us see how to implement few basic applications with this module:
 
 - Grove - IR Distance Interrupter v1.2 × 1
 - Arduino UNO (other models also are fine) × 1
-- [Grove cable](https://www.seeedstudio.com/depot/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack-p-925.html?cPath=98_106_57) × 1
+- Grove cable × 1
 - Grove - Base Shield × 1
 
 #### Connections

@@ -11,13 +11,15 @@ last_update:
 ---
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Relay/img/Twig-Relay.jpg" /></p>
+<!-- <p style=":center"><img src="https://files.seeedstudio.com/wiki/Grove-Relay/img/Twig-Relay.jpg" /></p> -->
+
+![](https://files.seeedstudio.com/wiki/Grove-Relay/img/Twig-Relay.jpg)
 
 The Grove-Relay module is a digital normally-open switch. Through it, you can control circuit of high voltage with low voltage, say 5V on the controller. There is an indicator LED on the board, which will light up when the controlled terminals get closed.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/MwLEawbP0ZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Relay-p-769.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style={{}}><a href="https://www.seeedstudio.com/Grove-Relay-p-769.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Version
 
@@ -31,9 +33,8 @@ The Grove-Relay module is a digital normally-open switch. Through it, you can co
 |Max Switching Current|5A|5A|
 
 :::tip
-More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
-
 ## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
@@ -41,30 +42,27 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
 
 :::caution
-The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
-
 ## Getting Started
 
 ### Play With Arduino
 
 :::note
-If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
-
 #### Materials required
 
 | Seeeduino V4.2 | Base Shield| Grove-Button **x2** |Grove-Relay|
 |--------------|-------------|-----------------|-----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Relay/img/button_s.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Relay/img/Thumbnail.jpg)|
-|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Button-p-766.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Relay-p-769.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" >Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Button-p-766.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Relay-p-769.html">Get One Now</a>| 
 
 :::note
-**1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
+    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
 
-**2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy
+    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy
 :::
-
 #### Hardware
 
 - **Step 1.** Connect Grove-Relay to port **D4** of Grove-Base Shield.
@@ -78,9 +76,8 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove-Relay/img/button-relay.jpg)
 
 :::note
-If we don't have the base shield, we also can directly connect the Grove-Relay and Grove-Button to Arduino board. Please follow below connection.
+    If we don't have the base shield, we also can directly connect the Grove-Relay and Grove-Button to Arduino board. Please follow below connection.
 :::
-
 | Grove-Relay | Arduino | Grove Cable|
 |-------------|---------|-----------|
 | GND         | GND     | Black|
@@ -149,19 +146,17 @@ Done uploading, if you press the button#1 the relay should be on; and if you pre
 **Step 1.** Open [Codecraft](https://ide.chmakered.com/), add Arduino support, and drag a main procedure to working area.
 
 :::note
-If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
+    If this is your first time using Codecraft, see also [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/Guide_for_Codecraft_using_Arduino/).
 :::
-
 **Step 2.** Drag blocks as picture below or open the cdc file which can be downloaded at the end of this page.
 
 ![cc](https://files.seeedstudio.com/wiki/Grove-Relay/img/cc_Relay.png)
 
 Upload the program to your Arduino/Seeeduino.
 
-:::tipSuccess
-When the code finishes uploaded. Relay will turns on when you push the button connected to port D2, and it will turns off when you push the button connected to port D3.
+:::success
+    When the code finishes uploaded. Relay will turns on when you push the button connected to port D2, and it will turns off when you push the button connected to port D3.
 :::
-
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -180,15 +175,13 @@ When the code finishes uploaded. Relay will turns on when you push the button co
 ![](https://files.seeedstudio.com/wiki/Grove-Relay/img/Relay_Hat.jpg)
 
 :::note
-For step 3 you are able to connect the relay module to **any GPIO Port** but make sure you change the command with the corresponding port number.
+    For step 3 you are able to connect the relay module to **any GPIO Port** but make sure you change the command with the corresponding port number.
 :::
-
 #### Software
 
-:::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::note
+     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
-
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library.
 
@@ -255,11 +248,10 @@ if __name__ == '__main__':
 
 ```
 
-:::tipsuccess
-If everything goes well, you will be able to see the LED indicator blinking.
+:::success
+    If everything goes well, you will be able to see the LED indicator blinking.
 :::
-
-You can quit this program by simply press `ctrl`+`c`.
+You can quit this program by simply press ++ctrl+c++.
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
@@ -288,10 +280,9 @@ If this is the first time you use GrovePi, please do this part step by step. If 
 
 - **Step 1.** Setting Up The Software. In the command line, type the following commands:
 
-:::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
+:::note
+     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
 :::
-
 ```
 sudo curl -kL dexterindustries.com/update_grovepi | bash
 
@@ -314,15 +305,13 @@ For more detail about this part, please refer to [Setting Software](https://www.
 - **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the latest firmware of GrovePi.
 
 :::note
-We firmly suggest you to update the firmware, or for some sensors you may get errors.
+    We firmly suggest you to update the firmware, or for some sensors you may get errors.
 :::
-
 - **Step 3.** Run the following command to get the result.
 
-:::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::note
+     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
-
 ```
 cd /home/pi/Desktop/GrovePi/Software/Python/
 sudo python3 grove_switch_relay.py
@@ -402,6 +391,7 @@ void loop() {
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Relay/res/Grove-Relay_Eagle_Files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+
 We have this part available in [geppetto](https://geppetto.seeedstudio.com/), easy modular electronic design with Seeed and Geppeto. Build it Now. [geppetto.seeedstudio.com](https://geppetto.seeedstudio.com/)
 
 ## Resources
@@ -414,19 +404,14 @@ We have this part available in [geppetto](https://geppetto.seeedstudio.com/), ea
 
 ## Projects
 
-<!-- <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg .tg-yw4l{vertical-align:top}
-</style> -->
-<!--<table class="tg">
+
+<table class="tg">
   <tr>
     <th class="tg-031e"><iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/sodaqmoja/using-a-switch-to-open-and-close-a-relay-3329ec/embed' width='350'></iframe></th>
     <th class="tg-031e"><iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/rei-vilo/private-iot-with-blynk-on-local-server-619926/embed' width='350'></iframe></th>
     <th class="tg-yw4l"><iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/josephroberts/resinified-office-lock-0ca2eb/embed' width='350'></iframe></th>
   </tr>
-</table><!--  -->
+</table>
 
 **Relay Grove module**:
 
