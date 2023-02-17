@@ -198,3 +198,12 @@ If you have any questions or comments, please don't hesitate to hop on to our fo
       <td align="left"><strong>Seeed on LinkedIn</strong><br />Digital transformation is happening. Follow us to learn how IoT Industry news, insights, case studies and more on LinkedIn.<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
   </tbody></table>
+
+
+# 132
+
+ <div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/Sensor_Network#kit-with-courses---">
+            <strong><span><font color={'FFFFFF'} size={"5"}> Get One Now 🛒</font></span></strong>
+    </a>
+  </div>

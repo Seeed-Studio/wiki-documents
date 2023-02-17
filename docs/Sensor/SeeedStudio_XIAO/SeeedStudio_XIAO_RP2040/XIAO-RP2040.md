@@ -12,6 +12,13 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" alt="pir" width={600} height="auto" /></p>
 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
 The Seeed Studio XIAO RP2040 is as small as the Seeed Studio XIAO SAMD21 but it's more powerful. On one hand, it carries the powerful Dual-core RP2040 processor that can flexible clock running up to 133 MHz which is a low-power microcontrollers. On the Seeed Studio XIAO RP2040 there is also 264KB of SRAM, and 2MB of on-board Flash memory which can provide more program to save and run. On the other hand, this little board has good performance in processing but needs less power.  
 All in all, it is designed in a tiny size as small as a thumb(20x17.5mm) and can be used for wearable devices and small projects.
 
@@ -19,13 +26,18 @@ There are 14 GPIO PINs on Seeed Studio XIAO RP2040, on which there are 11 digita
 
 Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board. 
 
-<!-- <p style=":center"><a href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p> -->
-[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html)
-Seeed Studio XIAO RP2040 has supported Arduino, MicroPython and CircuitPython programming, and we provide examples for each programming language. You can choose to select from the contents on the left side of the page, or click the hyperlink below:
 
-- [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/)
-- [Seeed Studio XIAO RP2040 with MicroPython](https://wiki.seeedstudio.com/XIAO-RP2040-with-MicroPython/)
-- [Seeed Studio XIAO RP2040 with CircuitPython](https://wiki.seeedstudio.com/XIAO-RP2040-with-CircuitPython/)
+
+
+
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+
 
 ## **Features**
 

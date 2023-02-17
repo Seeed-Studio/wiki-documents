@@ -19,8 +19,11 @@ Compared to Seeed Studio XIAO RP2040,  Seeed Studio XIAO nRF52840 contains **ric
 
 Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansion board.
 
-<!-- <p style=":center"><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p> -->
-[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Features
 
@@ -81,7 +84,6 @@ You need to prepare the following:
 - 1 x USB Type-C cable
 
 :::tip
-
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 Connect the Seeed Studio XIAO nRF52840 (Sense) to your computer via a USB Type-C cable.
