@@ -1,6 +1,6 @@
 ---
 description: Eagleye_530s
-title: Eagleye_530s
+title: Eagleye 530s
 keywords:
 - Eagleye_530s
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
@@ -11,21 +11,19 @@ last_update:
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Eagleye_530s/img/eagleye_530s.JPG)
 
-
 Seeed is an experienced designer of development kits for IoT technology platforms. Our latest development kit—the Eagleye 530s,--is designed to help you get started developing products and services for the [Samsung ARTIK™ IoT platform](https://www.artik.io/).
- 
+
 The Eagleye 530s is a high-performance, pre-tested, cost-effective and production-ready development kit which incorporates the Samsung ARTIK™ 530s--a 1GB system-on-module (SoM)-- on a custom credit card size board. For more information about ARTIK™ 530s, please click here.
- 
+
 What is Samsung ARTIK™? Samsung ARTIK™ is a pre-integrated IoT platform consisting of enterprise-grade system-on-modules (SoMs), cloud services, and end-to-end security for the design and development of robust IoT solutions. Developers frequently downplay the importance of security when designing and building IoT products. ARTIK integrated security services for SoMs and cloud make it easier for you to make your products secure.  
- 
+
 As mentioned above, the Eagleye530s is based on the ARTIK 530s 1GB SoM, which is a Quad Core Cortex® A9 running @ 1.2 GHz with 4 B Flash memory, hardware-based security features, and Linux OS (Ubuntu). The Eagleye 530s also provides a 40 pin GPIO and accessory interface for Micro SD, Ethernet 10/100/1000, Wi-Fi 802.11 a/b/g/n, Bluetooth BLE 4.2 802.15.4, and ZigBee/Thread. It also supports full HDMI, MIPI camera interfaces, video, and audio media.
- 
+
 Since the Eagleye 530s is pin-compatible with many “maker” hardware accessories, it allows Samsung ARTIK™ developers to easily tap into the extensive “maker” accessories marketplace and prototype and build with off-the-shelf sensors (eg. [GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html),[Grove sensors](https://www.seeedstudio.com/grove.html)), voice recognition (eg. [ReSpeaker 2-mic array](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) and [ReSpeaker 4-mic array](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2941.html)), relays, GPS, cellular connectivity, and more, providing many options for enterprise developers creating feature-rich proof-of-concepts (PoC) or production-ready products.
-<!-- 
+
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4IR768d8Ins" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p style=":center"><a href="https://www.seeedstudio.com/Eagleye-530s-p-3035.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
-
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Eagleye-530s-p-3035.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="200" height="38"  border={0} /></a></p>
 
 ## Version
 
@@ -81,15 +79,15 @@ Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/eagleye_530s_back.JPG)
 
-- <font face="" size=5 font color="ff0000">ⓐ</font> **DC Power:** 5V DC power supply.
+- <font face size={5} font color="ff0000">ⓐ</font> <strong>DC Power:</strong> 5V DC power supply.
 
-- <font face="" size=5 font color="ff0000">ⓑ</font> **USB Host 2.0 Interface:** has two USB 2.0 Interface.
+- <font face size={5} font color="ff0000">ⓑ</font><strong> USB Host 2.0 Interface</strong>: has two USB 2.0 Interface.
 
-- <font face="" size=5 font color="ff0000">ⓒ</font> **Ethernet:** The Ethernet Interface is based on 802.3az-2010 complying to the Energy Efficient Ethernet (EEE) standard. The maximum theoretical speed of the interface is 1000Mbps.
+- <font face size={5} font color="ff0000">ⓒ</font> <strong>Ethernet:</strong> The Ethernet Interface is based on 802.3az-2010 complying to the Energy Efficient Ethernet (EEE) standard. The maximum theoretical speed of the interface is 1000Mbps.
 
-- <font face="" size=5 font color="ff0000">ⓓ</font> **Ear Jack:** has one 4 pin ear jack interface supporting stereo audio
+- <font face size={5} font color="ff0000">ⓓ</font> <strong>Ear Jack:</strong> has one 4 pin ear jack interface supporting stereo audio
 
-- <font face="" size=5 font color="ff0000">ⓔ</font> **Boot Switch:** When ‘eMMc 1st Boot’ is selected as a booting option, the system will first try to boot from eMMc, if this fails the system will search for an SD Card to boot from. If booting from the SD-Card also fails the system tries to boot from USB. When choosing the SD-Card booting option, the system starts with booting from SD, and if this fails will continue to try a USB boot. When USB is selected as the booting mechanism of choice, only a USB boot will be attempted.
+- <font face size={5} font color="ff0000">ⓔ</font> <strong>Boot Switch:</strong> When ‘eMMc 1st Boot’ is selected as a booting option, the system will first try to boot from eMMc, if this fails the system will search for an SD Card to boot from. If booting from the SD-Card also fails the system tries to boot from USB. When choosing the SD-Card booting option, the system starts with booting from SD, and if this fails will continue to try a USB boot. When USB is selected as the booting mechanism of choice, only a USB boot will be attempted.
 
 | SW402 | eMMc 1st Boot | SD Card 1st Boot | USB 1st Boot |
 |-------|---------------|------------------|--------------|
@@ -98,48 +96,49 @@ Below figures show the overall preview of the Eagleye 530s' TOP and BOTTOM.
 | 3     | X             | X                | X            |
 | 4     | Off           | On               | X            |
 
-- <font face="" size=5 font color="ff0000">ⓕ</font> **HDMI:** has one HDMI 1.4a connector. The following video formats are supported:
-    - 480p/480i @59.94Hz/60Hz, 576p/576i@50Hz
-    - 720p/720i @50Hz/59.94Hz/60Hz
-    - 1080p/1080i @50Hz/59.94Hz/60Hz
+- <font face size={5} font color="ff0000">ⓕ</font> <strong>HDMI:</strong> has one HDMI 1.4a connector. The following video formats are supported:
+  - 480p/480i @59.94Hz/60Hz, 576p/576i@50Hz
+  - 720p/720i @50Hz/59.94Hz/60Hz
+  - 1080p/1080i @50Hz/59.94Hz/60Hz
 
-- <font face="" size=5 font color="ff0000">ⓖ</font> **USB OTG:** has one USB OTG.
+- <font face size={5} font color="ff0000">ⓖ</font> <strong>USB OTG:</strong> has one USB OTG.
 
-- <font face="" size=5 font color="ff0000">ⓗ</font> **USB UART:** has one USB UART.
+- <font face size={5} font color="ff0000">ⓗ</font> <strong>USB UART:</strong> has one USB UART.
 
-- <font face="" size=5 font color="ff0000">ⓘ</font> **User Button S4:**  switch named as S4, mapped to GPIO 54.
+- <font face size={5} font color="ff0000">ⓘ</font> <strong>User Button S4:</strong>  switch named as S4, mapped to GPIO 54.
 
-- <font face="" size=5 font color="ff0000">ⓚ</font> **Power On LED:** Led will be turned on when board power on.
+- <font face size={5} font color="ff0000">ⓚ</font> <strong>Power On LED:</strong> Led will be turned on when board power on.
 
-- <font face="" size=5 font color="ff0000">ⓛ</font> **Power in LED:** Led will be turned on when board get power supply in.
+- <font face size={5} font color="ff0000">ⓛ</font> <strong>Power in LED:</strong> Led will be turned on when board get power supply in.
 
-- <font face="" size=5 font color="ff0000">ⓜ</font> **SD Card in LED:** Led will be turned on when SD is pluged into board.
+- <font face size={5} font color="ff0000">ⓜ</font> <strong>SD Card in LED:</strong> Led will be turned on when SD is pluged into board.
 
-- <font face="" size=5 font color="ff0000">ⓝ</font> **User Button S3:** switch named as S3, mapped to GPIO 50.
+- <font face size={5} font color="ff0000">ⓝ</font> <strong>User Button S3:</strong> switch named as S3, mapped to GPIO 50.
 
-- <font face="" size=5 font color="ff0000">ⓞ</font> **MIPI CSI:** The MIPI CSI interface can have a static resolution of 5M pixels or a dynamic resolution for video capturing of 1080P.
+- <font face size={5} font color="ff0000">ⓞ</font> <strong>MIPI CSI:</strong> The MIPI CSI interface can have a static resolution of 5M pixels or a dynamic resolution for video capturing of 1080P.
 
-- <font face="" size=5 font color="ff0000">ⓟ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
+- <font face size={5} font color="ff0000">ⓟ</font> <strong>ANT(802.11):</strong> If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
 
-- <font face="" size=5 font color="ff0000">ⓠ</font> **Reset:** board resest.
+- <font face size={5} font color="ff0000">ⓠ</font> <strong>Reset:</strong> board resest.
 
-- <font face="" size=5 font color="ff0000">ⓡ</font> **Power:** Once the power switch is turned on, push the power button (S1), for about 1 second.
+- <font face size={5} font color="ff0000">ⓡ</font> <strong>Power:</strong> Once the power switch is turned on, push the power button (S1), for about 1 second.
 
-- <font face="" size=5 font color="ff0000">ⓢ</font> **ANT(802.11):** If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
+- <font face size={5} font color="ff0000">ⓢ</font> <strong>ANT(802.11):</strong> If 802.11 or Bluetooth® functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
 
-- <font face="" size=5 font color="ff0000">ⓣ</font> **User Pins:**  To make them versatile control and monitoring devices, Eagleye 530s provides many programmable signal pins. These pins directly handle tasks like controlling relays, generating analog voltages, and monitoring analog sensors, as well as complex tasks involving parallel and serial communication with more sophisticated control and sensor devices.
+- <font face size={5} font color="ff0000">ⓣ</font> <strong>User Pins:</strong>  To make them versatile control and monitoring devices, Eagleye 530s provides many programmable signal pins. These pins directly handle tasks like controlling relays, generating analog voltages, and monitoring analog sensors, as well as complex tasks involving parallel and serial communication with more sophisticated control and sensor devices.
 
-- <font face="" size=5 font color="ff0000">ⓤ</font> **ANT(Zigbee):** If Zigbee functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
+- <font face size={5} font color="ff0000">ⓤ</font> <strong>ANT(Zigbee):</strong> If Zigbee functionality is required, the antenna which is enclosed as part of the Eagleye 530s has to be attached.
 
-- <font face="" size=5 font color="ff0000">ⓥ</font> **Power Switch:** Through selection of the Jumpers JP1and JP2, the power source can be selected. When power is provided from a DC-5V Adapter ,  jumpers JP2 will be placed and 3-4 position will be connected.
+- <font face size={5} font color="ff0000">ⓥ</font> <strong>Power Switch:</strong> Through selection of the Jumpers JP1and JP2, the power source can be selected. When power is provided from a DC-5V Adapter ,  jumpers JP2 will be placed and 3-4 position will be connected.
 When the jumpers JP1 are in the 1-2 position, the power is provided from the usb-uart. When the Eagleye 530s is used with an external power adapter make certain that you use a 5V-2.5A adapter with a 2.1x5.5mm plug.
 
-!!!warning
+:::warning
     NEVER connect both at the same time!
+:::
 
-- <font face="" size=5 font color="ff0000">ⓦ</font> **SD card slot:** has one SD-CARD interface supporting SD3.0.  
+- <font face size={5} font color="ff0000">ⓦ</font> <strong>SD card slot:</strong> has one SD-CARD interface supporting SD3.0.  
 
-- <font face="" size=5 font color="ff0000">ⓧ</font> **JTAG:** has one JTAG interface.
+- <font face size={5} font color="ff0000">ⓧ</font> <strong>JTAG:</strong> has one JTAG interface.
 
 **Mechanical Drawing**
 
@@ -148,14 +147,15 @@ When the jumpers JP1 are in the 1-2 position, the power is provided from the usb
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/MECHANICAL5.png)
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/MECHANICAL4.png)
 
-!!!note
+:::note
     Mechanical Drawing all dimensions are in [mm].
+:::
 
 ## Application Ideas
 
-* DIY
-* IoT and Smart Home
-* Robot
+- DIY
+- IoT and Smart Home
+- Robot
 
 ## Getting Started
 
@@ -173,19 +173,19 @@ This section will describe how to start working with your Eagleye 530s Developme
 
 **Software**
 
-Setting up a connection with the Eagleye 530s Module can be done in a wired or wireless manner. Here we choose to install PuTTY a free serial console. The software can be downloaded from http://www.putty.org/. Once downloaded go through the following steps:
+Setting up a connection with the Eagleye 530s Module can be done in a wired or wireless manner. Here we choose to install PuTTY a free serial console. The software can be downloaded from <http://www.putty.org/>. Once downloaded go through the following steps:
 
 - Step 1. Open the device manager on the control panel.
-- Step 2. When using a PC install the USB to Serial driver. The driver can be found at the following location: (https://www.ftdichip.com/Drivers/CDM/CDM21218_Setup.zip). For other drivers please visit (https://www.ftdichip.com/Drivers/D2XX.htm).
+- Step 2. When using a PC install the USB to Serial driver. The driver can be found at the following location: (<https://www.ftdichip.com/Drivers/CDM/CDM21218_Setup.zip>). For other drivers please visit (<https://www.ftdichip.com/Drivers/D2XX.htm>).
 - Step 3. Check the COM port number on your PC when you connect the USB serial cable. In our case the COM port allocated is COM9.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Com.png)
 
 - Step 4. Set the PuTTY configuration as follows:
-    - Set the “Serial line” as the COM port number found in step 3.
-    - Set the COM speed to "115200".
-    - Set the connection type to "Serial".
-    - Save the session under Eagleye 530s.
+  - Set the “Serial line” as the COM port number found in step 3.
+  - Set the COM speed to "115200".
+  - Set the connection type to "Serial".
+  - Save the session under Eagleye 530s.
 - Step 5. Select your saved session and click the “Open” button.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_setup.png)
@@ -377,7 +377,6 @@ connmanctl> quit
 
 - Step 8. Please shutdown the board, remove SD card and switch boot switch Pin4 back to off.
 
-
 ## Play with Pin Programming
 
 Eagleye boards provide many programmable signal pins. Some of these are General-Purpose Input/Output (GPIO) pins, while others are fixed-purpose pins for analog input, pulse-width-modulated output, and serialized communication.
@@ -388,12 +387,11 @@ Eagleye boards provide many programmable signal pins. Some of these are General-
 - Serial Ports (I2C and UART) – sending and receiving data according to industry-standard protocols.
 - Analog Input (ADC) – reading a varying signal level and processing through an analog-to-digital converter
 
- The sysfs functionality of the Linux kernel provides libraries to control and monitor programmable pins. Details are available at the [reference](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt). 
+ The sysfs functionality of the Linux kernel provides libraries to control and monitor programmable pins. Details are available at the [reference](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt).
 
 Here is pinout of the connectors with its meaning.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/pin_map.png)
-
 
 | Description | Pin Name   | Pin Number | Pin Number | Pin Name  | Description |
 |-------------|------------|------------|------------|-----------|-------------|
@@ -418,23 +416,21 @@ Here is pinout of the connectors with its meaning.
 | ADC         | XADC1      | 37         | 38         | I2SDIN1   | I2S         |
 | GND         | GND        | 39         | 40         | I2SDOUT1  | I2S         |
 
-
-
-
 **GPIO Control through Sysfs**
 
 For example, pin 11 is GPIO and can be used as digital input or output. To use a particular GPIO, we would first set its direction (mode) as either input or output, and then read from or write to it as needed.
 
 The [Play with onboard LEDs](https://files.seeedstudio.com/wiki/Eagleye_530s/res/blink_led.py) and [Play with onboard buttons](https://files.seeedstudio.com/wiki/Eagleye_530s/res/read_button.py)  tutorials provided examples of the necessary programming for digital I/O pins.
 
-!!!warning
-    Please change the specific GPIO pin number in the led/button python program.
+:::caution
+Please change the specific GPIO pin number in the led/button python program.
+:::
 
 **PWM Control through Sysfs**
 
 For example, pin 22 is PWM. We can connect PWM of LED to PWM of 40 Pins and GND as well. We can set period and duty_cycle（Maximum limit  is 1,000,000,000 (expressed in ns).) Duty_cycle should always be less than period.
 
-The following exercise demonstrates use of a PWM pin, setting a fixed blink rate. 
+The following exercise demonstrates use of a PWM pin, setting a fixed blink rate.
 
 - Step 1. Export PWM0
 
@@ -446,25 +442,25 @@ A pwm0 subdirectory is created. (We can use echo 0 to create pwm0, echo 2 to cre
 
 - Step 2. Set attributes
 
-    - a)	Set period (Unit: ns) to 1 sec
+  - a) Set period (Unit: ns) to 1 sec
 
     ```
     echo 1000000000 > /sys/class/pwm/pwmchip0/pwm0/period
     ```
 
-    - b)	Set duty_cycle (Unit: ns) to 500 msec
+  - b) Set duty_cycle (Unit: ns) to 500 msec
 
     ```
     echo 500000000 > /sys/class/pwm/pwmchip0/pwm0/duty_cycle
     ```
-    
-    - c)	Enable PWM0
+
+  - c) Enable PWM0
 
     ```
     echo 1 > /sys/class/pwm/pwmchip0/pwm0/enable
-    ```   
+    ```
 
-    - d)	Disable PWM0
+  - d) Disable PWM0
 
     ```
     echo 0 > /sys/class/pwm/pwmchip0/pwm0/enable
@@ -476,7 +472,7 @@ A pwm0 subdirectory is created. (We can use echo 0 to create pwm0, echo 2 to cre
     echo 0 > /sys/class/pwm/pwmchip0/unexport
     ```
 
-Here is the terminal information for pwm0. 
+Here is the terminal information for pwm0.
 
 ```
 [root@artik pwmchip0]# echo 0 > /sys/class/pwm/pwmchip0/export    # please change to echo 2 for pwm2
@@ -503,14 +499,13 @@ For example, pin 36 is ADC0. The following command line examples demonstrate how
 4095
 ```
 
-!!!note
-    Please change the in_voltage0_raw to in_voltage1_raw if we use pin37 (ADC1). 
-
+:::note
+Please change the in_voltage0_raw to in_voltage1_raw if we use pin37 (ADC1).
+:::
 
 **UART Control**
 
 - Step 1. Run below command to enable UART0, and we can see ttyAMA4 in list, tested with [ARTIK 530s 1G Secure Module Firmware (Ubuntu): A533s_os_18.05.00](https://developer.artik.io/downloads/2768bd32-383a-44cf-9e90-9292712a96ba/download).
-
 
 ```
 cd /sys/kernel/config/device-tree/overlays/
@@ -586,8 +581,9 @@ hello ..
 [root@artik seeed-voicecard]# alsactl --file=wm8960_asound.state restore
 ```
 
-!!!warning
-    Please run Step 3 again after the rebooting, or else it can't detect the seeed voicecard.
+:::warning
+Please run Step 3 again after the rebooting, or else it can't detect the seeed voicecard.
+:::
 
 - Step 4. Use the arecord to list the record devices.
 
@@ -649,13 +645,13 @@ Here is the hardware setup. We can hear the playback from the 2 Mics audio jack.
 
 - Start recording using Python
 
-    - Step 1. Install pyaudio package by below commands
+  - Step 1. Install pyaudio package by below commands
 
       ```
       apt install python-pyaudio
       ```
 
-    - Step 2. Use a text editor like vi to create this [recorder_2Mics.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/recorder_2Mics.py) code file, which records a 10-sec audio clip called test.wav.
+  - Step 2. Use a text editor like vi to create this [recorder_2Mics.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/recorder_2Mics.py) code file, which records a 10-sec audio clip called test.wav.
 
 ```python
 import pyaudio
@@ -694,8 +690,9 @@ waveFile.writeframes(b''.join(frames))
 waveFile.close()
 ```
 
-!!!warning
-    For more information, such as play with google assistant, please refer to [ReSpeaker 2-Mics Pi HAT](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
+:::cautionwarning
+For more information, such as play with google assistant, please refer to [ReSpeaker 2-Mics Pi HAT](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
+:::
 
 **Play with 4 Mics Pi HAT**
 
@@ -749,8 +746,9 @@ waveFile.close()
 [root@artik seeed-voicecard]# alsactl --file=ac108_asound.state restore
 ```
 
-!!!warning
-    Please run Step 3 again after the rebooting, or else it can't detect the seeed voicecard.
+:::cautionwarning
+Please run Step 3 again after the rebooting, or else it can't detect the seeed voicecard.
+:::
 
 - Step 4. Use the arecord to list the record devices.
 
@@ -807,13 +805,13 @@ arecord -Dac108 -f S16_LE -r 48000  -c 4 /tmp/test.wav
 
 - Start recording using Python
 
-    - Step 1. Install pyaudio package by below commands
+  - Step 1. Install pyaudio package by below commands
 
       ```
       apt install python-pyaudio
       ```
 
-    - Step 2. Use a text editor like vi to create this [recorder_4Mics.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/recorder_4Mics.py) code file, which records a 10-sec audio clip called test.wav.
+  - Step 2. Use a text editor like vi to create this [recorder_4Mics.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/recorder_4Mics.py) code file, which records a 10-sec audio clip called test.wav.
 
 ```python
 import pyaudio
@@ -852,8 +850,9 @@ waveFile.writeframes(b''.join(frames))
 waveFile.close()
 ```
 
-!!!warning
-    For more information, such as play with Alexa/DuerOS, please refer to [ReSpeaker 4-Mic Array for Raspberry Pi](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/).
+:::cautionwarning
+For more information, such as play with Alexa/DuerOS, please refer to [ReSpeaker 4-Mic Array for Raspberry Pi](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/).
+:::
 
 **Play with Mic Array v2.0**
 
@@ -873,7 +872,7 @@ arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the 
 
 - Start recording using Python
 
-    - Step 1, We need to run the following script to get the device index number of Mic Array:
+  - Step 1, We need to run the following script to get the device index number of Mic Array:
 
     ```Python
     apt install python-pip
@@ -882,7 +881,7 @@ arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the 
     nano get_index.py
     ```
 
-    - Step 2, copy below code and paste on [get_index.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/get_index.py).
+  - Step 2, copy below code and paste on [get_index.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/get_index.py).
 
 ```Python
 import pyaudio
@@ -954,8 +953,9 @@ wf.writeframes(b''.join(frames))
 wf.close()
 ```
 
-!!!warning
-    For more information, such as play with DOA/LEDs, please refer to [ReSpeaker Mic Array v2.0](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/).
+:::cautionwarning
+For more information, such as play with DOA/LEDs, please refer to [ReSpeaker Mic Array v2.0](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/).
+:::
 
 ## Play with GrovePi+
 
@@ -986,23 +986,23 @@ git clone https://github.com/DexterInd/GrovePi.git
 ```c++
 void GrovePi::SMBusName(char *smbus_name)
 {
-	unsigned int hw_revision = gpioHardwareRevision();
-	unsigned int smbus_rev;
+ unsigned int hw_revision = gpioHardwareRevision();
+ unsigned int smbus_rev;
 
-	if(hw_revision < 4)
-		// type 1
-		smbus_rev = 1;
-	else if(hw_revision < 16)
-		// type 2
-		smbus_rev = 2;
-	else
-		// type 3
-		smbus_rev = 3;
+ if(hw_revision < 4)
+  // type 1
+  smbus_rev = 1;
+ else if(hw_revision < 16)
+  // type 2
+  smbus_rev = 2;
+ else
+  // type 3
+  smbus_rev = 3;
 
-	if(smbus_rev == 2 || smbus_rev == 3)
-		strcpy(smbus_name, "/dev/i2c-1");
-	else
-		strcpy(smbus_name, "/dev/i2c-0");
+ if(smbus_rev == 2 || smbus_rev == 3)
+  strcpy(smbus_name, "/dev/i2c-1");
+ else
+  strcpy(smbus_name, "/dev/i2c-0");
   strcpy(smbus_name, "/dev/i2c-1"); //add this line to enable the I2C for eagleye_530s
 }
 ```
@@ -1012,16 +1012,16 @@ void GrovePi::SMBusName(char *smbus_name)
 
 ```python
 if sys.platform == 'uwp':
-	import winrt_smbus as smbus
-	bus = smbus.SMBus(1)
+ import winrt_smbus as smbus
+ bus = smbus.SMBus(1)
 else:
-	import smbus
-#	import RPi.GPIO as GPIO
-#	rev = GPIO.RPI_REVISION
-#	if rev == 2 or rev == 3:
-	bus = smbus.SMBus(1)
-#	else:
-#		bus = smbus.SMBus(0)
+ import smbus
+# import RPi.GPIO as GPIO
+# rev = GPIO.RPI_REVISION
+# if rev == 2 or rev == 3:
+ bus = smbus.SMBus(1)
+# else:
+#  bus = smbus.SMBus(0)
 ```
 
 - Step 4. Every time we reset the board, run the following two commands. Put them in a bash file to make it automatic.
@@ -1031,8 +1031,9 @@ mkdir /sys/kernel/config/device-tree/overlays/i2c
 cat /boot/overlays/s5p4418-artik533-compy-i2c1.dtbo > /sys/kernel/config/device-tree/overlays/i2c/dtbo
 ```
 
-!!!warning
+:::cautionwarning
     Please run Step 4 commands after rebooting.
+:::
 
 - Step 5. Please attach the Grove-Led and Grove-Rotary Angle Sensor to GrovePi as below.
 
@@ -1113,8 +1114,9 @@ sensor_value = 363 voltage = 1.77 degrees = 106.2 brightness = 90
 sensor_value = 387 voltage = 1.89 degrees = 113.4 brightness = 96
 ```
 
-!!!warning:
-    For more Grove sensors, please refer to [DexterInd Python Library](https://github.com/DexterInd/GrovePi). We do not test all the sensors' compatiblity with Eagleye 530s. Please contact techsupport if any issue.  
+:::cautionwarning:
+For more Grove sensors, please refer to [DexterInd Python Library](https://github.com/DexterInd/GrovePi). We do not test all the sensors' compatiblity with Eagleye 530s. Please contact techsupport if any issue.  
+:::
 
 ## Play with Shield
 
@@ -1126,15 +1128,16 @@ sensor_value = 387 voltage = 1.89 degrees = 113.4 brightness = 96
 
 **Software**
 
-- Step 1. Run below command to enable the I2C. 
+- Step 1. Run below command to enable the I2C.
 
 ```
 mkdir /sys/kernel/config/device-tree/overlays/i2c
 cat /boot/overlays/s5p4418-artik533-compy-i2c1.dtbo > /sys/kernel/config/device-tree/overlays/i2c/dtbo
 ```
 
-!!!warning
-    Every time we reset the board, run the following two commands. Put them in a bash file to make it automatic.
+:::cautionwarning
+Every time we reset the board, run the following two commands. Put them in a bash file to make it automatic.
+:::
 
 - Step 2. Run i2cdetect to detect the relay shield.
 
@@ -1151,7 +1154,7 @@ cat /boot/overlays/s5p4418-artik533-compy-i2c1.dtbo > /sys/kernel/config/device-
 70: -- -- -- -- -- -- -- --
 ```
 
-- Step 3. Run the below commands to run the relay_lib_seeed_test.py. 
+- Step 3. Run the below commands to run the relay_lib_seeed_test.py.
 
 ```
 [root@artik ~]# cd ~
@@ -1170,8 +1173,9 @@ Turning relay 4 ON
 Turning relay 4 OFF
 ```
 
-!!!warning
-    For more information, please refer to [Raspberry Pi Relay Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0/).
+:::cautionwarning
+For more information, please refer to [Raspberry Pi Relay Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Relay_Board_v1.0/).
+:::
 
 **Play with RS232 Boards**
 
@@ -1189,10 +1193,10 @@ Turning relay 4 OFF
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Com.png)
 
 - Step 2. Set the PuTTY configuration as follows:
-    - Set the “Serial line” as the COM port number found in step 3.
-    - Set the COM speed to "115200".
-    - Set the connection type to "Serial".
-    - Save the session under Eagleye 530s.
+  - Set the “Serial line” as the COM port number found in step 3.
+  - Set the COM speed to "115200".
+  - Set the connection type to "Serial".
+  - Save the session under Eagleye 530s.
 - Step 3. Select your saved session and click the “Open” button.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_setup.png)
@@ -1202,24 +1206,25 @@ Turning relay 4 OFF
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Putty_normal_boot.png)
 
-!!!warning
-    For more information, please refer to [Raspberry Pi RS232 Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/).
+:::cautionwarning
+For more information, please refer to [Raspberry Pi RS232 Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_R232_Board_v1.0/).
+:::
 
 **Play with Breakout Board**
 
-Raspberry Pi Breakout Board, it also provides power, state indicator light, button and universal transistor,such as NPN, PNP, N-MOS, P-MOS. It works well with Eagleye_530s. 
+Raspberry Pi Breakout Board, it also provides power, state indicator light, button and universal transistor,such as NPN, PNP, N-MOS, P-MOS. It works well with Eagleye_530s.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/breakout_shield.jpg)
 
-!!!warning
-    For more information, please refer to [Raspberry Pi Breakout Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/).
-
+:::cautionwarning
+For more information, please refer to [Raspberry Pi Breakout Board v1.0](https://wiki.seeedstudio.com/Raspberry_Pi_Breakout_Board_v1.0/).
+:::
 
 ## FAQs
 
 - Q1: Is Eagleye 530s compatiable with Raspberry Pi enclosures?
 
-A1: Yes. Here are the compatiable list. 
+A1: Yes. Here are the compatiable list.
 
 | SKU       | Description                                                                                                    | Comments                             |
 |-----------|----------------------------------------------------------------------------------------------------------------|--------------------------------------|
@@ -1231,12 +1236,11 @@ A1: Yes. Here are the compatiable list.
 
 - Q2: How to set the auto-boot function?
 
-A2: Find the D401 diode as below picture, remove D401 diode by soldering, short the D401's two pins by soldering a solder dot. 
+A2: Find the D401 diode as below picture, remove D401 diode by soldering, short the D401's two pins by soldering a solder dot.
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Auto_boot_1.jpg)
 
 ![](https://files.seeedstudio.com/wiki/Eagleye_530s/img/Auto_boot_2.jpg)
-
 
 ## Resources
 
@@ -1250,5 +1254,7 @@ A2: Find the D401 diode as below picture, remove D401 diode by soldering, short 
 - **[More Reading]** [Facial-Recog Project](https://developer.artik.io/documentation/artik/projects/facial-recog.html)
 
 ## Tech Support
+
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p> -->
+<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

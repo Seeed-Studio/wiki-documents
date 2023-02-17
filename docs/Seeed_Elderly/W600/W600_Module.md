@@ -11,28 +11,19 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/W600_Module/img/113020031-preview.png)
 
-
-
-
 The W600 Module is a cost-effective 2.4GHz WiFi module support 802.11b/g/n. Seeed W600 Module is based on the W600 chip which features ARM Cortex-M3 with 1MB on-chip flash and freeRTOS kernel.
- 
- 
-We take the pins of the W600 chip out and put them on the back of the board, including I2S/I2C/SPI/GPIO/PWM/UART/SDIO. In addition, this module has an on-board PCB Antenna, no need to design the antenna separately, so you can quickly deploy the module to your own board. We also have made CE/FCC certification for this module and you can use it directly for business projects.
 
+We take the pins of the W600 chip out and put them on the back of the board, including I2S/I2C/SPI/GPIO/PWM/UART/SDIO. In addition, this module has an on-board PCB Antenna, no need to design the antenna separately, so you can quickly deploy the module to your own board. We also have made CE/FCC certification for this module and you can use it directly for business projects.
 
 <a href="https://www.seeedstudio.com/W600-Module-p-4020.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a>
 
-
-
 ## Features
-
 
 • Integrated 32bit Embedded Cortex-M3 CPU, operating frequency 80MHz
 
 • Integrated 288KB RAM
 
 • Integrated 1MB FLASH
-
 
 **Interface**
 
@@ -41,7 +32,6 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 • Integrated 2 UART interface, support RTS/CTS, baud rate: 1200bps~2Mbps
 
 • Integrated one high speed SPI controller, operating frequency: 0~50MHz;
-
 
 **Wireless**
 
@@ -65,7 +55,6 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 
 • On-board Antenna
 
-<!-- 
 ## Specification
 
 |Category|Item|Parameter|
@@ -73,12 +62,12 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 |Wireless|Support Wi‐Fi  Mode|IEEE802.11b/g/n|
 ||RF system impedance|50Ω|
 ||Frequency Range|2.4~2.4835 GHz|
-||Receiving sensitivity|20MHz MCS7@‐71dBm;<br>40MHz MCS7@‐68dBm;<br>54Mbps@‐73dBm;<br>11Mbps@‐86dBm;<br>1Mbps@‐95dBm;|
+||Receiving sensitivity|20MHz MCS7@‐71dBm;<br />40MHz MCS7@‐68dBm;<br />54Mbps@‐73dBm;<br />11Mbps@‐86dBm;<br />1Mbps@‐95dBm;|
 ||Physical layer data rate|802.11n MCS 0~7   150Mbps|
 ||Modulation|DSSS、OFDM、DBPSK、DQPSK、CCK、QAM16/64|
-||Output Power|IEEE802.11b, DSSS 1Mbps, POUT = +17dBm;<br>IEEE802.11g, OFDM 54Mbps, POUT = +10dBm;<br>IEEE802.11n, OFDM MCS7, POUT = +10dBm|
+||Output Power|IEEE802.11b, DSSS 1Mbps, POUT = +17dBm;<br />IEEE802.11g, OFDM 54Mbps, POUT = +10dBm;<br />IEEE802.11n, OFDM MCS7, POUT = +10dBm|
 |Hardware|Interface Type|UART/SPI/GPIO|
-||Interface rate|2Mbps@UART (Max) <br>50Mbps@SPI (Max)|
+||Interface rate|2Mbps@UART (Max) <br />50Mbps@SPI (Max)|
 ||Operating Voltage|3.3V(Module)/5V(Development Board)|
 ||Operating humidity|5%~90% (No condensation)|
 ||storage temperature|‐40~+125 ℃|
@@ -91,11 +80,9 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 ||Network protocol|TCP/UDP/ARP/ICMP/DHCP/DNS/HTTP|
 ||Interface Protocol| AT+ instruction set|
 
-
-!!!Note
-        For more detail about specifications, please check the W600 [Specification V1.0.0_EN.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Specification%20V1.0.0_EN.pdf) and [W600 HardwareDesignGuide_v1.0.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
- 
-
+:::note
+For more detail about specifications, please check the W600 [Specification V1.0.0_EN.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Specification%20V1.0.0_EN.pdf) and [W600 HardwareDesignGuide_v1.0.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
+:::
 
 ## Typical Applications
 
@@ -107,49 +94,39 @@ We take the pins of the W600 chip out and put them on the back of the board, inc
 - industrial control
 - other Internet of Things applications
 
-
 ## Hardware Overview
-
 
 ### Block Diagram
 
-
 <div align="center">
-<figure>
-  <a href="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" alt="block diagram of W600 Module" title="block diagram of W600 Module" />
-  <figcaption><i>click to see the clearer original file</i></figcaption></a>
-</figure>
+  <figure>
+    <a href="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/block.png" alt="block diagram of W600 Module" title="block diagram of W600 Module" />
+      <figcaption><i>click to see the clearer original file</i></figcaption></a>
+  </figure>
 </div>
-
 
 ### Pinout
 
-
 <div align="center">
-<figure>
-  <a href="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" alt="pinout of W600 Module" title="pinout of W600 Module" />
-  <figcaption><i>click to see the clearer original file</i></figcaption></a>
-</figure>
+  <figure>
+    <a href="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" target="_blank"><img src="https://files.seeedstudio.com/wiki/W600_Module/img/pinout_w600_module.jpg" alt="pinout of W600 Module" title="pinout of W600 Module" />
+      <figcaption><i>click to see the clearer original file</i></figcaption></a>
+  </figure>
 </div>
-
-
 
 ## Getting Started
 
+To use the **W600 Module**, you need to use [USB-to-Serial Tools](https://www.seeedstudio.com/PL2303-USB-to-Serial-TTL-Module-Adapter-p-2358.html) to connect the RX/TX pins to your computer, also you need to power this module with the **3.3v** and **GND** pins.
 
-To use the **W600 Module**, you need to use [USB-to-Serial Tools](https://www.seeedstudio.com/PL2303-USB-to-Serial-TTL-Module-Adapter-p-2358.html) to connect the RX/TX pins to your computer, also you need to power this module with the **3.3v** and **GND** pins. 
+:::note
+For mac, we found that some version of mac system can not recognize the on-board USB-to-Serial chip CH330N, please check here for solution [Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=aa548f2de0fb26380f50e0b328a49a80)
+:::
 
- 
-!!!Note
-        For mac, we found that some version of mac system can not recognize the on-board USB-to-Serial chip CH330N, please check here for solution [Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=aa548f2de0fb26380f50e0b328a49a80)
-
-
-We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**, you can download it [Here](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip). 
+We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**, you can download it [Here](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip).
 
 What ever, please make sure you have checked the option **AddCrLf**, and set the baud rate to **115200**
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_2.jpg)
-
 
 Tap **AT+** then click **SEND** or press ++enter++ key to to check if the connection was successfully established.
 
@@ -159,11 +136,9 @@ AT+
 
 When it returns **+OK**, you can use the AT command to control this module.
 
-
 ### Create a SoftAP process
 
-
-- 1- **WPRT** sets the wireless network card working mode to SoftAP: 
+- 1- **WPRT** sets the wireless network card working mode to SoftAP:
 
 ```C
 AT+WPRT=2
@@ -175,7 +150,7 @@ AT+WPRT=2
 AT+APSSID=MyAp
 ```
 
-- 3- **APENCRY** Set the wireless network card security mode to WEP64: 
+- 3- **APENCRY** Set the wireless network card security mode to WEP64:
 
 ```C
 AT+APENCRY=1
@@ -185,7 +160,7 @@ Parameter：
 
 open：0，WEP64：1，WEP128：2
 
-- 4- **APKEY** Set the wireless network card key to *12345* 
+- 4- **APKEY** Set the wireless network card key to *12345*
 
 ```C
 AT+APKEY=1,1,12345
@@ -196,7 +171,6 @@ Parameter 1：Key format， 0 means HEX, 1 means ASCII
 Parameter 2：index:  Key index number, 1 to 4 are used for WEP encryption keys, and other encryption methods are fixed to 0.  
 
 Parameter 3：wireless key, e.g.：12345  
-
 
 - 5- **APNIP** Set the ip address and subnet mask
 
@@ -228,7 +202,6 @@ AT+WJOIN
 AT+SLIST
 ```
 
-
 ### Scan AP Process
 
 Wireless network card scanning AP's AT command is ：
@@ -249,7 +222,7 @@ The last paremeter is the signal strength,  unit db
 AT+WPRT=0
 ```
 
-- 2- **SSID** Set the AP name to join. e.g. *TEST_AP* 
+- 2- **SSID** Set the AP name to join. e.g. *TEST_AP*
 
 ```C
 AT+SSID=TEST_AP
@@ -259,14 +232,13 @@ AT+SSID=TEST_AP
 
 ```C
 AT+KEY=1,0,12345678
-``` 
+```
 
 parameter 1：0 means HEX, 1 means ASCII
 
 parameter 2：index: The key index number, 1 to 4 is used for the WEP encryption key. The other encryption methods are fixed to 0.
 
 parameter 3： Wireless key  e.g.：12345678
-
 
 - 4- **NIP** Enable DHCP
 
@@ -280,14 +252,13 @@ AT+NIP=0
 AT+PMTF
 ```
 
-- 6- WJOIN Join the wireless network TEST_AP 
+- 6- WJOIN Join the wireless network TEST_AP
 
 ```C
 AT+WJOIN
 ```
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/AT_4.jpg)
-
 
 ### Create an APSTA process
 
@@ -307,7 +278,7 @@ AT+SSID=TEST_AP
 
 ```C
 AT+KEY=1,0,12345678
-``` 
+```
 
 parameter 1：0 means HEX, 1 means ASCII
 
@@ -327,7 +298,7 @@ AT+APSSID=”MYSoftAP”
 AT+APENCRY=5
 ```
 
-- 6- **APKEY**  Set the password for SoftAP (e.g. ASCII code 87654321) 
+- 6- **APKEY**  Set the password for SoftAP (e.g. ASCII code 87654321)
 
 ```C
 AT+APKEY=1,0,87654321
@@ -351,9 +322,9 @@ AT+PMTF
 AT+WJOIN
 ```
 
-!!!Note
-        For more detail about AT command, please check the [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
-
+:::note
+For more detail about AT command, please check the [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
+:::
 
 ## Firmware Programming
 
@@ -361,12 +332,11 @@ For the firmware programming please check here：
 
 [WM_W60X_SDK_User Manual_V1.0.0.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) and [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
 
-
 ## FAQ
 
 **Q1.How the STA disconnects the AP**
 
-A: The wireless network card disconnects the AP's AT command:     
+A: The wireless network card disconnects the AP's AT command:
 
 ```C
 AT+WLEAV
@@ -374,7 +344,7 @@ AT+WLEAV
 
 **Q2.SoftAP disconnected**
 
-A: The AT command of SoftAP disconnected network is: 
+A: The AT command of SoftAP disconnected network is:
 
 ```C
 AT+WLEAV=2
@@ -390,27 +360,24 @@ AT+LKSTT
 
 **Q4. How to View current SoftAP status**
 
-A: The AT command to view the current SoftAP status is: 
+A: The AT command to view the current SoftAP status is:
 
 ```C
 AT+APLKSTT
 ```
 
-
 ## Schematic Online Viewer
 
-<div class="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Module%20schemaic.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/W600_Module/res/W600%20Module%20schemaic.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resouce
-
 
 - **[PDF]** [WM_W60X_SDK_AT Command_V1.0.2.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_AT%20Command_V1.0.2.pdf)
 
 - **[PDF]** [W600 HardwareDesignGuide_v1.0.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/W600%20HardwareDesignGuide_v1.0.1.pdf)
 
-- **[PDF]** [W60X_SDK_User Manual_V1.0.0.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf) 
+- **[PDF]** [W60X_SDK_User Manual_V1.0.0.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_SDK_User%20Manual_V1.0.0.pdf)
 
 - **[PDF]** [WM_W60X_Firmware Generation Guide_V1.1.pdf](https://files.seeedstudio.com/wiki/W600_Module/res/WM_W60X_Firmware%20Generation%20Guide_V1.1.pdf)
 
@@ -418,16 +385,9 @@ AT+APLKSTT
 
 - **[ZIP]** [sscom](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip)
 
-
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/)
 
-
-
-
-
-
-
-
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p> -->
+<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
