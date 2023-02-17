@@ -22,29 +22,31 @@ WireLess Gate Shield is an Arduino-compatible expansion card designed to build a
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/WireLess-Gate-Shield-p-2117.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
+## Features
 
-##   Features
 ---
-*   Interface to connect the transceiver 315/433/868/915 MHz (depending on the version) [RFM69HW](http://devicter.ru/goods/RFM69HW-RF-transceiver)
 
-*   Interface to connect the transceiver at 2.4 GHz [nRF24L01 +](https://www.seeedstudio.com/depot/s/nRF24L01.html?search_in_description=0)
+* Interface to connect the transceiver 315/433/868/915 MHz (depending on the version) [RFM69HW](http://devicter.ru/goods/RFM69HW-RF-transceiver)
 
-*   IR receiver
-*   Real-time clock module based on DS1307 with battery backup
-*   LED automatic activity radio modules
-*   LED for user
-*   Clock button to operate
-*   [GROVE](https://www.seeedstudio.com/depot/Grove-t-3.html?ref=top)-compatible connector: I2C
-*   Fully compatible with [Ethernet Shield](https://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html)
+* Interface to connect the transceiver at 2.4 GHz [nRF24L01 +](https://www.seeedstudio.com/depot/s/nRF24L01.html?search_in_description=0)
 
-##   Layout and schematics
+* IR receiver
+* Real-time clock module based on DS1307 with battery backup
+* LED automatic activity radio modules
+* LED for user
+* Clock button to operate
+* [GROVE](https://www.seeedstudio.com/depot/Grove-t-3.html?ref=top)-compatible connector: I2C
+* Fully compatible with [Ethernet Shield](https://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html)
+
+## Layout and schematics
+
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/WireLess_Gate_Shield_V1.0/img/Wl-top.png" alt="pir" width={600} height="auto" /></p>
 
 On the left side WireLess Gate Shield are interfaces to wireless modules:
 
-*   nRF24l01 +, including the enhanced ("PA") version (above)
-*   RFM69HW (bottom).
+* nRF24l01 +, including the enhanced ("PA") version (above)
+* RFM69HW (bottom).
 
 Between wireless modules is U.FL connector for external antenna for RFM69HW. If you plan to use the regular antenna (bit of wire required length) - it is possible to solder directly to the board Schild (near the connector U.FL)
 
@@ -56,14 +58,15 @@ To the right and slightly below the slot for the battery - I2C-connector.
 
 On the right side is (top-down):
 
-*   LED LED2 "RF24"
-*   IR receiver
-*   LED LED3 - user
-*   Clock button S1
+* LED LED2 "RF24"
+* IR receiver
+* LED LED3 - user
+* Clock button S1
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/WireLess_Gate_Shield_V1.0/img/Wl-Scheme.PNG" alt="pir" width={600} height="auto" /></p>
 
-##   Basic functionality
+## Basic functionality
+
 ---
 In the basic version (without the use of Ethernet Shield) may organize a wireless gateway between the radios and the IR receiver.
 
@@ -73,103 +76,108 @@ Availability of real-time clock module will automate the sending of any data or 
 
 Device Management can be organized using a button located on the Shield.
 
-##  Expansion Capabilities
+## Expansion Capabilities
+
 ---
 Additionally WireLess Gate Shield can connect any i2c device using Grove-compatible connections (sensors, displays, etc.).
 
 WireLess Gate Shield was designed to be fully compatible with [Ethernet Shield](https://www.seeedstudio.com/depot/W5200-Ethernet-Shield-p-1577.html) - so you can use these two together Schild to create even more advanced wireless control device (logging on SD-card and presenting data on a web page, manage wireless devices via the web).
 
-##  Interfaces
+## Interfaces
+
 ---
-*   Interface for RF-module nRF24L01 +:
-    *   D11 - MOSI
 
-        *   D12 - MISO
-    *   D13 - SCK
+* Interface for RF-module nRF24L01 +:
+  * D11 - MOSI
 
-        *   D7 - RF24_CE
+    * D12 - MISO
+  * D13 - SCK
 
-        *   D8 - RF24_CSN
+    * D7 - RF24_CE
 
-        *   D2 - RF24_IRQ
+    * D8 - RF24_CSN
 
-*   Interface for RF-module RFM69HW:
-    *   D11 - MOSI
+    * D2 - RF24_IRQ
 
-        *   D12 - MISO
-    *   D13 - SCK
+* Interface for RF-module RFM69HW:
+  * D11 - MOSI
 
-        *   D9 - RF433_NSS
+    * D12 - MISO
+  * D13 - SCK
 
-        *   A0 - RF433_RESET
+    * D9 - RF433_NSS
 
-        *   D3 - RF433_IRQ
+    * A0 - RF433_RESET
 
-*   A4 (SDA), A5 (SCL) - displayed on the connector "I2C" (the other two pins in the connector - VCC and GND for sensor supply)
-*   A4 (SDA), A5 (SCL) - are involved in parallel for RTC DS1307
-*   A1 - Button
-*   D6 - Custom LED (LED3)
+    * D3 - RF433_IRQ
 
-##  Features  WireLess Gate Shield
+* A4 (SDA), A5 (SCL) - displayed on the connector "I2C" (the other two pins in the connector - VCC and GND for sensor supply)
+* A4 (SDA), A5 (SCL) - are involved in parallel for RTC DS1307
+* A1 - Button
+* D6 - Custom LED (LED3)
+
+## Features  WireLess Gate Shield
+
 ---
-###   Wireless Modules
+
+### Wireless Modules
 
 Both wireless module RFM69HW and nRF24l01 + connected hardware bus SPI.
 
 Selection of a particular wireless module is a low potential for the establishment of the appropriate chip select pin:
 
-*   CSN (D8) for the module nRF24l01 +
-*   NSS (D9) for the module RFM69HW
+* CSN (D8) for the module nRF24l01 +
+* NSS (D9) for the module RFM69HW
 
-_ 'Warning', 'If you have installed, but the software is not involved RFM69HW, be sure to install NSS pin of this module in state HIGH (otherwise it will interfere with the normal operation nRF24l01 + and Ethernet Shield. _
+_'Warning', 'If you have installed, but the software is not involved RFM69HW, be sure to install NSS pin of this module in state HIGH (otherwise it will interfere with the normal operation nRF24l01 + and Ethernet Shield._
 
-###   Automatic display of the wireless modules
+### Automatic display of the wireless modules
 
 LED indication of the wireless module is implemented as follows:
 
-*   LED cathode LED1 "RF24" connected to pin CSN (D8) module nRF24l01 +, the anode of the LED (through a current limiting resistor) - to pin SCK bus SPI (D13)
-*   LED cathode LED2 "RF433" connected to pin NSS (D9) module RFM69HW, the anode of the LED (through a current limiting resistor) - to pin SCK bus SPI (D13)
+* LED cathode LED1 "RF24" connected to pin CSN (D8) module nRF24l01 +, the anode of the LED (through a current limiting resistor) - to pin SCK bus SPI (D13)
+* LED cathode LED2 "RF433" connected to pin NSS (D9) module RFM69HW, the anode of the LED (through a current limiting resistor) - to pin SCK bus SPI (D13)
 
 When radios are not active - at the appropriate pines chip select (CSN and NSS) there is a high potential, with the appearance of the clock at pin SCK does not lead to the ignition of the LEDs.
 If the same MK "communicates" with any wireless module to select it at the appropriate Pina (CSN and NSS) is set low potential and at the same timing pulses at pin SCK "ignite" the corresponding LED.
 
 Thus, the user is not required to arrange for any additional programming work on the MC to indicate operation of the module.
 
-###   Features
+### Features
 
 If necessary, SMD-LED to replace the usual outs (eg to embed the finished device in a cute case with display):
 
-*   The board is close to the equipment corresponding LED is seating where you can solder terminals LEDs (or the appropriate cable).
-*   Current-limiting resistor is on the board (for the output of the LED series resistor is not required)
-*   SMD-LED when setting the output of the LED must be removed from the board
+* The board is close to the equipment corresponding LED is seating where you can solder terminals LEDs (or the appropriate cable).
+* Current-limiting resistor is on the board (for the output of the LED series resistor is not required)
+* SMD-LED when setting the output of the LED must be removed from the board
 
-###   Modification to control via IR
+### Modification to control via IR
 
 Custom LED can be replaced by LED3 pin IR LED and thereby further expand the use of WireLess Gate Shield (for example, a command sent via any wireless interface or LAN - control devices using infrared commands).
 
-##  Libraries
+## Libraries
 
-###  Required Library
+### Required Library
 
 To use the WireLess Gate Shield requires the following libraries:
 
-*   Work with the transceiver nRF24L01 + - [RF24](https://github.com/maniacbug/RF24/archive/master.zip)
+* Work with the transceiver nRF24L01 + - [RF24](https://github.com/maniacbug/RF24/archive/master.zip)
 
-*   Work with the transceiver RFM69HW - [RFM69](https://github.com/LowPowerLab/RFM69/archive/master.zip)
+* Work with the transceiver RFM69HW - [RFM69](https://github.com/LowPowerLab/RFM69/archive/master.zip)
 
-*   Real-time clock (RTC) - [RTClib](https://github.com/adafruit/RTClib/archive/master.zip)
+* Real-time clock (RTC) - [RTClib](https://github.com/adafruit/RTClib/archive/master.zip)
 
-*   IR-receiver - [IRremote](https://github.com/shirriff/Arduino-IRremote/archive/master.zip)
+* IR-receiver - [IRremote](https://github.com/shirriff/Arduino-IRremote/archive/master.zip)
 
 Additionally required libraries that are used when working RF24 and LCD-display:
 
-*   SPI
+* SPI
 
 Libraries are examples of them just to understand how they work.
 
-###   Features  use libraries
+### Features  use libraries
 
-**NRF24l01 + **
+**NRF24l01 +**
 
 Module Initialization nRF24l01 + as follows:
 
@@ -177,7 +185,6 @@ Module Initialization nRF24l01 + as follows:
 //RF24 radio(CE,CSN);
 RF24 radio(7,8);
 ```
-
 
 **RFM69HW**
 
@@ -214,26 +221,25 @@ void RFM69::isr1() { selfPointer-&gt;interruptHandler(); }
 
 Module Initialization RFM69HW as follows:
 
-
 ```cpp
   resetRFM69();
   radio.setCS(9); // NSS - D9
   radio.initialize(FREQUENCY,NODEID,NETWORKID);
 ```
 
-
-_ 'Note:' _ Working with RFM69HW determined by the state of its registers. For more tinctures for specific endpoints required by the rules in the file RFM69.cpp function RFM69 :: initialize
+_'Note:'_ Working with RFM69HW determined by the state of its registers. For more tinctures for specific endpoints required by the rules in the file RFM69.cpp function RFM69 :: initialize
 To better understand the purpose registers read the file RFM69registers.h (also included in the library), and documentation [radio RFM69HW](http://st.devicter.ru/9/1115/243/RFM69HW.pdf)
 
-##   Demonstration
+## Demonstration
 
-###   Code for the main unit with WireLess Gate Shield (works with RTC, IR, RFM69HW, nRF24l01 +)
+### Code for the main unit with WireLess Gate Shield (works with RTC, IR, RFM69HW, nRF24l01 +)
 
-*   Sends a structure to another RFM69HW and receives a response (ping-pong).
-*   Listen nRF24l01 + comes and if appropriate package - outputs it to monitor
-*   Accepts commands via IR receiver (the recognized commands are displayed in the monitor) and lights custom LED
+* Sends a structure to another RFM69HW and receives a response (ping-pong).
+* Listen nRF24l01 + comes and if appropriate package - outputs it to monitor
+* Accepts commands via IR receiver (the recognized commands are displayed in the monitor) and lights custom LED
 
 All results are displayed in the Serial Monitor
+
 ```cpp
 #include <RFM69.h>
 #include <SPI.h>
@@ -490,11 +496,13 @@ void listenRF24() {
     }
 }
 ```
-###   Code for "receiver" (for the test used Arduino Nano and RFM69HW module on the breadboard)
 
-*   Takes using RFM69HW structure
-*   Accountable for admission
-*   Prints additional information regarding the module RFM69HW (registers, etc.)
+### Code for "receiver" (for the test used Arduino Nano and RFM69HW module on the breadboard)
+
+* Takes using RFM69HW structure
+* Accountable for admission
+* Prints additional information regarding the module RFM69HW (registers, etc.)
+
 ```cpp
 #include <RFM69.h>
 #include <SPI.h>
@@ -646,44 +654,44 @@ void resetRFM69(){
 }
 ```
 
-##  Product versions
+## Product versions
 
-<table  cellpadding="5" cellspacing="0">
-<tr>
-<td width="150"> **Revision**
-</td>
-<td width="450"> **Description**
-</td>
-<td width="80"> **Release**
-</td></tr>
-<tr style="font-size: 90%">
-<td> 0.9
-</td>
-<td> Prototype
-</td>
-<td> 05.05.2014
-</td></tr>
-<tr style="font-size: 90%">
-<td> 1.0
-</td>
-<td> Public version
-</td>
-<td> 05.07.2014
-</td></tr></table>
+<table cellPadding={5} cellSpacing={0}>
+  <tbody><tr>
+      <td width={150}> <strong>Revision</strong>
+      </td>
+      <td width={450}> <strong>Description</strong>
+      </td>
+      <td width={80}> <strong>Release</strong>
+      </td></tr>
+    <tr style={{fontSize: '90%'}}>
+      <td> 0.9
+      </td>
+      <td> Prototype
+      </td>
+      <td> 05.05.2014
+      </td></tr>
+    <tr style={{fontSize: '90%'}}>
+      <td> 1.0
+      </td>
+      <td> Public version
+      </td>
+      <td> 05.07.2014
+      </td></tr></tbody></table>
 
-##   Applications
+## Applications
 
-*   Universal Wireless Gateway RF2.4 GHz (nRF24l01 +), RF433 MHz (RFM69HW), IR and LAN (using Ethernet Shield)
-*   Logging system commands and data wireless devices with the time (using the Ethernet Shield)
-*   Design and construction of administering various wireless commands at a certain time (for example, "turn on the light August 23, 2014 at 18:02" or "every day to include an automatic watering at 5:00")
+* Universal Wireless Gateway RF2.4 GHz (nRF24l01 +), RF433 MHz (RFM69HW), IR and LAN (using Ethernet Shield)
+* Logging system commands and data wireless devices with the time (using the Ethernet Shield)
+* Design and construction of administering various wireless commands at a certain time (for example, "turn on the light August 23, 2014 at 18:02" or "every day to include an automatic watering at 5:00")
 
-##   Questions and Answers
+## Questions and Answers
 
-*   Blog [WireLess Gate Shield](//devicter.blogspot.ru) RU
+* Blog WireLess Gate Shield RU
 
-*   Ask a question by e-mail support@devicter.ru
+* Ask a question by e-mail support@devicter.ru
 
-##   How to buy
+## How to buy
 
 This product can be purchased:
 
@@ -697,15 +705,16 @@ Russia
 
 [Devicter store](http://devicter.ru/goods/WireLess-Gate-Shield)
 
-##   Links
+## Links
 
-*   [Description RFM69HW](http://st.devicter.ru/9/1115/243/RFM69HW.pdf)
+* [Description RFM69HW](http://st.devicter.ru/9/1115/243/RFM69HW.pdf)
 
-*   [Description nRF24l01+](ftp://imall.iteadstudio.com/Modules/IM120606002_nRF24L01_module/DS_nRF24L01.pdf)
+* [Description nRF24l01+](ftp://imall.iteadstudio.com/Modules/IM120606002_nRF24L01_module/DS_nRF24L01.pdf)
 
-*   [schematic of the device](http://wiki.devicter.ru/images/c/c7/Wl-Scheme.PNG)
+* [schematic of the device](http://wiki.devicter.ru/images/c/c7/Wl-Scheme.PNG)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

@@ -16,22 +16,25 @@ no_comments: false # for Disqus
 
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Camera_Shield/img/CameraShield.jpg" alt="pir" width={600} height="auto" /></p>
+
 Camera Shield is the first shield board that support photograph, it is based on the solution of **VC0706 + OV7725**, the former is a high performance camera processor with enhanced image processing functions and it embedded the hard-wired JPEG codec, and the latter is a high-performance 1/4 inch, single-chip VGA camera and image processor in a small footprint package. We have written our library to control the Camera Shield via UART/SPI, which makes it possible to take picture easily by your Arduino board. Come on and use it to take a photo!
 
-##  Specification
+## Specification
+
 ---
-*   Fully Compatible with Arduino or Seeeduino
 
-*   Still Picture Resolution: (640x480) JPEG Output
+* Fully Compatible with Arduino or Seeeduino
 
-*   High Speed Serial Bus Control: UART/SPI
+* Still Picture Resolution: (640x480) JPEG Output
 
-*   Integrated MicroSD card Interface
+* High Speed Serial Bus Control: UART/SPI
 
-*   Power Supply: 5 V
+* Integrated MicroSD card Interface
 
+* Power Supply: 5 V
 
-##  Hardware Interface
+## Hardware Interface
+
 ---
 Camera Shield can be controlled via SPI or UART interface.
 
@@ -39,8 +42,8 @@ Camera Shield can be controlled via SPI or UART interface.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Camera_Shield/img/CameraShield_Interface2.png" alt="pir" width={600} height="auto" /></p>
 
+## Getting Started
 
-##  Getting Started
 ---
 Here is a brief introduction to use Camera Shield.
 
@@ -188,8 +191,8 @@ buffer = cam.readPicture(bytesToRead);
 
 and we allow you to read data via two mode:
 
-*   1. UART —— slower mode. Software Serial only support 9600/19200 baud rate. Hardware Serial can be 115200/38400/19200/9600. It will take about 30s to get a picture if you choose the uart mode and at 19200 baud rate.
-*   2. SPI —— faster mode. It will only take about 1s or 2s to get the whole picture back.
+* 1. UART —— slower mode. Software Serial only support 9600/19200 baud rate. Hardware Serial can be 115200/38400/19200/9600. It will take about 30s to get a picture if you choose the uart mode and at 19200 baud rate.
+* 2. SPI —— faster mode. It will only take about 1s or 2s to get the whole picture back.
 
 You can choose your mode in VC0706_UART header file. We use the SPI mode by default.
 
@@ -211,21 +214,19 @@ to use the UART mode.
 
 6. When the program finishes, pull out the SD card and insert it to your computer, you can see your photos. Have fun
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Camera_Shield/res/CameraShield-Schematic.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
+* [Camera Shield Library on gitHub](https://github.com/Seeed-Studio/Camera_Shield_VC0706)
 
-##  Resources
-
-*   [Camera Shield Library on gitHub](https://github.com/Seeed-Studio/Camera_Shield_VC0706)
-
-*   [Schematic of Camera Shield](https://files.seeedstudio.com/wiki/Camera_Shield/res/CameraShield-Schematic.zip)
+* [Schematic of Camera Shield](https://files.seeedstudio.com/wiki/Camera_Shield/res/CameraShield-Schematic.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

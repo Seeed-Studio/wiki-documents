@@ -26,7 +26,6 @@ This CAN-BUS Shield adopts **MCP2515** CAN Bus controller with SPI interface and
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/vehicle-hacking-tools" target="_blank"><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/CAN_Car_Hacking.png" /></a></p>
 </div>
 
-
 **Version**
 
 This document applies to the following version of products:
@@ -67,13 +66,11 @@ If your project is space limited and also don't need other fuctions except CAN-B
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/img/canbus_arduino.png" /></a></p>
 
-
 **What if I want to connect this shield to my car**
 
 If you want to read data or control your car, there's an OBD>DB9 cable available for you, [this cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html) make easier to connect to OBD-connector and DB9-connector. This cable will also work with anything that has a OBD-connector. Add a power switch makes such a satisfying click.
 
  <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/obd_cable.jpg" /></a></p>
-
 
 **USB-CAN Analyzer**
 
@@ -90,7 +87,7 @@ If you want a CAN Bus Analyzer to debug your CAN Bus, this [USB-CAN Analyzer](ht
 - Industrial standard DB-9 connector
 - LED indicators
 
-:::Note
+:::note
 CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/2560) as well as Arduino Leonardo (ATmega32U4).
 :::
 
@@ -113,7 +110,6 @@ CAN BUS Shield Work well with Arduino UNO (ATmega328), Arduino Mega (ATmega1280/
 9. **IC** - MCP2551, a high-speed CAN transceiver ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf))
 10. **IC** - MCP2515, stand-alone CAN controller with SPI interface ([datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf))
 
-
 :::warning
 When you use more than two CAN Bus Shield in one net, you should take the impedance into consideration.
 You should either cut P1 in the PCB with a knife, or just remove R3 on the PCB.
@@ -131,21 +127,23 @@ The FREE pin is available for the other usages.
 
 **CS pin**
 
-:::Attention
+:::caution
 When we produced the new batch of CAN-BUS Shield V2, the wire of the back pads was embedded inside the PCB, although the wire between the pads is now not visible on the outside, the inside is still connected, if you want to change the wiring of the pads, you still need to cut the wiring in the PCB first.
 :::
 
 SPI_CS pin of V1.2 is connected to **D9** by default. If you want to change to **D10**, please follow below instructions.
 
 - Step1: Take a look at the backside of the PCBA, you will find a pad named CS.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/zhanshitu1.png" alt="pir" width={600} height="auto" /></p>
 
- - Step2: Cut the wire between pad9 and the middle pad.
+- Step2: Cut the wire between pad9 and the middle pad.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/zhanshitu2.png" alt="pir" width={600} height="auto" /></p>
 
- - Step3:Solder the middle pad and pad 10.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/zhanshitu3.png" alt="pir" width={600} height="auto" /></p>
+- Step3:Solder the middle pad and pad 10.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/zhanshitu3.png" alt="pir" width={600} height="auto" /></p>
 
 :::warning
 Be careful with the box cutter, it's easy to hurt yourself or the PCBA.
@@ -194,7 +192,6 @@ This example is built under [Arduino IDE version 1.6.9](https://www.arduino.cc/d
     <td><a href="https://www.seeedstudio.com/item_detail.html?p_id=2517" target="_blank"><span>Link</span></a></td>
   </tr>  
   </tbody></table>
-
 
 **STEP2: Hardware Connection**
 
@@ -278,7 +275,6 @@ Open the Serial Monitor of Arduino IDE(**slaver**), you will get the data sent f
 
 ## APIs
 
-
 ### 1.Set the Baud rate
 
 This function is used to initialize the baud rate of the CAN Bus system.
@@ -356,10 +352,10 @@ CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
 
 It is a function to send data onto the bus. In which:
 
-* **id** represents where the data comes from.
-* **ext** represents the status of the frame. '0' means standard frame. '1' means extended frame.
-* **len** represents the length of this frame.
-* **data_buf** is the content of this message.
+- **id** represents where the data comes from.
+- **ext** represents the status of the frame. '0' means standard frame. '1' means extended frame.
+- **len** represents the length of this frame.
+- **data_buf** is the content of this message.
 
 For example, In the 'send' example, we have:
 
@@ -378,8 +374,8 @@ CAN.readMsgBuf(unsigned char len, unsigned char buf);
 
 In conditions that masks and filters have been set. This function can only get frames that meet the requirements of masks and filters.
 
-* **len** represents the data length.
-* **buf** is where you store the data.
+- **len** represents the data length.
+- **buf** is where you store the data.
 
 ### 7.init_CS
 
@@ -389,7 +385,7 @@ it is very usefule for you to use two CAN-BUS shields with one Arduino.we provid
 void MCP_CAN::init_CS(byte _CS)
 ```
 
-* **_CS** represents what you select pin.(9 or 10)
+- **_CS** represents what you select pin.(9 or 10)
 
 ## Generate a New BaudRate
 
@@ -476,38 +472,40 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 <p style={{textAlign: 'center'}}><a href="https://www.instructables.com/id/Hack-your-vehicle-CAN-BUS-with-Arduino-and-Seeed-C/" target="_blank"><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/Wiki_makeitnow_logo.png" /></a></p>
 
 ## FAQ
+
 ------
 **Q1: I can't get data from other CAN device.**
 
-* Check if the connection is right
-* Check if the baud rate setting is right
+- Check if the connection is right
+- Check if the baud rate setting is right
 
 **Q2: The serial monitor print Init Fail.**
 
-* Check if the CS pin setting is matched with the code. For CAN Bus Shield V1.1/1.2, CS pin is connected to D9, others are to D10.
+- Check if the CS pin setting is matched with the code. For CAN Bus Shield V1.1/1.2, CS pin is connected to D9, others are to D10.
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%20Shield%20%20v2.0.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resources
+
 -----
 
-* **[PDF]**[CAN-BUS Shield V2.0 Schmatics](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%20Shield%20%20v2.0.pdf)
-* **[Eagle]**[Schematic & PCB of CAN-BUS Shield V2.0](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%20Shield%20%20v2.0.rar)
-* **[Library]**[Arduino Library for CAN-BUS Shield](https://github.com/Seeed-Studio/CAN_BUS_Shield)
-* **[Datasheet]**[MCP2515 datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf)
-* **[Datasheet]**[MCP2551 datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf)
-* **[Demo]**[An OBD Demo](https://github.com/Seeed-Studio/CANBUS_SHIELD_OBD_RECIPLE)
-* **[Tool]**[MCP2515 Baud Rate Tool](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/CAN_Baudrate_CalcV1.3.zip)
-* **[Tool]**[USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
-* **[Cable]**[DB9 to OBD2 Cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
-* **[Drawing]**[CAN BUS Shield v2.0 Drawing in PDF](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.pdf)
-* **[Drawing]**[CAN BUS Shield v2.0 Drawing in DXF](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.dxf.zip)
+- **[PDF]**[CAN-BUS Shield V2.0 Schmatics](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%20Shield%20%20v2.0.pdf)
+- **[Eagle]**[Schematic & PCB of CAN-BUS Shield V2.0](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%20Shield%20%20v2.0.rar)
+- **[Library]**[Arduino Library for CAN-BUS Shield](https://github.com/Seeed-Studio/CAN_BUS_Shield)
+- **[Datasheet]**[MCP2515 datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/MCP2515.pdf)
+- **[Datasheet]**[MCP2551 datasheet](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/Mcp2551.pdf)
+- **[Demo]**[An OBD Demo](https://github.com/Seeed-Studio/CANBUS_SHIELD_OBD_RECIPLE)
+- **[Tool]**[MCP2515 Baud Rate Tool](https://files.seeedstudio.com/wiki/CAN_BUS_Shield/resource/CAN_Baudrate_CalcV1.3.zip)
+- **[Tool]**[USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+- **[Cable]**[DB9 to OBD2 Cable](https://www.seeedstudio.com/DB9-to-OBD2-Cable-With-Switch-p-2872.html)
+- **[Drawing]**[CAN BUS Shield v2.0 Drawing in PDF](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.pdf)
+- **[Drawing]**[CAN BUS Shield v2.0 Drawing in DXF](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.dxf.zip)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

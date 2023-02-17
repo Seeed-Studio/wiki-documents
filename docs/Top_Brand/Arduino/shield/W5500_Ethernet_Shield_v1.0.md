@@ -21,23 +21,25 @@ The W5500 Ethernet Shield v1.0 can provide your projects with internet connectiv
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/W5500-Ethernet-Shield-p-2433.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Features
+
 --------
 
--   Supports Hardwired TCP/IP Protocols : TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE
--   Supports 8 independent sockets simultaneously
--   Supports Power down mode
--   Supports Wake on LAN over UDP
--   Supports High Speed Serial Peripheral Interface(SPI MODE 0, 3)
--   Internal 32Kbytes Memory for TX/RX Buffers
--   10BaseT/100BaseTX Ethernet PHY embedded
--   Supports Auto Negotiation (Full and half duplex, 10 and 100\* based )
--   Not supports IP Fragmentation
--   3.3V operation with 5V I/O signal tolerance
--   LED outputs (Full/Half duplex, Link, Speed, Active)
--   Micro-SD card socket
--   Grove connectors for I2C and UART
+- Supports Hardwired TCP/IP Protocols : TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE
+- Supports 8 independent sockets simultaneously
+- Supports Power down mode
+- Supports Wake on LAN over UDP
+- Supports High Speed Serial Peripheral Interface(SPI MODE 0, 3)
+- Internal 32Kbytes Memory for TX/RX Buffers
+- 10BaseT/100BaseTX Ethernet PHY embedded
+- Supports Auto Negotiation (Full and half duplex, 10 and 100\* based )
+- Not supports IP Fragmentation
+- 3.3V operation with 5V I/O signal tolerance
+- LED outputs (Full/Half duplex, Link, Speed, Active)
+- Micro-SD card socket
+- Grove connectors for I2C and UART
 
 ## Hardware Overview
+
 -----------------
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/img/W5500_Interface.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -58,7 +60,7 @@ The W5500 Ethernet Shield v1.0 can provide your projects with internet connectiv
 4. D12： SPI MISO
 5. D13： SPI SCK
 
-:::Note
+:::note
 Both W5500 and SD card communicate with Arduino via SPI bus. Pin 10 and pin 4 are chip Selection pins for W5500 and SD slot. They cannot be used as general I/O.
 :::
 
@@ -83,7 +85,7 @@ We will show you an example.This example can upload data to webpage and store yo
     <td><h4>1</h4></td>
   </tr>
   <tr>
-    <td><h4><a href="https://www.seeedstudio.com/item_detail.html?p_id=2517" target="_blank"><span>Seeeduino V4.2</span></a></h4></td>
+    <td><h4><a href="https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html?queryID=dcb7226252c34d7139135b4fd97cafc5&objectID=627&indexName=bazaar_retailer_products" target="_blank"><span>Seeeduino V4.2</span></a></h4></td>
     <td><h4>Controller</h4></td>
     <td><h4>1</h4></td>
   </tr>  
@@ -199,7 +201,7 @@ void loop() {
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println("Connection: close");  // the connection will be closed after completion of the response
-	  client.println("Refresh: 5");  // refresh the page automatically every 5 sec
+   client.println("Refresh: 5");  // refresh the page automatically every 5 sec
           client.println();
           client.println("<!DOCTYPE HTML>");
           client.println("<html>");
@@ -265,15 +267,13 @@ Now, we will show result.
 
 Isn't it very easy? You can begin your project.
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/res/W5500_Ethernet_Shield_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
+
 - [W5500 Ethernet Shield in Eagle format](https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/res/W5500_Ethernet_Shield_v1.0.zip)
 - [W5500 Ethernet Shield Schematic in PDF format](https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/res/W5500_Ethernet_Shield_v1.0.pdf)
 - [W5500 Ethernet Shield PCB in PDF format](https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/res/W5500%20Ethernet%20Shield%20v1.0%20PCB.pdf)
@@ -282,6 +282,7 @@ Isn't it very easy? You can begin your project.
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

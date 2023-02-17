@@ -1,6 +1,6 @@
 ---
 description: Music_Shield_V2.2
-title: Music Shield_V2.2
+title: Music Shield V2.2
 tags:
   - Shield
 keywords:
@@ -18,13 +18,11 @@ no_comments: false # for Disqus
 
 Time to build your real-time MIDI instrument/music player! It can play many format including MP3, WMA, WAV, AAC, MIDI, Ogg Vorbis. The Music Shield is an audio encoder/decoder compatible with Arduino, Seeeduino, Seeeduino Mega and Arduino Mega. It is based on the VC1053B chip, which enabled it to play sound files from SD card and do short-time recording as well. You can also use it to play MIDI notes by slightly changing its hardware installations. Due to the SPI communication mode, it keeps a minimum number of IO port that facilitates users’ own developments of this device. Additionally, the new multifunction button provides greater convenience for users to control.
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+:::note
 The recording function works with Seeeduino Mega and Arduino Mega only. And the maximum size SD card you can use is 2GB.
-</div>
+:::
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/depot/Music-Shield-V20-p-1372.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
 
 Hardware Overview
 -----------------
@@ -88,24 +86,22 @@ Getting Started
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Music_Shield_V2.2/img/Music_shield4.jpg" alt="pir" width={600} height="auto" /></p>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+:::note
 <ol><li>If you want to use MIDI function, you need to change the hardware installation.</li>
 <li>If you changed the hardware installation in order to use MIDI function, you are not able to use playback & recording functions until you restore it to the original condition.</li></ol>
-</div>
+:::
 
-
-### ** Play music**
+### **Play music**
 
 1. Make sure there are songs in the micro SD card.
 2. Download [Music shield V2.0 library](https://github.com/Seeed-Studio/Music_Shield)
 3. Unzip and copy the folder to Arduino’s library path: ..\arduino-1.0\libraries.
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol><li>Change the folder name of the extracted library if Arduino throws an error while loading.</li>
-<li>Change the included header (to Arduino.h) in the example file if there is a <span style="font-style:italic">'arduino.h: No such file or directory'</span> error while compiling.</li></ol>
-</div>
+:::note
+
+1. Change the folder name of the extracted library if Arduino throws an error while loading.<br />
+2. Change the included header (to Arduino.h) in the example file if there is a `arduino.h: No such file or directory` error while compiling.
+:::
 
 **Demo 1: Play songs (e.g. in shuffle mode)**
 
@@ -117,19 +113,17 @@ In order to use the playback function, you need to create a playlist first.
 
 2. Set the play mode. In “creatList”, the function we use is described as follows.
 
-    **   Name:** setPlayMode(unsigned char playmode);
+    **Name:** setPlayMode(unsigned char playmode);
 
-    **   Function:** Set the play mode. There are four modes you can set: MODE_NORMAL, MODE_SHUFFLE, MODE_REPEAT_LIST, MODE_REPEAT_ONE. Each mode stands for different playing orders.
+    **Function:** Set the play mode. There are four modes you can set: MODE_NORMAL, MODE_SHUFFLE, MODE_REPEAT_LIST, MODE_REPEAT_ONE. Each mode stands for different playing orders.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Music_Shield_V2.2/img/Play_Mode.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 3. Select the type of Arduino board that you are using by the path: Tools --> Board --> for example Arduino UNO.
 4. Select the correct serial port you are using by the path: Tools --> Serial Port --> for example COM3.
 5. Upload the code. Click to Serial Monitor when “Done uploading” appears, you will find the order of songs is randomized on the list.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Music_Shield_V2.2/img/Play_List.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 When multifunction button is pressed up or down, the volume will change. Of course, you can try others play modes.
 
@@ -147,6 +141,7 @@ But you must ensure that the song has been stored in the SD card and the format 
 **Demo 3: Control Volume by analog port**
 
 1. Plug the Grove-Base Shield onto the Music shield, Connect the Grove socket of the Rotary and analog port 4 of the Base Shield with a Grove cable. You can change to the digital port as well. But don't forget to change the port number in the definition of the demo code at the same time.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Music_Shield_V2.2/img/Music_shield_5.jpg" alt="pir" width={600} height="auto" /></p>
 
 2. Open the “analogInputControl” example and upload it onto your Arduino Board.
@@ -167,7 +162,6 @@ But you must ensure that the song has been stored in the SD card and the format 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Music_Shield_V2.2/img/Music_shield_midi_demo.jpeg" alt="pir" width={600} height="auto" /></p>
 
-
 2. Upload Code to your arduino UNO.
 
 Reference
@@ -182,8 +176,6 @@ Reference
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Music_Shield_V2.2/res/Music_Shield_v2.2.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
@@ -192,10 +184,10 @@ Resources
 - [VS1053 Datasheet](https://files.seeedstudio.com/wiki/Music_Shield_V2.2/res/VS1053.pdf)
 - [Music Shield libraries](https://github.com/Seeed-Studio/Music_Shield)
 
-
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Music_Shield_V2.2 -->
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

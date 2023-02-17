@@ -27,27 +27,28 @@ The most interesting is that the board has a memory, and you can now update the 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW_.jpg" alt="pir" width={600} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/depot/RGBW-Strip-WireLess-Shield-V10-p-2629.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-##   Feature
 
-*   Built on Arduino-compatible architecture (DualOptiboot)
+## Feature
 
-*   Compatibility with 12 - 24V RGB LED Strip
+* Built on Arduino-compatible architecture (DualOptiboot)
 
-*   4 PWM output (RGBW)
+* Compatibility with 12 - 24V RGB LED Strip
 
-*   On board 64kb SPI flash / E2prom (for OTA firmware updates)
+* 4 PWM output (RGBW)
 
-*   Built-in Auto LED RF activity (for nRF24L01 +)
+* On board 64kb SPI flash / E2prom (for OTA firmware updates)
 
-*   Mini  transceiver 2.4G nRF24L01 +
+* Built-in Auto LED RF activity (for nRF24L01 +)
 
-*   Self-renewing fuse
+* Mini  transceiver 2.4G nRF24L01 +
 
-*   Built-in button
+* Self-renewing fuse
 
-*   GROVE-compatible connector: I2C
+* Built-in button
 
-##   Layout and schematics
+* GROVE-compatible connector: I2C
+
+## Layout and schematics
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW-top.png" alt="pir" width={600} height="auto" /></p>
 
@@ -55,11 +56,12 @@ The most interesting is that the board has a memory, and you can now update the 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/Scheme_RGBW.PNG" alt="pir" width={600} height="auto" /></p>
 
-##   Libraries
+## Libraries
 
-###   Necessary libraries
+### Necessary libraries
 
-###   Demo code (example)
+### Demo code (example)
+
 ```cpp
 
 int L_RED = 6;
@@ -105,25 +107,26 @@ void loop()  {
 }
 ```
 
-##  Version Tracker
+## Version Tracker
 
-<table  cellpadding="5" cellspacing="0">
-<tr>
-<td width="150"> **Revision**
-</td>
-<td width="450"> **Description**
-</td>
-<td width="80"> **Release**
-</td></tr>
-<tr style="font-size: 90%">
-<td> 1.0 rev 1
-</td>
-<td> Public version
-</td>
-<td> 19.11.2015
-</td></tr></table>
+<table cellPadding={5} cellSpacing={0}>
+  <tbody><tr>
+      <td width={150}> <strong>Revision</strong>
+      </td>
+      <td width={450}> <strong>Description</strong>
+      </td>
+      <td width={80}> <strong>Release</strong>
+      </td></tr>
+    <tr style={{fontSize: '90%'}}>
+      <td> 1.0 rev 1
+      </td>
+      <td> Public version
+      </td>
+      <td> 19.11.2015
+      </td></tr></tbody></table>
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

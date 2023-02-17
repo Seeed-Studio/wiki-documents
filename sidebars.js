@@ -110,7 +110,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Digital_Infrared_Temperature_Sensor',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Infrared_Temperature_Sensor',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Infrared_Temperature_Sensor_Array-AMG8833',
-                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor',
+                'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor_V1.2',
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
 
@@ -244,7 +244,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Biometric/Sensor_biomedicine',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Finger-clip_Heart_Rate_Sensor_with_shell',
-                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-EMG_Detector',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-EMG_Detector',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Ear-clip_Heart_Rate_Sensor',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Chest_Strap_Heart_Rate_Sensor',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
@@ -303,7 +303,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Digital-PIR-Sensor',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Collision_Sensor',
-                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Tilt_Switch',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Tilt_Switch',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Mini_Track_Ball',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Mouse_Encoder',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Piezo_Vibration_Sensor',
@@ -382,8 +382,8 @@ const sidebars = {
               label: 'RF',
               items: [
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-125KHz_RFID_Reader',
-                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-315MHz_RF_Kit',
-                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit',
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove-315MHz_RF_Kit',
+                'Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit',
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove_LoRa_Radio',
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-Serial_RF_Pro',
               ]
@@ -392,7 +392,7 @@ const sidebars = {
               type: 'category',
               label: 'Standard Protocol',
               items: [
-                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-DMX512',
+                'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-DMX512',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_ADC',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-I2C_FM_Receiver_v1.1',
@@ -481,9 +481,9 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Servo',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Speaker',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Speaker-Plus',
-                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Variable_Color_LED',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Variable_Color_LED',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Vibration_Motor',
-                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
 
@@ -549,14 +549,14 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C-Hub-6Port',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A',
-                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-AND',
-                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-OR',
-                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-DC_Jack_Power',  
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-AND',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-OR',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-DC_Jack_Power',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Qwiic-Hub',
-                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NunChuck',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NunChuck',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
-                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
               ]
             },
 
@@ -1193,16 +1193,16 @@ const sidebars = {
           ],
 
         },
-        //{
+        {
 
-        //type: 'category',
-        //label: 'Kit with Courses',
-        //items: [
-        //'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
-        //'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-        //],
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
+            // 'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+          ],
 
-        //},
+        },
 
       ],
 
@@ -2127,9 +2127,9 @@ const sidebars = {
         'Top_Brand/Arduino/Getting_Started_with_Arduino',
         {
           type: 'category',
-          label: 'shield',
+          label: 'Shield',
           items: [
-            'Top_Brand/Arduino/shield/shield_Getting_Started',
+            'Top_Brand/Arduino/shield/Shield',
             'Top_Brand/Arduino/shield/2.8inch_TFT_Touch_Shield_v2.0',
             'Top_Brand/Arduino/shield/4A_Motor_Shield',
             'Top_Brand/Arduino/shield/Base_Shield_V2',
@@ -2139,7 +2139,7 @@ const sidebars = {
             'Top_Brand/Arduino/shield/Energy_Shield',
             'Top_Brand/Arduino/shield/Motor_Shield_V2.0',
             'Top_Brand/Arduino/shield/Brushless_Motor_Shield_TB6605FTG',
-            //   'Top_Brand/Arduino/shield/Music_Shield_V2.2',
+            'Top_Brand/Arduino/shield/Music_Shield_V2.2',
             'Top_Brand/Arduino/shield/NFC_Shield_V2.0',
             'Top_Brand/Arduino/shield/Grove-Mega_Shield',
             'Top_Brand/Arduino/shield/Protoshield_Kit_for_Arduino',
@@ -2150,9 +2150,46 @@ const sidebars = {
             'Top_Brand/Arduino/shield/Spartan_Edge_Accelerator_Board',
             'Top_Brand/Arduino/shield/W5500_Ethernet_Shield_v1.0',
             'Top_Brand/Arduino/shield/Grove_Shield_for_Arduino_Nano',
-            //     'Top_Brand/Arduino/shield/RGBW_Stripe_WireLess_Shield_V1.0',
+            'Top_Brand/Arduino/shield/RGBW_Stripe_WireLess_Shield_V1.0',
             'Top_Brand/Arduino/shield/Renbotics_ServoShield_Rev',
-            //    'Top_Brand/Arduino/shield/WireLess_Gate_Shield_V1.0',
+            'Top_Brand/Arduino/shield/WireLess_Gate_Shield_V1.0',
+            'Top_Brand/Arduino/shield/2.7inch-Triple-Color-E-Ink-Shield-for-Arduino',
+            'Top_Brand/Arduino/shield/Bluetooth_Shield',
+            'Top_Brand/Arduino/shield/Motor_Shield_V1.0',
+            'Top_Brand/Arduino/shield/Motor_Shield',
+            'Top_Brand/Arduino/shield/NFC_Shield_V1.0',
+            'Top_Brand/Arduino/shield/NFC_Shield',
+            'Top_Brand/Arduino/shield/Energy_Monitor_Shield_V0.9b',
+            'Top_Brand/Arduino/shield/Ethernet_Shield_V1.0',
+            'Top_Brand/Arduino/shield/Ethernet_Shield_V2.0',
+            'Top_Brand/Arduino/shield/Ethernet_Shield',
+            'Top_Brand/Arduino/shield/GPRS-Shield',
+            'Top_Brand/Arduino/shield/GPRS_Shield_v1.0',
+            'Top_Brand/Arduino/shield/GPRS_Shield_V2.0',
+            'Top_Brand/Arduino/shield/GPRS_Shield_V3.0',
+            'Top_Brand/Arduino/shield/Music_Shield',
+            'Top_Brand/Arduino/shield/Music_Shield_V1.0',
+            'Top_Brand/Arduino/shield/Relay_Shield',
+            'Top_Brand/Arduino/shield/Relay_Shield_V1',
+            'Top_Brand/Arduino/shield/Relay_Shield_V2',
+            'Top_Brand/Arduino/shield/SD_Card_Shield',
+            'Top_Brand/Arduino/shield/SD_Card_Shield_V3.0',
+            'Top_Brand/Arduino/shield/Small_e-Paper_Shield',
+            'Top_Brand/Arduino/shield/Solar_Charger_Shield',
+            'Top_Brand/Arduino/shield/Starter_Shield_EN',
+            'Top_Brand/Arduino/shield/TFT_Touch_Shield_V1.0',
+            'Top_Brand/Arduino/shield/Wifi_Shield',
+            'Top_Brand/Arduino/shield/Wifi_Shield_V1.0',
+            'Top_Brand/Arduino/shield/Wifi_Shield_V1.1',
+            'Top_Brand/Arduino/shield/Wifi_Shield_V1.2',
+            'Top_Brand/Arduino/shield/Wifi_Shield_Fi250_V1.1',
+            'Top_Brand/Arduino/shield/Wifi_Shield_V2.0',
+            'Top_Brand/Arduino/shield/Shield_Bot_V1.1',
+            'Top_Brand/Arduino/shield/Shield_Bot_V1.2',
+            'Top_Brand/Arduino/shield/CAN-BUS_Shield_V1.2',
+            'Top_Brand/Arduino/shield/EL_Shield',
+            'Top_Brand/Arduino/shield/Seeed_BLE_Shield',
+            'Top_Brand/Arduino/shield/Small_e-Paper_Shield_V2',
           ]
         },
         {
@@ -2206,6 +2243,21 @@ const sidebars = {
                 'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/IR_Remote',
                 'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Joystick_Control_RGB_Led',
                 'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Light_Sensor_and_LED_Bar',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/LightView_201k_Digital_display_module',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/RFID_Control_LED',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Relay_Control_LED',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Sound_Sensor_And_LED_Bar',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/temperature_sensor',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_One-Blink',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_One-Double_Blink',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Two-Digital_Input',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Two-Digital_Input_v1.0b',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Three-Analog_Input_v1b',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Four-Noise_Maker',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Five-Relay_Control',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Six-LCD_Demonstration',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Seven-Temperature',
+                'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Eight-Thermostat',
               ]
             },
 
@@ -2220,6 +2272,7 @@ const sidebars = {
                   label: 'Compiling Platform',
                   items: [
                     'Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Guide_for_Codecraft_using_Arduino',
+                    'Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Codecraft_Grove_Compatible_List',
                   ]
                 },
               ],
@@ -2243,6 +2296,14 @@ const sidebars = {
               ],
             },
             'Top_Brand/Arduino/Kit with Courses/Grove_Speech_Recognizer_Kit_for_Arduino',
+            'Top_Brand/Arduino/Kit with Courses/Sidekick_Basic_Kit_for_Arduino_V2',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Starter_kit_for_Arduino_101',
+            'Top_Brand/Arduino/Kit with Courses/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible',
+            'Top_Brand/Arduino/Kit with Courses/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+            'Top_Brand/Arduino/Kit with Courses/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Indoor_Environment_Kit_for_Edison',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Smart_Plant_Care_Kit',
+            'Top_Brand/Arduino/Kit with Courses/Techbox_Tricks',
 
           ],
         },
@@ -2570,6 +2631,13 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reComputer Alpha',
+          items: [
+            'Seeed_Elderly/reComputer_Alpha/How-to-build-a-home-soft-router-and-NAS-With-ReComputer',
+          ]
+        },
+        {
+          type: 'category',
           label: 'Air Serial',
           items: [
             'Seeed_Elderly/Air_Serial/Air602_WiFi_Development_Board',
@@ -2581,6 +2649,21 @@ const sidebars = {
           label: 'NPi-i',
           items: [
             'Seeed_Elderly/NPi-i/NPi-i.MX6ULL-Dev-Board-Linux-SBC',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'W600',
+          items: [
+            'Seeed_Elderly/W600/W600_Module',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Artik',
+          items: [
+            'Seeed_Elderly/Artik/Artik',
+            'Seeed_Elderly/Artik/Eagleye_530s',
           ]
         },
         {
@@ -2620,6 +2703,24 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/Fubarino_SD',
             //'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
             'Seeed_Elderly/Discrete Product/Matrix_Clock',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Fusion',
+          items: [
+            'Seeed_Elderly/Fusion/Service_for_Fusion_PCB',
+            'Seeed_Elderly/Fusion/Galileo_Case',
+            'Seeed_Elderly/Fusion/Unibody_box_for_Galileo_Gen2',
+            'Seeed_Elderly/Fusion/Starter_bundle_harness_V1',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Contributors',
+          items: [
+            'Seeed_Elderly/Contributors/How_To_Edit_A_Document',
+            'Seeed_Elderly/Contributors/Things_We_Make',
           ]
         },
       ],

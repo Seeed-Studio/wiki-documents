@@ -18,15 +18,13 @@ no_comments: false # for Disqus
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/500px-Motorshield_01.jpg" alt="pir" width={600} height="auto" /></p>
 
-:::Note
+:::note
 This document works for Motor Shield V2.0/2.1/2.2.
 :::
 
 The Motor Shield is a driver module for motors that allows you to use Arduino to control the working speed and direction of the motor. Based on the Dual Full-Bridge Drive Chip L298, it is able to drive two DC motors or a step motor. The Motor Shield can either be powered by Arduino directly or by an external 6V~15V power supply via the terminal input. This module can be used for the development of micro robots and intelligent vehicles, etc
 
-
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Motor-Shield-V2-0.html?queryID=4a07292b83eeca2fc091c32620ff0c76&objectID=1498&indexName=bazaar_retailer_products" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
 
 <table align="center">
  <caption> <h2>Version</h2> </caption>
@@ -43,14 +41,15 @@ The Motor Shield is a driver module for motors that allows you to use Arduino to
   </tr>
   <tr>
     <td><h4>v2.0</h4></td>
-    <td><h4>Enable +5V Pin of Arduino/Seeeduino to power motor	</h4></td>
+    <td><h4>Enable +5V Pin of Arduino/Seeeduino to power motor </h4></td>
     <td><h4>2013-2</h4></td>
   </tr>  
   </tbody></table>
 
-
 ## Features
+
 -------------------
+
 - Standard Arduino UNO Shield pin out
 - Based on L298 full bridge IC
 - Drive 2 DC Motor or 1 Stepper
@@ -59,10 +58,9 @@ The Motor Shield is a driver module for motors that allows you to use Arduino to
 - Heat sink for better performance
 - Arduino library
 
-
 ## Specifications
--------------------
 
+-------------------
 
 <table align="center">
   <tbody>
@@ -91,7 +89,6 @@ The Motor Shield is a driver module for motors that allows you to use Arduino to
     <td><h4>2 Channels, 4 Ports</h4></td>
   </tr>
   </tbody></table>
-
 
 ## Hardware Overview
 
@@ -182,7 +179,7 @@ The Motor Shield is a driver module for motors that allows you to use Arduino to
   <tr>
     <td><h4>D9</h4></td>
     <td><h4>Enable of Channel0</h4></td>
-  </tr> 
+  </tr>
   <tr>
     <td><h4>D10</h4></td>
     <td><h4>Enable of Channel1</h4></td>
@@ -201,8 +198,7 @@ The Motor Shield is a driver module for motors that allows you to use Arduino to
   </tr>
   </tbody></table>
 
-
-:::Note
+:::note
 D8~D13 are used by Motor Shield. Please don't use those pins to avoid conflict.
 :::
 
@@ -240,12 +236,14 @@ D8~D13 are used by Motor Shield. Please don't use those pins to avoid conflict.
   </tr>
   </tbody></table>
 
-
-:::Note
+:::note
 Not Used means you can use those pins freely.
 :::
+
 ## Getting Started
+
 -------------------
+
 ### Drive a DC motor
 
 #### Connection
@@ -271,7 +269,6 @@ Here we will show you how this Motor Shield works via a simple demo. First of al
   </tr>  
   </tbody></table>
 
-
 - Set **SEN_A** and **SEN_B**, connect the left 2 pins together with a jumper.
 - Connect **MB_EN** together with a jumper, as we are not going use an external power.
 - Connect DC motor to Chanel 0 (OUT1 and OUT2).
@@ -280,14 +277,12 @@ Here we will show you how this Motor Shield works via a simple demo. First of al
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/DC%20connection.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 #### Software
 
 - Click below button to download the motor shield library.
 - Please follow [how to install an arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) procedures to install the library.
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/Seeed-Studio/SeeedMotorShieldV2/archive/master.zip" target="_blank"><img src="https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/image/400px-Motor_shield_v2_library.png" /></a></p>
-
 
 - Upload the code to Seeeduino V4.
 
@@ -319,6 +314,7 @@ void loop()
 }
 // END FILE
 ```
+
 - Then you will find your motor move (1s), stop (1s), move back (1s), stop (1s), and loop.
 
 If nothing happens, please make sure:
@@ -352,12 +348,9 @@ Here we will show you how this Motor Shield works via a simple demo.  First of a
   </tr>  
   </tbody></table>
 
-
-
 - Set **SEN_A** and **SEN_B**, connect the left 2 pins together with a jumper.
 - Connect **MB_EN** together with a jumper, as we are not going use an external power.
 - Find the pin definitions of you stepper, and connect it to the OUTPUT of the shield. As below:
-
 
 <table align="center">
   <tbody>
@@ -383,13 +376,13 @@ Here we will show you how this Motor Shield works via a simple demo.  First of a
   </tr>
   </tbody></table>
 
-
 - Plug Motor Shield into Arduino.
 - Connect Arduino to PC via a USB cable.
 
 #### Software
 
 Copy below code to Arduino IDE and upload it to Seeeduino V4, then you will find your stepper move.
+
 ```CPP
 /*
  * Stepper test for Seeed Motor Shield V2
@@ -436,44 +429,53 @@ void loop()
 
 // END FILE
 ```
+
 If nothing happens, please double check if you have connected the wire right.
 
 ## Library APIs
+
 ---------
 
-### DC Motor APIs:
+### DC Motor APIs
 
 #### begin
 
 **Description**
+
 ```Javascript
 void begin();
 ```
-#### speed
-**Description**
 
+#### speed
+
+**Description**
 
 ```Javascript
 void move(int motor_id, int speed);
 ```
+
 - motor_id
   - 0 - Chanel 0
   - 1 - Chanel 1
 - speed: -100~100, the larger the faster, 0 for stop
 
 **stop**
+
 ```Javascript
 void stop(unsigned char motor_id);
 ```
+
 **brake**
+
 ```Javascript
 void brake(unsigned char motor_id);
 ```
+
 #### Stepper
+
 **Note** that we use the library provided by Arduino IDE to drive a stepper.
 
 There's something need to be modified, please refer to the examples.
-
 
 ## FAQs
 
@@ -550,14 +552,10 @@ A3: Here is the connection.
   </tr>
   </tbody></table>
 
-
-
 ## Motor Shield V2.0 Eagle File Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_Shield_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Motor shield V2.1 Eagle File Schematic Online Viewer
 
@@ -565,9 +563,11 @@ A3: Here is the connection.
 </div>
 
 ## Resources
+
 -------------------
-- **[Eagle]** [ Motor Shield V2.0 Eagle File ](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_Shield_Eagle_File.zip)
-- **[Eagle]** [Motor shield V2.1 Eagle File ](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.1.rar)
+
+- **[Eagle]** [Motor Shield V2.0 Eagle File](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_Shield_Eagle_File.zip)
+- **[Eagle]** [Motor shield V2.1 Eagle File](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.1.rar)
 - **[PDF]** [Motor Shield 2.0 schematics](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.0.pdf)
 - **[PDF]** [Motor Shield 2.1 schematics](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor_shield_2.1.pdf)
 - **[PDF]** [Motor Shield 2.2 schematics](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/Motor%20Shield%20v2.2.pdf)
@@ -576,6 +576,7 @@ A3: Here is the connection.
 - **[Datasheet]** [78M05 Datasheet](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/78M05_datasheet.pdf)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

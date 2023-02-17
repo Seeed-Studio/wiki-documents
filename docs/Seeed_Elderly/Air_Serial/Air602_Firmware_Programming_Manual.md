@@ -12,16 +12,13 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/main.jpg)
 
-
 The Air602 module is based on W600 which embedded ARM-Cortex M3, in this tutorial we will show you how to burn the firmware.
-
 
 ## Firmware Tool & Imagme Download
 
-You can download the Firmware Programing Tool here 
+You can download the Firmware Programing Tool here
 
 [Firmware Tool](https://v2.fangcloud.com/share/f348cba5a0e3899fd97c57b9f2)
-
 
 We provide the official firmware for you.
 
@@ -29,8 +26,6 @@ We provide the official firmware for you.
 
 You will find 4 version in this zip package, we recommend you to use **AirM2M_Luat_V0011_W600T_USER**
 
-
-<!-- 
 ### change log
 
 |version|Description|
@@ -40,19 +35,17 @@ You will find 4 version in this zip package, we recommend you to use **AirM2M_Lu
 |AirM2M_Luat_V0010_W600T_USER|Fixed the problem that when the module is set to AP mode and the DHCP function is disabled, the device(stations) still can use DHCP function to get the IP address. At the same time, it also solves the problem that some mobile phones are connected successfully but disconnected immediately.|
 |AirM2M_Luat_V0011_W600T_USER|Optimized the power consumption of the chip, reducing the heat generated during the operation of the chip|
 
-
 You can jump to [Burn the firmware](#Burn the firmware) if you do not want to use SDK.
 
 ## SDK Download
 
-Also, you can download the SDK and reprogram it yourself. 
+Also, you can download the SDK and reprogram it yourself.
 
 [AirM2M_W600_SDK](https://github.com/openLuat/Luat_WiFi_WM_W600)
 
 We recommand you to build it with **Keil MDK5**. Please use the Keil to open the **WM_W600.uvprojx**, you can find it in the **XXXXX\WM_SDK\Tools\Keil\Project**, XXXXX is the location you unzip the SDK.
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/KEIL_path.jpg)
-
 
 When build is done, you can find the **.img** file at **XXXXX\WM_SDK\Bin**, also XXXXX is the location you unzip the SDK.
 
@@ -62,7 +55,7 @@ Now you can burn your own firmware to Air602, then the question is how?
 
 ## Burn the firmware
 
-Unfortunately, the firmware tool only support chinese language, to solve this problem, we will show you the sreenshots step by step. 
+Unfortunately, the firmware tool only support chinese language, to solve this problem, we will show you the sreenshots step by step.
 
 **Step 1.** Unzip the Firmware Tool, find and double click the **LuaTool.exe** in the **XXXX/LuaTools 1.5.7**, XXXX is the path you unzip the firmware tool(LuaTools1.5.7).
 
@@ -72,8 +65,7 @@ Unfortunately, the firmware tool only support chinese language, to solve this pr
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/Tool_1.jpg)
 
-
-**Step 3.** Switch to wifi mode. The default mode is Luat for 4G, to burn the Air602 firmware we should click **切换模式 ->切换至WiFi**. 
+**Step 3.** Switch to wifi mode. The default mode is Luat for 4G, to burn the Air602 firmware we should click **切换模式 ->切换至WiFi**.
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/Tool_2.jpg)
 
@@ -89,7 +81,7 @@ Then the software will restart, and you will see a new window like that:
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/Tool_5.jpg)
 
-Then you will see a notice **开始握手，请重启WiFi模块**, when this prompt appears, please press the reset button on the Air602 development board in time. 
+Then you will see a notice **开始握手，请重启WiFi模块**, when this prompt appears, please press the reset button on the Air602 development board in time.
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/Tool_6.jpg)
 
@@ -97,17 +89,15 @@ Please becareful when you press the reset button to prevent the USB device false
 
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/Tool_7.jpg)
 
+:::note
+If it fails, it may show **握手超时**, which means handshake timeout, please repeat step 5 several times, it will be OK then.
+:::
 
-!!!Note
-        If it fails, it may show **握手超时**, which means handshake timeout, please repeat step 5 several times, it will be OK then.
+:::tipsuccess
+If everything goes well, you will see the following picture, which means you have successfully burned the firmware into the Air602 development board. Enjoy :D
+:::
 
-
-!!!success
-        If everything goes well, you will see the following picture, which means you have successfully burned the firmware into the Air602 development board. Enjoy :D
-    
 ![](https://files.seeedstudio.com/wiki/Air602_WiFi_Module/img/Tool_8.jpg)
-
-
 
 ## FAQ
 
@@ -125,7 +115,8 @@ our forum.
 [Problems after burning FW AirM2M_Luat_V0011_W600T_USER](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8498&p=28790#p28790)
 
 ___
-### Q2: How to Programming from Linux.
+
+### Q2: How to Programming from Linux
 
 **Quote"**
 Now I find out that the "firmware tools" zipfile does not contain any sources, but just a few windows binaries. So how do I go about programming this thing from my Linux workstation?
@@ -136,7 +127,7 @@ A2: Unfortunately, we don't have the firmware tool for linux. However you can us
 
 >Step 1. Send 1B (HEX), Cyclically.  
 >Step 2. Offered by **tarp.andreas**. "Try to push the RESET button (or pull down LOW the Res-PIN on the stand-alone module) while sending "\x1b" then you'll get the desired response."  
->Step 3. When it recall "secboot running" and then with "CCCCCC...." you can choose the firmware file, and send them under xmodem protocol 
+>Step 3. When it recall "secboot running" and then with "CCCCCC...." you can choose the firmware file, and send them under xmodem protocol
 
 For more detail please check our forum.  
 
@@ -148,7 +139,6 @@ ___
 
 We found that some version of the mac system can not recognize this board.
 
-
 A3 : In that case you may need to install the CH340 driver manually, this board uses CH330N, which shares the same driver with CH340.
 
 For more detail please check our forum.  
@@ -156,7 +146,6 @@ For more detail please check our forum.
 [Mac os driver issue](https://forum.seeedstudio.com/viewtopic.php?f=106&t=8299&sid=acb3a9a37671cf031800ea6073adb854)
 
 ___
-
 
 ## Resource
 
@@ -166,8 +155,8 @@ ___
 
 - **[Github Page]** [AirM2M_W600_SDK](https://github.com/openLuat/Luat_WiFi_WM_W600)
 
-
 ## Tech Support
 
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/)
-<br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p> -->
+<br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
