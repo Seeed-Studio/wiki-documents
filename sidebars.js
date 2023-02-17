@@ -2622,6 +2622,24 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/Matrix_Clock',
           ]
         },
+        {
+          type: 'category',
+          label: 'Fusion',
+          items: [
+            'Seeed_Elderly/Fusion/Service_for_Fusion_PCB',
+            'Seeed_Elderly/Fusion/Galileo_Case',
+            'Seeed_Elderly/Fusion/Unibody_box_for_Galileo_Gen2',
+            'Seeed_Elderly/Fusion/Starter_bundle_harness_V1',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Contributors',
+          items: [
+            'Seeed_Elderly/Contributors/How_To_Edit_A_Document',
+            'Seeed_Elderly/Contributors/Things_We_Make',
+          ]
+        },
       ],
 
     },
