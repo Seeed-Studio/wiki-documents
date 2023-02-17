@@ -1193,16 +1193,16 @@ const sidebars = {
           ],
 
         },
-        //{
+        {
 
-        //type: 'category',
-        //label: 'Kit with Courses',
-        //items: [
-        //'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
-        //'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-        //],
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
+            // 'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+          ],
 
-        //},
+        },
 
       ],
 
@@ -2280,6 +2280,14 @@ const sidebars = {
               ],
             },
             'Top_Brand/Arduino/Kit with Courses/Grove_Speech_Recognizer_Kit_for_Arduino',
+            'Top_Brand/Arduino/Kit with Courses/Sidekick_Basic_Kit_for_Arduino_V2',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Starter_kit_for_Arduino_101',
+            'Top_Brand/Arduino/Kit with Courses/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible',
+            'Top_Brand/Arduino/Kit with Courses/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+            'Top_Brand/Arduino/Kit with Courses/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Indoor_Environment_Kit_for_Edison',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Smart_Plant_Care_Kit',
+            'Top_Brand/Arduino/Kit with Courses/Techbox_Tricks',
 
           ],
         },
