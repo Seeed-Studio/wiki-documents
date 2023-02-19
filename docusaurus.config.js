@@ -12,8 +12,8 @@ const config = {
   title: 'Seeed Studio Wiki',
   tagline: 'The Seeed Studio Files Management Platform, Opening up and Cooperation.',
   
-  url: 'https://c1ev0ps.github.io',
-  baseUrl: '/docusaurus_wiki/',
+  url: 'https://seeed-studio.github.io',
+  baseUrl: '/wiki-documents/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/S.png',
@@ -33,7 +33,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Seeed Studio', // Usually your GitHub org/user name.
-  projectName: 'docusaurus_wiki', // Usually your repo name.
+  projectName: 'wiki-documents', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -90,7 +90,7 @@ const config = {
           ],
 
           editUrl:
-            'https://github.com/c1ev0ps/docusaurus_wiki/edit/main/',
+            'https://github.com/c1ev0ps/wiki-documents/edit/main/',
         },
 
         
@@ -99,7 +99,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/c1ev0ps/docusaurus_wiki/edit/main/',
+            'https://github.com/c1ev0ps/wiki-documents/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -159,7 +159,7 @@ const config = {
       },
 
       giscus: {
-        repo: 'c1ev0ps/docusaurus_wiki',
+        repo: 'c1ev0ps/wiki-documents',
         repoId: 'R_kgDOIabZbQ',
         category: 'Q&A',
         categoryId: 'DIC_kwDOIabZbc4CSlHH',
@@ -216,7 +216,7 @@ const config = {
             className:'navbar_doc_items'
           },
           {
-            to: 'https://github.com/c1ev0ps/docusaurus_wiki',
+            to: 'https://github.com/c1ev0ps/wiki-documents',
             label: 'GitHub 💭',
             position: 'right',
             className:'navbar_doc_items'
@@ -381,7 +381,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/c1ev0ps/projects/3/views/1" href="https://github.com/c1ev0ps/docusaurus_wiki/blob/main/TASK.md">task lists</a>！',
+          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/c1ev0ps/projects/3/views/1" href="https://github.com/c1ev0ps/wiki-documents/blob/main/TASK.md">task lists</a>！',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,

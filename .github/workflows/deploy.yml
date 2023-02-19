@@ -50,7 +50,7 @@ jobs:
         run: |
             curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
             echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-            cd  ~/docusaurus_wiki
+            cd  ~/wiki-documents
             sudo apt remove cmdtest
             sudo apt update && sudo apt install yarn
             yarn add docusaurus
@@ -69,7 +69,7 @@ jobs:
       
       - name: PUBLISH to WEBSITE
         run: |
-            cd  ~/docusaurus_wiki/build
+            cd  ~/wiki-documents/build
             git init
             git remote add github git@github.com:Seeed-Studio/wiki-documents.git
             git checkout -b HTML 

@@ -69,10 +69,10 @@ jobs:
       
       - name: PUBLISH to WEBSITE
         run: |
-            git clone -b HTML_RE git@github.com:tianrking/docusaurus_wiki.git ~/HTML_RE
+            git clone -b HTML_RE git@github.com:tianrking/wiki-documents.git ~/HTML_RE
             cd ~/HTML_RE
             yarn add docusaurus-prince-pdf
-            npx docusaurus-prince-pdf -u https://c1ev0ps.github.io/docusaurus_wiki/Arduino
+            npx docusaurus-prince-pdf -u https://seeed-studio.github.io/wiki-documents/Arduino
             git add .
             git commit -m "Add: pdf"
             git push -u origin HTML_RE -f

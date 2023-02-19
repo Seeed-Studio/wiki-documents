@@ -17,4 +17,4 @@ last_update:
 
 - Your name and your works will be rewarded and presented.
 
-For further information, please visit our <strong><a href="https://github.com/c1ev0ps/docusaurus_wiki/blob/main/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> Github </font></span></a></strong> and make your local files management platform here!
+For further information, please visit our <strong><a href="https://github.com/c1ev0ps/wiki-documents/blob/main/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> Github </font></span></a></strong> and make your local files management platform here!

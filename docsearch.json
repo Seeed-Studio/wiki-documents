@@ -1,10 +1,10 @@
 {
   "index_name": "wiki",
   "start_urls": [
-    "https://c1ev0ps.github.io/docusaurus_wiki/"
+    "https://seeed-studio.github.io/wiki-documents/"
   ],
   "sitemap_urls": [
-    "https://c1ev0ps.github.io/docusaurus_wiki/sitemap.xml"
+    "https://seeed-studio.github.io/wiki-documents/sitemap.xml"
   ],
   "stop_urls": [
     "/search",
