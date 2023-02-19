@@ -90,7 +90,7 @@ const config = {
           ],
 
           editUrl:
-            'https://github.com/c1ev0ps/wiki-documents/edit/main/',
+            'https://github.com/Seeed-Studio/wiki-documents/edit/main/',
         },
 
         
@@ -99,7 +99,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/c1ev0ps/wiki-documents/edit/main/',
+            'https://github.com/Seeed-Studio/wiki-documents/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -216,7 +216,7 @@ const config = {
             className:'navbar_doc_items'
           },
           {
-            to: 'https://github.com/c1ev0ps/wiki-documents',
+            to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',
             position: 'right',
             className:'navbar_doc_items'
@@ -381,7 +381,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/c1ev0ps/projects/3/views/1" href="https://github.com/c1ev0ps/wiki-documents/blob/main/TASK.md">task lists</a>！',
+          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/Seeed-Studio/wiki-documents/blob/main/TASK.md">task lists</a>！',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,

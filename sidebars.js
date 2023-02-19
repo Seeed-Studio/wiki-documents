@@ -2816,7 +2816,7 @@ const sidebars = {
         margin-top: 100px;
       }
       </style>
-      <a class="sub_item" href="https://files.seeedstudio.com/wiki/One-Click-Download-PDF/seeed-studio.github.io-wiki-documents-Network-SenseCAP-Industrial-IoT-SenseCAP-Introduction.pdf" target="_blank"><span>Download PDF 📖</span></a>
+      <a class="sub_item" href="https://files.seeedstudio.com/wiki/One-Click-Download-PDF/c1ev0ps.github.io-docusaurus_wiki-Network-SenseCAP-Industrial-IoT-SenseCAP-Introduction.pdf" target="_blank"><span>Download PDF 📖</span></a>
     `,
     },
   ],
