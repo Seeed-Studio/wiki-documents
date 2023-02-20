@@ -15,17 +15,19 @@ This kit is used for one way wireless communication at a frequency of 315MHz and
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/grove-315mhz-simple-rf-link-kit-p-1061.html?cPath=139_140)
 
-##   Features
+## Features
+
 ---
-*   GROVE compatible interface.
 
-*   Uses ASK (Amplitude Shift Keying) Modulation.
+* GROVE compatible interface.
 
-*   One way communication
+* Uses ASK (Amplitude Shift Keying) Modulation.
 
-##  Specification
+* One way communication
 
-###  Transmitter Module
+## Specification
+
+### Transmitter Module
 
 <table  cellspacing="0" width="80%">
 <tr>
@@ -87,7 +89,7 @@ This kit is used for one way wireless communication at a frequency of 315MHz and
 <td> m
 </td></tr></table>
 
-###  Receiver Module
+### Receiver Module
 
 <table  cellspacing="0" width="80%">
 <tr>
@@ -126,28 +128,29 @@ This kit is used for one way wireless communication at a frequency of 315MHz and
 <td> MHz
 </td></tr></table>
 
-##   Application Ideas
+## Application Ideas
 
-*   Remote control
+* Remote control
 
-*   Remote automation
+* Remote automation
 
-*   Alarm
+* Alarm
 
-##   Usage
+## Usage
 
 The transmitter and receiver modules both rely on a single wire for communication. Though using the UART supplied by the Arduino platform can work, it is recommended, instead, to use the VirtualWire library which uses Amplitude Shift Keying for modulation which provides better communication.
 
 Both the transmitter and receiver modules require three wires: Vcc, Ground, and signal. Both of pin 2 parts of the kit are not connected.
 
-*   Connect the Transmitter module to Digital I/O 2 of the [Grove_-_Base_Shield](/Base_Shield_V2 "Grove - Base Shield") on the Arduino being used for transmission.
+* Connect the Transmitter module to Digital I/O 2 of the [Grove_-_Base_Shield](/Top_Brand/Arduino/shield/Base_Shield_V2 "Grove - Base Shield") on the Arduino being used for transmission.
 Grove-433MHz_Simple_RF_Link_Kit
-*   Connect the Receiver module to Digital I/O 2 of the [Grove_-_Base_Shield](/Base_Shield_V2 "Grove - Base Shield") on the receiving Arduino.
+* Connect the Receiver module to Digital I/O 2 of the [Grove_-_Base_Shield](/Top_Brand/Arduino/shield/Base_Shield_V2 "Grove - Base Shield") on the receiving Arduino.
 
-**Note:** The hardware installation can refer to [the usage of the module Grove - 433MHz Simple RF Link Kit](/Grove-433MHz_Simple_RF_Link_Kit "Grove-433MHz_Simple_RF_Link_Kit").
+**Note:** The hardware installation can refer to [the usage of the module Grove - 433MHz Simple RF Link Kit](/Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit "Grove-433MHz_Simple_RF_Link_Kit").
 
-*   Download the [File: VirtualWire library](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip) and unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0\libraries. Please reference [here](http://www.pjrc.com/teensy/td_libs_VirtualWire.html).
-*   Upload the below code for transmitter module:
+* Download the [File: VirtualWire library](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip) and unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0\libraries. Please reference [here](http://www.pjrc.com/teensy/td_libs_VirtualWire.html).
+* Upload the below code for transmitter module:
+
 ```
 #include <VirtualWire.h>
 
@@ -173,7 +176,8 @@ void loop()
 }
 ```
 
-*   Upload the below code for receiver module:
+* Upload the below code for receiver module:
+
 ```
 //Grove - 315(433) RF link kit Demo v1.0
 //by :https://www.seeedstudio.com/
@@ -211,13 +215,13 @@ void loop()
 }
 ```
 
-*   Open the serial monitor of receiver module to see the result.
+* Open the serial monitor of receiver module to see the result.
 
 ![](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/img/Receive_Data.jpg)
 
 This is just a simple transmitter and receiver instance as a reference.
 
-##   Version Tracker
+## Version Tracker
 
 <table>
 <tr>
@@ -235,16 +239,17 @@ This is just a simple transmitter and receiver instance as a reference.
 <td width="200px"> 03,Oct,2011
 </td></tr></table>
 
-##   Resources
+## Resources
 
-*   [File:VirtualWire Library.zip](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip)
+* [File:VirtualWire Library.zip](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip)
 
-*   [File:315MHz_demo.zip](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/315MHz_Demo.zip)
+* [File:315MHz_demo.zip](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/315MHz_Demo.zip)
 
-*   [VirtualWire Documentation](http://www.open.com.au/mikem/arduino/VirtualWire.pdf)
+* [VirtualWire Documentation](http://www.open.com.au/mikem/arduino/VirtualWire.pdf)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

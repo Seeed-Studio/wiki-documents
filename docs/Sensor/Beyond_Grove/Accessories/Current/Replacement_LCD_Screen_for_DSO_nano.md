@@ -13,24 +13,24 @@ last_update:
 
 Replacement LCD for DSO nano, purchase this if you broke the original one on your DSO. Please note that you need basic soldering skill to install this LCD to your DSO.
 
-##   Usage
+## Usage
 
-###   Hardware Installation
+### Hardware Installation
 
-####   Dismantle your DSO nano
+#### Dismantle your DSO nano
 
 Dismantel your DSO nano is pretty easy, but it’s still worth writing a tutorial to let people know what does DSO nano look inside before open it.
 
 <font color="red">
-**Note:**
+<strong>Note:</strong>
 This tutorial is for information purposes,  Dismantle the DSO nano and follow this tutorial at your own risk!
 </font>
 
 **You will need:**
 
-1.  A sharp knife (Or something else sharply)
+1. A sharp knife (Or something else sharply)
 
-2.  A 1.4mm screwdriver
+2. A 1.4mm screwdriver
 
 ![https://www.seeedstudio.com/blog/wp-content/uploads/2009/12/P1230049.jpg](https://www.seeedstudio.com/blog/wp-content/uploads/2009/12/P1230049.jpg)
 
@@ -57,20 +57,21 @@ Here we go, now you can take the screen and motherboard away from the case.
 ![https://www.seeedstudio.com/blog/wp-content/uploads/2009/12/P1230020.jpg](https://www.seeedstudio.com/blog/wp-content/uploads/2009/12/P1230020.jpg)
 ![https://www.seeedstudio.com/blog/wp-content/uploads/2009/12/dsoboard2%E5%89%AF%E6%9C%AC.jpg](https://www.seeedstudio.com/blog/wp-content/uploads/2009/12/dsoboard2%E5%89%AF%E6%9C%AC.jpg)
 
-1.  controller: STM32
+1. controller: STM32
 
-2.  stabilized voltage supply : 3.3V voltage output
+2. stabilized voltage supply : 3.3V voltage output
 
-3.  stabilized voltage supply : 3.0V voltage output
+3. stabilized voltage supply : 3.0V voltage output
 
-4.  stabilized voltage supply : use a P3232 RS-232 transceivers to output +5V and -5V voltage
+4. stabilized voltage supply : use a P3232 RS-232 transceivers to output +5V and -5V voltage
 
-5.  general purpose dual J-FET operation amplifier : to separate and scale the input signal
+5. general purpose dual J-FET operation amplifier : to separate and scale the input signal
 
-6.  8-Channel Analog Multiplexer : change the match channel for different V/div
+6. 8-Channel Analog Multiplexer : change the match channel for different V/div
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

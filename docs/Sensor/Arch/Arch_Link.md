@@ -18,30 +18,30 @@ last_update:
 Features
 --------
 
--   mbed enabled
-    -   Online IDE
-    -   Easy to use C/C++ SDK
-    -   Handy libraries
--   CMSIS DAP based on LPC11U35
-    -   Drag-n-drop programming
-    -   Debug using CMSIS DAP standard
-    -   USB virtual serial for communication
--   Arduino form factor with Grove connectors
-    -   I2C and UART connecter on board
--   Nordic nRF51822 Multi-protocol Bluetooth® 4.0 low energy/2.4GHz RF SoC
-    -   ARM Cortex M0 processor
-    -   256kB flash/16kB RAM
-    -   Configurable I/O mapping for digital I/O
--   WIZnet W5500 Ethernet
-    -   Supports following Hardwired TCP/IP Protocols : TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE
-    -   Supports Power down mode
-    -   Supports Wake on LAN over UDP
-    -   Supports High Speed Serial Peripheral Interface(SPI MODE 0, 3)
-    -   Internal 32Kbytes Memory for Tx/Rx Buffers
-    -   10BaseT/100BaseTX Ethernet PHY embedded
-    -   with RJ45 connector
--   USB Micro B connector
--   Micro SD Card connector
+- mbed enabled
+  - Online IDE
+  - Easy to use C/C++ SDK
+  - Handy libraries
+- CMSIS DAP based on LPC11U35
+  - Drag-n-drop programming
+  - Debug using CMSIS DAP standard
+  - USB virtual serial for communication
+- Arduino form factor with Grove connectors
+  - I2C and UART connecter on board
+- Nordic nRF51822 Multi-protocol Bluetooth® 4.0 low energy/2.4GHz RF SoC
+  - ARM Cortex M0 processor
+  - 256kB flash/16kB RAM
+  - Configurable I/O mapping for digital I/O
+- WIZnet W5500 Ethernet
+  - Supports following Hardwired TCP/IP Protocols : TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE
+  - Supports Power down mode
+  - Supports Wake on LAN over UDP
+  - Supports High Speed Serial Peripheral Interface(SPI MODE 0, 3)
+  - Internal 32Kbytes Memory for Tx/Rx Buffers
+  - 10BaseT/100BaseTX Ethernet PHY embedded
+  - with RJ45 connector
+- USB Micro B connector
+- Micro SD Card connector
 
 Hardware Overview
 ------
@@ -53,10 +53,10 @@ Get Started
 
 ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Get_started_with_mbed.png)
 
-1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
-2.  Import the mbed\_blinky program
-3.  Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
-4.  Drag-n-drop the downloaded hex file into the MBED disk
+1. Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
+2. Import the mbed\_blinky program
+3. Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
+4. Drag-n-drop the downloaded hex file into the MBED disk
 
 You can open **main.cpp** to change the program. For example, use the following code to blink the LED every 0.1s
 
@@ -84,21 +84,20 @@ Applications
 
 1. Color Pixels, a colorful LED strip, can be controlled by mobile phone.
 
-    -   Hardware
-        -   Arch Link
-        -   [Digital RGB LED Strip](https://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
-        -   Android device with BLE
+    - Hardware
+        - Arch Link
+        - [Digital RGB LED Strip](https://www.seeedstudio.com/depot/Digital-RGB-LED-FlexiStrip-30-LED-1-Meter-p-1665.html)
+        - Android device with BLE
 
     ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Ble_color_pixels_bb.png)
 
     ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Color_pixels_app.png)
 
-    -   Make it run
+    - Make it run
 
-        1.  Download [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
-        2.  Copy the hex file to the MBED disk of your Arch BLE
-        3.  Download [the Color Pixels Android app](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
-
+        1. Download [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        2. Copy the hex file to the MBED disk of your Arch BLE
+        3. Download [the Color Pixels Android app](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 
        If you want to change the program, click [this link](https://mbed.org/compiler/#import:/teams/Seeed/code/BLE_Color_Pixels/;platform:Seeed-Arch-BLE) to import the Color Pixels program to mbed online IDE.
 
@@ -107,7 +106,6 @@ Applications
 
         #define CFG_GAP_CONNECTION_MIN_INTERVAL_MS           20                     /**< Minimum acceptable connection interval */
         #define CFG_GAP_CONNECTION_MAX_INTERVAL_MS          200                     /**< Maximum acceptable connection interval */
-
 
 2. You can use the Arch Link as a web dashboard.
 
@@ -124,45 +122,43 @@ The latest firmware version for the Arch Link is v0203 built at Jun 4 2015. To c
 
 Changelog:
 
--   2015-06-4 first version
+- 2015-06-4 first version
 
 Firmware:
 
 The firmware v0203 2015-06-04 for Arch Link
 To flash a new firmware:
 
--   Hold the Arch Link's button and power it ON
--   A CRP DISABLD disk will show up
-    -   On Windows, replace firmware.bin with the above firmware
-    -   On Linux/Mac, use command: dd if={new\_firmware.bin} of={firmware.bin} conv=notrunc
-
+- Hold the Arch Link's button and power it ON
+- A CRP DISABLD disk will show up
+  - On Windows, replace firmware.bin with the above firmware
+  - On Linux/Mac, use command: dd if={new\_firmware.bin} of={firmware.bin} conv=notrunc
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
--   [Arch Link mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-Link/)
--   [Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_sch.pdf)
--   [Schematic and board files in EAGLE format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.rar)
--   [LPC11U35 Firmware](https://files.seeedstudio.com/wiki/Arch_Link/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
--   [Seeed BLE color pixels App for android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
--   [Sources of BLE color pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
+- [Arch Link mbed developer platform page](https://developer.mbed.org/platforms/Seeed-Arch-Link/)
+- [Schematic in PDF format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_sch.pdf)
+- [Schematic and board files in EAGLE format](https://files.seeedstudio.com/wiki/Arch_Link/res/Arch_Link_v1.0_Eagle.rar)
+- [LPC11U35 Firmware](https://files.seeedstudio.com/wiki/Arch_Link/res/Lpc11u35_nrf51822_if_mbed.bin.zip)
+- [Seeed BLE color pixels App for android](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
+- [Sources of BLE color pixels App](https://github.com/Seeed-Studio/ble_color_pixels)
 
 See Also
 --------
 
--   [Arch BLE](/Arch_BLE)
--   [W5500 Ethernet Shield](/W5500_Ethernet_Shield_v1.0)
+- [Arch BLE](/Sensor/Arch/Arch_BLE)
+- [W5500 Ethernet Shield](/Top_Brand/Arduino/shield/W5500_Ethernet_Shield_v1.0)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_Link -->
 
 ## Tech Support
+
 <div>
   Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

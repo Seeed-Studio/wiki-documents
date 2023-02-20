@@ -1,16 +1,6 @@
 ---
-name: How to detect finger touch
-category: Tutorial
-bzurl:
-oldwikiname: How to detect finger touch
-prodimagename:  
-surveyurl: https://www.research.net/r/How_to_detect_finger_touch
-sku:
----
-
----
-description: A Handy Serial Library
-title: A Handy Serial Library
+description: How to detect finger touch
+title: How to detect finger touch
 tags:
   - Tutorial
 keywords:
@@ -23,6 +13,15 @@ last_update:
 no_comments: false # for Disqus
 
 ---
+<!-- ---
+name: How to detect finger touch
+category: Tutorial
+bzurl:
+oldwikiname: How to detect finger touch
+prodimagename:  
+surveyurl: https://www.research.net/r/How_to_detect_finger_touch
+sku:
+--- -->
 
 ## How to Measure Capacitance
 
@@ -35,9 +34,11 @@ The capacitance measured on each sensing channel is the total capacitance to gro
 ![](https://files.seeedstudio.com/wiki/How_to_detect_finger_touch/img/500px-2.jpg)
 
 The amount of charge(Q)applied is programmable by setting the charge current(I), And the charge time(T). Once the electrode is charged, the peak voltage(V)at the end of chage is measured by internal 10 bit ADC. This voltage V is reverse proportional to the capatance(C)on the sensing channel.
+
 ```
  C = Q/V = (I*T)/V
 ```
+
 That is, If charge the outside cap with a some value of current(I) and time(T), and get the voltage(V), We can get the value of captance, using this way, the C measureble range can be calculated.
 
 ## How to Touch Sensing
@@ -51,6 +52,7 @@ Touch and release is determined by comparing the immediate capacitance deviation
 ![](https://files.seeedstudio.com/wiki/How_to_detect_finger_touch/img/600px-4.jpg)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

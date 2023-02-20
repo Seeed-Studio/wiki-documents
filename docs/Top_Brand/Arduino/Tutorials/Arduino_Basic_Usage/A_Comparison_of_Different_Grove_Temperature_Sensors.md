@@ -15,24 +15,25 @@ no_comments: false # for Disqus
 ---
 
 
-Temperature is a very important physical parameter to our daily lives. The measurement of temperature can be critical in industry applications and experimental test in labs, some home appliance also require measuring temperature for temperature control. 
-The Grove family provides up to ten types of sensors that can be used to measure temperature. They all featured with high reliability and the easy-to-use Grove interface, but they do have their differences and may be used for different projects and applications. 
+Temperature is a very important physical parameter to our daily lives. The measurement of temperature can be critical in industry applications and experimental test in labs, some home appliance also require measuring temperature for temperature control.
+The Grove family provides up to ten types of sensors that can be used to measure temperature. They all featured with high reliability and the easy-to-use Grove interface, but they do have their differences and may be used for different projects and applications.
 Here in this wiki we make a list of the key features of very Grove temperature sensors, include cost, measuring range, accuracy, sensitivity, response time, long-term stability and so on. The table can be a reference for you to choose the optimal sensor for your projects.
 
-#How to Choose the Optimal Temperature Sensor
+# How to Choose the Optimal Temperature Sensor
 
-Before you looking at the table, there are several things that need to be considered to select a right sensor for your project. 
+Before you looking at the table, there are several things that need to be considered to select a right sensor for your project.
 
-###At first, what is the object to be measured?
+### At first, what is the object to be measured?
+
 Is it the ambient air temperature in the room or a specific enclosure? Is it an air vent for airflow or a water tank for liquid? Or maybe an electronic system that may encounter high voltage and cause heating? Things like these would affect your choice of sensors based on cost budget, power consumption, safety factors, response time, and even the distance from sensor to instrument. For example, if you are measuring the temperature in your room, you might just need a cheap, low-cost thermometer that does not need to be very sensitive. But if your object is a greenhouse for growing plants, you might need a high accurate and sensitive sensor that precisely measures both the temperature and humidity.
 
-###Secondly, what is the expected range of temperature to be measured?
+### Secondly, what is the expected range of temperature to be measured?
 The expected range of temperature to be measured is very important. If the object's temperature exceeds the sensor's measuring range, it may result in irreversible damage to the sensor module or even the system that is connected to the sensor.
 
-###Another consideration is, how accurate do you need it to be?
+### Another consideration is, how accurate do you need it to be?
 Temperature sensors like thermocouples have very wide measuring range and are adequate to be used in harsh environment, but they usually lack of accuracy and long-term stability. The accuracy of measurement is critical in some cases like medical devices, wearable devices and some home facilities etc. Sensors with higher accuracy usually have higher cost and they have to be used very carefully to avoid physical damage on it (some may require not touching it with bare hand).
 
-#Specification
+# Specification
 
 |Temperature Sensor Name|Interface|Range|Accuracy|Sensitivity|Datasheet|
 |-----------------------|---------|----|---------|-----------|----|
@@ -54,7 +55,7 @@ More details please download below list.
 
 [![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/list.png)](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/res/temperature%C2%A0sensor%20v2.xlsx)
 
-#Groves
+# Groves
 
 |Temp&Humi Sensor | Temp&Humi Sensor Pro | Thermistor |
 |----------------------------|-------------------------------------|------------------------|
@@ -77,6 +78,7 @@ More details please download below list.
 |[GET ONE NOW!](https://www.seeedstudio.com/Grove-Barometer-Sensor-(BMP180)-p-1840.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-TempHumiBarometer-Sensor-BME280-p-2653.html)|
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
