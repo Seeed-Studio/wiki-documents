@@ -1,18 +1,11 @@
 ---
-name: How To Choose The Right Cable
-category: Tutorial
-oldwikiname:  How To Choose The Right Cable
-prodimagename:
-surveyurl: https://www.research.net/r/How_To_Choose_The_Right_Cable
----
-
----
-description: A Handy Serial Library
-title: A Handy Serial Library
+description: How To Choose The Right Cable
+title: How To Choose The Right Cable
 tags:
-  - Tutorial
+
+- Tutorial
 keywords:
-  - Tutorial
+- Tutorial
 image: https://avatars.githubusercontent.com/u/10758833
 last_update:
   date: 02/01/2023
@@ -21,8 +14,15 @@ last_update:
 no_comments: false # for Disqus
 
 ---
+<!-- ---
+name: How To Choose The Right Cable
+category: Tutorial
+title:  How To Choose The Right Cable
+prodimagename:
+surveyurl: https://www.research.net/r/How_To_Choose_The_Right_Cable
+--- -->
 
-##   A Bad Example
+## A Bad Example
 
 Here we will introduce a variety of cables that Seeed offers. When you make a demo, it's hard to avoid jumping a wire. To be honest, I hate jump a wire, it's really a mess. But sometimes you had to jump a wire, you couldn't make a PCB for an easy application.
 
@@ -35,7 +35,7 @@ Do you feel just a mess?
 
 Then, let's start the journey of Cables!
 
-##   Grove Cable
+## Grove Cable
 
 Grove Cable is the most common cable in the Grove system. They are used for connecting  a [Base Shield](https://www.seeedstudio.com/depot/base-shield-v13-p-1378.html?cPath=98_16) to a Grove sensor, actuator, or device. Since Grove Shields support connections to multiple devices at the same time, projects may require more than one Grove Cable.
 
@@ -45,19 +45,19 @@ Grove Cables feature four color coded wires and two male-type modular connectors
 
 Grove Cables are wired straight through. That is to say, pin 1 on connector A is connected to pin 1 on connector B, pin 2 to pin 2, and so on. The wires are also color coded. Pin 1 is yellow, pin 2 is white, pin 3 is red, and pin 4 is black. Typically, pins 1 and 2 are  are signal, e.g. A1/A2 or D1/D2, while pins 3 and 4 power and ground .
 
-*   [5cm](https://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-5cm-cable-5-pcs-pack-p-925.html?cPath=98_106_57)
+- [5cm](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack.html)
 
-*   [20cm](https://www.seeedstudio.com/depot/grove-universal-4-pin-20cm-unbuckled-cable-5-pcs-pack-p-749.html?cPath=98_106_57)
+- [20cm](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-5-PCs-pack.html)
 
-*   [30cm](https://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-30cm-cable-5-pcs-pack-p-926.html?cPath=98_106_57)
+- [30cm](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-30cm-Cable-5-PCs-Pack.html)
 
-*   [40cm](https://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-40cm-cable-5-pcs-pack-p-927.html?cPath=98_106_57)
+- [40cm](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-40cm-Cable-5-PCs-Pack.html)
 
-*   [50cm](https://www.seeedstudio.com/depot/grove-universal-4-pin-buckled-50cm-cable-5-pcs-pack-p-928.html?cPath=98_106_57)
+- [50cm](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-50cm-Cable-5-PCs-Pack.html)
 
-##   Grove - Branch Cable
+## Grove - Branch Cable
 
-[[Link](https://www.seeedstudio.com/depot/grove-branch-cable-5pcs-pack-p-847.html?cPath=98_106_57)]
+[[Link](https://www.seeedstudio.com/Grove-Branch-Cable-5PCs-pack.html)]
 
 Grove Branch Cable is a cable used in the Grove system. It consists of three male-type latching connectors and four color-coded wires. Grove Branch Cables can be used to support daisy-chaining multiple Grove devices to a Grove shield. Typically, one end is connected to a Grove shield, and the second and third connectors are attached to two Grove devices.
 
@@ -71,13 +71,13 @@ Use extra care if connecting multiple devices using the Grove Branch Cable. Be a
 
 Sample applications include:
 
-*   Connecting or daisy chaining two or more I2C devices. Multiple branch cables can be used to extend I2C busses.
+- Connecting or daisy chaining two or more I2C devices. Multiple branch cables can be used to extend I2C busses.
 
-*   Connecting two devices that need to work at the same time. For example, a [LED](https://www.seeedstudio.com/depot/grove-led-p-767.html?cPath=81_35) and a [Relay](https://www.seeedstudio.com/depot/grove-relay-p-769.html?cPath=39_42) could be connected to a Grove Shield using a single Grove Branch Cable. It would then be possible to turn both the LED and the Relay off or on simultaneously since the two devices would be controlled by a single digital pin.
+- Connecting two devices that need to work at the same time. For example, a [LED](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html) and a [Relay](https://www.seeedstudio.com/Grove-Relay.html) could be connected to a Grove Shield using a single Grove Branch Cable. It would then be possible to turn both the LED and the Relay off or on simultaneously since the two devices would be controlled by a single digital pin.
 
-##   Grove - Branch Cable for Servo
+## Grove - Branch Cable for Servo
 
-[[Link](https://www.seeedstudio.com/depot/grove-branch-cable-for-servo5pcs-pack-p-753.html?cPath=98_106_57)]
+[[Link](https://www.seeedstudio.com/Grove-Branch-Cable-for-Servo-5PCs-pack.html)]
 
 Grove Branch Cable for Servos are another type of Grove Cable, and are primarily used to connect one or two servos to your project. They consist of three connectors: one keyed four pin male connector suitable for connecting to a Grove Shield, and two three pin male post-type connectors. In this configuration, power and ground (pins 3 and 4 from the four pin male) are carried to both three pin male connectors. Pin 1 (yellow)of the four pin connector is connected to one of the pins of the Arduino capable of PWM, and is carried out to one of the three pin male post connectors. Pin 2 (white wire) of the four pin connector is also connected to a second PWM-capable pin of the Arduino, and is carried out to the second three pin male post connector.
 
@@ -85,26 +85,26 @@ The four pin keyed connector of the Grove Branch Cable for Servos will usually b
 
 Note that the Arduino UNO supports PWM on pins 3, 5, 6, 9, 10, and 11. On the Arduino Mega, it works on pins 2 - 13 and 44 - 46. Older Arduino boards with an ATmega8 only support analogWrite() on pins 9, 10, and 11.
 
-Here's a link to some of our [Servos](https://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=servo&amp;x=-1297&amp;y=-60).
+Here's a link to some of our [Servos](https://www.seeedstudio.com/catalogsearch/result/?q=servos).
 
 ![](https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/4pinto2x3pin500.jpg)
 
-##   Grove to 4pin Female Jumper
+## Grove to 4pin Female Jumper
 
 You can use it for:
 
-*   Connect Grove device to the other MCUs, such as you want to connect [Grove - Light Sensor](https://www.seeedstudio.com/depot/grove-light-sensor-p-746.html?cPath=25_27) to [Raspberry Pi](http://www.raspberrypi.org/).
+- Connect Grove device to the other MCUs, such as you want to connect [Grove - Light Sensor](https://www.seeedstudio.com/Grove-Light-Sensor-p-746.html) to [Raspberry Pi](http://www.raspberrypi.org/).
 
-*   Use Base Shield to control some non-grove device
+- Use Base Shield to control some non-grove device
 
 ![](https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/4p254.jpg)
 
+## Some Other Cables
 
-##   Some Other Cables
-
-There're some other cables for different use, clkic [here](https://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=cable&amp;inc_subcat=0&amp;sort=20a&amp;page=1)to find more information.
+There're some other cables for different use, clkic [here](https://www.seeedstudio.com/catalogsearch/result/?q=Cables)to find more information.
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

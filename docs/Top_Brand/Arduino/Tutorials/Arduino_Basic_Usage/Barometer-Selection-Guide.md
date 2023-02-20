@@ -1,6 +1,6 @@
 ---
-description: A Handy Serial Library
-title: A Handy Serial Library
+description: Seeed Barometer Sensor Selection Guide
+title: Seeed Barometer Sensor Selection Guide
 tags:
   - Tutorial
 keywords:
@@ -22,11 +22,11 @@ For all the barometer sensors in our bazaar, please click [Bazaar Barometer tag]
 
 ## What is Barometer
 
-A barometer is a widely used weather instrument that measures atmospheric pressure (also known as air pressure or barometric pressure) -- the weight of the air in the atmosphere. It is one of the basic sensors included in weather stations. Barometers have evolved through the centuries and come in all shapes and sizes. It is also used in more industries than just the weather and climate sectors. 
+A barometer is a widely used weather instrument that measures atmospheric pressure (also known as air pressure or barometric pressure) -- the weight of the air in the atmosphere. It is one of the basic sensors included in weather stations. Barometers have evolved through the centuries and come in all shapes and sizes. It is also used in more industries than just the weather and climate sectors.
 
 For instance, nowadays most mobile phones will have digital barometers builtin, of which are the main type of barometer in electronics field.
 
-<div align=center><img src="https://files.seeedstudio.com/products/101020812/img/baro%20produced.2019-12-11%2011_05_01.gif"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/products/101020812/img/baro%20produced.2019-12-11%2011_05_01.gif" /></div>
 
 ### How Does a Digital Barometer Work
 
@@ -36,10 +36,8 @@ The changing volume affects the strength of the current flowing through it, and 
 
 Below photo shows a typical barometer sensor with a builtin chip(DPS310):
 
-<div align=center><img width = 400 src="https://github.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/raw/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-pin.jpg"/><figcaption><b>Figure 1</b>. <i>Typical Barometer Sensor</i></figcaption></a>
-</figure></div>
-
-
+<div align="center"><img width="{400}" src="https://github.com/SeeedDocument/Grove-High-Precision-Barometer-Sensor-DPS310/raw/master/img/Grove-High-Precision-Barometer-Sensor-DPS310-pin.jpg" /><figcaption><b>Figure 1</b>. <i>Typical Barometer Sensor</i></figcaption>
+</div>
 
 ## Barometer Sensors at Seeed
 
@@ -49,7 +47,6 @@ Below photo shows a typical barometer sensor with a builtin chip(DPS310):
   <figcaption><b>Figure 2</b>. <i>Barometer Sensors at Seeed</i></figcaption></a>
 </figure>
 </div>
-
 
 ### Which One is Best For You
 
@@ -67,10 +64,11 @@ Below photo shows a typical barometer sensor with a builtin chip(DPS310):
 
 ### Quick Insight
 
-From the above table, **Pressure Range**, **Pressure Accuracy (Relative)** and **Pressure Resolution** are the vital aspects of barometer sensors. For such reasons, you can choose the one that is most suited for your needs. Furthermore, also need to considered about the communication interface. In our case, I2C communication is available to all barometers and SPI is also available to most of them. 
+From the above table, **Pressure Range**, **Pressure Accuracy (Relative)** and **Pressure Resolution** are the vital aspects of barometer sensors. For such reasons, you can choose the one that is most suited for your needs. Furthermore, also need to considered about the communication interface. In our case, I2C communication is available to all barometers and SPI is also available to most of them.
 
-!!!Note
-        SPI communication can operate faster than I2C which may be an advantages in some situations.
+:::note
+SPI communication can operate faster than I2C which may be an advantages in some situations.
+:::
 
 To add more, [Grove - Temp&Humi&Barometer Sensor (BME280)](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html) have added features for measuring ±1% accuracy for temperature and ±3% for humidity for certain needs.
 
@@ -81,7 +79,6 @@ To add more, [Grove - Temp&Humi&Barometer Sensor (BME280)](https://www.seeedstud
 - Outdoor Navigation (GPS start-up time and accuracy improvement, dead-reckoning e.g. in tunnels)
 - Weather Station('Micro-weather' and local forecasts)
 - Drones (Flight stability and height control)
-
 
 ## Useful Projects
 
@@ -101,9 +98,10 @@ To add more, [Grove - Temp&Humi&Barometer Sensor (BME280)](https://www.seeedstud
 
 - Reference
 
-    - [How a Barometer Works and Helps Forecast Weather](https://www.thoughtco.com/how-barometers-measure-air-pressure-3444416)
+  - [How a Barometer Works and Helps Forecast Weather](https://www.thoughtco.com/how-barometers-measure-air-pressure-3444416)
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://github.com/SeeedDocument/Wiki_Banner/raw/master/new_product.jpg" /></a></p>

@@ -1,6 +1,6 @@
 ---
-description: A Handy Serial Library
-title: A Handy Serial Library
+description: GPS-Modules-Selection-Guide
+title: GPS Modules Selection Guide
 tags:
   - Tutorial
 keywords:
@@ -18,22 +18,21 @@ We have released various types of GPS Modules in recent years. Let's take a clos
 
 For all the GPS or Communication modules in our bazaar, please click [Seeed Studio Bazaar](https://www.seeedstudio.com/) to check.
 
-
-## Introduction to GPS and GPS Modules 
+## Introduction to GPS and GPS Modules
 
 One of the global positioning system (GPS) devices ultilizes data from satellites to locate a specific point on the Earth in a process named trilateration. Meanwhile, a GPS receiver measures the distances to satellites using radio signals to trilaterate. And trilateration is similar to triangulation, which measures angles, depicted in this illustration (Tim Gunther, 2020). GPS modules contain tiny processors and antennas that directly receive data sent by satellites through dedicated RF frequencies. From there, it’ll receive timestamp from each visible satellites, along with other pieces of data. If the module’s antenna can spot 4 or more satellites, it’s able to accurately calculate its position and time.
 
-The four well-known Global Navigation Satellite System include GPS, BDS(Beidou), GLONASS and GALILEO four satellite navigation systems. The earliest appeared in the United States is GPS (Global Positioning System), which is the most complete technology at this stage. BDS, GLONASS and GALILEO have become the other largest satellite navigation systems in the world and are currently in the process of modernization. 
+The four well-known Global Navigation Satellite System include GPS, BDS(Beidou), GLONASS and GALILEO four satellite navigation systems. The earliest appeared in the United States is GPS (Global Positioning System), which is the most complete technology at this stage. BDS, GLONASS and GALILEO have become the other largest satellite navigation systems in the world and are currently in the process of modernization.
 
-<div align=center><img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/28251.jpg"/><figcaption><b>Figure 1</b>. <i> Illustration of globe with three satellites triangulating a precise location. ( Tim Gunther, 2020 ) </i></figcaption></a>
-</figure></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/28251.jpg" /><figcaption><b>Figure 1</b>. <i> Illustration of globe with three satellites triangulating a precise location. ( Tim Gunther, 2020 ) </i></figcaption>
+</div>
 
 We will introduce and compare these two GPS modules:
 
 - [Grove – GPS Module](https://wiki.seeedstudio.com/Grove-GPS/)  
 - [Grove – GPS(Air530)](https://wiki.seeedstudio.com/Grove-GPS-Air530/)
 
-These GPS modules are compatible with Arduino and Raspberry Pi, making it easy for you to start to try out.The Air 530 Module in **Grove - GPS(Air530)** is a high-performance, highly integrated multi-mode statelite positioning and navigation module. It supports GPS / Beidou / Glonass / Galileo / QZSS / SBAS, which makes it suitable for GNSS positioning applications such as car navigation, smart wear and drone. And Air530 module is also supporting NMEA 0183 V4.1 protocol and compatible with previous versions. 
+These GPS modules are compatible with Arduino and Raspberry Pi, making it easy for you to start to try out.The Air 530 Module in **Grove - GPS(Air530)** is a high-performance, highly integrated multi-mode statelite positioning and navigation module. It supports GPS / Beidou / Glonass / Galileo / QZSS / SBAS, which makes it suitable for GNSS positioning applications such as car navigation, smart wear and drone. And Air530 module is also supporting NMEA 0183 V4.1 protocol and compatible with previous versions.
 
 Meanwhile, the E-1612-UB module series of **Grove - GPS Module** is a family of stand-alone GPS receivers featuring the high performance u-blox 5 positioning engine. The 50-channel u-blox 5 positioning engine boasts a Time-To-First-Fix ( TTFF ) of under 1 second. The dedicated acquisition engine, with over 1 million correlators, is capable of massive parallel time / frequency space searches, enabling it to find satellites instantly.
 
@@ -41,7 +40,7 @@ Meanwhile, the E-1612-UB module series of **Grove - GPS Module** is a family of 
 
 You ought to acknowledge the principles of GPS modules before purchasing and the table below is provding some information.
 
-<style type="text/css">
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
@@ -50,8 +49,8 @@ You ought to acknowledge the principles of GPS modules before purchasing and the
 .tg .tg-5hs1{background-color:#656565;border-color:#c0c0c0;color:#FFF;font-size:18px;text-align:center;vertical-align:top}
 .tg .tg-q854{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:center;vertical-align:top}
 .tg .tg-uxnu{background-color:#ffffff;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:left;vertical-align:top}
-</style>
-<table class="tg" style="undefined;table-layout: fixed; width: 791px">
+</style> -->
+<!-- <table class="tg" style="undefined;table-layout: fixed; width: 791px">
 <colgroup>
 <col style="width: 200px">
 <col style="width: 591px">
@@ -116,14 +115,12 @@ You ought to acknowledge the principles of GPS modules before purchasing and the
     <td class="tg-uxnu">If the module power is turned off for a long time, and the backup capacitor disappears, the data will be lost. Next time you power up, GPS will need to download new almanac and ephemeris data.</td>
   </tr>
 </tbody>
-</table>
+</table> -->
 
 ## Field of Applicaitons
 
-There are a numerous ultilizations of GPS Modules. Particularly, plenty of social activities are able to be developed by applications of these GPS Modules. Therefore, GPS Modules play important roles in various sectors, which are including Environmental Measurement, Transportation, Emergency Rescue, Agriculture, Entertainment and etc. 
-
-
-<style type="text/css">
+There are a numerous ultilizations of GPS Modules. Particularly, plenty of social activities are able to be developed by applications of these GPS Modules. Therefore, GPS Modules play important roles in various sectors, which are including Environmental Measurement, Transportation, Emergency Rescue, Agriculture, Entertainment and etc.
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
@@ -132,40 +129,40 @@ There are a numerous ultilizations of GPS Modules. Particularly, plenty of socia
 .tg .tg-5hs1{background-color:#656565;border-color:#c0c0c0;color:#FFF;font-size:18px;text-align:center;vertical-align:top}
 .tg .tg-5z8m{background-color:#FFF;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:center;vertical-align:top}
 .tg .tg-ut4k{background-color:#FFF;border-color:#c0c0c0;color:#000000;font-size:18px;text-align:left;vertical-align:top}
-</style>
-<table class="tg" style="undefined;table-layout: fixed; width: 792px">
-<colgroup>
-<col style="width: 201px">
-<col style="width: 591px">
-</colgroup>
-<thead>
-  <tr>
-    <th class="tg-5hs1">Field of application</th>
-    <th class="tg-5hs1">Function</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-5z8m"><br><br>Measurement<br></td>
-    <td class="tg-ut4k">It uses carrier phase differential technology (RTK) to process the carrier phase of two observation stations in real time with an accuracy of centimeter level. Measurement results are unified in WGS84 coordinates, information is automatically received and stored, reducing cumbersome intermediate processing Link.</td>
-  </tr>
-  <tr>
-    <td class="tg-5z8m"><br><br>Transportation<br></td>
-    <td class="tg-ut4k">GPS modules can be used for autonomous navigation, port management and entry guidance, route traffic management and tracking and monitoring. Vehicle-mounted equipment uses GPS for precise positioning, combined with electronic maps and real-time traffic conditions, automatically matches the optimal path, and implements autonomous navigation of the vehicle.</td>
-  </tr>
-  <tr>
-    <td class="tg-5z8m"><br><br><br>Emergency Rescue<br></td>
-    <td class="tg-ut4k">Using GPS positioning technology, emergency dispatch of fire, ambulance and police can be carried out, and the emergency response department's response efficiency to fire, crime scene, traffic accident, traffic jam and other emergency events can be improved. A fishing boat equipped with a GPS module can quickly locate and alarm when a dangerous situation occurs, so that it can obtain rescue faster and more timely.</td>
-  </tr>
-  <tr>
-    <td class="tg-5z8m"><br><br>Agriculture<br><br></td>
-    <td class="tg-ut4k">A GPS module is used to locate and acquire farmland information, including yield monitoring, soil sample collection and etc. The computer system determines the management measures of farmland plots by analyzing and processing the data, and loads the yield and soil status information into the GPS equipment. In the spray applicator, it can accurately fertilize and spray the farmland.</td>
-  </tr>
-  <tr>
-    <td class="tg-5z8m"><br><br>Entertainment<br></td>
-    <td class="tg-ut4k">Through GPS modules, people can quickly find their destination in an unfamiliar city, and can travel on the optimal path; campers carry GPS receivers to quickly find suitable camping locations without worrying about getting lost; even some high-end video games , GPS simulation technology is also used.</td>
-  </tr>
-</tbody>
+</style> -->
+<table className="tg" style={{tableLayout: 'fixed', width: 792}}>
+  <colgroup>
+    <col style={{width: 201}} />
+    <col style={{width: 591}} />
+  </colgroup>
+  <thead>
+    <tr>
+      <th className="tg-5hs1">Field of application</th>
+      <th className="tg-5hs1">Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="tg-5z8m"><br /><br />Measurement<br /></td>
+      <td className="tg-ut4k">It uses carrier phase differential technology (RTK) to process the carrier phase of two observation stations in real time with an accuracy of centimeter level. Measurement results are unified in WGS84 coordinates, information is automatically received and stored, reducing cumbersome intermediate processing Link.</td>
+    </tr>
+    <tr>
+      <td className="tg-5z8m"><br /><br />Transportation<br /></td>
+      <td className="tg-ut4k">GPS modules can be used for autonomous navigation, port management and entry guidance, route traffic management and tracking and monitoring. Vehicle-mounted equipment uses GPS for precise positioning, combined with electronic maps and real-time traffic conditions, automatically matches the optimal path, and implements autonomous navigation of the vehicle.</td>
+    </tr>
+    <tr>
+      <td className="tg-5z8m"><br /><br /><br />Emergency Rescue<br /></td>
+      <td className="tg-ut4k">Using GPS positioning technology, emergency dispatch of fire, ambulance and police can be carried out, and the emergency response department's response efficiency to fire, crime scene, traffic accident, traffic jam and other emergency events can be improved. A fishing boat equipped with a GPS module can quickly locate and alarm when a dangerous situation occurs, so that it can obtain rescue faster and more timely.</td>
+    </tr>
+    <tr>
+      <td className="tg-5z8m"><br /><br />Agriculture<br /><br /></td>
+      <td className="tg-ut4k">A GPS module is used to locate and acquire farmland information, including yield monitoring, soil sample collection and etc. The computer system determines the management measures of farmland plots by analyzing and processing the data, and loads the yield and soil status information into the GPS equipment. In the spray applicator, it can accurately fertilize and spray the farmland.</td>
+    </tr>
+    <tr>
+      <td className="tg-5z8m"><br /><br />Entertainment<br /></td>
+      <td className="tg-ut4k">Through GPS modules, people can quickly find their destination in an unfamiliar city, and can travel on the optimal path; campers carry GPS receivers to quickly find suitable camping locations without worrying about getting lost; even some high-end video games , GPS simulation technology is also used.</td>
+    </tr>
+  </tbody>
 </table>
 
 ## GPS Modules at Seeed
@@ -187,7 +184,7 @@ With a higher maximum update rate, the **Grove - GPS** is able to be used for pr
 
 #### Accuracy
 
-Featuring Horizontal positioning accuracy of 2.5m, High positioning accuracy of 3.5m, speed accuracy of 0.1m/s, and a time transfer accuracy of 30ns, the **Grove -GPS (Air530)** is able to position quickly and accurately even under the condition of a bad signal. 
+Featuring Horizontal positioning accuracy of 2.5m, High positioning accuracy of 3.5m, speed accuracy of 0.1m/s, and a time transfer accuracy of 30ns, the **Grove -GPS (Air530)** is able to position quickly and accurately even under the condition of a bad signal.
 
 ## Projects
 
@@ -197,13 +194,13 @@ Featuring Horizontal positioning accuracy of 2.5m, High positioning accuracy of 
 
 **Vehicle Tracking System**: Now that you have just picked your GPS module, here are some projects that you can do with your Arduino and GPS module. Visit [here](https://create.arduino.cc/projecthub/muchika/vehicle-tracking-system-based-on-gps-and-gsm-57b814?ref=tag&ref_id=gps&offset=15) for detailed information.
 
-<iframe frameborder='0' height='327.5' scrolling='no' src='https://hackster.imgix.net/uploads/attachments/1038379/FZNOC7NK0MP38U3.jpg?auto=compress%2Cformat&w=900&h=675&fit=min' width='350'></iframe>
+<iframe frameborder='560' height='327.5' scrolling='no' src='https://hackster.imgix.net/uploads/attachments/1038379/FZNOC7NK0MP38U3.jpg?auto=compress%2Cformat&w=900&h=675&fit=min' width='350'></iframe>
 
 **LED Bike Speedometer**: Want to find out how fast you are riding? With this DIY bike speedometer, using GPS technology for speed sensing, you can tell how fast you are going! It also features an RGB LED to indicate the speed to the rider. Visit [here](https://create.arduino.cc/projecthub/JeremySCook/gps-led-bike-speedometer-c8f956?ref=tag&ref_id=gps&offset=26) for detailed information.
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=CeStrH-5Llo&feature=emb_rel_end" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-**Personal GPS Assistant**: This project is a device that lets you monitor people and things, and tell you continuously their location, and the values of the sensors attached to it. One of the feature allows you to set limit values for the sensors, and when these are exceeded an SMS alert is sent to you. You can also set restrictions from some places, where alerts will be given to you when the device leaves the area. It’s also possible to communicate with the device through SMS, in order to get information about it. 
+**Personal GPS Assistant**: This project is a device that lets you monitor people and things, and tell you continuously their location, and the values of the sensors attached to it. One of the feature allows you to set limit values for the sensors, and when these are exceeded an SMS alert is sent to you. You can also set restrictions from some places, where alerts will be given to you when the device leaves the area. It’s also possible to communicate with the device through SMS, in order to get information about it.
 
 Visit [here](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gps-assistant-26dfa3?ref=tag&ref_id=gps&offset=32) for detailed information.
 
@@ -218,7 +215,8 @@ Visit [here](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gp
 **[ZIP]** [Air530 Datasheets](https://files.seeedstudio.com/wiki/Grove-GPS_Air_530/Air530_GPS_User_Booklet.V1.7.pdf)
 
 ## Tech Support
- If you have any technical issue. submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ If you have any technical issue. submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

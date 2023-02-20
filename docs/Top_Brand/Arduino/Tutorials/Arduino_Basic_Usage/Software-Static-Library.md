@@ -9,7 +9,7 @@ last_update:
   author: jianjing Huang
 ---
 
-# Arduino Tutorials - How to Use Static (Pre-compiled) Libraries in Arduino
+<!-- # Arduino Tutorials - How to Use Static (Pre-compiled) Libraries in Arduino -->
 
 To improve compile time of big projects in Arduino, you can use one of the newer features introduced in Arduino IDE (>=1.8.6), **static (pre-compiled) libraries** for your Arduino Sketches.
 
