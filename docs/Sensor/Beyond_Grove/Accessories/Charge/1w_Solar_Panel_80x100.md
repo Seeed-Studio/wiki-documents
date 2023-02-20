@@ -15,8 +15,7 @@ This is a custom solar panel, which mates directly with many of our development 
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/1w-solar-panel-75x100-p-633.html?cPath=155)
 
-
-##   Key Specification
+## Key Specification
 
 <table>
 <tr>
@@ -75,19 +74,19 @@ This is a custom solar panel, which mates directly with many of our development 
 <td> 2.0mm JST
 </td></tr></table>
 
+## See Also
 
-##   See Also
+* [0.5w Solar Panel 55*70](/Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70 "0.5w Solar Panel 55*70")
 
-<!-- *   [0.5w Solar Panel 55*70](docs\Sensor\Beyond_Grove\Accessories\Charge\0.5w_Solar_Panel_55x70 "0.5w Solar Panel 55*70")
+* [1.5W Solar Panel 81*137](/Sensor/Beyond_Grove/Accessories/Charge/1.5W_Solar_Panel_81x137 "1.5W Solar Panel 81*137")
 
-<!-- *   [1.5W Solar Panel 81*137](/1.5W_Solar_Panel_81x137 "1.5W Solar Panel 81*137")
+* [2.5W Solar Panel 116*160](/Sensor/Beyond_Grove/Accessories/Charge/2.5W_Solar_Panel_116x160 "2.5W Solar Panel 116*160")
 
-*   [2.5W Solar Panel 116*160](/2.5W_Solar_Panel_116x160 "2.5W Solar Panel 116*160")
-
-*   [3W Solar Panel 138*160](/3W_Solar_Panel_138x160 "3W Solar Panel 138*160") --> -->
+* [3W Solar Panel 138*160](/Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160 "3W Solar Panel 138*160")
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

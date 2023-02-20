@@ -1,6 +1,5 @@
 ---
 title: DSO Quad:Calibration
-nointro:
 keywords:
   - docs
   - docusaurus
@@ -12,22 +11,27 @@ last_update:
 
 The calibration consists of different parts:
 
-*   DC Calibration with
-- Zero Offset
-- Gain
+* DC Calibration with
 
-*   AC Calibration (slope response, overshooting)
-- For 1 ... 10V/div
-- For 50 ... 500mV/div
-- For x10 probe
+* Zero Offset
 
-##   Zero Offset
+* Gain
+
+* AC Calibration (slope response, overshooting)
+
+* For 1 ... 10V/div
+
+* For 50 ... 500mV/div
+* For x10 probe
+
+## Zero Offset
 
 This calibration is done nearly automatically. The DSO should be well at operating temperature for this. So you should have turned it on at least about 10 minutes earlier. After selection of "Calibr" from the "Save/Recall" menu ("Square" Button, scrolling to last item, pushing -/+ button) you are asked to short CH_A input to GND. If you are using a probe, this should be in "x1" mode, not "x10". It's started by pressing the "Square" button. After a few seconds it's finished and waiting for the 1st step of the Gain calibration. If you don't want to do the gain calibration here, go the "arrow right" through all ranges without modifying anything with the -/+ navigator. Then you can repeat it (square button) or go "to the next operation" with "right" from the navigator and do the zero adjustment och CH_B. Additional Info: Even if the input voltage is zero, a real amplifier has a small non-zero value at the output. And this value changes, if the resistors for the range are changed. This zero offset is evaluated here for each range and that values are used in future to corrected in the digital part by adding/subtracting that offset
 
-##   Gain Calibration
+## Gain Calibration
 
-For the gain calibration additional external hardware is required! In each range a well known DC voltage of about 80 ... 100% of the full scale range needs to be applied. That "full scale range" e.g. 50mV/div * 6 div = 0.3V or 10V/div * 6 div = 60V. So you need the following voltages:
+For the gain calibration additional external hardware is required! In each range a well known DC voltage of about 80 ... 100% of the full scale range needs to be applied. That "full scale range" e.g. 50mV/div *6 div = 0.3V or 10V/div* 6 div = 60V. So you need the following voltages:
+
 ```
 0.25... 0.3 V for 50mV/div range
 0.5 ... 0.6 V for 0.1V/div range
@@ -43,7 +47,7 @@ I am suggesting to use some resistors as voltage divider and a voltage multimete
 
 With this equipment you can connect the volt meter and the channel of the DSO step by step the the output of that circuit and use the -/+ to adjust the DSO value to the same value as the volt meter.
 
-##   AC calibration
+## AC calibration
 
 While the DC calibration is applied in the digital part of the DSO, the AC calibration is done by changing the values of some capacitors in the hardware. The divider ratio of the capacitors need to match the divider ration of the resistors.
 
@@ -51,15 +55,15 @@ While the DC calibration is applied in the digital part of the DSO, the AC calib
 
 The calibration procedure for the Quad DSO it is already described, e.g. here: [[2]](http://neophob.com/2012/03/dso-quad-for-dummies/) It uses the build-in square wave output. For Ch_A first set the probe to x1 and adjust A1 (=C5A) in the 1V/div range. Then adjust A2 (C3A) in the 500mV/div range. Then check the A1 setting again, then the A2 again as each is influencing also the other a little. Finally set the probe to x10, select a siutable range and adjust A3.
 
+## See Also
 
-##   See Also
+* [DSO Quad](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad "DSO Quad")
 
-*   [DSO Quad](/DSO_Quad "DSO Quad")
-
-*   [DSO Quad:Upgrading Firmware](/DSO_Quad-Building_Firmware "DSO Quad:Upgrading Firmware")
+* [DSO Quad:Upgrading Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad:Upgrading Firmware")
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

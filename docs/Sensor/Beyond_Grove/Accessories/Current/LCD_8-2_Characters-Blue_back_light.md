@@ -13,13 +13,16 @@ last_update:
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/lcd-82-characters-blue-back-light-p-120.html?cPath=163_164)
 
-##   Schematic
+## Schematic
+
 ---
 ![](https://files.seeedstudio.com/wiki/LCD_8-2_Characters-Blue_back_light/img/LCD-bbl-block.JPG)
 
-##   Specification
+## Specification
+
 ---
-###   Absolute Maximum Ratings
+
+### Absolute Maximum Ratings
 
 <table>
 <tr>
@@ -89,7 +92,7 @@ last_update:
 <td>℃
 </td></tr></table>
 
-###   Mechanical Data
+### Mechanical Data
 
 <table>
 <tr>
@@ -135,7 +138,7 @@ last_update:
 <td>g
 </td></tr></table>
 
-###   Electrical Chatacteristics
+### Electrical Chatacteristics
 
 (V<sub>DD</sub>=5V±0.25V)
 
@@ -246,7 +249,7 @@ last_update:
 <td>V
 </td></tr></table>
 
-###   LED Backlight Specifications (Ta=25℃)
+### LED Backlight Specifications (Ta=25℃)
 
 <table>
 <tr>
@@ -294,7 +297,8 @@ last_update:
 <td>nm
 </td></tr></table>
 
-##   Pin definition and Rating
+## Pin definition and Rating
+
 ---
 <table>
 <tr>
@@ -437,18 +441,19 @@ L:Write
 <td> -
 </td></tr></table>
 
-##   Mechanic Dimensions
+## Mechanic Dimensions
 
 ![](https://files.seeedstudio.com/wiki/LCD_8-2_Characters-Blue_back_light/img/LCD-bbl-dimen.JPG)
 
-##   Resources
+## Resources
 
-*   [Demo code for Arduino](https://www.seeedstudio.com/depot/images/product/LCD0820.pde)
+* [Demo code for Arduino](https://www.seeedstudio.com/depot/images/product/LCD0820.pde)
 
-*   [Datasheet](https://www.seeedstudio.com/depot/datasheet/LMB0820-info.pdf)
+* [Datasheet](https://www.seeedstudio.com/depot/datasheet/LMB0820-info.pdf)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

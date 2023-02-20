@@ -1,5 +1,5 @@
 ---
-name: LCD 16*2 Characters- Green Yellow back light
+title: LCD 16*2 Characters- Green Yellow back light
 category: MakerPro
 bzurl: https://www.seeedstudio.com/lcd-162-characters-green-yellow-back-light-p-62.html?cPath=163_164
 oldwikiname:  LCD 16*2 Characters- Green Yellow back light
@@ -11,69 +11,77 @@ sku:     104990001
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/lcd-162-characters-green-yellow-back-light-p-62.html?cPath=163_164)
 
-##   Cautions
+## Cautions
+
 ---
-1.  The LCD panel is made by glass. Any mechanical shock (eg. dropping from high place) will damage the LCD module.
 
-2.  Do not add excessive force on the surface of the display, which may cause the Display color change abnormally.
+1. The LCD panel is made by glass. Any mechanical shock (eg. dropping from high place) will damage the LCD module.
 
-3.  The polarizer on the LCD is easily get scratched. If possible, do not remove the lCD protective film until the last step of installation.
+2. Do not add excessive force on the surface of the display, which may cause the Display color change abnormally.
 
-4.  Never attempt to disassemble or rework the LCD module.
+3. The polarizer on the LCD is easily get scratched. If possible, do not remove the lCD protective film until the last step of installation.
 
-5.  Only Clean the LCD with Isopropyl Alcohol or Ethyl Alcohol. Other solvents(eg.water) may damage the LCD.
+4. Never attempt to disassemble or rework the LCD module.
 
-6.  When mounting the LCD module, make sure that it is free form twisting, warping and distortion.
+5. Only Clean the LCD with Isopropyl Alcohol or Ethyl Alcohol. Other solvents(eg.water) may damage the LCD.
 
-7.  Ensure to provide enough space(with cushion) between case and LCD panel to prevent external force adding on it, or it may cause damage to the LCD or degrade the display result.
+6. When mounting the LCD module, make sure that it is free form twisting, warping and distortion.
 
-8.  Only hold the lCD module by its side. Never hold LCD module by add force on the heat seal ot TAB.
+7. Ensure to provide enough space(with cushion) between case and LCD panel to prevent external force adding on it, or it may cause damage to the LCD or degrade the display result.
 
-9.  Never add force to component of the LCD module. It may cause invisible damage or degrade of the reliability.
+8. Only hold the lCD module by its side. Never hold LCD module by add force on the heat seal ot TAB.
 
-10.  LCD module could be easily damaged by static electricity. Be careful to maintain an optimum anti-static work environment to protect the LCD module.
+9. Never add force to component of the LCD module. It may cause invisible damage or degrade of the reliability.
 
-11.  When peeling off the protective film from LCD, static charge may cause abnormal display pattern. It is normal and will resume to nomal in a short while.
+10. LCD module could be easily damaged by static electricity. Be careful to maintain an optimum anti-static work environment to protect the LCD module.
 
-12.  Take care and prevent get hurt by the LCD panel sharp edge.
+11. When peeling off the protective film from LCD, static charge may cause abnormal display pattern. It is normal and will resume to nomal in a short while.
 
-13.  Never operate the LCD module exceed the absolute maximum ratings.
+12. Take care and prevent get hurt by the LCD panel sharp edge.
 
-14.  Keep the signal line as short as possible to prevent noisy signal applying to LCD module.
+13. Never operate the LCD module exceed the absolute maximum ratings.
 
-15.  Never apply signal to the LCD module without power supply.
+14. Keep the signal line as short as possible to prevent noisy signal applying to LCD module.
 
-16.  IC chip(eg. TAB or COG) is sensitive to the light. Strong lighting environment could possibly cause malfunction. Light sealing structure casing is recommend.
+15. Never apply signal to the LCD module without power supply.
 
-17.  LCD module reliability may be reduced by temperature shock.
+16. IC chip(eg. TAB or COG) is sensitive to the light. Strong lighting environment could possibly cause malfunction. Light sealing structure casing is recommend.
 
-18.  When storing the lCD module, avoid exposure to the direct sunlight, high humidity, high temperature or low temperature. They may damage or degrade the LCD module.
+17. LCD module reliability may be reduced by temperature shock.
 
-##   Schematic
+18. When storing the lCD module, avoid exposure to the direct sunlight, high humidity, high temperature or low temperature. They may damage or degrade the LCD module.
+
+## Schematic
+
 ---
-###   Block Diagram
+
+### Block Diagram
 
 ![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-wbl-block-162.JPG)
 
-##   Specification
+## Specification
+
 ---
-*   LCD Display Mode: STN, Positive, Transflective
 
-*   Display Color: Deep Blue/ Yellow Green
+* LCD Display Mode: STN, Positive, Transflective
 
-*   Viewing Angle: 6H
+* Display Color: Deep Blue/ Yellow Green
 
-*   Driving Method : 1/16 duty, 1/5 bias
+* Viewing Angle: 6H
 
-*   Back Light : Yellow-Green LED backlight
+* Driving Method : 1/16 duty, 1/5 bias
 
-*   Outline Dimension: 80*36*15.8 MAX
+* Back Light : Yellow-Green LED backlight
 
-!!!Note
-    1.  Color tone may slightly change by Temperature and Driving Condition.
-    2.  The Color is defined as the inactive/background color
+* Outline Dimension: 80*36*15.8 MAX
 
-###   AC Characteristics
+:::note
+
+1. Color tone may slightly change by Temperature and Driving Condition.<br />
+2. The Color is defined as the inactive/background color
+:::
+
+### AC Characteristics
 
 V<sub>ss</sub>=0V,V<sub>DD</sub>=5V,T<sub>OP</sub>=25℃
 
@@ -249,17 +257,18 @@ V<sub>ss</sub>=0V,V<sub>DD</sub>=5V,T<sub>OP</sub>=25℃
 </td></tr></table>
 <table >
 <tr>
-<td>![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-WTiming.jpg)
+<td><div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-WTiming.jpg" /></div>
 </td>
-<td>![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-RTiming.jpg)
+<td><div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/LCD-module-RTiming.jpg" /></div>
 </td></tr>
 <tr>
-<td>**Host Writing Timing Diagram**
+<td><strong>Host Writing Timing Diagram</strong>
 </td>
-<td>**Host Read Timing Diagram**
+<td><strong>Host Read Timing Diagram</strong>
 </td></tr></table>
 
-##   Pin definition and Rating
+## Pin definition and Rating
+
 ---
 <table>
 <tr>
@@ -307,15 +316,15 @@ V<sub>ss</sub>=0V,V<sub>DD</sub>=5V,T<sub>OP</sub>=25℃
 </td>
 <td>
 
-*   RS=HIGH:DB0-DB7=Display RAM data
+* RS=HIGH:DB0-DB7=Display RAM data
 
-*   RS=LOW:DB0-DB7=Instruction data
+* RS=LOW:DB0-DB7=Instruction data
+
 <div>
   5
   R/W
   Input
 </div>
-
 
 In read mode
 
@@ -451,14 +460,17 @@ Display or instruction data could write into the LCD mudule's driver/controllers
 
 Only read display or instruction data form one of the driver/controller in the LCD module at a time, otherwise unexpected data collision may occur.
 
-##   Mechanic Dimensions
+## Mechanic Dimensions
+
 ---
 Outline Dimension:98.0*60.0*13.7MAX
 (See attached outline Drawing for details)
 
-##   Usage
+## Usage
+
 ---
-###   Internal Registers
+
+### Internal Registers
 
 There are three registers in each section of LCD module. Each of them could be controlled independently.
 
@@ -474,19 +486,22 @@ Y address counter designates address of the internal display data RAM. It could 
 
 Z address register indicates of display data RAM to LCD top line. It may be used for scrolling display pattern on the LCD.
 
-###   Programming
+### Programming
+
 ---
 **Basic Setting**
 
 To drive the LCD module correctly and provide normally display, please use the following setting
 
-*   Display start line(Z address )=0
+* Display start line(Z address )=0
 
-*   LCD Display = on
+* LCD Display = on
 
-!!!Note
-    1.  These setting/commands should issue to the LCD module while start up.
-    2.  See the Display Commands section for details.
+:::note
+
+1. These setting/commands should issue to the LCD module while start up.<br />
+2. See the Display Commands section for details.
+:::
 
 **Adjusting the LCD display contrast**
 
@@ -500,9 +515,9 @@ The LCD module should be initialized by setting /RST terminal at low level when 
 
 When /RST pull low, the LCD mudule will:
 
-*   Display off
+* Display off
 
-*   Display start line register becomes 0. (Z-address=0)
+* Display start line register becomes 0. (Z-address=0)
 
 While /RST is low, no instruction can be accepted except status read. Therefore, execute other instructions after making sure that DB4=0(cleat /RST) and DB7=0(ready) by status read instruction. The conditions of power supply at initial power up are as follow:
 
@@ -549,13 +564,13 @@ While /RST is low, no instruction can be accepted except status read. Therefore,
 
 ![](https://files.seeedstudio.com/wiki/LCD_16-2_Characters-Green_Yellow_back_light/img/VFD-lcd-module-trtx.jpg)
 
+## Resources
 
-##   Resources
-
-*   [Datasheet](https://bz.seeedstudio.com/depot/datasheet/LMB162ABC-Manual-Rev0.2.pdf)
+* [Datasheet](https://bz.seeedstudio.com/depot/datasheet/LMB162ABC-Manual-Rev0.2.pdf)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

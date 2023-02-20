@@ -1,6 +1,5 @@
 ---
 title: DSO Quad Manual (by the community)
-nointro:
 keywords:
   - docs
   - docusaurus
@@ -13,53 +12,53 @@ last_update:
 
 The DSO Quad is a pocket oscilloscope. It has lots of great features in a small package:
 
-*   2 Analog Inputs at 72 MS/s (10[Vpp](#Definitions) using the [x1 probe](#Definitions), 80[Vpp](#Definitions) is possible with an upgrade).
+* 2 Analog Inputs at 72 MS/s (10[Vpp](#definitions) using the [x1 probe](#definitions), 80[Vpp](#definitions) is possible with an upgrade).
 
-*   2 Digital Inputs at (3.3V max, diode designed to permit higher voltages needs an upgrade). Digital probes not included.
+* 2 Digital Inputs at (3.3V max, diode designed to permit higher voltages needs an upgrade). Digital probes not included.
 
-*   Signal Generator Output, 10 Hz-20kHz analog or 10 Hz-100kHz digital (8 MHz digital output is possible with an upgrade).
+* Signal Generator Output, 10 Hz-20kHz analog or 10 Hz-100kHz digital (8 MHz digital output is possible with an upgrade).
 
-*   Auto, Normal, Single, Scan, and free-running triggering modes.
+* Auto, Normal, Single, Scan, and free-running triggering modes.
 
 If this is your first time using the DSO Quad, please read the [Getting Started](#getting-started) section.
 
-The [Specifications](#Specifications) section has all the details about the DSO Quad's capabilities.
+The [Specifications](#specifications) section has all the details about the DSO Quad's capabilities.
 
-[&gt; Download this manual as a PDF &lt;](#PDF)
+<!-- [&gt; Download this manual as a PDF &lt;](#PDF) -->
 
 _**Note: The DSO Quad is currently a BETA product. This means significant hardware and software issues still exist in the product. Every attempt has been made to accurately describe the current product in this manual. However, this manual comes with ABSOLUTELY NO WARRANTY.**_
 
-##  Why Another Manual?
+## Why Another Manual?
 
 Seeedstudio's official manual can be downloaded [here](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1929). I started this page as a project in my spare time to answer all the questions I had when I first got my DSO Quad.
 
 This manual may help if you're wondering:
 
-1.  How do I install the battery? (I'm concerned my battery might be backwards! How can I be sure?)
+1. How do I install the battery? (I'm concerned my battery might be backwards! How can I be sure?)
 
-2.  How do I open the back cover?
+2. How do I open the back cover?
 
-3.  How do I power on the unit?
+3. How do I power on the unit?
 
-4.  What do the charging indicator LEDs mean?
+4. What do the charging indicator LEDs mean?
 
-5.  How do I upgrade the firmware?
+5. How do I upgrade the firmware?
 
-6.  How do I test the unit?
+6. How do I test the unit?
 
-7.  What are the buttons for?
+7. What are the buttons for?
 
 I felt like this all belongs in one place -- a manual -- and I just kept working on it until it is what you see now.
 
-###  Other Seeedstudio Documentation
+### Other Seeedstudio Documentation
 
-*   [DSO Quad Manual (official wiki page)](/DSO_Quad "DSO Quad")
+* [DSO Quad Manual (official wiki page)](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad "DSO Quad")
 
-*   [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
+* [DSO Quad Building Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
 
-*   [DSO Quad battery installation tutorial with video](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2074)
+* [DSO Quad battery installation tutorial with video](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2074)
 
-##  Getting Started
+## Getting Started
 
 When you receive the DSO Quad, you should have something like this:
 
@@ -67,47 +66,41 @@ When you receive the DSO Quad, you should have something like this:
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_usb_cable.jpg)
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_pouch.jpg)
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_probes.jpg)
-![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_battery.jpg) (This is the Lithium-Polymer battery, still in its static bag)
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_battery.jpg)<br />
+(This is the Lithium-Polymer battery, still in its static bag)
 
-###  Install the Battery
+### Install the Battery
 
-1.  First, be sure the DSO Quad on/off switch is **off**:
+1. First, be sure the DSO Quad on/off switch is **off**:
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Turn_off.jpg)
 
-
-2.  Hold the DSO Quad so that you are looking at the text on the back face, right-side up as shown:
+2. Hold the DSO Quad so that you are looking at the text on the back face, right-side up as shown:
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Back_right_side_up.jpg)
 
-
-3.  Slide the back face to the left:
+3. Slide the back face to the left:<br />
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Back_slide_to_left.jpg)
 
+4. The back face should then fall off easily, revealing the empty battery cavity:
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_back_removed.jpg)<br />
+ **Note:** There are reports of reverse-polarity batteries. _**This will destroy your charging circuit if not corrected.**_ Please carefully check for the proper alignment of red and black wires.
 
-4.  The back face should then fall off easily, revealing the empty battery cavity:
-![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_back_removed.jpg)
- **Note:** There are [reports of reverse-polarity batteries.](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) _**This will destroy your charging circuit if not corrected.**_ Please carefully check for the proper alignment of red and black wires.
-
-
-5.  Check that the red wire is closest to the outside of the DSO Quad. The black wire is on the inside.
+5. Check that the red wire is closest to the outside of the DSO Quad. The black wire is on the inside.
 ![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_observe_polarity.jpg)
 
+6. If your battery was connected incorrectly, _**do not plug it in!**_ Go to [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) for help.
 
-6.  If your battery was connected incorrectly, _**do not plug it in!**_ Go to [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1911) for help.
+7. If your battery is connected correctly, thread the wires through the clips on the left side:
 
-7.  If your battery is connected correctly, thread the wires through the clips on the left side:
-
-8.  Slide the back cover into place.
+8. Slide the back cover into place.
 Hold the left side tightly while sliding the cover to the right. See [http://www.flickr.com/photos/seeedstudio/5807556545/in/photostream/](http://www.flickr.com/photos/seeedstudio/5807556545/in/photostream/) for a demonstration.
 
+9. <div className="thumb tright"><div className="thumbinner" style={{width: 202}}> <div className="thumbcaption">Red "charging" LED</div></div></div> Turn the DSO Quad upright and connect the USB cable. You should see the red "charging" LED. Please charge your DSO Quad for at least 1 hour the first time before using it.
 
-<div>
-  9.  <div className="thumb tright"><div className="thumbinner" style={{width: 202}}>![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_red_charging_led.jpg) <div className="thumbcaption">Red "charging" LED</div></div></div> Turn the DSO Quad upright and connect the USB cable. You should see the red "charging" LED. Please charge your DSO Quad for at least 1 hour the first time before using it.
-</div>
+![](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/img/Dso_quad_red_charging_led.jpg)
 
+10. Please [update your firmware](#firmware-updates) to the latest version.
 
-10.  Please [update your firmware](#Firmware_Updates) to the latest version.
-
-###  LED Indicators and Power Modes
+### LED Indicators and Power Modes
 
 The DSO Quad is charged by connecting the USB cable. The LTC4054 battery controller [will not charge the battery](https://forum.seeedstudio.com/viewtopic.php?p=6922#p6922) while the power switch is on. This is best explained in a table:
 
@@ -225,19 +218,18 @@ The DSO Quad is charged by connecting the USB cable. The LTC4054 battery control
 
 *** USB port is not supplying power:** if your DSO quad is not charging, it may be the USB port. Here are some troubleshooting tips:
 
-1.  Please be sure the USB cable is correctly connected.
+1. Please be sure the USB cable is correctly connected.
 
-2.  Please try a different port on the computer. Some USB hubs cannot supply enough power, especially if several devices are connected.
+2. Please try a different port on the computer. Some USB hubs cannot supply enough power, especially if several devices are connected.
 
-3.  Please try a different port on another computer. Some laptops may turn off power to USB ports when in sleep mode.
+3. Please try a different port on another computer. Some laptops may turn off power to USB ports when in sleep mode.
 
-###  Firmware Updates
+### Firmware Updates
 
 There are several versions of the DSO Quad, and the firmware for each is different. Please carefully identify your hardware. When you first turn on the DSO Quad, look for the hardware version. Compare what you see to the following table:
 
-Check here for the latest firmware: [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
+Check here for the latest firmware: [DSO Quad Building Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
 Here is the latest firmware under special contract with [FPGA(DFU，SYS，APP) v2.7.2](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/res/DS203.V2.72.zip).
-
 
 <table>
 <tr>
@@ -313,45 +305,45 @@ You might find more info on [https://forum.seeedstudio.com/viewtopic.php?f=22&am
 
 The firmware source code is available [here](http://github.com/Seeed-Studio/DSOQuad_SourceCode). **Note:** Seeedstudio does not recommend you create your own FPGA firmware, because of the risk of damaging the hardware.
 
-###  Calibration
+### Calibration
 
 The DSO Quad requires calibration before the first use, and should be re-calibrated after extended use. The two parameters to be calibrated are gain and bias (DC offset).
 
-####  Old GUI (app version 2.x)
+#### Old GUI (app version 2.x)
 
-1.  Bias Calibration
+1. Bias Calibration
 
-    1.  Hold the button marked with a square for 2 seconds, and the calibration "spreadsheet" appears
+    1. Hold the button marked with a square for 2 seconds, and the calibration "spreadsheet" appears
 
-        2.  Dial the values to 0 in each box. Move up/down by rotating the right-most "navigation" switch left/right. Move columns by clicking in the right-most "navigation" switch.
+        2. Dial the values to 0 in each box. Move up/down by rotating the right-most "navigation" switch left/right. Move columns by clicking in the right-most "navigation" switch.
 
-        3.  Cancel the calibration by leaving some entries unchanged. Or, save the calibration after calibrating at each level. Follow the instructions an the top.
+        3. Cancel the calibration by leaving some entries unchanged. Or, save the calibration after calibrating at each level. Follow the instructions an the top.
 
-2.  Gain Calibration
+2. Gain Calibration
 
-    1.  (Look at the regular manual for this)
+    1. (Look at the regular manual for this)
 
-####  New GUI (hardware 2.7, app version P1.00 and above)
+#### New GUI (hardware 2.7, app version P1.00 and above)
 
 (i'm not sure whats going on with the version numbering, perhaps its a beta or preview, but its not clear to me)
 
-1.  Bias Calibration
+1. Bias Calibration
 
-    1.  Press square button one time
+    1. Press square button one time
 
-        2.  Select "Calibrat" in the menu.
+        2. Select "Calibrat" in the menu.
 
-        3.  Follow the instructions
+        3. Follow the instructions
 
-More details see here: [DSO Quad:Calibration](/DSO_Quad-Calibration "DSO Quad:Calibration")
+More details see here: [DSO Quad:Calibration](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Calibration "DSO Quad:Calibration")
 
 Note: I noticed the calibration is different when you connect or disconnect a powersupply to the micro USB connection. So calibrate it the way you will use it the most.
 
-1.  Gain Calibration
+1. Gain Calibration
 
-    1.  (Look at the regular manual for this)
+    1. (Look at the regular manual for this)
 
-##  Using The DSO Quad
+## Using The DSO Quad
 
 The most important switches are the two rotating switches on the right. The right-most is the "navigation" switch for changing which main part of the UI is currently blinking. The other switch is the "submenu" switch used to change Volts/div, microseconds, trigger positions, etc.
 
@@ -456,17 +448,17 @@ The main screen has these blocks:
 <td> customizable measurement read-outs. For example, Vbt, FPS, Vdc, RMS, Max, Min, Vpp, FRQ, DUT, CIR, TL, TH
 </td></tr></table>
 
-###  Measuring Voltage
+### Measuring Voltage
 
 Vmax, Vmin, Vpp, Vdc (average V), Vrms (sqrt(average(V*V)))
 
-##  Specifications
+## Specifications
 
 Sampling 0.1 usec - 1 sec
 
 Digital input bandwidth [This forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1978)
 
-###  Definitions
+### Definitions
 
 <table>
 <tr>
@@ -493,20 +485,19 @@ Note that the values on screen are 1/10 of the input, so please multiply by 10 i
 <td> ...
 </td></tr></table>
 
-###  Requirements
+### Requirements
 
 The DSO Quad can be charged from any normal USB port. Please charge your DSO Quad for at least 1 hour before using it.
 
-The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
-
+The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
 
 ## Resource
+
 [FPGA(DFU，SYS，APP) v2.7.2](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/res/DS203.V2.72.zip)
 
-
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
