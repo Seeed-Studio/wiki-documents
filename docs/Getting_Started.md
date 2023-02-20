@@ -56,7 +56,6 @@ The wiki contents have been divided into **four topics** as shown on the top nav
         </div>
     </a>
 
-
 <a class="start_card_item" href="/Solutions">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"7"}>Solutions</font></div>
@@ -158,11 +157,11 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 
 ## <font color="{'D29291'}" size="{&quot;6&quot;}">Contributors</font>
 
-This  platfrom can be deployed locally and everything will be editable. 
+This  platfrom can be deployed locally and everything will be editable.
 
 We want your skills, your language and language competence. We need your professions, your knowledge of hardware and development capabilities of software.
 
-We are facing the age of information explosion, we want to ensure your presentations are stored with us. Welcome to Seeed Studio Contributor Program! 
+We are facing the age of information explosion, we want to ensure your presentations are stored with us. Welcome to Seeed Studio Contributor Program!
 
 Check our <strong><a href="https://github.com/Seeed-Studio/wiki-documents" target="_blank"><span><font color={'8DC215'} size={"3"}> Github source </font></span></a></strong> and  <strong><a href="https://github.com/Seeed-Studio/wiki-documents/blob/main/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> task list </font></span></a></strong>
 for more information.
@@ -198,12 +197,3 @@ If you have any questions or comments, please don't hesitate to hop on to our fo
       <td align="left"><strong>Seeed on LinkedIn</strong><br />Digital transformation is happening. Follow us to learn how IoT Industry news, insights, case studies and more on LinkedIn.<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
   </tbody></table>
-
-
-# 132
-
- <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/Sensor_Network#kit-with-courses---">
-            <strong><span><font color={'FFFFFF'} size={"5"}> Get One Now 🛒</font></span></strong>
-    </a>
-  </div>
