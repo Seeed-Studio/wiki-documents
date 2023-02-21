@@ -154,7 +154,7 @@ We use the MAX485ESA IC for this shield, for more detail about this IC, please c
 |Raspberry pi|RS-485 Shield for Raspberry Pi|
 |------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/RS-485-Shield-for-Raspberry-Pi.html)|
 
 - **Step 1.** Plug the RS-485 Shield for Raspberry Pi into the Raspberry Pi.
 

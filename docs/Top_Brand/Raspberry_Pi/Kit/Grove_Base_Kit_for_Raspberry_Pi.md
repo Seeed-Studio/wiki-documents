@@ -728,7 +728,7 @@ pi@raspberrypi:~/grove.py $
 ### Lesson 4: Motion Sensor & Relay
 
 ![](https://files.seeedstudio.com/wiki/Grove_Beginner_Kit_for_RaspberryPi/img/pir+relay.jpg)
-
+<!-- 图片链接缺失 -->
 **Objective**
 
 Use Grove - mini PIR motion sensor to detect the motion, light on if people come.

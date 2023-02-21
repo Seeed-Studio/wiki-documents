@@ -1,6 +1,5 @@
 ---
-title: G1_Water_Flow_Sensor
-nointro:
+title: G1 Water Flow Sensor
 keywords:
   - docs
   - docusaurus
@@ -15,7 +14,8 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/g34-water-flow-sensor-p-1083.html?cPath=144_151)
 
-##   Specification
+## Specification
+
 ---
 <table>
   <tbody><tr>
@@ -74,10 +74,11 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
       <td>25%～95%RH
       </td></tr></tbody></table>
 
+## Mechanic Dimensions
 
-##   Mechanic Dimensions
 ---
-###   Sensor Components
+
+### Sensor Components
 
 <table>
   <tbody><tr>
@@ -213,12 +214,12 @@ Water flow sensor consists of a plastic valve body, a water rotor, and a hall-ef
       <td>
       </td></tr></tbody></table>
 
+## Usage Example
 
-##  Usage Example
 ---
 <font>Note: This example is abstracted from the forum, which was done by Charles Gantt. Thanks for his contribution.Let's see how it works.</font>
 
-###   Reading Water Flow rate with Water Flow Sensor
+### Reading Water Flow rate with Water Flow Sensor
 
 This is part of a project I have been working on and I thought I would share it here since there have been a few threads on how to read water flow rate in liters per hour using the Water Flow Sensor found in the Seeed Studio Depo. It uses a simple rotating wheel that pulses a hall effect sensor. By reading these pulses and implementing a little math, we can read the liquids flow rate accurate to within 3%. The threads are simple G1 so finding barbed ends will not be that hard.
 
@@ -238,6 +239,7 @@ Here is a fritzing diagram I made to show you how to wire it all up.
 Once you have it wired up you will need to upload the following code to your Seeeduino. Once it is uploaded and you have some fluid flowing through the Water Flow Sensor, you can open the serial monitor and it will display the flow rate, refreshing every second.
 
 **Programming**
+
 ```
 // reading liquid flow rate using Seeeduino and Water Flow Sensor from Seeedstudio.com
 // Code adapted by Charles Gantt from PC Fan RPM code written by Crenn @thebestcasescenario.com
@@ -274,13 +276,15 @@ void loop ()
 
 You can refer our forum for more details about [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632).
 
-##   Wiring Diagram
+## Wiring Diagram
+
 ---
 The external diameter of thread the connections use is 1.4mm.
 
 ![](https://files.seeedstudio.com/wiki/G1_Water_Flow_Sensor/img/Wfs-wiring.jpg)
 
-##   Output Table
+## Output Table
+
 ---
 Pulse frequency (Hz) in Horizontal Test= 1*Q, Q is flow rate in L/min. (Results in +/- 3% range)
 
@@ -307,6 +311,7 @@ Pulse frequency (Hz) in Horizontal Test= 1*Q, Q is flow rate in L/min. (Results 
 </td></tr></table>
 
 ## FAQ
+
 ---
 **What materials is water flow sensor made of?**
 
@@ -316,17 +321,17 @@ Nylon with fiber, avoiding strong acid and strong base.
 
 Yes, it's usage is safe for human consumption. It is frequently used on drinking machines.
 
+## Resource
 
-##   Resource
+* [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
 
-*   [Reading Water Flow rate with Water Flow Sensor](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=989&amp;p=3632#p3632)
+* [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
 
-*   [Water Flow rate display on LCD](http://www.practicalarduino.com/projects/water-flow-gauge)
-
-*   [datasheet for the material](https://wiki.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
+* [datasheet for the material](https://wiki.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

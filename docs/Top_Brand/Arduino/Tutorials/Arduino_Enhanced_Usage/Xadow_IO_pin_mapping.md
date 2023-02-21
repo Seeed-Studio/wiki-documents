@@ -1,4 +1,14 @@
 ---
+description: Xadow IO pin mapping
+title: Xadow IO pin mapping
+keywords:
+- Sorftware
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 1/16/2023
+  author: jianjing Huang
+---
+<!-- ---
 name: Xadow IO pin mapping
 category: Tutorial
 bzurl:
@@ -6,51 +16,51 @@ oldwikiname:  Xadow IO pin mapping
 prodimagename:
 surveyurl: https://www.research.net/r/Xadow_IO_pin_mapping
 sku:
----
+--- -->
 
 Single reference page for all pin information including:-
 
-*   How to use each pin in your Arduino code
+* How to use each pin in your Arduino code
 
-*   Xadow FFC to Atmega32u4 pin mapping
+* Xadow FFC to Atmega32u4 pin mapping
 
-*   pins that have interrupts and timers
+* pins that have interrupts and timers
 
-*   the 2 serial ports, IIc and ISP
-*   additional on board IO, that might be hacked
+* the 2 serial ports, IIc and ISP
+* additional on board IO, that might be hacked
 
 The tables provide different views of the data and are especially useful when you are planning which modules to use and which IO pins for direct use!
 
-##  Xadow FFC IO bus and matching Arduino and Atmega information and example Arduino code.
+## Xadow FFC IO bus and matching Arduino and Atmega information and example Arduino code
 
 <table>
 <tr>
-<td colspan="4"> **Xadow FFC pins**
+<td colspan="4"> <strong>Xadow FFC pins</strong>
 </td>
-<td colspan="2"> **Arduino**
+<td colspan="2"> <strong>Arduino</strong>
 </td>
-<td colspan="2"> **Atmega32u4 pins**
+<td colspan="2"> <strong>Atmega32u4 pins</strong>
 </td>
 <td>
 </td></tr>
 <tr>
-<td> **Name**
+<td> <strong>Name</strong>
 </td>
-<td> **IO function**
+<td> <strong>IO function</strong>
 </td>
-<td> **Alternate use**
+<td> <strong>Alternate use</strong>
 </td>
-<td> **#**
+<td> <strong>#</strong>
 </td>
-<td> **IO Pin**
+<td> <strong>IO Pin</strong>
 </td>
-<td> **code example(s)**
+<td> <strong>code example(s)</strong>
 </td>
-<td> **Name (**interrupts in red**)**
+<td> <strong>Name (<strong>interrupts in red</strong>)</strong>
 </td>
-<td> **#**
+<td> <strong>#</strong>
 </td>
-<td> **Notes**
+<td> <strong>Notes</strong>
 </td></tr>
 <tr>
 <td> P1
@@ -61,11 +71,11 @@ The tables provide different views of the data and are especially useful when yo
 </td>
 <td> 1
 </td>
-<td> **15**
+<td> <strong>15</strong>
 </td>
 <td> PinMode(15, OUTPUT); digitalWrite(15, HIGH);
 </td>
-<td> PB1**(PCINT1**/SCLK)
+<td> PB1<strong>(PCINT1</strong>/SCLK)
 </td>
 <td> 9
 </td>
@@ -80,11 +90,11 @@ The tables provide different views of the data and are especially useful when yo
 </td>
 <td> 2
 </td>
-<td> **16**
+<td> <strong>16</strong>
 </td>
 <td> PinMode(16, OUTPUT); digitalWrite(16, HIGH);
 </td>
-<td> PB2(PDI/**PCINT2**/MOSI)
+<td> PB2(PDI/<strong>PCINT2</strong>/MOSI)
 </td>
 <td> 10
 </td></tr>
@@ -97,11 +107,11 @@ The tables provide different views of the data and are especially useful when yo
 </td>
 <td> 3
 </td>
-<td> **14**
+<td> <strong>14</strong>
 </td>
 <td> PinMode(14, OUTPUT); digitalWrite(14, HIGH);
 </td>
-<td> PB3(PDO/**PCINT3**/MISO)
+<td> PB3(PDO/<strong>PCINT3</strong>/MISO)
 </td>
 <td> 11
 </td></tr>
@@ -114,7 +124,7 @@ The tables provide different views of the data and are especially useful when yo
 </td>
 <td> 4
 </td>
-<td> **A5**
+<td> <strong>A5</strong>
 </td>
 <td> analogWrite(A5, 128); pinMode(A5, OUTPUT); digitalWrite(A5, HIGH);
 </td>
@@ -133,11 +143,11 @@ The tables provide different views of the data and are especially useful when yo
 </td>
 <td> 9
 </td>
-<td> **3**
+<td> <strong>3</strong>
 </td>
 <td> PinMode(3, OUTPUT); digitalWrite(3, HIGH);
 </td>
-<td> PD0(OC0B/SCL/**INT0**)
+<td> PD0(OC0B/SCL/<strong>INT0</strong>)
 </td>
 <td> 18
 </td>
@@ -152,11 +162,11 @@ The tables provide different views of the data and are especially useful when yo
 </td>
 <td> 10
 </td>
-<td> **2**
+<td> <strong>2</strong>
 </td>
 <td> PinMode(2, OUTPUT); digitalWrite(2, HIGH);
 </td>
-<td> PD1 (SDA/**INT1**)
+<td> PD1 (SDA/<strong>INT1</strong>)
 </td>
 <td> 19
 </td>
@@ -171,11 +181,11 @@ The tables provide different views of the data and are especially useful when yo
 </td>
 <td> 11
 </td>
-<td> **0**
+<td> <strong>0</strong>
 </td>
 <td> PinMode(0, OUTPUT); digitalWrite(0, HIGH);
 </td>
-<td> PD2(RXD/**INT2**)
+<td> PD2(RXD/<strong>INT2</strong>)
 </td>
 <td> 20
 </td>
@@ -193,45 +203,45 @@ NOT same serial port uploading code–see Red/Green LED below.
 </td>
 <td> 12
 </td>
-<td> **1**
+<td> <strong>1</strong>
 </td>
 <td> PinMode(1, OUTPUT); digitalWrite(1, HIGH);
 </td>
-<td> PD3(TXD/**INT3**)
+<td> PD3(TXD/<strong>INT3</strong>)
 </td>
 <td> 21
 </td></tr></table>
 
-##  Some MORE Xadow IO pins - only on the Main module, NOT on the FFC bus!
+## Some MORE Xadow IO pins - only on the Main module, NOT on the FFC bus
 
 <table>
 <tr>
-<td colspan="4"> **Xadow pins**
+<td colspan="4"> <strong>Xadow pins</strong>
 </td>
-<td colspan="2"> **Arduino**
+<td colspan="2"> <strong>Arduino</strong>
 </td>
-<td colspan="2"> **Atmega32u4 pins**
+<td colspan="2"> <strong>Atmega32u4 pins</strong>
 </td>
 <td>
 </td></tr>
 <tr>
-<td> **Name**
+<td> <strong>Name</strong>
 </td>
-<td> **IO function**
+<td> <strong>IO function</strong>
 </td>
-<td> **Alternate use**
+<td> <strong>Alternate use</strong>
 </td>
-<td> **#**
+<td> <strong>#</strong>
 </td>
-<td> **IO Pin**
+<td> <strong>IO Pin</strong>
 </td>
-<td> **code example(s)**
+<td> <strong>code example(s)</strong>
 </td>
-<td> **Name (**interrupts in red**)**
+<td> <strong>Name (<strong>interrupts in red</strong>)</strong>
 </td>
-<td> **#**
+<td> <strong>#</strong>
 </td>
-<td> **Notes**
+<td> <strong>Notes</strong>
 </td></tr>
 <tr>
 <td> Red LED
@@ -242,11 +252,11 @@ NOT same serial port uploading code–see Red/Green LED below.
 </td>
 <td> -
 </td>
-<td> **17**
+<td> <strong>17</strong>
 </td>
 <td> PinMode(17, OUTPUT); digitalWrite(17, HIGH);
 </td>
-<td> PB0(SS/**PCINT0**)
+<td> PB0(SS/<strong>PCINT0</strong>)
 </td>
 <td> 8
 </td>
@@ -261,11 +271,11 @@ NOT same serial port uploading code–see Red/Green LED below.
 </td>
 <td> -
 </td>
-<td> **11**
+<td> <strong>11</strong>
 </td>
 <td> PinMode(11, OUTPUT); digitalWrite(11, HIGH);
 </td>
-<td> PB7(**PCINT7**/OC0A/OC1C/!RTS)
+<td> PB7(<strong>PCINT7</strong>/OC0A/OC1C/!RTS)
 </td>
 <td> 12
 </td></tr>
@@ -278,7 +288,7 @@ NOT same serial port uploading code–see Red/Green LED below.
 </td>
 <td> -
 </td>
-<td> **10**
+<td> <strong>10</strong>
 </td>
 <td> Have not yet connected and validated this!
 </td>
@@ -291,7 +301,7 @@ NOT same serial port uploading code–see Red/Green LED below.
 
 Note: Reset switch is connected to Atmega32u4 Reset pin 13 via a diode – so no access to the 32u4 IO pin AT THE RESET SWITCH!
 
-##  The BIG Table of Xadow modules and the IO bus pin use for each module.
+## The BIG Table of Xadow modules and the IO bus pin use for each module
 
 Why such a big complicated table? Well it brings together all of the IO information in one place, but more importantly it lets you see which IO pins are still available once you have selected several Xadow modules! Also the schematic has different FFC pin numbers to the rest of the wiki documentation!
 
@@ -305,7 +315,7 @@ Notes:-
 
 So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakout pins!
 
-4. ** Additional details highlighted in yellow in center of table document the **ADDITIONAL** breakout pins on each Xadow module!
+4. Additional details highlighted in yellow in center of table document the **ADDITIONAL** breakout pins on each Xadow module!
 
 5. ? = Don't know, or not yet verified!
 
@@ -331,33 +341,33 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 </td>
 <td> <center>0</center>
 </td>
-<td> **Arduino Pin name**
+<td> <strong>Arduino Pin name</strong>
 </td></tr>
 <tr>
 <td>
 </td>
-<td> **Interrupts in red--------&gt;**
+<td> <strong>Interrupts in red--------&gt;</strong>
 </td>
-<td> PB1**(PCINT1**/SCLK)
+<td> PB1(PCINT1/SCLK)
 </td>
-<td> PB2(PDI/**PCINT2**/MOSI)
+<td> PB2(PDI/<strong>PCINT2</strong>/MOSI)
 </td>
-<td> PB3(PDO/**PCINT3**/MISO)
+<td> PB3(PDO/<strong>PCINT3</strong>/MISO)
 </td>
 <td> PF0(ADC0)
 </td>
 <td> PD0(OC0B/SCL/INT0)
 </td>
-<td> PD1(SDA/**INT1**)
+<td> PD1(SDA/<strong>INT1</strong>)
 </td>
-<td> PD2(RXD/**INT2**)
+<td> PD2(RXD/<strong>INT2</strong>)
 </td>
-<td> PD3(TXD/**INT3**)
+<td> PD3(TXD/<strong>INT3</strong>)
 </td>
 <td> Atmega32u4 pin Name
 </td></tr>
 <tr>
-<td> <center>**IIC = I2C**</center>
+<td> <center><strong>IIC = I2C</strong></center>
 </td>
 <td>
 </td>
@@ -403,27 +413,27 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 <td> FFC pin Name, #
 </td></tr>
 <tr>
-<td> **Xadow Modules **
+<td> <strong>Xadow Modules </strong>
 </td>
-<td> **Module Control Mode &amp; Address**
-</td>
-<td> <center>Digital Pin </center>
+<td> <strong>Module Control Mode &amp; Address</strong>
 </td>
 <td> <center>Digital Pin </center>
 </td>
 <td> <center>Digital Pin </center>
 </td>
-<td> <center>**Analog or **Digital Pin </center>
+<td> <center>Digital Pin </center>
 </td>
-<td> <center>**IIC SCL**</center>
+<td> <center><strong>Analog or </strong>Digital Pin </center>
 </td>
-<td> <center>**IIC SDA**</center>
+<td> <center><strong>IIC SCL</strong></center>
 </td>
-<td> <center>**Serial Rxd**</center>
+<td> <center><strong>IIC SDA</strong></center>
 </td>
-<td> <center>**Serial Txd**</center>
+<td> <center><strong>Serial Rxd</strong></center>
 </td>
-<td> **Xadow Pin function**
+<td> <center><strong>Serial Txd</strong></center>
+</td>
+<td> <strong>Xadow Pin function</strong>
 </td></tr>
 <tr>
 <td> <center>3-Axis Accelerometer </center>
@@ -582,7 +592,7 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 </td>
 <td>
 </td>
-<td> _**Disconnect module BEFORE using ISP**_
+<td> _<strong>Disconnect module BEFORE using ISP</strong>_
 </td></tr>
 <tr>
 <td> <center>RTC </center>
@@ -628,7 +638,7 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 </td>
 <td> <center>?</center>
 </td>
-<td> _**Disconnect module BEFORE using ISP**_
+<td> _<strong>Disconnect module BEFORE using ISP</strong>_
 </td></tr>
 <tr>
 <td> <center>Digital Compass </center>
@@ -721,7 +731,7 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 <td>
 </td></tr>
 <tr>
-<td> <center>**Main Board**</center>
+<td> <center><strong>Main Board</strong></center>
 </td>
 <td> <center>?IIC master =0x00?</center>
 </td>
@@ -745,4 +755,6 @@ So items in purple in the IIC SCL &amp; IIC SDA columns do NOT also have breakou
 </td></tr></table>
 
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

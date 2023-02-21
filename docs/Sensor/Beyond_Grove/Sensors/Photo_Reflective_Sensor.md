@@ -1,5 +1,5 @@
 ---
-title: Photo_Reflective_Sensor
+title: Photo Reflective Sensor
 nointro:
 keywords:
   - docs
@@ -15,32 +15,37 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Photo-Reflective-Sensor-p-543.html)
 
-##   Features
+## Features
+
 ---
-*   Compact
 
-*   High performance
+* Compact
 
-*   High output
+* High performance
 
-*   Easy to mount on PCB
+* High output
 
-*   Widely applicable
+* Easy to mount on PCB
 
-##   Application Ideas
+* Widely applicable
+
+## Application Ideas
+
 ---
-*   Timing sensors
 
-*   Edge sensors
+* Timing sensors
 
-*   Micro floppy disc drivers
+* Edge sensors
 
-*   Level sensors of liquid
+* Micro floppy disc drivers
 
+* Level sensors of liquid
 
-##   Specification
+## Specification
+
 ---
-###   Maximum Ratings (Ta=25℃)
+
+### Maximum Ratings (Ta=25℃)
 
 <table>
 <tr>
@@ -82,7 +87,7 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 <td>mA
 </td></tr>
 <tr>
-<td>Pulse Forward current * 1
+<td>Pulse Forward current *1
 </td>
 <td>IFP
 </td>
@@ -147,7 +152,7 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 <td>℃
 </td></tr>
 <tr>
-<td colspan="2">Soldering Temperature *2
+<td colspan="2">Soldering Temperature*2
 </td>
 <td>Tsol
 </td>
@@ -156,7 +161,7 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 <td>℃
 </td></tr></table>
 
-###   Electro-optical Characteristics (Ta=25℃)
+### Electro-optical Characteristics (Ta=25℃)
 
 <table>
 <tr>
@@ -314,13 +319,13 @@ This is a reflective sensor combines a GaA1As infrared light emitting diode with
 <td>µsec
 </td></tr></table>
 
-
-##   Mechanic Dimensions
+## Mechanic Dimensions
 
 ![](https://files.seeedstudio.com/wiki/Photo_Reflective_Sensor/img/Photo-ref-dimen.JPG)
 
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

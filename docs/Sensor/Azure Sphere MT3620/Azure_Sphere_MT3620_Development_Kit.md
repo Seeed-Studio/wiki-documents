@@ -37,7 +37,7 @@ MT3620 software development is supported using the powerful Microsoft Visual Stu
 |Azure Sphere MT3620 Development Kit EU Version|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-EU-Version-p-3134.html)|
 
 :::cautionWarning
-    If you need help on version selection, please check the [Countries or regions available list](https://view.officeapps.live.com/op/view.aspx?src=https://statics3.seeedstudio.com/document/Available_country.docx) for more details.
+If you need help on version selection, please check the [Countries or regions available list](https://view.officeapps.live.com/op/view.aspx?src=https://statics3.seeedstudio.com/document/Available_country.docx) for more details.
 :::
 
 ## Features
@@ -197,7 +197,7 @@ Power to the Azure Sphere MT3620 Development Kit is supplied via the on-board US
 For using I2S, please refer to [M4 User Manual](https://d86o2zu8ugzlg.cloudfront.net/mediatek-craft/documents/MT3620-M4-User-Manual.pdf)
 
 :::tip
-For more info, please refer to [Information and tools for hardware design and manufacture](https://docs.microsoft.com/en-us/azure-sphere/manufacturers/hardware-manufacturing).
+For more info, please refer to [Information and tools for hardware design and manufacture](https://learn.microsoft.com/en-us/azure-sphere/hardware/hardware-manufacturing-overview).
 :::
 
 ## Product Handling
@@ -221,7 +221,7 @@ The Azure Sphere MT3620 Development Kit contains highly sensitive electronic cir
 - Utilities
 - Public Safety
 :::tip
-To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://docs.microsoft.com/en-us/azure-sphere/product-overview/scenario).
+To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://learn.microsoft.com/en-us/azure-sphere/product-overview/what-is-azure-sphere).
 :::
 
 ## Qualification and approvals

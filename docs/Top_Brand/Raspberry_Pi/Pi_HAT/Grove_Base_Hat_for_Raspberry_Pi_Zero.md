@@ -188,7 +188,7 @@ sudo pip3 install .
 If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
-Now you can use the Grove Base Hat for Raspberry Pi Zero with dozens Grove modules, tap the command **grove_** and press the ++tab++ key to check the supported Grove list.
+Now you can use the Grove Base Hat for Raspberry Pi Zero with dozens Grove modules, tap the command **grove_** and press the `tab` key to check the supported Grove list.
 
 ```
 pi@raspberrypi:~$ grove_

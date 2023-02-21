@@ -157,19 +157,19 @@ Please always plug 3.7V Lipo battery in case USB power supply is not sufficient.
 Since there are many interfaces here, it is necessary to know the capabilities of these interfaces. Please refer to the following figure for details.
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/Lora_interface.jpg)
 
-- <font face size={5} font color="ffc000">❶</font> **Micro-USB Input:**
+- <font face size={5} font color="ffc000">❶</font> <strong>Micro-USB Input:</strong>
 The whole system use this Micro-USB interface for power supply.
 
-- <font face size={5} font color="ffc000">❷</font> **USB HOST Connector:**
+- <font face size={5} font color="ffc000">❷</font> <strong>USB HOST Connector:</strong>
  Output power to supply for Raspberry Pi
 
-- <font face size={5} font color="ffc000">❸</font> **Raspberry Pi power input:** Input power for Raspberry.
+- <font face size={5} font color="ffc000">❸</font> <strong>Raspberry Pi power input:</strong> Input power for Raspberry.
 
-- <font face size={5} font color="ffc000">❹</font> **HDMI:** HD digital video output interface.
+- <font face size={5} font color="ffc000">❹</font> <strong>HDMI:</strong> HD digital video output interface.
 
-- <font face size={5} font color="ffc000">❺</font> **Headphone jack:** 3.5mm Headphone jack
+- <font face size={5} font color="ffc000">❺</font> <strong>Headphone jack:</strong> 3.5mm Headphone jack
 
-- <font face size={5} font color="ffc000">❻</font> **Ethernet interface:** You can use the Ethernet interface to connect this system to the Internet. Or you can use Wifi after you configured the wireless network.
+- <font face size={5} font color="ffc000">❻</font> <strong>Ethernet interface:</strong> You can use the Ethernet interface to connect this system to the Internet. Or you can use Wifi after you configured the wireless network.
 
 ### Hardware connection
 
@@ -208,7 +208,7 @@ You may have your other favorite serial tools,of cause you can use them.However 
 
 a) First, make sure the serial tool and RPi (RHF4T002 Adapter) are connected correctly.  
 
-b) Plug FT232 tool to PC (If COM port is not recognized correctly, please refer to [Virtual COM Port Drivers](https://www.ftdichip.com/Drivers/VCP.html))
+b) Plug FT232 tool to PC (If COM port is not recognized correctly, please refer to [Virtual COM Port Drivers](https://www.ftdichip.com/Drivers/VCP.html))<!-- 源文件链接有误 -->
 
 c) Open **Device Manager** of your PC to get the right COM port. Like COM15 for example. Configure
 ExtraPuTTY according to below picture (Speed 115200, others use defaults), click **Open**. As the gateway is still not opened, so there is nothing in the terminal.
@@ -509,9 +509,9 @@ just sent form the Seeeduino_LoRAWAN. congratulations! Job done!
 
 #### Step.1 Loriot Server Gateway Registration
 
-a)  New user need register an account first, click **[registration address](https://cn1.loriot.io/register.html)** . Fill in UserName, Password and email address to register, after registration an email will be sent to you, please follow the instruction in the email to activate.
+a)  New user need register an account first, click **[registration address](https://cn1.loriot.io/register.html)** <!--源文件链接有误 -->. Fill in UserName, Password and email address to register, after registration an email will be sent to you, please follow the instruction in the email to activate.
 
-b)  After successful activation, click **[here](https://cn1.loriot.io/home/login.html)** to log in. Default tier is “Community Network”, it supports 1 Gateway (RHF2S001) and 10 nodes.
+b)  After successful activation, click **[here](https://cn1.loriot.io/home/login.html)** <!-- 源文件链接有误 -->to log in. Default tier is “Community Network”, it supports 1 Gateway (RHF2S001) and 10 nodes.
 
 c)  Enter **Dashboard -> Gateway**, click **Add Gateway** start to add Gateway.
 
@@ -632,8 +632,8 @@ chmod +x loriot-gw
 ## Resources
 
 - **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/LoRa_LoRaWan_Gateway_Kit.pdf)
-- **[Uer Manual]** [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual%20-%20v3.2.pdf).
-<!-- - **[More Reading]** [Wiki of Seeeduino LoRaWAN](/Seeeduino_LoRAWAN/) -->
+- **[Uer Manual]** [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual%20-%20v3.2.pdf).<!-- 源文件链接有误 -->
+- **[More Reading]** <a href="/Sensor/Seeeduino Series/Seeeduino_LoRAWAN" ><span><font size={"3"}> Wiki of Seeeduino LoRaWAN </font></span></a>
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)
 - **[Azure IoT Edge LoRaWAN]** [Azure IoT Edge LoRaWAN](https://github.com/Azure/iotedge-lorawan-starterkit/)
 

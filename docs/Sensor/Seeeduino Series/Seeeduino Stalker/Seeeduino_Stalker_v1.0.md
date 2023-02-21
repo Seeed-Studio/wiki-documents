@@ -101,7 +101,7 @@ Seeeduino Stalker is a feature rich Arduino compatible Wireless Sensor Network n
 
 - **Bee series** socket - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the **wireless modules**: **XBee**, [BluetoothBee](https://seeeddoc.github.io/Bluetooth_Bee/) , **GPSBee**or [RFBee](https://seeeddoc.github.io/RFbee_V1.1-Wireless_Arduino_compatible_node/) .) Communication with these modules are done through UART.
 
-- Serial interface – To save space and lower costs, USB<->Serial connectivity is not provided by default. You may use the FT232 based [UartSBee](/UartSBee) (title=undefined) or other USB to serial adapter to do the programming or communicate with the PC.
+- Serial interface – To save space and lower costs, USB<->Serial connectivity is not provided by default. You may use the FT232 based UartSBee (title=undefined) or other USB to serial adapter to do the programming or communicate with the PC.
 
 - User LED and Switch – An LED and a Switch have been provided onboard for use in your application as desired.
 
