@@ -1,6 +1,6 @@
 ---
-description: Grove Shield for Pi Pico v1.0
-title: Grove Shield for Pi Pico v1.0
+description: Grove Shield / Grove Starter Kit for Raspberry Pi Pico
+title: Grove Shield / Grove Starter Kit for Raspberry Pi Pico
 keywords:
 - Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
