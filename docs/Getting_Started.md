@@ -15,17 +15,17 @@ last_update:
 
 Seeed Studio has dedicated to realizing interactive digital replica of our physical world, as being an IoT hardware partner since 2008. This is an open platform collecting all the wikis published by Seeed Studio, to show you the full picture of our efforts, natural environments digitization and outcome production.
 
-You can constantly receive updated data from sensors and <strong><font color={'8DC215'} size={"4"}>sensors network</font></strong>, access computational resources with different <strong><font color={'8DC215'} size={"4"}>edge computing</font></strong> power, display and manage information on <strong><font color={'8DC215'} size={"4"}>cloud and chain</font></strong> in ways.
+You can constantly receive updated data from sensors and <strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}>  Sensor Network </font></span></a></strong>, access computational resources with different <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong> power, display and manage information on <strong><a href="/CloudnChain"><span><font color={'8DC215'} size={"4"}>  Cloud and Chain </font></span></a></strong> in ways.
 
-We here also present you our current accomplishments and <strong><font color={'8DC215'} size={"4"}>solutions</font></strong> and we are looking for your contributions.
+We here also present you our current accomplishments and <strong><a href="/Solutions"><span><font color={'8DC215'} size={"4"}>  Solution </font></span></a></strong> and we are looking for your contributions.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
-## <font color="{'D29291'}" size="{&quot;6&quot;}">What does Wiki Platform Cover?</font>
+## What does Wiki Platform Cover?
 
 The wiki contents have been divided into **four topics** as shown on the top navigation. Each topic contains **two large portions**, facing two different situations. You will find documentation about concentrated, computational equipment for **practical purpose**, and industrial IoT scenarios, meanwhile, we offer documents about open development tools to help you **build your own**.
 
-### <font color="{'D29291'}" size="{&quot;5&quot;}">IoT Platform & Sensor Foundation</font>
+### IoT Platform & Sensor Foundation
 
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#industrial-iot">
@@ -67,7 +67,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     </a>
   </div>
 
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Development Boards and Devices</font>
+### Development Boards and Devices
 
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#microcontrollers---">
@@ -92,7 +92,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     </a>
   </div>
 
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Application with Software</font>
+### Application with Software
 
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#application---">
@@ -115,7 +115,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     </a>
   </div>
 
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Kit with Courses</font>
+### Kit with Courses
 
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#kit-with-courses---">
@@ -136,26 +136,26 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     </a>
   </div>
 
-### <font color="{'D29291'}" size="{&quot;5&quot;}">Others you can find</font>
+### Others you can find
 
  <div class="start_card_container">
     <a class="start_card_item">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}> Development Boards / Devices</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Tutorials</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>find in each Topic & Portion</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}>in each<font color={'FFFFFF'} size={"5"}> Topic & Portion</font></div>
         </div>
     </a>
     <a class="start_card_item">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Seeed Studio ageful production</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Seeed Elderly</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>find in each Topic & Portion</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}>in each<font color={'FFFFFF'} size={"5"}>  Topic & Portion</font></div>
         </div>
     </a>
   </div>
 
-## <font color="{'D29291'}" size="{&quot;6&quot;}">Contributors</font>
+## Contributors
 
 This  platfrom can be deployed locally and everything will be editable.
 
