@@ -12,8 +12,8 @@ const config = {
   title: 'Seeed Studio Wiki',
   tagline: 'The Seeed Studio Files Management Platform, Opening up and Cooperation.',
   
-  url: 'https://seeed-studio.github.io',
-  baseUrl: '/wiki-documents/',
+  url: 'http://wiki.seeedstudio.vip',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/S.png',
