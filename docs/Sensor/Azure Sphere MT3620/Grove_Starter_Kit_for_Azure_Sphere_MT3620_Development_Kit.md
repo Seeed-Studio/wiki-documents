@@ -114,7 +114,7 @@ The [SC18IM700](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Developme
 - Public Safety
 
 :::tip
-To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://docs.microsoft.com/en-us/azure-sphere/product-overview/scenario).
+To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://learn.microsoft.com/en-us/azure-sphere/product-overview/what-is-azure-sphere).
 :::
 
 ## Getting Started

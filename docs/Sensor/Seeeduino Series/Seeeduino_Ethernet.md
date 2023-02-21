@@ -16,27 +16,29 @@ In this version, we lowered the height of RJ45 to balance it with the headers. B
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Ethernet-p-1231.html)
 
+## Specification
 
-##   Specification
 ---
-*   Voltage: 6.2-13V
 
-*   Current: 140-550mA
+* Voltage: 6.2-13V
 
-*   Supported Card Type: Micro SD card(<font color="red">**must be SanDisk**</font>), FAT/FAT32 (More than 2G is not guaranteed)
+* Current: 140-550mA
 
-*   Supported Connection: TCP/UDP
+* Supported Card Type: Micro SD card(<font color="red">**must be SanDisk**</font>), FAT/FAT32 (More than 2G is not guaranteed)
 
-*   Net Weight: 23±2g
+* Supported Connection: TCP/UDP
+
+* Net Weight: 23±2g
 *
-*   Ethernet jack: Standard RJ45
+* Ethernet jack: Standard RJ45
 
-##   Demonstration
+## Demonstration
+
 ---
 We will test the Seeeduino Ethernet functions of writing or reading information from the SD Card and sending out A/D data to network.
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-1.jpg)
 
-###   Step 1: Install the Hardware
+### Step 1: Install the Hardware
 
 Firstly, install the hardware. We have two alternatives to plug in the power.
 
@@ -48,7 +50,7 @@ Firstly, install the hardware. We have two alternatives to plug in the power.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-4.jpg)
 
-###   Step 2: Programing
+### Step 2: Programing
 
 After hardware installation, here we continue to try the test code.
 This program is written to test the functions of writing or reading data from the SD Card and sending out A/D data to network.
@@ -59,6 +61,7 @@ This demo code can be used as a test program as well as reference if you wanna e
 1. All the ".h" file needed have been pre-installed in Arduino IDE(1.0).
 
 2. Install a Micro SD card. Make sure the Micro SD card is not full and the format is FAT or FAT32.
+
 ```
 /*
   SD card read/write
@@ -234,9 +237,9 @@ void loop()
 }
 ```
 
-###   Step 3: Download the program
+### Step 3: Download the program
 
-Because there is no USB connector on the board. Seeeduino Ethernet requires a [UartSBee](https://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to download the program. 
+Because there is no USB connector on the board. Seeeduino Ethernet requires a [UartSBee](https://www.seeedstudio.com/depot/uartsbee-v4-p-688.html?cPath=109) to download the program.
 
 Connect the UartSBee to Seeeduino Ethernet as below:
 
@@ -245,10 +248,10 @@ Connect the UartSBee to Seeeduino Ethernet as below:
  ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Seeeduino_ethernet-5.jpg)
 
 :::note
-    Please select Seeeduino V3.0 as board in tool menu to download the program.
+Please select Seeeduino V3.0 as board in tool menu to download the program.
 :::
 
-###   Step 4: Result testing
+### Step 4: Result testing
 
 <font color="red">NOTICE:</font> Make sure the Seeeduino Ethernet and your computer are in the same local area network.
 After the program was downloaded, open the Serial Monitor. You will check the status of the board.
@@ -259,25 +262,23 @@ Open a web browser and enter the web address:192.168.1.177, then you can check t
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/img/Ethernet_shield2.jpg)
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/res/Seeed_Ethernet_Source_Files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
+* [Seeeduino Ethernet Eagle Files](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/res/Seeed_Ethernet_Source_Files.zip)
 
-##   Resources
+* [Seeeduino Ethernet Schematic.pdf](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/res/Seeeduino_Ethernet_.pdf)
 
-*   [Seeeduino Ethernet Eagle Files](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/res/Seeed_Ethernet_Source_Files.zip)
+* This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/). Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
-*   [Seeeduino Ethernet Schematic.pdf](https://files.seeedstudio.com/wiki/Seeeduino_Ethernet/res/Seeeduino_Ethernet_.pdf)
-
-*   This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/). Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
-
-*   Please reformat SD card to FAT/FTA32 .If it still can't work ,suggest to download the [SD Formatter](https://www.sdcard.org/downloads/formatter_3/) and reformat SD card by this software.
+* Please reformat SD card to FAT/FTA32 .If it still can't work ,suggest to download the [SD Formatter](https://www.sdcard.org/downloads/formatter_3/) and reformat SD card by this software.
 
 ## Tech Support
+
 <div>
   Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

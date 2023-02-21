@@ -10,18 +10,18 @@ last_update:
 ---
  ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Xbshieldn2.jpg) ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Xbshield_bottom.jpg)
 
-A **Xbee shield** allows an **Arduino** or [Seeeduino](https://seeeddoc.github.io/Seeeduino_V2.2/) board to communicate wirelessly using **Bee compatible modules** (like Zigbee or BlueTooth Bee). It is designed to be used with **Xbee module from MaxStream**. It can be used as a **Serial Port** / **USB replacement. ** It is used to connect two **Seeeduinos** using **Zigbee** / **Bluetooth Bee** or connect a **Seeeduino** with PC Wirelessly. Two toggle switches decides how **Rxd** and **Txd** pins of Bee modules be connected to **Seeeduino** pins. These two switches provides options to connect **RxD** and **TxD** lines of Bee Modules to **Seeduino Hardware Serial Port** or **Digital pins** **11** and **12** or **FTDI** **RxD** and **Txd** Pins.
+A **Xbee shield** allows an **Arduino** or [Seeeduino](https://seeeddoc.github.io/Seeeduino_V2.2/) board to communicate wirelessly using **Bee compatible modules** (like Zigbee or BlueTooth Bee). It is designed to be used with **Xbee module from MaxStream**. It can be used as a **Serial Port** / **USB replacement.** It is used to connect two **Seeeduinos** using **Zigbee** / **Bluetooth Bee** or connect a **Seeeduino** with PC Wirelessly. Two toggle switches decides how **Rxd** and **Txd** pins of Bee modules be connected to **Seeeduino** pins. These two switches provides options to connect **RxD** and **TxD** lines of Bee Modules to **Seeduino Hardware Serial Port** or **Digital pins** **11** and **12** or **FTDI** **RxD** and **Txd** Pins.
 
  **Model:[WLS114A0P](https://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109)**
 
-
 Seeed Studio's **XBee®_Shield** is derived from [Arduino Xbee shield](https://arduino.cc/en/Main/ArduinoXbeeShield), with following features:
 
-*   Smaller form
-*   SMT package for most of the components
-*   Low cost
+* Smaller form
+* SMT package for most of the components
+* Low cost
 
 To use X-CTU with [Seeeduino](https://seeeddoc.github.io/Seeeduino_V2.2/), please upload following sketch
+
 ```c
 void setup()
 {
@@ -36,49 +36,47 @@ void loop()
 }  
 ```
 
-##   Features  
+## Features  
 
-1.  31mm X 41mm board.
-2.  Communicate with Arduino/Seeeduino
-    *   Via pin 11, 12 Software Serial Port or
-    *   Via hardware Serial Port
+1. 31mm X 41mm board.
+2. Communicate with Arduino/Seeeduino
+    * Via pin 11, 12 Software Serial Port or
+    * Via hardware Serial Port
 
-3.  Xbee modules can be configured by X-CTU via USB
-4.  Breakout of all pins
+3. Xbee modules can be configured by X-CTU via USB
+4. Breakout of all pins
 
-##   Application Ideas  
+## Application Ideas  
 
 <!-- *   Communicate two Seeeduinos / Arduinos Wirelessly using Bee Modules (**Xbee**,[BluetoothBee](https://seeeddoc.github.io/Bluetooth_Bee/),[RFBee](https://seeeddoc.github.io/RFbee_V1.1-Wireless_Arduino_compatible_node/)) -->
-*   Communicate Seeeduino / Arduino to PC Wirelessly using Bee Modules.
-*   Connecting **GPS Bee** to Arduino / Seeeduino
+* Communicate Seeeduino / Arduino to PC Wirelessly using Bee Modules.
+* Connecting **GPS Bee** to Arduino / Seeeduino
 
-##   Cautions  
+## Cautions  
 
+* Set the toggle switches to correct position before connecting to Bee Modules or Arduinos.
 
-
-*   Set the toggle switches to correct position before connecting to Bee Modules or Arduinos.
-
-##   Schematic  
+## Schematic  
 
 ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Xbee_Shield_Schematic.jpg)
 
-##   Specification  
+## Specification  
 
 See [features](https://wiki.seeedstudio.com/XBee_Shield/#features "XBee_Shield#Features") above.
 
-##   Mechanic Dimensions  
+## Mechanic Dimensions  
 
 XBee® Shield is of 3.1cm X 4.1cm size.
 
-##   Usage  
+## Usage  
 
 A **Bee module** is connected to Arduino / Seeeduino via the XBee Shield. In case of a Seeeduino, set the operating voltage switch to 3.3V position. Normally the Bee modules are connected via Software Serial Port by setting the toggle switches (**TOG_1** and **TOG_2**)positions to **left-side**. Please refer the below tables for different configuration.
 
-###   Hardware Installation  
+### Hardware Installation  
 
 ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Seeeduino_XBeeShield_XBeePro.jpg) ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/Seeeduino_BluetoothBee_Xbee_Shield.JPG)
 
-####   Xbee Shield Outline and Toggle Switch Position  
+#### Xbee Shield Outline and Toggle Switch Position  
 
 ![](https://files.seeedstudio.com/wiki/XBee-Shield/img/XBee_Shield_Outline.jpg)
 
@@ -179,9 +177,10 @@ A **Bee module** is connected to Arduino / Seeeduino via the XBee Shield. In cas
 <td> Atmege TxD0
 </td></tr></table>
 
-###   Testing AT commands on Bees  
+### Testing AT commands on Bees  
 
 Create a new sketch with the following code and download it into your Arduino board.  
+
 ```c
 //Serial Relay - Arduino will patch a
 //serial link between the computer and the Bee Shield
@@ -216,9 +215,10 @@ void loop()
 
 }
 ```
+
  After this fire up your favorite serial terminal software, choose the COM port for Arduino, set it to operate at default baud rate of your Bee (XBee default is 9600 8-N-1), connect and send the commands. Try sending "+++" (without the quotes) for XBee module, to the Arduino board. The XBee should respond by sending back an "OK".
 
-###   Send AT Updated Version for V 1.0  
+### Send AT Updated Version for V 1.0  
 
 The code above may have worked on earlier versions but the SoftwareSerial library is now part of the core.  The following code is taken almost directly from the [Aruino SoftwareSerial manual.](https://arduino.cc/en/Reference/SoftwareSerial)
 
@@ -248,7 +248,7 @@ void loop() // run over and over
 
 Upload this code to the Arudino hosting the Xbee Shield, startup the Serial Monitor and at that point the Arduino serial port will be connected via radio to any other xbee radios currently operating--anything you type in the serial monitor will be sent to the other radios and vise versa.
 
-###   Programming  
+### Programming  
 
 The following sketch configures [Bluetooth Bee](https://seeeddoc.github.io/Bluetooth_Bee/) as **Slave Device** and waits for connection request from PC or other master device. Bluetooth Bee is connected to Seeeduino via **XBee®_Shield** as shown above.
 
@@ -359,15 +359,15 @@ void sendBlueToothCommand(char command[])
 
 See **Bluetooth Bee Programming**for further information.
 
-##   FAQ  
+## FAQ  
 
 Please list your question here(if any).
 
-##   Support  
+## Support  
 
 If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
-##   Version Tracker  
+## Version Tracker  
 
 <table>
   <tbody><tr>
@@ -385,55 +385,52 @@ If you have questions or other better design ideas, you can go to our [forum](ht
       <td width={200}> Jul 06, 2009
       </td></tr></tbody></table>
 
-
-##   Bug Tracker  
+## Bug Tracker  
 
 Bug Tracker is the place where you can sumbit any bugs you think you might have found during use. Please write down what you want to say, your answers will help us improve our products.
 
-##   Additional Idea  
+## Additional Idea  
 
 The Additional Idea is the place to write your project ideas about this product, or other usages you've found. Or you can write them on Projects page.
 
-##   How to buy  
+## How to buy  
 
 Click here to buy : [https://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109](https://www.seeedstudio.com/depot/xbee%C3%82%C2%AE-shield-v11-by-seeedstudio-p-419.html?cPath=104_109)
 
-##   Licensing  
+## Licensing  
 
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
-##   See also  
+## See also  
 
-[Bluetooth Bee documentation](/Bluetooth_Bee "Bluetooth_Bee") demostrating use of **XBee®_Shield**
+[Bluetooth Bee documentation](/Seeed_Elderly/Bee/Bluetooth_Bee "Bluetooth_Bee") demostrating use of **XBee®_Shield**
 
-
-##   External Links  
+## External Links  
 
 Links to external webpages which provide more application ideas, documents/datasheet or software libraries.
 
-
 ## Schematic Online Viewer
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/XBee-Shield/res/Eagle_XBee_Shield_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources  
 
+* **[Arduino]**    [Arduino Xbee Shield Page](https://arduino.cc/en/Main/ArduinoXbeeShield)
 
-##   Resources  
+* **[Eagle]**    [eagle for Xbee_Shield_v1.0](https://files.seeedstudio.com/wiki/XBee-Shield/res/Eagle_XBee_Shield_v1.0.zip)
 
-- **[Arduino]**    [Arduino Xbee Shield Page](https://arduino.cc/en/Main/ArduinoXbeeShield)
+* **[PDF]**[XBee_Shield pdf](https://files.seeedstudio.com/wiki/XBee-Shield/res/XBee_Shield.pdf)
 
-- **[Eagle]**    [eagle for Xbee_Shield_v1.0](https://files.seeedstudio.com/wiki/XBee-Shield/res/Eagle_XBee_Shield_v1.0.zip)
+* **[Eagle]**[XBee_Shield sch](https://files.seeedstudio.com/wiki/XBee-Shield/res/XBee_Shield.sch)
 
-- **[PDF]**[XBee_Shield pdf](https://files.seeedstudio.com/wiki/XBee-Shield/res/XBee_Shield.pdf)
+* **[Eagle]**    [eagle for Xbee_Shield_v1.1](https://files.seeedstudio.com/wiki/XBee-Shield/res/Elage_xbee_shield_v1.1.zip)
+* **[PDF]**[Xbee_shield_v1.1 pdf](https://files.seeedstudio.com/wiki/XBee-Shield/res/Xbee_shield_v1.11.pdf)
 
-- **[Eagle]**[XBee_Shield sch](https://files.seeedstudio.com/wiki/XBee-Shield/res/XBee_Shield.sch)
-
-- **[Eagle]**    [eagle for Xbee_Shield_v1.1](https://files.seeedstudio.com/wiki/XBee-Shield/res/Elage_xbee_shield_v1.1.zip)
-- **[PDF]**[Xbee_shield_v1.1 pdf](https://files.seeedstudio.com/wiki/XBee-Shield/res/Xbee_shield_v1.11.pdf)
-
-- **[EAGLE]**[Xbee_shield_v1.1 sch](https://files.seeedstudio.com/wiki/XBee-Shield/res/Xbee_shield_v1.11.sch)
+* **[EAGLE]**[Xbee_shield_v1.1 sch](https://files.seeedstudio.com/wiki/XBee-Shield/res/Xbee_shield_v1.11.sch)
 
 ## Tech Support
+
 <div>
   Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

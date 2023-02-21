@@ -15,7 +15,6 @@ Seeeduino GPRS is a IoT panel, you can connect to the internet through GPRS wire
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-GPRS-p-1909.html)
 
-
 ## Application Ideas
 
 * Internet of Things  
@@ -57,7 +56,6 @@ Here is some funny project for your reference.
 |FM|76~109MHz|
 |Bluetooth|Compliant with 3.0+EDR|
 |Supply voltage range|3.4 ~ 4.4V|
-
 
 **AVR Arduino Microcontroller**
 
@@ -108,10 +106,7 @@ Operating Status Indication
 |64ms on/3000ms off|SIM800H registered the network|
 |64ms on/300ms off|SIM800H communication is established|
 
-
 ## Install the Driver
-
-
 
 First of all, you need to:
 
@@ -125,41 +120,39 @@ Connect the Arduino board to your computer using the USB cable. The green power 
 **For Windows**
 
 :::note
-    This drive is available for Windows XP, Windows Vista, Windows 7, Windows 8/8.1 and Windows 10.
+This drive is available for Windows XP, Windows Vista, Windows 7, Windows 8/8.1 and Windows 10.
 :::
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Mega/img/download_driver.png)](https://github.com/Seeed-Studio/Signed_USB_Serial_Driver/archive/master.zip)
 
-- Plug in your board and wait for Windows to begin its driver installation process. After a few moments, the process will fail, despite best efforts.
-- Click on the Start Menu, and open up the Control Panel.
-- While in the Control Panel, navigate to System and Security. Next, click on System. Once the System window is up, open the **Device Manager**.
-- Look under Ports (COM & LPT). You should find an open port named "Seeeduino GPRS". If there is no COM & LPT section, look under "Other Devices" for "Unknown Device".
-- Right click on the "Seeeduino GPRS" port and choose the "Update Driver Software" option.
-- Next, choose the "Browse my computer for Driver software" option.
-- Finally, navigate to and select the driver file named "seeed_usb_serial.inf"
-- Windows will finish up the driver installation from there.
+* Plug in your board and wait for Windows to begin its driver installation process. After a few moments, the process will fail, despite best efforts.
+* Click on the Start Menu, and open up the Control Panel.
+* While in the Control Panel, navigate to System and Security. Next, click on System. Once the System window is up, open the **Device Manager**.
+* Look under Ports (COM & LPT). You should find an open port named "Seeeduino GPRS". If there is no COM & LPT section, look under "Other Devices" for "Unknown Device".
+* Right click on the "Seeeduino GPRS" port and choose the "Update Driver Software" option.
+* Next, choose the "Browse my computer for Driver software" option.
+* Finally, navigate to and select the driver file named "seeed_usb_serial.inf"
+* Windows will finish up the driver installation from there.
 
 **For Mac OSX**
 
 You don't need to install any drivers.
 
-
 ## Getting Started
 
 :::note
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
+If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 :::
 
 First of all, you need to Install an Arduino Software.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
-
 **Launch the Arduino application**
 
 Double-click the Arduino application (arduino.exe) you have previously downloaded.
 
 :::note
-    If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
+If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
 :::
 
 **Open the Blink example**
@@ -173,7 +166,6 @@ Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 You'll need to select the entry in the **Tools > Board** menu that corresponds to your Arduino.
 Selecting a **Arduino Leonardo**. If you can not find the Arduino Leonardo, please check [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
 
-
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_select_board.png)
 
 **Select your serial port**
@@ -183,7 +175,7 @@ Select the serial device of the Arduino board from the Tools | Serial Port menu.
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_select_com.png)
 
 :::note
-    On the Mac, this should be something with **/dev/tty.USBmodem**.
+On the Mac, this should be something with **/dev/tty.USBmodem**.
 :::
 **Upload the program**
 
@@ -317,7 +309,6 @@ void loop() {
 }
 ```
 
-
 **FM Radio Function**
 
 Seeeduino GPRS has a FM radio function. Open the example sketch **FM_Test** in libraries/Seeeduino_GPRS/example/FM_Test/, and connect a button to your board, then compile the sketch and upload it to your board, Seeeduino GPRS functions like an FM radio. Even the channel can be changed with the button.
@@ -402,13 +393,10 @@ void loop() {
 }
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/Seeeduino_GPRS_v1.0_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -418,11 +406,11 @@ void loop() {
 
     [Seeeduino GPRS PDF file](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/Seeeduino_GPRS_v1.0_Schematic.pdf)
 
-* **Firmware**     
+* **Firmware**
 
     [Seeeduino GPRS Firmware & Update Guide](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/Firmware_update_for_Seeeduino_GPRS_v1.0.zip)
 
-* **SIM800 AT Command**    
+* **SIM800 AT Command**
 
     [SIM800 Series AT Command PDF](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
 
@@ -431,6 +419,6 @@ void loop() {
     [Seeeduino GPRS Library on GitHub](https://github.com/Seeed-Studio/Seeeduino_GPRS)
 
 ## Tech Support
-<div>
-  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
-</div>
+
+  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+  <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

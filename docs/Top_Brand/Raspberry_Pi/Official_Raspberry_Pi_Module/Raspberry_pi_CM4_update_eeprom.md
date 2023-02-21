@@ -234,7 +234,7 @@ The following is the table that defines the property of different boot modes set
 |  0xe | STOP | Stop and display error pattern. A power cycle is required to exit this state. |
 |  0xf | RESTART|  Restart from the first boot-mode in the BOOT_ORDER field i.e. loop |
 
-> Reference: [BOOT_ORDER Property Table](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#BOOT_ORDER){target=_blank}
+> Reference: [BOOT_ORDER Property Table](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#BOOT_ORDER)
 
 * **Step 2:** Get the latest firmware
 

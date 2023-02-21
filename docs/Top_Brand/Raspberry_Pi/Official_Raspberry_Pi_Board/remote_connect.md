@@ -1,6 +1,6 @@
 ---
 description: Remotely connect to Raspberry Pi/reComputer
-title: Remotely connect to Raspberry Pi/reComputer
+title: Remotely connect to Raspberry Pi
 keywords:
 - Raspberry_Pi
 - Official_Raspberry_Pi_Board

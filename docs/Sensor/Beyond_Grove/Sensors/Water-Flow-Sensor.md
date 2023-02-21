@@ -11,14 +11,13 @@ last_update:
 ---
 
 <div align="center">
-<figure>
-<img src="https://static-cdn.seeedstudio.site/media/catalog/product/cache/ab187aaa5f626ad16c8031644cd2de5b/h/t/httpsstatics3.seeedstudio.comseeedfile2017-06bazaar483771_1.jpg" alt="Grove-Doppler-Radar'' OUTCOME" title="demo" />
-<figcaption><b></b><i></i></figcaption>
-</figure>
+  <figure>
+    <img src="https://static-cdn.seeedstudio.site/media/catalog/product/cache/ab187aaa5f626ad16c8031644cd2de5b/h/t/httpsstatics3.seeedstudio.comseeedfile2017-06bazaar483771_1.jpg" alt="Grove-Doppler-Radar'' OUTCOME" title="demo" />
+    <figcaption><b /><i /></figcaption>
+  </figure>
 </div>
+
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Water-Flow-Sensor-YF-B1-p-2878.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
-
-
 
 Water flow sensor consists of a copper body, a water rotor, and a hall-effect sensor. When water flows through the rotor, rotor rolls, its speed changes with different rate of flow. And the hall-effect sensor outputs the corresponding pulse signal. This one is suitable to detect flow in water dispenser or coffee machine. **More importantly, the life of the copper one is longer than that of plastic body.**
 
@@ -30,29 +29,30 @@ Water flow sensor consists of a copper body, a water rotor, and a hall-effect se
 - RoHS Compliant
 
 ## Specification
+
 |Parameters|Value|
 |---|---|
-|Dimensions	|0mm x0mm x0mm|
-|Weight|	G.W 79g|
-|Battery	|Exclude|
-|Mini. Wokring Voltage|	DC 4.5V|
-|Max. Working Current|	15mA (DC 5V)|
-|Working Voltage	|DC 5V~15V|
-|Interface Dimensions|	G1/2Inch|
-|Flow Rate Range	|1~25L/min|
-|Frequency	|F=(11*Q)Q=L/MIN±3%|
-|Error Range	|(1~30L\MIN) ±3%|
-|Load Capacity	|≤10mA (DC 5V)|
-|Operating Temperature|	0 ~ 80℃|
-|Liquid Temperature	|≤120℃|
-|Operating Humidity	|35%～90%RH|
-|Water Pressure|	≤1.75MPa|
-|Material Description	|H57Copper+POM|
-|Storage Temperature	|-25～+ 80℃|
-|Storage Humidity	|25%～95%RH|
-|Output Pulse High Level	|>DC 4.7V (Input Voltage DC5V)|
-|Output Pulse Low Level	|<DC 0.5V (Input Voltage DC5V)|
-|Output Pulse Duty Cycle|	50%±10%|
+|Dimensions |0mm x0mm x0mm|
+|Weight| G.W 79g|
+|Battery |Exclude|
+|Mini. Wokring Voltage| DC 4.5V|
+|Max. Working Current| 15mA (DC 5V)|
+|Working Voltage |DC 5V~15V|
+|Interface Dimensions| G1/2Inch|
+|Flow Rate Range |1~25L/min|
+|Frequency |F=(11*Q)Q=L/MIN±3%|
+|Error Range |(1~30L\MIN) ±3%|
+|Load Capacity |≤10mA (DC 5V)|
+|Operating Temperature| 0 ~ 80℃|
+|Liquid Temperature |≤120℃|
+|Operating Humidity |35%～90%RH|
+|Water Pressure| ≤1.75MPa|
+|Material Description |H57Copper+POM|
+|Storage Temperature |-25～+ 80℃|
+|Storage Humidity |25%～95%RH|
+|Output Pulse High Level |>DC 4.7V (Input Voltage DC5V)|
+|Output Pulse Low Level |<DC 0.5V (Input Voltage DC5V)|
+|Output Pulse Duty Cycle| 50%±10%|
 
 ## What is a water flow sensor (meter)
 
@@ -86,10 +86,10 @@ It’s quite simple inside. The main components are the Hall Effect sensor, turb
 For every round of the wheel, the volume of water flowing through is a certain amount, as is the number of square waves output. Therefore, we can calculate the flow of water by counting the number of square waves ( pulse ).
 
 ## Platform Supported
+
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
-
 
 ## Getting Started
 
@@ -120,6 +120,7 @@ For the Atmega 328-based board like [Seeeduino V4.2](https://www.seeedstudio.com
 :::tip
     Please plug the USB cable, Water Flow Sensor Interface into Seeeduino board Interface gently, otherwise you may damage the port.
 :::
+
 #### Software
 
 Of course, you can use digitalread() in the **LOOP** function to read the output of the water flow sensor. Count number plus one whenever a high level is read. However, this approach is not real-time, and the program requires a certain waiting time for each execution, during which new pulses are not detected. For such real-time demanding applications, we typically use interrupt. Whenever the rising edge of the pulse is detected, an interruption is triggered, counting plus one.
@@ -133,17 +134,20 @@ Of course, you can use digitalread() in the **LOOP** function to read the output
 
 For more detail about **interrupt** please check [attachinterrupt](https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/).
 
-!!!Attention
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::caution
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::
 
 - **Step 1.** Plug Grove Base board with the Water Flow Sensor into Seeeduino board and connect Seeeduino board to PC via a USB cable.
 
 - **Step 2.** Then open your Arduino IDE and copy the code below. At last, download the code into Arduino.
 
-!!!Note
-    The code here **WORKS** for the most classic YF – S201, YF - S402 and other Water Flow Sensors at Seeed, so does the working principle of water flow sensors.
+:::note
+The code here **WORKS** for the most classic YF – S201, YF - S402 and other Water Flow Sensors at Seeed, so does the working principle of water flow sensors.
+:::
 
 #### Software Code
+
 ```C++
 /*
 YF‐ S201 Water Flow Sensor
@@ -190,8 +194,9 @@ void flow () // Interrupt function
 }
 ```
 
-!!!Success
-		If everything goes well, open the serial monitor tool and set the baud rate to 9600. as the water through, the flow value will print to the appropriate window.
+:::tipsuccess
+If everything goes well, open the serial monitor tool and set the baud rate to 9600. as the water through, the flow value will print to the appropriate window.
+:::
 
 ## The Formula for the calculation of water flow sensor
 
@@ -200,6 +205,7 @@ In the code section, we used the following formula, so how did this formula come
 ```C++
 l_hour = (flow_frequency * 60 / 7.5)
 ```
+
 Earlier we mentioned that with each revolution of the wheel, the volume of fluid flowing through is certain. At the same time, the number of pulses generated per revolution of the wheel is also a certain amount. Thus, we can establish an equation between the number of pulses and the water flow.
 
 For the YF-S201, every liter of water that flows, the Hall Sensor outputs 450 pulses. Let’s do little math here. 450 pulse for 1 liter, so each pulse means 1/450 liter water flowing through. We take the total volume of liquid flowing through the water flow sensor at a certain time **t**(unit s) as **V_total**(unit L), and the total number of pulses detected as **N**. Then we get:
@@ -213,6 +219,7 @@ Also, the total volume of fluid flowing through the water flow sensor is equal t
 ```C++
 V_total(L) = Q(L/s)*t(s) 
 ```
+
 So we get:
 
 ```C++
@@ -228,6 +235,7 @@ Q(L/s) = f/450;
 Q(L/min) = f*60/450 = f/7.5 
 Q(L/hour) = f*60*60/450 = f*60 /7.5 
 ```
+
 For the YF – S402, every liter of water that flows, the Hall Sensor outputs 4380 pulses. So, the formula should be:
 
 ```C++
@@ -239,9 +247,9 @@ Q(L/hour) = f*60*60/4380 = f*60 /73
 
 ## Water Flow Sensors at Seeed
 
-!!!Tip
-      There are numerous Water Flow Sensors on sale at Seeed, including [YF - 402](https://www.seeedstudio.com/M11-1-25-Water-Flow-Sensor-p-1345.html) and [YF - S201](https://www.seeedstudio.com/G1-2-Water-Flow-Sensor-p-635.html). Besides, we offer a variety of Water Flow Sensors with different dimensions, detecting ranges, material and etc as following:
-
+:::tip
+There are numerous Water Flow Sensors on sale at Seeed, including [YF - 402](https://www.seeedstudio.com/M11-1-25-Water-Flow-Sensor-p-1345.html) and [YF - S201](https://www.seeedstudio.com/G1-2-Water-Flow-Sensor-p-635.html). Besides, we offer a variety of Water Flow Sensors with different dimensions, detecting ranges, material and etc as following:
+:::
 
 |   Type   | Dimensions(DN) | Working Voltage | Flow Rate Range | Length |    Male & Female   | Length of Thread | Material |
 |:--------:|:--------------:|:---------------:|:---------------:|:------:|:------------------:|:----------------:|:--------:|
@@ -258,9 +266,9 @@ Q(L/hour) = f*60*60/4380 = f*60 /73
 |   [G1&8](https://www.seeedstudio.com/G1-8-Water-Flow-Sensor-p-1346.html)   |        -       |    5V~24V(DC)   |    0.3~6L/min   |    -   |          -         |         -        |  Plastic |
 | [M11*1.25](https://www.seeedstudio.com/M11-1-25-Water-Flow-Sensor-p-1345.html) |        -       |    5V~24V(DC)   |    0.3~6L/min   |    -   |          -         |         -        |  Plastic |
 
-
 ## Tech Support
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

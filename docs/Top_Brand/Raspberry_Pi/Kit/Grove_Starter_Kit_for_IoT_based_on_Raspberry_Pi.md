@@ -41,7 +41,7 @@ GrovePi+ and some of the code was designed by [Dexter Industry](http://www.dexte
 
 | SKU | Part Name | Qty | Link |
 |------|--------------|------|-------|
-|103010002 | GrovePi+ | 1 | [Get One Now](https://www.seeedstudio.com/item_detail.html?p_id=2241) |
+|103010002 | GrovePi+ | 1 | [Get One Now](https://www.seeedstudio.com/GrovePi.html) |
 |104990243| 5 Inch HDMI Display with USB TouchScreen | 1 | [Get One Now](https://www.seeedstudio.com/5-Inch-HDMI-Display-with-USB-TouchScreen-p-2638.html) |
 |103020005| Grove - Relay | 1 | [Get One Now](https://www.seeedstudio.com/Grove-Relay-p-769.html) |
 |101020011| Grove - Temp&Humi Sensor| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Temp&Humi-Sensor-p-745.html) |
@@ -179,7 +179,7 @@ Connect the RGB LCD to Port I2C-1 and power on the Raspberry Pi using the Grove 
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/3_1_2.png)
 
-3) At this point, Visual Studio will present the Remote Connections dialog. If you previously used [PowerShell](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm) to set a unique name for your device, you can enter it here (in this example, we’re using my-device). Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select None for Windows Authentication, then click Select.
+3) At this point, Visual Studio will present the Remote Connections dialog. If you previously used [PowerShell](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm) <!-- 源文件链接有误 -->to set a unique name for your device, you can enter it here (in this example, we’re using my-device). Otherwise, use the IP address of your Windows IoT Core device. After entering the device name/IP select None for Windows Authentication, then click Select.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Microsoft_IoT_Grove_Kit/images/3_1_3.png)
 

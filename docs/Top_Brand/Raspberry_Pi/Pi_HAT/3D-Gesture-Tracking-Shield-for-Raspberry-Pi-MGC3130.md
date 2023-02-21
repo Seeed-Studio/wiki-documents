@@ -91,7 +91,7 @@ What an amazing module, with the help it, you can use gestures to control lights
 - Step 7. Select yes when it asks to reboot.
 
 :::tip
-For more info about raspi-config, please refer to ![](https://www.raspberrypi.org/documentation/configuration/raspi-config.md).
+For more info about raspi-config, please refer to [https://www.raspberrypi.org/documentation/configuration/raspi-config.md](https://www.raspberrypi.org/documentation/configuration/raspi-config.md).
 :::
 
 ### Install ncurses

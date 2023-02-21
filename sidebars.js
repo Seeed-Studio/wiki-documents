@@ -584,11 +584,11 @@ const sidebars = {
           type: 'category',
           label: 'SenseCAP Sensor Probe',
           items: [
-                'Network/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
-                'Network/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
-                'Network/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
-                'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
-                'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+            'Network/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
           ],
 
         },
@@ -606,7 +606,7 @@ const sidebars = {
           type: 'category',
           label: ' SenseCAP Data Logger',
           items: [
-                'Network/SenseCAP/Extra_Tutorial_FAQ/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+            'Network/SenseCAP/Extra_Tutorial_FAQ/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
           ],
         },
 
@@ -1211,27 +1211,28 @@ const sidebars = {
         'Sensor/Seeeduino Series/Seeeduino_Lotus',
         'Sensor/Seeeduino Series/Seeeduino_Lotus_Cortex-M0-',
         'Sensor/Seeeduino Series/Seeeduino_Mega',
-        //'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
+        'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
         'Sensor/Seeeduino Series/Seeeduino-Nano',
-        'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
-        'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
-        'Sensor/Seeeduino Series/Seeeduino_Arch',
-        'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
         {
 
           type: 'category',
           label: 'Seeeduino Stalker',
           items: [
-            //'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
+            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3.1',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v3_enclosure',
-            //'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
+            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v2.3',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker',
-            //'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
+            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
           ],
 
         },
+        'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
+        'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
+        'Sensor/Seeeduino Series/Seeeduino_Arch',
+        'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
+
         {
 
           type: 'category',
@@ -1248,7 +1249,7 @@ const sidebars = {
           label: 'Kit with Courses',
           items: [
             'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
-            // 'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+            'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
           ],
 
         },
@@ -2297,12 +2298,16 @@ const sidebars = {
               type: 'category',
               label: 'Arduino Enhanced Usage',
               items: [
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Suli',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Seeed_Arduino_Serial',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/I2C_And_I2C_Address_of_Seeed_Product',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/ODYSSEY-X86J4105-Firmata',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-FreeRTOS',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-SWD',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-AWS-IOT-Bridge',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-DAPLink',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Flashing-Arduino-Bootloader-DAPLink',
+                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Xadow_IO_pin_mapping',
               ],
             },
             {
@@ -2388,19 +2393,20 @@ const sidebars = {
         'Top_Brand/Raspberry_Pi/Raspberry_Pi',
         {
           type: 'category',
-          label: 'Official Raspberry Pi Module',
-          items: [
-            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Module/Raspberry_pi_CM4_update_eeprom',
-          ]
-        },
-        {
-          type: 'category',
           label: 'Official Raspberry Pi Board',
           items: [
             'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B',
             'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/remote_connect',
           ]
         },
+        {
+          type: 'category',
+          label: 'Official Raspberry Pi Module',
+          items: [
+            'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Module/Raspberry_pi_CM4_update_eeprom',
+          ]
+        },
+
         {
           type: 'category',
           label: 'Pi HAT',
@@ -2628,9 +2634,10 @@ const sidebars = {
             //'Seeed_Elderly/Bee/BLE_dual_Bee_v1.0',
             //'Seeed_Elderly/Bee/Bluetooth_Bee_v2.0',
             //'Seeed_Elderly/Bee/Bluetooth_Bee_Standalone',
+            'Seeed_Elderly/Bee/Bluetooth_Bee',
             'Seeed_Elderly/Bee/Wifi_Bee',
             'Seeed_Elderly/Bee/Wifi_Bee_v2.0',
-            //'Seeed_Elderly/Bee/XBee_Shield',
+            'Seeed_Elderly/Bee/XBee_Shield',
             'Seeed_Elderly/Bee/XBee_Shield_V2.0',
             //'Seeed_Elderly/Bee/Atom_Node',
             'Seeed_Elderly/Bee/Bluetooth_V4.0_HM_11_BLE_Module',

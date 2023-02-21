@@ -98,7 +98,7 @@ If you need it work under -40 ~ +85℃, please contact iot@seeed.cc for customiz
 - Public Safety
 
 :::tip
-To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://docs.microsoft.com/en-us/azure-sphere/product-overview/scenario).
+To understand how Azure Sphere works in a real-world setting, consider [Contoso, Ltds cenario](https://learn.microsoft.com/en-us/azure-sphere/product-overview/what-is-azure-sphere).
 :::
 
 ## Getting Started
@@ -111,7 +111,7 @@ If you have an Azure Sphere development kit that has not yet been used, complete
 
 **MT3620 Ethernet Shield Library**
 
-This sample C application demonstrates how you can [connect an Azure Sphere device to a private Ethernet network](https://docs.microsoft.com/azure-sphere/network/connect-private-network). It configures the Azure Sphere device to run a DHCP server and an SNTP server, and it also implements a basic TCP server. The steps below show how to verify this functionality by connecting your computer to this private network.
+This sample C application demonstrates how you can [connect an Azure Sphere device to a private Ethernet network](https://docs.microsoft.com/azure-sphere/network/connect-private-network). <!-- 链接404 -->It configures the Azure Sphere device to run a DHCP server and an SNTP server, and it also implements a basic TCP server. The steps below show how to verify this functionality by connecting your computer to this private network.
 
 The DHCP and SNTP servers are managed by the Azure Sphere OS, according to the configuration provided by the application. These servers will start only after the application requests they do so, but they will continue to run even if the application stops.
 
@@ -143,14 +143,14 @@ Current the MT3620 Ethernet Shield does not support the internet connection due 
 
 **To build and run the sample**
 
-- Set up your Azure Sphere device and development environment as described in the [Azure Sphere documentation](https://docs.microsoft.com/azure-sphere/install/install).
+- Set up your Azure Sphere device and development environment as described in the [Azure Sphere documentation](https://docs.microsoft.com/azure-sphere/install/install).<!-- 链接404 -->
 - Even if you've performed this set up previously, ensure you have Azure Sphere SDK version 19.02 or above. In an Azure Sphere Developer Command Prompt, run **azsphere show-version** to check. Download and install the [latest SDK](https://aka.ms/AzureSphereSDKDownload) as needed.
 - Connect your Azure Sphere device to your PC by USB.
-- Enable [application development](https://docs.microsoft.com/azure-sphere/quickstarts/qs-blink-application#prepare-your-device-for-development-and-debugging), if you have not already done so:
+- Enable [application development](https://docs.microsoft.com/azure-sphere/quickstarts/qs-blink-application#prepare-your-device-for-development-and-debugging), <!-- 链接404 -->if you have not already done so:
 
    `azsphere device prep-debug`
 
-- Package and deploy the [board configuration image](https://docs.microsoft.com/azure-sphere/network/connect-private-network) for the Microchip ENC286J60 Ethernet chip:
+- Package and deploy the [board configuration image](https://docs.microsoft.com/azure-sphere/network/connect-private-network)<!-- 链接404 --> for the Microchip ENC286J60 Ethernet chip:
 
    `azsphere image package-board-config --preset lan-enc28j60-isu0-int5 --output enc28j60-isu0-int5.imagepackage`
 
@@ -272,7 +272,7 @@ If you no longer require Ethernet, for example because you wish to use your boar
 - **[PDF]** [MT3620 Ethernet Shield v1.0](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/MT3620%20Ethernet%20Shield_v1.0_SCH_181220.pdf)
 - **[Eagle]** [MT3620 Ethernet Shield v1.0](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/202002332_MT3620%20Ethernet%20Shield_v1.0_SCH%20%26%20PCB.zip)
 - **[Mechanical Drawing]** [MT3620 Ethernet Shield Mechanical Drawing](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/103990403%2C%20MT3620%20Ethernet%20Shield%20v1.0.pdf)
-- **[Library]** [MT3620 Ethernet Shield Library](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/PrivateEthernet)
+<!-- - **[Library]** [MT3620 Ethernet Shield Library](https://github.com/Azure/azure-sphere-samples/tree/master/Samples/PrivateEthernet)链接缺失 -->
 - **[DataSheet]** [ENC28J60 Datasheet](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/res/ENC28J60.pdf)
 - **[FAQ Web]** [Azure Sphere Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=azuresphere)
 - **[FAQ Web]** [Azure Sphere Github issues](https://github.com/MicrosoftDocs/azure-sphere-issues/issues?utf8=%E2%9C%93&q=is%3Aissue)
