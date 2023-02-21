@@ -725,8 +725,8 @@ const sidebars = {
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Basic',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Graphics',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Fonts',
-                // 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
-                // 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
+                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
+                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Linecharts',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Histogram',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-APIs',
@@ -1083,12 +1083,12 @@ const sidebars = {
           label: 'Wio Link',
           items: [
             'Sensor/Wio_Series/Wio_Link/Wio_Link',
-            // 'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
-            // 'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
-            // 'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
-            // 'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
-            // 'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
-            // 'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
+             'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
+             'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
+             'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
+             'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
+             'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
+             'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
           ]
         },
 
@@ -1102,7 +1102,7 @@ const sidebars = {
             'Sensor/Wio_Series/Wio_Tracker/LTE_Cat_1_Pi_HAT',
             'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
             'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
-            // 'Sensor/Wio_Series/Wio_Tracker Grove_Starter_Kit_for_Wio_LTE',
+            'Sensor/Wio_Series/Wio_Tracker/Grove_Starter_Kit_for_Wio_LTE',
 
           ]
         },
