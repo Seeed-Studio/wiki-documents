@@ -27,7 +27,8 @@ In this tutorial we are going to build a BLE Ibeacon using Wio terminal, in addi
 
 - **Type-C cable**
 
-- [**Wio terminal chassis battery**](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-p-4516.html)
+- **Wio terminal chassis battery**
+<!-- (https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-p-4516.html) -->
 
 ## Software required
 
