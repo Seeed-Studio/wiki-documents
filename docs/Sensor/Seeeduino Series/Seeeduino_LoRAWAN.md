@@ -19,7 +19,6 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 
 <iframe width={800} height={450} src="https://www.youtube.com/embed/4df5kaaKa6I" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
 
-
 |Product Version|Released Date | How to Buy|
 |-------|-------------|----------|
 |Seeeduino LoRaWAN |Dec 20, 2016|[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-LoRaWAN-p-2780.html)|
@@ -41,7 +40,8 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 :::tip
     Seeeduino LoRaWAN W/GPS is consist of GPS module.
 :::
-##Features
+
+## Features
 
 * Minimum current (3.7V lipo battery) - 2mA
 * Minimum current (3.7V lipo battery & remove PWR LED) - 80 uA
@@ -64,8 +64,8 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 * 1.45uA sleep current in WOR mode (Spec of the modules, not the board)
 * High link budget of 160dB. -140dBm sensitivity and 19dBm Output power.
 * Dual band, 434/470MHz and 868/915MHz
-    * 19dBm@434MHz/470MHz
-    * 14dBm@868MHz/915MHz
+  * 19dBm@434MHz/470MHz
+  * 14dBm@868MHz/915MHz
 * Support LoRaWAN protocol, Class A/C
 * Ultra long range communication
 * Ultra low power consumption
@@ -75,28 +75,29 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 :::warning
     Unlike most Arduino & Genuino boards, the Zero runs at 3.3V. The maximum voltage that the I/O pins can tolerate is 3.3V. Applying voltages higher than 3.3V to any I/O pin could damage the board.
 :::
-##Specification
+
+## Specification
 
 | Item|Value|
 |--------------|-------------------------------------|
 |Microcontroller |ATSAMD21G18, 32-Bit ARM Cortex M0+ |
-|Operating Voltage	|3.3V|
-|Digital I/O Pins	|20|
-|PWM Pins	|All but pins 2 and 7|
-|UART	|2 (Native and Programming)|
-|Analog Input Pins|	6, 12-bit ADC channels|
-|Analog Output Pins	|1, 10-bit DAC|
-|External Interrupts	|All pins except pin 4|
-|DC Current per I/O Pin	|7 mA|
-|Flash Memory	|256 KB|
-|SRAM	|32 KB|
-|EEPROM	|None|
-|Clock Speed	|48 MHz|
-|Lenght	|68 mm|
-|Width	|53 mm|
-|Weight	|19.6g(without GPS), 19.9(with GPS)|
+|Operating Voltage |3.3V|
+|Digital I/O Pins |20|
+|PWM Pins |All but pins 2 and 7|
+|UART |2 (Native and Programming)|
+|Analog Input Pins| 6, 12-bit ADC channels|
+|Analog Output Pins |1, 10-bit DAC|
+|External Interrupts |All pins except pin 4|
+|DC Current per I/O Pin |7 mA|
+|Flash Memory |256 KB|
+|SRAM |32 KB|
+|EEPROM |None|
+|Clock Speed |48 MHz|
+|Lenght |68 mm|
+|Width |53 mm|
+|Weight |19.6g(without GPS), 19.9(with GPS)|
 
-##Application Ideas
+## Application Ideas
 
 * Internet of Things
 * Smart House
@@ -111,7 +112,7 @@ If you want to build an IoT application quickly, Seeeduino LoRaWAN is your best 
 There are 4 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](https://wiki.seeedstudio.com/Grove_System/) for more details.
 In brief, Groves is hundreds of sensor that in standard style, which is consist of sensors, actuators, displays as well as communication.
 
-##Hardware Overview
+## Hardware Overview
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/hw_LoRa.png)
 
@@ -128,9 +129,9 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 * **B.** RF module - RHF76-052AM
 * **C.** ARM Cortex M0 processor - ATSAMD21G18
 * **D.** LEDs
-    * ***RX/TX*** - blink when data on UART(from/to USB)
-    * ***L*** - an led connect to D13
-    * ***PWR*** - power
+  * ***RX/TX*** - blink when data on UART(from/to USB)
+  * ***L*** - an led connect to D13
+  * ***PWR*** - power
 
 :::tip
     If you want to use the 4 on-board Grove connector, please use digitalWrite(38, HIGH) to open VCC. Otherwise you can't provide power to Grove modules.
@@ -162,15 +163,14 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 |A4      |#A4     |YES        |YES|YES      |          |Voltage of Battery|
 |A5      |#A5     |YES        |YES|YES      |          |Charge Status|
 
-!!!Note
+:::note
     All pins can act as Digital Input and Output
-
+:::
 
 ## Getting Started
 
-
 :::note
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
+If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 :::
 
 First you need to install the latest Arduino IDE, and [ADD Seeeduino LoRa to your Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/).
@@ -211,11 +211,7 @@ And Then,
 
 * Click on **Tools > Board > Seeeduino LoRaWAN**
 
-
-
 If you can not find the Seeeduino LoRaWAN, please check [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/)
-
-
 
 * Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
@@ -266,6 +262,7 @@ void loop() {
 :::note
     Charge status return 0 while charging, return 1 while charge done or no battery insert.
 :::
+
 ## 3. Send and Receive Example
 
 There is a well written library for the LoRaWAN modules, for simple applications you even don't need to know much about the protocol about LoRa, which is complex and hard to read.
@@ -352,12 +349,11 @@ After both of the sketch is well uploaded, open the serial monitor of the receiv
 
 ### 3.3 ABP
 
-- Step 1. Please refer to [LoRa/LoRaWAN Gateway Kit](https://wiki.seeedstudio.com/LoRa_LoRaWan_Gateway_Kit/) to setup gateway first.  
-- Step 2. Connect the [Grove-Temperature_and_Humidity_Sensor_Pro](https://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) to D2 port of base shield. 
-- Step 3. Connect the base shield to Seeeduino Lorawan.
-- Step 4. Download [DHT Library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/DHT.zip) and unzip to arduino library folder.
-- Step 5. Copy below code to arduino IDE and upload.
-
+* Step 1. Please refer to [LoRa/LoRaWAN Gateway Kit](https://wiki.seeedstudio.com/LoRa_LoRaWan_Gateway_Kit/) to setup gateway first.  
+* Step 2. Connect the [Grove-Temperature_and_Humidity_Sensor_Pro](https://wiki.seeedstudio.com/Grove-Temperature_and_Humidity_Sensor_Pro/) to D2 port of base shield.
+* Step 3. Connect the base shield to Seeeduino Lorawan.
+* Step 4. Download [DHT Library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/DHT.zip) and unzip to arduino library folder.
+* Step 5. Copy below code to arduino IDE and upload.
 
 ```c++
 
@@ -446,12 +442,12 @@ void loop(void)
 
 ```
 
-- Step 6. For local server, click Application->Seeed(the name of the Application you just added)->View application data, you will see the data you've just sent from the Seeeduino_LoRAWAN. For Loriot Server, go to Dashboard -> Applications -> SampleApp ->Device , click the Node Device EUI or DevAddr, you will find the data you've just sent here. 
+* Step 6. For local server, click Application->Seeed(the name of the Application you just added)->View application data, you will see the data you've just sent from the Seeeduino_LoRAWAN. For Loriot Server, go to Dashboard -> Applications -> SampleApp ->Device , click the Node Device EUI or DevAddr, you will find the data you've just sent here.
 
 ### 3.4 OTAA
 
-- Step 1. Please refer to [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/RHF-UM01649 IoT Discovery User Manual-seeed-v2.1.pdf) Session 3.2.3 to setup the gateway. 
-- Step 2. For seeeduino Lorawan, Please open your Arduino IDE and click on **File > Examples > LoRaWAN > OTAA** and refer the code.
+* Step 1. Please refer to [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/RHF-UM01649 IoT Discovery User Manual-seeed-v2.1.pdf) Session 3.2.3 to setup the gateway.
+* Step 2. For seeeduino Lorawan, Please open your Arduino IDE and click on **File > Examples > LoRaWAN > OTAA** and refer the code.
 
 ```c++
 #include <LoRaWan.h>
@@ -535,9 +531,10 @@ void loop(void)
 :::note
     This chapter works with Seeeduino LoRaWAN W/GPS only.
 :::
+
 ### 4.1 NMEA
 
-- Step 1. Copy below code you Seeeduino LoRaWAN W/GPS.
+* Step 1. Copy below code you Seeeduino LoRaWAN W/GPS.
 
 ```c++
 void setup()
@@ -559,14 +556,13 @@ void loop()
 }
 ```
 
-- Step 2. Open Serial Monitor then you will get data from GPS.
+* Step 2. Open Serial Monitor then you will get data from GPS.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/gps.png)
 
-
 ### 4.2 Lat and Lng
 
-Thanks for **Todd Krein** for sharing the example in Github. Please download the [TinyGPS++ library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan. 
+Thanks for **Todd Krein** for sharing the example in Github. Please download the [TinyGPS++ library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan.
 
 ```c++
 #define USE_GPS 1
@@ -774,19 +770,18 @@ Open your Serial Monitor and INPUT
 ```
 AT+VER
 ```
+
 Then you will get the version of your board.
 
 :::note
     If your Seeeduino LoRawan board is an AM version, it cannot support V3 firmware, you need DM version to update the firmware to above 3.0.Because V3 firmware is too large,  AM flash is too small.
 :::  
 
-
-
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/VER.png)
 
 The firmware version of is 2.0.10, if you want to update firmware, few steps need to follow.
 
-- Step 1. Copy and upload below code to your board.
+* Step 1. Copy and upload below code to your board.
 
 ```c
 // Update firmware to RHF76-052AM
@@ -812,25 +807,25 @@ void loop()
 
 ```
 
-- Step 2. Remove the board form USB and reconnect again, then press the DFU Button, after the Firmware mode led blinking you can go to the next step.
+* Step 2. Remove the board form USB and reconnect again, then press the DFU Button, after the Firmware mode led blinking you can go to the next step.
 
-- Step 3. Click to download the latest firmware, which is a .bin file.
+* Step 3. Click to download the latest firmware, which is a .bin file.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/firmware_bin.png)](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052am-v2.0.10-20160923.ebin%202.bin)
 
-- Step 4. Open PuTTy and connect to the board
+* Step 4. Open PuTTy and connect to the board
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/firmware_1.png)
 
 :::tip
     You can find the latest PuTTy here: [http://www.extraputty.com/download.php](http://www.extraputty.com/download.php)
 :::
-- Step 5. After connect your board to PuTTy successful, you will find the char 'C' print on the monitor continually.
+
+* Step 5. After connect your board to PuTTy successful, you will find the char 'C' print on the monitor continually.
 Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had downloaded at Step4.
 
-- Step 6. Then the updating is started.
+* Step 6. Then the updating is started.
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/img/firmware_4.png)
-
 
 ## FAQ
 
@@ -842,14 +837,10 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 
 **A2:** Click [this](https://github.com/SeeedDocument/seeeduino_LoraWan) to get it.
 
-
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/202001246 Seeeduino LoRaWAN Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -862,9 +853,9 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 * [RHF76-052 Firmware V3.3.1DM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052dm-v3.3.1-20180707.ebin(1).bin)
 * [RHF76-052 Firmware V3.5.13DM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf76-052dm-v3.5.13-20190916.ebin.bin)
 * [Datasheet of RHF76-052AM/DM](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/rhf-ds01500_rhf76-052_datasheet_v03.pdf)
-* [Datasheet of GPS Chip L70B-M39 ](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/L70B-M39.pdf)
+* [Datasheet of GPS Chip L70B-M39](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/L70B-M39.pdf)
 * [Azure IoT Edge LoRaWAN](https://github.com/Azure/iotedge-lorawan-starterkit/)
-* [[RHF-PS01709]LoRaWAN Class ABC AT Command Specification  ](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/AT-Command-Specificationv1.2.pdf)
+* [[RHF-PS01709]LoRaWAN Class ABC AT Command Specification](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/AT-Command-Specificationv1.2.pdf)
 
 ## Projects
 
@@ -872,8 +863,7 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 
 <iframe frameBorder={0} height="327.5" scrolling="no" src="https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed" width={350} />
 
-
 ## Tech Support
-<div>
-  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
-</div>
+
+  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+  <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

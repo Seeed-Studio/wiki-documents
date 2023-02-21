@@ -19,7 +19,7 @@ Clicking on the images below will take you to the documentation for the correspo
 |---|---|---|---|---|---|
 | Seeeduino Stalker v1.0  |Seeeduino Stalker v2.0   |Seeeduino Stalker v2.1   |Seeeduino Stalker v2.2   | Seeeduino Stalker v2.3  | Seeeduino-Stalker v3  |
 
-###   Comparison between various versions of Seeeduino Stalker  
+### Comparison between various versions of Seeeduino Stalker  
 
 <table >
 <tr>
@@ -40,41 +40,41 @@ Clicking on the images below will take you to the documentation for the correspo
 <th> Remarks
 </th></tr>
 <tr >
-<td > **<font >Product Release Date</font>**
+<td > <strong><font >Product Release Date</font></strong>
 </td>
-<td > **<font >23rd Dec 2009</font>**
+<td > <strong><font >23rd Dec 2009</font></strong>
 </td>
-<td > **<font >17th Dec 2010</font>**
+<td > <strong><font >17th Dec 2010</font></strong>
 </td>
-<td > **<font >3rd Oct 2011</font>**
+<td > <strong><font >3rd Oct 2011</font></strong>
 </td>
-<td > **<font >27th Dec 2011</font>**
+<td > <strong><font >27th Dec 2011</font></strong>
 </td>
-<td > **<font >29th Dec 2011</font>**
+<td > <strong><font >29th Dec 2011</font></strong>
 </td>
-<td > **<font >6th  Jun 2014</font>**
-</td>
-<td >
-</td></tr>
-<tr >
-<td > **Production Status**
-</td>
-<td > **<font >Discontinued</font>**
-</td>
-<td > **<font >Discontinued</font>**
-</td>
-<td > **<font >Discontinued</font>**
-</td>
-<td > **<font >Discontinued</font>**
-</td>
-<td > **<font>In Production</font>**
-</td>
-<td > **<font >In Production</font>**
+<td > <strong><font >6th  Jun 2014</font></strong>
 </td>
 <td >
 </td></tr>
 <tr >
-<td> **User LED &amp; Switch**
+<td > <strong>Production Status</strong>
+</td>
+<td > <strong><font >Discontinued</font></strong>
+</td>
+<td > <strong><font >Discontinued</font></strong>
+</td>
+<td > <strong><font >Discontinued</font></strong>
+</td>
+<td > <strong><font >Discontinued</font></strong>
+</td>
+<td > <strong><font>In Production</font></strong>
+</td>
+<td > <strong><font >In Production</font></strong>
+</td>
+<td >
+</td></tr>
+<tr >
+<td> <strong>User LED &amp; Switch</strong>
 </td>
 <td>
 </td>
@@ -125,7 +125,7 @@ Clicking on the images below will take you to the documentation for the correspo
 <td>
 </td></tr>
 <tr >
-<td> **Arduino Compatibility**
+<td> <strong>Arduino Compatibility</strong>
 </td>
 <td>
 </td>
@@ -241,7 +241,7 @@ Clicking on the images below will take you to the documentation for the correspo
 </td>
 <td> No
 </td>
-<td> In both version "UartSBee V3.1" or **V4.0** must be brought seperately and used for program downloading using Arduino IDE. A connector to mate to UartSBee is present on both versions. Microcontroller reset will automatically be controlled by DTR. **<font ></font>**
+<td> In both version "UartSBee V3.1" or <strong>V4.0</strong> must be brought seperately and used for program downloading using Arduino IDE. A connector to mate to UartSBee is present on both versions. Microcontroller reset will automatically be controlled by DTR.
 </td></tr>
 <tr >
 <td> Standalone Operation
@@ -295,7 +295,7 @@ Clicking on the images below will take you to the documentation for the correspo
 <td> Using I<sup>2</sup>C Interface
 </td></tr>
 <tr >
-<td> **Real Time Clock**
+<td> <strong>Real Time Clock</strong>
 </td>
 <td>
 </td>
@@ -363,7 +363,7 @@ Clicking on the images below will take you to the documentation for the correspo
 <td>
 </td></tr>
 <tr >
-<td> **I<sup>2</sup>C Interface**
+<td> <strong>I<sup>2</sup>C Interface</strong>
 </td>
 <td>
 </td>
@@ -414,7 +414,7 @@ Clicking on the images below will take you to the documentation for the correspo
 <td>
 </td></tr>
 <tr >
-<td> **Power Supply**
+<td> <strong>Power Supply</strong>
 </td>
 <td>
 </td>
@@ -551,6 +551,6 @@ Clicking on the images below will take you to the documentation for the correspo
 </td></tr></table>
 
 ## Tech Support
-<div>
-  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
-</div>
+
+  Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+  <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

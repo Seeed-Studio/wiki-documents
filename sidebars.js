@@ -1162,27 +1162,28 @@ const sidebars = {
         'Sensor/Seeeduino Series/Seeeduino_Lotus',
         'Sensor/Seeeduino Series/Seeeduino_Lotus_Cortex-M0-',
         'Sensor/Seeeduino Series/Seeeduino_Mega',
-        //'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
+        'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
         'Sensor/Seeeduino Series/Seeeduino-Nano',
-        'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
-        'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
-        'Sensor/Seeeduino Series/Seeeduino_Arch',
-        'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
         {
 
           type: 'category',
           label: 'Seeeduino Stalker',
           items: [
-            //'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
+            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3.1',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v3_enclosure',
-            //'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
+            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v2.3',
             'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker',
-            //'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
+            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
           ],
 
         },
+        'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
+        'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
+        'Sensor/Seeeduino Series/Seeeduino_Arch',
+        'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
+
         {
 
           type: 'category',
@@ -1199,7 +1200,7 @@ const sidebars = {
           label: 'Kit with Courses',
           items: [
             'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
-            // 'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+            'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
           ],
 
         },
@@ -2566,6 +2567,7 @@ const sidebars = {
             //'Seeed_Elderly/Bee/BLE_dual_Bee_v1.0',
             //'Seeed_Elderly/Bee/Bluetooth_Bee_v2.0',
             //'Seeed_Elderly/Bee/Bluetooth_Bee_Standalone',
+            'Seeed_Elderly/Bee/Bluetooth_Bee',
             'Seeed_Elderly/Bee/Wifi_Bee',
             'Seeed_Elderly/Bee/Wifi_Bee_v2.0',
             //'Seeed_Elderly/Bee/XBee_Shield',

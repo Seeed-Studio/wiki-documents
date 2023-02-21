@@ -15,7 +15,6 @@ Seeeduino Cloud is a microcontroller board based on [Dragino WiFi IoT module HE]
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-Cloud-Arduino-Yun-compatible-openWRT-controller-p-2123.html)
 
-
 ## Application Ideas
 
 * Internet of Things  
@@ -28,7 +27,6 @@ Here are some funny projects for your reference.
 |--------|----------|---------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/example_3.jpg)|
 |[Make it Now](https://www.instructables.com/id/Arduino-Yun-Messager/)|[Make it Now](https://www.instructables.com/id/Google-Docs-and-the-Arduino-Y%C3%BAn/)|[Make it Now](https://www.instructables.com/id/Arduino-Yun-Solar-Panel-Monitoring-System/)|
-
 
 ## Features
 
@@ -77,7 +75,6 @@ The images below show an overview of Seeeduino Cloud hardware features. The pin-
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_hardware.png)
 
-
 * **RJ45 Ethernet Port**
 The LAN Port is connected to ATHEROS AR9331 and has its own IP address that can be used for Internet connection and device management.
 * **USB Input**
@@ -100,18 +97,17 @@ This is an I-PEX Connector for an external antenna.
 It is not possible to access the I/O pins of the Atheros AR9331. All I/O lines are tied to the ATmega32U4.
 Each of the 20 digital pins on the 32U4 can be used as an input or output, using pinMode(), digitalWrite(), and digitalRead() functions. They operate at 5 volts. Each pin can provide or receive a maximum of 40 mA and has an internal pull-up resistor (disconnected by default) of 20-50 kOhms.
 In addition, some pins have specialized functions:
-	* Serial: 0 (RX) and 1 (TX). Used to receive (RX) and transmit (TX) TTL serial data using the ATmega32U4 hardware serial capability. Note that on the Seeeduino Cloud, the Serial class refers to USB (CDC) communication; for TTL serial on pins 0 and 1, use the Serial1 class. The hardware serials of the ATmega32U4 and the AR9331 on the Seeeduino Cloud are connected together and are used to communicate between the two processors. As is common in Linux systems, on the serial port of the AR9331 is exposed the console for access to the system, this means that you can access to the programs and tools offered by Linux from your sketch.
-	* TWI: 2 (SDA) and 3 (SCL). Support TWI communication using the Wire library.
-	* External Interrupts: 3 (interrupt 0), 2 (interrupt 1), 0 (interrupt 2), 1 (interrupt 3) and 7 (interrupt 4). These pins can be configured to trigger an interrupt on a low value, a rising or falling edge, or a change in value. See the attachInterrupt() function for details. Is not recommended to use pins 0 and 1 as interrupts because they are the also the hardware serial port used to talk with the Linux processor. Pin 7 is connected to the AR9331 processor and it may be used as handshake signal in future. Is recommended to be careful of possible conflicts if you intend to use it as interrupt.
-	* PWM: 3, 5, 6, 9, 10, 11, and 13. Provide 8-bit PWM output with the analogWrite() function.
-	* SPI: on the ICSP header. These pins support SPI communication using the SPI library. Note that the SPI pins are not connected to any of the digital I/O pins as they are on the Uno, They are only available on the ICSP connector. This means that if you have a shield that uses SPI, but does NOT have a 6-pin ICSP connector that connects to the Seeeduino Cloud's 6-pin ICSP header, the shield will not work. The SPI pins are also connected to the AR9331 gpio pins, where it has been implemented in software the SPI interface. This means that the ATMega32u4 and the AR9331 can also communicate using the SPI protocol.
-	* Analog Inputs: A0 - A5, A6 - A11 (on digital pins 4, 6, 8, 9, 10, and 12). The Seeeduino Cloud has 12 analog inputs, labeled A0 through A11, all of which can also be used as digital i/o. Pins A0-A5 appear in the same locations as on the Uno; inputs A6-A11 are on digital i/o pins 4, 6, 8, 9, 10, and 12 respectively. Each analog input provide 10 bits of resolution (i.e. 1024 different values). By default the analog inputs measure from ground to 5 volts, though is it possible to change the upper end of their range using the AREF pin and the analogReference() function.
-	* AREF. Reference voltage for the analog inputs. Used with analogReference().
+  * Serial: 0 (RX) and 1 (TX). Used to receive (RX) and transmit (TX) TTL serial data using the ATmega32U4 hardware serial capability. Note that on the Seeeduino Cloud, the Serial class refers to USB (CDC) communication; for TTL serial on pins 0 and 1, use the Serial1 class. The hardware serials of the ATmega32U4 and the AR9331 on the Seeeduino Cloud are connected together and are used to communicate between the two processors. As is common in Linux systems, on the serial port of the AR9331 is exposed the console for access to the system, this means that you can access to the programs and tools offered by Linux from your sketch.
+  * TWI: 2 (SDA) and 3 (SCL). Support TWI communication using the Wire library.
+  * External Interrupts: 3 (interrupt 0), 2 (interrupt 1), 0 (interrupt 2), 1 (interrupt 3) and 7 (interrupt 4). These pins can be configured to trigger an interrupt on a low value, a rising or falling edge, or a change in value. See the attachInterrupt() function for details. Is not recommended to use pins 0 and 1 as interrupts because they are the also the hardware serial port used to talk with the Linux processor. Pin 7 is connected to the AR9331 processor and it may be used as handshake signal in future. Is recommended to be careful of possible conflicts if you intend to use it as interrupt.
+  * PWM: 3, 5, 6, 9, 10, 11, and 13. Provide 8-bit PWM output with the analogWrite() function.
+  * SPI: on the ICSP header. These pins support SPI communication using the SPI library. Note that the SPI pins are not connected to any of the digital I/O pins as they are on the Uno, They are only available on the ICSP connector. This means that if you have a shield that uses SPI, but does NOT have a 6-pin ICSP connector that connects to the Seeeduino Cloud's 6-pin ICSP header, the shield will not work. The SPI pins are also connected to the AR9331 gpio pins, where it has been implemented in software the SPI interface. This means that the ATMega32u4 and the AR9331 can also communicate using the SPI protocol.
+  * Analog Inputs: A0 - A5, A6 - A11 (on digital pins 4, 6, 8, 9, 10, and 12). The Seeeduino Cloud has 12 analog inputs, labeled A0 through A11, all of which can also be used as digital i/o. Pins A0-A5 appear in the same locations as on the Uno; inputs A6-A11 are on digital i/o pins 4, 6, 8, 9, 10, and 12 respectively. Each analog input provide 10 bits of resolution (i.e. 1024 different values). By default the analog inputs measure from ground to 5 volts, though is it possible to change the upper end of their range using the AREF pin and the analogReference() function.
+  * AREF. Reference voltage for the analog inputs. Used with analogReference().
 
 ## Getting Started
 
 Seeeduino Cloud has two processors on board. One is an ATmega32U4 like on the Leonardo. The other is an Atheros 9331, running Linux and the OpenWRT wireless stack, which enables the board to connect to WiFi and Ethernet networks. With [Yun Bridge Library](https://www.arduino.cc/en/Reference/YunBridgeLibrary), it is possible to call programs or custom scripts on the Linux system through the Arduino to connect with various internet services.
-
 
 ### Program on ATmega32U4 side
 
@@ -122,14 +118,15 @@ The ATmega32U4 is programmed using the [Arduino Software (IDE)](https://www.ardu
 First of all, you need to:
 
 * **Get a Micro-USB cable**
-    * You need a Micro-USB cable first; the data cable of an Android Phone will do fine.
+  * You need a Micro-USB cable first; the data cable of an Android Phone will do fine.
 If you can't find one, you can buy one [here](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100).
 
-!!!Warning
-    Take gentle care in handling micro USB socket, or you might break the socket off.
+:::cautionWarning
+Take gentle care in handling micro USB socket, or you might break the socket off.
+:::
 
 * **Connect the board**
-    * The Seeeduino Cloud automatically draw power from either the USB connection to the computer or an external power supply. Connect the Arduino board to your computer using the USB cable. The green power LED (labelled **PWR**) should go on.
+  * The Seeeduino Cloud automatically draw power from either the USB connection to the computer or an external power supply. Connect the Arduino board to your computer using the USB cable. The green power LED (labelled **PWR**) should go on.
 
 **For Windows**
 
@@ -194,7 +191,7 @@ When you connect Seeeduino Cloud to a wired network with an ethernet cable, it w
 
 ### Sysupgrade Firmware
 
-Below is detailed by using Browser to upgrade new firmware. 
+Below is detailed by using Browser to upgrade new firmware.
 
 * Burn File -> Examples -> Birdge -> YunSerialTerminal.ino to Seeeduino Cloud
 
@@ -232,11 +229,11 @@ password: seeeduino
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_terminal.png)
 
-
 ### Yun Bridge Library
 
 The Bridge Library simplifies the communication between the Arduino Board and Dragino HE. Bridge commands from the AVR (Arduino Board) are interpreted by Python on the HE.
 Its role is to
+
 * execute programs on the GNU/Linux side when asked by Arduino,
 * provide a shared storage space for sharing data like sensor readings between the Arduino and the Internet
 * receive commands from the Internet and pass them directly to the Arduino.
@@ -354,34 +351,30 @@ String getTimeStamp() {
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/500px-SeeeduinoCloud_Sketch_USB.png)
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_Cloud/res/Seeeduino_Cloud_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
 * **Schematic**
-    * [Seeeduino Cloud Eagle file](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/res/Seeeduino_Cloud_v1.0.zip)
-    * [Seeeduino Cloud PDF file](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/res/Seeeduino_Cloud_PDF.pdf)
+  * [Seeeduino Cloud Eagle file](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/res/Seeeduino_Cloud_v1.0.zip)
+  * [Seeeduino Cloud PDF file](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/res/Seeeduino_Cloud_PDF.pdf)
 
 * **Firmware**
-    * [Seeeduino Cloud Firmware](http://www.dragino.com/downloads/index.php?dir=motherboards/ms14/Firmware/Yun/Newest_Firmware/)
+  * [Seeeduino Cloud Firmware](http://www.dragino.com/downloads/index.php?dir=motherboards/ms14/Firmware/Yun/Newest_Firmware/)
 
 * **References**
-    * [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
-    * [Arduino Language Reference](https://www.arduino.cc/en/Reference/HomePage)
-    * [Download the Arduino Software(IDE)](https://www.arduino.cc/en/Main/Software)
-    * [Arduino FAQ](https://www.arduino.cc/en/Main/FAQ)
-    * [Arduino Introduction](https://www.arduino.cc/en/guide/introduction)
-    * [Wikipedia page for Arduino](https://en.wikipedia.org/wiki/Arduino)
-    * [Arduino Yun Wiki](https://www.arduino.cc/en/Main/ArduinoBoardYun)
-    * [Getting started with Arduino Yun](https://www.arduino.cc/en/Guide/ArduinoYun#toc2)
-    * [Yun Bridge Library](https://www.arduino.cc/en/Reference/YunBridgeLibrary)
-
+  * [Getting Started with Arduino](https://www.arduino.cc/en/Guide/HomePage)
+  * [Arduino Language Reference](https://www.arduino.cc/en/Reference/HomePage)
+  * [Download the Arduino Software(IDE)](https://www.arduino.cc/en/Main/Software)
+  * [Arduino FAQ](https://www.arduino.cc/en/Main/FAQ)
+  * [Arduino Introduction](https://www.arduino.cc/en/guide/introduction)
+  * [Wikipedia page for Arduino](https://en.wikipedia.org/wiki/Arduino)
+  * [Arduino Yun Wiki](https://www.arduino.cc/en/Main/ArduinoBoardYun)
+  * [Getting started with Arduino Yun](https://www.arduino.cc/en/Guide/ArduinoYun#toc2)
+  * [Yun Bridge Library](https://www.arduino.cc/en/Reference/YunBridgeLibrary)
 
 ## FAQ
 
@@ -390,6 +383,7 @@ String getTimeStamp() {
 Yun Bridge Library is the mechanism used in Arduino Yun for communication between a MPU and a MCU. Seeeduino Cloud supports Yun Bridge Library to make it easy for Arduino users to build their IoT projects.
 
 ## Tech Support
+
 <div>
   Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>

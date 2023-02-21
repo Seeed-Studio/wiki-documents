@@ -17,7 +17,7 @@ Seeeduino Stalker V3.1 is not just a simple update of V3.0.The main surprise you
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/cover.JPG)
 
-###Version Track
+### Version Track
 
 |Version|Released Date|How to Buy|
 |--------|-----------|-----------|
@@ -29,8 +29,7 @@ Seeeduino Stalker V3.1 is not just a simple update of V3.0.The main surprise you
 |Seeeduino Stalker V3.0|Jun6, 2014|![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/EOL.png)|
 |Seeeduino Stalker V3.1|Jul10, 2016|[![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html)|
 
-
-###What's new in Seeeduino Stalker V3.1
+### What's new in Seeeduino Stalker V3.1
 
 **Improve Power Management**
 
@@ -42,9 +41,10 @@ There is a toggle switch added to X-bee area, which allows you to select either 
 
 We also added 2 toggle switch on RTC circuitry corresponding 2 INT pin of MCU, so that users can easily choose which INT pin to be connected with RTC INT port then activate MCU.
 
-
 ## Features
+
 ----
+
 - Arduino UNO compatible pinout with Arduino Fio bootloader
 - Lipo battery manager IC and Solar charge input(jst2.0 connector)
 - Onboard Real Time Clock chip **DS1337S** (Socket for a CR1220 coin cell, which acts as a backup power source for RTC)
@@ -55,6 +55,7 @@ We also added 2 toggle switch on RTC circuitry corresponding 2 INT pin of MCU, s
 - Bee series socket 2*10 pin 2.0mm pitch
 
 ## Specification
+
 ----
 
 |Parameter              |Value          |
@@ -74,6 +75,7 @@ We also added 2 toggle switch on RTC circuitry corresponding 2 INT pin of MCU, s
 |Size of PCB             |86.74mm x 60.96mm|
 
 ## Application Ideas
+
 ----
 
 - Wireless Sensor Network (using **XBee** bought separately)
@@ -83,8 +85,11 @@ We also added 2 toggle switch on RTC circuitry corresponding 2 INT pin of MCU, s
 - As a simple standalone Arduino compatible physical computing platform.
 
 ## Hardware Overview
+
 ----
-###Overview
+
+### Overview
+
 Seeeduino Stalker V3.1 is an application board with rich function. RTC, Lipo battery connector, Bee socket and SD card socket etc. The below overview image will introduce each part of the board to help you to know the board better.
 
 [![click to view larger image](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/overview.png)](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/overview.png)
@@ -106,16 +111,14 @@ Seeeduino Stalker V3.1 is an application board with rich function. RTC, Lipo bat
 |RST|Reset the Atmega328P|
 |SD CARD|A micro SD Card socket|
 
-
-###Pinmap
+### Pinmap
 
 Seeeduino Stalker V3.1 is compatible with Arduino, there're many Analog pins, Digital Pin as well as Serial pins available to make your own application. Below pin map image will help you to decided which pin are free or not as well as the pin used.
 
 [![click to view larger image](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/pinmap1.png)](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/pinmap1.png)
 
-
-
 ## Get Started
+
 ----
 If this is your first time to program with a Seeeduino Stalker. You can follow the below steps to getting started. Before we start, make sure you have the below things on hand:
 
@@ -127,7 +130,8 @@ If this is your first time to program with a Seeeduino Stalker. You can follow t
 :::note
     UartSBee V4, Mini USB Cable and 6pin cable are not included.
 :::
-###STEP1: Connection
+
+### STEP1: Connection
 
 Firstly connect Staler to UartSBee via the 6pin jumper wire, then connect UartSBee to a PC via the mini USB cable.
 
@@ -140,9 +144,10 @@ Firstly connect Staler to UartSBee via the 6pin jumper wire, then connect UartSB
 |    GND              |    GND          |
 
 :::note
-    The power switch on UartSBee V4 put to 5V    
+    The power switch on UartSBee V4 put to 5V
 :::
-###STEP2: UartSBee and the Driver
+
+### STEP2: UartSBee and the Driver
 
 UartSBee is a USB to Serial UART interface which is based on FT232RL from FDTI. Click to download the [driver](https://www.ftdichip.com/FTDrivers.htm) for the board.
 
@@ -152,18 +157,17 @@ In our case, it will perform three functions:
 - To communicate with Seeeduino Stalker.
 - Provide power (from USB power of PC) to Seeeduino Stalker (including any peripherals connected to it).
 
-###STEP3: Arduino IDE
+### STEP3: Arduino IDE
 
 Seeeduino Stalker is an Arduino compatible board that with rich function. If you don't have an Arduino IDE, you need to download the latest Arduino software to program the board.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png)](https://www.arduino.cc/en/Main/Software)
 
-###STEP4: Add Seeeduino Stalker to your Arduino IDE
+### STEP4: Add Seeeduino Stalker to your Arduino IDE
 
 There is no *Seeeduino Stalker* option in the boards of your Arduino IDE, click on [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) for the instruction.
 
-
-###STEP5: Blink
+### STEP5: Blink
 
 Here we will update a simple code to Stalker. Open your Arduino IDE, open **File > Examples > Basics > Blink**
 
@@ -171,21 +175,21 @@ Here we will update a simple code to Stalker. Open your Arduino IDE, open **File
 
 Then click on the Upload button, seconds later after the uploading is done, check **L** on the board, it will blink at the frequency of 1s.
 
-###Examples for Stalker V3.1
+### Examples for Stalker V3.1
+
 There are many examples for Seeeduino Stalker V3.1, which is consist of:
 
-* Example of reading the voltage of battery
-* Example of reading the status of charging
-* Example of data log
-* RTC library and some examples
-* Sleep related function
-
+- Example of reading the voltage of battery
+- Example of reading the status of charging
+- Example of data log
+- RTC library and some examples
+- Sleep related function
 
 ## RTC
 
 There's a on-board  DS1307S with a 3V cell battery, which can hold the time for more that 3 years even there's no power supply to the board. The library of DS1307S is included at the sketch of Stalker.
 
-###Adjust Date/Time
+### Adjust Date/Time
 
 Open Arduino IDE, then **File > Sketchbook > RTC > Adjust**, then set the current date/time using the DateTime Class object **dt** in the example:
 
@@ -194,7 +198,7 @@ Open Arduino IDE, then **File > Sketchbook > RTC > Adjust**, then set the curren
 
 Compile and upload to Stalker, then time is set.
 
-###Get Current Date/Time
+### Get Current Date/Time
 
 Open Arduino IDE, then **File > Sketchbook > RTC > Now**, The current date/time is read from DS1337 using **RTC.now()** function.
 
@@ -204,8 +208,8 @@ Compile and upload to Stalker, and open the Serial monitor, you will get the dat
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/rtc_now.png)
 
+### DS1337 Interrupts Example
 
-###DS1337 Interrupts Example
 This example is a demonstration of interrupt detection from DS1337 INT output. This feature is useful for data-logger functionality where the MCU is put to sleep mode when not in use and DS1337 INT wakes up the CPU periodically. This extends battery power. The complete operation is documented in the code.
 
 There're 2 INT output from DS1337, INTA (connect to **D2**) and INTB (connect to **D3**). There's a switch to connect INTA/INTB and D2/D3, if you don't need the interrupt, you can just close the switch and save 1 or 2 I/O. Switch as below:
@@ -224,23 +228,22 @@ Open your Arduino IDE, **File > Examples > SD**, you will get many examples.
 :::note
     The CS pin is connected to D10 of Stalker, so you need to change the CS pin into D10 at the examples.
 :::
+
 ## Power Manager
+
 There's Lipo battery manage circuit built in Stalker. There are two useful function supply at the sketch.
 
-
-###Read the voltage of Lipo Battery:
+### Read the voltage of Lipo Battery
 
 Open Arduino IDE, **File > Sketchbook > ReadBattery** to open the example.
 
 The voltage of the battery is related to the battery capacity. Below is a reference, but please know that it's not for every battery, for a certain battery, the data may a little different.
 
-
 |Capacity(%)|100%| 80% | 60% | 40% | 20% | 0% |
 |-----------|----|-----|-----|-----|-----|----|
 |**Voltage(V)**|4.20|4.00 |3.87 |3.79 |3.73 |3.00|
 
-
-###GET Charge Status
+### GET Charge Status
 
 Open Arduino IdE, **File > Sketchbook > ReadChageStatus** to open the examples. This function will return 3 status:
 
@@ -249,6 +252,7 @@ Open Arduino IdE, **File > Sketchbook > ReadChageStatus** to open the examples. 
     2: Charge done
 
 ## Bees
+
 Bees are a series of modules that consist of rich function. Such as Wi-Fi, BLE, GPS as well as RF etc. With an XBee, Stalker can act as a node that with communication. A Stalker talk to another Stalker is no longer impossible. If you need more details about the Bees, below is some reference.
 
 |Bluetooth Bee |XBee Wi-Fi PCB Antenna| RFbee V1.1|
@@ -262,14 +266,18 @@ Bees are a series of modules that consist of rich function. Such as Wi-Fi, BLE, 
 |[GET ONE NOW](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)    |<a href="https://www.seeedstudio.com/GPS-Bee-kit-(with-Mini-Embedded-Antenna)-p-560.html">GET ONE NOW</a> |<a href="https://www.seeedstudio.com/Mesh-Bee-Open-Source-Zigbee-Pro-Module-with-MCU-(JN5168)-p-1751.html">GET ONE NOW</a>|
 
 :::note
-    - You need to select the Serial pin for a Bee, D0/D1 and D5/D6 is available. Please refer to Hardware Overview get more info.
-    - D9 is controlling the power of Vcc of Bee socket, if you need power to a Bee, you should make D9 HIGH: digitalWrite(9, HIGH), and don't forget to pinMode(9, OUTPUT) in the Setup.
+
+- You need to select the Serial pin for a Bee, D0/D1 and D5/D6 is available. Please refer to Hardware Overview get more info.
+- D9 is controlling the power of Vcc of Bee socket, if you need power to a Bee, you should make D9 HIGH: digitalWrite(9, HIGH), and don't forget to pinMode(9, OUTPUT) in the Setup.
 :::
+
 ## Data Logger Example
+
 -----
 The principal application of Seeeduino Stalker v3.0 is data-logging of sensor signal like battery voltage, etc. along with the time-stamp. This sketch puts the MCU in sleep mode when not performing data sampling / logging operation. The complete implementation is documented very well in the code.
 
 Open Arduino IDE, **File > Sketchbook > StalkerV30_DataLogger_10Sec** to open the example.
+
 - This sketch logs battery voltage data to SD card configured by RTC.enableInterrupts(h, m, s) function.
 - The periodicity is provided using h, m and s. Once an interrupt is detected, the next interrupt time is updated by advancing the h, m and s value. The DateTime Class comes handy for this.
 - ex:- interruptTime = DateTime (interruptTime.get() + interruptInterval); //decide the time for next interrupt
@@ -277,27 +285,28 @@ Open Arduino IDE, **File > Sketchbook > StalkerV30_DataLogger_10Sec** to open th
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/data_log_example.png)
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/202000956_Seeeduino%20Stalker%20v3.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
+
 ---
 **Schematic**
-  * [Schematic in **Eagle**](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/202000956_Seeeduino%20Stalker%20v3.1.zip)
-  * [Schematic in **PDF**](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/Seeeduino%20Stalker%20v3.1.pdf)
+
+- [Schematic in **Eagle**](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/202000956_Seeeduino%20Stalker%20v3.1.zip)
+- [Schematic in **PDF**](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/Seeeduino%20Stalker%20v3.1.pdf)
 
 **Datasheet**
-  * [DS1307](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/ds1307.pdf)
-  * [CN3065](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/DSE-CN3065.pdf)
-  * [ETA3406](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/eta3406.pdf)
-* [Sketchbook](https://github.com/Seeed-Studio/Sketch_Stalker_V3_1)
+
+- [DS1307](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/ds1307.pdf)
+- [CN3065](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/DSE-CN3065.pdf)
+- [ETA3406](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/resources/eta3406.pdf)
+- [Sketchbook](https://github.com/Seeed-Studio/Sketch_Stalker_V3_1)
 
 ## FAQ
+
 ----
 
 Here are some questions that we usually received from new users. If you have any other issues when you are using Seeeduino Stalker V3.1, welcome to the [Community of Arduino](https://community.seeedstudio.com/discover.html?t=Arduino) where there are many professional users waiting to give you advices and also many advanced users providing plenty of ideas on how to use this products!
@@ -315,6 +324,7 @@ Here are some questions that we usually received from new users. If you have any
 > Make sure your solar panel is able to supple 4.5~6V voltage.
 
 ## Tech Support
+
 <div>
   Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
