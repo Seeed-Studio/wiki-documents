@@ -139,7 +139,7 @@ This section will show those senior customers how to add recording funtion to th
 
 *   [Schematic files](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688/res/Breakout_for_LinkIt_Smart_7688_v2.0_schematic_files.zip)
 
-*   [LinkIt smart 7688](/LinkIt_Smart_7688)
+<!-- *   [LinkIt smart 7688](/LinkIt_Smart_7688) -->
 
 *   [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 

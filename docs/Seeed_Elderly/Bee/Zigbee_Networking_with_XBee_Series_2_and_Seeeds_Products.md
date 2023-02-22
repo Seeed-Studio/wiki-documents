@@ -70,9 +70,9 @@ In this tutorial we are going to use **XBee ZB firmware** on a **XBee Znet 2.5 M
 <!-- *   Connect the **XBee ZB** to XBee socket of [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") or [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") like this : -->
 <table>
 <tr>
-<th> **XBee ZB** connected to [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") for configuration
+<th> **XBee ZB** connected to UartSBee_V3.1 for configuration
 </th>
-<th> **XBee ZB** connected to [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") for configuration
+<th> **XBee ZB** connected to Grove - XBee Carrier for configuration
 </th></tr>
 <tr>
 <td> ![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/XBee_UartSBee.jpg)
@@ -181,7 +181,7 @@ All modern **GNU/Linux OS** comes with FT232RL drivers. To check if UartSBee or 
 
 This demo configures two XBee modules to connect to each other automatically upon power-up and continuously trans-receive data. This setup can be used as a Wireless UART to connect any two PCs or two MCUs with serial ports.
 
-*   Use two [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") or two [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") with two XBee ZB modules.
+<!-- *   Use two [UartSBee_V3.1](/UartSBee_V3.1 "UartSBee_V3.1") or two [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier") with two XBee ZB modules. -->
 
 *   Connect these modules to PCs Serial port and make sure the drivers are installed.
 
@@ -216,9 +216,9 @@ This demo configures two XBee modules to connect to each other automatically upo
 
 ##  Wireless Sensor Networks(WSN) demo with XBee ZB modules
 
-###  Configuring a standalone sensor nodes using XBee ZB module and [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
+<!-- ###  Configuring a standalone sensor nodes using XBee ZB module and [Grove - XBee Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-###  Configuring a Zigbee Coordinator using XBee ZB module, Seeeduino and [XBee® Shield](/XBee_Shield "XBee® Shield")
+###  Configuring a Zigbee Coordinator using XBee ZB module, Seeeduino and [XBee® Shield](/XBee_Shield "XBee® Shield") -->
 
 <!-- ###  Using Seeeduino as Internet Gateway using XBee ZB module,[Wifi Bee](/Wifi_Bee "Wifi Bee") and [Bees Shield](/Bees_Shield "Bees Shield") -->
 
@@ -244,7 +244,7 @@ This project uses a zigbee mesh and GPRS SIM900 card to communicate to a server.
 
 ![](https://files.seeedstudio.com/wiki/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/img/Xbee_iot1.JPG)
 
-This is an IoT demo made by XBee and [Grove](/Grove_System "Grove System").
+<!-- This is an IoT demo made by XBee and [Grove](/Grove_System "Grove System"). -->
 
 A solar boiler is great because it gives you hot water using free-sun-energy, but what if there is not enough sun or someone already used all the hot water ? This project helps you take the right decision. It warns you when you run out of hot water and allows you to turn on the electric heating. It also let you know when you can take a bath or shower !
 
