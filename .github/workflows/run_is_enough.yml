@@ -71,6 +71,7 @@ jobs:
       - name: PUBLISH to WEBSITE
         run: |
             cd  ~/wiki-documents/build
+            cp  ~/wiki-documents/CNAME ./
             git init
             git remote add github git@github.com:Seeed-Studio/wiki-documents.git
             git checkout -b HTML_RE 

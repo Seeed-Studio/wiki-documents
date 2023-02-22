@@ -69,7 +69,7 @@ last_update:
 ---
 **Note:** In this case we show you a general development  environmental.
 
-###  Material required
+<!-- ###  Material required
 
 *   [Particle Photon](https://www.seeedstudio.com/depot/Particle-Photon-p-2527.html) × 1
 
@@ -78,7 +78,7 @@ last_update:
 
 *   Grove Base Shield for Photon × 1
 
-*   [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38) × 1
+*   [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38) × 1 -->
 
 ###  Buzzing
 
@@ -146,7 +146,7 @@ void loop() {
 ---
 *   [Schematic files](https://files.seeedstudio.com/wiki/Grove_Base_Shield_for_Photon/res/Schematic_files_for_Grove_Base_Shield_for_Photon.zip)
 
-*   [Grove_System](/Grove_System)
+<!-- *   [Grove_System](/Grove_System) -->
 
 ## Tech Support
 <div>

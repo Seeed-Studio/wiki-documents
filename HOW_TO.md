@@ -1,9 +1,19 @@
+### Thank you for considering to contribute to our seeed-studio files! 
+
+You can check these steps to set up your own files management platform:
+
+1. Fork this repository into your GitHub.
+2. Clone the repository you forked to your coding device.
+3. Make your modifications, changing existed files or add new files. ---- for detailed local deployment / installation please check below instruction.
+4. Commit your modifications and push to your Github repository.
+5. Create a PR from the branch in your forked to seeed-studio's wiki-documents main branch.
+
 
 ###
 
 export PATH=$PATH:/home/w0x7ce/Desktop/node-v18.12.1-linux-x64/bin
 
-## Installation
+## Local Installation
 
 [INSTALL LATEST LTS NODE](https://github.com/nodejs/release#release-schedule)
 
