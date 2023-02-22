@@ -28,7 +28,7 @@ To complete the demo, you need to:
 
 *   Connect Xadow Main Board,Xadow OLED, Xadow Vibrator and Xadow Accelerometer at the same direction with FFC cables.
 
-*   Connect Xadow Main Board to PC with a Micro USB cable. Before uploading code, you need to install Xadow driver. Please click [here](/Xadow_Main_Board#Get_Start_with_Xadow_Main_Board) to learn the specific operation.
+<!-- *   Connect Xadow Main Board to PC with a Micro USB cable. Before uploading code, you need to install Xadow driver. Please click [here](/Xadow_Main_Board#Get_Start_with_Xadow_Main_Board) to learn the specific operation. -->
 
 *   When you see "Now, you can program and use the Xadow as you use other Arduino boards", it means you have finished the preparations.
 

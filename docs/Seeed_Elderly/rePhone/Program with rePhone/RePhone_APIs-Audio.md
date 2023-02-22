@@ -22,7 +22,7 @@ Use getStatus() to check the current status and act correspondingly. The audio s
 If you try to play another audio file before the previous playback is finished, the previous playback will be stopped automatically, and the new audio will be played.
 </div>
 
-[![](https://files.seeedstudio.com/wiki/RePhone_APIs-Audio/img/Viewallapiofrephone.png)](/RePhone)
+[![](https://files.seeedstudio.com/wiki/RePhone_APIs-Audio/img/Viewallapiofrephone.png)]
 
 Function List
 -------------

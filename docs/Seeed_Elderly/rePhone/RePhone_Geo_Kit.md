@@ -276,7 +276,7 @@ Some frequently asked questions in RePhone Community are collected and answered 
 
 ##  Resources
 
-Please go the Wiki page [Xadow GPS V2](/Xadow_GPS_V2) for more info.
+<!-- Please go the Wiki page [Xadow GPS V2](/Xadow_GPS_V2) for more info. -->
 
 ## Tech Support
 <div>
