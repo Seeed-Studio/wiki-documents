@@ -33,14 +33,14 @@ Parts list
 
 | Parts name                                                                                                           | Quantity |
 |----------------------------------------------------------------------------------------------------------------------|----------|
-| [Grove - Button](/Grove-Button)                                                                                      | 1PC     |
-| [Grove - Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html)                                             | 1PC     |
-| [Grove - Temp&Humi Sensor](https://www.seeedstudio.com/depot/Grove-TempHumi-Sensor-p-745.html?cPath=25_125)           | 1PC     |
-| [Grove - Digital Light Sensor](https://www.seeedstudio.com/depot/Grove-Digital-Light-Sensor-p-1281.html?cPath=25_128) | 1PC     |
+| [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button/)                                                                                      | 1PC     |
+| [Grove - Relay](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products)                                             | 1PC     |
+| [Grove - Temp&Humi Sensor](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=ea8d1729f76e80d6b1b53c492c74fcdb&objectID=35&indexName=bazaar_retailer_products)           | 1PC     |
+| [Grove - Digital Light Sensor](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html?queryID=c7822737fbcac80a47232a5fb1ac1e1d&objectID=1594&indexName=bazaar_retailer_products) | 1PC     |
 | Grove - WS2812 Waterproof LED Strip - 30 LEDs 1 meter                                                                | 1PC     |
-| [Grove - 3-Axis Digital Accelerometer(±1.5g)](/Grove-3-Axis_Digital_Accelerometer-1.5g)                              | 1PC     |
-| [Wio Link](/Wio_Link)                                                                                                | 1PC     |
-| [Micro USB Cable - 48cm](https://www.seeedstudio.com/depot/Micro-USB-Cable-48cm-p-1475.html?cPath=98_100)             | 1PC     |
+| [Grove - 3-Axis Digital Accelerometer(±1.5g)](//Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-1.5g/)                              | 1PC     |
+| [Wio Link](/Sensor/Wio_Series/Wio_Link/)                                                                                                | 1PC     |
+| [Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html?queryID=a8b80828fdcd52ad1ae49daa5ed97191&objectID=1405&indexName=bazaar_retailer_products)             | 1PC     |
 
 A simple demo
 -------------
@@ -50,13 +50,12 @@ This demo can used as a compilation result-indicator.
 ### Preliminary Guide
 
 -   [Travis CI](https://travis-ci.org/)
--   [Wio Link](/Wio_Link)
+-   [Wio Link](/Sensor/Wio_Series/Wio_Link/)
+### Material required
 
-### Prerequisites
-
--   [Wio Link APP](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat)
--   [Wio Link](/Wio_Link)
--   [Grove Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42) × 3
+-   [Wio Link APP](https://www.seeedstudio.com/Wio-Link-Event-Kit-p-2611.html?queryID=3ab174447ce3813d2105c3db0e9e783a&objectID=537&indexName=bazaar_retailer_products)
+-   [Wio Link](/Sensor/Wio_Series/Wio_Link/)
+-   [Grove Relay](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products) × 3
 -   A Travis CI Account
 -   A GitHub Account
 -   Traffic Light

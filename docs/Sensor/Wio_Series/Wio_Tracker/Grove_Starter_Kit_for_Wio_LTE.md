@@ -64,7 +64,7 @@ Arduino quickly and effectively. You can visit [https://www.arduino.cc/en/Tutori
 ###  Arduino Sketches (basic example for each module)
 
 After you have gotten an LED blinking (for Windows user, you can find it at [https://www.arduino.cc/en/Guide/Windows](https://www.arduino.cc/en/Guide/Windows), you can find other versions for Mac OS and Linux variants at
-[https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at [https://www.seeedstudio.com/wiki/Grove_System](/Grove_System). And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
+[https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage) ), you still need to get familiar with Seeedstudio Grove system at Grove_System. And now, you can do some more practical quizzes which are specialized designed for this kit. Download the sketches of quizzes at [https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino](https://github.com/Seeed-Studio/Sketchbook_Starter_Kit_for_Arduino).
 
 ## Tech Support
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 

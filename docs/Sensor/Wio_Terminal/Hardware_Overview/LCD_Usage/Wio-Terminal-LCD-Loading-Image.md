@@ -9,7 +9,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 ---
-<style dangerouslySetInnerHTML={{__html: "\n.md-typeset__table {\n   min-width: 100%;\n}\n" }} />
+
 
 # loading Images
 
@@ -30,9 +30,9 @@ This repo describes how to load and display images from the SD card to the TFT L
 ## Image Format configuration
 
 ### STEP 1: Prepare the image
-!!!Note
+:::note
     We need to convert the image format to Windows 24-bit BMP format and put the image in the right folder setup ready. We recommend to use `Microsoft paint` to do so.
-
+:::
  - **Step 1-1:** Using `Microsoft paint` to resize the image to fit into the maximum pixel size of your screen display area
 
  - **Step 1-2:** Then save the image by clicking `Save as` followed by `BMP picture` then from the file type dropdown select `24-bit bitmap (.bmp)`  file.
@@ -42,9 +42,9 @@ This repo describes how to load and display images from the SD card to the TFT L
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/wioterminaltu.png" /></div>
 
 ### STEP 2: Convert the `24-bit bitmap` image to the microcontroller readable `8-bit or 16-bit bmp`  format
-!!!Note
+:::note
     To display bmp images on our embedded system, we need to get rid of some information (head files) in our Windows bmp format. We wrote a python script to do this for us, so please choose one of the following two options to convert you images.
-
+:::
 #### Option 1: Using Prebuilt Windows Executables (Windows only):
 
 - **Step 2-1-1:** We have prepared the executable by using the [Pyinstaller](https://pyinstaller.org/en/stable/){target=_blank} package, you can download the executable by simply clicking [bmp_converter.exe](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.exe)
@@ -54,9 +54,9 @@ This repo describes how to load and display images from the SD card to the TFT L
 - **Step 2-1-3:** Double click to run the `bmp_converter.exe`, then in the pop up `terminal` select one of the two options: "Enter `1` for 8-bit colour convert; Enter `2` for 16-bit colour convert".
 
 #### Option 2: Using Python Source Code (for cross platform)
-!!!Note
+:::note
     You should have python installed on your computer
-
+:::
 - **Step 2-2-1:** Download the Python script [bmp_converter.py](https://files.seeedstudio.com/wiki/Wio-Terminal/res/bmp_converter.py) , and save it in the same directory with the `bmp folder` created in `Step 1-3`.
 
 - **Step 2-2-2:** Open `cmd` or `terminal` to run the Python script. First, `cd` to the directory that saved the `bmp_converter.py` and `bmp folder`, then run the Python script.
