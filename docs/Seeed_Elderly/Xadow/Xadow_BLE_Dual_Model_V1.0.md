@@ -9,7 +9,7 @@ last_update:
   author: shuxu hu
 ---
 
-<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_PhotoBottom.jpg" alt="some_text">
+<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_PhotoBottom.jpg" alt="some_text"/>
 
 Xadow - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip,with the ARM architecture single chip which supports AT instructions, Users can develop flexibly according to the serial baud rate, equipment name, pairing password.
 
@@ -36,7 +36,7 @@ Xadow - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip,with the ARM arc
 
 ## Specification
 ---
-<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/600px-Xadow_-_BLE_(dual_model)_v1.0.png" alt="some_text">
+<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/600px-Xadow_-_BLE_(dual_model)_v1.0.png" alt="some_text"/>
 
 
 - **K2**:During connected status,It would be disconnected by pressing K2 more than 100ms.During sleeping model,It could be restored through pressing K2 factory settings.
@@ -54,9 +54,9 @@ The Xadow - BLE has a standard Xadow interface with lead pitch, we use a [Xadow 
 
 As Xadow interface is a axial symmetry port, so it's necessary to comply with the assembly direction, please refer to below picture.
 
-<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_ConnectToPC.jpg" alt="some_text">
+<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_ConnectToPC.jpg" alt="some_text"/>
 
-<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_ConnectToPCConnect.jpg" alt="some_text">
+<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_ConnectToPCConnect.jpg" alt="some_text"/>
 
 **Connecting Bluetooth to Xadow - Main Board**
 
@@ -64,7 +64,7 @@ Connect the Xadow BLE Slave to [Xadow - Main Board](https://wiki.seeedstudio.com
 
 Note: when connect Xadow - BLE to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one xadow module need to connect to the right angle of another module(see four corners of each xadow module).
 
-<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_ConnectToArduino.jpg" alt="some_text">
+<img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_ConnectToArduino.jpg" alt="some_text"/>
 
 ## Software Instruction
 ---
