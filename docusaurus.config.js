@@ -158,14 +158,14 @@ const config = {
         config: {}
       },
 
-//       giscus: {
-//         repo: 'c1ev0ps/wiki-documents',
-//         repoId: 'R_kgDOIabZbQ',
-//         category: 'Q&A',
-//         categoryId: 'DIC_kwDOIabZbc4CSlHH',
-//         theme: 'light_high_contrast',
-//         darkTheme: 'dark_tritanopia'
-//       },
+      giscus: {
+        repo: 'c1ev0ps/wiki-documents',
+        repoId: 'R_kgDOIabZbQ',
+        category: 'Q&A',
+        categoryId: 'DIC_kwDOIabZbc4CSlHH',
+        theme: 'light_high_contrast',
+        darkTheme: 'dark_tritanopia'
+      },
 
       docs: {
         sidebar: {
