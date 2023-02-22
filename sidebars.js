@@ -2145,13 +2145,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SenseCAP Hotspot APP',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
-        },
-        {
-          type: 'category',
           label: 'SenseCAP Mate APP',
           items: [
             'Cloud_Chain/SenseCAP_Cloud/wiki',
