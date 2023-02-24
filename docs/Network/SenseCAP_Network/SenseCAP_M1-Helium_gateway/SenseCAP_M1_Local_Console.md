@@ -2,7 +2,7 @@
 description: SenseCAP M1 Local Console
 title: SenseCAP M1 Local Console
 keywords:
-- Cloud and Chain
+- SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 02/14/2023
