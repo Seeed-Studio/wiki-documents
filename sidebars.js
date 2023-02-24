@@ -2773,6 +2773,7 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
             'Seeed_Elderly/Discrete Product/Matrix_Clock',
           ]
+
         },
         // {
         //   type: 'category',
