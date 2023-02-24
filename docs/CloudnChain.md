@@ -10,15 +10,15 @@ last_update:
   author: Matthew
 ---
 
-This topic here introduces the Seeed Studio product documentation regarding the cloud survice, which supports processed data management from computing boards and offers real-time operations to the users. There includes industrial SenseCAP Cloud survice and other cloud service applications in this page.
+This topic here introduces the Seeed Studio product documentation regarding the cloud service, which supports processed data management from computing boards and offers real-time operations to the users. There includes the industrial SenseCAP Cloud services and other cloud service applications on this page.
 
 ## SenseCAP Cloud Production
 
-<strong><font color={'8DC215'} size={"4"}>This portion here includes the cloud survice offered by Seeed Studio, published for industrial IoT applications. Here you can find:</font></strong>
+<strong><font color={'8DC215'} size={"4"}>This portion here includes the cloud service offered by Seeed Studio, published for industrial IoT applications. Here you can find:</font></strong>
 
 - List of SenseCAP Cloud production
 - Instruction of data management and devices management of each production
-- Differrent API for differnt connecting puporses
+- Different API for different connecting purposes
 - Cloud & Chain Introduction
 
 ### SenseCAP Dashboard / Protal -->
@@ -98,26 +98,11 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 
 ### SenseCAP API -->
 
-<div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'center'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP API Introduction</font></div>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Gateways</strong> - Displaying EUI, Name, Status, and more info.</font></span></a>
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP API </font></div>
+            This is the SenseCAP API for devices and data management.
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Node Group</strong> - Manage Devices Conveniently by Groups. </font></span></a>
-            <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Sensor Node</strong> - Displaying EUI, Name, Status, Data Type and more. </font></span></a>
-            <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices General Information</strong> - Battery Status, Recent Online Record and more. </font></span></a>
-            <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Settings</strong> - Adjust the data collection frequency of the device and more. </font></span></a>
-            <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Location </strong></font></span></a> 
-            /
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Bind </strong></font></span></a>
-            /
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Channel </strong></font></span></a>
-            /
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Data </strong></font></span></a>
+            > <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download PDF</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Introduction</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API Pricing</font></span></a>
     </a>
 </div>
-
