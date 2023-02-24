@@ -163,7 +163,7 @@ We want your skills, your language and language competence. We need your profess
 
 We are facing the age of information explosion, we want to ensure your presentations are stored with us. Welcome to Seeed Studio Contributor Program!
 
-Check our <strong><a href="https://github.com/Seeed-Studio/wiki-documents" target="_blank"><span><font color={'8DC215'} size={"3"}> Github source </font></span></a></strong> and  <strong><a href="https://github.com/Seeed-Studio/wiki-documents/blob/main/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> task list </font></span></a></strong>
+Check our <strong><a href="https://github.com/Seeed-Studio/wiki-documents" target="_blank"><span><font color={'8DC215'} size={"3"}> Github source </font></span></a></strong> and  <strong><a href="https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> task list </font></span></a></strong>
 for more information.
 
 ## Weekly Wiki

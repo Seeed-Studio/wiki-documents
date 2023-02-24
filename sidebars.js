@@ -2145,13 +2145,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SenseCAP Hotspot APP',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
-        },
-        {
-          type: 'category',
           label: 'SenseCAP Mate APP',
           items: [
             'Cloud_Chain/SenseCAP_Cloud/wiki',
@@ -2780,6 +2773,7 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
             'Seeed_Elderly/Discrete Product/Matrix_Clock',
           ]
+
         },
         // {
         //   type: 'category',
