@@ -159,10 +159,10 @@ const config = {
       },
 
       giscus: {
-        repo: 'c1ev0ps/wiki-documents',
-        repoId: 'R_kgDOIabZbQ',
+        repo: 'Seeed-Studio/wiki-documents',
+        repoId: 'MDEwOlJlcG9zaXRvcnkzMDM5NTk0Nzk=',
         category: 'Q&A',
-        categoryId: 'DIC_kwDOIabZbc4CSlHH',
+        categoryId: 'DIC_kwDOEh4Nt84CTIbM',
         theme: 'light_high_contrast',
         darkTheme: 'dark_tritanopia'
       },
@@ -218,6 +218,11 @@ const config = {
           {
             to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',
+            position: 'right',
+            className: 'navbar_doc_items'
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
             className: 'navbar_doc_items'
           },
@@ -381,7 +386,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/Seeed-Studio/wiki-documents/blob/main/TASK.md">task lists</a>！',
+          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false,

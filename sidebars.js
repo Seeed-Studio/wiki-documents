@@ -561,34 +561,41 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP',
       items: [
-        'Network/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
+        'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
         {
           type: 'category',
           label: 'SenseCAP LoRaWAN Sensor',
           items: [
-            'Network/SenseCAP/SenseCAP_Node/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
-            'Network/SenseCAP/SenseCAP_Node/SenseCAP-SOLO-CO2-Sensor',
+            'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
+
+            {
+              type: 'category',
+              label: 'SenseCAP S210X Series',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+              ],
+            },
+
             {
               type: 'category',
               label: 'SenseCAP A1101',
               items: [
-                'Network/SenseCAP/SenseCAP_Node/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
               ],
             },
           ],
 
         },
 
-
         {
           type: 'category',
           label: 'SenseCAP Sensor Probe',
           items: [
-            'Network/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
-            'Network/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
-            'Network/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
-            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
-            'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+            'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
           ],
 
         },
@@ -597,8 +604,8 @@ const sidebars = {
           type: 'category',
           label: ' SenseCAP ONE Weather Sensor',
           items: [
-            'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
-            'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/ORCH-S4-Weather-Station',
+            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
+            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
           ],
         },
 
@@ -606,7 +613,16 @@ const sidebars = {
           type: 'category',
           label: ' SenseCAP Data Logger',
           items: [
-            'Network/SenseCAP/Extra_Tutorial_FAQ/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+            'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
+            'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger',
+            {
+              type: 'category',
+              label: 'Tutorial',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+              ],
+            },
+
           ],
         },
 
@@ -614,8 +630,8 @@ const sidebars = {
           type: 'category',
           label: 'SenseCAP Accessories',
           items: [
-            'Network/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
-            'Network/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
+            'Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
+            'Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
           ],
         },
 
@@ -757,7 +773,7 @@ const sidebars = {
       type: 'category',
       label: 'Wio Terminal',
       items: [
-        // 'Sensor/Wio_Terminal/wiki',
+
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         {
@@ -1300,7 +1316,7 @@ const sidebars = {
       type: 'category',
       label: 'IOT BUTTON FOR AWS',
       items: [
-        // 'Sensor/IOT_Button_For_AWS/wiki',
+
         'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
       ],
 
@@ -1536,14 +1552,33 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'SenseCAP Network',
+      label: 'SenseCAP Gateway',
       items: [
-
+        'Network/SenseCAP_Network/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
         {
           type: 'category',
           label: 'Helium Gateway',
           items: [
-            'Network/SenseCAP/wiki',
+            {
+              type: 'category',
+              label: 'SenseCAP M1 Gateway',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SenseCAP M2 Data Only',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
+              ],
+            },
           ],
         },
 
@@ -1551,15 +1586,9 @@ const sidebars = {
           type: 'category',
           label: 'Flux Gateway',
           items: [
-            'Network/SenseCAP/wiki',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'SenseCAP M2 Multi-Platform Gateway',
-          items: [
-            'Network/SenseCAP/wiki',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
           ],
         },
 
@@ -1567,10 +1596,27 @@ const sidebars = {
           type: 'category',
           label: 'Outdoor Gateway',
           items: [
-            'Network/SenseCAP/wiki',
+            'Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview',
           ],
         },
 
+
+        {
+          type: 'category',
+          label: 'SenseCAP M2 Multi-Platform Gateway',
+          items: [
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
+            {
+              type: 'category',
+              label: 'Tutorial',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS IoT',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack',
+              ],
+            },
+          ],
+        },
 
 
       ],
@@ -2118,55 +2164,54 @@ const sidebars = {
     },
 
     {
-
       type: 'category',
-      label: 'SenseCAP Cloud',
+      label: 'SenseCAP Dashboard',
       items: [
-        {
+        'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics',
+        'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration',
+        'Cloud_Chain/SenseCAP_Dashboard/Hotspot_Registration',
+      ],
+},
+    {
           type: 'category',
           label: 'SenseCAP Portal',
           items: [
             'Cloud_Chain/SenseCAP_Cloud/wiki',
           ],
-        },
-        {
-          type: 'category',
-          label: 'SenseCAP Dashboard',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
-        },
-        {
+    },
+
+    {
           type: 'category',
           label: 'SenseCAP Hotspot APP',
           items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
           ],
-        },
-        {
-          type: 'category',
-          label: 'SenseCAP Hotspot APP',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
-        },
-        {
+    },
+    {
           type: 'category',
           label: 'SenseCAP Mate APP',
           items: [
             'Cloud_Chain/SenseCAP_Cloud/wiki',
           ],
-        },
-        {
+    },
+    {
           type: 'category',
           label: 'SenseCAP API',
           items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
+            'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
+            'Cloud_Chain/SenseCAP_API/API_pricing',
           ],
-        },
-      ],
-
     },
+  
 
     {
       type: 'html',
@@ -2780,6 +2825,7 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
             'Seeed_Elderly/Discrete Product/Matrix_Clock',
           ]
+
         },
         // {
         //   type: 'category',
@@ -2813,27 +2859,27 @@ const sidebars = {
   //     type: 'category',
   //     label: 'SenseCAP',
   //     items: [
-  //       'Network/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
+  //       'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
 
   //       {
   //         type: 'category',
   //         label: 'SenseCAP Node',
   //         items: [
-  //           'Network/SenseCAP/SenseCAP_Node/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
-  //           'Network/SenseCAP/SenseCAP_Node/SenseCAP-SOLO-CO2-Sensor',
+  //           'Sensor/SenseCAP/SenseCAP_Node/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
+  //           'Sensor/SenseCAP/SenseCAP_Node/SenseCAP-SOLO-CO2-Sensor',
   //           {
   //             type: 'category',
   //             label: 'SenseCAP A1101',
   //             items: [
-  //               'Network/SenseCAP/SenseCAP_Node/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+  //               'Sensor/SenseCAP/SenseCAP_Node/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
   //             ],
   //           },
   //           {
   //             type: 'category',
   //             label: 'SenseCAP Weather Station',
   //             items: [
-  //               'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
-  //               'Network/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/ORCH-S4-Weather-Station',
+  //               'Sensor/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
+  //               'Sensor/SenseCAP/SenseCAP_Node/SenseCAP_Weather_Station/ORCH-S4-Weather-Station',
   //             ],
   //           },
   //         ],
@@ -2842,26 +2888,26 @@ const sidebars = {
   //         type: 'category',
   //         label: 'SenseCAP Probe',
   //         items: [
-  //           'Network/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
-  //           'Network/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
-  //           'Network/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
-  //           'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
-  //           'Network/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+  //           'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+  //           'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+  //           'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+  //           'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+  //           'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
   //         ],
   //       },
   //       {
   //         type: 'category',
   //         label: 'Accessories',
   //         items: [
-  //           'Network/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
-  //           'Network/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
+  //           'Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
+  //           'Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
   //         ],
   //       },
   //       {
   //         type: 'category',
   //         label: 'Extra tutorial / FAQ',
   //         items: [
-  //           'Network/SenseCAP/Extra_Tutorial_FAQ/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+  //           'Sensor/SenseCAP/Extra_Tutorial_FAQ/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
   //         ],
   //       },
 
