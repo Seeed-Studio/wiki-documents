@@ -2116,50 +2116,56 @@ const sidebars = {
     </div>
     `,
     },
-
+    
     {
-
       type: 'category',
-      label: 'SenseCAP Cloud',
+      label: 'SenseCAP Dashboard',
       items: [
-        {
+        'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics',
+        'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration',
+        'Cloud_Chain/SenseCAP_Dashboard/Hotspot_Registration',
+      ],
+},
+    {
           type: 'category',
           label: 'SenseCAP Portal',
           items: [
             'Cloud_Chain/SenseCAP_Cloud/wiki',
           ],
-        },
-        {
-          type: 'category',
-          label: 'SenseCAP Dashboard',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
-        },
-        {
+    },
+
+    {
           type: 'category',
           label: 'SenseCAP Hotspot APP',
           items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
+            'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
           ],
-        },
-        {
+    },
+    {
           type: 'category',
           label: 'SenseCAP Mate APP',
           items: [
             'Cloud_Chain/SenseCAP_Cloud/wiki',
           ],
-        },
-        {
+    },
+    {
           type: 'category',
           label: 'SenseCAP API',
           items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
+            'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
+            'Cloud_Chain/SenseCAP_API/API_pricing',
           ],
-        },
-      ],
-
     },
+  
 
     {
       type: 'html',
