@@ -236,21 +236,21 @@ void loop()
 
 ```c
 #include <SPI.h>
-const int SS = 7;
+const int CS = 7;
 void setup (void) {
-   digitalWrite(SS, HIGH); // disable Slave Select
+   digitalWrite(CS, HIGH); // disable Slave Select
    SPI.begin ();
    SPI.setClockDivider(SPI_CLOCK_DIV8);//divide the clock by 8
 }
 
 void loop (void) {
    char c;
-   digitalWrite(SS, LOW); // enable Slave Select
+   digitalWrite(CS, LOW); // enable Slave Select
    // send test string
    for (const char * p = "Hello, world!\r" ; c = *p; p++) {
       SPI.transfer (c);
    }
-   digitalWrite(SS, HIGH); // disable Slave Select
+   digitalWrite(CS, HIGH); // disable Slave Select
    delay(2000);
 }
 ```
