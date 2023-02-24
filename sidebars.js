@@ -773,7 +773,7 @@ const sidebars = {
       type: 'category',
       label: 'Wio Terminal',
       items: [
-        // 'Sensor/Wio_Terminal/wiki',
+
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         {
@@ -1316,7 +1316,7 @@ const sidebars = {
       type: 'category',
       label: 'IOT BUTTON FOR AWS',
       items: [
-        // 'Sensor/IOT_Button_For_AWS/wiki',
+
         'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
       ],
 
