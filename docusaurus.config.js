@@ -159,10 +159,10 @@ const config = {
       },
 
       giscus: {
-        repo: 'c1ev0ps/wiki-documents',
-        repoId: 'R_kgDOIabZbQ',
+        repo: 'Seeed-Studio/wiki-documents',
+        repoId: 'MDEwOlJlcG9zaXRvcnkzMDM5NTk0Nzk=',
         category: 'Q&A',
-        categoryId: 'DIC_kwDOIabZbc4CSlHH',
+        categoryId: 'DIC_kwDOEh4Nt84CTIbM',
         theme: 'light_high_contrast',
         darkTheme: 'dark_tritanopia'
       },
