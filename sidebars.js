@@ -1536,14 +1536,33 @@ const sidebars = {
     {
 
       type: 'category',
-      label: 'SenseCAP Network',
+      label: 'SenseCAP Gateway',
       items: [
 
         {
           type: 'category',
           label: 'Helium Gateway',
           items: [
-            'Network/SenseCAP/wiki',
+            {
+              type: 'category',
+              label: 'SenseCAP M1 Gateway',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SenseCAP M2 Data Only',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
+              ],
+            },
           ],
         },
 
@@ -1551,15 +1570,9 @@ const sidebars = {
           type: 'category',
           label: 'Flux Gateway',
           items: [
-            'Network/SenseCAP/wiki',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'SenseCAP M2 Multi-Platform Gateway',
-          items: [
-            'Network/SenseCAP/wiki',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
           ],
         },
 
@@ -1567,10 +1580,27 @@ const sidebars = {
           type: 'category',
           label: 'Outdoor Gateway',
           items: [
-            'Network/SenseCAP/wiki',
+            'Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview',
           ],
         },
 
+
+        {
+          type: 'category',
+          label: 'SenseCAP M2 Multi-Platform Gateway',
+          items: [
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
+            {
+              type: 'category',
+              label: 'Tutorial',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS IoT',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack',
+              ],
+            },
+          ],
+        },
 
 
       ],
@@ -2116,7 +2146,7 @@ const sidebars = {
     </div>
     `,
     },
-    
+
     {
       type: 'category',
       label: 'SenseCAP Dashboard',
