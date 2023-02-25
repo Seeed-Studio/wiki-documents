@@ -11,11 +11,166 @@ last_update:
 
 This topic here introduces the Seeed Studio product documentation regarding the very first step of digitized data from physical world, that is, delopying information infrastructures in a dynamic sensing framework, to lay the groundwork for society monitoring and understanding the physical and natural environments.
 
-## Industrial IoT
+## Industrial IoT - Specialized
 
-（introduction）
+<strong><font color={'8DC215'} size={"4"}>We launched industrial grade sensors with long range connectivity and intelligence, generating digitized data from physical world in instrumental-level precision. You can find in this portion with:</font></strong>
 
-## Build Your Own(Easy IoT)
+- Sensors & Probes for various industrial-grade environmental data sensing
+- AI-based Sensors for reday-to-deploy intelligent scenarios
+- Data Logger for remote environmental data monitoring
+- Gateway for long-range, high-security, indoor and outdoor data transmission
+
+### Industrial Sensors and Probes -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Sensors & Probes</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP sensors and probes offer multiple ambient data sensing, with industrial hardware design.</font></div>
+    </a>
+</div>
+
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S210X Series Sensors</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperature and Humidity</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Wireless Light Intensity</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperature, Humidity and CO2</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Soil Moisture and Temperature</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Soil Moisture, Temperature and EC</font></span></a>
+            <br/>
+    </a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Probes</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Liquid Level Detecting</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water Leak Warning</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> pH Meter for Soil Conditions and Water Quality</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature Probe</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature & EC Probe</font></span></a>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Multi-in-one Sensors</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperature, Humidity, Atmospheric Pressure, and Light</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2120 - Temperature, Humidity, Wind Speed/Direction, Rainfall, light intensity, UV Index, and Barometric Pressure</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</font></span></a>
+    </a>
+</div>
+
+### Industrial AI-based Sensors -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC21F'} size={"6"}>SenseCAP AI-based Sensors</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Built for reday-to-deploy intelligent scenarios, SenseCAP A1101 with intelligent vision is really. </font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
+    </a>
+</div>
+
+
+### Data Logger with Configuration Guide -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"6"}>SenseCAP Data Logger</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Data Logger can connect to MODBUS-RTU RS485/Analog/GPIO sensors and transmit data from sensors to the LoRaWAN / 4G network </font></div>
+    </a>
+</div>
+
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>SenseCAP S2100 Data Logger</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the RS485 Sensor for S2100 Data Logger</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Analog Sensor for S2100 Data Logger</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the 12V RS485 Sensor for S2100 Data Logger</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Counter & GPIO Sensor for S2100 Data Logger</font></span></a>
+            <br/>
+    </a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>SenseCAP Sensor Hub 4G</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>User Guide of SenseCAP Sensor Hub 4G Data Logger</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Developer Guide for Private MQTT Messaging of SenseCAP SensorHub</font></span></a>
+            <br/>
+    </a>
+</div>
+
+### Gateway for Multiple Platform -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"6"}>SenseCAP Gateway</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway provides miles of wireless network coverage and data transmission capacity for Long Range / LoRaWAN devices </font></div>
+    </a>
+</div>
+
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Helium-Platform Gateway</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Overview</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Quick Start</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Local Console</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Overview</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Quick Start</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Local Console</font></span></a>
+            <br/>
+    </a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Multi-Platform Gateway</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Multi-Platform Gateway Overview</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>AWS Platform Connectting Method</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>TTN Platform Connectting Method</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>ChirpStack Platform Connectting Method</font></span></a>
+            <br/>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Flux-Platform Gateway</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square Overview</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square Quick Start</font></span></a>
+            <br/>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square FAQ</font></span></a>
+            <br/>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Outdoor Gateway</font></div>
+            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN Outdoor Gateway Overview</font></span></a>
+            <br/>
+    </a>
+</div>
+
+## Easy IoT - Build Your Own
 
 <strong><font color={'8DC215'} size={"4"}>Without complicated instruments, we can sense and monitor the physical world just using microcontrollers and simple functional elecrtricals. That is, in this portion you can find:</font></strong>
 
@@ -25,7 +180,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 - Kit with free courses and more intriguing tutorials
 - Fusion service
 
-### Sensors -->
+### Sensors and Sensors' Network -->
 
 <!-- Grove Sensor -->
 
@@ -75,7 +230,6 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="/Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Fast Models Traning </font></span></a>
             <br/>
     </a>
-
 </div>
 
 <div class="intro_container">
