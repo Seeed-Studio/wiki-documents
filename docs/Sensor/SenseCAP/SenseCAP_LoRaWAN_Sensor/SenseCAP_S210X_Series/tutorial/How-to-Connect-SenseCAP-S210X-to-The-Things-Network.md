@@ -1,16 +1,20 @@
- # Connect to The Things Network 
-   ## 1. The Things Network	
+---
+description: Connect to The Things Network
+title: Connect to The Things Network
+keywords:
+- SenseCAP Sensor_Probe&Accessories
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+last_update:
+  date: 2/14/2023
+  author: Matthew
+---
+
+# Connect to The Things Network
+ 
+## 1. The Things Network	
 The Things Stack is an enterprise grade LoRaWAN network server, built on an open-source core. The Things Stack allows you to build and manage LoRaWAN networks on your own hardware or in the cloud.
 
-![](003.png)
-
-
-
-
-
-
-
-
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/003.png)
 
 
 
@@ -22,28 +26,28 @@ TTN Website: <https://www.thethingsnetwork.org/>
 (1) Open the SenseCAP Mate App
 (2) Press button and hold for 3 seconds, the LED will flash at 1s frequency.
 
-![](004.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/004.png)
 
 (3) Please click the “Setup” button to turn on Bluetooth and click “Scan” to start scanning the sensor's Bluetooth.
 
-![](005.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/005.png)
 
 (4) Select the Sensor by S/N (label). Then, the basic information of the sensor will be displayed after entering.
 
-![](006.png)       
-![](007.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/006.png)       
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/007.png)
 ### Set Frequency of Sensor via SenseCAP Mate App
 Set the corresponding frequency band based on the frequency band of the gateway.
 
 (1) Click the “Setting” and select the platform is “The Things Network”.
 
-![wecom-temp-81208-6d8da19d41a879a504ad54c71bf4961c](008.jpeg)  
-![wecom-temp-73569-56429bfa7490c37c5ec3c5b2fc8ba435](009.jpeg)
+![wecom-temp-81208-6d8da19d41a879a504ad54c71bf4961c](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/008.jpeg)  
+![wecom-temp-73569-56429bfa7490c37c5ec3c5b2fc8ba435](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/009.jpeg)
 
 (2) Select the Frequency Plan, if your gateway is US915, set the sensor to US915.
 (3) The device uses OTAA to join the LoRaWAN network by default. So, we can set the device EUI, App EUI and APP Key here.
 
-![](010.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/010.png)
 
 |**Parameter**|**Type**|
 | - | - |
@@ -60,7 +64,7 @@ Set the corresponding frequency band based on the frequency band of the gateway.
 
 (5) Click the “Send” button, send the setting to the sensor for it to take effect. 
 
-![](011.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/011.png)
 
 (6) Click the “Home” button, the App will disconnect the Bluetooth connection.
 
@@ -80,26 +84,26 @@ Then, the sensor will reboot.
 ### Gateway Registration on TTN
 Create a Gateway on the TTN console based on actual information.
 
-![](012.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/012.png)
 ### Create the Application
 Create an application on your TTN console. Within applications, you can register and manage end devices and their network data. After setting up your device fleet, use one of our many integration options to pass relevant data to your external services.
 
-![](013.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/013.png)
 
 
 
 ## Add Sensor to TTN Console
 (1) Select the Application you have created, and click the ‘Register end device’ to add end your device.
 
-![](014.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/014.png)
 
 (2) Select the end device in the LoRaWAN Device Repository.
 
-![](015.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/015.png)
 
 And then based on the brand, configure items like the ones below.
 
-![](016.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/016.png)
 
 - End device brand: Select SenseCAP.
 - Model: Select your sensor model. (If not, use manual add)
@@ -121,21 +125,21 @@ For Helium network, please refer to:
 
 *https://docs.helium.com/lorawan-on-helium/frequency-plans*	
 
-![](017.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/017.png)
 
 (3) Configure ‘Provisioning information’.
 
-![](018.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/018.png)
 
 - JoinEUI: which means the **APP EUI**, you can get it from SenseCAP Mate App.
 
-![](019.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/019.png)
 
 - Device EUI/ App Key: Get it from the configuration page via SenseCAP Mate App. Like the below picture.
 
-![](020.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/020.png)
 
-![](021.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/021.png)
 
 
 (4) Register end device. 
@@ -147,6 +151,6 @@ After you finish the above items, Click the “Register end device” to save yo
 ## Check Data on TTN Console
 On the Data page, data package is uploading. For the format of the payload, refer to the section of Payload Decoding.
 
-![](022.png)
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/022.png)
 
 
