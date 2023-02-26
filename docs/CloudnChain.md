@@ -31,57 +31,46 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Dashboard</font></div>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Quick Start</strong> - Creat Account, Bind devices, Check data </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Dashboard Basics </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Overview</strong> Introduction of Website Dashboard </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Dashboard Registration </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Scene</strong> or <strong>Charts</strong> Data Display Configuration</font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Dashboard/Hotspot_Registration" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Hotspot Registration </font></span></a>
             <br/>
     </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Data Management</font></div>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detailed Data showed in Table </font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detailed Data showed in Table </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Graphical Data showed in Graph </font></span></a> 
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Graphical Data showed in Graph </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Account Information Checking </font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Account Information Checking </font></span></a>
             <br/>
     </a>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'center'}}>
+    <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Devices Management</font></div>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Gateways</strong> - Displaying EUI, Name, Status, and more info.</font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Gateways</strong> - Displaying EUI, Name, Status, and more info.</font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Node Group</strong> - Manage Devices Conveniently by Groups. </font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Node Group</strong> - Manage Devices Conveniently by Groups. </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Sensor Node</strong> - Displaying EUI, Name, Status, Data Type and more. </font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Sensor Node</strong> - Displaying EUI, Name, Status, Data Type and more. </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices General Information</strong> - Battery Status, Recent Online Record and more. </font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices General Information</strong> - Battery Status, Recent Online Record and more. </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Settings</strong> - Adjust the data collection frequency of the device and more. </font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Settings</strong> - Adjust the data collection frequency of the device and more. </font></span></a>
             <br/>
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Location </strong></font></span></a> 
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Location </strong></font></span></a> 
             /
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Bind </strong></font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Bind </strong></font></span></a>
             /
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Channel </strong></font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Channel </strong></font></span></a>
             /
-            <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Data </strong></font></span></a>
-    </a>
-</div>
-
-### SenseCAP Mate APP -->
-
-<div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Mate APP</font></div>
-            This is the SenseCAP Mate APP used in mobile phones to display data from SenseCAP sensors.
-            <br/>
-            > <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Bind Devices</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Group Management</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Device Management</font></span></a>
+            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Data </strong></font></span></a>
     </a>
 </div>
 
@@ -92,7 +81,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP HotSpot APP</font></div>
             This is the SenseCAP HotSpot APP used in mobile phones to manage LoRaWAN hotspot.
             <br/>
-            > <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Hotspot Management</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Remote Reboot</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Hotspot on Dashboard</font></span></a>
+            > <a href="Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Hotspot Management</font></span></a> / <a href="Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Remote Reboot</font></span></a> / <a href="Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Hotspot on Dashboard</font></span></a>
+    </a>
+</div>
+
+### SenseCAP Mate APP -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Mate APP</font></div>
+            This is the SenseCAP Mate APP used in mobile phones to display data from SenseCAP sensors.
+            <br/>
+            > <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Bind Devices</font></span></a> / <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Group Management</font></span></a> / <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Device Management</font></span></a>
     </a>
 </div>
 
@@ -103,6 +103,6 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP API </font></div>
             This is the SenseCAP API for devices and data management.
             <br/>
-            > <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download PDF</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Introduction</font></span></a> / <a href="Getting_started" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API Pricing</font></span></a>
+            > <a href="https://sensecap-docs.seeed.cc/pdf/sensecap_opanapi_document_en.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download PDF</font></span></a> / <a href="Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Introduction</font></span></a> / <a href="Cloud_Chain/SenseCAP_API/API_pricing" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API Pricing</font></span></a>
     </a>
 </div>
