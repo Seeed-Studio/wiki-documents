@@ -62,31 +62,17 @@ Example
 
 According to device type and data upload interval, the approximate time available is as follows:
 
-.tg {border-collapse:collapse;border-spacing:0;} .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; overflow:hidden;padding:10px 5px;word-break:normal;} .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;} .tg .tg-cly1{text-align:left;vertical-align:middle} .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle} .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top} .tg .tg-0lax{text-align:left;vertical-align:top}
-
-| Device Type (one device)  
- | Data Interval  
- | Time  
- |
-| --- | --- | --- |
-| LoRaWAN Temperature and Humidity Sensor  
- | 1 hour  
- | 2 ~ 5 years  
- |
-| 30 minutes  
- | 1 ~ 2.5 years  
- |
-| 5 minutes | 4 ~ 10 months |
-| LoRaWAN Light Intensity Sensor  
- | 1 hour  
- | 4 ~ 10 years |
-| 30 minutes  
- | 2 ~ 5 years |
-| 5 minutes  
- | 8 ~ 20 months |
-| SensorHub (5 types of measurements) | 1 hour | 5.6 years |
-| 30 minutes | 2.8 years |
-| 5 minutes | 11 months |
-| SensorHub (7 types of measurements) | 1 hour | 4 years |
-| 30 minutes | 2 years |
-| 5 minutes | 8 months |
+| Device Type (one device)                | Data Interval | Time          |
+|-----------------------------------------|---------------|---------------|
+| LoRaWAN Temperature and Humidity Sensor | 1 hour        | 2 ~ 5 years   |
+|                                         | 30 minutes    | 1 ~ 2.5 years |
+|                                         | 5 minutes     | 4 ~ 10 months |
+| LoRaWAN Light Intensity Sensor          | 1 hour        | 4 ~ 10 years  |
+|                                         | 30 minutes    | 2 ~ 5 years   |
+|                                         | 5 minutes     | 8 ~ 20 months |
+| SensorHub (5 types of measurements)     | 1 hour        | 5.6 years     |
+|                                         | 30 minutes    | 2.8 years     |
+|                                         | 5 minutes     | 11 months     |
+| SensorHub (7 types of measurements)     | 1 hour        | 4 years       |
+|                                         | 30 minutes    | 2 years       |
+|                                         | 5 minutes     | 8 months      |

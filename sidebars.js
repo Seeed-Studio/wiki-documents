@@ -573,6 +573,15 @@ const sidebars = {
               label: 'SenseCAP S210X Series',
               items: [
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                {
+                  type: 'category',
+                  label: 'Tutorials',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network',
+                  ],
+                },
               ],
             },
 
@@ -620,6 +629,9 @@ const sidebars = {
               label: 'Tutorial',
               items: [
                 'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger',
               ],
             },
 
