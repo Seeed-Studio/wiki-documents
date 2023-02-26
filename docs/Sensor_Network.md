@@ -11,6 +11,10 @@ last_update:
 
 This topic here introduces the Seeed Studio product documentation regarding the very first step of digitized data from physical world, that is, delopying information infrastructures in a dynamic sensing framework, to lay the groundwork for society monitoring and understanding the physical and natural environments.
 
+You can discover this page with two large portions.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/sensor_network/sensor_network_publish.png" alt="pir" width={1000} height="auto" /></p>
+
 ## Industrial IoT - Specialized
 
 <strong><font color={'8DC215'} size={"4"}>We launched industrial grade sensors with long range connectivity and intelligence, generating digitized data from physical world in instrumental-level precision. You can find in this portion with:</font></strong>
@@ -441,7 +445,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'center'}}>
+    <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>mmWave Radar Sensor</font></div>
             <a href="/Sensor/mmWave_radar_sensor/Radar_MR24HPC1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Human Static Presence Module Lite - Configurable Parameter</font></span></a>
             <br/>
@@ -505,20 +509,20 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MicroPython </font></span></a>,
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"3"}> CircuitPython </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MicroPython </font></span></a>,
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CircuitPython </font></span></a>
             <br/>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB" target="_blank"><span><font color={'FFFFFF'} size={"3"}> TinyUSB </font></span></a>,
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Nanase </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TinyUSB </font></span></a>,
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Nanase </font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO RP2040</font></div>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MicroPython </font></span></a>,
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"3"}> CircuitPython </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MicroPython </font></span></a>,
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CircuitPython </font></span></a>
             <br/>
     </a>
 </div>
@@ -526,49 +530,49 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO nRF52840</font></div>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
-            Sense Version:
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> IMU </font></span></a>,
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> PDM </font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> Sense Version: </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> IMU </font></span></a>,
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDM </font></span></a>
             <br/>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth_Usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Bluetooth Low Energy</font></span></a> ,
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> NFC </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth_Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth Low Energy</font></span></a> ,
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> NFC </font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Pin Multiplexing </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Pin Multiplexing </font></span></a>
             <br/>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Wi-Fi </font></span></a> ,
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Bluetooth Low Energy</font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wi-Fi </font></span></a> ,
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth Low Energy</font></span></a>
     </a>
 </div>
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal(Wio Series)</font></div>
-            <a href="/Sensor/Wio_Terminal/Wio-Terminal-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Getting Started </font></span></a>
+            <a href="/Sensor/Wio_Terminal/Wio-Terminal-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> LCD</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> IMU</font></span></a>,
-            <a href="Sensor/Wio_Terminal/Hardware_Overview/Microphone/Wio-Terminal-Mic" target="_blank"><span><font color={'FFFFFF'} size={"3"}> PDM</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> IO Ports</font></span></a>,
-            <a href="Sensor/Wio_Terminal/Hardware_Overview/Light_Sensor/Wio-Terminal-Light" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Light Sensor</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> SD Card</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LCD</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> IMU</font></span></a>,
+            <a href="Sensor/Wio_Terminal/Hardware_Overview/Microphone/Wio-Terminal-Mic" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDM</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> IO Ports</font></span></a>,
+            <a href="Sensor/Wio_Terminal/Hardware_Overview/Light_Sensor/Wio-Terminal-Light" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Light Sensor</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SD Card</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Wio-Terminal-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"3"}> CircuitPython</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Network-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Wi-Fi</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Bluetooth-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Bluetooth</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Wio-Terminal-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CircuitPython</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Network-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wi-Fi</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Bluetooth-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth</font></span></a>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Series</font></div>
-            <a href="/Sensor/Wio_Series/Wio-E5/LoRa_E5_mini" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Wio-E5 Boards</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio-E5/LoRa_E5_mini" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Wio-E5 Boards</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Wio RP2040 Boards</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Wio RP2040 Boards</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Series/Wio_Tracker" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Wio Tracker Boards</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_Tracker" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Wio Tracker Boards</font></span></a>
             <br/>
     </a>
 </div>
@@ -576,20 +580,20 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeeduino Series</font></div>
-            <a href="/Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Seeeduino V4.2 Board</font></span></a>
+            <a href="/Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino V4.2 Board</font></span></a>
             <br/>
-            <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Seeeduino Cloud Boards</font></span></a>
+            <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino Cloud Boards</font></span></a>
             <br/>
-            <a href="/Sensor/Seeeduino Series/Seeeduino_LoRAWAN" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Seeeduino LoRaWAN Boards</font></span></a>
+            <a href="/Sensor/Seeeduino Series/Seeeduino_LoRAWAN" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino LoRaWAN Boards</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Arch</font></div>
-            <a href="/Sensor/Arch/Arch_Mix" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Arch Mix Board</font></span></a>
+            <a href="/Sensor/Arch/Arch_Mix" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Arch Mix Board</font></span></a>
             <br/>
-            <a href="/Sensor/Arch/Arch_BLE" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Arch BLE Boards</font></span></a>
+            <a href="/Sensor/Arch/Arch_BLE" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Arch BLE Boards</font></span></a>
             <br/>
-            <a href="Sensor/Arch/Arch_GPRS" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Arch GPRS Boards</font></span></a>
+            <a href="Sensor/Arch/Arch_GPRS" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Arch GPRS Boards</font></span></a>
             <br/>
     </a>
 </div>
@@ -597,16 +601,16 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Arduino</font></div>
-            <a href="/Top_Brand/Arduino/" target="_blank"><span><font color={'FFFFFF'} size={"4"}> Arduino Introduction</font></span></a>
+            <a href="/Top_Brand/Arduino/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Arduino Introduction</font></span></a>
             <br/>
-            <a href="/Top_Brand/Arduino/Getting_Started_with_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started with Arduino Boards</font></span></a>
+            <a href="/Top_Brand/Arduino/Getting_Started_with_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started with Arduino Boards</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Micro:bit</font></div>
-            <a href="/Top_Brand/Micro_bit/microbit_wiki_page" target="_blank"><span><font color={'FFFFFF'} size={"4"}> Micro:bit Introduction</font></span></a>
+            <a href="/Top_Brand/Micro_bit/microbit_wiki_page" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Micro:bit Introduction</font></span></a>
             <br/>
-            <a href="/Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started with Micro:bit Boards</font></span></a>
+            <a href="/Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started with Micro:bit Boards</font></span></a>
             <br/>
     </a>
 </div>
@@ -623,14 +627,14 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Azure Sphere</font></div>
-            <a href="Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MT3620 Development Kit for Azure Sphere</font></span></a>
+            <a href="Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MT3620 Development Kit for Azure Sphere</font></span></a>
             <br/>
-            <a href="Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MT3620 Mini Dev Board for Azure Sphere</font></span></a>
+            <a href="Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MT3620 Mini Dev Board for Azure Sphere</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>AWS IoT</font></div>
-            <a href="Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio One-Click IoT Button For AWS</font></span></a>
+            <a href="Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Seeed Studio One-Click IoT Button For AWS</font></span></a>
             <br/>
     </a>
 </div>
@@ -895,18 +899,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Wio Terminal - Extensions</font></div>
-            <a href="/Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Audio Extension Board</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Ethernet Extension Board</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Audio Extension Board</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Ethernet Extension Board</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Battery-Chassis" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Battery Chassis with LoRaWAN</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Battery-Chassis" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Battery Chassis</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Battery Chassis with LoRaWAN</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Seeed Studio XIAO - Extensions</font></div>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Board 1: 4 Grove ports / OLED / RTC / SD Card Slot</font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Board 1: 4 Grove ports / OLED / RTC / SD Card Slot</font></span></a>
             <br/>
-            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Board 2: 8 Grove ports / Battery Management</font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Board 2: 8 Grove ports / Battery Management</font></span></a>
             <br/>
     </a>
 </div>
@@ -914,14 +918,14 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Raspberry Pi Pico - Extensions </font></div>
-            <a href="/Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Extension Board for Raspberry Pi Pico</font></span></a>
+            <a href="/Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Extension Board for Raspberry Pi Pico</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Wio Series - Extensions</font></div>
-            <a href="/Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Shield for Wio Lite</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Shield for Wio Lite</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC" target="_blank"><span><font color={'FFFFFF'} size={"3"}> RTC for Wio Tracker</font></span></a>
+            <a href="/Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RTC for Wio Tracker</font></span></a>
             <br/>
     </a>
 </div>
@@ -1090,20 +1094,20 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Arduino</font></div>
-            <a href="Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove_Beginner_Kit_for_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Beginner Kit for Arduino </font></span></a>
+            <a href="Top_Brand/Arduino/Kit with Courses/Grove Beginner Kit for Arduino/Grove_Beginner_Kit_for_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Beginner Kit for Arduino </font></span></a>
             <br/>
-            <a href="/Top_Brand/Arduino/Kit with Courses/Grove_Speech_Recognizer_Kit_for_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Speech Recognizer Kit for Arduino </font></span></a>
+            <a href="/Top_Brand/Arduino/Kit with Courses/Grove_Speech_Recognizer_Kit_for_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Speech Recognizer Kit for Arduino </font></span></a>
             <br/>
-            <a href="/Top_Brand/Arduino/Kit with Courses/Grove_Smart_Plant_Care_Kit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Smart Plant Care Kit </font></span></a>
+            <a href="/Top_Brand/Arduino/Kit with Courses/Grove_Smart_Plant_Care_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Smart Plant Care Kit </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Wio Terminal</font></div>
-            <a href="/Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML" target="_blank"><span><font color={'FFFFFF'} size={"3"}> What is TinyML </font></span></a>
+            <a href="/Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML" target="_blank"><span><font color={'FFFFFF'} size={"2"}> What is TinyML </font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML-Kit-Course" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Applications Kit ML101 with Prof. Vijay Course </font></span></a>
+            <a href="/Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML-Kit-Course" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Applications Kit ML101 with Prof. Vijay Course </font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Kit_with_Courses/Introduction_to_Artificial_Intelligence_for_Makers" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Introduction to Artificial Intelligence for Makers </font></span></a>
+            <a href="/Sensor/Wio_Terminal/Kit_with_Courses/Introduction_to_Artificial_Intelligence_for_Makers" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction to Artificial Intelligence for Makers </font></span></a>
             <br/>
     </a>
 </div>
@@ -1111,12 +1115,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Seeed Studio XIAO</font></div>
-            <a href="/Sensor/SeeedStudio_XIAO/Kit with Courses/XIAO-Kit-Courses" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Seeed Studio XIAO Kit with Courses </font></span></a>
+            <a href="/Sensor/SeeedStudio_XIAO/Kit with Courses/XIAO-Kit-Courses" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Seeed Studio XIAO Kit with Courses </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Micro:bit</font></div>
-            <a href="/Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Grove Inventor Kit for Micro:bit</font></span></a>
+            <a href="/Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Inventor Kit for Micro:bit</font></span></a>
             <br/>
     </a>
 </div>
@@ -1167,20 +1171,20 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Compiling Platform for Arduino</font></div>
-            <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Software-PlatformIO" target="_blank"><span><font color={'FFFFFF'} size={"3"}> PlatformIO </font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Software-PlatformIO" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PlatformIO </font></span></a>
             <br/>
-            <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Compiling_MicroPython_for_embedded_devices" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Compiling MicroPython for embedded devices </font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Compiling_MicroPython_for_embedded_devices" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Compiling MicroPython for embedded devices </font></span></a>
             <br/>
-            <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Guide_for_Codecraft_using_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Codecraft Platform for Arduino </font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Guide_for_Codecraft_using_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Codecraft Platform for Arduino </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}> Arduino Boards Fun Projects</font></div>
-            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/IR_Remote" target="_blank"><span><font color={'FFFFFF'} size={"3"}> IR Remote</font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/IR_Remote" target="_blank"><span><font color={'FFFFFF'} size={"2"}> IR Remote</font></span></a>
             <br/>
-            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Joystick_Control_RGB_Led" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Joystick Control RGB Led</font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Joystick_Control_RGB_Led" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Joystick Control RGB Led</font></span></a>
             <br/>
-            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Light_Sensor_and_LED_Bar" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Light Sensor and LED Bar</font></span></a>
+            <a href="/Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Light_Sensor_and_LED_Bar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Light Sensor and LED Bar</font></span></a>
             <br/>
     </a>
 </div>
@@ -1195,39 +1199,39 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><a><span><font color={'8DC215'} size={"5"}>Basic Usage of Wio Terminal</font></span></a></div>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to play retro games on Wio Terminal</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to play retro games on Wio Terminal</font></span></a>
             <br/>
-            USB Host for a
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Keyboard" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Keyboard</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Mouse" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mouse</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Xbox" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Xbox</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}>USB Host for a</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Keyboard" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Keyboard</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Mouse" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Xbox" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Xbox</font></span></a>
             <br/>
-            USB Client for a
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Keyboard" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Keyboard</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Mouse" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Mouse</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-MIDI" target="_blank"><span><font color={'FFFFFF'} size={"3"}> MIDI</font></span></a>,
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-HMI-Usermode-SDK" target="_blank"><span><font color={'FFFFFF'} size={"3"}> HMI</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}>USB Client for a</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Keyboard" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Keyboard</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Mouse" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-MIDI" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MIDI</font></span></a>,
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-HMI-Usermode-SDK" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HMI</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Gyro" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to display Gyro on Wio Terminal</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Gyro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to display Gyro on Wio Terminal</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Storting-Analog-Data" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to use Wio Terminal to store data</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Storting-Analog-Data" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to use Wio Terminal to store data</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Photos" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to use Wio Terminal to display photos</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Photos" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to use Wio Terminal to display photos</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal Fun Projects</font></div>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Use Codecraft compling platform connect Azure IoT</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use Codecraft compling platform connect Azure IoT</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Interactive-Face" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Wio Terminal Interactive Faces Demo</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Interactive-Face" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wio Terminal Interactive Faces Demo</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Pressure sensor using the Wio terminal</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Pressure sensor using the Wio terminal</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Reading Coronavirus Live Data using Wio Terminal</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Reading Coronavirus Live Data using Wio Terminal</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to measure noise levels with Wio Terminal</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to measure noise levels with Wio Terminal</font></span></a>
             <br/>
-            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-8720-dev" target="_blank"><span><font color={'FFFFFF'} size={"3"}> How to Use Wio Terminal as RTL8720DN Dev Board</font></span></a>
+            <a href="/Sensor/Wio_Terminal/Tutorial/Wio-Terminal-8720-dev" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to Use Wio Terminal as RTL8720DN Dev Board</font></span></a>
             <br/>
     </a>
 </div>

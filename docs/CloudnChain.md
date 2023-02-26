@@ -31,7 +31,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Dashboard</font></div>
             <a href="Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Dashboard Basics </font></span></a>
             <br/>
@@ -40,7 +40,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <a href="Cloud_Chain/SenseCAP_Dashboard/Hotspot_Registration" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Hotspot Registration </font></span></a>
             <br/>
     </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Data Management</font></div>
             <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detailed Data showed in Table </font></span></a>
             <br/>
