@@ -32,45 +32,47 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S210X Series Sensors</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperature and Humidity</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of SenseCAP S210X Sereis User Guide</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Wireless Light Intensity</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperature and Humidity</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperature, Humidity and CO2</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Wireless Light Intensity</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Soil Moisture and Temperature</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperature, Humidity and CO2</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Soil Moisture, Temperature and EC</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Soil Moisture and Temperature</font></span></a>
+            <br/>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Soil Moisture, Temperature and EC</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Probes</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Liquid Level Detecting</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Liquid Level Detecting</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water Leak Warning</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water Leak Warning</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> pH Meter for Soil Conditions and Water Quality</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> pH Meter for Soil Conditions and Water Quality</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature Probe</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature Probe</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature & EC Probe</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature & EC Probe</font></span></a>
     </a>
 </div>
 
 <div class="intro_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Multi-in-one Sensors</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperature, Humidity, Atmospheric Pressure, and Light</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperature, Humidity, Atmospheric Pressure, and Light</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2120 - Temperature, Humidity, Wind Speed/Direction, Rainfall, light intensity, UV Index, and Barometric Pressure</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of SenseCAP ONE Weather Sensor Sereis User Guide</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</font></span></a>
+            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</font></span></a>
     </a>
 </div>
 
@@ -79,8 +81,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC21F'} size={"6"}>SenseCAP AI-based Sensors</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Built for reday-to-deploy intelligent scenarios, SenseCAP A1101 with intelligent vision is really. </font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Built for reday-to-deploy intelligent scenarios, <strong>SenseCAP A1101</strong> with intelligent vision is really. </font></div>
+            <a href="Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
     </a>
 </div>
 
@@ -97,20 +99,24 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>SenseCAP S2100 Data Logger</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the RS485 Sensor for S2100 Data Logger</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP S2100 LoRaWAN Data Logger</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Analog Sensor for S2100 Data Logger</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the 12V RS485 Sensor for S2100 Data Logger</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the 12V RS485 Sensor for S2100 Data Logger</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Analog Sensor for S2100 Data Logger</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Counter & GPIO Sensor for S2100 Data Logger</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Counter & GPIO Sensor for S2100 Data Logger</font></span></a>
+            <br/>
+            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Build LoRaWAN Sensors with SenseCAP S2110 Grove to MODBUS RS485 Converter and SenseCAP Data Logger</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>SenseCAP Sensor Hub 4G</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>User Guide of SenseCAP Sensor Hub 4G Data Logger</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP Sensor Hub 4G Data Logger</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Developer Guide for Private MQTT Messaging of SenseCAP SensorHub</font></span></a>
+            <a href="https://files.seeedstudio.com/products/114992170/Sensor%20Hub%204G%20Data%20Logger%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}>PDF Download of SenseCAP Sensor Hub 4G User Guide</font></span></a>
+            <br/>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/114992170/Developer%20Guide%20for%20Private%20MQTT%20Messaging%20of%20SenseCAP%20SensorHub%20v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of Private MQTT Messaging of SenseCAP SensorHub Developer Guide</font></span></a>
             <br/>
     </a>
 </div>
@@ -127,28 +133,28 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Helium-Platform Gateway</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Overview</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Overview</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Quick Start</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Quick Start</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Local Console</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Local Console</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Overview</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Overview</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Quick Start</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Quick Start</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Local Console</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Local Console</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Multi-Platform Gateway</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Multi-Platform Gateway Overview</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Overview of SenseCAP M2 Multi-Platform Gateway</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>AWS Platform Connectting Method</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Connectting AWS Platform </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>TTN Platform Connectting Method</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Connectting TTN Platform </font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>ChirpStack Platform Connectting Method</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Connectting ChirpStack Platform </font></span></a>
             <br/>
     </a>
 </div>
@@ -156,16 +162,18 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Flux-Platform Gateway</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square Overview</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square Overview</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square Quick Start</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square Quick Start</font></span></a>
             <br/>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square FAQ</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square FAQ</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Outdoor Gateway</font></div>
-            <a href="Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN Outdoor Gateway Overview</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Outdoor / Indoor Gateway</font></div>
+            <a href="Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN Outdoor Gateway</font></span></a>
+            <br/>
+            <a href="Network/TTN_Gateway/The-Things-Indoor-Gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}>The Things Indoor Gateway</font></span></a>
             <br/>
     </a>
 </div>
