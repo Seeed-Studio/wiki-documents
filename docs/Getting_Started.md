@@ -28,7 +28,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 ### IoT Platform & Sensor Foundation
 
  <div class="start_card_container">
-    <a class="start_card_item" href="/Sensor_Network#industrial-iot">
+    <a class="start_card_item" href="/Sensor_Network#industrial-iot---specialized">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Sensor Node</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>SenseCAP Gateway</font></div>
@@ -36,7 +36,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
             <div class="start_card_content" style={{textAlign: 'center'}}>“Sensor Network” topic</div>
         </div>
     </a>
-        <a class="start_card_item" href="/Sensor_Network#sensors---">
+        <a class="start_card_item" href="/Sensor_Network#easy-iot---build-your-own">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove sensors & Network</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"5"}>Grove accessories</font></div>
