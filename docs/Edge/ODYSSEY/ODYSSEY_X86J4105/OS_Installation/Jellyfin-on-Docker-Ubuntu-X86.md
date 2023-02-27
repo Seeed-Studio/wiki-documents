@@ -5,8 +5,8 @@ tags:
   - ODYSSEY
 keywords:
   - ODYSSEY
-
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /Jellyfin-on-Docker-Ubuntu-X86
 last_update:
   date: 01/03/2023
   author: w0x7ce

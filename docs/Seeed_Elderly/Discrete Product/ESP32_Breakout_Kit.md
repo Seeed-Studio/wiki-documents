@@ -4,6 +4,7 @@ title: ESP32 Breakout Kit
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /ESP32_Breakout_Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu

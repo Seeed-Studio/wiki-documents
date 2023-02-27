@@ -4,6 +4,7 @@ title:  Shield Bot V1.1
 keywords:
 -  Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Shield_Bot_V1.1
 last_update:
   date: 2/16/2023
   author: jianjing Huang
@@ -22,7 +23,7 @@ sku:  110060010
 
 Compared with the  previous version, The Shield Bot V1.1 can use the usb port of PC to charge battery. And the charging efficiency is greatly improved after we optimize the circuit. And you can use the Arduino/Seeeduino Vin pin to fast charge.
 
-Note: Compatible Arduino Board not included, try the [Seeeduino](/Sensor/Seeeduino Series/Seeeduino/Seeeduino "Seeeduino").
+Note: Compatible Arduino Board not included, try the [Seeeduino](/Seeeduino "Seeeduino").
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Shield-Bot-p-1380.html)
 

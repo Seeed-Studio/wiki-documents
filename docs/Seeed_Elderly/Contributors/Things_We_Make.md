@@ -4,6 +4,7 @@ title: Things We Make
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Things_We_Make
 last_update:
   date: 1/13/2013
   author: shuxu hu

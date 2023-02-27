@@ -4,6 +4,7 @@ title: BeagleBone® Green Wireless
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /BeagleBone_Green_Wireless
 last_update:
   date: 1/10/2023
   author: jianjing Huang

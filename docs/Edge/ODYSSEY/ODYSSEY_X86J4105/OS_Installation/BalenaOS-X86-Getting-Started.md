@@ -4,6 +4,7 @@ title: BalenaOS Installation
 keywords:
 - Sorftware Allxon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /BalenaOS-X86-Getting-Started
 last_update:
   date: 1/13/2023
   author: jianjing Huang

@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Gesture_v1.0/
+slug: /Grove-Gesture_v1.0
 last_update:
   date: 01/05/2022
   author: gunengyu

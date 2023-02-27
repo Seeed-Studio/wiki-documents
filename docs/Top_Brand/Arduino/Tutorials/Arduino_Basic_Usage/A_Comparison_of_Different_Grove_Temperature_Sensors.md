@@ -6,6 +6,7 @@ tags:
 keywords:
   - Tutorial
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /A_Comparison_of_Different_Grove_Temperature_Sensors
 last_update:
   date: 02/02/2023
   author: w0x7ce

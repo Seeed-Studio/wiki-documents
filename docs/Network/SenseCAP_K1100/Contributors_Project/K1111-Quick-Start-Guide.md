@@ -4,6 +4,7 @@ title: Soil moisture monitor alarm system
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /K1111-Quick-Start-Guide
 last_update:
   date: 1/13/2023
   author: shuxu hu

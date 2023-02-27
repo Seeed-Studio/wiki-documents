@@ -4,6 +4,7 @@ title: ReSpeaker Core V2 & Wio Link
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /ReSpeaker_Core_V2_&_Wio_Link
 last_update:
   date: 1/11/2023
   author: jianjing Huang

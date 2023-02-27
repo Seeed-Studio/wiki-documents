@@ -4,6 +4,7 @@ title: USB To Uart 5V/3V3
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /USB_To_Uart_5V_3V3
 last_update:
   date: 1/13/2023
   author: jianjing Huang

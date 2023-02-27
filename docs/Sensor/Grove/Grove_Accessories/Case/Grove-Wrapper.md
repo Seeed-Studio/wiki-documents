@@ -4,6 +4,7 @@ title: Grove - Wrapper
 keywords:
 - Grove Grove_Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Wrapper
 last_update:
   date: 1/20/2023
   author: jianjing Huang

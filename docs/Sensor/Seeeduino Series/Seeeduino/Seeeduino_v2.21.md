@@ -4,6 +4,7 @@ title: Seeeduino V2.21
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_v2.21
 last_update:
   date: 1/11/2023
   author: shuxu hu

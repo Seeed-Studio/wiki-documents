@@ -4,6 +4,7 @@ title:  Shield Introduction
 keywords:
 -  Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang
@@ -47,7 +48,7 @@ Here is the list of the Seeeduino Boards you can find in the Seeed WiKi. The lis
 - [W5500 Ethernet Shield v1.0](https://wiki.seeedstudio.com/W5500_Ethernet_Shield_v1.0/)
 - [Wifi Shield (Fi250) V1.1](https://wiki.seeedstudio.com/Wifi_Shield_Fi250_V1.1/)
 - [Wifi Shield V2.0](https://wiki.seeedstudio.com/Wifi_Shield_V2.0/)
-- [XBee Shield V2.0](/Seeed_Elderly/Bee/XBee_Shield_V2.0)
+- [XBee Shield V2.0](/XBee_Shield_V2.0)
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

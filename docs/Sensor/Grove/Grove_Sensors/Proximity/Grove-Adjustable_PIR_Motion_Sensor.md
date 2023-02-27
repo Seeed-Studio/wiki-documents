@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Adjustable_PIR_Motion_Sensor/
+slug: /Grove-Adjustable_PIR_Motion_Sensor
 last_update:
   date: 01/05/2022
   author: gunengyu

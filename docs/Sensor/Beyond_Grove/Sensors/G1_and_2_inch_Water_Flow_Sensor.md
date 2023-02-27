@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/G1_and_2_inch_Water_Flow_Sensor/
+slug: /G1_and_2_inch_Water_Flow_Sensor
 last_update:
   date: 02/03/2022
   author: gunengyu

@@ -4,6 +4,7 @@ title: Azure Sphere MT3620 Development Kit
 keywords:
 - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Azure_Sphere_MT3620_Development_Kit
 last_update:
   date: 1/12/2023
   author: jianjing Huang

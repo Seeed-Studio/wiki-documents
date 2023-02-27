@@ -4,6 +4,7 @@ title: ReSpeaker Mic Array
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /ReSpeaker_Mic_Array
 last_update:
   date: 1/12/2023
   author: jianjing Huang

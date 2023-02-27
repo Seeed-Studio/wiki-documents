@@ -4,6 +4,7 @@ title: Mesh Bee
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Mesh_Bee
 last_update:
   date: 1/13/2023
   author: shuxu hu
@@ -409,13 +410,13 @@ Note2: SPI related pins can be used as digital IO only if you know how to disabl
 ### 5.1 Hardware Installation
 
 The Mesh Bee has a general Bee socket. So you can use it just like XBee or RFBee etc. One thing to notice is that, the pins are not 100% compatible with each other except for part of them.
-If you're newer to Bee series, please follow [this link](/Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series "Grove_Cape_for_BeagleBone_Series") to learn The Bee Series and [this link](/Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node#Usage "RFbee V1.1 - Wireless Arduino compatible node") to know how to install Bee with other hardware.
+If you're newer to Bee series, please follow [this link](/Grove_Cape_for_BeagleBone_Series "Grove_Cape_for_BeagleBone_Series") to learn The Bee Series and [this link](/RFbee_V1.1-Wireless_Arduino_compatible_node#Usage "RFbee V1.1 - Wireless Arduino compatible node") to know how to install Bee with other hardware.
 
 ### 5.2 How to update firmware
 
 The default firmware pre-flashed in Mesh Bee is a co-ordinator firmware due to the manufacture and selling inconvenience. You should flash the router / end-device firmware by yourself. And it's simple enough for makers like you.
 
-JN516x has a specific firmware download interface with a UART and some other pins, so you need a **programmer** to flash it. We provide this with [UartSBee v5](/Seeed_Elderly/Bee/UartSBee_v5 "UartSBee v5"). UartSBee v5 has most of the features of v4 and in addition a programmer for Mesh Bee.
+JN516x has a specific firmware download interface with a UART and some other pins, so you need a **programmer** to flash it. We provide this with [UartSBee v5](/UartSBee_v5 "UartSBee v5"). UartSBee v5 has most of the features of v4 and in addition a programmer for Mesh Bee.
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/UartSBee_V05.jpg)
 
@@ -423,7 +424,7 @@ To update firmware, follow the steps:
 
 * Step 1: Download the latest firmware from github;
 
-  * [Mesh_Bee#9.1_Firmware_Downloads](/Seeed_Elderly/Bee/Mesh_Bee#91-firmware-downloads "Mesh Bee")
+  * [Mesh_Bee#9.1_Firmware_Downloads](/Mesh_Bee#91-firmware-downloads "Mesh Bee")
 
 * Step 2: Configure the UartSBee v5 with FT_Prog;
 
@@ -527,13 +528,13 @@ Mesh Bee supports updating firmware over-the-air. That is, once you finished the
 
 <big>Step 1: Flash a new firmware into co-ordinator's external flash. </big>
 
-To achieve this step all you should do is very mush similar to [5.2 How to update firmware](/Seeed_Elderly/Bee/Mesh_Bee#52-how-to-update-firmware "Mesh Bee"), the only difference is choosing "External" for "Flash Select".
+To achieve this step all you should do is very mush similar to [5.2 How to update firmware](/Mesh_Bee#52-how-to-update-firmware "Mesh Bee"), the only difference is choosing "External" for "Flash Select".
 
 ![](https://files.seeedstudio.com/wiki/Mesh_Bee/img/Flash_External.jpg)
 
 <big>Step 2: Make sure that the network is correctly configured and nodes can communicate with others.</big>
 
-Configure the network nodes as described [5.3.2_Configuration](/Seeed_Elderly/Bee/Mesh_Bee#53-at-commands--configuration "Mesh Bee"). Send "ATLA" command to view the nodes on the network.
+Configure the network nodes as described [5.3.2_Configuration](/Mesh_Bee#53-at-commands--configuration "Mesh Bee"). Send "ATLA" command to view the nodes on the network.
 
 <big>Step 3: Trigger the OTA process. </big>
 
@@ -575,7 +576,7 @@ They are:
 
 <big>Step 2: Configure Mesh Bee nodes</big>
 
-Refer to [5.3.2_Configuration](/Seeed_Elderly/Bee/Mesh_Bee#532-configuration "Mesh Bee") to configure a p2p connection.
+Refer to [5.3.2_Configuration](/Mesh_Bee#532-configuration "Mesh Bee") to configure a p2p connection.
 
 <big>Step 3: Assembly the Servo side (be controlled) </big>
 

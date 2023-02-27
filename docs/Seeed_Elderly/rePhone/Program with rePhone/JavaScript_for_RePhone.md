@@ -4,6 +4,7 @@ title: JavaScript for RePhone
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /JavaScript_for_RePhone
 last_update:
   date: 1/13/2023
   author: shuxu hu
@@ -18,9 +19,9 @@ This wiki is a User Guide to help you start your RePhone project with JavaScript
 Install Driver and Update Firmware
 ----------------------------------
 
-- To **Install the Driver**, please refer to the **section 2 of <a href="/Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone" ><span><font color={'000000'} size={"3"}> Arduino IDE for RePhone Kit</font></span></a>**
+- To **Install the Driver**, please refer to the **section 2 of <a href="/JavaScript_for_RePhone" ><span><font color={'000000'} size={"3"}> Arduino IDE for RePhone Kit</font></span></a>**
 
-- To **Update Firmware**, please refer to **section 3 of <a href="/Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone" ><span><font color={'000000'} size={"3"}> Arduino IDE for RePhone Kit</font></span></a>**
+- To **Update Firmware**, please refer to **section 3 of <a href="/JavaScript_for_RePhone" ><span><font color={'000000'} size={"3"}> Arduino IDE for RePhone Kit</font></span></a>**
 
 Download JavaScript for RePhone Application
 -------------------------------------------

@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/
+slug: /Grove-I2C-Hub-6Port
 last_update:
   date: 01/06/2022
   author: gunengyu

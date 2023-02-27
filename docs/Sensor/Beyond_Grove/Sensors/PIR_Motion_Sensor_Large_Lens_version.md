@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/PIR_Motion_Sensor_Large_Lens_version/
+slug: /PIR_Motion_Sensor_Large_Lens_version
 last_update:
   date: 02/03/2022
   author: gunengyu

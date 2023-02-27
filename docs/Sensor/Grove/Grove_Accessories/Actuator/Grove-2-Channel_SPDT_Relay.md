@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-2-Channel_SPDT_Relay/
+slug: /Grove-2-Channel_SPDT_Relay
 last_update:
   date: 01/09/2022
   author: gunengyu

@@ -5,6 +5,7 @@ keywords:
  - Beagle_Bone
  - Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2/1/2023
   author: jianjing Huang
@@ -655,21 +656,21 @@ Resources
 
 - [【PDF】AWS IoT Developer Guide](https://files.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/res/AWS_IoT_Developer_Guide.pdf)
 - [【PDF】AWS User Guide for BBG](https://files.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/res/AWS_User_Guide_for_BBG.pdf)
-<!-- - [Main Page for Grove IoT Starter Kits Powered by AWS](/Sensor/Seeeduino Series/Kit with Courses/Main Page for Grove IoT Starter Kits Powered by AWS) -->
+<!-- - [Main Page for Grove IoT Starter Kits Powered by AWS](/Main Page for Grove IoT Starter Kits Powered by AWS) -->
 - [【Github】AWS SDK for BeagleBone Green kit](https://github.com/Seeed-Studio/AWS_SDK_for_BBG)
 - [【Github】Libraries for BeagleBone Green kit](https://github.com/Seeed-Studio/Grove_Starter_Kit_for_BBG)
-<!-- - [BeagleBone Green](/Edge/Beagle_Bone/BeagleBone_Green) -->
+<!-- - [BeagleBone Green](/BeagleBone_Green) -->
 - [Main page of Beagleboard](https://beagleboard.org/getting-started)
-<!-- - [Grove - I2C ADC](/Sensor/Grove/Grove_Sensors_Network/Standard_Protocol) -->
-- [Grove - I2C Hub](/Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub)
-<!-- - [Grove - Relay](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay) -->
-<!-- - [Grove - Buzzer](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer) -->
-- [Grove - OLED Display 96\*96](/Sensor/Grove/Grove_Accessories/Display/Grove-OLED_Display_0.96inch)
-- [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button)
-- [Grove - Temperature sensor v1.2](/Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor_V1.2)
-- [Grove - Sound sensor](/Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor)
-- [Grove - 3-Axis Digital Accelerometer ADXL345](/Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g)
-<!-- - [Grove - Chainable RGB LED](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Chainable_RGB_LED) -->
+<!-- - [Grove - I2C ADC](/Grove_Sensors_Network/Standard_Protocol) -->
+- [Grove - I2C Hub](/Grove-I2C_Hub)
+<!-- - [Grove - Relay](/Grove-Relay) -->
+<!-- - [Grove - Buzzer](/Grove-Buzzer) -->
+- [Grove - OLED Display 96\*96](/Grove-OLED_Display_0.96inch)
+- [Grove - Button](/Grove-Button)
+- [Grove - Temperature sensor v1.2](/Grove-Temperature_Sensor_V1.2)
+- [Grove - Sound sensor](/Grove-Sound_Sensor)
+- [Grove - 3-Axis Digital Accelerometer ADXL345](/Grove-3-Axis_Digital_Accelerometer-16g)
+<!-- - [Grove - Chainable RGB LED](/Grove-Chainable_RGB_LED) -->
 <!-- 上述链接缺失 -->
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS -->

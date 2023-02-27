@@ -4,6 +4,7 @@ title: Grove Cape for BeagleBone® Series
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove_Cape_for_BeagleBone_Series
 last_update:
   date: 1/10/2022
   author: jianjing Huang

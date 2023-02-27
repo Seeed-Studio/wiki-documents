@@ -4,6 +4,7 @@ title: Grove - Barometer Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Barometer_Sensor
 last_update:
   date: 1/4/2023
   author: shuxu hu
@@ -233,7 +234,7 @@ The following is a reference graph plotting out the relationship between altitud
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus/).
 
 3.Connection
 

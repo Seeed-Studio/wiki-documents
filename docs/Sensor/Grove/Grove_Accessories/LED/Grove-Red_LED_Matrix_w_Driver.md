@@ -4,6 +4,7 @@ title: Grove - Red LED Matrix w/Driver
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Red_LED_Matrix_w_Driver
 last_update:
   date: 1/9/2023
   author: shuxu hu

@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio-Terminal-IO-Analog/
+slug: /Wio-Terminal-IO-Analog
 last_update:
   date: 01/11/2022
   author: gunengyu

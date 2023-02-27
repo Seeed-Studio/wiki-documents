@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio_Link/
+slug: /Wio_Link
 last_update:
   date: 01/11/2022
   author: gunengyu

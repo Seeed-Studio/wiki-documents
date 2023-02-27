@@ -6,6 +6,7 @@ tags:
 keywords:
   - ODYSSEY
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /ODYSSEY-X86J4105-NCS2
 last_update:
   date: 01/03/2023
   author: w0x7ce
@@ -20,7 +21,7 @@ The **Intel Neural Compute Stick 2 (NCS2)** is a USB stick which offers you acce
 
 ## Set up Software Environment
 
-To use the Intel NCS2, please first complete the [Installing Intel® Distribution of OpenVINO™ toolkit for ODYSSEY - X86J4105](#./Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-NCS2) and configure all the dependent software environment.
+To use the Intel NCS2, please first complete the [Installing Intel® Distribution of OpenVINO™ toolkit for ODYSSEY - X86J4105](/ODYSSEY-X86J4105-NCS2) and configure all the dependent software environment.
 <!-- 上述链接有误 -->
 
 If you have already completed the tutorial, please follow the below instructions.

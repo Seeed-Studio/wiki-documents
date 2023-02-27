@@ -5,6 +5,7 @@ keywords:
   - Edge
   - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Jetson-Nano-MaskCam
 last_update:
   date: 01/04/2023
   author: w0x7ce

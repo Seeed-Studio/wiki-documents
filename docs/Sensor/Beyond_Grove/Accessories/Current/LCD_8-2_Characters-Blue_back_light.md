@@ -1,10 +1,10 @@
 ---
 title: LCD 8*2 Characters- Blue back light
-nointro:
 keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/LCD_8-2_Characters-Blue_back_light/
+slug: /LCD_8-2_Characters-Blue_back_light
 last_update:
   date: 02/03/2022
   author: gunengyu

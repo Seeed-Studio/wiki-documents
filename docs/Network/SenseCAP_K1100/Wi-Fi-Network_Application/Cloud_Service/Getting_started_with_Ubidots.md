@@ -4,6 +4,7 @@ title: Ubidots Usage
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Getting_started_with_Ubidots
 last_update:
   date: 1/13/2023
   author: shuxu hu

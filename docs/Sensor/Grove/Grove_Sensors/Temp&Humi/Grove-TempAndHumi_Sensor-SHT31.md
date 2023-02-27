@@ -4,6 +4,7 @@ title: Grove - Temp and Humi Sensor(SHT31)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-TempAndHumi_Sensor-SHT31
 last_update:
   date: 12/30/2022
   author: jianjing Huang

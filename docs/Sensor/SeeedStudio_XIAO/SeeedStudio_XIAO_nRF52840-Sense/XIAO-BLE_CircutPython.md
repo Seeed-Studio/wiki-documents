@@ -4,6 +4,7 @@ title: Seeed Studio XIAO nRF52840 with CircuitPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /XIAO-BLE_CircutPython
 last_update:
   date: 1/11/2023
   author: shuxu hu

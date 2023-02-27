@@ -4,6 +4,7 @@ title: Grove - Vibration Sensor(SW-420)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Vibration_Sensor_SW-420
 last_update:
   date: 1/7/2023
   author: shuxu hu

@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/G3-4_Water_Flow_sensor/
+slug: /G3-4_Water_Flow_sensor
 last_update:
   date: 02/03/2022
   author: gunengyu

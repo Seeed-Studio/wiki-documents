@@ -7,6 +7,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Analog-Microphone/
+slug: /Grove-Analog-Microphone
 last_update:
   date: 01/06/2022
   author: gunengyu

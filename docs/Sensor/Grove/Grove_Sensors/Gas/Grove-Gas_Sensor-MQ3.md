@@ -4,6 +4,7 @@ title: Grove - Gas Sensor(MQ3)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Gas_Sensor-MQ3
 last_update:
   date: 1/3/2023
   author: shuxu hu

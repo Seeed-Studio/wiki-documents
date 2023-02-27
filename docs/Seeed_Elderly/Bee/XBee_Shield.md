@@ -4,6 +4,7 @@ title: XBee Shield
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /XBee_Shield
 last_update:
   date: 1/13/2023
   author: shuxu hu
@@ -403,7 +404,7 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 
 ## See also  
 
-[Bluetooth Bee documentation](/Seeed_Elderly/Bee/Bluetooth_Bee "Bluetooth_Bee") demostrating use of **XBee®_Shield**
+[Bluetooth Bee documentation](/Bluetooth_Bee "Bluetooth_Bee") demostrating use of **XBee®_Shield**
 
 ## External Links  
 

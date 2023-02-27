@@ -8,6 +8,7 @@ keywords:
   - Nvidia
   - reComputer
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /Mini_AI_Computer_T906
 last_update:
   date: 01/05/2022
   author: w0x7ce

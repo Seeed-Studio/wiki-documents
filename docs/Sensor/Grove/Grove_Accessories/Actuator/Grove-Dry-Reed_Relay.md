@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Dry-Reed_Relay/
+slug: /Grove-Dry-Reed_Relay
 last_update:
   date: 01/09/2022
   author: gunengyu
@@ -231,7 +232,7 @@ The usage of this Dry-reed relay is quite alike that of common relays.
 :::
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus).
 
 3.Connection
 

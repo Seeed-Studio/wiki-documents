@@ -5,6 +5,7 @@ keywords:
 - Wio_terminal 
 - Embedded_ML 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /AIoTs_GPS_state_tester
 last_update:
   date: 1/31/2023
   author: jianjing Huang

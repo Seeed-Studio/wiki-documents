@@ -4,6 +4,7 @@ title:  RePhone Strap Kit for Pebble
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /RePhone_Strap_Kit_for_Pebble
 last_update:
   date: 1/13/2023
   author: shuxu hu

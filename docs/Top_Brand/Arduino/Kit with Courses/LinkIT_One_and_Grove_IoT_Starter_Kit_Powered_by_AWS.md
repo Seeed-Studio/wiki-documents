@@ -4,6 +4,7 @@ title: LinkIT One and Grove IoT Starter Kit Powered by AWS
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2/17/2023
   author: jianjing Huang
@@ -20,7 +21,7 @@ sku:
 --- -->
 ![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_linkit_cover.JPG)
 
-_Primary reference: [Grove IoT Starter Kits Powered by AWS](/Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS"Grove IoT Starter Kits Powered by AWS") , [LinkIt ONE](https://wiki.seeedstudio.com/LinkIt_ONE/ "LinkIt ONE"), [MediaTek AWS IoT Guide](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/hdk_intro/aws_kit/index.gsp)_
+_Primary reference: [Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS"Grove IoT Starter Kits Powered by AWS") , [LinkIt ONE](https://wiki.seeedstudio.com/LinkIt_ONE/ "LinkIt ONE"), [MediaTek AWS IoT Guide](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/hdk_intro/aws_kit/index.gsp)_
 
 **LinkIt ONE** development board is an open source, high-performance development board for wearable and IoT product prototyping. It is based on MT2502 (ARM7EJ-S™ MCU) and integrates GSM, GPRS, Wi-Fi, Bluetooth BR/EDR/BLE, GPS, Audio decoder, and SD card connector on a single development board. The kit enables you to build up cloud computing connected projects that involve communications for smart cities, transportation and logistics.
 
@@ -199,15 +200,15 @@ And modify IP_ADDRESS(line 40) to this line of numbers. (Here is 54.164.100.76)
 
 Material required:
 
-* [Base Shield v2.0](/Top_Brand/Arduino/shield/Base_Shield_V2), Set to 3V3(corner-most section of Base shield board)
+* [Base Shield v2.0](/Base_Shield_V2), Set to 3V3(corner-most section of Base shield board)
 
-* [Grove - Touch Sensor](/Sensor/Grove/Grove_Sensors/Touch/Grove-Touch_Sensor) connect to D6
+* [Grove - Touch Sensor](/Grove-Touch_Sensor) connect to D6
 
-* [Grove - LED Bar](Sensor/Grove/Grove_Accessories/LED/Grove-LED_Bar) connect to D2
+* [Grove - LED Bar](Grove-LED_Bar) connect to D2
 
 ### Upload code
 
-**Tip:** refer to [here](/Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Guide_to_use_demos_downloaded_from_Seeed-s_Github) for any library file(or header file) missing error prompted.
+**Tip:** refer to [here](/Guide_to_use_demos_downloaded_from_Seeed-s_Github) for any library file(or header file) missing error prompted.
 Connect you LinkIt ONE to PC, and remember to insert the Wi-Fi antenna first. Open your Device Manage, you will find there are 2 COM Ports:
 
 ![](https://files.seeedstudio.com/wiki/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_LinkIt_starter_kit_find_COM_port.jpg)

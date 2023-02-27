@@ -4,6 +4,7 @@ title: 6-Axis IMU Usage on Seeed Studio XIAO nRF52840 Sense
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /XIAO-BLE-Sense-IMU-Usage
 last_update:
   date: 1/11/2023
   author: shuxu hu

@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-EL_Driver/
+slug: /Grove-EL_Driver
 last_update:
   date: 01/09/2022
   author: gunengyu

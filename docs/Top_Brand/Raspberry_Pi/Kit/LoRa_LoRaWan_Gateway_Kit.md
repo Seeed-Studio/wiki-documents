@@ -4,6 +4,7 @@ title: LoRa/LoRaWAN Gateway Kit
 keywords:
 - Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /LoRa_LoRaWan_Gateway_Kit
 last_update:
   date: 2/15/2023
   author: jianjing Huang
@@ -633,7 +634,7 @@ chmod +x loriot-gw
 
 - **[PDF]** [Download Wiki PDF](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/LoRa_LoRaWan_Gateway_Kit.pdf)
 - **[Uer Manual]** [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/%5BRHF-UM01649%5DIoT%20Discovery%20User%20Manual%20-%20v3.2.pdf).<!-- 源文件链接有误 -->
-- **[More Reading]** <a href="/Sensor/Seeeduino Series/Seeeduino_LoRAWAN" ><span><font size={"3"}> Wiki of Seeeduino LoRaWAN </font></span></a>
+- **[More Reading]** <a href="/Seeeduino_LoRAWAN" ><span><font size={"3"}> Wiki of Seeeduino LoRaWAN </font></span></a>
 - **[More Reading]** [RisingHF Website](http://www.risinghf.com/product/risinghf-iot-dicovery/?lang=en)
 - **[Azure IoT Edge LoRaWAN]** [Azure IoT Edge LoRaWAN](https://github.com/Azure/iotedge-lorawan-starterkit/)
 

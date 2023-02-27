@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-RJ45_Adapter/
+slug: /Grove-RJ45_Adapter
 last_update:
   date: 01/06/2022
   author: gunengyu

@@ -6,6 +6,7 @@ tags:
 keywords:
   - Tutorial
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /Arduino_Common_Error
 last_update:
   date: 02/01/2023
   author: w0x7ce

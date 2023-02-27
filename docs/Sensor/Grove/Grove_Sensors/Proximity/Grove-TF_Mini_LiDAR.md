@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/
+slug: /Grove-TF_Mini_LiDAR
 last_update:
   date: 12/30/2022
   author: gunengyu

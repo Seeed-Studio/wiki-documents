@@ -4,6 +4,7 @@ title: BalenaOS Installation
 keywords:
 - Edge Quantum_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Quantum-Mini-Linux-Development-Kit
 last_update:
   date: 2/1/2023
   author: jianjing Huang

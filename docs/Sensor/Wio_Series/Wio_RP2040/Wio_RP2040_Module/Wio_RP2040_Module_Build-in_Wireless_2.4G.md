@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio_RP2040_Module_Build-in_Wireless_2.4G/
+slug: /Wio_RP2040_Module_Build-in_Wireless_2.4G
 last_update:
   date: 01/11/2022
   author: gunengyu

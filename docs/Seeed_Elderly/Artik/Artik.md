@@ -4,6 +4,7 @@ title: Artik
 keywords:
 - Artik
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Artik
 last_update:
   date: 01/20/2023
   author: Matthew

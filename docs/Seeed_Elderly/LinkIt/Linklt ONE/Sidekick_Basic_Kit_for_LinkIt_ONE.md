@@ -4,6 +4,7 @@ title: Sidekick Basic Kit for LinkIt ONE
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Sidekick_Basic_Kit_for_LinkIt_ONE
 last_update:
   date: 1/13/2023
   author: shuxu hu

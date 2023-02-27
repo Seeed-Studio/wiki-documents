@@ -4,6 +4,7 @@ title: Getting started with Grove Vision AI
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /edge-impulse-vision-ai
 last_update:
   date: 1/31/2023
   author: jianjing Huang

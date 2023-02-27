@@ -4,6 +4,7 @@ title: Grove - LED Matrix Driver (HT16K33)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-LED_Matrix_Driver-HT16K33
 last_update:
   date: 1/7/2023
   author: shuxu hu

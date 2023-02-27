@@ -4,6 +4,7 @@ title:  Edge Impulse on CodeCraft
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Edge_Impulse_CC
 last_update:
   date: 1/31/2023
   author: jianjing Huang

@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio_Link_Bootcamp_Kit/
+slug: /Wio_Link_Bootcamp_Kit
 last_update:
   date: 01/11/2022
   author: gunengyu
@@ -33,11 +34,11 @@ Parts list
 
 | Parts name                                                                                               | Quantity |
 |----------------------------------------------------------------------------------------------------------|----------|
-| [Grove - Relay](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay/)                                                                            | 1PC     |
-| [Grove - Recorder](/Sensor/Grove/Grove_Sensors/Sound/Grove-Recorder_v2.0/)                                                                 | 1PC     |
+| [Grove - Relay](/Grove-Relay/)                                                                            | 1PC     |
+| [Grove - Recorder](/Grove-Recorder_v2.0/)                                                                 | 1PC     |
 | Grove - WS2812 Waterproof LED Strip - 30 LEDs 1 meter                                                    | 1PC     |
-| [Grove - Buzzer](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer/)                                                                          | 1PC     |
-| [Wio Link](/Sensor/Wio_Series/Wio_Link/)                                                                                    | 1PC     |
+| [Grove - Buzzer](/Grove-Buzzer/)                                                                          | 1PC     |
+| [Wio Link](/Wio_Link/)                                                                                    | 1PC     |
 | [Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html?queryID=39d1b009a50fc3dc9e5a02a476ecb407&objectID=1405&indexName=bazaar_retailer_products) | 1PC     |
 | [Grove - Servo](https://www.seeedstudio.com/Grove-Servo.html?queryID=ef605ab9a8a236dec86d63eec8c17796&objectID=1626&indexName=bazaar_retailer_products)                                | 1PC     |
 
@@ -49,12 +50,12 @@ This demo can used as a compilation result-indicator.
 ### Preliminary Guide
 
 -   Travis CI
--   [Wio Link](/Sensor/Wio_Series/Wio_Link/)
+-   [Wio Link](/Wio_Link/)
 
 ### Prerequisites
 
 -   [Wio Link APP](https://www.seeedstudio.com/Wio-Link-Event-Kit-p-2611.html?queryID=3ab174447ce3813d2105c3db0e9e783a&objectID=537&indexName=bazaar_retailer_products)
--   [Wio Link](/Sensor/Wio_Series/Wio_Link/)
+-   [Wio Link](/Wio_Link/)
 -   [Grove Relay](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products) × 3
 -   A Travis CI Account
 -   A GitHub Account

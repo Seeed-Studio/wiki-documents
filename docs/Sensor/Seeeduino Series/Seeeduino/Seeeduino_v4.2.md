@@ -4,6 +4,7 @@ title: Seeeduino v4.2
 keywords:
 - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_v4.2
 last_update:
   date: 1/12/2022
   author: jianjing Huang

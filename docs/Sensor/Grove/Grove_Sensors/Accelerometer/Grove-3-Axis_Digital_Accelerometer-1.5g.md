@@ -4,6 +4,7 @@ title: Grove - 3-Axis Digital Accelerometer(±1.5g)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-3-Axis_Digital_Accelerometer-1.5g
 last_update:
   date: 1/5/2023
   author: shuxu hu
@@ -108,7 +109,7 @@ The outputs of this sensor consist of two parts: raw data and 3-axis acceleratio
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus/).
 
 3.Connection
 

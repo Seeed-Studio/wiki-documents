@@ -4,6 +4,7 @@ title: Grove - DS1307 RTC (Real Time Clock) for Arduino
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-RTC
 last_update:
   date: 1/9/2023
   author: jianjing Huang

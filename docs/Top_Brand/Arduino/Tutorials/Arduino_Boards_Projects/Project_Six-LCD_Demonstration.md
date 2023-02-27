@@ -5,6 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Project_Six-LCD_Demonstration
 last_update:
   date: 2/15/2023
   author: jianjing Huang
