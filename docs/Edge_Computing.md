@@ -333,7 +333,7 @@ You can discover this page with two large portions.
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BeagleBone®</font></div>
-            <a href="/Edge/Beagle_Bone/Application/BeagleBone_Solutions" target="_blank"><span><font color={'FFFFFF'} size={"2"}> BeagleBone® Solutions</font></span></a>
+            <a href="/BeagleBone_Solutions" target="_blank"><span><font color={'FFFFFF'} size={"2"}> BeagleBone® Solutions</font></span></a>
     </a>
 </div>
 
