@@ -10,6 +10,8 @@ last_update:
   author: jianjing Huang
 ---
 
+<p><meta name="google-site-verification" content="2bq3L0F_PFVokQM-qT-al7x9FcSNJOO8TtJfAHW43lE" /></p>
+
 # Building a smart home control centre around Home Assistant
 
 In this article, we will detail how to set up Home Assistant on Seeed Studio's new product LinkStar H68K and deploy the ESPHome environment. ESPHome is a very common service in Home Assistant. Due to the system limitations of soft routing, we will use ESPHome as an example to guide you through a clever method of installing this service.

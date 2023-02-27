@@ -47,6 +47,10 @@ The carrier board is called **Atom-N, and Quark-N is connected to Atom-N through
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/hardwareoverview1.png"/></div>
 
+:::tip
+Quantum has now been updated with a new version, which adjusts the antenna type for better wireless performance compared to the old one. In addition to this it also optimizes the PCB layout by moving the fan solder joints to the top. The Uboot and Recovery buttons have also been removed.
+:::
+
 ## Getting Started
 
 ### Hardware Requirements

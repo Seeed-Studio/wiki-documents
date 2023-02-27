@@ -14,7 +14,7 @@ last_update:
 
 <div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/0.jpg"/></div>
 
-<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" style={{width:800, height:'auto'}}/></a></p>
+<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
 
 ## Introduction
 
@@ -154,38 +154,55 @@ The library code used in this example can be downloaded by clicking the icon bel
 
 Before we get started developing a sketch, let's look at the available functions of the library.
 
-- `void recvRadarBytes()` —— This function collects the data frames reported by the Sensor via the UART according to the frame headers and frame tails in the Sensor data protocol. Used in conjunction with the `showData()` function, the collected data information can be printed out via the serial port.<br />
-**Input parameters:** None<br />
-**Return value:** None
+- `void recvRadarBytes()` —— This function collects the data frames reported by the Sensor via the UART according to the frame headers and frame tails in the Sensor data protocol. Used in conjunction with the `showData()` function, the collected data information can be printed out via the serial port.
 
-- `void showData();` —— This function serves to print out the complete data frame reported by the Sensor at once via the serial port and needs to be used in conjunction with the `recvRadarBytes()` function.<br />
-**Input parameters:** None<br />
-**Return value:** None
+  - **Input parameters:** None
 
-- `void HumanStatic_func(bool bodysign /*=false*/)` —— This function is responsible for parsing the data frames of the Sensor and outputting the relevant data on the state of the human presence.<br />
-**Input parameters:** `bodysign` —— This parameter is a switch that controls whether or not to output Human Movement Parameters. If **true**, the output will contain a large amount of human sign parameter data, which may affect your experience of viewing the data. By default this parameter is **false** and no information on the body sign parameters is displayed.<br />
+  - **Return value:** None
 
-**<span id="jump2">Return value:</span>**
+- `void showData()` —— This function serves to print out the complete data frame reported by the Sensor at once via the serial port and needs to be used in conjunction with the `recvRadarBytes()` function.
 
-- `int radarStatus` —— The value returned indicates which status class the parsed data frame belongs to. The specific categories can be found in the **Default Variables** section.
-- `int bodysign_val` —— The value returned represents the value of the Human Movement Parameter. This value is only valid with the parameter `bodysign=true`.
-- `int static_val` —— This value is equivalent to the **static value**. The variation in this value represents the constant statics noise in the environment. Exit Energy are low when the space is unoccupied, and overall Exit Energy fluctuate at higher values when there is a stationary person in the space (slight movement of the chest breathing). This value is only valid if the Open Underlying Message is on.
-- `int dynamic_val` —— The variation in this value represents the constant motion noise in the environment. The Motion Energy is low when there is no one in the space, and the overall Motion Energy gets higher as the motion increases in magnitude and distance. This value is only valid if the open underlying message is on.
-- `int dis_static` —— The straight line distance between the environment and the Sensor in the presence of a slightly moving area. When there is someone stationary at a location in space, the straight line distance from the Sensor is output in real time. This value is only valid if the Open Underlying Message is on.
-- `int dis_move` —— The straight-line distance between a moving position in the environment and the Sensor. When there is a person in motion at a location in space, the straight line distance from the Sensor is output in real time for that location. the straight-line distance from the Sensor. This value is only valid if the Open Underlying Message is on.
-- `int speed` —— This value indicates the speed of movement of the moving object. The value is for reference only. This value is only valid if the Open Underlying Message is on.
+  - **Input parameters:** None
+
+  - **Return value:** None
+
+- `void HumanStatic_func(bool bodysign /*=false*/)` —— This function is responsible for parsing the data frames of the Sensor and outputting the relevant data on the state of the human presence.
+
+  - **Input parameters:** `bodysign` —— This parameter is a switch that controls whether or not to output Human Movement Parameters. If **true**, the output will contain a large amount of human sign parameter data, which may affect your experience of viewing the data. By default this parameter is **false** and no information on the body sign parameters is displayed.
+
+  - <span id="jump2">**Return value:**</span>
+
+    - `int radarStatus` —— The value returned indicates which status class the parsed data frame belongs to. The specific categories can be found in the **Default Variables** section.
+
+    - `int bodysign_val` —— The value returned represents the value of the Human Movement Parameter. This value is only valid with the parameter `bodysign=true`.
+
+    - `int static_val` —— This value is equivalent to the **static value**. The variation in this value represents the constant statics noise in the environment. Exit Energy are low when the space is unoccupied, and overall Exit Energy fluctuate at higher values when there is a stationary person in the space (slight movement of the chest breathing). This value is only valid if the Open Underlying Message is on.
+
+    - `int dynamic_val` —— The variation in this value represents the constant motion noise in the environment. The Motion Energy is low when there is no one in the space, and the overall Motion Energy gets higher as the motion increases in magnitude and distance. This value is only valid if the open underlying message is on.
+
+    - `int dis_static` —— The straight line distance between the environment and the Sensor in the presence of a slightly moving area. When there is someone stationary at a location in space, the straight line distance from the Sensor is output in real time. This value is only valid if the Open Underlying Message is on.
+
+    - `int dis_move` —— The straight-line distance between a moving position in the environment and the Sensor. When there is a person in motion at a location in space, the straight line distance from the Sensor is output in real time for that location. the straight-line distance from the Sensor. This value is only valid if the Open Underlying Message is on.
+
+    - `int speed` —— This value indicates the speed of movement of the moving object. The value is for reference only. This value is only valid if the Open Underlying Message is on.
 
 - `void checkSetMode_func(const unsigned char* buff, int len, bool cyclic /*= false*/)` —— This function can be used to send data frames to the Sensor. The data frames sent and the data frames returned are printed out via the serial port.
-**Input parameters:**
-  - `buff` —— The data frame you want to send to the Sensor.
-  - `len` —— The length of the data frame you want to send to the Sensor.
-  - `cyclic` —— Cyclic send switch. The default is false, which can be set to **true** if you wish to send this data frame cyclically.
 
-    **Return value:** None
+  - **Input parameters:**
+
+    - `buff` —— The data frame you want to send to the Sensor.
+
+    - `len` —— The length of the data frame you want to send to the Sensor.
+
+    - `cyclic` —— Cyclic send switch. The default is false, which can be set to **true** if you wish to send this data frame cyclically.
+
+  - **Return value:** None
 
 - `void reset_func()` —— The function serves to reset the Sensor.
-**Input parameters:** None
-**Return value:** None
+
+  - **Input parameters:** None
+
+  - **Return value:** None
 
 #### Default Variables
 
@@ -358,7 +375,7 @@ void setup() {
 
   while(!Serial);   //When the serial port is opened, the program starts to execute.
 
-  Serial.println("Readly");
+  Serial.println("Ready");
 }
 
 void loop() {
@@ -413,7 +430,7 @@ void setup() {
 
   while(!Serial);   //When the serial port is opened, the program starts to execute.
 
-  Serial.println("Readly");
+  Serial.println("Ready");
 }
 
 void loop() {
@@ -457,15 +474,21 @@ void loop() {
         break;
       case DETAILMESSAGE:
         Serial.print("Spatial static values: ");
-        Serial.println(radar.static_val, DEC);
+        Serial.println(radar.static_val);
         Serial.print("Distance to stationary object: ");
-        Serial.println(radar.dynamic_val, DEC);
+        Serial.print(radar.dis_static);
+        Serial.println(" m");
+
         Serial.print("Spatial dynamic values: ");
-        Serial.println(radar.dis_static, DEC);
+        Serial.println(radar.dynamic_val);
+
         Serial.print("Distance from the movement object: ");
-        Serial.println(radar.dis_move, DEC);
+        Serial.print(radar.dis_move);
+        Serial.println(" m");
+        
         Serial.print("Speed of moving object: ");
-        Serial.println(radar.speed, DEC);
+        Serial.print(radar.speed);
+        Serial.println(" m/s");
         Serial.println("---------------------------------");
         break;
     }
@@ -536,7 +559,7 @@ void setup() {
 
   while(!Serial);   //When the serial port is opened, the program starts to execute.
 
-  Serial.println("Readly");
+  Serial.println("Ready");
 }
 
 void loop() {
@@ -564,11 +587,12 @@ Let's take the example of a data frame that queries the device ID.
 
 It can be seen that the checksum bit is in the penultimate bit of the entire data frame. Then we start by adding all the previous hexadecimal numbers.
 
-`0x53 + 0x59 + 0x02 + 0xA2 + 0x00 + 0x01 + 0x0F = 0x015F`
+`0x53 + 0x59 + 0x02 + 0xA2 + 0x00 + 0x01 + 0x0F = 0x0160`
 
-Then we need to take the lower two digits of it, which would be **5F**, so the checksum of this data frame is **5F**. If we want to look up the ID of the Sensor, then you can define the following array.
+Then we need to take the lower two digits of it, which would be **60**, so the checksum of this data frame is **60**. If we want to look up the ID of the Sensor, then you can define the following array.
 
-`const unsigned char DevID_buff[10] = {0x53, 0x59, 0x02, 0xA1, 0x00, 0x01, 0x0F, 0x5F, 0x54, 0x43};`
+`const unsigned char DevID_buff[10] = {0x53, 0x59, 0x02, 0xA1, 0x00, 0x01, 0x0F, 0x60, 0x54, 0x43};`
+
 :::
 
 Then we send the data frame by calling the `checkSetMode_func()` function. The parameters passed in are an array of data frames, the length of the array and a boolean value for whether to send it cyclically.
@@ -620,7 +644,7 @@ void setup() {
 
   while(!Serial);   //When the serial port is opened, the program starts to execute.
 
-  Serial.println("Readly");
+  Serial.println("Ready");
 
   radar.reset_func();
 }
@@ -700,7 +724,7 @@ void setup() {
 
   while(!Serial);   //When the serial port is opened, the program starts to execute.
 
-  Serial.println("Readly");
+  Serial.println("Ready");
 }
 ```
 
@@ -728,7 +752,7 @@ void setup() {
 
   while(!Serial);   //When the serial port is opened, the program starts to execute.
 
-  Serial.println("Readly");
+  Serial.println("Ready");
 }
 
 void loop() {
@@ -800,9 +824,13 @@ We have created a tutorial for connecting to ESPHome and Home Assistant for this
 
 ## Troubleshooting
 
-**FAQ1: Can this Sensor detect more than one person at a time in the same environment?**
+### **FAQ1: Can this Sensor detect more than one person at a time in the same environment?**
 
 > A: Not available. This Sensor can only be used on a single living object. If more than one person or animal is in the monitoring range, this will have an effect on the results of the monitoring.
+
+### FAQ2: Why can't I see anything in the serial monitor with the XIAO ESP32C3?
+
+> XIAO ESP32C3 serial port function is not quite consistent with the general Arduino hardware, and using Serial1 directly may cause the USB serial port not to work. For related application cases, please go to the [Serial chapter of XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial) for details.
 
 ## Resources
 

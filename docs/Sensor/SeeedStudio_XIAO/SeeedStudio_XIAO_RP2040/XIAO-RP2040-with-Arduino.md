@@ -42,44 +42,48 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 - **Step 1.** Download and Install the latest version of Arduino IDE according to your operating system
 
-<p style={{}}><a href="https://www.arduino.cc/en/software" target="_blank"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/Download_IDE.png" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.arduino.cc/en/software"target="_blank"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/Download_IDE.png" /></a></p>
 
 - **Step 2.** Launch the Arduino application.
 
-- **Step 3.** Open the Blink example by navigating **"File --> Examples --->01.Basics --> Blink"**
+- **Step 3.**  Add Seeed Studio XIAO RP2040 board package to your Arduino IDE
 
-<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/select_blink.png" /></div>
+Navigate to **File** > **Preferences**, and fill **Additional Boards Manager URLs** with the url below:
 
-- **Step 4.** Add Seeed Studio XIAO RP2040 to your Arduino IDE
+`https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
 
-Navigate to **File > Preference**, and fill **"Additional Boards Manager URLs"** with the url below:
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/5.png"/></div>
 
-<https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json>
+Navigate to **Tools-> Board-> Boards Manager...**, type the keyword "**RP2040**" in the searching blank. Select the lastest version of "Raspberry Pi Pico/RP2040" and install it.
 
-<div align="center"><img width="atuo" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/rp2040board.png" /></div>
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/2.png"/></div>
 
-Navigate to **Tools-> Board-> Boards Manager...**, type the keyword "**Seeed Studio XIAO RP2040**" in the searching blank. Select the lastest version of "Seeed Studio XIAO RP2040" and install it.
+:::cautionAttention
+The on-board package named **Seeed XIAO RP2040 is no longer available**, please do not download and use it!
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/3.png"/></div>
+:::
 
-<div align="center"><img width="autp" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl2.png" /></div>
+- **Step 4.** Select your board and port.
 
-- **Step 5.** Select your board and port
+- **Step 5.** Open the Blink example by navigating **"File --> Examples --->01.Basics --> Blink"**
+
+<div align="center"><img width ="550" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/select_blink.png"/></div>
 
 **Board**
 
 After installing the board package, navigate to **Tools-> Board**, find "**Seeed Studio XIAO RP2040**" and select it. Now we have finished setting up the Seeed Studio XIAO RP2040 for Arduino IDE.
 
-<div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl3.png" /></div>
+<div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/4.png"/></div>
 
 **Port**
 
 Navigate to Tools > Port and select the serial port name of the connected Seeed Studio XIAO RP2040. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). The serial port of the connected Seeed Studio XIAO RP2040 usually contains parentheses that are written "Seeed Studio XIAO RP2040".
 
-<div align="center"><img width={780} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png" /></div>
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl4.png"/></div>
 
 - **Step 6.** Click the **Upload** button to upload the Blink example code to the board.
 
-<!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl5.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl5.png" alt="pir" width={600} height="auto" /></p>
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/boardurl5.png"/></div>
 
 Once uploaded, you should be able to see the pin 25 Green (USER) LED on the board blinks once a second. If it does, congratulations! This means the connection is successful and now you can explore more projects with the Seeed Studio XIAO RP2040!
 
