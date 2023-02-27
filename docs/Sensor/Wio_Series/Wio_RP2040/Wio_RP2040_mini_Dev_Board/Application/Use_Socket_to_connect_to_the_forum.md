@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Use_Socket_to_connect_to_the_forum/
+slug: /Use_Socket_to_connect_to_the_forum
 last_update:
   date: 01/11/2022
   author: gunengyu

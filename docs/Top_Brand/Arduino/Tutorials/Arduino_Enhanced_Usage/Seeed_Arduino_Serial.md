@@ -4,6 +4,7 @@ title: Seeed Arduino Serial
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeed_Arduino_Serial
 last_update:
   date: 1/16/2023
   author: hushuxu

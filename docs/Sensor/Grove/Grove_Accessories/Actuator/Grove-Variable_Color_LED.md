@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Variable_Color_LED/
+slug: /Grove-Variable_Color_LED
 last_update:
   date: 01/09/2022
   author: gunengyu

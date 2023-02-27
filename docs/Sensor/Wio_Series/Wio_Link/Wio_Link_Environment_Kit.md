@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio_Link_Environment_Kit/
+slug: /Wio_Link_Environment_Kit
 last_update:
   date: 01/11/2022
   author: gunengyu
@@ -33,11 +34,11 @@ Parts list
 
 | Parts name                                                                                                                | Quantity |
 |---------------------------------------------------------------------------------------------------------------------------|----------|
-| [Grove - Moisture Sensor](/Sensor/Grove/Grove_Sensors/Soli_Humidity/Grove-Moisture_Sensor/)                                                                         | 1PC     |
+| [Grove - Moisture Sensor](/Grove-Moisture_Sensor/)                                                                         | 1PC     |
 | [Grove - Temp&Humi Sensor](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=ea8d1729f76e80d6b1b53c492c74fcdb&objectID=35&indexName=bazaar_retailer_products)                | 1PC     |
 | [Grove - Digital Light Sensor](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html?queryID=c7822737fbcac80a47232a5fb1ac1e1d&objectID=1594&indexName=bazaar_retailer_products)      | 1PC     |
 | [Grove - Air quality sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html?queryID=c98f1d7e388efeeee92d1815abe557cb&objectID=700&indexName=bazaar_retailer_products) | 1PC     |
-| [Wio Link](Sensor/Wio_Series/Wio_Link/)                                                                                                     | 1PC     |
+| [Wio Link](Wio_Link/)                                                                                                     | 1PC     |
 | [Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html?queryID=a8b80828fdcd52ad1ae49daa5ed97191&objectID=1405&indexName=bazaar_retailer_products)                  | 1PC     |
 
 A simple demo
@@ -48,12 +49,12 @@ This demo can used as a compilation result-indicator.
 ### Preliminary Guide
 
 -   [Travis CI](https://travis-ci.org/)
--   [Wio Link](/Sensor/Wio_Series/Wio_Link/)
+-   [Wio Link](/Wio_Link/)
 
 ### Material required
 
 -   [Wio Link APP](https://www.seeedstudio.com/Wio-Link-Event-Kit-p-2611.html?queryID=3ab174447ce3813d2105c3db0e9e783a&objectID=537&indexName=bazaar_retailer_products)
--   [Wio Link](/Sensor/Wio_Series/Wio_Link/)
+-   [Wio Link](/Wio_Link/)
 -   [Grove Relay](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products) × 3
 -   A Travis CI Account
 -   A GitHub Account

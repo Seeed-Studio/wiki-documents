@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove_Recorder/
+slug: /Grove_Recorder
 last_update:
   date: 01/09/2022
   author: gunengyu
@@ -123,12 +124,12 @@ Grove - Recorder is based on the ISD1820P chip, and can record 8-20 secs of audi
 ---
 Follow these steps to build a sample circuit using the **Grove - Recorder** module:
 
-1. Connect the recorder module to the output side of the Grove circuit (to the right of the power module). On the input side of the circuit, you may use a [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button") or a [Grove - Slide Potentiometer](/Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer "Grove - Slide Potentiometer") module.
+1. Connect the recorder module to the output side of the Grove circuit (to the right of the power module). On the input side of the circuit, you may use a [Grove - Button](/Grove-Button "Grove - Button") or a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer") module.
 2. Power up the circuit.
 
 3. Press and hold down the REC button on the recorder module and start recording the audio. The on-board red LED will turn ON. Continue to record the audio until the red LED gets turned OFF. The LED getting turned OFF is indicative of the fact that the recording time is now over.
 
-4. To play back the audio segment that has been recorded, press and hold down the [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button"). You should now hear the audio segment you recorded being played back. Continue to press and hold down the [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button") until you see the red LED on-board the recorder module flash. The flash indicates that playback of audio is now complete. If instead of a [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button"), you are using a [Grove - Slide Potentiometer](/Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer "Grove - Slide Potentiometer"), simply move the slider from GND to VCC position to hear the playback at any time.
+4. To play back the audio segment that has been recorded, press and hold down the [Grove - Button](/Grove-Button "Grove - Button"). You should now hear the audio segment you recorded being played back. Continue to press and hold down the [Grove - Button](/Grove-Button "Grove - Button") until you see the red LED on-board the recorder module flash. The flash indicates that playback of audio is now complete. If instead of a [Grove - Button](/Grove-Button "Grove - Button"), you are using a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer"), simply move the slider from GND to VCC position to hear the playback at any time.
 
 5. To override the recorded audio, simply repeat step 3 above. The new message will override the old one.
 

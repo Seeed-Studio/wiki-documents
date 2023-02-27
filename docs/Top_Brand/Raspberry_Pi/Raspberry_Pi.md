@@ -4,6 +4,7 @@ title: Raspberry Pi Introduction
 keywords:
 - Raspberry Pi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Raspberry_Pi
 last_update:
   date: 1/10/2023
   author: jianjing Huang

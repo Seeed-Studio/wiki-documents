@@ -4,6 +4,7 @@ title: SenseCAP & Node-RED to Microsoft Azure IoT Centra
 keywords:
 - SenseCap
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
+slug: /K1100_SenseCAP_to_Azure_IoT_Central
 last_update:
   date: 1/12/2023
   author: shuxu hu
@@ -120,7 +121,7 @@ We use **Network -> mqtt in** node and configure mqtt in the format of the Sense
 - Port: 1883
 - Protocol: MQTT V3.1.1
 - Client ID: The format is `org-<Organization ID>-<Random ID>`
-  - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_sensecap_node-red#get-the-sensecap-api).
+  - `<Orgnization ID>` Your organization ID. We have obtained it in the [Get the SenseCAP API](/K1100_sensecap_node-red#get-the-sensecap-api).
 
   - `<Random ID>` uses your own randomly generated numbers or lowercase letters.
 

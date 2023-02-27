@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/RS-232_To_TTL_Conveter-MAX3232IDR/
+slug: /RS-232_To_TTL_Conveter-MAX3232IDR
 last_update:
   date: 02/03/2022
   author: gunengyu

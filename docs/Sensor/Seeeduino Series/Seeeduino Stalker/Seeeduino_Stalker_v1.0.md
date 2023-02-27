@@ -4,6 +4,7 @@ title: Seeeduino Stalker v1.0
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_Stalker_v1.0
 last_update:
   date: 1/31/2023
   author: shuxu hu
@@ -12,7 +13,7 @@ last_update:
 
 **This is not the latest version of Seeeduino Stalker and has been discontinued.
 The latest version can be found here: [Seeeduino Stalker v2.1](https://seeeddoc.github.io/Seeeduino_Stalker_v2.1/)
-Look <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker#Comparison_between_various_versions_of_Seeeduino_Stalker" ><span><font size={"3"}> Arduino </font></span></a>  for comparison between v1.0, v2.0 and v2.1.**
+Look <a href="/Seeeduino_Stalker#Comparison_between_various_versions_of_Seeeduino_Stalker" ><span><font size={"3"}> Arduino </font></span></a>  for comparison between v1.0, v2.0 and v2.1.**
 
 Link to product page for this device (follow this link to buy):
 **Seeeduino Stalker Atmega 168P v1.0Model: [ARD125B5P](https://www.seeedstudio.com/depot/seeeduino-stalker-atmega-168-p-639.html?cPath=79_80)**

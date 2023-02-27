@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/DSO_Quad-Building_Firmware/
+slug: /DSO_Quad-Building_Firmware
 last_update:
   date: 02/03/2022
   author: gunengyu

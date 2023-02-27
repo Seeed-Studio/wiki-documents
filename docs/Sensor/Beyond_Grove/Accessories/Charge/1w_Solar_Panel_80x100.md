@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/1w_Solar_Panel_80x100/
+slug: /1w_Solar_Panel_80x100
 last_update:
   date: 02/03/2022
   author: gunengyu
@@ -76,13 +77,13 @@ This is a custom solar panel, which mates directly with many of our development 
 
 ## See Also
 
-* [0.5w Solar Panel 55*70](/Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70 "0.5w Solar Panel 55*70")
+* [0.5w Solar Panel 55*70](/0.5w_Solar_Panel_55x70 "0.5w Solar Panel 55*70")
 
-* [1.5W Solar Panel 81*137](/Sensor/Beyond_Grove/Accessories/Charge/1.5W_Solar_Panel_81x137 "1.5W Solar Panel 81*137")
+* [1.5W Solar Panel 81*137](/1.5W_Solar_Panel_81x137 "1.5W Solar Panel 81*137")
 
-* [2.5W Solar Panel 116*160](/Sensor/Beyond_Grove/Accessories/Charge/2.5W_Solar_Panel_116x160 "2.5W Solar Panel 116*160")
+* [2.5W Solar Panel 116*160](/2.5W_Solar_Panel_116x160 "2.5W Solar Panel 116*160")
 
-* [3W Solar Panel 138*160](/Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160 "3W Solar Panel 138*160")
+* [3W Solar Panel 138*160](/3W_Solar_Panel_138x160 "3W Solar Panel 138*160")
 
 ## Tech Support
 

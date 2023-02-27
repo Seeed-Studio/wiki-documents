@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-GPS-Air530/
+slug: /Grove-GPS-Air530
 last_update:
   date: 01/06/2022
   author: gunengyu

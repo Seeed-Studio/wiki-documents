@@ -4,6 +4,7 @@ title: Grove - 10A DC Current Sensor (ACS725)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-10A_DC_Current_Sensor-ACS725
 last_update:
   date: 1/9/2023
   author: jianjing Huang

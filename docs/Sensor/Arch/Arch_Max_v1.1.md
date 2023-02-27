@@ -4,6 +4,7 @@ title:  Arch Max v1.1
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Arch_Max_v1.1
 last_update:
   date: 2/1/2023
   author: hushuxu

@@ -4,6 +4,7 @@ title: Grove - 3-Axis Compass V1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-3-Axis_Compass_V1.0
 last_update:
   date: 1/5/2023
   author: shuxu hu
@@ -89,7 +90,7 @@ Now let's start to run your compass.
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus/).
 
 3.Connection
 

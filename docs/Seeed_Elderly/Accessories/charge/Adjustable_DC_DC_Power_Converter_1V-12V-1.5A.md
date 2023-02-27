@@ -4,6 +4,7 @@ title: Adjustable DC - DC Power Converter(1V - 12V1.5A)
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Adjustable_DC_DC_Power_Converter_1V-12V-1.5A
 last_update:
   date: 1/13/2023
   author: jianjing Huang

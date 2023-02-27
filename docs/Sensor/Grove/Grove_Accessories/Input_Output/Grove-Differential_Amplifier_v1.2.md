@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Differential_Amplifier_v1.2/
+slug: /Grove-Differential_Amplifier_v1.2
 last_update:
   date: 01/09/2022
   author: gunengyu
@@ -160,7 +161,7 @@ Usage
 
 **1. Sensor Choosing**
 
-The amplifier can turn signals in mA scale up to A scale. Before using it, make sure the output range of your sensor is in mA scale. For example, [Weight Sensor](/Sensor/Beyond_Grove/Sensors/Weight_Sensor_Load_Cell_0-500g) is one of them.
+The amplifier can turn signals in mA scale up to A scale. Before using it, make sure the output range of your sensor is in mA scale. For example, [Weight Sensor](/Weight_Sensor_Load_Cell_0-500g) is one of them.
 
 **2. Connector Reforming**
 

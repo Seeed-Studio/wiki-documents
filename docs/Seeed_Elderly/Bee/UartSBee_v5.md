@@ -4,6 +4,7 @@ title: UartSBee V5
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /UartSBee_v5
 last_update:
   date: 1/13/2023
   author: shuxu hu
@@ -17,7 +18,7 @@ last_update:
 
 **UartSBee v5 is the Mesh Bee programmer version based on UartSBee v4.**
 
-Please refer to [UartSBee v4's wiki page](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee V4") for general help topics. In this wiki we focus on the difference between v4 and v5.
+Please refer to [UartSBee v4's wiki page](/UartSBee_V4 "UartSBee V4") for general help topics. In this wiki we focus on the difference between v4 and v5.
 
 Added Features
 --------------
@@ -40,7 +41,7 @@ Resources
 ---------
 
 - [Eagle file for UartSBee v5](https://files.seeedstudio.com/wiki/UartSBee_v5/res/UartSBee_v5_eagle_file.zip)
-- [How to program Mesh Bee](/Seeed_Elderly/Bee/Mesh_Bee "Mesh Bee")
+- [How to program Mesh Bee](/Mesh_Bee "Mesh Bee")
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/UartSBee_v5 -->
 

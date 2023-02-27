@@ -4,6 +4,7 @@ title: Grove Speech Recognizer Kit for Arduino
 keywords:
 - Grove_Speech_Recognizer_Kit_for_Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove_Speech_Recognizer_Kit_for_Arduino
 last_update:
   date: 1/12/2023
   author: Matthew
@@ -30,15 +31,15 @@ The Grove Speech Recognizer Kit for Arduino is designed for prototype of Smart H
 
 1. Grove - Speech Recognizer  SKU:101020232
 
-2. [Grove - MP3 v2.0](/Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3_v2.0)
+2. [Grove - MP3 v2.0](/Grove-MP3_v2.0)
 
-3. [Grove – RTC](/Sensor/Grove/Grove_Accessories/Time/Grove-RTC)
+3. [Grove – RTC](/Grove-RTC)
 
-4. [Base Shield](/Top_Brand/Arduino/shield/Base_Shield_V2)
+4. [Base Shield](/Base_Shield_V2)
 
-5. [Grove - Infrared Receiver](/Sensor/Grove/Grove_Sensors/Light/Grove-Infrared_Receiver)
+5. [Grove - Infrared Receiver](/Grove-Infrared_Receiver)
 
-6. [Grove - Infrared Emitter](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Infrared_Emitter)
+6. [Grove - Infrared Emitter](/Grove-Infrared_Emitter)
 
 ## Application
 
@@ -457,7 +458,7 @@ Watch the commands of Speech Recognizer, there're many commands which are relate
 
 Download necessary libraries from github:
 [Grove_Serial_MP3_Player_V2.0](https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player.git);
-library, [Grove - MP3 v2.0](/Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3_v2.0), <font color="Red">pay attention to the path of your libraries: .../arduino/libraries </font>.
+library, [Grove - MP3 v2.0](/Grove-MP3_v2.0), <font color="Red">pay attention to the path of your libraries: .../arduino/libraries </font>.
 
 **Useful functions about Grove - MP3 v2**
 
@@ -611,7 +612,7 @@ Did you use Grove - MP3 to broadcast real-time? Let's have a try via Speech Reco
 
 **Adjust the real-time**
 
-Download necessary libraries from github: <font color="Red">[RTC_DS1307](https://github.com/Seeed-Studio/RTC_DS1307);[library, Grove - RTC](/Sensor/Grove/Grove_Accessories/Time/Grove-RTC);, pay attention to the path of your libraries: .../arduino/libraries</font> .
+Download necessary libraries from github: <font color="Red">[RTC_DS1307](https://github.com/Seeed-Studio/RTC_DS1307);[library, Grove - RTC](/Grove-RTC);, pay attention to the path of your libraries: .../arduino/libraries</font> .
 
 * Open the example file of "SetTimeAndDisplay" : File --&gt; Sketchbook --&gt; libraries --&gt; RTC_DS1307 --&gt; SetTimeAndDisplay.
 

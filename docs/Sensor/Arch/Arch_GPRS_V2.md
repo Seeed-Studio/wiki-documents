@@ -4,6 +4,7 @@ title: Arch GPRS V2
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Arch_GPRS_V2
 last_update:
   date: 2/1/2023
   author: hushuxu
@@ -170,7 +171,7 @@ Resources
 
 **See also**
 
-- [SIM900 GPRS Module Information](/Top_Brand/Arduino/shield/GPRS_Shield_V2.0)
+- [SIM900 GPRS Module Information](/GPRS_Shield_V2.0)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_GPRS_V2 -->
 

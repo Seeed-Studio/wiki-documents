@@ -4,6 +4,7 @@ title: Raspberry Pi RS232 Board v1.0
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Raspberry_Pi_R232_Board_v1.0
 last_update:
   date: 1/11/2023
   author: jianjing Huang

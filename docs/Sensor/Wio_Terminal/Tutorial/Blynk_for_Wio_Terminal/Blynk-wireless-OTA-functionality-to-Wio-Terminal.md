@@ -4,6 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Blynk-wireless-OTA-functionality-to-Wio-Terminal/
+slug: /Blynk-wireless-OTA-functionality-to-Wio-Terminal
 last_update:
   date: 01/11/2022
   author: gunengyu

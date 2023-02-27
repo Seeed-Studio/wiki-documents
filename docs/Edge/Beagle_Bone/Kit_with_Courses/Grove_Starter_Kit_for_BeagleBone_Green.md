@@ -4,6 +4,7 @@ title: Grove Starter Kit for BeagleBone® Green
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove_Starter_Kit_for_BeagleBone_Green
 last_update:
   date: 1/10/2022
   author: jianjing Huang
@@ -36,7 +37,7 @@ I2C Hub Grove is an extension Grove module for connecting multiply I2C devices t
 
 It can use with Universal 4 Pin to X2 4 Pin cable and connects up to 7 I2C devices which may cover most developing purpose.
 
-If you want to know more info about this module please click [**here**](/Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub).
+If you want to know more info about this module please click [**here**](/Grove-I2C_Hub).
 
 ### Grove - Button
 
@@ -74,7 +75,7 @@ It's this characteristic that we use to calculate the ambient temperature.
 The detectable range of this sensor is -40 - 125ºC, and the accuracy is ±1.5ºC.
 
 And you should plug it to Grove - I2C ADC J2 Port.
-If you want to know more info about this module please click [**here**](/Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor_V1.2).
+If you want to know more info about this module please click [**here**](/Grove-Temperature_Sensor_V1.2).
 
 ### Grove - Sound Sensor
 
@@ -85,7 +86,7 @@ Grove - Sound Sensor can detect the sound strength of the environment.
 The main component of the module is a simple microphone, which is based on the LM358 amplifier and an electret microphone.
 
 This module's output is analog and you should plug it to Grove - I2C ADC J2 Port.
-If you want to know more info about this module please click [**here**](/Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor).
+If you want to know more info about this module please click [**here**](/Grove-Sound_Sensor).
 
 ### Grove - 3-Axis Digital Accelerometer(±16g)
 
@@ -97,7 +98,7 @@ It's base on an advanced 3-axis IC ADXL345. Have no worry to implement it into y
 
 Meanwhile, it's agile enough to detect single and double taps. It's ideal for motion detection, Gesture detection as well as robotics.
 
-If you want to know more info about this module please click [**here**](/Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g).
+If you want to know more info about this module please click [**here**](/Grove-3-Axis_Digital_Accelerometer-16g).
 
 ### Grove - Relay
 
@@ -151,7 +152,7 @@ Grove - OLED 96 x 96 is constructed with 96 x 96 dot matrix OLED module LY120 an
 
 Comparing to LCD, OLED screens are more competitive, which has a number of advantages such as high brightness, self-emission, high contrast ratio, slim / thin outline, wide viewing angle, wide temperature range, and low power consumption.
 
-If you want to know more info about this module please click [**here**](/Sensor/Grove/Grove_Accessories/Display/Grove-OLED_Display_0.96inch).
+If you want to know more info about this module please click [**here**](/Grove-OLED_Display_0.96inch).
 
 :::tip
 More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -163,7 +164,7 @@ Examples
 To begin editing programs that live on your board, you can use the Cloud9 IDE.
 As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone® is a good start.
 
-If this is your first time to use Cloud9 IDE, please follow this [**link**](/Edge/Beagle_Bone/BeagleBone_Green).
+If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green).
 
 ### How to use Grove - Button on BBG
 

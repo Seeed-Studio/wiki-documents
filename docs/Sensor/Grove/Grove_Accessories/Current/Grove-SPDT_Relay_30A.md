@@ -4,6 +4,7 @@ title: Grove - SPDT Relay(30A)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-SPDT_Relay_30A
 last_update:
   date: 1/10/2023
   author: jianjing Huang

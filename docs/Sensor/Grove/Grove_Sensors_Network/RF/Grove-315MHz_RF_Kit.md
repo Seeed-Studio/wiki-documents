@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-315MHz_RF_Kit/
+slug: /Grove-315MHz_RF_Kit
 last_update:
   date: 01/06/2022
   author: gunengyu

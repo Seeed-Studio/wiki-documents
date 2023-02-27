@@ -5,6 +5,7 @@ keywords:
 - Raspberry_Pi
 - Official_Raspberry_Pi_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Raspberry_pi_CM4_update_eeprom
 last_update:
   date: 2/15/2023
   author: jianjing Huang
@@ -60,7 +61,7 @@ This process requires to put the CM4 eMMC stroage into 'USB mass storage' mode, 
 
 **For reTerminal**
 
-* **Step 1:** Open the case and remove the heatsink of reTerminal to get access the boot selection switch, Please follow the steps from the [reTerminal Getting Started Wiki Page](/Edge/reTerminal/reTerminal_Getting_Started) until you have flipped the boot mode switch.
+* **Step 1:** Open the case and remove the heatsink of reTerminal to get access the boot selection switch, Please follow the steps from the [reTerminal Getting Started Wiki Page](/reTerminal) until you have flipped the boot mode switch.
 
 **For reRouter**
 

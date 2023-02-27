@@ -4,6 +4,7 @@ title: Built-in Sensors with Edge Impulse
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /K1111-Edge-Impulse
 last_update:
   date: 1/13/2023
   author: shuxu hu

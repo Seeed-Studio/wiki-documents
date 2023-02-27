@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/DC_framework_solenoid_HCNE1-0630/
+slug: /Lipo_Rider_V1.1
 last_update:
   date: 02/03/2022
   author: jianjing Huang

@@ -4,6 +4,7 @@ title: Grove - Switch(P)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Switch-P
 last_update:
   date: 1/31/2023
   author: jianjing Huang

@@ -4,6 +4,7 @@ title: Grove IoT Starter Kits Powered by AWS
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove_IoT_Starter_Kits_Powered_by_AWS
 last_update:
   date: 1/31/2023
   author: shuxu hu
@@ -38,7 +39,7 @@ _**NOTE:**_ AWS IoT and Development boards that comes with the kit has lots of f
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_kit_seeeduino_cloud.JPG)
 
-**[Seeeduino Cloud](/Sensor/Seeeduino Series/Seeeduino_Cloud "Seeeduino Cloud")** is a microcontroller board based on Dragino WiFi IoT module [HE](http://www.dragino.com/products/linux-module/item/87-he.html) and ATmega32u4. **HE** is a high performance, low cost 150M, 2.4G WiFi module which with an Open Source OpenWrt system inside. Seeeduino Cloud is also an [Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun) compatible board. The Grove IoT Starter Kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
+**[Seeeduino Cloud](/Seeeduino_Cloud "Seeeduino Cloud")** is a microcontroller board based on Dragino WiFi IoT module [HE](http://www.dragino.com/products/linux-module/item/87-he.html) and ATmega32u4. **HE** is a high performance, low cost 150M, 2.4G WiFi module which with an Open Source OpenWrt system inside. Seeeduino Cloud is also an [Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun) compatible board. The Grove IoT Starter Kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
 
 For _**User Manual**_, please go to:
 Seeeduino Cloud and Grove IoT Starter Kit Powered by AW
@@ -132,7 +133,7 @@ Designed for expert makers, entrepreneurs, and industrial IoT companies, the **I
 
 [![enter image description here](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://wwww.amazon.com/dp/B0168KU5FK)
 
-For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit Powered by AWS](/Top_Brand/Arduino/Kit with Courses/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
+For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit Powered by AWS](/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
 
 **Part List**
 
@@ -209,14 +210,14 @@ For _**User Manual**_, please go to: [Intel® Edison and Grove IoT Starter Kit P
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_IoT_Starter_Kits_Powered_by_AWS/img/Aws_kit_bbg.JPG)
 
-_Main article: [BeagleBone Green](/Edge/Beagle_Bone/BeagleBone_Green "BeagleBone Green")_
+_Main article: [BeagleBone Green](/BeagleBone_Green "BeagleBone Green")_
 
-**[BeagleBone Green](/Edge/Beagle_Bone/BeagleBone_Green "BeagleBone Green")** (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is involved from the open source hardware design of [BeagleBone Black](https://beagleboard.org/BLACK) and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly.
+**[BeagleBone Green](/BeagleBone_Green "BeagleBone Green")** (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is involved from the open source hardware design of [BeagleBone Black](https://beagleboard.org/BLACK) and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://wwww.amazon.com/dp/B0168L6B0C)
 
 For _**User Manual**_, please go to:
-[Beagle Bone Green and Grove IoT Starter Kit Powered by AWS](/Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page.
+[Beagle Bone Green and Grove IoT Starter Kit Powered by AWS](/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page.
 
 **Part List**
 
@@ -287,7 +288,7 @@ _Main article: [LinkIt ONE](https://wiki.seeedstudio.com/LinkIt_ONE/ "LinkIt ONE
 [![enter image description here](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://wwww.amazon.com/dp/B0168LBYWC)
 
 For _**User Manual**_, please go to:
-[Wiki for LinkIT One and Grove IoT Starter Kit Powered by AWS](/Top_Brand/Arduino/Kit with Courses/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
+[Wiki for LinkIT One and Grove IoT Starter Kit Powered by AWS](/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS) wiki page
 
 **Part List**
 
@@ -347,13 +348,13 @@ For _**User Manual**_, please go to:
 
 * [Amazon Web Services](https://en.wikipedia.org/wiki/Amazon_Web_Services)
 
-* <a href="/Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS" ><span><font size={"3"}> Wiki for Seeeduino Cloud and Grove IoT Starter Kit Powered by AW </font></span></a>
+* <a href="/Grove_IoT_Starter_Kits_Powered_by_AWS" ><span><font size={"3"}> Wiki for Seeeduino Cloud and Grove IoT Starter Kit Powered by AW </font></span></a>
 
-* <a href="/Top_Brand/Arduino/Kit with Courses/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS" ><span><font size={"3"}>Wiki for Intel® Edison and Grove IoT Starter Kit Powered by AWS</font></span></a>
+* <a href="/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS" ><span><font size={"3"}>Wiki for Intel® Edison and Grove IoT Starter Kit Powered by AWS</font></span></a>
 
-* <a href="/Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS" ><span><font size={"3"}> Wiki for Beagle Bone Green and Grove IoT Starter Kit Powered by AWS </font></span></a>
+* <a href="/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS" ><span><font size={"3"}> Wiki for Beagle Bone Green and Grove IoT Starter Kit Powered by AWS </font></span></a>
 
-* <a href="/Top_Brand/Arduino/Kit with Courses/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS" ><span><font size={"3"}> Wiki for LinkIT One and Grove IoT Starter Kit Powered by AWS </font></span></a>
+* <a href="/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS" ><span><font size={"3"}> Wiki for LinkIT One and Grove IoT Starter Kit Powered by AWS </font></span></a>
 
 ## Tech Support
 

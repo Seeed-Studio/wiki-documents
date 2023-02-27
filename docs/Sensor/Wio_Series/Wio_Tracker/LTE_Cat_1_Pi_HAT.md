@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/LTE_Cat_1_Pi_HAT/
+slug: /LTE_Cat_1_Pi_HAT
 last_update:
   date: 01/11/2022
   author: gunengyu

@@ -8,6 +8,7 @@ keywords:
   - docs
   - docusaurus
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /template
 last_update:
   date: 11/21/2022
   author: w0x7ce

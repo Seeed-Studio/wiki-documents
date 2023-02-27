@@ -4,6 +4,7 @@ title:  LinkIt Introduction
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /LinkIt
 last_update:
   date: 1/13/2023
   author: shuxu hu
@@ -19,17 +20,17 @@ After LinkIt ONE, we released LinkIt Smart 7688 and LinkIt Smart 7688 Duo, both 
 
 Here is the list of the LinkIt Boards you can find in the Seeed WiKi. The list will be constantly updated.
 
-- [Arduino Breakout for LinkIt Smart 7688 Duo](/Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/)
-- [Breakout for LinkIt Smart 7688](/Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/)
-- [Breakout for LinkIt Smart 7688 v2.0](/Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0/)
-<!-- - [Grove - Starter Kit for LinkIt ONE](/Seeed_Elderly/LinkIt/Linklt ONE/_Grove-Starter_Kit_for_LinkIt_ONE/) -->
-<!-- - [Grove Breakout for LinkIt Smart 7688 Duo](/Seeed_Elderly/LinkIt/_Grove_Breakout_for_LinkIt_Smart_7688_Duo/) -->
-- [Grove Starter kit for LinkIt Smart7688 Duo](/Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/)
+- [Arduino Breakout for LinkIt Smart 7688 Duo](/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/)
+- [Breakout for LinkIt Smart 7688](/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/)
+- [Breakout for LinkIt Smart 7688 v2.0](/Breakout_for_LinkIt_Smart_7688_v2.0/)
+<!-- - [Grove - Starter Kit for LinkIt ONE](/_Grove-Starter_Kit_for_LinkIt_ONE/) -->
+<!-- - [Grove Breakout for LinkIt Smart 7688 Duo](/_Grove_Breakout_for_LinkIt_Smart_7688_Duo/) -->
+- [Grove Starter kit for LinkIt Smart7688 Duo](/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/)
 <!-- - [LinkIt ONE](/LinkIt_ONE/) -->
 <!-- - [LinkIt Smart 7688](/LinkIt_Smart_7688/) -->
 <!-- - [LinkIt Smart 7688 Duo](/LinkIt_Smart_7688_Duo/) -->
 <!-- - [Linkit Connect 7681](/Linkit_Connect_7681/) -->
-<!-- - [Sidekick Basic Kit for LinkIt ONE](/Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE/) -->
+<!-- - [Sidekick Basic Kit for LinkIt ONE](/Sidekick_Basic_Kit_for_LinkIt_ONE/) -->
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

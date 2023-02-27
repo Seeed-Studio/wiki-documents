@@ -4,13 +4,14 @@ title: Seeeduino Mega Protoshield Kit
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_Mega_Protoshield_Kit
 last_update:
   date: 1/31/2023
   author: shuxu hu
 ---
 ![](https://www.seeedstudio.com/images/large/product/protomega_LRG.jpg)
 
-This is the 1st Protoshield for <a href="/Sensor/Seeeduino Series/Seeeduino_Mega" ><span><font size={"3"}> Seeeduino Mega</font></span></a>, which brought all pins from <a href="/Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2" ><span><font size={"3"}> Seeeduino </font></span></a>, even <a href="/Top_Brand/Arduino/" ><span><font size={"3"}> Arduino </font></span></a> to the top! With this protoshield, users will find a large prototyping area, you can even use Xbee with this board to make it a Xbee shield.
+This is the 1st Protoshield for <a href="/Seeeduino_Mega" ><span><font size={"3"}> Seeeduino Mega</font></span></a>, which brought all pins from <a href="/Seeeduino_V2.2" ><span><font size={"3"}> Seeeduino </font></span></a>, even <a href="/Arduino" ><span><font size={"3"}> Arduino </font></span></a> to the top! With this protoshield, users will find a large prototyping area, you can even use Xbee with this board to make it a Xbee shield.
 
 [enter image description here](https://www.seeedstudio.com/seeeduino-mega-protoshield-kit-p-597.html?cPath=132_134)
 

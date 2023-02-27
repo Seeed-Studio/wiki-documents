@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-I2C_Motor_Driver/
+slug: /Grove-I2C_Motor_Driver
 last_update:
   date: 01/09/2022
   author: gunengyu
@@ -37,8 +38,8 @@ last_update:
 </table> -->
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver -->
-- [Grove-I2C_Motor_Driver_V1.2](/Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver_V1.2)
-- [Grove-I2C_Motor_Driver_V1.3](/Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver_V1.3)
+- [Grove-I2C_Motor_Driver_V1.2](/Grove-I2C_Motor_Driver_V1.2)
+- [Grove-I2C_Motor_Driver_V1.3](/Grove-I2C_Motor_Driver_V1.3)
 
 ## Tech Support
 

@@ -4,6 +4,7 @@ title: Wio Terminal Battery Chassis
 keywords:
 - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wio-Terminal-Battery-Chassis
 last_update:
   date: 1/30/2023
   author: jianjing Huang

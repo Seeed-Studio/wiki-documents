@@ -4,6 +4,7 @@ title: Grove - Barometer (High-Accuracy)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Barometer-High-Accuracy
 last_update:
   date: 1/4/2023
   author: shuxu hu

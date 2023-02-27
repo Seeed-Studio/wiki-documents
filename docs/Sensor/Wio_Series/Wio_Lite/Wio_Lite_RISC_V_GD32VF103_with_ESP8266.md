@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio_Lite_RISC_V_GD32VF103_with_ESP8266/
+slug: /Wio_Lite_RISC_V_GD32VF103_with_ESP8266
 last_update:
   date: 01/11/2022
   author: gunengyu

@@ -5,13 +5,14 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wireless Sensor Node - Solar Kit/
+slug: /Wireless_Sensor_Node-Solar_Kit
 last_update:
   date: 02/03/2022
   author: gunengyu
 ---
 ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit.jpg)
 
-**Wireless Sensor Node - Solar Kit** is an easy to use bundle created for experimenting with XBee and **XBee** compatible standalone wireless modules like RFBee and [Wifi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee"). Every **maker** is confronted with the question of selection the right set of components to build **Wireless Sensor Node**. **Wireless Sensor Node - Solar Kit** fills this place very appropriately. The Grove - XBee Carrier provides LDO power supply, charger for LiPo Battery and programming port for **XBee** compatible modules. The **Solar Panel** provides the required charging voltage in remote areas. The **500 mAH LiPo Battery** provides the backup when the Sun is away. A properly designed and configured wireless module could provide very long hours of usage. For this, put the node to sleep when not transmitting the sensor value. This kit comes with a perfectly made **Transparent Box** , sets of **Screws** and **Plastic Rivets**.
+**Wireless Sensor Node - Solar Kit** is an easy to use bundle created for experimenting with XBee and **XBee** compatible standalone wireless modules like RFBee and [Wifi Bee](/Wifi_Bee "Wifi Bee"). Every **maker** is confronted with the question of selection the right set of components to build **Wireless Sensor Node**. **Wireless Sensor Node - Solar Kit** fills this place very appropriately. The Grove - XBee Carrier provides LDO power supply, charger for LiPo Battery and programming port for **XBee** compatible modules. The **Solar Panel** provides the required charging voltage in remote areas. The **500 mAH LiPo Battery** provides the backup when the Sun is away. A properly designed and configured wireless module could provide very long hours of usage. For this, put the node to sleep when not transmitting the sensor value. This kit comes with a perfectly made **Transparent Box** , sets of **Screws** and **Plastic Rivets**.
 
 * We suggest you to buy more than one kit to create a distributed array of Sensor Nodes.
 
@@ -178,9 +179,9 @@ This section provides a Step-by-Step construction of a Wireless Sensor Node. Ima
 
 Information on how to setup / program Bee Modules are available in
 
-* [Grove - XBee_Carrier](/Seeed_Elderly/Bee/Grove-XBee_Carrier "Grove - XBee Carrier")
+* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-* [Wifi Bee Page](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee")
+* [Wifi Bee Page](/Wifi_Bee "Wifi Bee")
 
 ## Image Gallery
 
@@ -191,19 +192,19 @@ Information on how to setup / program Bee Modules are available in
 
 ## See Also
 
-* [Grove - XBee_Carrier](/Seeed_Elderly/Bee/Grove-XBee_Carrier "Grove - XBee Carrier")
+* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-* [Bees Shield](/Seeed_Elderly/Bee/Bees_Shield "Bees Shield")
+* [Bees Shield](/Bees_Shield "Bees Shield")
 
-* [XBee](/Seeed_Elderly/Bee/XBee_Shield_V2.0 "XBee_Shield_V2.0")
+* [XBee](/XBee_Shield_V2.0 "XBee_Shield_V2.0")
 
-* [Wifi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee")
+* [Wifi Bee](/Wifi_Bee "Wifi Bee")
 
-* [RFBee](/Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
+* [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
 
-* [UartSBee](/Seeed_Elderly/Bee/UartSBee_V3.1 "UartSBee_V3.1")
+* [UartSBee](/UartSBee_V3.1 "UartSBee_V3.1")
 
-* <a href="/Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2" ><span><font color={'000000'} size={"3"}> Seeeduino V2.2</font></span></a>
+* <a href="/Seeeduino_V2.2" ><span><font color={'000000'} size={"3"}> Seeeduino V2.2</font></span></a>
 
 ## Tech Support
 

@@ -4,6 +4,7 @@ title: Grove - Barometer Sensor(BME280)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Barometer_Sensor-BME280
 last_update:
   date: 1/4/2023
   author: shuxu hu

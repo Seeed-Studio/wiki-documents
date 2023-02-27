@@ -4,6 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/DSO_Quad/
+slug: /DSO_Quad
 last_update:
   date: 02/03/2022
   author: gunengyu
@@ -258,13 +259,13 @@ Improper operation of this device could result in physical injury and/or damage 
 ## Upgrading firmware
 
 ---
-Please note that this procedure currently only works under Windows. [Instructions For Linux are here](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad#upgrading-firmware "DSO_Quad/#upgrading-firmware"). (2011-04-29) If we can get the upgrade disk to work on Linux and Mac, it would be quite easy to write an application to automate this process for less experienced users. It might even be possible to have the upgrade program check the hardware version to prevent uploading the wrong firmware.
+Please note that this procedure currently only works under Windows. [Instructions For Linux are here](/DSO_Quad#upgrading-firmware "DSO_Quad/#upgrading-firmware"). (2011-04-29) If we can get the upgrade disk to work on Linux and Mac, it would be quite easy to write an application to automate this process for less experienced users. It might even be possible to have the upgrade program check the hardware version to prevent uploading the wrong firmware.
 
 ### Where to find firmware
 
 Here is the [latest firmware](https://files.seeedstudio.com/wiki/DSO_Quad/res/PA1_V113.zip).
 
-You could also [build the firmware from source](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad:Building Firmware").
+You could also [build the firmware from source](/DSO_Quad-Building_Firmware "DSO Quad:Building Firmware").
 
 ### Version warning
 
@@ -278,7 +279,7 @@ The order that you upload the files in DOES matter. Start by uploading the .hex 
 
 When you're finished uploading all the firmware files, turn off the device to complete the upgrade. When you boot the device again, your firmware versions should be updated. If you get an error at the splash screen, try uploading the firmware again, carefully following the instructions above.
 
-More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad#upgrading-firmware "DSO_Quad/#upgrading-firmware")
+More details and Linux instructions here: [DSO_Quad:Upgrading_Firmware](/DSO_Quad#upgrading-firmware "DSO_Quad/#upgrading-firmware")
 
 ### File Descriptions
 

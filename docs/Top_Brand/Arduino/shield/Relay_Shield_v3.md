@@ -6,6 +6,7 @@ tags:
 keywords:
   - Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Relay_Shield_v3
 last_update:
   date: 01/11/2023  
   author: Eico 

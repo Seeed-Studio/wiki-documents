@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Ultra_Sonic_range_measurement_module/
+slug: /Ultra_Sonic_range_measurement_module
 last_update:
   date: 01/11/2022
   author: gunengyu

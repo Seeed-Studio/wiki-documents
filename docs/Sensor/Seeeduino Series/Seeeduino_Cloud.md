@@ -4,6 +4,7 @@ title: Seeeduino Cloud
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_Cloud
 last_update:
   date: 1/31/2023
   author: shuxu hu

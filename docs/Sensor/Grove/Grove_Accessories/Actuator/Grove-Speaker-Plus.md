@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Speaker-Plus/
+slug: /Grove-Speaker-Plus
 last_update:
   date: 01/09/2022
   author: gunengyu

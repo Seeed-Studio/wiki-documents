@@ -6,6 +6,7 @@ tags:
 keywords:
   - Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /RGBW_Stripe_WireLess_Shield_V1.0
 last_update:
   date: 02/02/2023  
   author: Eico 

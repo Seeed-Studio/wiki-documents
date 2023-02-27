@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio-RP2040-with-Arduino-WIFI/
+slug: /Wio-RP2040-with-Arduino-WIFI
 last_update:
   date: 01/11/2022
   author: gunengyu

@@ -4,6 +4,7 @@ title: Audio System Design Tool
 keywords:
 - Wio_terminal Audio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wio-Terminal-Audio-GUI
 last_update:
   date: 1/16/2023
   author: jianjing Huang

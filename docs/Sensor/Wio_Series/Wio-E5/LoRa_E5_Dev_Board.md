@@ -4,6 +4,7 @@ nointro:
 keywords:
   - wio 
 image: https://wiki.seeedstudio.com/wio_gps_board/
+slug: /LoRa_E5_Dev_Board
 last_update:
   date: 01/30/2023
   author: hushuxu

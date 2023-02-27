@@ -8,6 +8,7 @@ keywords:
   - Shield
   - energy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Energy_Shield
 last_update:
   date: 01/11/2023  
   author: Eico 

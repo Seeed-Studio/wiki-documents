@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-I2C_ADC/
+slug: /Grove-I2C_ADC
 last_update:
   date: 01/06/2022
   author: gunengyu
@@ -156,14 +157,14 @@ Afterwards, open the serial monitor and read the values:
 
 <div class="admonition note">
 <p class="admonition-title">note</p>
-The address of Grove - I2C ADC is changeable which means you can redefine its address. That requires some hardware modification on the board. If you are thinking about using more than one I2C ADCs at the same time, follow the instructions in the Reference part below to do so. The maximum number of I2C ADCs that can be used simultaneously is 9, but there are only 4 I2C sockets on Grove - Base Shield V1.2, so if you want to use more than 4 I2C ADC, take a <a href="/Sensor/Grove/Grove_Accessories/Input_Output/Grove-I2C_Hub">Grove - I2C Hub</a> to create more I2C sockets.
+The address of Grove - I2C ADC is changeable which means you can redefine its address. That requires some hardware modification on the board. If you are thinking about using more than one I2C ADCs at the same time, follow the instructions in the Reference part below to do so. The maximum number of I2C ADCs that can be used simultaneously is 9, but there are only 4 I2C sockets on Grove - Base Shield V1.2, so if you want to use more than 4 I2C ADC, take a <a href="/Grove-I2C_Hub">Grove - I2C Hub</a> to create more I2C sockets.
 </div>
 ### With Beaglebone Green
 
 To begin editing programs that live on BBG, you can use the Cloud9 IDE.
 As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone is a good start.
 
-If this is your first time to use Cloud9 IDE, please follow this [**link**](/Edge/Beagle_Bone/BeagleBone_Green).
+If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green).
 
 **Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](https://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
 

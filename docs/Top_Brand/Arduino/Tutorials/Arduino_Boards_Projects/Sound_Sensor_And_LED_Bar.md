@@ -5,6 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Sound_Sensor_And_LED_Bar
 last_update:
   date: 2/15/2023
   author: jianjing Huang

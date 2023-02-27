@@ -4,6 +4,7 @@ title: Grove Base Cape for BeagleBone® v2
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove_Base_Cape_for_BeagleBone_v2
 last_update:
   date: 1/10/2022
   author: jianjing Huang
@@ -100,7 +101,7 @@ In this section, we will show you a basic example to use this board. You can fin
 
 ### Suggested reading
 
-* [BeagleBone® Green](/Edge/Beagle_Bone/BeagleBone_Green)
+* [BeagleBone® Green](/BeagleBone_Green)
 
 * [BeagleBone® community](https://beagleboard.org/)
 
@@ -168,7 +169,7 @@ function checkButton(x) {
 
 * [EAGLE Schematic &amp; PCB files and PDF format Schematic](https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/res/Grove_Base_Cape_for_BeagleBone_v2.0_Schematics.zip)
 
-* [BeagleBone® Green](/Edge/Beagle_Bone/BeagleBone_Green)
+* [BeagleBone® Green](/BeagleBone_Green)
 
 * [BeagleBone® community](https://beagleboard.org/)
 

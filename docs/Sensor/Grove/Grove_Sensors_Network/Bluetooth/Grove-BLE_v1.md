@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-BLE_v1/
+slug: /Grove-BLE_v1
 last_update:
   date: 01/06/2022
   author: gunengyu

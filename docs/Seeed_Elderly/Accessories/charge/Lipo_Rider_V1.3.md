@@ -4,6 +4,7 @@ title: Lipo Rider V1.3
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Lipo_Rider_V1.3
 last_update:
   date: 1/13/2023
   author: jianjing Huang

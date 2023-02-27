@@ -4,6 +4,7 @@ title: Motion Recognition based on Edge Impulse
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /XIAOEI
 last_update:
   date: 1/11/2023
   author: shuxu hu

@@ -4,6 +4,7 @@ title: Grove Basic Kit for Raspberry Pi Pico
 keywords:
 - Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Starter-Kit-for-Raspberry-Pi-Pico
 last_update:
   date: 1/11/2023
   author: jianjing Huang

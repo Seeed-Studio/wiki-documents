@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-80cm_Infrared_Proximity_Sensor/
+slug: /Grove-80cm_Infrared_Proximity_Sensor
 last_update:
   date: 12/30/2022
   author: gunengyu
@@ -185,7 +186,7 @@ Because of some basic trigonometry within the triangle from the emitter to refle
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
 2.You should have completed configuring the development environment.
-otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/). 
+otherwise follow [here](/GrovePi_Plus/). 
 
 3.Connection
 

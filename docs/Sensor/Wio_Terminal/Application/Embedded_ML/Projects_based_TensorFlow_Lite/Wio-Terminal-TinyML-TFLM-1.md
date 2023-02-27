@@ -6,6 +6,7 @@ keywords:
 - Embedded_ML 
 - Projects_based_TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wio-Terminal-TinyML-TFLM-1
 last_update:
   date: 1/30/2023
   author: jianjing Huang

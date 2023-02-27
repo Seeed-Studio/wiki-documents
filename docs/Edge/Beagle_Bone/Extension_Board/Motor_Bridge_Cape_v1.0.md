@@ -4,6 +4,7 @@ title: Motor Bridge Cape v1.0
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Motor_Bridge_Cape_v1.0
 last_update:
   date: 1/10/2022
   author: jianjing Huang

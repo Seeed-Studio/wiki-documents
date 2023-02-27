@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /DSO_Nano_v3
 last_update:
   date: 02/03/2022
   author: gunengyu

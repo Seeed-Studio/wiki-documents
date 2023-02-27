@@ -4,6 +4,7 @@ title: Intel® Edison and Grove IoT Starter Kit Powered by AWS
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2/17/2023
   author: jianjing Huang
@@ -20,7 +21,7 @@ sku:
 --- -->
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_wiki_cover.JPG)
 
-_Main articles: Start here [Grove IoT Starter Kits Powered by AWS](/Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS "Grove IoT Starter Kits Powered by AWS") , [Intel Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)_
+_Main articles: Start here [Grove IoT Starter Kits Powered by AWS](/Grove_IoT_Starter_Kits_Powered_by_AWS "Grove IoT Starter Kits Powered by AWS") , [Intel Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)_
 
 Designed for expert makers, entrepreneurs, and industrial IoT companies, the Intel Edison module provides easier prototyping with a fully open source hardware and software development environment. It supports Wi-Fi and BLE 4.0 connectivity. This kit contains eleven selective Grove sensors and actuators for you to track indoor environment as well as to create smart-house applications.
 
@@ -33,18 +34,18 @@ Designed for expert makers, entrepreneurs, and industrial IoT companies, the Int
 | Parts                                                                                                                                                                      | Wiki                                                                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | [Intel® Edison for Arduino](https://www.seeedstudio.com/depot/Intel-Edison-for-Arduino-p-2149.html)                                                                         | [Read Here](https://software.intel.com/en-us/iot/library/edison-getting-started)                                                         |
-| [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16)                                                                                     | [Read Here](/Top_Brand/Arduino/shield/Base_Shield_V2 "Base shield v2")                                                                                           |
-| [Grove - Temperature&Humidity Sensor (High-Accuracy & Mini)](https://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?cPath=25_125) | [Read Here](/Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0 "Grove - Tempture&Humidity Sensor (High-Accuracy &Mini) v1.0") |
-| [Grove - Moisture Sensor](https://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27)                                                                   | [Read Here](/Sensor/Grove/Grove_Sensors/Soli_Humidity/Grove-Moisture_Sensor "Grove - Moisture Sensor")                                                                           |
-| [Grove - Light Sensor](https://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)                                                                         | [Read Here](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor "Grove - Light Sensor")                                                                                 |
-| [Grove - UV Sensor](https://www.seeedstudio.com/depot/Grove-UV-Sensor-p-1540.html?cPath=25_27)                                                                              | [Read Here](/Sensor/Grove/Grove_Sensors/Light/Grove-UV_Sensor "Grove - UV Sensor")                                                                                       |
-| [Grove - PIR Motion Sensor](https://www.seeedstudio.com/depot/Grove-PIR-Motion-Sensor-p-802.html?cPath=25_31)                                                               | [Read Here](Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor "Grove - PIR Motion Sensor")                                                                       |
-| [Grove - Encoder](https://www.seeedstudio.com/depot/Grove-Encoder-p-1352.html?cPath=85_52)                                                                                  | [Read Here](/Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder "Grove - Encoder")                                                                                           |
-| [Grove - Button](https://www.seeedstudio.com/depot/Grove-Button-p-766.html)                                                                                                 | [Read Here](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button")                                                                                             |
-| [Grove - LCD RGB Backlight](https://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html?cPath=34_36)                                                              | [Read Here](/Sensor/Grove/Grove_Accessories/Display/Grove-LCD_RGB_Backlight "Grove - LCD RGB Backlight")                                                                       |
-| [Grove - Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)                                                                                       | [Read Here](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay "Grove - Relay")                                                                                               |
-| [Grove - Servo](https://www.seeedstudio.com/depot/Grove-Servo-p-1241.html?cPath=39_41)                                                                                      | [Read Here](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Servo "Grove - Servo")                                                                                               |
-| [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)                                                                                        | [Read Here](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer "Grove - Buzzer")                                                                                             |
+| [Base Shield](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html?cPath=98_16)                                                                                     | [Read Here](/Base_Shield_V2 "Base shield v2")                                                                                           |
+| [Grove - Temperature&Humidity Sensor (High-Accuracy & Mini)](https://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html?cPath=25_125) | [Read Here](/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0 "Grove - Tempture&Humidity Sensor (High-Accuracy &Mini) v1.0") |
+| [Grove - Moisture Sensor](https://www.seeedstudio.com/depot/Grove-Moisture-Sensor-p-955.html?cPath=25_27)                                                                   | [Read Here](/Grove-Moisture_Sensor "Grove - Moisture Sensor")                                                                           |
+| [Grove - Light Sensor](https://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)                                                                         | [Read Here](/Grove-Light_Sensor "Grove - Light Sensor")                                                                                 |
+| [Grove - UV Sensor](https://www.seeedstudio.com/depot/Grove-UV-Sensor-p-1540.html?cPath=25_27)                                                                              | [Read Here](/Grove-UV_Sensor "Grove - UV Sensor")                                                                                       |
+| [Grove - PIR Motion Sensor](https://www.seeedstudio.com/depot/Grove-PIR-Motion-Sensor-p-802.html?cPath=25_31)                                                               | [Read Here](Grove-PIR_Motion_Sensor "Grove - PIR Motion Sensor")                                                                       |
+| [Grove - Encoder](https://www.seeedstudio.com/depot/Grove-Encoder-p-1352.html?cPath=85_52)                                                                                  | [Read Here](/Grove-Encoder "Grove - Encoder")                                                                                           |
+| [Grove - Button](https://www.seeedstudio.com/depot/Grove-Button-p-766.html)                                                                                                 | [Read Here](/Grove-Button "Grove - Button")                                                                                             |
+| [Grove - LCD RGB Backlight](https://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html?cPath=34_36)                                                              | [Read Here](/Grove-LCD_RGB_Backlight "Grove - LCD RGB Backlight")                                                                       |
+| [Grove - Relay](https://www.seeedstudio.com/depot/Grove-Relay-p-769.html?cPath=39_42)                                                                                       | [Read Here](/Grove-Relay "Grove - Relay")                                                                                               |
+| [Grove - Servo](https://www.seeedstudio.com/depot/Grove-Servo-p-1241.html?cPath=39_41)                                                                                      | [Read Here](/Grove-Servo "Grove - Servo")                                                                                               |
+| [Grove - Buzzer](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html?cPath=38)                                                                                        | [Read Here](/Grove-Buzzer "Grove - Buzzer")                                                                                             |
 | USB Cable; 480mm-Black                                                                                                                                                     |                                                                                                                                          |
 | USB Wall Power Supply                                                                                                                                                      |                                                                                                                                          |
 
@@ -92,7 +93,7 @@ Visit amazone  [AWS console](http://console.aws.amazon.com), register and logon 
 
 6.Create a thing
 
-At this section you can also refer to the [Beagle Bone wiki](Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS) for another way to create a thing and finish the left tasks. The difference is Beagle Bone didn’t use AWS CLI tool to Get Certifications.
+At this section you can also refer to the [Beagle Bone wiki](/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS) for another way to create a thing and finish the left tasks. The difference is Beagle Bone didn’t use AWS CLI tool to Get Certifications.
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_create_a_thing1.png)
 
@@ -439,7 +440,7 @@ function sendData(){
 
 * **[PDF]** [AWS IoT Developer Guide](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/res/AWS_IoT_Developer_Guide.pdf)
 
-* [Wiki]<a href="/Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS" target="_blank"><span><font color={'000000'} size={"3"}> Main Page for Grove IoT Starter Kits Powered by AWS </font></span></a>
+* [Wiki]<a href="/Grove_IoT_Starter_Kits_Powered_by_AWS" target="_blank"><span><font color={'000000'} size={"3"}> Main Page for Grove IoT Starter Kits Powered by AWS </font></span></a>
 
 * [Getting started with Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)
 

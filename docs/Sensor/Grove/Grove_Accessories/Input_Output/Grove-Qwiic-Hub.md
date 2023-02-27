@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Qwiic-Hub/
+slug: /Grove-Qwiic-Hub
 last_update:
   date: 01/09/2022
   author: gunengyu

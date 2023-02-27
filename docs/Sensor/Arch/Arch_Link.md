@@ -4,6 +4,7 @@ title: Arch Link
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Arch_Link
 last_update:
   date: 2/1/2023
   author: hushuxu
@@ -152,8 +153,8 @@ Resources
 See Also
 --------
 
-- [Arch BLE](/Sensor/Arch/Arch_BLE)
-- [W5500 Ethernet Shield](/Top_Brand/Arduino/shield/W5500_Ethernet_Shield_v1.0)
+- [Arch BLE](/Arch_BLE)
+- [W5500 Ethernet Shield](/W5500_Ethernet_Shield_v1.0)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_Link -->
 

@@ -4,6 +4,7 @@ title: RFbee V1.1 - Wireless Arduino compatible node
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /RFbee_V1.1-Wireless_Arduino_compatible_node
 last_update:
   date: 1/13/2023
   author: shuxu hu

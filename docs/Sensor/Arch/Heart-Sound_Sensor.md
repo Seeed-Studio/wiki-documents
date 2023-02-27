@@ -4,6 +4,7 @@ title: Heart Sound Sensor
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Heart-Sound_Sensor
 last_update:
   date: 2/1/2023
   author: hushuxu

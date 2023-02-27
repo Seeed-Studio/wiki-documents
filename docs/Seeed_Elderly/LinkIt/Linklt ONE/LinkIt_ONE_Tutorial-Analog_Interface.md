@@ -4,6 +4,7 @@ title: LinkIt ONE Tutorial - Analog Interface
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /LinkIt_ONE_Tutorial-Analog_Interface
 last_update:
   date: 1/13/2023
   author: shuxu hu

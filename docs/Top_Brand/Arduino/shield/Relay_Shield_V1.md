@@ -4,6 +4,7 @@ title:  Relay Shield V1.0
 keywords:
 -  Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Relay_Shield_V1
 last_update:
   date: 2/16/2023
   author: jianjing Huang
@@ -60,7 +61,7 @@ The Relay Shield is an Arduino compatible smart module with 4 mechanical relays 
 ## Cautions ##
 
 **
-Place 2 layers of electrical tape on the top of the[Arduino's](/Top_Brand/Arduino/) (title=undefined) usb connector.  This will prevent the relay shield from making contact.
+Place 2 layers of electrical tape on the top of the[Arduino's](/Arduino) (title=undefined) usb connector.  This will prevent the relay shield from making contact.
 Do not operate voltage more than 35V DC.
 **
 

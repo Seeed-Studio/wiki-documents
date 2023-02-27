@@ -4,6 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Dfu-util/
+slug: /Dfu-util
 last_update:
   date: 02/03/2022
   author: gunengyu
@@ -11,7 +12,7 @@ last_update:
 
 ## Updating firmware with dfu-util
 
-You will need dfu-util 0.5 or newer to download dfu files to the [DSO Nano](/Sensor/Beyond_Grove/Accessories/Current/DSO_Nano "DSO Nano").
+You will need dfu-util 0.5 or newer to download dfu files to the [DSO Nano](/DSO_Nano "DSO Nano").
 Older dfu-util versions will not work. The DSO Nano, and many other devices based on ST Micro's microcontrollers, uses ST Micro's own DFU extensions (DfuSe) which are not compatible with the DFU standard.
 
 You can find a dfu-util 0.8 package for Ubuntu 10.04 in [Tormod's PPA](https://launchpad.net/~tormodvolden/+archive/ppa/+packages?field.series_filter=lucid). Just download and install the right .deb package. The same package should install fine in any later Ubuntu version or Debian unstable as well. For other operating systems you may have to build dfu-util yourself as described at the dfu-util home page.

@@ -6,6 +6,7 @@ tags:
 keywords:
   - micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /microbit_wiki_page
 last_update:
   date: 01/10/2023  
   author: Eico 

@@ -4,6 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/DSO_Quad_Manual_by_the_community/
+slug: /DSO_Quad_Manual_by_the_community
 last_update:
   date: 02/03/2022
   author: gunengyu
@@ -52,9 +53,9 @@ I felt like this all belongs in one place -- a manual -- and I just kept working
 
 ### Other Seeedstudio Documentation
 
-* [DSO Quad Manual (official wiki page)](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad "DSO Quad")
+* [DSO Quad Manual (official wiki page)](/DSO_Quad "DSO Quad")
 
-* [DSO Quad Building Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
+* [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
 
 * [DSO Quad battery installation tutorial with video](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=2074)
 
@@ -228,7 +229,7 @@ The DSO Quad is charged by connecting the USB cable. The LTC4054 battery control
 
 There are several versions of the DSO Quad, and the firmware for each is different. Please carefully identify your hardware. When you first turn on the DSO Quad, look for the hardware version. Compare what you see to the following table:
 
-Check here for the latest firmware: [DSO Quad Building Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
+Check here for the latest firmware: [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware")
 Here is the latest firmware under special contract with [FPGA(DFU，SYS，APP) v2.7.2](https://files.seeedstudio.com/wiki/DSO_Quad_Manual_by_the_community/res/DS203.V2.72.zip).
 
 <table>
@@ -335,7 +336,7 @@ The DSO Quad requires calibration before the first use, and should be re-calibra
 
         3. Follow the instructions
 
-More details see here: [DSO Quad:Calibration](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Calibration "DSO Quad:Calibration")
+More details see here: [DSO Quad:Calibration](/DSO_Quad-Calibration "DSO Quad:Calibration")
 
 Note: I noticed the calibration is different when you connect or disconnect a powersupply to the micro USB connection. So calibrate it the way you will use it the most.
 
@@ -489,7 +490,7 @@ Note that the values on screen are 1/10 of the input, so please multiply by 10 i
 
 The DSO Quad can be charged from any normal USB port. Please charge your DSO Quad for at least 1 hour before using it.
 
-The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
+The DSO Quad firmware does a rapid USB disconnect-reconnect to do a "live" firmware update. This method is incompatible with Mac OS X or Linux. Please see [this forum thread](https://forum.seeedstudio.com/viewtopic.php?f=22&amp;t=1934) for more information.  See [DSO Quad Building Firmware](/DSO_Quad-Building_Firmware "DSO Quad Building Firmware") for how to upgrade firmware from Linux.
 
 ## Resource
 
