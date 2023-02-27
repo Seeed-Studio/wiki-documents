@@ -110,24 +110,6 @@ const config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-client-redirects',
-      {
-        // fromExtensions: ['html', 'htm'], // /myPage.html -> /myPage
-        // toExtensions: ['exe', 'zip'], // /myAsset -> /myAsset.zip (if latter exists)
-        createRedirects(existingPath) {
-          if (existingPath.includes('/test/')) {
-            // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
-            return [
-              existingPath.replace('/test/', '/Sensor/Grove/Grove_Sensors/All_in_one/'),
-              existingPath.replace('/test/', '/docs/Sensor/Grove/Grove_Sensors/All_in_one/'),
-              // existingPath.replace('/docs/sensor', '/docs/'),
-            ];
-          }
-          return undefined; // Return a falsy value: no redirect created
-        },
-      },
-    ],
-    [
       '@docusaurus/plugin-pwa',
       {
         debug: true,
@@ -195,6 +177,7 @@ const config = {
         logo: {
           alt: 'Seeed Studio',
           src: 'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
+          href:'Getting_Started',
           className: 'navbar_logo_items'
         },
         items: [

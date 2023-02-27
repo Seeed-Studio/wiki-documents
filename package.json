@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@docusaurus/core": "2.2.0",
-    "@docusaurus/plugin-client-redirects": "2.2.0",
     "@docusaurus/plugin-content-docs": "^2.2.0",
     "@docusaurus/plugin-debug": "^2.2.0",
     "@docusaurus/plugin-pwa": "^2.2.0",
