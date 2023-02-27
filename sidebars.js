@@ -802,8 +802,8 @@ const sidebars = {
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Basic',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Graphics',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Fonts',
-                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
-                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Linecharts',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Histogram',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-APIs',
@@ -1160,12 +1160,12 @@ const sidebars = {
           label: 'Wio Link',
           items: [
             'Sensor/Wio_Series/Wio_Link/Wio_Link',
-             'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
-             'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
-             'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
-             'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
-             'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
-             'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
+            'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
+            'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
+            'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
+            'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
+            'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
+            'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
           ]
         },
 
@@ -2954,6 +2954,17 @@ const sidebars = {
   //   `,
   //   },
   // ],
+  CNSidebar: [
+    {
+
+      type: 'category',
+      label: 'Seeed Studio XIAO 拓展板',
+      items: [
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+      ]
+    },
+
+  ]
 
 };
 

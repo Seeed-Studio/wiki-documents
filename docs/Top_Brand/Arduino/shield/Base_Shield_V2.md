@@ -61,7 +61,7 @@ Arduino Uno is the most popular Arduino board so far, however it is sometimes fr
   <tr>
     <td><h4>Operation Temperature</h4></td>
     <td><h4>-25℃ to +85℃</h4></td>
-  </tr>    
+  </tr>
   <tr>
     <td><h4>Analog Ports</h4></td>
     <td><h4>4</h4></td>
@@ -97,12 +97,16 @@ The Base Shield is tested and fully compatible with following boards:
 - Intel Edison 5V
 - Linkit One
 
-
 :::note
 The boards are not listed above mean that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact us via [forum](https://forum.seeedstudio.com/).
 :::
 
+:::cautionAttention
+The default I2C pins of Grove Base Shield are D70/D71, but the default I2C Wire of Arduino DUE is defined as D20/D21, so when using both together, you will not be able to use the I2C pins of the expansion board properly if you use the `Wire` definition, you need to use `Wire1`.
+:::
+
 ## Hardware Overview
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/hardware_overview.jpg" alt="pir" width={600} height="auto" /></p>
 
 - **1-Analog Ports**: include 4 anlog ports, A0, A1, A2 and A3.
@@ -169,18 +173,17 @@ void loop()
     delay(10);
 }
 ```
+
 - Step 2. Press the button and we will hear the buzzer.
 
 ## FAQ
-Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1826443-base-shield-v2-sku-103030000) to see all Base Shield V2 FAQs.
 
+Please click [here](http://support.seeedstudio.com/knowledgebase/articles/1826443-base-shield-v2-sku-103030000) to see all Base Shield V2 FAQs.
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Base_Shield_V2/res/Base%20Shield%20v2%20eagle%20file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -200,8 +203,8 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182644
 
 <iframe frameBorder={0} height="327.5" scrolling="no" src="https://project.seeedstudio.com/taifur/solar-powered-environmental-monitoring-kit-b1d03d/embed" width={350} />
 
-
 ## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). 
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

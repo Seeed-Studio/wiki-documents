@@ -11,18 +11,18 @@ const config = {
 
   title: 'Seeed Studio Wiki',
   tagline: 'The Seeed Studio Files Management Platform, Opening up and Cooperation.',
-  
+
   url: 'http://wiki.seeedstudio.vip',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/S.png',
-  
+
 
   scripts: [
     // String format.
     // 'https://viewer.altium.com/client/static/js/embed.js',
-    
+
     // Object format.
     {
       src: 'https://viewer.altium.com/client/static/js/embed.js',
@@ -40,7 +40,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en',  'zh-CN'],
+    locales: ['en', 'zh-CN'],
     path: 'i18n',
     localeConfigs: {
       en: {
@@ -63,7 +63,7 @@ const config = {
           routeBasePath: '/',
 
           sidebarPath: require.resolve('./sidebars.js'),
-          
+
           remarkPlugins: [math],
           rehypePlugins: [katex],
 
@@ -93,7 +93,7 @@ const config = {
             'https://github.com/Seeed-Studio/wiki-documents/edit/main/',
         },
 
-        
+
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -107,7 +107,7 @@ const config = {
       }),
     ],
   ],
-  
+
   plugins: [
     [
       '@docusaurus/plugin-pwa',
@@ -140,10 +140,10 @@ const config = {
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass'
   ],
-  
+
   themeConfig:
-    
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
 
@@ -185,46 +185,51 @@ const config = {
             docId: 'Getting_Started',
             position: 'left',
             label: 'Getting Started',
-            className:'navbar_doc_items'
+            className: 'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Sensor_Network',
             position: 'left',
             label: 'Sensor Network',
-            className:'navbar_doc_items'
+            className: 'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Edge_Computing',
             position: 'left',
             label: 'Edge Computing',
-            className:'navbar_doc_items'
+            className: 'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'CloudnChain',
             position: 'left',
             label: 'Cloud & Chain',
-            className:'navbar_doc_items'
+            className: 'navbar_doc_items'
           },
           {
             type: 'doc',
             docId: 'Solutions',
             position: 'left',
             label: 'Solutions',
-            className:'navbar_doc_items'
+            className: 'navbar_doc_items'
           },
           {
             to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',
             position: 'right',
-            className:'navbar_doc_items'
+            className: 'navbar_doc_items'
           },
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          //   className: 'navbar_doc_items'
+          // },
           {
             type: 'localeDropdown',
             position: 'right',
-            className:'navbar_doc_items'
+            className: 'navbar_doc_items'
           },
           // {
           //   type: 'dropdown',
@@ -246,7 +251,7 @@ const config = {
           // },
         ],
       },
-      
+
       footer: {
         style: 'dark',
         links: [
@@ -352,24 +357,24 @@ const config = {
       algolia: {
         // The application ID provided by Algolia
         appId: '8182LB8Y0D',
-  
+
         // Public API key: it is safe to commit it
         apiKey: 'a2761291fdfe389c56720a86986d1952',
-  
+
         indexName: 'wiki',
-  
+
         // Optional: see doc section below
         contextualSearch: false,
-  
+
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
         // externalUrlRegex: 'external\\.com|domain\\.com',
-  
+
         // Optional: Algolia search parameters
         searchParameters: {},
-  
+
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
-  
+
         //... other Algolia params
       },
       mermaid: {
@@ -388,8 +393,8 @@ const config = {
       },
 
     }),
-  
-  
+
+
 };
 
 module.exports = config;

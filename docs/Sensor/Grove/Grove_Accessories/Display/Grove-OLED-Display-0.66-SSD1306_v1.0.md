@@ -9,6 +9,8 @@ last_update:
   author: shuxu hu
 ---
 
+<meta name="google-site-verification" content="2bq3L0F_PFVokQM-qT-al7x9FcSNJOO8TtJfAHW43lE" />
+
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/104020248_Front-05-min.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/104020248_Front-05-min.png" alt="pir" width={600} height="auto" /></p>
 
@@ -19,6 +21,7 @@ You can use I2C interface to light up the mini display with your microcontroller
 This Grove-OLED Display supports the U8g2 monochrome displays library written by Olikraus. The library is so convenient and well compatible that it can support SSD1306 and other chips like SSD1315. So get you one now and have fun with this tiny screen!
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-0-66-SSD1306-v1-0-p-5096.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-OLED-Display-0-66-SSD1306-v1-0-p-5096.html)
+
 ## Feature
 
 - Based on SSD1306, cropped to 64×48 resolution(Monochrome)
@@ -29,7 +32,6 @@ This Grove-OLED Display supports the U8g2 monochrome displays library written by
 - Low power consumption
 - Wide operating temperature range: -40℃ ~ +85 ℃
 - User-friendly design: Grove interface on the back
-
 
 ## Specification
 
@@ -49,8 +51,6 @@ This Grove-OLED Display supports the U8g2 monochrome displays library written by
   </figure>
 </div>
 
-
-
 ## Platforms Supported
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
@@ -64,9 +64,7 @@ This Grove-OLED Display supports the U8g2 monochrome displays library written by
 
 ### Play With Arduino
 
-
 **Materials required**
-
 
 | Seeeduino V4.2 | Base Shield | Grove - OLED Display 0.66"|
 |--------------|-------------|-----------------|
@@ -80,8 +78,6 @@ This Grove-OLED Display supports the U8g2 monochrome displays library written by
 - **Step 1.** Plug Grove - TDS Sensor to **I2C** port of Grove - Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
-
-
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/arduino1.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/arduino1.png" alt="pir" width={600} height="auto" /></p>
@@ -118,7 +114,6 @@ void loop(void) {
 ```
 
 Note: You should know the Grove - OLED Display 0.66" (SSD1306) screen is based on the 128×64 resolution screen. When you want to display by U8g2 SSD 128*64 drive , you may need to start the point at (31,16) instead of (0,0). The range is from (31,16) to (95,63).
-
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/note.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/note.png" alt="pir" width={600} height="auto" /></p>
@@ -157,10 +152,8 @@ Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki)
 
 ## Schematic Online Viewer
 
-
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/GroveOLEDDisplay0.66(SSD1306)inEagle.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Resources
 
@@ -168,6 +161,7 @@ Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki)
 - **[ZIP]** [SSD1306-Datasheet](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.66-SSD1306/SSD1306-Datasheet.zip)
 
 ## Tech Support
+
 Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
 <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

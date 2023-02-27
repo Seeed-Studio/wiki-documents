@@ -105,9 +105,11 @@ void loop() {
 
 ## Serial
 
+### Regular method - choose one of USB serial or UART0 serial to use
+
 There are 2 serial interfaces on this board:
 
-- USB Serial 
+- USB Serial
 - UART0 Serial
 
 By default, USB serial is enabled, which means you can connect the board to a PC via USB Type-C and open serial monitor on Arduino IDE to view data sent via serial.
@@ -116,13 +118,11 @@ However, if you want to use UART0 as the serial, you need to connect pin D6 as t
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-3.png" alt="pir" width={1000} height="auto" /></div>
 
-
 Also, you need to set **USB CDC On Boot** to **Disabled** from Arduino IDE.
 
 **NOTE: Change photo when board shows up on Arduino Board Manager**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
-
 
 Upload the following code to Arduino IDE to send the string "Hello World!" via serial
 
@@ -142,6 +142,165 @@ The output will be as follows on Arduino Serial Monitor
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-2.jpg" alt="pir" width={450} height="auto" /></div>
 
+### Special way - use USB serial and UART0/UART1 at the same time
+
+Very often, we need to use UART sensors to connect to XIAO ESP32C3 hardware serial port to get data, and at the same time, you may need to use the USB serial to display the data on the serial monitor. This can be achieved by some special methods.
+
+- Example program:
+
+```c++
+// Need this for the lower level access to set them up.
+#include <HardwareSerial.h>
+
+//Define two Serial devices mapped to the two internal UARTs
+HardwareSerial MySerial0(0);
+HardwareSerial MySerial1(1);
+
+void setup()
+{
+    // For the USB, just use Serial as normal:
+    Serial.begin(115200);
+
+    // Configure MySerial0 on pins TX=D6 and RX=D7 (-1, -1 means use the default)
+    MySerial0.begin(9600, SERIAL_8N1, -1, -1);
+    MySerial0.print("MySerial0");
+
+    // And configure MySerial1 on pins RX=D9, TX=D10
+    MySerial1.begin(115200, SERIAL_8N1, 9, 10);
+    MySerial1.print("MySerial1");
+}
+
+void loop()
+{
+
+}
+```
+
+As you can see, the XIAO ESP32C3 actually has three UARTs available.
+
+In the following, we will take the [60GHz mmWave Sensor - Human Resting Breathing and Heartbeat Module](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html), which is available for sale, as an example, and explain how to use the D6 and D7 hardware serial ports and the USB serial port.
+
+Please be prepared for the following.
+
+<table align="center">
+ <tr>
+     <th>XIAO ESP32C3</th>
+        <th>60GHz mmWave Sensor -<br/>Human Resting Breathing<br/>and Heartbeat Module</th>
+ </tr>
+    <tr>
+        <td><div align="center"><img width = {120} src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png"/></div></td>
+        <td><div align="center"><img width = {240} src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div></td>
+    </tr>
+ <tr>
+        <td align = "center"><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">Get One Now</a></td>
+        <td align = "center"><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html">Get One Now</a></td>
+ </tr>
+</table>
+
+Download the sensor library to your computer, please note that you need to select **newversion-dev**. And add it to the Arduino IDE.
+
+<p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/tree/newversion-dev" target="_blank"><div align="center"><img width = {300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/1.png" alt="pir" width={700} height="auto" /></div>
+
+Here, we want to parse the heartbeat and respiration data information, then you can rewrite your program like this.
+
+```c++
+#include "Arduino.h"
+#include <60ghzbreathheart.h>
+#include <HardwareSerial.h>
+
+HardwareSerial MySerial(0);   //Create a new HardwareSerial class -- D6/D7
+
+// can also try hardware serial with
+BreathHeart_60GHz radar = BreathHeart_60GHz(&MySerial);
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  MySerial.begin(115200, SERIAL_8N1, -1, -1); // at CPU Freq is 40MHz, work half speed of defined.
+
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
+
+  Serial.println("Readly");
+
+  // radar.ModeSelect_fuc(1);  //1: indicates real-time transmission mode, 2: indicates sleep state mode.
+  //After setting the mode, if you do not see data returned, you may need to re-power the sensor.
+}
+
+void loop()
+{
+  // put your main code here, to run repeatedly:
+  radar.Breath_Heart();           //Breath and heartbeat information output
+  if(radar.sensor_report != 0x00){
+    switch(radar.sensor_report){
+      case HEARTRATEVAL:
+        Serial.print("Sensor monitored the current heart rate value is: ");
+        Serial.println(radar.heart_rate, DEC);
+        Serial.println("----------------------------");
+        break;
+      case HEARTRATEWAVE:  //Valid only when real-time data transfer mode is on
+        Serial.print("The heart rate waveform(Sine wave) -- point 1: ");
+        Serial.print(radar.heart_point_1);
+        Serial.print(", point 2 : ");
+        Serial.print(radar.heart_point_2);
+        Serial.print(", point 3 : ");
+        Serial.print(radar.heart_point_3);
+        Serial.print(", point 4 : ");
+        Serial.print(radar.heart_point_4);
+        Serial.print(", point 5 : ");
+        Serial.println(radar.heart_point_5);
+        Serial.println("----------------------------");
+        break;
+      case BREATHNOR:
+        Serial.println("Sensor detects current breath rate is normal.");
+        Serial.println("----------------------------");
+        break;
+      case BREATHRAPID:
+        Serial.println("Sensor detects current breath rate is too fast.");
+        Serial.println("----------------------------");
+        break;
+      case BREATHSLOW:
+        Serial.println("Sensor detects current breath rate is too slow.");
+        Serial.println("----------------------------");
+        break;
+      case BREATHNONE:
+        Serial.println("There is no breathing information yet, please wait...");
+        Serial.println("----------------------------");
+        break;
+      case BREATHVAL:
+        Serial.print("Sensor monitored the current breath rate value is: ");
+        Serial.println(radar.breath_rate, DEC);
+        Serial.println("----------------------------");
+        break;
+      case BREATHWAVE:  //Valid only when real-time data transfer mode is on
+        Serial.print("The breath rate waveform(Sine wave) -- point 1: ");
+        Serial.print(radar.breath_point_1);
+        Serial.print(", point 2 : ");
+        Serial.print(radar.breath_point_2);
+        Serial.print(", point 3 : ");
+        Serial.print(radar.breath_point_3);
+        Serial.print(", point 4 : ");
+        Serial.print(radar.breath_point_4);
+        Serial.print(", point 5 : ");
+        Serial.println(radar.breath_point_5);
+        Serial.println("----------------------------");
+        break;
+    }
+  }
+  delay(200);                       //Add time delay to avoid program jam
+}
+```
+
+Please upload the program, then open the serial monitor and set the baud rate to 115200.
+
+Next, we can connect the sensor to the XIAO ESP32C3 using the following connection method.
+
+<div align="center"><img width = {700} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/62.jpg"/></div>
+
+If all goes well, you will see data messages on the serial monitor.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/2.png" alt="pir" width="800" height="auto"/></div>
 
 ## I2C
 
@@ -153,11 +312,10 @@ Connect a [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstu
 |-----------|-----------|
 | SCL       | SCL       |
 | SDA       | SDA       |
-| VCC       | 5V        | 
+| VCC       | 5V        |
 | GND       | GND       |
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-7.png" alt="pir" width={1000} height="auto" /></div>
-
 
 ### Software setup
 
@@ -166,7 +324,6 @@ Connect a [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstu
 - **Step 2.** Search for **u8g2** and install it
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
-
 
 - **Step 3.** Upload the following code to display text strings on the OLED Display
 
@@ -209,13 +366,12 @@ Connect a [Grove - High Precision Barometric Pressure Sensor (DPS310)](https://w
 |-----------|------------|
 | 3V3        | 3V3       |
 | SDI        | MOSI      |
-| GND        | GND       | 
+| GND        | GND       |
 | SDO        | MISO      |
 | CSK        | SCK       |
 | CS         | CS        |
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-4.png" alt="pir" width={1000} height="auto" /></div>
-
 
 ### Software setup
 
@@ -223,16 +379,13 @@ Connect a [Grove - High Precision Barometric Pressure Sensor (DPS310)](https://w
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-5.png" alt="pir" width={1000} height="auto" /></div>
 
-
-- **Step 2**. Open Arduino IDE, navigate to `Sketch > Include Library > Add .ZIP Library...` and open the downloaded zip file 
+- **Step 2**. Open Arduino IDE, navigate to `Sketch > Include Library > Add .ZIP Library...` and open the downloaded zip file
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
-
 
 - **Step 3.** Navigate to `File > Examples > DigitalPressureSensor > spi_background` to open the **spi_background** example
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-6.png" alt="pir" width={450} height="auto" /></div>
-
 
 Alternatively you can copy the code from below as well
 
@@ -337,6 +490,5 @@ void loop() {
 **Note:** Once you upload the codes, it will not be executed automatically until you click **Serial Monitor** on the upper right corner of the Arduino window.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-8.jpg" alt="pir" width={600} height="auto" /></div>
-
 
 Now you will see the temperature and pressure data displayed one after the other on the serial monitor as above!

@@ -14,7 +14,7 @@ last_update:
 
 The Seeed Studio XIAO SAMD21 is the smallest member of the Seeeduino family. It carries the powerful ATSAMD21G18A-MU which is a low-power microcontrollers. On the other hand, this little board has good performance in processing but needs less power. As a matter of fact, it is designed in a tiny size and can be used for wearable devices and small projects.
 
-Seeed Studio XIAO SAMD21 has 14 GPIO PINs, which can be used for 11 digital interfaces, 11 mock interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L). The colors of LEDs(Power,L,RX,TX) are green, yellow, blue and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface which can supply power and download code. There are two reset button, you can short connect them to reset the board.
+Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 mock interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power,L,RX,TX) are green, yellow, blue and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface which can supply power and download code. There are two reset button, you can short connect them to reset the board.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html">
@@ -78,13 +78,13 @@ There are two documentations on the usage of **Seeed Studio XIAO SAMD21** which 
 
 :::note
 
-    For general I/O pins:
-    Working voltage of MCU is 3.3V . Voltage input connected to general I/O pins may cause chip damage if it' higher than 3.3V .
+For general I/O pins:<br />
+  Working voltage of MCU is 3.3V . Voltage input connected to general I/O pins may cause chip damage if it' higher than 3.3V .
 
-    For power supply pins:
-    The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
+For power supply pins:<br />
+  The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
 
-    Please pay attention to use, do not lift the shield cover.
+Please pay attention to use, do not lift the shield cover.
 :::
 
 ### **Enter Bootloader Mode**
@@ -236,21 +236,21 @@ void loop()
 
 ```c
 #include <SPI.h>
-const int SS = 7;
+const int CS = 7;
 void setup (void) {
-   digitalWrite(SS, HIGH); // disable Slave Select
+   digitalWrite(CS, HIGH); // disable Slave Select
    SPI.begin ();
    SPI.setClockDivider(SPI_CLOCK_DIV8);//divide the clock by 8
 }
 
 void loop (void) {
    char c;
-   digitalWrite(SS, LOW); // enable Slave Select
+   digitalWrite(CS, LOW); // enable Slave Select
    // send test string
    for (const char * p = "Hello, world!\r" ; c = *p; p++) {
       SPI.transfer (c);
    }
-   digitalWrite(SS, HIGH); // disable Slave Select
+   digitalWrite(CS, HIGH); // disable Slave Select
    delay(2000);
 }
 ```
@@ -274,7 +274,7 @@ Here's an example that demonstrates both the DAC and the ADC. To set the experim
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/AO_A1.jpg" /></div>
 
 :::note
-    The Seeed Studio XIAO SAMD21 using the [**Seeed Studio XIAO SAMD21 expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+The Seeed Studio XIAO SAMD21 using the [**Seeed Studio XIAO SAMD21 expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 :::
 
 This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
@@ -287,7 +287,7 @@ You can, of course, open the serial monitor to view the voltage values stream by
 
 **Code**
 
-```CPP
+```cpp
 #define DAC_PIN A0 // Make code a bit more legible
 
 float x = 0; // Value to take the sin of
@@ -334,7 +334,7 @@ void loop()
 
 :::tip
 
-    Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1 ](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
+Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
 :::
 
 - Step 1. Prepare a Seeed Studio XIAO SAMD21 and a Type-C cable.
@@ -345,7 +345,7 @@ void loop()
 
 :::note
 
-    If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
+If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 :::
 
 - **Step 1. You need to Install an Arduino Software.**
@@ -359,7 +359,7 @@ Double-click the Arduino application (arduino.exe) you have previously downloade
 
 :::note
 
-    If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
+If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
 :::
 
 - **Step 2. Open the Blink example**  
@@ -405,7 +405,7 @@ Now, simply click the "Upload" button in the environment. Wait a few seconds and
  A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
 :::note
-  the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet in resourses
+the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet in resourses
 :::
 
 ## The sample application
