@@ -122,3 +122,5 @@ After you log-in to your dashboard, you should be presented with a navigation pa
 *   **Dashboard**: Dashboard home page.
 *   **Hotspot**: List’s all your hotspots that are registered.
 *   **Account**: Account management page, including API credentials, password resets, etc.
+
+
