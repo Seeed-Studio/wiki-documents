@@ -59,6 +59,11 @@ Finally, the three on-board Grove interfaces can make your board connect to Grov
         5.Change some silkscreen and part location</td>
       <td className="tg-yw4l">Aug 24, 2015</td>
     </tr>
+      <tr>
+    <td>Seeeduino V4.3</td>
+    <td>Change from <strong>ATMEGA328P-MU</strong> to ATMEGA328P-AU in V4.2<br />Replace the serial chip to <strong>cp2102</strong></td>
+    <td>Nov. 2022</td>
+  </tr>
   </tbody></table>
 
 ## Features
@@ -189,7 +194,9 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 :::
 
-**Step 1. Install the Driver for Seeeduino V4.2.**
+**Step 1. Install the Driver**
+
+- **For Seeeduino V4.2**
 
 For Windows
 
@@ -210,9 +217,15 @@ The driver will install automatically when we install arduino IDE at windows 10.
 - Finally, navigate to and select the driver file named "seeed_usb_serial.inf"
 - Windows will finish up the driver installation from there.
 
-For Mac OSX and Linux
+For Mac OSX and Linux, You don't need to install any drivers.
 
-You don't need to install any drivers.
+- **For Seeeduino v4.3**
+
+You need to install the cp2102 driver to use the serial port of Seeeduino V4.3.
+
+You can click [here](https://files.seeedstudio.com/wiki/SeeeduinoV4/resources/CP210x_Universal_Windows_Driver.zip) to download and unzip the Windows driver for cp2102.
+
+If you are using another operating system, you can get the driver on the [official website](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads).
 
 **Step 2. Launch the Arduino application.**
 

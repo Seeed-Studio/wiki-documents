@@ -286,8 +286,11 @@ Please have the above devices and software ready, firmware update packages can b
 | Flash to eMMC tool & driver | - | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Flash-to-eMMC-tool/) |
 |  Android Pad R22.11.17  | Fix working indicator; fix HDMI no sound problem; change right mouse button to return; change density to 240 | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Android/)  |
 |  Android TV R22.11.17  | Remote control support (not for sale at this time) | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Android/)  |
-| Ubuntu 18.04 v0.323 | Add support for remote controls (not for sale at this time) | Coming soon  |
-| Ubuntu 20.04 R22.11.04 | Add support for wifi AP256 | Coming soon  |
+| Ubuntu 20.04 R22.01.15 | Add support for wifi AP256, `default Username: linkstar, Password: linkstar, Root Username:root, Root Password:root` | [Download](https://sourceforge.net/projects/linkstar-h68k-os/files/Ubuntu%2020.04/) |
+
+:::note
+Due to the limited resources on the ARM based CPU core,of Linkstar the Ubuntu 20.04 is based on [Lubuntu](https://lubuntu.me/) which is a lightweight Linux distribution of Ubuntu which uses LXDM or LXQt desktop environment.
+:::
 
 :::caution
 The image provided here does not support Card-Flashing.
