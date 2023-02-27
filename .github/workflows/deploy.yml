@@ -65,6 +65,7 @@ jobs:
             yarn add @docusaurus/theme-live-codeblock
             yarn add docusaurus-plugin-image-zoom
             yarn add docusaurus-plugin-sass
+            yarn add @docusaurus/plugin-client-redirects
             yarn build
       
       - name: PUBLISH to WEBSITE
