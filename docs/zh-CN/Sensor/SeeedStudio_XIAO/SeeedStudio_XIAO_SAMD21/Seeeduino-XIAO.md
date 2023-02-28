@@ -282,15 +282,18 @@ DAC 仅可用于 Arduino 引脚 A0 ，并可使用 analogWrite（A0，`<value>`�
 上述图片中 Seeed Studio XIAO SAMD21 正在使用 [**Seeed Studio XIAO SAMD21 拓展板**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 :::
 
-This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
+<!-- This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V. -->
+这个程序在引脚A0上产生一个 0 到 3.3V 范围内的正弦波输出，然后使用 A1 读取该输出并将其转换为 0 到 3.3V 之间的电压值。
 
-You can, of course, open the serial monitor to view the voltage values stream by. But if the the sine wave is hard to visualize through text, check out Arduino's new Serial Plotter, by going to Tools > Serial Plotter.
+<!-- You can, of course, open the serial monitor to view the voltage values stream by. But if the the sine wave is hard to visualize through text, check out Arduino's new Serial Plotter, by going to Tools > Serial Plotter. -->
+您可以打开串口监视器查看电压值的流动。但是，如果正弦波很难通过文本可视化，请尝试打开 Arduino 的新串口绘图工具，方法是：`Tools > Serial Plotter`。
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Serial%20poltting.png" /></div>
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
+<br />
 
-**Code**
+**代码示例**
 
 ```cpp
 #define DAC_PIN A0 // Make code a bit more legible
