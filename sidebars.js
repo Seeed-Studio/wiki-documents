@@ -521,6 +521,8 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-6-Position_DIP_Switch',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Switch-P',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-LED_Button',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Dual-Button',
               ],
             },
             {
@@ -539,6 +541,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-16-bit-ADC-ADS1115',
               ]
             },
 
@@ -2183,47 +2186,47 @@ const sidebars = {
         'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration',
         'Cloud_Chain/SenseCAP_Dashboard/Hotspot_Registration',
       ],
-},
+    },
     {
-          type: 'category',
-          label: 'SenseCAP Portal',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
+      type: 'category',
+      label: 'SenseCAP Portal',
+      items: [
+        'Cloud_Chain/SenseCAP_Cloud/wiki',
+      ],
     },
 
     {
-          type: 'category',
-          label: 'SenseCAP Hotspot APP',
-          items: [
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
-          ],
+      type: 'category',
+      label: 'SenseCAP Hotspot APP',
+      items: [
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
+      ],
     },
     {
-          type: 'category',
-          label: 'SenseCAP Mate APP',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
+      type: 'category',
+      label: 'SenseCAP Mate APP',
+      items: [
+        'Cloud_Chain/SenseCAP_Cloud/wiki',
+      ],
     },
     {
-          type: 'category',
-          label: 'SenseCAP API',
-          items: [
-            'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
-            'Cloud_Chain/SenseCAP_API/API_pricing',
-          ],
+      type: 'category',
+      label: 'SenseCAP API',
+      items: [
+        'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
+        'Cloud_Chain/SenseCAP_API/API_pricing',
+      ],
     },
-  
+
 
     {
       type: 'html',
@@ -2961,6 +2964,14 @@ const sidebars = {
       label: 'Seeed Studio XIAO 拓展板',
       items: [
         'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+      ]
+    },
+    {
+
+      type: 'category',
+      label: 'Seeed Studio XIAO SAMD21',
+      items: [
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
       ]
     },
 
