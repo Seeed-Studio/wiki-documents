@@ -79,7 +79,7 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
-
+                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
               ],
             },
             {
@@ -291,12 +291,14 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/G1-1-4_Water_Flow_sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH_Sensor',
+
               ],
 
             },
@@ -317,6 +319,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Vibration_Sensor_SW-420',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Step_Counter-BMA456',  
               ],
 
             },
@@ -535,6 +538,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Mech_Keycap',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Thumb_Joystick',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Magnetic_Switch',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Joint_v2.0',
               ],
             },
             {
@@ -554,6 +558,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-16-bit-ADC-ADS1115',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NOT',
               ]
             },
 
@@ -1213,6 +1218,7 @@ const sidebars = {
                         'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_3V3',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/Codec-Adaptive_Wireless_Relay',
                       ],
 
 
@@ -2455,7 +2461,11 @@ const sidebars = {
             'Top_Brand/Arduino/Kit with Courses/Grove_Indoor_Environment_Kit_for_Edison',
             'Top_Brand/Arduino/Kit with Courses/Grove_Smart_Plant_Care_Kit',
             'Top_Brand/Arduino/Kit with Courses/Techbox_Tricks',
-
+            'Top_Brand/Arduino/Kit with Courses/Grove_Starter_Kit_Plus',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Starter_Kit_v3',
+            'Top_Brand/Arduino/Kit with Courses/Grove-Creator-Kit-1',
+            'Top_Brand/Arduino/Kit with Courses/Grove-Mixer_Pack_V2',
+            'Top_Brand/Arduino/Kit with Courses/Grove-Toy_Kit',
           ],
         },
       ],
@@ -2807,6 +2817,7 @@ const sidebars = {
             'Seeed_Elderly/Xadow/Xadow_Tutorial_Communicate_via_BLE',
             'Seeed_Elderly/Xadow/Xadow_Tutorial_Shaking_Shaking',
             'Seeed_Elderly/Xadow/Xadow_Wearable_Kit_For_Edison',
+            'Seeed_Elderly/Xadow/Xadow_Motor_Driver',
           ]
         },
         {
@@ -2814,7 +2825,10 @@ const sidebars = {
           label: 'Rainbowduino',
           items: [
             'Seeed_Elderly/Rainbowduino/Rainbowduino_v3.0',
+            'Seeed_Elderly/Rainbowduino/Rainbowduino_Extension_Board_v0.9b',
+            'Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness',
             'Seeed_Elderly/Rainbowduino/Rainbowduino_LED_driver_platform-ATmega328',
+            'Seeed_Elderly/Rainbowduino/Rainbowduino',
           ]
         },
         {
@@ -2891,6 +2905,11 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/Fubarino_SD',
             'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
             'Seeed_Elderly/Discrete Product/Matrix_Clock',
+            'Seeed_Elderly/Discrete Product/Bugduino',
+            'Seeed_Elderly/Discrete Product/CUI32Stem',
+            'Seeed_Elderly/Discrete Product/Danger_Shield_Complete_Kits',
+            'Seeed_Elderly/Discrete Product/FST-01',
+            'Seeed_Elderly/Discrete Product/Grove-Base_Shield_for_IOIO-OTG', 
           ]
 
         },
