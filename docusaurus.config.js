@@ -227,11 +227,11 @@ const config = {
           //   position: 'right',
           //   className: 'navbar_doc_items'
           // },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-            className: 'navbar_doc_items'
-          },
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          //   className: 'navbar_doc_items'
+          // },
           // {
           //   type: 'dropdown',
           //   label: 'Page',
