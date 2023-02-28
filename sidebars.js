@@ -149,6 +149,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Laser_PM2.5_Sensor-HM3301',
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Dust_Sensor',
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Air_Quality_Sensor_v1.3',
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Formaldehyde-Sensor',
               ]
             },
             {
@@ -250,6 +251,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Fingerprint_Sensor',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Human_Presence_Sensor-AK9753',
               ],
             },
 
@@ -277,6 +279,8 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121',
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121',
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-I2C_Touch_Sensor',
 
               ]
             },
@@ -292,6 +296,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH_Sensor',
               ],
 
             },
@@ -425,6 +430,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_1_54',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Serial_LCD_V1.0',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-BlinkM',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Serial_Camera_Kit',
               ],
             },
             {
@@ -468,6 +474,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
 
               ]
             },
@@ -494,6 +501,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Current/Grove-MOSFET',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-SPDT_Relay_30A',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-Screw_Terminal',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-Electromagnet',
 
               ],
             },
@@ -523,6 +531,10 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Switch-P',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-LED_Button',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Dual-Button',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-5-Way_Switch',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Mech_Keycap',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Thumb_Joystick',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Magnetic_Switch',
               ],
             },
             {

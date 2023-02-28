@@ -370,7 +370,7 @@ You can discover this page with two large portions.
             <a href="/Grove_Base_Hat_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Base HAT </font></span></a>,
             <a href="/Grove_AI_HAT_for_Edge_Computing" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove AI HAT</font></span></a>,
             <a href="/RS-485_Shield_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RS-485 Pi HAT</font></span></a>,
-            <a href="eight-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 8-Channel 12-Bit ADC HAT</font></span></a>,
+            <a href="/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 8-Channel 12-Bit ADC HAT</font></span></a>,
             <a href="//ReSpeaker_4_Mic_Array_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reSpeaker Pi HAT</font></span></a>
             <br/>
             <a href="/Grove_Base_HAT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Find out more</font></span></a>
