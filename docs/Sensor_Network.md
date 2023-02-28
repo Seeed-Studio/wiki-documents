@@ -23,6 +23,7 @@ You can discover this page with two large portions.
 - AI-based Sensors for reday-to-deploy intelligent scenarios
 - Data Logger for remote environmental data monitoring
 - Gateway for long-range, high-security, indoor and outdoor data transmission
+- Other network infrastructures for data transmission, such as routers.
 
 ### Industrial Sensors and Probes -->
 
@@ -179,6 +180,38 @@ You can discover this page with two large portions.
             <br/>
             <a href="/The-Things-Indoor-Gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}>The Things Indoor Gateway</font></span></a>
             <br/>
+    </a>
+</div>
+
+### Routers for Other Network Infrastructure -->
+
+<div class="title_container">
+    <a class="title_item" style={{textAlign: 'center'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Routers</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>The routers can connect a local network to the Internet, enabling devices communicate with each other.</font></div>
+    </a>
+</div>
+
+<div class="independent_container">
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reRouter</font></div>
+            <a href="/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction with Hardware Overview</font></span></a>
+            <br/>
+            <a href="Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Original OS Installation </font></span></a>
+            <br/>
+            <a href="/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Application: OpenWRT Installation  </font></span></a>
+            <br/>
+            <a href="/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Application: Plex Media Server Installation </font></span></a>
+            <br/>
+            <a href="/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Application: Mender Usage for reRouter </font></span></a>
+    </a>
+    <a class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LinkStar</font></div>
+            <a href="/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction with Hardware Overview</font></span></a>
+            <br/>
+            <a href="/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Original OS Installation</font></span></a>
+            <br/>
+            <a href="/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Application: Building a smart home control centre around Home Assistant</font></span></a>
     </a>
 </div>
 
@@ -737,7 +770,7 @@ You can discover this page with two large portions.
 
 ### Application -->
 
-### Easy IoT Application 🌲
+### Easy IoT Application <
 
 <!-- Easy IoT Application -->
 
@@ -809,7 +842,7 @@ You can discover this page with two large portions.
 
 <!-- Embedded ML Scenarios -->
 
-### Embedde ML Scenarios 💻
+### Embedde ML Scenarios <
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
