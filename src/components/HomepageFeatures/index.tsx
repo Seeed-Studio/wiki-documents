@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/structure.svg').default,
     description: (
       <>
-      New structure, New categorization <br/>More function, Better exhibition <br/><code>Algolia</code>  Serach Engine Powered<br/> Built around <code>Docusaurus</code> Framework
+      New structure, New categorization <br/>More function, Better exhibition <br/><code>Algolia</code>  Search Engine Powered<br/> Built around <code>Docusaurus</code> Framework
       </>
     ),
   },

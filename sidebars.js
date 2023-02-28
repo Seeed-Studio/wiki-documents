@@ -1093,446 +1093,454 @@ const sidebars = {
       ],
 
     },
-    {
-      type: 'category',
-      label: 'Wio Series',
-      items: [
-        'Sensor/Wio_Series/Wio',
-        {
-          type: 'category',
-          label: 'Wio-E5',
-          items: [
-            'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
-            'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
-            'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
-
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'Wio WM1302',
-          items: [
-            'Sensor/Wio_Series/Wio_WM1302/WM1302_module',
-            'Sensor/Wio_Series/Wio_WM1302/WM1302_Pi_HAT',
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'Wio RP2040',
-          items: [
-            {
-              type: 'category',
-              label: 'Wio RP2040 Module',
-              items: [
-                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_Module/Wio_RP2040_Module_Build-in_Wireless_2.4G',
-
-              ]
-            },
+    
+    
 
             {
+
               type: 'category',
-              label: 'Wio RP2040 mini Dev Board',
+              label: 'Beyond Grove',
               items: [
-                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
-                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio-RP2040-with-Arduino-WIFI',
-                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/LAN_Communications',
                 {
-                  type: 'category',
-                  label: 'Application',
-                  items: [
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_MQTT_to_remotely_light_up_LED_lights',
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_Socket_to_connect_to_the_forum',
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-Fall-Detection-Device',
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-desktop-atmosphere-lamp',
 
-                  ]
+                  type: 'category',
+                  label: 'Sensors',
+                  items: [
+                    'Sensor/Beyond_Grove/Sensors/Ultra_Sonic_range_measurement_module',
+                    'Sensor/Beyond_Grove/Sensors/Water-Flow-Sensor',
+                    'Sensor/Beyond_Grove/Sensors/Weight_Sensor_Load_Cell_0-500g',
+                    'Sensor/Beyond_Grove/Sensors/G1_Water_Flow_Sensor',
+                    'Sensor/Beyond_Grove/Sensors/G1_and_2_inch_Water_Flow_Sensor',
+                    'Sensor/Beyond_Grove/Sensors/G1-8_Water_Flow_Sensor',
+                    'Sensor/Beyond_Grove/Sensors/G3-4_Water_Flow_sensor',
+                    'Sensor/Beyond_Grove/Sensors/M11_1.25_Water_flow_Sensor',
+                    'Sensor/Beyond_Grove/Sensors/PIR_Motion_Sensor_Large_Lens_version',
+                    'Sensor/Beyond_Grove/Sensors/Photo_Reflective_Sensor',
+                    'Sensor/Beyond_Grove/Sensors/Photo_interrupter_OS25B10',
+                    'Sensor/Beyond_Grove/Sensors/Piezo_Sensor-MiniSense_100',
+                    'Sensor/Beyond_Grove/Sensors/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz',
+                    'Sensor/Beyond_Grove/Sensors/Gear_Stepper_Motor_Driver_Pack',
+                  ],
+
+
                 },
 
-              ]
-            },
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'Wio Link',
-          items: [
-            'Sensor/Wio_Series/Wio_Link/Wio_Link',
-            'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
-            'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
-            'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
-            'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
-            'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
-            'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'Wio Tracker',
-          items: [
-            'Sensor/Wio_Series/Wio_Tracker/Wio_Tracker',
-            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat.1',
-            'Sensor/Wio_Series/Wio_Tracker/wio_gps_board',
-            'Sensor/Wio_Series/Wio_Tracker/LTE_Cat_1_Pi_HAT',
-            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
-            'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
-            'Sensor/Wio_Series/Wio_Tracker/Grove_Starter_Kit_for_Wio_LTE',
-
-          ]
-        },
-
-        {
-          type: 'category',
-          label: 'Wio Lite',
-          items: [
-            'Sensor/Wio_Series/Wio_Lite/Wio-Lite-W600',
-            'Sensor/Wio_Series/Wio_Lite/Wio-Lite-MG126',
-            'Sensor/Wio_Series/Wio_Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
-            'Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite',
-            'Sensor/Wio_Series/Wio_Lite/Grove_Base_Shield_for_NodeMCU_V1.0',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Wio Node',
-          items: [
-            'Sensor/Wio_Series/Wio_Node/Wio_Node',
-          ]
-        },
-
-      ]
-    },
-
-
-
-    {
-
-      type: 'category',
-      label: 'Seeeduino Series',
-      items: [
-        'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
-        'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
-        {
-
-          type: 'category',
-          label: 'Seeeduino',
-          items: [
-            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2',
-            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.0',
-            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2_Atmega-168P',
-            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2',
-            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v2.21',
-            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
-            'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
-          ],
-
-        },
-        'Sensor/Seeeduino Series/Seeeduino_Cloud',
-        'Sensor/Seeeduino Series/Seeeduino-Cortex-M0',
-        'Sensor/Seeeduino Series/Seeeduino_Ethernet',
-        'Sensor/Seeeduino Series/Seeeduino_GPRS',
-        'Sensor/Seeeduino Series/Seeeduino_Lite',
-        'Sensor/Seeeduino Series/Seeeduino_LoRAWAN',
-        'Sensor/Seeeduino Series/Seeeduino_Lotus',
-        'Sensor/Seeeduino Series/Seeeduino_Lotus_Cortex-M0-',
-        'Sensor/Seeeduino Series/Seeeduino_Mega',
-        'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
-        'Sensor/Seeeduino Series/Seeeduino-Nano',
-        {
-
-          type: 'category',
-          label: 'Seeeduino Stalker',
-          items: [
-            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
-            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3.1',
-            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v3_enclosure',
-            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
-            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v2.3',
-            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker',
-            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
-          ],
-
-        },
-        'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
-        'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
-        'Sensor/Seeeduino Series/Seeeduino_Arch',
-        'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
-
-        {
-
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Sensor/Seeeduino Series/Application/Driver_for_Seeeduino',
-            'Sensor/Seeeduino Series/Application/FM_Receiver',
-          ],
-
-        },
-        {
-
-          type: 'category',
-          label: 'Kit with Courses',
-          items: [
-            'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
-            'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-          ],
-
-        },
-
-      ],
-
-
-    },
-
-
-
-    {
-
-      type: 'category',
-      label: 'Arch',
-      items: [
-        'Sensor/Arch/Arch_Mix',
-        'Sensor/Arch/Arch_V1.1',
-        'Sensor/Arch/Arch_Pro',
-        'Sensor/Arch/Arch_BLE',
-        'Sensor/Arch/Arch_Link',
-        'Sensor/Arch/Arch_GPRS',
-        'Sensor/Arch/Arch_GPRS_V2',
-        'Sensor/Arch/Arch_Max',
-        'Sensor/Arch/Arch_Max_v1.1',
-        'Sensor/Arch/Heart-Sound_Sensor',
-        'Sensor/Arch/Grove-Starter_Kit_for_mbed',
-      ],
-
-    },
-
-    {
-
-      type: 'category',
-      label: 'Azure Sphere MT3620',
-      items: [
-        'Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit',
-        'Sensor/Azure Sphere MT3620/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit',
-        'Sensor/Azure Sphere MT3620/MT3620_Ethernet_Shield_v1.0',
-        'Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board',
-        'Sensor/Azure Sphere MT3620/MT3620_Grove_Breakout',
-      ],
-
-    },
-
-    {
-
-      type: 'category',
-      label: 'IOT BUTTON FOR AWS',
-      items: [
-
-        'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
-      ],
-
-    },
-
-    {
-
-      type: 'category',
-      label: 'Pi Pico',
-      items: [
-        'Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico',
-      ],
-
-    },
-
-
-    {
-
-      type: 'category',
-      label: 'Beyond Grove',
-      items: [
-        {
-
-          type: 'category',
-          label: 'Sensors',
-          items: [
-            'Sensor/Beyond_Grove/Sensors/Ultra_Sonic_range_measurement_module',
-            'Sensor/Beyond_Grove/Sensors/Water-Flow-Sensor',
-            'Sensor/Beyond_Grove/Sensors/Weight_Sensor_Load_Cell_0-500g',
-            'Sensor/Beyond_Grove/Sensors/G1_Water_Flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/G1_and_2_inch_Water_Flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/G1-8_Water_Flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/G3-4_Water_Flow_sensor',
-            'Sensor/Beyond_Grove/Sensors/M11_1.25_Water_flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/PIR_Motion_Sensor_Large_Lens_version',
-            'Sensor/Beyond_Grove/Sensors/Photo_Reflective_Sensor',
-            'Sensor/Beyond_Grove/Sensors/Photo_interrupter_OS25B10',
-            'Sensor/Beyond_Grove/Sensors/Piezo_Sensor-MiniSense_100',
-            'Sensor/Beyond_Grove/Sensors/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz',
-            'Sensor/Beyond_Grove/Sensors/Gear_Stepper_Motor_Driver_Pack',
-          ],
-
-
-        },
-
-        {
-
-          type: 'category',
-          label: 'Sensor Network',
-          items: [
-            'Sensor/Beyond_Grove/Sensor_Network/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder',
-            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_RF_link_kit',
-            'Sensor/Beyond_Grove/Sensor_Network/315MHz_Simple_RF_Link_Kit',
-            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_Wireless_car_key_fob_with_key_chain',
-            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_remote_relay_switch_kits-2_channels',
-            'Sensor/Beyond_Grove/Sensor_Network/433Mhz_RF_Link_Kit',
-            'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
-            'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
-            'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
-
-          ],
-
-
-        },
-        {
-
-          type: 'category',
-          label: 'Accessories',
-          items: [
-            {
-
-              type: 'category',
-              label: 'Charge',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Charge/Essentials',
-                'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
-                'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
-                'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
-                'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
-                'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
-                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
-                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
-                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
-                'Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70',
-                'Sensor/Beyond_Grove/Accessories/Charge/1.5W_Solar_Panel_81x137',
-                'Sensor/Beyond_Grove/Accessories/Charge/1w_Solar_Panel_80x100',
-                'Sensor/Beyond_Grove/Accessories/Charge/2.5W_Solar_Panel_116x160',
-                'Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160',
-                'Sensor/Beyond_Grove/Accessories/Charge/3.6V_Micro_hydro_generator',
-                'Sensor/Beyond_Grove/Accessories/Charge/Bicycle_Dynamo_With_Bracket-6V_3W',
-                'Sensor/Beyond_Grove/Accessories/Charge/Battery_kit_3.7V_520_mAh',
-                'Sensor/Beyond_Grove/Accessories/Charge/Logic_DC_Jack',
-                'Sensor/Beyond_Grove/Accessories/Charge/Qi_Wireless_Charger_Transmitter',
-                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider',
-                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.1',
-                'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply',
-                'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply_v1.1',
-
-
-
-              ],
-
-
-            },
-            {
-
-              type: 'category',
-              label: 'Input/Output',
-              items: [
-                'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/125Khz_RFID_module-UART',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/Scream_out_loud-110dBA_fixed_tone_Siren',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/2.8inch-TFT_Touch_Shield_V1.0',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_3V3',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
-              ],
-
-
-            },
-            {
-
-              type: 'category',
-              label: 'Current',
-              items: [
-                'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
-                'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
-                'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
-
-
-              ],
-
-
-            },
-            {
-
-              type: 'category',
-              label: 'Case',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Current/Bracket_for_Infrared_Proximity_Sensor',
-                'Sensor/Beyond_Grove/Accessories/Current/Shield-MaTrix-V0.9b',
-
-
-              ],
-
-
-            },
-            {
-
-              type: 'category',
-              label: 'LED',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Current/FSM-55',
-              ],
-
-            },
-            {
-
-              type: 'category',
-              label: 'Tools',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Current/Bluetooth_Multimeter',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano',
-                'Sensor/Beyond_Grove/Accessories/Current/Dfu-util',
-                'Sensor/Beyond_Grove/Accessories/Current/Replacement_LCD_Screen_for_DSO_nano',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano_v3',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Development',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-OpenOCD_gdb',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Qemu_gdb',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-gcc',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad_Manual_by_the_community',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Beta_HW',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware',
-                'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Calibration',
-                'Sensor/Beyond_Grove/Accessories/Current/Mini_Soldering_Iron',
-                'Sensor/Beyond_Grove/Accessories/Current/RF_Explorer_Software',
-
-              ],
-
-            },
-            {
-
-              type: 'category',
-              label: 'Display',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Current/LCD_16-2_Characters-Green_Yellow_back_light',
-                'Sensor/Beyond_Grove/Accessories/Current/LCD_8-2_Characters-Blue_back_light',
+                {
+
+                  type: 'category',
+                  label: 'Sensor Network',
+                  items: [
+                    'Sensor/Beyond_Grove/Sensor_Network/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder',
+                    'Sensor/Beyond_Grove/Sensor_Network/315Mhz_RF_link_kit',
+                    'Sensor/Beyond_Grove/Sensor_Network/315MHz_Simple_RF_Link_Kit',
+                    'Sensor/Beyond_Grove/Sensor_Network/315Mhz_Wireless_car_key_fob_with_key_chain',
+                    'Sensor/Beyond_Grove/Sensor_Network/315Mhz_remote_relay_switch_kits-2_channels',
+                    'Sensor/Beyond_Grove/Sensor_Network/433Mhz_RF_Link_Kit',
+                    'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
+                    'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
+                    'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
+
+                  ],
+
+
+                },
+                {
+
+                  type: 'category',
+                  label: 'Accessories',
+                  items: [
+                    {
+
+                      type: 'category',
+                      label: 'Charge',
+                      items: [
+                        'Sensor/Beyond_Grove/Accessories/Charge/Essentials',
+                        'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
+                        'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
+                        'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
+                        'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
+                        'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
+                        'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
+                        'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
+                        'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
+                        'Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70',
+                        'Sensor/Beyond_Grove/Accessories/Charge/1.5W_Solar_Panel_81x137',
+                        'Sensor/Beyond_Grove/Accessories/Charge/1w_Solar_Panel_80x100',
+                        'Sensor/Beyond_Grove/Accessories/Charge/2.5W_Solar_Panel_116x160',
+                        'Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160',
+                        'Sensor/Beyond_Grove/Accessories/Charge/3.6V_Micro_hydro_generator',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Bicycle_Dynamo_With_Bracket-6V_3W',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Battery_kit_3.7V_520_mAh',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Logic_DC_Jack',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Qi_Wireless_Charger_Transmitter',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.1',
+                        'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply',
+                        'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply_v1.1',
+
+
+
+                      ],
+
+
+                    },
+                    {
+
+                      type: 'category',
+                      label: 'Input/Output',
+                      items: [
+                        'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/125Khz_RFID_module-UART',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/Scream_out_loud-110dBA_fixed_tone_Siren',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/2.8inch-TFT_Touch_Shield_V1.0',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_3V3',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
+                      ],
+
+
+                    },
+                    {
+
+                      type: 'category',
+                      label: 'Current',
+                      items: [
+                        'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
+                        'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
+                        'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
+
+
+                      ],
+
+
+                    },
+                    {
+
+                      type: 'category',
+                      label: 'Case',
+                      items: [
+                        'Sensor/Beyond_Grove/Accessories/Current/Bracket_for_Infrared_Proximity_Sensor',
+                        'Sensor/Beyond_Grove/Accessories/Current/Shield-MaTrix-V0.9b',
+
+
+                      ],
+
+
+                    },
+                    {
+
+                      type: 'category',
+                      label: 'LED',
+                      items: [
+                        'Sensor/Beyond_Grove/Accessories/Current/FSM-55',
+                      ],
+
+                    },
+                    {
+
+                      type: 'category',
+                      label: 'Tools',
+                      items: [
+                        'Sensor/Beyond_Grove/Accessories/Current/Bluetooth_Multimeter',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano',
+                        'Sensor/Beyond_Grove/Accessories/Current/Dfu-util',
+                        'Sensor/Beyond_Grove/Accessories/Current/Replacement_LCD_Screen_for_DSO_nano',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano_v3',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Development',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-OpenOCD_gdb',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Qemu_gdb',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-gcc',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad_Manual_by_the_community',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Beta_HW',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware',
+                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Calibration',
+                        'Sensor/Beyond_Grove/Accessories/Current/Mini_Soldering_Iron',
+                        'Sensor/Beyond_Grove/Accessories/Current/RF_Explorer_Software',
+
+                      ],
+
+                    },
+                    {
+
+                      type: 'category',
+                      label: 'Display',
+                      items: [
+                        'Sensor/Beyond_Grove/Accessories/Current/LCD_16-2_Characters-Green_Yellow_back_light',
+                        'Sensor/Beyond_Grove/Accessories/Current/LCD_8-2_Characters-Blue_back_light',
+                      ],
+
+                    },
+
+                  ],
+
+
+                },
               ],
 
             },
 
-          ],
 
-
-        },
-      ],
-
-    },
-
-
-
+            {
+              type: 'category',
+              label: 'Other Microcontrollers',
+              items: [
+                    {
+                      type: 'category',
+                      label: 'Wio Series',
+                      items: [
+                        'Sensor/Wio_Series/Wio',
+                        {
+                          type: 'category',
+                          label: 'Wio-E5',
+                          items: [
+                            'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
+                            'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
+                            'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
+        
+                          ]
+                        },
+        
+                        {
+                          type: 'category',
+                          label: 'Wio WM1302',
+                          items: [
+                            'Sensor/Wio_Series/Wio_WM1302/WM1302_module',
+                            'Sensor/Wio_Series/Wio_WM1302/WM1302_Pi_HAT',
+                          ]
+                        },
+        
+                        {
+                          type: 'category',
+                          label: 'Wio RP2040',
+                          items: [
+                            {
+                              type: 'category',
+                              label: 'Wio RP2040 Module',
+                              items: [
+                                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_Module/Wio_RP2040_Module_Build-in_Wireless_2.4G',
+        
+                              ]
+                            },
+        
+                            {
+                              type: 'category',
+                              label: 'Wio RP2040 mini Dev Board',
+                              items: [
+                                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
+                                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio-RP2040-with-Arduino-WIFI',
+                                'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/LAN_Communications',
+                                {
+                                  type: 'category',
+                                  label: 'Application',
+                                  items: [
+                                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_MQTT_to_remotely_light_up_LED_lights',
+                                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_Socket_to_connect_to_the_forum',
+                                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-Fall-Detection-Device',
+                                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-desktop-atmosphere-lamp',
+        
+                                  ]
+                                },
+        
+                              ]
+                            },
+                          ]
+                        },
+        
+                        {
+                          type: 'category',
+                          label: 'Wio Link',
+                          items: [
+                            'Sensor/Wio_Series/Wio_Link/Wio_Link',
+                            'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
+                            'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
+                            'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
+                            'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
+                            'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
+                            'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
+                          ]
+                        },
+        
+                        {
+                          type: 'category',
+                          label: 'Wio Tracker',
+                          items: [
+                            'Sensor/Wio_Series/Wio_Tracker/Wio_Tracker',
+                            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat.1',
+                            'Sensor/Wio_Series/Wio_Tracker/wio_gps_board',
+                            'Sensor/Wio_Series/Wio_Tracker/LTE_Cat_1_Pi_HAT',
+                            'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
+                            'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
+                            'Sensor/Wio_Series/Wio_Tracker/Grove_Starter_Kit_for_Wio_LTE',
+        
+                          ]
+                        },
+        
+                        {
+                          type: 'category',
+                          label: 'Wio Lite',
+                          items: [
+                            'Sensor/Wio_Series/Wio_Lite/Wio-Lite-W600',
+                            'Sensor/Wio_Series/Wio_Lite/Wio-Lite-MG126',
+                            'Sensor/Wio_Series/Wio_Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
+                            'Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite',
+                            'Sensor/Wio_Series/Wio_Lite/Grove_Base_Shield_for_NodeMCU_V1.0',
+                          ]
+                        },
+                        {
+                          type: 'category',
+                          label: 'Wio Node',
+                          items: [
+                            'Sensor/Wio_Series/Wio_Node/Wio_Node',
+                          ]
+                        },
+        
+                      ]
+                    },
+        
+        
+        
+                    {
+        
+                      type: 'category',
+                      label: 'Seeeduino Series',
+                      items: [
+                        'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
+                        'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
+                        {
+        
+                          type: 'category',
+                          label: 'Seeeduino',
+                          items: [
+                            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2',
+                            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.0',
+                            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2_Atmega-168P',
+                            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2',
+                            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v2.21',
+                            'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
+                            'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
+                          ],
+        
+                        },
+                        'Sensor/Seeeduino Series/Seeeduino_Cloud',
+                        'Sensor/Seeeduino Series/Seeeduino-Cortex-M0',
+                        'Sensor/Seeeduino Series/Seeeduino_Ethernet',
+                        'Sensor/Seeeduino Series/Seeeduino_GPRS',
+                        'Sensor/Seeeduino Series/Seeeduino_Lite',
+                        'Sensor/Seeeduino Series/Seeeduino_LoRAWAN',
+                        'Sensor/Seeeduino Series/Seeeduino_Lotus',
+                        'Sensor/Seeeduino Series/Seeeduino_Lotus_Cortex-M0-',
+                        'Sensor/Seeeduino Series/Seeeduino_Mega',
+                        'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
+                        'Sensor/Seeeduino Series/Seeeduino-Nano',
+                        {
+        
+                          type: 'category',
+                          label: 'Seeeduino Stalker',
+                          items: [
+                            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
+                            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3.1',
+                            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v3_enclosure',
+                            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
+                            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v2.3',
+                            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker',
+                            'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
+                          ],
+        
+                        },
+                        'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
+                        'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
+                        'Sensor/Seeeduino Series/Seeeduino_Arch',
+                        'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
+        
+                        {
+        
+                          type: 'category',
+                          label: 'Application',
+                          items: [
+                            'Sensor/Seeeduino Series/Application/Driver_for_Seeeduino',
+                            'Sensor/Seeeduino Series/Application/FM_Receiver',
+                          ],
+        
+                        },
+                        {
+        
+                          type: 'category',
+                          label: 'Kit with Courses',
+                          items: [
+                            'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
+                            'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+                          ],
+        
+                        },
+        
+                      ],
+        
+        
+                    },
+        
+        
+        
+                    {
+        
+                      type: 'category',
+                      label: 'Arch',
+                      items: [
+                        'Sensor/Arch/Arch_Mix',
+                        'Sensor/Arch/Arch_V1.1',
+                        'Sensor/Arch/Arch_Pro',
+                        'Sensor/Arch/Arch_BLE',
+                        'Sensor/Arch/Arch_Link',
+                        'Sensor/Arch/Arch_GPRS',
+                        'Sensor/Arch/Arch_GPRS_V2',
+                        'Sensor/Arch/Arch_Max',
+                        'Sensor/Arch/Arch_Max_v1.1',
+                        'Sensor/Arch/Heart-Sound_Sensor',
+                        'Sensor/Arch/Grove-Starter_Kit_for_mbed',
+                      ],
+        
+                    },
+        
+                    {
+        
+                      type: 'category',
+                      label: 'Azure Sphere MT3620',
+                      items: [
+                        'Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit',
+                        'Sensor/Azure Sphere MT3620/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit',
+                        'Sensor/Azure Sphere MT3620/MT3620_Ethernet_Shield_v1.0',
+                        'Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board',
+                        'Sensor/Azure Sphere MT3620/MT3620_Grove_Breakout',
+                      ],
+        
+                    },
+        
+                    {
+        
+                      type: 'category',
+                      label: 'IOT BUTTON FOR AWS',
+                      items: [
+        
+                        'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
+                      ],
+        
+                    },
+        
+                    {
+        
+                      type: 'category',
+                      label: 'Pi Pico',
+                      items: [
+                        'Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico',
+                      ],
+        
+                    },
+                  
+                ], 
+         
+              },
 
 
     // {
@@ -2557,8 +2565,43 @@ const sidebars = {
 
     },
 
-    'About',
-    'License',
+    {
+      type: 'html',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Contribution </strong></div>
+    </div>
+    `,
+    },
+
+    {
+          type: 'category',
+          label: 'Fusion',
+          items: [
+            'Contribution/Fusion/Service_for_Fusion_PCB',
+            'Contribution/Fusion/Galileo_Case',
+            'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
+            'Contribution/Fusion/Starter_bundle_harness_V1',
+          ]
+    },
+
+    {
+          type: 'category',
+          label: 'Contributors',
+          items: [
+            'Contribution/Contributors/How_To_Edit_A_Document',
+            'Contribution/Contributors/Things_We_Make',
+          ]
+    },
 
     {
 
@@ -2839,28 +2882,13 @@ const sidebars = {
           ]
 
         },
-        // {
-        //   type: 'category',
-        //   label: 'Fusion',
-        //   items: [
-        //     'Seeed_Elderly/Fusion/Service_for_Fusion_PCB',
-        //     'Seeed_Elderly/Fusion/Galileo_Case',
-        //     'Seeed_Elderly/Fusion/Unibody_box_for_Galileo_Gen2',
-        //     'Seeed_Elderly/Fusion/Starter_bundle_harness_V1',
-        //   ]
-        // },
-        // {
-        //   type: 'category',
-        //   label: 'Contributors',
-        //   items: [
-        //     'Seeed_Elderly/Contributors/How_To_Edit_A_Document',
-        //     'Seeed_Elderly/Contributors/Things_We_Make',
-        //   ]
-        // },
+
       ],
 
     },
 
+    'About',
+    'License',
 
   ],
 
