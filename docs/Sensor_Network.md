@@ -223,7 +223,6 @@ You can discover this page with two large portions.
 - Microtrollers and attached extension board, accessories, etc
 - Application for IoT or embedded ML methods acknowledge
 - Kit with free courses and more intriguing tutorials
-- Fusion service
 
 ### Sensors and Sensors' Network -->
 

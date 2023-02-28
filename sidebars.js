@@ -1170,11 +1170,11 @@ const sidebars = {
                       label: 'Charge',
                       items: [
                         'Sensor/Beyond_Grove/Accessories/Charge/Essentials',
-                        'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
-                        'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
-                        'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
-                        'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
-                        'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_Pro',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo-Rider-Plus',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.3',
                         'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
                         'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
                         'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
@@ -1204,7 +1204,7 @@ const sidebars = {
                       type: 'category',
                       label: 'Input/Output',
                       items: [
-                        'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V_3V3',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/125Khz_RFID_module-UART',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer',
@@ -1222,7 +1222,7 @@ const sidebars = {
                       type: 'category',
                       label: 'Current',
                       items: [
-                        'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
+                        'Sensor/Beyond_Grove/Accessories/Current/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
                         'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
                         'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
 
@@ -1236,10 +1236,8 @@ const sidebars = {
                       type: 'category',
                       label: 'Case',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/Bracket_for_Infrared_Proximity_Sensor',
-                        'Sensor/Beyond_Grove/Accessories/Current/Shield-MaTrix-V0.9b',
-
-
+                        'Sensor/Beyond_Grove/Accessories/Case/Bracket_for_Infrared_Proximity_Sensor',
+                        'Sensor/Beyond_Grove/Accessories/Case/Shield-MaTrix-V0.9b',
                       ],
 
 
@@ -1249,7 +1247,7 @@ const sidebars = {
                       type: 'category',
                       label: 'LED',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/FSM-55',
+                        'Sensor/Beyond_Grove/Accessories/LED/FSM-55',
                       ],
 
                     },
@@ -1258,23 +1256,22 @@ const sidebars = {
                       type: 'category',
                       label: 'Tools',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/Bluetooth_Multimeter',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano',
-                        'Sensor/Beyond_Grove/Accessories/Current/Dfu-util',
-                        'Sensor/Beyond_Grove/Accessories/Current/Replacement_LCD_Screen_for_DSO_nano',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano_v3',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Development',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-OpenOCD_gdb',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Qemu_gdb',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-gcc',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad_Manual_by_the_community',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Beta_HW',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Calibration',
-                        'Sensor/Beyond_Grove/Accessories/Current/Mini_Soldering_Iron',
-                        'Sensor/Beyond_Grove/Accessories/Current/RF_Explorer_Software',
-
+                        'Sensor/Beyond_Grove/Accessories/Tools/Bluetooth_Multimeter',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano',
+                        'Sensor/Beyond_Grove/Accessories/Tools/Dfu-util',
+                        'Sensor/Beyond_Grove/Accessories/Tools/Replacement_LCD_Screen_for_DSO_nano',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano_v3',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Development',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-OpenOCD_gdb',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Qemu_gdb',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-gcc',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad_Manual_by_the_community',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Beta_HW',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Building_Firmware',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Calibration',
+                        'Sensor/Beyond_Grove/Accessories/Tools/Mini_Soldering_Iron',
+                        'Sensor/Beyond_Grove/Accessories/Tools/RF_Explorer_Software',
                       ],
 
                     },
@@ -1283,8 +1280,8 @@ const sidebars = {
                       type: 'category',
                       label: 'Display',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/LCD_16-2_Characters-Green_Yellow_back_light',
-                        'Sensor/Beyond_Grove/Accessories/Current/LCD_8-2_Characters-Blue_back_light',
+                        'Sensor/Beyond_Grove/Accessories/Display/LCD_16-2_Characters-Green_Yellow_back_light',
+                        'Sensor/Beyond_Grove/Accessories/Display/LCD_8-2_Characters-Blue_back_light',
                       ],
 
                     },
