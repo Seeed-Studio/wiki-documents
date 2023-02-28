@@ -4,6 +4,7 @@ title: Grove - OLED Display 1.12&#34
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-OLED_Display_1.12inch
 last_update:
   date: 1/9/2023
   author: shuxu hu

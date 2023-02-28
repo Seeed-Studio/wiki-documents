@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/315MHz_Simple_RF_Link_Kit/
+slug: /315MHz_Simple_RF_Link_Kit
 last_update:
   date: 02/03/2022
   author: gunengyu
@@ -142,11 +143,11 @@ The transmitter and receiver modules both rely on a single wire for communicatio
 
 Both the transmitter and receiver modules require three wires: Vcc, Ground, and signal. Both of pin 2 parts of the kit are not connected.
 
-* Connect the Transmitter module to Digital I/O 2 of the [Grove_-_Base_Shield](/Top_Brand/Arduino/shield/Base_Shield_V2 "Grove - Base Shield") on the Arduino being used for transmission.
+* Connect the Transmitter module to Digital I/O 2 of the [Grove_-_Base_Shield](/Base_Shield_V2 "Grove - Base Shield") on the Arduino being used for transmission.
 Grove-433MHz_Simple_RF_Link_Kit
-* Connect the Receiver module to Digital I/O 2 of the [Grove_-_Base_Shield](/Top_Brand/Arduino/shield/Base_Shield_V2 "Grove - Base Shield") on the receiving Arduino.
+* Connect the Receiver module to Digital I/O 2 of the [Grove_-_Base_Shield](/Base_Shield_V2 "Grove - Base Shield") on the receiving Arduino.
 
-**Note:** The hardware installation can refer to [the usage of the module Grove - 433MHz Simple RF Link Kit](/Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit "Grove-433MHz_Simple_RF_Link_Kit").
+**Note:** The hardware installation can refer to [the usage of the module Grove - 433MHz Simple RF Link Kit](/Grove-433MHz_Simple_RF_Link_Kit "Grove-433MHz_Simple_RF_Link_Kit").
 
 * Download the [File: VirtualWire library](https://files.seeedstudio.com/wiki/315MHz_Simple_RF_Link_Kit/res/VirtualWire_Library.zip) and unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0\libraries. Please reference [here](http://www.pjrc.com/teensy/td_libs_VirtualWire.html).
 * Upload the below code for transmitter module:

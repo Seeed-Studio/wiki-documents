@@ -4,6 +4,7 @@ title: Update Jetson Linux Over-the-Air Using Allxon
 keywords:
 - Sorftware Allxon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Update-Jetson-Linux-OTA-Using-Allxon
 last_update:
   date: 1/13/2023
   author: jianjing Huang

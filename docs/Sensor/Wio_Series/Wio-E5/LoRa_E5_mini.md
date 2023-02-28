@@ -5,6 +5,7 @@ keywords:
   - wio 
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
+slug: /LoRa_E5_mini
 last_update:
   date: 01/30/2023
   author: hushuxu

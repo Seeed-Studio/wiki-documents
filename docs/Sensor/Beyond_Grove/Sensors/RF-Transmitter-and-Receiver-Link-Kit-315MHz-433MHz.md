@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz/
+slug: /RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz
 last_update:
   date: 02/03/2022
   author: gunengyu

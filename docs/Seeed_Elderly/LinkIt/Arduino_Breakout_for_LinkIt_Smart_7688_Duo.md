@@ -4,6 +4,7 @@ title: Arduino Breakout for LinkIt Smart 7688 Duo
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Arduino_Breakout_for_LinkIt_Smart_7688_Duo
 last_update:
   date: 1/13/2023
   author: shuxu hu

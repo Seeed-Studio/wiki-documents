@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-UART_Wifi_V2/
+slug: /Grove-UART_Wifi_V2
 last_update:
   date: 01/06/2022
   author: gunengyu

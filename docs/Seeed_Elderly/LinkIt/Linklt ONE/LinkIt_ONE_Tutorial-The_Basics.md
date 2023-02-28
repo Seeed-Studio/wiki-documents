@@ -4,6 +4,7 @@ title: LinkIt ONE Tutorial - The Basics
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /LinkIt_ONE_Tutorial-The_Basics
 last_update:
   date: 1/13/2023
   author: shuxu hu

@@ -6,6 +6,7 @@ tags:
 keywords:
   - Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /W5500_Ethernet_Shield_v1.0
 last_update:
   date: 01/30/2023  
   author: Eico 

@@ -1,12 +1,16 @@
 ---
-title: LCD 16*2 Characters- Green Yellow back light
-category: MakerPro
-bzurl: https://www.seeedstudio.com/lcd-162-characters-green-yellow-back-light-p-62.html?cPath=163_164
-oldwikiname:  LCD 16*2 Characters- Green Yellow back light
-prodimagename:  lcd1621n.jpg
-surveyurl: https://www.research.net/r/LCD_16-2_Characters-Green_Yellow_back_light
-sku:     104990001
+title: LCD_16-2_Characters-Green_Yellow_back_light
+nointro:
+keywords:
+  - docs
+  - docusaurus
+image: https://wiki.seeedstudio.com/LCD_8-2_Characters-Blue_back_light/
+slug: /LCD_16-2_Characters-Green_Yellow_back_light
+last_update:
+  date: 02/03/2022
+  author: matthew
 ---
+
 ![](http://bz.seeedstudio.com/depot/images/product/lcd1621n.jpg)
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/lcd-162-characters-green-yellow-back-light-p-62.html?cPath=163_164)

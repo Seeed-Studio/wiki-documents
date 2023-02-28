@@ -4,6 +4,7 @@ title: Grove - Collision Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Collision_Sensor
 last_update:
   date: 1/6/2023
   author: shuxu hu
@@ -304,7 +305,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus/).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus/).
 
 3.Connection
 

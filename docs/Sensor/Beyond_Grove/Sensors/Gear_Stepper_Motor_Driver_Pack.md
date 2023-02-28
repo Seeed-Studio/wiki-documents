@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Gear_Stepper_Motor_Driver_Pack/
+slug: /Gear_Stepper_Motor_Driver_Pack
 last_update:
   date: 02/03/2022
   author: gunengyu

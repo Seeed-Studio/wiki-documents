@@ -4,6 +4,7 @@ title: Grove - Recorder v2.0
 keywords:
   - Grove Grove_Sensors Sound
 image: https://wiki.seeedstudio.com/Grove-Loudness_Sensor/
+slug: /Grove-Recorder_v2.0
 last_update:
   date: 01/20/2023
   author: jianjing huang

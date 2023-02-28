@@ -4,6 +4,7 @@ title: Edison 4WD Auto Robotic Platform 2.0
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Edison_4WD_Auto_Robotic_Platform_2.0
 last_update:
   date: 1/13/2023
   author: shuxu hu

@@ -5,6 +5,7 @@ keywords:
   - LinkStar
   - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /h68k-ha-esphome
 last_update:
   date: 2/1/2023
   author: jianjing Huang

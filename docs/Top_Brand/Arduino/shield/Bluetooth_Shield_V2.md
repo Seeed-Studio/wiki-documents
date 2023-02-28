@@ -8,6 +8,7 @@ keywords:
   - Shield
   - bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Bluetooth_Shield_V2
 last_update:
   date: 01/11/2023  
   author: Eico 
@@ -88,7 +89,7 @@ make sure the right connection of the jumpers
 
 3.  Open Arduino IDE, open File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Slave_led, then you can open the code of Slave
 
-4.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Sensor/Seeeduino Series/Getting_Started_with_Seeeduino) for some help.
+4.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](/Getting_Started_with_Seeeduino) for some help.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_ide_1.jpg" alt="pir" width={600} height="auto" /></p>
@@ -123,7 +124,7 @@ Via a Bluetooth SPP App
 
 2.  Open Arduino IDE, File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Slave_Temperature, then you can open the code
 
-3.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](//Sensor/Seeeduino Series/Getting_Started_with_Seeeduino) for some help.
+3.  Click Upload to Upload the code, if you have any problem about how to start Arduino, please click [here](//Getting_Started_with_Seeeduino) for some help.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_Demo2.jpg" alt="pir" width={600} height="auto" /></p>
 

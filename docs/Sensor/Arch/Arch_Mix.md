@@ -4,6 +4,7 @@ title: Arch Mix
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Arch_Mix
 last_update:
   date: 1/12/2023
   author: jianjing Huang

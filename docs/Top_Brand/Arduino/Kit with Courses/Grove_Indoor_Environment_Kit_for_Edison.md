@@ -4,6 +4,7 @@ title: Grove Indoor Environment Kit for Edison
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove_Indoor_Environment_Kit_for_Edison
 last_update:
   date: 2/17/2023
   author: jianjing Huang
@@ -29,29 +30,29 @@ Grove Indoor Environment Kit for Edison makes it easy to create complete indoor 
 
 ---
 
-* [Base Shield V2](/Top_Brand/Arduino/shield/Base_Shield_V2)  x1
+* [Base Shield V2](/Base_Shield_V2)  x1
 
-* [Grove - Tempture&amp;Humidity Sensor (High-Accuracy &amp;Mini)](/Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0)  x1
+* [Grove - Tempture&amp;Humidity Sensor (High-Accuracy &amp;Mini)](/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0)  x1
 
-* [Grove - Moisture sensor](/Sensor/Grove/Grove_Sensors/Soli_Humidity/Grove-Moisture_Sensor)  x1
+* [Grove - Moisture sensor](/Grove-Moisture_Sensor)  x1
 
-* [Grove - Light Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor)  x1
+* [Grove - Light Sensor](/Grove-Light_Sensor)  x1
 
-* [Grove - UV Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-UV_Sensor)  x1
+* [Grove - UV Sensor](/Grove-UV_Sensor)  x1
 
-* [Grove - PIR Motion Sensor](Sensor/Grove/Grove_Sensors/Motion/Grove-PIR_Motion_Sensor)  x1
+* [Grove - PIR Motion Sensor](Grove-PIR_Motion_Sensor)  x1
 
-* [Grove - Encoder](/Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder)  x1
+* [Grove - Encoder](/Grove-Encoder)  x1
 
-* [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button)  x1
+* [Grove - Button](/Grove-Button)  x1
 
-* [Grove - LCD RGB Backlight](/Sensor/Grove/Grove_Accessories/Display/Grove-LCD_RGB_Backlight)  x1
+* [Grove - LCD RGB Backlight](/Grove-LCD_RGB_Backlight)  x1
 
-* [Grove - Relay](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay)  x1
+* [Grove - Relay](/Grove-Relay)  x1
 
-* [Grove - Servo](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Servo)  x1
+* [Grove - Servo](/Grove-Servo)  x1
 
-* [Grove - Buzzer](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer)  x1
+* [Grove - Buzzer](/Grove-Buzzer)  x1
 
 * [9V to Barrel Jack Adapter](https://www.seeedstudio.com/depot/9V-to-Barrel-Jack-Adapter-p-1481.html)  x1
 

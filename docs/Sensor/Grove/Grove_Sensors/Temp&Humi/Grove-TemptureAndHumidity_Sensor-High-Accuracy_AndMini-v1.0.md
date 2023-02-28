@@ -4,6 +4,7 @@ title: Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0
 last_update:
   date: 1/3/2023
   author: jianjing Huang

@@ -4,6 +4,7 @@ title: Grove - Gas O₂ Sensor(MIX8410)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Gas_Sensor-O2-MIX8410
 last_update:
   date: 1/3/2023
   author: shuxu hu

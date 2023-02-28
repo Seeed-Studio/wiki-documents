@@ -4,6 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/DSO_Quad-Calibration/
+slug: /DSO_Quad-Calibration
 last_update:
   date: 02/03/2022
   author: gunengyu
@@ -57,9 +58,9 @@ The calibration procedure for the Quad DSO it is already described, e.g. here: [
 
 ## See Also
 
-* [DSO Quad](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad "DSO Quad")
+* [DSO Quad](/DSO_Quad "DSO Quad")
 
-* [DSO Quad:Upgrading Firmware](/Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware "DSO Quad:Upgrading Firmware")
+* [DSO Quad:Upgrading Firmware](/DSO_Quad-Building_Firmware "DSO Quad:Upgrading Firmware")
 
 ## Tech Support
 

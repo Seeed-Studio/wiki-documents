@@ -4,6 +4,7 @@ title: Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600
 last_update:
   date: 1/31/2023
   author: jianjing Huang

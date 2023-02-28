@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/DSO_Nano-OpenOCD_gdb/
+slug: /DSO_Nano-OpenOCD_gdb
 last_update:
   date: 02/03/2022
   author: gunengyu

@@ -6,6 +6,7 @@ tags:
 keywords:
   - reServer
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /reServer_J2032_Flash_Jetpack
 last_update:
   date: 01/03/2023
   author: w0x7ce

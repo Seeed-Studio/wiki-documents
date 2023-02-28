@@ -4,6 +4,7 @@ title: Grove - Temperature&Humidity Sensor Pro(DHT22)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Temperature_and_Humidity_Sensor_Pro
 last_update:
   date: 1/3/2023
   author: jianjing Huang

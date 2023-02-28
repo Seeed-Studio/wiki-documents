@@ -4,6 +4,7 @@ title: Grove - LED String Light
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-LED_String_Light
 last_update:
   date: 1/7/2023
   author: shuxu hu
@@ -44,7 +45,7 @@ Follow these steps to build a sample circuit using this module:
 
 1.  First connect the LED string lights to the **Grove - LED String Light** module using the JST2.0 two-wire interface.
 
- 2.  Connect the LED string lights module to the output side of your circuit (to the right of the power module). On the input side of the circuit, you may use a range of sensor based input modules ([Grove - Light Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor/), [Grove - Sound Sensor](/Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor/), [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button/) or [Grove - Slide Potentiometer](/Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer/). 
+ 2.  Connect the LED string lights module to the output side of your circuit (to the right of the power module). On the input side of the circuit, you may use a range of sensor based input modules ([Grove - Light Sensor](/Grove-Light_Sensor/), [Grove - Sound Sensor](/Grove-Sound_Sensor/), [Grove - Button](/Grove-Button/) or [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer/). 
 
 3.  Power up the circuit.
 
@@ -55,7 +56,7 @@ Follow these steps to build a sample circuit using this module:
 
 If using with a sound sensor, you should see the LEDs light up on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the lights should be ON at all times except when there is a sound, add a Grove - NOT module between the sound sensor and the power module. 
 
-If using with a momentary switch like the one on the [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button/) module, simply press the button to light up the string lights. 
+If using with a momentary switch like the one on the [Grove - Button](/Grove-Button/) module, simply press the button to light up the string lights. 
 
 *   If using with a slide potentiometer, move the slider from the GND position to VCC and see the brightness of the lights increase as the supplied voltage increases.
 <!-- </dd></dl>

@@ -4,6 +4,7 @@ title:  Build a IR Thermal Imaging Camera using Wio Terminal
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wio-Terminal-Thermal-Camera
 last_update:
   date: 1/31/2023
   author: jianjing Huang

@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Weight_Sensor_Load_Cell_0-500g/
+slug: /Weight_Sensor_Load_Cell_0-500g
 last_update:
   date: 02/03/2022
   author: gunengyu

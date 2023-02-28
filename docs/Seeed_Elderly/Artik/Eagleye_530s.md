@@ -4,6 +4,7 @@ title: Eagleye 530s
 keywords:
 - Eagleye_530s
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Eagleye_530s
 last_update:
   date: 01/20/2023
   author: Matthew

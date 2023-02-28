@@ -4,6 +4,7 @@ title: Raspberry PI B+ Case
 keywords:
 - Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Raspberry_PI_Bplus_Case
 last_update:
   date: 2/15/2023
   author: jianjing Huang

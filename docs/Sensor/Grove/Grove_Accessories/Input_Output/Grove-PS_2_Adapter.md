@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-PS_2_Adapter/
+slug: /Grove-PS_2_Adapter
 last_update:
   date: 01/09/2022
   author: gunengyu

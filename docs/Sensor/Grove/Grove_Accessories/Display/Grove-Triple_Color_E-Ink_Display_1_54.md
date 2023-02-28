@@ -4,6 +4,7 @@ title: Grove - Triple Color E-Ink Display 1.54"
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Triple_Color_E-Ink_Display_1_54
 last_update:
   date: 1/9/2023
   author: shuxu hu

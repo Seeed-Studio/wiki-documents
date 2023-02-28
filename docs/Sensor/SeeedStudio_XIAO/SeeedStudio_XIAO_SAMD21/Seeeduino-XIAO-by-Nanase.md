@@ -4,6 +4,7 @@ title: Seeed Studio XIAO SAMD21 by Nanase
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino-XIAO-by-Nanase
 last_update:
   date: 1/11/2023
   author: shuxu hu

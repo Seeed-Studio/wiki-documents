@@ -4,6 +4,7 @@ title: PlatformIO for Arduino-supported Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Software-PlatformIO
 last_update:
   date: 1/16/2023
   author: jianjing Huang

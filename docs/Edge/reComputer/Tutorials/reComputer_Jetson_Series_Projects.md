@@ -8,6 +8,7 @@ keywords:
   - Nvidia
   - reComputer
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /reComputer_Jetson_Series_Projects
 last_update:
   date: 01/04/2023
   author: w0x7ce

@@ -4,6 +4,7 @@ title: Seeeduino Stalker V3
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino-Stalker_v3
 last_update:
   date: 1/31/2023
   author: shuxu hu
@@ -45,7 +46,7 @@ Seeeduino Stalker v3.0 is a feature rich Arduino compatible **Wireless Sensor Ne
 
 * Reset buttons for XBee Modules and ATMega328P
 
-* **Bee series socket** - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the wireless modules: **XBee**, [BluetoothBee](/Seeed_Elderly/Bee/Bluetooth_Bee "Bluetooth Bee"), [GPSBee](https://seeeddoc.github.io/Bluetooth_Bee/) or [RFBee](https://seeeddoc.github.io/RFbee_V1.1-Wireless_Arduino_compatible_node/).)
+* **Bee series socket** - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the wireless modules: **XBee**, [BluetoothBee](/Bluetooth_Bee "Bluetooth Bee"), [GPSBee](https://seeeddoc.github.io/Bluetooth_Bee/) or [RFBee](https://seeeddoc.github.io/RFbee_V1.1-Wireless_Arduino_compatible_node/).)
 
 ## Specification
 
@@ -495,7 +496,7 @@ Before modification
 
 After modification
 
-2.Now apply the procedure mentioned in <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3#pcb-jumper-pads" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a> (i.e) cut the jumper and solder the middle pad of Jumper P5 to PD7.
+2.Now apply the procedure mentioned in <a href="/Seeeduino-Stalker_v3#pcb-jumper-pads" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a> (i.e) cut the jumper and solder the middle pad of Jumper P5 to PD7.
 
 ## Board Layout
 

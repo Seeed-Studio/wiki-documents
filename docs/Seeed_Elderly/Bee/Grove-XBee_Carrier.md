@@ -4,6 +4,7 @@ title: Grove - XBee Carrier
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-XBee_Carrier
 last_update:
   date: 2/15/2023
   author: jianjing Huang
@@ -20,7 +21,7 @@ sku:  113020004
 
 ![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem.jpg)
 
-The Grove - XBee Carrier is a Wireless Sensor Network (WSN) base board designed for Bee series and Grove units. It is primarily suitable for standalone Bee Nodes like RFBee, Wifi Bee which have ATMega328 onboard and XBee (Zigbee) modules. It is compatible with [RFBee](/Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node"), [Wifi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee"), [XBee](http://garden.seeedstudio.com/index.php?title=Bee_series#ZigBee "Bee_series#ZigBee") and Bluetooth Bee. Besides a Bee receptacle, there are also two Grove connectors. The board can be powered by a lithium battery or through USB cable. You can use a Wireless charger, Solar Panel or the USB cable to charge the battery. The FT232RL chip onboard helps in downloading the program to Bee Module directly.
+The Grove - XBee Carrier is a Wireless Sensor Network (WSN) base board designed for Bee series and Grove units. It is primarily suitable for standalone Bee Nodes like RFBee, Wifi Bee which have ATMega328 onboard and XBee (Zigbee) modules. It is compatible with [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node"), [Wifi Bee](/Wifi_Bee "Wifi Bee"), [XBee](http://garden.seeedstudio.com/index.php?title=Bee_series#ZigBee "Bee_series#ZigBee") and Bluetooth Bee. Besides a Bee receptacle, there are also two Grove connectors. The board can be powered by a lithium battery or through USB cable. You can use a Wireless charger, Solar Panel or the USB cable to charge the battery. The FT232RL chip onboard helps in downloading the program to Bee Module directly.
 
 Bees which do not have ATMega328 like Bluetooth Bee can only be configured by using on-board FT232RL (USB to UART). Theses Bees are not suitable for standalone applications.
 
@@ -48,7 +49,7 @@ The on-board FT232RL can be used like any other 3.3V USB to UART interface when 
 
 ---
 
-* Wireless Sensor Network with Standalone Bee Node like [Wifi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee").
+* Wireless Sensor Network with Standalone Bee Node like [Wifi Bee](/Wifi_Bee "Wifi Bee").
 
 * As a configuration aid for Bees using FT232RL.
 
@@ -154,9 +155,9 @@ Pin 16 may need to be driven low to provide enough power to the I/O Grove [via m
 
 #### Working with Standalone Bee Nodes
 
-Bee Nodes are standalone Arduino Compatible Wireless Nodes. **SeeedStudio** has two such Nodes - [Wifi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee") and [RFBee](/Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node").
+Bee Nodes are standalone Arduino Compatible Wireless Nodes. **SeeedStudio** has two such Nodes - [Wifi Bee](/Wifi_Bee "Wifi Bee") and [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node").
 
-* The following image illustrated the connection of [WiFi Bee](/Seeed_Elderly/Bee/Wifi_Bee "Wifi Bee") to **Grove - XBee Carrier**.
+* The following image illustrated the connection of [WiFi Bee](/Wifi_Bee "Wifi Bee") to **Grove - XBee Carrier**.
 
 * Any Groves can be connected to the Grove sockets provided.
 

@@ -4,6 +4,7 @@ title:  Small e-Paper Shield V2
 keywords:
 -  Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Small_e-Paper_Shield_V2
 last_update:
   date: 2/16/2023
   author: jianjing Huang
@@ -172,7 +173,7 @@ Here we select the 2.0 inch screen as an example to show its display functions.
 
 <pre>#define SCREEN_SIZE 200 // choose screen size: 144, 200, 270</pre>
 
-* Upload the code to your microcontroller. Please click [here](/Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Upload_Code) if you do not know how to.
+* Upload the code to your microcontroller. Please click [here](/Upload_Code) if you do not know how to.
 
 * Now you can see this:
 

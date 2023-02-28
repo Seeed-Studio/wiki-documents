@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Qi_Wireless_Charger_Transmitter/
+slug: /Qi_Wireless_Charger_Transmitter
 last_update:
   date: 02/03/2022
   author: gunengyu

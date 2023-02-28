@@ -4,6 +4,7 @@ title: Seeed Studio XIAO RP2040 with Arduino
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /XIAO-RP2040-with-Arduino
 last_update:
   date: 1/11/2023
   author: shuxu hu

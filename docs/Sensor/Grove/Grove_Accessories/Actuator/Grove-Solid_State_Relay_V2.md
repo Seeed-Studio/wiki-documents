@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Solid_State_Relay_V2/
+slug: /Grove-Solid_State_Relay_V2
 last_update:
   date: 01/09/2022
   author: gunengyu

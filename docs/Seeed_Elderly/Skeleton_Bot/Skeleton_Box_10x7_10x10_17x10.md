@@ -4,6 +4,7 @@ title: Skeleton Box 10x7 10x10 17x10
 keywords:
 - Skeleton_Box_10x7_10x10_17x10
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Skeleton_Box_10x7_10x10_17x10
 last_update:
   date: 01/20/2023
   author: Matthew

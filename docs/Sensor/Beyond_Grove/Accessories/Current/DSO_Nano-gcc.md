@@ -4,13 +4,14 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/DSO_Nano-gcc/
+slug: /DSO_Nano-gcc
 last_update:
   date: 02/03/2022
   author: gunengyu
 ---
 # How to build the DSO Nano firmware using gcc
 
-The [DSO Nano](/Sensor/Beyond_Grove/Accessories/Current/DSO_Nano "DSO Nano") firmware can be build with a gcc toolchain. The gcc-specific files reside in the project/gcc folder of the firmware source code tree.
+The [DSO Nano](/DSO_Nano "DSO Nano") firmware can be build with a gcc toolchain. The gcc-specific files reside in the project/gcc folder of the firmware source code tree.
 
 ## Get a ARM cross-building gcc toolchain
 
@@ -64,7 +65,7 @@ make
 
 ## Testing
 
-Use [Dfu-util](/Sensor/Beyond_Grove/Accessories/Current/Dfu-util "Dfu-util") to download the dso-lib.bin and dso-app.bin files to your Nano V1 or V2. For the Nano V3 model, copy the dso-lib.hex and dso-app.hex one at a time to the DFU virtual USB drive.
+Use [Dfu-util](/Dfu-util "Dfu-util") to download the dso-lib.bin and dso-app.bin files to your Nano V1 or V2. For the Nano V3 model, copy the dso-lib.hex and dso-app.hex one at a time to the DFU virtual USB drive.
 
 ## Tech Support
 

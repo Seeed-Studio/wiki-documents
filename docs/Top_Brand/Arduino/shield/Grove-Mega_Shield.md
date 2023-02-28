@@ -6,6 +6,7 @@ tags:
 keywords:
   - Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Mega_Shield
 last_update:
   date: 01/30/2023  
   author: Eico 

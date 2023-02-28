@@ -4,6 +4,7 @@ title: Overview
 keywords:
 - Wio_terminal five_Way_Switch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wio-Terminal-Switch
 last_update:
   date: 1/17/2023
   author: jianjing Huang

@@ -4,13 +4,14 @@ title: Seeeduino Stalker V3 - Waterproof Solar Kit
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_Stalker_V3-Waterproof_Solar_Kit
 last_update:
   date: 1/31/2023
   author: shuxu hu
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_V3-Waterproof_Solar_Kit.JPG)
 
-Stalker Kit is a <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker_v3 </font></span></a> based **Wireless Sensor Network** node **data-logger**. Seeeduino Stalker v3 is a feature rich Arduino compatible Wireless Sensor Network node. It's modular structure and onboard peripherals like RTC, SDCard interface makes it convenient to log sensor values with accurate time stamp periodically. The Seeeduino Stalker is a candidate for all your tracking, monitoring and control projects.
+Stalker Kit is a <a href="/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker_v3 </font></span></a> based **Wireless Sensor Network** node **data-logger**. Seeeduino Stalker v3 is a feature rich Arduino compatible Wireless Sensor Network node. It's modular structure and onboard peripherals like RTC, SDCard interface makes it convenient to log sensor values with accurate time stamp periodically. The Seeeduino Stalker is a candidate for all your tracking, monitoring and control projects.
 
 The Stalker Kit includes all necessary components to work with Seeeduino Stalker v3.0. Stalker Kit can be used outdoors as it comes with a plastic, waterproof enclosure. Hence, you can even put it in the water if you have some special idea. The kit comes with a Solar Panel and a LiPo Battery. They might be used in remote areas like  desert or jungle by working just with the solar energy harvested and stored in the LiPo Battery.
 
@@ -28,7 +29,7 @@ The Stalker Kit includes all necessary components to work with Seeeduino Stalker
 <th> Quantity
 </th></tr>
 <tr>
-<td> <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker_v3 </font></span></a>
+<td> <a href="/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker_v3 </font></span></a>
 </td>
 <td> The Arduino Compatible WSN Node
 </td>
@@ -120,11 +121,11 @@ The Stalker Kit includes all necessary components to work with Seeeduino Stalker
 
 * RF Remote Control (using [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node") - bought separately)
 
-* As a simple standalone Arduino compatible physical computing platform ([UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4") must be bought separately for programming)
+* As a simple standalone Arduino compatible physical computing platform ([UartSBee_V4](/UartSBee_V4 "UartSBee_V4") must be bought separately for programming)
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/700px-Stalker_v3.0_and_the_Bees.jpg)
 
-poly 441 45 508 17 567 79 505 120 [UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4")
+poly 441 45 508 17 567 79 505 120 [UartSBee_V4](/UartSBee_V4 "UartSBee_V4")
 
 poly 75 0 353 0 353 102 75 99 [WiFiBee](/Wifi_Bee "Wifi_Bee")
 
@@ -148,11 +149,11 @@ poly 409 464 417 432 488 389 537 445 463 498 426 491 [RFBee](/RFbee_V1.1-Wireles
 
 poly 455 280 454 215 490 186 683 184 724 211 740 297 706 331 494 333 489 278 [Seeeduino-Stalker v3](/Seeeduino-Stalker_v3 "Seeeduino-Stalker v3")
 
-poly 570 132 573 13 802 16 803 131 [UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4")
+poly 570 132 573 13 802 16 803 131 [UartSBee_V4](/UartSBee_V4 "UartSBee_V4")
 &lt;/imagemap&gt; -->
 
 :::note
-Please note that [UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4") cannot be inserted into the Bee Series socket present on Seeeduino Stalker. The [UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4") is intended for interfacing the other Bee modules (shown in the photo above) to a computer and cannot itself be be inserted into the socket meant for these other Bee modules. There is a separate 5 way pinheader present on UartSBee_V4 as well as Seeeduino Stalker for interfacing them to each other. This pinheader is composed of: VCC (to supply power to Stalker), TXD, RXD, DTR (for controlling Stalker's Reset signal) &amp; GND.**
+Please note that [UartSBee_V4](/UartSBee_V4 "UartSBee_V4") cannot be inserted into the Bee Series socket present on Seeeduino Stalker. The [UartSBee_V4](/UartSBee_V4 "UartSBee_V4") is intended for interfacing the other Bee modules (shown in the photo above) to a computer and cannot itself be be inserted into the socket meant for these other Bee modules. There is a separate 5 way pinheader present on UartSBee_V4 as well as Seeeduino Stalker for interfacing them to each other. This pinheader is composed of: VCC (to supply power to Stalker), TXD, RXD, DTR (for controlling Stalker's Reset signal) &amp; GND.**
 :::
 
 ## Usage
@@ -160,7 +161,7 @@ Please note that [UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4") can
 ---
 <big>Getting Started</big>
 
-If you are new to the "Physical Computing" world and if Seeeduino Stalker is the first physical computing platform you want to begin with, then we suggest you to start with <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino </font></span></a>.
+If you are new to the "Physical Computing" world and if Seeeduino Stalker is the first physical computing platform you want to begin with, then we suggest you to start with <a href="/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino </font></span></a>.
 
 The following steps will help you assemble the hardware and software resources to get you started with Seeeduino Stalker v3
 
@@ -178,7 +179,7 @@ You will require the following hardware for running your first program.
 
 **Step 2: Installing the drivers and plugging in the hardware**
 
-1. [UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4") is like the multi-purpose Swiss Army knife of the Physical Computing world. There is a very detailed procedure to use UartSBee_V4 for both Windows and GNU/Linux users [here](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4").  In our case it will perform three functions:
+1. [UartSBee_V4](/UartSBee_V4 "UartSBee_V4") is like the multi-purpose Swiss Army knife of the Physical Computing world. There is a very detailed procedure to use UartSBee_V4 for both Windows and GNU/Linux users [here](/UartSBee_V4 "UartSBee_V4").  In our case it will perform three functions:
     * Allow us to program the Seeeduino Stalker.
     * Allow us to communicate with Seeeduino Stalker.
     * Provide power (from USB power of your computer) to Seeeduino Stalker (including any peripherals connected to it).
@@ -231,8 +232,8 @@ Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection
 
 <big>Connection Notes </big>
 
-* **Bee series socket** - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the [wireless modules](/Seeed_Elderly/Bee/Wifi_Bee "Wifi_Bee"): [XBee](/Seeed_Elderly/Bee/XBee_Shield "Zigbee Networking with XBee Series_2 and Seeeds Products"), [BluetoothBee](/Seeed_Elderly/Bee/Bluetooth_Bee "Bluetooth Bee"), [GPSBee](/Seeed_Elderly/Bee/GPS_Bee_kit "GPS_Bee_kit") or [RFBee](/Seeed_Elderly/Bee/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node").) Communication with these modules are done through UART.
-* **Serial interface** – To save space and lower costs, USB&lt;-&gt;Serial connectivity is not provided by default. You may use the FT232 based [UartSBee_V4](/Seeed_Elderly/Bee/UartSBee_V4 "UartSBee_V4") or other USB to serial adapter boards to do the programming or communicate with the PC.
+* **Bee series socket** - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the [wireless modules](/Wifi_Bee "Wifi_Bee"): [XBee](/XBee_Shield "Zigbee Networking with XBee Series_2 and Seeeds Products"), [BluetoothBee](/Bluetooth_Bee "Bluetooth Bee"), [GPSBee](/GPS_Bee_kit "GPS_Bee_kit") or [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node").) Communication with these modules are done through UART.
+* **Serial interface** – To save space and lower costs, USB&lt;-&gt;Serial connectivity is not provided by default. You may use the FT232 based [UartSBee_V4](/UartSBee_V4 "UartSBee_V4") or other USB to serial adapter boards to do the programming or communicate with the PC.
 * **User LED** – An LED has been provided onboard for use in your application as desired.
 * **I<sup>2</sup>C Interface**: Onboard I<sup>2</sup>C level shifter IC provides voltage translation between 3.3V and 5V devices. This allows you to connect 5.0 Volt I<sup>2</sup> ICs to you microcontroller when its operating on 3.3 Volts.
 
@@ -256,7 +257,7 @@ Seeeduino Stalker v3 &lt;---&gt; UartSBee v4.0 connection
 
     * **Ex:-** `DateTime dt(2015, 10, 1, 11, 43, 0, 4);`
 
-* compile and upload to <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a>.
+* compile and upload to <a href="/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a>.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_adjust.png)
 
@@ -274,7 +275,7 @@ Get Current Date/Time
 
   * **Ex:- `DateTime now = RTC.now();`**
 
-* compile and upload to <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a>
+* compile and upload to <a href="/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a>
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_now.png)
 
@@ -292,7 +293,7 @@ This example is a demonstration of interrupt detection from DS1337 INT output. T
 
 * Open **interrupts.ino** example from DS1337 library
 
-* compile and upload to <a href="/Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a>
+* compile and upload to <a href="/Seeeduino-Stalker_v3" ><span><font size={"3"}> Seeeduino-Stalker v3 </font></span></a>
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/img/Seeeduino_Stalker_v3_interrupt.png)
 **interrupts.ino output**

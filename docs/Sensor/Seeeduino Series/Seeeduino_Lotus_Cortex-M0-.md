@@ -4,6 +4,7 @@ title: Seeeduino Lotus Cortex-M0+
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_Lotus_Cortex-M0-
 last_update:
   date: 1/31/2023
   author: shuxu hu

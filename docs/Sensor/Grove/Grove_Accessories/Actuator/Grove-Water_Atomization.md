@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Water_Atomization/
+slug: /Grove-Water_Atomization
 last_update:
   date: 01/09/2022
   author: gunengyu

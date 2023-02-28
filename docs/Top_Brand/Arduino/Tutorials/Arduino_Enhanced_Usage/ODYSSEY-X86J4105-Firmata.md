@@ -4,6 +4,7 @@ title: Firmata for Arduino Compatible Boards
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /ODYSSEY-X86J4105-Firmata
 last_update:
   date: 1/16/2023
   author: jianjing Huang

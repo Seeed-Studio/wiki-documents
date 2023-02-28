@@ -4,6 +4,7 @@ title: Getting Started with OpenWRT
 keywords:
 - Sorftware OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /OpenWrt-Getting-Started
 last_update:
   date: 1/13/2023
   author: jianjing Huang

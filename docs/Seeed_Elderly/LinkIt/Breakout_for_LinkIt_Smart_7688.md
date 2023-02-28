@@ -4,6 +4,7 @@ title:  Breakout for LinkIt Smart 7688
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Breakout_for_LinkIt_Smart_7688
 last_update:
   date: 1/13/2023
   author: shuxu hu

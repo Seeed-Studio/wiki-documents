@@ -4,6 +4,7 @@ title: Wifi Bee
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wifi_Bee
 last_update:
   date: 1/13/2023
   author: shuxu hu

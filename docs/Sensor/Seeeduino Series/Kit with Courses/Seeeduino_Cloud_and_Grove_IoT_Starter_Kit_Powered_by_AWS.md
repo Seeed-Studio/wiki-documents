@@ -4,15 +4,16 @@ title: Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 1/31/2023
   author: shuxu hu
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_seeeduino_wiki_cover.JPG)
 
-*Main articles: Start here <a href="/Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS" ><span><font size={"3"}> Grove IoT Starter Kits Powered by AWS </font></span></a> , <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>*
+*Main articles: Start here <a href="/Grove_IoT_Starter_Kits_Powered_by_AWS" ><span><font size={"3"}> Grove IoT Starter Kits Powered by AWS </font></span></a> , <a href="/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>*
 
-**<a href="/Sensor/Seeeduino Series/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>** is a microcontroller board based on Dragino WiFi IoT module [HE](http://www.dragino.com/products/linux-module/item/87-he.html) and ATmega32u4. **HE** is a high performance, low-cost 150M, 2.4G WiFi module which with an Open Source OpenWrt system inside. Seeeduino Cloud is also an [Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun) compatible board. This kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
+**<a href="/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>** is a microcontroller board based on Dragino WiFi IoT module [HE](http://www.dragino.com/products/linux-module/item/87-he.html) and ATmega32u4. **HE** is a high performance, low-cost 150M, 2.4G WiFi module which with an Open Source OpenWrt system inside. Seeeduino Cloud is also an [Arduino Yun](https://www.arduino.cc/en/Main/ArduinoBoardYun) compatible board. This kit includes most frequently used sensors and actuators to turn your ideas into tangible applications with AWS Cloud computing.
 
 [![enter image description here](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://wwww.amazon.com/dp/B01669BB60)
 
@@ -32,18 +33,18 @@ last_update:
 
 | Board/Part                                                                                                                                            | Qty | Documentation                                                                 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|-----|-------------------------------------------------------------------------------|
-| [Seeeduino Cloud development board](https://www.seeedstudio.com/Seeeduino-Cloud-Arduino-Yun-compatible-openWRT-controller-p-2123.html?cPath=6_7) | 1   | <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>                               |
-| [Base Shield](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html?cPath=98_16)                                                                | 1   | [Read Here](/Top_Brand/Arduino/shield/Base_Shield_V2/ "Base shield v2")                                 |
-| [Grove - LCD RGB Backlight](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html?cPath=34_36)                                         | 1   | [Read Here](/Sensor/Grove/Grove_Accessories/Display/Grove-LCD_RGB_Backlight "Grove - LCD RGB Backlight")             |
-| [Grove - Relay](https://www.seeedstudio.com/Grove-Relay-p-769.html?cPath=39_42)                                                                  | 1   | [Read Here](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Relay "Grove - Relay")                                     |
-| [Grove - Buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html?cPath=38)                                                                   | 1   | [Read Here](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Buzzer "Grove - Buzzer")                                   |
-| [Grove - Sound Sensor](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html?cPath=25_128)                                                   | 1   | [Read Here](/Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor "Grove - Sound Sensor")                       |
-| [Grove - Touch Sensor](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html?cPath=85_94)                                                    | 1   | [Read Here](/Sensor/Grove/Grove_Sensors/Touch/Grove-Touch_Sensor "Grove - Touch Sensor")                       |
-| [Grove - Rotary Angle Sensor](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)                                      | 1   | [Read Here](/Sensor/Grove/Grove_Sensors/Touch/Grove-Rotary_Angle_Sensor "Grove - Rotary Angle Sensor")         |
-| [Grove - Temperature Sensor](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html?cPath=25_125)                                       | 1   | [Read Here](/Sensor/Grove/Grove_Sensors/Temperature/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2") |
-| [Grove - LED](https://www.seeedstudio.com/Grove-LED-p-767.html)                                                                                  | 1   | [Read Here](/Sensor/Grove/Grove_Accessories/LED/Grove-Red_LED "Grove-Red_LED")                                         |
-| [Grove - Light Sensor](https://www.seeedstudio.com/Grove-Light-Sensor-p-746.html?cPath=25_27)                                                    | 1   | [Read Here](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor "Grove - Light Sensor")                       |
-| [Grove – Button](https://www.seeedstudio.com/Grove-Button-p-766.html?cPath=85_50)                                                                | 1   | [Read Here](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button")                                   |
+| [Seeeduino Cloud development board](https://www.seeedstudio.com/Seeeduino-Cloud-Arduino-Yun-compatible-openWRT-controller-p-2123.html?cPath=6_7) | 1   | <a href="/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>                               |
+| [Base Shield](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html?cPath=98_16)                                                                | 1   | [Read Here](/Base_Shield_V2/ "Base shield v2")                                 |
+| [Grove - LCD RGB Backlight](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html?cPath=34_36)                                         | 1   | [Read Here](/Grove-LCD_RGB_Backlight "Grove - LCD RGB Backlight")             |
+| [Grove - Relay](https://www.seeedstudio.com/Grove-Relay-p-769.html?cPath=39_42)                                                                  | 1   | [Read Here](/Grove-Relay "Grove - Relay")                                     |
+| [Grove - Buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html?cPath=38)                                                                   | 1   | [Read Here](/Grove-Buzzer "Grove - Buzzer")                                   |
+| [Grove - Sound Sensor](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html?cPath=25_128)                                                   | 1   | [Read Here](/Grove-Sound_Sensor "Grove - Sound Sensor")                       |
+| [Grove - Touch Sensor](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html?cPath=85_94)                                                    | 1   | [Read Here](/Grove-Touch_Sensor "Grove - Touch Sensor")                       |
+| [Grove - Rotary Angle Sensor](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html?cPath=85_52)                                      | 1   | [Read Here](/Grove-Rotary_Angle_Sensor "Grove - Rotary Angle Sensor")         |
+| [Grove - Temperature Sensor](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html?cPath=25_125)                                       | 1   | [Read Here](/Grove-Temperature_Sensor_V1.2 "Grove - Temperature Sensor V1.2") |
+| [Grove - LED](https://www.seeedstudio.com/Grove-LED-p-767.html)                                                                                  | 1   | [Read Here](/Grove-Red_LED "Grove-Red_LED")                                         |
+| [Grove - Light Sensor](https://www.seeedstudio.com/Grove-Light-Sensor-p-746.html?cPath=25_27)                                                    | 1   | [Read Here](/Grove-Light_Sensor "Grove - Light Sensor")                       |
+| [Grove – Button](https://www.seeedstudio.com/Grove-Button-p-766.html?cPath=85_50)                                                                | 1   | [Read Here](/Grove-Button "Grove - Button")                                   |
 | DIP LED Blue-Blue                                                                                                                                     | 1   |                                                                               |
 | DIP LED Green-Green                                                                                                                                   | 1   |                                                                               |
 | DIP LED Red-Red                                                                                                                                       | 1   |                                                                               |
@@ -102,7 +103,7 @@ Click on the certificate we previously created.
 
 ### Getting started with Seeeduino Cloud (Arduino Yun)
 
-If this is your first time to use Seeeduino Cloud or Arduino Yun, you can click <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a> to get started. Before proceeding to the following steps, please make sure that you have **expect** installed on your computer and correctly installed the [Arduino IDE](https://www.arduino.cc/en/Main/OldSoftwareReleases).
+If this is your first time to use Seeeduino Cloud or Arduino Yun, you can click <a href="/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a> to get started. Before proceeding to the following steps, please make sure that you have **expect** installed on your computer and correctly installed the [Arduino IDE](https://www.arduino.cc/en/Main/OldSoftwareReleases).
 
 ### Download AWS-IoT-Arduino-Yún-SDK
 
@@ -122,7 +123,7 @@ For Arduino IDE installation on Linux, please visit [here](http://playground.ard
 
 #### Set up development board
 
-- Step 1. Set up the Arduino Yún board and connect it to WiFi. Obtain its IP address and password. If you don’t know how to do it you can follow this <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud#getting-started" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>.
+- Step 1. Set up the Arduino Yún board and connect it to WiFi. Obtain its IP address and password. If you don’t know how to do it you can follow this <a href="/Seeeduino_Cloud#getting-started" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>.
 - Step 2. Make sure your computer is connected to the same network (local IP address range).
 - Step 3. Download the AWS IoT CA file from [here](https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem). And save it as *root-CA.crt*.
 - Step 4. Put your AWS IoT CA file, private key and certificate into AWS-IoT-Arduino-Yun-SDK/AWS-IoT-Python-Runtime/certs.
@@ -144,7 +145,7 @@ For Arduino IDE installation on Linux, please visit [here](http://playground.ard
 
 Before proceeding to the following steps, please make sure that you have Putty and WinSCP installed on your PC. If you prefer to use other tools for SSH-ing into your Arduino Yún board and transferring files, you will have to adjust the steps below according to your tools. Putty can be downloaded from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). WinSCP can be downloaded from [here](http://winscp.net/eng/download.php). Set up the board.
 
-- Step 1. Setup the Arduino Yún Cloud board and connect it to WiFi. Obtain its IP address and password. If you don't know how to do it, please follow this <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud#getting-started" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>.
+- Step 1. Setup the Arduino Yún Cloud board and connect it to WiFi. Obtain its IP address and password. If you don't know how to do it, please follow this <a href="/Seeeduino_Cloud#getting-started" ><span><font size={"3"}>Seeeduino Cloud Boards</font></span></a>.
 
 - Step 2. Make sure your PC is connected to the same network (local IP address range).
 
@@ -222,7 +223,7 @@ Run examples
 ---------
 
 - [AWS IoT Documentation](http://aws.amazon.com/documentation/iot/)
-- <a href="/Sensor/Seeeduino Series/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud wiki page</font></span></a>
+- <a href="/Seeeduino_Cloud" ><span><font size={"3"}>Seeeduino Cloud wiki page</font></span></a>
 - [AWS IoT Arduino Yún SDK](https://github.com/aws/aws-iot-device-sdk-arduino-yun)
 
 ## Tech Support

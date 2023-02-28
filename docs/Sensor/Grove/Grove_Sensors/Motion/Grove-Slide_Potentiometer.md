@@ -4,6 +4,7 @@ title: Grove - Slide Potentiometer
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Slide_Potentiometer
 last_update:
   date: 1/6/2023
   author: shuxu hu

@@ -3,18 +3,19 @@ title: DSO Nano/Development
 keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/DSO_Nano-Development/
+slug: /DSO_Nano-Development
 last_update:
   date: 02/03/2022
   author: gunengyu
 ---
 
-Some resources for developing (on) the [DSO Nano](/Sensor/Beyond_Grove/Accessories/Current/DSO_Nano "DSO Nano").
+Some resources for developing (on) the [DSO Nano](/DSO_Nano "DSO Nano").
 
 ## Firmware development
 
 * Get the source and build it
 
-See [Building the source with gcc](/Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-gcc "DSO Nano/gcc"). To build with IAR, see the Links section below.
+See [Building the source with gcc](/DSO_Nano-gcc "DSO Nano/gcc"). To build with IAR, see the Links section below.
 
 * Contribute patches
 
@@ -22,9 +23,9 @@ Please share your modifications at the DSO Nano forum. The best is to post a "di
 
 ## Debugging
 
-* Debug arm code running on the [qemu emulator using gdb](/Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Qemu_gdb "DSO Nano/Qemu gdb")
+* Debug arm code running on the [qemu emulator using gdb](/DSO_Nano-Qemu_gdb "DSO Nano/Qemu gdb")
 
-* Debug arm code running on a board with JTAG using [OpenOCD and gdb](/Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-OpenOCD_gdb "DSO Nano/OpenOCD gdb")
+* Debug arm code running on a board with JTAG using [OpenOCD and gdb](/DSO_Nano-OpenOCD_gdb "DSO Nano/OpenOCD gdb")
 
 ## Links
 

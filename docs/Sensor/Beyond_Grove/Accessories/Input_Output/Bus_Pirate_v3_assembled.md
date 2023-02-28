@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Bus_Pirate_v3_assembled/
+slug: /Bus_Pirate_v3_assembled
 last_update:
   date: 02/03/2022
   author: gunengyu

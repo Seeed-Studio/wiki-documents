@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Chainable_RGB_LED/
+slug: /Grove-Chainable_RGB_LED
 last_update:
   date: 01/09/2022
   author: gunengyu
@@ -53,7 +54,7 @@ When you get Grove - Chainble RGB LED, you may think how I can light up it. Now 
 
 To complete this demo, you can use one or more Grove - Chainable RGB LED. Note that the IN interface of one Grove - Chainable RGB LED should be connect to D7/D8 of Grove - Base Shield and its OUT interface connect to IN interface of another Grove - Chainable RGB LED, chainable more LED in this way.
 
-- Download [Chainable LED Library](https://github.com/pjpmarques/ChainableLED) and install it to Arduino Library. There is the course about [how to install Arduino Library](/Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/How_to_install_Arduino_Library) in wiki page.
+- Download [Chainable LED Library](https://github.com/pjpmarques/ChainableLED) and install it to Arduino Library. There is the course about [how to install Arduino Library](/How_to_install_Arduino_Library) in wiki page.
 - Open the example CycleThroughColors by the path:File->Examples->ChainableLED_master and upload it to Seeeduino.
 
 ```
@@ -206,7 +207,7 @@ Upload the program to your Arduino/Seeeduino.
 :::
 1.You should have got a raspberry pi and a grovepi or grovepi+.
 
-2.You should have completed configuring the development enviroment, otherwise follow [here](/Top_Brand/Raspberry_Pi/Pi_HAT/GrovePi_Plus).
+2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus).
 
 3.Connection
 
@@ -632,7 +633,7 @@ To begin editing programs that live on BBG, you can use the Cloud9 IDE.
 
 As a simple exercise to become familiar with Cloud9 IDE, creating a simple application to blink one of the 4 user programmable LEDs on the BeagleBone is a good start.
 
-If this is your first time to use Cloud9 IDE, please follow this [**link**](/Edge/Beagle_Bone/BeagleBone_Green).
+If this is your first time to use Cloud9 IDE, please follow this [**link**](/BeagleBone_Green).
 
 **Step1:** Set the Grove - UART socket as a Grove - GPIO Socket, just follow this [**link**](https://www.seeedstudio.com/recipe/362-how-to-use-the-grove-uart-port-as-a-gpio-on-bbg.html).
 

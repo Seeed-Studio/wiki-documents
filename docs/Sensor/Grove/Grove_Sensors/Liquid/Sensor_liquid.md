@@ -4,6 +4,7 @@ title: Sensor - Liquid(introduction)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Sensor_liquid
 last_update:
   date: 1/6/2023
   author: shuxu hu

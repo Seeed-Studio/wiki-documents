@@ -4,6 +4,7 @@ title: Seeed Studio XIAO SAMD21 with MicroPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /XIAO-SAMD21-MicroPython
 last_update:
   date: 1/11/2023
   author: shuxu hu

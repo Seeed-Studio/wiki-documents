@@ -4,6 +4,7 @@ title: Grove - Node
 keywords:
 - Grove_Sensors_Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Node
 last_update:
   date: 1/20/2023
   author: jianjing Huang
@@ -201,7 +202,7 @@ Second, we need an **output** Grove module as an actuator. The following Grove m
       </td></tr></tbody></table>
 
 
-For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a [Grove-Light_Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor "Grove - Light Sensor") and a Grove-Red_LED. 
+For example, we intend to create a light which automatically turns on if the environment is dark and turns off if otherwise, then we select a [Grove-Light_Sensor](/Grove-Light_Sensor "Grove - Light Sensor") and a Grove-Red_LED. 
 
 
 Third, teach the Grove Node a logic.

@@ -5,6 +5,7 @@ keywords:
   - wio 
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
+slug: /WM1302_Pi_HAT
 last_update:
   date: 01/30/2023
   author: hushuxu

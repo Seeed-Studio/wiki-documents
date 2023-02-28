@@ -6,6 +6,7 @@ tags:
 keywords:
   - Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Renbotics_ServoShield_Rev
 last_update:
   date: 02/02/2023  
   author: Eico 

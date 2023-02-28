@@ -5,6 +5,7 @@ keywords:
   - Edge
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /DashCamNet-with-Jetson-Xavier-NX-Multicamera
 last_update:
   date: 01/04/2023
   author: w0x7ce

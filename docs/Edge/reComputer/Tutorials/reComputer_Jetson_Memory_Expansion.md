@@ -8,6 +8,7 @@ keywords:
   - Nvidia
   - reComputer
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /reComputer_Jetson_Memory_Expansion
 last_update:
   date: 01/05/2023
   author: w0x7ce

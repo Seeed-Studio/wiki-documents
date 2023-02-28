@@ -4,6 +4,7 @@ title: Seeeduino Lotus
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeeduino_Lotus
 last_update:
   date: 1/31/2023
   author: shuxu hu
@@ -38,7 +39,7 @@ Here is some funny project for your reference.
 |Car Controlled by Track Ball|FM Receiver|Make a Wooden Gun|
 |-------|-------|-------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/example_1.png)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/Fm%20demo.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/gun.jpg)|
-|[Make it Now](https://community.seeedstudio.com/A-Car-Controlled-by-Track-Ball-p-1132.html)|<a href="/Sensor/Seeeduino Series/Application/FM_Receiver" ><span><font size={"3"}> Make it Now </font></span></a>|[Make it Now](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)|
+|[Make it Now](https://community.seeedstudio.com/A-Car-Controlled-by-Track-Ball-p-1132.html)|<a href="/FM_Receiver" ><span><font size={"3"}> Make it Now </font></span></a>|[Make it Now](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)|
 
 ## Feature
 

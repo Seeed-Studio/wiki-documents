@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Mini_Fan/
+slug: /Grove-Mini_Fan
 last_update:
   date: 01/09/2022
   author: gunengyu
@@ -52,22 +53,22 @@ Follow these steps to build a sample circuit using this module:
 
 1.First connect the DC motor to the **Grove - Mini Fan** module using the JST2.0 two-wire interface.
 
-2.Connect the Mini Fan module to the output side of your circuit (to the right of the power module). On the input side of the circuit, you may use a range of sensor based input modules ([Grove - Light Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor "Grove - Light Sensor"), [Grove - Sound Sensor](/Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor "Grove - Sound Sensor"), [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button") or [Grove - Slide Potentiometer](/Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer "Grove - Slide Potentiometer")).
+2.Connect the Mini Fan module to the output side of your circuit (to the right of the power module). On the input side of the circuit, you may use a range of sensor based input modules ([Grove - Light Sensor](/Grove-Light_Sensor "Grove - Light Sensor"), [Grove - Sound Sensor](/Grove-Sound_Sensor "Grove - Sound Sensor"), [Grove - Button](/Grove-Button "Grove - Button") or [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer")).
 
 3.Power up the circuit.
 
 4.The DC motor starts to rotate when the input module supplies a trigger:
 
-* If using with a momentary switch like the one on the [Grove - Button](/Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button "Grove - Button") module, simply press the button to turn ON the motor.
+* If using with a momentary switch like the one on the [Grove - Button](/Grove-Button "Grove - Button") module, simply press the button to turn ON the motor.
 
-* If using with a [Grove - Slide Potentiometer](/Sensor/Grove/Grove_Sensors/Motion/Grove-Slide_Potentiometer "Grove - Slide Potentiometer"), move the slider from the GND position to VCC and see the speed of the motor increase as the supplied voltage increases. Attach the soft-leaved fan and you have a variable speed personal fan that you can run at whichever speed you desire to fight the heat!
+* If using with a [Grove - Slide Potentiometer](/Grove-Slide_Potentiometer "Grove - Slide Potentiometer"), move the slider from the GND position to VCC and see the speed of the motor increase as the supplied voltage increases. Attach the soft-leaved fan and you have a variable speed personal fan that you can run at whichever speed you desire to fight the heat!
 
-* If using with a [Grove - Light Sensor](/Sensor/Grove/Grove_Sensors/Light/Grove-Light_Sensor "Grove - Light Sensor") connected directly to the input side of the circuit, you should see that the motor runs in bright light and stops in the dark:
+* If using with a [Grove - Light Sensor](/Grove-Light_Sensor "Grove - Light Sensor") connected directly to the input side of the circuit, you should see that the motor runs in bright light and stops in the dark:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mini_Fan/img/Light_Sensitive_Fan.gif)
 
 * If you want the motor to run only in the dark, add a Grove - NOT module between the light sensor and the power module.
-* If using with a [Grove - Sound Sensor](/Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Sensor "Grove - Sound Sensor"), you should see that the motor runs on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the motor should be ON at all times except when there is a sound, add a Grove - NOT module between the sound sensor and the power module.
+* If using with a [Grove - Sound Sensor](/Grove-Sound_Sensor "Grove - Sound Sensor"), you should see that the motor runs on detecting sound. Again, if you want to reverse the function, or in other words, if you want that the motor should be ON at all times except when there is a sound, add a Grove - NOT module between the sound sensor and the power module.
 
 You can use either the Grove - USB Power module or the Grove - DC Jack Power module for the Grove circuit.
 

@@ -4,6 +4,7 @@ title:  EL Shield
 keywords:
 -  Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /EL_Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang

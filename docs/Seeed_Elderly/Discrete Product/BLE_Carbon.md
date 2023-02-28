@@ -4,6 +4,7 @@ title: BLE Carbon
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /BLE_Carbon
 last_update:
   date: 1/13/2023
   author: shuxu hu

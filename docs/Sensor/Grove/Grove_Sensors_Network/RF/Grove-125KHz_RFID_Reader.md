@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-125KHz_RFID_Reader/
+slug: /Grove-125KHz_RFID_Reader
 last_update:
   date: 01/06/2022
   author: gunengyu

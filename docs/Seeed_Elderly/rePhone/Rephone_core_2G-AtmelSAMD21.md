@@ -4,6 +4,7 @@ title:  Rephone Core 2G-AtmelSAMD21
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Rephone_core_2G-AtmelSAMD21
 last_update:
   date: 1/13/2023
   author: shuxu hu

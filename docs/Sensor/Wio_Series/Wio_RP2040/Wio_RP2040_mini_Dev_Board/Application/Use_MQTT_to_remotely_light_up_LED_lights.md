@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Use_MQTT_to_remotely_light_up_LED_lights/
+slug: /Use_MQTT_to_remotely_light_up_LED_lights
 last_update:
   date: 01/11/2022
   author: gunengyu

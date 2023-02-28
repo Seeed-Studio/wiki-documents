@@ -4,6 +4,7 @@ title: Google Sheets Integrated
 keywords:
 - SenseCap
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
+slug: /Integrate_into_Google_Sheets_via_Helium
 last_update:
   date: 1/13/2023
   author: shuxu hu

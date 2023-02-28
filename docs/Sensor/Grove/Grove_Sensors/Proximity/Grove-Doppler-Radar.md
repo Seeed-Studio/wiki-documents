@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Doppler-Radar/
+slug: /Grove-Doppler-Radar
 last_update:
   date: 01/04/2022
   author: gunengyu

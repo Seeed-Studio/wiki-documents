@@ -4,6 +4,7 @@ title: Web Bluetooth APIs
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wio-Terminal-Web-Bluetooth
 last_update:
   date: 1/16/2023
   author: jianjing Huang

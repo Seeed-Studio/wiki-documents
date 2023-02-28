@@ -8,6 +8,7 @@ keywords:
   - Shield
   - camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Camera_Shield
 last_update:
   date: 01/10/2023  
   author: Eico 

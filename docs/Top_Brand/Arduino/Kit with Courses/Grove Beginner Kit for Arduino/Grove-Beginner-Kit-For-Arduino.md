@@ -4,6 +4,7 @@ title: Grove Beginner Kit for Arduino
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-Beginner-Kit-For-Arduino
 last_update:
   date: 2/14/2023
   author: hushuxu

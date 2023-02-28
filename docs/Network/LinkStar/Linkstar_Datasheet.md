@@ -8,6 +8,7 @@ keywords:
   - LinkStar
   - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
+slug: /Linkstar_Datasheet
 last_update:
   date: 01/03/2023
   author: w0x7ce

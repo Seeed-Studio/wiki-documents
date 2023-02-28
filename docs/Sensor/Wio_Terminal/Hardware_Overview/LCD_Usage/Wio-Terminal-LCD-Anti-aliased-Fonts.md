@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Anti-aliased-Fonts./
+slug: /Wio-Terminal-LCD-Anti-aliased-Fonts
 last_update:
   date: 01/11/2022
   author: gunengyu

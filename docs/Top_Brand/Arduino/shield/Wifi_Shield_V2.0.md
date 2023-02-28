@@ -4,6 +4,7 @@ title:  Wifi Shield V2.0
 keywords:
 -  Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Wifi_Shield_V2.0
 last_update:
   date: 2/16/2023
   author: jianjing Huang
@@ -1217,7 +1218,7 @@ For example, to toggle pin 13 enter "2" and press "Send ASCII", then when prompt
 
 Now that you know how to send and receive information to and from the WiFi shield you can see how easy it would be to control any kind of device via the web.
 
-If you wish to control high power devices such as your desk lamp, a motor, or a water pump via a webpage or phone application we recommend our [Relay Shield V2.0](/Top_Brand/Arduino/shield/Relay_Shield_v3).
+If you wish to control high power devices such as your desk lamp, a motor, or a water pump via a webpage or phone application we recommend our [Relay Shield V2.0](/Relay_Shield_v3).
 
 The Relay Shield V2.0 uses pins 4, 5, 6, and 7 so it is fully compatible with the code in the examples in this page.
 
@@ -1266,7 +1267,7 @@ A3: Do not place plastic or any other dielectric material in touch with the ante
 - [RN-171 Datasheet](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-171.pdf)
 - [Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield)
 - [WiFi Module User Manual](https://files.seeedstudio.com/wiki/Wifi_Shield_V2.0/res/WiFly-RN-UM.pdf) *-- This is where you'll find all the commands for the RN-171 module in the shield.*
-- [What is a Seeeduino](/Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2)
+- [What is a Seeeduino](/Seeeduino_v4.2)
 - [w3schools](http://www.w3schools.com/) Great website to learn HTML, Javascript, and JQuery
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Wifi_Shield_V2.0 -->

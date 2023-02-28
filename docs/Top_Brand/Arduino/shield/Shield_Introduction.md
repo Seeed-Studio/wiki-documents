@@ -6,6 +6,7 @@ tags:
 keywords:
   - Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Shield_Introduction
 last_update:
   date: 01/10/2023  
   author: Eico 

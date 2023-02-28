@@ -4,6 +4,7 @@ title:  Seeed BLE Shield v1
 keywords:
 -  Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Seeed_BLE_Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang
@@ -113,7 +114,7 @@ This Seeed BLE Shield utilizes an HM-11 module to provide your Arduino/Seeeduino
 
 ![](https://files.seeedstudio.com/wiki/Seeed_BLE_Shield/img/BLE_Shield.png)
 
-* HM-11: The basic module is HM-11, more information you can refer to this wiki of [HM-11](/Seeed_Elderly/Bee/Bluetooth_V4.0_HM_11_BLE_Module).
+* HM-11: The basic module is HM-11, more information you can refer to this wiki of [HM-11](/Bluetooth_V4.0_HM_11_BLE_Module).
 
 * Signal lamp: Lamp will blink if no one connect BLE, but the lamp would keep lighting after BLE has been connected.
 
@@ -259,7 +260,7 @@ More information about the AT Commands please refer to the data sheet of BLE mod
 
 ---
 
-* [FAQ about Seeed BLE Shield](/Top_Brand/Arduino/shield/Seeed_BLE_Shield). _Also, you can enter the FAQ page by clicking the "FAQ" button which in the right side of product's wiki page._
+* [FAQ about Seeed BLE Shield](/Seeed_BLE_Shield). _Also, you can enter the FAQ page by clicking the "FAQ" button which in the right side of product's wiki page._
 
 ## Schematic Online Viewer
 

@@ -4,6 +4,7 @@ title: Grove - I2C Color Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-I2C_Color_Sensor
 last_update:
   date: 1/5/2023
   author: jianjing Huang
@@ -136,7 +137,7 @@ void loop()
 
 ### Color Sensor Examples/Applications
 
-This example shows how to use features of Grove - I2C Color Sensor and display the detected color with a [Chainable RGB LED Grove](/Sensor/Grove/Grove_Accessories/Actuator/Grove-Chainable_RGB_LED/).
+This example shows how to use features of Grove - I2C Color Sensor and display the detected color with a [Chainable RGB LED Grove](/Grove-Chainable_RGB_LED/).
 
 :::note
 If you haven't downloaded  <a href="https://github.com/Seeed-Studio/Grove_Chainable_RGB_LED">Grove-Chainable RGB LED library</a> to your Arduino IDE before, please download and set up the library first.

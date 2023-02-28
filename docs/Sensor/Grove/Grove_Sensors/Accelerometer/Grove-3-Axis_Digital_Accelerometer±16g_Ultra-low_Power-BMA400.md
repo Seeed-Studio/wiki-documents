@@ -4,6 +4,7 @@ title: Grove - 3 Axis Digital Accelerometer±16g Ultra-low Power (BMA400)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400
 last_update:
   date: 1/5/2023
   author: shuxu hu

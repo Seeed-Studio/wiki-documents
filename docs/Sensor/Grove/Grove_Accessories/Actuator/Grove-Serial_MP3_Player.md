@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Serial_MP3_Player/
+slug: /Grove-Serial_MP3_Player
 last_update:
   date: 01/09/2022
   author: gunengyu

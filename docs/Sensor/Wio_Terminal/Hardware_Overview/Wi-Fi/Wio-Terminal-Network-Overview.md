@@ -5,6 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview/
+slug: /Wio-Terminal-Network-Overview
 last_update:
   date: 01/11/2022
   author: gunengyu

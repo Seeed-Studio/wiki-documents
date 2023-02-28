@@ -4,6 +4,7 @@ title: Grove - LCD RGB Backlight
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Grove-LCD_RGB_Backlight
 last_update:
   date: 1/7/2023
   author: shuxu hu
