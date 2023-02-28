@@ -229,7 +229,7 @@ It is required to download the [Segger](https://www.segger.com/downloads/jlink/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD1.png" alt="pir" width={300} height="auto" /></p>
 
-- **Step 2.** Start the J-Flash and serach nRF52840, creating a new project:
+- **Step 2.** Start the J-Flash and search nRF52840, creating a new project:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD2.png" alt="pir" width={500} height="auto" /></p>
 
