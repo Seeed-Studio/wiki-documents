@@ -4,6 +4,7 @@ title: Seeed Studio XIAO SAMD21 入门指南
 keywords:
 - Seeed Studio XIAO SAMD21
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /zh-CN/Seeeduino-XIAO
 last_update:
   date: 2/27/2023
   author: jianjing Huang
@@ -79,13 +80,13 @@ Seeed Studio XIAO SAMD21 有14个引脚，可以用于11个数字接口，11个�
 
 :::note提示
 
-对于普通的 I/O 引脚：<br />
+**对于普通的 I/O 引脚**：<br />
   MCU的工作电压为3.3V。如果将高于 3.3V 的电压输入连接到普通的 I/O 引脚，可能会导致芯片损坏。
 
-对于电源引脚：<br />
+**对于电源引脚**：<br />
   内置的DC-DC转换电路能够将5V电压转换成3.3V电压，因此可以通过VIN引脚和5V引脚使用5V供电来为设备供电。
 
-请注意使用，不要拆卸防护盖。
+>请注意使用，不要拆卸防护盖。
 :::
 
 ### **进入Bootloader模式**
@@ -93,7 +94,7 @@ Seeed Studio XIAO SAMD21 有14个引脚，可以用于11个数字接口，11个�
 当用户编程过程失败时，Seeed Studio XIAO SAMD21 端口可能会消失。我们可以通过以下操作解决这个问题：
 
 - 将 Seeed Studio XIAO SAMD21 连接到您的计算机。
-- 用镊子或短线将图中的RST管脚短接两次。
+- 用镊子或短线将图中的RST管脚短接**两次**。
 - 橙色 LED 灯亮起并闪烁。
 
 此时，芯片进入Bootloader模式，也就是引导加载程序模式，并且烧录端口再次出现。因为SAMD21芯片有两个分区，一个是Bootloader，另一个是用户程序。产品出厂时会在系统内存中烧录引导加载程序代码。我们可以通过执行上述步骤来切换模式。
@@ -105,23 +106,25 @@ Seeed Studio XIAO SAMD21 有14个引脚，可以用于11个数字接口，11个�
 
 如果要重置 Seeed Studio XIAO SAMD21，请执行以下步骤：
 
-- Connect the Seeed Studio XIAO SAMD21 to your computer.
-- Use tweezers or short lines to short the RST pins **only once**
-- The orange LED lights flicker on and light up.
+- 将 Seeed Studio XIAO SAMD21 连接到您的电脑上。
+- 使用镊子或短线将RST引脚短接**一次**即可
+- 橙色 LED 灯亮起并闪烁。
 
-Please note: The behavior of the built-in LED is reversed to the one on an Arduino. On the Seeed Studio XIAO SAMD21 , the pin has to be pulled low, whereas on other micro-controllers it has to be pulled high.  
+>**请注意**：内置LED的行为方式与Arduino上的相反。在Seeed Studio XIAO SAMD21上，该引脚必须被拉低以点亮LED；而在其他微控制器上，它必须被拉高。
 
-### **Interrupt**
+### **中断**
 
-All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
+<!-- All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp). -->
+Seeed Studio XIAO SAMD21上的所有引脚都支持中断，但是5号引脚和7号引脚不能同时使用。有关中断的更多详细信息，请在[这里](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp)查看。
 
-### **Pin Multuiplexing**
+### **引脚多路复用**
 
-We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
+<!-- We don't need to configure the pins ourselves, after using the pins, you can call a function directly. -->
+我们无需自己配置引脚，在使用完引脚后，可以直接调用函数。
 
-#### **Digital Input and Output**
+#### **数字输入和输出**
 
-- Use pin 6 as the digital pin:
+- 使用引脚 6 作为数字引脚：
 
 ```c
 const int buttonPin = 6;     // the number of the pushbutton pin
@@ -151,13 +154,11 @@ void loop() {
 }
 ```
 
-#### **AnalogRead**
+#### **模拟读取**
 
-- Use pin 6 as the analog pin:
+- 使用引脚 6 作为模拟引脚:
 
 ```c
-
-
 void setup() {
   // declare the ledPin as an OUTPUT:
   pinMode(ledPin, OUTPUT);
@@ -177,12 +178,11 @@ void loop() {
 }
 ```
 
-#### **Serial**
+#### **串口**
 
-- Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
+- 使用引脚 6 作为 UART 的 TX 引脚（UART 的 RX 引脚为引脚 7）：
 
 ```c
-
 void setup() {
     Serial1.begin(115200);
     while (!Serial);
@@ -196,7 +196,7 @@ void loop() {
 
 #### **I2C**
 
-- Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
+- 使用引脚5作为I2C的SCL引脚（SDA引脚为引脚4）：
 
 ```c
 // Wire Master Writer
@@ -233,7 +233,7 @@ void loop()
 
 #### **SPI**
 
-- Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
+- 使用8号引脚作为SPI的SCK引脚（SPI的MISO引脚为9号引脚，MOSI引脚为10号引脚）:
 
 ```c
 #include <SPI.h>
@@ -258,24 +258,28 @@ void loop (void) {
 
 #### **QTouch**
 
-For how to use QTouch, we provide an example project: [How to Make a Fruit Piano on Seeed Studio XIAO SAMD21 ’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/).
+我们提供了一个示例工程关于如何使用 QTouch： [如何利用Q-Touch 功能在 Seeed Studio XIAO SAMD21 上制作水果钢琴](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/).
 
-#### **Analog Input and Output**
+#### **模拟输入和输出**
 
-While it still has PWM-based "analog outputs", the SAMD21 also features true analog output in the form of a digital-to-analog converter (DAC). This module can produce an analog voltage between 0 and 3.3V. It can be used to produce audio with more natural sound, or as a kind of "digital potentiometer" to control analog devices.
+<!-- While it still has PWM-based "analog outputs", the SAMD21 also features true analog output in the form of a digital-to-analog converter (DAC). This module can produce an analog voltage between 0 and 3.3V. It can be used to produce audio with more natural sound, or as a kind of "digital potentiometer" to control analog devices. -->
+尽管 SAM21 仍然具有基于脉宽调制（PWM）的“模拟输出”，但它还配备了数字模拟转换器（DAC），提供真正的模拟输出功能。该模块可在 0 到 3.3V 之间生成模拟电压。它可用于产生更自然的音频声音，或作为“数字电位器”来控制模拟设备。
 
-The DAC is only available on the Arduino pin A0, and is controlled using analogWrite(A0, `<value>`). The DAC can be set up to 10-bit resolution (make sure to call [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) in your setup), which means values between 0 and 1023 will set the voltage to somewhere between 0 and 3.3V.
+<!-- The DAC is only available on the Arduino pin A0, and is controlled using analogWrite(A0, `<value>`). The DAC can be set up to 10-bit resolution (make sure to call [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) in your setup), which means values between 0 and 1023 will set the voltage to somewhere between 0 and 3.3V. -->
+DAC 仅可用于 Arduino 引脚 A0 ，并可使用 analogWrite（A0，`<value>`）进行控制。 DAC 可以设置为 10 位分辨率（确保在设置中调用 [**analogWriteResolution(10)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogwriteresolution/) ），这意味着 0 到 1023 之间的值将电压设置在 0 到 3.3V 之间的某个位置。
 
-In addition to the DAC, the SAMD21's ADC channels also stand apart from the ATmega328: they're equipped with up to 12-bit resolution. That means the analog input values can range from 0-4095, representing a voltage between 0 and 3.3V. To use the ADC's in 12-bit mode, make sure you call [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) in your setup.
+<!-- In addition to the DAC, the SAMD21's ADC channels also stand apart from the ATmega328: they're equipped with up to 12-bit resolution. That means the analog input values can range from 0-4095, representing a voltage between 0 and 3.3V. To use the ADC's in 12-bit mode, make sure you call [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/) in your setup. -->
+除了 DAC 之外，SAMD21 的 ADC 通道还与 ATmega328 有所不同：它们配备高达 12 位的分辨率。这意味着模拟输入值可以在 0-4095 之间，即表示 0 到 3.3V 之间的电压。请确保在设置中调用 [**analogReadResolution(12)**](https://www.arduino.cc/reference/en/language/functions/zero-due-mkr-family/analogreadresolution/)，这样才能在 12 位模式下使用 ADC 。
 
-**Serial Plotting the DAC**
+**串行绘制 DAC**
 
-Here's an example that demonstrates both the DAC and the ADC. To set the experiment up, connect A0 to A1 -- we'll drive A0 with an analog voltage, then read it with A1. It's the simplest circuit we've ever put in a tutorial:
+下面是一个演示 DAC 和 ADC 的示例。接下来开始实验，请将 A0 连接到 A1 -- 我们将用模拟电压驱动 A0，然后使用 A1 读取它。这是我们在教程中介绍过的最简单的电路：
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/AO_A1.jpg" /></div>
+<br />
 
-:::note
-The Seeed Studio XIAO SAMD21 using the [**Seeed Studio XIAO SAMD21 expansion board**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+:::note提示
+上述图片中 Seeed Studio XIAO SAMD21 正在使用 [**Seeed Studio XIAO SAMD21 拓展板**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 :::
 
 This sketch produces a sine wave output on A0, with values ranging from 0 to 3.3V. Then it uses A1 to read that output into its ADC, and convert it into a voltage between 0 and 3.3V.
