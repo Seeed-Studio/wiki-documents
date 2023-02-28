@@ -149,6 +149,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Laser_PM2.5_Sensor-HM3301',
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Dust_Sensor',
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Air_Quality_Sensor_v1.3',
+                'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Formaldehyde-Sensor',
               ]
             },
             {
@@ -250,6 +251,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Capacitive-Fingerprint-Sensor',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-Fingerprint_Sensor',
                 'Sensor/Grove/Grove_Sensors/Biometric/Grove-GSR_Sensor',
+                'Sensor/Grove/Grove_Sensors/Biometric/Grove-Human_Presence_Sensor-AK9753',
               ],
             },
 
@@ -277,6 +279,8 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121',
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121',
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI',
+                'Sensor/Grove/Grove_Sensors/Touch/Grove-I2C_Touch_Sensor',
 
               ]
             },
@@ -292,6 +296,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH_Sensor',
               ],
 
             },
@@ -425,6 +430,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Triple_Color_E-Ink_Display_1_54',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-Serial_LCD_V1.0',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-BlinkM',
+                'Sensor/Grove/Grove_Accessories/Display/Grove-Serial_Camera_Kit',
               ],
             },
             {
@@ -468,6 +474,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
 
               ]
             },
@@ -494,6 +501,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Current/Grove-MOSFET',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-SPDT_Relay_30A',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-Screw_Terminal',
+                'Sensor/Grove/Grove_Accessories/Current/Grove-Electromagnet',
 
               ],
             },
@@ -521,6 +529,12 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-6-Position_DIP_Switch',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Button',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Switch-P',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-LED_Button',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Dual-Button',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-5-Way_Switch',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Mech_Keycap',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Thumb_Joystick',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Magnetic_Switch',
               ],
             },
             {
@@ -539,6 +553,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-PS_2_Adapter',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-16-bit-ADC-ADS1115',
               ]
             },
 
@@ -2191,47 +2206,47 @@ const sidebars = {
         'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration',
         'Cloud_Chain/SenseCAP_Dashboard/Hotspot_Registration',
       ],
-},
+    },
     {
-          type: 'category',
-          label: 'SenseCAP Portal',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
+      type: 'category',
+      label: 'SenseCAP Portal',
+      items: [
+        'Cloud_Chain/SenseCAP_Cloud/wiki',
+      ],
     },
 
     {
-          type: 'category',
-          label: 'SenseCAP Hotspot APP',
-          items: [
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
-            'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
-          ],
+      type: 'category',
+      label: 'SenseCAP Hotspot APP',
+      items: [
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
+      ],
     },
     {
-          type: 'category',
-          label: 'SenseCAP Mate APP',
-          items: [
-            'Cloud_Chain/SenseCAP_Cloud/wiki',
-          ],
+      type: 'category',
+      label: 'SenseCAP Mate APP',
+      items: [
+        'Cloud_Chain/SenseCAP_Cloud/wiki',
+      ],
     },
     {
-          type: 'category',
-          label: 'SenseCAP API',
-          items: [
-            'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
-            'Cloud_Chain/SenseCAP_API/API_pricing',
-          ],
+      type: 'category',
+      label: 'SenseCAP API',
+      items: [
+        'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
+        'Cloud_Chain/SenseCAP_API/API_pricing',
+      ],
     },
-  
+
 
     {
       type: 'html',
@@ -2989,6 +3004,14 @@ const sidebars = {
       label: 'Seeed Studio XIAO 拓展板',
       items: [
         'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+      ]
+    },
+    {
+
+      type: 'category',
+      label: 'Seeed Studio XIAO SAMD21',
+      items: [
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
       ]
     },
 
