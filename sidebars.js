@@ -2214,7 +2214,16 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP Portal',
       items: [
-        'Cloud_Chain/SenseCAP_Cloud/wiki',
+        'Cloud_Chain/SenseCAP_Portal/QuickStart',
+        {
+          type: 'category',
+          label: 'Management',
+          items: [
+            'Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Dashboard',
+            'Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Data_Management',
+            'Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management',      
+          ],
+        },
       ],
     },
 
@@ -2238,7 +2247,7 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP Mate APP',
       items: [
-        'Cloud_Chain/SenseCAP_Cloud/wiki',
+        'Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP',
       ],
     },
     {
@@ -2247,6 +2256,32 @@ const sidebars = {
       items: [
         'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
         'Cloud_Chain/SenseCAP_API/API_pricing',
+        {
+          type: 'category',
+          label: 'HTTP API',
+          items: [
+            'Cloud_Chain/SenseCAP_API/HTTP_API/Quick_Start',
+            'Cloud_Chain/SenseCAP_API/HTTP_API/HTTP_API_Access_Guide',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Data OpenStream API',
+          items: [
+            'Cloud_Chain/SenseCAP_API/Data_OpenStream_API/Data_OpenStream_API_Quickstart',
+            'Cloud_Chain/SenseCAP_API/Data_OpenStream_API/Data_OpenStream_API_Reference',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Appendix',
+          items: [
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Sensor_Types',
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Measurement_IDs',
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Device_Status_IDs',
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Error_Code',
+          ],
+        },
       ],
     },
 
