@@ -330,9 +330,9 @@ void loop()
 }
 ```
 
-## **Getting Started**
+## **上手指南**
 
-### **Hardware**
+### **硬件**
 
 **Materials required**
 
