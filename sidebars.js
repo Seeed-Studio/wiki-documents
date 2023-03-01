@@ -1119,7 +1119,7 @@ const sidebars = {
             {
 
               type: 'category',
-              label: 'Beyond Grove',
+              label: 'Other Sensing Modules',
               items: [
                 {
 
@@ -2299,7 +2299,7 @@ const sidebars = {
       }
     </style>
     <div style="width:100px;text-align:center"> 
-      <div class="sub_item"><strong> Top Brand </strong></div>
+      <div class="sub_item"><strong> Popular Platform </strong></div>
     </div>
     `,
     },
@@ -2640,30 +2640,49 @@ const sidebars = {
     `,
     },
 
-    {
-          type: 'category',
-          label: 'Fusion',
-          items: [
-            'Contribution/Fusion/Service_for_Fusion_PCB',
-            'Contribution/Fusion/Galileo_Case',
-            'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
-            'Contribution/Fusion/Starter_bundle_harness_V1',
-          ]
-    },
+    // {
+    //       type: 'category',
+    //       label: 'Fusion Service',
+    //       items: [
+    //         'Contribution/Fusion/Service_for_Fusion_PCB',
+    //         'Contribution/Fusion/Galileo_Case',
+    //         'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
+    //         'Contribution/Fusion/Starter_bundle_harness_V1',
+    //       ]
+    // },
 
     {
           type: 'category',
           label: 'Contributors',
           items: [
-            'Contribution/Contributors/How_To_Edit_A_Document',
-            'Contribution/Contributors/Things_We_Make',
+            // 'Contribution/Contributors/How_To_Edit_A_Document',
+            // 'Contribution/Contributors/Things_We_Make',
+            'wiki',
           ]
+    },
+
+    {
+      type: 'html',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Retired Product </strong></div>
+    </div>
+    `,
     },
 
     {
 
       type: 'category',
-      label: 'Seeed Elderly',
+      label: 'Retired Product',
       items: [
 
         {
@@ -2905,7 +2924,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Discrete Product',
+          label: 'Others',
           items: [
             'Seeed_Elderly/Discrete Product/ESP32_Breakout_Kit',
             'Seeed_Elderly/Discrete Product/UartSB_Frame',
