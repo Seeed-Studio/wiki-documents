@@ -79,7 +79,7 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
-
+                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
               ],
             },
             {
@@ -291,12 +291,14 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
+                'Sensor/Grove/Grove_Sensors/Liquid/G1-1-4_Water_Flow_sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-EC-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-TDS-Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH_Sensor',
+
               ],
 
             },
@@ -317,6 +319,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Vibration_Sensor_SW-420',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
+                'Sensor/Grove/Grove_Sensors/Motion/Grove-Step_Counter-BMA456',  
               ],
 
             },
@@ -535,6 +538,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Mech_Keycap',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Thumb_Joystick',
                 'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Magnetic_Switch',
+                'Sensor/Grove/Grove_Accessories/Switch&Button/Grove-Joint_v2.0',
               ],
             },
             {
@@ -554,6 +558,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Mini_Camera',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-16-bit-ADC-ADS1115',
+                'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NOT',
               ]
             },
 
@@ -1114,7 +1119,7 @@ const sidebars = {
             {
 
               type: 'category',
-              label: 'Beyond Grove',
+              label: 'Other Sensing Modules',
               items: [
                 {
 
@@ -1170,11 +1175,11 @@ const sidebars = {
                       label: 'Charge',
                       items: [
                         'Sensor/Beyond_Grove/Accessories/Charge/Essentials',
-                        'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
-                        'Seeed_Elderly/Accessories/charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
-                        'Seeed_Elderly/Accessories/charge/Lipo_Rider_Pro',
-                        'Seeed_Elderly/Accessories/charge/Lipo-Rider-Plus',
-                        'Seeed_Elderly/Accessories/charge/Lipo_Rider_V1.3',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_Pro',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo-Rider-Plus',
+                        'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.3',
                         'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
                         'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
                         'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
@@ -1204,7 +1209,7 @@ const sidebars = {
                       type: 'category',
                       label: 'Input/Output',
                       items: [
-                        'Seeed_Elderly/Accessories/charge/USB_To_Uart_5V_3V3',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V_3V3',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/125Khz_RFID_module-UART',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer',
@@ -1213,6 +1218,7 @@ const sidebars = {
                         'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_3V3',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V',
                         'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
+                        'Sensor/Beyond_Grove/Accessories/Input_Output/Codec-Adaptive_Wireless_Relay',
                       ],
 
 
@@ -1222,7 +1228,7 @@ const sidebars = {
                       type: 'category',
                       label: 'Current',
                       items: [
-                        'Seeed_Elderly/Accessories/charge/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
+                        'Sensor/Beyond_Grove/Accessories/Current/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
                         'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
                         'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
 
@@ -1236,10 +1242,8 @@ const sidebars = {
                       type: 'category',
                       label: 'Case',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/Bracket_for_Infrared_Proximity_Sensor',
-                        'Sensor/Beyond_Grove/Accessories/Current/Shield-MaTrix-V0.9b',
-
-
+                        'Sensor/Beyond_Grove/Accessories/Case/Bracket_for_Infrared_Proximity_Sensor',
+                        'Sensor/Beyond_Grove/Accessories/Case/Shield-MaTrix-V0.9b',
                       ],
 
 
@@ -1249,7 +1253,7 @@ const sidebars = {
                       type: 'category',
                       label: 'LED',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/FSM-55',
+                        'Sensor/Beyond_Grove/Accessories/LED/FSM-55',
                       ],
 
                     },
@@ -1258,23 +1262,22 @@ const sidebars = {
                       type: 'category',
                       label: 'Tools',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/Bluetooth_Multimeter',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano',
-                        'Sensor/Beyond_Grove/Accessories/Current/Dfu-util',
-                        'Sensor/Beyond_Grove/Accessories/Current/Replacement_LCD_Screen_for_DSO_nano',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano_v3',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Development',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-OpenOCD_gdb',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-Qemu_gdb',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Nano-gcc',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad_Manual_by_the_community',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Beta_HW',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Building_Firmware',
-                        'Sensor/Beyond_Grove/Accessories/Current/DSO_Quad-Calibration',
-                        'Sensor/Beyond_Grove/Accessories/Current/Mini_Soldering_Iron',
-                        'Sensor/Beyond_Grove/Accessories/Current/RF_Explorer_Software',
-
+                        'Sensor/Beyond_Grove/Accessories/Tools/Bluetooth_Multimeter',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano',
+                        'Sensor/Beyond_Grove/Accessories/Tools/Dfu-util',
+                        'Sensor/Beyond_Grove/Accessories/Tools/Replacement_LCD_Screen_for_DSO_nano',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano_v3',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Development',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-OpenOCD_gdb',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Qemu_gdb',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-gcc',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad_Manual_by_the_community',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Beta_HW',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Building_Firmware',
+                        'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Calibration',
+                        'Sensor/Beyond_Grove/Accessories/Tools/Mini_Soldering_Iron',
+                        'Sensor/Beyond_Grove/Accessories/Tools/RF_Explorer_Software',
                       ],
 
                     },
@@ -1283,8 +1286,8 @@ const sidebars = {
                       type: 'category',
                       label: 'Display',
                       items: [
-                        'Sensor/Beyond_Grove/Accessories/Current/LCD_16-2_Characters-Green_Yellow_back_light',
-                        'Sensor/Beyond_Grove/Accessories/Current/LCD_8-2_Characters-Blue_back_light',
+                        'Sensor/Beyond_Grove/Accessories/Display/LCD_16-2_Characters-Green_Yellow_back_light',
+                        'Sensor/Beyond_Grove/Accessories/Display/LCD_8-2_Characters-Blue_back_light',
                       ],
 
                     },
@@ -2211,7 +2214,16 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP Portal',
       items: [
-        'Cloud_Chain/SenseCAP_Cloud/wiki',
+        'Cloud_Chain/SenseCAP_Portal/QuickStart',
+        {
+          type: 'category',
+          label: 'Management',
+          items: [
+            'Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Dashboard',
+            'Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Data_Management',
+            'Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management',      
+          ],
+        },
       ],
     },
 
@@ -2235,7 +2247,7 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP Mate APP',
       items: [
-        'Cloud_Chain/SenseCAP_Cloud/wiki',
+        'Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP',
       ],
     },
     {
@@ -2244,6 +2256,32 @@ const sidebars = {
       items: [
         'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
         'Cloud_Chain/SenseCAP_API/API_pricing',
+        {
+          type: 'category',
+          label: 'HTTP API',
+          items: [
+            'Cloud_Chain/SenseCAP_API/HTTP_API/Quick_Start',
+            'Cloud_Chain/SenseCAP_API/HTTP_API/HTTP_API_Access_Guide',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Data OpenStream API',
+          items: [
+            'Cloud_Chain/SenseCAP_API/Data_OpenStream_API/Data_OpenStream_API_Quickstart',
+            'Cloud_Chain/SenseCAP_API/Data_OpenStream_API/Data_OpenStream_API_Reference',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Appendix',
+          items: [
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Sensor_Types',
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Measurement_IDs',
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Device_Status_IDs',
+            'Cloud_Chain/SenseCAP_API/Appendix/List_of_Error_Code',
+          ],
+        },
       ],
     },
 
@@ -2261,7 +2299,7 @@ const sidebars = {
       }
     </style>
     <div style="width:100px;text-align:center"> 
-      <div class="sub_item"><strong> Top Brand </strong></div>
+      <div class="sub_item"><strong> Popular Platform </strong></div>
     </div>
     `,
     },
@@ -2458,7 +2496,11 @@ const sidebars = {
             'Top_Brand/Arduino/Kit with Courses/Grove_Indoor_Environment_Kit_for_Edison',
             'Top_Brand/Arduino/Kit with Courses/Grove_Smart_Plant_Care_Kit',
             'Top_Brand/Arduino/Kit with Courses/Techbox_Tricks',
-
+            'Top_Brand/Arduino/Kit with Courses/Grove_Starter_Kit_Plus',
+            'Top_Brand/Arduino/Kit with Courses/Grove_Starter_Kit_v3',
+            'Top_Brand/Arduino/Kit with Courses/Grove-Creator-Kit-1',
+            'Top_Brand/Arduino/Kit with Courses/Grove-Mixer_Pack_V2',
+            'Top_Brand/Arduino/Kit with Courses/Grove-Toy_Kit',
           ],
         },
       ],
@@ -2598,30 +2640,49 @@ const sidebars = {
     `,
     },
 
-    {
-          type: 'category',
-          label: 'Fusion',
-          items: [
-            'Contribution/Fusion/Service_for_Fusion_PCB',
-            'Contribution/Fusion/Galileo_Case',
-            'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
-            'Contribution/Fusion/Starter_bundle_harness_V1',
-          ]
-    },
+    // {
+    //       type: 'category',
+    //       label: 'Fusion Service',
+    //       items: [
+    //         'Contribution/Fusion/Service_for_Fusion_PCB',
+    //         'Contribution/Fusion/Galileo_Case',
+    //         'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
+    //         'Contribution/Fusion/Starter_bundle_harness_V1',
+    //       ]
+    // },
 
     {
           type: 'category',
           label: 'Contributors',
           items: [
-            'Contribution/Contributors/How_To_Edit_A_Document',
-            'Contribution/Contributors/Things_We_Make',
+            // 'Contribution/Contributors/How_To_Edit_A_Document',
+            // 'Contribution/Contributors/Things_We_Make',
+            'wiki',
           ]
+    },
+
+    {
+      type: 'html',
+      value: `
+    <style>
+      .sub_item {
+        width: 275px;
+        display:inline-block;
+        text-align:center;
+        font-size:20px;
+        margin-top: 10px;
+      }
+    </style>
+    <div style="width:100px;text-align:center"> 
+      <div class="sub_item"><strong> Retired Product </strong></div>
+    </div>
+    `,
     },
 
     {
 
       type: 'category',
-      label: 'Seeed Elderly',
+      label: 'Retired Product',
       items: [
 
         {
@@ -2810,6 +2871,7 @@ const sidebars = {
             'Seeed_Elderly/Xadow/Xadow_Tutorial_Communicate_via_BLE',
             'Seeed_Elderly/Xadow/Xadow_Tutorial_Shaking_Shaking',
             'Seeed_Elderly/Xadow/Xadow_Wearable_Kit_For_Edison',
+            'Seeed_Elderly/Xadow/Xadow_Motor_Driver',
           ]
         },
         {
@@ -2817,7 +2879,10 @@ const sidebars = {
           label: 'Rainbowduino',
           items: [
             'Seeed_Elderly/Rainbowduino/Rainbowduino_v3.0',
+            'Seeed_Elderly/Rainbowduino/Rainbowduino_Extension_Board_v0.9b',
+            'Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness',
             'Seeed_Elderly/Rainbowduino/Rainbowduino_LED_driver_platform-ATmega328',
+            'Seeed_Elderly/Rainbowduino/Rainbowduino',
           ]
         },
         {
@@ -2859,7 +2924,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Discrete Product',
+          label: 'Others',
           items: [
             'Seeed_Elderly/Discrete Product/ESP32_Breakout_Kit',
             'Seeed_Elderly/Discrete Product/UartSB_Frame',
@@ -2894,6 +2959,11 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/Fubarino_SD',
             'Seeed_Elderly/Discrete Product/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout',
             'Seeed_Elderly/Discrete Product/Matrix_Clock',
+            'Seeed_Elderly/Discrete Product/Bugduino',
+            'Seeed_Elderly/Discrete Product/CUI32Stem',
+            'Seeed_Elderly/Discrete Product/Danger_Shield_Complete_Kits',
+            'Seeed_Elderly/Discrete Product/FST-01',
+            'Seeed_Elderly/Discrete Product/Grove-Base_Shield_for_IOIO-OTG', 
           ]
 
         },

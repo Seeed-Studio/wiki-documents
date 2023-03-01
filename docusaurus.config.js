@@ -90,7 +90,7 @@ const config = {
           ],
 
           editUrl:
-            'https://github.com/Seeed-Studio/wiki-documents/edit/main/',
+            'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
         },
 
 
@@ -99,7 +99,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Seeed-Studio/wiki-documents/edit/main/',
+            'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -227,11 +227,11 @@ const config = {
           //   position: 'right',
           //   className: 'navbar_doc_items'
           // },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-            className: 'navbar_doc_items'
-          },
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          //   className: 'navbar_doc_items'
+          // },
           // {
           //   type: 'dropdown',
           //   label: 'Page',
