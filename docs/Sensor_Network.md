@@ -495,11 +495,11 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-<!-- Beyond Grove / Seeed Elderly -->
+<!-- Beyond Grove / Retired Product -->
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Beyond Grove / Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Beyond Grove / Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> This is the introduction of Seeed Studio ageful sensors and communication modules.</font></div>
             <a href="/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click HERE </font></span></a> to see the full picture.
     </a>
@@ -673,7 +673,7 @@ You can discover this page with two large portions.
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Seeed Studio ageful microcontrollers.</font></div>
             <a href="/UartSB_Frame" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here </font></span></a> to see the full picture.
     </a>
@@ -1051,11 +1051,11 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-<!-- Beyond Grove / Seeed Elderly -->
+<!-- Beyond Grove / Retired Product -->
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Beyond Grove / Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"6"}>Beyond Grove / Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Seeed Studio ageful accessories.</font></div>
     </a>
 </div>
