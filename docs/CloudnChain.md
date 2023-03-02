@@ -42,11 +42,11 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Data Management</font></div>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detailed Data showed in Table </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Data_Management#table" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detailed Data showed in Table </font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Graphical Data showed in Graph </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Data_Management#graph" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Graphical Data showed in Graph </font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Account Information Checking </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Data_Management#check-account-info" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Account Information Checking </font></span></a>
             <br/>
     </a>
 </div>
@@ -54,23 +54,23 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Devices Management</font></div>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Gateways</strong> - Displaying EUI, Name, Status, and more info.</font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Gateways</strong> - Displaying EUI, Name, Status, and more info.</font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Node Group</strong> - Manage Devices Conveniently by Groups. </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#node-group-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Node Group</strong> - Manage Devices Conveniently by Groups. </font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Sensor Node</strong> - Displaying EUI, Name, Status, Data Type and more. </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#sensor-node-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>SenseCAP Sensor Node</strong> - Displaying EUI, Name, Status, Data Type and more. </font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices General Information</strong> - Battery Status, Recent Online Record and more. </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#general-information" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices General Information</strong> - Battery Status, Recent Online Record and more. </font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Settings</strong> - Adjust the data collection frequency of the device and more. </font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#settings" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Settings</strong> - Adjust the data collection frequency of the device and more. </font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Location </strong></font></span></a> 
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#location" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Location </strong></font></span></a> 
             /
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Bind </strong></font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#bind-device" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Bind </strong></font></span></a>
             /
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Channel </strong></font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#channel" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Channel </strong></font></span></a>
             /
-            <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Data </strong></font></span></a>
+            <a href="Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management#data" target="_blank"><span><font color={'FFFFFF'} size={"2"}> <strong>Devices Data </strong></font></span></a>
     </a>
 </div>
 
@@ -92,7 +92,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Mate APP</font></div>
             This is the SenseCAP Mate APP used in mobile phones to display data from SenseCAP sensors.
             <br/>
-            > <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Bind Devices</font></span></a> / <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Group Management</font></span></a> / <a href="Sensor/SenseCAP/wiki" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Device Management</font></span></a>
+            > <a href="Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP#config" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Bind Devices</font></span></a> / <a href="Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Account</font></span></a> / <a href="Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>User</font></span></a>
     </a>
 </div>
 
