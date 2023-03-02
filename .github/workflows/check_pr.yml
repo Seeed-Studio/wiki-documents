@@ -13,6 +13,7 @@ on:
       - "SECURITY.md"
       - "README.md"
       - "README_zh-CN.md"
+      
 
 jobs:
   lint:
@@ -23,18 +24,36 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@master
+        
+      - name: INSTALL SSH KEY
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PC }} 
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
 
       - name: GIT CLONE
         run: |
             sudo apt-get update
-
+            sudo apt-get install \
+                  git -y 
+            git config --global user.name 'tianrking'
+            git config --global user.email 'tian.r.king@gmail.com'
+            git clone git@github.com:Seeed-Studio/wiki-documents.git ~/wiki-documents
+            
       - name: NPM RUN for HTML BUILD
         run: |
             curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
             echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            cd  ~/wiki-documents
             sudo apt remove cmdtest
             sudo apt update && sudo apt install yarn
             yarn
             yarn build
+      
+
+
+
+
+
 
           
