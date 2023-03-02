@@ -17,5 +17,5 @@ A big shout-out to all the honorary contributors for devoting your previous time
 - [Yanlu Wei, Renshuai Tao et al.](https://arxiv.org/pdf/2004.08656.pdf), [Security Xray Scan Knife Detection](/Security_Scan)
 
 :::note
-The list of contributors is expanding. We'll keep updating. :)
+The list of contributors is expanding. We'll keep updating. :) Hope to see your name here SOON!
 :::
