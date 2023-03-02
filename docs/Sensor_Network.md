@@ -388,7 +388,7 @@ You can discover this page with two large portions.
             <a href="/Grove-TDS-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TDS </font></span></a>
             <br/>
             <a href="/Grove-PH-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PH </font></span></a>,
-            <a href="/Grove-ORP-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ORP </font></span></a>
+            <a href="/Grove-ORP-Sensor-Pro'" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ORP </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -906,7 +906,7 @@ You can discover this page with two large portions.
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
-            <a href="/Contributor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Pulish Soon</font></span></a>
+            <a href="/xiaoesp32c3-chatgpt" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Use WiFiClient and HTTPClient on XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT in action</font></span></a>
             <br/>
     </a>
 </div>
