@@ -104,6 +104,8 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+
+
       }),
     ],
   ],
@@ -151,11 +153,16 @@ const config = {
         selector: '.markdown :not(em) > img',
         background: {
           light: 'rgb(255, 255, 255)',
-          dark: 'rgb(50, 50, 50)'
+          dark: 'rgb(40, 50, 50)'
         },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
         config: {}
+      },
+
+      colorMode: {
+        defaultMode: 'dark',
+        // disableSwitch: true,
       },
 
       giscus: {
@@ -167,6 +174,8 @@ const config = {
         darkTheme: 'dark_tritanopia'
       },
 
+
+
       docs: {
         sidebar: {
           hideable: true,
@@ -177,7 +186,7 @@ const config = {
         logo: {
           alt: 'Seeed Studio',
           src: 'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
-          href:'Getting_Started',
+          href: 'Getting_Started',
           className: 'navbar_logo_items'
         },
         items: [
