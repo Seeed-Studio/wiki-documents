@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 01/20/2023
+  date: 03/03/2023
   author: Matthew
 ---
 
@@ -17,7 +17,7 @@ Seeed Studio has dedicated to realizing interactive digital replica of our physi
 
 You can constantly receive updated data from sensors and <strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}>  Sensor Network </font></span></a></strong>, access computational resources with different <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong> power, display and manage information on <strong><a href="/CloudnChain"><span><font color={'8DC215'} size={"4"}>  Cloud and Chain </font></span></a></strong> in ways.
 
-We here also present you our current accomplishments and <strong><a href="/Solutions"><span><font color={'8DC215'} size={"4"}>  Solution </font></span></a></strong> and we are looking for your contributions.
+<!-- We here also present you our current accomplishments and <strong><a href="/Solutions"><span><font color={'8DC215'} size={"4"}>  Solution </font></span></a></strong> and we are looking for your contributions. -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -56,7 +56,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
         </div>
     </a>
 
-<a class="start_card_item" href="/Solutions">
+<!-- <a class="start_card_item" href="/Solutions">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"7"}>Solutions</font></div>
             <div class="start_card_content" style={{textAlign: 'center'}}>More <font color={'8DC215'} size={"3"}>industrial IoT</font> info in
@@ -64,7 +64,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
             <div class="start_card_content" style={{textAlign: 'center'}}>“solution” topic
 </div>
         </div>
-    </a>
+    </a> -->
   </div>
 
 ### Development Boards and Devices
@@ -197,3 +197,5 @@ If you have any questions or comments, please don't hesitate to hop on to our fo
       <td align="left"><strong>Seeed on LinkedIn</strong><br />Digital transformation is happening. Follow us to learn how IoT Industry news, insights, case studies and more on LinkedIn.<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
   </tbody></table>
+
+If you have any questions or comments, please don't hesistate to hop on to our [forum](https://forum.seeedstudio.com/latest) and discuss with us directly! We greatly value your feedback and opinions because we always grow and prosper together with our users and the community!

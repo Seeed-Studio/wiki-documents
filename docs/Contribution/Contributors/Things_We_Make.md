@@ -10,6 +10,8 @@ last_update:
   author: shuxu hu
 ---
 
+We will change this page soon.
+
 As a maker, the most exciting thing must be really making something and liked by peoples. Apart from the Seeed Community, we also like sharing things we make on Instructable, the most famous DIY hobbier's website.
 
 Here is a list of what we have posted on Instructable, we love these projects and would like to share these projects with all Seeed's friends. These are also very good tutorials to learn how to use Seeed's products. Welcome to share things you made with us! If you have any query, advice, things to share, please contact with us via ae@seeed.cc. Happy hacking!

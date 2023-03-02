@@ -9,6 +9,9 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 ---
+
+We will change this page very soon.
+
 This tutorial will show you how to edit a document of our wiki system. We would like to thank you in advance if you have any idea and willing to update the document as a contributor. In this tutorial, you are going to visit the github repository of our wiki system, in which there are hundreds of documents which were writen in markdown format and the number is increasing as we are still in the process of document migration.
 
 This time we would like to take CAN-Bus shield for example to show you how to modify a document.

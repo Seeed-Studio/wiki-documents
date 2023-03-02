@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://avatars.githubusercontent.com/u/10758833
 last_update:
-  date: 12/21/2022
+  date: 02/27/2023
   author: Matthew
 ---
 
@@ -19,16 +19,13 @@ Today is when when when and a brand new week has begun! Check out what Seeed did
 
 ## Latest Wiki Launched
 
+### XIAO ESP32C3 Data Permanently in different ways
+
+A storage method that ensures that no data is lost even in the event of an abnormal development board.
+
+![weekly wiki](https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/4.png)
+
 ## Existed Wiki Updated
 
-If you have any questions or comments, please don't hesistate to hop on to our [forum](https://forum.seeedstudio.com/latest) and discuss with us directly! We greatly value your feedback and opinions because we always grow and prosper together with our users and the community!
+## See You Next Week!
 
-See you next week!
-
-:::tip
-
-will show up on the table of contents on the upper right
-
-So that your users will know what this page is all about without scrolling down or even without reading too much.
-
-:::

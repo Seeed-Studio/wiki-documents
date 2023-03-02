@@ -1,5 +1,5 @@
 {
-  "index_name": "wiki",
+  "index_name": "wiki_paltform",
   "start_urls": [
     "https://wiki.seeedstudio.vip/"
   ],
@@ -14,12 +14,6 @@
   ],
   "sitemap_alternate_links": true,
   "selectors": {
-    "lvl0": {
-      "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
-      "type": "xpath",
-      "global": true,
-      "default_value": "Documentation"
-    },
     "lvl1": "header h1",
     "lvl2": "article h2",
     "lvl3": "article h3",

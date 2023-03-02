@@ -102,7 +102,7 @@ You can discover this page with two large portions.
             <br/>
             <a href="/reTerminal_Home_Assistant" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Home Assistant</font></span></a>
             <br/>
-            <a href="/Home-Assistant-Customize" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Customize Home Assistant</font></span></a>
+            <a href="/reTerminal-Home-Assistant-Customize" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Customize Home Assistant</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'center'}}>

@@ -152,8 +152,8 @@ const config = {
       zoom: {
         selector: '.markdown :not(em) > img',
         background: {
+          dark: 'rgb(50, 50, 50)',
           light: 'rgb(255, 255, 255)',
-          dark: 'rgb(40, 50, 50)'
         },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
@@ -218,13 +218,13 @@ const config = {
             label: 'Cloud & Chain',
             className: 'navbar_doc_items'
           },
-          {
-            type: 'doc',
-            docId: 'Solutions',
-            position: 'left',
-            label: 'Solutions',
-            className: 'navbar_doc_items'
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'Solutions',
+          //   position: 'left',
+          //   label: 'Solutions',
+          //   className: 'navbar_doc_items'
+          // },
           {
             to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',

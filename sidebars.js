@@ -289,6 +289,7 @@ const sidebars = {
               label: 'Liquid',
               items: [
                 'Sensor/Grove/Grove_Sensors/Liquid/Sensor_liquid',
+                'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-Pro',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water_Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Water-Level-Sensor',
                 'Sensor/Grove/Grove_Sensors/Liquid/G1-1-4_Water_Flow_sensor',
@@ -298,7 +299,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH_Sensor',
-
               ],
 
             },
@@ -774,6 +774,14 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
+              ],
+            },
           ],
         },
         {
@@ -1892,7 +1900,7 @@ const sidebars = {
               label: 'Home Assistant',
               items: [
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
-                'Edge/reTerminal/Application/Home_Assistant/Home-Assistant-Customize',
+                'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
 
               ],
             },
@@ -1971,6 +1979,7 @@ const sidebars = {
             'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
             'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
             'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
           ]
 
         },
@@ -2103,7 +2112,7 @@ const sidebars = {
                   label: 'Home Assistant for ODYSSEY',
                   items: [
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant',
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Home-Assistant-Customize',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-Home-Assistant-Customize',
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome',
                   ]
                 },
@@ -2602,6 +2611,7 @@ const sidebars = {
           label: 'NVIDIA Jetson Alternative',
           items: [
             'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
+            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
           ],
 
         },
@@ -2651,15 +2661,14 @@ const sidebars = {
     //       ]
     // },
 
-    {
-          type: 'category',
-          label: 'Contributors',
-          items: [
+
             // 'Contribution/Contributors/How_To_Edit_A_Document',
             // 'Contribution/Contributors/Things_We_Make',
-            'wiki',
-          ]
-    },
+    'Contribution/Contributors/Contribution-Guide',
+    'Contribution/Contributors/Honorary-Contributors',
+    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+
+
 
     {
       type: 'html',
