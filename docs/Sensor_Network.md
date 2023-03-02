@@ -388,7 +388,7 @@ You can discover this page with two large portions.
             <a href="/Grove-TDS-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TDS </font></span></a>
             <br/>
             <a href="/Grove-PH-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PH </font></span></a>,
-            <a href="/Grove-ORP-Sensor-Pro'" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ORP </font></span></a>
+            <a href="/Grove-ORP-Sensor-Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ORP </font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
