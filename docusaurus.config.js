@@ -209,13 +209,13 @@ const config = {
             label: 'Cloud & Chain',
             className: 'navbar_doc_items'
           },
-          {
-            type: 'doc',
-            docId: 'Solutions',
-            position: 'left',
-            label: 'Solutions',
-            className: 'navbar_doc_items'
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'Solutions',
+          //   position: 'left',
+          //   label: 'Solutions',
+          //   className: 'navbar_doc_items'
+          // },
           {
             to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',
