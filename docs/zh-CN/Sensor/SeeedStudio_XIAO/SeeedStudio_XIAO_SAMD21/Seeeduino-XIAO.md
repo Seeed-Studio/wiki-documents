@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-英文wiki：<https://wiki.seeedstudio.com/Seeeduino-XIAO/>
+<!-- 英文wiki:[here](/Seeeduino-XIAO) -->
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -332,54 +332,55 @@ void loop()
 
 ## **上手指南**
 
-### **硬件**
+### **硬件部分**
 
-**Materials required**
+**所需材料**
 
 - Seeed Studio XIAO SAMD21 x1
-- Computer x1
-- USB typc cable x1
+- 电脑 x1
+- USB Type-C 数据线 x1
 
-:::tip
+:::tip提示
 
-Some USB cables can only supply power and cannot transfer data. If you don't have a usb cable or don't know if your usb cable can transmit data, you can check [seeed USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
+有些USB数据线只能供电，不能传输数据。如果你没有USB线或者不知道你的USB线是否可以传输数据，你可以查看[see USB type C support USB 3.1](https://www.seeedstudio.com/USB-Type-C-to-A-Cable-1Meter-p-4085.html).
 :::
 
-- Step 1. Prepare a Seeed Studio XIAO SAMD21 and a Type-C cable.
+- 第 1 步： 准备一根 Seeed Studio XIAO SAMD21和一根 Type-C 数据线。
 
-- Step 2. Connect the Seeed Studio XIAO SAMD21 to your computer.Then the yellow power LED should go on.
+- 第 2 步： 将 Seeed Studio XIAO SAMD21 连接到您的计算机，紧接着会亮起黄色的 LED 灯。
 
-### **Software**
+### **软件部分**
 
-:::note
+:::note说明
 
-If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
+如果这是您第一次使用 Arduino，我们建议您可以参考学习 [Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino)
 :::
 
-- **Step 1. You need to Install an Arduino Software.**
+- **步骤 1： 安装 Arduino 软件。**
 
 [<p><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" alt="pir" width={600} height="auto" /></p>
 ](https://www.arduino.cc/en/Main/Software)
 
-**Launch the Arduino application**
+**启动 Arduino 应用程序**
 
-Double-click the Arduino application (arduino.exe) you have previously downloaded.
+双击您之前下载的 Arduino 应用程序 (arduino.exe)。
 
-:::note
+:::note说明
 
-If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details.
+<!-- If the Arduino Software loads in a different language, you can change it in the preferences dialog. See the [Arduino Software (IDE) page](https://www.arduino.cc/en/Guide/Environment#languages) for details. -->
+如果 Arduino 软件加载的语言与您需要的不同，您可以在首选项对话框中更改。有关详细信息，请参见[Arduino 软件（IDE）页面](https://www.arduino.cc/en/Guide/Environment#languages)
 :::
 
-- **Step 2. Open the Blink example**  
+- **步骤 2： 打开 Blink 示例**  
 
-Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
+打开 LED 闪烁示例: **File > Examples >01.Basics > Blink**.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 3. Add Seeeduino to your Arduino IDE**
+- **第 3 步。将 Seeeduino板的URL 添加到您的 Arduino IDE**
 
-Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
+单击 **File > Preference**，然后再“Additional Boards Manager URLs”内添加以下网址 ：
     *<https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json>*
 
 <!-- ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png) -->
