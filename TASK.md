@@ -1,3 +1,9 @@
+We are looking for your contributions.
+
+You can [set up](/HOW_TO.md) this platform locally.
+
+You can also check the progress of your work [here](https://github.com/orgs/c1ev0ps/projects/3).
+
 # Seeed Studio Contributors Program (Task List)
 
 Here you can find the task list offcially launched by Seeed Studio.
@@ -8,7 +14,7 @@ Are you familiar with microcontrollers? Let see what you are capable of!
 
 ### Seeed Studio XIAOESP32C3
 
-#### XIAO ESP32C3: Wi-Fi application. 
+#### XIAO ESP32C3: Wi-Fi application
 
 The application direction is IoT, which uses XIAO ESP32 to connect Wi-Fi to manage devices in remote operation
 

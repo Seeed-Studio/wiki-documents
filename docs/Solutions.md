@@ -5,7 +5,7 @@ keywords:
 - solutions
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 01/20/2023
+  date: 03/01/2023
   author: Matthew
 ---
 
@@ -27,25 +27,19 @@ You can discover this page with two large portions.
 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}> Fusion Service</font></div>
-            <a href="/Service_for_Fusion_PCB" target="_blank"><span><font color={'FFFFFF'} size={"4"}> Introduction</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}> Contribution Guide </font></div>
+            <a href="/Contribution-Guide" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Contribution Guide </font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> Simple Examples:</font></span></a>
-            <br/>
-            <a href="/Galileo_Case" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Galileo Case</font></span></a>
-            <br/>
-            <a href="/Unibody_box_for_Galileo_Gen2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Unibody box for Galileo Gen2</font></span></a>
-            <br/>
-            <a href="/Starter_bundle_harness_V1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Starter bundle harness V1.0</font></span></a>
+            <a href="/Honorary-Contributors" target="_blank"><span><font color={'FFFFFF'} size={""}> Honorary Contributors </font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Help Documents</font></div>
-            <a href="/How_To_Edit_A_Document" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to edit a document</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}> Scale up Your Creation with Fusion</font></div>
+            <a href="/Scale-up-Your-Creation-with-Fusion#licensed-product-program" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Licensed Product Program </font></span></a>
             <br/>
-            <a href="/Things_We_Make" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Things we used to made</font></span></a>
+            <a href="/Scale-up-Your-Creation-with-Fusion#licensed-products-were-looking-for" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Licensed Products We're Looking for</font></span></a>
             <br/>
-            <a href="/IoT-into-the-wild-contest" target="_blank"><span><font color={'FFFFFF'} size={"2"}> IoT Into the Wild Contest for Sustainable Planet 2022</font></span></a>
+            <a href="/Scale-up-Your-Creation-with-Fusion#user-cases" target="_blank"><span><font color={'FFFFFF'} size={"3"}> User Cases </font></span></a>
             <br/>
     </a>
 </div>

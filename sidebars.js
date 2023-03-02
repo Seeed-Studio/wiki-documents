@@ -2657,7 +2657,9 @@ const sidebars = {
           items: [
             // 'Contribution/Contributors/How_To_Edit_A_Document',
             // 'Contribution/Contributors/Things_We_Make',
-            'wiki',
+            'Contribution/Contributors/Contribution-Guide',
+            'Contribution/Contributors/Honorary-Contributors',
+            'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
           ]
     },
 

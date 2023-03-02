@@ -150,8 +150,8 @@ const config = {
       zoom: {
         selector: '.markdown :not(em) > img',
         background: {
+          dark: 'rgb(50, 50, 50)',
           light: 'rgb(255, 255, 255)',
-          dark: 'rgb(50, 50, 50)'
         },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
@@ -357,10 +357,10 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: '8182LB8Y0D',
+        appId: 'AKPIWVFYW0',
 
         // Public API key: it is safe to commit it
-        apiKey: 'a2761291fdfe389c56720a86986d1952',
+        apiKey: 'dd2e490797af4d0ef1afdd73f66e3174',
 
         indexName: 'wiki',
 
