@@ -2661,17 +2661,14 @@ const sidebars = {
     //       ]
     // },
 
-    {
-          type: 'category',
-          label: 'Contributors',
-          items: [
+
             // 'Contribution/Contributors/How_To_Edit_A_Document',
             // 'Contribution/Contributors/Things_We_Make',
-            'Contribution/Contributors/Contribution-Guide',
-            'Contribution/Contributors/Honorary-Contributors',
-            'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
-          ]
-    },
+    'Contribution/Contributors/Contribution-Guide',
+    'Contribution/Contributors/Honorary-Contributors',
+    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+
+
 
     {
       type: 'html',

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 01/20/2023
+  date: 03/03/2023
   author: Matthew
 ---
 
@@ -197,3 +197,5 @@ If you have any questions or comments, please don't hesitate to hop on to our fo
       <td align="left"><strong>Seeed on LinkedIn</strong><br />Digital transformation is happening. Follow us to learn how IoT Industry news, insights, case studies and more on LinkedIn.<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
   </tbody></table>
+
+If you have any questions or comments, please don't hesistate to hop on to our [forum](https://forum.seeedstudio.com/latest) and discuss with us directly! We greatly value your feedback and opinions because we always grow and prosper together with our users and the community!
