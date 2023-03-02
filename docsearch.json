@@ -1,10 +1,10 @@
 {
   "index_name": "wiki",
   "start_urls": [
-    "https://seeed-studio.github.io/wiki-documents/"
+    "https://wiki.seeedstudio.vip/"
   ],
   "sitemap_urls": [
-    "https://seeed-studio.github.io/wiki-documents/sitemap.xml"
+    "https://wiki.seeedstudio.vip/sitemap.xml"
   ],
   "stop_urls": [
     "/search",
