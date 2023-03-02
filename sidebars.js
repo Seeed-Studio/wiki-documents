@@ -1900,7 +1900,7 @@ const sidebars = {
               label: 'Home Assistant',
               items: [
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
-                'Edge/reTerminal/Application/Home_Assistant/Home-Assistant-Customize',
+                'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
 
               ],
             },
@@ -2112,7 +2112,7 @@ const sidebars = {
                   label: 'Home Assistant for ODYSSEY',
                   items: [
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant',
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Home-Assistant-Customize',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-Home-Assistant-Customize',
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome',
                   ]
                 },

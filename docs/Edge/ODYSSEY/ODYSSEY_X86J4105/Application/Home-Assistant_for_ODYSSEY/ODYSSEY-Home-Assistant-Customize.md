@@ -8,7 +8,7 @@ keywords:
   - ODYSSEY
   - Home Assistant
 image: https://avatars.githubusercontent.com/u/10758833
-slug: /Home-Assistant-Customize
+slug: /ODYSSEY-Home-Assistant-Customize
 last_update:
   date: 01/03/2023
   author: w0x7ce

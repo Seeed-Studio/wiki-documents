@@ -183,7 +183,7 @@ void loop(void) {
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-SPI.png" alt="pir" width={1000} height="auto" /></p>
 
 
-- **Step 2.** This OLED display supports both I2C and SPI communication, and the default model is I2C. To use SPI mode, you need to refer [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-(SH1107)_V3.0/#software-i2c) to change the OLED display communication to SPI before proceeding further
+- **Step 2.** This OLED display supports both I2C and SPI communication, and the default model is I2C. To use SPI mode, you need to refer [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) to change the OLED display communication to SPI before proceeding further
 
 **Note:** Make sure U8g2 library is installed from the previous steps.
 

@@ -288,7 +288,7 @@ Results are shown as:
 
 ### **SPI**
 
-Here we are going to connect [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) through SPI and display "Hello World". The OLED display supports both IIC and SPI communication and yet the default communication mode is IIC. It is essential to [change the IIC function to the SPI function](https://wiki.seeedstudio.com/Grove-OLED-Yellow&Blue-Display-0.96-(SSD1315)_V1.0/) before strarting.
+Here we are going to connect [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) through SPI and display "Hello World". The OLED display supports both IIC and SPI communication and yet the default communication mode is IIC. It is essential to [change the IIC function to the SPI function](https://wiki.seeedstudio.com//Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/) before strarting.
 
 **Connection**:
 
