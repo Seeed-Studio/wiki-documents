@@ -387,9 +387,10 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
-        backgroundColor: '#fafbfc',
-        textColor: '#091E42',
+          // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
+          'The search engine is a work in progress, and more functionality will be added over time.',
+        backgroundColor: '#013949',
+        textColor: '#FFFFFF',
         isCloseable: false,
       },
 
