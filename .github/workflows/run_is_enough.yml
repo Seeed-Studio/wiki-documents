@@ -1,19 +1,6 @@
 name: Run is enough Deploy
 
 on:
-  pull_request:
-    paths-ignore:
-      - "ISSUE_TEMPLATE/**"
-      - ".github/**.md"
-      - ".gitignore"
-      - "demo/**"
-      - "docker/**"
-      - "HOW_TO.md"
-      - "TASK.md"
-      - "SECURITY.md"
-      - "README.md"
-      - "README_zh-CN.md"
-
   push:
     branches:
       - docusaurus-version
