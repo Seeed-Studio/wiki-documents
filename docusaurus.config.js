@@ -104,6 +104,8 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+
+
       }),
     ],
   ],
@@ -158,6 +160,11 @@ const config = {
         config: {}
       },
 
+      colorMode: {
+        defaultMode: 'dark',
+        // disableSwitch: true,
+      },
+
       giscus: {
         repo: 'Seeed-Studio/wiki-documents',
         repoId: 'MDEwOlJlcG9zaXRvcnkzMDM5NTk0Nzk=',
@@ -166,6 +173,8 @@ const config = {
         theme: 'light_high_contrast',
         darkTheme: 'dark_tritanopia'
       },
+
+
 
       docs: {
         sidebar: {
@@ -177,7 +186,7 @@ const config = {
         logo: {
           alt: 'Seeed Studio',
           src: 'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
-          href:'Getting_Started',
+          href: 'Getting_Started',
           className: 'navbar_logo_items'
         },
         items: [

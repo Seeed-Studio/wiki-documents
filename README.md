@@ -8,8 +8,8 @@ This is the Github source files for Seeed Studio.
 
 You can constantly receive updated data from sensors and sensors network, access computational resources with different edge computing power, display and manage information on cloud and chain in ways.
 
-We here present you our [current accomplishments](https://seeed-studio.github.io/wiki-documents/Getting_Started) and solutions and we are looking for your [contributions](/TASK.md).
+We here present you our [current accomplishments](/Getting_Started) and solutions and we are looking for your [contributions](/TASK.md).
 
 You can [set up](/HOW_TO.md) this platform locally.
 
-You can also check the progress of your work [here](https://github.com/orgs/c1ev0ps/projects/3).
+You can also check the progress of your work [here](https://github.com/Seeed-Studio/wiki-documents/projects?query=is%3Aopen).
