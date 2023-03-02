@@ -53,6 +53,149 @@ last_update:
 
 ## Getting Started
 
+### Firmware Version Updates
+
+The mmwave sensor has undergone a long period of technical precipitation and valuable suggestions provided by users, and we have been iterating on the original product to provide more accurate and reliable monitoring results and a better experience for our users.
+
+Newly shipped sensors are shipped with the latest firmware by default to ensure the latest product experience. However, for the sake of the old user experience, we hereby provide the latest firmware and update method to ensure that you can use our latest technology.
+
+#### Universal method - use J-link to burn firmware
+
+If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc., using this method to re-flash the firmware is the most effective way.
+
+**Download of the latest firmware**
+
+| Firmware Version | Download Address |
+|:----------------:|:----------------:|
+| Jlink_MR24HPC1-20230302.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR24HPC1-20230302.bin) |
+
+!!!Attention
+    1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
+    2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
+
+**To update your radar to the latest version**
+
+**Step1.** You will need to have a **Jlink** and **MR24HPC1** 24GHz mmWave Sensor.
+
+Connect the radar and Jlink together via Dupont wire as shown in the diagram below.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/57.jpg"/></div>
+
+**Step2.** Download the necessary software and firmware.
+
+| File | Download Address |
+|:----------------:|:----------------:|
+| JlinkV644e.rar | [Download](https://files.seeedstudio.com/wiki/60GHzradar/JlinkV644e.rar) |
+| Pack_Segger_AT32F4xx_v1.3.3.zip | [Download](https://files.seeedstudio.com/wiki/60GHzradar/Pack_Segger_AT32F4xx_v1.3.3.zip)
+
+**Step3.** Unzip **JlinkV644e.rar** and open the **JLink_Windows_V644e.exe** file inside.
+
+Just follow the default options to install. Once the installation is complete, start the **J-Flash V6.44e** software.
+
+**Step4.** Install the chip package.
+
+Unzip **Pack_Segger_AT32F4xx_v1.3.3.zip** and open **Segger_AT32F4xx_AddOn.exe** inside.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/47.png"/></div>
+
+**Step5.** Create a new project.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/48.png"/></div>
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/49.png"/></div>
+
+Find and choose **AT32F403ARGT7**.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/50.png"/></div>
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/51.png"/></div>
+
+**Step6.** Drag and drop the radar firmware (.bin file) into this software and a window will pop up, we will just use its default starting address of 0x8000000.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/52.png"/></div>
+
+**Step7.** Clink **Target** -> **Connect**
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/53.png"/></div>
+
+When the connection is successful it will show Connected successfully.
+
+<div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/60GHzradar/54.png"/></div>
+
+Erase firmware: **Target** -> **manual Programming** -> **Erase Chip**
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/55.png"/></div>
+
+Upgrade firmware: **Target** -> **manual Programming** -> **Program & Verify**
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/56.png"/></div>
+
+At this point, the firmware update is complete.
+
+#### Update firmware via UART
+
+Considering that J-link is expensive, it is too extravagant to buy a J-link for the vast majority of users who only need to update their radar firmware, so we offer an update method via UART.
+
+**Download of the latest firmware**
+
+| Firmware Version | Download Address |
+|:----------------:|:----------------:|
+| UART_MR24HPC1-20230302.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR24HPC1-20230302.bin) |
+
+!!!Attention
+    1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
+    2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
+
+!!!Attention
+    Make sure your radar firmware version is **at least version G24VD1SYV001006** before using the UART to upgrade the firmware, otherwise it may disable the radar, at which point you'll have to use J-link to burn the firmware to use it!
+    You can query the firmware version number information by sending the command `0x53 0x59 0x02 0xA4 0x00 0x01 0x0F 0x62 0x54 0x43` to Radar. The data reported by the radar is then displayed as a string, and you will see an effect similar to the one shown below.
+    `G24VD1SYV000009` is the model number reported on the radar, where `000009` is the version number. This means that this sensor **not** supports UART upgrade.
+    <div align=center><img width = 400 src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/21.png"/></div>
+
+**To update your radar to the latest version**
+
+**Step 1**. You will need to have a **UART to USB** and **MR24HPC1** 24GHz mmWave Sensor.
+
+Connect the radar and UART to USB together via Dupont wire as shown in the diagram below.
+
+<div align=center><img width = 600 src="https://files.seeedstudio.com/wiki/60GHzradar/uart.png"/></div>
+
+**Step 2**. Download the necessary software and firmware.
+
+| File | Download Address |
+|:----------------:|:----------------:|
+| PackageMake-v1.1.1.zip | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/PackageMake-v1.1.1.zip) |
+
+**Step 3**. Unzip the package PackageMake-v1.1.1.zip and open the PackageMake-v1.1.1.exe file inside.
+
+Connect the UART to USB with the sensor connected to the computer, click the gear pattern in the upper left corner of the software, select the port number, set the baud rate to 115200, and then click the bottom right corner to confirm. (If the port number is not found, check the connection and then click the refresh button in the lower left corner to retry)
+
+<div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/11.png"/></div>
+
+**Step 4**. Connecting the sensor
+
+After you have finished setting up the serial port as described above, click on the second icon in the upper right corner and you will see the raw data from the radar printed out if the port is selected correctly.
+
+<div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/12.png"/></div>
+
+**Step 5**. Update firmware
+
+Click the last icon in the upper right corner of the left mouse button, this will bring up a window to select the firmware. Please select the firmware version you have downloaded.
+
+<div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/13.png"/></div>
+
+After the selection is complete, the selected file path will appear under the software, please double check if the selected firmware version and model is consistent with the sensor you are using.
+
+<div align=center><img width = 500 src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/18.png"/></div>
+
+To upgrade the firmware, please double click the left mouse button to the last image on the top left of the software, then the firmware will start downloading to the sensor.
+
+<div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/15.png"/></div>
+
+<div align=center><img width = 450 src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/16.png"/></div>
+
+Wait for the progress bar to finish and the firmware update is complete.
+
 ### Use of the upper computer
 
 Connect the radar directly to the computer's usb port via a **UART to USB** device. The wiring is shown in the table below.
