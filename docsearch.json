@@ -1,10 +1,10 @@
 {
   "index_name": "wiki_paltform",
   "start_urls": [
-    "https://wiki.seeedstudio.vip/"
+    "https://wiki.seeedstudio.com/"
   ],
   "sitemap_urls": [
-    "https://wiki.seeedstudio.vip/sitemap.xml"
+    "https://wiki.seeedstudio.com/sitemap.xml"
   ],
   "stop_urls": [
     "/search",
