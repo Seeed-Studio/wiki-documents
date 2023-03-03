@@ -13,10 +13,9 @@ last_update:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" /></div>
 
+A powerful functional expansion board for Seeed Studio XIAO of only half Raspberry Pi 4 size. It enables build prototype and project in easy and quick way. With its rich peripherals including OLED, RTC, expandable memory, passive buzzer, RESET/User button, 5V servo connector, multiple data interfaces… you could explore infinite possibilities of Seeed Studio XIAO . [Circuitpython](https://circuitpython.org/) is also well supported by this board.
 
-A powerful functional expansion board for Seeed Studio XIAO of only half Raspberry Pi 4 size. It enables build prototype and project in easy and quick way. With its rich peripherals including OLED, RTC, expandable memory, passive buzzer, RESET/User button, 5V servo connector, multiple data interfaces… you could explore infinite possibilities of Seeed Studio XIAO . Circuit python is also well supported by this board.
-
-As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Grove Shield for Seeed Studio XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) and [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html). There is a slight difference between the pins and refer to the Pinout it is easy to manage.
+As Seeed Studio XIAO form factor, all Seeed Studio XIAO boards support both [Grove Shield for Seeed Studio XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) and [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html). There is a slight difference between the pins and refer to the Pinout it is easy to manage.
 
 Seeed Studio XIAO SAMD21 , Seeed Studio XIAO RP2040, and Seeed Studio XIAO nRF52840 are compatible to the Seeed Studio Expansion Base for XIAO.
 
@@ -28,11 +27,12 @@ Seeed Studio XIAO SAMD21 , Seeed Studio XIAO RP2040, and Seeed Studio XIAO nRF52
 
 ## **Features**
 
-- **Quick Prototyping:** Easy debug and Reset with RESET button and SWD pin led out to male header. 0.96”OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out.
+- **Quick Prototyping:** Easy debug and Reset with RESET button and SWD pin led out to male header.
+<!-- 0.96”OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out. -->
 
 - **Rich peripherals:** OLED display, RTC, expandable memory space, passive buzzer, user button, on board battery management chip.
 
-- **No Soldering Needed:** All pin led out. Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital.
+- **No Soldering Needed:** All pin led out. Convenient plug and play Grove connectors support multiple data protocols, including IIC, UART, Analog/Digital.
 
 - **Circuit Python Supported:** Well supports circuit python. MicroSD card slot enables memory space expand, making it possible to allocate more libraries needed in prototyping and project building.
 
@@ -65,7 +65,10 @@ Seeed Studio XIAO SAMD21 , Seeed Studio XIAO RP2040, and Seeed Studio XIAO nRF52
 |Seeed Studio Expansion Base for XIAO  | *1 |
 
 :::note
-This product does not include Seeed Studio XIAO and battery, please click this link to get [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB)
+This product does not include Seeed Studio XIAO and battery, Seeed Studio XIAO is constantly introducing new products. To keep up with the latest product developments in this series, visit the [XIAO series homepage](https://www.seeedstudio.com/xiao-series-page).
+
+<!-- please click this link to get [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB) -->
+
 :::
 
 ## **Getting Started**
@@ -132,7 +135,7 @@ Rich peripherals on board including:
 
 - **User button:** Besides the RESET button, also provide with another user-defined button.
 
-- **Passive buzzer:** Same passive buzzer on Wio Terminal, with which you could change the PMW frequency to award different beep sound to get a "buzzer music".
+- **Passive buzzer:** You could change the PMW frequency to award different beep sound to get a "buzzer music".
 
 - **Grove connectors:** All pin led out, plug and play grove connectors support common data protocols (Grove IIC*2, Grove UART*1, A0/D0 Grove*1)
 
@@ -446,9 +449,22 @@ There is a simple example introduce how to use the CirsuitPython on the Seeed St
 <br />
 
 :::note
-The `main` name is one of these: **code.txt**, **code.py**, **main.py**, **main.txt**, there is more detail about [**this behavior**](https://circuitpython.readthedocs.io/en/6.0.x/README.html#behavior).
+The `main` name is one of these: **code.txt**, **code.py**, **main.py**, **main.txt**, there is more detail about [**this behavior**](https://docs.circuitpython.org/en/latest/README.html#behavior).
 :::
-**Step 2** Paste the code on the `main` file then save it, you will see the orange LED blinking on the Seeed Studio XIAO SAMD21 board.
+
+**Step 2** Use REPL to get the pins of the orange LED. For details on REPL, see [Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython/the-repl) To use REPL, you first need to connet to the serial console. Once the connection is established, press CTRL+C twice to enter edit mode. Then, copy the following code and enter respectively.
+
+```
+>>> import board
+>>> dir(board)
+```
+
+You will see a list of all the pins on your board that are available for you to use in your code. Each board will differ slightly depending on the number of pins available.
+![image.png](./Seeeduino-XIAO-Expansion-Board12.png)
+
+Do you see YELLOW_LED_INVERTED? That's the pin you used to blink the orange LED!
+
+**Step 3** Paste the code on the `main` file then save it, you will see the orange LED blinking on the Seeed Studio XIAO SAMD21 board.
 
 **Code**
 
@@ -457,7 +473,7 @@ import time
 import board
 from digitalio import DigitalInOut, Direction
 
-led = DigitalInOut(board.D13)
+led = DigitalInOut(board.YELLOW_LED_INVERTED)
 led.direction = Direction.OUTPUT
 
 while True:
@@ -572,9 +588,9 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Step 2**. Install the [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
 
-**Step 4**. Copy the code stick on the Aruino IDE then upload it.
+**Step 3**. Copy the code stick on the Aruino IDE then upload it.
 
-**Step 5**. Place the Fan in the safety position, try to press the button make sure it can work safely.
+**Step 4**. Place the Fan in the safety position, try to press the button make sure it can work safely.
 
 **Code**
 
@@ -802,9 +818,13 @@ This box can store your important stuff, and you are not worried about some peop
 
 **Hardware Connection**
 
-Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+Please connect each module on the board as shown in the picture. Connect the fingerprint module to the UART port of the XIAO expansion board, and connect the servo to the D0 port of the XIAO expansion board.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/finger_pinter.png" /></div>
+
+Note that the NeoPixel ring is directly connected to the pins of the XIAO development board through three different colored wires: Connect the DIN pin of the NeoPixel ring with the yellow wire to the D1 pin of the XIAO, connect the VIN pin of the NeoPixel ring with the red wire to the 3V3 pin of the XIAO, and connect the GND pin of the NeoPixel ring with the black wire to the GND pin of the XIAO.
+
+![](./Seeeduino-XIAO-Expansion-Board13.jpeg)
 
 **Arduino Instructions**
 
@@ -1010,7 +1030,7 @@ This hammer is simulated Mjolnir, you need you to record your fingerprint on thi
 
 **Hardware Connection**
 
-Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+Please connect the expansion board and the required modules with Grove wire, connect the Grove electromagnet module to D0 port, and connect the fingerprint module to I2C port.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/66666.png" /></div>
 
@@ -1137,7 +1157,7 @@ This is an environment detect device to collect PM2.5, PM10, temperature, humidi
 
 **Hardware Connection**
 
-Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+Please connect each sensor as shown in the diagram. Connect the CO2 sensor and PM2.5 sensor to two I2C ports respectively, and connect the Dust sensor to the UART port.
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Air_Quality_Sensor_Hub/environment_detect_g.png" /></div>
 
@@ -1363,7 +1383,7 @@ The device used has an I2C two-wire interface and therefore keeps the wiring dow
 
 **Hardware Connection**
 
-Please follow the same color line to connect each sensor on the board. Please connect the IR sensor grove cable to D0, Mini Motor Driver grove cable to I2C.
+As shown in the figure below, connect the heart rate sensor to the I2C interface of the XIAO expansion board.
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Heartrate_Monitor_Watch/heart_detect.png" /></div>
 
