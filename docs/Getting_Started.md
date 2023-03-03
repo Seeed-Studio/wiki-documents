@@ -149,7 +149,7 @@ The wiki contents have been divided into **four topics** as shown on the top nav
     <a class="start_card_item">
         <div class="start_card_wrapper">
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"4"}>Seeed Studio ageful production</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Seeed Elderly</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}>in each<font color={'FFFFFF'} size={"5"}>  Topic & Portion</font></div>
         </div>
     </a>

@@ -298,7 +298,7 @@ You can discover this page with two large portions.
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Seeed Elderly Devices</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'808080'} size={"5"}>Retired Devices</font></div>
             <a href="/ReSpeaker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reSpeaker Series </font></span></a>
             <br/>
             <a href="/NPi-i.MX6ULL-Dev-Board-Linux-SBC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> NPi Sereis</font></span></a>

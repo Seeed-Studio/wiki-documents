@@ -12,7 +12,7 @@ const config = {
   title: 'Seeed Studio Wiki',
   tagline: 'The Seeed Studio Files Management Platform, Opening up and Cooperation.',
 
-  url: 'http://wiki.seeedstudio.com',
+  url: 'https://wiki.seeedstudio.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

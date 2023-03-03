@@ -18,6 +18,9 @@ Would you like to contribute to building this open wiki platform with us? Here i
   <tbody>
     <tr>
     <td>
+    <strong>What to Contribute</strong>
+    </td>
+    <td>
     <strong>Edits Suggestion</strong><br/>- Bug hunting<br/>- Proof-reading
     </td>
     <td><strong>Doc Translation</strong><br/>- Translate docs into your languages</td>
@@ -26,6 +29,9 @@ Would you like to contribute to building this open wiki platform with us? Here i
     </td>
     </tr>
     <tr>
+    <td>
+    <strong>How to Contribute</strong>
+    </td>
     <td>
     Click <strong>"Edit this page"</strong> at the end of the page to submit your edits and suggestions by pulling a requestion</td>
     <td>Please <a href="https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/HOW_TO.md" target="_blank"><span>set up this platform locally</span></a> so you can contribute for long content with an ease. You can check out your <a href="https://github.com/Seeed-Studio/wiki-documents/projects?query=is%3Aopen" target="_blank"><span>contribution progress here</span></a>.
