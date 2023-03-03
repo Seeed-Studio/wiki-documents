@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-<!-- 英文wiki:[here](/Seeeduino-XIAO) -->
+英文wiki:[https://wiki.seeedstudio.com/Seeeduino-XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO)
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 
