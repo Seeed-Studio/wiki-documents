@@ -6,10 +6,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /xiaoesp32c3-chatgpt
 last_update:
-  date: 3/2/2023
-  author: jianjing Huang
+  date: 03/03/2023
+  author: MengDu
 ---
-## Learn to use WiFiClient and HTTPClient on XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT in action
+# Learn to use WiFiClient and HTTPClient on XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT in action
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/18.png"/></div>
 
@@ -27,7 +27,12 @@ Seeed Studio XIAO ESP32C3 is an IoT mini development board based on the Espressi
 
 <div align="center"><img width ="200" src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png"/></div>
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
 
 So in this tutorial, we will guide users to learn and use XIAO ESP32C3 WiFiClient and HTTPClient libraries, how to connect to the network, how to publish web pages and the basics of HTTP GET and POST. The goal is to call OpenAI ChatGPT and create your own Q&A website.
 

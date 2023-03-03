@@ -6,15 +6,19 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Radar_MR60FDA1
 last_update:
-  date: 1/12/2023
-  author: jianjing Huang
+  date: 03/03/2023
+  author: MengDu
 ---
 
+# mmWave Fall Detection Module Pro (MR60FDA1)
 
+<div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"  style={{width:500, height:'auto'}}/></div>
 
-<div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div>
-
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Fall-Detection-Module-Pro-p-5375.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Fall-Detection-Module-Pro-p-5375.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Introduction
 
@@ -91,9 +95,11 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 |:----------------:|:----------------:|
 | Jlink_MR60FDA1-V114.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/Jlink_MR60FDA1-V114.bin) |
 
-!!!Attention
-    1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
-    2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
+:::caution
+1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
+
+2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
+:::
 
 **To update your radar to the latest version**
 
@@ -164,15 +170,19 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 |:----------------:|:----------------:|
 | UART_MR60FDA1-230227.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60FDA1-230227.bin) |
 
-!!!Attention
-    1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
-    2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
+:::caution
+1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
-!!!Attention
-    Make sure your radar firmware version is **at least version G60FD1SYv010102** before using the UART to upgrade the firmware, otherwise it may disable the radar, at which point you'll have to use J-link to burn the firmware to use it!
-    You can query the firmware version number information by sending the command `0x53 0x59 0x02 0xA4 0x00 0x01 0x0F 0x62 0x54 0x43` to Radar. The data reported by the radar is then displayed as a string, and you will see an effect similar to the one shown below.
-    `G60FD1SYv010104` is the model number reported on the radar, where `010104` is the version number. This means that this sensor supports UART upgrade.
-    <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/19.png"/></div>
+2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
+
+3. Make sure your radar firmware version is **at least version G60FD1SYv010102** before using the UART to upgrade the firmware, otherwise it may disable the radar, at which point you'll have to use J-link to burn the firmware to use it!
+
+You can query the firmware version number information by sending the command `0x53 0x59 0x02 0xA4 0x00 0x01 0x0F 0x62 0x54 0x43` to Radar. The data reported by the radar is then displayed as a string, and you will see an effect similar to the one shown below.
+
+`G60FD1SYv010104` is the model number reported on the radar, where `010104` is the version number. This means that this sensor supports UART upgrade.
+
+<div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/19.png"/></div>
+:::
 
 **To update your radar to the latest version**
 
@@ -495,7 +505,7 @@ This example will guide you through the process of printing out the raw data rep
 
 The following example program is in the examples folder of the library called **MR60FDA1_print_rawdata**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
@@ -551,7 +561,7 @@ In this example, we will explain how to use the function of human presence detec
 
 The following example program is in the examples folder of the library called **MR60FDA1_human_existence_inf_output**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
@@ -635,7 +645,7 @@ The principle of state output for falls is that there is content output only whe
 
 The following example program is in the examples folder of the library called **MR60FDA1_Fall_detection**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
@@ -700,7 +710,7 @@ Based on the details provided in the user manual, the user can send command fram
 
 The .ino file named **MR60FDA1_Send_frame** in the examples folder of the sensor library shows us how to send a program that queries the device ID to the sensor.
 
-```c++
+```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
@@ -776,7 +786,7 @@ There may be times when you have problems with your Sensor detecting anomalies o
 
 The following example program is in the examples folder of the library called **MR60FDA1_Reset_sensor**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
@@ -859,7 +869,7 @@ To avoid data confusion caused by using Serial for both output and data transmis
 
 The import of the soft serial port library and the definition of the RX and TX pins need to be done earlier in the program. The following program defines the **A2** and **A3** pins as the **RX** and **TX** pins of the soft serial port.
 
-```c++
+```c
 #include <SoftwareSerial.h>
 //Choose any two pins that can be used with SoftwareSerial to RX & TX
 #define RX_Pin A2
@@ -873,7 +883,7 @@ FallDetection_60GHz radar = FallDetection_60GHz(&mySerial);
 
 Also, don't forget to set the baud rate for the soft serial port in the `Setup()` function.
 
-```c++
+```c
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -888,7 +898,7 @@ void setup() {
 
 Using **Demo1** as an example, if you want to use the Arduino to print the reported data frames from the Sensor, then the complete program is as follows.
 
-```c++
+```c
 #include "Arduino.h"
 #include <60ghzfalldetection.h>
 
@@ -991,10 +1001,10 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 
 ## Resources
 
-- [PDF] [Universal Protocol](https://files.seeedstudio.com/wiki/60GHzradar/60GHz_mmWave_Sensor_Fall_Detection_Module_Pro-Universal_Protocol.pdf)
-- [PDF] [User manual V1.3](https://files.seeedstudio.com/wiki/60GHzradar/new_res/MR60FDA1_user_manual-V1.3.pdf)
-- [PDF] [Seeed Studio MMWave Sensor Case Design](https://files.seeedstudio.com/wiki/60GHzradar/Seeed_Studio_MMWave_Sensor-Case_Design.pdf)
-- [EXE] [Upper Computer Software](https://files.seeedstudio.com/wiki/60GHzradar/Fall_detection_radar.zip)
+- **[PDF]** [Universal Protocol](https://files.seeedstudio.com/wiki/60GHzradar/60GHz_mmWave_Sensor_Fall_Detection_Module_Pro-Universal_Protocol.pdf)
+- **[PDF]** [User manual V1.3](https://files.seeedstudio.com/wiki/60GHzradar/new_res/MR60FDA1_user_manual-V1.3.pdf)
+- **[PDF]** [Seeed Studio MMWave Sensor Case Design](https://files.seeedstudio.com/wiki/60GHzradar/Seeed_Studio_MMWave_Sensor-Case_Design.pdf)
+- **[EXE]** [Upper Computer Software](https://files.seeedstudio.com/wiki/60GHzradar/Fall_detection_radar.zip)
 
 ## Tech Support
 

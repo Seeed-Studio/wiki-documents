@@ -6,16 +6,21 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Radar_MR24HPC1
 last_update:
-  date: 1/12/2023
-  author: jianjing Huang
+  date: 03/03/2023
+  author: MengDu
 ---
 
 
 # 24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)
 
-<div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/0.jpg"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/0.jpg" style={{width:500, height:'auto'}}/></div>
 
-<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
 
 ## Introduction
 
@@ -42,7 +47,7 @@ last_update:
 
 ### Hardware Overview
 
-<div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/13.jpg"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/13.jpg" style={{width:500, height:'auto'}}/></div>
 
 1. The 5V pin is the power supply interface for the radar and RX and TX are the data transmission interfaces for the radar. RX means serial receive and TX means serial transmit.
 2. The human presence status output interface. You can use the level of these two pins to determine the current human movement in the environment.
@@ -69,9 +74,11 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 |:----------------:|:----------------:|
 | Jlink_MR24HPC1-20230302.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR24HPC1-20230302.bin) |
 
-!!!Attention
-    1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
-    2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
+:::caution
+1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
+
+2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
+:::
 
 **To update your radar to the latest version**
 
@@ -142,15 +149,19 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 |:----------------:|:----------------:|
 | UART_MR24HPC1-20230302.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR24HPC1-20230302.bin) |
 
-!!!Attention
-    1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
-    2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
+:::caution
+1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
-!!!Attention
-    Make sure your radar firmware version is **at least version G24VD1SYV001006** before using the UART to upgrade the firmware, otherwise it may disable the radar, at which point you'll have to use J-link to burn the firmware to use it!
-    You can query the firmware version number information by sending the command `0x53 0x59 0x02 0xA4 0x00 0x01 0x0F 0x62 0x54 0x43` to Radar. The data reported by the radar is then displayed as a string, and you will see an effect similar to the one shown below.
-    `G24VD1SYV000009` is the model number reported on the radar, where `000009` is the version number. This means that this sensor **not** supports UART upgrade.
-    <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/21.png"/></div>
+2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
+
+3. Make sure your radar firmware version is **at least version G24VD1SYV001006** before using the UART to upgrade the firmware, otherwise it may disable the radar, at which point you'll have to use J-link to burn the firmware to use it!
+
+You can query the firmware version number information by sending the command `0x53 0x59 0x02 0xA4 0x00 0x01 0x0F 0x62 0x54 0x43` to Radar. The data reported by the radar is then displayed as a string, and you will see an effect similar to the one shown below.
+
+`G24VD1SYV000009` is the model number reported on the radar, where `000009` is the version number. This means that this sensor **not** supports UART upgrade.
+
+<div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/60GHzradar/new_img/21.png"/></div>
+:::
 
 **To update your radar to the latest version**
 
@@ -314,7 +325,7 @@ Before we get started developing a sketch, let's look at the available functions
 
   - **Input parameters:** `bodysign` —— This parameter is a switch that controls whether or not to output Human Movement Parameters. If **true**, the output will contain a large amount of human sign parameter data, which may affect your experience of viewing the data. By default this parameter is **false** and no information on the body sign parameters is displayed.
 
-  - <span id="jump2">**Return value:**</span>
+  - <span id="jump2"><strong>Return value:</strong></span>
 
     - `int radarStatus` —— The value returned indicates which status class the parsed data frame belongs to. The specific categories can be found in the **Default Variables** section.
 
@@ -420,7 +431,7 @@ const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F,
 
 :::caution
 For **XIAO nRF52840**, please select **Seeed nRF52 mbed-enabled Boards**, otherwise an error may be reported when running programs.
-<div align="center"><img width ="{700}" src="https://files.seeedstudio.com/wiki/XIAO-BLE/SeeednRFmbed.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SeeednRFmbed.png" style={{width:600, height:'auto'}}/></div>
 :::
 
 **Step 4.** Install the Arduino code library.
@@ -429,7 +440,7 @@ Start by getting the code base from [GitHub](https://github.com/limengdu/Seeed_2
 
 Since you have downloaded the zip Library, open your Arduino IDE, click on **Sketch > Include Library > Add .ZIP Library**. Choose the zip file you just downloaded，and if the library install correct, you will see **Library added to your libraries** in the notice window. Which means the library is installed successfully.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:600, height:'auto'}}/></div>
 
 ## Arduino Example
 
@@ -441,7 +452,7 @@ Before completing the following examples, you will need to prepare the following
 
 |              |              |              |
 |:--------------:|:--------------:|:--------------:|
-|<div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/0.jpg"/></div>| <div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg"/></div>| <div align="center"><img width ="{150}" src="https://files.seeedstudio.com/wiki/60GHzradar/dupont.jpg"/></div>|
+|<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/0.jpg" style={{width:240, height:'auto'}}/></div>| <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" style={{width:210, height:'auto'}}/></div>| <div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/dupont.jpg" style={{width:150, height:'auto'}}/></div>|
 |[**MR24HPC1**](https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html)|[**Seeed XIAO BLE nRF52840 Sense**](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html?queryID=4bbd8c09f20216aa26f6b5a9040504d0&objectID=5253&indexName=bazaar_retailer_products)|**2mm to 2.54mm Pitch Ribbon Cable**|
 
 **Step 1.** Connect the device to the computer through the main board. The wiring diagram is shown in the table below.
@@ -481,9 +492,9 @@ Before completing the following examples, you will need to prepare the following
 
 :::tip
 If you are using **MacOS**, the serial port name of the device will often start with **/dev/cu.usbmodem xxx**, ending with the name of the device. If you are using **Windows**, the device's serial port name will often begin with **COM**, again ending with the device's name.
-:::
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/3.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/3.png" style={{width:600, height:'auto'}}/></div>
+:::
 
 In this example, we will demonstrate how the Sensor works with our popular product XIAO nRF52840 Sense.
 
@@ -493,7 +504,7 @@ This example will guide you through the process of printing out the raw data rep
 
 The following example program is in the examples folder of the library called **MR24HPCB1_rawdata_print**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
@@ -540,7 +551,7 @@ This means that there is no way for the main board to receive all the data frame
 
 Upload program. Opening your serial monitor to a baud rate of 115200 should show the result. The output should look something like the below image.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/1.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/1.png" style={{width:600, height:'auto'}}/></div>
 
 ### Demo2: Serial port printing of parsed human presence information
 
@@ -548,7 +559,7 @@ In this example, we will use the functions in the library to parse the received 
 
 The following example program is in the examples folder of the library called **MR24HPCB1_parsed_rawdata**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
@@ -645,7 +656,7 @@ To implement the data parsing function, we first need to call the `HumanStatic_f
 
 If you choose to turn it on, i.e. pass in the parameter `true`, you may get the following message for the serial port.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/2.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/2.png" style={{width:600, height:'auto'}}/></div>
 
 :::note
 Human Movement Parameters: human movement amplitude values. The Human Movement Parameters is **0** when no one is in the space, **1-5** when someone is present and stationary, and **2-100** when the body is in motion (the greater the motion amplitude the closer the body motion parameter is).
@@ -654,7 +665,7 @@ This means that if you feel that the results of the Sensor recognition do not me
 
 If you want to stop the crazy output of the Human Movement Parameters on the serial port, enter the parameter `false` and you will then be able to see clean body status information on the serial port.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/3.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/3.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 You may not see content printed on the serial monitor for a longer period of time, this may be normal. The algorithm built into the Sensor is such that information is only output when the motion state of the monitored object changes. If you have been stationary after the upload procedure, you may wish to get up and move around and observe the effect.
@@ -662,7 +673,7 @@ You may not see content printed on the serial monitor for a longer period of tim
 
 There is also the possibility that the data you received differs from the information in the data shown in the two images above. Then you may have switched on the Open Underlying Message output switch.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/4.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/4.png"  style={{width:600, height:'auto'}}/></div>
 
 For more information on how to switch on and off Open Underlying Message, please refer to the relevant section of [**Demo3**](#jump1). In short, the opening of Open Underlying Message means that more detailed data is exported.
 
@@ -674,7 +685,7 @@ The MR24HPC1 offers a wealth of mode setting functions. This example will explai
 
 The following example program is in the examples folder of the library called **MR24HPCB1_open_underlyingMes**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
@@ -747,7 +758,7 @@ radar.checkSetMode_func(open_buff, 10, false);
 
 Upload program. Opening your serial monitor to a baud rate of 115200 should show the result. The output should look something like the below image.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/5.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/5.png" style={{width:600, height:'auto'}}/></div>
 
 At this point please check the data frames returned and if they match the data frames returned as described in the user manual, then the setup was successful.
 
@@ -762,7 +773,7 @@ There may be times when you have problems with your Sensor detecting anomalies o
 
 The following example program is in the examples folder of the library called **MR24HPCB1_reset_radar**.
 
-```c++
+```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
@@ -845,7 +856,7 @@ To avoid data confusion caused by using Serial for both output and data transmis
 
 The import of the soft serial port library and the definition of the RX and TX pins need to be done earlier in the program. The following program defines the **A2** and **A3** pins as the **RX** and **TX** pins of the soft serial port.
 
-```c++
+```c
 #include <SoftwareSerial.h>
 //Choose any two pins that can be used with SoftwareSerial to RX & TX
 #define RX_Pin A2
@@ -859,7 +870,7 @@ HumanStaticLite radar = HumanStaticLite(&mySerial);
 
 Also, don't forget to set the baud rate for the soft serial port in the `Setup()` function.
 
-```c++
+```c
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -874,7 +885,7 @@ void setup() {
 
 Using **Demo1** as an example, if you want to use the Arduino to print the reported data frames from the Sensor, then the complete program is as follows.
 
-```c++
+```c
 #include "Arduino.h"
 #include <humanstaticLite.h>
 
@@ -946,7 +957,7 @@ Connect the Sensor directly to the computer's usb port via a **UART to USB** dev
 
 Use a software like serial debugging assistant to select the serial port where the Sensor is located.
 
-<div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/60GHzradar/37.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/37.png" style={{width:200, height:'auto'}}/></div>
 
 :::caution
 MR24HPC1 Sensor needs 5V power supply, otherwise the Sensor may not work properly.
@@ -954,11 +965,11 @@ MR24HPC1 Sensor needs 5V power supply, otherwise the Sensor may not work properl
 
 After a successful connection, you will see the Sensor sending a steady stream of messages.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/39.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/39.png" style={{width:600, height:'auto'}}/></div>
 
 At the same time, you can also send data frames to the Sensor via the software's send function.
 
-<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/40.png"/></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/40.png" style={{width:600, height:'auto'}}/></div>
 
 ### Demo7: MR24HPBC1 & XIAO ESP32C3 & ESPHome & Home Assistant
 
