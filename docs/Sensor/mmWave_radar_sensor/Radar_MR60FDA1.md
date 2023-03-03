@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Radar_MR60FDA1
 last_update:
-  date: 1/12/2023
-  author: jianjing Huang
+  date: 03/03/2023
+  author: MengDu
 ---
 
 # mmWave Fall Detection Module Pro (MR60FDA1)
