@@ -378,7 +378,7 @@ void loop()
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
 
-- **第 3 步。将 Seeeduino板的URL 添加到您的 Arduino IDE**
+- **步骤 3：将 Seeeduino板的URL 添加到您的 Arduino IDE**
 
 单击 **File > Preference**，然后再“Additional Boards Manager URLs”内添加以下网址 ：
     *<https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json>*
@@ -386,46 +386,52 @@ void loop()
 <!-- ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width={600} height="auto" /></p>
 
-Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO SAMD21**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
+<!-- Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO SAMD21**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it. -->
+请点击 **工具**-> **开发板**-> 开发板管理器，在搜索框中输入关键词 "Seeed Studio XIAO SAMD21"。出现 "**Seeed SAMD Boards**" 后，请进行安装。
 
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-board.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 4. Select your board and port**
+- **步骤 4: 选择您的开发板和端口t**
 
-After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO SAMD21 M0**" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
+<!-- After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO SAMD21 M0**" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE. -->
+在安装完开发板后，点击 **工具**-> **开发板**，找到 "**Seeed Studio XIAO SAMD21 M0**" 并选择它。现在，您已经在 Arduino IDE 中设置好了 Seeed Studio XIAO SAMD21 的开发板。
 
 <!-- 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png" alt="pir" width={600} height="auto" /></p>
 
-Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
+<!-- Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port. -->
+从 "工具 | 端口" 菜单中选择 Arduino 开发板。这可能是 COM3 或更高的端口（COM1 和 COM2 通常保留给硬件串行端口）。如果您不确定，请断开 Arduino 开发板并重新打开该菜单；消失的端口选项应该是 Arduino 开发板。重新连接开发板并选择该端口。
 
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 5.Upload the program**  
+- **步骤 5：上传程序**  
 
-Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
+<!-- Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar. -->
+现在，只需在环境中点击 "`上传`" 按钮。等待几秒钟，如果上传成功，状态栏中将出现消息 "Done uploading."。
 
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={600} height="auto" /></p>
 
- A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
+<!-- A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions. -->
 
-:::note
-the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet in resourses
+  上传完成后几秒钟，您应该会看到开发板上的 13 号引脚（L）LED 开始闪烁（呈橙色）。如果是这样，恭喜您！您已经成功运行了 Arduino。如果出现问题，请参考故障排除建议。
+
+:::note说明
+闪存的最大大小为 8KB。 有关更多信息，请参阅资源中的 ATSAMD218A-MU 数据表
 :::
 
 ## The sample application
 
-- [How to use Seeed Studio XIAO SAMD21 to log in to your Raspberry PI](https://wiki.seeedstudio.com/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
+- [如何使用 Seeed Studio XIAO SAMD21 登录你的树莓派](https://wiki.seeedstudio.com/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
 
-- [SPI Communication Interface](https://wiki.seeedstudio.com/XIAO-SPI-Communication-Interface)
+- [SPI 通讯接口](https://wiki.seeedstudio.com/XIAO-SPI-Communication-Interface)
 
-- [How to unbrick a dead xiao using raspberry pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Thanks John_Doe for sharing.
+- [如何使用树莓派解除砖化的 Xiao 开发板](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). 感谢 John_Doe 的分享.
 
-## Resourses
+## 资源下载
 
 - **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 
@@ -433,7 +439,7 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 - **[LBR]** [Seeeduino Eagle Libraries](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO.lbr)
 
-## Course Resources
+## 课程资料
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO.jpg" /></div>
 
@@ -441,7 +447,7 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 - **[ZIP]** [Codes](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Codes.rar)
 - **[ZIP]** [Document](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Document.rar)
 
-## Tech Support
+## 技术支持
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+请随时将问题提交到我们的[论坛](https://forum.seeedstudio.com/)。
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

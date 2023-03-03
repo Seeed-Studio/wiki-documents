@@ -233,9 +233,6 @@ static bool is_exist = false;
 static bool is_join = false;
 static int led = 0;
 
-```
-
-```c++
 static int at_send_check_response(char *p_ack, int timeout_ms, char*p_cmd, ...)
 {
     int ch;
@@ -574,7 +571,7 @@ The [u8g2](https://github.com/olikraus/u8g2) library must be installed for this 
 Copy the code stick on the Aruino IDE then upload it.
 One of them is used as a master, and the NODE_SLAVE macro definition in the code needs to be commented out, and the other is used as a slave, and the NODE_SLAVE macro definition in the code needs to be turned on.
 
-```C++
+```cpp
 # include <Arduino.h>
 # include <U8x8lib.h>
 
