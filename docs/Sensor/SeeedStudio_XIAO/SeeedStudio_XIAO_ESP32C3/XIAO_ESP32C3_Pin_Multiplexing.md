@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
-  date: 1/11/2023
-  author: shuxu hu
+  date: 03/03/2023
+  author: MengDu
 ---
 
 # Pin Multiplexing
@@ -18,7 +18,7 @@ Seeed Studio XIAO ESP32C3 has rich interfaces. There are **11 digital I/O** that
 
 Connect a pushbutton to Pin D6 and an LED to Pin D10. Then upload the following code to control the ON/OFF of LED using the pushbutton.
 
-```c++
+```c
 const int buttonPin = D6;     // pushbutton connected to digital pin 6
 const int ledPin =  D10;      // LED connected to digital pin 10
  
@@ -81,7 +81,7 @@ void loop() {
 
 Connect a potentiometer to Pin A0 and an LED to Pin D10. Then upload the following code to control the blinking interval of the LED by rotating the potentiometer knob.
 
-```c++
+```c
 const int sensorPin = A0;
 const int ledPin =  D10; 
 
@@ -149,7 +149,7 @@ Very often, we need to use UART sensors to connect to XIAO ESP32C3 hardware seri
 
 - Example program:
 
-```c++
+```c
 // Need this for the lower level access to set them up.
 #include <HardwareSerial.h>
 
@@ -198,15 +198,13 @@ Please be prepared for the following.
  </tr>
 </table>
 
-Download the sensor library to your computer, please note that you need to select **newversion-dev**. And add it to the Arduino IDE.
+Download the sensor library to your computer. And add it to the Arduino IDE.
 
-<p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/tree/newversion-dev" target="_blank"><div align="center"><img width = {300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/1.png" alt="pir" width={700} height="auto" /></div>
+<p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank"><div align="center"><img width = {300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
 
 Here, we want to parse the heartbeat and respiration data information, then you can rewrite your program like this.
 
-```c++
+```c
 #include "Arduino.h"
 #include <60ghzbreathheart.h>
 #include <HardwareSerial.h>
