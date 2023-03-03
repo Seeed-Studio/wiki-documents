@@ -195,3 +195,33 @@ height:80%;
   color:#fff;
   text-decoration: none;
 }
+
+/* github button */
+
+.github_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.github_item {
+  border-radius: 10px/10px;
+  width: 260px;
+  height:28px;
+  background: #000000;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: content-box;
+}
+
+.github_item:hover {
+  border:2px solid #7a7e73;
+  color:#fff;
+  text-decoration: none;
+}
