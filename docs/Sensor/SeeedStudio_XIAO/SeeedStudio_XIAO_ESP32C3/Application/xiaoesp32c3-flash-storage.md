@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /xiaoesp32c3-flash-storage
 last_update:
-  date: 3/2/2023
-  author: jianjing Huang
+  date: 03/03/2023
+  author: MengDu
 ---
 
 # XIAO ESP32C3 Data Permanently in different ways
