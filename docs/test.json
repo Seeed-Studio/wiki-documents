@@ -1,31 +1,85 @@
 {
-  "index_name": "wiki",
-  "start_urls": ["https://wiki.seeedstudio.com"],
-  "stop_urls": [],
-  "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml"],
-  "sitemap_alternate_links": true,
+	// 修改部分
+  "index_name": "test_wiki",
+  "start_urls": ["https://wiki.seeedstudio.com/"], // 自己的域名网站地址
+	// 更换自己的域名地址，Docusaurus 官方会有配置生成 sitemap.xml 的方式
+  "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml"], 
+	// end
+  "stop_urls": ["/search"], // 排除不需要爬取页面的路由地址
   "selectors": {
-      "lvl0": ".sidebar-heading.active",
-			"lvl1": "h1",
-			"lvl2": "h2",
-			"lvl3": "h3",
-			"lvl4": "h4",
-			"lvl5": "h5",
-			"lvl6": "h6",
-			"text": "p, li",
-    	"lang": {
-				"selector": "/html/@lang",
-				"type": "xpath",
-				"global": true,
-				"default_value": "zh-CN"
-			}
+    "lvl0": {
+      "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+      "type": "xpath",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "header h1, article h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5, article td:first-child",
+    "lvl6": "article h6",
+    "text": "article p, article li, article td:last-child"
+  },
+  "custom_settings": {
+    "attributesForFaceting": [
+      "type",
+      "lang",
+      "language",
+      "version",
+      "docusaurus_tag"
+    ],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ],
+    "attributesToHighlight": ["hierarchy", "content"],
+    "attributesToSnippet": ["content:10"],
+    "camelCaseAttributes": ["hierarchy", "content"],
+    "searchableAttributes": [
+      "unordered(hierarchy.lvl0)",
+      "unordered(hierarchy.lvl1)",
+      "unordered(hierarchy.lvl2)",
+      "unordered(hierarchy.lvl3)",
+      "unordered(hierarchy.lvl4)",
+      "unordered(hierarchy.lvl5)",
+      "unordered(hierarchy.lvl6)",
+      "content"
+    ],
+    "distinct": true,
+    "attributeForDistinct": "url",
+    "customRanking": [
+      "desc(weight.pageRank)",
+      "desc(weight.level)",
+      "asc(weight.position)"
+    ],
+    "ranking": [
+      "words",
+      "filters",
+      "typo",
+      "attribute",
+      "proximity",
+      "exact",
+      "custom"
+    ],
+    "highlightPreTag": "<span class='algolia-docsearch-suggestion--highlight'>",
+    "highlightPostTag": "</span>",
+    "minWordSizefor1Typo": 3,
+    "minWordSizefor2Typos": 7,
+    "allowTyposOnNumericTokens": false,
+    "minProximity": 1,
+    "ignorePlurals": true,
+    "advancedSyntax": true,
+    "attributeCriteriaComputedByMinProximity": true,
+    "removeWordsIfNoResults": "allOptional",
+    "separatorsToIndex": "_",
+    "synonyms": [
+      ["js", "javascript"],
+      ["ts", "typescript"]
+    ]
   }
-      "indexHeadings": true,
-      "scrape_start_urls": false,
-    	"strip_chars": " .,;:#",
-    	"custom_settings": {
-		"attributesForFaceting": [
-			"lang"
-		]
-	}
 }
