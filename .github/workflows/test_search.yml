@@ -7,8 +7,6 @@ on:
     paths:
       - docs/docsearch.json
 
-  schedule:
-    - cron: '0 18 * * *' # Runs at 18:00 UTC every day, 02:00 UTC+8
 
 jobs:
   algolia:
