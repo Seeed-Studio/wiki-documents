@@ -5,22 +5,27 @@
   "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml"],
   "sitemap_alternate_links": true,
   "selectors": {
-    "lvl0": {
-      "selector": ".sidebar-heading.active",
-      "global": true,
-      "default_value": "Documentation"
-    },
-    "lvl1": ".theme-hope-content h1",
-    "lvl2": ".theme-hope-content h2",
-    "lvl3": ".theme-hope-content h3",
-    "lvl4": ".theme-hope-content h4",
-    "lvl5": ".theme-hope-content h5",
-    "text": "article p, article li, article td:last-child",
+      "lvl0": ".sidebar-heading.active",
+			"lvl1": "h1",
+			"lvl2": "h2",
+			"lvl3": "h3",
+			"lvl4": "h4",
+			"lvl5": "h5",
+			"lvl6": "h6",
+			"text": "p, li",
+    	"lang": {
+				"selector": "/html/@lang",
+				"type": "xpath",
+				"global": true,
+				"default_value": "zh-CN"
+			}
   }
-  "scrape_start_urls": false,
-  "strip_chars": " .,;:#",
-  "custom_settings": {
-    "attributesForFaceting": ["type", "lang"]
-  }
-
+      "indexHeadings": true,
+      "scrape_start_urls": false,
+    	"strip_chars": " .,;:#",
+    	"custom_settings": {
+		"attributesForFaceting": [
+			"lang"
+		]
+	}
 }
