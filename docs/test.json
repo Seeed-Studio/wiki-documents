@@ -5,26 +5,31 @@
   "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml"],
   "sitemap_alternate_links": true,
   "selectors": {
-    "lvl0": {
-      "selector": ".sidebar-heading.active",
-      "global": true,
-      "default_value": "Documentation"
-    },
-    "lvl1": ".theme-hope-content h1",
-    "lvl2": ".theme-hope-content h2",
-    "lvl3": ".theme-hope-content h3",
-    "lvl4": ".theme-hope-content h4",
-    "lvl5": ".theme-hope-content h5",
-    "text": ".theme-hope-content h6, .theme-hope-content p, .theme-hope-content li",
-    "lang": {
-      "selector": "/html/@lang",
-      "type": "xpath",
-      "global": true
-    }
+    "lvl1": "header h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5, article td:first-child",
+    "lvl6": "article h6",
+    "text": "article p, article li, article td:last-child"
   },
-  "scrape_start_urls": false,
+
   "strip_chars": " .,;:#",
   "custom_settings": {
-    "attributesForFaceting": ["type", "lang"]
+    "separatorsToIndex": "_",
+    "attributesForFaceting": [
+      "language",
+      "version",
+      "type",
+      "docusaurus_tag"
+    ],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ]
   }
 }
