@@ -16,4 +16,4 @@ jobs:
           algolia_api_key: ${{ secrets.ALGOLIA_API_KEY }}
           algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
           # needs to be inside $GITHUB_WORKSPACE from actions/checkout step
-          file: './docsearch.json'
+          file: docs/test.json
