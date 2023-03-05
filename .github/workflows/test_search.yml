@@ -1,11 +1,7 @@
 name: Algolia Docsearch Action
 
 on:
-  push:
-    branches:
-      - docusaurus-version
-    paths:
-      - docs/docsearch.json
+
   schedule:
     #UTC 0 
     - cron: '0 0 * * *'
