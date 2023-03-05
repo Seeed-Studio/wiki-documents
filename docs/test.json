@@ -1,11 +1,11 @@
 {
-	// 修改部分
+
   "index_name": "test_wiki",
-  "start_urls": ["https://wiki.seeedstudio.com/"], // 自己的域名网站地址
-	// 更换自己的域名地址，Docusaurus 官方会有配置生成 sitemap.xml 的方式
+  "start_urls": ["https://wiki.seeedstudio.com/"],
+
   "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml"], 
-	// end
-  "stop_urls": ["/search"], // 排除不需要爬取页面的路由地址
+
+  "stop_urls": ["/search"],
   "selectors": {
     "lvl0": {
       "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
