@@ -6,7 +6,9 @@ on:
       - docusaurus-version
     paths:
       - docs/docsearch.json
-
+  schedule:
+    #UTC 0 
+    - cron: '0 0 * * *'
 
 jobs:
   algolia:
