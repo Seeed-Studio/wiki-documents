@@ -1,6 +1,6 @@
 {
 
-  "index_name": "test_wiki",
+  "index_name": "wiki_update",
   "start_urls": ["https://wiki.seeedstudio.com/"],
 
   "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml"], 
