@@ -10,6 +10,8 @@ last_update:
   author: Matthew
 ---
 
+英文wiki：[https://wiki.seeedstudio.com/Quantum-Mini-Linux-Development-Kit/](https://wiki.seeedstudio.com/Quantum-Mini-Linux-Development-Kit/)<br />
+
 # “夸克（Quark）”迷你开发者套件
 
 ![img](https://files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/Quantum-Mini-Linux-Dev-Kit.png)
