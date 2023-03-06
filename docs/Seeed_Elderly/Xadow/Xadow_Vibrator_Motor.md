@@ -3,7 +3,7 @@ description: Xadow - Vibrator Motor
 title: Xadow - Vibrator Motor
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Vibrator_Motor
 last_update:
   date: 1/13/2023

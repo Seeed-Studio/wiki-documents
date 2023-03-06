@@ -3,7 +3,7 @@ description: Grove - EMG Detector
 title: Grove - EMG Detector
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-EMG_Detector
 last_update:
   date: 1/6/2023

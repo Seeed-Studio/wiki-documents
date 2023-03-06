@@ -3,7 +3,7 @@ description: Grove Serial LCD V1.0
 title: Grove Serial LCD V1.0
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Serial_LCD_V1.0
 last_update:
   date: 1/29/2023

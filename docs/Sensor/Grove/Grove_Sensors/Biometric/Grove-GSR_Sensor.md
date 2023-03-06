@@ -3,7 +3,7 @@ description: Grove - GSR Sensor
 title: Grove - GSR Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-GSR_Sensor
 last_update:
   date: 1/6/2023

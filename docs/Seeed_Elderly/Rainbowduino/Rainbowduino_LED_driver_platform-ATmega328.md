@@ -3,7 +3,7 @@ description: Rainbowduino_LED_driver_platform-ATmega328
 title: Rainbowduino LED driver platform-ATmega328
 keywords:
 - Rainbowduino_LED_driver_platform-ATmega328
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino_LED_driver_platform-ATmega328
 last_update:
   date: 01/20/2023

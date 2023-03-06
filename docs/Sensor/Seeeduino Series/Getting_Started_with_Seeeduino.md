@@ -3,7 +3,7 @@ description: Getting Started with Seeeduino
 title: Getting Started with Seeeduino
 keywords:
 - Seeeduino_Series
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_Seeeduino
 last_update:
   date: 1/12/2022

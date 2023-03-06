@@ -3,7 +3,7 @@ description: How to Build a Home Soft Router and NAS with ReComputer
 title: How to Build a Home Soft Router and NAS with ReComputer
 keywords:
 - ReComputer_Alpha
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How-to-build-a-home-soft-router-and-NAS-With-ReComputer
 last_update:
   date: 01/20/2023

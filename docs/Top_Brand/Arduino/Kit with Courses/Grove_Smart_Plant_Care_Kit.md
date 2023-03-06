@@ -3,7 +3,7 @@ description: Grove_Smart_Plant_Care_Kit
 title: Grove Smart Plant Care Kit
 keywords:
 - Azure_Sphere_MT3620_Development_Kit
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Smart_Plant_Care_Kit
 last_update:
   date: 1/12/2023

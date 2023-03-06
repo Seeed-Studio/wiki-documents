@@ -3,7 +3,7 @@ description: Grove - Gas Sensor(MQ3)
 title: Grove - Gas Sensor(MQ3) 
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Gas_Sensor-MQ3
 last_update:
   date: 1/3/2023

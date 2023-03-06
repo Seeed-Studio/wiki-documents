@@ -3,7 +3,7 @@ description: Secret Box
 title: Secret Box
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Secret_Box
 last_update:
   date: 1/13/2023

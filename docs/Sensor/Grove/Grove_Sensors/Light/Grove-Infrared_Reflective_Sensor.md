@@ -3,7 +3,7 @@ description: Grove - Infrared Reflective Sensor
 title: Grove - Infrared Reflective Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Infrared_Reflective_Sensor
 last_update:
   date: 1/5/2023

@@ -7,7 +7,7 @@ tags:
 keywords:
   - Shield
   - motor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Motor_Shield_V2.0
 last_update:
   date: 01/30/2023  

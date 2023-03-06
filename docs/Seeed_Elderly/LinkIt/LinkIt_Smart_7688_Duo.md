@@ -3,7 +3,7 @@ description: LinkIt Smart 7688 Duo
 title: LinkIt Smart 7688 Duo
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_Smart_7688_Duo
 last_update:
   date: 1/13/2023

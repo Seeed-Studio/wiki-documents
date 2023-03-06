@@ -3,7 +3,7 @@ description: Speech Recognition
 title: Speech Recognition
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-TFLite-Mic
 last_update:
   date: 1/11/2023

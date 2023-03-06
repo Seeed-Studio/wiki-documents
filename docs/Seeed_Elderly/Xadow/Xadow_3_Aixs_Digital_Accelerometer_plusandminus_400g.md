@@ -3,7 +3,7 @@ description: Xadow - 3-Axis Digital Accelerometer(±400g)
 title: Xadow - 3-Axis Digital Accelerometer(±400g)
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g
 last_update:
   date: 1/13/2023

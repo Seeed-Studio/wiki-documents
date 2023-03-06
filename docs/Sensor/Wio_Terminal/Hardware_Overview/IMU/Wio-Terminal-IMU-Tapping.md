@@ -3,7 +3,7 @@ description: Tapping
 title: Tapping
 keywords:
 - Wio_terminal IMU
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-IMU-Tapping
 last_update:
   date: 1/17/2023

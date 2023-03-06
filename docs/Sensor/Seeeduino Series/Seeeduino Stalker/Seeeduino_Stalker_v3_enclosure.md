@@ -3,7 +3,7 @@ description: Seeeduino Stalker v3 enclosure
 title: Seeeduino Stalker v3 enclosure
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker_v3_enclosure
 last_update:
   date: 1/31/2023

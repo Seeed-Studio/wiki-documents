@@ -3,7 +3,7 @@ description: Xadow - M0
 title: Xadow - M0
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_M0
 last_update:
   date: 1/13/2023

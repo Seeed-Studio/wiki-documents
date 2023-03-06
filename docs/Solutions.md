@@ -3,7 +3,7 @@ description: Solutions
 title: Solutions
 keywords:
 - solutions
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
   date: 03/01/2023
   author: Matthew

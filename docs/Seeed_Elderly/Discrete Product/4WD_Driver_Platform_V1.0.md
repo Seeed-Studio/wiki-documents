@@ -3,7 +3,7 @@ description: 4WD Driver Platform V1.0
 title: 4WD Driver Platform V1.0
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /4WD_Driver_Platform_V1.0
 last_update:
   date: 1/13/2023

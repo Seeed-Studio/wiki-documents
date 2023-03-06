@@ -4,7 +4,7 @@ title: Grove - Capacitive Touch Slide Sensor(CY8C4014LQI)
 category: Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI
 last_update:
   date: 2/22/2023

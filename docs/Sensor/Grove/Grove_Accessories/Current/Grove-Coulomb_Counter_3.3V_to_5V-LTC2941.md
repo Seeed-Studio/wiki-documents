@@ -3,7 +3,7 @@ description: Grove - Coulomb Counter 3.3V to 5V (LTC2941)
 title: Grove - Coulomb Counter 3.3V to 5V (LTC2941)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Coulomb_Counter_3.3V_to_5V-LTC2941
 last_update:
   date: 1/9/2023

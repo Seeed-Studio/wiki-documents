@@ -3,7 +3,7 @@ description: Rainbowduino
 title: Rainbowduino
 keywords:
 - grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino
 last_update:
   date: 1/13/2023

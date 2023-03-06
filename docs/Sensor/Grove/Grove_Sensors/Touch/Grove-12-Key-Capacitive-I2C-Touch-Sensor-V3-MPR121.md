@@ -3,7 +3,7 @@ description: Grove - 12 Key Capacitive I2C Touch Sensor V3 (MPR121)
 title: Grove - 12 Key Capacitive I2C Touch Sensor V3 (MPR121)
 keywords:
 - Grove Grove_Sensors Touch
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121
 last_update:
   date: 1/19/2023

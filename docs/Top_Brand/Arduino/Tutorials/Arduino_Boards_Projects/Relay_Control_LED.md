@@ -4,7 +4,7 @@ title: Relay Control LED
 keywords:
 - Arduino
 - Arduino_Boards_Projects
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Relay_Control_LED
 last_update:
   date: 2/15/2023

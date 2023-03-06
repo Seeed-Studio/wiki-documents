@@ -3,7 +3,7 @@ description: Skeleton_Bot-4WD_hercules_mobile_robotic_platform
 title: Skeleton Bot 4WD hercules mobile robotic platform
 keywords:
 - Skeleton_Bot-4WD_hercules_mobile_robotic_platform
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Bot-4WD_hercules_mobile_robotic_platform
 last_update:
   date: 01/20/2023

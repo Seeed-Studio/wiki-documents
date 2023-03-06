@@ -3,7 +3,7 @@ description: Skeleton box for BeagleBone®
 title: Skeleton box for BeagleBone®
 keywords:
 - Beagle_Bone
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_box_for_Beaglebone
 last_update:
   date: 1/10/2022

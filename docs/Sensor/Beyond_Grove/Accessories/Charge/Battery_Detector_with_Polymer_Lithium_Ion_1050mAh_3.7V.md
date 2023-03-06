@@ -3,7 +3,7 @@ description: Battery Detector with Polymer Lithium Ion 1050mAh 3.7V
 title: Battery Detector with Polymer Lithium Ion 1050mAh 3.7V
 keywords:
 - Accessories charge
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V
 last_update:
   date: 1/13/2023

@@ -3,7 +3,7 @@ description: ReSpeaker Mic Array
 title: ReSpeaker Mic Array
 keywords:
 - reSpeaker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Mic_Array
 last_update:
   date: 1/12/2023

@@ -5,7 +5,7 @@ keywords:
 - Wio_terminal 
 - Embedded_ML 
 - Projects_based_TensorFlow_Lite
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-TFLM-3
 last_update:
   date: 1/30/2023

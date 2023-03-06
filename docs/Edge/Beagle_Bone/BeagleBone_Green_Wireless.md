@@ -3,7 +3,7 @@ description: BeagleBone® Green Wireless
 title: BeagleBone® Green Wireless
 keywords:
 - Beagle_Bone
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Green_Wireless
 last_update:
   date: 1/10/2023

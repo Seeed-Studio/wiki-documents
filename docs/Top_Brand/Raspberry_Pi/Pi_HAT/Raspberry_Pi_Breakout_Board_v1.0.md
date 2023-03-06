@@ -3,7 +3,7 @@ description: Raspberry Pi Breakout Board v1.0
 title: Raspberry Pi Breakout Board v1.0
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_Breakout_Board_v1.0
 last_update:
   date: 1/11/2023

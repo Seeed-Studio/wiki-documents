@@ -3,7 +3,7 @@ description: Grove - CO2 & Temperature & Humidity Sensor (SCD41)
 title: Grove - CO2 & Temperature & Humidity Sensor (SCD41)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-CO2&Temperature&HumiditySensor-SCD41
 last_update:
   date: 12/30/2022

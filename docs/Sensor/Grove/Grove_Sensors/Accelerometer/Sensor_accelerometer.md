@@ -3,7 +3,7 @@ description: Sensor - Accelerometer
 title: Sensor - Accelerometer
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_accelerometer
 last_update:
   date: 1/5/2023

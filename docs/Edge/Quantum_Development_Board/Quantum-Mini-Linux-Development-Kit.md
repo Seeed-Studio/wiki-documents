@@ -3,7 +3,7 @@ description: Getting Started with balenaOS on ODYSSEY-X86
 title: BalenaOS Installation
 keywords:
 - Edge Quantum_Development_Board
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Quantum-Mini-Linux-Development-Kit
 last_update:
   date: 2/1/2023

@@ -5,7 +5,7 @@ tags:
   - micro_bit
 keywords:
   - micro_bit
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Inventor_Kit_for_microbit
 last_update:
   date: 01/05/2022 

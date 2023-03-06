@@ -3,7 +3,7 @@ description: Seeeduino ADK Main Board
 title: Seeeduino ADK Main Board
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_ADK_Main_Board
 last_update:
   date: 1/31/2023

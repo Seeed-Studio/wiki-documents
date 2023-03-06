@@ -3,7 +3,7 @@ description: How to Debug Arduino Boards using SWD Interface
 title: How to Debug Arduino Boards using SWD Interface
 keywords:
 - Sorftware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-SWD
 last_update:
   date: 1/16/2023

@@ -3,7 +3,7 @@ description: Grove - ±5A DC/AC Current Sensor (ACS70331)
 title: Grove - ±5A DC/AC Current Sensor (ACS70331)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-5A_DC_AC_Current_Sensor-ACS70331
 last_update:
   date: 1/9/2023

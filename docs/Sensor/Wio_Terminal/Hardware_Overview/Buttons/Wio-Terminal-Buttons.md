@@ -3,7 +3,7 @@ description: Overview
 title: Overview
 keywords:
 - Wio_terminal Configurable_Buttons
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Buttons
 last_update:
   date: 1/17/2023

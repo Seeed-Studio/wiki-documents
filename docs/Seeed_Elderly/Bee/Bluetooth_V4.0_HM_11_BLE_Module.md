@@ -3,7 +3,7 @@ description: Bluetooth V4.0 HM-11 BLE Module
 title: Bluetooth V4.0 HM-11 BLE Module
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_V4.0_HM_11_BLE_Module
 last_update:
   date: 1/13/2023

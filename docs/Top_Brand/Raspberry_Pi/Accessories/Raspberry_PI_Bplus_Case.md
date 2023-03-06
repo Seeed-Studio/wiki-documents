@@ -3,7 +3,7 @@ description: Raspberry PI B+ Case
 title: Raspberry PI B+ Case
 keywords:
 - Accessories
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_PI_Bplus_Case
 last_update:
   date: 2/15/2023

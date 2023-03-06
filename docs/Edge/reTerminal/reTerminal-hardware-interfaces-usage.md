@@ -4,7 +4,7 @@ title: Hardware and Interfaces Usage
 keywords:
   - Edge
   - reTerminal 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-hardware-interfaces-usage
 last_update:
   date: 1/31/2023

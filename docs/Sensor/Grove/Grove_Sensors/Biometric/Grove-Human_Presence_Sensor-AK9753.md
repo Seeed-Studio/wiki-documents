@@ -3,7 +3,7 @@ description: Grove - Human Presence Sensor (AK9753)
 title: Grove - Human Presence Sensor (AK9753)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Human_Presence_Sensor-AK9753
 last_update:
   date: 2/22/2023

@@ -3,7 +3,7 @@ description: Use Arduino Borads as DAPLink Device
 title: Use Arduino Borads as DAPLink Device
 keywords:
 - Sorftware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino-DAPLink
 last_update:
   date: 1/16/2023

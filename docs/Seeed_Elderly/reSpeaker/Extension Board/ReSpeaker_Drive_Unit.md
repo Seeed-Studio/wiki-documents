@@ -3,7 +3,7 @@ description: ReSpeaker Drive Unit
 title: ReSpeaker Drive Unit
 keywords:
 - reSpeaker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Drive_Unit
 last_update:
   date: 1/12/2023

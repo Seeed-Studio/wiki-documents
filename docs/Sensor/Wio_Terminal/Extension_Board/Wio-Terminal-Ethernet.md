@@ -3,7 +3,7 @@ description: Ethernet Extension board
 title: Ethernet Extension board
 keywords:
 - Wio_terminal Extension_Board
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Ethernet
 last_update:
   date: 1/30/2023

@@ -3,7 +3,7 @@ description: Fast training of models with Edge Impulse
 title: Fast training of models with Edge Impulse
 keywords:
 - Sensor Vision_AI
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Deploy-AI-Model-Grove-Vision-AI
 last_update:
   date: 1/13/2023

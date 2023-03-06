@@ -4,7 +4,7 @@ title: LightView 201k Digital display module
 keywords:
 - Arduino
 - Arduino_Boards_Projects
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LightView_201k_Digital_display_module
 last_update:
   date: 2/15/2023

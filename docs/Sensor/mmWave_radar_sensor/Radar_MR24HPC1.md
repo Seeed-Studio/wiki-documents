@@ -3,7 +3,7 @@ description: mmWave Human Static Presence Module Lite
 title: mmWave Human Static Presence Module Lite
 keywords:
 - mmWave_radar_sensor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24HPC1
 last_update:
   date: 03/03/2023

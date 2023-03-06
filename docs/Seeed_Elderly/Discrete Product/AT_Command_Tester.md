@@ -3,7 +3,7 @@ description: AT Command Tester
 title: AT Command Tester
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /AT_Command_Tester
 last_update:
   date: 1/13/2023

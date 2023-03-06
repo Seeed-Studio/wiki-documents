@@ -3,7 +3,7 @@ description: Develop with Ubidots
 title: Ubidots Usage
 keywords:
 - SenseCap
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_started_with_Ubidots
 last_update:
   date: 1/13/2023

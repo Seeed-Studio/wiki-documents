@@ -3,7 +3,7 @@ description: Grove - Gas Sensor V2(Multichannel)
 title: Grove - Gas Sensor V2(Multichannel)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Multichannel-Gas-Sensor-V2
 last_update:
   date: 1/4/2023

@@ -3,7 +3,7 @@ description: Skeleton Box for Raspberry Pi Compute Module Development Kit
 title: Skeleton Box for Raspberry Pi Compute Module Development Kit
 keywords:
 - Accessories
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit
 last_update:
   date: 1/11/2023

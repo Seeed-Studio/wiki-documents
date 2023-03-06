@@ -3,7 +3,7 @@ description: MT3620 Ethernet Shield v1.0
 title: MT3620 Ethernet Shield v1.0
 keywords:
 - Azure_Sphere_MT3620_Development_Kit
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /MT3620_Ethernet_Shield_v1.0
 last_update:
   date: 1/13/2023

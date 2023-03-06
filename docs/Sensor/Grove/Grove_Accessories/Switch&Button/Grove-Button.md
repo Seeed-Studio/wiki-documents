@@ -3,7 +3,7 @@ description: Grove - Button
 title: Grove - Button
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Button
 last_update:
   date: 1/10/2023

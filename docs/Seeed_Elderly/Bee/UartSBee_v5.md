@@ -3,7 +3,7 @@ description: UartSBee V5
 title: UartSBee V5
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /UartSBee_v5
 last_update:
   date: 1/13/2023

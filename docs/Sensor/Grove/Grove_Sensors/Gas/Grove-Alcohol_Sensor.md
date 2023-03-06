@@ -3,7 +3,7 @@ description: Grove - Alcohol Sensor
 title: Grove - Alcohol Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Alcohol_Sensor
 last_update:
   date: 1/5/2023

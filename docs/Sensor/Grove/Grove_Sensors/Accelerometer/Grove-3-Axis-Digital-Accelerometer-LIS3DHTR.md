@@ -3,7 +3,7 @@ description: Grove - 3-Axis Digital Accelerometer (LIS3DHTR)
 title: Grove - 3-Axis Digital Accelerometer (LIS3DHTR)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis-Digital-Accelerometer-LIS3DHTR
 last_update:
   date: 1/5/2023

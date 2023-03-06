@@ -3,7 +3,7 @@ description: Grove Shield for Intel Joule
 title: Grove Shield for Intel Joule
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Shield_for_Intel_Joule
 last_update:
   date: 1/13/2023

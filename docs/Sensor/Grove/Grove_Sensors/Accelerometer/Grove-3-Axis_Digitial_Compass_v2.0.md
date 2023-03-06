@@ -3,7 +3,7 @@ description: Grove - 3-Axis Digitial Compass v2.0
 title: Grove - 3-Axis Digitial Compass v2.0
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis_Digitial_Compass_v2.0
 last_update:
   date: 1/5/2023

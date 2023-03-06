@@ -3,7 +3,7 @@ description: Grove - OLED Display 0.66" (SSD1306)
 title: Grove - OLED Display 0.66" (SSD1306)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED-Display-0.66-SSD1306_v1.0
 last_update:
   date: 1/7/2023

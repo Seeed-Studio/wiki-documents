@@ -4,7 +4,7 @@ title: Hardware Layout for reComputer Series
 keywords:
   - Edge
   - reComputer
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_Hardware_Layout
 last_update:
   date: 01/03/2023

@@ -3,7 +3,7 @@ description: Xadow IO pin mapping
 title: Xadow IO pin mapping
 keywords:
 - Sorftware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_IO_pin_mapping
 last_update:
   date: 1/16/2023

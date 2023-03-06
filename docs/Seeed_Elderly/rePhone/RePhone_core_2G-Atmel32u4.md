@@ -3,7 +3,7 @@ description:  Rephone Core 2G-Atmel32u4
 title:  Rephone Core 2G-Atmel32u4
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RePhone_core_2G-Atmel32u4
 last_update:
   date: 1/13/2023

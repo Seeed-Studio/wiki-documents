@@ -3,7 +3,7 @@ description: Eagleye_530s
 title: Eagleye 530s
 keywords:
 - Eagleye_530s
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Eagleye_530s
 last_update:
   date: 01/20/2023

@@ -3,7 +3,7 @@ description: Grove-Temperature_Sensor
 title: Grove-Temperature_Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Temperature_Sensor
 last_update:
   date: 1/3/2023

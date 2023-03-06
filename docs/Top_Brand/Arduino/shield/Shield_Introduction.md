@@ -5,7 +5,7 @@ tags:
   - Shield
 keywords:
   - Shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Shield_Introduction
 last_update:
   date: 01/10/2023  

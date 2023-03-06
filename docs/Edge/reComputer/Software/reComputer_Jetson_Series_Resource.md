@@ -4,7 +4,7 @@ title: Jetson Resource
 keywords:
   - Edge
   - reComputer Application
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_Resource
 last_update:
   date: 01/04/2023

@@ -3,7 +3,7 @@ description: Grove Base Kit for Raspberry Pi
 title: Grove Base Kit for Raspberry Pi
 keywords:
 - Kit
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Base_Kit_for_Raspberry_Pi
 last_update:
   date: 1/11/2023

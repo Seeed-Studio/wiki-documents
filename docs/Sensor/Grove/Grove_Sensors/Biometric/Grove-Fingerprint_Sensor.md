@@ -3,7 +3,7 @@ description: Grove - Fingerprint Sensor
 title: Grove - Fingerprint Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Fingerprint_Sensor
 last_update:
   date: 1/6/2023

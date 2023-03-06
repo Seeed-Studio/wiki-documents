@@ -3,7 +3,7 @@ description: Nose LED Kit
 title: Nose LED Kit
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Nose_LED_Kit
 last_update:
   date: 1/13/2023

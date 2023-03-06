@@ -3,7 +3,7 @@ description:  Xadow - Motor Driver
 title: Xadow - Motor Driver
 keywords:
 - grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Motor_Driver
 last_update:
   date: 1/13/2023

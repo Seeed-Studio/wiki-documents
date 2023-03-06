@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal Application
   - Embedded_ML
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edgebox-rpi-200-codesys
 last_update:
   date: 2/1/2023

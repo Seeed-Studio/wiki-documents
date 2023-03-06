@@ -3,7 +3,7 @@ description: Grove - I2C High Accuracy Temperature Sensor(MCP9808)
 title: Grove - I2C High Accuracy Temperature Sensor(MCP9808)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808
 last_update:
   date: 12/30/2022

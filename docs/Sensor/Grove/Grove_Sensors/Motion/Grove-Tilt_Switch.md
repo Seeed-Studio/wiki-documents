@@ -3,7 +3,7 @@ description: Grove - Tilt Switch
 title: Grove - Tilt Switch
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Tilt_Switch
 last_update:
   date: 1/6/2023

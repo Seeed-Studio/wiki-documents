@@ -3,7 +3,7 @@ description: Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS
 title: Seeeduino Cloud and Grove IoT Starter Kit Powered by AWS
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 1/31/2023

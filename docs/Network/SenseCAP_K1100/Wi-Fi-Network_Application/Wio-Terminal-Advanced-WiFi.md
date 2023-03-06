@@ -3,7 +3,7 @@ description: Advanced WiFi Usage
 title: Advanced WiFi Usage
 keywords:
 - SenseCap
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Advanced-WiFi
 last_update:
   date: 1/13/2023

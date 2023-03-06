@@ -3,7 +3,7 @@ description: Unibody box for Galileo Gen2
 title: Unibody box for Galileo Gen2
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Unibody_box_for_Galileo_Gen2
 last_update:
   date: 1/13/2023

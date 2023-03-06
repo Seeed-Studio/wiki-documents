@@ -4,7 +4,7 @@ title: reComputer for Jetson Initiation
 keywords:
   - Edge
   - reComputer
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_Initiation
 last_update:
   date: 01/04/2023

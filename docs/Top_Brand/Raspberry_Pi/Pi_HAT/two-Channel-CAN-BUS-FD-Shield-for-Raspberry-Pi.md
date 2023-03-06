@@ -3,7 +3,7 @@ description: 2 Channel CAN BUS FD Shield for Raspberry Pi
 title: 2 Channel CAN BUS FD Shield for Raspberry Pi
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi
 last_update:
   date: 1/11/2023

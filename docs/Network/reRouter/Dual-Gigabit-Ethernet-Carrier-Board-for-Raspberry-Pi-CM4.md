@@ -3,7 +3,7 @@ description: reRouter carrier board
 title: reRouter carrier board
 keywords:
 - Device
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4
 last_update:
   date: 1/10/2022

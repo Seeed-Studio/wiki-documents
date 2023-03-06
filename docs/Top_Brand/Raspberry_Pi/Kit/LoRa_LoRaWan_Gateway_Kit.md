@@ -3,7 +3,7 @@ description: LoRa/LoRaWAN Gateway Kit
 title: LoRa/LoRaWAN Gateway Kit
 keywords:
 - Kit
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LoRa_LoRaWan_Gateway_Kit
 last_update:
   date: 2/15/2023

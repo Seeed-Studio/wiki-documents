@@ -3,7 +3,7 @@ description: Grove - I2C Color Sensor
 title: Grove - I2C Color Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_Color_Sensor
 last_update:
   date: 1/5/2023

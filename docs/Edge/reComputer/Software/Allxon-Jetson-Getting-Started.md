@@ -3,7 +3,7 @@ description: Getting Started with Allxon on NVIDIA® Jetson
 title: Getting Started with Allxon on NVIDIA® JetsonGbE CM4
 keywords:
 - Sorftware Allxon
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Allxon-Jetson-Getting-Started
 last_update:
   date: 1/13/2023

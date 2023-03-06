@@ -3,7 +3,7 @@ description: Grove - Integrated Pressure Sensor Kit
 title: Grove - Integrated Pressure Sensor Kit
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Integrated-Pressure-Sensor-Kit
 last_update:
   date: 1/5/2023

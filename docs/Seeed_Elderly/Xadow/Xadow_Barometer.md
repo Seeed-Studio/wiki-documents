@@ -3,7 +3,7 @@ description: Xadow - Barometer
 title: Xadow - Barometer
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Barometer
 last_update:
   date: 1/13/2023

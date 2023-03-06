@@ -3,7 +3,7 @@ description: Grove-Single Axis Analog Gyro
 title: Grove-Single Axis Analog Gyro
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Single_Axis_Analog_Gyro
 last_update:
   date: 1/29/2023

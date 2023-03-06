@@ -3,7 +3,7 @@ description: Flash JetPack to NVIDIA® Jetson AGX Orin 32GB H01 Kit
 title: NVIDIA® Jetson AGX Orin 32GB H01 Kit
 keywords:
 - NVIDIA Jetson Alternative
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_AGX_Orin_32GB_H01_Flash_Jetpack
 last_update:
   date: 3/2/2023

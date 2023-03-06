@@ -3,7 +3,7 @@ description: Arduino IDE for RePhone Kit
 title: Arduino IDE for RePhone Kit
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino_IDE_for_RePhone_Kit
 last_update:
   date: 1/13/2023

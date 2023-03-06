@@ -3,7 +3,7 @@ description:  Relay Shield
 title:  Relay Shield
 keywords:
 -  Arduino shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Relay_Shield
 last_update:
   date: 2/16/2023

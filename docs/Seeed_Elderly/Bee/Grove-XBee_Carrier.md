@@ -3,7 +3,7 @@ description: Grove - XBee Carrier
 title: Grove - XBee Carrier
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-XBee_Carrier
 last_update:
   date: 2/15/2023

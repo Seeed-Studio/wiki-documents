@@ -3,7 +3,7 @@ description: ReSpeaker USB Mic Array
 title: ReSpeaker USB Mic Array
 keywords:
 - reSpeaker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker-USB-Mic-Array
 last_update:
   date: 1/12/2023

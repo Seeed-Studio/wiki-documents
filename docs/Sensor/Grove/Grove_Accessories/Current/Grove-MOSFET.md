@@ -3,7 +3,7 @@ description: Grove - MOSFET
 title: Grove - MOSFET
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-MOSFET
 last_update:
   date: 1/9/2023

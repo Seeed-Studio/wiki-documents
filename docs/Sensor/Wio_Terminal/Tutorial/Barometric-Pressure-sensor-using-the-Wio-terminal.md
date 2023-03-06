@@ -3,7 +3,7 @@ description:  Pressure sensor using the Wio terminal
 title:  Pressure sensor using the Wio terminal
 keywords:
 - Wio_terminal Tutorial
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Barometric-Pressure-sensor-using-the-Wio-terminal
 last_update:
   date: 1/31/2023

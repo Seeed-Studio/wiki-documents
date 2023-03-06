@@ -4,7 +4,7 @@ title: Grove Port
 keywords:
 - Wio_terminal Hardware_Overview
 - Input&Output
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Grove
 last_update:
   date: 1/31/2023

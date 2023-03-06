@@ -3,7 +3,7 @@ description: Grove-VOC and eCO2 Gas Sensor(SGP30)
 title: Grove-VOC and eCO2 Gas Sensor(SGP30)
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-VOC_and_eCO2_Gas_Sensor-SGP30
 last_update:
   date: 1/4/2023

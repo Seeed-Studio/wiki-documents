@@ -3,7 +3,7 @@ description: ReSpeaker Core v2.0
 title: ReSpeaker Core v2.0
 keywords:
 - reSpeaker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Core_v2.0
 last_update:
   date: 1/11/2023

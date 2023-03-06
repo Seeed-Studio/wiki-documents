@@ -3,7 +3,7 @@ description: Vision AI with Customizable Models
 title: Vision AI with Customizable Models
 keywords:
 - SenseCap
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Vision_AI_with_Customizable_Models
 last_update:
   date: 2/2/2023

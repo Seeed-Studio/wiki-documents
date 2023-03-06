@@ -3,7 +3,7 @@ description: Seeeduino Nano
 title: Seeeduino Nano
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-Nano
 last_update:
   date: 1/31/2023

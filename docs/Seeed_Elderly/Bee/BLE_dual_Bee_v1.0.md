@@ -3,7 +3,7 @@ description: BLE (dual) Bee v1.0
 title: BLE (dual) Bee v1.0
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BLE_dual_Bee_v1.0
 last_update:
   date: 1/13/2023

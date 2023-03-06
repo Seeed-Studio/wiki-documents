@@ -3,7 +3,7 @@ description: Xadow - UV Sensor
 title: Xadow - UV Sensor
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_UV_Sensor
 last_update:
   date: 1/13/2023

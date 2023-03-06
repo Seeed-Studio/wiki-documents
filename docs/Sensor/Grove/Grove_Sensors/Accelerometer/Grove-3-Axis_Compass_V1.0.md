@@ -3,7 +3,7 @@ description: Grove - 3-Axis Compass V1.0
 title: Grove - 3-Axis Compass V1.0
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis_Compass_V1.0
 last_update:
   date: 1/5/2023

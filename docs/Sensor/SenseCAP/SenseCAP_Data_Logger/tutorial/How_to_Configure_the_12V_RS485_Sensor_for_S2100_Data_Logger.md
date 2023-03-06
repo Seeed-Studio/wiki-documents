@@ -3,7 +3,7 @@ description: Configure the 12V RS485 Sensor
 title: Configure the 12V RS485 Sensor
 keywords:
 - SenseCAP data logger
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
   date: 2/14/2023
   author: Matthew

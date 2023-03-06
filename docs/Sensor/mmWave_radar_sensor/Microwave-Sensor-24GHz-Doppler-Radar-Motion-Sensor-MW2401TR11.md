@@ -3,7 +3,7 @@ description: Microwave Sensor - 24GHz Doppler Radar Motion Sensor - MW2401TR11
 title: Microwave Sensor - 24GHz Doppler Radar Motion Sensor - MW2401TR11
 keywords:
 - mmWave_radar_sensor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11
 last_update:
   date: 1/12/2023

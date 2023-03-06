@@ -3,7 +3,7 @@ description: Grove Starter kit for Arduino & Genuino 101
 title: Grove Starter kit for Arduino & Genuino 101
 keywords:
 - Kit with Courses
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_kit_for_Arduino_101
 last_update:
   date: 2/17/2023

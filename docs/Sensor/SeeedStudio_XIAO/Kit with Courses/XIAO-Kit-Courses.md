@@ -3,7 +3,7 @@ description: Seeed Studio XIAO Kit Courses
 title: Seeed Studio XIAO Kit Courses
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-Kit-Courses
 last_update:
   date: 1/11/2023

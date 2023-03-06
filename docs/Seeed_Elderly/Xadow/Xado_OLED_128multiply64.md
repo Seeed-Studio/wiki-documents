@@ -3,7 +3,7 @@ description: Xadow - OLED 128*64
 title:  Xadow - OLED 128*64
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xado_OLED_128multiply64
 last_update:
   date: 1/13/2023

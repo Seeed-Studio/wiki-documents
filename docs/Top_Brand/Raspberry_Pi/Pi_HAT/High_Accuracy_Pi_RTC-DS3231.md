@@ -3,7 +3,7 @@ description: DS3231 High Accuracy RTC (Real Time Clock) for Raspberry Pi
 title: DS3231 High Accuracy RTC (Real Time Clock) for Raspberry Pi
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /High_Accuracy_Pi_RTC-DS3231
 last_update:
   date: 1/11/2023

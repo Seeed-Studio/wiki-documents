@@ -3,7 +3,7 @@ description: Grove Base Hat for Raspberry Pi Zero
 title: Grove Base Hat for Raspberry Pi Zero
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Base_Hat_for_Raspberry_Pi_Zero
 last_update:
   date: 1/11/2023

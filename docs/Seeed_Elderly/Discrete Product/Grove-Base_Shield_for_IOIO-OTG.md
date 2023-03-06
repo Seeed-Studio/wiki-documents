@@ -3,7 +3,7 @@ description: Grove - Base Shield for IOIO-OTG
 title: Grove - Base Shield for IOIO-OTG
 keywords:
 - grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Base_Shield_for_IOIO-OTG
 last_update:
   date: 1/13/2023

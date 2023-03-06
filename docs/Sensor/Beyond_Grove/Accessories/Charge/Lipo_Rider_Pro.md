@@ -3,7 +3,7 @@ description: Lipo Rider Pro
 title: Lipo Rider Pro
 keywords:
 - Accessories charge
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Lipo_Rider_Pro
 last_update:
   date: 1/13/2023

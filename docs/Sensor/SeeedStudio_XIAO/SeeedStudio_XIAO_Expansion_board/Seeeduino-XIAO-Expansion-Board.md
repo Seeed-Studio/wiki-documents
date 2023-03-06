@@ -3,7 +3,7 @@ description: Seeed Studio XIAO Expansion board
 title: Seeed Studio XIAO Expansion board
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO-Expansion-Board
 last_update:
   date: 1/10/2023

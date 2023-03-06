@@ -3,7 +3,7 @@ description: SeeedStudio BeagleBone® Green
 title: SeeedStudio BeagleBone® Green
 keywords:
 - Beagle_Bone
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Green
 last_update:
   date: 1/10/2023

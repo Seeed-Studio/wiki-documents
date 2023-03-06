@@ -3,7 +3,7 @@ description: Grove - PH Sensor
 title: Grove - PH Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-PH_Sensor
 last_update:
   date: 2/22/2023

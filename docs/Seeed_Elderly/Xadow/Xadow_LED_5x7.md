@@ -3,7 +3,7 @@ description: Xadow - LED 5x7
 title: Xadow - LED 5x7
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_LED_5x7
 last_update:
   date: 1/13/2023

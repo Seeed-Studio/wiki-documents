@@ -3,7 +3,7 @@ description: Grove - Circular LED
 title: Grove - Circular LED
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Circular_LED
 last_update:
   date: 1/7/2023

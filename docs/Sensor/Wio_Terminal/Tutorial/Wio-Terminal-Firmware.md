@@ -3,7 +3,7 @@ description:  Wio Terminal Retro Gaming Firmware
 title:  Wio Terminal Retro Gaming Firmware
 keywords:
 - Wio_terminal Tutorial
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Firmware
 last_update:
   date: 1/31/2023

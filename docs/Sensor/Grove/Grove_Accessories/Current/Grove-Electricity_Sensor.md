@@ -3,7 +3,7 @@ description: Grove - Electricity Sensor
 title: Grove - Electricity Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Electricity_Sensor
 last_update:
   date: 1/9/2023

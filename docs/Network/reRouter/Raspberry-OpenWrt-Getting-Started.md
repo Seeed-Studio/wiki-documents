@@ -3,7 +3,7 @@ description: reRouter Introduction
 title: reRouter Introduction
 keywords:
 - Device
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry-OpenWrt-Getting-Started
 last_update:
   date: 1/10/2022

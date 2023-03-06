@@ -3,7 +3,7 @@ description: Quick & No-code Initiation with SenseCraft
 title: Quick & No-code Initiation with SenseCraft
 keywords:
 - SenseCap
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-quickstart
 last_update:
   date: 1/12/2023

@@ -3,7 +3,7 @@ description: Starter bundle harness V1.0
 title: Starter bundle harness V1.0
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Starter_bundle_harness_V1
 last_update:
   date: 1/13/2023

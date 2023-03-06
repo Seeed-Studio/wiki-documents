@@ -5,7 +5,7 @@ tags:
   - micro_bit
 keywords:
   - micro_bit
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /microbit_wiki_page
 last_update:
   date: 01/10/2023  

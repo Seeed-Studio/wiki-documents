@@ -3,7 +3,7 @@ description: Xadow Tutorial - Communicate via BLE
 title: Xadow Tutorial - Communicate via BLE
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Tutorial_Communicate_via_BLE
 last_update:
   date: 1/13/2023

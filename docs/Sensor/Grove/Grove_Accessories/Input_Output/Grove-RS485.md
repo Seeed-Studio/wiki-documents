@@ -3,7 +3,7 @@ description: Grove - RS485
 title: Grove - RS485
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-RS485
 last_update:
   date: 2/22/2023

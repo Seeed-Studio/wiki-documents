@@ -4,7 +4,7 @@ title: reComputerJ2021 | J202
 keywords:
   - Edge
   - reComputer JetPack™_OS_Installation
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J2021_J202_Flash_Jetpack
 last_update:
   date: 01/05/2023

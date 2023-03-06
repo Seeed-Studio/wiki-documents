@@ -4,7 +4,7 @@ title: Few-Shot Object Detection
 keywords:
   - Edge
   - reComputer Application
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /YOLOv5-Object-Detection-Jetson
 last_update:
   date: 01/04/2023

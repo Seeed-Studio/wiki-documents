@@ -3,7 +3,7 @@ description: Seeeduino Cloud
 title: Seeeduino Cloud
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Cloud
 last_update:
   date: 1/31/2023

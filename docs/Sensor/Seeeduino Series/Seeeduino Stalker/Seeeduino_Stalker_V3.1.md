@@ -3,7 +3,7 @@ description: Seeeduino Stalker V3.1
 title: Seeeduino Stalker V3.1
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker_V3.1
 last_update:
   date: 1/31/2023

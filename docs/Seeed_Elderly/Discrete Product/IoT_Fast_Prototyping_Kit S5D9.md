@@ -3,7 +3,7 @@ description: IoT Fast Prototyping Kit S5D9
 title: IoT Fast Prototyping Kit S5D9
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /IoT_Fast_Prototyping_Kit S5D9
 last_update:
   date: 1/13/2023

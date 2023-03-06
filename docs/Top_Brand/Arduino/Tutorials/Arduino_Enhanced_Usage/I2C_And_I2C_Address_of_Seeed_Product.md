@@ -3,7 +3,7 @@ description: I2C And I2C Address of Seeed Product
 title: I2C And I2C Address of Seeed Product
 keywords:
 - Sorftware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /I2C_And_I2C_Address_of_Seeed_Product
 last_update:
   date: 1/16/2023

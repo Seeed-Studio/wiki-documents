@@ -3,7 +3,7 @@ description: Scale up Your Creation with Seeed Studio Fusion
 title: Scale up Your Creation with Seeed Studio Fusion
 keywords:
 - Contributor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Scale-up-Your-Creation-with-Fusion
 last_update:
   date: 03/01/2023

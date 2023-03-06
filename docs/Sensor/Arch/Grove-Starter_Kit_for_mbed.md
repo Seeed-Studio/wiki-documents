@@ -3,7 +3,7 @@ description: Grove - Starter Kit for mbed
 title: Grove - Starter Kit for mbed
 keywords:
 - Arch
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Starter_Kit_for_mbed
 last_update:
   date: 2/1/2023

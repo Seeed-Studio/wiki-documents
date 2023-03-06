@@ -3,7 +3,7 @@ description:  RePhone Geo Kit
 title:  RePhone Geo Kit
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RePhone_Geo_Kit
 last_update:
   date: 1/13/2023

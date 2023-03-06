@@ -3,7 +3,7 @@ description: LinkIt ONE Tutorial - Hello World
 title: LinkIt ONE Tutorial - Hello World
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_ONE_Tutorial-Hello_World
 last_update:
   date: 1/13/2023

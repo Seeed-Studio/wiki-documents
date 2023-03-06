@@ -3,7 +3,7 @@ description: mmWave Human Static Presence Sensor
 title: mmWave Human Static Presence Sensor
 keywords:
 - mmWave_radar_sensor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24HPB1
 last_update:
   date: 1/12/2023

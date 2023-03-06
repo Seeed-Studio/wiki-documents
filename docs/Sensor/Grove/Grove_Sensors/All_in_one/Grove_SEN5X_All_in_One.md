@@ -3,7 +3,7 @@ description: Grove SEN5X All in One
 title: Grove SEN5X All in One
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_SEN5X_All_in_One
 last_update:
   date: 1/29/2023

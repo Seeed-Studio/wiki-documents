@@ -4,7 +4,7 @@ title: Cloud & Chain
 keywords:
 - Cloud
 - Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
   date: 01/20/2023
   author: Matthew

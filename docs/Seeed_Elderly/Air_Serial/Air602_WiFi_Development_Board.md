@@ -3,7 +3,7 @@ description: Air602_WiFi_Development_Board
 title: Air602 WiFi Development Board
 keywords:
 - Air602_WiFi_Development_Board
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Air602_WiFi_Development_Board
 last_update:
   date: 01/20/2023

@@ -3,7 +3,7 @@ description: Grove AI HAT for Edge Computing
 title: Grove AI HAT for Edge Computing
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_AI_HAT_for_Edge_Computing
 last_update:
   date: 1/11/2023

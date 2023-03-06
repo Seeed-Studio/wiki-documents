@@ -3,7 +3,7 @@ description: Connect to TTN
 title: Connect to TTN
 keywords:
 - SenseCap
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Connecting-to-TTN
 last_update:
   date: 1/13/2023

@@ -3,7 +3,7 @@ description: Arch Link
 title: Arch Link
 keywords:
 - Arch
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arch_Link
 last_update:
   date: 2/1/2023

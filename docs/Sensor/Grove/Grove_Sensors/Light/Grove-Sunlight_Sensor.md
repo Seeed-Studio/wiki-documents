@@ -3,7 +3,7 @@ description: Grove - Sunlight Sensor
 title: Grove - Sunlight Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Sunlight_Sensor
 last_update:
   date: 1/5/2023

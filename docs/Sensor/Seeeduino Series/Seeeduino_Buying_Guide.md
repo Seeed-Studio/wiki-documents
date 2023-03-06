@@ -3,7 +3,7 @@ description: Seeeduino Buying Guide
 title: Seeeduino Buying Guide
 keywords:
 - Seeeduino_Series
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Buying_Guide
 last_update:
   date: 1/12/2022

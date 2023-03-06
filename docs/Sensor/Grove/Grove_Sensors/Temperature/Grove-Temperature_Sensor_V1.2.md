@@ -3,7 +3,7 @@ description: Grove - Temperature Sensor V1.2
 title: Grove - Temperature Sensor V1.2
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Temperature_Sensor_V1.2
 last_update:
   date: 1/3/2023

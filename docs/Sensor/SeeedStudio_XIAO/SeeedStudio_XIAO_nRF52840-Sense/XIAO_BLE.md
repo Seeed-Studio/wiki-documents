@@ -3,7 +3,7 @@ description: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
 title: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_BLE
 last_update:
   date: 1/11/2023

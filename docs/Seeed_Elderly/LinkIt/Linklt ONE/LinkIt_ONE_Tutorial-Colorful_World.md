@@ -3,7 +3,7 @@ description: LinkIt ONE Tutorial - Colorful World
 title: LinkIt ONE Tutorial - Colorful World
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_ONE_Tutorial-Colorful_World
 last_update:
   date: 1/13/2023

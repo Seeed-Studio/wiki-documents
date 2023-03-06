@@ -3,7 +3,7 @@ description: Grove - Differential Amplifier v1.0
 title: Grove - Differential Amplifier v1.0
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Differential_Amplifier_v1.0
 last_update:
   date: 2/22/2023

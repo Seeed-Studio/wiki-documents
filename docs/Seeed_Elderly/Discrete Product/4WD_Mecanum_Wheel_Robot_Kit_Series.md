@@ -3,7 +3,7 @@ description: 4WD Mecanum Wheel Robot Kit Series
 title: 4WD Mecanum Wheel Robot Kit Series
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /4WD_Mecanum_Wheel_Robot_Kit_Series
 last_update:
   date: 1/13/2023

@@ -3,7 +3,7 @@ description: Overview
 title: Overview
 keywords:
 - ReSpeaker_2-Mics_Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_2_Mics_Pi_HAT
 last_update:
   date: 1/11/2023
