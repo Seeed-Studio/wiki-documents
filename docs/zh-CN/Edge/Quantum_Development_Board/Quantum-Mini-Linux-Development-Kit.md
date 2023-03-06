@@ -1,13 +1,13 @@
 ---
-description: Getting Started with balenaOS on ODYSSEY-X86
-title: BalenaOS Installation
+description: “夸克（Quark）”迷你开发者套件
+title: “夸克（Quark）”迷你开发者套件
 keywords:
 - Edge Quantum_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: cn/Quantum-Mini-Linux-Development-Kit
+slug: /cn/Quantum-Mini-Linux-Development-Kit
 last_update:
   date: 2/1/2023
-  author: jianjing Huang
+  author: Matthew
 ---
 
 # “夸克（Quark）”迷你开发者套件

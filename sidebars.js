@@ -3077,25 +3077,25 @@ const sidebars = {
   //   `,
   //   },
   // ],
-  CNSidebar: [
-    {
+  // CNSidebar: [
+  //   {
 
-      type: 'category',
-      label: 'Seeed Studio XIAO 拓展板',
-      items: [
-        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
-      ]
-    },
-    {
+  //     type: 'category',
+  //     label: 'Seeed Studio XIAO 拓展板',
+  //     items: [
+  //       'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+  //     ]
+  //   },
+  //   {
 
-      type: 'category',
-      label: 'Seeed Studio XIAO SAMD21',
-      items: [
-        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
-      ]
-    },
+  //     type: 'category',
+  //     label: 'Seeed Studio XIAO SAMD21',
+  //     items: [
+  //       'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
+  //     ]
+  //   },
 
-  ]
+  // ]
 
 };
 

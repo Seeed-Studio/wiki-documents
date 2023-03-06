@@ -4,7 +4,7 @@ title: Seeed Studio XIAO SAMD21 入门指南
 keywords:
 - Seeed Studio XIAO SAMD21
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /zh-CN/Seeeduino-XIAO
+slug: /cn/Seeeduino-XIAO
 last_update:
   date: 2/27/2023
   author: jianjing Huang
