@@ -3,7 +3,7 @@ description: Weekly Wiki
 title: Weekly Wiki
 keywords:
 - weeely wiki
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
   date: 02/27/2023
   author: Matthew
