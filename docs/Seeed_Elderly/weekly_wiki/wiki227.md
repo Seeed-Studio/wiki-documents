@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/06/2023
+  date: 02/27/2023
   author: Matthew
 ---
 
@@ -19,18 +19,13 @@ Today is when when when and a brand new week has begun! Check out what Seeed did
 
 ## Latest Wiki Launched
 
-### Firmware Version Updates of mmWave Radar Sensor
+### XIAO ESP32C3 Data Permanently in different ways
 
-We provide the methods of firmware version updates for three mmWave radar sensor:
+A storage method that ensures that no data is lost even in the event of an abnormal development board.
 
-- [24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)](https://wiki.seeedstudio.com/Radar_MR24HPC1#firmware-version-updates)
-- [60GHz mmWave Breathing and Heartbeat Module](https://wiki.seeedstudio.com/Radar_MR60BHA1#firmware-version-updates)
-- [60GHz mmWave Fall Detection Module Pro (MR60FDA1)](https://wiki.seeedstudio.com/Radar_MR60FDA1#firmware-version-updates)
-
-![image](https://files.seeedstudio.com/wiki/60GHzradar/57.jpg)
+![weekly wiki](https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/4.png)
 
 ## Existed Wiki Updated
 
 ## See You Next Week!
 
-- [weekly wiki on 2.27th](/Seeed_Elderly/weekly_wiki/wiki227)
