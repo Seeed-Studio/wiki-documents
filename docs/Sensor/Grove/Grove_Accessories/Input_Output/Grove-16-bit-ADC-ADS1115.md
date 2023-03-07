@@ -26,7 +26,11 @@ For microcontrollers without an analog-to-digital converter, or when you need a 
 
 The module also contains a Grove port that is internally connected to its channel 0 and channel 1, of which makes it easier to use with Grove Ecosystem.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Speaker-Plus-p-4592.html)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADS1115-16-bit-ADC-p-4599.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Feature
 
