@@ -86,7 +86,7 @@ And the monitor replies with current ip address and opened port. It can be easil
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee_v2.0/img/Join_network.png)
 
-*   8) Use Web browser to access [http://ip:port](http://ip:port), like: [http://192.168.0.28:2000](http://192.168.0.28:2000), and the monitor receives the http request from the Web browser shown below. However, the Web browser will not receive anything due to the wifi bee replies nothing.
+*   8) Use Web browser to access "http://ip:port", like:"http://192.168.0.28:2000", and the monitor receives the http request from the Web browser shown below. However, the Web browser will not receive anything due to the wifi bee replies nothing.
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee_v2.0/img/Web_access.png)
 

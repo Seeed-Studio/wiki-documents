@@ -130,7 +130,7 @@ This will output the Node-RED log to the terminal. You must keep the terminal op
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/k1100-nodered/3.png" /></div>
 
-This will allow you to see the Node-RED editor on [http://localhost:1880](http://localhost:1880.).
+This will allow you to see the Node-RED editor on http://localhost:1880.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100-nodered/4.png" /></div>
 
