@@ -6,7 +6,7 @@ tags:
 keywords:
   - ODYSSEY
 image: https://avatars.githubusercontent.com/u/10758833
-slug: /Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105
+slug: /Coral-Mini-PCIe-Accelerator-x86
 last_update:
   date: 01/03/2023
   author: w0x7ce
