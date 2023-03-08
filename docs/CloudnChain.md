@@ -21,7 +21,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 - Different API for different connecting purposes
 - Cloud & Chain Introduction
 
-### SenseCAP Dashboard / Portal -->
+### SenseCAP Dashboard / Portal
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -85,7 +85,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
-### SenseCAP Mate APP -->
+### SenseCAP Mate APP
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -96,7 +96,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
-### SenseCAP API -->
+### SenseCAP API
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
