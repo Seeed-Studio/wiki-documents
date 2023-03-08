@@ -408,12 +408,11 @@ You can discover this page with two large portions.
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY X86J4105</font></div>
-            <a href="/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Coral Mini PCIe Accelerator</font></span></a>
+            <a href="/Coral-Mini-PCIe-Accelerator-x86" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Coral Mini PCIe Accelerator</font></span></a>
             <br/>
             <a href="/ODYSSEY-X86J4105-LTE-Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LTE Modules</font></span></a>
             <br/>
     </a>
-</div>
 
 ### Kit with Courses
 
