@@ -413,6 +413,7 @@ You can discover this page with two large portions.
             <a href="/ODYSSEY-X86J4105-LTE-Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LTE Modules</font></span></a>
             <br/>
     </a>
+</div>
 
 ### Kit with Courses
 
