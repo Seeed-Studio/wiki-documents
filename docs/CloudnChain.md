@@ -21,12 +21,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 - Different API for different connecting purposes
 - Cloud & Chain Introduction
 
-### SenseCAP Dashboard / Protal -->
+### SenseCAP Dashboard / Portal -->
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Proral</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the SenseCAP Proral for data monitoring of SenseCAP sensors nodes and SenseCAP gateway.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the SenseCAP Portal for data monitoring of SenseCAP sensors nodes and SenseCAP gateway.</font></div>
     </a>
 </div>
 
