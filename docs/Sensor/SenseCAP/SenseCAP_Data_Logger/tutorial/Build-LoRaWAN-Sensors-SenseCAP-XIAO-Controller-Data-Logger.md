@@ -4,6 +4,7 @@ title: Build LoRaWAN Sensors with SenseCAP S2110 Converter and SenseCAP Data Log
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger
 last_update:
   date: 1/16/2023
   author: jianjing Huang

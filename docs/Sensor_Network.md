@@ -112,7 +112,7 @@ You can discover this page with two large portions.
             <br/>
             <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Counter & GPIO Sensor for S2100 Data Logger</font></span></a>
             <br/>
-            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Build LoRaWAN Sensors with SenseCAP S2110 Grove to MODBUS RS485 Converter and SenseCAP Data Logger</font></span></a>
+            <a href="/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Build LoRaWAN Sensors with SenseCAP S2110 Grove to MODBUS RS485 Converter and SenseCAP Data Logger</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
