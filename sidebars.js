@@ -1972,6 +1972,7 @@ const sidebars = {
             'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
             'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
             'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
+            'Edge/reComputer/Software/Lumeo-Jetson-Getting-Started',
           ]
         },
         {

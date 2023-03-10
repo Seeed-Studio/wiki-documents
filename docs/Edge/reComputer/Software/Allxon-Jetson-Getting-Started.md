@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Allxon on NVIDIA® Jetson
-title: Getting Started with Allxon on NVIDIA® JetsonGbE CM4
+title: Getting Started with Allxon on NVIDIA® Jetson Devices
 keywords:
 - Sorftware Allxon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
