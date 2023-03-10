@@ -1971,6 +1971,7 @@ const sidebars = {
             'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
             'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
             'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
+            'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
           ]
         },
         {
