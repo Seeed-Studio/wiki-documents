@@ -1,6 +1,6 @@
 ---
-description: Fast training of models with Edge Impulse
-title: Fast training of models with Edge Impulse
+description: Train and Deploy Your Own AI Model with Roboflow, YOLOv5, TensorFlow Lite
+title: Train and Deploy Your Own AI Model with Roboflow, YOLOv5, TensorFlow Lite
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

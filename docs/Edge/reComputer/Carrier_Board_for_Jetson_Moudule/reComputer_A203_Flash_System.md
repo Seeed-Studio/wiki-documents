@@ -1,6 +1,6 @@
 ---
-description: A203 Flash System
-title: A203
+description: A203 Carrier Board
+title: A203 Carrier Board
 keywords:
   - Edge
   - reComputer Carrier_Board_for_Jetson_Moudule
@@ -289,7 +289,7 @@ In the Linux host PC, we need to replace some files in the official image with t
 
 `/home/<username>/nvidia/nvidia_sdk/JetPack_<version num>_Linux_<board name>_TARGETS/Linux_for_Tegra`
 
-#### Replace the Files
+### Replace the Files
 
 !!!Attention
  Before replacing the files, you can choose to make a backup of the `.dtb` file that will be replaced in the `kernel` folder and save it temporarily in another path so that you can restore the official download at any time.

@@ -1,6 +1,6 @@
 ---
-description: Getting started with Grove Vision AI
-title: Getting started with Grove Vision AI
+description: Train and Deploy Your Own AI Model with Edge Impulse
+title: Train and Deploy Your Own AI Model with Edge Impulse
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

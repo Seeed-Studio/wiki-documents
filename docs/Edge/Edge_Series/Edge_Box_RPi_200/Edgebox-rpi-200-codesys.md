@@ -30,6 +30,12 @@ tags:
 
 EdgeBox-RPi-200 series are all-in-one Raspberry Pi-based industrial edge computing controllers, combining multiple industrial purposes. Designed as high-scalability and rugged industrial hardware, mounted with rich IO resources and supported by the great Raspberry Pi industrial software ecosystem, it is an ideal choice for smart automation and Industrial Internet of Things(IIoT) solutions.
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
 ### Feature
 
 - All-in-one Industry Controller:
@@ -55,8 +61,6 @@ EdgeBox-RPi-200 series are all-in-one Raspberry Pi-based industrial edge computi
 - Great Raspberry Pi Industrial Software Ecosystem:
   
   - Support a variety of industrial software and platforms, including Codesys, Node Red, MQTT, OPC UA, Ignition and etc.
-
-<div align="center"><a href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></div>
 
 ## What is Codesys?
 
