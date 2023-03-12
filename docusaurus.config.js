@@ -93,6 +93,10 @@ const config = {
             'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
         },
 
+        googleAnalytics: {
+          trackingID: 'UA-77925723-11',
+          anonymizeIP: true,
+        },
 
         blog: {
           showReadingTime: true,
