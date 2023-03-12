@@ -527,7 +527,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Microcontrollers -->
+### Microcontrollers
 
 <!-- Open Source Controllers -->
 
@@ -841,7 +841,7 @@ You can discover this page with two large portions.
 
 <!-- Embedded ML Scenarios -->
 
-### Embedde ML Scenarios <
+### Embedde ML Scenarios
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>

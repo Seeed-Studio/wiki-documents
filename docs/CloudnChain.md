@@ -74,7 +74,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
-### SenseCAP HotSpot APP -->
+### SenseCAP HotSpot APP
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
