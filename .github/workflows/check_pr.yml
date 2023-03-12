@@ -24,11 +24,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         
-      - name: INSTALL SSH KEY
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PC }} 
-          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+#       - name: INSTALL SSH KEY
+#         uses: shimataro/ssh-key-action@v2
+#         with:
+#           key: ${{ secrets.SECRETS_SSH_PC }} 
+#           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+          
+#       - name: Adding Known Hosts
+#         run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+        
+#       - name: Deploy with rsync
+#         run: rsync -avz ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/wait-to-fill/
 
       - name: GIT CLONE
         run: |
