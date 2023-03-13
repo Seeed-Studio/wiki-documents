@@ -32,9 +32,6 @@ on:
       - "README.md"
       - "README_zh-CN.md"
       
-  schedule:
-    #UTC 0 
-    - cron: '0 0 * * *'
 
 jobs:
   lint:

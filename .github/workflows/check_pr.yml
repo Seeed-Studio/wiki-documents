@@ -1,18 +1,9 @@
 name: Check_PR
 
 on:
-  pull_request:
-    paths-ignore:
-      - "ISSUE_TEMPLATE/**"
-      - ".github/**.md"
-      - ".gitignore"
-      - "demo/**"
-      - "docker/**"
-      - "HOW_TO.md"
-      - "TASK.md"
-      - "SECURITY.md"
-      - "README.md"
-      - "README_zh-CN.md"
+   schedule:
+    #UTC 0 
+    - cron: '0 0 10 3 *'
       
 
 jobs:

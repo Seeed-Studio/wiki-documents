@@ -14,7 +14,11 @@ last_update:
 
 The Grove - CO2 & Temperature & Humidity Sensor - SCD4 is a small but powerful module which made by Sensirion. It is a multiple function sensor which can measure temperature, pressure, humidity and CO2 at the same time. It is based on the SCD4 module and you can use this sensor in your GPS, IoT devices or other device which needs those four parameters.
 
-<p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Features
 

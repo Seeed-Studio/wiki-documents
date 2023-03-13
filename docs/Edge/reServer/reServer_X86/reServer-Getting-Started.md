@@ -31,7 +31,12 @@ reServer is based on an ODYSSEY X86 v2 board and powered by the latest Intel® C
 
 Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to two 3.5"/2.5" SATA internal hard disk drives to acquire more storage. It also has M.2 connectors to connect to various SSDs for faster read and write speeds.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Features
 

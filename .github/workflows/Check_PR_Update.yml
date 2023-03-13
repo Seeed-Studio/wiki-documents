@@ -1,25 +1,19 @@
-name: Deploy
+name: Check Pull Requests
 
 on:
-#   push:
-#     branches:
-#       - docusaurus-version
+  pull_request:
+    paths-ignore:
+      - "ISSUE_TEMPLATE/**"
+      - ".github/**.md"
+      - ".gitignore"
+      - "demo/**"
+      - "docker/**"
+      - "HOW_TO.md"
+      - "TASK.md"
+      - "SECURITY.md"
+      - "README.md"
+      - "README_zh-CN.md"
       
-#     paths-ignore:
-#       - "ISSUE_TEMPLATE/**"
-#       - ".github/**.md"
-#       - ".gitignore"
-#       - "demo/**"
-#       - "docker/**"
-#       - "HOW_TO.md"
-#       - "TASK.md"
-#       - "SECURITY.md"
-#       - "README.md"
-#       - "README_zh-CN.md"
-      
-  schedule:
-    #UTC 0 
-    - cron: '0 0 10 3 *'
 
 jobs:
   lint:
@@ -44,7 +38,7 @@ jobs:
                   git -y 
             git config --global user.name 'tianrking'
             git config --global user.email 'tian.r.king@gmail.com'
-            git clone git@github.com:Seeed-Studio/wiki-documents.git
+            git clone git@github.com:Seeed-Studio/wiki-documents.git ~/wiki-documents
             
       - name: NPM RUN for HTML BUILD
         run: |
@@ -53,29 +47,19 @@ jobs:
             cd  ~/wiki-documents
             sudo apt remove cmdtest
             sudo apt update && sudo apt install yarn
-            yarn add docusaurus
-            yarn add @docusaurus/theme-mermaid
-            yarn add remark-math@3 rehype-katex@4
-            yarn add @docusaurus/theme-search-algolia
-            yarn add remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0
-            yarn add @docusaurus/plugin-content-docs
-            yarn add @docusaurus/plugin-debug
-            yarn add @docusaurus/plugin-pwa
-            yarn add --dev @docusaurus/eslint-plugin
-            yarn add @docusaurus/theme-live-codeblock
-            yarn add docusaurus-plugin-image-zoom
-            yarn add docusaurus-plugin-sass
+            yarn
             yarn build
       
       - name: PUBLISH to WEBSITE
         run: |
             cd  ~/wiki-documents/build
+            cp  ~/wiki-documents/CNAME ./
             git init
             git remote add github git@github.com:Seeed-Studio/wiki-documents.git
-            git checkout -b HTML 
+            git checkout -b HTML_RE 
             git add .
             git commit -m "Update"
-            git push -u github HTML -f
+            git push -u github HTML_RE -f
 
 
 

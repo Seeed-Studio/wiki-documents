@@ -30,9 +30,10 @@ We have already prepared 8 grove modules to let you get started with micro:bit. 
 The output voltage of micro:bit is around 3.0V, use microbit or AA battery to power the circuit may cause malfunction of Grove modules which requires high input voltage and drive current(e.g Grove - Ultrasonic Ranger). In order to make these kind of Grove function well, please use the micro-USB port on Grove shield for microbit to power the circuit.
 :::
 
-  <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro%3Abit-p-2891.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-  
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro%3Abit-p-2891.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Features
 
