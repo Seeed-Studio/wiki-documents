@@ -1,25 +1,25 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - docusaurus-version
+#   push:
+#     branches:
+#       - docusaurus-version
       
-    paths-ignore:
-      - "ISSUE_TEMPLATE/**"
-      - ".github/**.md"
-      - ".gitignore"
-      - "demo/**"
-      - "docker/**"
-      - "HOW_TO.md"
-      - "TASK.md"
-      - "SECURITY.md"
-      - "README.md"
-      - "README_zh-CN.md"
+#     paths-ignore:
+#       - "ISSUE_TEMPLATE/**"
+#       - ".github/**.md"
+#       - ".gitignore"
+#       - "demo/**"
+#       - "docker/**"
+#       - "HOW_TO.md"
+#       - "TASK.md"
+#       - "SECURITY.md"
+#       - "README.md"
+#       - "README_zh-CN.md"
       
   schedule:
     #UTC 0 
-    - cron: '0 0 * * *'
+    - cron: '0 0 10 3 *'
 
 jobs:
   lint:
