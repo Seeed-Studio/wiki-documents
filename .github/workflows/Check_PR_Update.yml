@@ -28,7 +28,7 @@ jobs:
       - name: INSTALL SSH KEY
         uses: shimataro/ssh-key-action@v2
         with:
-          key: ${{ secrets.SSH_PC }} 
+          key: ${{ secrets.SECRETS_SSH_PC }} 
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
 
       - name: GIT CLONE
