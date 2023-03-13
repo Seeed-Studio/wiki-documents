@@ -43,6 +43,6 @@ last_update:
 <div class="embedded_world_container">
     <a class="embedded_world_item" style={{textAlign: 'center'}} href="/Seeeduino-XIAO">
             <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Seeed Studio XIAO SAMD21</font></div>
-            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>A universal mini dev board with strong stability and compatibility. </font></div>
+            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>A universal mini dev board with strong stability and compatibility </font></div>
     </a>
 </div>
