@@ -57,6 +57,7 @@ const sidebars = {
       type: 'category',
       label: 'Grove',
       items: [
+        'Sensor/Grove/Grove_System',
         {
           type: 'category',
           label: 'Grove Sensor',
