@@ -33,9 +33,3 @@ last_update:
     </a>
 </div>
 
-<div class="embedded_world_container">
-    <a class="embedded_world_item" style={{textAlign: 'center'}} href="https://www.seeedstudio.com/make_sense_from_the_true_wild.html">
-            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP S2100 LoRaWAN® DTU</font></div>
-            <div class="embedded_world_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>A battery-powered IP66 DTU converts RS485, Analog, GPIO to LoRaWAN® </font></div>
-    </a>
-</div>

@@ -1,6 +1,6 @@
 ---
-description: The Jetson Family
-title: The Jetson Family
+description: NVIDIA® Jetson™ Products Family
+title: NVIDIA® Jetson™ Products Family
 keywords:
 - Embedded World
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
