@@ -19,21 +19,18 @@ Today is when when when and a brand new week has begun! Check out what Seeed did
 
 ## Latest Wiki Launched
 
-### Getting Started with CVEDIA-RT on NVIDIA® Jetson Devices
+### Firmware Version Updates of mmWave Radar Sensor
 
-![image](https://files.seeedstudio.com/wiki/CVEDIA/thumb.gif)
+We provide the methods of firmware version updates for three mmWave radar sensor:
 
-This wiki will walkthrough how you can easily install CVEDIA-RT on the NVIDIA Jetson platform and start building exciting applications.
+- [24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)](https://wiki.seeedstudio.com/Radar_MR24HPC1#firmware-version-updates)
+- [60GHz mmWave Breathing and Heartbeat Module](https://wiki.seeedstudio.com/Radar_MR60BHA1#firmware-version-updates)
+- [60GHz mmWave Fall Detection Module Pro (MR60FDA1)](https://wiki.seeedstudio.com/Radar_MR60FDA1#firmware-version-updates)
 
-### Getting Started with Lumeo on NVIDIA® Jetson Devices
-
-![image](https://files.seeedstudio.com/wiki/Lumeo/thumb.gif)
-
-This wiki will walkthrough how you can easily install Lumeo on the NVIDIA Jetson platform and set it up as a gateway so that you will be able to execute pipelines and process video from Streams, IP Cameras on the same network, or attached USB cameras.
+![image](https://files.seeedstudio.com/wiki/60GHzradar/57.jpg)
 
 ## Existed Wiki Updated
 
 ## See You Next Week!
 
 - [weekly wiki on 2.27th](/Seeed_Elderly/weekly_wiki/wiki227)
-- [weekly wiki on 3.06th](/Seeed_Elderly/weekly_wiki/wiki306)
