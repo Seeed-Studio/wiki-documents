@@ -29,15 +29,15 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SECRETS_SSH_PC }} 
-          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+          known_hosts: 'a-placeholder-so-we-dont-get-errors'
 
       - name: GIT CLONE
         run: |
             sudo apt-get update
             sudo apt-get install \
                   git -y 
-            git config --global user.name 'tianrking'
-            git config --global user.email 'tian.r.king@gmail.com'
+            git config --global user.name 'MatthewJeffson'
+            git config --global user.email '2768073931@qq.com'
             git clone git@github.com:Seeed-Studio/wiki-documents.git ~/wiki-documents
             
       - name: NPM RUN for HTML BUILD
