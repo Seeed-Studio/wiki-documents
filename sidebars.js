@@ -2703,6 +2703,7 @@ const sidebars = {
 
             // 'Contribution/Contributors/How_To_Edit_A_Document',
             // 'Contribution/Contributors/Things_We_Make',
+    'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
     'Contribution/Contributors/Contribution-Guide',
     'Contribution/Contributors/Honorary-Contributors',
     'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
