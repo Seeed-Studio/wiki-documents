@@ -87,7 +87,7 @@ You can discover this page with two large portions.
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC21F'} size={"6"}>SenseCAP AI-based Sensors</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Built for reday-to-deploy intelligent scenarios, <strong>SenseCAP A1101</strong> with intelligent vision is really. </font></div>
-            <a href="Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
+            <a href="/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
     </a>
 </div>
 
@@ -658,12 +658,12 @@ You can discover this page with two large portions.
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Azure Sphere</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Azure IoT</font></div>
             <a href="Azure_Sphere_MT3620_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MT3620 Development Kit for Azure Sphere</font></span></a>
             <br/>
             <a href="MT3620_Mini_Dev_Board" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MT3620 Mini Dev Board for Azure Sphere</font></span></a>
             <br/>
-            <a href="https://seeedjp.github.io/ReButton/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reButton for Azure Sphere</font></span></a>
+            <a href="https://seeedjp.github.io/ReButton/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reButton for Azure IoT Hub/IoT Central</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>

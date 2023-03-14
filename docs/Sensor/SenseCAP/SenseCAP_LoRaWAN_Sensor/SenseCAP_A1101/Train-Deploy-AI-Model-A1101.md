@@ -4,6 +4,7 @@ title: Train and Deploy Your Own AI Model Into SenseCAP A1101
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Train-Deploy-AI-Model-A1101
 last_update:
   date: 1/16/2023
   author: jianjing Huang
