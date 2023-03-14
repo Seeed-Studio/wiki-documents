@@ -10,6 +10,6 @@ You can constantly receive updated data from sensors and sensors network, access
 
 We here present you our [current accomplishments](/Getting_Started) and solutions and we are looking for your [contributions](/TASK.md).
 
-You can [set up](/HOW_TO.md) this platform locally.
+You can [set up](https://wiki.seeedstudio.com/Deploy_Page_Locally) this platform locally.
 
 You can also check the progress of your work [here](https://github.com/Seeed-Studio/wiki-documents/projects?query=is%3Aopen).
