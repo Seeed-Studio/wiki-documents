@@ -3,7 +3,7 @@ description: The Sensor Prototype Kit Introduction
 title: The Sensor Prototype Kit Introduction
 # slug: /ABC
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
-slug: /K1100_Getting_Started
+slug: /K1100-Getting-Started
 last_update:
   date: 11/30/2022
   author: MengDu
