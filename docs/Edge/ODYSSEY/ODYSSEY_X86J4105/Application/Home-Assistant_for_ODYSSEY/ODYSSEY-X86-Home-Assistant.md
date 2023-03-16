@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Getting Started with Home Assistant
 tags:
   - ODYSSEY
@@ -10,8 +10,8 @@ keywords:
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86-Home-Assistant
 last_update:
-  date: 01/03/2023
-  author: w0x7ce
+  date: 03/16/2023
+  author: Lakshantha
 
 ---
 # Getting Started with Home Assistant on ODYSSEY-X86

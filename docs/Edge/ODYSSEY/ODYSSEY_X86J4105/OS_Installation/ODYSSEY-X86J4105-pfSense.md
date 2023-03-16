@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: pfSense Installation
 tags:
   - ODYSSEY
@@ -22,7 +22,7 @@ wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-pfSense/
 sku: 102110399
 --- -->
 
-This tutorial demonstrates how to install the **[pfSense](https://www.pfsense.org/)** onto the [ODYSSEY-X86J4105](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html).
+This tutorial demonstrates how to install the **[pfSense](https://www.pfsense.org/)** onto the [ODYSSEY-X86J41x5](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html).
 
 **[pfSense](https://www.pfsense.org/)** is an open source firewall/router computer software distribution based on [FreeBSD](https://www.freebsd.org/). It is installed on a physical computer or a virtual machine to make a dedicated firewall/router for a network.
 
@@ -48,7 +48,7 @@ First, download the [pfSense OS Image](https://www.pfsense.org/download/) into y
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/pfSense/Download.png" /></div>
 
-For ODYSSEY-X86J4105, choose the settings as above and click download.
+For ODYSSEY-X86J41x5, choose the settings as above and click download.
 
 ## Creating a Bootable USB
 
@@ -78,15 +78,15 @@ Select the downloaded Operating System Image, select the formatted USB Drive and
 
 ## Installing the pfSense OS
 
-### Step 1 - Enabling CSM Mode in ODYSSEY - X86J4105
+### Step 1 - Enabling CSM Mode in ODYSSEY - X86J41x5
 
-Plugin your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
+Plugin your bootable USB, Monitor and keyboard to ODYSSEY - X86J41x5, and power up. When booting up, keep pressing **`DEL`** key to enter the setup screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/biosSetting.jpg" /></div>
 
 ### Step 2 - Install the OS
 
-Reboot your ODYSSEY - X86J4105 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB (Installer) and press Enter.
+Reboot your ODYSSEY - X86J41x5 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB (Installer) and press Enter.
 
 **Note:** Remember to choose the one that has the pfSense iso image on it.
 
@@ -112,7 +112,7 @@ Now, choose the correct keymap for your keyboard, or just select **Continue with
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/pfSense/pfSense-Install-3.png" /></div>
 
-Here you can choose Auto to automatic install the pfSense on to the ODYSSEY-X86J4105, but it's better to use **Manual** to choose exactly where you want to install the pfSense.
+Here you can choose Auto to automatic install the pfSense on to the ODYSSEY-X86J41x5, but it's better to use **Manual** to choose exactly where you want to install the pfSense.
 
 **Note:** In this tutorial, pfSense is installed onto a USB drive for convenience. Hence another good reason to choose **Manual** other than Auto.
 
@@ -140,7 +140,7 @@ Select **Reboot** and pfSense is successfully installed!
 
 ## Configurations of pfSense
 
-Reboot ODYSSEY-X86J4105, and choose the correct hard drive to boot pfSense OS. Plug in the ethernet cable into one of Ethernet ports from ODYSSEY-X86J4105. The pfSense should booted properly and shows the following screen.
+Reboot ODYSSEY-X86J41x5, and choose the correct hard drive to boot pfSense OS. Plug in the ethernet cable into one of Ethernet ports from ODYSSEY-X86J41x5. The pfSense should booted properly and shows the following screen.
 
 **Note:** If you see LAN already configured, you can choose **`1`** to assign interfaces and choose the right port for **WAN** and get rid of **LAN**. For example, in the below picture, LAN is removed for now.
 
@@ -174,7 +174,7 @@ Now you can log into the pfSense Web GUI from another PC using the IP address sh
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/pfSense/WebGUI.png" /></div>
 
-Now you can easily manage your pfSense running on ODYSSEY-X86J4105!
+Now you can easily manage your pfSense running on ODYSSEY-X86J41x5!
 
 ### Installing packages
 

@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: How to Customize Home Assistant
 tags:
   - ODYSSEY
