@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Mender-Server-ODYSSEY-X86
 last_update:
-  date: 1/13/2023
-  author: jianjing Huang
+  date: 03/16/2023
+  author: Lakshantha
 ---
 
 # Installation of Self-Hosted Mender Server on ODYSSEY - X86

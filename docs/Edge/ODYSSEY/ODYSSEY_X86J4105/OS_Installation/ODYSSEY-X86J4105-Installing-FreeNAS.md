@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: FreeNAS Installation
 tags:
   - ODYSSEY
@@ -21,7 +21,7 @@ wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-FreeNAS/
 sku: 102110399
 --- -->
 
-This tutorial demonstrates how to install the open-source Storage operating system.  [FreeNAS](https://www.freenas.org/) is an operating system that can be installed on virtually any hardware platform to share data over a network. By installing FreeNAS on ODYSSEY - X86J4105 you have built yourself a personal cloud drive!
+This tutorial demonstrates how to install the open-source Storage operating system.  [FreeNAS](https://www.freenas.org/) is an operating system that can be installed on virtually any hardware platform to share data over a network. By installing FreeNAS on ODYSSEY - X86J41x5 you have built yourself a personal cloud drive!
 
 ## Hardware Requirements
 
@@ -67,15 +67,15 @@ Select the downloaded Operating System Image, select the formatted USB Drive and
 
 ## Installing FreeNAS OS
 
-### Step 1 - Enabling CSM Mode in ODYSSEY - X86J4105
+### Step 1 - Enabling CSM Mode in ODYSSEY - X86J41x5
 
-Plugin your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
+Plugin your bootable USB, Monitor and keyboard to ODYSSEY - X86J41x5, and power up. When booting up, keep pressing **`DEL`** key to enter the setup screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/biosSetting.jpg" /></div>
 
 ### Step 2 - Install the OS
 
-Reboot your ODYSSEY - X86J4105 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB (Installer) and press Enter.
+Reboot your ODYSSEY - X86J41x5 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB (Installer) and press Enter.
 
 **Note:** Remember to choose the one that has the FreeNAS iso image on it.
 
@@ -109,13 +109,13 @@ Create your root password for logging into the FreeNAS from Web interface later.
 
 The installing process will take place, and wait until the installing is finished. When it's done, it should like above.
 
-The installing process is all done, you can reboot the ODYSSEY - X86J4105 and unplug the bootable USB(Installer).
+The installing process is all done, you can reboot the ODYSSEY - X86J41x5 and unplug the bootable USB(Installer).
 
 Plug in the Ethernet cable for internet and can be accessed to the Web interface.
 
 ## Configurations
 
-Reboot the ODYSSEY - X86J4105 and press `F7` again to enter Boot Manager Screen, and choose the USB drive that just installed the FreeNAS.
+Reboot the ODYSSEY - X86J41x5 and press `F7` again to enter Boot Manager Screen, and choose the USB drive that just installed the FreeNAS.
 
 **Note:** Can also change it in the set-up by pressing `DEL` and set the USB drive as the first boot-up option.
 
@@ -133,7 +133,7 @@ The user name is `root` and the password is the one set during installation.
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/FreeNAS/FreeNAS-web2.jpg)
 
-If you able see this screen then you have successfully installed the FreeNAS and feel free to add more storage to the ODYSSEY - X86J4105 and have fun with personal cloud drive!
+If you able see this screen then you have successfully installed the FreeNAS and feel free to add more storage to the ODYSSEY - X86J41x5 and have fun with personal cloud drive!
 
 *For further development, you can visit the [FreeNAS official Forum](https://www.ixsystems.com/community/?__hstc=54333623.367bb0a280861850367fe7c0081ee5de.1582628751612.1582693495900.1582699340011.3&__hssc=54333623.1.1582699340011&__hsfp=3609375136) and find out more about plugins and features*
 

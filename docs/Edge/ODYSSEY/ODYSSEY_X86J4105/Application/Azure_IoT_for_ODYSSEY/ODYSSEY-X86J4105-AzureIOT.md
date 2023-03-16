@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Azure IoT
 tags:
   - ODYSSEY
@@ -8,8 +8,8 @@ keywords:
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86J4105-AzureIOT
 last_update:
-  date: 01/03/2023
-  author: w0x7ce
+  date: 03/16/2023
+  author: Lakshantha
 
 ---
 
@@ -23,7 +23,7 @@ sku: 102110399
 
 # Edge IoT - Sending Sensor Data to Cloud
 
-This tutorial demonstrate how to read sensor values connnected to the ODYSSEY - X86J4105 and sends the data to **Microsoft Azure IoT Hub**, where this data can be displayed or  processed for further IoT applications.
+This tutorial demonstrate how to read sensor values connnected to the ODYSSEY - X86J41x5 and sends the data to **Microsoft Azure IoT Hub**, where this data can be displayed or  processed for further IoT applications.
 
 ## Receiving Raw Data
 
@@ -41,7 +41,7 @@ This tutorial demonstrate how to read sensor values connnected to the ODYSSEY - 
 
 ## Prerequireties
 
-- Install [Python 3](https://www.python.org/downloads/windows/) on ODYSSEY - X86J4105
+- Install [Python 3](https://www.python.org/downloads/windows/) on ODYSSEY - X86J41x5
 
 - An Microsoft Azure account. If you don't have one, create a [free account](https://azure.microsoft.com/en-us/free/?WT.mc_id=A261C142F) before you begin.
 
@@ -140,9 +140,9 @@ This section simply use Arduino core to read sensor values and prints the readin
 
 1.Follow Getting Started to download, install and configure **Arduino IDE**.
 
-2.Connect a Grove Light sensor signal wire to **A0** of ODYSSEY - X86J4105, and also power and ground. Please refer to to Pinout diagram in Getting Started for more information.
+2.Connect a Grove Light sensor signal wire to **A0** of ODYSSEY - X86J41x5, and also power and ground. Please refer to to Pinout diagram in Getting Started for more information.
 
-3.Upload the following Code to ODYSSEY - X86J4105 using Arduino IDE. Remember to select the correct **Board** and **Port**. Make a note of the **Port** here, which will be used later. In my case, the port is `COM4`. 
+3.Upload the following Code to ODYSSEY - X86J41x5 using Arduino IDE. Remember to select the correct **Board** and **Port**. Make a note of the **Port** here, which will be used later. In my case, the port is `COM4`. 
 
 ### Arduino Code
 
@@ -277,7 +277,7 @@ az iot hub monitor-events --hub-name iot-test-1 --device-id MyPythonDevice
 
 - Replace your `hub-name` and `device-id`, the same as above.
 
-The following screenshot shows the messages sent from ODYSSEY - X86J4105 to the Iot Hub. This data can be processed or displayed.
+The following screenshot shows the messages sent from ODYSSEY - X86J41x5 to the Iot Hub. This data can be processed or displayed.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/recevingData.jpg" /></div>
 
@@ -386,7 +386,7 @@ To create a Stream Analytic Job:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/run.jpg" /></div>
 
 
-**Note: To start getting sensor readings, remember to run the Python script in ODYSSEY - X86J4105 to send data to cloud.**
+**Note: To start getting sensor readings, remember to run the Python script in ODYSSEY - X86J41x5 to send data to cloud.**
 
 ## Create and publish a Power BI report to visulize data
 
@@ -423,7 +423,7 @@ Microsoft also offers the [Power BI mobile apps](https://powerbi.microsoft.com/e
 
 ## Further Development
 
-You've successfully set up your ODYSSEY - X86J4105 for one of the IoT scenario, you can now implement this and build your own IoT solutions!
+You've successfully set up your ODYSSEY - X86J41x5 for one of the IoT scenario, you can now implement this and build your own IoT solutions!
 
 *For more technical support please visit [Azure IoT](https://azure.microsoft.com/en-us/overview/iot/).*
 

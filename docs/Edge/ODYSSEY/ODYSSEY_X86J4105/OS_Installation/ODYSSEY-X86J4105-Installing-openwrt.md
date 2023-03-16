@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: OpenWRT Installation
 tags:
   - ODYSSEY
@@ -21,7 +21,7 @@ wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-openwrt/
 sku: 102110399
 --- -->
 
-This tutorial demonstrates how to install the open source OS for router network. With the help of OpenWrt, your ODYSSEY - X86J4105 can turn into a router and take care of your home network!
+This tutorial demonstrates how to install the open source OS for router network. With the help of OpenWrt, your ODYSSEY - X86J41x5 can turn into a router and take care of your home network!
 
 ## Hardware Requirements
 
@@ -67,15 +67,15 @@ Select the downloaded Operating System Image, select the formatted USB Drive and
 
 ## Installing OpenWrt
 
-### Step 1 - Enabling CSM Mode in ODYSSEY - X86J4105
+### Step 1 - Enabling CSM Mode in ODYSSEY - X86J41x5
 
-Plug in your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup Screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
+Plug in your bootable USB, Monitor and keyboard to ODYSSEY - X86J41x5, and power up. When booting up, keep pressing **`DEL`** key to enter the setup Screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/biosSetting.jpg" /></div>
 
 ### Step 2 - Install the OS
 
-Reboot your ODYSSEY - X86J4105 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB and press Enter.
+Reboot your ODYSSEY - X86J41x5 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB and press Enter.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/biosSetup.jpg" /></div>
 
@@ -108,7 +108,7 @@ Where you change the station IP address for LAN configurations so that you can u
 
 ## Accessing from Another PC
 
-Now, you can access the OpenWrt from another computer via LuCI web interface. Simply, use **a Ethernet cable to connect Ethernet Port that is close to the HDMI port**. Connect the other ethernet cable to the other Ethernet port on ODYSSEY - X86J4105 and to the internet(This may be varied such as  PPPoE method).
+Now, you can access the OpenWrt from another computer via LuCI web interface. Simply, use **a Ethernet cable to connect Ethernet Port that is close to the HDMI port**. Connect the other ethernet cable to the other Ethernet port on ODYSSEY - X86J41x5 and to the internet(This may be varied such as  PPPoE method).
 
 Now, from your computer, type `192.168.10.1` (The IP address specified earlier) in the web browser and you should see the following screen:
 
