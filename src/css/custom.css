@@ -225,3 +225,8 @@ height:80%;
   color:#fff;
   text-decoration: none;
 }
+
+.table-center {
+  display: table;
+   margin: 0 auto;
+  }
