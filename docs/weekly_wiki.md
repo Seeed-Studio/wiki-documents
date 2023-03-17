@@ -19,13 +19,13 @@ Today is March 13th and a brand new week has begun! Check out what Seeed did las
 
 ## Latest Wiki Launched
 
-### Getting Started with CVEDIA-RT on NVIDIA® Jetson Devices
+### [Getting Started with CVEDIA-RT on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/CVEDIA-Jetson-Getting-Started)
 
 ![image](https://files.seeedstudio.com/wiki/CVEDIA/thumb.gif)
 
 This wiki will walkthrough how you can easily install CVEDIA-RT on the NVIDIA Jetson platform and start building exciting applications.
 
-### Getting Started with Lumeo on NVIDIA® Jetson Devices
+### [Getting Started with Lumeo on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/Lumeo-Jetson-Getting-Started)
 
 ![image](https://files.seeedstudio.com/wiki/Lumeo/thumb.gif)
 
