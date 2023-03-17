@@ -1662,6 +1662,15 @@ const sidebars = {
                 'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
               ],
             },
+
+            {
+              type: 'category',
+              label: 'SenseCAP M2 Light Gateway',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
+              ],
+            },
+
           ],
         },
 
@@ -2704,7 +2713,7 @@ const sidebars = {
             // 'Contribution/Contributors/How_To_Edit_A_Document',
             // 'Contribution/Contributors/Things_We_Make',
     'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
-    'Contribution/Contributors/Contribution-Guide',
+    'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
     'Contribution/Contributors/Honorary-Contributors',
     'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
 
