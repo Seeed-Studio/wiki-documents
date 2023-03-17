@@ -47,7 +47,7 @@ const sidebars = {
       }
     </style>
     <div style="width:100px;text-align:center"> 
-      <div class="sub_item"><strong> Sensor </strong></div>
+      <div class="sub_item"><strong> Sensing </strong></div>
     </div>
     `,
     },
@@ -57,6 +57,7 @@ const sidebars = {
       type: 'category',
       label: 'Grove',
       items: [
+        'Sensor/Grove/Grove_System',
         {
           type: 'category',
           label: 'Grove Sensor',
@@ -77,9 +78,10 @@ const sidebars = {
               type: 'category',
               label: 'Vision AI',
               items: [
+                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
-                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
+
               ],
             },
             {
@@ -1508,7 +1510,41 @@ const sidebars = {
         
                     },
         
-        
+                    {
+                      type: 'category',
+                      label: 'LinkIt',
+                      items: [
+                        'Seeed_Elderly/LinkIt/LinkIt',
+                        'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
+                        'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
+                        'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
+                        'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
+                        'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
+                        'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
+                        'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
+                        'Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo',
+                        {
+                          type: 'category',
+                          label: 'Linklt ONE',
+                          items: [
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Analog_Interface',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Colorful_World',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Hello_World',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Light-Sensor',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Marquee',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt-ONE-Tutorial---Mini-Servo',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Push_Button',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-SMS_control_the_LED',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-The_Basics',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
+                          ]
+                        },
+                      ]
+                    },
         
                     {
         
@@ -1547,7 +1583,7 @@ const sidebars = {
                     {
         
                       type: 'category',
-                      label: 'IOT BUTTON FOR AWS',
+                      label: 'IOT Button for AWS',
                       items: [
         
                         'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
@@ -1626,6 +1662,15 @@ const sidebars = {
                 'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
               ],
             },
+
+            {
+              type: 'category',
+              label: 'SenseCAP M2 Light Gateway',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
+              ],
+            },
+
           ],
         },
 
@@ -1965,6 +2010,8 @@ const sidebars = {
           type: 'category',
           label: 'Software',
           items: [
+            'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
+            'Edge/reComputer/Software/Lumeo-Jetson-Getting-Started',
             'Edge/reComputer/Software/jetson-docker-getting-started',
             'Edge/reComputer/Software/DeciAI-Getting-Started',
             'Edge/reComputer/Software/Allxon-Jetson-Getting-Started',
@@ -2672,6 +2719,7 @@ const sidebars = {
 
             // 'Contribution/Contributors/How_To_Edit_A_Document',
             // 'Contribution/Contributors/Things_We_Make',
+    'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
     'Contribution/Contributors/Contribution-Guide',
     'Contribution/Contributors/Honorary-Contributors',
     'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
@@ -2777,41 +2825,7 @@ const sidebars = {
             },
           ]
         },
-        {
-          type: 'category',
-          label: 'LinkIt',
-          items: [
-            'Seeed_Elderly/LinkIt/LinkIt',
-            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
-            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
-            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
-            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
-            'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo',
-            {
-              type: 'category',
-              label: 'Linklt ONE',
-              items: [
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Analog_Interface',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Colorful_World',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Hello_World',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Light-Sensor',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Marquee',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt-ONE-Tutorial---Mini-Servo',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Push_Button',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-SMS_control_the_LED',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-The_Basics',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
-              ]
-            },
-          ]
-        },
+       
         {
           type: 'category',
           label: 'Bee',

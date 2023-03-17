@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: LTE Modules for ODYSSEY
 tags:
   - ODYSSEY
@@ -113,7 +113,7 @@ The following window will appear:
 
 ## Reference
 
-- [How Fast is 5G On The ODYSSEY – X86J4105 | 5G Speed Test](https://blog.seeedstudio.com/blog/2020/06/15/how-fast-is-5g-on-the-odyssey-x86j4105-5g-speed-test-m/)
+- [How Fast is 5G On The ODYSSEY – X86J41x5 | 5G Speed Test](https://blog.seeedstudio.com/blog/2020/06/15/how-fast-is-5g-on-the-odyssey-x86j4105-5g-speed-test-m/)
 
 ## Tech Support
 

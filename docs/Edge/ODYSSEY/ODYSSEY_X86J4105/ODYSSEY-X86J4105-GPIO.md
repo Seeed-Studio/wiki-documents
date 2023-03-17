@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Accessing 40-pin GPIO
 tags:
   - ODYSSEY
@@ -9,14 +9,14 @@ keywords:
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86J4105-GPIO
 last_update:
-  date: 01/03/2023
-  author: w0x7ce
+  date: 03/16/2023
+  author: Lakshantha
 
 ---
 
-# Accessing and Controlling ODYSSEY - X86J4105 40-Pin GPIO
+# Accessing and Controlling ODYSSEY - X86J41x5 40-Pin GPIO
 
-This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY - X86J4105 under Linux (Ubuntu). With this, you can start to build your IoT projects using [ODYSSEY - X86J4105](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html) with ease!
+This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY - X86J41x5 under Linux (Ubuntu). With this, you can start to build your IoT projects using [ODYSSEY - X86J41x5](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html) with ease!
 
 ## 40-Pin GPIO Pinout Diagram
 
@@ -27,7 +27,7 @@ This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY 
 
 ## GPIO
 
-**The default pins on the ODYSSEY - X86J4105 are configured to function mode so for example the pin 3 is set to I2C at default instead of GPIO mode. If you preferde using GPIO at default please check below.**
+**The default pins on the ODYSSEY - X86J41x5 are configured to function mode so for example the pin 3 is set to I2C at default instead of GPIO mode. If you preferde using GPIO at default please check below.**
 
 You can use the GPIO or change the function mode pin to GPIO using the Linux sysfs GPIO interface. Let's take pin 7 for example, the following code will turn on a LED module connected to Pin 7:
 
@@ -60,7 +60,7 @@ echo 337 > unexport
 
 ### Interrupts
 
-To test interrupts on ODYSSEY - X86J4105, please follow the instructions below:
+To test interrupts on ODYSSEY - X86J41x5, please follow the instructions below:
 
 Here I used the [python-periphery](https://github.com/vsergeev/python-periphery) to access GPIO interface in userspace Linux (Linux GPIO numbering).
 
@@ -92,7 +92,7 @@ sudo python3 IRQtest.py
 
 If you prefer 40-pin to be in default GPIO, you can do this by changing setting in the BIOS.
 
-1. Reboot your ODYSSEY - X86J4105 and keep pressing **DEL** key while booting up to enter BIOS menu.
+1. Reboot your ODYSSEY - X86J41x5 and keep pressing **DEL** key while booting up to enter BIOS menu.
 
 2. Navigate to **Advanced** -> **HAT Configuration**.
 
@@ -131,7 +131,7 @@ To unexport, follow the same steps as before.
 
 ## UART
 
-To check the UART devices on ODYSSEY - X86J4105, please run the following command:
+To check the UART devices on ODYSSEY - X86J41x5, please run the following command:
 
 ```bash
 ls /sys/bus/pci/devices/0000\:00\:18.?/dw-apb-uart.*/tty/ | grep tty
@@ -149,10 +149,10 @@ sudo screen /dev/ttyS4/ 115200
 ## I2C
 
 :::note
-        The Default I2C Speed for ODYSSEY - X86J4105 is 1MB/s, which cannot be configured.
+        The Default I2C Speed for ODYSSEY - X86J41x5 is 1MB/s, which cannot be configured.
 :::
 
-To identify I2C ports on ODYSSEY - X86J4105, you can execute the following command:
+To identify I2C ports on ODYSSEY - X86J41x5, you can execute the following command:
 
 - **i2c_designware.0** -> I2C channel on **Pin 27 and 28 (I2C6_SDA and I2C6_SCL)**
 
@@ -204,7 +204,7 @@ chmod +x acpi-add acpi-upgrades install_hooks
 sudo ./install_hooks && sudo acpi-add spidev*
 ```
 
-3. Reboot your ODYSSEY - X86J4105.
+3. Reboot your ODYSSEY - X86J41x5.
 
 Now you will be able to check SPI devices inside `/dev`
 

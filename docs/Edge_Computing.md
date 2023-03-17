@@ -26,7 +26,7 @@ You can discover this page with two large portions.
 - Extension board or Carrier board for the devices
 - Tutorials
 
-### Device -->
+### Device
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -83,11 +83,11 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Application / Software -->
+### Application / Software
 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'center'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>reTerminal</font></div>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal</font></div>
             <a href="/reTerminal-build-UI-using-LVGL" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LVGL</font></span></a>,
             <a href="/reTerminal-build-UI-using-Flutter" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Flutter</font></span></a>,
             <a href="/reTerminal-build-UI-using-Electron" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Electro</font></span></a>,
@@ -106,7 +106,7 @@ You can discover this page with two large portions.
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'center'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Edge Series</font></div>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Edge Series</font></div>
             <a href="/Edgebox-rpi-200-codesys" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Codesys on EdgeBox-RPI-200 controller</font></span></a>
             <br/>
             <a href="/Contributor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> More Publish Soon</font></span></a>
@@ -116,7 +116,7 @@ You can discover this page with two large portions.
 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'center'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>reComputer Application</font></div>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reComputer Application</font></div>
             <a href="/HardHat" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Hard Hat Detection </font></span></a>
             <br/>
             <a href="/No-code-Edge-AI-Tool" target="_blank"><span><font color={'FFFFFF'} size={"2"}> No code Edge AI Tool </font></span></a>
@@ -131,7 +131,7 @@ You can discover this page with two large portions.
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'center'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Software for reComputer</font></div>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Software for reComputer</font></div>
             <a href="/Allxon-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with Allxon </font></span></a>
             <br/>
             <a href="/jetson-docker-getting-started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with Docker</font></span></a>
@@ -147,7 +147,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### OS Installation / Firmware Updating -->
+### OS Installation / Firmware Updating
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -205,18 +205,18 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Extensions / Carrier Board -->
+### Extensions / Carrier Board
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>reTerminal Extensions</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal Extensions</font></div>
             <a href="/reTerminalBridge" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reTerminal E10-1 -  Expand UPS, Gigabit Ethernet, LTE/4G/5G/LoRaWAN, RS485/232, CAN, SATA 2.0</font></span></a>
             <br/>
             <a href="/reTerminal_Mount_Options" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reTerminal E10-1 Mount Options</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>NVIDIA Jetson Extensions</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>NVIDIA Jetson Extensions</font></div>
             <a href="/reComputer_A203_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"2"}> A203, support Jetson Nano / Xavier NX/TX2 NX</font></span></a>
             <br/>
             <a href="/reComputer_A205_Flash_System" target="_blank"><span><font color={'FFFFFF'} size={"2"}> A205, support Jetson Nano / Xavier NX/TX2 NX</font></span></a>
@@ -226,7 +226,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Tutorial / FAQ -->
+### Tutorial / FAQ
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -258,7 +258,7 @@ You can discover this page with two large portions.
 - Kit with courses based on the SBC
 - Tutorials
 
-### Single Board Computer -->
+### Single Board Computer 
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -305,7 +305,7 @@ You can discover this page with two large portions.
      </a>
 </div>
 
-### Application / Software -->
+### Application / Software 
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -337,7 +337,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### OS Installation / Firmware Updating -->
+### OS Installation / Firmware Updating 
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -362,11 +362,11 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Extensions / Carrier Board -->
+### Extensions / Carrier Board
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>Raspberry Pi - Pi HAT</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi - Pi HAT</font></div>
             <a href="/Grove_Base_Hat_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Base HAT </font></span></a>,
             <a href="/Grove_AI_HAT_for_Edge_Computing" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove AI HAT</font></span></a>,
             <a href="/RS-485_Shield_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RS-485 Pi HAT</font></span></a>,
@@ -379,7 +379,7 @@ You can discover this page with two large portions.
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>BeagleBone®</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BeagleBone®</font></div>
             <a href="/BeagleBone_Green_HDMI_Cape" target="_blank"><span><font color={'FFFFFF'} size={"2"}> BeagleBone® Green HDMI Cape</font></span></a>
             <br/>
             <a href="/Motor_Bridge_Cape_v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Motor Bridge Cape v1.0 for BeagleBone®</font></span></a>
@@ -388,7 +388,7 @@ You can discover this page with two large portions.
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'398FFB'} size={"5"}>reSpeaker</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reSpeaker</font></div>
             <a href="//ReSpeaker_Drive_Unit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Drive Unit for reSpeaker Series</font></span></a>
             <br/>
             <a href="//ReSpeaker_Mic_Array_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mic Array for reSpeaker Series</font></span></a>
@@ -396,26 +396,26 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Assessories -->
+### Assessories
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>Raspberry Pi</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
             <a href="/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Skeleton box for Raspberry Pi</font></span></a>
             <br/>
             <a href="/Raspberry_PI_Bplus_Case" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Raspberry PI B Plus Case</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'D86547'} size={"5"}>ODYSSEY X86J4105</font></div>
-            <a href="/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Coral Mini PCIe Accelerator</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>ODYSSEY X86J4105</font></div>
+            <a href="/Coral-Mini-PCIe-Accelerator-x86" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Coral Mini PCIe Accelerator</font></span></a>
             <br/>
             <a href="/ODYSSEY-X86J4105-LTE-Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LTE Modules</font></span></a>
             <br/>
     </a>
 </div>
 
-### Kit with Courses -->
+### Kit with Courses
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -436,7 +436,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Tutorials / FAQ -->
+### Tutorials / FAQ
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>

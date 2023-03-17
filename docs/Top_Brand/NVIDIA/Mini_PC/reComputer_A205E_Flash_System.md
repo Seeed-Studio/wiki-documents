@@ -30,8 +30,9 @@ In this wiki, we will show you how to flash Jetpack OS to the A205E Carrier Boar
 <div align="center">
   <table>
     <tbody><tr>
-        <td align="center">A205E Carrier Board
-        </td><td align="center">A205E Mini PC
+        <td align="center"><a href="https://www.seeedstudio.com/A205E-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5496.html" target="_blank"><span>A205E Carrier Board</span></a>
+        </td>
+        <td align="center"><a href="https://www.seeedstudio.com/A205E-Mini-PC-with-128GB-SSD-p-5495.html" target="_blank"><span>A205E Mini PC</span></a>
         </td></tr>
       <tr>
         <td align="center">

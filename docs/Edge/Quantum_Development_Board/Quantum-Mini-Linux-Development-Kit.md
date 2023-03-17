@@ -22,7 +22,11 @@ The SoM is called **Quark-N, based on Allwinner H3, Quad-core Cortex-A7, and ARM
 
 The carrier board is called **Atom-N, and Quark-N is connected to Atom-N through the M.2 interface**. Atom-N leads out a row of golden finger pins to realize I/O expansion, **expand SPI, I2C, UART, GPIO, and other interfaces to facilitate the completion of your own design**. Also, it is equipped with **a microphone, MPU6050 motion sensor (accelerometer and gyroscope), onboard 4 buttons (GPIO-KEY, Uboot, Recovery, Reset), IPS display, Wi-Fi/Bluetooth connectivity which greatly expands the possibilities with this product**.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Features
 

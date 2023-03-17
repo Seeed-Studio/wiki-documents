@@ -15,7 +15,12 @@ last_update:
 The Raspberry Pi Pico is a new popular low-cost, high-performance microcontroller board, so how to integrate Grove sensor to it?  The grove shield perfectly solved this problem.
 
 The Grove Shield for Pi Pico v1.0 is a plug-and-play shield for Raspberry Pi Pico which integrates with various kinds of Grove connectors, including 2*I2C, 3*Analog, 2*UART, 3*Digital ports, SWD debug interface and SPI pin, 3.3v/5v selectable power switch. It enables the build prototype and project in an easy and quick way without jumper wire and breadboard, you could explore infinite possibilities of Pico. The shield board is a stackable add-on board which acts as a bridge for Pi Pico and Seeed's Grove system.
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)  
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Specification
 
