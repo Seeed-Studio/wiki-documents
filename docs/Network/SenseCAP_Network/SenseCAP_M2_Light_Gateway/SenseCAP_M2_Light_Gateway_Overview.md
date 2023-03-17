@@ -71,8 +71,6 @@ For users who need to power the gateway on Ethernet instead of an extra power su
 
 To enhance the coverage and signal strength of SenseCAP M2, it is equipped with a high-performance 3dBi     antenna, which can provide wide-ranging coverage of miles on the LoRaWAN network. Additionally, the          antenna can be upgraded to a higher dBi [fiberglass antenna](https://www.seeedstudio.com/catalogsearch/result/?q=fiberglass%20antenna) to suit various usage scenarios and environments.
 
-<https://www.sensecapmx.com/wp-admin/post.php?post=8010&action=edit>                                                                                                                                                          3/12
-
 
 
 **Professional** **Management** **Tools** **and** **Cloud** **Services**
@@ -159,7 +157,7 @@ These labels on the bottom indicate important information about the unit includi
 **System** **Structure**
 
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image11.png)
+![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image11.jpg)
 
 
 
