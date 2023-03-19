@@ -226,6 +226,11 @@ height:80%;
   text-decoration: none;
 }
 
+.table-center {
+  display: table;
+   margin: 0 auto;
+  }
+
 /* embedded world product list button */
 
 .embedded_world_container {
@@ -255,3 +260,4 @@ height:80%;
   color:#fff;
   text-decoration: none;
 }
+
