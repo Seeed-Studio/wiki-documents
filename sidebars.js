@@ -2092,6 +2092,13 @@ const sidebars = {
       label: 'Edge Series',
       items: [
         'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+        {
+          type: 'category',
+          label: 'EdgeBox-ESP-100',
+          items: [
+            'Edge/Edge_Series/Edge_Box_ESP_100/Edgebox-ESP-100-Arduino',
+          ],
+        },
       ],
 
     },

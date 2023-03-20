@@ -376,8 +376,12 @@ Not all browsers support the display of Vision AI results. Please refer to the t
 |--------|------|---------|-------|--------|
 | Support | Support | Not support |  Support | Not support |
 
+:::Tip
+On March 17, we found that updating Vision AI's firmware under Windows 11 currently causes Vision AI to not work abnormally, so we temporarily hid the method of restoring factory settings and brushing in the model firmware. Until we update the documentation content, if you are using Window 11, please do not update the firmware and wait until we restore this part again before replacing the model. Sorry for the inconvenience!
+:::
 
-## Customize Trainning Model
+
+<!-- ## Customize Trainning Model
 
 The seeed studio has provided pre-trained people detected model and will provide more models in the foreseeable future. You can directly use them to quickly get to know AI camera.
 
@@ -446,7 +450,7 @@ We can see 5V light and 3.3V LED light are lighting on the back of the module, t
 
 <!-- <div align=center><img width = 800 src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png"/></div> -->
 
-![](https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png)
+![](https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png) -->
 ## Trouble Shooting
 
 1. What is the main method of connection?
@@ -460,14 +464,14 @@ We can see 5V light and 3.3V LED light are lighting on the back of the module, t
 - a. Is the module heated? Connect the module only will cost heat problem and let the module not functioning for a moment.
 - b. Is connecting after the correct method?
 
-3. Why does Grove Vision AI suddenly get an "Algo begin failed." error one day while in use?
+<!-- 3. Why does Grove Vision AI suddenly get an "Algo begin failed." error one day while in use?
 
 - In older versions of the initial firmware, it was confirmed that there may be a problem with models being lost during operation. Please follow the steps below and re-flash the firmware to resolve this issue.
 
   - Step 1: Connect the Vision AI to the computer and quickly press the BOOT button twice, at which point a disk named GROVEAI will appear on the computer.
   - Step 2: Please download following file.
     [grove_ai_without_crc_v01-30.uf2](https://files.seeedstudio.com/wiki/Grove_AI_Module/grove_ai_without_crc_v01-30.uf2)
-  - Step 3: Simply copy the file you downloaded in step 2 into GROVEAI.
+  - Step 3: Simply copy the file you downloaded in step 2 into GROVEAI. -->
 
 ## Tech Support
 
