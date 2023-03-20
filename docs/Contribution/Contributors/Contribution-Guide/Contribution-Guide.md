@@ -12,6 +12,8 @@ last_update:
 
 Would you like to contribute to building this open wiki platform with us? Here is a basic guide to contributing. Looking forward to collaborating with every single of you very soon. Thank you so much in advance!
 
+We also provide methods for you can **modify existed files** and **add new files**.
+
 ## What to Contribute / How to Contribute
 
 <table align="center">
@@ -40,3 +42,21 @@ Would you like to contribute to building this open wiki platform with us? Here i
     </tr>
   </tbody></table>
 
+## Modify Existed Files Locally
+
+Before modifying the existed files, please make sure you can [build the wiki platform page locally](/Deploy_Page_Locally)
+
+### 1. Bring your forked branch up to date
+
+(image1)
+
+### 2. Update the downloaded files
+
+```
+git checkout main
+git pull
+```
+
+### 3. Modify the contents of existed files
+
+All the files on the wiki platform are stored in the "docs" folder

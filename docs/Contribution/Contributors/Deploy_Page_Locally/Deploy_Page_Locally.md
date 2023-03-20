@@ -34,7 +34,7 @@ Please download the [Visual Studio Code](https://code.visualstudio.com/Download)
 
 ### 4. Install Yarn
 
-Use the followling command to install Yarn.
+Open the "Visual Studio Code" and use the followling command to install Yarn.
 
 ```
 npm install --global yarn
