@@ -12,7 +12,7 @@ last_update:
   author: Peter Pan
 ---
 
-## Edgebox-RPI-200
+## Edgebox-ESP-100
 
 <div align="center"><img width ={500} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/e/d/edgebox-esp100_1.jpg" style={{width: 600}}/></div>
 
