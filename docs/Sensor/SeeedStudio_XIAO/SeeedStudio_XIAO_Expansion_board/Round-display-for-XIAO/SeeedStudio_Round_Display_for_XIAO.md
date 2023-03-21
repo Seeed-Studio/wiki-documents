@@ -16,10 +16,12 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="购买链接">
+    <a class="get_one_now_item" href="/seeedstudio_round_display_for_xiao">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
+
+<!-- 购买链接 -->
 
 ## Introduction
 

@@ -18,10 +18,11 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="购买链接">
+    <a class="get_one_now_item" href="/using_lvgl_and_tft_on_round_display">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
+<!-- 购买链接 -->
 
 Thank you for purchased Seeed Studio Round Display products. In this section of the tutorial, we will focus on how to use the `TFT_eSPI` library and `LVGL` library to draw various rich and interesting dial patterns on the Round Display, and introduce the usage of some common functions of these two useful but complex libraries from simple to deep. Through the content of this tutorial, I hope you can use this product to draw your ideal dial pattern. Have a great learning experience!
 
@@ -44,7 +45,7 @@ For demonstration purposes, this tutorial will use the **XIAO ESP32S3** as the m
     </tr>
 	<tr>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="购买链接">
+    		<a class="get_one_now_item" href="/using_lvgl_and_tft_on_round_display"> 
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     		</a>
 		</div></td>
@@ -55,6 +56,8 @@ For demonstration purposes, this tutorial will use the **XIAO ESP32S3** as the m
 		</div></td>
 	</tr>
 </table>
+
+<!-- 购买链接 -->
 
 When installing the XIAO with Round Display, please let the XIAO's Type-C connector face the outside of the Round Display, and then connect each pin against the dual 7-pin headers.
 
