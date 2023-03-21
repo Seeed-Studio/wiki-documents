@@ -21,8 +21,6 @@ last_update:
     </a>
 </div>
 
-<!-- 购买链接 -->
-
 ## Introduction
 
 
