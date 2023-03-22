@@ -1,20 +1,20 @@
 ---
-description: Build LoRaWAN Sensors with SenseCAP S2110 Converter and SenseCAP Data Logger
-title: Build LoRaWAN Sensors with SenseCAP S2110 Converter and SenseCAP Data Logger
+description: Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger
+title: Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger
 last_update:
-  date: 1/16/2023
-  author: jianjing Huang
+  date: 3/22/2023
+  author: Yvonne
 ---
 
-# Build LoRaWAN Sensors with SenseCAP S2110 Grove to MODBUS RS485 Converter and SenseCAP Data Logger
+# Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger
 
-SenseCAP S2110 Grove to MODBUS RS485 Converter is an open-source tool to build RS485 sensors with 500+ Grove sensors. It also enables developers to build a custom industrial-grade LoRaWAN sensor connecting to SenseCAP Cloud with SenseCAP Data Logger.
+SenseCAP S2110 Sensor Builder is an open-source tool to build RS485 sensors with 500+ Grove sensors. It also enables developers to build a custom industrial-grade LoRaWAN sensor connecting to SenseCAP Cloud with SenseCAP Data Logger.
 
-**Note:** From here on, we will refer **SenseCAP S2110 Grove to MODBUS RS485 Converter** as **SenseCAP S2110 Converter** for convenience
+**Note:** From here on, we will refer **SenseCAP S2110 Sensor Builder** as **SenseCAP S2110 Sensor Builder** for convenience
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/105.jpg"/></div>
 
@@ -48,13 +48,13 @@ The product comes with an IP66 industrial-grade enclosure and also the mounting 
 
 Check whether you are within LoRaWAN network coverage of Helium or TTN (The Things Network). If you do not have coverage, you can use any gateway powered by Helium/ TTN to send the sensor data to the cloud. However, this wiki focuses on sending the sensor data to Sensecap platform. And to do that, you need to have either a [SenseCAP Outdoor LoRaWAN Gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html) for TTN or [SenseCAP M1 LoRaWAN Indoor Gateway](https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html) or [SenseCAP M2 LoRaWAN Indoor Gateway](https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5342.html) or any other Helium-enabled gateway for Helium.
 
-2.SenseCAP S2110 Converter x 1
+2.SenseCAP S2110 Sensor Builder x 1
 
 3.SenseCAP Data Logger x 1
 
 4.Grove Sensor x 1
 
-Currently, SenseCAP S2110 Converter supports the following Grove modules out-of-the-box to communicate with SenseCAP Data Logger and send the sensor data to the SenseCAP platform via LoRa.
+Currently, SenseCAP S2110 Sensor Builder supports the following Grove modules out-of-the-box to communicate with SenseCAP Data Logger and send the sensor data to the SenseCAP platform via LoRa.
 
 - [Grove - Temperature and Barometer Sensor (BMP280)](https://www.seeedstudio.com/Grove-Barometer-Sensor-BMP280.html)
 - [Grove - Oxygen Sensor (MIX8410)](https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html)
@@ -62,12 +62,18 @@ Currently, SenseCAP S2110 Converter supports the following Grove modules out-of-
 - [Grove - Sunlight Sensor - SI1151](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)
 - [Grove - Light Sensor v1.2 - LS06-S phototransistor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
 - [Grove - Flame Sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html)
+- [Grove - Gas Sensor(BME688)](https://www.seeedstudio.com/Grove-Gas-Sensor-BME688-p-5478.html)
+- [Grove - Multichannel Gas Sensor v2](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html?queryID=e92bca5d79e17a6d5bf1447be36e2ee2&objectID=4569&indexName=bazaar_retailer_products)
+- [Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids)](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html?queryID=9f138cfc508f141092493577c1ca83bb&objectID=4400&indexName=bazaar_retailer_products)
+- [Grove - UV Sensor](https://www.seeedstudio.com/Grove-UV-Sensor.html?queryID=07ecb93f63b4035df7dfa9aea8b1e498&objectID=1345&indexName=bazaar_retailer_products)
+- [Grove - Ultrasonic Distance Sensor](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html?queryID=ebe18a5e13611be3b60f176e7bfabde7&objectID=2281&indexName=bazaar_retailer_products)
+- [Grove - Turbidity Sensor](https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html?queryID=42f9c89339bce9fbff617e5c8a0328eb&objectID=4399&indexName=bazaar_retailer_products)
 
-We will add support to more Grove sensors in the near future. So stay tuned! We have made the source code for SenseCAP S2110 Converter open-source so that users could develop their own Grove sensors as well!
+We will add support to more Grove sensors in the near future. So stay tuned! We have made the source code for SenseCAP S2110 Sensor Builder open-source so that users could develop their own Grove sensors as well!
 
-### Connect Grove Sensor to SenseCAP S2110 Grove to MODBUS RS485 Converter
+### Connect Grove Sensor to SenseCAP S2110 Sensor Builder
 
-- **Step 1:** Unscrew the four screws on the SenseCAP S2110 Converter lid and open the lid
+- **Step 1:** Unscrew the four screws on the SenseCAP S2110 Sensor Builder lid and open the lid
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/84.jpg"/></div>
 
@@ -75,7 +81,7 @@ We will add support to more Grove sensors in the near future. So stay tuned! We 
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/78.jpg"/></div>
 
-- **Step 3:** Pass the included cable through the cap into the SenseCAP S2110 Converter
+- **Step 3:** Pass the included cable through the cap into the SenseCAP S2110 Sensor Builder
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/79.jpg"/></div>
 
@@ -83,7 +89,7 @@ We will add support to more Grove sensors in the near future. So stay tuned! We 
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/86.jpg"/></div>
 
-- **Step 5:** Place a Grove sensor inside the SenseCAP S2110 Converter and screw it
+- **Step 5:** Place a Grove sensor inside the SenseCAP S2110 Sensor Builder and screw it
 
 Grove with 2 holes (ex: Grove - Light Sensor v1.2)
 
@@ -93,7 +99,7 @@ Grove with 3 holes (Grove Temperature and Barometer Sensor (BMP280))
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/81.jpg"/></div>
 
-- **Step 6:** Connect Grove cable to Grove sensor and Grove connector on SenseCAP S2110 Converter board
+- **Step 6:** Connect Grove cable to Grove sensor and Grove connector on SenseCAP S2110 Sensor Builder board
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/85.jpg"/></div>
 
@@ -105,7 +111,7 @@ Grove with 3 holes (Grove Temperature and Barometer Sensor (BMP280))
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/83.jpg"/></div>
 
-### Connect SenseCAP S2110 Converter to SenseCAP Data Logger
+### Connect SenseCAP S2110 Sensor Builder to SenseCAP Data Logger
 
 - **Step 1:** Uncrew the three screws on the data logger
 
@@ -137,7 +143,7 @@ Grove with 3 holes (Grove Temperature and Barometer Sensor (BMP280))
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/76.jpg"/></div>
 
-Once all the connections are done for the SenseCAP S2110 Converter and the Data Logger, it should look like below
+Once all the connections are done for the SenseCAP S2110 Sensor Builder and the Data Logger, it should look like below
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/93.jpg"/></div>
 
@@ -202,7 +208,7 @@ Now it will start scanning for nearby SenseCAP Data Loggers
 
 <div align="center"><img width="{300}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12.jpg"/></div>
 
-#### Configure Settings for Data Logger and SenseCAP S2110 Converter Communication
+#### Configure Settings for Data Logger and SenseCAP S2110 Sensor Builder Communication
 
 - **Step 1:** Enter **bluetooth pairing mode** on the Data Logger again and click **Setup**
 
@@ -243,7 +249,7 @@ It will open a page with useful information under **General**
 | Modbus Address | Slave address of the sensor. The range is 1 to 247. Enter **1** here. |
 | Power Type | Periodic power: Power the sensor before data collection, and power  off the sensor after data collection. This mode reduces power  consumption and increases battery life. Always-on: Select this mode when the sensor needs constant  power supply. Generally, an external 12V DC power supply is used.  If it is powered only by batteries, it may not work for long. Select **periodic power** here. |
 | Power Voltage | Select the supply voltage to the sensor. It supports 3V/5V/12V.  Select **5V** here. |
-| Sensor Warm-up Time | The warm-up time denotes the amount of time it takes for the  sensor to attain its highest accuracy or performance level once the  voltage supply has been applied. This depends from sensor to sensor. Only the **Grove - Oxygen Sensor (MIX8410)** needs a warm-up time of **5s**, which means you need to enter **5000** inside the box. The other Grove sensors supported by the SenseCAP S2110 Converter at the moment only need **0ms** warm-up time. |
+| Sensor Warm-up Time | The warm-up time denotes the amount of time it takes for the  sensor to attain its highest accuracy or performance level once the  voltage supply has been applied. This depends from sensor to sensor. Only the **Grove - Oxygen Sensor (MIX8410)** needs a warm-up time of **5s**, which means you need to enter **5000** inside the box. The other Grove sensors supported by the SenseCAP S2110 Sensor Builder at the moment only need **0ms** warm-up time. |
 | Response Timeout | After Data Logger initiates a data read request to the sensor, it  waits for the timeout time for a response. If this time is exceeded,  the command will be resent. Enter **1** here, which means **100ms**. |
 | Startup Time | The length of time the sensor can communicate from powered -on  to communicating with Modbus. Enter **20** here, which means **2000ms=2s** |
 
@@ -422,13 +428,13 @@ A filled **Measurement Setting** page can be seen below
 
 #### Test and View the Sensor Data Locally
 
-Now we need to test whether the SenseCAP S2110 Converter is properly sending the sensor data to the Data Logger.
+Now we need to test whether the SenseCAP S2110 Sensor Builder is properly sending the sensor data to the Data Logger.
 
 - **Step 1:** Go to General and click **Measure**
 
 <div align="center"><img width="{300}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/34.jpg"/></div>
 
-Now it will display the sensor value and you will see the LEDs of the Seeed Studio XIAO RP2040 on the SenseCAP S2110 Converter lighting up
+Now it will display the sensor value and you will see the LEDs of the Seeed Studio XIAO RP2040 on the SenseCAP S2110 Sensor Builder lighting up
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/101.gif"/></div>
 
@@ -446,7 +452,7 @@ The below is for **Grove Temperature and Barometer Sensor (BMP280)**. This indic
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/100.gif"/></div>
 
-You will also see the LEDs of the Seeed Studio XIAO RP2040 on the SenseCAP S2110 Converter lighting up
+You will also see the LEDs of the Seeed Studio XIAO RP2040 on the SenseCAP S2110 Sensor Builder lighting up
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/101.gif"/></div>
 
@@ -502,25 +508,25 @@ You can also use the SenseCAP Web Dashboard to visualize the sensor data.
 
 ## Use as XIAO Development Board with RS485
 
-Since there is a Seeed Studio XIAO inside, with a Grove connector as well, you can use this SenseCAP S2110 Converter as a development device just as you would normally use a XIAO with a Grove module. There is an added bonus here as well and that is, you get RS485 connectivity to add more RS485-enabled sensors to XIAO and expand your project ideas. We already have a lot of content around tinkering with XIAO and you can check [this wiki](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino) to learn more.
+Since there is a Seeed Studio XIAO inside, with a Grove connector as well, you can use this SenseCAP S2110 Sensor Builder as a development device just as you would normally use a XIAO with a Grove module. There is an added bonus here as well and that is, you get RS485 connectivity to add more RS485-enabled sensors to XIAO and expand your project ideas. We already have a lot of content around tinkering with XIAO and you can check [this wiki](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino) to learn more.
 
-## Build Your Own LoRaWAN Grove Sensor With SenseCAP S2110 Converter and Data Logger
+## Build Your Own LoRaWAN Grove Sensor With SenseCAP S2110 Sensor Builder and Data Logger
 
-If you want to add more Grove sensors to the SenseCAP S2110 Converter and send the sensor data to the cloud with the help of the Data Logger, you can explore the [SenseCAP S2110 Converter source code](https://github.com/Seeed-Studio/Seeed_Arduino_S2110) and start tinkering by yourself!
+If you want to add more Grove sensors to the SenseCAP S2110 Sensor Builder and send the sensor data to the cloud with the help of the Data Logger, you can explore the [SenseCAP S2110 Sensor Builder source code](https://github.com/Seeed-Studio/Seeed_Arduino_S2110) and start tinkering by yourself!
 
-## Flash Factory Firmware into SenseCAP S2110 Converter
+## Flash Factory Firmware into SenseCAP S2110 Sensor Builder
 
-Now we will go through the steps of flashing firmware into SenseCAP S2110 Grove to MODBUS RS485 Converter. Here we will flash the initial factory firmware.
+Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor Builder. Here we will flash the initial factory firmware.
 
-- **Step 1:** Unscrew the four screws on the SenseCAP S2110 Converter lid to open the lid and unscrew the PG connector (with a coin)
+- **Step 1:** Unscrew the four screws on the SenseCAP S2110 Sensor Builder lid to open the lid and unscrew the PG connector (with a coin)
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/92.jpg"/></div>
 
-- **Step 2:** If you have already made the connection between the SenseCAP S2110 Converter and the Data Logger with the 4 wires, it is recommended to remove the red wire which connects to the 5V pin of the SenseCAP S2110 Grove to MODBUS RS485 Converter
+- **Step 2:** If you have already made the connection between the SenseCAP S2110 Sensor Builder and the Data Logger with the 4 wires, it is recommended to remove the red wire which connects to the 5V pin of the SenseCAP S2110 Sensor Builder
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/97.jpg"/></div>
 
-- **Step 3:** Connect one end of a USB Type-C cable to the SenseCAP S2110 Grove to MODBUS RS485 Converter. While holding down the **B** button, connect the other end of the USB cable to the PC to enter mass storage mode.
+- **Step 3:** Connect one end of a USB Type-C cable to the SenseCAP S2110 Sensor Builder. While holding down the **B** button, connect the other end of the USB cable to the PC to enter mass storage mode.
 
 <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/98.jpg"/></div>
 
@@ -534,7 +540,7 @@ The **RPI-RP2** disk will disappear once the firmware flashing is complete.
 
 ## Resources
 
-- **[GitHub]** [SenseCAP S2110 Converter source code](https://github.com/Seeed-Studio/Seeed_Arduino_S2110)
+- **[GitHub]** [SenseCAP S2110 Sensor Builder source code](https://github.com/Seeed-Studio/Seeed_Arduino_S2110)
 
 ## Tech Support
 
