@@ -456,3 +456,14 @@ However, if you want **INT8** precision which offers better performance, you can
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/4.jpg" style={{width:1000, height:'auto'}}/></div>
 
 Here we can take the mean latency as 2.9ms which translates to 350FPS. This is the same performance we got in the previous DeepStream demo.
+
+## Resources
+
+- [YOLOv8 documentation](https://docs.ultralytics.com)
+- [TensorRT documentation](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html)
+- [DeepStream SDK documentation](https://docs.nvidia.com/metropolis/deepstream/dev-guide)
+
+## Tech Support
+
+Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
