@@ -2022,6 +2022,7 @@ const sidebars = {
             'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
             'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
             'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
+            'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
           ]
         },
         {
