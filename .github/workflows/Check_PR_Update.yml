@@ -1,8 +1,8 @@
-name: Check Pull Requests
+name: Test deployment
 
 on:
   pull_request:
-    paths-ignore:
+   paths-ignore:
       - "ISSUE_TEMPLATE/**"
       - ".github/**.md"
       - ".gitignore"
@@ -13,38 +13,21 @@ on:
       - "SECURITY.md"
       - "README.md"
       - "README_zh-CN.md"
-      
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
-  lint:
-    name: test_ci
+  test-deploy:
+    name: Test deployment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1.0.0
-            
-      - name: NPM RUN for HTML BUILD
-        run: |
-            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-            cd  ~/wiki-documents
-            sudo apt remove cmdtest
-            sudo apt update && sudo apt install yarn
-            yarn
-            yarn build
-      
-      - name: PUBLISH to WEBSITE
-        run: |
-            cd  ~/wiki-documents/build
-            cp  ~/wiki-documents/CNAME ./
-            git init
-            git remote add github git@github.com:Seeed-Studio/wiki-documents.git
-            git checkout -b HTML_RE 
-            git add .
-            git commit -m "Update"
-            git push -u github HTML_RE -f
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
 
-
-
-
-
-          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Test build website
+        run: yarn build
