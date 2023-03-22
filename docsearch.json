@@ -10,7 +10,9 @@
     "/search",
     "/v3me",
     "/playground",
-    "/inspector"
+    "/inspector",
+    "/zh-CN",
+    "/cn"
   ],
   "sitemap_alternate_links": true,
   "selectors": {
