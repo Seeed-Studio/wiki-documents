@@ -116,7 +116,7 @@ Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" /></div> | <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -125,7 +125,7 @@ Platforms Supported
 Hardware Overview
 ------------------
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/Grove－Digital_Infrared_Temperature_Sensor_4.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/Grove－Digital_Infrared_Temperature_Sensor_4.jpg" /></div>
 
 | Pin Number | Name | Type   | Function Description                             |
 |------------|------|--------|--------------------------------------------------|
@@ -150,14 +150,14 @@ We provide an example here to show you how to use this sensor to measure the tem
 
 | Seeeduino V4.2 | Base Shield|  Grove - Digital Infrared Temperature Sensor |
 |--------------|-------------|-----------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/thumbnail.jpg" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/thumbnail.jpg" /></div>|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)|
 
 - **Step 1.** Plug Grove - Digital Infrared Temperature Sensor into D2 port of Grove-Base Shield.
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/connection.JPG" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/connection.JPG" /></div>
 
 :::note
  If we don't have Grove Base Shield, We also can directly connect Grove - Digital Infrared Temperature Sensor to Arduino as below.
@@ -178,14 +178,14 @@ We provide an example here to show you how to use this sensor to measure the tem
 
   **File -> Examples -> Digital_Infrared_Temperature_Sensor_MLX90615 -> MLX90615Soft**. As the following picture shown:
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/example.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/example.png" /></div>
 
 Since the sensor is factory calibrated with the digital SMBus compatible interface enabled, but the library is based on a soft i2c library, so you can use any digital pins on any AVR chip to drive the **SDA** and **SCL** lines. We use **D2** as the **SCL** pin and **D3** as the **SDA** pin in this demo code. You can use other port as long as you modify the code with matched pins.
 
 - **Step 4.** Upload the code into Arduino. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 - **Step 5.** Click **Tool -> Serial Monitor** to start up the Serial Monitor. And you will see the result.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/Digital_Infrared_Temperature_Sensor_Serial_Monitor.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Digital_Infrared_Temperature_Sensor/img/Digital_Infrared_Temperature_Sensor_Serial_Monitor.jpg" /></div>
 
 Now, you can measure the temperature with this sensor. Ambient temperature is the MLX90615 package temperature and Object temperature is the object target temperature. According to our experiment, when you place the sensor in the normal indoor temperature, and ensure that there is nothing source of heat in front of the sensor's 1M scope. The Object temperature will approximately equal to Ambient temperature. When measuring the Object temperature, you should ensure the object is as close as possible whit the sensor, but do not touch the surface of the sensor, we recommend the distance is less than 3cm. Wish you have a fun try.
 

@@ -9,7 +9,7 @@ last_update:
   author: Matthew
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings!
 

@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_view.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_view.jpg" /></div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Sunlight-Sensor-p-2530.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border="0" /></a></p>
 
@@ -77,7 +77,7 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Hardware_overview.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Hardware_overview.jpg" /></div>
 
 - Grove Connector - a 4pin interface, contain VCC, GND, SDA and SCL
 - LED - LED Driver pin
@@ -95,7 +95,7 @@ After this section, you can make Grove - Sunlight Sensor run with only few steps
 
 | Seeeduino V4.2 |Grove - Sunlight Sensor|
 |--------------|-------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 :::caution
@@ -104,7 +104,7 @@ If this is your first time using Arduino, Please put hand on [here](https://wiki
 
 **Connecting hardware**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_hardware_connect.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_hardware_connect.jpg" /></div>
 
 :::note
 If you need a plug more modules on main control board, you may need a [Grove base shield](https://wiki.seeedstudio.com/Base_Shield_V2/) which will make your work easy.
@@ -160,7 +160,7 @@ Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](https:
 
 After upload completed, Open Serial Monitor of your Arduino IDE, you can get the data:
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/output.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/output.png" /></div>
 
 :::note
     Vis - visible light, unit in lm
@@ -176,12 +176,12 @@ Now, put Grove - Sunlight Sensor under the sun to see if it's a nice day.
 
 | Raspberry Pi 4 Model B |Grove - Base Hat for Raspberry Pi|Grove - Sunlight Sensor|
 |--------------|-------------|-----------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 **Connecting hardware**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/connection_2.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/connection_2.jpg" /></div>
 
 **Step 1.** Connect Grove - Sunlight Sensor to port **I2C** of Grove - Base Hat for Raspberry Pi, Plugged into Raspberry Pi 4 Model B. And then connect the Raspberry Pi 4 Model B with a PC.
 
@@ -244,11 +244,11 @@ If the i2c device works properly, there will be:
 
 **If NOT**, use the command **sudo raspi-config** and reboot to enable the i2c device:
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/1.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/1.png" /></div>
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/2.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/2.png" /></div>
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/3.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/3.png" /></div>
 
 **Step 4.** Run the demo by the following command:
 
@@ -264,7 +264,7 @@ python3 examples/BasicRead.py
 The outcome will display as following if everything goes well:
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/outcome.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/outcome.png" /></div>
 
 :::note
 **Visible** refers to **visible light of Ambient** and **UV** refers to **Ultraviolet (UV) Index** while **IR** means **infrared light of Ambient**.
@@ -276,12 +276,12 @@ The outcome will display as following if everything goes well:
 
 | Raspberry Pi 4 Model B |Grove - Base Hat for Raspberry Pi|Grove - Sunlight Sensor|
 |--------------|-------------|-----------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 **Connecting hardware**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/connection_2.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/connection_2.jpg" /></div>
 
 **Step 1.** Connect Grove - Sunlight Sensor to port **I2C** of Grove - Base Hat for Raspberry Pi, Plugged into Raspberry Pi 4 Model B. And then connect the Raspberry Pi 4 Model B with a PC.
 
@@ -305,11 +305,11 @@ If the i2c device works properly, there will be:
 
 **If NOT**, use the command **sudo raspi-config** and reboot to enable the i2c device:
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/1.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/1.png" /></div>
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/2.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/2.png" /></div>
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/3.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/3.png" /></div>
 
 **Step 3.** Run the demo by the following command:
 
@@ -324,7 +324,7 @@ python3 seeed_si115x.py
 :::tipsuccess
 The outcome will display as following if everything goes well:
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/Sunlighttu.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/Sunlighttu.png" /></div>
 
 :::note
 **Visible** refers to **visible light of Ambient** and **UV** refers to **Ultraviolet (UV) Index** while **IR** means **infrared light of Ambient**.
@@ -342,7 +342,7 @@ Spectrum has since been applied by analogy to topics outside of optics. Thus, on
 
 In most modern usages of spectrum there is a unifying theme between extremes at either end. Some older usages of the word did not have a unifying theme, but they led to modern ones through a sequence of events set out below. Modern usages in mathematics did evolve from a unifying theme, but this may be difficult to recognize.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_spectrum.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_spectrum.jpg" /></div>
 
 **Lumen**
 
@@ -362,7 +362,7 @@ The purpose of the UV Index is to help people effectively protect themselves fro
 
 When the day's predicted UV Index is within various numerical ranges, the recommendations for protection are as follows:
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/uv%20index.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/uv%20index.png" /></div>
 
 **Cautionary notes**
 

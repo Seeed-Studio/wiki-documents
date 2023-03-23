@@ -103,11 +103,11 @@ Now we will explore a couple of application which comes out-of-the-box and how y
 
 **Step 1:**  Click on **intelligent-transportation-systems** and click the run button next to the **lane-occupancy** solution
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/CVEDIA/2.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/CVEDIA/2.jpg" /></div>
 
 Now it will download the necessary files such as the model file, config file, example video file and start the demo. Here you will see zones drawn according to the lanes and each zone indicating how many vehicles are inside that particular zone. 
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/CVEDIA/lane-GIF.gif" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/CVEDIA/lane-GIF.gif" /></div>
 
 **Step 2:** Change settings according to your preference inside the application such as turning ON/OFF bounding boxes and labels, changing zones, zone colors and more
 
@@ -115,7 +115,7 @@ Now it will download the necessary files such as the model file, config file, ex
 
 **Step 3:** STOP or PAUSE the demo using the two icons next to **lane-occupancy**
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/CVEDIA/4.jpg" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/CVEDIA/4.jpg" /></div>
 
 **Step 4:** Click the gear icon next to **lane-occupancy**, click **Edit Source** to change the video stream according to your preference
 

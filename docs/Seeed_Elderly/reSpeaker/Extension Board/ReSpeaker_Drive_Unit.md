@@ -58,7 +58,7 @@ After the system image has been written, the ReSpeaker Core will reboot.
 
 Plug your ReSpeaker Core onto the Meow King drive unit like the image below.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/img/mk_1.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/img/mk_1.jpg" /></div>
 
 Press the power logo over 5 seconds, the drive unit will power on, and also the ReSpeaker Core board.
 
@@ -70,7 +70,7 @@ To power down the whole device, please press the power logo over 5 seconds again
 
 When the device is powered on, the ReSpeaker Core will enter the boot up process. The LED ring will light up with red color for 1 second, indicating that the ReSpeaker Core is booting up.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/img/mk_2.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/ReSpeaker_Drive_Unit/img/mk_2.jpg" /></div>
 
 Now wait a few seconds, find your smart phone and prepare to stream your music onto the Meow King drive unit.
 

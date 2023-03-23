@@ -24,7 +24,7 @@ We will mainly use SenseCAP A1101 - LoRaWAN Vision AI Sensor throughout this wik
 
 [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) combines TinyML AI technology and LoRaWAN long-range transmission to enable a low-power, high-performance AI device solution for outdoor use. This sensor features Himax's high-performance, low-power AI vision solution which supports the Google TensorFlow Lite framework and multiple TinyML AI platforms. Different models can implement different AI functions, for example, pest detection, people counting, object recognition. Users can adopt models provided by Seeed, generate their own models through AI training tools, or procure deployable, commercial models from Seeed's partner model providers.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/60.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/60.jpg"/></div>
 
 ## Software introduction
 
@@ -89,11 +89,11 @@ You can download a number of publically available datasets such as the  [COCO da
 
 - **Step 2.** Click **Create Account** to create a Roboflow account
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/53.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/53.png"/></div>
 
 - **Step 3.** Click **Download**, select **YOLO v5 PyTorch** as the **Format**, click **show download code** and click **Continue**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/51.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/51.png"/></div>
 
 This will generate a code snippet that we will use later inside Google Colab training. So please keep this window open in the background.
 
@@ -114,11 +114,11 @@ It will walkthrough the following:
 - Perform the training
 - Download the trained model
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/18.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/18.png"/></div>
 
 For an apple detection dataset with 699 images, it took around 7 minutes to finish the training process on Google Colab running on NVIDIA Tesla T4 GPU with 16GB GPU memory.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/43.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/43.png"/></div>
 
 If you followed the above Colab project, you know that you can load 4 models to the device all at once. However, please note that only one model can be loaded at a time. This can be specified by the user and will be explained later in this wiki.
 
@@ -220,11 +220,11 @@ python3 capture_images_script.py --interval 1000
 
 After the above script is executed, SenseCAP A1101 will start to capture images from the in-built cameras continuosly and save all of them inside a folder named **save_img**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/41.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/41.png"/></div>
 
 Also, it will open a preview window while it is recording
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/40.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/40.jpg"/></div>
 
 After you have enough images captured, click on the terminal window and press the following key combinations to stop the capturing process
 
@@ -254,7 +254,7 @@ For this wiki, we will use a dataset with images containing apples so that we ca
 
 - **Step 2.** Click **Create New Project** to start our project
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/YOLOV5/2.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/2.jpg"/></div>
 
 - **Step 3.** Fill in **Project Name**, keep the **License (CC BY 4.0)** and **Project type (Object Detection (Bounding Box))**  as default. Under **What will your model predict?** column, fill in an annotation group name. For example, in our case we choose **apples**. This name should highlight all of the classes of your dataset. Finally, click **Create Public Project**.
 
@@ -262,23 +262,23 @@ For this wiki, we will use a dataset with images containing apples so that we ca
 
 - **Step 4.** Drag and drop the images that you have captured using SenseCAP A1101
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/7.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/7.png"/></div>
 
 - **Step 5.** After the images are processed, click **Finish Uploading**. Wait patiently until the images are uploaded.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/4.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/4.jpg"/></div>
 
 - **Step 6.** After the images are uploaded, click **Assign Images**
 
-<div align="center"><img width="{300}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/5.jpg"/></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/5.jpg"/></div>
 
 - **Step 7.** Select an image, draw a rectangular box around an apple, choose the label as **apple** and press **ENTER**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/9.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/9.png"/></div>
 
 - **Step 8.** Repeat the same for the remaining apples
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/10.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/10.png"/></div>
 
 **Note:** Try to label all the apples that you see inside the image. If only a part of an apple is visible, try to label that too.
 
@@ -296,7 +296,7 @@ As you can see above, it can only help to predict annotations for the 80 classes
 
 - **Step 10.** Once labelling is done, click **Add images to Dataset**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/YOLOV5/25.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/25.jpg"/></div>
 
 - **Step 11.** Next we will split the images between "Train, Valid and Test". Keep the default percentages for the distribution and click **Add Images**
 
@@ -304,11 +304,11 @@ As you can see above, it can only help to predict annotations for the 80 classes
 
 - **Step 12.** Click **Generate New Version**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/YOLOV5/27.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/27.jpg"/></div>
 
 - **Step 13.** Now you can add **Preprocessing** and **Augmentation** if you prefer. Here we will **change** the **Resize** option to **192x192**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/11.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/11.png"/></div>
 
 <div align="center"><img width="{450}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/13.png"/></div>
 
@@ -316,11 +316,11 @@ Here we change the image size to 192x192 because we will use that size for train
 
 - **Step 14.** Next, proceed with the remaining defaults and click **Generate**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/14.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/14.png"/></div>
 
 - **Step 15.** Click **Export**, select **Format** as **YOLO v5 PyTorch**, select **show download code** and click **Continue**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/54.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/54.png"/></div>
 
 This will generate a code snippet that we will use later inside Google Colab training. So please keep this window open in the background.
 
@@ -387,15 +387,15 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 - **Step 12.** [Click here](https://files.seeedstudio.com/grove_ai_vision/index.html) to open a preview window of the camera stream
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png"/></div>
 
 - **Step 13.** Click **Connect** button. Then you will see a pop up on the browser. Select **Grove AI - Paired** and click **Connect**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/32.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/32.png"/></div>
 
 - **Step 14.** View real-time inference results using the preview window!
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/33.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/33.jpg"/></div>
 
 As you can see above, the apples are being detected with bounding boxes around them. Here "0" corresponds to each detection of the same class. If you have multiple classes, they will be named as 0,1,2,3,4 and so on. Also the confidence score for each detected apple (0.8 and 0.84 in above demo) is being displayed!
 
@@ -465,7 +465,7 @@ python3 train.py --img 192 --batch 64 --epochs 100 --data data.yaml --cfg yolov5
 
 For an apple detection dataset with 987 images, it took around 30 minutes to finish the training process on a Local PC running on NVIDIA GeForce GTX 1660 Super GPU with 6GB GPU memory.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/44.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/44.png"/></div>
 
 If you followed the above Colab project, you know that you can load 4 models to the device all at once. However, please not that only one model can be loaded at a time. This can be specified by the user and will be explained later in this wiki.
 

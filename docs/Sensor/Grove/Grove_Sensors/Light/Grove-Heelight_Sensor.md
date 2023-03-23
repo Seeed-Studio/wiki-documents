@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/Heelight%20Sensor%20plus%20coin.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/Heelight%20Sensor%20plus%20coin.jpg" /></div>
 
 Grove – Heelight Sensor is a smart voice sensor that can recognize up tp 500 digital voice commands. It was originally used on the Heelight – a smart colorful bulb that can be controlled by digital sound waves. Now we introduce this sensor into the small and neat Grove modules, allow you to realize smart control in your Arduino – based projects.
 
@@ -51,7 +51,7 @@ Grove – Heelight Sensor is a smart voice sensor that can recognize up tp 500 d
 - Plug the Base Shield V2 on the Seeeduino V4.2
 - Connect the Grove - Heelight Sensor to D6 port of Base Shield V2.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/hardware%20connection.JPG" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/hardware%20connection.JPG" /></div>
 
 ### Upload the code
 
@@ -130,7 +130,7 @@ void loop() // run over and over
 
 Open the serial monitor, set baud rate to be 57600, then play the sound. We have prepared 511 different [digital sounds](https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/res/audio.zip) for you. Every time one sound is played, the heelight sensor will output a hex value correspond to the sound, and the last 2 characters of the hex value is the same as the sounds value.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/heelight%20sensor%20output.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/img/heelight%20sensor%20output.png" /></div>
 
 :::note
 If this sensor doesn't work well when you play the specific sounds we provided via PC or other speakers, please set the volume in a low level. We recommend 10/100 in windows PC.

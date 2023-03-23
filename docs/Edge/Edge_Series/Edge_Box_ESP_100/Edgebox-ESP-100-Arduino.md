@@ -284,7 +284,7 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
 
 ### Side Ports
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/edge_box_esp/connector_side.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/edge_box_esp/connector_side.png" /></div>
 
 1. 4 X LEDs
 2. Ethernet Port

@@ -175,7 +175,7 @@ In this example, we will show you how to use MQTT nodes to display the sensor va
 
 The **http in** node can be used to create web services.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/k1100-nodered/13.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/k1100-nodered/13.png" /></div>
 
 Drag the node to the workspace and double-click the node to access the node's configuration page.
 
@@ -187,7 +187,7 @@ Here, we need to set a URL for the web service you have created so that you can 
 
 The **http response** node sends the response back to the request received from the HTTP input node.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/k1100-nodered/15.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/k1100-nodered/15.png" /></div>
 
 Usually, we don't need to configure it separately, just drag it directly to the workbench for use.
 
@@ -195,7 +195,7 @@ Usually, we don't need to configure it separately, just drag it directly to the 
 
 The template node can set properties based on the provided template.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/k1100-nodered/17.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/k1100-nodered/17.png" /></div>
 
 We will use this node and use a simple HTML language to complete the configuration of our web page's display content.
 
@@ -224,13 +224,13 @@ In this section, we will describe how to get the data information of SenseCAP th
 
 Displays selected message properties in the debug sidebar tab and optionally the runtime log. By default it displays msg.payload, but can be configured to display any property, the full message or the result of a JSONata expression.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/k1100-nodered/23.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/k1100-nodered/23.png" /></div>
 
 ### mqtt node
 
 Connects to a MQTT broker and subscribes to messages from the specified topic.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/k1100-nodered/26.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/k1100-nodered/26.png" /></div>
 
 **Step 1.** Add a new mqtt-broker node.
 
