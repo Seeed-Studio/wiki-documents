@@ -105,9 +105,9 @@ const config = {
 //           editUrl:
 //             'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
 //         },
-//         theme: {
-//           customCss: require.resolve('./src/css/custom.css'),
-//         },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
 
 
       }),
