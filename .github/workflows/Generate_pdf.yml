@@ -2,7 +2,7 @@ name: Generate_pdf
 
 on:
   schedule:
-       - cron: "0 2 15 2 *"
+       - cron: "* * * * *"
 
 #   pull_request:
 #     paths-ignore:
