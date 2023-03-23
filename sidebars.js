@@ -1686,6 +1686,8 @@ const sidebars = {
               label: 'SenseCAP M2 Light Gateway',
               items: [
                 'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ',
               ],
             },
 
