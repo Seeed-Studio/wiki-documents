@@ -56,7 +56,7 @@ BL702 is the USB-UART chip which enables the communication between the PC and th
 
 3. Open previously installed Bouffalo Lab Dev Cube software, select **BL702/704/706**, and then click **Finish**.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/edge-impulse-visionai/3.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/edge-impulse-visionai/3.png" /></div>
 
 4. Go to **MCU** tab. Under **Image file**, click **Browse** and select the firmware you just downloaded.
 

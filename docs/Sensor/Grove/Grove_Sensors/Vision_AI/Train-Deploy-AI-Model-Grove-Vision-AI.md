@@ -218,7 +218,7 @@ For this wiki, we will use a dataset with images containing apples so that we ca
 
 Roboflow has a feature called **Label Assist** where it can predict the labels beforehand so that your labelling will be much faster. However, it will not work with all object types, but rather a selected type of objects. To turn this feature on, you simply need to press the **Label Assist** button, **select a model**, **select the classes** and navigate through the images to see the predicted labels with bounding boxes
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/YOLOV5/41.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/YOLOV5/41.png" /></div>
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/YOLOV5/39.png" /></div>
 

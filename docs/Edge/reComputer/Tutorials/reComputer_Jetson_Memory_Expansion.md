@@ -457,15 +457,15 @@ When your system does not boot properly due to an error, or for some other reaso
       </th><td align="left">Ubuntu host x1</td>
     </tr>
     <tr>
-      <th align="center"><div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/reComputerheadline.png" /></div>
+      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/reComputerheadline.png" /></div>
       </th><td align="left">Unable to access the system reComputer Jetson x1</td>
     </tr>
     <tr>
-      <th align="center"><div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/5.png" /></div>
+      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/5.png" /></div>
       </th><td align="left"><a href="https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html?queryID=cb30ad1a9d75c9ef437912535186b130&objectID=1112&indexName=bazaar_retailer_products">UART to USB module x1</a></td>
     </tr>
     <tr>
-      <th align="center"><div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/6.png" /></div>
+      <th align="center"><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/6.png" /></div>
       </th><td align="left"><a href="https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html?queryID=a51c4491cb6b462a1e844c832c98c52a&objectID=2042&indexName=bazaar_retailer_products">Female to female DuPont wire x3</a></td>
     </tr>
   </tbody>

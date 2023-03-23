@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/one-wire.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/one-wire.png" /></div>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border="0" /></a></p>
 
@@ -62,7 +62,7 @@ The cable part cannot be put under temperature higher than 70°C for a long time
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
 ## Getting Started
 
@@ -75,12 +75,12 @@ After this section, you can make One Wire Temperature Sensor run with only few s
 
 | Seeeduino Lotus V1.1 |One Wire Temperature Sensor|
 |--------------|--------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/small.png" /></div>| <div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/small.png" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png" /></div>|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
 
 #### Hardware Connection
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/hardware-1-wire.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/hardware-1-wire.jpg" /></div>
 
 :::tip
 Please plug the USB cable，One Wire Temperature Sensor Interface into Seeeduino Lotus V1.1 Interface gently, otherwise you may damage the port.
@@ -180,12 +180,12 @@ void loop(void)
 
 | Raspberry Pi 4 Model B |Grove - Base Hat for Raspberry Pi|One Wire Temperature Sensor|
 |--------------|-------------|-----------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png" /></div>|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
 
 #### Connecting hardware
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/connection.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/connection.jpg" /></div>
 
 **Step 1.** Connect One Wire Temperature Sensor to port **D5** of Grove - Base Hat for Raspberry Pi, Plugged into Raspberry Pi 4 Model B. And then connect the Raspberry Pi 4 Model B with a PC.
 
@@ -236,9 +236,9 @@ if __name__ == "__main__":
 When running the demo code on Raspberry Pi, you **MIGHT** be reminded to enable the **1-Wire** interface. Then you should use the command **sudo raspi-config** and reboot to enable the 1-Wire device:
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/1.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/1.png" /></div>
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/1.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/1.png" /></div>
 
 **Step 4.** Run the demo by the following command:
 
@@ -254,7 +254,7 @@ python3 examples/BasicRead.py
           The outcome will display as following if everything goes well:
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/TEM.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/TEM.png" /></div>
 
 ## Resource
 

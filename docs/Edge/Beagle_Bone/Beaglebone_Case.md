@@ -10,9 +10,9 @@ last_update:
   author: jianjing Huang
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_1.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_1.jpg" /></div>
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_4.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_4.jpg" /></div>
 
 The acrylic case is used for BeagleBone®, like the Raspberry PI B+ case.It’s made of acrylic sheet. manufacture by laser cutting, CNC milling, and hot bending. almost all handmade, Looks very compact and beautiful, Only 4 pieces sheets in total, so easy to assembled. It's strong enought, not easy break like other 6 acrylic sheets case. In the box rounded corners and beveled edges  .you will feel very comfortable when you hold it.
 
@@ -32,33 +32,33 @@ It's different from the others case just like 6-acrylic sheets laser cutting cas
 
 We should cutting it by laser cutting machine, It's cheap and fast.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/20141016191356.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/20141016191356.jpg" /></div>
 
 **<big>The second process——CNC milling</big>**
 
 After laser cutting you we should cutting some structure let it easy assembly and bending.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/123bc.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/123bc.jpg" /></div>
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/IMG_9992a.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/IMG_9992a.jpg" /></div>
 
 **<big>The third process——hot bending</big>**
 
 The last process is hot bending, We can use the heater heating the acrylic notch which is machined by CNC milling machine.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/20141016191303.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/20141016191303.jpg" /></div>
 
 After you know the 3 processes maybe you can understand why we said it's out of the common.
 
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_2.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_3.jpg" /></div>
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_2.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_3.jpg" /></div>
 |---|---|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_5.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_6.jpg" /></div>
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_5.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/1130070001_6.jpg" /></div>
 
 ## Usage
 
 Assembly diagram is as follows:
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/20141016183208.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Beaglebone_Case/img/20141016183208.jpg" /></div>
 
 <table cellSpacing={0} width="80%">
   <tbody><tr>

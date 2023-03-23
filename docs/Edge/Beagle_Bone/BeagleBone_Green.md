@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cover.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/cover.jpg" /></div>
 
 Seeed Studio BeagleBone® Green is a low cost, open-source, community supported development platform for developers and hobbyists. It is a joint effort by [BeagleBoard.org](https://beagleboard.org/) and Seeed Studio. It is based on the classical open-source hardware design of [BeagleBone® Black](https://beagleboard.org/black) and developed into this differentiated version. The Seeed Studio BeagleBone® Green includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI is removed to make room for these Grove connectors.
 
@@ -82,17 +82,17 @@ Here are some funny projects for your reference.
 
 |Home Center|Retro Lamp|Drive a Motor|
 |---------------|-----|--------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project1.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project2.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project3.jpg" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project2.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project3.jpg" /></div>|
 |[MAKE IT NOW!](https://www.instructables.com/id/Home-Control-Center-Using-BeagleBone-Green-Wireles/)|[MAKE IT NOW!](https://www.instructables.com/id/DIY-a-Retro-Wooden-Lamp-with-BBG/)|[MAKE IT NOW!](https://www.instructables.com/id/A-BeagleBone-Tutorial-Getting-Started-With-Motor-B/)|
 
 |Seeed Studio BeagleBone® Green Acrylic Case|GPIO Control|Smart Light|
 |---------------|-----|--------------|
-|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project4.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project5.jpg" /></div>|<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project6.png" /></div>|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project5.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/project6.png" /></div>|
 |[MAKE IT NOW!](https://www.instructables.com/id/5-Design-of-Laser-Cut-Cases-for-5-Popular-Platform/)|[MAKE IT NOW!](https://community.seeedstudio.com/How-to-use-the-Grove-UART-port-as-a-GPIO-on-BBG-p-365.html)|[MAKE IT NOW!](https://community.seeedstudio.com/Smart-Light-Demo-with-BBG-%26amp%3B-BBG-Start-Kit(HA)-p-366.html)|
 
 ## Hardware Overview
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/10201002703.jpg" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/10201002703.jpg" /></div>
 
 * **USB Host** - USB Host
 * **DC Power and USB Client** - Power the board and act as client
@@ -118,7 +118,7 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
     In GPIO mode, each digital I/O can produce interrupts.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_IO.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_IO.png" /></div>
 
 **PWMs and Timers**
 
@@ -126,7 +126,7 @@ Each digital I/O pin has 8 different modes that can be selected, including GPIO.
 Up to 8 digital I/O pins can be configured with pulse-width modulators (PWM) to produce signals to control motors or create pseudo analog voltage levels, without taking up any extra CPU cycles.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_TIMER.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_TIMER.png" /></div>
 
 **Analog Inputs**
 
@@ -134,7 +134,7 @@ Up to 8 digital I/O pins can be configured with pulse-width modulators (PWM) to 
 Make sure you don't input more than 1.8V to the analog input pins. This is a single 12-bit analog-to-digital converter with 8 channels, 7 of which are made available on the headers.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_ANALOG.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_ANALOG.png" /></div>
 
 **UART**
 
@@ -142,7 +142,7 @@ Make sure you don't input more than 1.8V to the analog input pins. This is a sin
 There is a dedicated header for getting to the UART0 pins and connecting a debug cable. Five additional serial ports are brought to the expansion headers, but one of them only has a single direction brought to the headers.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_UART.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_UART.png" /></div>
 
 **I2C**
 
@@ -150,7 +150,7 @@ There is a dedicated header for getting to the UART0 pins and connecting a debug
 The first I2C bus is utilized for reading EEPROMS on cape add-on boards and can't be used for other digital I/O operations without interfering with that function, but you can still use it to add other I2C devices at available addresses. The second I2C bus is available for you to configure and use.
 :::
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_I2C.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green/images/PINMAP_I2C.png" /></div>
 
 **SPI**
 

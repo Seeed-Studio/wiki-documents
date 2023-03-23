@@ -416,7 +416,7 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
         <tr>
             <th>Connect the Wio Terminal to Microsoft Azure IoT Hub (WiFi)</th>
             <th>Integrate into Azure IoT Hub (Helium)</th>
-            <td rowSpan={11}><div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/K1100/hub.png" /></div></td>
+            <td rowSpan={11}><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/K1100/hub.png" /></div></td>
         </tr>
         <tr>
             <td align="left">In this chapter, we will describe how to send data from the Wio Terminal to Azure IoT Hub via the WiFi function that comes with the Wio Terminal.</td>

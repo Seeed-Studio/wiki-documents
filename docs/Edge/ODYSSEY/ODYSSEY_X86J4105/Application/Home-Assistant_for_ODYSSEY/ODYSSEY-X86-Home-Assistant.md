@@ -16,7 +16,7 @@ last_update:
 ---
 # Getting Started with Home Assistant on ODYSSEY-X86
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Home-Assistant-X86/thumb.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant-X86/thumb.png" /></div>
 
 
 ## Introduction
