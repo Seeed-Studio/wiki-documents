@@ -371,47 +371,6 @@ deepstream-app -c deepstream_app_config.txt
 
 Here we get an FPS value of about 350!
 
-
-## Benchmark Results
-
-These are some of the performance benchmark results based on our testing
-
-<table>
-  <thead>
-    <tr>
-      <th>Model Name</th>
-      <th>Precision</th>
-      <th>Inference Size</th>
-      <th>Inference Time (ms)</th>
-      <th>FPS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan={4}>YOLOv8s</td>
-      <td>with PyTorch</td>
-      <td rowSpan={4}>480x640</td>
-      <td>14</td>
-      <td>71.4</td>
-    </tr>
-    <tr>
-      <td>FP32</td>
-      <td>7.2</td>
-      <td>139</td>
-    </tr>
-    <tr>
-      <td>FP16</td>
-      <td>4</td>
-      <td>252</td>
-    </tr>
-    <tr>
-      <td>INT8</td>
-      <td>2.9</td>
-      <td>350</td>
-    </tr>
-  </tbody>
-</table>
-
 ## trtexec Tool
 
 Included in the samples directory is a command-line wrapper tool called [trtexec](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html#trtexec). trtexec is a tool to use TensorRT without having to develop your own application. The trtexec tool has three main purposes:
@@ -456,6 +415,141 @@ However, if you want **INT8** precision which offers better performance, you can
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/4.jpg" style={{width:1000, height:'auto'}}/></div>
 
 Here we can take the mean latency as 2.9ms which translates to 350FPS. This is the same performance we got in the previous DeepStream demo.
+
+## Benchmark Results
+
+These are some of the performance benchmark results based on our testing on the [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)
+
+<table style={{tableLayout: 'fixed', width: 812}}>
+  <colgroup>
+    <col style={{width: '195.085714px'}} />
+    <col style={{width: '168.085714px'}} />
+    <col style={{width: '195.085714px'}} />
+    <col style={{width: '183.085714px'}} />
+    <col style={{width: '71.085714px'}} />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Model Name	</th>
+      <th>Precision</th>
+      <th>Inference Size	</th>
+      <th>Inference Time (ms)	</th>
+      <th>FPS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={4}>YOLOv8n</td>
+      <td>with PyTorch</td>
+      <td rowSpan={4}>640x640	</td>
+      <td>18</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <td>FP32</td>
+      <td>8.7</td>
+      <td>115</td>
+    </tr>
+    <tr>
+      <td>FP16	</td>
+      <td>4.9</td>
+      <td>204</td>
+    </tr>
+    <tr>
+      <td>INT8</td>
+      <td>3.9</td>
+      <td>256</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>YOLOv8s	</td>
+      <td>with PyTorch</td>
+      <td rowSpan={4}>640x640	</td>
+      <td>19</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td>FP32</td>
+      <td>14.9</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <td>FP16	</td>
+      <td>7.8</td>
+      <td>128</td>
+    </tr>
+    <tr>
+      <td>INT8</td>
+      <td>5.1</td>
+      <td>196</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>YOLOv8m	</td>
+      <td>with PyTorch</td>
+      <td rowSpan={4}>640x640	</td>
+      <td>38</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>FP32</td>
+      <td>32.5</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>FP16	</td>
+      <td>15.8</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>INT8</td>
+      <td>10.8</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>YOLOv8l	</td>
+      <td>with PyTorch</td>
+      <td rowSpan={4}>640x640	</td>
+      <td>62</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>FP32</td>
+      <td>49</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>FP16	</td>
+      <td>24</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>INT8</td>
+      <td>14.4</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td rowSpan={4}>YOLOv8x	</td>
+      <td>with PyTorch</td>
+      <td rowSpan={4}>640x640	</td>
+      <td>99</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>FP32</td>
+      <td>79.5</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>FP16	</td>
+      <td>37.9</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>INT8</td>
+      <td>21.9</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Resources
 
