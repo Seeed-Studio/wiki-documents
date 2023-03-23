@@ -2,7 +2,7 @@ name: Generate_pdf
 
 on:
   schedule:
-       - cron: "0 2 15 2 *"
+       - cron: "* * * * *"
 
 #   pull_request:
 #     paths-ignore:
@@ -72,7 +72,8 @@ jobs:
             git clone -b HTML_RE git@github.com:tianrking/wiki-documents.git ~/HTML_RE
             cd ~/HTML_RE
             yarn add docusaurus-prince-pdf
-            npx docusaurus-prince-pdf -u https://seeed-studio.github.io/wiki-documents/Arduino
+            npx docusaurus-prince-pdf -u https://wiki.seeedstudio.com/Sensor/SenseCAP
+            npx docusaurus-prince-pdf -u https://wiki.seeedstudio.com/Sensor/SenseCAP --output docs1.pdf
             git add .
             git commit -m "Add: pdf"
             git push -u origin HTML_RE -f
