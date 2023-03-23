@@ -69,7 +69,7 @@ jobs:
       
       - name: PUBLISH to WEBSITE
         run: |
-            git clone -b HTML_RE git@github.com:tianrking/wiki-documents.git ~/HTML_RE
+            git clone -b HTML_RE git@github.com:Seeed-Studio/wiki-documents.git ~/HTML_RE
             cd ~/HTML_RE
             yarn add docusaurus-prince-pdf
             npx docusaurus-prince-pdf -u https://wiki.seeedstudio.com/Sensor/SenseCAP
