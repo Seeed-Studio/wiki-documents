@@ -76,7 +76,7 @@ jobs:
             npx docusaurus-prince-pdf -u https://wiki.seeedstudio.com/Sensor/SenseCAP --output docs1.pdf
             git add .
             git commit -m "Add: pdf"
-            git push -u origin HTML_RE -f
+            git push -u origin HTML_RE
 
 
 
