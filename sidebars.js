@@ -609,6 +609,13 @@ const sidebars = {
 
             {
               type: 'category',
+              label: 'SSenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
+              ],
+            },
+            {
+              type: 'category',
               label: 'SenseCAP A1101',
               items: [
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
