@@ -148,7 +148,7 @@ If we don't have Grove Base Shield, We also can directly connect this module to 
 | GND            |     Black               |GND |
 | 5V / 3.3V          |   Red                    | VCC |
 | SDA           | White                   |  SDA  |
-| SCL           | Yellow                  |  SDA  |
+| SCL           | Yellow                  |  SCL  |
 
 #### Software
 
