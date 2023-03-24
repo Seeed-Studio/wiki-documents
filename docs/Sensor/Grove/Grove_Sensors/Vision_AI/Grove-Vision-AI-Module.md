@@ -371,10 +371,6 @@ Not all browsers support the display of Vision AI results. Please refer to the t
 | Support | Support | Not support |  Support | Not support |
 :::
 
-:::tip
-On March 17, we found that updating Vision AI's firmware under Windows 11 currently causes Vision AI to not work abnormally, so we temporarily hid the method of restoring factory settings and brushing in the model firmware. Until we update the documentation content, if you are using Window 11, please do not update the firmware and wait until we restore this part again before replacing the model. Sorry for the inconvenience!
-:::
-
 
 ## Customize Trainning Model
 
@@ -397,7 +393,7 @@ You can find our firmware and models for Grove Vision AI at the following locati
   Or refer to [the tutorial here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-Grove-Vision-AI/) and train your own model to suit your needs.
 
 
-### Burn Model file into the Module
+## Burn Model file into the Module
 
 The training models are all represented as ".uf2" file, which is what we need.
 
@@ -426,6 +422,10 @@ In general, we do not need to reflash the factory firmware unless your device is
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI10.png" style={{width:600, height:'auto'}}/></div>
 
 ## Restore Factory Firmware
+
+:::tip
+If ever uploading firmware on the latest version of Windows 11 has rendered the device unusable, you may need to refer to the section on [Update BootLoader](#update-bootloader).
+:::
 
 It is important to note that not all properly functioning Grove Vision AI's require flash factory firmware. If you are not experiencing the conditions described below, please do not flash the factory firmware lightly.
 
@@ -509,6 +509,17 @@ Please download the latest version of the factory firmware in the link below. Th
 
   Copy the `grove_ai_without_crc_vxx.uf2` file to the GROVEAI disk to complete the firmware flash.
 
+## Check BootLoader Version
+
+You may need to detect if the BootLoader version needs to be updated to decide if the update should be done. The method to check the version number is as follows.
+
+Connect the Grove Vision AI to your computer via the USB-C port. Then use a serial port monitoring tool to select the port where the added Grove Vision AI is located. The baud rate is set to **921600**.
+
+Then press Reset on the Grove Vison AI and if the device is working properly, then you should see the following message.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI22.png" style={{width:800, height:'auto'}}/></div>
+
+You can see that the third line of the picture is the version number of BootLoader. If it is the same as the version number we released, you don't need to update BootLoader.
 
 ## Update BootLoader
 
