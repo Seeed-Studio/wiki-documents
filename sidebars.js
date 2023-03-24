@@ -609,11 +609,13 @@ const sidebars = {
 
             {
               type: 'category',
-              label: 'SSenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+              label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
               items: [
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
               ],
             },
+
             {
               type: 'category',
               label: 'SenseCAP A1101',
