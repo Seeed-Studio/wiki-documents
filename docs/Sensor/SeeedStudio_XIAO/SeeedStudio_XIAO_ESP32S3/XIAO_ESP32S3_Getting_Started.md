@@ -189,6 +189,9 @@ If you are shopping for the XIAO ESP32S3 Sense, then you should also include an 
 
 By installing the expansion board with XIAO ESP32S3 Sense, you can use the functions on the expansion board.
 
+Installing the expansion board is very simple, you just need to align the connector on the expansion board with the B2B connector on the XIAO ESP32S3, press it hard and hear a "click", the installation is complete.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
 ### Software Preparation
 
