@@ -796,28 +796,28 @@ const sidebars = {
             },
           ],
         },
-        // {
-        //   type: 'category',
-        //   label: 'SeeedStudio XIAO ESP32S3 (Sense)',
-        //   items: [
-        //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO ESP32S3 (Sense)',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
         //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
         //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
         //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
-        //   ],
-        // },
+          ],
+        },
         {
           type: 'category',
           label: 'SeeedStudio XIAO Expansion board',
           items: [
-            // {
-            //   type: 'category',
-            //   label: 'Seeed Studio Round Display for XIAO',
-            //   items: [
-            //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
-            //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
-            //   ],
-            // },
+            {
+              type: 'category',
+              label: 'Seeed Studio Round Display for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
+              ],
+            },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
           ],

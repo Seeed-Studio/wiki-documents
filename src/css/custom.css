@@ -196,6 +196,36 @@ height:80%;
   text-decoration: none;
 }
 
+/* download Arduino button */
+
+.download_arduino_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.download_arduino_item {
+  border-radius: 10px/10px;
+  width: 300px;
+  height:28px;
+  background: #00979c;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: content-box;
+}
+
+.download_arduino_item:hover {
+  border:2px solid #00979c;
+  color:#fff;
+  text-decoration: none;
+}
+
 /* github button */
 
 .github_container {
