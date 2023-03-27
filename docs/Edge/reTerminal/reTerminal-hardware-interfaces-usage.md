@@ -368,7 +368,7 @@ sudo nano /boot/config.txt
 - **Step 5.** Modify the file by adding the following to the end
 
 ```sh
-dtoverlay=reTerminal,key0=0x100,key1=0x101,key2=0x102,key3=0x103
+dtoverlay=reTerminal,key0=0x100,key1=0x101,key2=0x102,key3=0x103,tp_rotate=1
 ```
 
 **Note:** Here the hexadecimal numbers 100,101,102 and 103 are assigned to key0, key1, key2. key3 respectively
