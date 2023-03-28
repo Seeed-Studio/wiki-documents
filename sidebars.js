@@ -636,6 +636,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
           ],
 
         },
