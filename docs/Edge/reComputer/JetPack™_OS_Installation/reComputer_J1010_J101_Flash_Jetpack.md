@@ -32,8 +32,9 @@ There are still some preparation that we need first:
 - <a href="https://developer.nvidia.com/login" target="_blank"><span>NVIDIA account</span></a>
 - Linux Host Computer with Ubuntu 18.04 OS (or above)
 
-!!!note
- In this tutorial, we will use Ubuntu 18.04 LTS based system to complete the installation.
+:::note
+In this tutorial, we will use Ubuntu 18.04 LTS based system to complete the installation.
+:::
 
 ### Hardware Preparation (Force Recovery Mode)
 
@@ -240,8 +241,9 @@ cd ..
 sudo ./apply_binaries.sh
 ```
 
-!!!Note
-    `${}` is where you put the names of the files.
+:::tip
+`${}` is where you put the names of the files.
+:::
 
 *As the example of **NVIDIA L4T 32.7.1**, the downloaded files are stored in `/Desktop/L4T_Drivers`, so under the '/Desktop/L4T_Drivers' path we open the command line window(Terminal) and execute the following command.
 
@@ -312,8 +314,9 @@ If you can't get into the system in **Flashing to eMMC with command-line -- Step
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/35.jpg" /></div>
 
-!!!Note
-    If more storage space is needed, we can use SD card to expand the capacity, or burn the system on SD card, you can refer to our recommended solution [Flash System on SD card](https://wiki.seeedstudio.com/Flash_System_on_SD_card/)
+:::note
+If more storage space is needed, we can use SD card to expand the capacity, or burn the system on SD card, you can refer to our recommended solution [Flash System on SD card](https://wiki.seeedstudio.com/J1010_Boot_From_SD_Card/)
+:::
 
 ## Tech Support
 
