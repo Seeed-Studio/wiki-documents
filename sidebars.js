@@ -636,6 +636,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
           ],
 
         },
@@ -2048,6 +2049,7 @@ const sidebars = {
             'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
             'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
             'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
+            'Edge/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
           ]
         },
         {

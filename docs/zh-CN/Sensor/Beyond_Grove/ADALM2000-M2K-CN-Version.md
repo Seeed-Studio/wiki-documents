@@ -12,7 +12,6 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/ADALM2000-M2K-CN-Version/img/20190905171231.jpg)
 
-
 ## 简介
 
 ADALM2000 (M2K)主动学习模块是一个经济实惠的 USB 供电数据采集模块，相比于ADALM1000 (M1K)，其模块功能有大幅扩展和提升。ADALM2000内置采样速率可达 100MSPS 的12位模-数和数-模转换器，是一个高性能掌上实验室。与高成本、大体积的传统实验室设备不同，ADALM2000可以在低成本的前提下帮助电气工程专业学生或爱好者们学习和探索频率达数十兆赫兹的信号与系统。配合ADI公司的 [Scopy™](https://wiki.analog.com/university/tools/m2k/scopy) 图形应用软件，ADALM2000 可以向用户提供如下高性能仪器：  

@@ -23,10 +23,9 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
 
 ## **Features**
 
