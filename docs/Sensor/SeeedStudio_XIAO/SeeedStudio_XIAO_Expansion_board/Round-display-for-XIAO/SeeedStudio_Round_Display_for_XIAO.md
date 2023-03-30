@@ -282,6 +282,10 @@ If the program runs smoothly, you will see the following effect.
 
 A: Please check that the Round Display switch is turned on. If you are using the XIAO ESP32C3, you may also need to press Reset after uploading the program to make it work.
 
+### Q2: If I want to connect Seeed Studio XIAO ESP32S3 Sense to this extension screen, will there be a conflict with two TF card slots?
+
+A: If you connect XIAO ESP32S3 Sense with this extension screen, the data transmission of the TF card will be applied in the Seeed Studio XIAO ESP32S3 Sense. Meanwhile, the TF card on the screen will not be used.
+
 ## Resources
 
 - **[PDF]** [Charge IC datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/charge-IC-datasheet.pdf)
@@ -289,6 +293,7 @@ A: Please check that the Round Display switch is turned on. If you are using the
 - **[PDF]** [RTC PCF8563 datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/RTC-PCF8563-datasheet.pdf)
 - **[PDF]** [Seeed Studio Round Display for XIAO SCH](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH_230308.pdf)
 - **[ZIP]** [Seeed Studio Round Display for XIAO SCH&PCB](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH&PCB_230308.zip)
+- **[stl]** [The 3D model diagram of the shell for Round Display](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
 
 ## Tech Support
 
