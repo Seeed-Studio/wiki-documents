@@ -55,7 +55,7 @@ int ledPin = D10;    // LED connected to digital pin 10
 
 void setup() {
   // declaring LED pin as output
-  pinMode(led_pin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {

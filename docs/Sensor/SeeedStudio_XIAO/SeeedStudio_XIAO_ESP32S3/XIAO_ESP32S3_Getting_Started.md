@@ -19,8 +19,8 @@ last_update:
 	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
 	</tr>
 	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -76,7 +76,7 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
     <tr>
 	    <th>Dimensions</th>
 	    <td align="center">21 x 17.5mm</td>
-        <td align="center">(with expansion board)</td>
+        <td align="center">21 x 17.5 x 15mm (with expansion board)</td>
 	</tr>
     <tr>
 	    <th rowspan="5">Power</th>
@@ -100,8 +100,8 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
 	</tr>
     <tr>
         <th>Low Power Consumption Model</th>
-        <td>Modem-sleep Model: <strong>~ 25.000 mA</strong> <br></br> Light-sleep Model: <strong>~ 2.000 mA</strong> <br></br> Deep Sleep Model: <strong>>14 μA</strong></td>
-        <td align="center">Modem-sleep Model: <strong>3.8V/32.7 mA</strong> <br></br> Light-sleep Model: <strong>3.8V/28.8 mA</strong> <br></br> Deep Sleep Model: <strong>3.8V/26.5 mA</strong></td>
+        <td>Modem-sleep Model: <strong>3.8V/25 mA</strong> <br></br> Light-sleep Model: <strong>3.8V/2 mA</strong> <br></br> Deep Sleep Model: <strong>3.8V/14 μA</strong></td>
+        <td>Without any peripherals: <br></br> - Modem-sleep Model: <strong>3.8V/25.5 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/2.4 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/63.768 μA</strong> <br></br> Connect the camera: <br></br> - Modem-sleep Model: <strong>3.8V/44.57 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/5.47 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/3.00 mA</strong> <br></br> Connecting an SD Card: <br></br> - Modem-sleep Model: <strong>3.8V/32.8 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/3.48 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/1.08 mA</strong><br></br> Simultaneously connect the camera and the SD card: <br></br> - Modem-sleep Model: <strong>3.8V/55.72 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/6.56 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/3.98 mA</strong></td>
     </tr>
     <tr>
         <th>Wi-Fi Enabled Power Consumption</th>
