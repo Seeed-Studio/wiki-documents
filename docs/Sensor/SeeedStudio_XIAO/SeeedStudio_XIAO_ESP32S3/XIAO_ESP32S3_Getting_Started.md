@@ -321,6 +321,10 @@ Once the program is successfully uploaded, you will see the following output mes
 
 Congratulations, you've learned how to write and upload programs for the XIAO ESP32S3!
 
+:::note
+The LED will only turn off when the user LED pin on the XIAO ESP32S3 is set to a high level, and it will only turn on when the pin is set to a low level.
+:::
+
 ## Battery Usage
 
 The XIAO ESP32S3 series has a built-in power management chip that allows the XIAO ESP32S3 to be powered independently by using a battery or to charge the battery through the XIAO ESP32S3's USB port.
