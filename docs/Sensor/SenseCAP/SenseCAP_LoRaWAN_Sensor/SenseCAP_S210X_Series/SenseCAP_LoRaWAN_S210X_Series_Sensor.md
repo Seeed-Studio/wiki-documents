@@ -5,69 +5,43 @@ keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 2/14/2023
-  author: Matthew
+  date: 3/30/2023
+  author: Yvonne
 ---
 
 
-# About SenseCAP LoRaWAN S210X Series Sensor
--------
+# SenseCAP LoRaWAN S210X Series Sensor
 
-The next generation of LoRa sensors, the S210X series offers users’ industrial long-distance data acquisition via LoRaWAN. This series is suitable for a wide variety of different industries such as smart agriculture, smart buildings and industrial control. 
-With the IP66 rating, -40 ~ +85C ° operating temperature and built-in 19Ah high-capacity battery, combined with the devices’ low power consumption, the series can operate in harsh outdoor environments for up to 10 years with a range of up to 10km. The built-in Bluetooth facilitates setup and greatly reduces large-scale deployment costs.Users can focus on application development with the easy set-up, and start retrieving data in a few steps. Just install the device, bind it using the QR code and configure the network, then data can be viewed from the SenseCAP portal, which supports popular IoT protocols such as HTTP and MQTT.
+SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway. Users can install the device, bind it using the QR code and configure the network, then data can be viewed from the SenseCAP portal, which supports popular IoT protocols such as HTTP and MQTT.
 
-![图片1](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/1.png)
+![图片1](https://media-cdn.seeedstudio.com/media/wysiwyg/111_1.png)
+<p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
 
-# Architecture
-------
-![图片2](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/2.png)
+# Features
 
-# Application
-------
-![图片3](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/3.png)
+- Compatible with Worldwide LoRaWAN® Networks: Compatible with different types of LoRaWAN® gateways to enable fast connection with LoRaWAN® networks (support the universal frequency plan from 863MHz ~928MHz).
+- Long Range & Battery powered: Ultra-wide-transmission range of 2km in urban scenes and 10km in line of sight scenes. Powered by easily replaceable standard Li-SOCl2 battery (type: ER34615) with Max.10 years of battery life.
+- Designed to Use in Harsh Environments: -40℃ ~ 85℃ operating temperature and IP66-rated enclosure, suitable for outdoor use, high UV exposure, heavy rain, dusty conditions, etc.
+- Simple Configuration: SenseCAP provides a no-code experience that enables users to finish configuration with 4 steps through SenseCAP Mate APP.
+
+:::tip
+IP 66: An IP Rating (also known as an Ingress Protection Rating or International Protection Rating) is a way of showing the effectiveness of electrical enclosures in blocking foreign bodies such as dust, moisture, liquids, and accidental contact.
+
+SenseCAP Mate App: SenseCAP Mate APP is a powerful APP for data visualization and remote device management.
+:::
 
 # How to Select Gateway and LoRaWAN® Network Server
-------
 LoRaWAN network coverage is required when using sensors, there are two options.
 ![图片4](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/4.png)
 
-# Features - S210X Series
-![图片5](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/05.png) 
-
-![图片6](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/06.png)
-
-![图片7](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/07.png)
-
-![图片8](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/08.png)
-
-![图片9](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/09.png)
-
-# SenseCAP Mate App
------
-SenseCAP Mate is a standalone Bluetooth configuration tool, which can modify sensor parameters like EUI, key, frequency plan, etc.
-
-![图片10](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/10.png)
-
-
 # How to Use the Sensor
------
 ![图片11](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
 
+# Architecture
 
-# SenseCAP Portal
------
-SenseCAP Portal is a web-based platform which enables
+![图片2](https://media-cdn.seeedstudio.com/media/wysiwyg/222.png)
 
-- Device management
-- Data management
-- API Access Key management
 
-Visit SenseCAP Portal: 
-https://sensecap.seeed.cc
-
-For more info, please visit: 
-https://solution.seeedstudio.com
-
-![图片12](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/12.png)
-
+# Application
+![图片3](https://wdcdn.qpic.cn/MTY4ODg1NTg2NjMyNjM0Nw_764306_m5FVYoxTQ-Ayq1fK_1669970097?w=1080&h=584)
 
