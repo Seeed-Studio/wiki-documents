@@ -15,7 +15,7 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is March 20th and a brand new week has begun! Check out what Seeed did last week!
+Today is March 27th and a brand new week has begun! Check out what Seeed did last week!
 
 ## Latest Wiki Launched
 
