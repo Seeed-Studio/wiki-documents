@@ -688,15 +688,178 @@ This part can refer to the example we wrote for XIAO ESP32C3 to access ChatGPT, 
 
 - [Learn to use WiFiClient and HTTPClient on XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT in action](https://wiki.seeedstudio.com/xiaoesp32c3-chatgpt)
 
-<!-- ## WiFi Mesh -->
+## WiFi Mesh
 
+Accordingly to the [Espressif documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/mesh.html):
 
+"ESP-MESH is a networking protocol built atop the Wi-Fi protocol. ESP-MESH allows numerous devices (referred to as nodes) spread over a large physical area (both indoors and outdoors) to be interconnected under a single WLAN (Wireless Local-Area Network). ESP-MESH is self-organizing and self-healing meaning the network can be built and maintained autonomously."
+
+In a traditional Wi-Fi network architecture, a single node (access point – usually the router) is connected to all other nodes (stations). Each node can communicate with each other using the access point. However, this is limited to the access point wi-fi coverage. Every station must be in the range to connect directly to the access point.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/42.png" style={{width:800, height:'auto'}}/></div>
+
+With ESP-MESH, the nodes don’t need to connect to a central node. Nodes are responsible for relaying each others transmissions. This allows multiple devices to spread over a large physical area. The Nodes can self-organize and dynamically talk to each other to ensure that the packet reaches its final node destination. If any node is removed from the network, it is able to self-organize to make sure that the packets reach their destination.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/43.png" style={{width:800, height:'auto'}}/></div>
+
+The [painlessMesh library](https://gitlab.com/painlessMesh/painlessMesh) allows us to create a mesh network with the ESP32 boards in an easy way.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/44.png" style={{width:800, height:'auto'}}/></div>
+
+If a window pops up prompting us to download some dependent packages to use this library, we also need to download them together.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/45.png" style={{width:500, height:'auto'}}/></div>
+
+If this window doesn’t show up, you’ll need to install the following library dependencies:
+
+- [ArduinoJson](https://github.com/bblanchon/ArduinoJson) (by bblanchon)
+- [TaskScheduler](https://github.com/arkhipenko/TaskScheduler)
+- [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) (ESP32)
+
+To get started with ESP-MESH, we’ll first experiment with the library’s basic example. This example creates a mesh network in which all boards broadcast messages to all the other boards.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/46.png" style={{width:700, height:'auto'}}/></div>
+
+Before uploading the code, you can set up the `MESH_PREFIX` (it’s like the name of the MESH network) and the `MESH_PASSWORD` variables (you can set it to whatever you like).
+
+Then, we recommend that you change the following line for each board to easily identify the node that sent the message. For example, for node 1, change the message as follows:
+
+```c
+String msg = "Hi from node 1 ";
+```
+
+Okay, next we will use two XIAO ESP32S3 as an example. The conceptual diagram after networking is roughly as follows.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/47.png" style={{width:700, height:'auto'}}/></div>
+
+Upload the program separately to the two XIAO, open the serial port monitor and set the baud rate to 115200. (If there are two XIAO, you may need additional serial port software), if the program runs smoothly, you will see the following results:
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/48.png" style={{width:800, height:'auto'}}/></div>
+
+### Program annotation
+
+Start by including the painlessMesh library. Then, add the mesh details. The `MESH_PREFIX` refers to the name of the mesh. The `MESH_PASSWORD`, as the name suggests is the mesh password. All nodes in the mesh should use the same `MESH_PREFIX` and `MESH_PASSWORD`. The `MESH_PORT` refers to the the TCP port that you want the mesh server to run on. The default is **5555**.
+
+It is recommended to avoid using `delay()` in the mesh network code. To maintain the mesh, some tasks need to be performed in the background. Using `delay()` will stop these tasks from happening and can cause the mesh to lose stability/fall apart. Instead, it is recommended to use `TaskScheduler` to run your tasks which is used in painlessMesh itself. The following line creates a new `Scheduler` called `userScheduler`.
+
+```c
+Scheduler userScheduler; // to control your personal task
+```
+
+Create a `painlessMesh` object called mesh to handle the mesh network.
+
+```c
+painlessMesh  mesh;
+```
+
+Create a task called `taskSendMessage` responsible for calling the `sendMessage()` function every second as long as the program is running.
+
+```c
+Task taskSendMessage(TASK_SECOND * 1 , TASK_FOREVER, &sendMessage);
+```
+
+The `sendMessage()` function sends a message to all nodes in the message network (broadcast).
+
+```c
+void sendMessage() {
+  String msg = "Hello from node 1";
+  msg += mesh.getNodeId();
+  mesh.sendBroadcast( msg );
+  taskSendMessage.setInterval(random(TASK_SECOND * 1, TASK_SECOND * 5));
+}
+```
+
+The message contains the “Hello from node 1” text followed by the board chip ID.
+
+To broadcast a message, simply use the `sendBroadcast()` method on the mesh object and pass as argument the message (msg) you want to send.
+
+```c
+mesh.sendBroadcast(msg);
+```
+
+Every time a new message is sent, the code changes the interval between messages (one to five seconds).
+
+```c
+taskSendMessage.setInterval(random(TASK_SECOND * 1, TASK_SECOND * 5));
+```
+
+Next, several callback functions are created that will be called when specific events happen on the mesh. The `receivedCallback()` function prints the message sender (from) and the content of the message (`msg.c_str()`).
+
+```c
+void receivedCallback( uint32_t from, String &msg ) {
+  Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
+}
+```
+
+The `newConnectionCallback()` function runs whenever a new node joins the network. This function simply prints the chip ID of the new node. You can modify the function to do any other task.
+
+```c
+void newConnectionCallback(uint32_t nodeId) {
+  Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
+}
+```
+
+The `changedConnectionCallback()` function runs whenever a connection changes on the network (when a node joins or leaves the network).
+
+```c
+void changedConnectionCallback() {
+  Serial.printf("Changed connections\n");
+}
+```
+
+The `nodeTimeAdjustedCallback()` function runs when the network adjusts the time, so that all nodes are synchronized. It prints the offset.
+
+```c
+void nodeTimeAdjustedCallback(int32_t offset) {
+  Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(),offset);
+}
+```
+
+In the `setup()`, initialize the serial monitor. Choose the desired debug message types:
+
+```c
+//mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
+
+mesh.setDebugMsgTypes( ERROR | STARTUP );  // set before init() so that you can see startup messages
+```
+
+Initialize the mesh with the details defined earlier.
+
+```c
+mesh.init(MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT);
+```
+
+Assign all the callback functions to their corresponding events.
+
+```c
+mesh.onReceive(&receivedCallback);
+mesh.onNewConnection(&newConnectionCallback);
+mesh.onChangedConnections(&changedConnectionCallback);
+mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
+```
+
+Finally, add the taskSendMessage function to the userScheduler. The scheduler is responsible for handling and running the tasks at the right time.
+
+```c
+userScheduler.addTask(taskSendMessage);
+```
+
+Finally, enable the taskSendMessage, so that the program starts sending the messages to the mesh.
+
+```c
+taskSendMessage.enable();
+```
+
+To keep the mesh running, add `mesh.update()` to the `loop()`.
+
+```c
+void loop() {
+  // it will run the user scheduler as well
+  mesh.update();
+}
+```
 
 ## Troubleshooting
-
-<!-- ### Q1: How do I use the FTM function in XIAO ESP32S3?
-
-A: Currently, when using the official FTM example provided by ESP, the error message **FTM Error: CONF_REJECTED** appears. We are troubleshooting the issue and cannot use the FTM function on XIAO ESP32S3 for the time being. -->
 
 ### Q1: Why can't I connect to the XIAO ESP32S3 hotspot when I am using the softAP example?
 
@@ -706,6 +869,21 @@ If the cause of overheating is ruled out, then it is possible that the antenna s
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
+## Citations & References
+
+This article draws on the web content **[Random Nerd Tutorials](https://randomnerdtutorials.com/)**' on ESP32 and uses it verified on the Seeed Studio XIAO ESP32S3. 
+
+Special thanks to the authors of **Random Nerd Tutorials** for their hard work!
+
+The following is the reference link to the original article, you are welcome to learn more about ESP32 network through the following link to the original article.
+
+- [ESP32 Useful Wi-Fi Library Functions (Arduino IDE)](https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/)
+- [ESP32 MQTT – Publish and Subscribe with Arduino IDE](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/)
+- [ESP-MESH with ESP32 and ESP8266: Getting Started (painlessMesh library)](https://randomnerdtutorials.com/esp-mesh-esp32-esp8266-painlessmesh/)
+
+For more information about using the ESP32 development board, please read the official website of Random Nerd Tutorials.
+
+- [Random Nerd Tutorials](https://randomnerdtutorials.com/)
 
 ## Tech Support
 
