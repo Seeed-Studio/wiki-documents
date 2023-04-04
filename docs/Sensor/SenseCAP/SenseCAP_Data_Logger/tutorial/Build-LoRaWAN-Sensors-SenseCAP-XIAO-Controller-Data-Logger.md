@@ -597,7 +597,7 @@ Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/91.png"/></div>
 
-- **Step 5:** Copy sensorBuilder.ino.elf.uf2 firmware file into the **RPI-RP2** disk.
+- **Step 5:** Copy sensorBuilder.ino.uf2 firmware file into the **RPI-RP2** disk.
 
 The **RPI-RP2** disk will disappear once the firmware flashing is complete.
 
