@@ -4,7 +4,6 @@ title: Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Dat
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Build-LoRaWAN-Sensors-with-SenseCAP-S2110-Sensor-Builder-and-SenseCAP-Data-Logger
 last_update:
   date: 3/23/2023
   author: Yvonne
