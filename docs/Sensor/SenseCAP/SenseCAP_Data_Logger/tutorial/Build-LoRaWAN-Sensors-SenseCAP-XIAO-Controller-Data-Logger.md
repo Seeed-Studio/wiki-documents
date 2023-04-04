@@ -579,7 +579,7 @@ If you want to add more Grove sensors to the SenseCAP S2110 Sensor Builder and s
 
 ## Flash Factory Firmware into SenseCAP S2110 Sensor Builder
 
-Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor Builder. Here we will flash the initial factory firmware.
+Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor Builder. Here we will flash the initial factory firmware, download [the latest uf2 firmware](https://github.com/Seeed-Studio/Seeed_Arduino_S2110/releases) before starting.
 
 - **Step 1:** Unscrew the four screws on the SenseCAP S2110 Sensor Builder lid to open the lid and unscrew the PG connector (with a coin)
 
@@ -597,7 +597,7 @@ Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/91.png"/></div>
 
-- **Step 5:** Copy [controller.ino.elf.uf2](https://files.seeedstudio.com/wiki/SenseCAP-S2110/controller.ino.elf.uf2) firmware file into the **RPI-RP2** disk.
+- **Step 5:** Copy sensorBuilder.ino.elf.uf2 firmware file into the **RPI-RP2** disk.
 
 The **RPI-RP2** disk will disappear once the firmware flashing is complete.
 
