@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/27/2023
+  date: 04/03/2023
   author: Matthew
 ---
 
@@ -15,81 +15,41 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is March 20th and a brand new week has begun! Check out what Seeed did last week!
+Today is April 3rd and a brand new week has begun! Check out what Seeed did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Seeed Studio XIAO ESP32S3 (Sense)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started)
+### [WiFi Usage with Seeed Studio XIAO ESP32S3 (Sense)](https://wiki.seeedstudio.com/xiao_esp32s3_wifi_usage)
 
-We have launched the Seeed Studio XIAO ESP32S3(Sense) last week! The sense version integrates camera sensor, digital microphone and SD card supporting. Combining embedded ML computing power and photography capability, this development board can be your great tool to get started with intelligent voice and vision AI.
+In this tutorial, we will explore how to leverage the XIAO ESP32S3's Wi-Fi capabilities to connect to a Wi-Fi network and perform basic networking tasks.
 
-<table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
-    <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
-</table>
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/40.jpg" /></div>
 
-### [Getting Started with Seeed Studio Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display)
+### [Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)](https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing)
 
-Seeed Studio Round Display for XIAO is an expansion board compatible with all XIAO development boards. It features a fully covered touch screen on one side, designed as a 39mm disc. It contains onboard RTC, charge chip, TF card slot within its compact size, perfect for interactive displays in smart home, wearables and more.
+In this tutorial, you will have a good understanding of the pinout of the XIAO ESP32S3 and be able to use it effectively in your projects.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/round_display_for_xiao/rounddisplay.jpg" /></div>
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.png" /></div>
 
-### [Using LVGL and TFT on the Seeed Studio Round Display for XIAO](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display)
+### [Getting Started with Cochl.Sense on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/Cochl.Sense-Jetson-Getting-Started/)
 
-In this section of the tutorial, we will focus on how to use the TFT_eSPI library and LVGL library to draw various rich and interesting dial patterns on the Round Display, and introduce the usage of some common functions of these two useful but complex libraries from simple to deep.
+In this tutorial, you are going to build a sound recognition system that runs on the NVIDIA Jetson board using Cochl.Sense. Cochl.Sense is a Machine Listening development platform for deploying deep learning applications on edge devices such as NVIDIA® Jetson devices.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/round_display_for_xiao/000.jpg" /></div>
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Cochl.Sense/1.gif" /></div>
 
-### [Deploy YOLOv8 on NVIDIA Jetson using TensorRT and DeepStream SDK](https://wiki.seeedstudio.com/YOLOv8-DeepStream-TRT-Jetson)
+### [RS485 500cm Ultrasonic Level Sensor](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor)
 
-This guide explains how to deploy a trained AI model into NVIDIA Jetson Platform and perform inference using TensorRT and DeepStream SDK. Here we use TensorRT to maximize the inference performance on the Jetson platform.
+The RS485 500cm Ultrasonic Level Sensor offers high precision and has a measuring range of 25 to 500cm. It utilizes advanced ultrasonic sensing technology to deliver accurate distance measurements with a resolution of up to 1mm.
 
-![image1](https://files.seeedstudio.com/wiki/YOLOV8/elephant-detect-GIF.gif)
-
-### [SenseCAP M2 Light Gateway Quick Start File](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction)
-
-SenseCAP S2120 battery-powered 8-in-1 LoRaWAN weather sensor measures air temperature, humidity, wind speed, wind direction, rainfall, light intensity, UV index, and barometric pressure. It enables low maintenance cost for its ultra-low power consumption, reliable performance, built-in Bluetooth, and app service for OTA configuration and remote device management. It supports multi-scenario applications like backyard, gardens, smart agriculture, meteorology, smart city, etc.
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction914.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%201.png" /></div>
 
 ## Existed Wiki Updated
 
-### [Update Firmware for Grove - Vision AI Module](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/)
+### [Check BootLoader Version and Update Bootloader for SenseCAP A1101](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#check-bootloader-version)
 
-We have updated firmware for the Grove - Vision AI Module and rewrite the wiki. Please do not hesitate to show your opinion with us!
+We have updated the bootloader version and upgraded method.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/camera.jpg" /></div>
-
-### [More Grove modules supported for SenseCAP S2110 Sensor Builder](https://wiki.seeedstudio.com/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger)
-
-SenseCAP S2110 Sensor Builder is an open-source tool to build RS485 sensors. Now there are more Grove modules supported:
-
-- Grove - Gas Sensor(BME688)
-- Grove - Multichannel Gas Sensor v2
-- Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids)
-- Grove - UV Sensor
-- Grove - Ultrasonic Distance Sensor
-- Grove - Turbidity Sensor
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP_S2110_builder/SenseCAP-S2110-Sensor-Builder-106.jpg" /></div>
+<div align="center"><img width={800} src="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/assert/q2.png" /></div>
 
 ## Past Weekly wiki
 
@@ -97,3 +57,4 @@ SenseCAP S2110 Sensor Builder is an open-source tool to build RS485 sensors. Now
 - [weekly wiki on 3.06th](/Seeed_Elderly/weekly_wiki/wiki306)
 - [weekly wiki on 3.13th](/Seeed_Elderly/weekly_wiki/wiki313)
 - [weekly wiki on 3.20th](/Seeed_Elderly/weekly_wiki/wiki320)
+- [weekly wiki on 3.27th](/Seeed_Elderly/weekly_wiki/wiki327)

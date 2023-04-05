@@ -51,7 +51,7 @@ The courses contain 4 Units and 16 lessons to help you quickly get started with 
 	<tr>
 	    <td><img src="https://files.seeedstudio.com/wiki/XIAO-Kit/XIAO-Kit.jpg" alt="pir" width="600" height="auto"/> 
 		</td>
-	    <td align="left"><strong> Preface</strong>: This course does not require Arduino programming or electronics knowledge. The course will take you step by step to understand and learn these necessary knowledge, and quickly practice in each project.       <a href="https://files.seeedstudio.com/wiki/XIAO-Kit/XIAO-Kit-Preface.pdf/">Preface ></a></td>
+	    <td align="left"><strong> Preface</strong>: This course does not require Arduino programming or electronics knowledge. The course will take you step by step to understand and learn these necessary knowledge, and quickly practice in each project.       <a href="https://files.seeedstudio.com/wiki/XIAO-Kit/XIAO-Kit-Preface.pdf">Preface ></a></td>
 	</tr>
 	<tr>
 	    <td ><img src="https://files.seeedstudio.com/wiki/XIAO-Kit/xiaokitss.png" alt="pir" width="250" height="auto"/></td>

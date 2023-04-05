@@ -828,7 +828,7 @@ const sidebars = {
           type: 'category',
           label: 'Kit with Courses',
           items: [
-            'Sensor/SeeedStudio_XIAO/Kit with Courses/XIAO-Kit-Courses',
+            'Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses',
 
           ]
         },
