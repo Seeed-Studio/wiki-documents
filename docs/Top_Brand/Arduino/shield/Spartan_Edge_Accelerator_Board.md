@@ -6,7 +6,7 @@ tags:
 keywords:
   - Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Spartan_Edge_Accelerator_Board
+slug: /Spartan-Edge-Accelerator-Board
 last_update:
   date: 01/30/2023  
   author: Eico 
