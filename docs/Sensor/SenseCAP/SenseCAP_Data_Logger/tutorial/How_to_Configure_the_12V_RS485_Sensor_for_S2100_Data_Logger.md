@@ -1,553 +1,342 @@
 ---
-description: Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger
-title: Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger
+description: Configure the 12V RS485 Sensor
+title: Configure the 12V RS485 Sensor
 keywords:
-- SenseCAP
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+- SenseCAP data logger
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
-  date: 3/23/2023
-  author: Yvonne
+  date: 2/14/2023
+  author: Matthew
 ---
 
-# Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger
 
-SenseCAP S2110 Sensor Builder is an open-source tool to build RS485 sensors with 500+ Grove sensors. It also enables developers to build a custom industrial-grade LoRaWAN sensor connecting to SenseCAP Cloud with SenseCAP Data Logger.
+# Configure the 12V RS485 Sensor
 
+## Sensor Probe
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP_S2110_builder/SenseCAP-S2110-Sensor-Builder-105.jpg"/></div>
+Get these items ready:
 
-It has Seeed Studio XIAO RP2040 as the dual-core ARM Cortex M0+ processor, and has one Grove and one RS485 connector, enabling developers to connect with 500+ Grove sensors and various MODBUS RS485 sensors to develop custom industrial-grade MODBUS RS485 sensors for various IoT applications.
+![picture1](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/1.png)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/107.jpg"/></div>
+### Tools
 
-For the LoRaWAN application, developers could easily connect it with a [SenseCAP LoRaWAN Data Logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)(*Grove sensors and data logger are not included in the product, learn more on the bundle kit [here](https://www.seeedstudio.com/sensecap-outdoor-lorawan-sensor-kit-based-on-grove-p-5503.html)) to transfer the data to SenseCAP Cloud, which only takes a 5-minute simple BLE configuration in SenseCAP Mate App. Clear data results and further analysis could be easily obtained from SenseCAP Dashboard and SenseCAP Mate App. IoT platforms such as Helium, TTN, LORIOT, etc. are also supported.
+|**Type**|**Description**|
+| - | - |
+|Cross screwdriver|Cross recess No.2|
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP_S2110_builder/SenseCAP-S2110-Sensor-Builder-106.jpg"/></div>
+# Connect to the Sensor 
+## Disassemble the Data Logger
+1. Unscrew three screws.
 
-The product comes with an IP66 industrial-grade enclosure and also the mounting pads and screws set, which enables you to deploy the sensor outdoors easily and safely.
+![picture2](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/2.png)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/108.png"/></div>
+2. Take down the cover.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border="0" /></a></p>
+![picture3](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/3.png)
 
-## Features
+3. Remove the thread cap and pass it through the cable of the sensor, pass it through the bottom cover, and connect it to the wiring terminal.
 
-- **Easily build Modbus RS485 Industrial-grade Sensors:** With open-source source code and IP66 enclosure, easily convert over 500+ existing Grove sensors to Modbus RS485 industrial-grade sensors. 6 of the most popular environmental Grove sensors are already fully compatible with native firmware with more to come
-- **SenseCAP Data Logger and IoT Platform Compatible:** Convert to a SenseCAP LoRaWAN® sensor with SenseCAP Data Logger and take advantage of quick and easy set-up in just 5-minutes with SenseCAP Mate APP
-- **Supports Third-party Data Loggers and IoT Platforms:** Besides SenseCAP Data Logger, developers could connect to other data loggers that support Modbus RS485 protocol and third-party IoT platforms
-- **Ready-to-deploy Industrial-grade Outdoor Enclosure:** IP66 waterproof rate outdoor enclosure with window and waterproof ventilation hole reserved for light and gas sensors, also comes with a customized mounting panel, suitable for pole and wall installation
-- **Powered by Seeed Studio XIAO RP2040:** Take advantage of the powerful Seeed Studio XIAO RP2040 dual-core ARM M0+ processor and vast open-source resources to customize your own sensor. Easily upload code via USB-C port
+![picture4](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/4.png)
 
-## Get Started
+|**No.**|**Pin**|**Description**|
+| - | - | - |
+|1|12V|<p>External 12V input voltage. The Data Logger can be powered by an external 12V DC power supply.</p><p>When using 12V power supply, the battery will serve as backup power supply.</p>|
+|2|5V|5V output voltage, providing 5V voltage to the sensor.|
+|3|3V|3V output voltage, providing 3V voltage to the sensor.|
+|4|IO|Acquisition level or pulse input|
+|5|V1|The voltage input of 0 to 10V is collected|
+|6|V2|The voltage input of 0 to 10V is collected|
+|7|A|RS485 A/+|
+|8|B|RS485 B/-|
+|9|I1|Collect the current input from 4 to 20mA|
+|10|I2|Collect the current input from 4 to 20mA|
+|11|GND|Ground pin|
+|12|GND|Ground pin|
 
-### Preparation
+## Power supply options of sensor
+Data Logger supports two power supply modes, we choose the External 12V DC mode:
 
-1.LoRaWAN network coverage
+|**Mode**|**Description**|
+| - | - |
+|Built-in Battery|The Data Logger and sensors are powered by batteries. In this case, the Data Logger can be connected to a 5V sensor.|
+|External 12V DC|<p>Supply power to Data Logger and sensor through external 12V power supply. When the external 12V is disconnected, the system switches to battery power. </p><p>When using external 12V power supply, use it together with the junction box to ensure the waterproof performance of the device.</p>|
 
-Check whether you are within LoRaWAN network coverage of Helium or TTN (The Things Network). If you do not have coverage, you can use any gateway powered by Helium/ TTN to send the sensor data to the cloud. However, this wiki focuses on sending the sensor data to Sensecap platform. And to do that, you need to have either a [SenseCAP Outdoor LoRaWAN Gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html) for TTN or [SenseCAP M1 LoRaWAN Indoor Gateway](https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html) or [SenseCAP M2 LoRaWAN Indoor Gateway](https://www.seeedstudio.com/SenseCAP-M2-Light-Hotspot-and-Software-License.html) or any other Helium-enabled gateway for Helium.
 
-2.SenseCAP S2110 Sensor Builder x 1
+## Connect to the junction box
+Wire sequence of M12 cable:
 
-3.SenseCAP Data Logger x 1
+![picture5](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png)
 
-4.Grove Sensor x 1
+When your sensor needs 12V power, the battery will not be able to drive the sensor. Therefore, an external 12V power supply is required.
 
-Currently, SenseCAP S2110 Sensor Builder supports the following Grove modules out-of-the-box to communicate with SenseCAP Data Logger and send the sensor data to the SenseCAP platform via LoRa.
+1) Prepare the following items: 12V DC adapter, Junction box, and 4-pin wire.
+2) Wire to the terminal of the Data Logger.
 
-- [Grove - Temperature and Barometer Sensor (BMP280)](https://www.seeedstudio.com/Grove-Barometer-Sensor-BMP280.html)
-- [Grove - Oxygen Sensor (MIX8410)](https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html)
-- [Grove - CO2 & Temperature & Humidity Sensor - SCD41](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html)
-- [Grove - Sunlight Sensor - SI1151](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)
-- [Grove - Light Sensor v1.2 - LS06-S phototransistor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
-- [Grove - Flame Sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html)
-- [Grove - Gas Sensor(BME688)](https://www.seeedstudio.com/Grove-Gas-Sensor-BME688-p-5478.html)
-- [Grove - Multichannel Gas Sensor v2](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html?queryID=e92bca5d79e17a6d5bf1447be36e2ee2&objectID=4569&indexName=bazaar_retailer_products)
-- [Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids)](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html?queryID=9f138cfc508f141092493577c1ca83bb&objectID=4400&indexName=bazaar_retailer_products)
-- [Grove - UV Sensor](https://www.seeedstudio.com/Grove-UV-Sensor.html?queryID=07ecb93f63b4035df7dfa9aea8b1e498&objectID=1345&indexName=bazaar_retailer_products)
-- [Grove - Ultrasonic Distance Sensor](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html?queryID=ebe18a5e13611be3b60f176e7bfabde7&objectID=2281&indexName=bazaar_retailer_products)
-- [Grove - Turbidity Sensor](https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html?queryID=42f9c89339bce9fbff617e5c8a0328eb&objectID=4399&indexName=bazaar_retailer_products)
+![picture6](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/6.png)
 
-We will add support to more Grove sensors in the near future. So stay tuned! We have made the source code for SenseCAP S2110 Sensor Builder open-source so that users could develop their own Grove sensors as well!
+Connect the cover, rubber ring and screw cap in turn.
 
+![picture7](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/7.png)
+![picture8](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/8.png)
 
-:::tip
-If you would like to Build a LoRaWAN sensor with the Grove sensors which are not currently supported in the above list or build with third-party sensors with Grove or RS485 connector, please refer to the guidance here: https://github.com/Seeed-Studio/Seeed_Arduino_S2110 
-:::
+3) Wire to the terminal of the junction box.
 
+![picture9](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/9.png)
 
 
-### Connect Grove Sensor to SenseCAP S2110 Sensor Builder
 
-- **Step 1:** Unscrew the four screws on the SenseCAP S2110 Sensor Builder lid and open the lid
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/84.jpg"/></div>
+4) Connect the M12 sensor wire to the junction box.
 
-- **Step 2:** Remove the thread cap
+![picture10](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/10.png)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/78.jpg"/></div>
+5) Connect the 12V DC adapter to the power supply.
+## Connect to the Sensor
+Wire sequence of ONE Compact Weather Station Sensor:
 
-- **Step 3:** Pass the included cable through the cap into the SenseCAP S2110 Sensor Builder
+![picture11](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/11.png)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/79.jpg"/></div>
+The device adopts an M12 8-pin connector, the different colored pins provide power and data communication (as shown in the above diagram).
 
-- **Step 4:** Connect the wires of the cable into the screw terminal as follows
+When working with the RS-485, you can connect only 4 wires (not using a heating function), and the rest can be individually wrapped with tape to prevent short circuit.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/86.jpg"/></div>
+![picture12](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/12.png)
 
-- **Step 5:** Place a Grove sensor inside the SenseCAP S2110 Sensor Builder and screw it
+The holes of the cable and the pins of the device connector **must be aligned** when the cable is plugged in.
+![picture13](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/13.png)
 
-Grove with 2 holes (ex: Grove - Light Sensor v1.2)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/80.jpg"/></div>
 
-Grove with 3 holes (Grove Temperature and Barometer Sensor (BMP280))
+Plugin the cable and tighten it clockwise
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/81.jpg"/></div>
+![picture14](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/14.png)
 
-- **Step 6:** Connect Grove cable to Grove sensor and Grove connector on SenseCAP S2110 Sensor Builder board
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/85.jpg"/></div>
+To complete the assembly.
 
-- **Step 7:** Close lid and screw it back
+![picture15](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/15.png)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/82.jpg"/></div>
 
-- **Step 8:** Tighten the thread cap and secure in place
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/83.jpg"/></div>
+**Tighten the screws and screw caps** **to check the waterproofing**. If the wire diameter is too thin, add waterproof tape for winding.
 
-### Connect SenseCAP S2110 Sensor Builder to SenseCAP Data Logger
+![picture16](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/16.png)
 
-- **Step 1:** Uncrew the three screws on the data logger
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/70.jpg"/></div>
 
-- **Step 2:** Remove the bottom cover and take out the inside PCBA until the screw terminals are accessible. You do not need to take out the entire board
+**\*Note:** When assembling the device, it is necessary to install the waterproof pad of the Data Logger and the adapter box, and tighten the screw cap and screw, otherwise the waterproof effect of the device may be affected!
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/71.jpg"/></div>
+If the wire diameter is too small, it can be wrapped with waterproof tape, as shown below:
 
-- **Step 3:** Remove the thread cap by unscrewing in clockwise counter-clockwise direction
+![picture17](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/17.png)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/72.jpg"/></div>
 
-- **Step 4:** Pass the included cable through the thread cap and the bottom cover
+# Setup the S2100
+## Connect to Sensor to App
+1) Press button and hold for **3 seconds**, the LED will flash at 1s frequency. Please use the App to connect the sensor within 1 minute; otherwise, the device will power off or reboot.
+![picture18](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/18.png)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/73.jpg"/></div>
+2) Please select “S2100 Data Logger”.
 
-- **Step 5:** Connect the wires of the cable into the screw terminal as follows
+Please click the “Setup” button to turn on Bluetooth and click “Scan” to start scanning the sensor's Bluetooth.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/74.png"/></div>
+![picture19](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/19.png)
+![picture20](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/20.png)
 
-**Note:** Since there are 5 wires inside the cable and we are only using 4, it is better to tape the extra wire to avoid accidental contacts with the screw terminals
 
-- **Step 6:** Put back the hardware unit inside the case, close it from bottom cover and screw it back
+3) Select the Sensor by S/N (S/N is on the front label of the sensor). Then, the basic information of the sensor will be displayed after entering.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/75.jpg"/></div>
+![picture21](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/21.png)
+![picture22](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/22.png)
+![picture23](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/23.png)
 
-- **Step 7:** Tighten the thread cap and secure the cable in place
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/76.jpg"/></div>
+4) Enter configuration mode after Bluetooth connection is successful: LED flashes at 2s frequency.
 
-Once all the connections are done for the SenseCAP S2110 Sensor Builder and the Data Logger, it should look like below
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/93.jpg"/></div>
 
-### Connect to SenseCAP Cloud via SenseCAP Mate App
 
-#### Download, Install SenseCAP Mate App and Log In
 
-- **Step 1:** Download and install **SenseCAP Mate App** on your mobile phone according to your OS
 
-  - [Android](https://play.google.com/store/apps/details?id=cc.seeed.sensecapmate&hl=en&gl=US)
-  - [iOS](https://apps.apple.com/gb/app/sensecap-mate/id1619944834)
 
-- **Step 2:** Open the SenseCAP Mate APP and sign in to your SenseCAP account by entering your registered **email and password** and clicking **Login** buttons
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/1.jpg"/></div>
 
-**Note:** Keep the **Server Location** as **Global**, which is the default
 
-If it is your first time to use the SenseCAP platform, please register an account first by clicking **Register** button and login afterwards with the newly created account
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/2.jpg"/></div>
 
-**Note:** The fields with *are required fields, and those without* can be filled in optionally.
 
-#### Update Data Logger Firmware
+## Configure basic parameters through App
+### Select the Platform and Frequency
+S210x Sensors are manufactured to support universal frequency plan from 863MHz ~928MHz in one SKU. That is to say, every single device can support 7 frequency plans.
 
-- **Step 1:** Under **Config** page, select **S2100 Data Logger**
+Here we select the “SenseCAP for Helium” or “SenseCAP for TTN”. The Frequency Plan based on your actual situation.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/4.jpg"/></div>
+**\*Note:** Data Logger can upload data when there is a Helium network around the user. It runs on SenseCAP private Helium Console. Users do not need to create a device on the Helium Console;
 
-- **Step 2:** Press and hold the configuration button on the SenseCAP Data Logger for 3 seconds to enter bluetooth pairing mode
+SenseCAP for TTN platform needs to be used with SenseCAP LoRaWAN outdoor gateway(https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/96.jpg"/></div>
+![picture24](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/24.png)
 
-If it enters bluetooth pairing mode, a green LED will start to blink
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/99.gif"/></div>
+### Set the Interval
+The working mode of device: wake up the device every interval and collect measurement values and upload them through LoRa.  
 
-- **Step 3:** Click **Update**
+For example, the device collects and uploads data **every 60 minutes by default**.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/5.jpg"/></div>
+![picture25](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/25.png)
 
-- **Step 4:** Now it will prompt you to turn on location services. Click **GO TO** to open the location services page on your phone
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/6.jpg"/></div>
 
-- **Step 5:** Turn on location services. It will look as follows for Android
+### Set the Packet Policy
+The sensor uplink packet strategy has three modes, we select 1N here or you can according to your own requirement.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/9.jpg"/></div>
+![picture26](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/26.png)
 
-- **Step 6:** Come back to SenseCAP Mate App and click **Scan**
+|**Parameter**|**Description**|
+| - | - |
+|2C+1N (default)|2C+1N (2 confirm packets and 1 none-confirm) is the best strategy, the mode can minimize the packet loss rate, however the device will consume the most data packet in TTN, or date credits in Helium network.|
+|1C|1C (1 confirm) the device will sleep after get 1 received confirm packet from server.|
+|1N|1N (1 none-confirm) the device only send packet and then start to sleep, no matter the server received the data or not.|
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/10.jpg"/></div>
 
-Now it will start scanning for nearby SenseCAP Data Loggers
+### Restore Factory Setting
+When selecting the SenseCAP platform, you must use the fixed EUI/App EUI/App Key. Therefore, you need to restore the factory Settings before switching back to the SenseCAP platform from other platforms.
 
-- **Step 7:** Click on the discovered device
+![picture27](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/27.png)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/11.jpg"/></div>
 
-- **Step 8:** If an update is available, click **Get Updates** to update to the latest version. After updating to the latest version or if it says **The device is already running the latest firmware**, go back to the previous set up page
+When we make a mistake or want to reset everything, we can click the button. The device will be restored to the factory's default configuration.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12.jpg"/></div>
+**\*Note:** The “Restore Factory” function can only reset the Basic Setting.
 
-#### Configure Settings for Data Logger and SenseCAP S2110 Sensor Builder Communication
 
-- **Step 1:** Enter **bluetooth pairing mode** on the Data Logger again and click **Setup**
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/13.jpg"/></div>
+## Configure RS485 Modbus-RTU Sensor via App
+Select the “Protocol” as “RS485 Modbus RTU”. Then set the following parameters in turn.
 
-- **Step 2:** Click on the device found
+![picture28](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/28.png)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/14.jpg"/></div>
 
-It will open a page with useful information under **General**
+|Baud Rate|Baud rate of communication with the sensor. Select **9600** here.|
+| - | - |
+|Modbus Address|<p>The default address is 10 for Five in ONE, 20 for Seven in ONE, 38 for Nine in ONE, and 43 for Ten in ONE.</p><p>Slave address of the sensor. The range is 1 to 247. Enter **20** here.</p>|
+|Power Type|<p>Periodic power: Power the sensor before data collection, and power off the sensor after data collection. This mode reduces power consumption and increases battery life.</p><p>Select **Always on**.</p>|
+|Power Voltage|Select the supply **12V** voltage to the sensor.|
+|Sensor Warm-up Time|The warm-up time denotes the amount of time it takes for the sensor to attain its highest accuracy or performance level once the voltage supply has been applied. Enter **200ms** generally.|
+|Response Timeout|After Data Logger initiates a data read request to the sensor, it waits for the timeout time for a response. If this time is exceeded, the command will be resent; **5(\*100ms)** would be ok.|
+|Startup Time|The length of time the sensor can communicate from powered -on to communicating with Modbus. Range of **10\*(100ms)** would be ok.|
+|Measurement Number|Collect 0 to 10 measurements in RS485 mode. Since the sensor has seven kinds of sensor registers. We select **7** here.|
+|Work Mode|Select **Periodic collect** mode: Periodically collect and upload data.|
+|Measurement Setting|Set the register of the measurement value and other configurations.|
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/15.jpg"/></div>
+**Measurement Setting**
 
-- **Step 3:** Go to **Setting** page and under **Basic Setting**, choose the platform either as **SenseCAP for the Things Network** or **SenseCAP for Helium**
+Set each measurement in turn. Measurement1 (**Air temperature**)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/16.jpg"/></div>
+|Register Address|The register address of the measured value in the sensor, which is an integer. The Air temperature register address is 0.Enter **0** here.|
+| - | - |
+|Function Code|Modbus function code, select **03** here.|
+|Data Type|<p>The data type determines the number of registers read from the sensor and how the data should parse the value. </p><p>Select **Signed 32bit integer, 0xABCD** here.</p>|
+|Precision|<p>Precision of the value. You can choose the decimal place of the measurement value. If 1 is selected, one decimal place is reserved.</p><p>Select **2, #.##** here.</p>|
+|Y= Ax + B|<p>“Y”: It is the value of Data Logger will upload. </p><p>“x”: It is the original current value. </p><p>Factory A: Custom values that can be scaled up or down by multiples of the “x”. </p><p>Factory B: A custom value that increments or diminishes the value of the “x”.</p><p>By setting the values of A and B, you can calculate the desired value. If only raw values are uploaded, set A=1 and B=0.</p><p>**Factory A is 0.001 and Factory B is 0.**</p>|
+|Write Strategy|<p>This function is enabled only for some special sensors and is generally disabled by default</p><p>After reading the value of the register, special instructions can be issued to the sensor, such as the instruction to empty the register after reading register 0.</p><p>None: Off by default.</p><p>After Read: Send the RS485 command to sensor after reading the register.</p><p>On New Data: Send the RS485 command to sensor every 24 hours.</p><p>We don’t need to write strategy so we select **None** here.</p>|
+Measurement2 (**Air humidity**)
 
-**Note:** You can choose others as well, but in that case, you cannot use SenseCAP platform
+|Register Address|Enter **2** here.|
+| - | - |
+|Function Code|Select **03** here.|
+|Data Type|Select **Signed 32bit integer, 0xABCD** here.|
+|Precision|Select **2, #.##** here.|
+|Y= Ax + B|**Factory A is 0.001 and Factory B is 0.**|
+|Write Strategy|We don’t need to write strategy so we select **None** here.|
 
-- **Step 4:** Choose the **Frequency Plan**, **Uplink interval** and **Packet Policy**
+Measurement3 (**Barometric pressure**)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/17.jpg"/></div>
+|Register Address|Enter **4** here.|
+| - | - |
+|Function Code|Select **03** here.|
+|Data Type|Select **Signed 32bit integer, 0xABCD** here.|
+|Precision|Select **0, #** here.|
+|Y= Ax + B|**Factory A is 0.001 and Factory B is 0.**|
+|Write Strategy|We don’t need to write strategy so we select **None** here.|
 
-**Note:** The default Packet Policy is **2C+1N** and the below table explains more about it and others
+Measurement4 (**Light intensity**)
 
-| Parameter | Description |
-|---|---|
-| 2C+1N (default) | 2C+1N (2 confirm packets and 1 none-confirm) is the best  strategy, the mode can minimize the packet loss rate, however  the device will consume the most data packet in TTN, or date  credits in Helium network. |
-| 1C | 1C (1 confirm) the device will sleep after get 1 received confirm  packet from server. |
-| 1N | 1N (1 none-confirm) the device only send packet and then start to  sleep, no matter the server received the data or not. |
+|Register Address|Enter **6** here.|
+| - | - |
+|Function Code|Select **03** here.|
+|Data Type|Select **Signed 32bit integer, 0xABCD** here.|
+|Precision|Select **0, #** here.|
+|Y= Ax + B|**Factory A is 0.001 and Factory B is 0.**|
+|Write Strategy|We don’t need to write strategy so we select **None** here.|
 
-- **Step 5:** Under Sensor Setting, fill as follows
+Measurement5 (**Average wind direction**)
 
-| Parameter | Description |
-|---|:---:|
-| Protocol | RS485 Modbus RTU |
-| Baud Rate | Baud rate of communication with the sensor.   Select **9600** here. |
-| Modbus Address | Slave address of the sensor. The range is 1 to 247. Enter **1** here. |
-| Power Type | Periodic power: Power the sensor before data collection, and power  off the sensor after data collection. This mode reduces power  consumption and increases battery life. Always-on: Select this mode when the sensor needs constant  power supply. Generally, an external 12V DC power supply is used.  If it is powered only by batteries, it may not work for long. Select **periodic power** here. |
-| Power Voltage | Select the supply voltage to the sensor. It supports 3V/5V/12V.  Select **5V** here. |
-| Sensor Warm-up Time | The warm-up time denotes the amount of time it takes for the  sensor to attain its highest accuracy or performance level once the  voltage supply has been applied. This depends from sensor to sensor. Only the **Grove - Oxygen Sensor (MIX8410)** needs a warm-up time of **5s**, which means you need to enter **5000** inside the box. The other Grove sensors supported by the SenseCAP S2110 Sensor Builder at the moment only need **0ms** warm-up time. |
-| Response Timeout | After Data Logger initiates a data read request to the sensor, it  waits for the timeout time for a response. If this time is exceeded,  the command will be resent. Enter **1** here, which means **100ms**. |
-| Startup Time | The length of time the sensor can communicate from powered -on  to communicating with Modbus. Enter **20** here, which means **2000ms=2s** |
+|Register Address|Enter **12** here.|
+| - | - |
+|Function Code|Select **03** here.|
+|Data Type|Select **Signed 32bit integer, 0xABCD** here.|
+|Precision|Select **1, #.#** here.|
+|Y= Ax + B|**Factory A is 0.001 and Factory B is 0.**|
+|Write Strategy|We don’t need to write strategy so we select **None** here.|
 
-A filled settings page can be seen below
+Measurement6 (**Average wind speed**)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/18.jpg"/></div>
+|Register Address|Enter **18** here.|
+| - | - |
+|Function Code|Select **03** here.|
+|Data Type|Select **Signed 32bit integer, 0xABCD** here.|
+|Precision|Select **1, #.#** here.|
+|Y= Ax + B|**Factory A is 0.001 and Factory B is 0.**|
+|Write Strategy|We don’t need to write strategy so we select **None** here.|
 
-- **Step 6:** For the **Measurement Number**, refer to the table below according to the specific sensor.
+Measurement7 (**Rain intensity**)
 
-<table>
-<thead>
-  <tr>
-    <th>Grove Sensor Name</th>
-    <th>Measure Number</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Grove - Light Sensor v1.2</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>Grove - Flame Sensor</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>Grove - Oxygen Sensor (MIX8410)</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>Grove - Sunlight sensor (SI1151)</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>Grove Temperature and Barometer Sensor (BMP280)</td>
-    <td>3</td>
-  </tr>
-</tbody>
-</table>
+|Register Address|Enter **24** here.|
+| - | - |
+|Function Code|Select **03** here.|
+|Data Type|Select **Signed 32bit integer, 0xABCD** here.|
+|Precision|Select **1, #.#** here.|
+|Y= Ax + B|**Factory A is 0.001 and Factory B is 0.**|
+|Write Strategy|We don’t need to write strategy so we select **None** here.|
 
-**Note:** SenseCAP Data Logger can collect 0 to 10 measurements in RS485 mode.
 
-- **Step 7:** After specifying the **Measurement Number**, you need to fill the **Measurement Settings**. Here we will choose a **Grove - Light Sensor v1.2**. For this sensor, we only need **one measurement**, which is the light level. Select **1** for the **Measurement Number** and click **Measurement Setting**
+After the configuration information is completed, click "Back to Home" (at this time, the node and the APP Bluetooth will be automatically disconnected), and the Data Logger will try to connect to the network (the LED indicator flashes red slowly when trying to connect to the network, and flashes green quickly after the network is successfully connected);
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/19.jpg"/></div>
+![picture29](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/29.png)
 
-- **Step 8:** Under **Measurement Setting** click **Measurement1**
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/20.jpg"/></div>
 
-If you use the **Grove - CO2 & Temperature & Humidity Sensor (SCD41)** we need **three measurements**, which is the **temprature, humidity and C02 levels**. Select **3** for the **Measurement Number** and click **Measurement Setting**
+# Check data on the SenseCAP Portal
+## Bind Sensor to SenseCAP Portal
+Please open SenseCAP Mate App.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/23.jpg"/></div>
+1) **Scan QR Code**
+2) Click “Add device” on the upper-right corner of device page to enter the device binding page.
 
-Also, here you need to configure the 3 measurements separately
+![picture30](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/30.png)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/24.jpg"/></div>
 
-- **Step 9:** For the **Register Address**, refer to the table below and enter the **decimal value** of the **register address**
+3) Scan the QR code on the device to bind the device to your account. If you do not set it to a designated group, the device will be put into the “default” group.
 
-<table>
-<thead>
-  <tr>
-    <th>Grove Sensor Name</th>
-    <th>Register Name</th>
-    <th>Register Address<br />(Hexadecimal)</th>
-    <th>Register Address<br />(Decimal)</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Grove - Light Sensor v1.2</td>
-    <td>Light</td>
-    <td>0x000A</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>Grove - Flame Sensor</td>
-    <td>Flame</td>
-    <td>0x000C</td>
-    <td>12</td>
-  </tr>
-  <tr>
-    <td>Grove - Oxygen Sensor (MIX8410)</td>
-    <td>Oxygen</td>
-    <td>0x000E</td>
-    <td>14</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</td>
-    <td>Temperature</td>
-    <td>0x0004</td>
-    <td>04</td>
-  </tr>
-  <tr>
-    <td>Humidity</td>
-    <td>0x0006</td>
-    <td>06</td>
-  </tr>
-  <tr>
-    <td>CO2</td>
-    <td>0x0008</td>
-    <td>08</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Grove - Sunlight sensor (SI1151)</td>
-    <td>Light Intensity</td>
-    <td>0x0010</td>
-    <td>16</td>
-  </tr>
-  <tr>
-    <td>Visible Light</td>
-    <td>0x0012</td>
-    <td>18</td>
-  </tr>
-  <tr>
-    <td>UV</td>
-    <td>0x0014</td>
-    <td>20</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Grove Temperature and Barometer Sensor (BMP280)</td>
-    <td>Barometric Temperature</td>
-    <td>0x0016</td>
-    <td>22</td>
-  </tr>
-  <tr>
-    <td>Atmospheric Pressure</td>
-    <td>0x0018</td>
-    <td>24</td>
-  </tr>
-  <tr>
-    <td>Height</td>
-    <td>0x001A</td>
-    <td>26</td>
-  </tr>
-</tbody>
-</table>
+![picture31](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/31.png)
 
-A filled register address for the **Grove - Light Sensor v1.2** can be seen below
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/21.jpg"/></div>
+4) **Manually fill in the EUI**
 
-Filled register addresses for the **Grove - CO2 & Temperature & Humidity Sensor (SCD41)** can be seen below
+If the QR code sticker is damaged, you can manually fill in the EUI of the device to bind the device to your account. Please make sure you put in the EUI in the format suggested by the system and then click “confirm”.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/26.jpg"/></div>
+![picture32](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/32.png)
+![picture33](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/33.png)
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/28.jpg"/></div>
+## Check Data on SenseCAP Portal	
+On the SenseCAP App or the website <http://sensecap.seeed.cc/> , you can check the device online status and the latest data. In the list for each Sensor, you can check its online status and the time of its last data upload.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/29.jpg"/></div>
+![picture34](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/34.png)
 
-- **Step 10:** The rest of the settings are common to all the Grove sensors and fill them as follows
+Also, you can check the date on SenseCAP Mate APP.
 
-| Function Code | Modbus function code. Select **03** here |
-|---|---|
-| Data Type | The data type determines the number of registers read from the  sensor and how the data should parse the value.  Select **Signed 32bit integer, 0xABCD** here. |
-| Precision | Precision of the value. You can choose the decimal place of the  measurement value. If 1 is selected, one decimal place is reserved. Select **2, #.##** here. |
-| Y= Ax + B | “Y”: It is the value of Data Logger will upload.  “x”: It is the original current value.  Factory A: Custom values that can be scaled up or down by  multiples of the “x”.  Factory B: A custom value that increments or diminishes the value of the “x”. By setting the values of A and B, you can calculate the desired value. If only raw values need to be uploaded, set A=1 and B=0. Here we set **Factory A is 0.001 and Factory B is 0**. |
-| Write Strategy | This function is enabled only for some special sensors and is  generally disabled by default After reading the value of the register, special instructions can be  issued to the sensor, such as the instruction to empty the register  after reading register 0. None: Off by default. After Read: Send the RS485 command to sensor after reading the  register. On New Data: Send the RS485 command to sensor every 24  hours. We don’t need to write strategy so we select **None** here |
+![picture35](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/35.png)
+![picture36](https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/36.png)
 
-A filled **Measurement Setting** page can be seen below
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/30.jpg"/></div>
-
-- **Step 11:** Click **Confirm** to save the changes and it will go back to the **Setting** page
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/32.jpg"/></div>
-
-- **Step 12:** Click **Send** to send the changes to the Data Logger
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/33.jpg"/></div>
-
-#### Test and View the Sensor Data Locally
-
-Now we need to test whether the SenseCAP S2110 Sensor Builder is properly sending the sensor data to the Data Logger.
-
-- **Step 1:** Go to General and click **Measure**
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/34.jpg"/></div>
-
-Now it will display the sensor value and you will see the LEDs of the Seeed Studio XIAO RP2040 on the SenseCAP S2110 Sensor Builder lighting up
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/101.gif"/></div>
-
-The below is for **Grove - Oxygen Sensor (MIX8410)**. This indicates oxygen concentration of air which is 21.36%.
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/35.jpg"/></div>
-
-The below is for **Grove Temperature and Barometer Sensor (BMP280)**. This indicates barometric temperature as 30.55°C, atmospheric pressure as 101401Pa, and height as 53.08m.
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/36.jpg"/></div>
-
-#### Add Newly Created Sensor to SenseCAP Platform
-
-- **Step 1:** Go back to the app home page and Data Logger Red LEDs will start blinking for a couple of seconds followed by Green LEDs blinking for a brief amount of time to indicate that the LoRaWAN connection is successful and the data is sent. Alternatively you can click the button on the data logger once, to force this data sending.
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/100.gif"/></div>
-
-You will also see the LEDs of the Seeed Studio XIAO RP2040 on the SenseCAP S2110 Sensor Builder lighting up
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/101.gif"/></div>
-
-Now we need to add this sensor to SenseCAP platform in order to view the data on the cloud
-
-- **Step 2:** Go to **Device** page, click the **+** symbol and click **Add device**
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/39.jpg"/></div>
-
-- **Step 3:** Scan the QR code located on the Data Logger
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/40.jpg"/></div>
-
-- **Step 4:** Enter a **Device name** according to the connected Grove sensor and click **Next**
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/41.jpg"/></div>
-
-- **Step 5:** Enter a **Device Location** and click **Confirm**
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/42.jpg"/></div>
-
-### Visualize Sensor Data on SenseCAP Mate App
-
-Now you will see the Data Logger online on the SenseCAP Mate App
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/43.jpg"/></div>
-
-Click on it to display the sensor values
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/45.jpg"/></div>
-
-Below is for **Grove Temperature and Barometer Sensor (BMP280)**.
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/44.jpg"/></div>
-
-### Visualize Sensor Data on SenseCAP Dashboard
-
-You can also use the SenseCAP Web Dashboard to visualize the sensor data.
-
-- **Step 1:** Visit sensecap.seeed.cc and sign in to your SenseCAP account that you created inside the SenseCAP Mate App before
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/88.png"/></div>
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/87.png"/></div>
-
-- **Step 2:** Click **Sensor Node** and select the sensor that we created before inside the SenseCAP Mate App
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/89.png"/></div>
-
-- **Step 3:** Click **Data** tab and you will see all sensor data displayed from the connected Grove sensor
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/90.jpg"/></div>
-
-## Use as XIAO Development Board with RS485
-
-Since there is a Seeed Studio XIAO inside, with a Grove connector as well, you can use this SenseCAP S2110 Sensor Builder as a development device just as you would normally use a XIAO with a Grove module. There is an added bonus here as well and that is, you get RS485 connectivity to add more RS485-enabled sensors to XIAO and expand your project ideas. We already have a lot of content around tinkering with XIAO and you can check [this wiki](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino) to learn more.
-
-## Build Your Own LoRaWAN Grove Sensor With SenseCAP S2110 Sensor Builder and Data Logger
-
-If you want to add more Grove sensors to the SenseCAP S2110 Sensor Builder and send the sensor data to the cloud with the help of the Data Logger, you can explore the [SenseCAP S2110 Sensor Builder source code](https://github.com/Seeed-Studio/Seeed_Arduino_S2110) and start tinkering by yourself!
-
-## Flash Factory Firmware into SenseCAP S2110 Sensor Builder
-
-Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor Builder. Here we will flash the initial factory firmware.
-
-- **Step 1:** Unscrew the four screws on the SenseCAP S2110 Sensor Builder lid to open the lid and unscrew the PG connector (with a coin)
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/92.jpg"/></div>
-
-- **Step 2:** If you have already made the connection between the SenseCAP S2110 Sensor Builder and the Data Logger with the 4 wires, it is recommended to remove the red wire which connects to the 5V pin of the SenseCAP S2110 Sensor Builder
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/97.jpg"/></div>
-
-- **Step 3:** Connect one end of a USB Type-C cable to the SenseCAP S2110 Sensor Builder. While holding down the **B** button, connect the other end of the USB cable to the PC to enter mass storage mode.
-
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/98.jpg"/></div>
-
-- **Step 4:** If the **RPI-RP2** disk is shown on the PC and the Power LED on the XIAO is on, the connection is complete.
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/91.png"/></div>
-
-- **Step 5:** Copy [controller.ino.elf.uf2](https://files.seeedstudio.com/wiki/SenseCAP-S2110/controller.ino.elf.uf2) firmware file into the **RPI-RP2** disk.
-
-The **RPI-RP2** disk will disappear once the firmware flashing is complete.
-
-## Resources
-
-- **[GitHub]** [SenseCAP S2110 Sensor Builder source code](https://github.com/Seeed-Studio/Seeed_Arduino_S2110)
-
-## Tech Support
-
-Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). <br />
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

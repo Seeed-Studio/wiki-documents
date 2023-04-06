@@ -70,6 +70,10 @@ Currently, SenseCAP S2110 Sensor Builder supports the following Grove modules ou
 
 We will add support to more Grove sensors in the near future. So stay tuned! We have made the source code for SenseCAP S2110 Sensor Builder open-source so that users could develop their own Grove sensors as well!
 
+:::tip
+If you would like to Build a LoRaWAN sensor with the Grove sensors which are not currently supported in the above list or build with third-party sensors with Grove or RS485 connector, please refer to the guidance here: https://github.com/Seeed-Studio/Seeed_Arduino_S2110 
+:::
+
 ### Connect Grove Sensor to SenseCAP S2110 Sensor Builder
 
 - **Step 1:** Unscrew the four screws on the SenseCAP S2110 Sensor Builder lid and open the lid
