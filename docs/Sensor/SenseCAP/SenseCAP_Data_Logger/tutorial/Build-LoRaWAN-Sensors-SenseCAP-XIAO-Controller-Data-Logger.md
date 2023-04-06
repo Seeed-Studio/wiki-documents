@@ -344,6 +344,7 @@ Also, here you need to configure the 3 measurements separately
     <td>Light</td>
     <td>0x000A</td>
     <td>10</td>
+  </tr>
   <tr>
     <td>Grove - Flame Sensor</td>
     <td>Flame</td>
@@ -393,61 +394,62 @@ Also, here you need to configure the 3 measurements separately
      <td>Temperature</td>
      <td>0x001C</td>
      <td>28</td>
-   </tr>
-     <tr>
+  </tr>
+  <tr>
     <td>Atmospheric Pressure</td>
     <td>0x001E</td>
     <td>30</td>
   </tr>
-    <tr>
+  <tr>
     <td>Humidity</td>
     <td>0x0020</td>
     <td>32</td>
   </tr>
-    <tr>
+  <tr>
     <td>Air Quality(VOC)</td>
     <td>0x0022</td>
     <td>34</td>
   </tr>
   <tr>
-     <td rowspan="4">Grove - Gas Sensor V2(Multichannel)</td>
-     <td>N02</td>
-     <td>0x0024</td>
-     <td>36</td>
-   </tr>
-     <tr>
+    <td rowspan="4">Grove - Gas Sensor V2(Multichannel)</td>
+    <td>N02</td>
+    <td>0x0024</td>
+    <td>36</td>
+  </tr>
+  <tr>
     <td>C2H50H</td>
     <td>0x0026</td>
     <td>38</td>
   </tr>
-    <tr>
+  <tr>
     <td>VOC</td>
     <td>0x0028</td>
     <td>40</td>
   </tr>
-    <tr>
+  <tr>
     <td>CO</td>
     <td>0x002A</td>
     <td>42</td>
+  </tr>
   <tr>
     <td>Grove - UV Sensor</td>
     <td>UV Intensity</td>
     <td>0x002C</td>
     <td>44</td>
   </tr>
-    <tr>
+  <tr>
     <td>Grove - Turbidity Sensor Meter V1.0</td>
     <td>Turbidity</td>
     <td>0x002E</td>
     <td>46</td>
   </tr>
-    <tr>
+  <tr>
     <td>Grove - TDS Sensor</td>
     <td>TDS</td>
     <td>0x0030</td>
     <td>48</td>
   </tr>
-    <tr>
+  <tr>
     <td>Grove - Ultrasonic Ranger</td>
     <td>Distance</td>
     <td>0x0032</td>
