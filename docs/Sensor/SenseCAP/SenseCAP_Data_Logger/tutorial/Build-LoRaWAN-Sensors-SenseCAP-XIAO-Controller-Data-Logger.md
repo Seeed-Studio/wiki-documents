@@ -324,6 +324,22 @@ Also, here you need to configure the 3 measurements separately
 </thead>
 <tbody>
   <tr>
+    <td rowspan="3">Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</td>
+    <td>Temperature</td>
+    <td>0x0004</td>
+    <td>04</td>
+  </tr>
+  <tr>
+    <td>Humidity</td>
+    <td>0x0006</td>
+    <td>06</td>
+  </tr>
+  <tr>
+    <td>CO2</td>
+    <td>0x0008</td>
+    <td>08</td>
+  </tr>
+  <tr>
     <td>Grove - Light Sensor v1.2</td>
     <td>Light</td>
     <td>0x000A</td>
@@ -340,22 +356,6 @@ Also, here you need to configure the 3 measurements separately
     <td>Oxygen</td>
     <td>0x000E</td>
     <td>14</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</td>
-    <td>Temperature</td>
-    <td>0x0004</td>
-    <td>04</td>
-  </tr>
-  <tr>
-    <td>Humidity</td>
-    <td>0x0006</td>
-    <td>06</td>
-  </tr>
-  <tr>
-    <td>CO2</td>
-    <td>0x0008</td>
-    <td>08</td>
   </tr>
   <tr>
     <td rowspan="3">Grove - Sunlight sensor (SI1151)</td>
@@ -388,6 +388,72 @@ Also, here you need to configure the 3 measurements separately
     <td>Height</td>
     <td>0x001A</td>
     <td>26</td>
+  </tr>
+  <tr>
+     <td rowspan="4">Grove - Temperature Humidity Pressure Gas Sensor(BME680)</td>
+     <td>Temperature</td>
+     <td>0x001C</td>
+     <td>28</td>
+  </tr>
+  <tr>
+    <td>Atmospheric Pressure</td>
+    <td>0x001E</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Humidity</td>
+    <td>0x0020</td>
+    <td>32</td>
+  </tr>
+  <tr>
+    <td>Air Quality(VOC)</td>
+    <td>0x0022</td>
+    <td>34</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Grove - Gas Sensor V2(Multichannel)</td>
+    <td>N02</td>
+    <td>0x0024</td>
+    <td>36</td>
+  </tr>
+  <tr>
+    <td>C2H50H</td>
+    <td>0x0026</td>
+    <td>38</td>
+  </tr>
+  <tr>
+    <td>VOC</td>
+    <td>0x0028</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>CO</td>
+    <td>0x002A</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Grove - UV Sensor</td>
+    <td>UV Intensity</td>
+    <td>0x002C</td>
+    <td>44</td>
+  </tr>
+  <tr>
+    <td>Grove - Turbidity Sensor Meter V1.0</td>
+    <td>Turbidity</td>
+    <td>0x002E</td>
+    <td>46</td>
+  </tr>
+  <tr>
+    <td>Grove - TDS Sensor</td>
+    <td>TDS</td>
+    <td>0x0030</td>
+    <td>48</td>
+  </tr>
+  <tr>
+    <td>Grove - Ultrasonic Ranger</td>
+    <td>Distance</td>
+    <td>0x0032</td>
+    <td>50</td>
   </tr>
 </tbody>
 </table>
@@ -515,7 +581,7 @@ If you want to add more Grove sensors to the SenseCAP S2110 Sensor Builder and s
 
 ## Flash Factory Firmware into SenseCAP S2110 Sensor Builder
 
-Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor Builder. Here we will flash the initial factory firmware.
+Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor Builder. Here we will flash the initial factory firmware, download [the latest uf2 firmware](https://github.com/Seeed-Studio/Seeed_Arduino_S2110/releases) before starting.
 
 - **Step 1:** Unscrew the four screws on the SenseCAP S2110 Sensor Builder lid to open the lid and unscrew the PG connector (with a coin)
 
@@ -533,7 +599,7 @@ Now we will go through the steps of flashing firmware into SenseCAP S2110 Sensor
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/91.png"/></div>
 
-- **Step 5:** Copy [controller.ino.elf.uf2](https://files.seeedstudio.com/wiki/SenseCAP-S2110/controller.ino.elf.uf2) firmware file into the **RPI-RP2** disk.
+- **Step 5:** Copy sensorBuilder.ino.uf2 firmware file into the **RPI-RP2** disk.
 
 The **RPI-RP2** disk will disappear once the firmware flashing is complete.
 
