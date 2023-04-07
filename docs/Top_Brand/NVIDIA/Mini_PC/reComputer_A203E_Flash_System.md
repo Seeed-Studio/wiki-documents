@@ -72,7 +72,7 @@ TO put the A203E in Force Recovery Mode, please make sure A203E is powered off.
 
 **Step 3.** Connect the Power adptor for A203E.
 
-**Step 4.** **Press and Hold** the **Reset Key** first, and then **Press and Hold** the **Power Key**, wait for the LED to be light up, then **Release** the **Power Key**, now **Wait for 2 second** and **Release** the **Recovery Key**.
+**Step 4.** **Press and Hold** the **Reset Key** first, and then **Press and Hold** the **Power Key**, wait for the LED to be light up, then **Release** the **Power Key**, now **Wait for 2 second** and **Release** the **Reset Key**.
 
 
 
