@@ -89,7 +89,20 @@ You can discover this page with two large portions.
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC21F'} size={"6"}>SenseCAP AI-based Sensors</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Built for reday-to-deploy intelligent scenarios, <strong>SenseCAP A1101</strong> with intelligent vision is really. </font></div>
-            <a href="/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
+    </a>
+</div>
+
+<div class="intro_container">
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP A1101 Vision AI</font></div>
+            <a href="/SenseCAP-Vision-AI-Get-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started with SenseCAP A1101 Vision AI</font></span></a>
+            <br/>
+            <a href="/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Train and Deploy Your Own AI Model Into SenseCAP A1101</font></span></a>
+            <br/>
+            <a href="/One-Stop-Model-Training-with-Edge-Impulse" target="_blank"><span><font color={'FFFFFF'} size={"2"}>One Stop Model Training with Edge Impulse</font></span></a>
+    </a>
+    <a class="intro_item" style={{textAlign: 'left'}}>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>More Coming Soon</font></div>
     </a>
 </div>
 
