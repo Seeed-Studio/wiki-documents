@@ -227,8 +227,8 @@ or
 - **Step 5.** Copy the generated **cfg**, **wts** and **labels.txt** (if generated) files into the **DeepStream-Yolo** folder
 
 ```sh
-cp yolov5s.cfg ~/DeepStream-Yolo
-cp yolov5s.wts ~/DeepStream-Yolo
+cp yolov8s.cfg ~/DeepStream-Yolo
+cp yolov8s.wts ~/DeepStream-Yolo
 cp labels.txt ~/DeepStream-Yolo
 ```
 
@@ -240,7 +240,7 @@ CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.1.1 / 6.1
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.1 / 6.0
 ```
 
-- **Step 7.** Edit the **config_infer_primary_yoloV5.txt** file according to your model (example for YOLOv8s with 80 classes)
+- **Step 7.** Edit the **config_infer_primary_yoloV8.txt** file according to your model (example for YOLOv8s with 80 classes)
 
 ```sh
 [property]
@@ -280,7 +280,7 @@ deepstream-app -c deepstream_app_config.txt
 
 The above result is running on Jetson AGX Orin 32GB H01 Kit with FP32 and YOLOv8s 640x640. We can see that the FPS is around 60 and that is not the true FPS because when we set **type=2** under **[sink0]** in **deepstream_app_config.txt** file, the FPS is limited to the fps of the monitor and the monitor we used for this testing is a 60Hz monitor. However, if you change this value to **type=1**, you will be able to obtain the maximum FPS, but there will be no live detection output.
 
-For the same video source and the same model as used above, after changing **type=2** under **[sink0]**, the below result can be obtained.
+For the same video source and the same model as used above, after changing **type=1** under **[sink0]**, the below result can be obtained.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/FP32-no-screen.gif" style={{width:1000, height:'auto'}}/></div>
 
@@ -409,12 +409,12 @@ Here we can take the mean latency as 7.2ms which translates to 139FPS. This is t
 However, if you want **INT8** precision which offers better performance, you can execute the above command as follows
 
 ```sh
-./trtexec --onnx=/home/nvidia/yolov8s.onnx --saveEngine=/home/nvidia/yolov8s.engine 
+./trtexec --onnx=/home/nvidia/yolov8s.onnx --int8 --saveEngine=/home/nvidia/yolov8s.engine 
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/4.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Here we can take the mean latency as 2.9ms which translates to 350FPS. This is the same performance we got in the previous DeepStream demo.
+Here we can take the mean latency as 3.2ms which translates to 313FPS.
 
 ## Benchmark Results
 
