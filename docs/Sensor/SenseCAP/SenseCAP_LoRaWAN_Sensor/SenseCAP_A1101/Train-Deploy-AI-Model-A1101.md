@@ -20,8 +20,6 @@ In this wiki, we will teach you how to train your own AI model for your specific
 
 We will mainly use SenseCAP A1101 - LoRaWAN Vision AI Sensor throughout this wiki. So first, let's become familiar with this hardware.
 
-### SenseCAP A1101 - LoRaWAN Vision AI Sensor
-
 [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) combines TinyML AI technology and LoRaWAN long-range transmission to enable a low-power, high-performance AI device solution for outdoor use. This sensor features Himax's high-performance, low-power AI vision solution which supports the Google TensorFlow Lite framework and multiple TinyML AI platforms. Different models can implement different AI functions, for example, pest detection, people counting, object recognition. Users can adopt models provided by Seeed, generate their own models through AI training tools, or procure deployable, commercial models from Seeed's partner model providers.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/60.jpg"/></div>
@@ -60,8 +58,9 @@ The first section will be the fastest way to build your own AI model with the le
 
 So there are two ways to follow this wiki:
 
-1. Follow [section 1](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#1-train-your-own-ai-model-with-a-public-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference) - fast to follow
-2. Follow [section 2](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#2-train-your-own-ai-model-with-your-own-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference) - slow to follow
+1. Follow [section 1](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#1-train-your-own-ai-model-with-a-public-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#3-deploy-the-trained-model-and-perform-inference) - fast to follow
+
+2. Follow [section 2](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#2-train-your-own-ai-model-with-your-own-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#3-deploy-the-trained-model-and-perform-inference) - slow to follow
 
 However, we encourage to follow the first way at first and then move onto the second way.
 
@@ -125,6 +124,7 @@ If you followed the above Colab project, you know that you can load 4 models to 
 ### Deploy and inference
 
 If you directly want to jump to **section 3** which explains how to deploy the trained AI model into SenseCAP A1101 and perform inference, [click here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference).
+
 
 ## 2. Train your own AI model with your own dataset
 
@@ -192,13 +192,12 @@ You need to make sure your BootLoader version is greater than 2.0.0 before you c
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
-After this you will see a new storage drive shown on your file explorer as **VISIONAI**
+After this you will see a new storage drive shown on your file explorer as **SENSECAP**
 
-**Note:** The below image will be updated soon with the addition of **VISIONAI** drive
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/19.jpg"/></div>
+<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
-- **Step 3.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/capture_images_A1101_firmware.uf2) to **VISIONAI** drive
+- **Step 3.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/capture_images_A1101_firmware.uf2) to **SENSECAP** drive
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -242,7 +241,7 @@ After you have finished recording images for the dataset, you need to make sure 
 
 - **Step 1.** Enter **Boot mode** on SenseCAP A1101 as explained before
 
-- **Step 2.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/A1101_default_firmware.uf2) to **VISIONAI** drive according to your device
+- **Step 2.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/A1101_default_firmware.uf2) to **SENSECAP** drive according to your device
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -348,13 +347,12 @@ Now we will move the **model-1.uf2** that we obtained at the end of the training
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
-After this you will see a new storage drive shown on your file explorer as **VISIONAI**  
+After this, you will see a new storage drive shown on your file explorer as **SENSECAP**  
+ 
 
-**Note:** The below image shows the drive as **GROVEAI**. It will be updated soon to **VISIONAI**  
+<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/19.jpg"/></div>
-
-- **Step 4.** Drag and drop the **model-1.uf2** file to **VISIONAI** drive
+- **Step 4.** Drag and drop the **model-1.uf2** file to **SENSECAP** drive
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -393,7 +391,7 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png"/></div>
 
-- **Step 13.** Click **Connect** button. Then you will see a pop up on the browser. Select **Grove AI - Paired** and click **Connect**
+- **Step 13.** Click **Connect** button. Then you will see a pop up on the browser. Select **SenseCAP Vision AI - Paired** and click **Connect**
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/32.png"/></div>
 
@@ -536,6 +534,7 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 
 - **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then clink 
 
+
 ## Resources
 
 - **[Web Page]** [YOLOv5 Documentation](https://docs.ultralytics.com)
@@ -556,5 +555,6 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+Please do not hesitate to submit the issue into our [Discord](https://discord.com/channels/862602258452578314/956370118575804467) and our email: order@seeed.cc. <br />
+
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
