@@ -5,7 +5,7 @@ keywords:
 - edge computing
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 04/07/2023
+  date: 01/20/2023
   author: Matthew
 ---
 
@@ -107,9 +107,7 @@ You can discover this page with two large portions.
     </a>
     <a class="independent_item" style={{textAlign: 'center'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Edge Series</font></div>
-            <a href="/Edgebox-rpi-200-codesys" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Codesys on EdgeBox-RPI-200</font></span></a>
-            <br/>
-            <a href="/Edgebox-ESP-100-Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Start with Arduino on EdgeBox-ESP-100</font></span></a>
+            <a href="/Edgebox-rpi-200-codesys" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Codesys on EdgeBox-RPI-200 controller</font></span></a>
             <br/>
             <a href="/Contributor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> More Publish Soon</font></span></a>
             <br/>
@@ -134,10 +132,6 @@ You can discover this page with two large portions.
     </a>
     <a class="independent_item" style={{textAlign: 'center'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Software for reComputer</font></div>
-            <a href="/CVEDIA-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  CVEDIA-RT </font></span></a> , 
-            <a href="/Cochl.Sense-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Cochl.Sense </font></span></a> ,
-            <a href="/Lumeo-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  Lumeo </font></span></a>
-            <br/>
             <a href="/Allxon-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with Allxon </font></span></a>
             <br/>
             <a href="/jetson-docker-getting-started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with Docker</font></span></a>
@@ -146,7 +140,9 @@ You can discover this page with two large portions.
             <br/>
             <a href="/DeciAI-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with Deci </font></span></a>
             <br/>
-            <a href="/YOLOv8-DeepStream-TRT-Jetson" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Deploy YOLOv8 with TensorRT and DeepStream SDK </font></span></a>
+            <a href="/Update-Jetson-Linux-OTA-Using-Allxon" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Update Jetson Linux Over-the-Air Using Allxon </font></span></a>
+            <br/>
+            <a href="/reComputer_Jetson_Series_Resource" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Jetson Resource </font></span></a>
             <br/>
     </a>
 </div>
