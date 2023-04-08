@@ -131,7 +131,7 @@ Finally, once a model is trained, it can be easily deployed to the A1101 – Vis
 <div align="center"><img width ={700} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p17.png"/></div>
 
 ## Deploy model to A1101 - Vision AI
-After building the machine learning model and downloading the Edge Impulse firmware from Edge Impulse Studio, deploy the model uf2 to SenseCAP - Vision AI by following **steps 1 and 2** under [Update Edge Impulse firmware section](https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/seeed-grove-vision-ai#2.-update-edge-impulse-firmware).
+After building the machine learning model and downloading the Edge Impulse firmware from Edge Impulse Studio, deploy the model uf2 to SenseCAP - Vision AI by following **steps 1 and 2** under [Update Edge Impulse firmware section](https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/seeed-sensecap-a1101#2.-update-edge-impulse-firmware).
 Drag and drop the **firmware.uf2** file from EDGE IMPULSE to **SENSECAP** drive.
 
 When you run this on your local interface:
