@@ -55,7 +55,7 @@ Model selection and configuration is also done in the Setting interface. First s
 
 **1.[One Stop Model Training with Edge Impulse](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse)** Fsst to follow.
 
-**2.[Train AI Model with Roboflow, YOLOv5, TensorFlow Lite](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite)** Slow to follow.
+**2.[Train AI Model with Roboflow, YOLOv5, TensorFlow Lite](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101)** Slow to follow.
 
 # Connect to the LoraWAN®
 LoRaWAN® (Long Range Wide Area Network) is a wireless communication protocol designed for low-power, long-range communications between IoT (Internet of Things) devices and gateways. It uses unlicensed radio spectrum in the Industrial, Scientific, and Medical (ISM) band, typically at 868 MHz in Europe and 915 MHz in the United States. LoRaWAN® provides a low-cost, energy-efficient solution for connecting IoT devices over long distances. The technology allows for bi-directional communication between devices and gateways, and it supports a range of data rates to accommodate different types of applications. 
