@@ -50,17 +50,17 @@ YOLO is an abbreviation for the term ‘You Only Look Once’. It is an algorith
 
 This wiki will be divided into three main sections
 
-1. [Train your own AI model with a public dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#1-train-your-own-ai-model-with-a-public-dataset)
-2. [Train your own AI model with your own dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#2-train-your-own-ai-model-with-your-own-dataset)
-3. [Deploy the trained AI model into SenseCAP A1101](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference)
+1. [Train your own AI model with a public dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset)
+2. [Train your own AI model with your own dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset)
+3. [Deploy the trained AI model into SenseCAP A1101](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)
 
 The first section will be the fastest way to build your own AI model with the least number of steps. The second section will take some time and effort to build your own AI model, but it will be definitely worth the knowledge. The third section about deploying the AI model can be done either after first or second section.
 
 So there are two ways to follow this wiki:
 
-1. Follow [section 1](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#1-train-your-own-ai-model-with-a-public-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#3-deploy-the-trained-model-and-perform-inference) - fast to follow
+1. Follow [section 1](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference) - fast to follow
 
-2. Follow [section 2](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#2-train-your-own-ai-model-with-your-own-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-AI-Model-with-Roboflow-YOLOv5-TensorFlow-Lite/#3-deploy-the-trained-model-and-perform-inference) - slow to follow
+2. Follow [section 2](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference) - slow to follow
 
 However, we encourage to follow the first way at first and then move onto the second way.
 
