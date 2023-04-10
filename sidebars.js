@@ -812,6 +812,14 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'SeeedStudio XIAO ESP32S3 Sense',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_tf_and_filesystem',
+            // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_camera',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SeeedStudio XIAO Expansion board',
           items: [
             {

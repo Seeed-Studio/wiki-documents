@@ -902,10 +902,6 @@ The solder pad interfaces provided on the Sense expansion board allow users to s
   </tr>
 </table>
 
-
-
-
-
 :::caution
 As can be seen from the picture, due to the space limitations of XIAO, many wire layouts are very compact. Therefore, when cutting the connection of J3, please be very careful not to cut outside the white line, otherwise it may cause the development board to malfunction!
 :::
