@@ -62,7 +62,7 @@ Before we begin, let's review all the pins that the XIAO ESP32S3 has and its fun
 	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
 	</tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.png" style={{width:1000, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
 	</tr>
 </table>
 
@@ -908,7 +908,7 @@ As can be seen from the picture, due to the space limitations of XIAO, many wire
 
 ## Touch Pins
 
-In addition to the common functional pins mentioned above, XIAO ESP32S3 also has 9 touch detection pins A0~A5, A8~A10. If you purchased the Sense version, there are two additional touch pins on the expansion board for a total of 11 touch detection pins.
+In addition to the common functional pins mentioned above, XIAO ESP32S3/XIAO ESP32S3 Sense also has 9 touch detection pins A0~A5, A8~A10.
 
 We can check if a pin has been touched by reading its analog value, which is very convenient. The following program is used to detect whether pin A5 has been touched.
 
@@ -969,6 +969,36 @@ A: If you encounter this type of error, please turn on the **USB CDC On Boot** s
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/28.png" style={{width:600, height:'auto'}}/></div>
 
 This issue may also manifest as an empty serial output in Arduino IDE 2.x, and it may also be caused by this same reason.
+
+### Q2: What features does the ESP-32 support or not support?
+
+A: The following is a list of supported/unsupported features provided by [ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html). As of April 10, 2023.
+
+| Peripheral    | ESP32         | ESP32-S2      | ESP32-C3      | ESP32-S3      | Comments               |
+|---------------|---------------|---------------|---------------|---------------|------------------------|
+| ADC           | Yes           | Yes           | Yes           | Yes           |                        |
+| Bluetooth     | Yes           | Not Supported | Not Supported | Not Supported | Bluetooth Classic      |
+| BLE           | Yes           | Not Supported | Yes           | Yes           |                        |
+| DAC           | Yes           | Yes           | Not Supported | Not Supported |                        |
+| Ethernet      | Yes           | Not Supported | Not Supported | Not Supported | (*)                    |
+| GPIO          | Yes           | Yes           | Yes           | Yes           |                        |
+| Hall Sensor   | Yes           | Not Supported | Not Supported | Not Supported |                        |
+| I2C           | Yes           | Yes           | Yes           | Yes           |                        |
+| I2S           | Yes           | Yes           | Yes           | Yes           |                        |
+| LEDC          | Yes           | Yes           | Yes           | Yes           |                        |
+| Motor PWM     | No            | Not Supported | Not Supported | Not Supported |                        |
+| Pulse Counter | No            | No            | No            | No            |                        |
+| RMT           | Yes           | Yes           | Yes           | Yes           |                        |
+| SDIO          | No            | No            | No            | No            |                        |
+| SDMMC         | Yes           | Not Supported | Not Supported | Yes           |                        |
+| Timer         | Yes           | Yes           | Yes           | Yes           |                        |
+| Temp. Sensor  | Not Supported | Yes           | Yes           | Yes           |                        |
+| Touch         | Yes           | Yes           | Not Supported | Yes           |                        |
+| TWAI          | No            | No            | No            | No            |                        |
+| UART          | Yes           | Yes           | Yes           | Yes           |                        |
+| USB           | Not Supported | Yes           | Yes           | Yes           | ESP32-C3 only CDC/JTAG |
+| Wi-Fi         | Yes           | Yes           | Yes           | Yes           |                        |
+
 
 ## Tech Support
 
