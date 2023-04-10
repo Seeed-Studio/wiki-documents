@@ -149,7 +149,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
 	</tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.png" style={{width:1000, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
 	</tr>
 </table>
 
