@@ -153,8 +153,6 @@ STEP 6: you should see the Modbus nodes in the side bar
 * 1 x reTerminal DM
 * 1 x Host Computer
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" /></div>
-
 #### Software 
 
 * Graphical serial communication program such as `cutecom` installed on your host machine
@@ -164,7 +162,7 @@ STEP 6: you should see the Modbus nodes in the side bar
 
 Please connect the Hardware as shown below
 
-
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" /></div>
 
 ### Edit the Flows
 
