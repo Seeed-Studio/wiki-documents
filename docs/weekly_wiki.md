@@ -29,7 +29,11 @@ In this tutorial, we will focus on the basic features of the XIAO ESP32S3's Blue
 
 In this wiki, we will teach you how to train your own AI model for your specific application with Edge Imoulse and then deploy it easily to the SenseCAP A1101 - LoRaWAN Vision AI Sensor.
 
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/33.png" /></div>
+
 ### [Getting Started with SenseCAP Vision AI](https://wiki.seeedstudio.com/SenseCAP-Vision-AI-Get-Started)
+
+<div align="center"><img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg" /></div>
 
 This wiki is published about how to gat started with SenseCAP Vision AI.
 
