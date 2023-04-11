@@ -975,7 +975,7 @@ At the same time, you can also send data frames to the Sensor via the software's
 
 We have created a tutorial for connecting to ESPHome and Home Assistant for this radar and the XIAO ESP32C3, if you are interested, you can refer to the tutorial here.
 
-- [LinkStar Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
+- [XIAO ESP32C3 accesses Home Assistant via ESPHome service](https://wiki.seeedstudio.com/xiao-esp32c3-esphome)
 
 ## Troubleshooting
 
