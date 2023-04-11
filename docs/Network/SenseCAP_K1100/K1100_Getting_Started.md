@@ -3,7 +3,7 @@ description: The Sensor Prototype Kit Introduction
 title: The Sensor Prototype Kit Introduction
 # slug: /ABC
 image: https://avatars.githubusercontent.com/u/37475446?s=400&u=081e62d37acfd56fd814a8106ae50f5497f6aafe&v=4
-slug: /K1100_Getting_Started
+slug: /K1100-Getting-Started
 last_update:
   date: 11/30/2022
   author: MengDu
@@ -20,7 +20,11 @@ In the digital age where IoT and big data are becoming more prevalent, massive d
 
 **SenseCAP - The Sensor Prototype Kit with LoRa® and AI** enables you to rapidly digitize the world using LoRaWAN® and solve real-world challenges. With this plug-and-play toolkit, anyone can add AI to their edge devices and unlock the potential of AIoT.
 
-<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html?queryID=a88444c7c4ccfa5dddd4d2a84db3dd5e&objectID=5370&indexName=bazaar_retailer_products" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" style={{width:1000, height:'auto'}}/></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Upgradable to Industrial Sensors
 
@@ -412,7 +416,7 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
         <tr>
             <th>Connect the Wio Terminal to Microsoft Azure IoT Hub (WiFi)</th>
             <th>Integrate into Azure IoT Hub (Helium)</th>
-            <td rowSpan={11}><div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/K1100/hub.png" /></div></td>
+            <td rowSpan={11}><div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/K1100/hub.png" /></div></td>
         </tr>
         <tr>
             <td align="left">In this chapter, we will describe how to send data from the Wio Terminal to Azure IoT Hub via the WiFi function that comes with the Wio Terminal.</td>

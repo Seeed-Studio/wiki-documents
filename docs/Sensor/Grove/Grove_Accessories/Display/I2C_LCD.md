@@ -3,7 +3,7 @@ description: I2C LCD
 title: I2C LCD
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /I2C_LCD
 last_update:
   date: 1/9/2023

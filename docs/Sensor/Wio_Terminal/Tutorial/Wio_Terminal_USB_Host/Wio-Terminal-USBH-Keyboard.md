@@ -3,7 +3,7 @@ description: Keyboard
 title: Keyboard
 keywords:
 - Wio_terminal USB_Host
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-USBH-Keyboard
 last_update:
   date: 1/17/2023

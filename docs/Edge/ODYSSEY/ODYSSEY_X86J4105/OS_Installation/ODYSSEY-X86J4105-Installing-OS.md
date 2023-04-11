@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Original OS
 tags:
   - ODYSSEY
@@ -21,7 +21,7 @@ wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/
 sku: 102110399
 --- -->
 
-This tutorial demonstrates how to create a bootable USB drive and install Linux OS(Ubuntu Desktop 18.04) onto the ODYSSEY - X86J4105.
+This tutorial demonstrates how to create a bootable USB drive and install Linux OS(Ubuntu Desktop 18.04) onto the ODYSSEY - X86J41x5.
 
 ## Hardware Requirements
 
@@ -37,7 +37,7 @@ This tutorial demonstrates how to create a bootable USB drive and install Linux 
 
 ### Step 1 - Download the Operating System Image
 
-Download your required OS Image to your local drive. In this tutorial, *Ubuntu Desktop 18.04* is used to demonstrate to install into the ODYSSEY - X86J4105.
+Download your required OS Image to your local drive. In this tutorial, *Ubuntu Desktop 18.04* is used to demonstrate to install into the ODYSSEY - X86J41x5.
 
 - You can download [Ubuntu](https://ubuntu.com/download/desktop) OS Image from here.
 
@@ -65,7 +65,7 @@ Select the downloaded Operating System Image, select the formatted USB Drive and
 
 ### Step 1 - Selecting Bootable USB as Boot Device
 
-Plug in your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`F7`** to enter the Boot Manager Screen. And use  &#8593; and &#8595; Key on keyboard to select your bootable USB.
+Plug in your bootable USB, Monitor and keyboard to ODYSSEY - X86J41x5, and power up. When booting up, keep pressing **`F7`** to enter the Boot Manager Screen. And use  &#8593; and &#8595; Key on keyboard to select your bootable USB.
 
 In this Tutorial, `UEFI: Mass Storage Device 1.00` is the bootable USB.
 
@@ -81,13 +81,13 @@ Select the **`Install ubuntu`** and press Enter. Follow through the installing i
 
 ### Step 3 - Reboot and Enjoy New OS
 
-If everything goes well, ubuntu should be installed on the ODYSSEY - X86J4105 and you can start enjoying your new OS!
+If everything goes well, ubuntu should be installed on the ODYSSEY - X86J41x5 and you can start enjoying your new OS!
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/InstallingOS/result.jpg" /></div>
 
 ## Notes
 
-- **Ubuntu 16 is not supported by ODYSSEY - X86J4105**
+- **Ubuntu 16 is not supported by ODYSSEY - X86J41x5**
 
 ## Tech Support
 

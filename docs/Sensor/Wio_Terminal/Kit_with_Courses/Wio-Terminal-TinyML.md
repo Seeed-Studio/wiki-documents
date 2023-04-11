@@ -3,7 +3,7 @@ description: What is TinyML
 title: What is TinyML
 keywords:
 - Wio_terminal Kit_with_Courses
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML
 last_update:
   date: 1/31/2023
@@ -14,7 +14,7 @@ last_update:
 
 ML as you might have guessed stands for Machine Learning and in most of cases (not always though) nowadays refers to Deep Learning. Tiny in TinyML means that the ML models are optimized to run on very low-power and small footprint devices, such as various MCUs. It is a subset of ML on the Edge or Embedded Machine Learning.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/81nihP0ASSL.jpg" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/81nihP0ASSL.jpg" /></div>
 
 Embedded devices come in all sorts of shapes and sizes, starting from “embedded supercomputer” Nvidia Jetson Xavier AGX to the tiniest of microcontrollers, for example ESP32 or Cortex M0.
 
@@ -75,7 +75,7 @@ Main difference between course and standalone projects is that course mainly aim
 
 ## No-code Programming to Get Started with TinyML
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/cc_tinyml_2.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML/cc_tinyml_2.png" /></div>
 
 Designed to introduce beginners to the basics of Embedded Machine Learning with Wio Terminal  and Codecraft graphical programming.
 

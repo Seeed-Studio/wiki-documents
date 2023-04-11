@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Connect Grove Modules to Home Assistant using ESPHome
 tags:
   - ODYSSEY
@@ -10,8 +10,8 @@ keywords:
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Connect-Grove-to-Home-Assistant-ESPHome
 last_update:
-  date: 01/03/2023
-  author: w0x7ce
+  date: 03/16/2023
+  author: Lakshantha
 
 ---
 
@@ -116,7 +116,7 @@ esp32:
 
 - **Step 8.** Click **SAVE** and then click **INSTALL**
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/ESPHome/16.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/ESPHome/16.png" /></div>
 
 - **Step 9.** Connect one end of a USB Type-C cable to Seeed Studio XIAO ESP32C3 and the other end to one of the USB ports on the ODYSSEY-X86
 
@@ -461,7 +461,7 @@ You can learn more about the **AHT10 component** [here](https://esphome.io/compo
 
 Now your Home Assistant dashboard will look like below 
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/ESPHome/37.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/ESPHome/37.png" /></div>
 
 - **Step 7.** You can also visualize sensor data as gauges. Click **Gauge** under **BY CARD**
 

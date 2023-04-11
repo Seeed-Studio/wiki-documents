@@ -3,7 +3,7 @@ description: GrovePi Plus
 title: GrovePi Plus
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /GrovePi_Plus
 last_update:
   date: 1/11/2023

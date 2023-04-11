@@ -3,7 +3,7 @@ description: Codec-Adaptive Wireless Relay
 title: Codec-Adaptive Wireless Relay
 keywords:
 - grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Codec-Adaptive_Wireless_Relay
 last_update:
   date: 1/13/2023

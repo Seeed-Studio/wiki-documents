@@ -3,7 +3,7 @@ description: Grove - Gas Sensor(O₂)
 title: Grove - Gas Sensor(O₂) 
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Gas_Sensor-O2
 last_update:
   date: 1/3/2023

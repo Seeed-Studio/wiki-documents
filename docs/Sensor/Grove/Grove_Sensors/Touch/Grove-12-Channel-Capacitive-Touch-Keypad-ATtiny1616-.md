@@ -3,7 +3,7 @@ description: Grove 12 Channel Capacitive Touch Keypad (ATtiny1616)
 title: Grove 12 Channel Capacitive Touch Keypad (ATtiny1616)
 keywords:
 - Grove Grove_Sensors Touch
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-
 last_update:
   date: 1/19/2023

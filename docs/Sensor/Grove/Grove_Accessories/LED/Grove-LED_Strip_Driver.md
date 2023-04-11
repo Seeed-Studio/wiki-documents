@@ -3,7 +3,7 @@ description: Grove - LED Strip Driver
 title: Grove - LED Strip Driver
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_Strip_Driver
 last_update:
   date: 1/7/2023

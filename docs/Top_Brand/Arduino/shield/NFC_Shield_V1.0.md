@@ -3,7 +3,7 @@ description:  NFC Shield V1.0
 title:  NFC Shield V1.0
 keywords:
 -  Arduino shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /NFC_Shield_V1.0
 last_update:
   date: 2/16/2023

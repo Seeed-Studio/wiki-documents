@@ -3,7 +3,7 @@ description: CircuitPython with Wio Terminal
 title: CircuitPython with Wio Terminal
 keywords:
 - Wio_terminal
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-CircuitPython
 last_update:
   date: 1/31/2023

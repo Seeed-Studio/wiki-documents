@@ -195,3 +195,121 @@ height:80%;
   color:#fff;
   text-decoration: none;
 }
+
+/* download Arduino button */
+
+.download_arduino_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.download_arduino_item {
+  border-radius: 10px/10px;
+  width: 300px;
+  height:28px;
+  background: #00979c;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: content-box;
+}
+
+.download_arduino_item:hover {
+  border:2px solid #00979c;
+  color:#fff;
+  text-decoration: none;
+}
+
+/* github button */
+
+.github_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.github_item {
+  border-radius: 10px/10px;
+  width: 260px;
+  height:28px;
+  background: #000000;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: content-box;
+}
+
+.github_item:hover {
+  border:2px solid #7a7e73;
+  color:#fff;
+  text-decoration: none;
+}
+
+.table-center {
+  display: table;
+   margin: 0 auto;
+  }
+
+/* embedded world product list button */
+
+.embedded_world_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.embedded_world_item {
+  border-radius: 12px/12px;
+  width: 100%;
+  height:100px;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-top:8px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: content-box;
+}
+
+.embedded_world_item:hover {
+  border:2px solid #8DC21F;
+  color:#fff;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 200px 50px;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/S.png");
+  background-size: auto;
+  background-position: center;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(3);
+}
+
+@media only screen and (max-width: 768px) {
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

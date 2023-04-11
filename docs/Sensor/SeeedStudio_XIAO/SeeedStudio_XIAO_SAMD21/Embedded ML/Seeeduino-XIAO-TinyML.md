@@ -3,7 +3,7 @@ description: TinyML on Seeed Studio XIAO SAMD21
 title: TinyML on Seeed Studio XIAO SAMD21
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO-TinyML
 last_update:
   date: 1/11/2023

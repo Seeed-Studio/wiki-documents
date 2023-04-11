@@ -3,7 +3,7 @@ description: Grove - Barometer Sensor
 title: Grove - Barometer Sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Barometer_Sensor
 last_update:
   date: 1/4/2023

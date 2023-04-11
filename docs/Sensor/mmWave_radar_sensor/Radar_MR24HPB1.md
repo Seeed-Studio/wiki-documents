@@ -3,7 +3,7 @@ description: mmWave Human Static Presence Sensor
 title: mmWave Human Static Presence Sensor
 keywords:
 - mmWave_radar_sensor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24HPB1
 last_update:
   date: 1/12/2023
@@ -12,7 +12,10 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg)
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Intrdocution
 

@@ -3,7 +3,7 @@ description: Zigbee Networking with XBee Series 2 and Seeed Products
 title: Zigbee Networking with XBee Series 2 and Seeed Products
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products
 last_update:
   date: 1/13/2023

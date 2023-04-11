@@ -3,7 +3,7 @@ description: ReSpeaker Mic Array v2.0
 title: ReSpeaker Mic Array v2.0
 keywords:
 - reSpeaker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Mic_Array_v2.0
 last_update:
   date: 1/12/2023

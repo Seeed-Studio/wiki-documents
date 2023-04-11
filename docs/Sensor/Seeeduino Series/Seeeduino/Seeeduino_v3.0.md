@@ -3,7 +3,7 @@ description: Seeeduino v3.0
 title: Seeeduino v3.0
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_v3.0
 last_update:
   date: 1/11/2023

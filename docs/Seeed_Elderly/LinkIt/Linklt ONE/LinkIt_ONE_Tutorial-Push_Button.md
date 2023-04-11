@@ -3,7 +3,7 @@ description: LinkIt ONE Tutorial - Push Button
 title: LinkIt ONE Tutorial - Push Button
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_ONE_Tutorial-Push_Button
 last_update:
   date: 1/13/2023

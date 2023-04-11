@@ -5,7 +5,7 @@ tags:
   - Shield
 keywords:
   - Shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Renbotics_ServoShield_Rev
 last_update:
   date: 02/02/2023  

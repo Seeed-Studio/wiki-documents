@@ -3,20 +3,24 @@ description: BeagleBone® Blue
 title: BeagleBone® Blue
 keywords:
 - Beagle_Bone
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Blue
 last_update:
   date: 1/10/2023
   author: jianjing Huang
 ---
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover.jpg" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover.jpg" /></div>
 
 BeagleBone® Blue is based on the extremely successful open-source hardware design of BeagleBone® Black, a high-expansion, maker-focused, community-supported open hardware computer, created by the BeagleBoard.Org Foundation.
 
 BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink™ interface of the BeagleBone® Black Wireless and the robotics capabilities of the Robotics Cape from Strawson Design.  BeagleBone® Blue has onboard 2 cell (2S) LiPo battery management with charger and battery level LEDs, 8 servo motor outputs, 4 DC motor drivers, 4 quadrature encoder inputs, a wide array of GPIO and serial protocol connectors including CAN, a 9 axis IMU and barometer, 4 ADC inputs, a PC USB interface, an USB 2.0 host port, a reset button, a power button, two user configurable buttons and six indicating LEDs.  Built on Octavo Systems’ System-In-Package that integrates a high-performance TI ARM processor and 512MB of DDR3, BeagleBone® Blue boots Linux in around 10 seconds and gets you started developing through your web browser in less than 5 minutes with just a single USB cable.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png"/></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Features
 
@@ -183,7 +187,7 @@ BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink�
 
 ## Hardware Overview
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Hardware_overviw.png" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Hardware_overviw.png" /></div>
 
 ## Getting Started
 
@@ -211,7 +215,7 @@ Click to download <a href="https://etcher.io/">Etcher</a> here, and burn the ```
 
 Click the Plus icon to add the image you just download, the software will automatically select the SD card you plug. Then click Flash! to start burning. It will takes about 20 minutes to flash.
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/v2-flash-sd.png" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Respeaker_V2/raw/master/img/v2-flash-sd.png" /></div>
 
 Then reject the SD card and Insert it into your BeagleBone® Blue.
 
@@ -219,7 +223,7 @@ Then reject the SD card and Insert it into your BeagleBone® Blue.
 
 Connect the BeagleBone® Blue to your computer with the Micro-USB Cable.
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/connect.jpg" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/connect.jpg" /></div>
 
 :::caution
 Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html"><B>here</B></a> to buy. If you want to use the Motor Control modules of BeagleBone® Blue, the power supply via USB Port is not sufficiant, you need to use DC-DC Port or 2S battery.
@@ -280,7 +284,7 @@ Using either Chrome or Firefox (Internet Explorer will NOT work), browse to the 
 
 When the boot is done, a network adapter should show up on your computer. You can click to enter the [Cloud 9 IDE](http://beaglebone.local:3000/).
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cloud9.png" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cloud9.png" /></div>
 
 #### STEP4. Connect to wifi
 
@@ -372,12 +376,12 @@ Then you will see the USER2 LED blink.
 
 | BeagleBone® Blue | Grove - LED Socket Kit|Grove Adapter cable(6pin)|
 |--------------|-------------|-------|
-|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover_icon.jpg" /></div>|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove-White-LED-p-2016.jpeg" /></div>|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove_4pin.jpg" /></div>|
+|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover_icon.jpg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove-White-LED-p-2016.jpeg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove_4pin.jpg" /></div>|
 |[Get ONE Now](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-to-Beaglebone-Blue-6-Pin-Female-JST%2FSH-Conversion-Cable-%2810-pcs-pack%29-p-3027.html)|
 
 **Step 2.** Connect the LED Socket Kit to the 6 pin **GPIO** interface of BeagleBone® Blue.
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/LED.jpg" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/LED.jpg" /></div>
 
 **Step 3.** Open a new terminal in the Cloud9 IDE, tap the code below into this terminal.
 
@@ -402,12 +406,12 @@ Now you will see your LED light up in the heartbeat mode.
 
 | BeagleBone® Blue | Grove - LED Socket Kit|Grove Adapter cable(4pin)|
 |--------------|-------------|-------|
-|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover_icon.jpg" /></div>|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove-GPS.jpg" /></div>|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove_4pin.jpg" /></div>|
+|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover_icon.jpg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove-GPS.jpg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove_4pin.jpg" /></div>|
 |[Get ONE Now](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Get ONE Now](https://www.seeedstudio.com/grove-gps-p-959.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Universal-4-Pin-to-Beaglebone-Blue-4-Pin-Female-JST-SH-Conversion-Cable-(10-pcs-pack)-p-3026.html)|
 
 **Step 2.** Connect the Grove-GPS sensor to the 4 pin **UART1** interface of BeagleBone® Blue.
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/GPS_hARD.jpg" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/GPS_hARD.jpg" /></div>
 
 **Step 3.** Open a new terminal in the Cloud9 IDE, tap the code below into this terminal.
 
@@ -418,7 +422,7 @@ tio /dev/ttyO1 -b 9600
 
 Then you will see the GPS information on the terminal as the picture shown below.
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/GPS.png" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/GPS.png" /></div>
 
 ### Demo.4  USE I2C With Grove-Digital Light Sensor
 
@@ -426,12 +430,12 @@ Then you will see the GPS information on the terminal as the picture shown below
 
 | BeagleBone® Blue | Grove - LED Socket Kit|Grove Adapter cable(4pin)|
 |--------------|-------------|-------|
-|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover_icon.jpg" /></div>|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Digital_Light_Sensor.jpg" /></div>|<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove_4pin.jpg" /></div>|
+|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover_icon.jpg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Digital_Light_Sensor.jpg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove_4pin.jpg" /></div>|
 |[Get ONE Now](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[Get ONE Now](https://www.seeedstudio.com/category/Grove-Universal-4-Pin-to-Beaglebone-Blue-4-Pin-Female-JST-SH-Conversion-Cable-(10-pcs-pack)-p-3026.html)|
 
 **Step 2.** Connect the Grove-Digital Light Sensor to the 4 pin **I2C** interface of BeagleBone® Blue.
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Digital_light.jpg" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Digital_light.jpg" /></div>
 
 **Step 3.** Open a new terminal in the Cloud9 IDE, tap the code below into this terminal.
 
@@ -444,7 +448,7 @@ watch -n0 cat 1-0029/iio\:device0/in_illuminance0_input
 
 Then you will get the light value as the picture below.
 
-<div align="center"><img width="{1000}" src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Digital_520.png" /></div>
+<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Digital_520.png" /></div>
 
 ## Grove Compatibility List
 

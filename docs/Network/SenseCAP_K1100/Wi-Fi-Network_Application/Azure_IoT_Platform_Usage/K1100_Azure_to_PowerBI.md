@@ -3,7 +3,7 @@ description: Data visualisation with Power BI
 title: Data visualisation with Power BI
 keywords:
 - SenseCap
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100_Azure_to_PowerBI
 last_update:
   date: 1/13/2023

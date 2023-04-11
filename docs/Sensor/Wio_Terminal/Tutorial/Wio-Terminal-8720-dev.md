@@ -3,7 +3,7 @@ description:  How to Use Wio Terminal as RTL8720DN Dev Board
 title:  How to Use Wio Terminal as RTL8720DN Dev Board
 keywords:
 - Wio_terminal Tutorial
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-8720-dev
 last_update:
   date: 1/31/2023

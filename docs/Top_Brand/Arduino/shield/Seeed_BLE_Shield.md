@@ -3,7 +3,7 @@ description:  Seeed BLE Shield v1
 title:  Seeed BLE Shield v1
 keywords:
 -  Arduino shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_BLE_Shield
 last_update:
   date: 2/16/2023

@@ -3,7 +3,7 @@ description: Wio Terminal Interactive Faces Demo
 title: Wio Terminal Interactive Faces Demo
 keywords:
 - Wio_terminal Tutorial
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Interactive-Face
 last_update:
   date: 1/31/2023

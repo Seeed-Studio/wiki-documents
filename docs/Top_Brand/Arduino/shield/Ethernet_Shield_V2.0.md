@@ -3,7 +3,7 @@ description:  Ethernet Shield V2.0
 title:  Ethernet Shield V2.0
 keywords:
 -  Arduino shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Ethernet_Shield_V2.0
 last_update:
   date: 2/16/2023

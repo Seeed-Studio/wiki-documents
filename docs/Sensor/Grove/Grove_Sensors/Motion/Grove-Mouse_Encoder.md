@@ -3,7 +3,7 @@ description: Grove - Mouse Encoder
 title: Grove - Mouse Encoder
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Mouse_Encoder
 last_update:
   date: 1/7/2023

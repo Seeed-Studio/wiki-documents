@@ -3,7 +3,7 @@ description: Client and Server introduction
 title: Client and Server introduction
 keywords:
 - Wio_terminal Bluetooth
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-terminal-BLE-introduction
 last_update:
   date: 1/16/2023

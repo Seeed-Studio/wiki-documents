@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Firmware Upgrade
 tags:
   - ODYSSEY
@@ -8,8 +8,8 @@ keywords:
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86J4105-Updating-Firmware
 last_update:
-  date: 01/03/2023
-  author: w0x7ce
+  date: 03/16/2023
+  author: Lakshantha
 
 ---
 
@@ -34,7 +34,7 @@ This tutorial demonstrates how to update the BIOS and EC (Embedded Controller) f
 
 ## How to Upgrade the BIOS
 
-BIOS is also like an OS and can be upgraded to fix bugs and enhance performance of the ODYSSEY - X86J4105. Here is the instruction how to upgrade the BIOS version on ODYSSEY - X86J4105.
+BIOS is also like an OS and can be upgraded to fix bugs and enhance performance of the ODYSSEY - X86J41x5. Here is the instruction how to upgrade the BIOS version on ODYSSEY - X86J41x5.
 
 ### Current Latest BIOS Version and Changelog
 
@@ -125,7 +125,7 @@ Just like creating a bootable USB for installing OS, format the USB into `FAT32`
   </div>
 </div>
 
-Plug the USB into ODYSSEY - X86J4105 and boot up and follow steps below:
+Plug the USB into ODYSSEY - X86J41x5 and boot up and follow steps below:
 
 - Keep pressing `F7` Key to Enter **Boot Manager Screen**. Select the `UEFI: Built-in EFI Shell` as boot device and press `Enter`.
 

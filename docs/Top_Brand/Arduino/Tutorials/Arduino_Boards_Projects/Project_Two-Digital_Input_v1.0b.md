@@ -4,7 +4,7 @@ title: Project Two - Digital Input v1.0b
 keywords:
 - Arduino
 - Arduino_Boards_Projects
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_Two-Digital_Input_v1.0b
 last_update:
   date: 2/15/2023

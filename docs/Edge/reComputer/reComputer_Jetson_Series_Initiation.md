@@ -4,7 +4,7 @@ title: reComputer for Jetson Initiation
 keywords:
   - Edge
   - reComputer
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_Initiation
 last_update:
   date: 01/04/2023
@@ -26,8 +26,9 @@ Connect the reComputer host to a USB-connected keyboard, mouse, and connect to t
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputerzhongwen/rekaiji1.jpg" alt="pir" width={600} height="auto" /></p>
 
-!!!Note
-    For the reComputer host with both HDMI or DP interface, although it has two display output ports, it does not support dual display output, which means only one display output interface can be used at the same time.
+:::note
+For the reComputer host with both HDMI or DP interface, although it has two display output ports, it does not support dual display output, which means only one display output interface can be used at the same time.
+:::
 
 ## 2. Power Up
 
@@ -37,8 +38,9 @@ After connecting peripherals, connect power to the reComputer host.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/dc1.png" alt="pir" width={600} height="auto" /></p>
 
-!!!Note
-    [reComputer J1010](https://www.seeedstudio.com/Jetson-10-1-A0-p-5336.html) has a Type-C port on the both sides, where the one on the right near the LAN port is the data transmission port. It is strictly forbidden to insert the Type-C power supply into the data transmission port on the right, which may cause damage to the components.
+:::note
+[reComputer J1010](https://www.seeedstudio.com/Jetson-10-1-A0-p-5336.html) has a Type-C port on the both sides, where the one on the right near the LAN port is the data transmission port. It is strictly forbidden to insert the Type-C power supply into the data transmission port on the right, which may cause damage to the components.
+:::
 
 - [reComputer J1020](https://www.seeedstudio.com/Jetson-10-1-H0-p-5335.html), [reComputer J2011](https://www.seeedstudio.com/Jetson-20-1-H1-p-5328.html), and [reComputer J2012](https://www.seeedstudio.com/Jetson-20-1-H2-p-5329.html) are powered by DC interface where is near the HDMI interface.
 
@@ -96,9 +98,10 @@ The final you will chose is the supply voltage while the reComputer operating.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputerzhongwen/rekaiji12.jpg" alt="pir" width={600} height="auto" /></p>
 
-!!!Note
-    The following table shows NVIDIA predefined power modes and associated module resource usage caps.
-    <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/21.jpg" /></div>
+:::note
+The following table shows NVIDIA predefined power modes and associated module resource usage caps.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/21.jpg" /></div>
+:::
 
 After completing the above instructions, we need to wait 1~2 minutes for the reComputer to do the final configuration.
 

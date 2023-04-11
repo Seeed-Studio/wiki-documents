@@ -3,7 +3,7 @@ description: I2C User Guide for Arduino Boards
 title: I2C User Guide for Arduino Boards
 keywords:
 - Sorftware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino_Software_I2C_user_guide
 last_update:
   date: 1/16/2023

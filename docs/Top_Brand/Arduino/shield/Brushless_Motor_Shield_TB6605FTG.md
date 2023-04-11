@@ -7,7 +7,7 @@ tags:
 keywords:
   - Shield
   - motor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Brushless_Motor_Shield_TB6605FTG
 last_update:
   date: 01/30/2023  

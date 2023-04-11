@@ -3,7 +3,7 @@ description:  CAN-BUS Shield V1.2
 title:  CAN-BUS Shield V1.2
 keywords:
 -  Arduino shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CAN-BUS_Shield_V1.2
 last_update:
   date: 2/16/2023

@@ -3,7 +3,7 @@ description: Things We Make
 title: Things We Make
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Things_We_Make
 last_update:
   date: 1/13/2013

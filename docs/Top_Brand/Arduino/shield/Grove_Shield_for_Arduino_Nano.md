@@ -5,7 +5,7 @@ tags:
   - Shield
 keywords:
   - Shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Shield_for_Arduino_Nano
 last_update:
   date: 02/02/2023  

@@ -3,7 +3,7 @@ description: Grove Indoor Environment Kit for Edison
 title: Grove Indoor Environment Kit for Edison
 keywords:
 - Kit with Courses
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Indoor_Environment_Kit_for_Edison
 last_update:
   date: 2/17/2023

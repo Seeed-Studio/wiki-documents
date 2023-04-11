@@ -3,7 +3,7 @@ description: Grove - Touch Sensor
 title: Grove - Touch Sensor
 keywords:
 - Grove Grove_Sensors Touch
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Touch_Sensor
 last_update:
   date: 1/19/2023

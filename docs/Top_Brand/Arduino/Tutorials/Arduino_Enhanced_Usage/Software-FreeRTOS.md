@@ -3,7 +3,7 @@ description: FreeRTOS for Arduino Boards
 title:  FreeRTOS for Arduino Boards
 keywords:
 - Sorftware
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-FreeRTOS
 last_update:
   date: 1/16/2023

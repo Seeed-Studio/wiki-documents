@@ -3,7 +3,7 @@ description: The Things Indoor Gateway
 title: The Things Indoor Gateway
 keywords:
 - Sorftware Mender
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /The-Things-Indoor-Gateway
 last_update:
   date: 2/1/2023
@@ -14,7 +14,12 @@ last_update:
 
 ![TTIG](https://files.seeedstudio.com/products/113990896/wiki/113990894_All-22.png)
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/The-Things-Indoor-Gateway-US-p-4710.html)
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/The-Things-Indoor-Gateway-US-p-4710.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Product Introduction
 

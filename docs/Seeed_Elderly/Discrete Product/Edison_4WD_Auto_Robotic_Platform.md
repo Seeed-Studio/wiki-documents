@@ -3,7 +3,7 @@ description: Edison_4WD_Auto_Robotic_Platform
 title: Edison_4WD_Auto_Robotic_Platform 
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edison_4WD_Auto_Robotic_Platform
 last_update:
   date: 1/13/2023

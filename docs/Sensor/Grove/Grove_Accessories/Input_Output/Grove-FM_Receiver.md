@@ -3,7 +3,7 @@ description: Grove - FM Receiver
 title: Grove - FM Receiver
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-FM_Receiver
 last_update:
   date: 2/22/2023

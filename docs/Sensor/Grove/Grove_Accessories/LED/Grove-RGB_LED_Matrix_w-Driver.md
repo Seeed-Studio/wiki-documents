@@ -3,7 +3,7 @@ description: Grove - RGB LED Matrix w/Driver
 title: Grove - RGB LED Matrix w/Driver
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-RGB_LED_Matrix_w-Driver
 last_update:
   date: 1/9/2023

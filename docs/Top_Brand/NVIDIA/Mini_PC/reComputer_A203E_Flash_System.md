@@ -34,6 +34,11 @@ In this wiki, we will show you how to flash Jetpack OS to the A203E Mini PC whic
   <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"><a href="https://www.seeedstudio.com/A203-Mini-PC-with-128GB-SSD-p-5494.html" target="_blank" rel="noopener"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/a/2/a203_mini_pc_-1.png" alt /></a></p>
 </div>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A203-Mini-PC-with-128GB-SSD-p-5494.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Getting Started
 
@@ -67,7 +72,7 @@ TO put the A203E in Force Recovery Mode, please make sure A203E is powered off.
 
 **Step 3.** Connect the Power adptor for A203E.
 
-**Step 4.** **Press and Hold** the **Reset Key** first, and then **Press and Hold** the **Power Key**, wait for the LED to be light up, then **Release** the **Power Key**, now **Wait for 2 second** and **Release** the **Recovery Key**.
+**Step 4.** **Press and Hold** the **Reset Key** first, and then **Press and Hold** the **Power Key**, wait for the LED to be light up, then **Release** the **Power Key**, now **Wait for 2 second** and **Release** the **Reset Key**.
 
 
 

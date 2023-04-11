@@ -3,7 +3,7 @@ description: SenseCAP Portal Quick Start
 title: SenseCAP Portal Quick Start
 keywords:
 - Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png        
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 last_update:
   date: 02/14/2023
   author: Matthew

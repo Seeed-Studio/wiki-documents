@@ -3,7 +3,7 @@ description: XIAO ESP32C3-Chatgpt
 title: XIAO ESP32C3-Chatgpt
 keywords:
 - XIAO ESP32C3
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiaoesp32c3-chatgpt
 last_update:
   date: 03/03/2023

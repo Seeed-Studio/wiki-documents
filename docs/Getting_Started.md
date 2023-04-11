@@ -3,7 +3,7 @@ description: Quick Guide for Seeed Studio Wiki Platform
 title: Getting Started
 keywords:
 - weeely wiki
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
   date: 03/03/2023
   author: Matthew

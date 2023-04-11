@@ -3,7 +3,7 @@ description: BeagleBone® Introduction
 title: BeagleBone® Introduction
 keywords:
 - Beagle_Bone
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone
 last_update:
   date: 1/10/2023

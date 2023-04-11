@@ -4,7 +4,7 @@ title: Few-Shot Object Detection
 keywords:
   - Edge
   - reComputer Application
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /YOLOv5-Object-Detection-Jetson
 last_update:
   date: 01/04/2023
@@ -167,7 +167,7 @@ Next we will move on to annotating the dataset that we have. Annotating means si
 
 Roboflow has a feature called **Label Assist** where it can predict the labels beforehand so that your labelling will be much faster. However, it will not work with all object types, but rather a selected type of objects. To turn this feature on, you simply need to press the **Label Assist** button, **select a model**, **select the classes** and navigate through the images to see the predicted labels with bounding boxes
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/YOLOV5/41.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/YOLOV5/41.png" /></div>
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/YOLOV5/39.png" /></div>
 
@@ -867,7 +867,7 @@ The training was done on an NVIDIA GeForce GTX 1660 Super Graphics Card with 6GB
 
 According to the local training we performed before for the plants, we obtained the following results
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/YOLOV5/65.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/65.png" /></div>
 
 Here it took only **2.2 hours** run 100 epochs. This is comparatively faster than training using public datasets.
 

@@ -4,7 +4,7 @@ title: GPIO and Grove for reComputer Series
 keywords:
   - Edge
   - reComputer 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_GPIO_Grove
 last_update:
   date: 11/21/2022

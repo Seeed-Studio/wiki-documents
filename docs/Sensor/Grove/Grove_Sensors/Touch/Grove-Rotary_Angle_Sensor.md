@@ -3,7 +3,7 @@ description: Grove - Rotary Angle Sensor
 title: Grove - Rotary Angle Sensor
 keywords:
 - Grove Grove_Sensors Touch
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Rotary_Angle_Sensor
 last_update:
   date: 1/19/2023

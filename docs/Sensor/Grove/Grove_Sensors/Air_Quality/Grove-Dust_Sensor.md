@@ -3,7 +3,7 @@ description: Grove - Dust Sensor
 title: Grove - Dust Sensor
 keywords:
 - Grove Grove_Sensors Air_Quality
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Dust_Sensor
 last_update:
   date: 1/20/2023

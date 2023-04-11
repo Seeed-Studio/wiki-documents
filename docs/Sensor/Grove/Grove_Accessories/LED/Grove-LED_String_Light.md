@@ -3,7 +3,7 @@ description: Grove - LED String Light
 title: Grove - LED String Light
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_String_Light
 last_update:
   date: 1/7/2023

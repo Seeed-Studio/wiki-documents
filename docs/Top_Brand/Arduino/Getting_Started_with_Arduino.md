@@ -3,7 +3,7 @@ description: Get Started with Arduino
 title: Get Started with Arduino
 keywords:
 - Arduino
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_Arduino
 last_update:
   date: 2/14/2023

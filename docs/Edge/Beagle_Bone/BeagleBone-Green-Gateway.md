@@ -3,7 +3,7 @@ description: SeeedStudio BeagleBone® Green Gateway
 title: SeeedStudio BeagleBone® Green Gateway
 keywords:
 - Beagle_Bone
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone-Green-Gateway
 last_update:
   date: 1/10/2023
@@ -19,7 +19,12 @@ The **Seeed Studio BeagleBone® Green Gateway** is a combination of Seeed Studio
 
 Boot Linux in less 10 seconds and get started on development in less than 5 minutes with just a single USB cable.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Gateway-p-4586.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Gateway-p-4586.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
 
 ## Features
 

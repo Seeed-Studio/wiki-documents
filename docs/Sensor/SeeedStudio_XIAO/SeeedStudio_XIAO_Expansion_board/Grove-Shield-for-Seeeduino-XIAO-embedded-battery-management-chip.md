@@ -3,7 +3,7 @@ description: Grove Shield for Seeed Studio XIAO with embedded battery management
 title: Grove Shield for Seeed Studio XIAO with embedded battery management chip
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
 last_update:
   date: 1/10/2023

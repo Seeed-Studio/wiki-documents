@@ -3,7 +3,7 @@ description: Sensor - Gas
 title: Sensor - Gas
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_gas
 last_update:
   date: 1/4/2023

@@ -7,7 +7,7 @@ tags:
 keywords:
   - Shield
   - CAN-BUS
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CAN-BUS_Shield_V2.0
 last_update:
   date: 01/10/2023  

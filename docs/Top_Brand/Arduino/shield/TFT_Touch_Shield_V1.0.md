@@ -3,7 +3,7 @@ description:  TFT Touch Shield V1.0
 title:  TFT Touch Shield V1.0
 keywords:
 -  Arduino shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /TFT_Touch_Shield_V1.0
 last_update:
   date: 2/16/2023

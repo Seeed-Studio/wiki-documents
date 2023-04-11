@@ -93,14 +93,18 @@ const config = {
             'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
         },
 
-
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
+        googleAnalytics: {
+          trackingID: 'UA-77925723-11',
+          anonymizeIP: true,
         },
+
+//         blog: {
+//           showReadingTime: true,
+//           // Please change this to your repo.
+//           // Remove this to remove the "edit this page" links.
+//           editUrl:
+//             'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
+//         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -371,7 +375,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: 'dd2e490797af4d0ef1afdd73f66e3174',
 
-        indexName: 'wiki',
+        indexName: 'wiki_update',
 
         // Optional: see doc section below
         contextualSearch: false,
@@ -397,7 +401,7 @@ const config = {
         id: 'support_us',
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
-          'The search engine is a work in progress, and more functionality will be added over time.',
+          'More functionality will be added over time! Welcome to <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/Seeed-Studio/wiki-documents/discussions/69">share</a> your thoughts with us!',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
         isCloseable: false,

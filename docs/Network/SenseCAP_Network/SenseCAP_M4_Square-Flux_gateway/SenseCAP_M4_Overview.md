@@ -3,7 +3,7 @@ description: SenseCAP M4 Overview
 title: SenseCAP M4 Overview
 keywords:
 - SenseCAP Network
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
   date: 02/14/2023
   author: Matthew

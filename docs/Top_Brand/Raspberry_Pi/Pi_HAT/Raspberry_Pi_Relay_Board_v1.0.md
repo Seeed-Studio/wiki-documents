@@ -3,7 +3,7 @@ description: 4-Channel SPDT Relay HAT for Raspberry Pi
 title: 4-Channel SPDT Relay HAT for Raspberry Pi
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_Relay_Board_v1.0
 last_update:
   date: 1/11/2023

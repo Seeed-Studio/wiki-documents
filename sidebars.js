@@ -47,7 +47,7 @@ const sidebars = {
       }
     </style>
     <div style="width:100px;text-align:center"> 
-      <div class="sub_item"><strong> Sensor </strong></div>
+      <div class="sub_item"><strong> Sensing </strong></div>
     </div>
     `,
     },
@@ -57,6 +57,7 @@ const sidebars = {
       type: 'category',
       label: 'Grove',
       items: [
+        'Sensor/Grove/Grove_System',
         {
           type: 'category',
           label: 'Grove Sensor',
@@ -77,9 +78,10 @@ const sidebars = {
               type: 'category',
               label: 'Vision AI',
               items: [
+                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
-                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
+
               ],
             },
             {
@@ -607,9 +609,21 @@ const sidebars = {
 
             {
               type: 'category',
+              label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
+              ],
+            },
+
+            {
+              type: 'category',
               label: 'SenseCAP A1101',
               items: [
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
+//                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
               ],
             },
           ],
@@ -625,6 +639,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
           ],
 
         },
@@ -778,6 +793,7 @@ const sidebars = {
               type: 'category',
               label: 'Application',
               items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
               ],
@@ -786,8 +802,35 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'SeeedStudio XIAO ESP32S3 (Sense)',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
+          ],
+        },
+        // {
+        //   type: 'category',
+        //   label: 'SeeedStudio XIAO ESP32S3 Sense',
+        //   items: [
+        //     // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_tf_and_filesystem',
+        //     // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_camera',
+        //   ],
+        // },
+        {
+          type: 'category',
           label: 'SeeedStudio XIAO Expansion board',
           items: [
+            {
+              type: 'category',
+              label: 'Seeed Studio Round Display for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
+              ],
+            },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
           ],
@@ -796,7 +839,7 @@ const sidebars = {
           type: 'category',
           label: 'Kit with Courses',
           items: [
-            'Sensor/SeeedStudio_XIAO/Kit with Courses/XIAO-Kit-Courses',
+            'Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses',
 
           ]
         },
@@ -1507,7 +1550,41 @@ const sidebars = {
         
                     },
         
-        
+                    {
+                      type: 'category',
+                      label: 'LinkIt',
+                      items: [
+                        'Seeed_Elderly/LinkIt/LinkIt',
+                        'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
+                        'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
+                        'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
+                        'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
+                        'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
+                        'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
+                        'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
+                        'Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo',
+                        {
+                          type: 'category',
+                          label: 'Linklt ONE',
+                          items: [
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Analog_Interface',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Colorful_World',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Hello_World',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Light-Sensor',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Marquee',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt-ONE-Tutorial---Mini-Servo',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Push_Button',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-SMS_control_the_LED',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-The_Basics',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
+                            'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
+                          ]
+                        },
+                      ]
+                    },
         
                     {
         
@@ -1546,7 +1623,7 @@ const sidebars = {
                     {
         
                       type: 'category',
-                      label: 'IOT BUTTON FOR AWS',
+                      label: 'IOT Button for AWS',
                       items: [
         
                         'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
@@ -1625,6 +1702,17 @@ const sidebars = {
                 'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
               ],
             },
+
+            {
+              type: 'category',
+              label: 'SenseCAP M2 Light Gateway',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ',
+              ],
+            },
+
           ],
         },
 
@@ -1958,18 +2046,22 @@ const sidebars = {
             'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
             'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
             'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
+            'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
           ]
         },
         {
           type: 'category',
           label: 'Software',
           items: [
+            'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
+            'Edge/reComputer/Software/Lumeo-Jetson-Getting-Started',
             'Edge/reComputer/Software/jetson-docker-getting-started',
             'Edge/reComputer/Software/DeciAI-Getting-Started',
             'Edge/reComputer/Software/Allxon-Jetson-Getting-Started',
             'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
             'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
             'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
+            'Edge/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
           ]
         },
         {
@@ -2044,6 +2136,13 @@ const sidebars = {
       label: 'Edge Series',
       items: [
         'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+        {
+          type: 'category',
+          label: 'EdgeBox-ESP-100',
+          items: [
+            'Edge/Edge_Series/Edge_Box_ESP_100/Edgebox-ESP-100-Arduino',
+          ],
+        },
       ],
 
     },
@@ -2664,7 +2763,8 @@ const sidebars = {
 
             // 'Contribution/Contributors/How_To_Edit_A_Document',
             // 'Contribution/Contributors/Things_We_Make',
-    'Contribution/Contributors/Contribution-Guide',
+    'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
+    'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
     'Contribution/Contributors/Honorary-Contributors',
     'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
 
@@ -2769,41 +2869,7 @@ const sidebars = {
             },
           ]
         },
-        {
-          type: 'category',
-          label: 'LinkIt',
-          items: [
-            'Seeed_Elderly/LinkIt/LinkIt',
-            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
-            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
-            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
-            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
-            'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo',
-            {
-              type: 'category',
-              label: 'Linklt ONE',
-              items: [
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Analog_Interface',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Colorful_World',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Hello_World',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Light-Sensor',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Marquee',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt-ONE-Tutorial---Mini-Servo',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Push_Button',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-SMS_control_the_LED',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-The_Basics',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
-              ]
-            },
-          ]
-        },
+       
         {
           type: 'category',
           label: 'Bee',
@@ -3076,25 +3142,25 @@ const sidebars = {
   //   `,
   //   },
   // ],
-  CNSidebar: [
-    {
+  // CNSidebar: [
+  //   {
 
-      type: 'category',
-      label: 'Seeed Studio XIAO 拓展板',
-      items: [
-        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
-      ]
-    },
-    {
+  //     type: 'category',
+  //     label: 'Seeed Studio XIAO 拓展板',
+  //     items: [
+  //       'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+  //     ]
+  //   },
+  //   {
 
-      type: 'category',
-      label: 'Seeed Studio XIAO SAMD21',
-      items: [
-        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
-      ]
-    },
+  //     type: 'category',
+  //     label: 'Seeed Studio XIAO SAMD21',
+  //     items: [
+  //       'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
+  //     ]
+  //   },
 
-  ]
+  // ]
 
 };
 

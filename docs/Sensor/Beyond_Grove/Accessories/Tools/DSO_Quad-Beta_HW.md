@@ -3,7 +3,7 @@ title: DSO Quad:Beta HW
 keywords:
   - docs
   - docusaurus
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /DSO_Quad-Beta_HW
 last_update:
   date: 02/03/2022

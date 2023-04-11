@@ -3,7 +3,7 @@ description: Danger Shield Complete Kits
 title: Danger Shield Complete Kits
 keywords:
 - grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Danger_Shield_Complete_Kits
 last_update:
   date: 1/13/2023

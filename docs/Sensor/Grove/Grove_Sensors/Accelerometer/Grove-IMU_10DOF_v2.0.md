@@ -3,7 +3,7 @@ description: Grove - IMU 10DOF v2.0
 title: Grove - IMU 10DOF v2.0
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-IMU_10DOF_v2.0
 last_update:
   date: 1/5/2023

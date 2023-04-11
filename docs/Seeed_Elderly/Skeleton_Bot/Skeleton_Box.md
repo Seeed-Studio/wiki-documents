@@ -3,7 +3,7 @@ description: Skeleton Box
 title: Skeleton Box
 keywords:
 - Skeleton_Box
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Box
 last_update:
   date: 01/20/2023

@@ -3,7 +3,7 @@ description: 3D Gesture Tracking Shield for Raspberry Pi MGC3130
 title: 3D Gesture Tracking Shield for Raspberry Pi MGC3130
 keywords:
 - Pi_HAT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130
 last_update:
   date: 1/11/2023

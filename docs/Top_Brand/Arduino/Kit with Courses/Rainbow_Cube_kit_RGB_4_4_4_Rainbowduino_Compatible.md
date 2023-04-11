@@ -3,7 +3,7 @@ description: Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)
 title: Rainbow Cube kit - RGB 4*4*4 (Rainbowduino Compatible)
 keywords:
 - Kit with Courses
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible
 last_update:
   date: 2/17/2023

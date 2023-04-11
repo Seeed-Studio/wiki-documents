@@ -3,7 +3,7 @@ description:  Xadow Wearable Kit For Edison
 title:  Xadow Wearable Kit For Edison
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Wearable_Kit_For_Edison
 last_update:
   date: 1/13/2023

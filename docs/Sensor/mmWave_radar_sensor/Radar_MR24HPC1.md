@@ -3,7 +3,7 @@ description: mmWave Human Static Presence Module Lite
 title: mmWave Human Static Presence Module Lite
 keywords:
 - mmWave_radar_sensor
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24HPC1
 last_update:
   date: 03/03/2023
@@ -975,7 +975,7 @@ At the same time, you can also send data frames to the Sensor via the software's
 
 We have created a tutorial for connecting to ESPHome and Home Assistant for this radar and the XIAO ESP32C3, if you are interested, you can refer to the tutorial here.
 
-- [LinkStar Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
+- [XIAO ESP32C3 accesses Home Assistant via ESPHome service](https://wiki.seeedstudio.com/xiao-esp32c3-esphome)
 
 ## Troubleshooting
 
@@ -989,8 +989,9 @@ We have created a tutorial for connecting to ESPHome and Home Assistant for this
 
 ## Resources
 
+- **[PDF]** [Quick Setup Template](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)
 - **[PDF]** [Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
-- **[PDF]** [User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_User_Manual.pdf)
+- **[PDF]** [User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)
 - **[EXE]** [upper computer software](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/Human-Radar-Open-Protocol_2.0.exe)
 
 ## Tech Support

@@ -3,7 +3,7 @@ description:  Connect Seeed Studio XIAO SAMD21 to your Raspberry PI
 title:  Connect Seeed Studio XIAO SAMD21 to your Raspberry PI
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI
 last_update:
   date: 1/11/2023

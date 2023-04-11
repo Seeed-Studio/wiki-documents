@@ -3,7 +3,7 @@ description:  Grove - Starter Kit Plus
 title:  Grove - Starter Kit Plus
 keywords:
 - grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_Kit_Plus
 last_update:
   date: 1/13/2023

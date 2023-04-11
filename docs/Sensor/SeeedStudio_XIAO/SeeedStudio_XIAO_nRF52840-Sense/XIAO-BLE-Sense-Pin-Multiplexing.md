@@ -3,7 +3,7 @@ description: Pin Multiplexing on Seeed Studio XIAO nRF52840 (Sense)
 title: Pin Multiplexing on Seeed Studio XIAO nRF52840 (Sense)
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-Pin-Multiplexing
 last_update:
   date: 1/11/2023

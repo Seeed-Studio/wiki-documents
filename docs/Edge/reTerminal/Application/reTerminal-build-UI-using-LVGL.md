@@ -4,7 +4,7 @@ title:  LVGL for reTerminal
 keywords:
   - Edge
   - reTerminal Application
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-build-UI-using-LVGL
 last_update:
   date: 1/31/2023

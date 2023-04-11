@@ -3,18 +3,21 @@ description: Flash JetPack to NVIDIA® Jetson AGX Orin 32GB H01 Kit
 title: NVIDIA® Jetson AGX Orin 32GB H01 Kit
 keywords:
 - NVIDIA Jetson Alternative
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_AGX_Orin_32GB_H01_Flash_Jetpack
 last_update:
-  date: 3/2/2023
-  author: jianjing Huang
+  date: 3/30/2023
+  author: Lakshantha
 ---
 
 <!-- # Flash JetPack to NVIDIA® Jetson AGX Orin 32GB H01 Kit  -->
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/6.png"/></div>
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Jetson-Xavier-AGX-H01-Kit-p-5283.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 This wiki will guide you how to install JetPack to Jetson AGX Orin 32GB H01 Kit.
 

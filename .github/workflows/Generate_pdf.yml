@@ -1,19 +1,18 @@
 name: Generate_pdf
 
 on:
-  pull_request:
-    paths-ignore:
-      - "ISSUE_TEMPLATE/**"
-      - ".github/**.md"
-      - ".gitignore"
-      - "demo/**"
-      - "docker/**"
-      - "HOW_TO.md"
-      - "TASK.md"
-      - "SECURITY.md"
-      - "README.md"
-      - "README_zh-CN.md"
-
+#   pull_request:
+#     paths-ignore:
+#       - "ISSUE_TEMPLATE/**"
+#       - ".github/**.md"
+#       - ".gitignore"
+#       - "demo/**"
+#       - "docker/**"
+#       - "HOW_TO.md"
+#       - "TASK.md"
+#       - "SECURITY.md"
+#       - "README.md"
+#       - "README_zh-CN.md"
   push:
     branches:
       - HTML_RE
@@ -29,9 +28,6 @@ on:
       - "README.md"
       - "README_zh-CN.md"
       
-  schedule:
-    #UTC 0 
-    - cron: '0 0 * * *'
 
 jobs:
   lint:
@@ -69,13 +65,13 @@ jobs:
       
       - name: PUBLISH to WEBSITE
         run: |
-            git clone -b HTML_RE git@github.com:tianrking/wiki-documents.git ~/HTML_RE
+            git clone -b HTML_RE git@github.com:Seeed-Studio/wiki-documents.git ~/HTML_RE
             cd ~/HTML_RE
             yarn add docusaurus-prince-pdf
-            npx docusaurus-prince-pdf -u https://seeed-studio.github.io/wiki-documents/Arduino
+            npx docusaurus-prince-pdf -u https://wiki.seeedstudio.com/Sensor/SenseCAP
             git add .
             git commit -m "Add: pdf"
-            git push -u origin HTML_RE -f
+            git push -u origin HTML_RE
 
 
 

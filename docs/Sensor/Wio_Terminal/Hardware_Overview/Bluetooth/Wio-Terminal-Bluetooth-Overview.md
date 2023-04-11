@@ -3,7 +3,7 @@ description: Overview
 title: Overview
 keywords:
 - Wio_terminal Bluetooth
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Bluetooth-Overview
 last_update:
   date: 1/16/2023

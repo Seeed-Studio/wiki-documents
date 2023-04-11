@@ -3,7 +3,7 @@ description: Grove - Serial Camera Kit
 title: Grove - Serial Camera Kit
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Serial_Camera_Kit
 last_update:
   date: 2/22/2023

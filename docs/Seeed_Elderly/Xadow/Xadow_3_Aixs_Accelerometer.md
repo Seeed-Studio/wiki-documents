@@ -3,7 +3,7 @@ description: Xadow - 3-Axis Accelerometer
 title:  Xadow - 3-Axis Accelerometer
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_3_Aixs_Accelerometer
 last_update:
   date: 1/13/2023

@@ -3,7 +3,7 @@ description:  GPRS Shield
 title:  GPRS Shield
 keywords:
 -  Arduino shield
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /GPRS-Shield
 last_update:
   date: 2/16/2023

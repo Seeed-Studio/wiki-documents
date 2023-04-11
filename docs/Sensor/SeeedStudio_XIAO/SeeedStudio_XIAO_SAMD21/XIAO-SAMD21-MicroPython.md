@@ -3,7 +3,7 @@ description: Seeed Studio XIAO SAMD21 with MicroPython
 title: Seeed Studio XIAO SAMD21 with MicroPython
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-SAMD21-MicroPython
 last_update:
   date: 1/11/2023
@@ -52,7 +52,7 @@ First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and 
 
 - **Step 1**. Press and hold the "BOOT" button and then connect the Seeed Studio XIAO SAMD21 to the PC through the Type-C cable. If it works well, there is an "Arduino" desk shown on the PC.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
 
 - **Step 2**. Flash the firmware
@@ -100,7 +100,7 @@ If you want to use the program offline, you should save the program to XIAO SAMD
 
 Press and hold Ctrl + Shift + S at the same time , then select save to **MicroPython device** 
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/6.jpg" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/6.jpg" /></div>
 
 
 ### GPIO TEST (LED)
@@ -129,7 +129,7 @@ tim = Timer(-1)
 tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 ```
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
 
 ### GPIO Control Relays
 

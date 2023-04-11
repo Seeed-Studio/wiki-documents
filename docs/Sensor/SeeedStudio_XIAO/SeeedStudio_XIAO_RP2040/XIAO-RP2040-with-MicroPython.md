@@ -3,7 +3,7 @@ description: Seeed Studio XIAO RP2040 with MicroPython
 title: Seeed Studio XIAO RP2040 with MicroPython
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-with-MicroPython
 last_update:
   date: 1/11/2023
@@ -48,7 +48,7 @@ First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and 
 
 - **Step 1**. Press and hold the "BOOT" button and then connect the Seeed Studio XIAO RP2040 to the PC through the Type-C cable. If it works well, there is an "RPI-RP2" desk shown on the PC.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
 - **Step 2**. Click **Install or update MicroPython**.
 

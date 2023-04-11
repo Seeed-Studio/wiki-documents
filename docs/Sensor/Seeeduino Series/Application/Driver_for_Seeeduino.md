@@ -3,7 +3,7 @@ description: Driver for Seeeduino
 title: Driver for Seeeduino
 keywords:
 - Seeeduino 
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Driver_for_Seeeduino
 last_update:
   date: 1/31/2023

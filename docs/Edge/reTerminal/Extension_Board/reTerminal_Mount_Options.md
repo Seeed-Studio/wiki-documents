@@ -4,7 +4,7 @@ title:   reTerminal Mount Options
 keywords:
   - Edge
   - reTerminal Extension_Board
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal_Mount_Options
 last_update:
   date: 2/1/2023

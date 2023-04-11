@@ -3,7 +3,7 @@ description: LinkIt Smart 7688 Duo
 title: LinkIt Smart 7688 Duo
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_Smart_7688_Duo
 last_update:
   date: 1/13/2023
@@ -16,12 +16,16 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 
 :::note
-    * This page only guides you to get started with this development board. For a complete guide, please refer to Resources.
-    * Only one controller can be the main controller of the board at a time.
-    * This board is only a part of MediaTek LinkItTM Smart 7688 platform which includes other development boards.
+* Only one controller can be the main controller of the board at a time.
+* This board is only a part of MediaTek LinkItTM Smart 7688 platform which includes other development boards.
 :::
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/LinkIt-Smart-7688-Duo-p-2574.html)  
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkIt-Smart-7688-Duo-p-2574.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Features
 

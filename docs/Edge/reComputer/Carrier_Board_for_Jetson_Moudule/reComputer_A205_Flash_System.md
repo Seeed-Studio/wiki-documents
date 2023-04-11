@@ -1,6 +1,6 @@
 ---
-description: A205 Flash System
-title: A205
+description: A205 Carrier Board
+title: A205 Carrier Board
 keywords:
   - Edge
   - reComputer Carrier_Board_for_Jetson_Moudule
@@ -27,8 +27,11 @@ tags:
 
 In this wiki, we will show you how to flash Jetpack OS to the A205 Carrier Board which supports both NVIDIA Jetson Nano module and NVIDIA Jetson Xavier module. We here will introduce you two ways to flash the system, and because the A205 Carrier Board is different to the official NVIDIA Jetson Carrier Board, the corresponding driver should be installed as well.
 
-<div align="center">
-  <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"><a href="https://www.seeedstudio.com/A205-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5133.html" target="_blank" rel="noopener"><img width={400} src="https://files.seeedstudio.com/wiki/reComputer_Carrier_Board/A205/Flash_A205.png" alt /></a></p>
+![image](https://files.seeedstudio.com/wiki/reComputer_Carrier_Board/A205/Flash_A205.png)
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A205-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5133.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
 </div>
 
 ## Getting Started
@@ -194,7 +197,7 @@ In the Linux host PC, we need to replace some files in the official image with t
 
 `/home/<username>/nvidia/nvidia_sdk/JetPack_<version num>_Linux_<board name>_TARGETS/Linux_for_Tegra`
 
-#### Replace the Files
+### Replace the Files
 
 !!!Attention
  Before replacing the files, you can choose to make a backup of the `.dtb` file that will be replaced in the `kernel` folder and save it temporarily in another path so that you can restore the official download at any time.

@@ -3,7 +3,7 @@ description: Techbox Tricks
 title: Techbox Tricks
 keywords:
 - Kit with Courses
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Techbox_Tricks
 last_update:
   date: 2/17/2023

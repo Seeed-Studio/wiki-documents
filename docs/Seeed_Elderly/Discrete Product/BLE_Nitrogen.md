@@ -3,7 +3,7 @@ description: BLE Nitrogen
 title: BLE Nitrogen
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BLE_Nitrogen
 last_update:
   date: 1/13/2023

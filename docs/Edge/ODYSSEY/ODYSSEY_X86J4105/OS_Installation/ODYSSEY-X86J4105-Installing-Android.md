@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Android-x86 Installation
 tags:
   - ODYSSEY
@@ -23,7 +23,7 @@ sku: 102110399
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Installing-Android/BBC.png" /></div>
 
-This tutorial demonstrates how to install the Android-x86 on the ODYSSEY-X86J4105 and use it as a smart TV box to watch live stream TV or media from local storage(such as NAS) with the help of [Kodi](https://kodi.tv/).
+This tutorial demonstrates how to install the Android-x86 on the ODYSSEY-X86J41x5 and use it as a smart TV box to watch live stream TV or media from local storage(such as NAS) with the help of [Kodi](https://kodi.tv/).
 
 The Android-x86 is a project to port Android open source project to x86 platform, formerly known as "patch hosting for android x86 support". For more reference, please visit the official [Android-x86](https://www.android-x86.org/).
 
@@ -69,15 +69,15 @@ Select the downloaded Operating System Image, select the formatted USB Drive and
 
 ## Installing the Android-x86
 
-### Step 1 - Enabling CSM Mode in ODYSSEY - X86J4105
+### Step 1 - Enabling CSM Mode in ODYSSEY - X86J41x5
 
-Plugin your bootable USB, Monitor and keyboard to ODYSSEY - X86J4105, and power up. When booting up, keep pressing **`DEL`** key to enter the setup screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
+Plugin your bootable USB, Monitor and keyboard to ODYSSEY - X86J41x5, and power up. When booting up, keep pressing **`DEL`** key to enter the setup screen. Navigate to **`Advanced`** -> **`CSM Support`** and press Enter to enable it.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/OpenWRT/biosSetting.jpg" /></div>
 
 ### Step 2 - Install the OS
 
-Reboot your ODYSSEY - X86J4105 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB (Installer) and press Enter.
+Reboot your ODYSSEY - X86J41x5 and keep pressing **`F7`** to enter the boot manager screen. Select the bootable USB (Installer) and press Enter.
 
 **Note:** Remember to choose the one that has the Android-x86 iso image on it.
 
@@ -121,7 +121,7 @@ This may look familiar with people who use Android phones!
 
 ## Setting up as Smart TV Box
 
-To get ODYSSEY-X86J4105 to work as a smart TV Box, we will need to install [Kodi](https://kodi.tv/).
+To get ODYSSEY-X86J41x5 to work as a smart TV Box, we will need to install [Kodi](https://kodi.tv/).
 
 Kodi is a free, open source piece of media centre software that can run on anything from your Android phone to your home PC, and plenty of other devices in between. And of course it supports Android-x86!
 

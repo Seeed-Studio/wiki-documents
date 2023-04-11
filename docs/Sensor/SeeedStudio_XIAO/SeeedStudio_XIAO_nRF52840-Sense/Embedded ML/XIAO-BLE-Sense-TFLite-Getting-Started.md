@@ -3,7 +3,7 @@ description: Getting Started
 title: Getting Started
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-TFLite-Getting-Started
 last_update:
   date: 1/11/2023

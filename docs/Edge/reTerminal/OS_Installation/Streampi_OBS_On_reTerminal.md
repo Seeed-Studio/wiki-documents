@@ -4,7 +4,7 @@ title:  Stream-pi & OBS studio for reTerminal
 keywords:
   - Edge
   - reTerminal OS_Installation
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Streampi_OBS_On_reTerminal
 last_update:
   date: 2/1/2023

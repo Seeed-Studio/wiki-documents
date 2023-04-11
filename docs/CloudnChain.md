@@ -4,7 +4,7 @@ title: Cloud & Chain
 keywords:
 - Cloud
 - Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
   date: 01/20/2023
   author: Matthew
@@ -21,12 +21,12 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 - Different API for different connecting purposes
 - Cloud & Chain Introduction
 
-### SenseCAP Dashboard / Protal -->
+### SenseCAP Dashboard / Portal
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Proral</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the SenseCAP Proral for data monitoring of SenseCAP sensors nodes and SenseCAP gateway.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the SenseCAP Portal for data monitoring of SenseCAP sensors nodes and SenseCAP gateway.</font></div>
     </a>
 </div>
 
@@ -74,7 +74,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
-### SenseCAP HotSpot APP -->
+### SenseCAP HotSpot APP
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -85,7 +85,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
-### SenseCAP Mate APP -->
+### SenseCAP Mate APP
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -96,7 +96,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
     </a>
 </div>
 
-### SenseCAP API -->
+### SenseCAP API
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>

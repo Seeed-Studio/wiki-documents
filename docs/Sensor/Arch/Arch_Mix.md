@@ -3,7 +3,7 @@ description: Arch Mix
 title: Arch Mix
 keywords:
 - Arch
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arch_Mix
 last_update:
   date: 1/12/2023

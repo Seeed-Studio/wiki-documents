@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: Adding Accessories
 tags:
   - ODYSSEY
@@ -14,34 +14,34 @@ last_update:
 
 ---
 
-# Adding Accessories to ODYSSEY - X86J4105
+# Adding Accessories to ODYSSEY - X86J41x5
 
-This wiki introduces how to add different accessories to ODYSSEY - X86J4105 to boost up the performance to fit your needs. For instance, you might be using ODYSSEY-X86J4105 for a more graphics required scenario, hence the need of **adding an external GPU for high performance.** Or in some cases such as NAS, you would prefer **two HDD hard drive instead of using SSD for stability reasons.**
+This wiki introduces how to add different accessories to ODYSSEY - X86J41x5 to boost up the performance to fit your needs. For instance, you might be using ODYSSEY-X86J41x5 for a more graphics required scenario, hence the need of **adding an external GPU for high performance.** Or in some cases such as NAS, you would prefer **two HDD hard drive instead of using SSD for stability reasons.**
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/driver-installed-2.png" /></div>
 
 ## 1. Adding Additional Storage via PCIe to SATA III (HDD Hard Drives)
 
-On ODYSSEY-X86J4105, there is **1 M.2 SATA SSD, 1 M.2 PCIe SSD and 1 SATA III connectors with 3 SATA III power connectors.** For standard use, these connectors are enough. However, for more of a industrial usage would prefer using HDD instead of SSD. This demonstrates how to attach more than 1 HDD to ODYSSEY-X86J4105.
+On ODYSSEY-X86J41x5, there is **1 M.2 SATA SSD, 1 M.2 PCIe SSD and 1 SATA III connectors with 3 SATA III power connectors.** For standard use, these connectors are enough. However, for more of a industrial usage would prefer using HDD instead of SSD. This demonstrates how to attach more than 1 HDD to ODYSSEY-X86J41x5.
 
 ### Materials Required
 
 - **M.2 PCIe to SATA Adapter**
 
-- HDD Hard Drives (Maximum 3 HDD supported on ODYSSEY-X86J4105)
+- HDD Hard Drives (Maximum 3 HDD supported on ODYSSEY-X86J41x5)
 
-To attach more HDD to ODYSSEY-X86J4105, we need an extra component, a M.2 PCIe to SATA adapter which can convert the M.2 PCIe slot into SATA data connector. This adapter can be purchased commonly on the electronics market.
+To attach more HDD to ODYSSEY-X86J41x5, we need an extra component, a M.2 PCIe to SATA adapter which can convert the M.2 PCIe slot into SATA data connector. This adapter can be purchased commonly on the electronics market.
 
 ### Hardware Instructions
 
-- Attach the  M.2 PCIe to SATA adapter to the PCIe slot of the ODYSSEY-X86J4105 and plug the HDD data cable into it as shown below. Connect the HDD power cable to one of the three SATA III power connectors.
+- Attach the  M.2 PCIe to SATA adapter to the PCIe slot of the ODYSSEY-X86J41x5 and plug the HDD data cable into it as shown below. Connect the HDD power cable to one of the three SATA III power connectors.
 
 <div>
   <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/HDD.jpg" /></div>
   <br />
 </div>
 
-- You can have maximum of 3 HDD hard drives connected to the ODYSSEY-X86J4105. Boot up the devices and check if the hard drives shown up in the operating system.
+- You can have maximum of 3 HDD hard drives connected to the ODYSSEY-X86J41x5. Boot up the devices and check if the hard drives shown up in the operating system.
 
 ### Result
 
@@ -53,9 +53,9 @@ Once booted in the OS, you should be able to see the hard drives.
 
 Now you don't have to worry about the storage issue no more!
 
-## 2. Adding an External GPU to the ODYSSEY-X86J4105
+## 2. Adding an External GPU to the ODYSSEY-X86J41x5
 
-To add external GPU to the ODYSSEY-X86J4105 to boost up performance, you will also need an extra component.
+To add external GPU to the ODYSSEY-X86J41x5 to boost up performance, you will also need an extra component.
 
 ### Materials Required
 
@@ -91,7 +91,7 @@ Save the BIOS settings and power off the device.
 
 - Insert your GPU into the PCIe x16 end of the adapter.
 
-- Insert the Adapter to M.2 PCIe slot of the ODYSSEY-X86J4105,
+- Insert the Adapter to M.2 PCIe slot of the ODYSSEY-X86J41x5,
 
 - The GPU also needs an external power, here I used a DIY 4-pin to DC jack to supply the 12V power **(Only do this if know what you are doing)**. There is also 4-pin to DC jack on the market out there that you can buy.
 
@@ -100,7 +100,7 @@ Save the BIOS settings and power off the device.
   <br />
 </div>
 
-- Connect the HDMI to the GPU instead of the ODYSSEY-X86J4105.
+- Connect the HDMI to the GPU instead of the ODYSSEY-X86J41x5.
 
 :::note
 Please be careful during the hardware connection. Make sure everything is connected correctly before turning on power or you may in danger of damaging components.
@@ -200,7 +200,7 @@ Or simply go to the settings:
   <br />
 </div>
 
-Now enjoy the boosted up ODYSSEY-X86J4105 and all set to dive in the field of AI where it requires a lot of GPU power!
+Now enjoy the boosted up ODYSSEY-X86J41x5 and all set to dive in the field of AI where it requires a lot of GPU power!
 
 ## Tech Support
 

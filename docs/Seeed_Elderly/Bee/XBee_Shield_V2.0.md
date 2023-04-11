@@ -3,7 +3,7 @@ description: XBee Shield V2.0
 title: XBee Shield V2.0
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XBee_Shield_V2.0
 last_update:
   date: 1/13/2023

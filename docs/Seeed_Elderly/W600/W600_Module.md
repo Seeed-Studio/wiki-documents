@@ -3,7 +3,7 @@ description: W600 Module
 title: W600 Module
 keywords:
 - Air602_WiFi_Development_Board
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /W600_Module
 last_update:
   date: 01/20/2023

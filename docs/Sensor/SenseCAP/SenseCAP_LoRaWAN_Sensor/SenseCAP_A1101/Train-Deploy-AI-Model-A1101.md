@@ -3,7 +3,8 @@ description: Train and Deploy Your Own AI Model Into SenseCAP A1101
 title: Train and Deploy Your Own AI Model Into SenseCAP A1101
 keywords:
 - SenseCAP
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Train-Deploy-AI-Model-A1101
 last_update:
   date: 1/16/2023
   author: jianjing Huang
@@ -19,11 +20,9 @@ In this wiki, we will teach you how to train your own AI model for your specific
 
 We will mainly use SenseCAP A1101 - LoRaWAN Vision AI Sensor throughout this wiki. So first, let's become familiar with this hardware.
 
-### SenseCAP A1101 - LoRaWAN Vision AI Sensor
-
 [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) combines TinyML AI technology and LoRaWAN long-range transmission to enable a low-power, high-performance AI device solution for outdoor use. This sensor features Himax's high-performance, low-power AI vision solution which supports the Google TensorFlow Lite framework and multiple TinyML AI platforms. Different models can implement different AI functions, for example, pest detection, people counting, object recognition. Users can adopt models provided by Seeed, generate their own models through AI training tools, or procure deployable, commercial models from Seeed's partner model providers.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/60.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/60.jpg"/></div>
 
 ## Software introduction
 
@@ -51,16 +50,17 @@ YOLO is an abbreviation for the term ‘You Only Look Once’. It is an algorith
 
 This wiki will be divided into three main sections
 
-1. [Train your own AI model with a public dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#1-train-your-own-ai-model-with-a-public-dataset)
-2. [Train your own AI model with your own dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#2-train-your-own-ai-model-with-your-own-dataset)
-3. [Deploy the trained AI model into SenseCAP A1101](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference)
+1. [Train your own AI model with a public dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset)
+2. [Train your own AI model with your own dataset](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset)
+3. [Deploy the trained AI model into SenseCAP A1101](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference)
 
 The first section will be the fastest way to build your own AI model with the least number of steps. The second section will take some time and effort to build your own AI model, but it will be definitely worth the knowledge. The third section about deploying the AI model can be done either after first or second section.
 
 So there are two ways to follow this wiki:
 
-1. Follow [section 1](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#1-train-your-own-ai-model-with-a-public-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference) - fast to follow
-2. Follow [section 2](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#2-train-your-own-ai-model-with-your-own-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference) - slow to follow
+1. Follow [section 1](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#1-train-your-own-ai-model-with-a-public-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference) - fast to follow
+
+2. Follow [section 2](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#2-train-your-own-ai-model-with-your-own-dataset) and then [section 3](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101#3-deploy-the-trained-model-and-perform-inference) - slow to follow
 
 However, we encourage to follow the first way at first and then move onto the second way.
 
@@ -88,11 +88,11 @@ You can download a number of publically available datasets such as the  [COCO da
 
 - **Step 2.** Click **Create Account** to create a Roboflow account
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/53.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/53.png"/></div>
 
 - **Step 3.** Click **Download**, select **YOLO v5 PyTorch** as the **Format**, click **show download code** and click **Continue**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/51.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/51.png"/></div>
 
 This will generate a code snippet that we will use later inside Google Colab training. So please keep this window open in the background.
 
@@ -113,17 +113,18 @@ It will walkthrough the following:
 - Perform the training
 - Download the trained model
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/18.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/18.png"/></div>
 
 For an apple detection dataset with 699 images, it took around 7 minutes to finish the training process on Google Colab running on NVIDIA Tesla T4 GPU with 16GB GPU memory.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/43.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/43.png"/></div>
 
 If you followed the above Colab project, you know that you can load 4 models to the device all at once. However, please note that only one model can be loaded at a time. This can be specified by the user and will be explained later in this wiki.
 
 ### Deploy and inference
 
 If you directly want to jump to **section 3** which explains how to deploy the trained AI model into SenseCAP A1101 and perform inference, [click here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference).
+
 
 ## 2. Train your own AI model with your own dataset
 
@@ -177,6 +178,10 @@ wget https://conda.anaconda.org/conda-forge/osx-arm64/libusb-1.0.26-h1c322ee_100
 conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 ```
 
+:::cautionwarning
+You need to make sure your BootLoader version is greater than 2.0.0 before you can change the firmware to do the following. If you are not sure, please check the BootLoader version by following the steps mentioned in [this section](#check-bootloader-version), and if the version is less than 2.0.0, please update the BootLoader by following the steps mentioned in [this section](#update-bootloader)
+:::
+
 ### Collect dataset
 
 - **Step 1.** Connect SenseCAP A1101 to PC by using USB Type-C cable
@@ -187,13 +192,12 @@ conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
-After this you will see a new storage drive shown on your file explorer as **VISIONAI**
+After this you will see a new storage drive shown on your file explorer as **SENSECAP**
 
-**Note:** The below image will be updated soon with the addition of **VISIONAI** drive
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/19.jpg"/></div>
+<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
-- **Step 3.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/capture_images_A1101_firmware.uf2) to **VISIONAI** drive
+- **Step 3.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/capture_images_A1101_firmware.uf2) to **SENSECAP** drive
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -219,11 +223,11 @@ python3 capture_images_script.py --interval 1000
 
 After the above script is executed, SenseCAP A1101 will start to capture images from the in-built cameras continuosly and save all of them inside a folder named **save_img**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/41.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/41.png"/></div>
 
 Also, it will open a preview window while it is recording
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/40.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/40.jpg"/></div>
 
 After you have enough images captured, click on the terminal window and press the following key combinations to stop the capturing process
 
@@ -237,7 +241,7 @@ After you have finished recording images for the dataset, you need to make sure 
 
 - **Step 1.** Enter **Boot mode** on SenseCAP A1101 as explained before
 
-- **Step 2.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/A1101_default_firmware.uf2) to **VISIONAI** drive according to your device
+- **Step 2.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/A1101_default_firmware.uf2) to **SENSECAP** drive according to your device
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -253,7 +257,7 @@ For this wiki, we will use a dataset with images containing apples so that we ca
 
 - **Step 2.** Click **Create New Project** to start our project
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/YOLOV5/2.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/2.jpg"/></div>
 
 - **Step 3.** Fill in **Project Name**, keep the **License (CC BY 4.0)** and **Project type (Object Detection (Bounding Box))**  as default. Under **What will your model predict?** column, fill in an annotation group name. For example, in our case we choose **apples**. This name should highlight all of the classes of your dataset. Finally, click **Create Public Project**.
 
@@ -261,23 +265,23 @@ For this wiki, we will use a dataset with images containing apples so that we ca
 
 - **Step 4.** Drag and drop the images that you have captured using SenseCAP A1101
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/7.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/7.png"/></div>
 
 - **Step 5.** After the images are processed, click **Finish Uploading**. Wait patiently until the images are uploaded.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/4.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/4.jpg"/></div>
 
 - **Step 6.** After the images are uploaded, click **Assign Images**
 
-<div align="center"><img width="{300}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/5.jpg"/></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/5.jpg"/></div>
 
 - **Step 7.** Select an image, draw a rectangular box around an apple, choose the label as **apple** and press **ENTER**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/9.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/9.png"/></div>
 
 - **Step 8.** Repeat the same for the remaining apples
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/10.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/10.png"/></div>
 
 **Note:** Try to label all the apples that you see inside the image. If only a part of an apple is visible, try to label that too.
 
@@ -295,7 +299,7 @@ As you can see above, it can only help to predict annotations for the 80 classes
 
 - **Step 10.** Once labelling is done, click **Add images to Dataset**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/YOLOV5/25.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/25.jpg"/></div>
 
 - **Step 11.** Next we will split the images between "Train, Valid and Test". Keep the default percentages for the distribution and click **Add Images**
 
@@ -303,11 +307,11 @@ As you can see above, it can only help to predict annotations for the 80 classes
 
 - **Step 12.** Click **Generate New Version**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/YOLOV5/27.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/27.jpg"/></div>
 
 - **Step 13.** Now you can add **Preprocessing** and **Augmentation** if you prefer. Here we will **change** the **Resize** option to **192x192**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/11.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/11.png"/></div>
 
 <div align="center"><img width="{450}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/13.png"/></div>
 
@@ -315,11 +319,11 @@ Here we change the image size to 192x192 because we will use that size for train
 
 - **Step 14.** Next, proceed with the remaining defaults and click **Generate**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/14.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/14.png"/></div>
 
 - **Step 15.** Click **Export**, select **Format** as **YOLO v5 PyTorch**, select **show download code** and click **Continue**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/54.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/54.png"/></div>
 
 This will generate a code snippet that we will use later inside Google Colab training. So please keep this window open in the background.
 
@@ -343,13 +347,12 @@ Now we will move the **model-1.uf2** that we obtained at the end of the training
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
-After this you will see a new storage drive shown on your file explorer as **VISIONAI**  
+After this, you will see a new storage drive shown on your file explorer as **SENSECAP**  
+ 
 
-**Note:** The below image shows the drive as **GROVEAI**. It will be updated soon to **VISIONAI**  
+<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/19.jpg"/></div>
-
-- **Step 4.** Drag and drop the **model-1.uf2** file to **VISIONAI** drive
+- **Step 4.** Drag and drop the **model-1.uf2** file to **SENSECAP** drive
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -386,15 +389,15 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 - **Step 12.** [Click here](https://files.seeedstudio.com/grove_ai_vision/index.html) to open a preview window of the camera stream
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png"/></div>
 
-- **Step 13.** Click **Connect** button. Then you will see a pop up on the browser. Select **Grove AI - Paired** and click **Connect**
+- **Step 13.** Click **Connect** button. Then you will see a pop up on the browser. Select **SenseCAP Vision AI - Paired** and click **Connect**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/32.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/32.png"/></div>
 
 - **Step 14.** View real-time inference results using the preview window!
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/33.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/33.jpg"/></div>
 
 As you can see above, the apples are being detected with bounding boxes around them. Here "0" corresponds to each detection of the same class. If you have multiple classes, they will be named as 0,1,2,3,4 and so on. Also the confidence score for each detected apple (0.8 and 0.84 in above demo) is being displayed!
 
@@ -464,7 +467,7 @@ python3 train.py --img 192 --batch 64 --epochs 100 --data data.yaml --cfg yolov5
 
 For an apple detection dataset with 987 images, it took around 30 minutes to finish the training process on a Local PC running on NVIDIA GeForce GTX 1660 Super GPU with 6GB GPU memory.
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/44.png"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/44.png"/></div>
 
 If you followed the above Colab project, you know that you can load 4 models to the device all at once. However, please not that only one model can be loaded at a time. This can be specified by the user and will be explained later in this wiki.
 
@@ -498,6 +501,40 @@ Eventhough you can load 4 models to the device all at once, please not that only
 
 - **Step 10.** Now a file named **model-1.uf2** will be generated. This is the file that we will load into the SenseCAP A1101 Module to perform the inference!
 
+## Check BootLoader Version
+- Double click the BOOT button and wait for the removable drive to mount
+- Open INFO_UF2.TXT in the removable drive
+<div align="center"><img width="{600}" src="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/assert/q2.png"/></div>
+
+## Update BootLoader
+
+If your SenseCAP A1101 is not recognized by your computer and behaves as no port number, then you may need to update the BootLoader.
+
+- **Step 1**. Download the BootLoader `.bin` file on the windows PC.
+
+Please download the latest version of the BootLoader file in the link below. The name of the BootLoader is usually `tinyuf2-sensecap_vision_ai_vx.x.x.bin`.
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Firware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div>
+
+This is the firmware that controls the BL702 chip that builds the connection between the computer and the Himax chip. The latest version of the BootLoader has now fixed the problem of Vision AI not being able to be recognised by Mac and Linux.
+
+- **Step 2**. Download and open [**BLDevCube.exe**](https://files.seeedstudio.com/wiki/Grove_AI_Module/BouffaloLabDevCube-1.6.6-win32.rar) software, select **BL702/704/706**, and then click **Finish**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI01a.png" style={{width:300, height:'auto'}}/></div>
+
+- **Step 3**. Click **View**, choose **MCU** first. Move to **Image file**, click **Browse** and select the firmware you just downloaded.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/1.png" style={{width:800, height:'auto'}}/></div>
+
+- **Step 4**. Make sure there are no other devices connect to the PC. Then hold the Boot button on the module, connect it to the PC.
+
+- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then clink 
+
+
 ## Resources
 
 - **[Web Page]** [YOLOv5 Documentation](https://docs.ultralytics.com)
@@ -518,5 +555,6 @@ Eventhough you can load 4 models to the device all at once, please not that only
 
 ## Tech Support
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+Please do not hesitate to submit the issue into our [Discord](https://discord.com/channels/862602258452578314/956370118575804467) and our email: order@seeed.cc. <br />
+
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

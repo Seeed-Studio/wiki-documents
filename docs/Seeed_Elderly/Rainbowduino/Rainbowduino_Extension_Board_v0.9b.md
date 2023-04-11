@@ -3,7 +3,7 @@ description:  Rainbowduino Extension Board v0.9b
 title:  Rainbowduino Extension Board v0.9b
 keywords:
 - grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino_Extension_Board_v0.9b
 last_update:
   date: 1/13/2023

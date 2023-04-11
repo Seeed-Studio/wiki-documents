@@ -3,7 +3,7 @@ description: Seeed Studio XIAO RP2040 with Arduino
 title: Seeed Studio XIAO RP2040 with Arduino
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-with-Arduino
 last_update:
   date: 1/11/2023
@@ -37,7 +37,7 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 - Step 2. If the "RPI-RP2" disk is shown on the PC and the Power LED on the Seeed Studio XIAO RP2040 is turned on, the connnection is complete.
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/desk.png" /></div>
 
 ### **Software Setup**
 

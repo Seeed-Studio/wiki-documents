@@ -3,7 +3,7 @@ description: Grove-Encoder
 title: Grove-Encoder
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Encoder
 last_update:
   date: 1/7/2023

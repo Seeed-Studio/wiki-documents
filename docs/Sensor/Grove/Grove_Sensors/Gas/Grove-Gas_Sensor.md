@@ -3,7 +3,7 @@ description: Grove - Gas Sensor
 title: Grove - Gas Sensor 
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Gas_Sensor
 last_update:
   date: 12/30/2022

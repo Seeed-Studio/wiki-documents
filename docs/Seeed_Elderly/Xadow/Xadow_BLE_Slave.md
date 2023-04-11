@@ -3,7 +3,7 @@ description: Xadow - BLE Slave
 title: Xadow - BLE Slave
 keywords:
 - Seeed_Elderly
-image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_BLE_Slave
 last_update:
   date: 1/13/2023

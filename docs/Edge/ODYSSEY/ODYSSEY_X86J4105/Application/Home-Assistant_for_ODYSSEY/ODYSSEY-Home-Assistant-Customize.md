@@ -1,5 +1,5 @@
 ---
-description: ODYSSEY - X86J4105
+description: ODYSSEY - X86J41x5
 title: How to Customize Home Assistant
 tags:
   - ODYSSEY
@@ -541,7 +541,7 @@ Now we will install the weather card from HACS
 
 - **Step 14.** Enter **City Name** according to **Latitude and Logitude** that you entered before and click **SAVE**
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Home-Assistant/104.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/104.png" /></div>
 
 
 Now the finished dashboard will look like below
