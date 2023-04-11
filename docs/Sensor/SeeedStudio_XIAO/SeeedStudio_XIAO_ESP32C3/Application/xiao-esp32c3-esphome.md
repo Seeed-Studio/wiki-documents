@@ -164,13 +164,11 @@ The goal of our tutorial is to be able to see the data information of the 24GHz 
 Connect the device to the computer through the main board. The wiring diagram is shown in the table below.
 
 <table align="center">
-  <tbody><tr>
-      <td colSpan={4}><div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/62.jpg" /></div></td>
-    </tr>
+  <tbody>
     <tr>
-      <td align="center">XIAO ESP32C3</td>
-      <td align="center" />
       <td align="center">24GHz mmWave Human Static<br />Presence Module Lite</td>
+      <td align="center" />
+      <td align="center">XIAO ESP32C3</td>
     </tr>
     <tr>
       <td align="center">5V</td>
@@ -185,12 +183,12 @@ Connect the device to the computer through the main board. The wiring diagram is
     <tr>
       <td align="center">RX</td>
       <td align="center">--&gt;</td>
-      <td align="center">D6</td>
+      <td align="center">D2</td>
     </tr>
     <tr>
       <td align="center">TX</td>
       <td align="center">--&gt;</td>
-      <td align="center">D7</td>
+      <td align="center">D3</td>
     </tr>
   </tbody></table>
 
