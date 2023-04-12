@@ -11,7 +11,7 @@ last_update:
   author: Lakshantha
 ---
 
-## How to use 40-Pin GPIO on reComputer Jetson Boards
+# How to use 40-Pin GPIO on reComputer Jetson Boards
 
 This wiki demonstrates how to access and control the 40-pin GPIO of reComputer Jetson Boards. For this wiki, we have used reComputer J4012 as an example. However, the steps will be similar for other reComputer Jetson boards as well.
 
