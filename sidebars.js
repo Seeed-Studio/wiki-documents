@@ -2034,6 +2034,7 @@ const sidebars = {
         'Edge/reComputer/reComputer_Jetson_Series_Introduction',
         'Edge/reComputer/reComputer_Jetson_Series_Initiation',
         'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
+        'Edge/reComputer/reComputer_Jetson_GPIO',
         'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
         {
           type: 'category',
