@@ -13,24 +13,22 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/img/45.png)
 
-<div className="tips" style={{display: 'table', tableLayout: 'fixed', backgroundColor: '#ffefd9', height: 'auto', width: '100%'}}>
-  <div className="left-icon" style={{display: 'table-cell', verticalAlign: 'middle', backgroundColor: '#ffc983', paddingTop: 10, boxSizing: 'border-box', height: 'auto', width: 38, textAlign: 'center'}}><img style={{width: 26, verticalAlign: 'middle'}} src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Attention.svg" alt="attention icon" /></div>
-  <div className="right-desc" style={{display: 'table-cell', verticalAlign: 'middle', paddingLeft: 15, boxSizing: 'border-box', width: 'calc(95% - 38px)'}}>
-    <p style={{fontWeight: 'bold', marginTop: 10}}>Attention</p>
-    <p style={{fontSize: 14}}>1. This version of Wio Terminal battery chassis cannot turn off the power completely (no influence on usage).</p>
-    <p style={{fontSize: 14}}>2. The charge current will up to 1.5A, which may reduce battery life or cause other issues.</p>
-    <p style={{fontSize: 14}}>We are optimizing the design of the new version (the estimated release date is unavailable yet), and we recommend the new version if you are a beginner.</p>
-    <p style={{fontSize: 14}}>*Please contact us (techsupport@seeed.cc) for tech support or exchange if you meet any problem during the usage of this version.</p>
-    <p style={{fontSize: 14}}>*Please do <strong>NOT</strong> let the pins touch other objects when the power is on.</p>
-    <p style={{fontSize: 14}}><span /></p>
-  </div>
-</div>
+:::note
+1. This version of Wio Terminal battery chassis cannot turn off the power completely (no influence on usage).
+2. The charge current will up to 1.5A, which may reduce battery life or cause other issues.
+We are optimizing the design of the new version (the estimated release date is unavailable yet), and we recommend the new version if you are a beginner.
+*Please contact us (techsupport@seeed.cc) for tech support or exchange if you meet any problem during the usage of this version.
+*Please do NOT let the pins touch other objects when the power is on.
+:::
 
 The Wio Terminal Battery Chassis is a must-have extension board for [Wio-Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) Dev Board as it provides an external power source for Wio Terminal to enhance its portability and compactness. It has **a 650mAH rechargeable lithium polymer battery, 4 Grove Analog/Digital Ports, 1 Grove I2C Port, and 1 Grove UART Port, as well as the ABS enclosure for aesthetic and protection.** There is also the same Raspberry Pi 40-pin compatible GPIO at the back of the Wio Terminal Battery Chassis for more add-ons!
 
 With [Wio-Terminal Dev Board](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) + Wio Terminal Battery Chassis, you are able to build the most powerful and compact IoT projects with no ease. With the extended Grove Ports, you can enjoy the plug and play features of the [Grove Ecosystem](https://www.seeedstudio.com/category/Grove-c-1003.html)!
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-p-4516.html)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Feature
 
