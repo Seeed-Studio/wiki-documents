@@ -650,6 +650,14 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
             'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
+            {
+              type: 'category',
+              label: 'SenseCAP One Compact Weather Station',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting Started with SenseCAP ONE Compact Weather Sensor',
+              ],
+            },
           ],
         },
 
