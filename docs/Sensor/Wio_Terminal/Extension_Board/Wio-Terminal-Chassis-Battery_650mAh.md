@@ -4,7 +4,7 @@ title: Wio Terminal Chassis Battery(650mAh)
 keywords:
 - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Wio-Terminal-Chassis-Battery(650mAh)
+slug: /Wio-Terminal-Chassis-Battery_650mAh
 last_update:
   date: 1/30/2023
   author: jianjing Huang
@@ -16,7 +16,10 @@ The Wio Terminal Battery Chassis is a must-have extension board for [Wio-Termina
 
 The new version of the Wio Terminal Battery Chassis has added the **Texas Instrument's [BQ27441-G1A](http://www.ti.com/product/BQ27441-G1)** - self-calibrating, I2C-based fuel gauge for lithium polymer (LiPo) batteries which can be used to measures your battery's voltage to estimate its charge percentage and remaining capacity!
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## **Feature**
 
