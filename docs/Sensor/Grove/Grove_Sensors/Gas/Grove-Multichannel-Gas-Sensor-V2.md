@@ -21,7 +21,7 @@ last_update:
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)
 
 :::tip
-      We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_gas/), it will help you choose the gas sensor that best suits your needs.
+We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_gas/), it will help you choose the gas sensor that best suits your needs.
 :::
 Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensitive to various kinds of gases, which means you are able to get four sets of data at the same time. And different sorts of gases can also be judged by these four sets of data. The gas sensor used in this module is based on MEMS technology and has the advantage of being in a small size with considerable measurement stability and is more suitable for qualitative than quantitative measurement.
 
@@ -784,8 +784,10 @@ The output voltage in Chart 12 is the voltage across the load resistance (RL) of
 
 | Wio Terminal | Grove-Multichannel Gas Sensor V2 | 
 |--------------|-----------------|
-|<p><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/V2.png" alt="pir" width={600} height="auto" /></p>|
+|<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png" style={{width:250, height:'auto'}}/></div> |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/V2.png" style={{width:250, height:'auto'}}/></div> |
 |[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)|
+
+
 
 #### Hardware Overview
 
@@ -794,9 +796,10 @@ The output voltage in Chart 12 is the voltage across the load resistance (RL) of
  
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/Hardware+Diagram.png" alt="pir" width={600} height="auto" /></p> 
 
-:::notice
-      The module in the image of Hardware Connection has the same arrangement as the one in the image of Hardware Diagram above. As you can see in the Hardware Diagram, the outlined area in the left is the Grove Interface. And there are four squares with tiny holes refer to the gas sensors. When the board with sensors is connected with Wio Terminal, the information of the gases will display on the screen.
+:::note
+The module in the image of Hardware Connection has the same arrangement as the one in the image of Hardware Diagram above. As you can see in the Hardware Diagram, the outlined area in the left is the Grove Interface. And there are four squares with tiny holes refer to the gas sensors. When the board with sensors is connected with Wio Terminal, the information of the gases will display on the screen.
 :::
+
 - **Step 1.** Connect Grove - Multichannel Gas Sensor V2 to port I2C of Grove-Base Shield. Plug Grove - Base Shield into Wio Terminal. And connect Wio Terminal to PC via a USB cable.
 
 - **Step 2.** Download the  [ Grove_Multichannel_Gas_Sensor_v2 Library](https://github.com/Seeed-Studio/Seeed_Multichannel_Gas_Sensor/archive/master.zip) from Github. And refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
@@ -806,7 +809,8 @@ The output voltage in Chart 12 is the voltage across the load resistance (RL) of
 - **Step 4.** Refer [How to TFT LCD Library](https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/) to install TFT LCD Library. Lastly, upload code from the Software Code below and the data has to be displayed successfully.
 
 #### Software Code
-```C++
+
+```cpp
 #include <TFT_eSPI.h>
 #include <Multichannel_Gas_GMXXX.h>
 #include <Wire.h>
@@ -846,7 +850,6 @@ void loop() {
   spr.setTextColor(TFT_WHITE);
   spr.drawNumber(val,60 - 20,100+10,1);
   spr.setTextColor(TFT_GREEN);
-  spr.drawString("ppm", 60 + 12, 100+8, 1);
   // GM302B C2H5CH sensor
   val = gas.getGM302B();
   if (val > 999) val = 999;
@@ -856,7 +859,6 @@ void loop() {
   spr.setTextColor(TFT_WHITE);
   spr.drawNumber(val,230 - 20,100+10,1);
   spr.setTextColor(TFT_GREEN);
-  spr.drawString("ppm", 230 + 12, 100+8, 1);
   // GM502B VOC sensor
   val = gas.getGM502B();
   if (val > 999) val = 999;
@@ -866,7 +868,6 @@ void loop() {
   spr.setTextColor(TFT_WHITE);
   spr.drawNumber(val,60 - 20,180+10,1);
   spr.setTextColor(TFT_GREEN);
-  spr.drawString("ppm", 60 + 12, 180+8, 1);
   // GM702B CO sensor
   val = gas.getGM702B();
   if (val > 999) val = 999;
@@ -876,7 +877,6 @@ void loop() {
   spr.setTextColor(TFT_WHITE);
   spr.drawNumber(val ,230 - 20 ,180+10,1);
   spr.setTextColor(TFT_GREEN);
-  spr.drawString("ppm", 230 + 12, 180+8, 1);
   
   spr.pushSprite(0, 0);
   delay(100);
@@ -885,12 +885,12 @@ void loop() {
 ```
 
 :::caution
-
-      - The module should avoid being placed in the volatile silicon compound steam, or it will cause the sensitivity to be reduced and irrecoverable.
-      - The module should avoid being exposured to high concentrations of corrosive gases (such as H2S, SOX, Cl2, HCl, etc.), otherwise it will be irreversibly damaged.
-      - The module should not be placed in water or ice.
-      - After the module is powered on, the sensor will heat up to a certain degree during the process, which is a normal phenomena.
-      - Users MUST preheat the module before starting measuring gases. 
+- The module should avoid being placed in the volatile silicon compound steam, or it will cause the sensitivity to be reduced and irrecoverable.
+- The module should avoid being exposured to high concentrations of corrosive gases (such as H2S, SOX, Cl2, HCl, etc.), otherwise it will be irreversibly damaged.
+- The module should not be placed in water or ice.
+- After the module is powered on, the sensor will heat up to a certain degree during the process, which is a normal phenomena.
+- Users MUST preheat the module before starting measuring gases. 
+- The values obtained by this sensor are analog values and can only be used as a result of qualitative measurements and not for quantitative measurements.
 :::
 
 ## Schematic Online Viewer
