@@ -345,6 +345,14 @@ Since all GPIO pins of the XIAO ESP32S3 are assigned their own functions, we do 
 
 If you encounter the above problem, it is recommended that you first try pressing the reset button on the XIAO ESP32S3 to try to get the program running again. If the problem persists, please recheck your program and read the methods provided in **[BootLoader Mode](#bootloader-mode)** to restore the device.
 
+### Q2: Why does my XIAO have the problem of not being flush at the rounded corners? Is this a quality problem?
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>
+
+First of all, it should be noted that this is not a quality issue and will not affect the normal function of XIAO.
+
+XIAO ESP32S3 is the most complex one in all XIAO because of its high integration, and the PCB needs to be put together in factory production. Due to the high level of integration, the splicing board connection can only be placed at the four rounded corners, which will lead to the problem of uneven rounded corners on the picture. We will try to improve the process to ensure that this problem will be solved in the subsequent production.
+
 ## Resources
 
 [PDF] **[ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)**

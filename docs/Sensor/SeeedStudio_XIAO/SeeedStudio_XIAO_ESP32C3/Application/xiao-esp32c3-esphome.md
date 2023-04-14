@@ -163,12 +163,16 @@ The goal of our tutorial is to be able to see the data information of the 24GHz 
 
 Connect the device to the computer through the main board. The wiring diagram is shown in the table below.
 
+<div class="table-center">
 <table align="center">
   <tbody>
     <tr>
-      <td align="center">24GHz mmWave Human Static<br />Presence Module Lite</td>
-      <td align="center" />
+      <td colspan="3"><div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/esphome-pinconnect.png" /></div></td>
+    </tr>
+    <tr>
       <td align="center">XIAO ESP32C3</td>
+      <td align="center" />
+      <td align="center">24GHz mmWave Human Static<br />Presence Module Lite</td>
     </tr>
     <tr>
       <td align="center">5V</td>
@@ -181,16 +185,17 @@ Connect the device to the computer through the main board. The wiring diagram is
       <td align="center">GND</td>
     </tr>
     <tr>
-      <td align="center">RX</td>
-      <td align="center">--&gt;</td>
       <td align="center">D2</td>
+      <td align="center">--&gt;</td>
+      <td align="center">RX</td>
     </tr>
     <tr>
-      <td align="center">TX</td>
-      <td align="center">--&gt;</td>
       <td align="center">D3</td>
+      <td align="center">--&gt;</td>
+      <td align="center">TX</td>
     </tr>
   </tbody></table>
+</div>
 
 ### Step 3. Download the sensor library to your Home Assistant
 
@@ -550,9 +555,67 @@ pip3 install esphomeflasher
 If you still do not see XIAO, you can use the [esphome flasher](https://github.com/esphome/esphome-flasher) software to check the XIAO log information and check the XIAO connection through the logs.
 You can re-plug the xiao to let it try to search for WiFi and connect again.
 
-### FAQ4: My XIAO ESP32C3 is connected to LinkStar's network, but why don't I see the sensor data refreshed?
+### FAQ4: My XIAO ESP32C3 is connected to network, but why don't I see the sensor data refreshed?
 
-> A: When we encounter this problem, we need to use the logs to understand the exact reason why the sensor is not returning data. The situation that has been found to be likely to be encountered so far is a situation where the sensor is not responding, then its logs will look like this.
+> A: In the previous Wiki content, we used the default UART pins (D6, D7) to receive and send data from the radar, but many users feedback there is a need to re-power the radar before it can work. In response, we **updated the Wiki** content and procedures to replace the serial ports of the radar with **D2 and D3**, and after testing, this fixes the problem very well.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/esphome-pinconnect.png" style={{width:600, height:'auto'}}/></div>
+
+> **If you haven't noticed the Wiki update, I suggest you re-wire the radar and re-write the compile and upload process following [steps 2 and 5](#configure-the-xiao-esp32c3-and-esphome-connection) of this article's tutorial.**
+
+> However, some users have responded that they still can't get the radar to work properly even after replacing the serial pins. So here, we propose the following methods and steps to check where the problem occurs, if you still can't solve the problem of radar working, **please provide your operation steps to the technical support email**, which can speed up the processing of after-sales problems.
+
+**Please check the following Exclusion in order.**
+
+> **Exclusion 1: Make sure the XIAO ESP32C3 is under the same LAN as the ESPHome deployed device.**
+
+> If the XIAO ESP32C3 is not under the same LAN as the device of ESPHome, the log you see in Home Assistant is incomplete and cannot be used as the basis of data collection. So please double check your router to see if the IP address of XIAO appears.
+
+> **Exclusion 2: Check that the Data Live Transfer button is on.**
+
+> After XIAO is on the network and the device is successfully added, you will be able to see the radar components in the dashboard. Please note that by default the live data transfer button is off, you need to turn it on to be able to see the radar data being reported continuously.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/69.png" /></div>
+
+> **Exclusion 3: Check whether the radar can work properly.**
+
+> We need to make sure that the radar works well with the XIAO ESP32C3 first, which will allow us to quickly identify whether it is a problem with ESPHome or the product. Please upload the following code to XIAO ESP32C3 in Arduino IDE, please note that the **RX/TX pins of radar should be connected to D2/D3 of XIAO**.
+
+```cpp
+#include "Arduino.h"
+#include <humanstaticLite.h>
+#include <HardwareSerial.h>
+
+// can also try hardware serial with
+HumanStaticLite radar = HumanStaticLite(&Serial1);
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  Serial1.begin(115200, SERIAL_8N1, 4, 5);
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
+  Serial.println("Ready");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
+}
+```
+
+> Open the serial monitor and set the baud rate to 115200, if the radar is working properly then you should see a lot of numbers printed out.
+
+> If you don't see any data output as soon as you do this step, re-flash the firmware for the radar according to the Wiki. We offer two ways for you to update the firmware: [Firmware Version Updates](https://wiki.seeedstudio.com/Radar_MR24HPC1/#firmware-version-updates).
+
+> If you still haven't heard anything after updating the firmware, please don't be stingy and contact our technical support team directly. And inform them of everything you have already done.
+
+> **Exclusion 4: The XIAO and radar work normally at the above check points, but after replacing the serial port pins, still can't get the radar real-time data.**
+
+> If you have replaced the RX and TX pins of the radar to D2/D3 and have also carefully troubleshoot according to the above and still cannot get real-time data messages, please contact our technical support team. Before that, **please let us know if the radar works properly in Arduino environment** so that we can analyze and deal with the problem.
+
+<!-- > A: When we encounter this problem, we need to use the logs to understand the exact reason why the sensor is not returning data. The situation that has been found to be likely to be encountered so far is a situation where the sensor is not responding, then its logs will look like this.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/71.png" /></div>
 
@@ -563,7 +626,7 @@ You can re-plug the xiao to let it try to search for WiFi and connect again.
 
 > Generally speaking, the third point solves this problem. A normal log flow for data transfer should look like this.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/72.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/72.png" /></div> -->
 
 ## Tech Support
 
