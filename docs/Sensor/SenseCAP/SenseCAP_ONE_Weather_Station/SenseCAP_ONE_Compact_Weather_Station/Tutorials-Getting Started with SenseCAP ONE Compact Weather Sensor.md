@@ -1,15 +1,15 @@
 ---
-description:  Getting Started with SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor
-title:  Getting Started with SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor
+description:  Getting Started with SenseCAP ONE Compact Weather Sensor
+title:  Getting Started with SenseCAP ONE Compact Weather Sensor
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Getting-Started-with-SenseCAP-S2120_8-in-1_LoRaWAN-Weather-Sensor
+slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 4/13/2023
+  date: 4/14/2023
   author: Yvonne
 ---
-# Getting Started with SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor
+# Getting Started with SenseCAP ONE Compact Weather Sensor
 
 # Pre-Installation
 
@@ -59,7 +59,7 @@ Note: the cable is aimed at the bottom before inserting it into the bottom. Othe
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png"/></div>
 
 When using the device with a heating function, a separate 24V (24V@1A is recommended) power supply is required. Gray wire 5 is connected to the
-negative of the power supply, and pink wire 6 is connected to the the positive pole of the power supply.
+negative of the power supply, and pink wire 6 is connected to the positive pole of the power supply.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image10.png"/></div>
 
@@ -67,7 +67,8 @@ negative of the power supply, and pink wire 6 is connected to the the positive p
 
 There are two major installation methods, either mounted on a pole with a sleeve or a platform with a flange plate.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image11.png"/></div>
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image11.png" /></div>
+
 
 The size of the sleeve is shown below.
 
@@ -95,7 +96,7 @@ The device has two operating modes, **configuration mode, and**
 There is a waterproof round cover at the bottom of the device. Turn it counterclockwise to remove this cover, and you can see a USB Type-C connector and a configuration button.
 
 Connect the device to your computer with a USB Type-C cable. The computer will automatically install the device driver. After the driver
-is successfully installed, you can see a serial port in the device\'s manager.
+is successfully installed, you can see a serial port in the device's manager.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image16.png"/></div>
 
@@ -139,7 +140,8 @@ Click Settings to enter the device settings, and click"Read From Device" to obta
 
 1.  Select the communication protocol. In the example here we choose the RS-485 Modbus RTU.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image22.png"/></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image22.png" /></div>
+
 
 2.  Modify the Modbus address: write the address in the Modbus address, and then click "Write to Device".
 
@@ -169,7 +171,7 @@ The communication settings are as follows:
 
 -   In the Serial Debug Assistant, select the corresponding COM port.
 
--   Check the \"click Enter to start a new line\" check box.
+-   Check the "click Enter to start a new line" check box.
 
 -   Set the baud rate to 9,600.
 
@@ -264,17 +266,17 @@ The temperature needs to be obtained through a complement calculation.
 
 **S500 decode:**
 
-Read register 0x0000\~0x0005.
+Read register 0x0000~0x0005.
 
 Send command：0A 04 00 00 00 06 71 73（Check code）；
 
-Return：26 04 40 00 00 70 80（Temperature）00 00 95 10（Humidity） 06 07 94 40（Air pressure）99 09（Check code）；Read register 0x0008\~0x0013. Send commond：0A 04 00 08 00 0C 70 B6（Check code）；
+Return：26 04 40 00 00 70 80（Temperature）00 00 95 10（Humidity） 06 07 94 40（Air pressure）99 09（Check code）；Read register 0x0008~0x0013. Send commond：0A 04 00 08 00 0C 70 B6（Check code）；
 
 Return：0A 04 0C 00 00 00 00（Min wind direction）00 03 6E 84（Max wind direction）00 03 C8 C0（Avg wind direction）00 00 00 00（Min wind speed）00 00 04 BC（Max wind speed）00 00 02 10（Avg wind speed）BC 78（Check code）
 
 **S700 decode:**
 
-Read register 0x0000\~0x001F and 0x0030\~0x0033.
+Read register 0x0000~0x001F and 0x0030~0x0033.
 
 Send command: 14 04 00 00 00 20 F3 06
 
@@ -283,7 +285,7 @@ Return: 14 04 40 00 00 70 80（Temperature） 00 00 95 10（Humidity） 06 07 94
 
 **S900 decode:**
 
-Read register 0x0000\~0x001F and 0x0030\~0x0033.
+Read register 0x0000~0x001F and 0x0030~0x0033.
 
 Send command: 26 04 00 00 00 20 F7 05
 
@@ -299,7 +301,7 @@ Return: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Check code)
 
 **S1000 decode:**
 
-Read register 0x0000\~0x001F and 0x0030\~0x0033.
+Read register 0x0000~0x001F and 0x0030~0x0033.
 
 Send command: 2B 04 00 00 00 20 F6 18
 
@@ -307,13 +309,13 @@ Return: 2B 04 40 00 00 70 80 (Temperature) 00 00 95 10(Humidity) 06 07 94 40(Air
 00 00 00 00(Max wind direction) 00 00 00 00(Avg wind direction) 00 00 00 00 (Min wind speed) 00 00 00 00(Max wind speed) 00 00 00 00(Avg wind
 speed) 00 00 00 00(Accumulated rainfall) 00 00 00 00(Accumulated rainfall duration) 00 00 00 00(Rain intensity) 00 00 00 00(Maximum rainfall intensity)00 00 6A 7C(Heating Temperature) 00 00 00 00(The dumping of state) 99 09(Check code)
 
-PM2.5, PM10 and CO2 need to be read separately：
+PM2.5, PM10, and CO2 need to be read separately：
 
 Send command: 2B 04 00 30 00 04 F6 0C
 
 Return: 2B 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Check code)
 
-Read register 0x0040\~0x0041.
+Read register 0x0040~0x0041.
 
 Send command:2B 04 00 40 00 02 77 D5
 
@@ -341,7 +343,7 @@ Querying the data of the noise sensor (address: 40, 0x28) :
 
 If it is succeeded to query, the following information is returned:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image43.png"/></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image01.png"/></div>
 
 Real DB = register value /100
 
@@ -361,13 +363,13 @@ Commands come in two formats:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/11.png"/></div>
 
-*Example: ?\<CR\>\<LF\> indicates query the device's address*
+*Example: `?<CR><LF>` indicates query the device's address*
 
 **2.** A command **with = refers to a query with an argument**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/22.png"/></div>
 
-*Example: 0XA;BD=?\<CR\>\<LF\> indicates query the device's baud rate*
+*Example: 0XA;BD=`?<CR><LF>` indicates query the device's baud rate*
 
 ### Setting Command Format
 
@@ -375,7 +377,7 @@ Commands come in two formats:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/33.png"/></div>
 
-*Example: 0XA;BD=96\<CR\>\<LF\> indicates query the device's baud rate*
+*Example: 0XA;BD=96`<CR><LF>` indicates query the device's baud rate*
 
 ### Command List
 
@@ -389,7 +391,7 @@ SDI-12 communication adopts three wires, two of which are sensor power supply wi
 Each sensor on the SDI-12 bus has a unique address, which can be set to '0', '1' ~ '9', 'A' ~ 'Z', 'A' ~ 'Z'. The SDI-12 address of the SenseCAP ONE defaults to '0'. The instructions supported by this sensor are shown in the next chapter, where each instruction conforms to the
 SDI-12 v1.4.
 
-The sensor is powered by a DC power supply of 3.6\~16V. After the sensor is powered on, it will go into sleep mode immediately and wait for the data acquisition equipment to give instructions. SDI-12 uses a baud rate of 9600bps, 1 start bit (high level), 7 data bits (high 0 and low 1, anti-logic), 1 even parity bit, and 1 stop bit.
+The sensor is powered by a DC power supply of 3.6~16V. After the sensor is powered on, it will go into sleep mode immediately and wait for the data acquisition equipment to give instructions. SDI-12 uses a baud rate of 9600bps, 1 start bit (high level), 7 data bits (high 0 and low 1, anti-logic), 1 even parity bit, and 1 stop bit.
 
 The sequence of each byte sent is shown in the following figure:
 
@@ -426,11 +428,11 @@ Download the serial port debugging assistant:
 
 -   Set the baud rate to the baud rate of the USB to SDI-12 debugger (note that it is not the baud rate of the SDI-12 protocol)
 
--   Check the \"CRLF\"
+-   Check the "CRLF"
 
 -   Click to open the serial port.
 
--   Send the query device address command \"?!\", if you can see the response \"0\", it means the connection is OK.
+-   Send the query device address command "?!", if you can see the response "0", it means the connection is OK.
 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image50.png"/></div>
@@ -439,24 +441,24 @@ Download the serial port debugging assistant:
 
 Read air temperature, air humidity, barometric pressure, light intensity
 
-Send the \"start measurement command 0M!\", the sensor first responds with \"00024\", which means that the \"0M!\" command takes 2 seconds to measure and returns 4 measured values. After 2 seconds, the sensor responds with its own address \"0\", indicating that the measurement has been completed.
+Send the "start measurement command 0M!", the sensor first responds with "00024", which means that the "0M!" command takes 2 seconds to measure and returns 4 measured values. After 2 seconds, the sensor responds with its own address "0", indicating that the measurement has been completed.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image51.png"/></div>
 
-Then send \" Read measurement value command 0D0!\" to get the 4 measured values ​​of this measurement, which are air temperature +27.01℃, air humidity 64.74%, barometric pressure 100720Pa, and light intensity 10Lux.
+Then send " Read measurement value command 0D0!" to get the 4 measured values ​​of this measurement, which are air temperature +27.01℃, air humidity 64.74%, barometric pressure 100720Pa, and light intensity 10Lux.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image52.png"/></div>
 
 Use extended measurement command 0M1! to read minimum wind direction, maximum wind direction, average wind direction, minimum wind speed,
-maximum wind speed, and average wind speed. The device responds with \"00056\", which means that the \"0M1!\" command takes 5 seconds to measure and returns 6 measured values. After 5 seconds, the device responds with its own address \"0\", indicating that the measurement has been completed.
+maximum wind speed, and average wind speed. The device responds with "00056", which means that the "0M1!" command takes 5 seconds to measure and returns 6 measured values. After 5 seconds, the device responds with its own address "0", indicating that the measurement has been completed.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image53.png"/></div>
 
-Then send \" Read measurement value command 0D0!\" to get the 6 measured values of this measurement, which are minimum wind direction 345.9 degrees, maximum wind direction 347.5 degrees, average wind direction 346.3 degrees, minimum wind speed 2.8m/s, and maximum wind speed 2.8m/s, average wind speed 2.8m/s.
+Then send "Read measurement value command 0D0!" to get the 6 measured values of this measurement, which are minimum wind direction 345.9 degrees, maximum wind direction 347.5 degrees, average wind direction 346.3 degrees, minimum wind speed 2.8m/s, and maximum wind speed 2.8m/s, average wind speed 2.8m/s.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image54.png"/></div>
 
-Then send "continuous measurement command 0R2!, the device returns 4 measured values: cumulative rainfall 1.2mm, cumulative rainfall duration 20 seconds, rainfall intensity 1.2mm/h, maximum rainfall intensity 72.0mm/h.
+Then send "continuous measurement command 0R2! the device returns 4 measured values: cumulative rainfall 1.2mm, cumulative rainfall duration 20 seconds, rainfall intensity 1.2mm/h, maximum rainfall intensity 72.0mm/h.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image55.png"/></div>
 
@@ -472,3 +474,4 @@ Then send "continuous measurement command 0R2!, the device returns 4 measured va
 ## SDI-12 error code 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png"/></div>
+

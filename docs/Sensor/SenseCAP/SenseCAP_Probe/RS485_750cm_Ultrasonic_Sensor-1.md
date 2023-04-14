@@ -1,19 +1,19 @@
 ---
-description: RS485 500cm Ultrasonic Level Sensor
-title: RS485 500cm Ultrasonic Level Sensor
+description: RS485 750cm Ultrasonic Level Sensor
+title: RS485 750cm Ultrasonic Level Sensor
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 3/28/2023
+  date: 4/14/2023
   author: Yvonne
 ---
 
-# RS485 500cm Ultrasonic Level Sensor
+# RS485 750cm Ultrasonic Level Sensor
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%201.png"/></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg"/></div>
 
-The RS485 500cm Ultrasonic Level Sensor offers high precision and has a measuring range of 25 to 500cm. It utilizes advanced ultrasonic sensing technology to deliver accurate distance measurements with a resolution of up to 1mm. We also provide serial port tools for parameter configuration and firmware upgrades to ensure seamless operation, making it ideal for a variety of applications, including horizontal ranging, intelligent trash can management systems, robot avoidance, and automatic control.
+The RS485 750cm Ultrasonic Level Sensor utilizes ultrasonic sensing technology to measure distances with a measuring range of 28-750cm. Equipped with a bell mouth, it can detect objects up to 750cm with a resolution of 1mm. With its IP67 waterproof ultrasonic transducer, it can be used in various applications such as sewer and water level monitoring, intelligent trash can management systems, robot avoidance, and automatic control.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/RS485-500cm-Ultrasonic-Level-Sensor-p-5588.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
 
@@ -23,7 +23,7 @@ With the SenseCAP S2100 [data logger](https://www.seeedstudio.com/SenseCAP-S210
 
 # Play with S2100 LoRaWAN Data Logger
 
-On this page, we'll guide you through the process of connecting the S2100 LoRaWAN Data Logger with a 500cm Ultrasonic Level Sensor, enabling you to create a robust, industrial-grade LoRaWAN wireless sensor that can be used commercially in just five minutes.
+On this page, we'll guide you through the process of connecting the S2100 LoRaWAN Data Logger with a 750cm Ultrasonic Level Sensor, enabling you to create a robust, industrial-grade LoRaWAN wireless sensor that can be used commercially in just five minutes.
 ## Get Started
 
 ### Preparation
@@ -33,12 +33,12 @@ On this page, we'll guide you through the process of connecting the S2100 LoRaWA
 <table align="center">
 	<tr>
 	    <th>SenseCAP S2100 Data Logger</th>
-      <th>500cm Ultrasonic Level Sensor</th>
+      <th>750cm Ultrasonic Level Sensor</th>
     <th>Cross screwdriver</th>
 	</tr>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%205.png" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%201.png" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%206.png" style={{width:500, height:'auto'}}/></div></td>
 	</tr>
     <tr>
@@ -48,7 +48,7 @@ On this page, we'll guide you through the process of connecting the S2100 LoRaWA
     		</a>
 		</div></td>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-500cm-Ultrasonic-Level-Sensor-p-5588.html?queryID=b2f7f18dfc97aa5f70b2a759a49a00ab&objectID=5588&indexName=bazaar_retailer_products">
+    		<a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html?queryID=2bee749eb1a41d36e0d4d5fbdcbfb36f&objectID=5587&indexName=bazaar_retailer_products">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     		</a>
 		</div></td>
@@ -57,12 +57,14 @@ On this page, we'll guide you through the process of connecting the S2100 LoRaWA
 
 
 
-## 1. Prepare data logger, RS485 500cm Ultrasonic Level Sensor, gateway, and tools.
+## 1. Prepare data logger, RS485 750cm Ultrasonic Level Sensor, gateway, and tools.
 
 1. **Data logger**: It is a LoRaWAN converter that converts MODBUS RS485/Analog/GPIO sensors into LoRa-enabled sensors and therefore transfers data through the LoRaWAN protocol.
 
-2. **RS485 500cm Ultrasonic Level Sensor**: It uses ultrasonic sensing technology for distance measurement. Measuring range from 25cm to 500cm, and the resolution can reach 1mm. With an IP67 waterproof ultrasonic transducer, it has strong adaptability to the working environment. 
+2. **RS485 750cm Ultrasonic Level Sensor**: It is uses ultrasonic sensing technology for distance measurement.Measuring range from 28cm to 750cm, and the resolution can reach 1mm. With an IP67 waterproof ultrasonic transducer, it has strong adaptability to the working environment. 
+
 3. **Cross screwdriver**: Used to assemble the sensor probe.
+
 4. **Gateway**: The LoRaWAN sensor transmits data to a LoRaWAN gateway, which then transmits it to the cloud server. If you don't have a gateway, there are two options:
 - Option 1: Sensors work in areas covered by Helium Network(Check on [Helium Explorer](https://explorer.helium.com/)). Wherever the helium network is available, you can use sensors to transfer data without purchasing a gateway.
 - Option 2: Buy a [gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html).
@@ -82,7 +84,7 @@ The data logger converts sensor data into LoRa data and uploads the data to the 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%208.png"/></div>
 
-### 3. Connect RS485 500cm Ultrasonic Level Sensor to SenseCAP Data Logger
+### 3. Connect RS485 750cm Ultrasonic Level Sensor to SenseCAP Data Logger
 
 
 
@@ -111,11 +113,11 @@ The data logger converts sensor data into LoRa data and uploads the data to the 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2023.png"/></div>
 
-Wire sequence of the RS485 500cm Ultrasonic Level Sensor:
+Wire sequence of the RS485 750cm Ultrasonic Level Sensor:
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2024.png"/></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/Picture3.png"/></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2010.png"/></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image%203.png"/></div>
 
 - **Step 6:** Put back the hardware unit inside the case, close it from bottom cover and screw it back
 
@@ -127,10 +129,10 @@ Wire sequence of the RS485 500cm Ultrasonic Level Sensor:
 
 Once all the connections are done for the Ultrasonic Level Sensor and the Data Logger, it should look like below
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2013.png"/></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/Picture4.png"/></div>
 
 
-### 4. Configure Settings for Data Logger and RS485 500cm Ultrasonic Level Sensor Communication
+### 4. Configure Settings for Data Logger and RS485 750cm Ultrasonic Level Sensor Communication
 
 - **Step 1:** Select **S2100 Data Logger** and Click **Setup** on the config page.
 
@@ -187,7 +189,7 @@ At present, a LoRaWAN sensor has been developed.
 
 ## Resources
 
-- **[PDF]** [RS485 500cm Ultrasonic Level Sensor](https://files.seeedstudio.com/wiki/RS485-Ultrasonic-Level-Sensor/RS485-500cm-Ultrasonic-Level-Sensor.pdf)
+- **[PDF]** [RS485 750cm Ultrasonic Level Sensor](https://files.seeedstudio.com/wiki/RS485-Ultrasonic-Level-Sensor/RS485-750cm-Ultrasonic-Level-Sensor.pdf)
 - **[PDF]** [SenseCAP S2100 Data Logger User Guide](https://files.seeedstudio.com/products/SenseCAP/S2100/SenseCAP%20S2100%20LoRaWAN%20Data%20Logger%20User%20Guide.pdf)
 
 ## Tech Support
