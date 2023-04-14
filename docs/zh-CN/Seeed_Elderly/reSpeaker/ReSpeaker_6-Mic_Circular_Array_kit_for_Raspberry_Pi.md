@@ -4,9 +4,9 @@ title: ReSpeaker 6-Mic 圆形阵列套件
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /cn/ADALM2000-M2K-CN-Version
+slug: /cn/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi
 date: 2/1/2023
-author: jianjing Huang
+author: H
 sku: 107990055
 ---
 <!-- ---
