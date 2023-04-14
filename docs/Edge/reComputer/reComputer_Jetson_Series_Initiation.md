@@ -147,18 +147,19 @@ If you haven't started a project with reComputer, you might consider using this 
 
 - There are generally two ways to install a system for reComputer, the first is to use the **NVIDIA SDK Manager**.
 
-If you are on a **reComputer J2011** or **reComputer J2012**, in **step 12** of [Flashing to eMMC with SDK Manager](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards/#flashing-to-emmc-with-sdk-manager), you can expand the capacity by changing the location of the system burn-in.
+If you are on a **reComputer J2011** or **reComputer J2012**, in **step 12** of [Flashing to eMMC with SDK Manager](reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line), you can expand the capacity by changing the location of the system burn-in.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/52.png" /></div>
 
-!!!Tip
-    This method is not applicable to the Jetson Nano module.
+:::tip
+This method is not applicable to the Jetson Nano module.
+:::
 
 - There are generally two ways to install a system for reComputer, the second is to use the **command lines**.
 
-  - If you are using an **A20X carrier board**, the method to install the system using the command line is in [Flashing to eMMC with command-line](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards/#flashing-to-emmc-with-command-line).
+- If you are using an **A20X carrier board**, the method to install the system using the command line is in [Flashing to eMMC with command-line](reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line).
 
-  - If you are using the **reComputer J1010 Carrier Board**, then use the command line to install the system at [Flashing to eMMC with command-line](https://wiki.seeedstudio.com/install_NVIDIA_software_to_Jetson-10-1-A0/#flashing-to-emmc-with-command-line).
+- If you are using the **reComputer J1010 Carrier Board**, then use the command line to install the system at [Flashing to eMMC with command-line](reComputer_J1010_J101_Flash_Jetpack#flashing-jetpack-os-via-command-line).
 
 They both essentially complete the installation of the system by using the following command.
 
