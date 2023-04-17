@@ -19,17 +19,17 @@ Today is April 17th and a brand new week has begun! Check out what Seeed did las
 
 ## Latest Wiki Launched
 
-### [EdgeLab Getting Start with Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_edgelab/)
-
-<div align="center"><img width={800} src="https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-lcd.png" /></div>
-
-EdgeLab is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implemention more user-friendly, achieving faster and more accurate inference on embedded devices.
-
 ### [File System and XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/73.jpg" /></div>
 
 In this tutorial, we will focus on the use of the file system of XIAO ESP32S3, mainly on the use of the microSD card slot for the Sense version. At the same time, we will introduce the official ESP file system SPIFFS, the chip's built-in Flash, etc.
+
+### [EdgeLab Getting Start with Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_edgelab/)
+
+<div align="center"><img width={800} src="https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-lcd.png" /></div>
+
+EdgeLab is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implemention more user-friendly, achieving faster and more accurate inference on embedded devices.
 
 ### [How to use 40-Pin GPIO on reComputer Jetson Boards(NVIDIA)](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/)
 
@@ -93,3 +93,4 @@ If you have the same issue, you can refer to here and check it.
 - [weekly wiki on 3.20th](/Seeed_Elderly/weekly_wiki/wiki320)
 - [weekly wiki on 3.27th](/Seeed_Elderly/weekly_wiki/wiki327)
 - [weekly wiki on 4.03rd](/Seeed_Elderly/weekly_wiki/wiki403)
+- [weekly wiki on 4.10th](/Seeed_Elderly/weekly_wiki/wiki410)
