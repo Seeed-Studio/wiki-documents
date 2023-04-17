@@ -2722,6 +2722,7 @@ const sidebars = {
           items: [
             'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
             'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
+            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A607_Flash_JetPack',
           ],
 
         },
