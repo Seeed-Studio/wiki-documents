@@ -613,6 +613,7 @@ const sidebars = {
               items: [
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting Started with SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
               ],
             },
 
@@ -640,6 +641,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
           ],
 
         },
@@ -2720,6 +2722,7 @@ const sidebars = {
           items: [
             'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
             'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
+            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A607_Flash_JetPack',
           ],
 
         },
