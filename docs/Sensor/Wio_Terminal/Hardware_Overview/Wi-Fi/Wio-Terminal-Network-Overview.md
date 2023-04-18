@@ -15,8 +15,9 @@ last_update:
 This wiki introduces how to update the latest firmware for the Wireless Core Realtek RTL8720 on the Wio Terminal, as well as installing all the dependent libraries for Wio Terminal to enable wireless connectivity.
 
 :::note
-    **We have moved the Wi-Fi Software to the new eRPC Structure which is more stable and can work with Bluetooth at the same time**! Please follow through to update to eRPC Wi-Fi firmware and related libraries!
+**We have moved the Wi-Fi Software to the new eRPC Structure which is more stable and can work with Bluetooth at the same time**! Please follow through to update to eRPC Wi-Fi firmware and related libraries!
 :::
+
 ## Update the Wireless Core Firmware
 
 First, we need to update the firmware for the Realtek RTL8720 Wireless core on the Wio Terminal. **This is essential and must update to the latest firmware before proceeding to examples.**
@@ -184,7 +185,7 @@ Once you open **Serial Monitor**, you should see the **firmware version** printe
 ## Update Seeed SAMD ArduinoCore
 
 :::note
-    Please update the **Seeed SAMD ArduinoCore to the latest version (1.8.1)**!
+Please update the **Seeed SAMD ArduinoCore to the latest version (1.8.1)**!
 :::
 - **STEP 1:** Open the **Arduino IDE**, and click `Tools` -> `Board` -> `Boards Manager`, and search **Wio Terminal** in the search box
 
