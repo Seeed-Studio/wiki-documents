@@ -100,7 +100,7 @@ First of all, you need to install the peripheral drivers for this board. These a
 
 ### Jetson Orin NX
 
-Here we will use NVIDIA L4T **35.2.1** to install **Jetpack 5.1** on the A607 Carrier Board with Jetson Orin NX module
+Here we will use NVIDIA L4T **35.2.1** to install **Jetpack 5.1** on the A603 Carrier Board with Jetson Orin NX module
 
 **Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3521) the NVIDIA drivers on the host PC. The required drivers are shown below:
 
@@ -129,11 +129,22 @@ For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop")
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**Step 4:** Flash the system to the NVMe SSD
+**Step 4:** Flash the system to either NVMe SSD or USB Flash drive
+
+#### NVMe SSD
 
 ```sh
 cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+  -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
+  --showlogs --network usb0 p3509-a02+p3767-0000 internal
+```
+
+#### USB Flash drive
+
+```sh
+cd Linux_for_Tegra
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
 ```
@@ -160,13 +171,36 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**Step 3:** Flash the system to the NVMe SSD
+**Step 3:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+
+```sh
+sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
+```
+
+For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+
+```sh
+sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
+```
+
+**Step 4:** Flash the system to either NVMe SSD or USB Flash drive
+
+#### NVMe SSD
 
 ```sh
 cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
-  --showlogs --network usb0 p3509-a02+p3767-0000 internal
+  --showlogs --network usb0 jetson-orin-nano-devkit internal
+```
+
+#### USB Flash drive
+
+```sh
+cd Linux_for_Tegra
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 \
+  -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
+  --showlogs --network usb0 jetson-orin-nano-devkit internal
 ```
 
 You will see the following output if the flashing process is successful
