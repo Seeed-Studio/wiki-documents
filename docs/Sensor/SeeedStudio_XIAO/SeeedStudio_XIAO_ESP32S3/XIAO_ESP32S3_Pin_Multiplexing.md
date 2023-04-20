@@ -189,6 +189,10 @@ After you cut the connection between J1 and J2, the microphone function on the e
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/21.png" style={{width:400, height:'auto'}}/></div>
 :::
 
+For the actual circuit schematic, please refer to the following diagram:
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/92.png" style={{width:600, height:'auto'}}/></div>
+
 #### Step 2. Hardware preparation
 
 <table align="center">
@@ -906,6 +910,12 @@ The solder pad interfaces provided on the Sense expansion board allow users to s
 As can be seen from the picture, due to the space limitations of XIAO, many wire layouts are very compact. Therefore, when cutting the connection of J3, please be very careful not to cut outside the white line, otherwise it may cause the development board to malfunction!
 :::
 
+:::caution
+For the sake of common sense, the J3 is simply described above as an interface that turns the SD card function on or off, but this is actually inaccurate. The actual circuit connection is shown below. Cutting off J3 actually disconnects the pull-up resistors from R4 to R5, which is the main reason why the SD card function is disabled while the SPI function is restored to normal.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/93.png" style={{width:800, height:'auto'}}/></div>
+:::
+
 ## Touch Pins
 
 In addition to the common functional pins mentioned above, XIAO ESP32S3/XIAO ESP32S3 Sense also has 9 touch detection pins A0~A5, A8~A10.
@@ -999,6 +1009,13 @@ A: The following is a list of supported/unsupported features provided by [ESP32]
 | USB           | Not Supported | Yes           | Yes           | Yes           | ESP32-C3 only CDC/JTAG |
 | Wi-Fi         | Yes           | Yes           | Yes           | Yes           |                        |
 
+### Q3: Why can I always see the debug message of the chip in the serial monitor?
+
+A: You can try to turn off the output of debug messages using the following method, **Tool -> Core Debug Level: -> None** in the Arduino IDE.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/90.png" style={{width:500, height:'auto'}}/></div>
+
+However, this method does not always work, in fact, the debug information of ESP32-S3 is always printed from the serial port, which cannot be changed. Please forgive it, it's just too eager to let you know it's working properly.
 
 ## Tech Support
 
