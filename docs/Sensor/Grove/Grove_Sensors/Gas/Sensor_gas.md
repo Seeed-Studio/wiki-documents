@@ -4,7 +4,7 @@ title: Sensor - Gas
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor_gas
+slug: /Seeed_Gas_Sensor_Selection_Guide
 last_update:
   date: 1/4/2023
   author: shuxu hu

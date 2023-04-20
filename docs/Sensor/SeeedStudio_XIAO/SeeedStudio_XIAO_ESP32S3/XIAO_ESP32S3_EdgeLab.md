@@ -66,12 +66,12 @@ idf.py set-target esp32s3
 Configure the example
 
 ```
-dif.py menuconfig
+idf.py menuconfig
 ```
 
-- Select the Camera Module in `Component config` -> `EdgeLab Configuration` -> `Camera Configuration`
+- Select the Camera Module in `Component config` -> `Edgelab Configuration` -> `Camera Configuration` -> `Select Camera Pinout`
 ![img](https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-camera.png)
-- Select the LCD Module in `Component config` -> `EdgeLab Configuration` -> `LCD Configuration`
+- Select the LCD Module in `Component config` -> `Edgelab Configuration` -> `LCD Configuration` -> `Select LCD Pinout`
 ![img](https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-lcd.png)
 
 

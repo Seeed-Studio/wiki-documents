@@ -371,6 +371,42 @@ deepstream-app -c deepstream_app_config.txt
 
 Here we get an FPS value of about 350!
 
+## Multistream Configuration
+
+NVIDIA DeepStream allows you to easily setup multiple streams on a single configuration file to build multistream video analytics applications. We will demonstrate later in this wiki on how models with high FPS performance can really help with multistream applications along with some benchmarks.
+
+Here we will take 9 streams as an example. We will be changing the **deepstream_app_config.txt** file.
+
+- **Step 1.** Inside the **[tiled-display]** section, change the rows and columns to 3 and 3 so that we can have a 3x3 grid with 9 streams
+
+```sh
+[tiled-display]
+rows=3
+columns=3
+```
+
+- **Step 2.** Inside the **[source0]** section, set **num-sources=9** and add more **uri**. Here we will simply duplicate the current example video file 8 times to make up 9 streams in total. However, you can change to different video streams according to your application
+
+```sh
+[source0]
+enable=1
+type=3
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+num-sources=9
+```
+
+Now if you run the application again with **deepstream-app -c deepstream_app_config.txt** command, you will see the following output
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/7.jpg" style={{width:1000, height:'auto'}}/></div>
+
 ## trtexec Tool
 
 Included in the samples directory is a command-line wrapper tool called [trtexec](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html#trtexec). trtexec is a tool to use TensorRT without having to develop your own application. The trtexec tool has three main purposes:
@@ -416,140 +452,27 @@ However, if you want **INT8** precision which offers better performance, you can
 
 Here we can take the mean latency as 3.2ms which translates to 313FPS.
 
-## Benchmark Results
+## YOLOv8 Benchmark Results
 
-These are some of the performance benchmark results based on our testing on the [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)
+We have done performance benchmarks for different YOLOv8 models running on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html), [AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html) and [reComputer J2021](https://www.seeedstudio.com/reComputer-J2021-p-5438.html)
 
-<table style={{tableLayout: 'fixed', width: 812}}>
-  <colgroup>
-    <col style={{width: '195.085714px'}} />
-    <col style={{width: '168.085714px'}} />
-    <col style={{width: '195.085714px'}} />
-    <col style={{width: '183.085714px'}} />
-    <col style={{width: '71.085714px'}} />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Model Name	</th>
-      <th>Precision</th>
-      <th>Inference Size	</th>
-      <th>Inference Time (ms)	</th>
-      <th>FPS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan={4}>YOLOv8n</td>
-      <td>with PyTorch</td>
-      <td rowSpan={4}>640x640	</td>
-      <td>18</td>
-      <td>56</td>
-    </tr>
-    <tr>
-      <td>FP32</td>
-      <td>8.7</td>
-      <td>115</td>
-    </tr>
-    <tr>
-      <td>FP16	</td>
-      <td>4.9</td>
-      <td>204</td>
-    </tr>
-    <tr>
-      <td>INT8</td>
-      <td>3.9</td>
-      <td>256</td>
-    </tr>
-    <tr>
-      <td rowSpan={4}>YOLOv8s	</td>
-      <td>with PyTorch</td>
-      <td rowSpan={4}>640x640	</td>
-      <td>19</td>
-      <td>53</td>
-    </tr>
-    <tr>
-      <td>FP32</td>
-      <td>14.9</td>
-      <td>67</td>
-    </tr>
-    <tr>
-      <td>FP16	</td>
-      <td>7.8</td>
-      <td>128</td>
-    </tr>
-    <tr>
-      <td>INT8</td>
-      <td>5.1</td>
-      <td>196</td>
-    </tr>
-    <tr>
-      <td rowSpan={4}>YOLOv8m	</td>
-      <td>with PyTorch</td>
-      <td rowSpan={4}>640x640	</td>
-      <td>38</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <td>FP32</td>
-      <td>32.5</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <td>FP16	</td>
-      <td>15.8</td>
-      <td>63</td>
-    </tr>
-    <tr>
-      <td>INT8</td>
-      <td>10.8</td>
-      <td>93</td>
-    </tr>
-    <tr>
-      <td rowSpan={4}>YOLOv8l	</td>
-      <td>with PyTorch</td>
-      <td rowSpan={4}>640x640	</td>
-      <td>62</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>FP32</td>
-      <td>49</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <td>FP16	</td>
-      <td>24</td>
-      <td>42</td>
-    </tr>
-    <tr>
-      <td>INT8</td>
-      <td>14.4</td>
-      <td>69</td>
-    </tr>
-    <tr>
-      <td rowSpan={4}>YOLOv8x	</td>
-      <td>with PyTorch</td>
-      <td rowSpan={4}>640x640	</td>
-      <td>99</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>FP32</td>
-      <td>79.5</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <td>FP16	</td>
-      <td>37.9</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <td>INT8</td>
-      <td>21.9</td>
-      <td>46</td>
-    </tr>
-  </tbody>
-</table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/14.png" style={{width:1000, height:'auto'}}/></div>
+
+To learn about more performance benchmarks we have done using YOLOv8 models, please check [our blog](https://www.seeedstudio.com/blog/2023/03/30/yolov8-performance-benchmarks-on-nvidia-jetson-devices).
+
+## Multistream Model Benchmarks
+
+After running a couple of deepstream applications on AGX Orin 32GB H01 Kit, we have done some benchmarks with the YOLOv8 models.
+
+### YOLOv8s model with INT8 precision and 640x640 image size
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/9.png" style={{width:1000, height:'auto'}}/></div>
+
+As you can see above, an FPS of 34 per stream is very impressive while running 9 streams simultaneously on a single device. When we tested this model performance with trtexec tool before, we got an FPS around 303. And now with 9 streams, the FPS is around 34 per stream. Which means the FPS per stream is nearly the calculation of **Total FPS/ number of streams**. This means by knowing the FPS per stream with model benchmarks, we can decide how many streams we want to have.
+
+### YOLOv8n model with INT8 precision and 640x640 image size
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/8.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Resources
 
