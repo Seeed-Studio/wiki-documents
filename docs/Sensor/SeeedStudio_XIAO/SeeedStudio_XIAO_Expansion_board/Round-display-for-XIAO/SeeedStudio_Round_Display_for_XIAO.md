@@ -177,6 +177,10 @@ First, you need to search and download the latest version **TFT_eSPI** and **LVG
 	</tr>
 </table>
 
+If you want to use the RTC function on the expansion board, then you also need to search and install the **I2C BM8563 RTC** library.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/63.png" style={{width:800, height:'auto'}}/></div>
+
 :::tip
 The **TFT_eSPI** library compatible with Round Display has been submitted for merge request, so when the next version is released, you can search and download **TFT_eSPI** in Arduino IDE to use it normally. Until then, if you need to use the **TFT_eSPI** library for Round Display, please download it from here.
 
@@ -274,7 +278,11 @@ Make sure the Round Display switch is toggled to the ON position.
 
 If the program runs smoothly, you will see the following effect.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/60.gif" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/60.gif" style={{width:600, height:'auto'}}/></div>
+
+:::note
+This sample program will test all the functional items of the expansion board, including the RTC function. If you do not have the I2C BM8563 RTC library installed, then an error may be reported, you can comment out the function `lv_hardware_test()`, then the functional detection of the SD card will also be turned off.
+:::
 
 ## Troubleshooting
 
