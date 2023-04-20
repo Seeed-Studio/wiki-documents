@@ -586,6 +586,13 @@ const sidebars = {
         'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
         {
           type: 'category',
+          label: 'SenseCAP Indicator',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP LoRaWAN Sensor',
           items: [
             'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
@@ -613,7 +620,7 @@ const sidebars = {
               items: [
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting Started with SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
               ],
             },
 
