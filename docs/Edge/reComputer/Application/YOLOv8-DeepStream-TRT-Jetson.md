@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /YOLOv8-DeepStream-TRT-Jetson
 last_update:
-  date: 03/22/2023
+  date: 04/21/2023
   author: Lakshantha
 ---
 
@@ -35,7 +35,10 @@ For YOLOv8 to work together with DeepStream, we are using this [DeepStram-YOLO](
   </thead>
   <tbody>
     <tr>
-      <td>6.2</td>
+      <td rowSpan={2}>6.2</td>
+      <td>5.1.1</td>
+    </tr>
+    <tr>
       <td>5.1</td>
     </tr>
     <tr>
@@ -63,7 +66,7 @@ For YOLOv8 to work together with DeepStream, we are using this [DeepStram-YOLO](
   </tbody>
 </table>
 
-To verify this wiki, we have installed **DeepStream SDK 6.1.1** on a **JetPack 5.0.2** system running on [Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/Jetson-Xavier-AGX-H01-Kit-p-5283.html). At the time of writing this wiki, DeepStream-YOLO only supports DeepStream SDK 6.1.1 which means you need to flash JetPack 5.0.2 on the device. However, Orin NX ([reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)) only supports JetPack 5.1 and above and if you want to test this on Orin NX, you need to emulate Orin NX on the Jetson AGX Orin Dev Kit or AGX Orin 32GB H01 Kit with JetPack 5.0.2. Refer to [this detailed guide](https://jetsonhacks.com/2022/09/27/one-jetson-orin-to-be-them-all) about emulation to learn more. 
+To verify this wiki, we have installed **DeepStream SDK 6.2** on a **JetPack 5.1.1** system running on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
 ## Flash JetPack to Jetson
 
@@ -82,6 +85,23 @@ For Seeed Jetson-powered devices flashing guides, please refer to the below link
 ## Install DeepStream
 
 There are multiple ways of installing DeepStream to the Jetson device. You can follow [this guide](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html) to learn more. However, we recommend you to install DeepStream via the SDK Manager because it can guarantee for a successful and easy installation.
+
+If you install DeepStream using SDK manager, you need to execute the below commands which are additional dependencies for DeepStream, after the system boots up
+
+```sh
+sudo apt install \
+libssl1.1 \
+libgstreamer1.0-0 \
+gstreamer1.0-tools \
+gstreamer1.0-plugins-good \
+gstreamer1.0-plugins-bad \
+gstreamer1.0-plugins-ugly \
+gstreamer1.0-libav \
+libgstreamer-plugins-base1.0-dev \
+libgstrtspserver-1.0-0 \
+libjansson4 \
+libyaml-cpp-dev
+```
 
 ## Install Necessary Packages
 
@@ -236,7 +256,7 @@ cp labels.txt ~/DeepStream-Yolo
 
 ```sh
 cd ~/DeepStream-Yolo
-CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.1.1 / 6.1
+CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.2/ 6.1.1 / 6.1
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.1 / 6.0
 ```
 
@@ -300,7 +320,7 @@ sudo apt-get install libopencv-dev
 
 ```sh
 cd ~/DeepStream-Yolo
-CUDA_VER=11.4 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.1.1 / 6.1
+CUDA_VER=11.4 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.2/ 6.1.1 / 6.1
 CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.1 / 6.0
 ```
 
