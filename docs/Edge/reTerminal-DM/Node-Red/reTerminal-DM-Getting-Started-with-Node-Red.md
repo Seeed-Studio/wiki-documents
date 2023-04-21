@@ -196,9 +196,9 @@ STEP 6: you should see the Modbus nodes in the side bar
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-nodes.png" /></div>
 
-# reTerminal DM Supported Nodes
+<!-- # reTerminal DM Supported Nodes
 
-* [RS485/RS232](/reTerminal-DM-Node-Red-RS485_RS232)
+* [RS485/RS232](/reTerminal-DM-Node-Red-RS485_RS232) -->
 
 ## Tech Support
 
