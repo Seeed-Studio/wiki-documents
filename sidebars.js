@@ -2044,6 +2044,22 @@ const sidebars = {
     },
 
     {
+      type: 'category',
+      label: 'reTerminal-DM',
+      items: [
+        // 'Edge/reTerminal-DM/reTerminal-DM',
+        {
+          type: 'category',
+          label: 'Node-Red',
+          items: [
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
+            // 'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485_RS232',
+          ],
+        },
+      ],
+    },
+
+    {
 
       type: 'category',
       label: 'reComputer',
