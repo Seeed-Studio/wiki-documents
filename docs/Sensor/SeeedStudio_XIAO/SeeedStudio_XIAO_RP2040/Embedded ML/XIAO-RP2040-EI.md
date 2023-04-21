@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-EI
 last_update:
-  date: 1/11/2023
-  author: shuxu hu
+  date: 04/17/2023
+  author: MengDu
 ---
 
 # TinyML on SEEED XIAO RP2040 (Motion Recognition)

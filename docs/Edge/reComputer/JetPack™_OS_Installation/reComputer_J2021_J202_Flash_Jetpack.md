@@ -163,12 +163,13 @@ If you only need to install the system, you can uncheck the SDK component.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/8_1.png" /></div>
 
-!!!Tip
-    When choosing which components to install, you may want to keep an eye on the capacity used. The built-in eMMC size is only 16GB, please allocate and use this space wisely according to your actual needs.
-    <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/9.png" /></div>
-    After actual testing, there is only about 500MB of eMMC space left after installing the full set of SDK components.
-    <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/10_1.jpg" /></div>
-    If you want to check how to solve the problem of insufficient capacity, please refer to [Troubleshooting](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space).
+:::tip
+When choosing which components to install, you may want to keep an eye on the capacity used. The built-in eMMC size is only 16GB, please allocate and use this space wisely according to your actual needs.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/9.png" /></div>
+After actual testing, there is only about 500MB of eMMC space left after installing the full set of SDK components.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/10_1.jpg" /></div>
+If you want to check how to solve the problem of insufficient capacity, please refer to [Troubleshooting](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space).
+:::
 
 If you want SDK Manager to download all the files to a location other than the default path, go to the Download & Install Options located at the bottom of the screen, then select the path you wish to use.
 
@@ -214,8 +215,9 @@ When you see the following window appear, the installation has been done. You ca
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/17.png" /></div>
 
-!!!Attention
-    Be sure to unplug the jumper and exit force recovery mode before re-powering into the system.
+:::note
+Be sure to unplug the jumper and exit force recovery mode before re-powering into the system.
+:::
 
 ### Flashing to eMMC with command-line
 
@@ -322,8 +324,9 @@ If you can't get into the system in **Flashing to eMMC with command-line -- Step
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/35.jpg" /></div>
 
-!!!Note
-    If more storage space is needed, we can use SD card to expand the capacity, or burn the system on SD card, you can refer to our recommended solution  [Flash System on SD card](https://wiki.seeedstudio.com/Flash_System_on_SD_card/)
+:::note
+If more storage space is needed, we can use SD card to expand the capacity, or burn the system on SD card, you can refer to our recommended solution  [Flash System on SD card](/J101_Enable_SD_Card)
+:::
 
 ## Tech Support
 

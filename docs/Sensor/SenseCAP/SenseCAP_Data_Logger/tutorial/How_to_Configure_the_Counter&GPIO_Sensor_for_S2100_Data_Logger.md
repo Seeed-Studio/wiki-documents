@@ -5,23 +5,23 @@ keywords:
 - SenseCAP data logger
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 2/14/2023
-  author: Matthew
+  date: 4/12/2023
+  author: Yvonne
 ---
 
-# Configure the Counter & GPIO Sensor
+# # Getting S2100 started with Counter&GPIO Sensor
+Let's get started on learning how to use the S2100 with Counter&GPIO sensor. Once we've got that down, we'll move on to the basics of S2100's application. This will give you a good idea of how to connect your own customized sensor in the future.
 
 ## Sensor Probe
 
 Get these items ready:
 
-![图1](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/1.png)
-
-### Tools
-
-| **Type** | **Description** |
-| --- | --- |
-| Cross screwdriver | Cross recess No.2 |
+- Data logger
+- Rain Gauge RG-15 Rain sensor(as an example)
+- 8 pin wire
+- Cross screwdriver(Cross recess No.2)
+- SenseCAP Mate APP
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/2.png"/></div>
 
 # Connect the Sensor Probe
 
@@ -29,15 +29,15 @@ Get these items ready:
 
 1. Unscrew three screws.
 
-![图2](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/2.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/3.png"/></div>
 
 2. Take down the cover.
 
-![图3](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/3.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/4.png"/></div>
 
 3. Remove the thread cap and pass it through the cable of the sensor, pass it through the bottom cover, and connect it to the wiring terminal.
 
-![图4](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/4.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/5.png"/></div>
 
 | **No.** | **Pin** | **Description** |
 | --- | --- | --- |
@@ -74,65 +74,70 @@ Wire sequence of Datalogger:
 
 1. Pass the 8 pin wire through the bottom cover and connect it to the base of the Data Logger according to the wire sequence requirements;
 
-![图5](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/5.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/6.png"/></div>
 
 2. Connect the upper cover, rubber ring and screw cap in sequence
 
-![图6](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/6.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/7.png"/></div>
 
-![图7](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/7.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/8.png"/></div>
 
-3. **Tighten the screws and screw caps**** to check the waterproofing**. If the wire diameter is too thin, add waterproof tape for winding.
+3. **Tighten the screws and screw caps** to check the waterproofing. If the wire diameter is too thin, add waterproof tape for winding.
 
 **\*Note:** When assembling the device, it is necessary to install the waterproof pad of the Data Logger and the adapter box, and tighten the screw cap and screw, otherwise the waterproof effect of the device may be affected!
 
 If the wire diameter is too small, it can be wrapped with waterproof tape, as shown below:
 
-![图8](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/8.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/9.png"/></div>
 
 ## Connect to the Rain Gauge Sensor
 
 Wire sequence of Rain Gauge sensor:
 
-![图9](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/9.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/10.png"/></div>
 
 1. Unscrew four screws,take down the cover.Pass the 8 pin wire through the bottom cover and connect it to the base of the J1 according to the wire sequence requirements;
 
-Red wire to V+;
+|Wire Type|Description|
+| --- | --- |
+|Red|  V+|
+|Black| GND|
+|Yellow|OUT|
 
-Black wire to GND;
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/11.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/12.png"/></div>
 
-Yellow wire to OUT.
-
-![图10](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/10.png) ![图11](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/11.png)
-
-![图12](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/12.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/13.png"/></div>
 
 2. Turn the DIP Switches **1** of the rain sensor S1 base to the ON, turn the switch **2** to the OFF , and turn the **3** and **4** to the OFF;
 
-![图13](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/13.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/14.png"/></div>
 
 3. Install the cover and tighten the screws. Complete the connection.
 
-![图14](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/14.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/15.png"/></div>
 
+We've finished the wiring at this point. Now, let's set up the S2100 and configure it on our APP
 # Setup the S2100
 
 ## Connect to Sensor to App
 
 1. Press button and hold for **3 seconds** , the LED will flash at 1s frequency. Please use the App to connect the sensor within 1 minute; otherwise, the device will power off or reboot.
 
-![图15](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/15.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/16.png"/></div>
 
 2. Please select "S2100 Data Logger".
 
 Please click the "Setup" button to turn on Bluetooth and click "Scan" to start scanning the sensor's Bluetooth.
 
-![图16](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/16.png) ![图17](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/17.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/17.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/18.png"/></div>
 
 3. Select the Sensor by S/N (S/N is on the front label of the sensor). Then, the basic information of the sensor will be displayed after entering.
 
-![图18](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/18.png) ![图19](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/19.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/19.png"/></div>
+
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/20.png"/></div>
 
 4. Enter configuration mode after Bluetooth connection is successful: LED flashes at 2s frequency.
 
@@ -146,9 +151,10 @@ Here we select the "SenseCAP for Helium" or "SenseCAP for TTN". The Frequency Pl
 
 **\*Note:** Data Logger can upload data when there is a Helium network around the user. It runs on SenseCAP private Helium Console. Users do not need to create a device on the Helium Console;
 
-SenseCAP for TTN platform needs to be used with SenseCAP LoRaWAN outdoor gateway(https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)
+SenseCAP for TTN platform needs to be used with SenseCAP LoRaWAN outdoor [gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)
 
-![图20](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/20.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/21.png"/></div>
+
 
 ### Set the Interval
 
@@ -156,13 +162,13 @@ The working mode of device: wake up the device every interval and collect measur
 
 For example, the device collects and uploads data **every 60 minutes by default**.
 
-![图21](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/21.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/22.png"/></div>
 
 ### Set the Packet Policy
 
 The sensor uplink packet strategy has three modes, we select 1N here or you can according to your own requirement.
 
-![图22](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/22.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/23.png"/></div>
 
 | **Parameter** | **Description** |
 | --- | --- |
@@ -174,7 +180,7 @@ The sensor uplink packet strategy has three modes, we select 1N here or you can 
 
 When selecting the SenseCAP platform, you must use the fixed EUI/App EUI/App Key. Therefore, you need to restore the factory Settings before switching back to the SenseCAP platform from other platforms.
 
-![图23](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/23.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/24.png"/></div>
 
 When we make a mistake or want to reset everything, we can click the button. The device will be restored to the factory's default configuration.
 
@@ -184,11 +190,12 @@ When we make a mistake or want to reset everything, we can click the button. The
 
 Select the "Protocol" as "GPIO". Then set the following parameters in turn.
 
-![图24](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/24.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/25.png"/></div>
 
 1. Select the supply voltage to the sensor. It supports 3V/5V/12V. Here we select **5V**.
 
-![图25](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/25.png) ![图26](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/26.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/26.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/27.png"/></div>
 
 2. Set the "Sensor Warm-up time", the warm-up time denotes the amount of time it takes for the sensor to attain its highest accuracy or performance level once the voltage supply has been applied. We enter **50(ms)** herr.
 2. Select the input type:
@@ -199,13 +206,13 @@ Select the "Protocol" as "GPIO". Then set the following parameters in turn.
 
 We select **Counter Mode** here.
 
-![图27](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/27.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/28.png"/></div>
 
 ### Set the Counter Sensor
 
 Select the "Counter Mode" as input type. Then set the following parameters in turn.
 
-![图28](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/28.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/29.png"/></div>
 
 | Digital input | Sets the type of input pulse. Pull High: Valid when a rising edge is detected. Pull Low: Valid when a falling edge is detected. We select **Pull High** here. |
 | --- | --- |
@@ -216,7 +223,7 @@ Select the "Counter Mode" as input type. Then set the following parameters in tu
 
 After the configuration information is completed, click "Back to Home" (at this time, the node and the APP Bluetooth will be automatically disconnected), and the Data Logger will try to connect to the network (the LED indicator flashes red slowly when trying to connect to the network, and flashes green quickly after the network is successfully connected);
 
-![图29](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/29.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/30.png"/></div>
 
 # Check data on the SenseCAP Portal
 
@@ -228,24 +235,26 @@ Please open SenseCAP Mate App.
 
 2. Click "Add device" on the upper-right corner of device page to enter the device binding page.
 
-![图30](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/30.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/31.png"/></div>
 
 3. Scan the QR code on the device to bind the device to your account. If you do not set it to a designated group, the device will be put into the "default" group.
 
-![图31](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/31.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/32.png"/></div>
 
 4. Manually fill in the EUI
 
 If the QR code sticker is damaged, you can manually fill in the EUI of the device to bind the device to your account. Please make sure you put in the EUI in the format suggested by the system and then click "confirm".
 
-![图32](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/32.png) ![图33](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/33.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/33.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/34.png"/></div>
 
 ## Check Data on SenseCAP Portal
 
 On the SenseCAP App or the website [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/) , you can check the device online status and the latest data. In the list for each Sensor, you can check its online status and the time of its last data upload.
 
-![图34](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/34.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/35.png"/></div>
 
 Also, you can check the date on SenseCAP Mate APP.
 
-![图35](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/35.png) ![图36](https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/36.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/36.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/1.png"/></div>
