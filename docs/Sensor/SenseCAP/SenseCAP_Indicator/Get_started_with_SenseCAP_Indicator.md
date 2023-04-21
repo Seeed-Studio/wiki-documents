@@ -5,7 +5,7 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 4/20/2023
+  date: 4/21/2023
   author: Yvonne
 ---
 
@@ -297,9 +297,7 @@ Download these libraries we need:
 
 [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
 
-[SHT41 temperature and humidity sensor library](https://github.com/Sensirion/arduino-i2c-sht4x)
-
-[BMP390 barometric pressure sensor library](https://github.com/adafruit/Adafruit_BMP3XX)
+[AHT20 temperature and humidity sensor library](https://github.com/adafruit/Adafruit_AHTX0)
 
 [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core/)
 
@@ -333,7 +331,14 @@ We provide an example code file, you can modify the code according to your needs
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_37.png"/></div>
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_38.png"/></div>
 
-# **Resource**
+## **Communication protocol**
+Esp32 and rp2040 use serial port communication, using the [cobs](http://www.stuartcheshire.org/papers/COBSforToN.pdf) communication protocol. The list of commands used in the demo is as follows:
+
+The command format consists of the packet type and packet parameters.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_41.png"/></div>
+
+## **Resource**
 
 
 IDF downloard: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/linux-macos-setup.html)
@@ -343,6 +348,25 @@ IDF downloard: [Standard Toolchain Setup for Linux and macOS](https://docs.espre
 SenseCAP Indicator SDK：[SenseCAP Indicator SDK](https://github.com/Seeed-Solution/sensecap_indicator_esp32.git)
 
 
-# **Tech Support**
+## **FAQ**
+**How to distinguish the serial port？**
+
+**For Windows:**
+
+Check the port on your Device Manage
+
+"USB串行设备" is for RP2040
+"USB-SERIAL" is for ESP32
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
+
+**For Mac:**
+
+"/dev/cu.usbmodem" is for RP2040
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
+
+## **Tech Support**
 
 Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
+
