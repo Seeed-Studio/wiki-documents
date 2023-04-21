@@ -280,7 +280,7 @@ void setup()
   Serial.begin(115200);
   
    Serial.println("begin");
-  if (ai.begin(ALGO_OBJECT_DETECTION, MODEL_EXT_INDEX_1)) // Object detection and pre-trained model 1
+  if (ai.begin(ALGO_OBJECT_DETECTION, (MODEL_INDEX_T)0x11)) // Object detection and pre-trained model 1
   {
     Serial.print("Version: ");
     Serial.println(ai.version());
