@@ -163,9 +163,9 @@ Please match the power supply cable for the power adapter according to your loca
 
 ## What‘s More
 
-We here present you more complete tables about NVIDIA® Oetson Module Powered Devices Comparison and NVIDIA® Jetson Module Compatible Carrier Boards Comparison. You can click the image or the title for a better look.
+We here present you more complete tables about NVIDIA® Jetson Module Powered Devices Comparison and NVIDIA® Jetson Module Compatible Carrier Boards Comparison. You can click the image or the title for a better look.
 
-### <a href="https://files.seeedstudio.com/wiki/reComputer/NVIDIA-Jetson-Devices-and-carrier-boards-comparision_00.png" target="_blank"><span>NVIDIA® Oetson Module Powered Devices Comparison</span></a>
+### <a href="https://files.seeedstudio.com/wiki/reComputer/NVIDIA-Jetson-Devices-and-carrier-boards-comparision_00.png" target="_blank"><span>NVIDIA® Jetson Module Powered Devices Comparison</span></a>
 
 <div class="document">
 <div class="document">
