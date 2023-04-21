@@ -681,9 +681,15 @@ Since the XIAO EPS32S3 Sense is designed with three pull-up resistors R4~R6 conn
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:500, height:'auto'}}/></div>
 
-This allows us to use the SD card slot on the XIAO ESP32S3 Sense or the SD card slot on the round display by configuring it in software.
+After disconnecting J3, the SD card slot on XIAO ESP32S3 Sense will not work properly, so you need to insert a microSD card into the SD card slot on the Round Display.
 
 Next, please install the microSD card, XIAO ESP32S3 Sense and Round Display in order.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/101.gif" style={{width:500, height:'auto'}}/></div>
+
+:::tip
+We recommend that you remove the camera module first to avoid scratching the camera when you cut the J3 connection with the blade.
+:::
 
 ### Specific operation
 
@@ -819,7 +825,7 @@ void setup() {
   tft.fillScreen(TFT_WHITE);
 
   // Initialize SD card
-  if(!SD.begin(21)){
+  if(!SD.begin(D2)){
     Serial.println("Card Mount Failed");
     return;
   }
@@ -1287,6 +1293,15 @@ For performance reasons, the quality of the screen cannot be higher than **CIF**
 Oh, my big face is circled.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" style={{width:600, height:'auto'}}/></div>
+
+
+## Troubleshooting
+
+### Q1: When XIAO ESP32S3 Sense and Round Display are used together, do I have to cut the J3 pin? Which SD card slot can be used?
+
+A: If you want to use a microSD card, then you have to cut the J3 pin when XIAO ESP32S3 Sense is used together with Round Display. The reason is that there are pull-up resistors in the design of the circuit of both expansion boards, so theoretically, if two pull-up resistors work at the same time, then the SD card slot will not work properly. An error message of SD card mount failure will appear. Since the pull-up resistor on the Round Display cannot be blocked, you need to cut J3 on the sense expansion board to make sure only one pull-up resistor is working when the two are used together. This also determines that when both are used together, there is and only the SD card slot on the Round Display is active.
+
+
 
 ## Tech Support
 

@@ -1017,6 +1017,10 @@ A: You can try to turn off the output of debug messages using the following meth
 
 However, this method does not always work, in fact, the debug information of ESP32-S3 is always printed from the serial port, which cannot be changed. Please forgive it, it's just too eager to let you know it's working properly.
 
+### Q4: Why I cut the connection of J3, but still test to get D8 and D9 pins high? The write to microSD card still has a probability of success?
+
+In terms of SD card design, the correct circuit must have pull-up resistors to make the microSD card work properly. If you find that the pin level and card reading and writing are still normal after cutting J3, this may just be a lucky situation and we do not recommend you to read and write the card in this case, which may cause the problem of losing the written data. While D8 and D9 pins can be modified level by writing low level after cutting J3.
+
 ## Tech Support
 
 Please submit any technical issues into our [forum](https://forum.seeedstudio.com/).
