@@ -137,15 +137,14 @@ if (sample && sample != -1 && sample != 1) {
 
 The `read()` function is called on the I2S object to read a single audio sample from the I2S interface. The if statement checks the value of the sample variable. If the sample value is not 0, -1, or 1, it is considered a valid audio sample, and the code inside the if block will be executed. In this case, the sample value is printed to the serial console using the `Serial.println()` function.
 
-## Save recorded sound
+**More content coming soon**
 
 
+<!-- ## Save recorded sound
 
 ## Online Voice Changer
 
-
-
-## Troubleshooting
+## Troubleshooting -->
 
 
 
