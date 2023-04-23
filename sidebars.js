@@ -2048,6 +2048,7 @@ const sidebars = {
       label: 'reTerminal-DM',
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
+        'Edge/reTerminal-DM/reterminal-dm-warranty',
         {
           type: 'category',
           label: 'Node-Red',
