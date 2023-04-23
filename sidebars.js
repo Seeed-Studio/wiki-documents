@@ -2047,7 +2047,7 @@ const sidebars = {
       type: 'category',
       label: 'reTerminal-DM',
       items: [
-        // 'Edge/reTerminal-DM/reTerminal-DM',
+        'Edge/reTerminal-DM/reterminal-dm',
         {
           type: 'category',
           label: 'Node-Red',
