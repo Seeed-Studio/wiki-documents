@@ -222,7 +222,11 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-:::tip
+:::caution
+The on-board package for XIAO ESP32S3 requires at least version **2.0.8** to be available.
+:::
+
+<!-- :::tip
 We have now submitted a merge request to ESP32 and will be able to search and use XIAO ESP32S3 in the Arduino IDE when ESP32 releases the next version of the on-board package update.
 
 Until then, you can manually add the XIAO ESP32S3 on-board package to the Arduino directory to use it.
@@ -259,15 +263,15 @@ After you have downloaded the above zip, please unzip it and you will see two fi
     Then go to the **variants folder** and copy the **XIAO_ESP32S3 folder** to it.
 
 
-- **Step 4.** Close the Arduino IDE and reopen it.
+- **Step 4.** Close the Arduino IDE and reopen it.-->
 
-- **Step 5.** Select your board and port
+- **Step 4.** Select your board and port.
 
-    On top of the Arduino IDE, you can select the port directly. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports).
+On top of the Arduino IDE, you can select the port directly. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports).
 
-    Also, search for **xiao** in the development board on the left. select **XIAO_ESP32S3**.
+Also, search for **xiao** in the development board on the left. select **XIAO_ESP32S3**.
 
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
 
 With this preparation, you can start writing programs for XIAO ESP32S3 to compile and upload.
 
