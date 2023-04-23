@@ -14,6 +14,9 @@ last_update:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"/></div>
 
+
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html?" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
+
 SenseCAP Indicator is a 4-inch touch screen driven by ESP32 and RP2040 dual-MCU and supports Bluetooth/Wi-Fi/LoRa communication. 
 
 The board comes with Type C and Grove interfaces, supports ADC and IIC transmission protocols, and can easily connect to other peripherals with rich GPIOs. 

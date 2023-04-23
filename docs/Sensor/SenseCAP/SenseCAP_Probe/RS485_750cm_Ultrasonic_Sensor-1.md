@@ -16,7 +16,7 @@ last_update:
 
 The RS485 750cm Ultrasonic Level Sensor utilizes ultrasonic sensing technology to measure distances with a measuring range of 28-750cm. Equipped with a bell mouth, it can detect objects up to 750cm with a resolution of 1mm. With its IP67 waterproof ultrasonic transducer, it can be used in various applications such as sewer and water level monitoring, intelligent trash can management systems, robot avoidance, and automatic control.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/RS485-500cm-Ultrasonic-Level-Sensor-p-5588.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
 
 ## Upgradable to Industrial Sensors
 
