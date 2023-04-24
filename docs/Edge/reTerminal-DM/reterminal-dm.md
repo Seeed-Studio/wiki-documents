@@ -20,7 +20,14 @@ Based on Raspberry Pi CM4, and as a Panel PC, HMI, PLC, IIoT Gateway all-in-one 
 
 It is equipped with rich scalability and hybrid connectivity, supporting CAN bus, RS485, RS232, Gigabit Ethernet port, and other interfaces, as well as powerful wireless communication capabilities such as 4G, LoRa®, WiFi, and BLE.
 
-> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
+> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly, for 
+> [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Feature
 
@@ -29,7 +36,7 @@ Low code programming for event-driven applications: Natively integrated Node-RED
 Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
 Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
 Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
-Product warranty: Two-year warranty
+[Product warranty: Two-year warranty](/docs/Edge/reTerminal-DM/reterminal-dm-warranty.md)
 
 > \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
 
@@ -274,9 +281,6 @@ Product warranty: Two-year warranty
 ## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/_-04-2.jpg" alt="pir" width="auto" height="auto"/></p>
-
-
-## Tech Support
 
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

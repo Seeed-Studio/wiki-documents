@@ -2020,6 +2020,7 @@ const sidebars = {
       label: 'reTerminal-DM',
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
+        'Edge/reTerminal-DM/reterminal-dm-flash-OS',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
         {
           type: 'category',
