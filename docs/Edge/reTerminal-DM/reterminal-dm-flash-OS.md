@@ -374,7 +374,6 @@ sudo ./scripts/reTerminal.sh --device reTerminal-plus
 
 ```sh
 sudo reboot
-
 ```
 
 Now your screen should light up and run normally.

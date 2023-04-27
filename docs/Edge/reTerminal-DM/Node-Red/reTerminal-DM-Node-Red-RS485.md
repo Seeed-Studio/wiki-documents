@@ -225,7 +225,7 @@ STEP 2-2: Click on the `pencil` icon for the server configuration option
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-server-config-button.png" /></div>
 
-Once you clicked teh `pencil` icon you should see the `Add new modbus-client config node` configuration panel
+Once you clicked the `pencil` icon you should see the `Add new modbus-client config node` configuration panel
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-client-config.png" /></div>
 
@@ -262,7 +262,7 @@ STEP 4: Find and Drag out `debug node` and `Modbus Response node` and connect th
 
 #### Final Result
 
-congratulations, you have successfully experienced and learnt how to use Modbus with reTerminal DM with node-RED now, your final results should be similar as the image shown below
+Congratulations, you have successfully experienced and learnt how to use Modbus with reTerminal DM with node-RED now, your final results should be similar as the image shown below
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-results.png" /></div>
 
@@ -372,9 +372,9 @@ You can copy the following JSON code to import the Nodes
 
 ``` 
 
-<!-- # Explore more nodes on reTerminal DM with node-RED -->
+# Explore more nodes on reTerminal DM with node-RED
 
-
+* [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
 
 ## Tech Support
 
