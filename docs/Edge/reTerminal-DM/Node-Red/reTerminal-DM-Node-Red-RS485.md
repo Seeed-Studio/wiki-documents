@@ -62,7 +62,7 @@ Overall, Node-RED provides a powerful and flexible platform for building IoT and
 
 # Getting start with Modbus Node on reTerminal DM
 
-You can find more infomation in the [Modbus Node-RED](https://flows.nodered.org/node/node-red-contrib-modbus) page.
+You can find more information in the [Modbus Node-RED](https://flows.nodered.org/node/node-red-contrib-modbus) page.
 
 If you are using Senscraft Edge OS you can skip the modbus node installation steps and go to the [how to use Modbus Node with reTerminal DM](#how-to-use-modbus-node-with-retermianl-dm)
 
@@ -71,6 +71,10 @@ If you are using Senscraft Edge OS you can skip the modbus node installation ste
 In this section we are going to install the `node-red-contrib-modbus` node, so please revise on how to [install nodes](/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes).
 
 ### Option 1: Command line
+
+First of all please go ahead and refreshing your knowledge with accessing reTerminal DM via SSH, please check the steps [here](/reterminal-dm-flash-OS#install-drivers)
+
+Once you have access the reTerminal DM with SSH you can proceed to the steps below:
 
 STEP 1: Please go to Node-RED folder
 
