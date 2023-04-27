@@ -94,6 +94,10 @@ The Node-RED team has prepared us with a [All-IN-ONE](https://nodered.org/docs/g
 There are many options on installing Node-RED with Raspberry Pi, you can explore the [official guide](https://nodered.org/docs/getting-started/), here we show you the [all-in-one](https://nodered.org/docs/getting-started/raspberrypi) guide to install Node-RED on reTerminal DM.
 :::
 
+Once the installation process finished you should see a `.node-red` folder with `ls -all` commands as shown in the image below:
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-installed.png" /></div><br />
+
 ### Setup Node-RED
 
 Once you have installed Node-RED, please follow the steps below to setup and getting the Node-RED environment ready.
@@ -113,6 +117,10 @@ Once you have installed Node-RED, please follow the steps below to setup and get
     ```sh
     node-red-start
     ```
+    if you want to enable the node-RED as autostart service you could use `sudo systemctl enable nodered.service` command and you should see the the output as shown below.
+
+    <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-autostart.png" /></div>
+
 * **STEP 2:** Access Node-RED editor:
 
     Now please open your favorite Web Browser and enter the url described as below:
@@ -196,9 +204,9 @@ STEP 6: you should see the Modbus nodes in the side bar
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-nodes.png" /></div>
 
-<!-- # reTerminal DM Supported Nodes
+# reTerminal DM Supported Nodes
 
-* [RS485/RS232](/reTerminal-DM-Node-Red-RS485_RS232) -->
+* [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
 
 ## Tech Support
 
