@@ -1469,6 +1469,7 @@ const sidebars = {
               type: 'category',
               label: 'Wio Lite',
               items: [
+                'Sensor/Wio_Series/Wio_Lite/Wio-Lite-AI-Getting-Started',
                 'Sensor/Wio_Series/Wio_Lite/Wio-Lite-W600',
                 'Sensor/Wio_Series/Wio_Lite/Wio-Lite-MG126',
                 'Sensor/Wio_Series/Wio_Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
@@ -2049,6 +2050,7 @@ const sidebars = {
       label: 'reTerminal-DM',
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
+        'Edge/reTerminal-DM/reterminal-dm-flash-OS',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
         {
           type: 'category',
