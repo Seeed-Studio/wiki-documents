@@ -70,7 +70,7 @@ If you are using Senscraft Edge OS you can skip the modbus node installation ste
 
 In this section we are going to install the `node-red-contrib-modbus` node, so please revise on how to [install nodes](/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes).
 
-#### Option 1: Command line
+### Option 1: Command line
 
 STEP 1: Please go to Node-RED folder
 
@@ -95,7 +95,7 @@ STEP 3: Once the node gets install, Please restart the Node-RED service with:
 node-red-restart
 ```
 
-#### Option 2: Node-RED editor
+### Option 2: Node-RED editor
 
 STEP 1: Click the `Settings` button with "three dash" icon located at the right corner and then select the `Manage palette`
 
@@ -209,7 +209,7 @@ STEP 3-6: repeat the STEPS 4-4 to add two more Registers as shown below, where `
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim-sample-setting.png" /></div>
 
 
-### Edit the Flows
+#### Edit the Flows
 
 STEP 1: Drag `Modbus Read` to the `Flow Editor` panel
 
@@ -260,7 +260,7 @@ STEP 4: Find and Drag out `debug node` and `Modbus Response node` and connect th
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-responese.gif" /></div>
 
-### Final Result
+#### Final Result
 
 congratulations, you have successfully experienced and learnt how to use Modbus with reTerminal DM with node-RED now, your final results should be similar as the image shown below
 
