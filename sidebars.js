@@ -2027,7 +2027,7 @@ const sidebars = {
           label: 'Node-Red',
           items: [
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
-            // 'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485_RS232',
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
           ],
         },
       ],
