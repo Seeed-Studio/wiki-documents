@@ -2058,6 +2058,7 @@ const sidebars = {
           items: [
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
           ],
         },
       ],
