@@ -11,8 +11,9 @@ last_update:
   date: 04/27/2023
   author: Peter Pan
 ---
+# reTerminal DM MQTT with Node-RED
 
-# Brief info about MQTT
+## Brief info about MQTT
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3--114070201-reterminal-dm---font.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -24,7 +25,7 @@ last_update:
 
 <br />
 
-## MQTT & Node-RED
+### MQTT & Node-RED
 
 MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol that is designed to enable communication between devices in a machine-to-machine (M2M) or Internet of Things (IoT) context. MQTT was developed by IBM in 1999 and later became an open standard. MQTT is designed to be a simple and efficient way of sending small packets of data between devices. It uses a publish/subscribe messaging pattern where messages are published to a broker and then delivered to all subscribers who have subscribed to a particular topic. This allows devices to communicate with each other without having to know each other's IP addresses or other network details. MQTT is particularly useful in situations where devices are connected over unreliable networks, such as low-bandwidth or high-latency networks, because it uses a small amount of bandwidth and has a low overhead. It also supports Quality of Service (QoS) levels, which allows for different levels of reliability in message delivery. MQTT has become a popular choice for IoT and M2M applications because of its simplicity and efficiency, and it is supported by a wide range of devices and platforms.
 

@@ -12,7 +12,9 @@ last_update:
   author: Peter Pan
 ---
 
-# Brief info about RS485, Modbus, Modbus RTU and Modbus Node-RED Node
+# reTerminal DM RS485 Port with Node-RED
+
+## Brief info about RS485, Modbus, Modbus RTU and Modbus Node-RED Node
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3--114070201-reterminal-dm---font.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -24,11 +26,11 @@ last_update:
 
 <br />
 
-## RS485
+### RS485
 
 RS485 are serial communication protocols used to transmit data between devices. RS485 is a standard for serial communication transmission of data, which is commonly used in industrial applications. It uses a differential signal, meaning that there are two data lines (A and B) and a ground line (GND) for communication. This differential signal provides better noise immunity and allows for longer cable lengths of up to 4,000 feet. The maximum data rate for RS485 is typically higher than RS232, up to 10 Mbps. RS485 is designed for multi-point communication. This means that RS485 can transmit data between multiple devices on the same bus. In summary, RS485 is commonly used for longer-distance communication between multiple devices, such as in industrial control systems.
 
-## Modbus RTU
+### Modbus RTU
 
 Modbus RTU is a popular industrial communication protocol used for data exchange between devices in a supervisory control and data acquisition (SCADA) system. It is a serial communication protocol that operates on top of RS485 or RS232 bus standards. Modbus RTU uses a master-slave architecture, where a master device initiates communication with one or more slave devices. The master sends a request message to a slave device, which then responds with a message containing the requested data. Modbus RTU messages consist of a header, data, and an error-checking field. The header contains information about the message, such as the slave address and function code. The data field contains the actual data being transmitted. The error-checking field is used to ensure the integrity of the message. Modbus RTU supports a variety of data types, including binary, integer, floating point, and string. It also supports a range of function codes that allow for different types of data access, such as read holding registers, write single coil, and read input registers. One of the advantages of Modbus RTU is its simplicity and ease of implementation. It is widely supported by a variety of devices and software, making it a popular choice for industrial automation and control systems. It is also well-suited for applications that require real-time data exchange and low-latency communication.
 
@@ -50,7 +52,7 @@ Modbus RTU is a popular communication protocol used in a variety of industrial a
 
 In general, any application that requires real-time data exchange and low-latency communication in an industrial environment can benefit from the use of Modbus RTU.
 
-## Modbus node
+### Modbus node
 
 Node-RED has a built-in Modbus node, which allows users to easily integrate Modbus devices into their Node-RED workflows. The Modbus node supports both Modbus TCP and Modbus RTU protocols, and can be used to read and write data from Modbus devices.
 

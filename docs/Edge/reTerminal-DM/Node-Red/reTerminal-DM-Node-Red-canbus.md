@@ -42,7 +42,7 @@ To use Node-RED with CAN bus, you will need a CAN bus interface device that conn
 
 You can find more information in the [node-red-contrib-socketcan](https://flows.nodered.org/node/node-red-contrib-socketcan) page.
 
-If you are using Senscraft Edge OS you can skip the modbus node installation steps and go to the [how to use Modbus Node with reTerminal DM](#how-to-use-modbus-node-with-retermianl-dm)
+If you are using Senscraft Edge OS you can skip the Socketcan node installation steps.
 
 ### Prerequisite
 
@@ -60,6 +60,7 @@ The Host Computer should be able to have internet connection to the reTerminal D
 In this Wiki tutorial we are going to use the `node-red-contrib-socketcan` node, so please install the `node-red-contrib-socketcan` with the guide [install nodes](/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes).
 
 ### Config CAN BUS on reTerminal DM
+
 :::note
 Assume you have access direct access of the `Terminal` app on reTerminal DM or access reTerminal DM via SSH, if not please follow the first step [here](/reTerminal-DM-Getting-Started-with-Node-Red#install-node-red) to get yourself familiar on how to do it.
 :::
