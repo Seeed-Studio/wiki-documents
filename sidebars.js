@@ -2063,6 +2063,7 @@ const sidebars = {
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
           ],
         },
       ],
