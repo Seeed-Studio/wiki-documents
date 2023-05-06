@@ -214,7 +214,9 @@ STEP 6: you should see the Modbus nodes in the side bar
 # reTerminal DM Supported Nodes
 
 * [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
-
+* [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
+* [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
+  
 ## Tech Support
 
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />

@@ -183,16 +183,7 @@ STEP 3-1: Open the `Slave Simulator` from `ModbusMechanic` Tools
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim.png" /></div>
 
-STEP 3-2: Then select `RTU` from the popup
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/select_rtu.png" /></div>
-
-
-STEP 3-3: Enter `1` for the `Slave ID` and click `OK` 
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/set-slave-id.png" /></div>
-
-STEP 3-4-1: Select `Input` as the `Register type`
+STEP 3-2: Then select `RTU` from the popup1 Mbit
 
 STEP 3-4-2: Enter `1` as the `Register number` 
 
@@ -381,7 +372,8 @@ You can copy the following JSON code to import the Nodes
 # Explore more nodes on reTerminal DM with node-RED
 
 * [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
-
+* [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
+* 
 ## Tech Support
 
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />

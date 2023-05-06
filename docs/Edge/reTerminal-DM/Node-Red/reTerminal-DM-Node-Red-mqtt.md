@@ -350,6 +350,7 @@ You can copy the following JSON code to import the Nodes
 # Explore more nodes on reTerminal DM with node-RED
 
 * [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
+* [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
 
 ## Tech Support
 
