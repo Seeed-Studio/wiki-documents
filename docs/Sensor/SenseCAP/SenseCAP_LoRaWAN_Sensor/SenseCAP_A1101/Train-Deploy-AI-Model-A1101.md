@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Deploy-AI-Model-A1101
 last_update:
-  date: 1/16/2023
-  author: jianjing Huang
+  date: 5/10/2023
+  author: Yvonne
 ---
 
 # Train and Deploy Your Own AI Model Into SenseCAP A1101
@@ -102,7 +102,7 @@ This will generate a code snippet that we will use later inside Google Colab tra
 
 After we have chosen a public dataset, we need to train the dataset. Here we use a Google Colaboratory environment to perform training on the cloud. Furthermore, we use Roboflow api within Colab to easily download our dataset.
 
-Click [here](https://colab.research.google.com/gist/lakshanthad/b47a1d1a9b4fac43449948524de7d374/yolov5-training-for-sensecap-a1101.ipynb) to open an already prepared Google Colab workspace, go through the steps mentioned in the workspace and run the code cells one by one.
+Click [here](https://colab.research.google.com/github/Seeed-Studio/yolov5-swift/blob/master/tutorial.ipynb) to open an already prepared Google Colab workspace, go through the steps mentioned in the workspace and run the code cells one by one.
 
 **Note:** On Google Colab, in the code cell under **Step 4**, you can directly copy the code snippet from Roboflow as mentioned above
 
@@ -197,7 +197,7 @@ After this you will see a new storage drive shown on your file explorer as **SEN
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
-- **Step 3.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/capture_images_A1101_firmware.uf2) to **SENSECAP** drive
+- **Step 3.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_capture_firmware_v01-00.uf2) to **SENSECAP** drive
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
