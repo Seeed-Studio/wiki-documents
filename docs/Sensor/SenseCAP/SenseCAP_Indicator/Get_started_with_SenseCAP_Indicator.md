@@ -5,8 +5,8 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 4/28/2023
-  author: Jessie
+  date: 5/9/2023
+  author: Thomas
 ---
 
 # SenseCAP Indicator (ESP32S3&RP2040 4-Inch Touch Screen)
@@ -103,17 +103,17 @@ The embedded SX1262 LoRa module enables you to build the LoRa application and co
 
 The SenseCAP Indicator is equipped with built-in tVOC and CO2 sensors, combined with the SenseCAP native firmware, which easily transforms it into a desktop air quality detector with simple settings.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_8.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_8.png"/></div>
 
 ## Setting
 Quickly configure your SenseCAP Indicator through a visual page.
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/setting.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/setting.png"/></div>
 
 ### **Wi-Fi Setting**
 Select the WiFi you need, input the password and connect it.
 
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_9.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_9.png"/></div>
 
 
 The green icon means you have successfully connected to Wi-Fi.
@@ -147,9 +147,11 @@ The green icon means you have successfully connected to Wi-Fi.
 We offers four different versions: D1, D1S, D1L, and D1Pro. Each version is designed to meet different application needs without any extra cost from unnecessary hardware. Here are the differences between the versions:
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/version.png"/></div>
 
-With the D1Pro version, the native firmware has prepared 2 pages for viewing sensor data, including tVOC、CO2、Air Temperature and Air Humidity data.
+The device's firmware has two pages that display data for tVOC, CO2, temperature, and humidity.
+
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_12.png"/></div>
 
+> **Note:** The UI for the native firmware will remain the same for all versions for SenseCAP Indicator. For D1 and D1L version which has no embedded sensors. the sensor data will show 'N/A'. Moreover, you can create your own customized UI.
 
 Click the specified sensor to enter the detailed information page, and you can choose to display the value of 24h or a week.
 
