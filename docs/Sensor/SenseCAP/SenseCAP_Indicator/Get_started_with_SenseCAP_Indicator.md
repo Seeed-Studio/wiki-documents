@@ -5,11 +5,15 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 4/21/2023
-  author: Yvonne
+  date: 4/28/2023
+  author: Jessie
 ---
 
-# Get Started with SenseCAP Indicator (ESP32S3&RP2040 4-Inch Touch Screen)
+# SenseCAP Indicator (ESP32S3&RP2040 4-Inch Touch Screen)
+
+
+
+# Introduction
 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"/></div>
@@ -39,43 +43,39 @@ SenseCAP Indicator is a fully open source powerful IoT development platform for 
 
 
 
-
-
-
-
-
-
-
 ## **Hardware Overview**
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_2.png"/></div>
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_3.png"/></div>
 
-## **Button Function**
+### **System Diagram**
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_7.png"/></div>
+
+
+### **Button Function**
 Short press: Turn off /wake up the screen
 
 Long press for 3s: Switch on/switch off the device
 
 Long press for 10s: Factory reset
 
-## **Grove Interfaces**
+### **Grove**
 
 There are two Grove interfaces for connecting Grove modules, providing more possibilities for developers. 
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/grove.png"/></div>
 
 Grove is a modular, standardized connector prototyping system and a strong open source hardware ecosystem. Click [**here**](https://www.seeedstudio.com/category/Grove-c-1003.html) to learn more
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_4.png"/></div>
 
 
-## **SX1262 LoRa Chip**
+### **LoRa**
 The embedded SX1262 LoRa module enables you to build the LoRa application and connect your local LoRa sensors to the Cloud via Wi-Fi. For example, you could build a LoRa hub device to connect your LoRa sensors to your smart home ecosystem to implement Matter over Wi-Fi. In this way, the LoRa devices could be connected to the Matter ecosystem via Wi-Fi, without the need to buy a new Matter-compatible device.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_5.png"/></div>
 
-## **System Diagram**
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_7.png"/></div>
 
 
 
@@ -98,50 +98,33 @@ The embedded SX1262 LoRa module enables you to build the LoRa application and co
 |Buzzer|MLT-8530, Resonant Frequency：2700Hz|
 
 
+# Getting Start with SenseCAP Native Firmware
 
-## **Native Firmware**
-SenseCAP Indicator native firmware enables you to use it as a desktop air quality detector，just a few simple steps to enjoy. 
+
+The SenseCAP Indicator is equipped with built-in tVOC and CO2 sensors, combined with the SenseCAP native firmware, which easily transforms it into a desktop air quality detector with simple settings.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_8.png"/></div>
 
+## Setting
+Quickly configure your SenseCAP Indicator through a visual page.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/setting.png"/></div>
+
 ### **Wi-Fi Setting**
-Plug the 5V power adaptor into the USB type-C power connector, the device will power on automatically, then the display will show the WiFi setting page.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_9.png"/></div>
+Select the WiFi you need, input the password and connect it.
 
 
-Select the WiFi you need, input the password and connect.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_10.png"/></div>
-
-#### **Data Viewing**
-- **Home page**
-
-Including the time, date, location info.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_11.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_9.png"/></div>
 
 
-- **Sensor data**
+The green icon means you have successfully connected to Wi-Fi.
 
-Built-in tVOC and CO2 sensors, and an external Grove AHT20 TH sensor for more precise temperature and humidity readings.
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_10.png"/></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_12.png"/></div>
+### **Display Setting**
+**Brightness**: Adjust screen brightness
 
+**Sleep Mode**: Turn off the screen according to the interval you set.During sleep mode, the screen is inactive and does not display any content.
 
-Click the specified sensor to enter the detailed information page, and you can choose to display the value of 24h or a week.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
-
-
-- **Setting** 
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_14.png"/></div>
-
-#### **Display Setting**
-Brightness: Adjust screen brightness
-
-Sleep Mode: Turn off the screen according to the interval you set
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_15.png"/></div>
 
@@ -158,218 +141,19 @@ Sleep Mode: Turn off the screen according to the interval you set
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_17.png"/></div>
 
 
-# **Development Tutorial**
 
-## ESP32  Firmware Flashing
-            
-### **Flash by Flash Download Tools (For Windows only)**
 
-- **Step 1**: Connect the device to your PC with the provided USB type-C cable.
-- **Step 2**:Install the Flash Download Tools
+### **Sensor Data**
+We offers four different versions: D1, D1S, D1L, and D1Pro. Each version is designed to meet different application needs without any extra cost from unnecessary hardware. Here are the differences between the versions:
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/version.png"/></div>
 
-[Flash Download Tools for Windows](https://www.espressif.com.cn/en/support/download/other-tools?keys=&field_type_tid%5B%5D=842)
+With the D1Pro version, the native firmware has prepared 2 pages for viewing sensor data, including tVOC、CO2、Air Temperature and Air Humidity data.
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_12.png"/></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_18.png"/></div>
 
-- **Step 3**: User interface setting
+Click the specified sensor to enter the detailed information page, and you can choose to display the value of 24h or a week.
 
-Double-click the .exe file to enter the main interface of the tool.
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
 
-**Chip Type**: ESP32-S3
 
-**WorkMode**: Develop
-
-**LoadMode**: UART
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_19.png"/></div>
-
-- **Step 4**: SPI Download Tab Configure
-
-Click "..." and select the "indicator_terminal_demo.bin" file in the [SDK](https://github.com/Seeed-Solution/sensecap_indicator_esp32) to configure the loading path.
-
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_20.png"/></div>
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_21.png"/></div>
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_22.png"/></div>
-
-
-
-- **Step 5**: SPI Flash Configure
-
-**SPI SPEED**: 40MHz
-
-**SPI MODE**: DIO
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_22.png"/></div>
-
-
-- **Step 6**: Download Panel Configure
-
-**COM**:  Check the ports on your Device Manage, the USB-SERIAL is the correct one.
-
-**Baud**: 921600(recommended value）
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_23.png"/></div>
-
-- **Step 6**: Start Downloading
-
-Then click "START" to start the downloading.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_24.png"/></div>
-
-When it shows "FINISH", the flash has been completed.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_25.png"/></div>
-
-
-
-### **Flash by IDF**
-
-For Linux and MacOS: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/linux-macos-setup.html)
-
-For Windows: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/windows-setup.html)
-
-
-There is "indicator_terminal_demo.bin" firmware (allinone ) in the [SDK](https://github.com/Seeed-Solution/sensecap_indicator_esp32) . you can flash it by IDF.
-
-```
-cd  <sdk>/examples/factory/
-esptool.py write_flash 0x0 indicator_terminal_demo.bin
-```
-
-also you can build, flash and monitor the project.
-```
-cd  <sdk>/examples/terminal_demo/
-idf.py -p PORT build flash monitor
-```
-
-
-
-
-## **RP2040 Firmware Flashing**
-
-### **Flash by .uf2 file**
-- **Step 1**: Connect the device to your PC
-
-Long press this internal button, then connect the device to your PC by the provided USB type-C cable, release the button once connected.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_26.png"/></div>
-
-- **Step 2**: Firmware Flash
-
-After the connection is successful, your PC will show a disk.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_27.png"/></div>
-
-Copy the .uf2 file in the firmware package to the disk, then the disk will log out.
-
-The upgrade will run automatically.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_28.png"/></div>
-
-### **Flash by Arduino IDE**
-- **Step 1**: Install Arduino IDE
-
-[Arduino IDE](https://www.arduino.cc/en/software)
-
-- **Step 2**: Add the Raspberry Pi Pico Board
-
-Open your Arduino IDE, click on **Arduino** > **Settings**, and copy the below URL to **Additional Boards Manager URLs**:
-
-`https://github.com/earlephilhower/arduino-pico/releases/download/global/package\_rp2040\_index.json`
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_29.png"/></div>
-
-Click on **Tools** > **Board** > **Board Manager**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_30.png"/></div>
-
-Search and install "Raspberry Pi Pico/RP2040" in the Boards Manager
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_31.png"/></div>
-
-- **Step 3**: Add Libraries
-
-Download these libraries we need:
-
-[Serial communication protocol](https://github.com/bakercp/PacketSerial)
-
-[SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
-
-[Transfer index library: Sensirion Gas Index Algorithm](https://github.com/Sensirion/arduino-gas-index-algorithm)
-
-[SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
-
-[AHT20 temperature and humidity sensor library](https://github.com/adafruit/Adafruit_AHTX0)
-
-[Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core/)
-
-Navigate to **Sketch** -> **Include Library** -> **Add .ZIP Library**, then select the libraries you download.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_32.png"/></div>
-
-- **Step 4**: Connect the device to your PC with the provided USB Typc-C cable.
-
-- **Step 5**: Select the board
-
-**Tools** > **Board** > **Raspberry Pi PR2040 Boards** > **Raspberry Pi Pico**
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_33.png"/></div>
-
-Port: Select the "usbmodem" one
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_34.png"/></div>
-
-- **Step 6**: Open the example code file
-
-**File** > **Open**, then select the example code file (.ino file).
-
-We provide an example code file, you can modify the code according to your needs.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_35.png"/></div>
-
-- **Step 7**: Verify and Upload the file.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_36.png"/></div>
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_37.png"/></div>
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_38.png"/></div>
-
-## **Communication protocol**
-Esp32 and rp2040 use serial port communication, using the [cobs](http://www.stuartcheshire.org/papers/COBSforToN.pdf) communication protocol. The list of commands used in the demo is as follows:
-
-The command format consists of the packet type and packet parameters.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_41.png"/></div>
-
-## **Resource**
-
-
-IDF downloard: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/linux-macos-setup.html)
-
-`                            `[Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/windows-setup.html)
-
-SenseCAP Indicator SDK：[SenseCAP Indicator SDK](https://github.com/Seeed-Solution/sensecap_indicator_esp32.git)
-
-
-## **FAQ**
-**How to distinguish the serial port？**
-
-**For Windows:**
-
-Check the port on your Device Manage
-
-"USB串行设备" is for RP2040
-"USB-SERIAL" is for ESP32
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
-
-**For Mac:**
-
-"/dev/cu.usbmodem" is for RP2040
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
-
-## **Tech Support**
-
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
 

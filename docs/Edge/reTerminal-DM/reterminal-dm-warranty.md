@@ -17,11 +17,16 @@ last_update:
 3. The products to be repaired shall be properly packaged and transported, and the customer shall be responsible for any loss or damage during transportation.
 4. During the warranty period, the freight and maintenance costs arising from product quality failures shall be borne by the Company. If the warranty period exceeds 24 months，The company will charge the cost of replacing parts according to the product failure, and the freight is borne by the user.
 5. During the free warranty period, in case of any of the following events, the Company has the right to refuse service or charge materials and service fees at its discretion.
-• Product failure or damage caused by improper use by users.
-• The product label is damaged and the product information cannot be identified.
-• Damage not caused by the company's repair.
-• Other unavoidable external factors cause product failure and damage.
-1. Note: The above warranty regulations are only applicable to the above Seeed Studio reTerminal DM, other products are not applicable!
+
+    • Product failure or damage caused by improper use by users.
+
+    • The product label is damaged and the product information cannot be identified. 
+
+    • Even within the warranty period, if the product has functional issues or is difficult to repair due to improper customer use, unauthorized disassembly or modification, poor operating environment, improper maintenance, accidents or other reasons. Seeed Studio reserves the right to make judgments on the above situations and collect maintenance fees.
+
+    • Other unavoidable external factors cause product failure and damage.
+
+6. Note: The above warranty regulations are only applicable to the above Seeed Studio reTerminal DM, other products are not applicable!
 
 ## Tech Support
 

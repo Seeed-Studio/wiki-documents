@@ -133,7 +133,7 @@ The PSRAM of ESP32 refers to the external PSRAM (Pseudo Static Random Access Mem
 
 3. Storage buffers: For applications that require large buffers, such as network buffers, audio buffers, etc., PSRAM can provide enough storage space to avoid out-of-memory situations.
 
-For the content of this tutorial, you **need to turn on the PARAM function** of the Arduino IDE to ensure that the camera works properly.
+For the content of this tutorial, you **need to turn on the PSRAM function** of the Arduino IDE to ensure that the camera works properly.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/94.png" style={{width:700, height:'auto'}}/></div>
 

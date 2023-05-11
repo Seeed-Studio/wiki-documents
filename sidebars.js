@@ -589,6 +589,10 @@ const sidebars = {
           label: 'SenseCAP Indicator',
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator',
+            'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Dive_into_Hardware',
+            'Sensor/SenseCAP/SenseCAP_Indicator/ESP32-S3R8_Overview',
+            'Sensor/SenseCAP/SenseCAP_Indicator/RP2040_Overview',
           ],
         },
         {
