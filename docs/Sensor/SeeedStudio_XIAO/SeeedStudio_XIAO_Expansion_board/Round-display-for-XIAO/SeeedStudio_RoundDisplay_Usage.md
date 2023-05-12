@@ -233,6 +233,23 @@ If you want to use the functions inside this header file, you can copy the file 
 
 2. `void lv_hardware_test(void)`: This function is used to test all hardware functions, including screen display, screen touch, RTC clock and battery level. You can refer to this function writing method to complete the development of the Round Display function you want.
 
+## KE Button & GPIO
+
+On the new version of the Round Display, we have designed a KE switch to selectively release certain GPIOs for selective use by the user.
+
+The KE switch is designed in the middle of the microSD card slot and the row of pins that connect to the XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/90.jpg" style={{width:400, height:'auto'}}/></div>
+
+The circuit design for this switch is shown below.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/91.png" style={{width:400, height:'auto'}}/></div>
+
+This means that when the switch is closed **(toggled to the ON side)** then the Round Display's battery voltage reading function and display backlight function become available.
+
+When the switch is disconnected **(toggled to the digital side)**, then pins A0 and D6 on the XIAO are the available states.
+
+
 
 ## Measure battery voltage
 
