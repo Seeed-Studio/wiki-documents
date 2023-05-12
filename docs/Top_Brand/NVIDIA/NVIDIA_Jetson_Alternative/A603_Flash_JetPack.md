@@ -153,7 +153,7 @@ sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop -
 cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
-  --showlogs --network usb0 jetson-orin-nano-devkit internal
+  --showlogs --network usb0 p3509-a02+p3767-0000 internal
 ```
 
 #### USB Flash drive
@@ -162,7 +162,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
-  --showlogs --network usb0 jetson-orin-nano-devkit internal
+  --showlogs --network usb0 p3509-a02+p3767-0000 internal
 ```
 
 You will see the following output if the flashing process is successful
