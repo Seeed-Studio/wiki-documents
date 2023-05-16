@@ -707,21 +707,7 @@ const sidebars = {
 
     },
 
-    {
 
-      type: 'category',
-      label: 'mmWave radar sensor',
-      items: [
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
-        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
-      ],
-
-    },
 
     {
       type: 'category',
@@ -1188,7 +1174,21 @@ const sidebars = {
 
     },
 
+    {
 
+      type: 'category',
+      label: 'mmWave radar sensor',
+      items: [
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
+        'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
+        'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
+        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
+      ],
+
+    },
 
     {
 

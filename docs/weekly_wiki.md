@@ -31,7 +31,7 @@ In this wiki, we will show you how to flash Jetpack to an NVMe SSD connected to 
 
 In this wiki, we will show you how to flash Jetpack to an NVMe SSD and a USB Flash drive connected to the A603 Carrier Board which supports both NVIDIA Jetson Orin NX module and NVIDIA Jetson Orin Nano module.
 
-### [Get Started with SenseCAP Indicator (ESP32S3&RP2040 4-Inch Touch Screen)](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png)
+### [Get Started with SenseCAP Indicator (ESP32S3&RP2040 4-Inch Touch Screen)](Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png" /></div>
 
