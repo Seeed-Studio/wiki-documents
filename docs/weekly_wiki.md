@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 04/17/2023
+  date: 05/15/2023
   author: Matthew
 ---
 
@@ -15,51 +15,68 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is April 17th and a brand new week has begun! Check out what Seeed did last week!
+Today is May 15th and a brand new week has begun! Check out what Seeed did last week!
 
 ## Latest Wiki Launched
 
-### [Flash JetPack OS to A607 Carrier Board](https://wiki.seeedstudio.com/reComputer_A607_Flash_System/)
+### [Use of the Seeed Studio Round Display extension](/seeedstudio_round_display_usage)
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A607/1.png" /></div>
+This tutorial will explain in detail how to use the extended functions on the Round Display, including the use of the **RTC function**, **SD card function**, and **screen function**.
 
-In this wiki, we will show you how to flash Jetpack to an NVMe SSD connected to the A607 Carrier Board which supports both NVIDIA Jetson Orin NX module and NVIDIA Jetson Orin Nano module.
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/round_display_for_xiao/75.gif" /></div>
 
-### [Flash JetPack OS to A603 Carrier Board](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/)
+### [reTerminal DM Flash Raspbian OS to eMMC](/reterminal-dm-flash-OS)
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A603/1.jpg" /></div>
+This is the wiki about flashing Raspbian OS to reTerminal DM.
 
-In this wiki, we will show you how to flash Jetpack to an NVMe SSD and a USB Flash drive connected to the A603 Carrier Board which supports both NVIDIA Jetson Orin NX module and NVIDIA Jetson Orin Nano module.
+<div align="center"><img width={1000} src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" /></div>
 
-### [Get Started with SenseCAP Indicator (ESP32S3&RP2040 4-Inch Touch Screen)](Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)
+### [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png" /></div>
+This is the brief info about RS485, Modbus, Modbus RTU and Modbus Node-RED Node, operating with Node-RED.
 
-SenseCAP Indicator is a 4-inch touch screen driven by ESP32 and RP2040 dual-MCU and supports Bluetooth/Wi-Fi/LoRa communication.
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-results.png" /></div>
 
-The board comes with Type C and Grove interfaces, supports ADC and IIC transmission protocols, and can easily connect to other peripherals with rich GPIOs.
+### [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
 
-SenseCAP Indicator is a fully open source powerful IoT development platform for developers. One-stop ODM Fusion service is also available for customization and quick scale-up.
+This is the wiki including on how to install local MQTT Broker on reTerminal DM and then utilising the MQTT Broker for sending and receiving messages, operating with Node-RED.
 
-### [Camera Usage in Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-result-mqtt.png" /></div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" /></div>
+### [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
 
-In this tutorial, we will walk you through using the camera module on the XIAO ESP32S3 Sense. This tutorial is divided into the following parts, first, we will explain the camera function provided by ESP32 and its functions. Secondly, we will bring you how to use the camera in two dimensions: taking pictures and recording videos, and finally, we will create some interesting projects around taking pictures and recording videos.
+This wiki shows you how to use a CAN bus interface device that connects to the reTerminal DM CAN BUS port, allowing you to send and receive messages on the network, operating with Node-RED
 
-### [reTerminal DM Getting Started](https://wiki.seeedstudio.com/reterminal-dm/)
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/Host-receive.png" /></div>
 
-<div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" /></div>
+### [reTerminal DM Warranty](/reterminal-dm-warranty)
 
-reTerminal DM is A 10.1" open-source industrial HMI - an Integrated Device Master to unify data flow and manage the onsite device.
+### [Grove -Smart Air Quality Sensor (SGP41)](/grove-smart-air-quality-sensor-sgp41)
 
-We will update this wiki for you getting started very soon.
+This is the wiki about getting started with Grove -Smart Air Quality Sensor (SGP41).
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-SGP41/1.jpg" /></div>
+
+### [The QSPI Flash Usage on Seeed Studio XIAO nRF52840 Sense](/xiao-ble-qspi-flash-usage)
+
+In this tutorial, you will learn how to utilize the QSPI Flash on XIAO boards, which can greatly expand the storage capacity and speed up your projects.
+
 
 ## Existed Wiki Updated
 
-### [Save recorded sound to microSD card](https://wiki.seeedstudio.com/XIAO_ESP32S3_Sense_mic#save-recorded-sound-to-microsd-card)
+### [Pin Multiplexing on Seeed Studio XIAO ESP32C3](XIAO_ESP32C3_Pin_Multiplexing#note-on-xiao-esp32c3-io-allocation)
 
-In this next project, we will guide you how to combine the functions of the microSD card and save the recorded sound to the microSD card. Then for this project, please prepare the microSD card and format it to FAT32 format in advance.
+There something you should know about the pin D9 and D6 on Seeed Studio XIAO ESP32C3.
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" /></div>
+
+### [Resources release about Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#resources)
+
+We have updated the release files about Seeed Studio XIAO ESP32S3, the Eagle footprint and KiCAD libraries.
+
+### [Jetson AI Developer Tools](/Jetson-AI-developer-tools)
+
+We have updated the some Jetson AI Developer Tools for you better getting started with NVIDIA Jetson.
 
 ## Past Weekly wiki
 
@@ -71,3 +88,4 @@ In this next project, we will guide you how to combine the functions of the micr
 - [weekly wiki on 4.03rd](/Seeed_Elderly/weekly_wiki/wiki403)
 - [weekly wiki on 4.10th](/Seeed_Elderly/weekly_wiki/wiki410)
 - [weekly wiki on 4.17th](/Seeed_Elderly/weekly_wiki/wiki417)
+- [weekly wiki on 4.24th](/Seeed_Elderly/weekly_wiki/wiki424)
