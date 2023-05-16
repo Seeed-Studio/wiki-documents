@@ -413,6 +413,7 @@ sudo -i
 echo 0 > /sys/class/leds/usr-led/brightness
 echo 1 > /sys/class/leds/usr-led/brightness
 ```
+You should see the USER LED light up with red color.
 
 ### Light Sensor
 
@@ -777,7 +778,56 @@ to the GND_ISO pin
 :::
 
 To test and interface with CAN bus:
+Please connect the USB to CAN adapter like shown in the image below:
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" /></div>
+
+- STEP 1: Install the CAN-utils
+ 
+```sh
+sudo apt install can-utils
+```
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image4.jpg" /></div>
+
+CAN-utils is a collection of extremely useful debugging tools using the CAN interface. It includes applications such as:
+
+* candump – Dump can packets – display, filter and log to disk.
+* canplayer – Replay CAN log files.
+* cansend – Send a single frame.
+* cangen – Generate random traffic.
+* canbusload – display the current CAN bus **utilisation**
+
+CAN-utils source can be obtained from the [GitHub repository](https://github.com/linux-can/can-utils).
+
+- STEP 2: Setup CAN interface using the following command:
+  
+```sh
+sudo ip link set can0 up type can bitrate 500000
+sudo ifconfig can0 txqueuelen 1000
+sudo ip link set can0 up
+```
+
+- STEP 3: Download the testing code to reTerminal DM by using git
+
+```sh
+git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
+
+```
+- STEP 4: Compiles and runs the code that sends the data:
+
+```sh
+cd Seeed_reTerminal_Bridge_CAN_exmaple/
+gcc cantransmit.c -o cantransmit
+
+```
+on you Linux host computer or another reTerminal DM, you can compiles and runs the code that receives the data.
+
+```sh
+gcc canreceive.c -o canreceive
+```
+you can see the results, the image below is done by using the two reTerminal DM:
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image8.jpg" /></div>
 
 ### USB
 
@@ -791,7 +841,7 @@ There are two times of USB 2.0 Type-A ports, which you can connect USB devices s
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/usb-c.png" /></div>
 
-USB Type-C is a USB 2.0 port used for serial debugging or flashing OS image depends on the boot switch position. For flashing OS please refer to [Flashing OS WiKi page](/reterminal-dm-flash-OS)
+USB Type-C is a USB 2.0 port used for serial debugging or flashing OS image depends on the boot switch position. For flashing OS please refer to [Flashing OS Wiki page](/reterminal-dm-flash-OS)
 
 ### SIM Card Slot
 
@@ -814,37 +864,347 @@ There is a Mini Push Button Switch located in the reset hole of reTerminal DM. B
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/audio-jack.png" /></div>
 
+reTerminal DM has a 3.5mm headphone jack, which supports sound output, and can be connected to external headphones, speakers, etc. 
+
+:::note
+The headphone jack only supports sound output and does not support the microphone recording function.
+:::
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/audio-power.png" /></div>
+
 
 ### HDMI
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/hdmi.png" /></div>
 
+The reTerminal DM features a native HDMI interface from CM4, supporting up to 4K @ 60 fps video output. It is ideal for applications that require multiple displays, allowing users to output their content to external large screens.
 
 ### Ethernet RJ45
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RJ45.png" /></div>
 
+The reTerminal DM comes with a CM4 native Gigabit Ethernet interface that supports three different speeds: 10/100/1000 Mbit/s. An additional PoE module can be purchased to enable power-over-Ethernet (PoE) delivery through this interface, providing power to the reTerminal DM.
+
 ### Internal Interface
 
 #### 40-Pin GPIO
 
+The classic Raspberry Pi 40-pin GPIO design is retained inside the reTerminal DM, and the pin dentition remains the same as the Raspberry Pi 4B. Users need to open the back cover to use these GPIOs, It should be noted that due to the limited resources of CM4 IO, the 40-pin GPIO and many peripheral interfaces are multiplexed, so you need to pay special attention to the conﬂict when using GPIOs. For detailed pin assignment information, please refer to the following table.
+
+<div class="table-center">
+
+<div>
+  <style type="text/css" dangerouslySetInnerHTML={{__html: "\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}\n.tg .tg-3z1b{border-color:#000000;text-align:right;vertical-align:top}\n.tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}\n.tg .tg-tynx{background-color:#8fc31f;border-color:#000000;color:#000000;font-weight:bold;text-align:center;vertical-align:top}\n.tg .tg-xwyw{border-color:#000000;text-align:center;vertical-align:middle}\n.tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}\n.tg .tg-0a7q{border-color:#000000;text-align:left;vertical-align:middle}\n.tg .tg-8o2n{border-color:#000000;text-align:right;vertical-align:middle}\n" }} />
+  <table className="tg">
+    <thead>
+      <tr>
+        <th className="tg-tynx">Description</th>
+        <th className="tg-tynx">Pin multiplexing</th>
+        <th className="tg-tynx" />
+        <th className="tg-tynx" />
+        <th className="tg-tynx" />
+        <th className="tg-tynx">Pin multiplexing</th>
+        <th className="tg-tynx">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="tg-3z1b">Pin 1</td>
+        <td className="tg-3z1b" />
+        <td className="tg-wp8o">3V3</td>
+        <td className="tg-xwyw" rowSpan={20}>40 PIN<br />GPIO</td>
+        <td className="tg-wp8o">5V</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b">I2C1_SDA</td>
+        <td className="tg-wp8o">GPIO 2</td>
+        <td className="tg-wp8o">5V</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b">I2C1_SCL</td>
+        <td className="tg-wp8o">GPIO 3</td>
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b">I2C3_SDA</td>
+        <td className="tg-wp8o">GPIO 4</td>
+        <td className="tg-wp8o">GPIO 14</td>
+        <td className="tg-73oq">UART0_TXD</td>
+        <td className="tg-0a7q" rowSpan={2}>USB Type C</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b" />
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-wp8o">GPIO 15</td>
+        <td className="tg-73oq">UART0_RXD</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b">Block Terminal DI2</td>
+        <td className="tg-3z1b">DI2</td>
+        <td className="tg-wp8o">GPIO 17</td>
+        <td className="tg-wp8o">GPIO 18</td>
+        <td className="tg-73oq">PCM_CLK</td>
+        <td className="tg-73oq">3.5mm audio jack</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b">Interrupt pins for screen touch</td>
+        <td className="tg-3z1b">TP_INT</td>
+        <td className="tg-wp8o">GPIO 27</td>
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b">Block Terminal DI3</td>
+        <td className="tg-3z1b">DI3</td>
+        <td className="tg-wp8o">GPIO 22</td>
+        <td className="tg-wp8o">GPIO 23</td>
+        <td className="tg-73oq">DI4</td>
+        <td className="tg-73oq">Block Terminal DI4</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b" />
+        <td className="tg-wp8o">3V3<br /></td>
+        <td className="tg-wp8o">GPIO 24</td>
+        <td className="tg-73oq">DO1</td>
+        <td className="tg-73oq">Block Terminal DO1</td>
+      </tr>
+      <tr>
+        <td className="tg-8o2n" rowSpan={3}>CAN and LoRa® module</td>
+        <td className="tg-3z1b">SPI0_MOSI</td>
+        <td className="tg-wp8o">GPIO 10</td>
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b">SPI0_MISO</td>
+        <td className="tg-wp8o">GPIO 9</td>
+        <td className="tg-wp8o">GPIO 25</td>
+        <td className="tg-73oq">DO2</td>
+        <td className="tg-73oq">Block Terminal DO2</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b">SPI0_SCLK</td>
+        <td className="tg-wp8o">GPIO 11</td>
+        <td className="tg-wp8o">GPIO 8</td>
+        <td className="tg-73oq">SPI0_CE0</td>
+        <td className="tg-73oq">SPI enable pins for CAN</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b" />
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-wp8o">GPIO 7</td>
+        <td className="tg-73oq">SPI0_CE1</td>
+        <td className="tg-73oq">SPI enable pins for LoRa®</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b" />
+        <td className="tg-wp8o">ID_SD</td>
+        <td className="tg-wp8o">ID_SC</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b">I2C_SCL</td>
+        <td className="tg-wp8o">GPIO 5</td>
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b">Block Terminal DO4</td>
+        <td className="tg-3z1b">DO4</td>
+        <td className="tg-wp8o">GPIO 6</td>
+        <td className="tg-wp8o">GPIO 12</td>
+        <td className="tg-73oq">CAN_INT</td>
+        <td className="tg-73oq">Interrupt pins for CAN</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b">LCD backlight control pins</td>
+        <td className="tg-3z1b">LCD_PWM</td>
+        <td className="tg-wp8o">GPIO 13</td>
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-73oq" />
+        <td className="tg-73oq" />
+      </tr>
+      <tr>
+        <td className="tg-3z1b">3.5mm audio jack</td>
+        <td className="tg-3z1b">PCM_FS</td>
+        <td className="tg-wp8o">GPIO 19</td>
+        <td className="tg-wp8o">GPIO 16</td>
+        <td className="tg-73oq">DI1</td>
+        <td className="tg-73oq">Block Terminal DI1</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b">Block Terminal DO3</td>
+        <td className="tg-3z1b">DO3</td>
+        <td className="tg-wp8o">GPIO 26</td>
+        <td className="tg-wp8o">GPIO 20</td>
+        <td className="tg-73oq">PCM_DIN</td>
+        <td className="tg-73oq">3.5mm audio jack</td>
+      </tr>
+      <tr>
+        <td className="tg-3z1b" />
+        <td className="tg-3z1b" />
+        <td className="tg-wp8o">GND</td>
+        <td className="tg-wp8o">GPIO 21</td>
+        <td className="tg-73oq">PCM_DOUT</td>
+        <td className="tg-73oq">3.5mm audio jack</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
 
 #### RTC
 
+The reTerminal DM features an RTC circuit that comes pre-installed with a CR2032 battery, enabling it to maintain timekeeping functionality even in the event of power loss.
+
+Use the following command to change the hardware clock with current system clock
+
+```sh
+sudo hwclock --systohc
+
+```
+
+Use the following command to change the system clock with current hardware clock
+
+```sh
+sudo hwclock --hctosys
+
+```
+To veiw the current hardware clock
+
+```sh
+sudo hwclock -r 
+```
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RTC.png" /></div>
+
+
 #### Watchdog
+
+The reTerminal DM comes equipped with an independent hardware watchdog circuit that ensures automatic system reboot in case of abnormal system crashes. The watchdog circuit is implemented through RTC and allows for ﬂexible feeding times from 1 to 255 seconds.
+
+To configure the watchdog timeout time in watchdog.conf, please follow these steps:
+
+STEP 1: Open the watchdog.conf file for editing, usually located at /etc/watchdog.conf.
+
+```sh
+sudo nano /etc/watchdog.conf
+```
+STEP 2: Look for the "watchdog-device" and "watchdog-timeout" configuration options under the `/etc/watchdog.conf`, please set as following.
+
+:::note
+you might experience instant restart when `watchdog-timeout` option is set under `60`, to utilise the Hardware watchdog you need to config the  `watchdog-device` as `/dev/watchdog1`, where the default config without `1` is utilising the Broadcom watchdog device.
+:::
+
+```sh
+
+# Uncomment this to use the watchdog device driver access "file".
+
+watchdog-device		= /dev/watchdog1
+
+# Uncomment and edit this line for hardware timeout values that differ
+# from the default of one minute.
+
+watchdog-timeout	= 60
+
+
+```
+
+For example, if you want to set the watchdog timeout time to 60 seconds, you can set the value of `watchdog-timeout` to `60`, which means that if the watchdog does not receive a reset signal within 60 seconds, it will trigger an automatic reboot operation, assuming the system has crashed.
+
+:::warning
+you can test if the watchdog is active with following command, where these command will put system in halt please be carefull on proferm the follow commands:
+```sh
+sudo su
+echo 1 > /proc/sys/kernel/sysrq
+echo "c" > /proc/sysrq-trigger
+```
+Now your reTerminal DM should have rebooted after the time you have set to the watchdog-timeout
+:::
 
 #### Backlight
 
-There are 16 steps of brightness you can set to the backlight, from 0 is switch off to 15 is the maximum brightness.
+There are 6 steps of brightness you can set to the backlight, from 0 is switch off to 5 is the maximum brightness.
 You could interface on controlling the brightness by using following commands.
 
 ```sh
 sudo -i
 
-echo 0 > /sys/class/leds/usr-led/brightness
-echo 1 > /sys/class/leds/usr-led/brightness
-echo 15 > /sys/class/leds/usr-led/brightness
+echo 0 > /sys/class/backlight/lcd_backlight/brightness
+echo 1 > /sys/class/backlight/lcd_backlight/brightness
+echo 5 > /sys/class/backlight/lcd_backlight/brightness
 ```
+
+### Add-on
+
+#### Camera
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/Camera.png" /></div>
+
+The CSI camera interface is reserved on the reTerminal DM mainboard, which can be customized to support camera functions. Please note that due to the limited space on the front panel, only small-sized cameras can be used. The currently rigorously tested solution uses the Raspberry Pi camera V2.0 driver board + Seeed customized camera IMX219-77.
+
+<div class="table-center">
+
+| Connector | Connector Type | Pin Pitch | Lane | FPC Orientation |
+|  ---      |  ---           |   ---     |  --- | --- |
+| CSI0      | 15-pin FPC     | 1mm       | 2    | Gold ﬁngers facing downwards |
+| CSI1      | 22-pin FPC     | 0.5mm     | 4    | Gold ﬁngers facing upwards |
+
+</div>
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/camera_version.png" /></div>
+
+:::note
+Please note that the standard version of the reTerminal DM does not come with a camera opening on the front panel, therefore, the camera functionality is not available for the standard product. If you have a customized camera requirement, please contact odm@seeed.cc
+:::
+
+#### PCIe Expansion Card
+
+The reTerminal DM features a PCIe interface that is derived from the CM4, which supports PCIe 2.0 and theoretically provides a maximum transmission speed of 5Gbps. This allows for the expansion of various high-speed interfaces such as Gigabit Ethernet and NVMe SSD. We have developed multiple expansion cards based on PCIe, USB, and I2C interfaces to meet different scenario requirements. This also facilitates customization needs.
+
+:::note
+Please note that the standard product does not include a PCIe expansion card by default. Seeed can provide assembly services for batch customization orders.
+:::
+
+#### POE
+
+The reTerminal DM can support the IEEE 802.3af PD(Powered Devices) standard by adding a PoE power supply module.
+
+:::note
+The reTerminal DM supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to solder and assemble the PoE module themselves.
+:::
+
+#### SSD
+
+The reTerminal DM supports 2280 NVMe SSD through the use of a PCIe expansion card. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 210MB/s and a maximum read speed of 360MB/s. If you are unsure which SSDs are compatible, you can purchase the 112990247, 512GB NVMe M.2 PCle Gen3x4 2280 SSD from Seeed's ofﬁcial website.
+
+:::note
+The standard version of the reTerminal DM does not support SSD and requires the purchase of a PCIe expansion card to enable this feature.
+:::
+
+
+# Addition Material
+
+* 
 
 
 Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
