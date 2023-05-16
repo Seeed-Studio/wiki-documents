@@ -42,13 +42,13 @@ We also provide methods for you can **modify existed files** and **add new files
     </tr>
   </tbody></table>
 
-## Modify Existed Files Locally
+## Step by Step Modify Files
 
 Before modifying the existed files, please make sure you can [build the wiki platform page locally](/Deploy_Page_Locally)
 
 ### 1. Bring your forked branch up to date
 
-(image1)
+![image1](./1.png)
 
 ### 2. Update the downloaded files
 
@@ -59,4 +59,46 @@ git pull
 
 ### 3. Modify the contents of existed files
 
-All the files on the wiki platform are stored in the "docs" folder
+All the files on the wiki platform are stored in the "docs" folder.
+
+![image2](./2.png)
+
+And the name of file you want to change usually is the last part of the url(take Seeed Studio XIAO ESP32C3 as an example).
+
+![image3](./3.png)
+
+Once you done updating, you can use the command below to see whether it shows fine.
+
+```
+yarn start
+```
+
+On the edit platform:
+
+![image4](./4.png)
+
+On the local page:
+
+![image5](./5.png)
+
+### 4. Save and push the changes to your forked github repository
+
+If all is ok, you can use the command below to push the changes to your forked github repository.
+
+```
+git add "the files that you changed"
+git commit -m "Update：I have updated ..."
+git push
+```
+
+### 5. Pull request to the Seeed Studio Repository
+
+Once you have pushed the changes to your github repository, there is a column showing up automatically. Click the "Compare & Pull Request" button:
+
+![image6](./6.png)
+
+Show us what you have edited and click "creat pull request" button to us.
+
+![image7](./7.png)
+
+Thank you for your contributions!
