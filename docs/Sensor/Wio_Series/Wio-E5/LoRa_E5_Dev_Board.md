@@ -198,6 +198,9 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 ## Getting Started
 
+Thanks for [Sammy Carbajal](https://github.com/scarbajali)'s point, it is required to install the USB driver for CP201x from [SILICON LABS](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) before using the board.
+
+
 ###  Quick start of AT Commands
 
 #### Preparation
