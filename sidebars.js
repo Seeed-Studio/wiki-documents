@@ -2063,7 +2063,7 @@ const sidebars = {
         'Edge/reTerminal/reTerminal',
         'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
         'Edge/reTerminal/reTerminal-FAQ',
-        'Edge/reTerminal/Application/reTerminal-piCam',
+        'Edge/reTerminal/reTerminal-piCam',
         {
           type: 'category',
           label: 'Application',
