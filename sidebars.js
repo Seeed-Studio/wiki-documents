@@ -2073,6 +2073,7 @@ const sidebars = {
             'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
             'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
             'Edge/reTerminal/Application/Mender-Client-reTerminal',
+            'Edge/reTerminal/Application/reTerminal-piCam',
             {
               type: 'category',
               label: 'Home Assistant',
