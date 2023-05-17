@@ -367,6 +367,7 @@ const sidebars = {
               type: 'category',
               label: 'NFC',
               items: [
+                'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC(ST25)',
                 'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC',
                 'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC_Tag',
               ]
