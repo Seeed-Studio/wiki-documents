@@ -31,16 +31,6 @@ In this wiki, we will show you how to flash Jetpack to an NVMe SSD connected to 
 
 In this wiki, we will show you how to flash Jetpack to an NVMe SSD and a USB Flash drive connected to the A603 Carrier Board which supports both NVIDIA Jetson Orin NX module and NVIDIA Jetson Orin Nano module.
 
-### [Get Started with SenseCAP Indicator (ESP32S3&RP2040 4-Inch Touch Screen)](Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png" /></div>
-
-SenseCAP Indicator is a 4-inch touch screen driven by ESP32 and RP2040 dual-MCU and supports Bluetooth/Wi-Fi/LoRa communication.
-
-The board comes with Type C and Grove interfaces, supports ADC and IIC transmission protocols, and can easily connect to other peripherals with rich GPIOs.
-
-SenseCAP Indicator is a fully open source powerful IoT development platform for developers. One-stop ODM Fusion service is also available for customization and quick scale-up.
-
 ### [Camera Usage in Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" /></div>
