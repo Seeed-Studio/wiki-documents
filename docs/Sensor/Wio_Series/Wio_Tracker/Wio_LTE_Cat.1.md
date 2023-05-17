@@ -354,6 +354,12 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 
 - Step 1. Install Arduino IDE, recommand IDE version upon 1.8.0.
 - Step 2. Follow [How to Add Seeed boards to Arduino IDE](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) to add Wio_LTE into arduino board manager.
+
+:::note
+Hi, the board of "Wio LTE Cat.1" is stored in "Seeed SAMD Boards" package like "Wio Terminal". You can refer to [here](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started#software) to install the package.
+![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/addBoard.png)
+:::
+
 - Step 3. Download the [Wio_LTE Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library) from Github.
 - Step 4. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
