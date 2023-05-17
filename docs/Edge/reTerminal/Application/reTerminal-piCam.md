@@ -6,7 +6,7 @@ keywords:
   - reTerminal 
   - piCamera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reTerminal
+slug: /reTerminal-piCam
 last_update:
   date: 5/17/2023
   author: Kasun Thushara
