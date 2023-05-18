@@ -79,7 +79,7 @@ Please make sure the `RX pin` from `USB to RS485/RS232` is connected to the `RT 
 
 #### Final Result
 
-Congratulations, you have successfully experienced and learnt how to use RS232 on reTerminal DM with node-RED now, your final results should be similar as the image shown below
+Congratulations, you have successfully experienced and learned how to use RS232 on reTerminal DM with node-RED now, your final results should be similar as the image shown below
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-results.png" /></div>
 
