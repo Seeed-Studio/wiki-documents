@@ -35,6 +35,16 @@ Here are the specifications for each version of the PiCam:
 - Resolution: 12.3 megapixels (4056 x 3040 pixels)
 - Video Modes: 1080p30, 720p60, 640x480p90
 
+| Raspberry Pi Camera Module V1|Raspberry Pi Camera Module V2| Raspberry Pi Camera Module 3 |
+|----------|---------------------|--------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/pi_cam3.jpg)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-p-1659.html?queryID=9e37f656a0eb0086c424e93bcfffadf4&objectID=1242&indexName=bazaar_retailer_products)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-V2.html)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-p-5574.html?queryID=11243e5e9f95c4f4f0716b229dd8dcf0&objectID=5574&indexName=bazaar_retailer_products)|
+
+|Raspberry Pi Camera Module 3 Wide NoIR | Raspberry Pi Camera Module 3 NoIR | Raspberry Pi Camera Module 3 Wide |
+|----------|---------------------|--------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picamWN.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picamnoir.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam3w.jpg)|
+|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-Wide-NoIR-p-5577.html?queryID=f7e448b5e2e91156540a55c164fe9806&objectID=5577&indexName=bazaar_retailer_products)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-NoIR-p-5575.html?queryID=580ed0215d20c7d125b592090e007ba6&objectID=5575&indexName=bazaar_retailer_products)|[BUY ONE NOW!](https://www.seeedstudio.com/Raspberry-Pi-Camera-3-Wide-p-5576.html?queryID=b165ed9d2e2ff82f45003dbb7c921182&objectID=5576&indexName=bazaar_retailer_products)|
+
 All versions of the PiCam connect to the Raspberry Pi via the MIPI CSI-2 interface, providing a direct and high-speed connection for transmitting image and video data.
 
 The PiCam offers a range of features and capabilities that make it suitable for various applications, **including photography, videography, computer vision projects, surveillance, and more**. Its small form factor and easy integration with the Raspberry Pi make it a popular choice among hobbyists, makers, and professionals.
@@ -57,28 +67,30 @@ It's important to note that the pre-built images currently support **only the Pi
 
 
 
-- **Step 1** Visit the Seeed Studio wiki page dedicated to reTerminal and navigate to the section providing the pre-built images.( you can refer this link to get images and acknowledge installation procedure. if you have already done please skip this step.  https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)
-- **Step 2** 	Power off the reterminal and connect the PiCam v1 module to the camera interface on the reTerminal. Ensure it is securely attached.
+- **Step 1** Visit the Seeed Studio wiki page dedicated to reTerminal and navigate to the section providing the pre-built images.( you can refer this link to get images and acknowledge installation procedure. if you have already done please skip this step. [This Link](https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal))
+- **Step 2** 	Power off the reTerminal and connect the PiCam v1 module to the camera interface on the reTerminal. Ensure it is securely attached.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/reterminal_inside.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 3** Assemble the reTerminal and boot the reTerminal. Go to reTerminal icon which you can find in the desktop and enable camera and reboot. 
 
 - **Step 4** Open a terminal or SSH into the reTerminal to access the command line interface. 
-- **Step 5** Use the `raspistill` command to capture images. You can visit this site for more commands. https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3
+- **Step 5** Use the `raspistill` command to capture images. You can visit this site for more commands. [Link](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3)
 ```sh
 raspistill -o Desktop/image.jpg
 ``` 
 ## For fresh raspberry pi OS 
 
 We recommend Raspbian Bullseye 64-bit fresh image from raspberry pi official web-site for Seeed Studio reTerminal:
-- **Step 1** Seeed Studio provides detailed instructions on how to install the drivers after flashing a new Raspberry Pi OS or other OS. Refer to the Seeed Studio wiki page for reTerminal and follow the instructions provided in the "Flash new Raspberry Pi OS" section (https://wiki.seeedstudio.com/reTerminal#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) and "How to install reTerminal drivers"( section https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) If you already have done please skip this step.
+- **Step 1** Seeed Studio provides detailed instructions on how to install the drivers after flashing a new Raspberry Pi OS or other OS. Refer to the Seeed Studio wiki page for reTerminal and follow the instructions provided in the ["Flash new Raspberry Pi OS" ](https://wiki.seeedstudio.com/reTerminal#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) section and ["How to install reTerminal drivers"](https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) section If you already have done please skip this step.
 
-- **Step 2** Open a terminal or SSH into your reTerminal and execute the following command to edit the config.txt file:
+- **Step 2** Power off the reTerminal and connect the PiCam module to the camera interface on the reTerminal. Ensure it is securely attached.
+
+- **Step 3** Open a terminal or SSH into your reTerminal and execute the following command to edit the config.txt file:
 
 ```sh
 sudo nano /boot/config.txt 
 ``` 
-- **Step 3** Within the config.txt file, you need to make specific changes to enable the PiCam. Follow these steps:
+- **Step 4** Within the config.txt file, you need to make specific changes to enable the PiCam. Follow these steps:
 
     - Locate the line camera_auto_detect=1 and comment it out by adding a "#" at the beginning of the line. This step is necessary to disable the auto-detection of the camera module.
 
@@ -92,14 +104,14 @@ sudo nano /boot/config.txt
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/muxcam.PNG" alt="pir" width="600" height="auto"/></p>
 
-- **Step 4** : Save the changes made to the config.txt file by pressing Ctrl + X, followed by Y, and then Enter to confirm. Finally, reboot the ReTerminal to apply the modifications:
+- **Step 5** : Save the changes made to the config.txt file by pressing Ctrl + X, followed by Y, and then Enter to confirm. Finally, reboot the reTerminal to apply the modifications:
 
 ```sh
 sudo reboot
 ``` 
  After the reboot, the PiCam should be configured and ready to use with your Seeed Studio reTerminal. You can now proceed with capturing images or recording videos using the libcamera.
 
- - **Step 5** :Open the terminal and write following code to test everything is work. 
+ - **Step 6** :Open the terminal and write following code to test everything is work. 
 
 ```sh
 sudo libcamera-hello
@@ -107,7 +119,10 @@ sudo libcamera-hello
 libcamera-hello is the equivalent of a "hello world" application for the camera. It starts the camera, displays a preview window, and does nothing else.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/imx708.PNG" alt="pir" width="600" height="auto"/></p>
 
-you can refer the following documents for more details about libcamera  (https://www.raspberrypi.com/documentation/computers/camera_software.html ) 
+you can refer the following documents for more details about [libcamera](https://www.raspberrypi.com/documentation/computers/camera_software.html ) 
+
+
+
 
 
 
