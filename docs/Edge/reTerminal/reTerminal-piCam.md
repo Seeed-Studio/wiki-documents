@@ -30,9 +30,9 @@ Here are the specifications for each version of the PiCam:
 - Video Modes: 1080p30, 720p60, 640x480p90
 
 
-**PiCam v3 (Camera Module v3):**
-- Sensor: Sony IMX477
-- Resolution: 12.3 megapixels (4056 x 3040 pixels)
+**PiCam v3 (Camera Module 3):**
+- Sensor: Sony IMX708
+- Resolution: 12 megapixels (4056 x 3040 pixels)
 - Video Modes: 1080p30, 720p60, 640x480p90
 
 | Raspberry Pi Camera Module V1|Raspberry Pi Camera Module V2| Raspberry Pi Camera Module 3 |
@@ -98,9 +98,12 @@ sudo nano /boot/config.txt
         - dtoverlay=ov5647,cam0 
         - dtoverlay=camera-mux-2port 
 
-            :::note
-            If you are using PiCam v3 NoIR wide instead of PiCam v1, use **dtoverlay=imx708,cam0** instead of **dtoverlay=ov5647,cam0**. The dtoverlay configuration specifies the camera module being used and the camera multiplexer.
-            :::
+            
+:::note
+
+If you are using PiCam v3 NoIR wide instead of PiCam v1, use **dtoverlay=imx708,cam0** instead of **dtoverlay=ov5647,cam0**. The dtoverlay configuration specifies the camera module being used and the camera multiplexer.
+
+:::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/muxcam.PNG" alt="pir" width="600" height="auto"/></p>
 
