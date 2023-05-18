@@ -170,10 +170,10 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Oxygen-Sensor-Pro',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Alcohol_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-smart_air_quality_sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
-
               ],
 
             },
@@ -367,6 +367,7 @@ const sidebars = {
               type: 'category',
               label: 'NFC',
               items: [
+                'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC_ST25',
                 'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC',
                 'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC_Tag',
               ]
@@ -588,11 +589,76 @@ const sidebars = {
           type: 'category',
           label: 'SenseCAP Indicator',
           items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator',
             'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Dive_into_Hardware',
-            'Sensor/SenseCAP/SenseCAP_Indicator/ESP32-S3R8_Overview',
-            'Sensor/SenseCAP/SenseCAP_Indicator/RP2040_Overview',
+            {
+              type: 'category',
+              label: 'Get Started with SenseCAP Indicator',
+              items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'OpenAI X SenseCAP Indicator',
+              items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Development Tutorial',
+              items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Dive_into_the_Hardware',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/How_to_Create_your_own_UI',
+            {
+              type: 'category',
+              label: 'Develop with ESP32-S3',
+              items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Four-inch_Touch_Screen',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Wi-Fi',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Develop with RP2040',
+              items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/CO2_Sensor_Built-in',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
+            {
+              type: 'category',
+              label: 'Grove',
+              items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
+              ],
+            },
+              ],
+            },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+            {
+              type: 'category',
+              label: 'Open AI x SenseCAP Indicator',
+              items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/ChatGPT_with_Indicator',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/DALL·E_AI_Picture_Generator_Application',
+              ],
+            },
+              ],
+            },
           ],
         },
         {
@@ -707,21 +773,7 @@ const sidebars = {
 
     },
 
-    {
 
-      type: 'category',
-      label: 'mmWave radar sensor',
-      items: [
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
-        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
-      ],
-
-    },
 
     {
       type: 'category',
@@ -782,6 +834,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
             {
               type: 'category',
@@ -1187,7 +1240,21 @@ const sidebars = {
 
     },
 
+    {
 
+      type: 'category',
+      label: 'mmWave radar sensor',
+      items: [
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
+        'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
+        'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
+        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
+      ],
+
+    },
 
     {
 
@@ -1996,6 +2063,7 @@ const sidebars = {
         'Edge/reTerminal/reTerminal',
         'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
         'Edge/reTerminal/reTerminal-FAQ',
+        'Edge/reTerminal/reTerminal-piCam',
         {
           type: 'category',
           label: 'Application',
@@ -2006,6 +2074,7 @@ const sidebars = {
             'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
             'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
             'Edge/reTerminal/Application/Mender-Client-reTerminal',
+            
             {
               type: 'category',
               label: 'Home Assistant',

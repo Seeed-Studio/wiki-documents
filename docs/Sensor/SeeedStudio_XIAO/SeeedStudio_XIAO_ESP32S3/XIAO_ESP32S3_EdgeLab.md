@@ -48,8 +48,7 @@ cd to the root directory of the project and run the following command to get the
 ```
 git clone https://github.com/Seeed-Studio/edgelab-example-esp32 && cd edgelab-example-esp32
 git submodule init
-git submodule update examples/esp32/compoents/esp-nn
-git submodule update examples/esp32/compoents/esp32-camera
+git submodule update
 ```
 
 ## How to Use
