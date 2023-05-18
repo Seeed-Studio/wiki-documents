@@ -98,9 +98,12 @@ sudo nano /boot/config.txt
         - dtoverlay=ov5647,cam0 
         - dtoverlay=camera-mux-2port 
 
-            :::note
-            If you are using PiCam v3 NoIR wide instead of PiCam v1, use **dtoverlay=imx708,cam0** instead of **dtoverlay=ov5647,cam0**. The dtoverlay configuration specifies the camera module being used and the camera multiplexer.
-            :::
+            
+:::note
+
+If you are using PiCam v3 NoIR wide instead of PiCam v1, use **dtoverlay=imx708,cam0** instead of **dtoverlay=ov5647,cam0**. The dtoverlay configuration specifies the camera module being used and the camera multiplexer.
+
+:::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/muxcam.PNG" alt="pir" width="600" height="auto"/></p>
 
