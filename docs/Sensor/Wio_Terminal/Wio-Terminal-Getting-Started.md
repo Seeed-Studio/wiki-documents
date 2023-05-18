@@ -315,6 +315,20 @@ You may refer to the specific library lists here: <https://github.com/Seeed-Stud
 - **[DXF]** [Wio Terminal Battery Chassis Dimensions](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-Chassis-Battery.dxf)
 - **[DXF]** [Wio Terminal PCB Dimensions](https://files.seeedstudio.com/wiki/Wio-Terminal/res/Wio-Terminal-PCB-V3.0.dxf)
 
+
+<a href="https://github.com/Seeed-Studio/OSHW-WioTerminal">
+  <div className="custom-layout">
+    <div className="custom-image">
+      <img src="https://files.seeedstudio.com/wiki/wiki-platform/opensource.jpg" alt="your-image-description" />
+    </div>
+    <div className="custom-text">
+      <h2>Open Source hardware</h2>
+      <p>This product is fully open-sourced. Access the related open-source documents through this link.</p>
+    </div>
+  </div>
+</a>
+
+
 ## Tech Support
 
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
