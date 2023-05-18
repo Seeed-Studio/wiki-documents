@@ -30,9 +30,9 @@ Here are the specifications for each version of the PiCam:
 - Video Modes: 1080p30, 720p60, 640x480p90
 
 
-**PiCam v3 (Camera Module v3):**
-- Sensor: Sony IMX477
-- Resolution: 12.3 megapixels (4056 x 3040 pixels)
+**PiCam v3 (Camera Module 3):**
+- Sensor: Sony IMX708
+- Resolution: 12 megapixels (4056 x 3040 pixels)
 - Video Modes: 1080p30, 720p60, 640x480p90
 
 | Raspberry Pi Camera Module V1|Raspberry Pi Camera Module V2| Raspberry Pi Camera Module 3 |
