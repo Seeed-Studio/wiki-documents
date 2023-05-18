@@ -41,13 +41,13 @@ The PiCam offers a range of features and capabilities that make it suitable for 
 
 Note that the specifications mentioned above are for the standard PiCam modules, and there may be variations or alternative camera modules available from third-party manufacturers.
 
-When it comes to installing the PiCam, you have two options. The first option is to use pre-built images provided by SeeedStudio, which can be found on their wiki page. These pre-built images are specifically configured for the PiCam, ensuring compatibility and ease of use. However, please note that these images only work with PiCam v1 (OmniVision OV5647 sensor).
+When it comes to installing the PiCam, you have two options. The first option is to use pre-built images provided by Seeed Studio, which can be found on our wiki page. These pre-built images are specifically configured for the PiCam, ensuring compatibility and ease of use. However, please note that these images only work with PiCam v1 (OmniVision OV5647 sensor).
 
-Alternatively, you can choose to install the latest version of the Raspberry Pi OS from the official website. By doing so, you'll have access to the most recent features and improvements. SeeedStudio recommends this approach and provides instructions on their wiki page for installing the necessary drivers and related components to ensure proper functionality of the PiCam on the fresh Raspberry Pi OS installation.
+Alternatively, you can choose to install the latest version of the Raspberry Pi OS from the official website. By doing so, you'll have access to the most recent features and improvements. Seeed Studio recommends this approach and provides instructions on our wiki page for installing the necessary drivers and related components to ensure proper functionality of the PiCam on the fresh Raspberry Pi OS installation.
 
 ## Using pre-built raspberry pi Images.
 
-To install the PiCam for SeeedStudio ReTerminal, you have the option of using pre-built images provided by SeeedStudio. These images are available on their wiki page and are specifically designed for the ReTerminal.
+To install the PiCam for Seeed Studio reTerminal, you have the option of using pre-built images provided by Seeed Studio. These images are available on our wiki page and are specifically designed for the reTerminal.
 
 :::note
 
@@ -57,23 +57,23 @@ It's important to note that the pre-built images currently support **only the Pi
 
 
 
-- **Step 1** Visit the SeeedStudio wiki page dedicated to ReTerminal and navigate to the section providing the pre-built images.( you can refer this link to get images and acknowledge installation procedure. if you have already done please skip this step.  https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)
-- **Step 2** 	Power off the reterminal and connect the PiCam v1 module to the camera interface on the ReTerminal. Ensure it is securely attached.
+- **Step 1** Visit the Seeed Studio wiki page dedicated to reTerminal and navigate to the section providing the pre-built images.( you can refer this link to get images and acknowledge installation procedure. if you have already done please skip this step.  https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)
+- **Step 2** 	Power off the reterminal and connect the PiCam v1 module to the camera interface on the reTerminal. Ensure it is securely attached.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/reterminal_inside.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 3** Assemble the reTerminal and boot the reTerminal. Go to reTerminal icon which you can find in the desktop and enable camera and reboot. 
 
-- **Step 4** Open a terminal or SSH into the ReTerminal to access the command line interface. 
+- **Step 4** Open a terminal or SSH into the reTerminal to access the command line interface. 
 - **Step 5** Use the `raspistill` command to capture images. You can visit this site for more commands. https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3
 ```sh
 raspistill -o Desktop/image.jpg
 ``` 
 ## For fresh raspberry pi OS 
 
-We recommend Raspbian Bullseye 64-bit fresh image from raspberry pi official web-site for SeeedStudio ReTerminal:
-- **Step 1** SeeedStudio provides detailed instructions on how to install the drivers after flashing a new Raspberry Pi OS or other OS. Refer to the SeeedStudio wiki page for ReTerminal and follow the instructions provided in the "Flash new Raspberry Pi OS" section (https://wiki.seeedstudio.com/reTerminal#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) and "How to install reTerminal drivers"( section https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) If you already have done please skip this step.
+We recommend Raspbian Bullseye 64-bit fresh image from raspberry pi official web-site for Seeed Studio reTerminal:
+- **Step 1** Seeed Studio provides detailed instructions on how to install the drivers after flashing a new Raspberry Pi OS or other OS. Refer to the Seeed Studio wiki page for reTerminal and follow the instructions provided in the "Flash new Raspberry Pi OS" section (https://wiki.seeedstudio.com/reTerminal#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) and "How to install reTerminal drivers"( section https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) If you already have done please skip this step.
 
-- **Step 2** Open a terminal or SSH into your ReTerminal and execute the following command to edit the config.txt file:
+- **Step 2** Open a terminal or SSH into your reTerminal and execute the following command to edit the config.txt file:
 
 ```sh
 sudo nano /boot/config.txt 
@@ -86,7 +86,9 @@ sudo nano /boot/config.txt
         - dtoverlay=ov5647,cam0 
         - dtoverlay=camera-mux-2port 
 
+            :::note
             If you are using PiCam v3 NoIR wide instead of PiCam v1, use **dtoverlay=imx708,cam0** instead of **dtoverlay=ov5647,cam0**. The dtoverlay configuration specifies the camera module being used and the camera multiplexer.
+            :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/muxcam.PNG" alt="pir" width="600" height="auto"/></p>
 
@@ -95,7 +97,7 @@ sudo nano /boot/config.txt
 ```sh
 sudo reboot
 ``` 
- After the reboot, the PiCam should be configured and ready to use with your SeeedStudio ReTerminal. You can now proceed with capturing images or recording videos using the libcamera.
+ After the reboot, the PiCam should be configured and ready to use with your Seeed Studio reTerminal. You can now proceed with capturing images or recording videos using the libcamera.
 
  - **Step 5** :Open the terminal and write following code to test everything is work. 
 
