@@ -788,6 +788,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
               ]
             },
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO-BLE-sidewalk',
+              ],
+            },
           ]
         },
         {
