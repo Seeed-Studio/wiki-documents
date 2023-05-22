@@ -375,6 +375,49 @@ At the same time, we designed a red indicator light for battery charging, throug
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/104.jpg" style={{width:600, height:'auto'}}/></div>
 
+## UF2 BootLoader
+
+We understand that some users are looking to flash UF2 files directly to XIAO, which will enable the process of batch flashing programs. Here we will describe this method.
+
+:::note
+Currently this method can only be used on Windows systems.
+:::
+
+**Step 1**. Download the required script zip. And extract it to your local machine.
+
+*https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/xiaos3-bin2uf2.zip*
+
+**Step 2**. Converting BIN files into UF2 files.
+
+Once you have compiled and saved an Arduino program, you can export the binary file BIN file directly. This file will then be generated in your Arduino project folder.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/106.png" style={{width:600, height:'auto'}}/></div>
+
+At this point, all you need to do is copy this BIN file to the **xiaos3-bin2uf2** directory that you just extracted in the first step, and then execute the **convert_uf2.bat** script to generate a UF2 file directly.
+
+**Step 3**. Put the XIAO into UF2 BootLoader mode.
+
+Then please connect the XIAO to the computer and then run the **boot_uf2.bat** script again, the XIAO will appear in the computer as a USB stick, which means it has successfully entered the UF2 BootLoader mode.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/107.png" style={{width:800, height:'auto'}}/></div>
+
+**Step 4**. Copy the UF2 file to XIAO ESP32S3.
+
+Next you can access the XIAO ESP32S3's USB stick and copy the converted UF2 to the USB stick. Once the copying is complete, the XIAO USB stick will automatically disappear and the program will start to execute.
+
+:::tip
+1. Please ensure that your program is compiled and executed without problems, otherwise the UF2 program may not run as expected.
+2. The sample UF2 file for Blink is provided in the **xiaos3-bin2uf2** folder. When this program is uploaded, the orange LED on the XIAO ESP32S3 will flash and you can use this UF2 file as a test.
+:::
+
+**Step 5**. Enter the UF2 BootLoader again.
+
+Once you have performed the above steps and you still want the XIAO ESP32S3 to access the UF2 BootLoader to upload other UF2 files, you need to quickly press the **Reset** button first and then the **Boot** button afterwards. And there is no need to execute the boot_uf2.bat script again.
+
+:::note
+Press Reset then Boot, and be quick!
+:::
+
 ## Troubleshooting
 
 ### Q1: What should I do if the upload program fails/the program runs abnormally/the device port is not found?
@@ -430,6 +473,12 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 <!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model]() -->
 
 <!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Certification files]() -->
+
+### Other
+
+- **[STP]** [XIAO ESP32S3 Sense housing design (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp)
+
+- **[STP]** [XIAO ESP32S3 Sense housing design (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp)
 
 
 *The remaining open source material is being compiled, so stay tuned!*
