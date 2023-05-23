@@ -4,10 +4,10 @@ title: Get Started with SenseCAP Indicator Native Firmware
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Get_Started_with_SenseCAP_Indicator_Native_Firmware
+slug: /Indicator_Get_Started_Native_Firmware
 last_update:
-  date: 5/16/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Native Firmware**
 
@@ -30,17 +30,15 @@ Once you saw the green Wi-Fi icon, you'are all set.
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_10.png"/></div>
 
 ## **Display Setting**
-**Brightness**: Adjust screen brightness.
-
-**Sleep Mode**: Turn off the screen according to the interval you set.During sleep mode, the screen is turned of and does not display any content.
+- **Brightness**: Adjust screen brightness.
+- **Sleep Mode**: Turn off the screen according to the interval you set.During sleep mode, the screen is turned of and does not display any content.
 
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_15.png"/></div>
 
 ## **Date & Time Setting**
-**Time Format:** You can set 24H or 12H format.
-
-**Time Auto Update/Zone Auto Update**: When the device is connected to WiFi, it will automatically obtain the corresponding time zone and date.
+- **Time Format:** You can set 24H or 12H format.
+- **Time Auto Update/Zone Auto Update**: When the device is connected to WiFi, it will automatically obtain the corresponding time zone and date.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_16.png"/></div>
 
@@ -66,3 +64,8 @@ Click the specified sensor to enter the detailed information page, and you can c
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
 
+# **Tech Support**
+
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

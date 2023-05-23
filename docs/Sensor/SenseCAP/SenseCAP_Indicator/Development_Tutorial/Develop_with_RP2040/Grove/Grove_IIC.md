@@ -4,10 +4,10 @@ title: Grove IIC
 keywords:
 - Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Grove_IIC
+slug: /Indicator_RP2040_Grove_IIC
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Overview**
 
@@ -28,13 +28,13 @@ Different with the built-in sensors, you only need to define the SCL and SDA pin
 
 ## **Example Cod**e:
 
-This example code introduces how to connect a [Grove TH sensor](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor):
+This example code introduces how to connect a [Grove TH sensor](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor):
 
 [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/)
 
 
 
-```
+```cpp
 #include <Arduino.h>
 #include <Wire.h>
 #include "AHT20.h"

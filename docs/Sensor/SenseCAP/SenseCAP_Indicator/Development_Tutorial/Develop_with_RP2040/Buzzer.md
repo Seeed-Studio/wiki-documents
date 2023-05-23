@@ -2,12 +2,12 @@
 description: Buzzer
 title: Buzzer
 keywords:
-- Development Tutorial
+- SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Buzzer
+slug: /Indicator_RP2040_Buzzer
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Buzzer**
 
@@ -18,7 +18,7 @@ The built-in buzzer of SenseCAP Indicator is a passive buzzer, meaning that it r
 ## **Basic**
 
 
-```
+```cpp
 #include <Arduino.h>
 
 #define Buzzer  19 //Buzzer GPIO 
@@ -41,7 +41,7 @@ This example use a buzzer to play melodies. It sends a square wave of the approp
 " Twinkle Twinkle Little Start..."
 
 
-```
+```cpp
 #include <Arduino.h>
 #define Buzzer  19 //Buzzer GPIO 
 
@@ -96,7 +96,7 @@ void playNote(char note, int duration) {
 
 This example demonstrates an alarm when the CO2 value is greater than 1000ppm.
 
-```
+```cpp
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -200,5 +200,6 @@ void loop() {
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

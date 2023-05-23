@@ -2,12 +2,12 @@
 description: Wi-Fi
 title: Wi-Fi
 keywords:
-- Development Tutorial
+- SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Wi-Fi
+slug: /Indicator_ESP32_Wi-Fi
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Wi-Fi**
 
@@ -52,6 +52,6 @@ Follow the printed instructions to flash, or run
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
 
+If you have large order or customization requirement, please contact iot@seeed.cc

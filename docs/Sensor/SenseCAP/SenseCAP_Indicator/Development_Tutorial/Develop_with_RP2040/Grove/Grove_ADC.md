@@ -4,10 +4,10 @@ title: Grove ADC
 keywords:
 - Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Grove_ADC
+slug: /Indicator_RP2040_Grove_ADC
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Overview**
 
@@ -22,16 +22,16 @@ This repo will introduce how to use the Grove IOs on the SenseCAP Indicator. Thi
 
 To use the Grove configurable A/D Port as Analog port, simply define it as follow:
 
-```
+```cpp
 #define ADC1  27
 ```
 
 ## **Example Code**:
 
-This example code introduces how to connect the [Light sensor](https://wiki.seeedstudio.com/Grove-Light_Sensor) in the grove ADC interface.
+This example code introduces how to connect the [Light sensor](/Grove-Light_Sensor) in the grove ADC interface.
 The output signal is analog value, the brighter the light is, the larger the value.
 
-```
+```cpp
 #include <Arduino.h>
 
 #define ADC1  27
