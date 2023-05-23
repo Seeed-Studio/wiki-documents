@@ -2,19 +2,19 @@ name: Run is enough Deploy
 
 on:
   push:
-    branches:
-      - docusaurus-version
-    paths-ignore:
-      - "ISSUE_TEMPLATE/**"
-      - ".github/**.md"
-      - ".gitignore"
-      - "demo/**"
-      - "docker/**"
-      - "HOW_TO.md"
-      - "TASK.md"
-      - "SECURITY.md"
-      - "README.md"
-      - "README_zh-CN.md"
+#     branches:
+#       - docusaurus-version
+#     paths-ignore:
+#       - "ISSUE_TEMPLATE/**"
+#       - ".github/**.md"
+#       - ".gitignore"
+#       - "demo/**"
+#       - "docker/**"
+#       - "HOW_TO.md"
+#       - "TASK.md"
+#       - "SECURITY.md"
+#       - "README.md"
+#       - "README_zh-CN.md"
       
   schedule:
     #UTC 0 
