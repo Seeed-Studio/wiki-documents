@@ -4,10 +4,10 @@ title: Get Started with SenseCAP Indicator Introduction
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Get_Started_with_SenseCAP_Indicator_Introduction
+slug: /SenseCAP_Indicator_Get_Started_introduction
 last_update:
-  date: 5/16/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Overview**
 
@@ -53,11 +53,9 @@ Seeed Studio also provides one-stop ODM service for quick customization and scal
 
 
 ### **Button Function**
-**Short Press:** Turn off /Wake up the screen.
-
-**Long Press for 3s:** Switch on/Wwitch off the device.
-
-**Long Press for 10s:** Factory firmware reset.
+- **Short Press:** Turn off /Wake up the screen.
+- **Long Press for 3s:** Switch on/Wwitch off the device.
+- **Long Press for 10s:** Factory firmware reset.
 
 ### **Grove**
 
@@ -95,5 +93,6 @@ The embedded Semtech SX1262 LoRa® module enables you to build the LoRa® applic
 
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

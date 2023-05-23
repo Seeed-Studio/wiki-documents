@@ -1,18 +1,18 @@
 ---
-description: How To Flash The Default Firmware
+description: Flash The Default Firmware
 title: How To Flash The Default Firmware
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /How_To_Flash_The_Default_Firmware
+slug: /Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware
 last_update:
-  date: 5/16/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **How To Flash The Default Firmware**
 The SenseCAP indicator has two MCUs, ESP32-S3 and RP2040. This tutorial provides detailed guide to help developer get onboard, and the first part is a toturial guide user flash the out-of-box factory default firmware, and help the early shipped devices updating to latest out-of-box firmware.
 ## **Preparation**
-Get ready your Indicator and find a laptop, works on Windows/Mac/Linux.
+All you need is your indicator and any Windows/Mac/Linux **Computer**.
 
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/usb1.png"/></div>
@@ -21,16 +21,22 @@ Get ready your Indicator and find a laptop, works on Windows/Mac/Linux.
 
 ## **Download Default Firmware**
 SenseCAP Indicator's default shipping firmware is fully open source on both ESP32-S3 and RP2040.
+:::note
+You have two options to download the Out of the Box Firmware: 
+- Source code: Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain to compile it.
+- Firmware: Directly flash the pre-compiled binary file without the need for any code modification or compilation.
+:::
 
 **Source Code**
-[ESP32-S3 Source Code, based on ESP IDF](https://github.com/Seeed-Solution/sensecap_indicator_esp32)
-[RP2040 Source Code, based on Arduino](https://github.com/Seeed-Solution/sensecap_indicator_rp2040)
+
+- [ESP32-S3 Source Code, based on ESP IDF](https://github.com/Seeed-Solution/sensecap_indicator_esp32)
+- [RP2040 Source Code, based on Arduino](https://github.com/Seeed-Solution/sensecap_indicator_rp2040)
 
 
 **Firmware**
 
-[Click to download ESP32-S3 firmware](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.0)
-[Click to download RP2040 frimware](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/releases/tag/v1.0.0)
+- [Click to download ESP32-S3 firmware](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.0)
+- [Click to download RP2040 frimware](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/releases/tag/v1.0.0)
 
 
 ## **Flash ESP32-S3 Firmware on Windows**
@@ -44,33 +50,33 @@ SenseCAP Indicator's default shipping firmware is fully open source on both ESP3
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_18.png"/></div>
 
-**Double-click** the .exe file to enter the main interface of the tool.
+- **Step 1**: **Double-click** the `.exe` file to enter the main interface of the tool.
 
-Selecting
+- **Step 2**: Selecting
 
-**Chip Type**: ESP32-S3
-
-**WorkMode**: Develop
-
-**LoadMode**: UART
+| Option        | Param    |
+| ------------- | -------- |
+| **Chip Type** | ESP32-S3 |
+| **WorkMode**  | Develop  |
+| **LoadMode**  |  UART  	|
 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_59.png"/></div>
 
-Then connect SenseCAP Indicator to your laptop with USB type-C cable.
+- **Step 3**: Then connect SenseCAP Indicator to your laptop with USB type-C cable.
 
-In the SPI Download Tab and Click "..." 
-
-and navigate to the firmware you just downloaded.
+- **Step 4**: In the SPI Download Tab and Click "..." and navigate to the firmware you just downloaded.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
 
 
-SPI Flash Configure
 
-**SPI SPEED**: 40MHz
+- **Step 5**: SPI Flash Configure
 
-**SPI MODE**: DIO
+| Option        | Param    |
+| ------------- | -------- |
+| **SPI SPEED** | 40MHz |
+| **SPI MODE**  | DIO  |
 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
@@ -117,7 +123,7 @@ but, when you use IDF build firmware, you will get there binary files, you have 
 
 **Espressif IDF**
 
-IDF is a software development framework provided by Espressif Systems for the development of applications and firmware for their ESP32 and ESP8266 series of microcontrollers,it provides a comprehensive set of libraries, tools, and documentation that enable developers to build applications and firmware for ESP32 and ESP8266 microcontrollers. It includes libraries for communication protocols such as Wi-Fi, Bluetooth, and Ethernet, as well as drivers for various peripherals like sensors, displays, and motors.
+> IDF is a software development framework provided by Espressif Systems for the development of applications and firmware for their ESP32 and ESP8266 series of microcontrollers,it provides a comprehensive set of libraries, tools, and documentation that enable developers to build applications and firmware for ESP32 and ESP8266 microcontrollers. It includes libraries for communication protocols such as Wi-Fi, Bluetooth, and Ethernet, as well as drivers for various peripherals like sensors, displays, and motors.
 
 **Download and install:**
 For Windows: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/windows-setup.html)
@@ -299,5 +305,6 @@ Check the port on your Device Manage
 
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-if you have large order requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

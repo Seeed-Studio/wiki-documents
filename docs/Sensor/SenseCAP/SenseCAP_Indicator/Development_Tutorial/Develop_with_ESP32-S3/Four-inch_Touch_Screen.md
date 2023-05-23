@@ -4,10 +4,10 @@ title: 4-inch Touch Screen
 keywords:
 - Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /4-inch_Touch_Screen
+slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_ESP32/4-inch_Touch_Screen
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **4-inch Touch Screen**
 
@@ -38,7 +38,7 @@ Pixels also expressed in colour form, so also better to cover some colour models
 
 To initialise the LCD screen on SenseCAP Indicator:
 
-```
+```c
 lcd init:
 bsp_board_init()
 ```
@@ -55,5 +55,6 @@ bsp_board_init()
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

@@ -589,7 +589,7 @@ const sidebars = {
           type: 'category',
           label: 'SenseCAP Indicator',
           items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Indicator_Flash_The_Default_Firmware',
             {
               type: 'category',
               label: 'Get Started with SenseCAP Indicator',
@@ -653,8 +653,8 @@ const sidebars = {
               type: 'category',
               label: 'Open AI x SenseCAP Indicator',
               items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/ChatGPT_with_Indicator',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/DALL·E_AI_Picture_Generator_Application',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/Indicator_Application_ChatGPT',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/Indicator_Application_DALL·E',
               ],
             },
               ],

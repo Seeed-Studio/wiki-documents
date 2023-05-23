@@ -2,12 +2,13 @@
 description: LoRa®
 title: LoRa®
 keywords:
-- Development Tutorial
+- Development Tutorial 
+- Lora
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /LoRa®
+slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_ESP32/LoRa
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **LoRa®**
 
@@ -19,7 +20,7 @@ This example code demonstrates a basic example of how to use the LoRa® radio mo
 
 
 
-```
+```c
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -85,7 +86,7 @@ void demo_lora_tx(void)
 This example code sets up a LoRa® receiver using the SX126x radio module and logs the received packets to the console. It can be used as a starting point for developing LoRa® applications that require receiving data over long distances with low power consumption.
 
 
-```
+```c
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -157,5 +158,6 @@ void demo_lora_rx(void)
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc
