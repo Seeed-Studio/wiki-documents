@@ -319,7 +319,7 @@ You may refer to the specific library lists here: <https://github.com/Seeed-Stud
 <a href="https://github.com/Seeed-Studio/OSHW-WioTerminal">
   <div className="custom-layout">
     <div className="custom-image">
-      <img src="https://files.seeedstudio.com/wiki/wiki-platform/opensource.jpg" alt="your-image-description" />
+     <img width="100" src="https://files.seeedstudio.com/wiki/Wio-Terminal/res/oshw-logo.svg" alt="your-image-description" />
     </div>
     <div className="custom-text">
       <h2>Open Source hardware</h2>
