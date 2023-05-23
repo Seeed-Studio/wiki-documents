@@ -1201,8 +1201,7 @@ The reTerminal DM supports 2280 NVMe SSD through the use of a PCIe expansion car
 The standard version of the reTerminal DM does not support SSD and requires the purchase of a PCIe expansion card to enable this feature.
 :::
 
-
-# Addition Resources
+## Additional Resources
 
 *  [reTerminal DM Datasheet](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminalDM_datasheet.pdf)
 *  [reTerminal DM User Manual](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-User-Manual.pdf)

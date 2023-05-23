@@ -2132,6 +2132,7 @@ const sidebars = {
         'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
+        'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
         {
           type: 'category',
           label: 'Node-Red',
