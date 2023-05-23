@@ -2,9 +2,9 @@
 description: Wi-Fi
 title: Wi-Fi
 keywords:
-- Development Tutorial
+- SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_ESP32/Wi-Fi
+slug: /Indicator_ESP32_Wi-Fi
 last_update:
   date: 5/23/2023
   author: Thomas

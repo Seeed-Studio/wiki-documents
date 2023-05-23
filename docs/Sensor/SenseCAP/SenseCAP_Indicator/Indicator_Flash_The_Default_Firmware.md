@@ -4,7 +4,7 @@ title: How To Flash The Default Firmware
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware
+slug: /Indicator_How_To_Flash_The_Default_Firmware
 last_update:
   date: 5/23/2023
   author: Thomas

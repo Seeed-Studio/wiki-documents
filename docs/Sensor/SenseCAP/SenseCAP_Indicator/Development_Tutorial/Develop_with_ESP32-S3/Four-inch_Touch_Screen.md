@@ -2,9 +2,9 @@
 description: 4-inch Touch Screen
 title: 4-inch Touch Screen
 keywords:
-- Development Tutorial
+- SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_ESP32/4-inch_Touch_Screen
+slug: /Indicator_ESP32_4_inch_Touch_Screen
 last_update:
   date: 5/23/2023
   author: Thomas

@@ -4,7 +4,7 @@ title: ChatGPT Indicator
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Application/Indicator_ChatGPT
+slug: /Indicator_Get_Started_ChatGPT
 last_update:
   date: 5/23/2023
   author: Thomas
@@ -31,7 +31,7 @@ Select the Wi-Fi, input the password and connect it.
 
 ## Step 2. Set the API Key
     
-Click "Set API Key" and scan the QR code, then set it according to the [tutorial](/Sensor/SenseCAP/SenseCAP_Indicator/Application/Set_An_API_Key).
+Click "Set API Key" and scan the QR code, then set it according to the [tutorial](/Indicator_Get_Started_How_to_Set_the_API_Keyy).
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/apikey.png"/></div>
 

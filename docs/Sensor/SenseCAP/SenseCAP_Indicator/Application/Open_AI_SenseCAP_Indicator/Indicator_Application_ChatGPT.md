@@ -4,7 +4,7 @@ title: Indicator ChatGPT Application
 keywords:
 - SenseCAP ChatGPT AI Prompt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Application/Indicator_Application_ChatGPT
+slug: /Indicator_Application_ChatGPT
 last_update:
   date: 5/23/2023
   author: Thomas
@@ -18,8 +18,8 @@ On this page, we will guide you on how to organize the OpenAI Demo for quick add
 - The IDF toolchain installed on your computer
 
 :::note
-- Want to know how to change the UI? -> [How to Create your own UI](/Sensor/SenseCAP/SenseCAP_Indicator/How_to_Create_your_own_UI)
-- Haven't installed toolchain? -> [How_To_Flash_The_Default_Firmware](/Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware)
+- Want to know how to change the UI? -> [How to Create your own UI](/Indicator_How_to_Create_your_own_UI)
+- Haven't installed toolchain? -> [How_To_Flash_The_Default_Firmware](/Indicator_How_To_Flash_The_Default_Firmware)
 :::
 
 The following code snippet is the main code related to OpenAI startup. flowchart:
@@ -678,7 +678,7 @@ ESP_ERROR_CHECK(esp_event_handler_instance_register_with(view_event_handle, VIEW
   
 # Resource
 - [Indicator OpenAI Demo · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/82d02957dbc71d4c1549246e823fac4ead89bb42/examples/indicator_openai)
-- The actual effect: [ChatGPT_Indicator](/Sensor/SenseCAP/SenseCAP_Indicator/Application/Indicator_ChatGPT)
+- The actual effect: [ChatGPT_Indicator](/Indicator_Get_Started_ChatGPT)
 
 
 

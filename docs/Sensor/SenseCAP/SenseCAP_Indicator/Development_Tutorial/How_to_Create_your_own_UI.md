@@ -2,9 +2,9 @@
 description: How to Create your own UI
 title: How to Create your own UI
 keywords:
-- Development Tutorial
+- Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/How_to_Create_your_own_UI
+slug: /Indicator_How_to_Create_your_own_UI
 last_update:
   date: 5/23/2023
   author: Thomas

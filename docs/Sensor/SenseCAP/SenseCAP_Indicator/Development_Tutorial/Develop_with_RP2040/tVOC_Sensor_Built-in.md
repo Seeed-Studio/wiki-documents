@@ -2,9 +2,9 @@
 description: tVOC Sensor Built-in
 title: tVOC Sensor Built-in
 keywords:
-- Development Tutorial
+- Indicator Development Tutorial RP2040
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_RP2040/tVOC Sensor_Built-in
+slug: /Indicator_RP2040_tVOC Sensor_Built-in
 last_update:
   date: 5/23/2023
   author: Thomas

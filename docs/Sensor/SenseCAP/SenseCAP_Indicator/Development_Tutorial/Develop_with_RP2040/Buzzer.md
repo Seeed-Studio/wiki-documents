@@ -2,9 +2,9 @@
 description: Buzzer
 title: Buzzer
 keywords:
-- Development Tutorial
+- SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_RP2040/Buzzer
+slug: /Indicator_RP2040_Buzzer
 last_update:
   date: 5/23/2023
   author: Thomas

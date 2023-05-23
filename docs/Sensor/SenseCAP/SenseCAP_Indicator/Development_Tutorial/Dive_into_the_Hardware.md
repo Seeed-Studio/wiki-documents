@@ -2,9 +2,9 @@
 description: Dive into the Hardware
 title: Dive into the Hardware
 keywords:
-- Development Tutorial
+- Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Dive_into_the_Hardware
+slug: /Indicator_Dive_into_the_Hardware
 last_update:
   date: 5/23/2023
   author: Thomas

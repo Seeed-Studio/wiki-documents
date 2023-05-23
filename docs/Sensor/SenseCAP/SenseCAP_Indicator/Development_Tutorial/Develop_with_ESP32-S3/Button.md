@@ -2,9 +2,9 @@
 description: Button
 title: Button
 keywords:
-- Development Tutorial
+- SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_ESP32/Button
+slug: /Indicator_ESP32_Button
 last_update:
   date: 5/23/2023
   author: Thomas

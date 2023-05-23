@@ -4,7 +4,7 @@ title: Grove ADC
 keywords:
 - Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Sensor/SenseCAP/SenseCAP_Indicator/Indicator_RP2040/Grove_ADC
+slug: /Indicator_RP2040_Grove_ADC
 last_update:
   date: 5/23/2023
   author: Thomas
