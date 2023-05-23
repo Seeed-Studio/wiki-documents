@@ -20,7 +20,7 @@ This repo describes how to draw line graphs on Wio Terminal. You can use this to
 
 ### Installing the Seeed_Arduino_Linechart Library For 2D Graphic For Wio Terminal
 
-- Visit [Seeed_Arduino_Linechart](https://github.com/Seeed-Studio/Seeed_Arduino_Linechart) and download the entire repo to your local drive.
+- Visit [Seeed_Arduino_Linechart](https://files.seeedstudio.com/wiki/Wio-Terminal-LCD-Linecharts/Seeed_Arduino_Linechart-1.0.0.zip) and download the entire repo to your local drive.
 
 - Now, the Wio Terminal_graphics library can be installed to the Arduino IDE. Open the Arduino IDE, and click `sketch` -> `Include Library` -> `Add .ZIP Library`, and choose the `Seeed_Arduino_Linechart` file that you've have just downloaded.
 
