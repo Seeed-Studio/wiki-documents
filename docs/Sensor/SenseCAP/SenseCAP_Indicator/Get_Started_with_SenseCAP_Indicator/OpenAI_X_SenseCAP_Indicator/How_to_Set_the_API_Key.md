@@ -6,15 +6,15 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Set_the_API_Key
 last_update:
-  date: 5/23/2023
+  date: 5/24/2023
   author: Thomas
 ---
 # **How to Set the API Key**
-
-**Note**: OpenAI's services are not available in some countries, like China、Iran、Russia,etc, check [Supported counties and territories](https://platform.openai.com/docs/supported-countries) for details.
+:::caution
+OpenAI's services are not available in some countries, like China、Iran、Russia, etc, check [Supported counties and territories](https://platform.openai.com/docs/supported-countries) for details.
 
 Please make sure that your network environment is able to connect OpenAI API.
-
+:::
 
 - **Step 1:** Log in https://platform.openai.com/signup
 If you don't have an account already, you'll need to sign up for one. 
