@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 last_update:
-  date: 5/23/2023
+  date: 5/24/2023
   author: Thomas
 ---
 # **How To Flash The Default Firmware**
@@ -21,7 +21,7 @@ All you need is your indicator and any Windows/Mac/Linux **Computer**.
 
 ## **Download Default Firmware**
 SenseCAP Indicator's default shipping firmware is fully open source on both ESP32-S3 and RP2040.
-:::note
+:::tip
 You have two options to download the Out of the Box Firmware: 
 - Source code: Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain to compile it.
 - Firmware: Directly flash the pre-compiled binary file without the need for any code modification or compilation.
@@ -67,8 +67,6 @@ You have two options to download the Out of the Box Firmware:
 
 - **Step 4**: In the SPI Download Tab and Click "..." and navigate to the firmware you just downloaded.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator23.png"/></div>
-
 
 
 - **Step 5**: SPI Flash Configure
@@ -79,18 +77,14 @@ You have two options to download the Out of the Box Firmware:
 | **SPI MODE**  | DIO  |
 
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator23.png"/></div>
-
-
 - **Step 6**: Download Panel Configure
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
 
 **COM**:  Check the ports on your Device Manage, the USB-SERIAL is the correct one.
 Here we chose **COM4**
 
 **Baud**: 921600(recommended value）
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator23.png"/></div>
-
 
 Click Start Downloading
 
@@ -123,7 +117,7 @@ but, when you use IDF build firmware, you will get there binary files, you have 
 
 **Espressif IDF**
 
-> IDF is a software development framework provided by Espressif Systems for the development of applications and firmware for their ESP32 and ESP8266 series of microcontrollers,it provides a comprehensive set of libraries, tools, and documentation that enable developers to build applications and firmware for ESP32 and ESP8266 microcontrollers. It includes libraries for communication protocols such as Wi-Fi, Bluetooth, and Ethernet, as well as drivers for various peripherals like sensors, displays, and motors.
+> ESP-IDF is a software development framework provided by Espressif Systems for the development of applications and firmware for their ESP32 and ESP8266 series of microcontrollers,it provides a comprehensive set of libraries, tools, and documentation that enable developers to build applications and firmware for ESP32 and ESP8266 microcontrollers. It includes libraries for communication protocols such as Wi-Fi, Bluetooth, and Ethernet, as well as drivers for various peripherals like sensors, displays, and motors.
 
 **Download and install:**
 For Windows: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/windows-setup.html)
@@ -214,7 +208,7 @@ Click on **Tools** > **Board** > **Board Manager**.
 
 Search "indicator" and install "Raspberry Pi Pico/RP2040" in the Boards Manager
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator.png"/></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator.png"/></div>
 
 - **Step 3**: Add Libraries
 
