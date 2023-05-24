@@ -353,14 +353,16 @@ height:80%;
   margin: 0;
 }
 
+
+
 .button_forum{
   display: inline-block;
   background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png");
   background-size: cover;
   background-position: center;
-  margin-top:8px;
+  margin-top: 8px;
   margin-bottom: 15px;
-  margin-left: 2px;
+  margin-left: 30px;
   margin-right: 2px;
   padding: 10px 20px;
   /* color: rgb(0, 0, 0);text color */ 
@@ -371,7 +373,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 225px; /* 按钮高度 */
+  height: 186px; /* 按钮高度 */
 }
 
 .button_forum:hover {
@@ -385,9 +387,9 @@ height:80%;
   background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support2.png");
   background-size: cover;
   background-position: center;
-  margin-top:8px;
+  margin-top: 8px;
   margin-bottom: 15px;
-  margin-left: 2px;
+  margin-left: 30px;
   margin-right: 2px;
   padding: 10px 20px;
   font-size: 100px;
@@ -397,7 +399,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 225px; /* 按钮高度 */
+  height: 186px; /* 按钮高度 */
 }
 
 .button_email:hover {
@@ -411,9 +413,9 @@ height:80%;
   background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support3.png");
   background-size: cover;
   background-position: center;
-  margin-top:8px;
-  margin-bottom: 5px;
-  margin-left: 2px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
   margin-right: 2px;
   padding: 10px 20px;
   font-size: 100px;
@@ -423,7 +425,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 225px; /* 按钮高度 */
+  height: 186px; /* 按钮高度 */
 }
 
 .button_discord:hover {
@@ -437,9 +439,9 @@ height:80%;
   background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png");
   background-size: cover;
   background-position: center;
-  margin-top:8px;
-  margin-bottom: 5px;
-  margin-left: 2px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 30px;
   margin-right: 2px;
   padding: 10px 20px;
   font-size: 100px;
@@ -449,7 +451,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 225px; /* 按钮高度 */
+  height: 186px; /* 按钮高度 */
 }
 
 .button_discussion:hover {
