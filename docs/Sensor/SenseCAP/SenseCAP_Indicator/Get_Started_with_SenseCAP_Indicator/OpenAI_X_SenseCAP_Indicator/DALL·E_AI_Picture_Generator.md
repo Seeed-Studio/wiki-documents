@@ -1,12 +1,12 @@
 ---
 description: DALL·E AI Picture Generator
-title: DALL·E AI Picture Generator
+title: DALL·E Image Generation
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_DALL·E
 last_update:
-  date: 5/23/2023
+  date: 5/24/2023
   author: Thomas
 ---
 # **DALL·E AI Picture Generator**
