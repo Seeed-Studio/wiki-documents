@@ -31,7 +31,7 @@ reTerminal DM is A 10.1" open-source industrial HMI - an Integrated Device Maste
 
 <div align="center"><img width={1000} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" /></div>
 
-### [SenseCAP Indicator Native Firmware](/Indicator_Get_Started_Native_Firmware)
+### [SenseCAP Indicator Native Firmware](/SenseCAP_Indicator_Native_Firmware)
 
 The SenseCAP Indicator D1S and D1Pro version has the built-in tVOC and CO2 sensors, and an external Grove TH sensor for accurate data reading. The SenseCAP native firmware provides air quality detector UI to show the sensor data.
 
@@ -43,19 +43,19 @@ Sensecap Indicator integrates two popular models ChatGPT and DALL·E via API, em
 
 You can refer to the links below for more help:
 
-- [How to Set the API Key](/Indicator_Get_Started_How_to_Set_the_API_Key)
-- [ChatGPT Indicator](/Indicator_Get_Started_ChatGPT)
-- [DALL·E AI Picture Generator](/Indicator_Get_Started_DALL·E)
+- [How to Set the API Key](/SenseCAP_Indicator_How_to_Set_the_API_Key)
+- [ChatGPT Indicator](/SenseCAP_Indicator_ChatGPT)
+- [DALL·E AI Picture Generator](/SenseCAP_Indicator_DALL·E)
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png" /></div>
 
-### [SenseCAP Indicator - Dive into the Hardware](/Indicator_Dive_into_the_Hardware)
+### [SenseCAP Indicator - Dive into the Hardware](/SenseCAP_Indicator_Dive_into_the_Hardware)
 
 This chapter will provide detailed information about ESP32 and RP2040 of SenseCAP Indicator, including their functions and usage. It covers include programming, interfacing with sensors, and communicating with other devices，etc.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png" /></div>
 
-### [SenseCAP Indicator - How to Create your own UI](/Indicator_How_to_Create_your_own_UI)
+### [SenseCAP Indicator - How to Create your own UI](/SenseCAP_Indicator_How_to_Create_your_own_UI)
 
 LvGL is an open-source graphics library providing everything you need to create an embedded GUI with easy-to-use graphical elements, beautiful visual effects, and a low memory footprint.
 
@@ -63,20 +63,20 @@ LvGL is an open-source graphics library providing everything you need to create 
 
 ### SenseCAP Indicator - Develop with ESP32-S3
 
-- [4-inch Touch Screen](/Indicator_ESP32_4_inch_Touch_Screen)
-- [Wi-Fi](/Indicator_ESP32_Wi-Fi)
-- [BLE](/Indicator_ESP32_BLE)
-- [Button](/Indicator_ESP32_Button)
-- [LoRa®](/Indicator_ESP32_LoRa)
+- [4-inch Touch Screen](/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen)
+- [Wi-Fi](/SenseCAP_Indicator_ESP32_Wi-Fi)
+- [BLE](/SenseCAP_Indicator_ESP32_BLE)
+- [Button](/SenseCAP_Indicator_ESP32_Button)
+- [LoRa®](/SenseCAP_Indicator_ESP32_LoRa)
 
 ### SenseCAP Indicator - Develop with RP2040
 
-- [CO2 Sensor(Built-in)](/Indicator_RP2040_tVOC Sensor_Built-in)
-- [tVOC Sensor(Built-in)](/Indicator_RP2040_tVOC Sensor_Built-in)
-- [Buzzer](/Indicator_RP2040_Buzzer)
-- [MicroSD](/Indicator_RP2040_MicroSD)
-- [Grove ADC](/Indicator_RP2040_Grove_ADC)
-- [Grove IIC](/Indicator_RP2040_Grove_IIC)
+- [CO2 Sensor(Built-in)](/SenseCAP_Indicator_RP2040_CO2)
+- [tVOC Sensor(Built-in)](/SenseCAP_Indicator_RP2040_tVOC)
+- [Buzzer](/SenseCAP_Indicator_RP2040_Buzzer)
+- [MicroSD](/SenseCAP_Indicator_RP2040_MicroSD)
+- [Grove ADC](/SenseCAP_Indicator_RP2040_Grove_ADC)
+- [Grove IIC](/SenseCAP_Indicator_RP2040_Grove_IIC)
 
 ### [Grove - NFC (ST25DV64)](/grove-nfc-st25dv64)
 

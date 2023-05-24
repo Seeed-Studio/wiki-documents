@@ -4,7 +4,7 @@ title: BLE
 keywords:
 - SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_ESP32_BLE
+slug: /SenseCAP_Indicator_ESP32_BLE
 last_update:
   date: 5/23/2023
   author: Thomas
