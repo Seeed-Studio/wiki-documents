@@ -1,10 +1,10 @@
 ---
 description: Get Started with SenseCAP Indicator Introduction
-title: Get Started with SenseCAP Indicator Introduction
+title: Introduction
 keywords:
-- SenseCAP Indicator
+- Get Started SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_Get_Started_introduction
+slug: /SenseCAP_Indicator_Get_Started
 last_update:
   date: 5/23/2023
   author: Thomas

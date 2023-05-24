@@ -4,7 +4,7 @@ title: Grove IIC
 keywords:
 - Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_RP2040_Grove_IIC
+slug: /SenseCAP_Indicator_RP2040_Grove_IIC
 last_update:
   date: 5/23/2023
   author: Thomas

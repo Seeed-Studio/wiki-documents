@@ -1,10 +1,10 @@
 ---
 description: Get Started with SenseCAP Indicator Native Firmware
-title: Get Started with SenseCAP Indicator Native Firmware
+title: Native Firmware
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_Get_Started_Native_Firmware
+slug: /SenseCAP_Indicator_Native_Firmware
 last_update:
   date: 5/23/2023
   author: Thomas
@@ -24,10 +24,10 @@ Simple steps to configure SenseCAP Indicator at the setting page.
 Select the Wi-Fi name and input the password and connect it.
 
 
-<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_9.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_9.png"/></div>
 Once you saw the green Wi-Fi icon, you'are all set.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_10.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_10.png"/></div>
 
 ## **Display Setting**
 - **Brightness**: Adjust screen brightness.

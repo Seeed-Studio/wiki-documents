@@ -4,7 +4,7 @@ title: How To Set The API Key
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_Get_Started_How_to_Set_the_API_Key
+slug: /SenseCAP_Indicator_How_to_Set_the_API_Key
 last_update:
   date: 5/23/2023
   author: Thomas
@@ -48,7 +48,7 @@ Learn more in the [rate limits](https://platform.openai.com/docs/guides/rate-lim
 
 
 
-- **Step 4:** Open Arduino IDE, for more details about Arduino IDE, please check [Development Tutorial](/Indicator_Get_Started_Native_Firmware) first
+- **Step 4:** Open Arduino IDE, for more details about Arduino IDE, please check [Development Tutorial](/SenseCAP_Indicator_Native_Firmware) first
 
 Select the board and port.
 **Board**: Seeed INDICATOR RP2040
