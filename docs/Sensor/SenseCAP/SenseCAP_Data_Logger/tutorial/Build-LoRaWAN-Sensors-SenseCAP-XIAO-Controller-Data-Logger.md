@@ -61,7 +61,7 @@ Currently, SenseCAP S2110 Sensor Builder supports the following Grove modules ou
 - [Grove - Sunlight Sensor - SI1151](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)
 - [Grove - Light Sensor v1.2 - LS06-S phototransistor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
 - [Grove - Flame Sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html)
-- [Grove - Gas Sensor(BME688)](https://www.seeedstudio.com/Grove-Gas-Sensor-BME688-p-5478.html)
+- [Grove - Gas Sensor(BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
 - [Grove - Multichannel Gas Sensor v2](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html?queryID=e92bca5d79e17a6d5bf1447be36e2ee2&objectID=4569&indexName=bazaar_retailer_products)
 - [Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids)](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html?queryID=9f138cfc508f141092493577c1ca83bb&objectID=4400&indexName=bazaar_retailer_products)
 - [Grove - UV Sensor](https://www.seeedstudio.com/Grove-UV-Sensor.html?queryID=07ecb93f63b4035df7dfa9aea8b1e498&objectID=1345&indexName=bazaar_retailer_products)
