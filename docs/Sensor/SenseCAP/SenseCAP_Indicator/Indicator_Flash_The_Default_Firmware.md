@@ -4,13 +4,13 @@ title: How To Flash The Default Firmware
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_How_To_Flash_The_Default_Firmware
+slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 last_update:
   date: 5/23/2023
   author: Thomas
 ---
 # **How To Flash The Default Firmware**
-The SenseCAP indicator has two MCUs, ESP32-S3 and RP2040. This tutorial provides detailed guide to help developer get onboard, and the first part is a toturial guide user flash the out-of-box factory default firmware, and help the early shipped devices updating to latest out-of-box firmware.
+The SenseCAP indicator has two MCUs, ESP32-S3 and RP2040. This tutorial provides detailed guide to help developer get onboard, and the first part is a tutorial guide user flash the out-of-box factory default firmware, and help the early shipped devices updating to latest out-of-box firmware.
 ## **Preparation**
 All you need is your indicator and any Windows/Mac/Linux **Computer**.
 
@@ -67,7 +67,7 @@ You have two options to download the Out of the Box Firmware:
 
 - **Step 4**: In the SPI Download Tab and Click "..." and navigate to the firmware you just downloaded.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator23.png"/></div>
 
 
 
@@ -79,7 +79,7 @@ You have two options to download the Out of the Box Firmware:
 | **SPI MODE**  | DIO  |
 
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator23.png"/></div>
 
 
 - **Step 6**: Download Panel Configure
@@ -89,7 +89,7 @@ Here we chose **COM4**
 
 **Baud**: 921600(recommended value）
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator23.png"/></div>
 
 
 Click Start Downloading
@@ -214,7 +214,7 @@ Click on **Tools** > **Board** > **Board Manager**.
 
 Search "indicator" and install "Raspberry Pi Pico/RP2040" in the Boards Manager
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator.png"/></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator.png"/></div>
 
 - **Step 3**: Add Libraries
 

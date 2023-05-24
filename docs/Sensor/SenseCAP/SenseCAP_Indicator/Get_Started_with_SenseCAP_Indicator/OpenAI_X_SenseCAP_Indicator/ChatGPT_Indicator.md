@@ -1,15 +1,15 @@
 ---
 description: ChatGPT Indicator
-title: ChatGPT Indicator
+title: ChatGPT Chat Completions
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_Get_Started_ChatGPT
+slug: /SenseCAP_Indicator_ChatGPT
 last_update:
-  date: 5/23/2023
+  date: 5/24/2023
   author: Thomas
 ---
-# **ChatGPT Indicator**
+  # **ChatGPT Indicator**
 
 ChatGPT is a conversational AI model developed by OpenAI. It is specifically designed for chatbot applications, and it has been trained on a large corpus of conversational data to enable it to understand and generate natural language responses to user inputs. ChatGPT has been used in various applications, including customer service chatbots, virtual assistants, and social media chatbots.
 
@@ -23,25 +23,25 @@ into the native firmware, it can help you quickly experience the conversation wi
 Select the Wi-Fi, input the password and connect it.
 
 
-<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_9.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_9.png"/></div>
 
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_10.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_10.png"/></div>
 
 
 ## Step 2. Set the API Key
-    
-Click "Set API Key" and scan the QR code, then set it according to the [tutorial](/Indicator_Get_Started_How_to_Set_the_API_Key).
+
+Click "Set API Key" and scan the QR code, then set it according to the [tutorial](/SenseCAP_Indicator_How_to_Set_the_API_Key).
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/apikey.png"/></div>
 
 
-    
+ 
     
 ## Step 3. Start Communicate with ChatGPT
 
 When you have set up Wi-Fi and APIKey, you are all done.
-    
+
 **Ask ChatGPT everything you want to know!**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/gpt.jpg"/></div>
@@ -53,11 +53,9 @@ In addition to the demonstrated functionality, SensecAP provides fully open sour
 
 
 # **FAQ**
-    
-    
-    
+
 **The device is connected to WIFi but still prompts "Please check the wifi connection"**
-    
+
 - Please try connecting to another Wi-Fi, or check your router settings.
   
 
@@ -65,7 +63,7 @@ In addition to the demonstrated functionality, SensecAP provides fully open sour
     
 - The API Key is not set, or the setting fails, please set it again.
   
-    
+
 **Request fail**
     
 - Check if the API Key is correct. 

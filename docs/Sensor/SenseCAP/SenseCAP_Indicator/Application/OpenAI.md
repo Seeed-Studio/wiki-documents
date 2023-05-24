@@ -1,15 +1,15 @@
 ---
 description: ChatGPT with Indicator
-title: Indicator ChatGPT Application
+title: ChatGPT & DALL·E Application Development
 keywords:
-- SenseCAP ChatGPT AI Prompt
+- SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Indicator_Application_ChatGPT
+slug: /SenseCAP_Indicator_Application_ChatGPT
 last_update:
-  date: 5/23/2023
+  date: 5/24/2023
   author: Thomas
 ---
-# Indicator ChatGPT Setup Guide
+# SenseCAP Indicator x ChatGPT x DALL·E Application Development
 On this page, we will guide you on how to organize the OpenAI Demo for quick addition, deletion, and modification of programs according to the provided BSP.
 
 ## Prerequisites
@@ -18,12 +18,12 @@ On this page, we will guide you on how to organize the OpenAI Demo for quick add
 - The IDF toolchain installed on your computer
 
 :::note
-- Want to know how to change the UI? -> [How to Create your own UI](/Indicator_How_to_Create_your_own_UI)
-- Haven't installed toolchain? -> [How_To_Flash_The_Default_Firmware](/Indicator_How_To_Flash_The_Default_Firmware)
+- Want to know how to change the UI? -> [How to Create your own UI](/SenseCAP_Indicator_How_to_Create_your_own_UI)
+- Haven't installed toolchain? -> [How_To_Flash_The_Default_Firmware](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)
 :::
 
 The following code snippet is the main code related to OpenAI startup. flowchart:
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_openai_sys.png)
+![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_openai_sys.png)
 
 ## MVC (Model-View-Controller)
 The openai_demo is developed based on the MVC architecture.
@@ -63,6 +63,15 @@ static int __chat_json_prase(const char *p_str, char *p_answer, char *p_err);
 ```
 
 In the `chat_request` function of `indicator_openai.c`, the `data_buf` variable is employed to store both the prompt and data input. If you are familiar with HTTP, you will recognize that this function generates an HTTP request that encapsulates user-supplied data.
+
+# DALL·E AI Picture Generator
+
+On this page, we will guide you on how to organize the OpenAI Demo for quick addition, deletion, and modification of programs according to the provided BSP.
+
+To understand the structure of the entire project, you can visit the [Indicator ChatGPT demo](/SenseCAP_Indicator_ChatGPT) page.
+
+> Principle: When a request is successful, it returns a URL address. By downloading and decoding the image from this URL link, it can be displayed.
+
 
 ```c
 #define WEB_SERVER "api.openai.com"
@@ -165,7 +174,7 @@ data_len += sprintf(data_buf + data_len, "\"}]}");
 ```
 
 
-To see the detail code, go to [indicator_openaI.c · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/82d02957dbc71d4c1549246e823fac4ead89bb42/examples/indicator_openai/main/model/indicator_openai.c)
+To see the detail code, go to [indicator_openaI.c · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/82d02957dbc71d4c1549246e823fac4ead89bb42/examples/SenseCAP_Indicator_openai/main/model/SenseCAP_Indicator_openai.c)
 
 ```c
 #include "indicator_openai.h"
@@ -677,8 +686,8 @@ ESP_ERROR_CHECK(esp_event_handler_instance_register_with(view_event_handle, VIEW
 ```  
   
 # Resource
-- [Indicator OpenAI Demo · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/82d02957dbc71d4c1549246e823fac4ead89bb42/examples/indicator_openai)
-- The actual effect: [ChatGPT_Indicator](/Indicator_Get_Started_ChatGPT)
+- [Indicator OpenAI Demo · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/82d02957dbc71d4c1549246e823fac4ead89bb42/examples/SenseCAP_Indicator_openai)
+- The actual effect: [ChatGPT_Indicator](/SenseCAP_Indicator_ChatGPT)
 
 
 
