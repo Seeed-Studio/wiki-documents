@@ -2,12 +2,12 @@
 description: tVOC Sensor Built-in
 title: tVOC Sensor Built-in
 keywords:
-- Development Tutorial
+- Indicator Development Tutorial RP2040
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Develop_with_RP2040/tVOC Sensor_Built-in
+slug: /SenseCAP_Indicator_RP2040_tVOC
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **tVOC Sensor(Built-in)**
 
@@ -30,7 +30,7 @@ Based on the following library：
 
 Note: When using the built-in sensor, the sensor power must be enabled.
 
-```
+```cpp
 #include <Arduino.h>
 #include <SensirionI2CSgp40.h>
 #include <VOCGasIndexAlgorithm.h>
@@ -143,5 +143,6 @@ void loop() {
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

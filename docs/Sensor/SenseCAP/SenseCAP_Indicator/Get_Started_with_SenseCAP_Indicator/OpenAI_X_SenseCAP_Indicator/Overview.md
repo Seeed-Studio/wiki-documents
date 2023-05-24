@@ -1,30 +1,73 @@
 ---
-description: OpenAI X SenseCAP Indicator Overview
-title: OpenAI X SenseCAP Indicator Overview
+description: OpenAI & SenseCAP Indicator Overview
+title: Overview
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /OpenAI_X_SenseCAP_Indicator_Overview
+slug: /SenseCAP_Indicator_OpenAI_X_Overview
 last_update:
-  date: 5/16/2023
-  author: Yvonne
+  date: 5/24/2023
+  author: Thomas
 ---
-# **Overview**
+# SenseCAP Indicator & OpenAI
+
+## Overview
+
+SenseCAP Indicator is a powerful tool that harnesses the capabilities of OpenAI's ChatGPT and DALL·E models through API integration. Developed by OpenAI, a renowned name in the field of artificial intelligence, SenseCAP Indicator allows users to experience the fascinating potential of AI in various scenarios.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png"/></div>
+
+SenseCAP Indicator integrates [ChatGPT](https://platform.openai.com/docs/guides/chat) and [DALL·E](https://platform.openai.com/docs/guides/images/introduction) AI services. It serves as a versatile smart assistant, enabling seamless interactions such as real-time conversations, language learning and translation, and engaging text-based games. 
+
+Developers can also leverage SenseCAP Indicator to integrate AI into their applications, ranging from **Smart Home control** and **IFTTT automation to sensor data analysis**, and so on.
+
+## Functionality
+
+The integration of OpenAI's ChatGPT and DALL·E models with SenseCAP Indicator provides the following key functionalities:
+
+### Language Processing
+
+**ChatGPT**, with its advanced natural language processing capabilities, enables intelligent and human-like conversation flows. Users can engage in meaningful dialogues with SenseCAP Indicator, leveraging its ability to understand and generate text.
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_WHO_ARE_YOU.JPG"/></div>
+
+### Image Generation
+
+**DALL·E**, an image generation model, empowers SenseCAP Indicator to create visual content from textual descriptions. Users can experience the creative possibilities of AI by providing text prompts and receiving generated images based on their inputs.
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_1_CAT.JPG"/></div>
+
+## Get Started
+
+To begin using SenseCAP Indicator, follow these steps:
+
+1. Press the "ChatGPT" button on the interface.
+2. Enter your text prompt, such as "What is a camel?" in the input field.
+3. Hide the keyboard(press `√`) and click the "Generate" button.
+4. Wait for the response, which will be displayed on the screen.
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_REQ_WHAT_IS_CAM.JPG"/></div>
+
+You can also test ChatGPT's mathematical capabilities and explore its ability to answer various questions.
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/chatgpt.jpg"/></div>
 
 
-OpenAI(Open Artificial Intelligence) has made significant contributions to the field of AI with its research and development of advanced AI models, such as the GPT (Generative Pre-trained Transformer) series and DALL·E. These models including GPT-3, have demonstrated remarkable language processing and generation capabilities, pushing the boundaries of AI technology.
 
-It provides APIs that allow developers to access and use their AI models. These APIs enable the integration of OpenAI's AI technologies into various applications, fostering innovation and expanding the reach of AI across different domains.
+Similarly, DALL·E integration offers image generation functionality. By providing text prompts, you can request generated images based on your descriptions.
 
-Sensecap Indicator integrates two popular models ChatGPT and DALL·E via API, empowering users to quickly experience and enjoy the charm of AI!
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_ONECAT_WHOLE.jpg"/></div>
 
-<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png"/></div>
-
-
-Before starting your OpenAI journey, you will need to apply an API Key for access.
-
-Click "Set API Key" and scan the QR code, then set it according to the following chapter.
-
-<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/apikey.png"/></div>
+If you are not satisfied with a generated image, you can click the "Regenerate" button to request another one.
 
 
+## Resource
+Need more detail information to know how to use ChatGPT and DALL·E models? 
+- [SenseCAP_Indicator_ChatGPT Chat Completions](/SenseCAP_Indicator_ChatGPT)
+- [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL·E)
+
+# **Tech Support**
+
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

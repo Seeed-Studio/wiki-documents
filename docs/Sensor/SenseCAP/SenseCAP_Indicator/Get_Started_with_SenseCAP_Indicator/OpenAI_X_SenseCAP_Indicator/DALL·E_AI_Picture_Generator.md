@@ -1,13 +1,13 @@
 ---
 description: DALL·E AI Picture Generator
-title: DALL·E AI Picture Generator
+title: DALL·E Image Generation
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /DALL·E_AI_Picture_Generator
+slug: /SenseCAP_Indicator_DALL·E
 last_update:
-  date: 5/16/2023
-  author: Yvonne
+  date: 5/24/2023
+  author: Thomas
 ---
 # **DALL·E AI Picture Generator**
 
@@ -31,7 +31,7 @@ Click on image for full view, click it again to return.
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/dall2.png"/></div>
     
 
-In addition to the demonstrated functionality, SensecAP provides fully open source code and detailed tutorials,click [here](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Application) for more details.
+In addition to the demonstrated functionality, SensecAP provides fully open source code and detailed tutorials,click [here](/SenseCAP_Indicator_ChatGPT) for more details.
 
     
 
@@ -55,5 +55,6 @@ In addition to the demonstrated functionality, SensecAP provides fully open sour
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc
