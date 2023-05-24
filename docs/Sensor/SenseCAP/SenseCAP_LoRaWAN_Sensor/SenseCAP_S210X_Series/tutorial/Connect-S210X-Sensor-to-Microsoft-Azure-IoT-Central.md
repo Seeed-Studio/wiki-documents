@@ -2,16 +2,22 @@
 description: Connect S210X Sensor to Microsoft Azure IoT Central Via Node-RED
 title: Connect S210X Sensor to Microsoft Azure IoT Central Via Node-RED
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+- SenseCAP LoRaWAN Sensor& Microsoft Azure IoT Central
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 2/14/2023
-  author: Matthew
+  date: 5/24/2023
+  author: Jessie
 ---
 
 # Connect S210X Sensor to Microsoft Azure IoT Central Via Node-RED
 
-**SenseCAP S210X Series Sensors** are with the IP66 rating, -40 ~ +85C ° operating temperature and a built-in 19Ah high-capacity battery, combined with the devices' low power consumption, the series can operate in harsh outdoor environments for up to 10 years with a range of up to 10km. ![IMG\_256](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/001.png)
+**SenseCAP S210X Series Sensors** are with the IP66 rating, -40 ~ +85C ° operating temperature and a built-in 19Ah high-capacity battery, combined with the devices' low power consumption, the series can operate in harsh outdoor environments for up to 10 years with a range of up to 10km. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/001.png" alt="pir" width={600} height="auto" /></p>
+
+
+
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/catalogsearch/result/?q=S210x" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
 
 In this tutorial, we will introduce how to connect S210X series Sensors to the Microsoft Azure IoT Central via Node-RED
 ## **SenseCAP & Node-RED**
@@ -24,7 +30,9 @@ This chapter is to make it easier for our users to connect data from the SenseCA
 Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
 
 It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click. 
-![IMG\_257](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/002.png)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/002.png" alt="pir" width={600} height="auto" /></p>
+
 
 #### **Install Node.Js**
 To install Node-RED locally you will need a supported version of Node.js.
@@ -210,49 +218,32 @@ Drag out the **function** node from the function bar on the left, double-click i
 
 ![IMG\_282](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/027.png)
 
-> code:
+**Code**:
 
-`{
-
-`    `var payload = msg.payload;
-
-`    `var topic = msg.topic;
-
-`    `var strs = topic.split("/");
-
-`    `var length = strs.length
-
-`    `if (length >= 2) {
-
-`        `var measurementId = strs[length - 1]
-
-`        `var body = {}
-
-`        `var value = payload.value
-
-`        `if (measurementId == 4097) {
-
-`            `body.AirTemperature = value
-
-`        `} else if (measurementId == 4098) {
-
-`            `body.AirHumidity = value
-
-`        `} else if (measurementId == 4100) {
-
-`            `body.CO2 = value
-
-`        `}`
-
-`        `msg.payload = body;
-
-`    `}
-
-`    `return msg;
-
+```cpp
+{
+    var payload = msg.payload;
+    var topic = msg.topic;
+    var strs = topic.split("/");
+    var length = strs.length
+    if (length >= 2) {
+        var measurementId = strs[length - 1]
+        var body = {}
+        var value = payload.value
+        if (measurementId == 4097) {
+            body.AirTemperature = value
+        } else if (measurementId == 4098) {
+            body.AirHumidity = value
+        } else if (measurementId == 4100) {
+            body.CO2 = value
+        }
+        msg.payload = body;
+    }
+    return msg;
 }
+```
 
-> 
+
 
 If you want to see the logging information of the data, you can add a debug node after the function node.
 
