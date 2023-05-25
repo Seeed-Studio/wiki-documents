@@ -171,7 +171,7 @@ Congratulations! You have successfully deployed a real-time Machine Listening ap
 - [Cochl Website](https://www.cochl.ai)
 - [Web-based Demos](https://labs.cochl.ai)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

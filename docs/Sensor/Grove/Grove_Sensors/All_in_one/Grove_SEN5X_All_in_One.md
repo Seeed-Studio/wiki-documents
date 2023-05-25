@@ -604,9 +604,9 @@ The output should be like:
 
 - [Library for STM32](https://github.com/Sensirion/embedded-i2c-sen5x)
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

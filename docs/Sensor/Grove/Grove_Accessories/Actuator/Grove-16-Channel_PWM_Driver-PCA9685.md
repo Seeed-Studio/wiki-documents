@@ -221,7 +221,7 @@ void loop()
 
 - **[PDF]** [Datasheet PCA9685](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/res/PCA9685.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

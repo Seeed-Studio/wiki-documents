@@ -67,7 +67,7 @@ If you have questions or other better design ideas, you can go to our [forum](ht
 
 [BlinkM_Examples from ThingM.com](http://thingm.com/fileadmin/thingm/downloads/BlinkM_Examples.zip)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

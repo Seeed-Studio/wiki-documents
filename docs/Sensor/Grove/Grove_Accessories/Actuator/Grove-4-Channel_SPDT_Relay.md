@@ -397,7 +397,7 @@ This is the introduction Video of this product, simple demos, you can have a try
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5NBdUr5D-8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

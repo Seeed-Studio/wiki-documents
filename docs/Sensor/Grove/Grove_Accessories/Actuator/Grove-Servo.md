@@ -334,7 +334,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GTej6Lv8us" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

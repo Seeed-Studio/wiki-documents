@@ -139,7 +139,7 @@ For display devices using BeagleBone® HDMI, uncomment `disable_uboot_overlay_vi
 
 - **[Schematic]** [Schematic files](https://statics3.seeedstudio.com/assets/file/bazaar/product/5INCH_BBG_00A2_SCH.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

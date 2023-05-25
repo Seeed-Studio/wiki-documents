@@ -235,9 +235,9 @@ white line detected
 - **[Datasheet]** [LMV358.PDF](https://files.seeedstudio.com/wiki/Grove_Line_Finder/res/Lmv358.pdf)
 - **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_Line_Finder/res/Grove_Line_Finder_CDC_File.zip)
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

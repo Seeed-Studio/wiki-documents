@@ -217,7 +217,7 @@ STEP 6: you should see the Modbus nodes in the side bar
 * [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
 * [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
   
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

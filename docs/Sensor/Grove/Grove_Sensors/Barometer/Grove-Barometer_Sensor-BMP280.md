@@ -266,9 +266,9 @@ void loop()
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/monitoring-system-for-smart-crops-dfa4bd/embed' width='350'></iframe>
 
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+
 
 
 

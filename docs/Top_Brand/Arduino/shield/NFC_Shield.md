@@ -25,7 +25,7 @@ tags:
 |---|---|
 |[NFC Shield V1.0](https://wiki.seeedstudio.com/NFC_Shield_V1.0/) |[NFC Shield V2.0](https://wiki.seeedstudio.com/NFC_Shield_V2.0/) |
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

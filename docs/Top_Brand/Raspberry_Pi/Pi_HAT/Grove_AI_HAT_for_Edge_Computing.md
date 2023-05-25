@@ -161,7 +161,7 @@ We hope this board may help you with your edge computing, AI vision, voice recog
 - **[PDF]** [Accelerometers_Sensor_datasheet Datasheet](https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/res/Accelerometers_Sensor_datasheet.pdf)
 - **[PDF]** [ADS1115 Datasheet](https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/res/ADS1115.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

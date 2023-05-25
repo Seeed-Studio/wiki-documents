@@ -523,7 +523,7 @@ If you want to experience a more interesting demo with Electron, you can checkou
 - **[GitHub]** [Electron_reTerminal_Smart_Lamp_UI](https://github.com/lakshanthad/Electron_reTerminal_Smart_Lamp_UI)
 - **[Webpage]** [Electron Documentation](https://www.electronjs.org/docs/api)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

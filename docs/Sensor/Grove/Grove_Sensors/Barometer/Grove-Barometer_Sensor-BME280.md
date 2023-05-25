@@ -372,9 +372,9 @@ Pressure:  100331 Pa
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed' width='350'></iframe>
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+
 
 
 

@@ -199,7 +199,7 @@ delay(1000); // wait 1000 milliseconds (1 second)}
 - **[PDF]**[Relay shield PCB](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/res/Relay%20shield%20PCB.pdf)
 - **[PDF]**[Relay shield sch](https://files.seeedstudio.com/wiki/Relay-Shield_V2.0/res/Relay%20shield%20sch.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

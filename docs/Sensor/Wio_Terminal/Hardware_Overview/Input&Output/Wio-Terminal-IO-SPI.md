@@ -40,7 +40,7 @@ In Arduino, all SPI pins are pre-defined and you can access the pins as follow:
 
 - **SS** -> `PIN_SPI_SS`
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

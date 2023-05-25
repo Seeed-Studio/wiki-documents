@@ -39,7 +39,7 @@ Here lists the comparison between various versions of SD Card Shield:
  |**Supported Card Type**|SD card(<=2G); Micro SD card(<=2G); SDHC card(<=16G)|SD card(<=16G); Micro SD card(<=2G); SDHC card(<=16G)|
  |**Compatibility**|Do not compatible with Mega|Compatible with Mega|
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

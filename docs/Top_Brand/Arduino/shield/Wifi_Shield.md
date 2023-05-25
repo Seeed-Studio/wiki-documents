@@ -39,7 +39,7 @@ Here lists the comparison between various versions of WiFi Shield:
 | Antenna Type       | mast antenna                                                                                           | PCB antenna                                                            | onboard antenna                                                                           |
 | Library File       | [Wifi Shield Library V1.0](https://files.seeedstudio.com/wiki/WIFI_Shield/res/WifiShield.zip) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) | [New Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) _the same to v1.2_ |
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

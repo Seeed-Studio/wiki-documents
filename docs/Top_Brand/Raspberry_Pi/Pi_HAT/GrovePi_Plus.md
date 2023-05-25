@@ -171,7 +171,7 @@ We have developed three simple projects to illustrate how the GrovePi works.
 * **[PDF]** [GrovePi_Plus V3.0 PCB pdf file](https://files.seeedstudio.com/wiki/GrovePi_Plus/res/GrovePi%2B%20v3.0%20PCB.pdf)
 * **[Document]** [Setting_Up_Software_for_GrovePi](https://files.seeedstudio.com/wiki/GrovePi_Plus/res/Setting_Up_Software_for_GrovePi.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

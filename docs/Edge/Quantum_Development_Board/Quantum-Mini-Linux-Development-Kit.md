@@ -324,7 +324,7 @@ The fan holder can be installed as follows:
 - **[ZIP]** [**Fan holder**](#files.seeedstudio.com/wiki/Quantum-Mini-Linux-Dev-Kit/cooling-case-202006-fan.zip)
 <!-- 上述zip链接有误 -->
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

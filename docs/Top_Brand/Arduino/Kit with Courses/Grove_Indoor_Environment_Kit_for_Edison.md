@@ -277,7 +277,7 @@ _**Note: When visiting the web server, a port number(88)should be added,such as:
 
 * [Intel Edison Software &amp; Documentation](https://communities.intel.com/community/makers/edison/documentation)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

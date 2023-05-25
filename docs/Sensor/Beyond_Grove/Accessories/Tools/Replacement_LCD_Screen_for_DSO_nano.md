@@ -70,7 +70,7 @@ Here we go, now you can take the screen and motherboard away from the case.
 
 6. 8-Channel Analog Multiplexer : change the match channel for different V/div
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -505,7 +505,7 @@ From each node (IE Switch pod that controls your windows or electric door locks)
 - **[Drawing]**[CAN BUS Shield v2.0 Drawing in PDF](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.pdf)
 - **[Drawing]**[CAN BUS Shield v2.0 Drawing in DXF](https://files.seeedstudio.com/wiki/CAN-BUS-Shield-V2.0/res/CAN-BUS%C2%A0SHIELD%C2%A0V2.0.dxf.zip)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -52,7 +52,7 @@ Touch and release is determined by comparing the immediate capacitance deviation
 
 ![](https://files.seeedstudio.com/wiki/How_to_detect_finger_touch/img/600px-4.jpg)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

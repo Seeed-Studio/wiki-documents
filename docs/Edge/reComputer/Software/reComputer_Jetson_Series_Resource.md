@@ -128,7 +128,7 @@ Ask and recevie questions on the Jetson Forum. NVIDIA engineers, community devel
 - [Jetson Nano forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/jetson-nano) for Jetson Nano developer kits and Jetson Nano production modules.
 - [Jetson Xavier NX Forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/jetson-xavier-nx) for Jetson Xavier NX Development Kits and Jetson Xavier NX Production Modules.
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

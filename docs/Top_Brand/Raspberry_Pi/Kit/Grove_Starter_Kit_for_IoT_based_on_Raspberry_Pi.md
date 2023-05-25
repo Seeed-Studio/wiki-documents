@@ -315,7 +315,7 @@ You can see the Distance Sound Light value and relay state on the LCD Screen. Th
 * [GrovePi C# Library Code](https://github.com/DexterInd/GrovePi/tree/master/Software/CSharp)
 * [Example Code](https://github.com/Seeed-Studio/GrovePiExamples_win10)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

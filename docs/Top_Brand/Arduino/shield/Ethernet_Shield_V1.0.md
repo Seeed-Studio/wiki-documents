@@ -158,7 +158,7 @@ Connect the ethernet shield with internet via RJ45 connector, and Arduino with P
 - **[PDF]**[W5100_ethernet_shield PCB](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/W5100_ethernet_shield.pdf)
 - **[PDF]**[W5100_ethernet_shield SCH](https://files.seeedstudio.com/wiki/Ethernet_Shield_V1.0/res/W5100_ethernet_shield%20SCH.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

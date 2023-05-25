@@ -184,7 +184,7 @@ If you want to try other demos available under **/opt/nvidia/deepstream/deepstre
 sudo deepstream-app -c deepstream_app_source1_$MODEL.txt
 ```
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

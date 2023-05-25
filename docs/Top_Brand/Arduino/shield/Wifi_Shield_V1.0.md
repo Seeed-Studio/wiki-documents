@@ -252,7 +252,7 @@ For more detailed information about RN171, you can download the datasheet here [
 - **[Datasheet]**[RN171 Datasheet](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/res/WiFly-RN-UM.pdf)
 - **[Library]**[Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

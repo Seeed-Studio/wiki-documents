@@ -154,7 +154,7 @@ The Grove - Finger-clip Heart Rate Sensor provides heart rate measurements. Howe
 
 * [Grove - Finger-clip Heart Rate Sensor bin file](https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor_with_shell/res/Grove-Finger-clip_Heart_Rate_Sensor_bin.zip)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

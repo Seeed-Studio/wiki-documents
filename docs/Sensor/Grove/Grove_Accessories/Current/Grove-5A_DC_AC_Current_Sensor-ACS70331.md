@@ -414,7 +414,7 @@ So, in the figure 6, when we set the **Vref** to 595.70, the **Ip** turns to 0mA
 - **[ZIP]** [Grove - ±5A DC/AC Current Sensor (ACS70331) Schematic file](https://files.seeedstudio.com/wiki/Grove--5A_DC-AC_Current_Sensor-ACS70331/res/5A%20DCAC%20Current%20Sensor(ACS70331)%20v1.0.zip)
 - **[PDF]** [ACS70331 Datasheet](https://files.seeedstudio.com/wiki/Grove-2.5A_DC_Current_Sensor-ACS70331/res/Current_Sensor_ACS70331.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
