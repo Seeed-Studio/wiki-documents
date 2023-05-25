@@ -17,7 +17,7 @@ Please make sure that your network environment is able to connect OpenAI API.
 :::
 
 - **Step 1:** Log in https://platform.openai.com/signup
-If you don't have an account already, you'll need to sign up for one. 
+If you don't have an account already, you'll need to sign up for one.
 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/login.png"/></div>
@@ -44,7 +44,7 @@ If you don't have an account already, you'll need to sign up for one.
 
 OpenAI enforces rate limits on the requests you can make to the API. These are applied over requests-per-minute, tokens-per-minute, or in the case of image models, images-per-minute.
 
-Learn more in the [rate limits](https://platform.openai.com/docs/guides/rate-limits/overview) documentation, or reference the [default rate limits](https://platform.openai.com/docs/guides/rate-limits/what-are-the-rate-limits-for-our-api) for your models. 
+Learn more in the [rate limits](https://platform.openai.com/docs/guides/rate-limits/overview) documentation, or reference the [default rate limits](https://platform.openai.com/docs/guides/rate-limits/what-are-the-rate-limits-for-our-api) for your models.
 
 
 
@@ -53,17 +53,17 @@ Learn more in the [rate limits](https://platform.openai.com/docs/guides/rate-lim
 Select the board and port.
 **Board**: Seeed INDICATOR RP2040
 **Port**: usbserial port
-    
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/chooseboard.png"/></div>
 
-  
-- **Step 5:** Open the port monitor.
-    
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/monitor.png"/></div>   
 
-    
+- **Step 5:** Open the port monitor.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/monitor.png"/></div>
+
+
 - **Step 6:** Send the following command to the device to set the APIKey:
-    
+
 `openai_api -k {your apikey}`
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/setkey.png"/></div>
@@ -73,6 +73,6 @@ You will see the log shows: "openai_api_key read successful", then you are all s
 
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
