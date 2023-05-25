@@ -246,6 +246,8 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 [Wio Terminal 音乐频谱分析仪 -- 潘知非](https://files.seeedstudio.com/wiki/Wio-Terminal/projects/music_spectrum_analyzer.pdf)
 
+[简单上手将图片显示在 Wio Terminal 上](https://files.seeedstudio.com/wiki/Wio-Terminal/projects/wioterminal_picture_display_CN_version.zip)
+
 ## 技术支持
 
 如果您有任何技术问题，请提交到我们的[论坛](https://forum.seeedstudio.com/)。<br />

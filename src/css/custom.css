@@ -373,7 +373,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 186px; /* 按钮高度 */
+  height: 160px; /* 按钮高度 */
 }
 
 .button_forum:hover {
@@ -399,7 +399,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 186px; /* 按钮高度 */
+  height: 160px; /* 按钮高度 */
 }
 
 .button_email:hover {
@@ -425,7 +425,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 186px; /* 按钮高度 */
+  height: 160px; /* 按钮高度 */
 }
 
 .button_discord:hover {
@@ -451,7 +451,7 @@ height:80%;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
   width: 400px; /* 按钮宽度 */
-  height: 186px; /* 按钮高度 */
+  height: 160px; /* 按钮高度 */
 }
 
 .button_discussion:hover {
