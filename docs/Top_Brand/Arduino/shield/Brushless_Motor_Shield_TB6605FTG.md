@@ -186,7 +186,7 @@ If everything goes well, you can see the DC motor run and the LCD will show the 
 
 - **[PDF]** [42BLF01 Brushless Motor-Specification](https://files.seeedstudio.com/wiki/BLDC-Motor-Shield-TB6605/res/42BLF01-Specification.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

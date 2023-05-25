@@ -172,7 +172,7 @@ After you have gotten an LED blinking (for Windows user, you can find it at [htt
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/shadeydave/arduino-101-ble-rover-05fa85/embed' width='350'></iframe>
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

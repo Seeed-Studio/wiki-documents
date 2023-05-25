@@ -333,7 +333,7 @@ It can be seen that the optimized model is nearly **2.57 times faster** than the
 
 - **[Web Page]** [Deci AI Documentation](https://docs.deci.ai/docs)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

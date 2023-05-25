@@ -186,7 +186,7 @@ For a novice, it may find a little hard to assemble them. Do not be frustrated. 
 ---
 [Mechanical Files](https://files.seeedstudio.com/wiki/Grove-Wrapper/res/Mechanical_Diagram.zip)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

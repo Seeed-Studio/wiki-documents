@@ -210,10 +210,6 @@ Please check,
 * If you choose the right Port and Board (Seeeduino Lotus)
 * Close and reopen Arduino IDE and try again
 
-**Q3. Where can I find technical support if I have some other issue.**
-
-You can post a question to [forum](https://forum.seeedstudio.com/) .
-
 ## Project
 
 **The Da Vinci Code** The work combines art and electronics. The art part makes the skeleton and consists of 11 layers of medium density fiberboard.

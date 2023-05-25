@@ -154,7 +154,7 @@ Please click **[here](http://support.seeedstudio.com/knowledgebase/articles/1831
 * **[PDF]** [Grove Base HAT Mechanical](https://files.seeedstudio.com/wiki/Grove_Base_HAT/res/hat-board-mechanical.pdf)
 * **[Github]** [HAT](https://github.com/raspberrypi/hats)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

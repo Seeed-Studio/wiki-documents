@@ -674,7 +674,7 @@ So, in the figure 6, when we set the **Vref** to 346.68, the **Ip** turns to 0mA
 - **[ZIP]** [Grove - 10A DC Current Sensor (ACS725) Schematic file](https://files.seeedstudio.com/wiki/Grove-10A_Current_Sensor-ACS725/res/10A%20Current%20Sensor%20(ACS725).zip)
 - **[PDF]** [ACS725 Datasheet](https://files.seeedstudio.com/wiki/Grove-10A_Current_Sensor-ACS725/res/ACS725.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

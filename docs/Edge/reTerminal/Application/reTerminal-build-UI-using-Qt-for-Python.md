@@ -637,7 +637,7 @@ If you want to experience a more interesting demo with Qt for Python, you can ch
 - **[GitHub]** [Python_ReTerminalQt5_LED_UI](https://github.com/lakshanthad/Python_ReTerminalQt5_LED_UI)
 - **[Webpage]** [Qt Documentation](https://doc.qt.io/qt-5/index.html)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

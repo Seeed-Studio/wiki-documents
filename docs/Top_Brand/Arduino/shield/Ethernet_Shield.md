@@ -41,7 +41,7 @@ Here lists the comparison among various versions of Ethernet Shield:
 |**Grove Connector** |UART and IIC Connector |No| UART and IIC Connector|
 |**Ethernet jack **|Minimal RJ45 |Standard RJ45 |Minimal RJ45|
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

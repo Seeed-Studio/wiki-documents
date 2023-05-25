@@ -127,7 +127,7 @@ Here will also provide an example that uses static library [**here**](https://gi
 
 - One thing to be noted is that, this pre-compiled library feature only supports Arduino IDE >= **`1.8.6`**, so please update to the latest version of Arduino IDE to avoid this error.
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

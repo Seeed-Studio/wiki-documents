@@ -102,10 +102,6 @@ The Base Shield is tested and fully compatible with following boards:
 - Intel Edison 5V
 - Linkit One
 
-:::note
-The boards are not listed above mean that it might have chance to work with the platform board however requires extra work such as jump wires or rewriting the code. If you are interested in digging more, welcome to contact us via [forum](https://forum.seeedstudio.com/).
-:::
-
 :::cautionAttention
 The default I2C pins of Grove Base Shield are D70/D71, but the default I2C Wire of Arduino DUE is defined as D20/D21, so when using both together, you will not be able to use the I2C pins of the expansion board properly if you use the `Wire` definition, you need to use `Wire1`.
 :::
@@ -208,7 +204,7 @@ Please click [here](http://support.seeedstudio.com/knowledgebase/articles/182644
 
 <iframe frameBorder={0} height="327.5" scrolling="no" src="https://project.seeedstudio.com/taifur/solar-powered-environmental-monitoring-kit-b1d03d/embed" width={350} />
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

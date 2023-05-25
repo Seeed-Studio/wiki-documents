@@ -219,7 +219,7 @@ Get more information about Core User please email to:[recipe@seeed.cc](mailto:re
 - **[PDF]**[Ethernet Shield v2.0 SCH](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/Ethernet%20Shield%20v2.0%20sch.pdf)
 - **[Datasheet]**[W5200 Datasheet.pdf](https://files.seeedstudio.com/wiki/Ethernet_Shield_V2.0/res/W5200_Datasheet.pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

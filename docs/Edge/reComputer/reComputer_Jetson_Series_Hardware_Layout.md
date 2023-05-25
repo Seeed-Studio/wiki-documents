@@ -319,7 +319,7 @@ Congratulations, you have successfully installed the wireless module and connect
 |  RTC                     |  1x RTC Back-up Coin Cell Socket (CR1220)         |  1x RTC Back-up Coin Cell Socket (CR1225)         |
 |   Power                  |  1x Type C connector                            |  1x DC Input Power TE Connector                   |
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

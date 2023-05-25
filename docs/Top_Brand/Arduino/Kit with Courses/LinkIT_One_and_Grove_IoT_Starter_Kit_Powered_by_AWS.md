@@ -269,7 +269,7 @@ You can check the status of Touch Sensor now. Try press the Touch Sensor, and up
 
 * [AWS IoT](https://aws.amazon.com/iot/)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

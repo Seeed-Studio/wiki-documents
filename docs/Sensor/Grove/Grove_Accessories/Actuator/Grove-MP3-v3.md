@@ -354,7 +354,7 @@ void printMenu(void) {
 - **[ZIP]** [Grove - MP3 V3 Schematic](https://files.seeedstudio.com/wiki/Grove-MP3-V3/res/Grove-MP3.zip)
 - **[PDF]** [WT2003S Datasheet](https://files.seeedstudio.com/wiki/Grove-MP3-V3/res/Grove-MP3.zip)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

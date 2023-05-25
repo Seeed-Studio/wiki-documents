@@ -434,7 +434,7 @@ python3 hardhat_detectation.py /home/jetson-nano/modelfile.eim
 
 Or can it be an image, deploy your ML application for the PPE detection pipeline in 5 mins? Stay tuned with us!
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

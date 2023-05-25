@@ -330,7 +330,7 @@ Yes, it's usage is safe for human consumption. It is frequently used on drinking
 
 * [datasheet for the material](https://wiki.seeedstudio.com/images/4/4e/YEE70G30HSLNC..pdf)
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -32,7 +32,7 @@ To use them, simply use the defined pin names as above! Some pins are multifunct
 
 As you can see, There are two Grove Ports available on Wio Terminal. One is the default **I2C Port** and other one is **configurable Digital/Analog Pin**, it can also be used for PWM outputs. Both Grove ports can be used as Digital.
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

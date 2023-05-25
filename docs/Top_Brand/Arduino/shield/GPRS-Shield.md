@@ -51,7 +51,7 @@ Here lists the comparison between various versions of GPRS Shield that you can f
 |  **Antenna**|0.4W|0.8W(29dBm)  |
 |**transit power**|0.4W|0.8W(29dBm)|
 
-## Tech Support
+## Tech Support & Product Descussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
