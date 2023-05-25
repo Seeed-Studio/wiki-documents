@@ -125,10 +125,10 @@ After that you can see a form to fill down.
 
 - **Step 4**: Submit Configuration
 
-After configuring the container name, network, environments, and bind mounts, click on the "Submit" button to save the changes.
+    After configuring the container name, network, environments, and bind mounts, click on the "Submit" button to save the changes.
 
 
-By following these steps, you will successfully configure the Plex container with the specified settings.
+    By following these steps, you will successfully configure the Plex container with the specified settings.
 
 ## Run and Set up Plex Media Server
 - **Step 1:**
