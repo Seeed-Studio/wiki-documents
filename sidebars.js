@@ -597,7 +597,7 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
                 {
                   type: 'category',
-                  label: 'OpenAI & SenseCAP Indicator',
+                  label: 'OpenAI X SenseCAP Indicator',
                   items: [
                 'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
                 'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',

@@ -1,6 +1,6 @@
 ---
-description: Flash The Default Firmware
-title: How To Flash The Default Firmware
+description: Flash The Native Firmware
+title: How To Flash The Native Firmware
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,9 +10,9 @@ last_update:
   author: Thomas
 ---
 
-# **How To Flash The Default Firmware**
+# **How To Flash The Native Firmware**
 
-The SenseCAP indicator has two MCUs, ESP32-S3 and RP2040. This tutorial provides comprehensive guide to help developer get onboard, including flashing the out-of-the-box factory default firmware and updating early shipped devices to the latest firmware.
+The SenseCAP indicator has two MCUs, ESP32-S3 and RP2040. This tutorial provides comprehensive guide to help developer get onboard, including flashing the out-of-the-box factory Native Firmware and updating early shipped devices to the latest firmware.
 
 The firmware update is particularly applicable in two scenarios:
 
@@ -25,7 +25,7 @@ To get started, all you need is your SenseCAP Indicator and a Windows/Mac/Linux 
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/usb1.png"/></div>
 
-## Download Default Firmware
+## Download Native Firmware
 
 The default shipping firmware of the SenseCAP Indicator is fully open source for both ESP32-S3 and RP2040.
 
@@ -124,7 +124,7 @@ There is "Default_Factory_Firmware_ESP32-S3.bin" firmware in the [Release](https
 
 :::caution **Note**:
 
-SenseCAP ESP32 SDK uses the 120 MHz frequency , if you flash this default firmware, please add a [patch](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/tools/patch).
+SenseCAP ESP32 SDK uses the 120 MHz frequency , if you flash this Native Firmware, please add a [patch](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/tools/patch).
 
 This patch is intended to achieve the best performance of RGB LCD by using the PSRAM Octal 120 MHz feature, and it's only used for the release/v5.0 branch of ESP-IDF.
 
