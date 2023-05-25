@@ -46,7 +46,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Sensing </strong></div>
     </div>
     `,
@@ -644,7 +644,7 @@ const sidebars = {
                 },
               ],
             },
-            'Sensor/SenseCAP/SenseCAP_Indicator/Indicator_Flash_The_Default_Firmware',
+            'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
             {
               type: 'category',
               label: 'Application',
@@ -1757,7 +1757,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Network </strong></div>
     </div>
     `,
@@ -2050,7 +2050,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Edge </strong></div>
     </div>
     `,
@@ -2075,7 +2075,7 @@ const sidebars = {
             'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
             'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
             'Edge/reTerminal/Application/Mender-Client-reTerminal',
-            
+
             {
               type: 'category',
               label: 'Home Assistant',
@@ -2418,7 +2418,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Cloud and Chain </strong></div>
     </div>
     `,
@@ -2521,7 +2521,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Popular Platform </strong></div>
     </div>
     `,
@@ -2860,7 +2860,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Contribution </strong></div>
     </div>
     `,
@@ -2899,7 +2899,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Retired Product </strong></div>
     </div>
     `,

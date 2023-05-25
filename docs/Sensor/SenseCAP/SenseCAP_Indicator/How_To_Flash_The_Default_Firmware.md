@@ -21,10 +21,10 @@ All you need is your indicator and any Windows/Mac/Linux **Computer**.
 
 ## **Download Default Firmware**
 SenseCAP Indicator's default shipping firmware is fully open source on both ESP32-S3 and RP2040.
-:::tip
-You have two options to download the Out of the Box Firmware: 
-- Source code: Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain to compile it.
-- Firmware: Directly flash the pre-compiled binary file without the need for any code modification or compilation.
+:::tip You have two options to download the Out of the Box Firmware:
+
+- **Source code:** Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain to compile it.
+- **Firmware:** Directly flash the pre-compiled binary file without the need for any code modification or compilation.
 :::
 
 **Source Code**
@@ -43,7 +43,7 @@ You have two options to download the Out of the Box Firmware:
 
 
 
-**Flash Download Tools** are used for programming or flashing firmware onto ESP8266 and ESP32 series of microcontrollers, which are widely used in the Internet of Things (IoT) applications. it provides a graphical user interface (GUI) for users to easily flash firmware onto the ESP microcontrollers. 
+**Flash Download Tools** are used for programming or flashing firmware onto ESP8266 and ESP32 series of microcontrollers, which are widely used in the Internet of Things (IoT) applications. it provides a graphical user interface (GUI) for users to easily flash firmware onto the ESP microcontrollers.
 
 **Download:**
 [Flash Download Tools (for Windows only)](https://www.espressif.com.cn/en/support/download/other-tools?keys=&field_type_tid%5B%5D=842)
@@ -100,7 +100,7 @@ When it shows "FINISH", the firmware flashing has been completed.
 
 
 
-**Note**: 
+**Note**:
 In the above guide, the binary file merged there bins into one, which name is *Default_Factory_Firmware_ESP32-S3.bin*
 
 but, when you use IDF build firmware, you will get there binary files, you have to write the correct address(you can put your own address) on the right side
@@ -299,6 +299,6 @@ Check the port on your Device Manage
 
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
