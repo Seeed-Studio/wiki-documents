@@ -1,16 +1,16 @@
 ---
-description: OpenAI & SenseCAP Indicator Overview
+description: OpenAI X SenseCAP Indicator Overview
 title: Overview
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_OpenAI_X_Overview
 last_update:
-  date: 5/24/2023
+  date: 5/25/2023
   author: Thomas
 ---
 
-# SenseCAP Indicator & OpenAI
+# SenseCAP Indicator X OpenAI
 
 ## Overview
 
@@ -18,13 +18,13 @@ SenseCAP Indicator is a powerful tool that harnesses the capabilities of OpenAI'
 
 SenseCAP Indicator integrates [ChatGPT](https://platform.openai.com/docs/guides/chat) and [DALL·E](https://platform.openai.com/docs/guides/images/introduction) AI services. It serves as a versatile smart assistant, enabling seamless interactions such as real-time conversations, language learning and translation, and engaging text-based games.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png"/></div>
-
 Developers can also leverage SenseCAP Indicator to integrate AI into their applications, ranging from **Smart Home control** and **IFTTT automation to sensor data analysis**, and so on.
 
 ## Functionality
 
 The integration of OpenAI's ChatGPT and DALL·E models with SenseCAP Indicator provides the following key functionalities:
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png"/></div>
 
 ### Language Processing
 
