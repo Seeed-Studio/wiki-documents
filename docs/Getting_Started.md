@@ -168,7 +168,7 @@ for more information.
 
 ## Weekly Wiki
 
-[Seeed Studio Weekly Wiki](/weekly_wikio) will be published each Monday and it will introduce you to our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+[Seeed Studio Weekly Wiki](/weekly_wiki) will be published each Monday and it will introduce you to our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
 ## Tech Support & Product Descussion
 
