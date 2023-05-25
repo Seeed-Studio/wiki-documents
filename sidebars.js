@@ -2002,6 +2002,7 @@ const sidebars = {
           label: 'Application',
           items: [
             'Network/LinkStar/Application/h68k-ha-esphome',
+            'Network/LinkStar/Application/plex_media_server',
 
           ]
         }
