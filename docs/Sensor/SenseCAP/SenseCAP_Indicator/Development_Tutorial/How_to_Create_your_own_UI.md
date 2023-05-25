@@ -2,12 +2,12 @@
 description: How to Create your own UI
 title: How to Create your own UI
 keywords:
-- Development Tutorial
+- Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /How_to_Create_your_own_UI
+slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **How to Create your own UI**
 
@@ -20,7 +20,7 @@ last_update:
 We provide the demo code of the UI interface, and [lvGL example file](https://docs.lvgl.io/master/examples.html) are many sample codes for drawing UI for reference, you can modify the sample code or customize your own UI.
 
 
-```
+```c
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
@@ -138,5 +138,6 @@ Run the following command to build, flash and monitor the project:
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

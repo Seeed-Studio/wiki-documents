@@ -10,8 +10,7 @@ last_update:
   author: shuxu hu
 ---
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 
 The Seeed Studio XIAO SAMD21 is the smallest member of the Seeeduino family. It carries the powerful ATSAMD21G18A-MU which is a low-power microcontrollers. On the other hand, this little board has good performance in processing but needs less power. As a matter of fact, it is designed in a tiny size and can be used for wearable devices and small projects.
 
@@ -65,26 +64,19 @@ There are two documentations on the usage of **Seeed Studio XIAO SAMD21** which 
 
 ## **Hardware Overview**
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg" alt="pir" width={600} height="auto" /></p>
 
-<!-- ![](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/img/new1.png) -->
-  <p style={{textAlign: 'center'}}><img src="https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/img/new1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/img/new1.png" alt="pir" width={600} height="auto" /></p>
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino%20XIAO%20pinout%202.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino%20XIAO%20pinout%202.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino%20XIAO%20pinout%202.png" alt="pir" width={600} height="auto" /></p>
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/regulator_to_3.3v.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/regulator_to_3.3v.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/regulator_to_3.3v.png" alt="pir" width={600} height="auto" /></p>
 
 :::note
-
-For general I/O pins:<br />
-  Working voltage of MCU is 3.3V . Voltage input connected to general I/O pins may cause chip damage if it' higher than 3.3V .
-
-For power supply pins:<br />
-  The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
-
+For general I/O pins:
+Working voltage of MCU is 3.3V . Voltage input connected to general I/O pins may cause chip damage if it' higher than 3.3V .
+For power supply pins:
+The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
 Please pay attention to use, do not lift the shield cover.
 :::
 
@@ -98,8 +90,7 @@ Sometimes the Seeed Studio XIAO SAMD21 port may disappear when user programming 
 
 At this point, the chip enters Bootloader mode and the burn port appears again. Because the samd21 chip has two partitions, one is the Bootloader and the other is the user program. The product will burn a bootloader code in the system memory when it leaves the factory. We can switch modes by performing the above steps.
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" alt="pir" width={600} height="auto" /></p>
 
 ### **Reset**
 
@@ -351,8 +342,10 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 - **Step 1. You need to Install an Arduino Software.**
 
-[<p><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" alt="pir" width={600} height="auto" /></p>
-](https://www.arduino.cc/en/Main/Software)
+<div class="download_arduino_container" style={{textAlign: 'center'}}>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+    </a>
+</div>
 
 **Launch the Arduino application**
 
@@ -367,16 +360,15 @@ If the Arduino Software loads in a different language, you can change it in the 
 
 Open the LED blink example sketch: **File > Examples >01.Basics > Blink**.
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 3. Add Seeeduino to your Arduino IDE**
 
 Click on **File > Preference**, and fill Additional Boards Manager URLs with the url below:
-    *<https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json>*
 
-<!-- ![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width={600} height="auto" /></p>
+*<https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json>*
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width={600} height="auto" /></p>
 
 Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO SAMD21**" in the searching blank. Here comes the "Seeed SAMD Boards". Install it.
 
@@ -387,21 +379,17 @@ Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO
 
 After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO SAMD21 M0**" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
 
-<!-- 
-![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png" alt="pir" width={600} height="auto" /></p>
 
 Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png" alt="pir" width={600} height="auto" /></p>
 
 - **Step 5.Upload the program**  
 
 Now, simply click the "Upload" button in the environment. Wait a few seconds and if the upload is successful, the message "Done uploading." will appear in the status bar.
 
-<!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={600} height="auto" /></p>
 
  A few seconds after the upload finishes, you should see the pin 13 (L) LED on the board start to blink (in orange). If it does, congratulations! You've gotten Arduino up-and-running. If you have problems, please see the troubleshooting suggestions.
 
@@ -447,7 +435,16 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 - **[ZIP]** [Codes](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Codes.rar)
 - **[ZIP]** [Document](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Document.rar)
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

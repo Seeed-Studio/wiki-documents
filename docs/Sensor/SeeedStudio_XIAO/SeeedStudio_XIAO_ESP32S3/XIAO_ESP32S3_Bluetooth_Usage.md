@@ -869,10 +869,20 @@ The above example gives the simplest example of a single value for a single sens
 
 [The ESP32-S3 has no Bluetooth Classic hardware in the chip](https://github.com/espressif/arduino-esp32/issues/8023). Only the "old" ESP32 can do it - no other Espressif SoC has BT Classic.
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please submit any technical issues into our [forum](https://forum.seeedstudio.com/).
+.
 
-<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
 
 

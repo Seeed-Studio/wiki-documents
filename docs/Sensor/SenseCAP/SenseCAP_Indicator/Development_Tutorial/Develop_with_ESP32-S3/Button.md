@@ -2,12 +2,12 @@
 description: Button
 title: Button
 keywords:
-- Development Tutorial
+- SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Button
+slug: /SenseCAP_Indicator_ESP32_Button
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Button**
 
@@ -15,7 +15,7 @@ This code initializes the board, registers two button event callbacks, and speci
 The ESP_LOGI() function is used to print a message to the console indicating which button event occurred.
 
 
-```
+```c
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -60,5 +60,6 @@ void app_main(void)
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc
