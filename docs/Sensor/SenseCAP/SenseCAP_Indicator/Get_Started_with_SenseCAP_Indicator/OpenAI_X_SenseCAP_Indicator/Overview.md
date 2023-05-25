@@ -1,5 +1,5 @@
 ---
-description: OpenAI & SenseCAP Indicator Overview
+description: OpenAI X SenseCAP Indicator Overview
 title: Overview
 keywords:
 - Get Started with SenseCAP Indicator
@@ -10,7 +10,7 @@ last_update:
   author: Thomas
 ---
 
-# SenseCAP Indicator & OpenAI
+# SenseCAP Indicator X OpenAI
 
 ## Overview
 
