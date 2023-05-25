@@ -6,13 +6,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Get_Started
 last_update:
-  date: 5/23/2023
+  date: 5/25/2023
   author: Thomas
 ---
 # **Overview**
 
 
-SenseCAP Indicator is a 4-inch touch screen driven by ESP32-S3 and RP2040 Dual-MCU and supports Wi-Fi/Bluetooth/LoRa communication. 
+SenseCAP Indicator is a 4-inch touch screen driven by ESP32-S3 and RP2040 Dual-MCU and supports Wi-Fi/Bluetooth/LoRa communication.
 
 The device comes two Grove interfaces, which supports ADC and I2C transmission protocols, and two USB Type-C ports with GPIO expantion pins inside, so user can easily expand external accessories via USB port.
 
@@ -27,17 +27,15 @@ SenseCAP Indicator is a fully open source powerful IoT development platform for 
 
 ## **Features**
 
-
-
-- **Dual MCUs and Rich GPIOs** 
+- **Dual MCUs and Rich GPIOs**
 Equipped with powerful ESP32S3 and RP2040 dual MCUs and over 400 Grove-compatible GPIOs for flexible expansion options.
-- **Real-time Air Quality Monitoring** 
+- **Real-time Air Quality Monitoring**
 Built-in tVOC and CO2 sensors, and an external Grove AHT20 TH sensor for more precise temperature and humidity readings.
-- **Local LoRa Hub for IoT Connectivity** 
+- **Local LoRa Hub for IoT Connectivity**
 Integrated Semtech SX1262 LoRa chip (optional) for connecting LoRa devices to popular IoT platforms such as Matter via Wi-Fi, without the need for additional compatible devices.
-- **Fully Open Source Platform** 
+- **Fully Open Source Platform**
 Leverage the extensive ESP32 and Raspberry Pi open source ecosystem for infinite application possibilities.
-- **Fusion ODM Service Available** 
+- **Fusion ODM Service Available**
 Seeed Studio also provides one-stop ODM service for quick customization and scale-up to meet various needs.(please contact iot@seeed.cc)
 
 
@@ -59,7 +57,7 @@ Seeed Studio also provides one-stop ODM service for quick customization and scal
 
 ### **Grove**
 
-There are two Grove interfaces for connecting Grove modules, providing more possibilities for developers. 
+There are two Grove interfaces for connecting Grove modules, providing more possibilities for developers.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/grove.png"/></div>
 
 Grove is a modular, standardized connector prototyping system and a strong open source hardware ecosystem. Click [**here**](https://www.seeedstudio.com/category/Grove-c-1003.html) to learn more
@@ -93,6 +91,6 @@ The embedded Semtech SX1262 LoRa® module enables you to build the LoRa® applic
 
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
