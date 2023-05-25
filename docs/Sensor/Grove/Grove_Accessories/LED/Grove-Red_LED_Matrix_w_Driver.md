@@ -10,14 +10,13 @@ last_update:
   author: shuxu hu
 ---
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/main2.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
-<!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/main2.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/main2.jpg" alt="pir" width={600} height="auto" /></p>
-
-<!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Red-LED-Matrix-w/Driver.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>  -->
-[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Red-LED-Matrix-w/Driver.html)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-Matrix-w-Driver.html"> 
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    		</a>
+		</div>
 
 LED Matrix is low cost and usually used to display simple numbers and images. Grove - Red LED Matrix w/Driver is the combination of the 20mm  8*8 square LED Matrix - Red and the Grove - LED Matrix Driver. The HT16K33 is a memory mapping and multi-function LED controller driver which allows you to control the LED matrix with our prepared and easy-to-use libraries, or you can create your own library to control it to satisfy your need. 
 
