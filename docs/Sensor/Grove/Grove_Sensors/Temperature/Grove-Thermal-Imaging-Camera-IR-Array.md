@@ -754,7 +754,7 @@ sudo ircamera I2C MLX90641
 - **[PDF]** [Datasheet of MLX90641](https://files.seeedstudio.com/products/101020892/res/MLX90641-Datasheet-Melexis.pdf)
 - **[ZIP]** [MLX90641 Visualization](https://files.seeedstudio.com/products/101020892/res/Visualization-mlx90641.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
 

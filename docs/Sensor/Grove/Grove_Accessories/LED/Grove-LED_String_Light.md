@@ -92,7 +92,7 @@ Alternatively, it can be bought stand-alone at the Seeed Studio Bazaar.
 
 *   [[Eagle File](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/res/Grove-LED_String_Light.zip)]
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

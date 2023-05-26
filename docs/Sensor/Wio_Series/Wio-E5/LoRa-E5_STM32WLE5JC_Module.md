@@ -743,7 +743,7 @@ This application will also enable low-power mode on Wio-E5 mini/ Wio-E5 Developm
 
 * **Step 4.** Refer to **step 4 - step 10** from the previous **FreeRTOS LowPower** application and you will see the same output at the end on the power meter!
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
 

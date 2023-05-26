@@ -58,7 +58,7 @@ Your phone will enter the charging mode when D1 is flashing and buzzer is turned
 
 *   **[Datasheet]** [Mosfet Driver TPS28225](https://files.seeedstudio.com/wiki/Qi_Wireless_Charger_Transmitter/res/TPS28225.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

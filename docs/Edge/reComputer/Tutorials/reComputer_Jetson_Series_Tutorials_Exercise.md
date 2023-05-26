@@ -83,7 +83,7 @@ In this tutorial, you will use the Jupyter iPython on your own Jetson Nano to bu
 
 This course will guide you through the basic concepts of implementing the [NVIDIA DeepStream SDK](https://developer.nvidia.com/deepstream-sdk)'s plug-and-play architecture for streaming analytics on your own NVIDIA® Jetson Nano.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

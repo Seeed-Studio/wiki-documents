@@ -143,7 +143,7 @@ The result should be like:
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Infrared_Temperature_Sensor -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

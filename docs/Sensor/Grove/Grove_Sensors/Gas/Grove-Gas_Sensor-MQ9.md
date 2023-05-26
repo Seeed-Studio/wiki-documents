@@ -413,7 +413,7 @@ Resources
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ9) -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 ## Upgradable to Industrial Sensors

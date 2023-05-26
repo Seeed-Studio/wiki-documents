@@ -410,7 +410,7 @@ There're many references to help you to get more information about the board.
 * **[3D]** [Seeed Studio BeagleBone® Green 3D Model](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG.zip)
 * **[PDF]** [Seeed Studio BeagleBone® Green Mechincal Drawing](https://files.seeedstudio.com/wiki/BeagleBone_Green/resources/BBG-PCBA.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

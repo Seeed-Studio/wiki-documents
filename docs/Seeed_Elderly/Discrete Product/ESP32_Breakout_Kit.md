@@ -61,7 +61,7 @@ This is the breakout kit specially designed for ESP32, it contains a breakout bo
 * [ESP32 Breakout Kit Schematics in PDF format](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/res/ESP32%20Extension%20Board%20v1.0.pdf)
 * [ESP32 Breakout Kit PCB in PDF format](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/res/ESP32%20Extension%20Board%20v1.0%20PCB.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

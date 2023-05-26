@@ -38,7 +38,7 @@ Some boards, such as the Seeeduino Stalker V3.1 and Seeeduino Ethernet, do not h
 | Wio LTE Cat.1                                     | STM32F405RG      | SerialUSB               | serialDebug: Connect to EC21                                 | Serial: Connect to Grove UART Port                               |                                                         |                         |
 | Wio LTE Cat M1/NB-IoT Tracker                     | STM32F405RG      | SerialDebug             | SerialGrove: Connect to Grove UART Port                      | SerialGSM: Connect to LTE M1/NB-IOT module                       | SerialGNSS: Connect to GPS module                       |                         |
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

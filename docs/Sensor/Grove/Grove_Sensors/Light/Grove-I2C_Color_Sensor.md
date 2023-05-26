@@ -245,7 +245,7 @@ For byte and block read, the command should be 0xC0+ADDRESS, REG_GREEN_LOW( 10h 
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_I2C_Color_Sensor -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

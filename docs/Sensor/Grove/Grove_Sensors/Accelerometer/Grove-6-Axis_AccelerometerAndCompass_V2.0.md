@@ -393,7 +393,7 @@ Click [here](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCom
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

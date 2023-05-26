@@ -107,7 +107,7 @@ It is essential to explain a NDEF message in order to have a clear recognition a
 - [Xadow NFC Antenna Eagle File](https://files.seeedstudio.com/wiki/Xadow_NFC/resources/Xadow_NFC_Antanna.zip)
 - [PN532 Datasheet](https://files.seeedstudio.com/wiki/Xadow_NFC/resources/PN532.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

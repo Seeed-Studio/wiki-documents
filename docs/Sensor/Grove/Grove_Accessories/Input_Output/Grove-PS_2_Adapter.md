@@ -238,7 +238,7 @@ Please click [here](https://www.seeedstudio.com/wiki/Upload_Code) if you do not 
 
 * [PS2 Adapter Library](https://files.seeedstudio.com/wiki/Grove-PS_2_Adapter/res/PS2_Adapter_Library.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

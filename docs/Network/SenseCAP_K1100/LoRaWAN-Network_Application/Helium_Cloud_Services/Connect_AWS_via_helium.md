@@ -202,7 +202,7 @@ The message received is similar to the one shown below. The data that is useful 
 
 At this point, we have completed the entirety of Helium's integration into AWS IoT Core. If you want to do more with your data through AWS IoT Core, you can refer to the [Documentation Centre of AWS IoT Core](https://docs.aws.amazon.com/iot/index.html) to continue learning more in depth.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

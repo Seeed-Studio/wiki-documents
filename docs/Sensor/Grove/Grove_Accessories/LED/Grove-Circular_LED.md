@@ -193,7 +193,7 @@ Upload the program to your Arduino/Seeeduino.
 
 - [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Grove_Circular_LED_CDC_File.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

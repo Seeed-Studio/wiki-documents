@@ -227,7 +227,7 @@ slider value is9
 
 - **[PDF]** [Datasheet of CY8C4014LQI](https://files.seeedstudio.com/wiki/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/res/CY8C4014LQI_Datasheet.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

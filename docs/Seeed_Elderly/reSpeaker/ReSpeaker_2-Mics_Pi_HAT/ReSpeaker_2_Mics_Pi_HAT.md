@@ -120,7 +120,7 @@ Mycroft Precise is Apache-2.0 License project, which means you can modify and di
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4gN1bvl24ZM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

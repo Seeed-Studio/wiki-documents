@@ -94,7 +94,7 @@ For more CircuitPython API reference, please visit [**CircuitPython Essentials**
 
 - [**Installing Circuit Python on Seeed Studio Xiao SAMD21**](https://makeandymake.github.io/2020/05/02/installing-circuitpython-on-seeeduino-xiao.html)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

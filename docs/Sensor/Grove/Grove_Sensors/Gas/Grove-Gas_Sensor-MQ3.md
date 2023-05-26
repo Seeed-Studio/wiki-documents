@@ -488,7 +488,7 @@ Resources
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ3) -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

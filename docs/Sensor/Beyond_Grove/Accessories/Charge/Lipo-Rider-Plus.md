@@ -90,7 +90,7 @@ However, the Lipo Rider Plus only has one JST2.0 port. Hence, it can not use a s
 
 - **[Zip]** [Lipo Rider Plus](https://files.seeedstudio.com/wiki/Lipo-Rider-Plus/img/202002729_Lipo_Rider_Plus.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

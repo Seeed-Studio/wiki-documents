@@ -642,7 +642,7 @@ Relevant SDK:
 
 - <p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
 

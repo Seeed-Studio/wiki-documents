@@ -264,7 +264,7 @@ Seeed oled 96*96 demo.
 - **[DataSheet]** [WF-M620 RSC1 datasheet](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/res/WF-M620-RSC1_datasheet_20190314.pdf)
 - **[DataSheet]** [AD7992 datasheet](https://files.seeedstudio.com/wiki/MT3620_Grove_Breakout/res/AD7992.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

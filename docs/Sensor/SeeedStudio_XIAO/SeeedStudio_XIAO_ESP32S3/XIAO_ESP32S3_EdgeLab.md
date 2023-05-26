@@ -94,7 +94,7 @@ idf.py --port /dev/ttyUSB0 monitor
 ```
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

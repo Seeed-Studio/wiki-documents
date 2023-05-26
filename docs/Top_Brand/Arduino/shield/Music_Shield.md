@@ -44,7 +44,7 @@ Here lists the comparison among various versions of Music Shield:
 | Control Volume and Select songs|2 control-push buttons and 1 knob switch| a Multifunction button|a Multifunction button|
 |Library File|[library for Music shield V1.0](https://files.seeedstudio.com/wiki/Music_Shield/res/MusicPlayer_v1_7.zip)|[library for Music shield V2.0](https://files.seeedstudio.com/wiki/Music_Shield/res/Music_shield_library_V1.0.zip)|[library for Music shield V2.2](https://files.seeedstudio.com/wiki/Music_Shield/res/Music_shield_library_V1.0.zip)|
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

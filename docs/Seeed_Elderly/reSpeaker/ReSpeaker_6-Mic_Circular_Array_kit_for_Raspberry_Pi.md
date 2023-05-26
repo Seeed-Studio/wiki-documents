@@ -636,7 +636,7 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 - **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

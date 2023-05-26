@@ -250,7 +250,7 @@ For further infomation, please check [Sensirion/raspberry-pi-i2c-scd4x on GitHub
 - **[STEP]** [STEP of Sensirion CO2 Sensors SCD4x](https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/res/Sensirion_CO2_Sensors_SCD4x_STEP_file.step)
 - **[ZIP]** [Grove - CO2 & Temperature & Humidity Sensor - SCD4 Board File](https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/res/SCH&PCB.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -571,7 +571,7 @@ The XIAO is powered via USB and then the XIAO nRF52840 is controlled using pushb
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/18.png" style={{width:600, height:'auto'}}/></div>
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

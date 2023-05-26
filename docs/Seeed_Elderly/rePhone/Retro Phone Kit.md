@@ -131,7 +131,7 @@ Now join us in the [RePhone Community](https://forum.seeedstudio.com/viewforum.p
 - [Datasheet of ETA6003](https://files.seeedstudio.com/wiki/Retro_Phone_Kit/res/ETA6003.pdf)
 - [AT Command of SIM800](https://files.seeedstudio.com/wiki/Retro_Phone_Kit/res/SIM800_AT.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

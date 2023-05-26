@@ -340,7 +340,7 @@ Certificates
 - [WM1302(USB) CE Certificate](https://files.seeedstudio.com/products/114992549/SHEA587_EU_Cert.pdf)
 - [WM1302(SPI) CE Certificate](https://files.seeedstudio.com/products/114992549/SHEA588_EU_Cert.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
 

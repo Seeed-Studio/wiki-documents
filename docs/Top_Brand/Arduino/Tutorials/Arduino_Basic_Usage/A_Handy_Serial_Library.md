@@ -72,7 +72,7 @@ I made some small change to this library, you can download here: [https://github
 
 - [download pdf file](https://files.seeedstudio.com/wiki/A_Handy_Serial_Library/res/A_handy_Serial_library.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

@@ -98,7 +98,7 @@ Based on the Arduino Leonardo, the Matrix Clock is fully compatible with the Ard
 
 Matrix Clock V1 by Dan Hamer  is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/deed.en_US)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

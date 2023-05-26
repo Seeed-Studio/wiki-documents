@@ -323,7 +323,7 @@ Y axis = 8.43g
 
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

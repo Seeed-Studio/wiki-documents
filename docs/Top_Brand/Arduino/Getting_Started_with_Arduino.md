@@ -27,7 +27,7 @@ prodimagename:
 
 ### [How to Install the driver for Seeeduino](https://wiki.seeedstudio.com/Driver_for_Seeeduino)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

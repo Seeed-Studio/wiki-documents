@@ -283,7 +283,7 @@ void loop() {
 - **[ZIP]** [Grove - Smart Air Quality Sensor (SGP41) SCH&PCB](https://files.seeedstudio.com/wiki/Grove-SGP41/AIR_QUALITY_SENSOR(SGP41)_sch&pcb.zip)
 - **[PDF]** [SGP41 Datasheet](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

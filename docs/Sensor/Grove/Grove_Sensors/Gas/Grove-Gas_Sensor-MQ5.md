@@ -406,7 +406,7 @@ You can quit this program by simply press ++ctrl+c++.
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Gas_Sensor(MQ5) -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 ## Upgradable to Industrial Sensors

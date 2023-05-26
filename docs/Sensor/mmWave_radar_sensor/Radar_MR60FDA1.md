@@ -1006,7 +1006,7 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 - **[PDF]** [Seeed Studio MMWave Sensor Case Design](https://files.seeedstudio.com/wiki/60GHzradar/Seeed_Studio_MMWave_Sensor-Case_Design.pdf)
 - **[EXE]** [Upper Computer Software](https://files.seeedstudio.com/wiki/60GHzradar/Fall_detection_radar.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

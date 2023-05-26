@@ -395,7 +395,7 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 [ **ZIP** ] [Dimension of Grove 20X40 SMD Horizontal](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove-20x40-SMD-horizontal.zip)
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
  <br />
 

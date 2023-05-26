@@ -246,7 +246,7 @@ See [ble on mbed.org](http://developer.mbed.org/teams/Bluetooth-Low-Energy/)
 
 * [Grove - Node v1.0 eagle design file](https://files.seeedstudio.com/wiki/Grove-Node/res/Grove-Node_v1.0_eagle.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

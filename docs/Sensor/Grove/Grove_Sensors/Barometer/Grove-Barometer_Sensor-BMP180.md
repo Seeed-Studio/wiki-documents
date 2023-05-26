@@ -377,7 +377,7 @@ while True :
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/rei-vilo/weather-and-security-station-with-blynk-74608b/embed' width='350'></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 ## Upgradable to Industrial Sensors

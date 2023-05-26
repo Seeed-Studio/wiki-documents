@@ -182,7 +182,7 @@ It will ask you to click a URL, then you will see a live preview of the camera o
 For example, as you can see above, the cat are being detected with bounding boxes around them. Here "0" corresponds to each detection of the same class. If you have multiple classes, they will be named as 0,1,2,3,4 and so on. Also the confidence score for each detected apple (0.72 in above demo) is being displayed!
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

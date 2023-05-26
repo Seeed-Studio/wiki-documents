@@ -869,7 +869,7 @@ The above example gives the simplest example of a single value for a single sens
 
 [The ESP32-S3 has no Bluetooth Classic hardware in the chip](https://github.com/espressif/arduino-esp32/issues/8023). Only the "old" ESP32 can do it - no other Espressif SoC has BT Classic.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

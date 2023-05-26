@@ -333,7 +333,7 @@ A2: Please click raspberry -> Preferences -> Raspberry Pi Configuration, then se
 
 [Mojing Mojing - A Smart Mirror with ReSpeaker!](https://www.hackster.io/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20): A smart mirror with voice interface control via ReSpeaker. We also connect with Wio Link to control other objects! Based on Raspberry Pi.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

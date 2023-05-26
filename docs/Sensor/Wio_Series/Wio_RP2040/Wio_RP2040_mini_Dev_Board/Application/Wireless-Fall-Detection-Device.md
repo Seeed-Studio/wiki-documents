@@ -406,7 +406,7 @@ Finally, put it into a cloth pocket. This simple fall detection device is comple
 
 ![image.png](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/Wireless-Fall-Detection-Device/device.jpg)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

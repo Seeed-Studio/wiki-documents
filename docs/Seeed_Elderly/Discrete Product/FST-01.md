@@ -611,7 +611,7 @@ PCB Assembly was done by **User:Gniibe** by hand.  See [my article](http://www.g
             * waiting 5 seconds
             * blink LED (emits lights for 25ms,off 200ms).
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

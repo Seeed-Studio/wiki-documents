@@ -270,7 +270,7 @@ Now share you awesome projects on with us on [Recipe](https://www.seeedstudio.co
 
 <font color="#FF0000">Get more information about Core User please email to: recipe@seeed.cc</font>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -303,7 +303,7 @@ A: If you connect XIAO ESP32S3 Sense with this extension screen, the data transm
 - **[ZIP]** [Seeed Studio Round Display for XIAO SCH&PCB](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH&PCB_230308.zip)
 - **[stl]** [The 3D model diagram of the shell for Round Display](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

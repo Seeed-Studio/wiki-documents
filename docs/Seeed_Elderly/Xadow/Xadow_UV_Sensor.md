@@ -232,7 +232,7 @@ In default mode, ADR0 and ADR1 are connected to "H"(see the Xadow UV Sensor)
 ---
 [Xadow UV Sensor Eagle File](https://files.seeedstudio.com/wiki/Xadow_UV_Sensor/res/Xadow_UV_Sensor_Eagle_File.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

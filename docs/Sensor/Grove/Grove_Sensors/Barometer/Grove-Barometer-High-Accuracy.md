@@ -453,7 +453,7 @@ Our mission with nature is to preserve it, designing and implementing technologi
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gabogiraldo/smart-crops-implementing-iot-in-conventional-agriculture-3674a6/embed' width='350'></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

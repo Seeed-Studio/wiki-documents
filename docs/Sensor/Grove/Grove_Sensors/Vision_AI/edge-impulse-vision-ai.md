@@ -136,7 +136,7 @@ After building the machine learning model and downloading the Edge Impulse firmw
 
 If you want to compile the Edge Impulse firmware from source code, you can visit [this GitHub repo](https://github.com/edgeimpulse/firmware-seeed-grove-vision-ai) and follow the instructions included in the README. The model used for the official firmware can be found in this [public project](https://studio.edgeimpulse.com/public/87291/latest).
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

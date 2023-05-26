@@ -54,7 +54,7 @@ Then, github will fork the whole repository to your personal account, please cli
 
 If this is too complicated to you, you are also welcome to fill in the survey at the end of the document or write to us at Jeremy.xiao@seeed.cc or Loovee@seeed.cc. We are looking forward to your message! Happy hacking!
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

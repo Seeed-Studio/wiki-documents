@@ -456,7 +456,7 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 * **[MoreReading]** [ESP8266 on Hackaday](http://hackaday.com/tag/esp8266/)
 * **[MoreReading]** [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

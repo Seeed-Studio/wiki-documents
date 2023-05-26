@@ -250,7 +250,7 @@ TDS Value: 30.9311414242
 - **[PDF]** [LMV324 Datasheet](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/res/LMV324-Datasheet.pdf)
 - **[PDF]** [CD4060BM Datasheet](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/res/CD4060BM-Datasheet.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 ## Upgradable to Industrial Sensors

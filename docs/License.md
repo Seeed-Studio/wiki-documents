@@ -49,7 +49,7 @@ All demo software, code examples embedded in the document and any software libra
 The resources provided with the product documents also contains datasheets, software examples, images and other content copyrighted by 3rd party authors and companies. All such items are copyright of respective owners. The use of such items are governed by their respective licenses. 
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

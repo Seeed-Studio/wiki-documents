@@ -194,7 +194,7 @@ Now you are good to go!
 - [RK3568 Datasheet](https://files.seeedstudio.com/wiki/LinkStar/RK3568_Brief_Datasheet.pdf)
 - [M7921E Wi-Fi Module](https://files.seeedstudio.com/wiki/LinkStar/M7921E_Wi-Fi_Module.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

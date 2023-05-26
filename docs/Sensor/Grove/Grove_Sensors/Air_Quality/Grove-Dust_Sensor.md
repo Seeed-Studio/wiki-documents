@@ -289,7 +289,7 @@ A1: The output signal from Dust Sensor needs to be scaled down to 3.3V logic to 
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed' width='350'></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

@@ -30,7 +30,7 @@ Resource File: [Grove - NunChuck Eagle File](https://files.seeedstudio.com/wiki/
 
 If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or [wish](http://wish.seeedstudio.com) to discuss.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

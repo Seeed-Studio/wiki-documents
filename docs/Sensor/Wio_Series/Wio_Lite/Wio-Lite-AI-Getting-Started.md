@@ -32,7 +32,7 @@ ST provides very detailed information on the use of this product. If you want to
 - [Visual Inspection Training Courseware for Artificial Intelligence](https://files.seeedstudio.com/wiki/Wio_Lite_AI/Visual_Inspection_Training_Courseware_for_Artificial_Intelligence.zip)
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

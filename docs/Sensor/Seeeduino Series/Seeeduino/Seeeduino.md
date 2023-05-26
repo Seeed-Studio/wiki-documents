@@ -31,7 +31,7 @@ On the hardware part, remarkable changes are taken to improve the flexibility an
 |Seeeduino v4.0|1.DC-to-DC converter to reduce power dissipation.|2.Remove RST switch.
 |Seeeduino v4.2|1.Add a Grove connectors2.Improve the power design|Aug 24, 2015|
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

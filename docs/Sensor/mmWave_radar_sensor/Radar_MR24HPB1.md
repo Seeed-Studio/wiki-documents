@@ -502,7 +502,7 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 - **[ZIP]** [24GHz Respiratory schematic](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-respiratory-schematic.zip)
 - **[PPTX]** [Seeed mmWave sensor series V2.0](https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

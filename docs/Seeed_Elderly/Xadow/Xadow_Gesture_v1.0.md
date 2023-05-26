@@ -80,7 +80,7 @@ Pins on both sides of Xadow modules are symmetrical, here are pins descriptions 
 - [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://files.seeedstudio.com/wiki/Xadow_Gesture_v1.0/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
 - [Library of Xadow - Guesture](https://github.com/Seeed-Studio/Grove_Guesture)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

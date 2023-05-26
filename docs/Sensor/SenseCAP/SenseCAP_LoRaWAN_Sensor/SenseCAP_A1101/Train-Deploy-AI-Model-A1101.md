@@ -553,7 +553,7 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 
 - **[PDF]** [FAQ for SenseCAP A1101 LoRaWAN Vision AI Sensor](https://files.seeedstudio.com/wiki/SenseCAP-A1101/FAQ_for_SenseCAP_A1101_LoRaWAN_AI_Vision_Sensor_v1.0.0.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
  <br />
 

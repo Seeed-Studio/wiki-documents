@@ -719,7 +719,7 @@ MQ2 Gas Sensor Reading is:  64
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/sakshambhutani2001/octopod-smart-iot-home-automation-project-fa939b/embed' width='350'></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 ## Upgradable to Industrial Sensors

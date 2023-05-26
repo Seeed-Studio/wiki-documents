@@ -131,7 +131,7 @@ WM1302 Pi HAT, together with the WM1302 Gateway Module and Raspberry Pi, can hel
 
 <!-- ![](https://files.seeedstudio.com/products/113100022/WM1302%20PiHat_Size-17.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/113100022/WM1302%20PiHat_Size-17.png" alt="pir" width={600} height="auto" /></p>
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
 

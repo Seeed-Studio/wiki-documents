@@ -186,7 +186,7 @@ For more information on this section, please refer to the relevant tutorials.
 - [Connect Grove Modules to Home Assistant using ESPHome](https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/)
 - [LinkStar Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

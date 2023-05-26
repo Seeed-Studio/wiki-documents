@@ -38,7 +38,7 @@ Grove is an open source, modulated, ready-to-use toolset which applies the build
 
 If you want to apply [Grove Sensors](https://www.seeedstudio.com/category/Grove-c-1003.html) into the Jetson Nano, the best way is acquiring the [grove.py](https://github.com/Seeed-Studio/grove.py/blob/master/doc/README.md) and [Python libraies](https://github.com/Seeed-Studio/grove.py/blob/master/doc/README.md) which will help you get started with your projects in serval minutes! Click [here](https://www.seeedstudio.com/blog/2019/06/13/create-more-ai-possibilities-with-grove-pihat-for-nvidia-jetson-nano/) for more information.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

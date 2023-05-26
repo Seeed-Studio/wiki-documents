@@ -65,7 +65,7 @@ You can find the product page for the beta device [here: TES101D2P](https://www.
 
 * [Free digital probe for DSO Quad beta testers](https://www.seeedstudio.com/blog/2011/06/01/free-digital-probe-for-dso-quad-beta-testers/)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

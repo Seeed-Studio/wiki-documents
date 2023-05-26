@@ -244,7 +244,7 @@ while True:
 
 - **[ZIP]** [Grove - Temperature & Humidity Sensor V2.0(DHT20)](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Pico-micropython-master.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

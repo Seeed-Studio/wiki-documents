@@ -76,7 +76,7 @@ Powerup, press red button for 6 seconds until LED off, codec cleared.
 ---
 *   [File:Wireless relay datasheet.pdf](https://files.seeedstudio.com/wiki/Codec-Adaptive_Wireless_Relay/res/Wireless_relay_datasheet.pdf "File:Wireless relay datasheet.pdf")
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

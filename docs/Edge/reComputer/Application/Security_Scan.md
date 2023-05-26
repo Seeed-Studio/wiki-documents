@@ -236,7 +236,7 @@ The result will be shown as the figure below:
 >3. if error: creating server: Internal - failed to load all models, execute:
 `--exit-on-error=false`
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

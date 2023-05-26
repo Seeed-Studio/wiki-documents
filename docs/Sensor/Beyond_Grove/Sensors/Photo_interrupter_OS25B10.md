@@ -323,7 +323,7 @@ The resources need to be downloaded, like Eagle file, Demo code, project or othe
 
 ![](https://files.seeedstudio.com/wiki/Photo_interrupter_OS25B10/img/OS25B10.jpg)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

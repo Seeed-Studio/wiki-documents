@@ -278,7 +278,7 @@ The meaning of each curve in the figure is:: (in order)
 
 - **[PDF]** [XC6206 DATASHEET](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
  <br />
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

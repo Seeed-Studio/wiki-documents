@@ -218,7 +218,7 @@ Make sure that the local broker docker is up and running the whole time.
 
 - [How to Bridge Mosquitto MQTT Broker to AWS IoT](https://aws.amazon.com/cn/blogs/iot/how-to-bridge-mosquitto-mqtt-broker-to-aws-iot/)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 <br/>
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

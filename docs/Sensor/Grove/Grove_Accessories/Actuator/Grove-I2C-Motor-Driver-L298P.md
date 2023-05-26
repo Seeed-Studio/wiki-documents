@@ -162,7 +162,7 @@ The connection between [24BYJ48](https://www.seeedstudio.com/depot/high-quality-
 
 - **[Zip]** [Motor Driver Library](https://github.com/Seeed-Studio/Grove_I2C_Motor_Driver_v1_3/archive/master.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
