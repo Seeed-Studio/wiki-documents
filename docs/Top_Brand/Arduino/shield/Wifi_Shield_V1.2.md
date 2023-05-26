@@ -1186,14 +1186,22 @@ To learn more about adhoc mode check out the [WiFly RN User Manual](https://file
 
 ## Support
 
-* [Forum](https://forum.seeedstudio.com/): *Please visit our forum and post your questions here if you have any problem about products.*
 * [FAQ about Wifi Shield](http://support.seeedstudio.com/knowledgebase/articles/456737-wifi-shield)： *Click here to see if your questions have been solved.*
 
 ## Licensing
 
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

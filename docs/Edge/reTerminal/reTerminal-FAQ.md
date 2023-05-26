@@ -752,7 +752,39 @@ sudo reboot
 
 Now the screen will be displayed in the correct orientation!
 
-## Q12: LEDs and Buzzer do not work after installing reTerminal drivers
+## Q12: Troubleshooting Touch Screen Inaccuracy
+After configuring the screen to the correct orientation, the touch position may still be inaccurate, causing the cursor to move in unexpected directions when you touch a specific area on the display. To address this issue, it is essential to take the following steps.
+
+- **Step 1** : Open the terminal and enter to xorg.conf.d folder by typing 
+
+```sh
+cd /usr/share/X11/xorg.conf.d
+```
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/lcd_touch2.png" alt="pir" width={1000} height="auto" /></p>
+
+- **Step 2** : You will have access to the "40-libinput.conf" file, which can be edited by using the command.
+
+```sh
+sudo nano 40-libinput.conf
+```
+- **Step 3**: Find the InputClass section of **touchscreen** InputClass.
+
+- **Step 4**: Add following phrase. You can refer the screenshot
+```sh
+Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1
+```
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/lcd_touch1.png" alt="pir" width={1000} height="auto" /></p>
+
+- **Step 5** : Save by Ctrl+O and press enter then Ctrl+X  after that Reboot
+```sh
+Sudo reboot 
+```
+
+After rebooting, you may notice that the touch position is now accurate. This means that when you touch a specific area on the display, the cursor moves in the intended direction.
+
+
+
+## Q13: LEDs and Buzzer do not work after installing reTerminal drivers
 
 This issue will not last long. We will completely solve this issue later from reTerminal drivers itself
 
@@ -776,7 +808,7 @@ sudo reboot
 
 Now the LEDs and Buzzer will work as normal.
 
-## Q13: How to check if the Encryption Chip is ATECC608A-SSHDA-B or ATECC608A-TNGTLSS-G
+## Q14: How to check if the Encryption Chip is ATECC608A-SSHDA-B or ATECC608A-TNGTLSS-G
 
 | Released Date | Encryption Chip IC Version |
 |---|---|
@@ -800,6 +832,16 @@ Now the LEDs and Buzzer will work as normal.
 
 # Tech support
 
-Please submit any technical issues into our [forum](https://forum.seeedstudio.com/)
 
-<p style={{textAlign:'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

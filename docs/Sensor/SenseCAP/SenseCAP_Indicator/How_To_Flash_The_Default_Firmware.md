@@ -1,90 +1,91 @@
 ---
-description: How To Flash The Default Firmware
-title: How To Flash The Default Firmware
+description: Flash The Native Firmware
+title: How To Flash The Native Firmware
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /How_To_Flash_The_Default_Firmware
+slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 last_update:
-  date: 5/16/2023
-  author: Yvonne
+  date: 5/25/2023
+  author: Thomas
 ---
-# **How To Flash The Default Firmware**
-The SenseCAP indicator has two MCUs, ESP32-S3 and RP2040. This tutorial provides detailed guide to help developer get onboard, and the first part is a toturial guide user flash the out-of-box factory default firmware, and help the early shipped devices updating to latest out-of-box firmware.
-## **Preparation**
-Get ready your Indicator and find a laptop, works on Windows/Mac/Linux.
 
+# **How To Flash The Native Firmware**
+
+The SenseCAP indicator has two MCUs, ESP32-S3 and RP2040. This tutorial provides comprehensive guide to help developer get onboard, including flashing the out-of-the-box factory Native Firmware and updating early shipped devices to the latest firmware.
+
+The firmware update is particularly applicable in two scenarios:
+
+1. If you purchased a product without OpenAI firmware before June 2023, with firmware version `1.0.0`, you can download and update to the latest firmware that includes OpenAI functionality. The latest firmware can be downloaded from [here](https://github.com/Seeed-Solution/sensecap_indicator_esp32).
+2. If you have developed an application and wish to flash a custom firmware, you can follow [the tutorial provided below](#flash-esp32-s3-frimware-using-espressif-idf).
+
+## Preparation
+
+To get started, all you need is your SenseCAP Indicator and a Windows/Mac/Linux computer.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/usb1.png"/></div>
 
+## Download Native Firmware
 
+The default shipping firmware of the SenseCAP Indicator is fully open source for both ESP32-S3 and RP2040.
 
-## **Download Default Firmware**
-SenseCAP Indicator's default shipping firmware is fully open source on both ESP32-S3 and RP2040.
+:::tip You have two options to download the Out of the Box Firmware:
+
+- **Source code:** Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain to compile it.
+- **Firmware:** Directly flash the pre-compiled binary file without the need for any code modification or compilation.
+:::
 
 **Source Code**
-[ESP32-S3 Source Code, based on ESP IDF](https://github.com/Seeed-Solution/sensecap_indicator_esp32)
-[RP2040 Source Code, based on Arduino](https://github.com/Seeed-Solution/sensecap_indicator_rp2040)
 
+- [ESP32-S3 Source Code, based on ESP IDF](https://github.com/Seeed-Solution/sensecap_indicator_esp32)
+- [RP2040 Source Code, based on Arduino](https://github.com/Seeed-Solution/sensecap_indicator_rp2040)
 
 **Firmware**
 
-[Click to download ESP32-S3 firmware](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.0)
-[Click to download RP2040 frimware](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/releases/tag/v1.0.0)
+- [Click to download ESP32-S3 firmware](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.0)
+- [Click to download RP2040 frimware](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/releases/tag/v1.0.0)
 
+## ESP32-S3
+### **Flash ESP32-S3 Firmware using Flash Download Tools**
 
-## **Flash ESP32-S3 Firmware on Windows**
-
-
-
-**Flash Download Tools** are used for programming or flashing firmware onto ESP8266 and ESP32 series of microcontrollers, which are widely used in the Internet of Things (IoT) applications. it provides a graphical user interface (GUI) for users to easily flash firmware onto the ESP microcontrollers. 
+**Flash Download Tools** are used for programming or flashing firmware onto ESP8266 and ESP32 series of microcontrollers. They provide a graphical user interface (GUI) for users to easily flash firmware onto the ESP microcontrollers.
 
 **Download:**
 [Flash Download Tools (for Windows only)](https://www.espressif.com.cn/en/support/download/other-tools?keys=&field_type_tid%5B%5D=842)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_18.png"/></div>
 
-**Double-click** the .exe file to enter the main interface of the tool.
+- **Step 1**: **Double-click** the `.exe` file to enter the main interface of the tool.
 
-Selecting
+- **Step 2**: Select the following options:
 
-**Chip Type**: ESP32-S3
-
-**WorkMode**: Develop
-
-**LoadMode**: UART
-
+| Option        | Param    |
+| ------------- | -------- |
+| **Chip Type** | ESP32-S3 |
+| **WorkMode**  | Develop  |
+| **LoadMode**  | UART     |
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_59.png"/></div>
 
-Then connect SenseCAP Indicator to your laptop with USB type-C cable.
+- **Step 3**: Connect the SenseCAP Indicator to your laptop with a USB type-C cable.
 
-In the SPI Download Tab and Click "..." 
+- **Step 4**: In the SPI Download Tab and Click "..." and navigate to the firmware you just downloaded.
 
-and navigate to the firmware you just downloaded.
+* **Step 5**: Configure SPI Flash:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
+| Option        | Param |
+| ------------- | ----- |
+| **SPI SPEED** | 40MHz |
+| **SPI MODE**  | DIO   |
 
-
-SPI Flash Configure
-
-**SPI SPEED**: 40MHz
-
-**SPI MODE**: DIO
-
+- **Step 6**: Configure the Download Panel:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
 
-
-- **Step 6**: Download Panel Configure
-
-**COM**:  Check the ports on your Device Manage, the USB-SERIAL is the correct one.
+**COM**: Check the ports on your Device Manage, the USB-SERIAL is the correct one.
 Here we chose **COM4**
 
 **Baud**: 921600(recommended value）
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator23.png"/></div>
-
 
 Click Start Downloading
 
@@ -96,45 +97,40 @@ When it shows "FINISH", the firmware flashing has been completed.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/finish.png"/></div>
 
+:::tip **Note**:
+In the above guide, the binary file merged there bins into one, which name is _Default_Factory_Firmware_ESP32-S3.bin_
 
+However, when you use ESP-IDF to build firmware, you will get three binary files, you have to write the correct address (you can put your own address) on the right side:
+:::
 
-
-
-**Note**: 
-In the above guide, the binary file merged there bins into one, which name is *Default_Factory_Firmware_ESP32-S3.bin*
-
-but, when you use IDF build firmware, you will get there binary files, you have to write the correct address(you can put your own address) on the right side
 - **bootloader.bin** ----> **0x0**
 - **partion-table.bin** ----> **0x8000**
 - **termial_demo.bin** ----> **0x10000**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/3binfiles.png"/></div>
 
-
-
-## **Flash ESP32-S3 Frimware using Espressif IDF**
-
+### **Flash ESP32-S3 Frimware using Espressif IDF**
 
 **Espressif IDF**
 
-IDF is a software development framework provided by Espressif Systems for the development of applications and firmware for their ESP32 and ESP8266 series of microcontrollers,it provides a comprehensive set of libraries, tools, and documentation that enable developers to build applications and firmware for ESP32 and ESP8266 microcontrollers. It includes libraries for communication protocols such as Wi-Fi, Bluetooth, and Ethernet, as well as drivers for various peripherals like sensors, displays, and motors.
+> ESP-IDF is a software development framework provided by Espressif Systems for the development of applications and firmware for their ESP32 and ESP8266 series of microcontrollers,it provides a comprehensive set of libraries, tools, and documentation that enable developers to build applications and firmware for ESP32 and ESP8266 microcontrollers. It includes libraries for communication protocols such as Wi-Fi, Bluetooth, and Ethernet, as well as drivers for various peripherals like sensors, displays, and motors.
 
 **Download and install:**
-For Windows: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/windows-setup.html)
 
-For MacOS and Linux: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/linux-macos-setup.html)
-
+- For Windows: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/windows-setup.html)
+- For MacOS and Linux: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/linux-macos-setup.html)
 
 There is "Default_Factory_Firmware_ESP32-S3.bin" firmware in the [Release](https://github.com/Seeed-Solution/sensecap_indicator_esp32/releases/tag/v1.0.0) .
 
-**Note**:
+:::caution **Note**:
 
-SenseCAP ESP32 SDK uses the 120 MHz frequency , if you flash this default firmware, please add a [patch](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/tools/patch).
+SenseCAP ESP32 SDK uses the 120 MHz frequency , if you flash this Native Firmware, please add a [patch](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/tools/patch).
 
 This patch is intended to achieve the best performance of RGB LCD by using the PSRAM Octal 120 MHz feature, and it's only used for the release/v5.0 branch of ESP-IDF.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/patch.png"/></div>
+:::
 
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/patch.png"/></div>
 
 Run the following command to build and flash the project:
 
@@ -152,12 +148,12 @@ idf.py -p PORT build flash monitor
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/upgrade.png"/></div>
 
+## RP2040
 
+### **RP2040 Firmware Flashing**
 
+#### **Flash the .uf2 file**
 
-## **RP2040 Firmware Flashing**
-
-### **Flash the .uf2 file**
 - **Step 1**: Connect the device to your PC
 
 Long press this internal button using a needle, then connect the device to your PC by the provided USB type-C cable, release the button once connected.
@@ -176,20 +172,15 @@ The upgrade will run automatically.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/uf2.png"/></div>
 
-### **Flash by Arduino IDE**
+#### **Flash by Arduino IDE**
 
+##### **RP2040 Development Tool**
 
-#### **RP2040 Development Tool**
-
-Arduino IDE is an open-source software development environment used for programming Arduino boards, which are microcontroller-based development boards that can be used for building various electronic projects. It provides an easy-to-use graphical user interface (GUI) that allows developers to write, compile, and upload code to the Arduino board. It is based on a simplified version of the C++ programming language and provides a set of libraries and examples that make it easier for beginners to get started with programming Arduino boards.
+> Arduino IDE is an open-source software development environment used for programming Arduino boards, which are microcontroller-based development boards that can be used for building various electronic projects. It provides an easy-to-use graphical user interface (GUI) that allows developers to write, compile, and upload code to the Arduino board. It is based on a simplified version of the C++ programming language and provides a set of libraries and examples that make it easier for beginners to get started with programming Arduino boards.
 
 **Download:**
-[Arduino IDE](https://www.arduino.cc/en/software)
 
-
-- **Step 1**: Install Arduino IDE
-
-[Arduino IDE](https://www.arduino.cc/en/software)
+- **Step 1**: Install [Arduino IDE]( https://www.arduino.cc/en/software
 
 - **Step 2**: Add the Raspberry Pi Pico Board
 
@@ -200,7 +191,6 @@ Open your Arduino IDE, click on **Arduino IDE** > **Reference**, and copy the
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_29.png"/></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_80.png"/></div>
-
 
 Click on **Tools** > **Board** > **Board Manager**.
 
@@ -234,7 +224,6 @@ Navigate to **Sketch** -> **Include Library** -> **Add .ZIP Library**, then sele
 
 - **Step 5**: Select the board and port
 
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/board.png"/></div>
 
 Search "Indicator" and select "Seeed INDICATOR RP2040"board;
@@ -242,9 +231,6 @@ Search "Indicator" and select "Seeed INDICATOR RP2040"board;
 Select the "usbmodem" Serial Port.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/portport.png"/></div>
-
-
-
 
 - **Step 6**: Open the example code file
 
@@ -260,44 +246,55 @@ We provide an example code file, you can modify the code according to your needs
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_37.png"/></div>
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_38.png"/></div>
 
+## ESP32 & RP2040 Communication Protocol
 
-
-
-## **ESP32 & RP2040 Communication Protocol**
 ESP32 and RP2040 use serial port communication, using the [cobs](http://www.stuartcheshire.org/papers/COBSforToN.pdf) communication protocol. The list of commands used in the demo is as follows:
 
 The command format consists of the packet type and packet parameters.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_41.png"/></div>
 
-## **Resource**
-
-
+## Resource
 
 [SenseCAP Indicator ESP32 SDK](https://github.com/Seeed-Solution/sensecap_indicator_esp32.git)
 
 [SenseCAP Indicator RP2040 Demo](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main)
 
-## **FAQ**
-**How to distinguish the serial port？**
+## FAQ
 
-**For Windows:**
+### How to distinguish the serial port?
+
+<!-- Tab -->
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="Windows" label="Windows">
 
 Check the port on your Device Manage
 
-"USB串行设备" is for RP2040
-"USB-SERIAL" is for ESP32
+- "USB 串行设备" is for RP2040
+- "USB-SERIAL" is for ESP32
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
 
-**For Mac:**
+</TabItem>
+<TabItem value="Mac" label="Mac">
 
-"/dev/cu.usbmodem" is for RP2040
+- "/dev/cu.usbmodem" is for RP2040
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
 
 
+</TabItem>
+</Tabs>
+
+<!-- End of Tab -->
+
+
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-if you have large order requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
+
+If you have large order or customization requirement, please contact iot@seeed.cc

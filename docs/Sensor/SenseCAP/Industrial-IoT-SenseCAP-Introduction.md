@@ -133,3 +133,16 @@ To learn more about the guide and references of SenseCAP API, kindly visit [Sens
 ![Dashboard](https://files.seeedstudio.com/products/102991154/wiki%20images/dashboard.png)
 
 If you want to visualize the data collected from SenseCAP for your application in a quick manner, [SenseCAP Dashboard](https://solution.seeedstudio.com/product/software-cloud-sensecap-dashboard/) is a decent choice. It is an open-source program developed based on Vue and can be embedded in rich web applications. We provide all the related libraries to our partners to make it customizable in many different ways, for instance, change the logo, language, configure data sources, and so on. Feel free to check out and contact us to call for your demand!
+
+## SenseCAP Tech Support
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a> 
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a> 
+</div>

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 05/15/2023
+  date: 05/22/2023
   author: Matthew
 ---
 
@@ -15,68 +15,89 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is May 15th and a brand new week has begun! Check out what Seeed did last week!
+Today is May 22nd and a brand new week has begun! Check out what Seeed did last week!
 
 ## Latest Wiki Launched
 
-### [Use of the Seeed Studio Round Display extension](/seeedstudio_round_display_usage)
+### [Seeed Studio XIAO nRF52840 on Sidewalk](/xiao-ble-sidewalk)
 
-This tutorial will explain in detail how to use the extended functions on the Round Display, including the use of the **RTC function**, **SD card function**, and **screen function**.
+Amazon Sidewalk is a wireless network protocol developed by Amazon that allows compatible devices to share a small portion of their internet bandwidth with nearby devices. The goal of Sidewalk is to create a larger, more resilient network that can extend the range of smart home devices and improve their connectivity.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/round_display_for_xiao/75.gif" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/19.jpg" /></div>
 
-### [reTerminal DM Flash Raspbian OS to eMMC](/reterminal-dm-flash-OS)
+### [reTerminal DM Getting Started](/reterminal-dm)
 
-This is the wiki about flashing Raspbian OS to reTerminal DM.
+reTerminal DM is A 10.1" open-source industrial HMI - an Integrated Device Master to unify data flow and manage the onsite device.
 
-<div align="center"><img width={1000} src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" /></div>
+<div align="center"><img width={1000} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" /></div>
 
-### [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
+### [SenseCAP Indicator Native Firmware](/SenseCAP_Indicator_Native_Firmware)
 
-This is the brief info about RS485, Modbus, Modbus RTU and Modbus Node-RED Node, operating with Node-RED.
+The SenseCAP Indicator D1S and D1Pro version has the built-in tVOC and CO2 sensors, and an external Grove TH sensor for accurate data reading. The SenseCAP native firmware provides air quality detector UI to show the sensor data.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-results.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_8.png" /></div>
 
-### [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
+### [OpenAI x SenseCAP Indicator](/SenseCAP_Indicator_OpenAI_X_Overview)
 
-This is the wiki including on how to install local MQTT Broker on reTerminal DM and then utilising the MQTT Broker for sending and receiving messages, operating with Node-RED.
+Sensecap Indicator integrates two popular models ChatGPT and DALL·E via API, empowering users to quickly experience and enjoy the charm of AI!
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-result-mqtt.png" /></div>
+You can refer to the links below for more help:
 
-### [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
+- [How to Set the API Key](/SenseCAP_Indicator_How_to_Set_the_API_Key)
+- [ChatGPT Indicator](/SenseCAP_Indicator_ChatGPT)
+- [DALL·E AI Picture Generator](/SenseCAP_Indicator_DALL·E)
 
-This wiki shows you how to use a CAN bus interface device that connects to the reTerminal DM CAN BUS port, allowing you to send and receive messages on the network, operating with Node-RED
+<div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png" /></div>
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/Host-receive.png" /></div>
+### [SenseCAP Indicator - Dive into the Hardware](/SenseCAP_Indicator_Dive_into_the_Hardware)
 
-### [reTerminal DM Warranty](/reterminal-dm-warranty)
+This chapter will provide detailed information about ESP32 and RP2040 of SenseCAP Indicator, including their functions and usage. It covers include programming, interfacing with sensors, and communicating with other devices，etc.
 
-### [Grove -Smart Air Quality Sensor (SGP41)](/grove-smart-air-quality-sensor-sgp41)
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png" /></div>
 
-This is the wiki about getting started with Grove -Smart Air Quality Sensor (SGP41).
+### [SenseCAP Indicator - How to Create your own UI](/SenseCAP_Indicator_How_to_Create_your_own_UI)
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-SGP41/1.jpg" /></div>
+LvGL is an open-source graphics library providing everything you need to create an embedded GUI with easy-to-use graphical elements, beautiful visual effects, and a low memory footprint.
 
-### [The QSPI Flash Usage on Seeed Studio XIAO nRF52840 Sense](/xiao-ble-qspi-flash-usage)
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/export.png" /></div>
 
-In this tutorial, you will learn how to utilize the QSPI Flash on XIAO boards, which can greatly expand the storage capacity and speed up your projects.
+### SenseCAP Indicator - Develop with ESP32-S3
 
+- [4-inch Touch Screen](/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen)
+- [Wi-Fi](/SenseCAP_Indicator_ESP32_Wi-Fi)
+- [BLE](/SenseCAP_Indicator_ESP32_BLE)
+- [Button](/SenseCAP_Indicator_ESP32_Button)
+- [LoRa®](/SenseCAP_Indicator_ESP32_LoRa)
+
+### SenseCAP Indicator - Develop with RP2040
+
+- [CO2 Sensor(Built-in)](/SenseCAP_Indicator_RP2040_CO2)
+- [tVOC Sensor(Built-in)](/SenseCAP_Indicator_RP2040_tVOC)
+- [Buzzer](/SenseCAP_Indicator_RP2040_Buzzer)
+- [MicroSD](/SenseCAP_Indicator_RP2040_MicroSD)
+- [Grove ADC](/SenseCAP_Indicator_RP2040_Grove_ADC)
+- [Grove IIC](/SenseCAP_Indicator_RP2040_Grove_IIC)
+
+### [Grove - NFC (ST25DV64)](/grove-nfc-st25dv64)
+
+Grove - NFC (ST25DV64) is an innovative and versatile NFC/RFID tag board based on the advanced ST25DV64K chip from STMicroelectronics. This dynamic chip supports ISO/IEC 15693 and NFC Forum Type 5 tag standards, making it compatible with a wide array of NFC-enabled devices.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-NFCST25/1.jpg" /></div>
+
+### [reTerminal and Pi camera modules](/reTerminal-piCam)
+
+This is the wiki that helps you to install the necessary drivers and related components to ensure proper functionality of the PiCam on the fresh Raspberry Pi OS installation.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/imx708.PNG" /></div>
 
 ## Existed Wiki Updated
 
-### [Pin Multiplexing on Seeed Studio XIAO ESP32C3](XIAO_ESP32C3_Pin_Multiplexing#note-on-xiao-esp32c3-io-allocation)
+### [BootLoader Mode on Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#bootloader-mode)
 
-There something you should know about the pin D9 and D6 on Seeed Studio XIAO ESP32C3.
+We have upgraded the bootloader mode for XIAO ESP32S3.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" /></div>
 
-### [Resources release about Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#resources)
-
-We have updated the release files about Seeed Studio XIAO ESP32S3, the Eagle footprint and KiCAD libraries.
-
-### [Jetson AI Developer Tools](/Jetson-AI-developer-tools)
-
-We have updated the some Jetson AI Developer Tools for you better getting started with NVIDIA Jetson.
 
 ## Past Weekly wiki
 
@@ -89,3 +110,4 @@ We have updated the some Jetson AI Developer Tools for you better getting starte
 - [weekly wiki on 4.10th](/Seeed_Elderly/weekly_wiki/wiki410)
 - [weekly wiki on 4.17th](/Seeed_Elderly/weekly_wiki/wiki417)
 - [weekly wiki on 4.24th](/Seeed_Elderly/weekly_wiki/wiki424)
+- [weekly wiki on 5.15th](/Seeed_Elderly/weekly_wiki/wiki515)

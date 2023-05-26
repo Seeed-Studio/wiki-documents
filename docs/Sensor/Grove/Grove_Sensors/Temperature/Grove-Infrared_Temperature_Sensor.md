@@ -143,9 +143,9 @@ The result should be like:
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Infrared_Temperature_Sensor -->
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

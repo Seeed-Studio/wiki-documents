@@ -168,7 +168,21 @@ for more information.
 
 ## Weekly Wiki
 
-Seeed Studio Weekly Wiki will be published each Monday and it will introduce you to our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+[Seeed Studio Weekly Wiki](/weekly_wiki) will be published each Monday and it will introduce you to our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+
+## Tech Support & Product Descussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
 
 ## What's More
 
@@ -176,10 +190,6 @@ If you have any questions or comments, please don't hesitate to hop on to our fo
 
 <table align="center">
   <tbody>
-    <tr>
-      <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/discord1.png" alt="pir" width={100} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on Discord</strong><br />You’re invited to join the Place for You to Get 24/7 Support from the Community and seeed studio Team.<p><a href="https://discord.com/invite/QqMgVwHT3X" target="_blank">Click here</a></p></td>
-    </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/Twitter1.png" alt="pir" width={60} height="auto" /></p></td>
       <td align="left"><strong>Seeed on Twitter</strong><br />Follow us to Get the 1st Hand Product Updates &amp; Campaigns<p><a href="https://twitter.com/seeedstudio" target="_blank">Click here</a></p></td>
@@ -196,6 +206,5 @@ If you have any questions or comments, please don't hesitate to hop on to our fo
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/LinkedIn_Logo.png" alt="pir" width={300} height="auto" /></p></td>
       <td align="left"><strong>Seeed on LinkedIn</strong><br />Digital transformation is happening. Follow us to learn how IoT Industry news, insights, case studies and more on LinkedIn.<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
-  </tbody></table>
-
-If you have any questions or comments, please don't hesistate to hop on to our [forum](https://forum.seeedstudio.com/latest) and discuss with us directly! We greatly value your feedback and opinions because we always grow and prosper together with our users and the community!
+  </tbody>
+</table>

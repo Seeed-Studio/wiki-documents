@@ -210,7 +210,7 @@ You can discover this page with two large portions.
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reTerminal Extensions</font></div>
-            <a href="/reTerminalBridge" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reTerminal E10-1 -  Expand UPS, Gigabit Ethernet, LTE/4G/5G/LoRaWAN, RS485/232, CAN, SATA 2.0</font></span></a>
+            <a href="/reTerminalBridge" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reTerminal E10-1 -  Expand UPS, Gigabit Ethernet, LTE/4G/5G/LoRaWAN®, RS485/232, CAN, SATA 2.0</font></span></a>
             <br/>
             <a href="/reTerminal_Mount_Options" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reTerminal E10-1 Mount Options</font></span></a>
             <br/>
@@ -422,7 +422,7 @@ You can discover this page with two large portions.
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi</font></div>
             <a href="/Grove_Base_Kit_for_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Base Kit for Raspberry Pi</font></span></a>
             <br/>
-            <a href="/LoRa_LoRaWan_Gateway_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LoRa/LoRaWAN® Gateway Kit</font></span></a>
+            <a href="/LoRa_LoRaWan_Gateway_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LoRa®/LoRaWAN® Gateway Kit</font></span></a>
             <br/>
             <a href="/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Starter Kit for IoT based on Raspberry Pi</font></span></a>
             <br/>

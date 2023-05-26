@@ -2,12 +2,12 @@
 description: Dive into the Hardware
 title: Dive into the Hardware
 keywords:
-- Development Tutorial
+- Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Dive_into_the_Hardware
+slug: /SenseCAP_Indicator_Dive_into_the_Hardware
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **Overview**
 
@@ -86,5 +86,6 @@ In the terminal demo, the following data frames are used for transmission：
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc
