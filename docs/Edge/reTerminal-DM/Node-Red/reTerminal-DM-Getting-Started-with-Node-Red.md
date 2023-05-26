@@ -153,19 +153,8 @@ The core Element of the Node-RED editor are listed:
 * Deploy Button
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-editor.png" /></div><br />
+## Tech Support & Product Descussion
 
-### Install Nodes
-
-There are two options on install Node-RED node modules, if you are using the SenseCraft EDGE OS please use the [Node-RED editor method](#option-2-node-red-editor): 
-
-#### Option 1: Command line
-
-STEP 1: Please go to Node-RED folder
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-folder.png" /></div><br />
-
-```sh
-cd .node-red/
 ```
 STEP 2: Install Modbus Node
 
@@ -217,7 +206,7 @@ STEP 6: you should see the Modbus nodes in the side bar
 * [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
 * [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
   
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
