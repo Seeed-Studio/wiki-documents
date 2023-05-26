@@ -352,3 +352,188 @@ height:80%;
   font-size: 1rem;
   margin: 0;
 }
+
+
+
+.button_forum{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */ 
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.button_forum:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support2_change.png');
+  background-size: cover;
+}
+
+.button_email{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support2.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.button_email:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1_change.png');
+  background-size: cover;
+}
+
+.button_discord{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support3.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.button_discord:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support3_change.png');
+  background-size: cover;
+}
+
+.button_discussion{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.button_discussion:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support4_change.png');
+  background-size: cover;
+}
+
+.button_tech_support_sensecap{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.button_tech_support_sensecap:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap_change.png');
+  background-size: cover;
+}
+
+.button_tech_support_sensecap2{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.button_tech_support_sensecap2:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1_change.png');
+  background-size: cover;
+}
+
+.button_tech_support_sensecap3{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap3.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.button_tech_support_sensecap3:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2_change.png');
+  background-size: cover;
+}

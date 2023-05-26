@@ -2,12 +2,12 @@
 description: CO2 Sensor Built-in
 title: CO2 Sensor Built-in
 keywords:
-- Development Tutorial
+- SenseCAP Indicator RP2040 Development Tutorial 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Develop_with_RP2040/CO2_Sensor_Built-in
+slug: /SenseCAP_Indicator_RP2040_CO2
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **CO2 Sensor(Built-in)**
 
@@ -38,7 +38,7 @@ Based on the following library：
 **Note**: When using the built-in sensor, the sensor power must be enabled.
 
 
-```
+```cpp
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -132,9 +132,8 @@ void loop() {
 **Note:** The temperature and humidity in this built-in SCD41 sensor does not fully represent the air temperature and humidity
 
 
-
-    
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc

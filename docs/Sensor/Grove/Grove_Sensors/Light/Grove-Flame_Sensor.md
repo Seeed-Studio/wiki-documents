@@ -376,9 +376,9 @@ The sensor can detect the light source whose wavelength is in the range of 760nm
 - **[Datasheet]** [LM293D datasheet](https://files.seeedstudio.com/wiki/Grove-Flame_Sensor/res/LM293D.pdf)
 - **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Flame_Sensor/res/Grove_Flame_Sensor_CDC_File.zip)
 
-## Tech Support
+## Tech Support & Product Descussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

@@ -46,7 +46,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Sensing </strong></div>
     </div>
     `,
@@ -589,74 +589,68 @@ const sidebars = {
           type: 'category',
           label: 'SenseCAP Indicator',
           items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
             {
               type: 'category',
               label: 'Get Started with SenseCAP Indicator',
               items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'OpenAI X SenseCAP Indicator',
-              items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+                {
+                  type: 'category',
+                  label: 'OpenAI X SenseCAP Indicator',
+                  items: [
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
+                  ],
+                },
               ],
             },
             {
               type: 'category',
               label: 'Development Tutorial',
               items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Dive_into_the_Hardware',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/How_to_Create_your_own_UI',
-            {
-              type: 'category',
-              label: 'Develop with ESP32-S3',
-              items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Four-inch_Touch_Screen',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Wi-Fi',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Dive_into_the_Hardware',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/How_to_Create_your_own_UI',
+                {
+                  type: 'category',
+                  label: 'Develop with ESP32-S3',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Four-inch_Touch_Screen',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Wi-Fi',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Develop with RP2040',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/CO2_Sensor_Built-in',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
+                {
+                  type: 'category',
+                  label: 'Grove',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
+                  ],
+                },
+                  ],
+                },
               ],
             },
-            {
-              type: 'category',
-              label: 'Develop with RP2040',
-              items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/CO2_Sensor_Built-in',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
-            {
-              type: 'category',
-              label: 'Grove',
-              items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
-              ],
-            },
-              ],
-            },
-              ],
-            },
+            'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
             {
               type: 'category',
               label: 'Application',
               items: [
-            {
-              type: 'category',
-              label: 'Open AI x SenseCAP Indicator',
-              items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/ChatGPT_with_Indicator',
-            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Open_AI_SenseCAP_Indicator/DALL·E_AI_Picture_Generator_Application',
-              ],
-            },
+                  'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
+                  'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
               ],
             },
           ],
@@ -1763,7 +1757,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Network </strong></div>
     </div>
     `,
@@ -2057,7 +2051,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Edge </strong></div>
     </div>
     `,
@@ -2082,7 +2076,7 @@ const sidebars = {
             'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
             'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
             'Edge/reTerminal/Application/Mender-Client-reTerminal',
-            
+
             {
               type: 'category',
               label: 'Home Assistant',
@@ -2133,6 +2127,7 @@ const sidebars = {
         'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
+        'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
         {
           type: 'category',
           label: 'Node-Red',
@@ -2424,7 +2419,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Cloud and Chain </strong></div>
     </div>
     `,
@@ -2527,7 +2522,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Popular Platform </strong></div>
     </div>
     `,
@@ -2866,7 +2861,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Contribution </strong></div>
     </div>
     `,
@@ -2905,7 +2900,7 @@ const sidebars = {
         margin-top: 10px;
       }
     </style>
-    <div style="width:100px;text-align:center"> 
+    <div style="width:100px;text-align:center">
       <div class="sub_item"><strong> Retired Product </strong></div>
     </div>
     `,

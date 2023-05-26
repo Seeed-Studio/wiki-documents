@@ -4,10 +4,10 @@ title: MicroSD
 keywords:
 - Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /MicroSD
+slug: /SenseCAP_Indicator_RP2040_MicroSD
 last_update:
-  date: 5/17/2023
-  author: Yvonne
+  date: 5/23/2023
+  author: Thomas
 ---
 # **MicroSD**
 
@@ -20,7 +20,7 @@ SPI TX(such as GPIO11) to SD_MOSI
 SPI RX(such as GPIO12) to SD_MISO 
 A single GPIO pin (such as GPIO13) to the CS (chip select) pin on the SD card module
 
-```
+```cpp
  // Initialize the SPI interface for the SD card
   const int chipSelect = 13;
   SPI1.setSCK(10);
@@ -40,7 +40,7 @@ Once the hardware connection is established, you can use a software library, suc
 
 This example code realizes reading CO2 data and storing the data in SD.
 
-```
+```cpp
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -179,5 +179,6 @@ void loop() {
     
 # **Tech Support**
 
-Don’t worry, we’ve got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions！
-If you have large order or customization requirment, please contact iot@seeed.cc
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+
+If you have large order or customization requirement, please contact iot@seeed.cc
