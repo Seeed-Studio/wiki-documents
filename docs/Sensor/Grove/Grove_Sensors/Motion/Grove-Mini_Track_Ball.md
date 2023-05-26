@@ -395,7 +395,7 @@ void loop() {
 - **[Datasheet]** [AN48841B Datasheet](http://www.semicon.panasonic.co.jp/ds4/AN48841B_E.pdf)
 - **[Library]** [Library file in Github](https://github.com/Seeed-Studio/Grove_Mini_Track_Ball)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

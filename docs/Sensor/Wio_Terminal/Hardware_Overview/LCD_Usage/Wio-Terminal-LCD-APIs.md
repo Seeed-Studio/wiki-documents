@@ -64,7 +64,7 @@ For more information about the TFT LCD screen, please visit [Basics of the TFT L
 
 <div align="left"><img width={253} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/IMG_0141.2019-12-03%2014_57_30.gif" /></div>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

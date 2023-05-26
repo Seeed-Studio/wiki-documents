@@ -189,7 +189,7 @@ The [AS5600](https://github.com/Seeed-Studio/Seeed_Arduino_AS5600) library also 
 - **[PDF]** [AS5600 Datasheet](https://files.seeedstudio.com/wiki/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/res/Magnetic%20Rotary%20Position%20Sensor%20AS5600%20Datasheet.pdf)
 - **[DWG]** [Grove - 12 bit Magnetic Rotary Position Sensor(AS5600) Calibrator](https://files.seeedstudio.com/wiki/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/res/Grove%20-%2012%20bit%20Magnetic%20Rotary%20Position%20Sensor(AS5600)%20Calibrator.dwg)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

@@ -276,6 +276,8 @@ Once the above steps finished and you have reapply the power to the reTerminal D
 
 ## Install Drivers
 
+### Access reTerminal DM via SSH
+
 :::note
 
 The following steps require some basic Linux command line knowledge, Please prepare yourself a cup of coffee and getting ready.
@@ -377,6 +379,44 @@ sudo reboot
 ```
 
 Now your screen should light up and run normally.
+
+## FAQ
+
+### 32-bit OS driver
+
+**Q: I want to use 32-bit Operating System how to install driver?**
+
+**A: Please carefully follow the steps below:**
+
+:::note
+The Operating System that pre-installed on reTerminal DM is 64-bit, if you wish to install 32-bit OS please use the following method to install the DTS drivers.
+:::
+
+Please follow the [**Access reTerminal DM via SSH**](#access-reterminal-dm-via-ssh) step, and then enter the following command:
+
+```sh
+echo arm_64bit=0 | sudo tee -a /boot/config.txt
+```
+Then continue the [**Install drivers after flashing new Raspbian OS process**](#install-reterminal-drivers-after-flashing-new-raspbian-os)
+
+### Touch Screen orientation
+
+**Q: The screen touch panel is orientate differently from the screen display?** 
+
+**A: Please carefully follow the steps below:**
+
+Please follow the [access reTerminal DM via SSH](#access-reterminal-dm-via-ssh) step, and then enter the following command:
+
+```sh
+echo 'ATTRS{name}=="gt9271", ENV{LIBINPUT_CALIBRATION_MATRIX}="0  1.0  0 -1.0 0 1.0 0 0 1.0"' | sudo tee -a /etc/udev/rules.d/98-touchscreen-cal.rules
+```
+Then reboot:
+
+```sh
+sudo reboot
+```
+
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

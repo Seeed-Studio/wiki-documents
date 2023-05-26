@@ -229,7 +229,7 @@ double avergearray(int* arr, int number) {
 - **[ZIP]** [Demo Code library](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Grove-PH_Sensor_kit.zip)
 - **[XLSX]** [Calibration for k&offset](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/Calibration_for_k&offset.xlsx)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/).
 
 ## Upgradable to Industrial Sensors

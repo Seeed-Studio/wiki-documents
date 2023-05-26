@@ -554,7 +554,7 @@ This talk mainly focuses on explaining how easily you can create custom Linux im
 - **[Webpage]** [Toaster Manual](https://www.yoctoproject.org/docs/current/toaster-manual/toaster-manual.html)
 - **[GitHub]** [meta-seeed-reterminal](https://github.com/Seeed-Studio/meta-seeed-reterminal)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

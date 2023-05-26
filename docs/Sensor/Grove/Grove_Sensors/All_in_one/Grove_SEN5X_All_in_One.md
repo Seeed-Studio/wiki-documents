@@ -604,7 +604,7 @@ The output should be like:
 
 - [Library for STM32](https://github.com/Sensirion/embedded-i2c-sen5x)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

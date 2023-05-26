@@ -464,7 +464,7 @@ Eventhough you can load 4 models to the device all at once, please not that only
 
 - **[Web Page]** [TensorFlow Lite Documentation](https://www.tensorflow.org/lite/guide)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

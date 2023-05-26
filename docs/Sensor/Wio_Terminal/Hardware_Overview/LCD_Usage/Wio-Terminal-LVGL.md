@@ -61,7 +61,7 @@ For more usage, you may also use the [**official document of LvGL**](https://doc
 - [Official document of LvGL Library](https://docs.lvgl.io/latest/en/html/index.html)
 - [LvGL Github](https://github.com/lvgl/lvgl)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

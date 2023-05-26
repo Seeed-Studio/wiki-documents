@@ -576,7 +576,7 @@ A3: Here is the connection.
 - **[Datasheet]** [L298 Datasheet](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/L298.pdf)
 - **[Datasheet]** [78M05 Datasheet](https://files.seeedstudio.com/wiki/Motor_Shield_V2.0/resource/78M05_datasheet.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

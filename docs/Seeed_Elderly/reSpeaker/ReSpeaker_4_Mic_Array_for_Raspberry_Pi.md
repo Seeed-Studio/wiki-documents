@@ -555,7 +555,7 @@ A4: There is a genuine one-off small memory loss when the driver is first loaded
 * **[Voice Engine** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
 * **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

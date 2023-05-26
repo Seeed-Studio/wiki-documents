@@ -164,7 +164,7 @@ void loop() {
 - **[ZIP]** [Grove - RS485 Schematic file](https://files.seeedstudio.com/wiki/Grove-RS485/res/Grove%20-%20RS485.zip)
 - **[PDF]** [Max13478E Datasheet](https://files.seeedstudio.com/wiki/Grove-RS485/res/Max13478.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

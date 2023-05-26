@@ -270,7 +270,7 @@ void loop()
 
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

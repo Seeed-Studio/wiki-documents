@@ -231,7 +231,7 @@ Place the phone's NFC antenna close to the NFC antenna of the Grove - NFC (ST25D
 - **[ZIP]** [Grove - NFC(ST25DV64)](https://files.seeedstudio.com/wiki/Grove-NFCST25/Grove-NFC(ST25DV64).zip)
 - **[PDF]** [ST25DV64K Datasheet](https://files.seeedstudio.com/wiki/Grove-NFCST25/st25dv.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

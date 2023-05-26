@@ -1065,7 +1065,7 @@ The examples here are for reference only and not every example will necessarily 
 :::
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 ### Q1: Why do I get an error when I use XIAO nRF52840 (Sense)?
 
@@ -1099,7 +1099,7 @@ When you encounter this error, please update your **Seeed SAMD** development boa
 If there is no problem with the program and it does not show up after uploading it may be that it needs to be reset. Just press the reset button on the XIAO ESP32C3.
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

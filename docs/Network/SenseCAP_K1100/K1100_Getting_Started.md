@@ -716,7 +716,7 @@ For more details, please read [Helium LoRaWAN®: Public Infrastructure with Priv
 For more details, please read [TTN offcial website](https://www.thethingsnetwork.org/docs/).
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

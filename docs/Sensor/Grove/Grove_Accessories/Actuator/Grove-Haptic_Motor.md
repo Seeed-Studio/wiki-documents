@@ -161,7 +161,7 @@ void loop()
 - **[PDF]** [Grove-Haptic Motor Schematic](https://files.seeedstudio.com/wiki/Grove-Haptic_Motor/res/Grove_Haptic_Motor_v0.9_SCH.pdf).
 - **[Datasheet]** [More about drive circuit DRV2605L](http://www.ti.com/product/DRV2605L).
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

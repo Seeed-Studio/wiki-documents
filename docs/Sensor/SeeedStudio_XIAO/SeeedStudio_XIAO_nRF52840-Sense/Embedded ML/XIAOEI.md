@@ -257,7 +257,7 @@ Congratulation! You acheve the end of the project. It is encouraged that you can
 
 - [Seeed Studio XIAO nRF52840 Case File](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/xiao-case-pink.stl)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

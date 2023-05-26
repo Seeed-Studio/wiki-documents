@@ -77,7 +77,7 @@ If more detailed information of individuals are required, please visit their own
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
  If you have any technical issue, please submit the issue into our [forum](http://forum.seeedstudio.com/).
 

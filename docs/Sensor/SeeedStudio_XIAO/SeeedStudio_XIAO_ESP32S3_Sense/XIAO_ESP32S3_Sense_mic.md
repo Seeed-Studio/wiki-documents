@@ -310,7 +310,7 @@ If there are no problems with the card and the recording is quite successful. Th
 
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

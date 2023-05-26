@@ -222,7 +222,7 @@ Please continue with the next step of the tutorial [Connecting to Helium](https:
       <td align="left"><strong>Connecting to Helium</strong><br /><br />This section describes how to configure Helium so that sensor data can be successfully uploaded to and displayed in Helium.<br /><br /><a href="https://wiki.seeedstudio.com/Connecting-to-Helium">Let's get started &gt;</a></td>
     </tr></tbody></table>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

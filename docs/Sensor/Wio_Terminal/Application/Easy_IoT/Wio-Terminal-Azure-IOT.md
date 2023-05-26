@@ -28,7 +28,7 @@ To connect with Microsoft Azure IoT with Wio Terminal, please see the [**Benjami
 
 If you want to connect Wio Terminal to MQTT servers(such as Microsoft Azure IoT), you may also check [**Benjamin's Guide for MQTT on Wio Terminal**](https://github.com/kartben/wioterminal-mqtts-sample)!
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
  if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

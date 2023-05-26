@@ -142,7 +142,7 @@ If this sensor doesn't work well when you play the specific sounds we provided v
 - [500+ digital voice audio](https://files.seeedstudio.com/wiki/Grove_Heelight_Sensor/res/audio.zip)
 - [Example Code](https://github.com/SeeedDocument/Grove_Heelight_Sensor/tree/master/res/Grove_-_Heelight_Sensor_example)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

@@ -483,7 +483,7 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 
 *The remaining open source material is being compiled, so stay tuned!*
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

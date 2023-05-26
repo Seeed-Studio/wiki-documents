@@ -75,7 +75,7 @@ This demo enables the motor rotate in one direction for 2 sec, take a break for 
 - [Motor Shield Library](https://files.seeedstudio.com/wiki/4A_Motor_Shield/res/MotorDriver20121210.zip)
 - [MC33932 Datasheet](https://files.seeedstudio.com/wiki/4A_Motor_Shield/res/MC33932.pdf)  
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

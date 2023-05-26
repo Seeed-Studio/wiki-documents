@@ -213,7 +213,7 @@ This adding kernel method allows you to develop your own shell or python script 
 
 - **[PDF]** [Datasheet ADS1115](https://files.seeedstudio.com/wiki/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115/res/ADS1115.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
  .
 

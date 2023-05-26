@@ -561,7 +561,7 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 - **[PDF]** [User manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24FDB1_User_manual.pdf)
 - **[PPTX]** [Seeed mmWave sensor series V2.0](https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

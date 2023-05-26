@@ -211,7 +211,7 @@ For the **Receive Example**, the Serial Monitor should be like this:
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/ctroberts/ir-launchpad-to-launchpad-communication-0dd109/embed' width='350'></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

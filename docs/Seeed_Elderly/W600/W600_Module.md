@@ -386,7 +386,7 @@ AT+APLKSTT
 
 - **[ZIP]** [sscom](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/res/sscom51.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

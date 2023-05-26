@@ -153,7 +153,7 @@ Download the complete code [here](https://files.seeedstudio.com/wiki/Wio-Termina
 
 4. Now, you should be able to see the Raspberry's Pi System info on Wio Terminal's LCD Screen.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -18,7 +18,7 @@ Here is the list of the Artik Boards you can find in the Seeed WiKi. The list wi
 
 - [Eagleye 530s](https://wiki.seeedstudio.com/Eagleye_530s/)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

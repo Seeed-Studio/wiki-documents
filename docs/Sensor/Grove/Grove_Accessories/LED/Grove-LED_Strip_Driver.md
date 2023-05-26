@@ -175,7 +175,7 @@ It can drive an LED strip 1 to 2 meters long with 9 V, while 1 to 5 meters long 
 
 *   [Suli Library](https://github.com/Seeed-Studio/LED_Strip_Suli)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">

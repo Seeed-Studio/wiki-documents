@@ -31,7 +31,7 @@ Please share your modifications at the DSO Nano forum. The best is to post a "di
 
 * [Firmware generation and upgrade](http://dsonano.googlecode.com/files/DSO%20nano%20firmware%20generation%20and%20upgrade.pdf) (PDF)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -311,7 +311,7 @@ If everything goes well, you can control the led and buzzer by dual button.
 
 - **[PDF]** [Hardware schematic](https://files.seeedstudio.com/products/111020103/document/Grove-Dual-Button_v1_0_SCH_190916.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 <br />
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

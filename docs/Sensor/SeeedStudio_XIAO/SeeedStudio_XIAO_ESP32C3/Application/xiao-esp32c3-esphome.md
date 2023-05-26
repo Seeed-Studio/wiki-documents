@@ -628,7 +628,7 @@ void loop() {
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/72.png" /></div> -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

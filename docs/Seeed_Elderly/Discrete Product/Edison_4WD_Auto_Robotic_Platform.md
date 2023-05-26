@@ -377,7 +377,7 @@ A:The i2c Motor Driver has a bug that if a complete byte of orders sending was i
 
 *   [Edison 4WD Auto Robotic Platform DC Motor with Encoder Spec](https://files.seeedstudio.com/wiki/Edison_4WD_Auto_Robotic_Platform/res/Edison_4WD_Auto_Robotic_Platform_DC_Motor_with_Encoder_Spec.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

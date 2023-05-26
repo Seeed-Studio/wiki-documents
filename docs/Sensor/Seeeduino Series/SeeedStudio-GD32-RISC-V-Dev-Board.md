@@ -124,7 +124,7 @@ If you want to download another code, just press the reset button on the board, 
 + **[Zip]** Project file["TFT_GD32"](https://github.com/Seeed-Studio/Seeed_Arduino_LCD/archive/TFT_GD32.zip)
 + **[Zip]** [DFU Tool](https://files.seeedstudio.com/wiki/GD32VF103/res/GD32_MCU_Dfu_Tool_V3.8.1.5784_1.rar)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 <br />Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

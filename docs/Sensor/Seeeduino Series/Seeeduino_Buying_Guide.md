@@ -46,7 +46,7 @@ Well, we have a lot Seeeduino Boards to achieve all kinds of functions. But you 
 
  **[Seeeduino LoRaWAN W/GPS](https://www.seeedstudio.com/Seeeduino-LoRaWAN-W-GPS-p-2781.html) :** Seeeduino LoRaWAN W/GPS is an Arduino development board with LoRaWan protocol and GPS function embeded, through which you can get started quickly to experience LoRa's advantage in the field of IoT.For more information, please click [here](https://wiki.seeedstudio.com/Seeeduino_LoRAWAN/)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

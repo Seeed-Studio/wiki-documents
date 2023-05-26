@@ -215,7 +215,7 @@ Visit [here](https://create.arduino.cc/projecthub/Momy93/sandro-your-personal-gp
 
 **[ZIP]** [Air530 Datasheets](https://files.seeedstudio.com/wiki/Grove-GPS_Air_530/Air530_GPS_User_Booklet.V1.7.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
  If you have any technical issue. submit the issue into our [forum](http://forum.seeedstudio.com/).
 

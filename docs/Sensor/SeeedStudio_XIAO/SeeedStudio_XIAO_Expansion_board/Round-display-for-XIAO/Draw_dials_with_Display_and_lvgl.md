@@ -821,7 +821,7 @@ We have created two dial styles for the circular screen for users' reference. Du
     </a>
 </div> -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

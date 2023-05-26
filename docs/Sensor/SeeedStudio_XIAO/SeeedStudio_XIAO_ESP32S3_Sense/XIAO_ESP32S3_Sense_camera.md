@@ -1303,7 +1303,7 @@ A: If you want to use a microSD card, then you have to cut the J3 pin when XIAO 
 
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

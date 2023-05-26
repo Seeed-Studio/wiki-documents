@@ -887,7 +887,7 @@ For more information about using the ESP32 development board, please read the of
 
 - [Random Nerd Tutorials](https://randomnerdtutorials.com/)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

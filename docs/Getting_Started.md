@@ -170,7 +170,7 @@ for more information.
 
 [Seeed Studio Weekly Wiki](/weekly_wiki) will be published each Monday and it will introduce you to our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

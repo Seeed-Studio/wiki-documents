@@ -382,7 +382,7 @@ The program is only available for **mbed** boards, so please select the XIAO nRF
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" alt="pir" width={800} height="auto" /></p>
 
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

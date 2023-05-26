@@ -1021,7 +1021,7 @@ However, this method does not always work, in fact, the debug information of ESP
 
 In terms of SD card design, the correct circuit must have pull-up resistors to make the microSD card work properly. If you find that the pin level and card reading and writing are still normal after cutting J3, this may just be a lucky situation and we do not recommend you to read and write the card in this case, which may cause the problem of losing the written data. While D8 and D9 pins can be modified level by writing low level after cutting J3.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 .
 

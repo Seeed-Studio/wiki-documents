@@ -300,7 +300,7 @@ black surface detected
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Infrared_Reflective_Sensor -->
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

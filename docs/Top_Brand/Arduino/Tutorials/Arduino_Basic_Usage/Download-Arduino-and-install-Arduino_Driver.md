@@ -201,7 +201,7 @@ Please check,
 
 You can post a question to [Seeed Forum](https://community.seeedstudio.com/discover.html?t=Arduino) .
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 <br />

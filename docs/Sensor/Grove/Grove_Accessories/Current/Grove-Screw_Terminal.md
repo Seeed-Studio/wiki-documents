@@ -56,7 +56,7 @@ and two other undefined ports. Screw terminals are commonly used to connect a ch
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/gerrikoiot/family-friend-or-foe-pir-arm-disarm-using-ble-e561e8/embed' width='350'></iframe>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

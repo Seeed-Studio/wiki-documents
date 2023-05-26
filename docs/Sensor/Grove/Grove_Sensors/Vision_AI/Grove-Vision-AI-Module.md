@@ -575,7 +575,7 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 
 If this is the error, then it is likely that there is a problem with your model, please re-upload your model based on the [Burn Model file into the Module](#burn-model-file-into-the-module) section and retry again.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -1106,7 +1106,7 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Debug_Output_Master.png)
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/HM-01-Debug_Output_Slave.png)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -363,7 +363,7 @@ If you add other folders to the project, make sure you change CMakeLists.txt acc
 - **[Webpage]** [Official LVGL Documentation](https://docs.lvgl.io/master/index.html)
 - **[GitHub]** [PC Simulator Source Code](https://github.com/lvgl/lv_sim_eclipse_sdl)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

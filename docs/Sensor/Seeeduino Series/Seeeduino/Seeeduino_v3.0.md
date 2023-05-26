@@ -142,7 +142,7 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 - **[PDF]**[Seeeduino v3.0 SCH](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/res/Seeeduino_v3.0%20SCH.pdf)
 - **[PDF]**[Schematic in pdf](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/res/Seeeduino_v3.0.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

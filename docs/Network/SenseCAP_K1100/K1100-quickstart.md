@@ -586,7 +586,7 @@ Please use the **EUI** and **Code** information marked on the back of the Grove 
 
 A: The answer to this is no. SenseCAP's triple code cannot be used to bind to other platforms, otherwise there is a high risk of data anomalies on different platforms.
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

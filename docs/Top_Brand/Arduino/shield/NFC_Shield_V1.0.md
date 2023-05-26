@@ -446,7 +446,7 @@ This method is used to transmit and receive data to and from initiator. This cod
 - **[PDF]**[NXP PN532 - User Manual](http://www.nxp.com/documents/user_manual/141520.pdf)
 - **[Links]**[NFC Forum](http://www.nfc-forum.org)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

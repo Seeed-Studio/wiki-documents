@@ -995,7 +995,7 @@ We have created a tutorial for connecting to ESPHome and Home Assistant for this
 - **[EXE]** [upper computer software](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/Human-Radar-Open-Protocol_2.0.exe)
 - **[ZIP]** [CE certification documents](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/101991030_CE.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

@@ -124,7 +124,7 @@ Have you successfully make the buzzer to buzz? Here are 2 more awesome projects 
 - [Wiki link for LinkIt Smart 7688 Duo](https://www.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo)
 - [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

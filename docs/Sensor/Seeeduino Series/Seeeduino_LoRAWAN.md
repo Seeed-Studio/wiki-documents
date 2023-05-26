@@ -864,7 +864,7 @@ Click on **Files Transfer > Ymodem > Send**, and select the .bin file we had dow
 
 <iframe frameBorder={0} height="327.5" scrolling="no" src="https://www.hackster.io/SeeedStudio/seeed-lora-iotea-solution-b5ee95/embed" width={350} />
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
    <br />
  Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

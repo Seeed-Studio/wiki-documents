@@ -183,7 +183,7 @@ With that done, you can take a look at the other library examples for reading, w
 
 * **[Eagle]**   [Eagle file of SD Card Shield v3.0](https://wiki.seeedstudio.com/images/0/09/Eagle_file_of_SD_Card_Shield_v3.0.ZIP).
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

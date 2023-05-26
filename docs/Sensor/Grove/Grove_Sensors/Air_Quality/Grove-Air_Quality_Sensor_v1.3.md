@@ -448,7 +448,7 @@ sudo python grove_air_quality_sensor.py
 
 <iframe frameBorder={0} height="327.5" scrolling="no" src="https://project.seeedstudio.com/kevin-lee2/home-control-center-using-beaglebone-green-wireless-107a0d/embed" width={350} />
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

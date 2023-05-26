@@ -297,7 +297,7 @@ You will see the following output when flashing is successful
 
 - <a href="https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html" target="_blank"><span>Platform IO for Seeed Studio XIAO ESP32</span></a>
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

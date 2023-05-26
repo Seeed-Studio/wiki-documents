@@ -209,7 +209,7 @@ Arch GPRS doesn't come with [an mbed interface](https://mbed.org/handbook/mbed-H
 - **[Datasheet]**[EG10 datasheet](https://files.seeedstudio.com/wiki/Arch_GPRS/res/EG10%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.pdf)
 - **[Demo]**[demo](https://mbed.org/users/loovee/code/ARCH_GPRS_Demo/)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

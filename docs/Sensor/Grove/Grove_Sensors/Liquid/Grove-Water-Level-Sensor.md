@@ -262,7 +262,7 @@ void loop()
 - **[ZIP]** [Grove - Water Level Sensor (10CM) Schematic file](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/res/Grove%20-%20Water%20Level%20Sensor%20(10CM)_SCH%26PCB.zip)
 - **[PDF]** [ATtiny1616-1617-Automotive-Data-Sheet](https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/res/ATtiny1616-1617-Automotive-Data-Sheet.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 
 

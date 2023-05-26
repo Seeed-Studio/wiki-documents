@@ -358,7 +358,7 @@ After use, rinse the electrode well with distilled water and tighten the protect
 
 - **[ZIP]** [Grove ORP Sensor Kit Pro_v1.0 SCH&PCB](https://files.seeedstudio.com/wiki/grove-ORP-sensor/Grove-ORP-Sensor-Kit-Pro_v1.0_SCH&PCB_221019.zip)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
