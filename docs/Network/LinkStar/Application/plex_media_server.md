@@ -109,11 +109,15 @@ After that you can see a form to fill down.
 
 - **Step 2**: Configure Environments
 
-        Obtain the timezone by visiting the provided link and copy the TZ database name.
-        Set the timezone using the following format: TZ=<enter timezone
+    Obtain the timezone by visiting the provided [link](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and copy the TZ database name.
+    Set the timezone using the following format
+        
+        TZ=<enter timezone>
 
-        Obtain the claimToken by visiting the provided link and copy/paste the token.
-        Set the claimToken using the following format: PLEX_CLAIM=<enter claimToken>
+    Obtain the claimToken by visiting the provided [link](https://www.plex.tv/claim/) and copy/paste the token.
+    Set the claimToken using the following format
+    
+         PLEX_CLAIM=<enter claimToken>
 
 - **Step 3** : Configure Bind Mounts
 
@@ -126,8 +130,8 @@ After that you can see a form to fill down.
 - **Step 4**: Submit Configuration
 
     After configuring the container name, network, environments, and bind mounts, click on the "Submit" button to save the changes.
-
-
+    
+    
     By following these steps, you will successfully configure the Plex container with the specified settings.
 
 ## Run and Set up Plex Media Server
