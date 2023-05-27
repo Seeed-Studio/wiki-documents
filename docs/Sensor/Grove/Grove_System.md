@@ -16,7 +16,7 @@ last_update:
 
 Grove is a modular, standardized connector prototyping system. Compared to systems using jumpers or solder, Grove's modular building-block approach makes assembling real electronics easy.
 
-The Grove system consists of a base unit and various modules with standardized connectors.  These were originally called "stems" and "twigs", but the names have been phased-out.
+The Grove system consists of a base unit and various modules with standardized connectors.  These were originally called "stems" and "twigs", but the names have been phased out.
 
 The Base unit, generally a microprocessor, allows for easy connection of any input or output from the Grove modules. Every Grove module typically addresses a single function, such as a simple button or a more complex heart rate sensor.
 
