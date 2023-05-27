@@ -14,11 +14,11 @@ last_update:
 
 ## What is the Grove System?
 
-Grove is a modular, standardized connector prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down. Some of the other prototype systems out there takes the level down to building blocks. Good stuff to be learned that way, but the Grove system allows you to build real systems. It requires some learning and expertise to hook things up.
+Grove is a modular, standardized connector prototyping system. Compared to systems using jumpers or solder, Grove's modular building-block approach makes assembling real electronics easy.
 
-The Grove system consists of a base unit (stem) and various modules (twigs) with standardized connectors.  The people originating the Grove system (Seeedstudio) have tried to use "stems"and "twigs" as part of the Grove lexicon.  After a short period of consideration, we are dropping those names.   They just aren't needed and just confuse the issue.
+The Grove system consists of a base unit and various modules with standardized connectors.  These were originally called "stems" and "twigs", but the names have been phased-out.
 
-The Base unit, generally a microprocessor, allows for easy connection of any input or output from the Grove modules. And every Grove module typically addresses a single function, such as a simple button or a more complex heart rate sensor.
+The Base unit, generally a microprocessor, allows for easy connection of any input or output from the Grove modules. Every Grove module typically addresses a single function, such as a simple button or a more complex heart rate sensor.
 
 You don't need a Base unit to connect up to Grove modules. You can use a cable (Grove to Pin Header Converter) to run from the pins on the Raspberry Pi or Arduino to the Grove connectors.
 
@@ -75,7 +75,7 @@ Here are some project made with Grove for your reference, more projects please r
 
 ## Size of Grove
 
-There're 5 size of Grove.
+There are 5 sizes of Grove.
 
 | 1X1 | 1X2 | 1X3 | 2X2 | 2X3 |
 |---|-----|------|-----|----|
