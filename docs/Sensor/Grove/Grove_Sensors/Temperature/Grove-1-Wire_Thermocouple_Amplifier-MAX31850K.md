@@ -338,9 +338,9 @@ Device Address: 3B2321180000005C Temp C: 25.25 Temp F: 77.45
 - **[Zip]** [Seeed_MAX31850K Library](https://github.com/Seeed-Studio/Seeed_MAX31850K/archive/master.zip)
 - **[PDF]** [Datasheet of MAX31850](https://files.seeedstudio.com/wiki/Grove-1_Wire_Themocouple_Amplifier-MAX31850K/res/Max31850.pdf)
 
-## Tech Support
+## Tech Support & Product Discussion
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

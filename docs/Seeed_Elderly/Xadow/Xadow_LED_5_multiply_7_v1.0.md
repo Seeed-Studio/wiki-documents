@@ -33,7 +33,7 @@ The Hardware installation as shown below:
 
 Note: when connect Xadow LED 5X7 to Xadow Main Board, you should concern about the connection direction. The connection method is that the unfilled corner of one Xadow module need to connect to the right angle of another module(see four corners of each Xadow module).
 The test code for displaying string or charring:
-```
+
 ```
 #include "Wire.h"
 #define XADOW_DEBUG 1
@@ -172,10 +172,10 @@ void TESTIO(void)
     Serial.println(error);
 }
 ```
+
 You can see the belowing scene after uploading the code to Xadow Main Board.
 
 ![](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/img/LED_Effect_Diagram_.JPG)
-
 
 ## Schematic Online Viewer
 
@@ -189,5 +189,16 @@ You can see the belowing scene after uploading the code to Xadow Main Board.
 
 *   [Xadow LED Firmware](https://files.seeedstudio.com/wiki/Xadow_LED_5_multiply_7_v1.0/res/Xadow_LED_Firmware.zip)
 
-## Tech Support
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -14,11 +14,11 @@ last_update:
 
 ## What is the Grove System?
 
-Grove is a modular, standardized connector prototyping system. Grove takes a building block approach to assembling electronics. Compared to the jumper or solder based system, it is easier to connect, experiment and build and simplifies the learning system, but not to the point where it becomes dumbed down. Some of the other prototype systems out there takes the level down to building blocks. Good stuff to be learned that way, but the Grove system allows you to build real systems. It requires some learning and expertise to hook things up.
+Grove is a modular, standardized connector prototyping system. Compared to systems using jumpers or solder, Grove's modular building-block approach makes assembling real electronics easy.
 
-The Grove system consists of a base unit (stem) and various modules (twigs) with standardized connectors.  The people originating the Grove system (Seeedstudio) have tried to use "stems"and "twigs" as part of the Grove lexicon.  After a short period of consideration, we are dropping those names.   They just aren't needed and just confuse the issue.
+The Grove system consists of a base unit and various modules with standardized connectors.  These were originally called "stems" and "twigs", but the names have been phased out.
 
-The Base unit, generally a microprocessor, allows for easy connection of any input or output from the Grove modules. And every Grove module typically addresses a single function, such as a simple button or a more complex heart rate sensor.
+The Base unit, generally a microprocessor, allows for easy connection of any input or output from the Grove modules. Every Grove module typically addresses a single function, such as a simple button or a more complex heart rate sensor.
 
 You don't need a Base unit to connect up to Grove modules. You can use a cable (Grove to Pin Header Converter) to run from the pins on the Raspberry Pi or Arduino to the Grove connectors.
 
@@ -75,7 +75,7 @@ Here are some project made with Grove for your reference, more projects please r
 
 ## Size of Grove
 
-There're 5 size of Grove.
+There are 5 sizes of Grove.
 
 | 1X1 | 1X2 | 1X3 | 2X2 | 2X3 |
 |---|-----|------|-----|----|
@@ -395,8 +395,18 @@ Want some Grove modules for your project? Here are some recommendations, more pr
 [ **ZIP** ] [Dimension of Grove 20X40 SMD Horizontal](https://files.seeedstudio.com/wiki/GroveSystem/res/Grove-20x40-SMD-horizontal.zip)
 
 
-## Tech Support
+## Tech Support & Product Discussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/). <br />
+ <br />
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

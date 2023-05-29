@@ -296,9 +296,9 @@ The **standard particulate matter mass concentration value** refers to the mass 
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
 
-## Tech Support
+## Tech Support & Product Discussion
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

@@ -246,11 +246,21 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 [Wio Terminal 音乐频谱分析仪 -- 潘知非](https://files.seeedstudio.com/wiki/Wio-Terminal/projects/music_spectrum_analyzer.pdf)
 
+[简单上手将图片显示在 Wio Terminal 上](https://files.seeedstudio.com/wiki/Wio-Terminal/projects/wioterminal_picture_display_CN_version.zip)
+
 ## 技术支持
 
-如果您有任何技术问题，请提交到我们的[论坛](https://forum.seeedstudio.com/)。<br />
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
 
 
 

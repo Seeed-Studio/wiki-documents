@@ -272,10 +272,10 @@ void loop(){
 
 
 
-## Tech Support
+## Tech Support & Product Discussion
 
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+
 
 
 ## Upgradable to Industrial Sensors

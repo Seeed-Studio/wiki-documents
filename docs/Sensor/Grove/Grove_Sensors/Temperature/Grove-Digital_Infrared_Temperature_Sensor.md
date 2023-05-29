@@ -207,9 +207,9 @@ Resources
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Digital_Infrared_Temperature_Sensor -->
 
-## Tech Support
+## Tech Support & Product Discussion
 
-Please submit any technical issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

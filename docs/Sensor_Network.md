@@ -112,14 +112,14 @@ You can discover this page with two large portions.
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Data Logger</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Data Logger can connect to MODBUS-RTU RS485/Analog/GPIO sensors and transmit data from sensors to the LoRaWAN / 4G network </font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Data Logger can connect to MODBUS-RTU RS485/Analog/GPIO sensors and transmit data from sensors to the LoRaWAN® / 4G network </font></div>
     </a>
 </div>
 
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S2100 Data Logger</font></div>
-            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP S2100 LoRaWAN Data Logger</font></span></a>
+            <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP S2100 LoRaWAN® Data Logger</font></span></a>
             <br/>
             <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the 12V RS485 Sensor for S2100 Data Logger</font></span></a>
             <br/>
@@ -127,7 +127,7 @@ You can discover this page with two large portions.
             <br/>
             <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Counter & GPIO Sensor for S2100 Data Logger</font></span></a>
             <br/>
-            <a href="/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Build LoRaWAN Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger</font></span></a>
+            <a href="/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Build LoRaWAN® Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger</font></span></a>
             <br/>
     </a>
     <a class="independent_item" style={{textAlign: 'left'}}>
@@ -146,7 +146,7 @@ You can discover this page with two large portions.
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Gateway</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway provides miles of wireless network coverage and data transmission capacity for Long Range / LoRaWAN devices </font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway provides miles of wireless network coverage and data transmission capacity for Long Range / LoRaWAN® devices </font></div>
     </a>
 </div>
 
@@ -191,7 +191,7 @@ You can discover this page with two large portions.
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Outdoor / Indoor Gateway</font></div>
-            <a href="Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN Outdoor Gateway</font></span></a>
+            <a href="Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN® Outdoor Gateway</font></span></a>
             <br/>
             <a href="/The-Things-Indoor-Gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}>The Things Indoor Gateway</font></span></a>
             <br/>
@@ -643,7 +643,7 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Seeeduino_Cloud" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino Cloud Boards</font></span></a>
             <br/>
-            <a href="/Seeeduino_LoRAWAN" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino LoRaWAN Boards</font></span></a>
+            <a href="/Seeeduino_LoRAWAN" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino LoRaWAN® Boards</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'center'}}>
@@ -812,7 +812,7 @@ You can discover this page with two large portions.
 <div class="independent_container">
     <a class="independent_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP K1100</font></div>
-            <span><font color={'FFFFFF'} size={"4"}> ☁️ LoRaWAN-Network Application </font></span>
+            <span><font color={'FFFFFF'} size={"4"}> ☁️ LoRaWAN®-Network Application </font></span>
             <br/>
             <a href="/K1100_sensecap_node-red" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > SenseCAP & Node-Red for Cloud Services</font></span></a>
             <br/>
@@ -964,7 +964,7 @@ You can discover this page with two large portions.
             <a href="/Wio-Terminal-Ethernet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Ethernet Extension Board</font></span></a>
             <br/>
             <a href="/Wio-Terminal-Battery-Chassis" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Battery Chassis</font></span></a>,
-            <a href="/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Battery Chassis with LoRaWAN</font></span></a>
+            <a href="/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Battery Chassis with LoRaWAN®</font></span></a>
             <br/>
     </a>
     <a class="intro_item" style={{textAlign: 'left'}}>

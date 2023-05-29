@@ -16,10 +16,13 @@ last_update:
 
 This Grove - GPS module is a cost-efficient and field-programmable gadget armed with a SIM28 (u-blox 6 is the old version) and serial communication configuration. It features 22 tracking / 66 acquisition channels GPS receiver. The sensitivity of tracking and acquisition both reach up to -160dBm, making it a great choice for personal navigation projects and location services, as well as an outstanding one among products of the same price class.
 
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/grove-gps-p-959.html)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Module.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+</div>
+
 
 :::tip
-      We've released the [Seeed GPS Modules Selection Guide](https://wiki.seeedstudio.com/GPS-Modules-Selection-Guide/), it will help you choose the GPS Module that best suits your needs.
+We've released the [Seeed GPS Modules Selection Guide](https://wiki.seeedstudio.com/GPS-Modules-Selection-Guide/), it will help you choose the GPS Module that best suits your needs.
 :::
 
 ## Version
@@ -391,10 +394,16 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/OHAlgerie/project-of-gps-gprs-tracker-36c425/embed' width='350'></iframe>
 
-## Tech Support
+## Tech Support & Product Discussion
 
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div>
-  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

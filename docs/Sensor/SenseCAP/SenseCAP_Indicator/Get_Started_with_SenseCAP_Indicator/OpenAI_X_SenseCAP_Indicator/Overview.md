@@ -1,29 +1,30 @@
 ---
-description: OpenAI & SenseCAP Indicator Overview
+description: OpenAI X SenseCAP Indicator Overview
 title: Overview
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_OpenAI_X_Overview
 last_update:
-  date: 5/24/2023
+  date: 5/25/2023
   author: Thomas
 ---
-# SenseCAP Indicator & OpenAI
+
+# SenseCAP Indicator X OpenAI
 
 ## Overview
 
 SenseCAP Indicator is a powerful tool that harnesses the capabilities of OpenAI's ChatGPT and DALL·E models through API integration. Developed by OpenAI, a renowned name in the field of artificial intelligence, SenseCAP Indicator allows users to experience the fascinating potential of AI in various scenarios.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png"/></div>
-
-SenseCAP Indicator integrates [ChatGPT](https://platform.openai.com/docs/guides/chat) and [DALL·E](https://platform.openai.com/docs/guides/images/introduction) AI services. It serves as a versatile smart assistant, enabling seamless interactions such as real-time conversations, language learning and translation, and engaging text-based games. 
+SenseCAP Indicator integrates [ChatGPT](https://platform.openai.com/docs/guides/chat) and [DALL·E](https://platform.openai.com/docs/guides/images/introduction) AI services. It serves as a versatile smart assistant, enabling seamless interactions such as real-time conversations, language learning and translation, and engaging text-based games.
 
 Developers can also leverage SenseCAP Indicator to integrate AI into their applications, ranging from **Smart Home control** and **IFTTT automation to sensor data analysis**, and so on.
 
 ## Functionality
 
 The integration of OpenAI's ChatGPT and DALL·E models with SenseCAP Indicator provides the following key functionalities:
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png"/></div>
 
 ### Language Processing
 
@@ -52,22 +53,21 @@ You can also test ChatGPT's mathematical capabilities and explore its ability to
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/chatgpt.jpg"/></div>
 
-
-
 Similarly, DALL·E integration offers image generation functionality. By providing text prompts, you can request generated images based on your descriptions.
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_ONECAT_WHOLE.jpg"/></div>
 
 If you are not satisfied with a generated image, you can click the "Regenerate" button to request another one.
 
-
 ## Resource
-Need more detail information to know how to use ChatGPT and DALL·E models? 
+
+Need more detail information to know how to use ChatGPT and DALL·E models?
+
 - [SenseCAP_Indicator_ChatGPT Chat Completions](/SenseCAP_Indicator_ChatGPT)
 - [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL·E)
 
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc

@@ -386,9 +386,9 @@ This is the introduction Video of this product, simple demos, you can have a try
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3slfeHKSSCw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-## Tech Support
+## Tech Support & Product Discussion
 
-Please do not hesitate to submit the issue into our [forum](https://forum.seeedstudio.com/).
+
 
 ## Upgradable to Industrial Sensors
 

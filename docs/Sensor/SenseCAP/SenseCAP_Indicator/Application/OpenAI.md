@@ -1,164 +1,89 @@
 ---
-description: ChatGPT with Indicator
-title: ChatGPT & DALL·E Application Development
+description: ChatGPT x DALL·E with Indicator
+title: ChatGPT x DALL·E Application Development
 keywords:
 - SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_ChatGPT
 last_update:
-  date: 5/24/2023
+  date: 5/25/2023
   author: Thomas
 ---
+
 # SenseCAP Indicator x ChatGPT x DALL·E Application Development
-On this page, we will guide you on how to organize the OpenAI Demo for quick addition, deletion, and modification of programs according to the provided BSP.
+
+This guide will provide you with information on how to organize the OpenAI Demo for quick addition, deletion, and modification of programs according to the provided BSP (Board Support Package).
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_BE_RICH.JPG"/></div>
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_1_CAT.JPG"/></div>
 
 ## Prerequisites
 
-- One SenseCAP Indicator
-- The IDF toolchain installed on your computer
+- One [SenseCAP Indicator](https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html)
+- The [ESP-IDF](https://github.com/espressif/esp-idf) toolchain installed on your computer
 
-:::note
-- Want to know how to change the UI? -> [How to Create your own UI](/SenseCAP_Indicator_How_to_Create_your_own_UI)
-- Haven't installed toolchain? -> [How_To_Flash_The_Default_Firmware](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)
+:::tip
+If you want to learn how to change the user interface (UI), you can refer to the guide: [How to Create your own UI](/SenseCAP_Indicator_How_to_Create_your_own_UI)
+
+If you haven't installed the IDF toolchain yet, you can follow the instructions in the guide: [How_To_Flash_The_Default_Firmware](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)
 :::
 
-The following code snippet is the main code related to OpenAI startup. flowchart:
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_openai_sys.png)
+## Get Started
 
-## MVC (Model-View-Controller)
-The openai_demo is developed based on the MVC architecture.
-From the above workflow, it can be seen that this project is based on the MVC architecture.
+The main code related to the OpenAI startup flowchart is shown below:
 
-- View port: indicator_view_init();
-- Model port: indicator_model_init();
-- Controller port: indicator_controller_init();
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_openai_sys.png"/></div>
 
-### View 
-In the View, various event-triggered signals are mainly processed, and LVGL is used for driving the display.
+### Function
+
+The SenseCAP Indicator x ChatGPT x DALL·E Application is developed based on the MVC (Model-View-Controller) architecture. The project's workflow indicates its reliance on the MVC architecture.
+
+In this architecture, the components are structured as follows:
+
+- View: The View handles various event-triggered signals and utilizes LVGL (Light and Versatile Graphics Library) for driving the display.
 
 :::note
-If you want to quickly build the UI, you can use [SquareLine Studio](https://squareline.io/), which is also used in our project. Use version 1.3.0.
+To quickly build the user interface (UI), you can use [SquareLine Studio](https://squareline.io/), which is also employed in our project. Recommend using SquareLine Studio version 1.3.0 to ensure a smooth and seamless experience while following this guide..
 :::
 
+- Model: The Model contains the `indicator_openai.c` file, which includes the `indicator_openai_init()` function. When executed at the Model entry, this function sends requests to OpenAI, receives responses, and parses them for display on the screen through the View.
 
-## Model
-When the newly added indicator_openai.c with indicator_openai_init(); is placed into indicator_model_init(); and executed at the Model entry, various event triggering mechanisms within it will send requests to OpenAI, receive responses, and parse them for display on the screen through the View.
+Here are the key functions and workflow of the Model (once [the API Key](/SenseCAP_Indicator_How_to_Set_the_API_Key) is saved):
 
-The following are the key functions and workflow of the Model (once the API Key is saved):
+#### **ChatGPT flowchart**
 
-![](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/model_openai.png)
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/model_openai.png"/></div>
 
+#### **DALL·E flowchart**
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/model_openai_DALLE.png"/></div>
 
 ## Example Code
 
-To utilize the OpenAI service, we need to implement functions that can send requests to OpenAI, receive responses, and parse the JSON response. As depicted in the flowchart above, it has provided us with the necessary information.
+To utilize the OpenAI service, we need to implement functions that can send requests to OpenAI, receive responses, and parse the JSON response. The following code snippet illustrates the necessary code structure:
 
+<!-- Code -->
 
-```c
-/* HTTPS Request & get Response*/
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="ChatGPT" label="ChatGPT Code">
+
+```c title="openai.c"
+/* HTTPS Request & get Response */
 static int chat_request(struct view_data_openai_request *p_req,
                         struct view_data_openai_response *p_resp);
-/* Json Prase*/
+
+/* Json Prase */
 static int __chat_json_prase(const char *p_str, char *p_answer, char *p_err);
 ```
 
-In the `chat_request` function of `indicator_openai.c`, the `data_buf` variable is employed to store both the prompt and data input. If you are familiar with HTTP, you will recognize that this function generates an HTTP request that encapsulates user-supplied data.
+The `chat_request(...)` function in `indicator_openai.c` is responsible for sending requests to the OpenAI API, receiving responses, and parsing the JSON response. It generates an HTTP request encapsulating user-supplied data and communicates with the server using `mbedtls_send_then_recv(...)`.
 
-# DALL·E AI Picture Generator
+To add a prompt to your application, you can modify the `data_buf` variable in the `chat_request(...)` function as follows:
 
-On this page, we will guide you on how to organize the OpenAI Demo for quick addition, deletion, and modification of programs according to the provided BSP.
-
-To understand the structure of the entire project, you can visit the [Indicator ChatGPT demo](/SenseCAP_Indicator_ChatGPT) page.
-
-> Principle: When a request is successful, it returns a URL address. By downloading and decoding the image from this URL link, it can be displayed.
-
-
-```c
-#define WEB_SERVER "api.openai.com"
-#define WEB_PORT "443"
-
-static char *p_recv_buf;
-static size_t recv_buf_max_len;
-
-static char openai_api_key[52];
-static bool have_key = false;
-static int chat_request(struct view_data_openai_request *p_req,
-                        struct view_data_openai_response *p_resp)
-{
-	// store the request and data to be sent to the OpenAI API.
-    char request_buf[2048];
-    char data_buf[1536];
-
-	
-    int data_len = 0; // store the length of the data 
-    int ret = 0;
-	int len = 0; //store the length of the request
-
-    memset(request_buf, 0, sizeof(request_buf));
-    memset(data_buf, 0, sizeof(data_buf));
-
-    data_len = sprintf(data_buf,
-                       "{\"model\":\"gpt-3.5-turbo\",\"temperature\":0.7, \"messages\":[{\"role\":"
-                       "\"user\",\"content\":\"");
-                     
-    data_len += sprintf(data_buf + data_len, "%s", p_req->question); // user question
-
-    len += sprintf(request_buf + len, "POST /v1/chat/completions HTTP/1.0\r\n");
-    len += sprintf(request_buf + len, "Host: %s\r\n", WEB_SERVER);
-    len += sprintf(request_buf + len, "Connection: Close\r\n");
-    len += sprintf(request_buf + len, "Content-Type: application/json\r\n");
-    len += sprintf(request_buf + len, "Content-Length: %d\r\n", data_len);
-    len += sprintf(request_buf + len, "Authorization: Bearer %s\r\n",
-                   openai_api_key);
-    len += sprintf(request_buf + len, "\r\n");
-    len += sprintf(request_buf + len, "%s", data_buf);
-
-    memset(p_recv_buf, 0, recv_buf_max_len);
-    /*
-    sending an HTTP request to the server specified by WEB_SERVER and WEB_PORT, with the request data stored in request_buf and the length of the request data stored in len. 
-    It then waits for a response from the server, which is stored in
-    p_recv_buf with a maximum length of recv_buf_max_len. The function mbedtls_send_then_recv is used to perform both the sending and receiving of data in a single call. If the function returns a negative value, it indicates an error has occurred.
-    */
-    ret = mbedtls_send_then_recv(WEB_SERVER, WEB_PORT, request_buf, len,
-                                 p_recv_buf, recv_buf_max_len, 100, NULL);
-
-    if (ret < 0)
-    {
-        ESP_LOGE(TAG, "mbedtls request fail");
-        p_resp->ret = 0;
-        strcpy(p_resp->err_msg, "Request fail");
-        return -1;
-    }
-    char *p_json = strstr(p_recv_buf, "\r\n\r\n");
-    if (p_json == NULL)
-    {
-        ESP_LOGE(TAG, "Response format error");
-        p_resp->ret = 0;
-        strcpy(p_resp->err_msg, "Response format error");
-        return -1;
-    }
-    p_json += 4;
-    p_resp->p_answer = p_recv_buf + recv_buf_max_len / 2; // use p_recv_buf mem
-    /*
-    The chat_request() function sends a request to the OpenAI API for generating a chat response and parses the response to extract the answer and error message.
-    */
-    ret = __chat_json_prase(p_json, p_resp->p_answer, p_resp->err_msg);
-    if (ret != 0)
-    {
-        p_resp->ret = 0;
-        return -1;
-    }
-    p_resp->ret = 1;
-    return 0;
-}
-
-```
-
-In this function, `mbedtls_send_then_recv` is called to do the request and get method.
-
-**Adding Prompt**
-
-> If you want to add prompt to your application, just add codes like that:
+**Adding Prompt:**
 
 ```c
 data_len += sprintf(data_buf + data_len, "Your are SenseCAP Indicator, developed by Seeed Studio, has been launched on April 20th, 2023.");
@@ -173,8 +98,44 @@ data_len += sprintf(data_buf + data_len, "]");
 data_len += sprintf(data_buf + data_len, "\"}]}");
 ```
 
+In this function, `mbedtls_send_then_recv` is called to do the request and get method.
 
-To see the detail code, go to [indicator_openaI.c · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/82d02957dbc71d4c1549246e823fac4ead89bb42/examples/SenseCAP_Indicator_openai/main/model/SenseCAP_Indicator_openai.c)
+
+</TabItem>
+<TabItem value="DALL·E" label="DALL·E Code">
+
+```c title="openai.c"
+/* HTTPS Request & get Response */
+static int image_request(struct view_data_openai_request *p_req,
+					 struct view_data_openai_response *p_resp);
+
+/* Json Prase */
+static int __image_json_prase(const char *p_str, char *p_url, char *p_err);
+
+/* prase URL to download */
+static void url_prase(char *p_url, char *p_host, char *p_path);
+```
+
+> Principle: When a request is successful, it returns a URL address. By downloading and decoding the image from this URL link, it can be displayed.
+
+
+Same as `ChatGPT Code`, in the initial request, we will utilize a prompt to obtain the image URL. After acquiring the URL, we will attempt to download the image to the local buffer using the obtained URL.
+
+
+</TabItem>
+</Tabs>
+
+<!-- Code END -->
+
+---
+
+
+<details>
+
+<summary>ChatGPT & DALL·E Code</summary>
+
+For the detailed and latest code, please refer to [SenseCAP Indicator OpenAI](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_openai).
+
 
 ```c
 #include "indicator_openai.h"
@@ -240,7 +201,7 @@ static int mbedtls_send_then_recv(char *p_server, char *p_port, char *p_tx,
     memset(&cacert,0, sizeof(cacert) );
     memset(&conf,0, sizeof(conf) );
     memset(&server_fd,0, sizeof(server_fd) );
-    
+
     mbedtls_ssl_init(&ssl);
     mbedtls_x509_crt_init(&cacert);
     mbedtls_ctr_drbg_init(&ctr_drbg);
@@ -396,6 +357,13 @@ static int mbedtls_send_then_recv(char *p_server, char *p_port, char *p_tx,
             break;
         }
         len = ret;
+
+        // if( recv_len < 512 ) {
+        //     for (int i = 0; (i < len); i++)
+        //     {
+        //         putchar(p_rx[i + recv_len]);
+        //     }
+        // }
         if( p_read_cb != NULL ) {
             p_read_cb(NULL, len);
         }
@@ -444,13 +412,27 @@ static int __chat_json_prase(const char *p_str, char *p_answer, char *p_err)
         return -1;
     }
 
+    // {
+    //     "error": {
+    //         "message": "",
+    //         "type": "invalid_request_error",
+    //         "param": null,
+    //         "code": "invalid_api_key"
+    //     }
+    // }
     cjson_item = cJSON_GetObjectItem(root, "error");
     if (cjson_item != NULL)
     {
         cjson_item1 = cJSON_GetObjectItem(cjson_item, "message");
-        if (cjson_item1 != NULL && cjson_item1->valuestring != NULL)
+        if (cjson_item1 != NULL && cjson_item1->valuestring != NULL && strlen(cjson_item1->valuestring) > 0)
         {
-            strcpy(p_err, cjson_item1->valuestring);
+            strncpy(p_err, cjson_item1->valuestring, 63);
+        } else {
+            cjson_item1 = cJSON_GetObjectItem(cjson_item, "code");
+            if (cjson_item1 != NULL && cjson_item1->valuestring != NULL)
+            {
+                strncpy(p_err, cjson_item1->valuestring, 63);
+            }
         }
         cJSON_Delete(root);
         return -1;
@@ -493,7 +475,6 @@ static int chat_request(struct view_data_openai_request *p_req,
     data_len = sprintf(data_buf,
                        "{\"model\":\"gpt-3.5-turbo\",\"temperature\":0.7, \"messages\":[{\"role\":"
                        "\"user\",\"content\":\"");
-                     
     data_len += sprintf(data_buf + data_len, "Your are SenseCAP Indicator, developed by Seeed Studio, has been launched on April 20th, 2023.");
     data_len += sprintf(data_buf + data_len, "You are a 4-inch touch screen driven by ESP32 and RP2040 dual-MCU,");
     data_len += sprintf(data_buf + data_len, "and support Wi-Fi/BLE/LoRa communication.");
@@ -523,7 +504,7 @@ static int chat_request(struct view_data_openai_request *p_req,
     {
         ESP_LOGE(TAG, "mbedtls request fail");
         p_resp->ret = 0;
-        strcpy(p_resp->err_msg, "Request fail");
+        strcpy(p_resp->err_msg, "Connect 'api.openai.com' fail");
         return -1;
     }
     ESP_LOGI(TAG, "Starting using strstr");
@@ -547,6 +528,195 @@ static int chat_request(struct view_data_openai_request *p_req,
         return -1;
     }
     p_resp->ret = 1;
+    return 0;
+}
+
+static int __image_json_prase(const char *p_str, char *p_url, char *p_err)
+{
+    int ret = 0;
+
+    cJSON *root = NULL;
+    cJSON *cjson_item = NULL;
+    cJSON *cjson_item1 = NULL;
+    cJSON *cjson_item2 = NULL;
+
+    root = cJSON_Parse(p_str);
+    if (root == NULL)
+    {
+        strcpy(p_err, "Parse json fail");
+        return -1;
+    }
+
+    cjson_item = cJSON_GetObjectItem(root, "error");
+    if (cjson_item != NULL)
+    {
+        cjson_item1 = cJSON_GetObjectItem(cjson_item, "message");
+        if (cjson_item1 != NULL && cjson_item1->valuestring != NULL)
+        {
+            strcpy(p_err, cjson_item1->valuestring);
+        }
+        cJSON_Delete(root);
+        return -1;
+    }
+
+    cjson_item = cJSON_GetObjectItem(root, "data");
+    if (cjson_item != NULL)
+    {
+        cjson_item1 = cJSON_GetObjectItem(cJSON_GetArrayItem(cjson_item, 0), "url");
+
+        if (cjson_item1 != NULL && cjson_item1->valuestring != NULL)
+        {
+            strcpy(p_url, cjson_item1->valuestring);
+            cJSON_Delete(root);
+            return 0;
+        }
+    }
+    strcpy(p_err, "Not find url");
+    return -1;
+}
+
+static void url_prase(char *p_url, char *p_host, char *p_path)
+{
+    char *pos1;
+    char *pos2;
+    pos1 = strchr(p_url, '/');
+    pos2 = strchr(pos1 + 2, '/');
+
+    strncpy(p_host, pos1 + 2, pos2 - (pos1 + 2));
+    strncpy(p_path, pos2, strlen(pos2) + 1);
+}
+
+static image_download_progress = 40;
+static void image_progress_update_cb(uint8_t *p_data, int len)
+{
+    image_download_progress++;
+    if( image_download_progress >=99) {
+        image_download_progress=99;
+    }
+    if( (image_download_progress%10) == 0) {
+        request_st_update(image_download_progress, "Download image...");
+    }
+}
+
+static int image_request(struct view_data_openai_request *p_req,
+                         struct view_data_openai_response *p_resp)
+{
+    char request_buf[1024];
+    char data_buf[1024];
+
+    int data_len = 0;
+    int ret = 0;
+    int len = 0;
+
+    memset(request_buf, 0, sizeof(request_buf));
+    memset(data_buf, 0, sizeof(data_buf));
+
+    if( strlen(request.question) == 0) {
+        strcpy(request.question, "Astronaut riding a horse in space.");
+    }
+
+    data_len =
+    sprintf(data_buf, "{\"prompt\":\"%s\",\"n\":1,\"size\":\"512x512\"}",
+                p_req->question);
+
+    len += sprintf(request_buf + len, "POST /v1/images/generations HTTP/1.0\r\n");
+    len += sprintf(request_buf + len, "Host: %s\r\n", WEB_SERVER);
+    len += sprintf(request_buf + len, "Content-Type: application/json\r\n");
+    len += sprintf(request_buf + len, "Connection: Close\r\n");
+    len += sprintf(request_buf + len, "Content-Length: %d\r\n", data_len);
+    len += sprintf(request_buf + len, "Authorization: Bearer %s\r\n",
+                   openai_api_key);
+    len += sprintf(request_buf + len, "\r\n");
+    len += sprintf(request_buf + len, "%s", data_buf);
+
+    memset(p_recv_buf, 0, recv_buf_max_len);
+
+    image_download_progress = 40;
+    request_st_update( image_download_progress, "Image generation...");
+    ret = mbedtls_send_then_recv(WEB_SERVER, WEB_PORT, request_buf, len,
+                                 p_recv_buf, recv_buf_max_len, 2000, NULL);
+    if (ret < 0)
+    {
+        ESP_LOGE(TAG, "mbedtls request fail");
+        p_resp->ret = 0;
+        strcpy(p_resp->err_msg, "Request fail");
+        return -1;
+    }
+
+    char *p_json = strstr(p_recv_buf, "\r\n\r\n");
+    if (p_json == NULL)
+    {
+        ESP_LOGE(TAG, "Response format error");
+        p_resp->ret = 0;
+        strcpy(p_resp->err_msg, "Response format error");
+        return -1;
+    }
+
+    p_json += 4;
+
+    memset(data_buf, 0, sizeof(data_buf));
+    ret = __image_json_prase(p_json, data_buf, p_resp->err_msg);
+    if (ret != 0)
+    {
+        p_resp->ret = 0;
+        return -1;
+    }
+
+    // download image
+    ESP_LOGI(TAG, "Download image from (%s)...", data_buf);
+
+    char host[64];
+    char path[512];
+
+    memset(host, 0, sizeof(host));
+    memset(path, 0, sizeof(path));
+    url_prase(data_buf, host, path);
+
+    len = 0;
+    memset(request_buf, 0, sizeof(request_buf));
+    len += sprintf(request_buf + len, "GET %s HTTP/1.0\r\n", path);
+    len += sprintf(request_buf + len, "Host: %s\r\n", host);
+    len += sprintf(request_buf + len, "Connection: Close\r\n");
+    len += sprintf(request_buf + len, "\r\n");
+
+    memset(p_recv_buf, 0, recv_buf_max_len);
+    ret = mbedtls_send_then_recv(host, "443", request_buf, len,
+                                 p_recv_buf, recv_buf_max_len, 2000,  image_progress_update_cb);
+    if (ret < 0)
+    {
+        ESP_LOGE(TAG, "Download fail");
+        p_resp->ret = 0;
+        strcpy(p_resp->err_msg, "Download fail");
+        return -1;
+    }
+
+    // find png image len
+    int content_len = 0;
+    char *p_content_len_str = strstr(p_recv_buf, "Content-Length");
+    if( p_content_len_str == NULL ) {
+        ESP_LOGE(TAG, "Content-Length not find");
+        p_resp->ret = 0;
+        strcpy(p_resp->err_msg, "Content-Length not find");
+        return -1;
+    }
+    sscanf(p_content_len_str, "Content-Length: %d", &content_len);
+    ESP_LOGI(TAG, "Content-Length: %d", content_len);
+
+
+    // find png image body
+    char *p_png = strstr(p_recv_buf, "\r\n\r\n");
+    if (p_json == NULL)
+    {
+        ESP_LOGE(TAG, "Response format error");
+        p_resp->ret = 0;
+        strcpy(p_resp->err_msg, "Response format error");
+        return -1;
+    }
+
+    p_png += 4;
+    p_resp->p_answer = p_png;
+    p_resp->ret = 1;
+    p_resp->len = content_len;
     return 0;
 }
 
@@ -595,7 +765,7 @@ static void __indicator_openai_task(void *p_arg)
             if (xSemaphoreTake(__g_gpt_com_sem, pdMS_TO_TICKS(100)) == pdTRUE) {
                 ESP_LOGI(TAG, "--> chat request: %s", request.question);
                 memset(&response, 0, sizeof(response));
-                request_st_update(99, "Request..."); 
+                request_st_update(99, "Request...");
                 ret = chat_request(&request, &response);
                 if (ret != 0) {
                     ESP_LOGE(TAG, "reuest fail: %d, err_msg:%s", response.ret, response.err_msg);
@@ -656,11 +826,20 @@ static void __view_event_handler(void *handler_args, esp_event_base_t base,
             xSemaphoreGive(__g_gpt_com_sem);
             break;
         }
+        case VIEW_EVENT_DALLE_REQUEST:
+        {
+            ESP_LOGI(TAG, "event: VIEW_EVENT_DALLE_REQUEST");
+            struct view_data_openai_request *p_req = (struct view_data_openai_request *)event_data;
+            memcpy(&request,p_req, sizeof(request));
+            request_st_update(0, "ready");
+            xSemaphoreGive(__g_dalle_com_sem);
+            break;
+        }
         case VIEW_EVENT_OPENAI_API_KEY_READ:
         {
             ESP_LOGI(TAG, "event: VIEW_EVENT_OPENAI_API_KEY_READ");
             __openai_api_key_read();
-            break;  
+            break;
         }
         default:
             break;
@@ -674,25 +853,33 @@ int indicator_openai_init(void)
 
     __openai_api_key_read();
     __openai_init();
-    ESP_ERROR_CHECK(esp_event_handler_instance_register_with(view_event_handle, VIEW_EVENT_BASE, VIEW_EVENT_WIFI_ST, __view_event_handler, NULL, NULL));
 
-ESP_ERROR_CHECK(esp_event_handler_instance_register_with(view_event_handle, VIEW_EVENT_BASE, VIEW_EVENT_CHATGPT_REQUEST, __view_event_handler, NULL, NULL));
-   
-   ESP_ERROR_CHECK(esp_event_handler_instance_register_with(view_event_handle, VIEW_EVENT_BASE, VIEW_EVENT_OPENAI_API_KEY_READ, __view_event_handler, NULL, NULL));
-
-	xTaskCreate(&__indicator_openai_task, "__indicator_openai_task", 1024 * 10, NULL, 10, NULL);
+    ESP_ERROR_CHECK(esp_event_handler_instance_register_with( view_event_handle,
+                                                            VIEW_EVENT_BASE, VIEW_EVENT_WIFI_ST,
+                                                            __view_event_handler, NULL, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register_with( view_event_handle,
+                                                            VIEW_EVENT_BASE, VIEW_EVENT_CHATGPT_REQUEST,
+                                                            __view_event_handler, NULL, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register_with( view_event_handle,
+                                                            VIEW_EVENT_BASE, VIEW_EVENT_DALLE_REQUEST,
+                                                            __view_event_handler, NULL, NULL));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register_with( view_event_handle,
+                                                            VIEW_EVENT_BASE, VIEW_EVENT_OPENAI_API_KEY_READ,
+                                                            __view_event_handler, NULL, NULL));
+    xTaskCreate(&__indicator_openai_task, "__indicator_openai_task", 1024 * 10, NULL, 10, NULL);
 }
- 
-```  
-  
-# Resource
-- [Indicator OpenAI Demo · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/82d02957dbc71d4c1549246e823fac4ead89bb42/examples/SenseCAP_Indicator_openai)
-- The actual effect: [ChatGPT_Indicator](/SenseCAP_Indicator_ChatGPT)
+```
+</details>
 
 
+## Resource
+
+- [SenseCAP_Indicator_ESP32 · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
+- [SenseCAP_Indicator_ChatGPT Chat Completions](/SenseCAP_Indicator_ChatGPT)
+- [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL·E)
 
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
