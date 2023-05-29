@@ -33,7 +33,7 @@ The default shipping firmware of the SenseCAP Indicator is fully open source for
 
 - **Source code:** Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain to compile it.
 - **Firmware:** Directly flash the pre-compiled binary file without the need for any code modification or compilation.
-  :::
+:::
 
 **Source Code**
 
