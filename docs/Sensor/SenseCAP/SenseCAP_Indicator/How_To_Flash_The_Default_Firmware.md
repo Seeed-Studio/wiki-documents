@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 last_update:
-  date: 5/25/2023
+  date: 5/29/2023
   author: Thomas
 ---
 
@@ -33,7 +33,7 @@ The default shipping firmware of the SenseCAP Indicator is fully open source for
 
 - **Source code:** Before flashing it, you have the option to modify the code as per your requirements. You will need a toolchain to compile it.
 - **Firmware:** Directly flash the pre-compiled binary file without the need for any code modification or compilation.
-:::
+  :::
 
 **Source Code**
 
@@ -46,6 +46,7 @@ The default shipping firmware of the SenseCAP Indicator is fully open source for
 - [Click to download RP2040 frimware](https://github.com/Seeed-Solution/SenseCAP_Indicator_RP2040/releases/tag/v1.0.0)
 
 ## ESP32-S3
+
 ### **Flash ESP32-S3 Firmware using Flash Download Tools**
 
 **Flash Download Tools** are used for programming or flashing firmware onto ESP8266 and ESP32 series of microcontrollers. They provide a graphical user interface (GUI) for users to easily flash firmware onto the ESP microcontrollers.
@@ -98,7 +99,7 @@ When it shows "FINISH", the firmware flashing has been completed.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/finish.png"/></div>
 
 :::tip **Note**:
-In the above guide, the binary file merged there bins into one, which name is _Default_Factory_Firmware_ESP32-S3.bin_
+In the above guide, the binary file merged there bins into one, which name is `Default_Factory_Firmware_ESP32-S3.bin`
 
 However, when you use ESP-IDF to build firmware, you will get three binary files, you have to write the correct address (you can put your own address) on the right side:
 :::
@@ -180,7 +181,7 @@ The upgrade will run automatically.
 
 **Download:**
 
-- **Step 1**: Install [Arduino IDE]( https://www.arduino.cc/en/software
+- **Step 1**: Install [Arduino IDE](https://www.arduino.cc/en/software)
 
 - **Step 2**: Add the Raspberry Pi Pico Board
 
@@ -202,19 +203,19 @@ Search "indicator" and install "Raspberry Pi Pico/RP2040" in the Boards Manager
 
 - **Step 3**: Add Libraries
 
-Libraries for reference：
+**Libraries for reference**：
 
-[Serial communication protocol](https://github.com/bakercp/PacketSerial)
+- [Serial communication protocol](https://github.com/bakercp/PacketSerial)
 
-[SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
+- [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
 
-[Transfer index library: Sensirion Gas Index Algorithm](https://github.com/Sensirion/arduino-gas-index-algorithm)
+- [Transfer index library: Sensirion Gas Index Algorithm](https://github.com/Sensirion/arduino-gas-index-algorithm)
 
-[SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
+- [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
 
-[AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/)
+- [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/)
 
-[Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core/)
+- [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core/)
 
 Navigate to **Sketch** -> **Include Library** -> **Add .ZIP Library**, then select the libraries you download.
 
@@ -286,12 +287,10 @@ Check the port on your Device Manage
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
 
-
 </TabItem>
 </Tabs>
 
 <!-- End of Tab -->
-
 
 # **Tech Support**
 
