@@ -375,6 +375,10 @@ In addition to reading the extensive LVGL official documentation and writing our
 
 Next, we will give you a brief introduction to the use of the software on the round screen, configuration methods, to help you can quickly get started using the software to design some interfaces.
 
+:::caution
+We recommend you to use the **v1.2.3** version of SquareLine Studio. After testing, the v1.3.0 version can have compatibility problems with the tft_eSPI library.
+:::
+
 #### Step1. Download the SuqareLine Studio
 
 You can go to the official website of SquareLine Studio by clicking [here](https://squareline.io/), then click **TRY IT FOR FREE** to download the software to your computer.
