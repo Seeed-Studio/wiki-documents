@@ -6,12 +6,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Dive_into_the_Hardware
 last_update:
-  date: 5/23/2023
+  date: 5/31/2023
   author: Thomas
 ---
 # **Overview**
 
-The SenseCAP Indicator is a 4-inch touch screen device that is powered by the ESP32 and RP2040 dual MCUs. ESP32 and RP2040 are both highly capable microcontrollers that offer a range of features and functions. 
+The SenseCAP Indicator is a 4-inch touch screen device that is powered by the ESP32 and RP2040 dual MCUs. ESP32 and RP2040 are both highly capable microcontrollers that offer a range of features and functions.
 
 
 This chapter will provide detailed information about ESP32 and RP2040 of SenseCAP Indicator, including their functions and usage. It covers include programming, interfacing with sensors, and communicating with other devices，etc.
@@ -23,7 +23,7 @@ This chapter will provide detailed information about ESP32 and RP2040 of SenseCA
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
 
-As shown in the figure, the SenseCAP Indicator is primarily driven by the ESP32 and RP2040 MCUs, which are connected to the LoRa transceiver, LCD, and other peripheral circuits. 
+As shown in the figure, the SenseCAP Indicator is primarily driven by the ESP32 and RP2040 MCUs, which are connected to the LoRa transceiver, LCD, and other peripheral circuits.
 In the following sections, we will provide an overview of the ESP32 and RP2040 development and their respective capabilities.
 
 ## **ESP32-S3**
@@ -44,7 +44,7 @@ SenseCAP Indicator is embeded with [RP2040](https://www.seeedstudio.com/Raspberr
 
 ## **ESP32-S3 and RP2040 Communication**
 
-ESP32 and RP2040 use serial port communication, using the [COBS](http://www.stuartcheshire.org/papers/COBSforToN.pdf) communication protocol. 
+ESP32 and RP2040 use serial port communication, using the [COBS](http://www.stuartcheshire.org/papers/COBSforToN.pdf) communication protocol.
 
 
 Libraries used in ESP32:  https://github.com/cmcqueen/cobs-c
@@ -83,9 +83,17 @@ In the terminal demo, the following data frames are used for transmission：
 
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+**Need help with your SenseCAP Indicator? We're here to assist you!**
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

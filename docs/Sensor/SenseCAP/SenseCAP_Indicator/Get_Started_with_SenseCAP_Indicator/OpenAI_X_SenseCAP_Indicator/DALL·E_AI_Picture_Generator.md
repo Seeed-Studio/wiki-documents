@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_DALL·E
 last_update:
-  date: 5/24/2023
+  date: 5/31/2023
   author: Thomas
 ---
 # **DALL·E X SenseCAP Indicator**
@@ -55,6 +55,14 @@ In addition to the demonstrated functionality, SenseCAP provides fully open sour
 
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
+**Need help with your SenseCAP Indicator? We're here to assist you!**
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
