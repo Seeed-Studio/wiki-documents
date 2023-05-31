@@ -169,11 +169,11 @@ Before we get started developing a sketch, let's look at the available functions
 
 1. `if (ai.begin(ALGO_OBJECT_DETECTION, MODEL_EXT_INDEX_1))` - This is where we can select our methods of classification and the models.
 
-  You can change `ALGO_OBJECT_DETECTION` to `ALGO_OBJECT_COUNT` or `ALGO_IMAGE_CLASSIFICATION`. 
+  You can change `ALGO_OBJECT_DETECTION` to `ALGO_OBJECT_COUNT` or `ALGO_IMAGE_CLASSIFICATION`.
 
   Meanwhile, if you also burn your customized model(firmware) into the module, you can change `MODEL_EXT_INDEX_1` to `MODEL_EXT_INDEX_2` or 3, 4, as you named it.
 
-2. `object_detection_t data` - This is the struct dataset where the result output. 
+2. `object_detection_t data` - This is the struct dataset where the result output.
 
   If you change the classification method, you need to change `object_detection_t` correspondingly to `image_classification_t` or `object_count_t`.
 
@@ -278,7 +278,7 @@ void setup()
 {
   Wire.begin();
   Serial.begin(115200);
-  
+
    Serial.println("begin");
   if (ai.begin(ALGO_OBJECT_DETECTION, (MODEL_INDEX_T)0x11)) // Object detection and pre-trained model 1
   {
@@ -309,7 +309,7 @@ void loop()
     {
       while (1) // wait for invoking finished
       {
-        CMD_STATE_T ret = ai.state(); 
+        CMD_STATE_T ret = ai.state();
         if (ret == CMD_STATE_IDLE)
         {
           break;
@@ -320,7 +320,7 @@ void loop()
      uint8_t len = ai.get_result_len(); // receive how many people detect
      if(len)
      {
-       int time1 = millis() - tick; 
+       int time1 = millis() - tick;
        Serial.print("Time consuming: ");
        Serial.println(time1);
        Serial.print("Number of people: ");
@@ -333,7 +333,7 @@ void loop()
           Serial.print("Detecting and calculating: ");
           Serial.println(i+1);
           ai.get_result(i, (uint8_t*)&data, sizeof(object_detection_t)); //get result
-  
+
           Serial.print("confidence:");
           Serial.print(data.confidence);
           Serial.println();
@@ -553,7 +553,7 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI06.png" style={{width:600, height:'auto'}}/></div>
 
-- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then clink **Creat&Program**, wait for the process done.
+- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then click **Creat&Program**, wait for the process done.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png" style={{width:800, height:'auto'}}/></div>
 
@@ -580,12 +580,12 @@ If this is the error, then it is likely that there is a problem with your model,
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
