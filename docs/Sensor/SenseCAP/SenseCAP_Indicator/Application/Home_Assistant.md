@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Indicator x Home Assistant Application Development
-title: Home Assistant Application Development
+title: Home Assistant X SenseCAP Indicator
 keywords:
 - SenseCAP Indicator Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -15,6 +15,8 @@ last_update:
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
+
+<br />
 
 Welcome to the Seeed SenseCAP Indicator and HomeAssistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with HomeAssistant.
 

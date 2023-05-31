@@ -1,6 +1,6 @@
 ---
 description: DALL·E AI Picture Generator
-title: DALL·E Image Generation
+title: DALL·E AI Picture Generator
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,7 @@ last_update:
   date: 5/31/2023
   author: Thomas
 ---
-# **DALL·E X SenseCAP Indicator**
+# **SenseCAP Indicator X DALL·E**
 
 DALL-E is an advanced AI model developed by OpenAI that can generate images from textual descriptions. DALL-E has been trained on a massive dataset of images and their corresponding textual descriptions.
 

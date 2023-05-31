@@ -1,6 +1,6 @@
 ---
 description: ChatGPT Indicator
-title: ChatGPT Chat Completions
+title: ChatGPT Indicator
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,7 @@ last_update:
   date: 5/31/2023
   author: Thomas
 ---
-  # **ChatGPT X SenseCAP Indicator**
+  # **SenseCAP Indicator X ChatGPT**
 
 ChatGPT is a conversational AI model developed by OpenAI. It is specifically designed for chatbot applications, and it has been trained on a large corpus of conversational data to enable it to understand and generate natural language responses to user inputs. ChatGPT has been used in various applications, including customer service chatbots, virtual assistants, and social media chatbots.
 
