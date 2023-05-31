@@ -878,13 +878,18 @@ int indicator_openai_init(void)
 </details>
 
 
-## Resource
+## Resources
 
-- [SenseCAP_Indicator_ESP32 · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
-- [SenseCAP_Indicator_ChatGPT Chat Completions](/SenseCAP_Indicator_ChatGPT)
-- [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL·E)
+1. [SenseCAP Indicator X ChatGPT](/SenseCAP_Indicator_ChatGPT)
+2. [SenseCAP Indicator X DALL·E](/SenseCAP_Indicator_DALL·E)
+3. **Demo SDK**: The Demo SDK for the SenseCAP Indicator is available on [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
+4. **SenseCAP Indicator User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started).
+5. **Chat completions OpenAI Guide**: If you're new to Chat API, this guide will help you get you on board. You can find it [here](https://platform.openai.com/docs/guides/chat/chat-completions-beta).
+6. **`indicator_openai.c` File**: This file contains the main functions for the `ChatGPT` and `DALL·E` integration. You can view it [here](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_openai/main/model/indicator_openai.c).
+7. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 
-# **Tech Support**
+
+## **Tech Support**
 
 Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
 
