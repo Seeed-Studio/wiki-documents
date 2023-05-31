@@ -18,7 +18,7 @@ last_update:
 
 <br />
 
-Welcome to the Seeed SenseCAP Indicator and HomeAssistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with HomeAssistant.
+Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant.
 
 ## Prerequisites
 
@@ -237,6 +237,13 @@ This file contains the main functions for the Home Assistant integration. It inc
 
 These functions work together to enable the communication between the SenseCAP Indicator and Home Assistant via MQTT. The `indicator_ha_init()` function starts the MQTT client and subscribes to the necessary topics. Then, whenever an MQTT event occurs, the `mqtt_event_handler()` function is called to handle the event. If a new message arrives, it calls `mqtt_message_arrived()` to handle the message. And whenever the state of a sensor or switch changes, `mqtt_publish()` is called to publish the new state to the corresponding MQTT topic.
 
+## Resources
+
+1. **Demo SDK**: The Demo SDK for the SenseCAP Indicator is available on [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
+2. **`indicator_ha.c` File**: This file contains the main functions for the Home Assistant integration. You can view it [here](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_ha/main/model/indicator_ha.c).
+3. **User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started).
+4. **Home Assistant Installation Guide**: If you're new to Home Assistant, this guide will help you get it installed and set up. You can find it [here](https://www.home-assistant.io/installation/).
+5. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 ## Tech Support
 
 **Need help with your SenseCAP Indicator? We're here to assist you!**
