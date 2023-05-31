@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Indicator x Home Assistant Application Development
-title: Home Assistant Application Development
+title: Home Assistant X SenseCAP Indicator
 keywords:
 - SenseCAP Indicator Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,13 +10,15 @@ last_update:
   author: Thomas
 ---
 
-# SenseCAP Indicator x HomeAssistant Application Development Tutorial
+# SenseCAP Indicator x Home Assistant Application Development
 <!-- SenseCAP Indicator x Home Assistant Application Development -->
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 
-Welcome to the Seeed SenseCAP Indicator and HomeAssistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with HomeAssistant.
+<br />
+
+Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant.
 
 ## Prerequisites
 
@@ -235,10 +237,29 @@ This file contains the main functions for the Home Assistant integration. It inc
 
 These functions work together to enable the communication between the SenseCAP Indicator and Home Assistant via MQTT. The `indicator_ha_init()` function starts the MQTT client and subscribes to the necessary topics. Then, whenever an MQTT event occurs, the `mqtt_event_handler()` function is called to handle the event. If a new message arrives, it calls `mqtt_message_arrived()` to handle the message. And whenever the state of a sensor or switch changes, `mqtt_publish()` is called to publish the new state to the corresponding MQTT topic.
 
+## Resources
+
+1. **Demo SDK**: The Demo SDK for the SenseCAP Indicator is available on [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
+2. **`indicator_ha.c` File**: This file contains the main functions for the Home Assistant integration. You can view it [here](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_ha/main/model/indicator_ha.c).
+3. **User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started).
+4. **Home Assistant Installation Guide**: If you're new to Home Assistant, this guide will help you get it installed and set up. You can find it [here](https://www.home-assistant.io/installation/).
+5. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
+
+
 ## Tech Support
+
+**Need help with your SenseCAP Indicator? We're here to assist you!**
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions" class="button_discussion"></a>
+</div>

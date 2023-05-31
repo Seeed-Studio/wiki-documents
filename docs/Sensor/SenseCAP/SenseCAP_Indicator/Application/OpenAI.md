@@ -1,21 +1,24 @@
 ---
-description: ChatGPT x DALL·E with Indicator
-title: ChatGPT x DALL·E Application Development
+description: ChatGPT X DALL·E with Indicator
+title: ChatGPT X DALL·E X SenseCAP Indicator
 keywords:
 - SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_ChatGPT
 last_update:
-  date: 5/25/2023
+  date: 5/31/2023
   author: Thomas
 ---
 
-# SenseCAP Indicator x ChatGPT x DALL·E Application Development
+# SenseCAP Indicator X ChatGPT X DALL·E Application Development
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
+
+<br />
 
 This guide will provide you with information on how to organize the OpenAI Demo for quick addition, deletion, and modification of programs according to the provided BSP (Board Support Package).
-
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_BE_RICH.JPG"/></div>
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_1_CAT.JPG"/></div>
 
 ## Prerequisites
 
@@ -29,6 +32,9 @@ If you haven't installed the IDF toolchain yet, you can follow the instructions 
 :::
 
 ## Get Started
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_BE_RICH.JPG"/></div>
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_1_CAT.JPG"/></div>
 
 The main code related to the OpenAI startup flowchart is shown below:
 
@@ -872,14 +878,29 @@ int indicator_openai_init(void)
 </details>
 
 
-## Resource
+## Resources
 
-- [SenseCAP_Indicator_ESP32 · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
-- [SenseCAP_Indicator_ChatGPT Chat Completions](/SenseCAP_Indicator_ChatGPT)
-- [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL·E)
+1. [SenseCAP Indicator X ChatGPT](/SenseCAP_Indicator_ChatGPT)
+2. [SenseCAP Indicator X DALL·E](/SenseCAP_Indicator_DALL·E)
+3. **Demo SDK**: The Demo SDK for the SenseCAP Indicator is available on [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
+4. **SenseCAP Indicator User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started).
+5. **Chat completions OpenAI Guide**: If you're new to Chat API, this guide will help you get you on board. You can find it [here](https://platform.openai.com/docs/guides/chat/chat-completions-beta).
+6. **`indicator_openai.c` File**: This file contains the main functions for the `ChatGPT` and `DALL·E` integration. You can view it [here](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_openai/main/model/indicator_openai.c).
+7. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 
-# **Tech Support**
+
+## **Tech Support**
 
 Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
