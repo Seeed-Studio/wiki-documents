@@ -203,7 +203,9 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 - **Step 4.** Copy and paste [this Python script](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/blob/master/tools/capture_images_script.py) inside a newly-created file named **capture_images_script.py** on your PC
 
-- **Step 5.** Execute the Python script to start capturing images
+- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then click **Creat&Program**, wait for the process done.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png" style={{width:800, height:'auto'}}/></div>
 
 ```sh
 python3 capture_images_script.py
@@ -347,8 +349,8 @@ Now we will move the **model-1.uf2** that we obtained at the end of the training
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
-After this, you will see a new storage drive shown on your file explorer as **SENSECAP**  
- 
+After this, you will see a new storage drive shown on your file explorer as **SENSECAP**
+
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
@@ -412,7 +414,7 @@ You can also use your own PC to train an object detection model. However, the tr
 - **Step 1.** Clone the **yolov5-swift repo** and install **requirements.txt** in a **Python>=3.7.0** environment
 
 ```sh
-git clone https://github.com/Seeed-Studio/yolov5-swift 
+git clone https://github.com/Seeed-Studio/yolov5-swift
 cd yolov5-swift
 pip install -r requirements.txt
 ```
@@ -478,7 +480,7 @@ If you followed the above Colab project, you know that you can load 4 models to 
 - **Step 8.** Export the trained model to TensorFlow Lite
 
 ```sh
-python3 export.py --data {dataset.location}/data.yaml --weights runs/train/yolov5n6_results/weights/best.pt --imgsz 192 --int8 --include tflite  
+python3 export.py --data {dataset.location}/data.yaml --weights runs/train/yolov5n6_results/weights/best.pt --imgsz 192 --int8 --include tflite
 ```
 
 - **Step 9.** Convert TensorFlow Lite to a UF2 file
@@ -532,7 +534,7 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 
 - **Step 4**. Make sure there are no other devices connect to the PC. Then hold the Boot button on the module, connect it to the PC.
 
-- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then clink 
+- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then clink
 
 
 ## Resources
@@ -560,11 +562,11 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
