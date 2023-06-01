@@ -891,7 +891,7 @@ int indicator_openai_init(void)
 
 ## **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
 

@@ -17,7 +17,7 @@ In this tutorial, we will guide you on how to use the LvGL (Light and Versatile 
 
 **Pixel Coordinates Systems**
 
-A digital 2-D image is made up of rows and columns of pixels. A pixel in the image is specified by saying which column and which row the pixel is in. In simple terms, a pixel can be identified by a pair of integers providing the column number and the row number. 
+A digital 2-D image is made up of rows and columns of pixels. A pixel in the image is specified by saying which column and which row the pixel is in. In simple terms, a pixel can be identified by a pair of integers providing the column number and the row number.
 
 Conventionally, columns are numbered from the top left to right, starting from zero, but in some cases, it can also start from other corners(by setting rotation).
 
@@ -52,9 +52,9 @@ bsp_board_init()
 
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc

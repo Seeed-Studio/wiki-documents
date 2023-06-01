@@ -105,7 +105,7 @@ void sensor_sgp40_get(void) {
   } else {
     Serial.print("SRAW_VOC:");
     Serial.print(srawVoc);
-    
+
     int32_t voc_index = voc_algorithm.process(srawVoc);
     Serial.print(", VOC Index: ");
     Serial.println(voc_index);
@@ -140,9 +140,9 @@ void loop() {
 "VOC Index" is a calculated value that is used as a way to represent the concentration of VOCs in the air in a more user-friendly format. The VOC index is a numerical value that ranges from 0 to 500, with higher values indicating higher concentrations of VOCs.
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc

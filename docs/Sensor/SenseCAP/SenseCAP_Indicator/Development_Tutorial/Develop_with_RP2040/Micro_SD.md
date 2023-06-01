@@ -15,9 +15,9 @@ The RP2040 has a set of GPIO pins that can be used to interface with an external
 
 To use a MicroSD card with the RP2040, we use the SPI (Serial Peripheral Interface) protocol to connect the SD card module to the GPIO pins of the microcontroller. This involves connecting the following pins on the RP2040 to the corresponding pins on the MicroSD card module:
 
-SPI SCK(such as GPIO10) to SD_SCK 
+SPI SCK(such as GPIO10) to SD_SCK
 SPI TX(such as GPIO11) to SD_MOSI
-SPI RX(such as GPIO12) to SD_MISO 
+SPI RX(such as GPIO12) to SD_MISO
 A single GPIO pin (such as GPIO13) to the CS (chip select) pin on the SD card module
 
 ```cpp
@@ -50,7 +50,7 @@ This example code realizes reading CO2 data and storing the data in SD.
 
 SensirionI2CScd4x scd4x;
 //Initialize a string to store data for writing to the SD card
-String SDDataString = "";  
+String SDDataString = "";
 
 void sensor_power_on(void) {
   pinMode(18, OUTPUT);
@@ -176,9 +176,9 @@ void loop() {
 ```
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc

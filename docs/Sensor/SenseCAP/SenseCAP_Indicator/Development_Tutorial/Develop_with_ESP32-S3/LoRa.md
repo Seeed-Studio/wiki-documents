@@ -57,10 +57,10 @@ void demo_lora_tx(void)
     ESP_LOGI(TAG, "system start");
     ESP_LOGI(TAG, "demo lora tx");
     ESP_ERROR_CHECK(bsp_board_init());
-    
+
     RadioEvents.TxDone = OnTxDone;
     Radio.Init( &RadioEvents );
-    
+
     Radio.SetChannel( RF_FREQUENCY );
     Radio.SetTxConfig( MODEM_LORA,22, 0, LORA_BANDWIDTH,
                                    LORA_SPREADING_FACTOR, LORA_CODINGRATE,
@@ -128,10 +128,10 @@ void demo_lora_rx(void)
     ESP_LOGI(TAG, "system start");
     ESP_LOGI(TAG, "demo lora rx continue");
     bsp_sx126x_init();
-    
+
     RadioEvents.RxDone = OnRxDone;
     Radio.Init( &RadioEvents );
-    
+
     Radio.SetChannel( RF_FREQUENCY );
     Radio.SetTxConfig( MODEM_LORA,22, 0, LORA_BANDWIDTH,
                                    LORA_SPREADING_FACTOR, LORA_CODINGRATE,
@@ -154,9 +154,9 @@ void demo_lora_rx(void)
 ```
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
