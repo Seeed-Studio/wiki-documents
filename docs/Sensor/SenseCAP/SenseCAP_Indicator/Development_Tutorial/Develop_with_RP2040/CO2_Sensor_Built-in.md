@@ -2,7 +2,7 @@
 description: CO2 Sensor Built-in
 title: CO2 Sensor Built-in
 keywords:
-- SenseCAP Indicator RP2040 Development Tutorial 
+- SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_RP2040_CO2
 last_update:
@@ -15,7 +15,7 @@ SenseCAP Indicator (D1S/D1Pro Version)has a built-in SCD41 sensor, which can det
 CO2 content is an important criterion for assessing the quality of air and ensuring that it is safe and healthy for all who breathe it.
 
 
-The levels of CO2 in the air: 
+The levels of CO2 in the air:
 * Normal outdoor level: 350 - 450 ppm
 * Acceptable levels: < 600 ppm
 * Complaints of stuffiness and odors: 600 - 1000 ppm
@@ -134,6 +134,6 @@ void loop() {
 
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc

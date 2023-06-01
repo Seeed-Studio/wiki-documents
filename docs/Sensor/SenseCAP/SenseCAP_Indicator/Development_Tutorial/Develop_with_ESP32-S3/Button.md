@@ -11,7 +11,7 @@ last_update:
 ---
 # **Button**
 
-This code initializes the board, registers two button event callbacks, and specifies the button events to be handled. When the user presses the button, the corresponding callback function will be called. 
+This code initializes the board, registers two button event callbacks, and specifies the button events to be handled. When the user presses the button, the corresponding callback function will be called.
 The ESP_LOGI() function is used to print a message to the console indicating which button event occurred.
 
 
@@ -57,9 +57,9 @@ void app_main(void)
 
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
