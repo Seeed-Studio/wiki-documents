@@ -259,8 +259,6 @@ Replace the contents as followed:
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Done.png"/></div>
 
-Now you have already finish the Home Assistant establishment part!
-
 ## Build and Flash the Native Firmware
 
 Once you have completed the above steps, you are ready to build and flash the project.
