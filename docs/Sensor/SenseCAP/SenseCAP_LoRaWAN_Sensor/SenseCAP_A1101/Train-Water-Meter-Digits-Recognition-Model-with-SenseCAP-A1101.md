@@ -1,4 +1,4 @@
-ç---
+---
 description: Train Water Meter Digits Recognition Model with SenseCAP A1101
 title: Train Water Meter Digits Recognition Model with SenseCAP A1101
 keywords:
