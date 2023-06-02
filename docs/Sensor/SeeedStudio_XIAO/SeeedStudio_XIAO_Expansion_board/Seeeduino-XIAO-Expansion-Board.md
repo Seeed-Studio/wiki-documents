@@ -391,7 +391,72 @@ void loop() {
 }
 ```
 
-## Acrylic Case for Seeed Studio Seeed Studio Expansion Base for XIAO
+### **SD card Function**
+
+The following procedures apply to all XIAO's. For the XIAO SAMD21, XIAO RP2040, XIAO ESP32C3 and XIAO ESP32S3, you do not need to install a separate SD card library to use a third party. For the XIAO nRF52840 series, you may need to install the [Arduino SD card library](https://www.arduino.cc/reference/en/libraries/sd/) separately in order to successfully execute the following program.
+
+```cpp
+#include <SPI.h>
+#include <SD.h>
+#include "FS.h"
+
+File myFile;
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(115200);
+  while(!Serial);              // Execute after turning on the serial monitor
+  delay(500);
+
+  Serial.print("Initializing SD card...");
+
+  pinMode(D2, OUTPUT);          // Modify the pins here to fit the CS pins of the SD card you are using.
+  if (!SD.begin(D2)) {
+    Serial.println("initialization failed!");
+    return;
+  }
+  Serial.println("initialization done.");
+
+  // open the file. note that only one file can be open at a time,
+  // so you have to close this one before opening another.
+  myFile = SD.open("/test.txt", FILE_WRITE);          // The path to read and write files needs to start with "/"
+
+  // if the file opened okay, write to it:
+  if (myFile) {
+    Serial.print("Writing to test.txt...");
+    myFile.println("testing 1, 2, 3.");
+    // close the file:
+    myFile.close();
+    Serial.println("done.");
+  } else {
+    // if the file didn't open, print an error:
+    Serial.println("error opening test.txt");
+  }
+
+  // re-open the file for reading:
+  myFile = SD.open("/test.txt");                       // The path to read and write files needs to start with "/"
+  if (myFile) {
+    Serial.println("test.txt:");
+
+    // read from the file until there's nothing else in it:
+    while (myFile.available()) {
+      Serial.write(myFile.read());
+    }
+    // close the file:
+    myFile.close();
+  } else {
+    // if the file didn't open, print an error:
+    Serial.println("error opening test.txt");
+  }
+}
+
+void loop() {
+  // nothing happens after setup
+}
+
+```
+
+## **Acrylic Case for Seeed Studio Seeed Studio Expansion Base for XIAO**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/110010024_Preview-08.png" /></div>
 
