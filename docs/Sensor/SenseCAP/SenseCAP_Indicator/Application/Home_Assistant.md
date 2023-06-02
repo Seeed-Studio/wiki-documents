@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Home_Assistant
 last_update:
-  date: 5/31/2023
+  date: 6/02/2023
   author: Thomas
 ---
 
@@ -18,7 +18,7 @@ last_update:
 
 <br />
 
-Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant.
+Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant using the [Home Assistant Yellow](https://www.home-assistant.io/yellow).
 
 ## Prerequisites
 
@@ -28,21 +28,70 @@ Before we begin, make sure you have read the [User Guide](https://wiki.seeedstud
 
 ### Step 1: Install Home Assistant
 
-First, you need to install Home Assistant. You can follow the instructions provided [here](https://www.home-assistant.io/installation/).
+First, you need to install Home Assistant.
 
-### Step 2: Install MQTT Broker
+With **Home Assistant Yellow** You can follow the instructions provided [here](https://www.home-assistant.io/installation/yellow). Also, to run on any type of Raspberry Pi or a local server, you can follow this [instruction](https://www.home-assistant.io/installation/) step by step.
 
-The next step is to install an MQTT Broker. MQTT stands for Message Queuing Telemetry Transport. It is a lightweight messaging protocol for small sensors and mobile devices, optimized for high-latency or unreliable networks.
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Installed.png"/></div>
+
+:::tip Don't know how to onboard HA?
+Once you installed the Home Assistant, check [Onboarding Home Assistant - Home Assistant](https://www.home-assistant.io/getting-started/onboarding/) for details.
+:::
+
+### Step 2: Install **Mosquitto Broker** and **File Editor**
+
+The next step is to install the Mosquitto Broker and File Editor. Mosquitto is an open-source message broker that implements the MQTT protocol whereas File Editor allows you to modify the `configuration.yaml` file without access the terminal .
+
+In Home Assistant Yellow, you can install the Mosquitto Broker and File Editor using the Add-ons feature.
+
+:::caution Add-ons
+Home Assistant Yellow comes with **Home Assistant Operating System** can be easily installed Add-ons. However, **Home Assistant Container** does not support Add-ons, which means you need to install a MQTT broker application aside from Home Assistant.
+:::
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Setting.png"/></div>
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Add-ons.png"/></div>
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Press_Add.png"/></div>
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add-on_Store.png"/></div>
+
+**For convenience, show the 'File editor' in sidebar:**
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_editor_show.png"/></div>
+
+Now we get two add-ons.
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Two_Adds.png"/></div>
 
 ### Step 3: Add MQTT Integration and Config
 
 After installing the MQTT Broker, you need to add MQTT integration and configuration to Home Assistant. This will allow Home Assistant to communicate with the SenseCAP Indicator Board.
 
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Devices.png"/></div>
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Config_MQTT.png"/></div>
+
+:::tip
+If not discovered MQTT, restart Home Assistant to see the new one discovered.
+:::
+
+
 ### Step 4: Modify "configuration.yaml" to Add Indicator Entity
+
+You can use the 'File editor' add-on in Home Assistant Yellow to modify the `configuration.yaml` file.
+
+> If not supporting Add-ons, such as Home Assistant Container, you need to modify it through terminal。
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_File_editor.png"/></div>
+
+<!--  <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_choose.png"/></div>  Picture not exist! -->
 
 The next step is to modify the "configuration.yaml" file to add the Indicator entity. This file is used by Home Assistant to keep track of the various entities in your setup.
 
-You need to add the following to your "configuration.yaml" file:
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_Choose_config.png"/></div>
+
+Add the following to your "configuration.yaml" file:
 
 ```yaml
 # Example configuration.yaml entry
@@ -141,9 +190,28 @@ mqtt:
       value_template: "{{ value_json.switch8 }}"
 ```
 
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_edit.png"/></div>
+
+Save the file and switch the sidebar: `Settings->Dashboards` to create a dashboard for Indicator(not necessary).
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard.png"/></div>
+
+Set a title and Icon you like, then create it.
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard_info.png"/></div>
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard.png"/></div>
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png"/></div>
+
 ### Step 5: Edit Dashboard
 
 The final step is to edit the Home Assistant dashboard. You need to add the following to the raw configuration editor of the dashboard:
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png"/></div>
+
+Press the  `TAKE CONTROL` button.
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard_config.png"/></div>
 
 ```yaml
 views:
@@ -185,21 +253,30 @@ views:
         show_header_toggle: false
         state_color: true
 ```
+Replace the contents as followed:
 
-[Picture placeholder]
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Save.png"/></div>
 
-## Build and Flash
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Done.png"/></div>
+
+## Build and Flash the Native Firmware
 
 Once you have completed the above steps, you are ready to build and flash the project.
 
-1. The project configure PSRAM with Octal 120M by default. Please see [here](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md#idf-patch) to enable `PSRAM Octal 120M` feature.
-2. Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
+1. Clone [the git repository](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
+2. Navigate to `examples\indicator_ha` folder.
+	- Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
+	- To exit the serial monitor, type `Ctrl-]`.
 
-To exit the serial monitor, type
-
-`Ctrl-]`.
+:::warning
+The project configure PSRAM with Octal 120M by default. Please see [here](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md#idf-patch) to enable `PSRAM Octal 120M  feature.
+:::
 
 For full steps to configure and use ESP-IDF to build projects, you can refer to the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
+
+As the Home Assistant demo is mainly based on the indicator_basis demo, you could enjoy the Home Assistant functions when sliding to the other panel.
+
+<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Picture"/></div>
 
 ## Additional Information
 
