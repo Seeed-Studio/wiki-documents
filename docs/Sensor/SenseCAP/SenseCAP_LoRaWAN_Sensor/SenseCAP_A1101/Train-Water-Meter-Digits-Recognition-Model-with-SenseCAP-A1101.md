@@ -1,21 +1,21 @@
 ---
-description: Train A Meter Model
-title: Train A Meter Model
+description: Train Water Meter Digits Recognition Model with SenseCAP A1101
+title: Train Water Meter Digits Recognition Model with SenseCAP A1101
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Train-Deploy-AI-Model-A1101
+slug: /Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
 last_update:
   date: 5/10/2023
   author: Lee
 ---
 
-# Train a roulette meter reading detection model
+# Train Water Meter Digits Recognition Model with SenseCAP A1101
 
 ## Overview
 
 In this wiki, we will teach you how to train your own meter model for your specific application and then deploy it easily to the SenseCAP A1101. Let's get started!
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/60.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/0.jpg"/></div>
 
 
 ## Hardware preparation

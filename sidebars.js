@@ -695,7 +695,7 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-A-Meter-Model',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
                 //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
               ],
             },
