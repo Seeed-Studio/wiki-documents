@@ -395,6 +395,10 @@ void loop() {
 
 The following procedures apply to all XIAO's. For the XIAO SAMD21, XIAO RP2040, XIAO ESP32C3 and XIAO ESP32S3, you do not need to install a separate SD card library to use a third party. For the XIAO nRF52840 series, you may need to install the [Arduino SD card library](https://www.arduino.cc/reference/en/libraries/sd/) separately in order to successfully execute the following program.
 
+:::tip
+The expansion board circuit is designed so that the CS pin of the SD card slot is connected to the **D2** pin of the XIAO.
+:::
+
 ```cpp
 #include <SPI.h>
 #include <SD.h>
