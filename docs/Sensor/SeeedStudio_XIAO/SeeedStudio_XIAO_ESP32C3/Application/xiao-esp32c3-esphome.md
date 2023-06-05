@@ -22,6 +22,10 @@ In addition, we will build a Home Assistant with human presence detection in com
 
 ## Getting Started
 
+:::caution
+As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
+:::
+
 If you want to follow this tutorial through everything, you will need to prepare the following.
 
 <table align="center">
@@ -481,6 +485,10 @@ At this point, the steps to add the device have been successfully completed.
 
 ### Step 8. 24GHz mmWave Module Lite functions overview
 
+:::caution
+As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
+:::
+
 We come to the Home Assistant's overview tab. We give a general overview of the basic functions of the operating panel.
 
 Firstly, there is the **Custom Infor output switch**. The icon on the left indicates that the information output is switched off, while the icon on the right indicates that the information output is switched on. If you want to see the sensor return information in real time, then you should have to click on the lightning bolt icon on the right.
@@ -497,7 +505,15 @@ Due to space limitations, you can refer to the following two documents for more 
 - [24GHz mmWave Human Static Presence Module Lite User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_User_Manual.pdf)
 - [24GHz mmWave Human Static Presence Module Lite sensor Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
 
+:::caution
+As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
+:::
+
 ### Step 9. Configure Home Assistant panel
+
+:::caution
+As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
+:::
 
 If you find the default cards very boring and unfriendly for presenting data, Home Assistant offers a wide range of ready-made dashboards to choose from.
 
@@ -556,6 +572,10 @@ If you still do not see XIAO, you can use the [esphome flasher](https://github.c
 You can re-plug the xiao to let it try to search for WiFi and connect again.
 
 ### FAQ4: My XIAO ESP32C3 is connected to network, but why don't I see the sensor data refreshed?
+
+:::caution
+As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
+:::
 
 > A: In the previous Wiki content, we used the default UART pins (D6, D7) to receive and send data from the radar, but many users feedback there is a need to re-power the radar before it can work. In response, we **updated the Wiki** content and procedures to replace the serial ports of the radar with **D2 and D3**, and after testing, this fixes the problem very well.
 
@@ -627,6 +647,33 @@ void loop() {
 > Generally speaking, the third point solves this problem. A normal log flow for data transfer should look like this.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/72.png" /></div> -->
+
+## FAQ5: I used the Jlink flash firmware, but I got the error "Programming of range @address 0x08000000 failed (block verification error) Program failed Failed to program and verify target" ?
+
+When you are using the Jlink flash firmware and this error occurs, then you may be in any one of the following situations.
+
+1. Your sensor is no longer working properly at all and you cannot receive any messages from it.
+2. You are trying to use an invalid or incorrect firmware.
+
+:::caution
+If your radar was originally working properly, check again that you are using the correct firmware! The firmware used varies from radar to radar and from sensor model to sensor model! And the firmware upgrade via UART is not the same as the firmware upgrade via Jlink! Please stop proceeding with the following steps.
+:::
+
+<details>
+
+<summary><strong>I have confirmed that my product gets this error message in case of an exception</strong></summary>
+
+If your radar is not working at all, then it may be normal to have this error message.
+
+Because the abnormal operation of the radar has allowed the radar to trigger the read/write protection mechanism, the user is no longer allowed to flash program the product in general, so we need to unlock the radar's read/write protection mechanism.
+
+Due to the high risk of unprotecting reads and writes, we do not disclose the method of unprotecting reads and writes separately to the public here, we will place the method in the [zip file here](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/ArteryICPProgrammer_V2.4.23.zip) for those who need it. Once the abnormal radar is unprotected, the firmware can be updated again to restore normal operation.
+
+</details>
+
+
+
+
 
 ## Tech Support & Product Discussion
 
