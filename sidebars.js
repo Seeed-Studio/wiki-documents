@@ -2134,6 +2134,7 @@ const sidebars = {
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
+        // 'Edge/reTerminal-DM/reterminal-dm-sensecraft-edge-os-intro',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
         'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
         {
@@ -2144,6 +2145,13 @@ const sidebars = {
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
+          ],
+        },        
+        {
+          type: 'category',
+          label: 'SenseCraft_Edge',
+          items: [
+            'Edge/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
           ],
         },
       ],
