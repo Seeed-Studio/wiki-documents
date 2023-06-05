@@ -15,12 +15,12 @@ last_update:
 ## Overview
 
 In this wiki, we will teach you how to train your own meter model for your specific application and then deploy it easily to the SenseCAP A1101. Let's get started!
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/0.jpg"/></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/0.jpg"/></div>
 
 
 ## Hardware preparation
 
-- SenseCAP A1101 - LoRaWAN Vision AI Sensor
+- [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)
 - USB Type-C cable
 - Windows/ Linux/ Mac with internet access
 
@@ -29,13 +29,17 @@ In this wiki, we will teach you how to train your own meter model for your speci
 We will be using the following software technologies in this wiki
 
 - [Roboflow](https://roboflow.com) - for annotating
-- [YOLOv5](https://ultralytics.com/yolov5) - for training
+- [EdgeLab](https://seeed-studio.github.io/EdgeLab/) - for training
 - [TensorFlow Lite](https://www.tensorflow.org/lite) - for inferencing
 
-<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/57.png"/></div>
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/11.png"/></div>
 
 
 Now let's setup the software. The software setup for Windows, Linux and Intel Mac will be same whereas for M1/M2 Mac will be different.
+
+:::tip
+**What is EdgeLab?**Seeed Studio EdgeLab is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices.
+:::
 
 ### Windows, Linux, Intel Mac
 
@@ -142,7 +146,7 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 ## 2. Generate Dataset with RoboFlow
 
-[Roboflow](https://roboflow.com) is an annotation tool based online. Here we can directly import the video footage that we have recorded into Roboflow and it will be exported into a series of images. This tool is very convenient because it will let us help distribute the dataset into "training, validation and testing". Also this tool will allow us to add further processing to these images after labelling them. Furthermore, it can easily export the labelled dataset into **YOLOV5 PyTorch format** which is what we exactly need!
+[Roboflow](https://roboflow.com) is an annotation tool based online. Here we can directly import the video footage that we have recorded into Roboflow and it will be exported into a series of images. This tool is very convenient because it will let us help distribute the dataset into "training, validation and testing". Also this tool will allow us to add further processing to these images after labelling them. Furthermore, it can easily export the labelled dataset into **COCO format** which is what we exactly need!
 
 
 - **Step 1.** Click [here](https://app.roboflow.com/login) to sign up for a Roboflow account
@@ -166,9 +170,9 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/5.jpg"/></div>
 
-- **Step 7.** Select an image, draw a rectangular box around an apple, choose the label as **apple** and press **ENTER**
+- **Step 7.** Select an image, draw a rectangular box around digits, choose the label as **digits** and press **ENTER**
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4.png"/></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4.png"/></div>
 
 - **Step 8.** Repeat the same for the remaining images
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/5.png"/></div>
@@ -179,9 +183,9 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/25.jpg"/></div>
 
-- **Step 11.** Next we will split the images between "Train, Valid and Test". Keep the default percentages for the distribution and click **Add Images**
+- **Step 11.** Next we will split the images between "Train, Valid and Test". If there are more datasets, it can be 80/20. if datasets are less, it can be 85/15. Please note the 'Train' should not be less than 80.
 
-<div align="center"><img width="{330}" src="https://files.seeedstudio.com/wiki/YOLOV5/26.png"/></div>
+<div align="center"><img width="{330}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/12.png"/></div>
 
 - **Step 12.** Click **Generate New Version**
 
@@ -197,7 +201,7 @@ Here we change the image size to 192x192 because we will use that size for train
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/7.png"/></div>
 
-- **Step 15.** Click **Export**, select **Format** as **YOLO v5 PyTorch**, select **show download code** and click **Continue**
+- **Step 15.** Click **Export**, select **Format** as **COCO**, select **show download code** and click **Continue**
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/8.png"/></div>
 
@@ -205,12 +209,12 @@ This will generate a code snippet that we will use later inside Google Colab tra
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/55.png"/></div>
 
-### Train using YOLOv5 on Google Colab
+### Train using EdgeLab on Google Colab
 
 
 After we have chosen a public dataset, we need to train the dataset. Here we use a Google Colaboratory environment to perform training on the cloud. Furthermore, we use Roboflow api within Colab to easily download our dataset.
 
-Click [here](https://colab.research.google.com/github/Seeed-Studio/yolov5-swift/blob/master/notebooks/Google_Colab_Digital_Meter_Example.ipynb) to open an already prepared Google Colab workspace, go through the steps mentioned in the workspace and run the code cells one by one.
+Click [here](https://colab.research.google.com/github/Seeed-Studio/EdgeLab/blob/main/notebooks/Google-Colab-YOLOv5-A1101-Example.ipynb) to open an already prepared Google Colab workspace, go through the steps mentioned in the workspace and run the code cells one by one.
 
 **Note:** On Google Colab, in the code cell under **Step 4**, you can directly copy the code snippet from Roboflow as mentioned above
 
@@ -250,7 +254,7 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 **Note:** If you have 4 model files ready, you can drag and drop each model one-by-one. Drop first model, wait until it finishes copying, enter boot mode again, drop second model and so on. If you have only loaded one model (with index 1) into SenseCAP A1101, it will load that model.
 
-- **Step 5.** [Click here](https://files.seeedstudio.com/grove_ai_vision/index.html) to open a preview window of the camera stream
+- **Step 5.** [Click here](https://vision-ai-demo.seeed.cn/) to open a preview window of the camera stream
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png"/></div>
 
@@ -260,7 +264,7 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 - **Step 7.** View real-time inference results using the preview window!
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/10.png"/></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/10.png"/></div>
 
 As you can see above, the numbers are being detected with bounding boxes around them. 
 
@@ -268,7 +272,7 @@ As you can see above, the numbers are being detected with bounding boxes around 
 
 ## Resources
 
-- **[Web Page]** [YOLOv5 Documentation](https://docs.ultralytics.com)
+- **[Web Page]** [EdgeLab Documentation](https://seeed-studio.github.io/EdgeLab/)
 
 - **[Web Page]** [Ultralytics HUB](https://ultralytics.com/hub)
 
