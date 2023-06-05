@@ -16,6 +16,10 @@ last_update:
 
 In this wiki, we will teach you how to train your own AI model for your specific application and then deploy it easily to the SenseCAP A1101 - LoRaWAN Vision AI Sensor. Let's get started!
 
+:::caution **Note:**
+Our current device firmware is compatible with [EI](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/). If you purchased the device after **March 30, 2023**, you need to flash the device back to the [default firmware](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#change-device-firmware-after-image-collection) to follow this wiki.
+:::
+
 ## Hardware introduction
 
 We will mainly use SenseCAP A1101 - LoRaWAN Vision AI Sensor throughout this wiki. So first, let's become familiar with this hardware.
@@ -123,7 +127,7 @@ If you followed the above Colab project, you know that you can load 4 models to 
 
 ### Deploy and inference
 
-If you directly want to jump to **section 3** which explains how to deploy the trained AI model into SenseCAP A1101 and perform inference, [click here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#3-deploy-the-trained-model-and-perform-inference).
+If you directly want to jump to **section 3** which explains how to deploy the trained AI model into SenseCAP A1101 and perform inference, [click here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#3-deploy-the-trained-model-and-perform-inference).
 
 
 ## 2. Train your own AI model with your own dataset
@@ -241,7 +245,7 @@ After you have finished recording images for the dataset, you need to make sure 
 
 - **Step 1.** Enter **Boot mode** on SenseCAP A1101 as explained before
 
-- **Step 2.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/tools/A1101_default_firmware.uf2) to **SENSECAP** drive according to your device
+- **Step 2.** Drag and drop [this .uf2 file](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_v01-30.uf2) to **SENSECAP** drive according to your device
 
 As soon as the uf2 finishes copying into the drive, the drive will disappear. This means the uf2 has been successfully uploaded to the module.
 
@@ -365,27 +369,27 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 - **Step 6.** Open the app, under **Config** screen, select **Vision AI Sensor**
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/21.jpg"/></div>
+<div align="center"><img width="{100}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/21.jpg"/></div>
 
 - **Step 7.** Press and hold the configuration button on the SenseCap A1101 for 3 seconds to enter bluetooth pairing mode
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/37.png"/></div>
+<div align="center"><img width="{100}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/37.png"/></div>
 
 - **Step 8.** Click **Setup** and it will start scanning for nearby SenseCAP A1101 devices
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/23.jpg"/></div>
+<div align="center"><img width="{100}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/23.jpg"/></div>
 
 - **Step 9.** Click on the device found
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/24.jpg"/></div>
+<div align="center"><img width="{100}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/24.jpg"/></div>
 
 - **Step 10.** Go to **Settings** and make sure **Object Detection** is selected. If not, select it and click **Send**
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/25.jpg"/></div>
+<div align="center"><img width="{100}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/25.jpg"/></div>
 
 - **Step 11.** Go to **General** and click **Detect**
 
-<div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/26.jpg"/></div>
+<div align="center"><img width="{100}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/26.jpg"/></div>
 
 - **Step 12.** [Click here](https://files.seeedstudio.com/grove_ai_vision/index.html) to open a preview window of the camera stream
 
