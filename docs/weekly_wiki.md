@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 05/29/2023
+  date: 06/05/2023
   author: Matthew
 ---
 
@@ -15,33 +15,27 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is May 29nd and a brand new week has begun! Check out what Seeed did last week!
+Today is June 5th and a brand new week has begun! Check out what Seeed did last week!
 
 ## Latest Wiki Launched
 
-### [reTerminal DM Hardware Guide](/reterminal-dm-hardware-guide)
+### [SenseCAP Indicator x Home Assistant Application Development](/SenseCAP_Indicator_Application_Home_Assistant)
 
-This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting.
+Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant using the Home Assistant Yellow.
 
-<div align="center"><img width={1000} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" /></div>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### [DALL·E X SenseCAP Indicator](/SenseCAP_Indicator_DALL·E)
+### [Miniature ChatGPT Voice Assistant based on XIAO ESP32S3](/xiao_esp32s3_speech2chatgpt)
 
-DALL-E is an advanced AI model developed by OpenAI that can generate images from textual descriptions. DALL-E has been trained on a massive dataset of images and their corresponding textual descriptions.
+We are pleased to bring you today a brand new project using the XIAO ESP32S3 Sense and Round Display for XIAO! The project aims to first build a speech recognition system using the XIAO ESP32S3 Sense's microphone and Google Cloud's speech-to-text service. The recognized speech text is then used to call OpenAI's interface to ask questions to ChatGPT and return answers. Finally, we display the recognised speech and the content of the answers on screen.
 
-<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL1.png"/></div>
+<iframe width="958" height="400" src="https://www.youtube.com/embed/wPi-XjeJPNw" title="Miniature ChatGPT Voice Assistant with Smallest Display and XIAO ESP32S3 Sense" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### [ChatGPT X SenseCAP Indicator](/SenseCAP_Indicator_ChatGPT)
+### [reTerminal DM SenseCraft Edge OS Getting Started](/reterminal-dm-sensecraft-edge-os-intro)
 
-ChatGPT is a conversational AI model developed by OpenAI. It is specifically designed for chatbot applications, and it has been trained on a large corpus of conversational data to enable it to understand and generate natural language responses to user inputs. ChatGPT has been used in various applications, including customer service chatbots, virtual assistants, and social media chatbots.
+SenseCraft Edge OS is a cutting-edge operating system meticulously designed for reTerminal DM's 10.1" Human Machine Interface (HMI) device, featuring an array of integrated functionalities that elevate user experience to new heights. This groundbreaking OS boasts an intuitive interface with built-in setting and control functions, empowering users to effortlessly configure and manage their devices.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/gpt.jpg"/></div>
-
-### [The Future of Home Entertainment; LinkStar-H68K Router and Plex Media Server](/plex_media_server)
-
-This Wiki shows us how to use Plex Media Server on a LinkStar-H68K Router. Here are some potential applications and factors. This groundbreaking innovation transcends the conventional capabilities of a networking device,  enriching your daily life and revolutionizing small establishments like cafes and restaurants,  offering extraordinary customer experiences.
-
-<div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/plex interface.PNG"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/chirpstack.png" /></div>
 
 <!-- ## Existed Wiki Updated
 
@@ -64,3 +58,4 @@ We have upgraded the bootloader mode for XIAO ESP32S3.
 - [weekly wiki on 4.24th](/Seeed_Elderly/weekly_wiki/wiki424)
 - [weekly wiki on 5.15th](/Seeed_Elderly/weekly_wiki/wiki515)
 - [weekly wiki on 5.22th](/Seeed_Elderly/weekly_wiki/wiki522)
+- [weekly wiki on 5.29th](/Seeed_Elderly/weekly_wiki/wiki529)

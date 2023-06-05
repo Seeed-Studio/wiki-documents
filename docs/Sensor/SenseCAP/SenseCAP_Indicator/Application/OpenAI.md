@@ -6,15 +6,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_ChatGPT
 last_update:
-  date: 5/31/2023
+  date: 6/05/2023
   author: Thomas
 ---
 
 # SenseCAP Indicator X ChatGPT X DALL·E Application Development
 
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</center>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br />
 
@@ -889,18 +887,10 @@ int indicator_openai_init(void)
 7. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 
 
-## **Tech Support**
+## Tech Support
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
+**Need help with your SenseCAP Indicator? We're here to assist you!**
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
-<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
+Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!

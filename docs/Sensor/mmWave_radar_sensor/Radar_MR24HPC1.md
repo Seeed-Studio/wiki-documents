@@ -977,6 +977,50 @@ We have created a tutorial for connecting to ESPHome and Home Assistant for this
 
 - [XIAO ESP32C3 accesses Home Assistant via ESPHome service](https://wiki.seeedstudio.com/xiao-esp32c3-esphome)
 
+### Demo8: Using sensors in the XIAO ESP32C3
+
+Due to the [special design](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#special-way---use-usb-serial-and-uart0uart1-at-the-same-time) of the XIAO ESP32C3 hardware serial port, you will need to use the following code in order to use the UART to send and receive data messages with the sensor.
+
+```cpp
+#include "Arduino.h"
+#include <humanstaticLite.h>
+#include <HardwareSerial.h>
+
+//HardwareSerial MySerial(0); // If you want to use D6 and D7 as serial pins, uncomment this line and comment the following line instead.
+HardwareSerial MySerial(1);   // Create a new HardwareSerial class
+
+// can also try hardware serial with
+HumanStaticLite radar = HumanStaticLite(&MySerial);
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+
+  /*
+   * 4, 5 indicate GPIO4 and GPIO5, corresponding to pins D2 and D3. 
+   * If you want to use the hardware UART pins of the XIAO ESP32C3 directly, you can change 4, 5 to -1, -1.
+   * MySerial.begin(115200, SERIAL_8N1, -1, -1);
+   * 
+   * In addition to this you can also use the D9 (GPIO9) and D10 (GPIO10) pins as serial ports.
+   * MySerial1.begin(115200, SERIAL_8N1, 9, 10);
+   */
+  MySerial.begin(115200, SERIAL_8N1, 4, 5);
+
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
+
+  delay(500);
+
+  Serial.println("Ready");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
+}
+```
+
 ## Troubleshooting
 
 ### **FAQ1: Can this Sensor detect more than one person at a time in the same environment?**

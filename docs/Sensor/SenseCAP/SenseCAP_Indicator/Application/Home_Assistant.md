@@ -2,19 +2,20 @@
 description: SenseCAP Indicator x Home Assistant Application Development
 title: Home Assistant X SenseCAP Indicator
 keywords:
-- SenseCAP Indicator Home Assistant
+- SenseCAP Indicator
+- Home Assistant
+- ESP32S3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Home_Assistant
 last_update:
-  date: 6/02/2023
+  date: 6/05/2023
   author: Thomas
 ---
 
 # SenseCAP Indicator x Home Assistant Application Development
 <!-- SenseCAP Indicator x Home Assistant Application Development -->
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</center>
+
+<iframe class="youtube-video" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br />
 
@@ -28,49 +29,79 @@ Before we begin, make sure you have read the [User Guide](https://wiki.seeedstud
 
 ### Step 1: Install Home Assistant
 
-First, you need to install Home Assistant.
-
 With **Home Assistant Yellow** You can follow the instructions provided [here](https://www.home-assistant.io/installation/yellow). Also, to run on any type of Raspberry Pi or a local server, you can follow this [instruction](https://www.home-assistant.io/installation/) step by step.
+
+Once you installed, getting into this page means you can go to next step.
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Installed.png"/></div>
 
-:::tip Don't know how to onboard HA?
+<br />
+
+:::tip Don't know how to onboard Home Assistant?
 Once you installed the Home Assistant, check [Onboarding Home Assistant - Home Assistant](https://www.home-assistant.io/getting-started/onboarding/) for details.
 :::
 
 ### Step 2: Install **Mosquitto Broker** and **File Editor**
 
-The next step is to install the Mosquitto Broker and File Editor. Mosquitto is an open-source message broker that implements the MQTT protocol whereas File Editor allows you to modify the `configuration.yaml` file without access the terminal .
+The next step is to install the **Mosquitto Broker** and **File Editor**. **Mosquitto** is an open-source message broker that implements the MQTT protocol whereas **File Editor** allows you to modify the `configuration.yaml` file without accessing the terminal .
 
 In Home Assistant Yellow, you can install the Mosquitto Broker and File Editor using the Add-ons feature.
 
-:::caution Add-ons
-Home Assistant Yellow comes with **Home Assistant Operating System** can be easily installed Add-ons. However, **Home Assistant Container** does not support Add-ons, which means you need to install a MQTT broker application aside from Home Assistant.
+:::caution Add-ons feature required
+Home Assistant Yellow comes with **Home Assistant Operating System** can be easily installed Add-ons. However, **Home Assistant Container** does not support Add-ons, which means you need to install a MQTT broker application aside from Home Assistant. For details, check the [installation Methods](https://www.home-assistant.io/installation/#compare-installation-methods).
 :::
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Setting.png"/></div>
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Setting.png" style={{width:480, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Add-ons.png" style={{width:480, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Press_Add.png" style={{width:480, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add-on_Store.png" style={{width:480, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Add-ons.png"/></div>
+<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Setting.png"/></div> -->
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Press_Add.png"/></div>
+<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Add-ons.png"/></div>-->
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add-on_Store.png"/></div>
+<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Press_Add.png"/></div>-->
 
-**For convenience, show the 'File editor' in sidebar:**
+<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add-on_Store.png"/></div>-->
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_editor_show.png"/></div>
+:::tip
+<details>
+
+<summary>For convenience, show the 'File editor' in sidebar:</summary>
+
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_editor_show.png"/></div>
+
+</details>
+:::
 
 Now we get two add-ons.
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Two_Adds.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Two_Adds.png"/></div>
 
 ### Step 3: Add MQTT Integration and Config
 
 After installing the MQTT Broker, you need to add MQTT integration and configuration to Home Assistant. This will allow Home Assistant to communicate with the SenseCAP Indicator Board.
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Devices.png"/></div>
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Devices.png" style={{width:480, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Config_MQTT.png" style={{width:480, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Config_MQTT.png"/></div>
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Devices.png"/></div> -->
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Config_MQTT.png"/></div> -->
 
 :::tip
 If not discovered MQTT, restart Home Assistant to see the new one discovered.
@@ -79,19 +110,11 @@ If not discovered MQTT, restart Home Assistant to see the new one discovered.
 
 ### Step 4: Modify "configuration.yaml" to Add Indicator Entity
 
-You can use the 'File editor' add-on in Home Assistant Yellow to modify the `configuration.yaml` file.
+You can use the **File editor** add-on in Home Assistant Yellow to modify the `configuration.yaml` file.
 
-> If not supporting Add-ons, such as Home Assistant Container, you need to modify it through terminal。
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_File_editor.png"/></div>
-
-<!--  <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_choose.png"/></div>  Picture not exist! -->
-
-The next step is to modify the "configuration.yaml" file to add the Indicator entity. This file is used by Home Assistant to keep track of the various entities in your setup.
-
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_Choose_config.png"/></div>
-
-Add the following to your "configuration.yaml" file:
+<details>
+<summary>Click to copy configuration.yaml</summary>
 
 ```yaml
 # Example configuration.yaml entry
@@ -189,29 +212,35 @@ mqtt:
       command_template: '{"switch8": {{ value }} }'
       value_template: "{{ value_json.switch8 }}"
 ```
+</details>
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_edit.png"/></div>
+:::caution
+If your local server doesn't support Add-ons, such as Home Assistant Container, you need to modify the configuration.yaml through terminal.
+:::
 
-Save the file and switch the sidebar: `Settings->Dashboards` to create a dashboard for Indicator(not necessary).
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_File_editor.png"/></div>
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard.png"/></div>
+<!--  <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_choose.png"/></div>  Picture not exist! -->
 
-Set a title and Icon you like, then create it.
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard_info.png"/></div>
+The next step is to modify the `configuration.yaml` file to add the Indicator entity. This file is used by Home Assistant to keep track of the various entities in your setup.
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard.png"/></div>
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_Choose_config.png"/></div>
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png"/></div>
+Add the code into the `configuration.yaml` like this:
+
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_edit.png"/></div>
+
+Save the file, and go to the `Developer Tools` to update YAML configuration.
+
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_ALL_YAML.png"/></div>
 
 ### Step 5: Edit Dashboard
 
 The final step is to edit the Home Assistant dashboard. You need to add the following to the raw configuration editor of the dashboard:
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png"/></div>
+<details>
 
-Press the  `TAKE CONTROL` button.
-
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard_config.png"/></div>
+<summary>Click to copy dashboard YAML</summary>
 
 ```yaml
 views:
@@ -253,30 +282,101 @@ views:
         show_header_toggle: false
         state_color: true
 ```
-Replace the contents as followed:
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Save.png"/></div>
+</details>
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Done.png"/></div>
+<details>
+
+<summary>Create a dashboard for SenseCAP Indicator(not necessary, any dashboard is ok)</summary>
+
+switch the sidebar: `Settings->Dashboards`:
+
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard.png"/></div>
+
+Set a title and Icon you like, then create it.
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard_info.png" style={{width:480, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard.png" style={{width:480, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard_info.png"/></div> -->
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard.png"/></div> -->
+
+</details>
+
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png" style={{width:480, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png" style={{width:480, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png"/></div> -->
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png"/></div> -->
+
+Press the  `TAKE CONTROL` button.
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard_config.png" style={{width:480, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Save.png" style={{width:480, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard_config.png"/></div> -->
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Save.png"/></div> -->
+
+Replace the YAML contents as above:
+
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Done.png"/></div>
 
 ## Build and Flash the Native Firmware
 
 Once you have completed the above steps, you are ready to build and flash the project.
 
-1. Clone [the git repository](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
+<div class="github_container" style={{textAlign: 'center'}}>
+
+<a class="github_item" href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32">
+
+<strong><span><font color={'FFFFFF'} size={"4"}> Download the Project</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+
+</a>
+
+</div>
+<br />
+
+```bash
+git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32
+```
+
+
+1. Clone the git repository.
 2. Navigate to `examples\indicator_ha` folder.
 	- Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
 	- To exit the serial monitor, type `Ctrl-]`.
 
-:::warning
-The project configure PSRAM with Octal 120M by default. Please see [here](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md#idf-patch) to enable `PSRAM Octal 120M  feature.
+:::caution PSRAM Octal 120M feature required
+The project configure PSRAM with Octal 120M by default. Please see [here](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md#idf-patch) to enable `PSRAM Octal 120M`  feature.
 :::
 
 For full steps to configure and use ESP-IDF to build projects, you can refer to the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 
 As the Home Assistant demo is mainly based on the indicator_basis demo, you could enjoy the Home Assistant functions when sliding to the other panel.
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Picture"/></div>
+<div align="center"><img width={480} src="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/4b1b0c4626839a8727de312fd1e670b742988d42/examples/indicator_ha/docs/Home%20Assistant.png?raw=true"/></div>
 
 ## Additional Information
 
@@ -330,13 +430,3 @@ These functions work together to enable the communication between the SenseCAP I
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
 Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
-<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
-<a href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions" class="button_discussion"></a>
-</div>
