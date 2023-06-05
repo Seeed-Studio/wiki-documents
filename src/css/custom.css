@@ -353,7 +353,11 @@ height:80%;
   margin: 0;
 }
 
-
+.button_tech_support_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
 .button_forum{
   display: inline-block;
