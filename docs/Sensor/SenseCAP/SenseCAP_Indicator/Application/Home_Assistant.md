@@ -8,15 +8,14 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Home_Assistant
 last_update:
-  date: 6/02/2023
+  date: 6/05/2023
   author: Thomas
 ---
 
 # SenseCAP Indicator x Home Assistant Application Development
 <!-- SenseCAP Indicator x Home Assistant Application Development -->
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</center>
+
+<iframe class="youtube-video" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br />
 
@@ -431,13 +430,3 @@ These functions work together to enable the communication between the SenseCAP I
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
 Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
-<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
-<a href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions" class="button_discussion"></a>
-</div>

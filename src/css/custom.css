@@ -365,7 +365,7 @@ height:80%;
   margin-left: 30px;
   margin-right: 2px;
   padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */ 
+  /* color: rgb(0, 0, 0);text color */
   font-size: 100px;
   font-weight: 40%;
   text-decoration: none;
@@ -536,4 +536,24 @@ height:80%;
   transform: scale(1.2);
   background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2_change.png');
   background-size: cover;
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  display: block;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For screens smaller than 768px (e.g. mobile phones) */
+  .youtube-video {
+    width: 50%; /* Increase the width to 90% */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* For screens smaller than 480px (e.g. smaller mobile phones) */
+  .youtube-video {
+    width: 90%; /* Increase the width to 100% */
+  }
 }
