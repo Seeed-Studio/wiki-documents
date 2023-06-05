@@ -111,17 +111,85 @@ sudo nano /boot/config.txt
 sudo reboot
 ```
 
-- **Step 4.** Make a new directory inside reTerminal
+- **Step 4.** Make a new directory inside reTerminal and enter it.
 
 ```sh
 mkdir STM32
+cd STM32
 ```
 
-- **Step 5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download **stm32flash** file and the **STM32G030F6_R2.bin** file from the **latest release** version.
+<!-- - **Step 5.** Visit [this link](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases) and download **stm32flash** file and the **STM32G030F6_R2.bin** file from the **latest release** version.
 
-**Note:** You can click on them to start downloading
+**Note:** You can click on them to start downloading -->
 
-- **Step 6.** Open command prompt on PC and navigate to the location of the downloaded files before
+- **Step 5.** Download **stm32flash** file and the **STM32G030F6_R2.bin**
+
+```sh
+wget https://sourceforge.net/projects/stm32flash/files/stm32flash-0.7.tar.gz 
+```
+
+```sh
+wget https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases/download/2022-05-29-reTerminal-V1.9/STM32G030F6_R2.bin
+```
+
+- **Step 6.** Unpack **stm32flash-0.7.tar.gz**
+
+```sh
+tar -xvf stm32flash-0.7.tar.gz
+```
+
+- **Step 7.** Go to the folder named **stm32flash-0.7** and make the flash tool executable
+
+```sh
+cd stm32flash-0.7/
+make
+```
+
+- **Step 8.** Make STM32 enter **boot mode** through **i2c-tools**
+
+```sh
+i2ctransfer -y 1 w2@0x45 0x9b 0x01
+```
+
+- **Step 9.** Erase the flash in the STM32 chip using **stm32flash tool**
+
+```sh
+./stm32flash -a 0x56 -o /dev/i2c-1
+```
+
+- **Step 10.** Flash the firmware to STM32 using stm32flash tool
+
+```sh
+./stm32flash -a 0x56 -w ../STM32G030F6_R2.bin -v -g 0x0 /dev/i2c-1
+```
+
+**Note:** **STM32G030F6_R2.bin** is the file name of the new firmware
+
+- **Step 11.** Modify the OPTR register as follows
+
+```sh
+i2ctransfer -y 1 w2@0x45 0x9b 0x00
+```
+
+- **Step 12.** Open the configuration file that we used before
+
+```sh
+sudo nano /boot/config.txt
+```
+
+- **Step 13.** At the very bottom of this file, uncomment the line which says **dtoverlay=reTerminal**
+
+```sh
+dtoverlay=reTerminal
+```
+
+- **Step 14.** Reboot reTerminal
+
+```sh
+sudo reboot
+```
+
+<!-- - **Step 6.** Open command prompt on PC and navigate to the location of the downloaded files before
 
 ```sh
 cd C:\Users\user\Downloads
@@ -147,9 +215,9 @@ Then you will see the files that we copied earlier
 
 ```sh
 chmod +x stm32flash
-```
+``` -->
 
-- **Step 10.** Make STM32 enter **boot mode** through **i2c-tools**
+<!-- - **Step 10.** Make STM32 enter **boot mode** through **i2c-tools**
 
 ```sh
 i2ctransfer -y 1 w2@0x45 0x9b 0x01
@@ -191,7 +259,7 @@ dtoverlay=reTerminal
 
 ```sh
 sudo reboot
-```
+``` -->
 
 Now you have successfully flashed the firmware to STM32!
 
@@ -753,13 +821,15 @@ sudo reboot
 Now the screen will be displayed in the correct orientation!
 
 ## Q12: Troubleshooting Touch Screen Inaccuracy
+
 After configuring the screen to the correct orientation, the touch position may still be inaccurate, causing the cursor to move in unexpected directions when you touch a specific area on the display. To address this issue, it is essential to take the following steps.
 
-- **Step 1** : Open the terminal and enter to xorg.conf.d folder by typing 
+- **Step 1** : Open the terminal and enter to xorg.conf.d folder by typing
 
 ```sh
 cd /usr/share/X11/xorg.conf.d
 ```
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/lcd_touch2.png" alt="pir" width={1000} height="auto" /></p>
 
 - **Step 2** : You will have access to the "40-libinput.conf" file, which can be edited by using the command.
@@ -767,22 +837,24 @@ cd /usr/share/X11/xorg.conf.d
 ```sh
 sudo nano 40-libinput.conf
 ```
+
 - **Step 3**: Find the InputClass section of **touchscreen** InputClass.
 
 - **Step 4**: Add following phrase. You can refer the screenshot
+
 ```sh
 Option "TransformationMatrix" "0 1 0 -1 0 1 0 0 1
 ```
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/FAQ/lcd_touch1.png" alt="pir" width={1000} height="auto" /></p>
 
 - **Step 5** : Save by Ctrl+O and press enter then Ctrl+X  after that Reboot
+
 ```sh
 Sudo reboot 
 ```
 
 After rebooting, you may notice that the touch position is now accurate. This means that when you touch a specific area on the display, the cursor moves in the intended direction.
-
-
 
 ## Q13: LEDs and Buzzer do not work after installing reTerminal drivers
 
@@ -832,16 +904,14 @@ Now the LEDs and Buzzer will work as normal.
 
 # Tech support
 
-
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
