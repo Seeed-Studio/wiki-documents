@@ -20,7 +20,7 @@ In this wiki, we will teach you how to train your own meter model for your speci
 
 ## Hardware preparation
 
-- SenseCAP A1101 - LoRaWAN Vision AI Sensor
+- [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)
 - USB Type-C cable
 - Windows/ Linux/ Mac with internet access
 
