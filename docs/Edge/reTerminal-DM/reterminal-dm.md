@@ -24,19 +24,19 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 > [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Feature
 
-HMI, PLC, Panel PC and gateway in one: Perfect for the distributed hub devices
-Low code programming for event-driven applications: Natively integrated Node-RED for flow-based editing and one-click deployment, compatible with all software runs on Raspberry Pi
-Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
-Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
-Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
-[Product warranty: Two-year warranty](/docs/Edge/reTerminal-DM/reterminal-dm-warranty.md)
+* HMI, PLC, Panel PC and gateway in one: Perfect for the distributed hub devices
+* Low code programming for event-driven applications: Natively integrated Node-RED for flow-based editing and one-click deployment, compatible with all software runs on Raspberry Pi
+* Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
+* Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
+* Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
+* [Product warranty: Two-year warranty](/docs/Edge/reTerminal-DM/reterminal-dm-warranty.md)
 
 > \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
 
