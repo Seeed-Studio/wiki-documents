@@ -545,15 +545,15 @@ height:80%;
 }
 
 @media only screen and (min-width: 600px) {
-  /* For screens smaller than 768px (e.g. mobile phones) */
+  /* For screens bigger than 768px (e.g. mobile phones) */
   .youtube-video {
-    width: 50%; /* Increase the width to 90% */
+    width: 50%; /* Increase the width to 50% */
   }
 }
 
 @media only screen and (max-width: 480px) {
   /* For screens smaller than 480px (e.g. smaller mobile phones) */
   .youtube-video {
-    width: 90%; /* Increase the width to 100% */
+    width: 90%; /* Increase the width to 90% */
   }
 }
