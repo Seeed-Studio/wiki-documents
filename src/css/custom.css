@@ -353,7 +353,11 @@ height:80%;
   margin: 0;
 }
 
-
+.button_tech_support_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
 .button_forum{
   display: inline-block;
@@ -365,7 +369,7 @@ height:80%;
   margin-left: 30px;
   margin-right: 2px;
   padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */ 
+  /* color: rgb(0, 0, 0);text color */
   font-size: 100px;
   font-weight: 40%;
   text-decoration: none;
@@ -536,4 +540,39 @@ height:80%;
   transform: scale(1.2);
   background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2_change.png');
   background-size: cover;
+}
+
+/* Added media query for mobile */
+@media screen and (max-width: 767px)  {
+  .button_forum,
+  .button_email,
+  .button_discord,
+  .button_discussion,
+  .button_tech_support_sensecap,
+  .button_tech_support_sensecap2,
+  .button_tech_support_sensecap3 {
+    width: 90%; /* Adjust the width to fit the mobile screen */
+    margin-left: 5%; /* Center the buttons horizontally */
+    margin-right: 5%;
+  }
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  display: block;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For screens bigger than 768px (e.g. mobile phones) */
+  .youtube-video {
+    width: 50%; /* Increase the width to 50% */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* For screens smaller than 480px (e.g. smaller mobile phones) */
+  .youtube-video {
+    width: 90%; /* Increase the width to 90% */
+  }
 }

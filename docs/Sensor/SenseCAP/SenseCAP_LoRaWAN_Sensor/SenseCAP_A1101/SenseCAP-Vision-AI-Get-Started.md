@@ -53,7 +53,7 @@ Model selection and configuration is also done in the Setting interface. First s
 
 2. If you want to train your own AI model, there are two ways. please refer to:
 
-**1.[One Stop Model Training with Edge Impulse](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse)** Fsst to follow.
+**1.[One Stop Model Training with Edge Impulse](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse)** Fast to follow.
 
 **2.[Train AI Model with Roboflow, YOLOv5, TensorFlow Lite](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101)** Slow to follow.
 

@@ -6,15 +6,14 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_OpenAI_X_Overview
 last_update:
-  date: 5/31/2023
+  date: 6/05/2023
   author: Thomas
 ---
 
 # SenseCAP Indicator X OpenAI
 
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</center>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 <br />
 ## Overview
