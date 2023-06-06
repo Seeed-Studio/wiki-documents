@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Home_Assistant
 last_update:
-  date: 6/05/2023
+  date: 6/06/2023
   author: Thomas
 ---
 
@@ -21,15 +21,25 @@ last_update:
 
 Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant using the [Home Assistant Yellow](https://www.home-assistant.io/yellow).
 
+To get your SenseCAP Indicator working with Home Assistant, you need to follow two main steps:
+
+1. [Install Home Assistant](#install_HA)
+2. [Config Home Assistant Projection](#Config_HA)
+
+
 ## Prerequisites
 
 Before we begin, make sure you have read the [User Guide](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started) of the SenseCAP Indicator Board to familiarize yourself with its software and hardware information.
 
-## Step-by-Step Guide
 
-### Step 1: Install Home Assistant
+## Install Home Assistant {#install_HA}
+> Home Assistant is a powerful open-source home automation platform that focuses on privacy and local control. It offers a customizable and flexible framework to manage and automate all your home devices from a single, unified platform.
 
 With **Home Assistant Yellow** You can follow the instructions provided [here](https://www.home-assistant.io/installation/yellow). Also, to run on any type of Raspberry Pi or a local server, you can follow this [instruction](https://www.home-assistant.io/installation/) step by step.
+
+<div align="center"><img width={680} src="https://www.home-assistant.io/images/yellow/home-assistant-yellow-exploded-and-labeled.png"/></div>
+
+> **Home Assistant Yellow** comes pre-assembled in a custom enclosure with a Raspberry Pi Compute Module 4 (CM4) and a custom heat sink for fanless, silent operation. The CM4 is a version without wireless and has 2 GB RAM and 16 GB eMMC storage. Pre-installed with Home Assistant.
 
 Once you installed, getting into this page means you can go to next step.
 
@@ -41,7 +51,7 @@ Once you installed, getting into this page means you can go to next step.
 Once you installed the Home Assistant, check [Onboarding Home Assistant - Home Assistant](https://www.home-assistant.io/getting-started/onboarding/) for details.
 :::
 
-### Step 2: Install **Mosquitto Broker** and **File Editor**
+### Step 1: Install **Mosquitto Broker** and **File Editor**
 
 The next step is to install the **Mosquitto Broker** and **File Editor**. **Mosquitto** is an open-source message broker that implements the MQTT protocol whereas **File Editor** allows you to modify the `configuration.yaml` file without accessing the terminal .
 
@@ -86,7 +96,7 @@ Now we get two add-ons.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Two_Adds.png"/></div>
 
-### Step 3: Add MQTT Integration and Config
+### Step 2: Add MQTT Integration and Config
 
 After installing the MQTT Broker, you need to add MQTT integration and configuration to Home Assistant. This will allow Home Assistant to communicate with the SenseCAP Indicator Board.
 
@@ -108,7 +118,7 @@ If not discovered MQTT, restart Home Assistant to see the new one discovered.
 :::
 
 
-### Step 4: Modify "configuration.yaml" to Add Indicator Entity
+### Step 3: Modify "configuration.yaml" to Add Indicator Entity
 
 You can use the **File editor** add-on in Home Assistant Yellow to modify the `configuration.yaml` file.
 
@@ -234,7 +244,7 @@ Save the file, and go to the `Developer Tools` to update YAML configuration.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_ALL_YAML.png"/></div>
 
-### Step 5: Edit Dashboard
+### Step 4: Edit Dashboard
 
 The final step is to edit the Home Assistant dashboard. You need to add the following to the raw configuration editor of the dashboard:
 
@@ -343,6 +353,55 @@ Replace the YAML contents as above:
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Done.png"/></div>
 
+Now you've already finish the Home Assistant configuration.
+
+### Add Users for MQTT adds-on
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_User.png" style={{width:480, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Create_User.png" style={{width:480, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_User.png"/></div> -->
+
+<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Create_User.png"/></div> -->
+
+## Project Configuration {#Config_HA}
+
+The purpose of this section is to establish the default communication between Home Assistant (HA) and the Indicator.
+
+### Step 1: Configure IP Address
+
+Normally, the default Home Assistant server address is `homeassistant.local`, if you have multiple Home Assistant servers, or if there is no default DNS resolution, or if there are multiple IP server addresses, you will need to configure the IP address accordingly.
+
+In `ha_config.h`, changing the `CONFIG_BROKER_URL` value, e.g.:
+
+```c
+// #define CONFIG_BROKER_URL    "mqtt://homeassistant.local" // Default
+#define CONFIG_BROKER_URL    "mqtt://192.168.1.100" // To yours
+```
+### Step 2: Configure User Name and Password
+
+If you have a username and password, you will need to configure them. This can be done in the `mqtt_start` function in the `indicator_ha.c` file, specifically in the `mqtt_cfg` configuration. If you do not have a username and password, you can comment them out.
+
+Here is an example of how to configure the username and password:
+
+```c
+    esp_mqtt_client_config_t mqtt_cfg = {
+        .broker.address.uri = CONFIG_BROKER_URL,
+        .credentials.username = "MQTT_Indicator_1", // Your Home Assistant user
+        .credentials.authentication.password = "kjdf", // user's password
+    };
+```
+
+After completing these steps and building it, you should be able to see the Home Assistant and Indicator working together.
+
+<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_data_show.gif"/></div>
+
 ## Build and Flash the Native Firmware
 
 Once you have completed the above steps, you are ready to build and flash the project.
@@ -365,8 +424,14 @@ git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32
 
 1. Clone the git repository.
 2. Navigate to `examples\indicator_ha` folder.
-	- Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
+	- Run `idf.py -p PORT build flash monitor` to build, flash and monitor the project.
 	- To exit the serial monitor, type `Ctrl-]`.
+
+```bash
+$ git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32
+$ cd SenseCAP_Indicator_ESP32/examples/indicator_ha
+$ idf.py -p PORT build flash monitor
+```
 
 :::caution PSRAM Octal 120M feature required
 The project configure PSRAM with Octal 120M by default. Please see [here](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md#idf-patch) to enable `PSRAM Octal 120M`  feature.
@@ -374,11 +439,29 @@ The project configure PSRAM with Octal 120M by default. Please see [here](https:
 
 For full steps to configure and use ESP-IDF to build projects, you can refer to the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 
-As the Home Assistant demo is mainly based on the indicator_basis demo, you could enjoy the Home Assistant functions when sliding to the other panel.
-
-<div align="center"><img width={480} src="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/4b1b0c4626839a8727de312fd1e670b742988d42/examples/indicator_ha/docs/Home%20Assistant.png?raw=true"/></div>
+> As the Home Assistant demo is mainly based on the indicator_basis demo, you could enjoy the Home Assistant functions when sliding to the other panel.
 
 ## Additional Information
+### Modifying Configuration
+
+In the `ha_config.h` file, there are several tags that are used for MQTT communication. These tags are used to identify different components in the system and can be modified according to your needs.
+
+For instance, for *sensor5*, the tags are defined as follows:
+
+```c
+#define CONFIG_SENSOR5_VALUE_KEY     "temp"
+#define CONFIG_SENSOR5_UI_UNIT       "°C"
+#define CONFIG_SENSOR5_UI_NAME       "Temp"
+#define CONFIG_SENSOR5_TOPIC_DATA    CONFIG_TOPIC_SENSOR_DATA
+```
+
+The `CONFIG_SENSOR5_VALUE_KEY` tag is used for parsing JSON and structuring JSON data. This tag determines the key that will be used to extract the sensor data from the incoming MQTT messages.
+
+**SenseCAP Indicator UI**
+
+The `CONFIG_SENSOR5_UI_UNIT` and `CONFIG_SENSOR5_UI_NAME` tags are used to set the display on the SenseCAP Indicator. The `CONFIG_SENSOR5_UI_UNIT` tag determines the unit of measurement that will be displayed, while the `CONFIG_SENSOR5_UI_NAME` tag determines the name of the sensor that will be displayed.
+
+If you want to change the title or the unit of measurement displayed on the SenseCAP Indicator, you can simply modify the `CONFIG_SENSOR5_UI_UNIT` and `CONFIG_SENSOR5_UI_NAME` tags. The same principle applies to other sensors and switch as well.
 
 ### CONFIG_BROKER_URL
 
@@ -421,6 +504,7 @@ These functions work together to enable the communication between the SenseCAP I
 3. **User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started).
 4. **Home Assistant Installation Guide**: If you're new to Home Assistant, this guide will help you get it installed and set up. You can find it [here](https://www.home-assistant.io/installation/).
 5. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
+6. [Home Assistant Concepts and terminology](https://www.home-assistant.io/getting-started/concepts-terminology/)
 
 
 ## Tech Support
