@@ -196,6 +196,10 @@ In conditions that masks and filters have been set. This function can only get f
 
 This product does not include the XIAO module, so you will need to purchase a separate XIAO module. In this example, we use the XIAO ESP32C3 for demonstration purposes, but other versions of the XIAO module will work similarly. The hardware connection is straightforward - simply insert the XIAO module into the expansion board.
 
+Please refer to the diagram below for the connection to XIAO.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/connect.jpg" alt="pir" width={500} height="auto" /></p>
+
 #### Software
 
 - **Step 1.** Download the [CAN Bus Library](https://github.com/limengdu/Arduino_CAN_BUS_MCP2515) from Github.
@@ -262,7 +266,7 @@ void loop()
 
 ## Schematic Online Viewer
 
-<div className="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/D7S_SENSOR_RES/raw/main/D7S%20Vibration%20Sensor.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/CAN_DEV_XIAO.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 
