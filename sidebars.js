@@ -172,6 +172,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-smart_air_quality_sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_Gas_Sensor-SGP40',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
               ],
@@ -196,6 +197,7 @@ const sidebars = {
               type: 'category',
               label: 'Accelerometer',
               items: [
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-D7S-Vibration-Sensor',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Sensor_accelerometer',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Analog_Accelerometer',
@@ -224,6 +226,7 @@ const sidebars = {
               type: 'category',
               label: 'Light',
               items: [
+                'Sensor/Grove/Grove_Sensors/Light/Grove-Lightning-Sensor-AS3935',
                 'Sensor/Grove/Grove_Sensors/Light/Sensor_light',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Digital_Light_Sensor',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Heelight_Sensor',
@@ -477,7 +480,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Speaker-Plus',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Variable_Color_LED',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Vibration_Motor',
-                'Sensor/Grove/Grove_Accessories/Actuator/Grove-D7S-Vibration-Sensor',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
