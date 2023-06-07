@@ -226,6 +226,7 @@ const sidebars = {
               type: 'category',
               label: 'Light',
               items: [
+                'Sensor/Grove/Grove_Sensors/Light/Grove-Lightning-Sensor-AS3935',
                 'Sensor/Grove/Grove_Sensors/Light/Sensor_light',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Digital_Light_Sensor',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Heelight_Sensor',
