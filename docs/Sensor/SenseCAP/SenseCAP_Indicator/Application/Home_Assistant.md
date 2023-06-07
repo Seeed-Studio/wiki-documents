@@ -21,6 +21,10 @@ last_update:
 
 Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant using the [Home Assistant Yellow](https://www.home-assistant.io/yellow).
 
+<div align="center"><img width={680} src="https://www.home-assistant.io/images/yellow/home-assistant-yellow-exploded-and-labeled.png"/></div>
+
+> **Home Assistant Yellow** comes pre-assembled in a custom enclosure with a Raspberry Pi Compute Module 4 (CM4) and a custom heat sink for fanless, silent operation. The CM4 is a version without wireless and has 2 GB RAM and 16 GB eMMC storage. Pre-installed with Home Assistant.
+
 To get your SenseCAP Indicator working with Home Assistant, you need to follow two main steps:
 
 1. [Install Home Assistant](#install_HA)
@@ -36,10 +40,6 @@ Before we begin, make sure you have read the [User Guide](https://wiki.seeedstud
 > Home Assistant is a powerful open-source home automation platform that focuses on privacy and local control. It offers a customizable and flexible framework to manage and automate all your home devices from a single, unified platform.
 
 With **Home Assistant Yellow** You can follow the instructions provided [here](https://www.home-assistant.io/installation/yellow). Also, to run on any type of Raspberry Pi or a local server, you can follow this [instruction](https://www.home-assistant.io/installation/) step by step.
-
-<div align="center"><img width={680} src="https://www.home-assistant.io/images/yellow/home-assistant-yellow-exploded-and-labeled.png"/></div>
-
-> **Home Assistant Yellow** comes pre-assembled in a custom enclosure with a Raspberry Pi Compute Module 4 (CM4) and a custom heat sink for fanless, silent operation. The CM4 is a version without wireless and has 2 GB RAM and 16 GB eMMC storage. Pre-installed with Home Assistant.
 
 Once you installed, getting into this page means you can go to next step.
 
