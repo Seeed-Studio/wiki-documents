@@ -196,6 +196,7 @@ const sidebars = {
               type: 'category',
               label: 'Accelerometer',
               items: [
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-D7S-Vibration-Sensor',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Sensor_accelerometer',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Analog_Accelerometer',
@@ -477,7 +478,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Speaker-Plus',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Variable_Color_LED',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Vibration_Motor',
-                'Sensor/Grove/Grove_Accessories/Actuator/Grove-D7S-Vibration-Sensor',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
