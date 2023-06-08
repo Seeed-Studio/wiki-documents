@@ -39,11 +39,11 @@ Most examples have a project-specific "Example Configuration" section here (for 
 
 `idf.py build`
 
-Follow the printed instructions to flash, or run 
+Follow the printed instructions to flash, or run
 `idf.py -p PORT flash`
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc

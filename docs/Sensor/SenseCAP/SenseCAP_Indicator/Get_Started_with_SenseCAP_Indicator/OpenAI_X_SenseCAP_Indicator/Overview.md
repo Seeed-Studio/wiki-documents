@@ -6,12 +6,16 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_OpenAI_X_Overview
 last_update:
-  date: 5/25/2023
+  date: 6/05/2023
   author: Thomas
 ---
 
 # SenseCAP Indicator X OpenAI
 
+<iframe class="youtube-video" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<br />
 ## Overview
 
 SenseCAP Indicator is a powerful tool that harnesses the capabilities of OpenAI's ChatGPT and DALL·E models through API integration. Developed by OpenAI, a renowned name in the field of artificial intelligence, SenseCAP Indicator allows users to experience the fascinating potential of AI in various scenarios.
@@ -67,7 +71,14 @@ Need more detail information to know how to use ChatGPT and DALL·E models?
 - [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL·E)
 
 # **Tech Support**
+**Need help with your SenseCAP Indicator? We're here to assist you!**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Set_the_API_Key
 last_update:
-  date: 5/25/2023
+  date: 5/31/2023
   author: Thomas
 ---
 
@@ -64,7 +64,15 @@ openai_api -k {sk-your apikey}
 You will see the log shows: "`openai_api_key read successful`", then you are all set. Enjoy your AI journey now!
 
 # **Tech Support**
+**Need help with your SenseCAP Indicator? We're here to assist you!**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+

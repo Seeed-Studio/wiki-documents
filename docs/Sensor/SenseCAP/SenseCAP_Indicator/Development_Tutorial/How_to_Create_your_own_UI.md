@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
 last_update:
-  date: 5/23/2023
+  date: 5/31/2023
   author: Thomas
 ---
 # **How to Create your own UI**
@@ -122,7 +122,7 @@ Create a new project:
 
 
 
-* Step 3:Remove all the original UI files and copy your onw UI files to this direct. 
+* Step 3:Remove all the original UI files and copy your onw UI files to this direct.
 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/ui.png"/></div>
@@ -131,13 +131,21 @@ Create a new project:
 
 Run the following command to build, flash and monitor the project:
 
-`idf.py -p PORT build flash monitor` 
+`idf.py -p PORT build flash monitor`
 
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+**Need help with your SenseCAP Indicator? We're here to assist you!**
 
-If you have large order or customization requirement, please contact iot@seeed.cc
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

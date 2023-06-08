@@ -140,9 +140,10 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="button_tech_support_container">
 <a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
-<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a> 
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a> 
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -375,6 +375,17 @@ In addition to reading the extensive LVGL official documentation and writing our
 
 Next, we will give you a brief introduction to the use of the software on the round screen, configuration methods, to help you can quickly get started using the software to design some interfaces.
 
+:::caution
+We recommend you to use the **v1.2.3** version of SquareLine Studio. After testing, the v1.3.0 version can have compatibility problems with the tft_eSPI library.
+
+Environment used in the preparation of this tutorial:
+
+1. **[TFT_eSPI library](https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/main/libraries/TFT_eSPI.zip)** by Bodmer, version: **2.5.22**
+
+2. **[LVGL library](https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/libraries/lvgl)** by kisvegabor, embeddedt, pete-pjb, version: **8.2.0**
+
+:::
+
 #### Step1. Download the SuqareLine Studio
 
 You can go to the official website of SquareLine Studio by clicking [here](https://squareline.io/), then click **TRY IT FOR FREE** to download the software to your computer.

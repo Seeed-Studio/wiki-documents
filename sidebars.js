@@ -172,6 +172,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-smart_air_quality_sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_Gas_Sensor-SGP40',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
               ],
@@ -196,6 +197,7 @@ const sidebars = {
               type: 'category',
               label: 'Accelerometer',
               items: [
+                'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-D7S-Vibration-Sensor',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Sensor_accelerometer',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Digital_Accelerometer-16g',
                 'Sensor/Grove/Grove_Sensors/Accelerometer/Grove-3-Axis_Analog_Accelerometer',
@@ -224,6 +226,7 @@ const sidebars = {
               type: 'category',
               label: 'Light',
               items: [
+                'Sensor/Grove/Grove_Sensors/Light/Grove-Lightning-Sensor-AS3935',
                 'Sensor/Grove/Grove_Sensors/Light/Sensor_light',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Digital_Light_Sensor',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Heelight_Sensor',
@@ -695,6 +698,7 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
                 //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
               ],
             },
@@ -893,6 +897,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
               ],
             },
+            {
+              type: 'category',
+              label: 'Applications',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Speech2chatgpt',
+              ],
+            },
           ],
         },
         {
@@ -910,6 +921,7 @@ const sidebars = {
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
           ],
         },
         {
@@ -2127,6 +2139,7 @@ const sidebars = {
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
+        // 'Edge/reTerminal-DM/reterminal-dm-sensecraft-edge-os-intro',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
         'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
         {
@@ -2137,6 +2150,13 @@ const sidebars = {
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
+          ],
+        },        
+        {
+          type: 'category',
+          label: 'SenseCraft_Edge',
+          items: [
+            'Edge/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
           ],
         },
       ],
@@ -2191,6 +2211,15 @@ const sidebars = {
             'Edge/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
           ]
 
+        },
+        {
+          type: 'category',
+          label: 'reComputer Industrial',
+          items: [
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_Getting_Started',
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
+          ]
         },
         {
           type: 'category',

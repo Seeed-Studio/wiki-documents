@@ -66,11 +66,5 @@ Click the specified sensor to enter the detailed information page, and you can c
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
 
 :::tip Looking for ChatGPT x DALL·E?
-Head to [SenseCAP Indicator & OpenAI](/SenseCAP_Indicator_OpenAI_X_Overview)
+Head to [SenseCAP Indicator X OpenAI](/SenseCAP_Indicator_OpenAI_X_Overview)
 :::
-
-# **Tech Support**
-
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions!
-
-If you have large order or customization requirement, please contact iot@seeed.cc

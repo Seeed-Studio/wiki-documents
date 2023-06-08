@@ -52,6 +52,11 @@ See the [Installation and troubleshooting guide](https://docs.edgeimpulse.com/do
 
 With all the software in place it's time to connect the A1101 to Edge Impulse.
 
+:::caution **Note:**
+If you purchased the device after **March 30, 2023**, then you don't need to update the firmware of EI, please jump directly to [STEP3](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/#step-3-setting-keys) Setting keys. Please note that updating the firmware of EI will overwrite the default model.
+:::
+
+
 ### Step 1. Update BL702 chip firmware
 
 BL702 is the USB-UART chip which enables the communication between the PC and the Himax chip. You need to update this firmware in order for the Edge Impulse firmware to work properly.
@@ -135,7 +140,9 @@ After building the machine learning model and downloading the Edge Impulse firmw
 Drag and drop the **firmware.uf2** file from EDGE IMPULSE to **SENSECAP** drive.
 
 When you run this on your local interface:
-<br />edge-impulse-daemon --debug<br />
+```
+edge-impulse-daemon --debug
+```
 It will ask you to click a URL, then you will see a live preview of the camera on your device.
 
 <div align="center"><img width ={700} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/p33.png"/></div>

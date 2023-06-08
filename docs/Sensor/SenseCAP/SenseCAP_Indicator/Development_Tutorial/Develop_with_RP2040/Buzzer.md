@@ -21,7 +21,7 @@ The built-in buzzer of SenseCAP Indicator is a passive buzzer, meaning that it r
 ```cpp
 #include <Arduino.h>
 
-#define Buzzer  19 //Buzzer GPIO 
+#define Buzzer  19 //Buzzer GPIO
 
 void setup() {
   digitalWrite(Buzzer, OUTPUT); //Set Buzzer as an output
@@ -43,7 +43,7 @@ This example use a buzzer to play melodies. It sends a square wave of the approp
 
 ```cpp
 #include <Arduino.h>
-#define Buzzer  19 //Buzzer GPIO 
+#define Buzzer  19 //Buzzer GPIO
 
 
 int length = 15;         /* the number of notes */
@@ -103,7 +103,7 @@ This example demonstrates an alarm when the CO2 value is greater than 1000ppm.
 #include <SD.h>
 #include <SensirionI2CScd4x.h>
 
-#define Buzzer  19 //Buzzer GPIO 
+#define Buzzer  19 //Buzzer GPIO
 
 SensirionI2CScd4x scd4x;
 String SDDataString = "";
@@ -165,7 +165,7 @@ void sensor_scd4x_get(void) {
 
 
   if( co2 > 1000 ) {
-    analogWrite(Buzzer, 10); 
+    analogWrite(Buzzer, 10);
   } else {
     analogWrite(Buzzer, 0);
   }
@@ -197,9 +197,9 @@ void loop() {
 
 
 
-    
+
 # **Tech Support**
 
-Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/cPpeuQMM) to ask your questions! 
+Don't worry, we've got you covered! Please visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions!
 
 If you have large order or customization requirement, please contact iot@seeed.cc
