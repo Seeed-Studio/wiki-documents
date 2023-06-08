@@ -98,6 +98,11 @@ By defining the desired state of the application in the docker-compose.yml file,
 ```sh
 mysql/mysql-server:8.0
 ``` 
+:::note
+
+You can change other parameters like MYSQL_USER, MYSQL_PASSWORD etc. But I keep as it is
+
+:::
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/wordpress/portainer8.PNG" alt="pir" width="600" height="auto"/></p>
 
 Then you can find **Create custom template** under the page and Click it.
