@@ -2213,6 +2213,15 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reComputer Industrial',
+          items: [
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_Getting_Started',
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
+          ]
+        },
+        {
+          type: 'category',
           label: ' Carrier Board for Jetson Moudule',
           items: [
             'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
