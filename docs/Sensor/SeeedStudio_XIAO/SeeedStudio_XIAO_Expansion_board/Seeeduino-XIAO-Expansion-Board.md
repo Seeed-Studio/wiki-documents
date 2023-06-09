@@ -529,7 +529,7 @@ The `main` name is one of these: **code.txt**, **code.py**, **main.py**, **main.
 ```
 
 You will see a list of all the pins on your board that are available for you to use in your code. Each board will differ slightly depending on the number of pins available.
-![image.png](./Seeeduino-XIAO-Expansion-Board12.png)
+![image.png](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board12.png)
 
 Do you see YELLOW_LED_INVERTED? That's the pin you used to blink the orange LED!
 
@@ -893,7 +893,7 @@ Please connect each module on the board as shown in the picture. Connect the fin
 
 Note that the NeoPixel ring is directly connected to the pins of the XIAO development board through three different colored wires: Connect the DIN pin of the NeoPixel ring with the yellow wire to the D1 pin of the XIAO, connect the VIN pin of the NeoPixel ring with the red wire to the 3V3 pin of the XIAO, and connect the GND pin of the NeoPixel ring with the black wire to the GND pin of the XIAO.
 
-![](./Seeeduino-XIAO-Expansion-Board13.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board13.jpeg)
 
 **Arduino Instructions**
 
@@ -1521,11 +1521,11 @@ void loop() {
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
