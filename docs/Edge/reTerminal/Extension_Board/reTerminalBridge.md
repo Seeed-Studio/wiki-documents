@@ -786,7 +786,7 @@ sudo make
 
 ```
 cd sx1302_hal/packet_forwarder
-wget https://files.seeedstudio.com/wiki/reTerminal_bridge/reset_lgw.sh
+wget https://files.seeedstudio.com/wiki/reTerminal_Bridge/reset_lgw.sh
 ```
 
 Then run the following code test according to your WM1302 version.

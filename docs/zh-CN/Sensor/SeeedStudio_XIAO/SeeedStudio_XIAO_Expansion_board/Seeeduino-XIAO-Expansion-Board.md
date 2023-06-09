@@ -74,17 +74,17 @@ Seeed Studio XIAO 系列的外形规格统一，Seeed Studio XIAO 系列（[XIAO
 
 <!-- ![](https://cdn.nlark.com/yuque/0/2023/jpeg/2392200/1675215940952-0f1b7772-73be-41d8-a0d4-84aab6e0987b.jpeg) -->
 
-![1](./Seeeduino-XIAO-Expansion-Board1.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board1.jpeg)
 
 背面有一个外部 MicroSD 卡插槽和 RTC 电池座，MicroSD 卡主要用于保存和运行文件，RTC 用于跟踪当前时间，可用于在特定时间编程操作。其尺寸比较如下图所示。
 
-![](./Seeeduino-XIAO-Expansion-Board2.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board2.jpeg)
 
 ### **引脚排列图**[¶](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/#pinout-diagram)
 
 外部接口与引脚说明如下图所示。
 
-![](./Seeeduino-XIAO-Expansion-Board3.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board3.jpeg)
 
 ## **扩展板的使用**
 
@@ -92,7 +92,7 @@ Seeed Studio XIAO 系列的外形规格统一，Seeed Studio XIAO 系列（[XIAO
 
 如下图所示将 Seeed Studio Xiao SAMD21 插在扩展板上，Seeed Studio XIAO SAMD21 上的绿色 LED 应会亮起。
 
-![image.png](./Seeeduino-XIAO-Expansion-Board4.png)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png" /></div>
 
 > ⚠️ 注意
 > 请先将 XIAO 插入扩展板，然后插入Type-C，请记住将 XIAO 插入两个母头连接器的中间，否则会损坏Seeed Studio XIAO和扩展板。
@@ -101,12 +101,12 @@ Seeed Studio XIAO 系列的外形规格统一，Seeed Studio XIAO 系列（[XIAO
 
 XIAO 扩展板可以通过电池供电，因此如果你的项目需要移动演示，接入电池将帮助你解决供电问题。当你插入电池时，请注意正极和负极，按照图片连接电池，以防损坏电路板。
 
-![](./Seeeduino-XIAO-Expansion-Board5.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board5.jpeg)
 
 此外，当你接上锂电池和 Type-C 电缆，并将扩展板的开关切换到 ON 时，扩展板会为电池充电。
 如下图所示，如果 LED 闪烁，这意味着电池不充电或电路板不连接电池，如果 LED 保持亮起，则表示电池正在充电。
 
-![](./Seeeduino-XIAO-Expansion-Board6.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board6.jpeg)
 
 ## **扩展板上的模块**
 
@@ -127,7 +127,7 @@ XIAO 扩展板可以通过电池供电，因此如果你的项目需要移动演
 
 这个示例介绍如何在 XIAO 扩展板上使用 OLED 显示屏显示一个“Hello World！”的字样。
 
-![image.png](./Seeeduino-XIAO-Expansion-Board7.png)
+<div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Hello_world11.jpg" /></div>
 
 **第 1 步**：在扩展板上安装 Seeed Studio XIAO SAMD21，然后连接Type-C电缆。
 
@@ -173,7 +173,7 @@ void loop(void) {
 
 这个示例介绍了如何使用 XIAO 扩展板上的按钮来控制 Seeed Studio XIAO SAMD21 上的 LED。
 
-![](./Seeeduino-XIAO-Expansion-Board8.gif)
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/LED_botton.gif" /></div>
 
 **第 1 步**：将 Seeed Studio XIAO SAMD21 安装到扩展板上，然后连接 Type-C 电缆。
 
@@ -221,7 +221,7 @@ void loop() {
 
 蜂鸣器默认连接到 A3 引脚，如果你想移除蜂鸣器功能，只需按照下面图片中的方法，切断连线。
 
-![](./Seeeduino-XIAO-Expansion-Board9.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board9.jpeg)
 
 #### **使用无源蜂鸣器播放歌曲**
 
@@ -304,7 +304,7 @@ void loop() {
 
 此示例使用旋钮通过 XIAO 扩展板上的端口控制舵机。
 
-![](./Seeeduino-XIAO-Expansion-Board10.gif)
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/rotary_servo.gif" /></div>
 
 **第1步**：将 Seeed Studio XIAO SAMD21 安装在扩展板上，然后连接 Type-C 电缆。<br />
 **第2步**：将舵机电缆连接到 I2C 端口，旋钮连接到 D0 端口。<br />
@@ -369,7 +369,7 @@ void loop() {
 
 此示例使用 RTC 在 OLED 上显示时钟。<br />
 
-![](./Seeeduino-XIAO-Expansion-Board11.gif)
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/time_clock.gif" /></div>
 
 **第 1 步**：将 Seeed Studio XIAO SAMD21 安装在扩展板上，然后连接 Type-C 电缆。
 
@@ -522,7 +522,7 @@ CIRCUITPY 的新外部驱动器目录如下图所示。
 
 您将会看见板上所有可供您在代码中使用的引脚的列表。根据可用引脚的数量，每个板的列表会略有不同。
 
-![image.png](./Seeeduino-XIAO-Expansion-Board12.png)
+![image.png](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board12.png)
 
 看到了 YELLOW_LED_INVERTED 吗？那就是你用来使橙色 LED 闪烁的引脚！
 
@@ -947,7 +947,7 @@ void delayUntil(unsigned long elapsedTime) {
 
 如下图所示，注意灯环通过三根不同颜色的线和 XIAO 开发板的引脚直接连接：将灯环的 `DIN` 引脚用黄色线与 XIAO 的 `D1` 引脚连接，将灯环的 `VIN` 用红色线与 XIAO 的 `3V3` 引脚连接，将灯环的 `GND` 用黑色线与 XIAO 的 `GND` 引脚连接。
 
-![](./Seeeduino-XIAO-Expansion-Board13.jpeg)
+![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board13.jpeg)
 
 **Arduino 编程说明**
 
