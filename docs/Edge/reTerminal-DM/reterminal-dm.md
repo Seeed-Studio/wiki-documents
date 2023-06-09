@@ -1154,9 +1154,9 @@ echo 1 > /sys/class/backlight/lcd_backlight/brightness
 echo 5 > /sys/class/backlight/lcd_backlight/brightness
 ```
 
-### Add-on
+## Internal Add-on
 
-#### Camera
+### Camera
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/Camera.png" /></div>
 
@@ -1177,7 +1177,218 @@ The CSI camera interface is reserved on the reTerminal DM mainboard, which can b
 Please note that the standard version of the reTerminal DM does not come with a camera opening on the front panel, therefore, the camera functionality is not available for the standard product. If you have a customized camera requirement, please contact odm@seeed.cc
 :::
 
-#### PCIe Expansion Card
+### LoraWAN®  Module
+
+:::note
+reTerminal DM support for both USB and SPI version of the WM1302 LoraWAN®  Module, however the USB verison will need to uiltising the Mini PCIe designed for 4G Moudle which means if you want to use the both 4G Module and LoraWAN®  Module Please choose SPI version of the WM1302 LoraWAN®  Module.
+:::
+
+
+<!-- Code -->
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="WM1302 SPI" label="WM1302 SPI">
+
+**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN®  Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
+
+
+**Step 2.** type `sudo raspi-config` in command line to open Rasberry Pi Software Configuration Tool:
+
+- Select Interface Options
+- Select SPI, then select **Yes** to enable it
+- Select I2C, then select **Yes** to enable it
+- Select Serial Port, then select **No** for "Would you like a login shell..." and select **Yes** for "Would you like the serial port hardware..."
+
+After this, please reboot Raspberry Pi to make sure these settings work.
+
+**Step 3.** Download the [WM1302 code](https://github.com/Lora-net/sx1302_hal) to reTerminal and compile it.
+
+```sh
+cd ~/
+git clone https://github.com/Lora-net/sx1302_hal
+cd sx1302_hal
+sudo make
+```
+
+**Step 4.** Copy the reset_lgw.sh script
+
+```
+cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
+```
+
+**Step 5.** replace the default `SPI` port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915` config file: 
+
+```sh
+sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
+```
+
+**Step 6.** Start LoraWAN® Module
+
+Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
+
+```sh
+$ cd ~/sx1302_hal/packet_forwarder
+$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915
+```
+
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
+
+Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
+
+<!-- **Step 7.** Sign up at [TTN website](https://www.thethingsnetwork.org/) and log into your account. If you don't have one please registe. Then enter the Gateway interface and click "Get Starting"
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa1.png"/></div>
+
+Select your region.
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa2.png"/></div>
+
+Chose "Go to gateways"
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa3.png"/></div>
+
+Click **Add gateway** to add the device:
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image22.jpg"/></div>
+
+Among them, the value of **Gateway EUI** will be displayed in the log when the test is run in **step 4**. The Frequency plan in Lora options (take the European version as an example) select **Europe 863-870 MHz (SF9 for RX2 - recommended)**. Then click on **Create gateway**.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image23.jpg"/></div>
+
+**Step 8.** Edit **global_conf.json.sx1250.US915** in the **sx1302_hal/packet_forwarder** folder.
+
+Search for **gateway_conf** in the corresponding file.
+
+- Then change the **gateway_ID** behind to the **Gateway EUI** filled in the webpage.
+
+- **server_address** is modified to the **Gateway Server address** in the web page.
+
+- Both **serv_port_up** and **serv_port_up** are modified to **1700**.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image24.jpg"/></div> -->
+
+</TabItem>
+<TabItem value="WM1302 USB" label="WM1302 USB">
+
+**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
+
+
+**Step 2.** type `sudo raspi-config` in command line to open Rasberry Pi Software Configuration Tool:
+
+- Select Interface Options
+- Select I2C, then select **Yes** to enable it
+- Select Serial Port, then select **No** for "Would you like a login shell..." and select **Yes** for "Would you like the serial port hardware..."
+
+After this, please reboot Raspberry Pi to make sure these settings work.
+
+**Step 3.** Download the [WM1302 code](https://github.com/Lora-net/sx1302_hal) to reTerminal and compile it.
+
+```sh
+cd ~/
+git clone https://github.com/Lora-net/sx1302_hal
+cd sx1302_hal
+sudo make
+```
+
+**Step 4.** Copy the reset_lgw.sh script
+
+```
+cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
+```
+
+**Step 5.** replace the USB port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915.USB` config file:
+
+**Step 5-1.**
+First to get the specific USB port please follow the steps below:
+
+```sh
+lsusb
+```
+In my case our WM1302 is using the `STMicroelectronics Virtual COM Port` so we can get the product id `5740`
+
+**Step 5-2.**
+Then get the usb device with the Product ID number `5740`, In this case we get the USB port number `1-1.4.1`:
+
+```sh
+sudo dmesg | grep 5740
+```
+
+Then we could get the device port as follow:
+
+```sh
+sudo dmesg | grep 1-1.4.1
+```
+
+so in my case the USB device is `ttyACM2`
+
+So lets modify the USB device in the  `global_conf.json.sx1250.US915.USB` config with the sed command `sed -i 's/search_string/replacement_string/g' filename`, so please follow the pattern as `sed -i 's/ttyACM0/the_result_from_above' global_conf.json.sx1250.frequency_of_your_module.USB`, to be note that please replace `the_result_from_above` and `frequency_of_your_module` for your own application:
+
+for example in my case:
+
+```sh
+sed -i 's/ttyACM0/ttyACM2/g'  global_conf.json.sx1250.US915.USB
+```
+
+Please refer to the steps shown in the image below:
+
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/find-lora-usb.png"/></div>
+
+**Step 6.** Start LoraWAN® Module
+
+Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
+
+```sh
+USB version
+$ cd ~/sx1302_hal/packet_forwarder
+$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
+```
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
+
+Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
+
+<!-- **Step 7.** Sign up at [TTN website](https://www.thethingsnetwork.org/) and log into your account. If you don't have one please registe. Then enter the Gateway interface and click "Get Starting"
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa1.png"/></div>
+
+Select your region.
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa2.png"/></div>
+
+Chose "Go to gateways"
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa3.png"/></div>
+
+Click **Add gateway** to add the device:
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image22.jpg"/></div>
+
+Among them, the value of **Gateway EUI** will be displayed in the log when the test is run in **step 4**. The Frequency plan in Lora options (take the European version as an example) select **Europe 863-870 MHz (SF9 for RX2 - recommended)**. Then click on **Create gateway**.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image23.jpg"/></div>
+
+**Step 8.** Edit **global_conf.json.sx1250.US915.USB** in the **sx1302_hal/packet_forwarder** folder.
+
+Search for **gateway_conf** in the corresponding file.
+
+- Then change the **gateway_ID** behind to the **Gateway EUI** filled in the webpage.
+
+- **server_address** is modified to the **Gateway Server address** in the web page.
+
+- Both **serv_port_up** and **serv_port_up** are modified to **1700**.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image24.jpg"/></div>
+
+**Step 9.** Run the command in **step 6** again, and you can see the connection information of the device on the web page later. -->
+
+</TabItem>
+</Tabs>
+
+<!-- Code END -->
+
+### PCIe Expansion Card
 
 The reTerminal DM features a PCIe interface that is derived from the CM4, which supports PCIe 2.0 and theoretically provides a maximum transmission speed of 5Gbps. This allows for the expansion of various high-speed interfaces such as Gigabit Ethernet and NVMe SSD. We have developed multiple expansion cards based on PCIe, USB, and I2C interfaces to meet different scenario requirements. This also facilitates customization needs.
 
@@ -1185,7 +1396,7 @@ The reTerminal DM features a PCIe interface that is derived from the CM4, which 
 Please note that the standard product does not include a PCIe expansion card by default. Seeed can provide assembly services for batch customization orders.
 :::
 
-#### POE
+### POE
 
 The reTerminal DM can support the IEEE 802.3af PD(Powered Devices) standard by adding a PoE power supply module.
 
@@ -1193,7 +1404,7 @@ The reTerminal DM can support the IEEE 802.3af PD(Powered Devices) standard by a
 The reTerminal DM supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to solder and assemble the PoE module themselves.
 :::
 
-#### SSD
+### SSD
 
 The reTerminal DM supports 2280 NVMe SSD through the use of a PCIe expansion card. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 210MB/s and a maximum read speed of 360MB/s. If you are unsure which SSDs are compatible, you can purchase the 112990247, 512GB NVMe M.2 PCle Gen3x4 2280 SSD from Seeed's ofﬁcial website.
 
