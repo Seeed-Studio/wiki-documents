@@ -625,6 +625,14 @@ git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 cd seeed-linux-dtoverlays
 ```
 
+:::note
+For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`
+
+```
+echo arm_64bit=0 | sudo tee -a /boot/config.txt
+```
+:::
+
 - **Step 3.** Type the following to install the drivers
 
 ```sh
