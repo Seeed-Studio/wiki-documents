@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/05/2023
+  date: 06/12/2023
   author: Matthew
 ---
 
@@ -15,35 +15,63 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is June 5th and a brand new week has begun! Check out what Seeed did last week!
+Today is June 12th and a brand new week has begun! Check out what Seeed did last week!
 
 ## Latest Wiki Launched
 
-### [SenseCAP Indicator x Home Assistant Application Development](/SenseCAP_Indicator_Application_Home_Assistant)
+### [Grove - VOC Gas Sensor (SGP40)](/grove_voc_gas_sensor_sgp40)
 
-Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant using the Home Assistant Yellow.
+The Grove - VOC Gas Sensor (SGP40) is an innovative environmental sensing module developed for a wide array of Volatile Organic Compound (VOC) detection applications. Based on the advanced Sensirion SGP40 sensor, it excels in transforming raw sensor signals into standardized digital signals for seamless integration into existing systems.
 
-<iframe class="youtube-video" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_SGP40/main.jpg" alt="pir" width={500} height="auto" /></p>
 
-### [Miniature ChatGPT Voice Assistant based on XIAO ESP32S3](/xiao_esp32s3_speech2chatgpt)
+### [XIAO CAN Bus Expansion Board](/xiao-can-bus-expansion)
 
-We are pleased to bring you today a brand new project using the XIAO ESP32S3 Sense and Round Display for XIAO! The project aims to first build a speech recognition system using the XIAO ESP32S3 Sense's microphone and Google Cloud's speech-to-text service. The recognized speech text is then used to call OpenAI's interface to ask questions to ChatGPT and return answers. Finally, we display the recognised speech and the content of the answers on screen.
+The XIAO CAN Bus Expansion Board is specifically designed to work with the Seeed Studio XIAO development board, providing an easy and convenient way to add CAN bus communication functionality to your projects. CAN bus (Controller Area Network) is a widely used communication protocol in automotive, industrial, and other embedded systems, allowing for reliable and robust data exchange between different nodes.
 
-<iframe width="958" height="400" src="https://www.youtube.com/embed/wPi-XjeJPNw" title="Miniature ChatGPT Voice Assistant with Smallest Display and XIAO ESP32S3 Sense" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/main.jpg" alt="pir" width={500} height="auto" /></p>
 
-### [reTerminal DM SenseCraft Edge OS Getting Started](/reterminal-dm-sensecraft-edge-os-intro)
+### [Grove - D7S Vibration Sensor](/grove-d7s-vibration-sensor)
 
-SenseCraft Edge OS is a cutting-edge operating system meticulously designed for reTerminal DM's 10.1" Human Machine Interface (HMI) device, featuring an array of integrated functionalities that elevate user experience to new heights. This groundbreaking OS boasts an intuitive interface with built-in setting and control functions, empowering users to effortlessly configure and manage their devices.
+The Grove - D7S Vibration Sensor is a powerful earthquake detection module that provides real-time monitoring of seismic activities. It is based on the advanced D7S module developed by Omron Corporation, a leading manufacturer of sensing technology.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/sensecraft-edge/chirpstack.png" /></div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-d7s-vibration-sensor/main.jpg" alt="pir" width={500} height="auto" /></p>
 
-<!-- ## Existed Wiki Updated
+### [Grove Lightning Sensor AS3935](/grove-lightning-sensor-as3935)
 
-### [BootLoader Mode on Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#bootloader-mode)
+The Grove Lightning Sensor is a highly sensitive sensor that detects electric fields free in air and using an internal proprietary algorithm determines if it is caused by the front end of a storm with lightning events. It is very easy to be used as a plug and play device using the Grove standard cable can accept several adjustments to be optimized for the application environment, both indoor or outdoor.
 
-We have upgraded the bootloader mode for XIAO ESP32S3.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/6.jpg" alt="pir" width={500} height="auto" /></p>
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" /></div> -->
+### [Getting Started with reComputer Industrial](/reComputer_Industrial_Getting_Started)
+
+reComputer industrial series offers full systems including NVIDIA Jetson™ Xavier NX/ Orin Nano/Orin NX/ modules, ranging from 20 TOPS to 100 TOPS AI performance. Preinstalled with Jetpack 5.1.1, reComputer industrial simplifies development, ideal for bulding applications of video analytics, object detection, natural language processing, medical imaging, and robots, which brings digital transformantion across industries of smart cities, security, industrial automation, smart factories.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png" alt="pir" width={500} height="auto" /></p>
+
+### [reComputer Industrial J20 Hardware and Interfaces Usage](/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
+
+This wiki introduces the various different hardware and interfaces on the reComputer Industrial J2012, J2011 and how to use them to expand your project ideas.
+
+### [reComputer Industrial J40, J30 Hardware and Interfaces Usage](/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)
+
+This wiki introduces the various different hardware and interfaces on the reComputer Industrial J4012, J4011, J3011, J3010 and how to use them to expand your project ideas.
+
+### [Streamlining Web Development The Perfect Duo - Linkstar and WordPress](/wordpress_linkstar)
+
+This wiki will guide you through the installation process of WordPress using Docker and how to access the WordPress dashboard. Embrace the transformative power of Linkstar as you customize your local host website, captivating customers and driving sales. Prepare to experience unparalleled growth, efficiency, and technical prowess with the cutting-edge capabilities of Linkstar.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/wordpress/portainer16.PNG" alt="pir" width={500} height="auto" /></p>
+
+## Existed Wiki Updated
+
+### [XIAO ESP32C3 accesses Home Assistant via ESPHome service](https://wiki.seeedstudio.com/xiao-esp32c3-esphome/#faq5-i-used-the-jlink-flash-firmware-but-i-got-the-error-programming-of-range-address-0x08000000-failed-block-verification-error-program-failed-failed-to-program-and-verify-target-)
+
+We have added `FAQ5`: I used the Jlink flash firmware, but I got the error "Programming of range @address 0x08000000 failed (block verification error) Program failed Failed to program and verify target"
+
+### [FAQs for reTerminal Usage](https://wiki.seeedstudio.com/reTerminal-FAQ/#connect-to-stm32-using-cm4-and-flash-the-firmware)
+
+We have updated the steps for `Connect to STM32 using CM4 and flash the firmware`.
 
 ## Past Weekly wiki
 
@@ -57,5 +85,6 @@ We have upgraded the bootloader mode for XIAO ESP32S3.
 - [weekly wiki on 4.17th](/Seeed_Elderly/weekly_wiki/wiki417)
 - [weekly wiki on 4.24th](/Seeed_Elderly/weekly_wiki/wiki424)
 - [weekly wiki on 5.15th](/Seeed_Elderly/weekly_wiki/wiki515)
-- [weekly wiki on 5.22th](/Seeed_Elderly/weekly_wiki/wiki522)
+- [weekly wiki on 5.22nd](/Seeed_Elderly/weekly_wiki/wiki522)
 - [weekly wiki on 5.29th](/Seeed_Elderly/weekly_wiki/wiki529)
+- [weekly wiki on 6.05th](/Seeed_Elderly/weekly_wiki/wiki605)
