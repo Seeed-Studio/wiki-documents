@@ -32,7 +32,7 @@ Make sure that you are running [the latest Raspberry Pi OS](https://www.raspberr
 
 ```bash
 sudo apt-get update
-git clone https://github.com/Seeed-Projects/seeed-voicecard.git
+git clone https://github.com/seeed-studio-projects/seeed-voicecard.git
 cd seeed-voicecard
 sudo ./install.sh
 sudo reboot now
