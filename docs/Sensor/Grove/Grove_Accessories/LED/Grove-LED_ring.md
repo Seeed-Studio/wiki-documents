@@ -50,8 +50,8 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 |RGB Channel Constant Current|16mA/LED|
 |Refresh Frequency|2KHz|
 |Reset Time|>280μs|
-|Operating Temperature|-25～85℃|
-|Storage Temperature|-40～105℃|
+|Operating Temperature|-25～85 C|
+|Storage Temperature|-40～105 C|
 
 
 

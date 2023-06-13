@@ -41,8 +41,8 @@ LED Matrix is low cost and usually used to display simple numbers and images. Th
 |---|---|
 |Supply Voltage|3.3V / 5V|
 |LED Matrix Dot NO.|8 * 8|
-|Operating temperature|-40～85℃|
-|Storage temperature|-50～125℃|
+|Operating temperature|-40～85 C|
+|Storage temperature|-50～125 C|
 |Interface|I2C|
 |I2C address|0x70(defult) 0x71~0x77(configurable)|
 |size|L: 40mm W: 40mm H: 17mm| 
