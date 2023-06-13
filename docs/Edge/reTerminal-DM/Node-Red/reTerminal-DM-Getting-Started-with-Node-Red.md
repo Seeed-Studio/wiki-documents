@@ -36,12 +36,12 @@ Here is the getting started guide on how to setup, as well as getting familiar w
 
 :::tip
 * For **Raspbian OS** User Please Go TO: [Install Node-RED](#install-and-setting-up-node-red)
-* For **Senscraft Edge OS** User Please Go TO: [Getting Familiar with Node-RED](#getting-familiar-with-node-red)
+* For **Sensecraft Edge OS** User Please Go TO: [Getting Familiar with Node-RED](#getting-familiar-with-node-red), Since Sensecraft Edge OS comes with Node-RED preinstalled
 :::
 
-## Install and Setting up Node-RED
+## Install and Setting up Node-RED On Raspbian OS
 
-Once you have complete with the setup a new Operating System with reTerminal DM by Following the [Install OS on reTerminal DM](#), please follow the steps below to setup the Node-RED.
+Once you have complete with the setup a new Operating System with reTerminal DM by Following the [Install OS on reTerminal DM](/reterminal-dm-flash-OS/), please follow the steps below to setup the Node-RED.
 
 ### Install Node-RED
 
@@ -154,11 +154,24 @@ The core Element of the Node-RED editor are listed:
 * Deploy Button
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-editor.png" /></div><br />
-## Tech Support & Product Discussion
 
+### Install Nodes
+
+There are two options on install Node-RED node modules, if you are using the SenseCraft EDGE OS please use the [Node-RED editor method](#option-2-node-red-editor): 
+
+#### Option 1: Command line
+
+STEP 1: Please go to Node-RED folder
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-folder.png" /></div><br />
+
+```sh
+cd .node-red/
 ```
+
 STEP 2: Install Modbus Node
 
+```
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/npm-install-node.png" /></div><br />
 
 ```sh
