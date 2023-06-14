@@ -101,12 +101,13 @@ function ShowcaseCards() {
          <section className={clsx(' margin-bottom--xl',styles.cards)}>
 
 					{item.list.map((tag, i) => {
+					const imagePath = require(`../../../assets/contribution/${tag.preview}`).default;
 								return (
 									<li className={styles.card_item} key={i}>
 										<div className={styles.card_image}>
 											<img
 												src={
-													'https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg'
+													imagePath
 												}
 												alt={tag.title}
 											/>

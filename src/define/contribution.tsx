@@ -65,7 +65,7 @@ export const Users: User[] = [
   {
     title: 'AgileTs',
     description: 'Global State and Logic Framework for reactive Applications',
-    preview: require('./showcase/agilets.png'),
+    preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://agile-ts.org/',
     source: 'https://github.com/agile-ts/documentation',
     tags: ['opensource', 'design'],
@@ -73,7 +73,7 @@ export const Users: User[] = [
   {
     title: 'AI-Speaker',
     description: 'Local, reliable, fast and private Audio and IoT gate.',
-    preview: require('./showcase/aispeaker.png'),
+    preview: 'aispeaker.png',
     website: 'https://ai-speaker.com/',
     source: 'https://github.com/sviete/AIS-WWW',
     tags: ['opensource'],
@@ -82,7 +82,7 @@ export const Users: User[] = [
     title: 'Aide Jeune',
     description:
       'French Discord server that helps young people who have been bullied or feel bad about themselves',
-    preview: require('./showcase/aide_jeune.png'),
+    preview: 'aide_jeune.png',
     website: 'https://aidejeune.fr',
     source: null,
     tags: [],
@@ -90,7 +90,7 @@ export const Users: User[] = [
   {
     title: "Akara's blog",
     description: 'Personal frontend blog for learning',
-    preview: require('./showcase/akara-blog.png'),
+    preview: 'akara-blog.png',
     website: 'https://messiahhh.github.io/blog/',
     source: 'https://github.com/messiahhh/blog',
     tags: ['opensource', 'personal'],
@@ -99,7 +99,7 @@ export const Users: User[] = [
     title: 'Algolia DocSearch',
     description:
       'The best search experience for docs, integrates in minutes, for free',
-    preview: require('./showcase/algolia.png'),
+    preview: 'algolia.png',
     website: 'https://docsearch.algolia.com/',
     source: 'https://github.com/algolia/docsearch/tree/main/packages/website',
     tags: ['favorite', 'opensource', 'product'],
@@ -108,7 +108,7 @@ export const Users: User[] = [
     title: 'Apache APISIX',
     description:
       'A Dynamic, Real-Time, High-Performance Cloud-Native API Gateway',
-    preview: require('./showcase/apache-apisix.png'),
+    preview: 'apache-apisix.png',
     website: 'https://apisix.apache.org/',
     source: 'https://github.com/apache/apisix-website',
     tags: ['opensource', 'i18n', 'large'],
@@ -116,7 +116,7 @@ export const Users: User[] = [
   {
     title: 'Apex FP',
     description: 'Functional programming library for Salesforce Apex',
-    preview: require('./showcase/apexfp.png'),
+    preview: 'apexfp.png',
     website: 'https://www.apexfp.org',
     source: 'https://github.com/ipavlic/apex-fp/tree/master/website',
     tags: ['opensource'],
@@ -125,7 +125,7 @@ export const Users: User[] = [
     title: 'Astronomer',
     description:
       'Enterprise-grade framework for Apache Airflow. Production-ready Airflow environments with just a few clicks',
-    preview: require('./showcase/astronomer.png'),
+    preview: 'astronomer.png',
     website: 'https://docs.astronomer.io',
     source: 'https://github.com/astronomer/docs',
     tags: ['product', 'versioning', 'opensource'],
@@ -139,7 +139,7 @@ export const ContributionList=[
       {
         title: 'Perception System for SDG',
         description: 'Come join the community activity and share your solution!',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://agile-ts.org/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
         tags: ['opensource', 'design'],
@@ -153,7 +153,7 @@ export const ContributionList=[
       {
         title: 'XIAO ESP32C3 with Home Assistant',
         description: 'Really need your help for applying XIAO ESP32C3 into Home Assistant',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://wiki.seeedstudio.com/xiao-esp32c3-esphome/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/5/views/1?pane=issue&itemId=30468268',
         tags: ['opensource', 'design'],
@@ -161,7 +161,7 @@ export const ContributionList=[
       {
         title: 'XIAO ESP32S3 with Home Assistant',
         description: 'Really need your help for applying XIAO ESP32S3 into Home Assistant',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://wiki.seeedstudio.com/xiao-esp32c3-esphome/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/5/views/1',
         tags: ['opensource', 'design'],
@@ -175,7 +175,7 @@ export const ContributionList=[
       {
         title: '[Page Update] Arduino Intro',
         description: 'We need an updated wiki page introducing Arduino',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
         source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
         tags: ['opensource', 'design'],
@@ -183,7 +183,7 @@ export const ContributionList=[
       {
         title: '[Page Add] Raspberry Pi Intro',
         description: 'We need a new wiki page introducing Raspberry Pi',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
         source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
         tags: ['opensource', 'design'],
@@ -191,7 +191,7 @@ export const ContributionList=[
       {
         title: '[Bug Fix] Level 4 hyperlink bug',
         description: 'Level 4 hyperlink titles cannot be displayed correctly',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469734',
         source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469734',
         tags: ['opensource', 'design'],
@@ -199,7 +199,7 @@ export const ContributionList=[
       {
         title: '[Function Add] PDF button',
         description: 'Add a button at each page that automatically downloads the current page and converts it to PDF#302',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469734',
         source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469767',
         tags: ['opensource', 'design'],
@@ -213,7 +213,7 @@ export const ContributionList=[
       {
         title: 'Mr. Jefferson',
         description: 'Global State and Logic Framework for reactive Applications',
-        preview: require('./showcase/agilets.png'),
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://agile-ts.org/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
         tags: ['personal'],
@@ -221,7 +221,7 @@ export const ContributionList=[
       {
         title: 'Mrs. Huang',
         description: 'Local, reliable, fast and private Audio and IoT gate.',
-        preview: require('./showcase/aispeaker.png'),
+        preview: 'aispeaker.png',
         website: 'https://ai-speaker.com/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
         tags: ['personal'],
@@ -229,7 +229,7 @@ export const ContributionList=[
       {
         title: 'Mr Liu',
         description: 'Local, reliable, fast and private Audio and IoT gate.',
-        preview: require('./showcase/aispeaker.png'),
+        preview: 'aispeaker.png',
         website: 'https://ai-speaker.com/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
         tags: ['personal'],
