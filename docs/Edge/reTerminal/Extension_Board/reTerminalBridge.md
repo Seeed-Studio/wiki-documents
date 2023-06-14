@@ -43,6 +43,13 @@ git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
 cd seeed-linux-dtoverlays
 sudo ./scripts/reTerminal.sh
 ```
+:::note
+For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`
+
+```
+echo arm_64bit=0 | sudo tee -a /boot/config.txt
+```
+:::
 
 After the installation is complete, please restart the machine. Then use the following command to check whether the `reTerminal-bridge.dtbo` file exists to ensure that the driver installation is complete.
 

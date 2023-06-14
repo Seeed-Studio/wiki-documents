@@ -124,7 +124,7 @@ You can use the **File editor** add-on in Home Assistant Yellow to modify the `c
 
 
 <details>
-<summary>Click to copy configuration.yaml</summary>
+<summary>Click to copy Configuration.yaml to configure Integrations</summary>
 
 ```yaml
 # Example configuration.yaml entry
@@ -250,7 +250,9 @@ The final step is to edit the Home Assistant dashboard. You need to add the foll
 
 <details>
 
-<summary>Click to copy dashboard YAML</summary>
+<summary>Click to copy Dashboard YAML to change the UI</summary>
+
+> Note: This is not for `Configuration.YAML`.
 
 ```yaml
 views:
@@ -467,7 +469,7 @@ If you want to change the title or the unit of measurement displayed on the Sens
 
 The `CONFIG_BROKER_URL` should be related to the Home Assistant's MQTT broker address. This is crucial for the communication between the SenseCAP Indicator and Home Assistant.
 
-### Relationship between `ha_config.h` and `configuration.yaml`
+### Relationship between `ha_config.h` and `Configuration.yaml`
 
 The `ha_config.h` file is a header file in the C programming language. It contains definitions to be shared between several source files. In this case, it contains definitions related to the MQTT configuration.
 
