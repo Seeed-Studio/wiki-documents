@@ -73,7 +73,7 @@ export const Users: User[] = [
   {
     title: 'AI-Speaker',
     description: 'Local, reliable, fast and private Audio and IoT gate.',
-    preview: 'aispeaker.png',
+    preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://ai-speaker.com/',
     source: 'https://github.com/sviete/AIS-WWW',
     tags: ['opensource'],
@@ -82,7 +82,7 @@ export const Users: User[] = [
     title: 'Aide Jeune',
     description:
       'French Discord server that helps young people who have been bullied or feel bad about themselves',
-    preview: 'aide_jeune.png',
+    preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://aidejeune.fr',
     source: null,
     tags: [],
@@ -90,7 +90,7 @@ export const Users: User[] = [
   {
     title: "Akara's blog",
     description: 'Personal frontend blog for learning',
-    preview: 'akara-blog.png',
+    preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://messiahhh.github.io/blog/',
     source: 'https://github.com/messiahhh/blog',
     tags: ['opensource', 'personal'],
@@ -99,7 +99,7 @@ export const Users: User[] = [
     title: 'Algolia DocSearch',
     description:
       'The best search experience for docs, integrates in minutes, for free',
-    preview: 'algolia.png',
+    preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://docsearch.algolia.com/',
     source: 'https://github.com/algolia/docsearch/tree/main/packages/website',
     tags: ['favorite', 'opensource', 'product'],
@@ -108,7 +108,7 @@ export const Users: User[] = [
     title: 'Apache APISIX',
     description:
       'A Dynamic, Real-Time, High-Performance Cloud-Native API Gateway',
-    preview: 'apache-apisix.png',
+    preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://apisix.apache.org/',
     source: 'https://github.com/apache/apisix-website',
     tags: ['opensource', 'i18n', 'large'],
@@ -116,7 +116,7 @@ export const Users: User[] = [
   {
     title: 'Apex FP',
     description: 'Functional programming library for Salesforce Apex',
-    preview: 'apexfp.png',
+    preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://www.apexfp.org',
     source: 'https://github.com/ipavlic/apex-fp/tree/master/website',
     tags: ['opensource'],
@@ -221,7 +221,7 @@ export const ContributionList=[
       {
         title: 'Mrs. Huang',
         description: 'Local, reliable, fast and private Audio and IoT gate.',
-        preview: 'aispeaker.png',
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://ai-speaker.com/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
         tags: ['personal'],
@@ -229,7 +229,7 @@ export const ContributionList=[
       {
         title: 'Mr Liu',
         description: 'Local, reliable, fast and private Audio and IoT gate.',
-        preview: 'aispeaker.png',
+        preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://ai-speaker.com/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
         tags: ['personal'],
@@ -362,3 +362,13 @@ function sortUsers() {
 }
 
 export const sortedUsers = sortUsers();
+function sortContribution() {
+  let result = Users;
+  // Sort by site name
+  result = sortBy(result, (user) => user.title.toLowerCase());
+  // Sort by favorite tag, favorites first
+  result = sortBy(result, (user) => !user.tags.includes('favorite'));
+  return result;
+}
+
+export const sortedContribution = sortContribution();
