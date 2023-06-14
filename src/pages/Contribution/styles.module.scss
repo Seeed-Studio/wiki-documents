@@ -37,19 +37,7 @@
 	padding: 0;
 
 	li {
-		background-color: rgba(148, 225, 208, 0.1);
-		border: 2px solid rgb(26, 137, 113);
-		opacity: 0.9;
-		font-size: 0.8rem;
-		height: 32px;
-		margin-right: 0.5rem;
-		margin-top: 0.5rem;
-		-webkit-user-select: none;
-		user-select: none;
-		white-space: nowrap;
-		padding: 0.275rem 0.8rem;
-		list-style: none;
-		border-radius: 4px;
+		cursor: pointer;
 
 		span {
 			display: inline-block;
@@ -226,14 +214,37 @@
 
 .svgIconFavoriteXs,
 .svgIconFavorite {
-	color: var(--site-color-svg-icon-favorite);
+	color: #e9669e !important;
 }
 
 .svgIconFavoriteXs {
 	margin-left: 0.625rem;
-	font-size: 1rem;
+	font-size: 1rem !important;
 }
 
 .svgIconFavorite {
 	margin-left: 1rem;
+}
+
+.searchContainer {
+	margin-left: auto;
+
+}
+
+.searchContainer input {
+	display: block;
+	margin: 0 auto;
+	height: 30px;
+	border-radius: 15px;
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+.searchContainer_wrapper {
+	text-align: right;
+
+	.searchContainer input {
+		display: inline-block;
+
+	}
 }
