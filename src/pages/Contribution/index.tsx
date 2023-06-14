@@ -3,20 +3,19 @@ import clsx from 'clsx'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 import Translate, { translate } from '@docusaurus/Translate'
-import docList from '../../define/IAGDocs.js'
-import styles from './styles.module.scss'
+import styles from './styles.module.css'
 import Link from '@docusaurus/Link'
-import { sortedUsers, Tags, TagList, type User, type TagType, Users } from './users'
+import { sortedUsers, Tags, TagList, ContributionList,type User, type TagType, Users } from '../../define/contribution'
 import { useHistory, useLocation } from '@docusaurus/router'
 import { useState, useMemo, useEffect } from 'react'
-import {sortBy} from './jsUtils';
+import {sortBy} from '../../utils/jsUtils';
 
 function ShowcaseHeader() {
 	return (
 		<section className={styles.header}>
-			<h1>Docusaurus Site Showcase</h1>
-			<p>List of websites people are building with Docusaurus</p>
-			<Link className='button button--primary'>🙏 Please add your site</Link>
+			<h1> Welcom Rangers!</h1>
+			<p>This is the introductory page for the "Ranger Program". <br></br> Here, you can find all the contribution content we are looking for, as well as the progress and the achievement of them.</p>
+			<Link className='button button--primary'> Seeed Studio</Link>
 		</section>
 	)
 }
@@ -29,12 +28,12 @@ type UserState = {
 function ShowcaseFilters() {
 	return (
 		<section className={styles.filters}>
-			<div>
+			{/* <div>
 				<div className={styles.filters_header}>
 					<h2 as='h2'>Filters</h2>
 					<span className={styles.filters_number}>400 sites</span>
 				</div>
-			</div>
+			</div> */}
 			<ul>
 				{TagList.map((tag, i) => {
           const {label, description, color} = Tags[tag];
@@ -91,51 +90,66 @@ function ShowcaseCardTag({tags}: {tags: TagType[]}) {
 }
 function ShowcaseCards() {
 	return (
-    <section className={clsx('margin-top--lg margin-bottom--xl',styles.cards)}>
-			{Users.map((tag, i) => {
-				return (
-					<li className={styles.card_item} key={i}>
-						<div className={styles.card_image}>
-							<img
-								src={
-									'https://www.docusaurus.io/assets/ideal-img/algolia.1026fe5.640.png'
-								}
-								alt={tag.title}
-							/>
-						</div>
-						<div className={styles.card__body}>
-							<div className={styles.card__title}>
-								<h4>
-									<a
-										href='https://docsearch.algolia.com/'
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-									{tag.title}
-									</a>
-								</h4>
-                 {tag.source && (
-                  <Link
-                    href={tag.source}
-                    className={clsx(
-                      'button button--secondary button--sm',
-                      styles.showcaseCardSrcBtn,
-                    )}>
-                    <Translate id="showcase.card.sourceLink">source</Translate>
-                  </Link>
-                )}
-							</div>
-              <p className={styles.showcaseCardBody}>{tag.description}</p>
-						</div>
-            <ul className={clsx('card__footer', styles.cardFooter)}>
-        <ShowcaseCardTag tags={tag.tags} />
-      </ul>
-					</li>
+    <div>
+			{
+			ContributionList.map((item,index)=>{
+			return (
+				<div className={styles.card_container}>
+
+					<h2 className={styles.card_title}>{item.title}</h2>
+					<h4 className={styles.card_describe}>{item.describe}</h4>
+         <section className={clsx(' margin-bottom--xl',styles.cards)}>
+
+					{item.list.map((tag, i) => {
+								return (
+									<li className={styles.card_item} key={i}>
+										<div className={styles.card_image}>
+											<img
+												src={
+													'https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg'
+												}
+												alt={tag.title}
+											/>
+										</div>
+										<div className={styles.card__body}>
+											<div className={styles.card__title}>
+												<h3>
+													<a
+														href='/XIAO_ESP32C3_Home'
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+													{tag.title}
+													</a>
+												</h3>
+												{tag.source && (
+													<Link
+														href={tag.source}
+														className={clsx(
+															'button button--secondary button--sm',
+															styles.showcaseCardSrcBtn,
+														)}>
+														<Translate id="showcase.card.sourceLink">Progress</Translate>
+													</Link>
+												)}
+											</div>
+											<p className={styles.showcaseCardBody}>{tag.description}</p>
+										</div>
+										<ul className={clsx('card__footer', styles.cardFooter)}>
+								<ShowcaseCardTag tags={tag.tags} />
+							</ul>
+						</li>
+							)
+						})}
+					</section>
+				</div>
 				)
-			})}
-		</section>
+			}) 
+			}
+		</div>
 	)
 }
+
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
