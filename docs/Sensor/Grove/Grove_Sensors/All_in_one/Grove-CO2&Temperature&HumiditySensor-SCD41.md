@@ -10,9 +10,9 @@ last_update:
   author: jianjing Huang
 ---
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/img/101020952_Preview-07.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/img/101020952_Preview-07.png" /></div>
 
-The Grove - CO2 & Temperature & Humidity Sensor - SCD4 is a small but powerful module which made by Sensirion. It is a multiple function sensor which can measure temperature, pressure, humidity and CO2 at the same time. It is based on the SCD4 module and you can use this sensor in your GPS, IoT devices or other device which needs those four parameters.
+The Grove - CO2 & Temperature & Humidity Sensor - SCD41 is a small but powerful module which made by Sensirion. It is a multiple function sensor which can measure temperature, pressure, humidity and CO2 at the same time. It is based on the SCD41 module and you can use this sensor in your GPS, IoT devices or other device which needs those four parameters.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">
@@ -49,7 +49,7 @@ The Grove - CO2 & Temperature & Humidity Sensor - SCD4 is a small but powerful m
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
 :::caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 ## Getting Started
@@ -60,7 +60,7 @@ The Grove - CO2 & Temperature & Humidity Sensor - SCD4 is a small but powerful m
 
 **Materials required**
 
-| Seeeduino V4.2 | Base Shield| CO2 & Temperature & Humidity Sensor - SCD4 |
+| Seeeduino V4.2 | Base Shield| CO2 & Temperature & Humidity Sensor - SCD41 |
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/small.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/img/thumbnail.png" /></div>|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html" target="_blank">Get One Now</a>|
@@ -80,7 +80,7 @@ The Grove - CO2 & Temperature & Humidity Sensor - SCD4 is a small but powerful m
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/img/2222.jpg" /></div>
 
 :::note
-        If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 :::
 
 | Seeeduino     |  Grove-BME680           |
@@ -93,7 +93,7 @@ The Grove - CO2 & Temperature & Humidity Sensor - SCD4 is a small but powerful m
 #### Software
 
 :::note
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
 - **Step 1.** Download the [arduino-i2c-scd4x](https://github.com/Sensirion/arduino-i2c-scd4x) library and [arduino-core](https://github.com/Sensirion/arduino-core) dependency from Github.
@@ -119,7 +119,7 @@ Co2:852 Temperature:32.28 Humidity:51.54
 ```
 
 :::notebug
-         - To get the stable and accurate value, you need to let the arduino run the code for about 2 hours. The result is much more reliable then.
+- To get the stable and accurate value, you need to let the arduino run the code for about 2 hours. The result is much more reliable then.
 :::
 
 ## Play on RaspberryPi
@@ -135,7 +135,7 @@ Co2:852 Temperature:32.28 Humidity:51.54
 
 #### I2C Connection
 
-- **Step 1.** Plug Grove - CO2 & Temperature & Humidity Sensor - SCD4 to **I2C** port of Grove - Base Hat.
+- **Step 1.** Plug Grove - CO2 & Temperature & Humidity Sensor - SCD41 to **I2C** port of Grove - Base Hat.
 
 - **Step 2.** Plug Grove - Base Hat into RaspberryPi.
 
@@ -248,7 +248,7 @@ For further infomation, please check [Sensirion/raspberry-pi-i2c-scd4x on GitHub
 
 - **[PDF]** [Sensirion CO2 Sensors SCD4x Datasheet](https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/res/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf)
 - **[STEP]** [STEP of Sensirion CO2 Sensors SCD4x](https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/res/Sensirion_CO2_Sensors_SCD4x_STEP_file.step)
-- **[ZIP]** [Grove - CO2 & Temperature & Humidity Sensor - SCD4 Board File](https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/res/SCH&PCB.zip)
+- **[ZIP]** [Grove - CO2 & Temperature & Humidity Sensor - SCD41 Board File](https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/res/SCH&PCB.zip)
 
 ## Tech Support & Product Discussion
 
