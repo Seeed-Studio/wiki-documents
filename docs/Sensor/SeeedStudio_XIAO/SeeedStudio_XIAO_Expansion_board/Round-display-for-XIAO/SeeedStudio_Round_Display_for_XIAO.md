@@ -241,9 +241,6 @@ If you want to use the **TFT_eSPI** library for display driving, you must **comm
 
 <table align="center">
 	<tr>
-		<td rowspan="3"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/54.png" style={{width:1000, height:'auto'}}/></div></td>
-	</tr>
-	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/56.png" style={{width:1000, height:'auto'}}/></div></td>
 	</tr>
 	<tr>
@@ -292,17 +289,30 @@ A: Please check that the Round Display switch is turned on. If you are using the
 
 ### Q2: If I want to connect Seeed Studio XIAO ESP32S3 Sense to this extension screen, will there be a conflict with two TF card slots?
 
-A: If you connect XIAO ESP32S3 Sense with this extension screen, the data transmission of the TF card will be applied in the Seeed Studio XIAO ESP32S3 Sense. Meanwhile, the TF card on the screen will not be used.
+A: This does not create a conflict. The different SD card slots are controlled via chip select, if you want to use the microSD card slot on Sense, the chip select pin should be **21**, if you want to use the microSD card slot on Round Display, the chip select pin should be **D2**.
+
+We have [examples](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#project-i-making-a-handheld-camera) of using both hardware and microSD cards in the S3 Sense camera tutorial.
+
+### Q3: Why does my XIAO RP2040 get a very strange C++ error when using the code for HardwareTest with Round Display?
+
+A: This may be caused by you not selecting the appropriate compile option for the XIAO RP2040. Please refer to the diagram below to set and re-upload the program.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/100.png" style={{width:1000, height:'auto'}}/></div>
+
+### Q4: I have followed the tutorial and still can't get the TFT or LVGL program to compile properly, what should I do?
+
+Updates to the TFT library and the LVGL library may cause the procedures in the tutorial to fail. We recommend that you use our [tested and stable versions of the libraries](https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/libraries), which you can use without even having to change the configuration in them yourself.
 
 ## Resources
 
 - **[PDF]** [Charge IC datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/charge-IC-datasheet.pdf)
 - **[PDF]** [ETA3410 datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/ETA3410-datasheet.pdf)
 - **[PDF]** [RTC PCF8563 datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/RTC-PCF8563-datasheet.pdf)
+- **[PDF]** [1.28'' a-Si TFT Liquid Crystal Display datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
 - **[PDF]** [Seeed Studio Round Display for XIAO SCH](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH_230308.pdf)
 - **[ZIP]** [Seeed Studio Round Display for XIAO SCH&PCB](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH&PCB_230308.zip)
-- **[stl]** [The 3D model diagram of the shell for Round Display](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
-- **[PDF]** [GJX0128A4-15HY_Datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
+- **[STL]** [The 3D model diagram of the shell for Round Display](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
+- **[PDF]** [GJX0128A4-15HY Datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
 
 ## Tech Support & Product Discussion
 

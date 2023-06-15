@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /plex_media_server
 last_update:
-  date: 5/24/2023
+  date: 6/14/2023
   author: Kasun Thushara
 ---
 # The Future of Home Entertainment; LinkStar-H68K Router and Plex Media Server
@@ -169,6 +169,35 @@ Now you will be greeted with the Plex Media Server user interface, allowing you 
 
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/plex interface.PNG"/></div>
+
+## Mount Plex Directory on the PC and Transfer the Media
+
+- **Step 1.** In OpenWrt Luci interface, navigate to `NAS > Network Shares > ADD`
+
+<div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/NAS1.PNG"/></div>
+
+- **Step 2.** Fill the row according to the following 
+
+        - name: Plex 
+        - Path: /plex
+        - Browse-able: ticked
+        - Allow guests: ticked
+        - Create mask: 0666
+        - Directory mask: 0777
+- **Step 3** Press **Save and apply**:
+- **Step 4** Go to windows explorer and click **Map network drive**  and type //192.168.100.1/plex
+
+<div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/NAS2.PNG"/></div>
+
+- **Step 5** Add your favourite movies, music to media folder.
+- **Step 6** Go to Plex media server again and click this on **More**
+
+
+<div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/LinkStar/plex/NAS3.PNG"/></div>
+
+- **Step 7** Next click on these three dots and click on **Scan Library Files**. Then you can see the movies or songs you recently added to your library. 
+
+<div align="center"><img width ={400} src="https://files.seeedstudio.com/wiki/LinkStar/plex/NAS4.PNG"/></div>
 
 By implementing a media server, whether at home or in a small-scale hotel or cafe, users can offer an exceptional entertainment experience to themselves, family members, guests, and customers. It's a cost-effective solution that centralizes media storage, reduces device clutter, and provides remote access and customization options.
 
