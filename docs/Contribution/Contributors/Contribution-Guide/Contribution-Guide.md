@@ -10,16 +10,30 @@ last_update:
   author: Matthew
 ---
 
-## Step by Step Modify Files
+# Contribution(Pull Request) Guide
 
-Before modifying the existed files, please make sure you can [build the wiki platform page locally](/Deploy_Page_Locally)
+
+
+<strong><font color={'8DC215'} size={"5"}>Thanks for your efforts! <br /> Please follow steps below to complete your submission on GitHub.</font></strong>
+
+## Before everything starts
+
+- Please make sure you can [build the wiki platform page locally](/Deploy_Page_Locally)
+- All files to be uploaded(pull request) should be placed in this path:
+`/docs/Contribution/Contributors/file_transfer_station/"create a folder to store your files"`
+
+## Step by Step submit the files to repository
+
+Here are the detailed uploading steps.
 
 ### 1. Bring your forked branch up to date
 
-![image1](https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/1.jpg)
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/1.jpg" /></div>
 
 ### 2. Update the downloaded files
-https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/
+
+Use the code below and update the downloaded files.
+
 ```
 git checkout main
 git pull
@@ -29,11 +43,14 @@ git pull
 
 All the files on the wiki platform are stored in the "docs" folder.
 
-![image2](https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/2.jpg)
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/2.jpg" /></div>
 
-And the name of file you want to change usually is the last part of the url(take Seeed Studio XIAO ESP32C3 as an example).
+:::note
+The name of file you want to change usually is the last part of the url(take Seeed Studio XIAO ESP32C3 as an example).
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/3.jpg" /></div>
+:::
 
-![image3](https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/3.jpg)
+### 4. Check the files changed locally
 
 Once you done updating, you can use the command below to see whether it shows fine.
 
@@ -49,7 +66,7 @@ On the local page:
 
 ![image5](https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/5.jpg)
 
-### 4. Save and push the changes to your forked github repository
+### 5. Save and push the changes to your forked github repository
 
 If all is ok, you can use the command below to push the changes to your forked github repository.
 
