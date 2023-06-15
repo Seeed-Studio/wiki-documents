@@ -97,7 +97,7 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
         <td>Microphone recording & SD card writing:  <br></br> - Type-C: <br></br> - - Average power consumption: 5V/<strong>46.5mA</strong> <br></br> - - Peak power consumption: 5V/<strong>89.6mA</strong> <br></br> - Battery: <br></br> - - Average power consumption: 3.8V/<strong>54.4mA</strong> <br></br> - - Peak power consumption: 3.8V/<strong>108mA</strong></td>
 	</tr>
     <tr>
-	    <td align="center">Charging battery current: <strong>50mA</strong></td>
+	    <td align="center">Charging battery current: <strong>100mA</strong></td>
 		<td align="center">Charging battery current: <strong>100mA</strong></td>
 	</tr>
     <tr>
