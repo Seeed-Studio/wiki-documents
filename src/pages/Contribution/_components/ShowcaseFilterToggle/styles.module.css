@@ -39,7 +39,11 @@
 	transform: translateX(calc(var(--width) / 2 - var(--border)));
 }
 
-input:focus-visible ~ .checkboxLabel::after {
+input.contribution_input {
+	display: none;
+}
+
+input.contribution_input:focus-visible ~ .checkboxLabel::after {
 	outline: 2px solid currentColor;
 }
 
@@ -48,6 +52,6 @@ input:focus-visible ~ .checkboxLabel::after {
 	transition: opacity 150ms ease-in 50ms;
 }
 
-input:checked ~ .checkboxLabel::after {
+input.contribution_input:checked ~ .checkboxLabel::after {
 	transform: translateX(calc(-1 * var(--border)));
 }
