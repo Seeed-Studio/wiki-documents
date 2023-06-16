@@ -423,6 +423,7 @@ const sidebars = {
               type: 'category',
               label: 'Display',
               items: [
+                'Sensor/Grove/Grove_Accessories/Display/Grove-1.2_inch_IPS_Display',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-4-Digit_Display',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-0.54_inch_Red_Dual_Alphanumeric_Display',
                 'Sensor/Grove/Grove_Accessories/Display/Grove-0.54_inch_Red_Quad_Alphanumeric_Display',
