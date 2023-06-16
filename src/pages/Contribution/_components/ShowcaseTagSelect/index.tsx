@@ -16,7 +16,7 @@ import React, {
 import { useHistory, useLocation } from '@docusaurus/router';
 import { toggleListItem } from '@site/src/utils/jsUtils';
 import type { TagType } from '../../../define/contribution'
-
+import clsx from 'clsx'
 import { prepareUserState } from '../../index';
 import styles from './styles.module.css';
 
@@ -66,7 +66,7 @@ function ShowcaseTagSelect(
       <input
         type="checkbox"
         id={id}
-        className="screen-reader-only"
+        className={clsx(styles.contribution_input, 'screen-reader-only')}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
             toggleTag();

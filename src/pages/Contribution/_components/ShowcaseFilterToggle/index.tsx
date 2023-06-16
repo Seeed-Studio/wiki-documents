@@ -49,14 +49,14 @@ export default function ShowcaseFilterToggle(): JSX.Element {
       <input
         type="checkbox"
         id={id}
-        className="screen-reader-only"
+        className={clsx(styles.contribution_input, 'screen-reader-only')}
         aria-label="Toggle between or and and for the tags you selected"
         onChange={toggleOperator}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
             toggleOperator();
           }
-        }}
+        }}ß
         checked={operator}
       />
       <label htmlFor={id} className={clsx(styles.checkboxLabel, 'shadow--md')}>
