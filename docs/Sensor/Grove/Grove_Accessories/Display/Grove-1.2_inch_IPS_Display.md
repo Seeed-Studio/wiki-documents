@@ -242,7 +242,6 @@ A: Please ensure the display is correctly initialized in your code and you're us
 ## Resources
 
 - **[ZIP]** [Eagle File for Grove-1.2 Inch IPS Display](https://files.seeedstudio.com/wiki/Grove-1.2inch-ips-display/Grove-RGB-OLED-Display-1.22(ST7789).rar)
-- **[PDF]** [Datasheet for the Display](https://files.seeedstudio.com/wiki/Grove-1.2inch-ips-display/datasheet_WLK1201SPI-4PIN.pdf)
 - **[PDF]** [ST7789 Spec](https://files.seeedstudio.com/wiki/Grove-1.2inch-ips-display/ST7789V_SPEC_V1.2.pdf)
 
 
