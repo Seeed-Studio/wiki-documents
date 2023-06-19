@@ -2508,6 +2508,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'SenseCAP AI',
+      items: [
+        'Cloud_Chain/SenseCAP_AI/How_to_Use SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP',
+      ],
+    },
+    {
+      type: 'category',
       label: 'SenseCAP API',
       items: [
         'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
