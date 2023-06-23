@@ -1,16 +1,19 @@
 ---
-name: Grove - Moisture Sensor
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html
-oldwikiname: Grove - Moisture Sensor
-prodimagename: Moisture_sensor_.jpg
-surveyurl: https://www.research.net/r/grove-moisture-sensor
-sku: 101020008
+description: // Este sensor de humedad puede ser utilizado para detectar la humedad en la tierra o juzgar si existe agua alrededor.
+title: // Sensor de HUmedad
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Moisture_Sensor_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernadez
+
 ---
 
 ![](https://github.com/SeeedDocument/Grove_Moisture_Sensor/raw/master/images/Moisture_sensor_.jpg)
 
-Ese sensor de humedad puede ser utilizado para detectar la humedad en la tierra o juzgar si existe agua alrededor, dejar una planta en tu jardín y darle la capacidad de solicitar ayuda humana cuando tenga sed. El sensor es muy simple de utilizar, puedes simplemente insertarlo en la tierra y leer los datos. Con este sensor, puedes crear pequeños proyectos que permitan a tu planta enviarte un mensaje como "Tengo sed, por favor dame un poco de agua". 
+Este sensor de humedad puede ser utilizado para detectar la humedad en la tierra o juzgar si existe agua alrededor, dejar una planta en tu jardín y darle la capacidad de solicitar ayuda humana cuando tenga sed. El sensor es muy simple de utilizar, puedes simplemente insertarlo en la tierra y leer los datos. Con este sensor, puedes crear pequeños proyectos que permitan a tu planta enviarte un mensaje como "Tengo sed, por favor dame un poco de agua". 
 
 <p style=":center"><a href="https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html" target="_blank"><img src="https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>
 

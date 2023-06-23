@@ -1,12 +1,14 @@
 ---
-name: Grove - Temperature&Humidity Sensor
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Temp&Humi-Sensor-p-745.html
-oldwikiname: Grove_-_Temperature&Humidity_Sensor
-prodimagename: Grove-TempAndHumiSensor.jpg
-bzprodimageurl: https://statics3.seeedstudio.com/images/101020011 1.jpg
-surveyurl: https://www.research.net/r/Grove-TemperatureAndHumidity_Sensor
-sku: 101020011
+description: // Este sensor de temperatura y humedad proporciona una salida digital precalibrada.
+title: // Sensor de temperatura y humedad
+keywords:
+// Grove，SenseCAP，reTerminal
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-TemperatureAndHumidity_Sensor_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
+
 ---
 
 ![](https://github.com/SeeedDocument/Grove-TemperatureAndHumidity_Sensor/raw/master/img/main.jpg)

@@ -1,11 +1,14 @@
 ---
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html
-oldwikiname: Grove - Ultrasonic Ranger
-prodimagename: 350px-Ultrasonic_Ranger.jpg
-surveyurl: https://www.research.net/r/Grove-Ultrasonic-Ranger
-sku: 101020010
-tags: io_3v3, io_5v, plat_duino, plat_pi
+description: // El Grove - Ultrasónico es un módulo medidor de distancia sin contacto que trabaja a 40KHz.
+title: // Grove - Ultrasónico
+keywords:
+//Enter the upper-level directory where the file is stored (Grove，SenseCAP，reTerminal...)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Ultrasonic_Ranger_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernadez
+
 ---
 ![](https://github.com/SeeedDocument/Grove_Ultrasonic_Ranger/raw/master/img/Ultrasonic.jpg)
 

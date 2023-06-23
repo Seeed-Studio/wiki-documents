@@ -1,12 +1,13 @@
 ---
-name: Grove - Vibration Sensor (SW-420)
-category: Sensor
-bzurl: 
-oldwikiname: 
-prodimagename:
-surveyurl: 
-sku: 101020586
-tags:
+description: // Is a high sensitivity non-directional vibration sensor.
+title: // The Grove - Vibration Sensor
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Vibration_Sensor_SW-420_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
 
 ![](https://github.com/SeeedDocument/Grove-Vibration_Sensor-SW-420/raw/master/img/main.jpg)

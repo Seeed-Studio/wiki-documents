@@ -1,12 +1,14 @@
 ---
-name: Grove-LED Button
-category: Acator
-bzurl: 
-oldwikiname: 
-prodimagename:
-surveyurl: 
-sku: 111020044,111020045,111020046
-tags: 2-链接 
+description: // El Grove - Botón LED está compuesto de Grove - Botón Amarillo, Grove - Botón Azul y Grove - Botón Rojo.
+title: // Grove - Botón LED 
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-LED_Button_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
+
 ---
 
 

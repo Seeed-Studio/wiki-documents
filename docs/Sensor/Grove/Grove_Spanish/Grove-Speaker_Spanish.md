@@ -1,15 +1,14 @@
 ---
-name: Grove - Speaker
-category: Actuator
-bzurl: https://seeedstudio.com/Grove-Speaker-p-1445.html
-oldwikiname: Grove_-_Speaker
-prodimagename: Grove_Speaker_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Grove Speaker.jpg
-surveyurl: https://www.research.net/r/Grove-Speaker
-sku: 107020001
-tags: grove_digital, io_5v, plat_duino, plat_wio
+description: // El módulo Grove - Altavoz consiste en amplificación de poder y salidad de voz.
+title: // Módulo Grove - Altavoz
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Speaker_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
-
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Speaker/master/img/Grove_Speaker_01.jpg)
 
 El módulo Grove - Altavoz consiste en amplificación de poder y salidad de voz. El volumen de salida puede ser ajustado con el potenciometro <em>On-Board</em>. Con distintas frecuencias de entrada, el altavoz genera distintos tonos. Crea tu música con Arduino ¡DIY tu propia caja de música!

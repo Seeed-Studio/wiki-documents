@@ -1,15 +1,14 @@
 ---
-name: Grove - Flame Sensor
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Flame-Sensor-p-1450.html
-oldwikiname: Grove_-_Flame_Sensor
-prodimagename: Flame_Sensor_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/Flame Sensor.jpg
-surveyurl: https://www.research.net/r/Grove-Flame_Sensor
-sku: 101020049
-tags: grove_digital, io_5v, plat_duino, plat_linkit
+description: //El Sensor de Flama - Grove puede utilizarse para detectar fuentes de incendio u otras fuentes de luz siempre que su longitud de onda esté en un rango de 760nm - 1100 nm.
+title: // Sensor de Flama
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Flame_Sensor_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
-
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Flame_Sensor/master/img/Flame_Sensor_01.jpg)
 

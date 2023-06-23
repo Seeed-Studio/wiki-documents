@@ -1,12 +1,14 @@
 ---
-name: Grove - 16 x 2 LCD
-category: Display
-bzurl: 
-oldwikiname: 
-prodimagename:
-surveyurl: 
-sku: 104020111,104020112,104020113
-tags:
+description: // El ha sido bien recibido desde su comienzo. Basado en las retroalimentaciones de los clientes, ahora brindamos una mayor relación costo-beneficio con una luz de fondo monocromática para ti.
+title: // Grove- LCD RGB
+keywords:
+//Grove, LCD, Amarillo, Rojo, Azul
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-16x2_LCD_Series_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 ![](https://github.com/SeeedDocument/Grove-16x2_LCD_Series/raw/master/img/main.jpg)

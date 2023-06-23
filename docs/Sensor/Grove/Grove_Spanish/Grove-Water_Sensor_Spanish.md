@@ -1,13 +1,13 @@
 ---
-name: Grove - Water Sensor
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Water-Sensor-p-748.html
-oldwikiname: Grove_-_Water_Sensor
-prodimagename: Grove-Water_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020018 1.jpg
-surveyurl: https://www.research.net/r/Grove-Water_Sensor
-sku: 101020018
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
+description: // El Módulo sensor de agua es parte de sistema Grove. Indica si el sensor se encuentra seco, húmedo o completamente sumergido en agua midiendo la conductividad.
+title: // Water Sensor
+keywords:
+//Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Water_Sensor_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Water_Sensor/master/img/Grove-Water_Sensor_1.png)

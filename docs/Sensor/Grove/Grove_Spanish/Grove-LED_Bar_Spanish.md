@@ -1,13 +1,14 @@
 ---
-name: Grove - LED Bar
-category: Display
-bzurl: https://seeedstudio.com/Grove-LED-Bar-p-1178.html
-oldwikiname: Grove_-_LED_Bar
-prodimagename: Grove-LED_Bar-1.jpg
-surveyurl: https://www.research.net/r/Grove-LED_Bar
-sku: 104030002
+description: // El Grove - Barra LED es un compuesto de 10 segmentos LED en forma de barra medidora y un chip de control MY92221.
+title: // Led bar 
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-LED_Bar_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
-
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-LED_Bar/master/img/Grove-LED_Bar-1.jpg)
 
 El Grove - Barra LED es un compuesto de 10 segmentos LED en forma de barra medidora y un chip de control MY92221. Este módulo podría ser usado como indicador mostrando el nivel de una batería, voltaje, nivel del agua, volumen de música, entre muchas otras aplicaciones que requieran una pantalla gradiente. Hay 10 barras LED en módulo Grove: Uno rojo, uno amarillo, uno ligeramente verde, y siete completamente verdes. El código LED esta disponible para ayudarte a usarlo rápidamente. Este enciende los LEDs de manera secuencial del rojo al verde, por lo tanto la barra completa queda encendida al final. ¿Quieres llegar más lejos? ¡Ve y crea tus propios efectos!

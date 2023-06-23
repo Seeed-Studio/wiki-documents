@@ -1,13 +1,14 @@
 ---
-name: Grove - Light Sensor
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Light-Sensor-(P)-v1.1-p-2693.html
-oldwikiname: Grove_-_Light_Sensor
-prodimagename: cover.jpg
-sku: 101020173
-tags: io_3v3, io_5v, plat_duino, plat_wio, plat_pi, plat_bbg, plat_linkit
+description: // EL Grove - Sensor de Luz integra una fotoresistencia (Resistencia dependiente a la luz) para detectar la intensidad de la luz.
+title: // Light Sensor
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Light_Sensor_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
-
 
 ![enter image description here](https://raw.githubusercontent.com/SeeedDocument/Grove_Light_Sensor/master/images/cover.jpg)
 

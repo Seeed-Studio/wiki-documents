@@ -1,13 +1,14 @@
 ---
-name: Grove - Buzzer
-category: Actuator
-bzurl: https://www.seeedstudio.com/Grove-Buzzer-p-768.html
-oldwikiname: Grove - Buzzer
-prodimagename: Grove%20Buzzer.jpg
-surveyurl: https://www.surveymonkey.com/r/grove-buzzer
-sku: 107020000
+description: // El Zumbador - Grove tiene un zumbador piezoeléctrico  como componente principal.
+title: // Zumbador-Grove
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Buzzer_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
-
 
 ![](https://github.com/SeeedDocument/Grove_Buzzer/raw/master/images/Grove%20Buzzer.jpg)
 

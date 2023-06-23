@@ -1,12 +1,14 @@
 ---
-name: Grove - Temperature Sensor V1.2
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html
-oldwikiname: Grove - Temperature Sensor V1.2
-prodimagename: Grove_Temperature_Sensor_View.jpg
-surveyurl: https://www.surveymonkey.com/r/Grove-Temperature_Sensor_V1-2
-sku: 101020015
-tags: io_3v3, io_5v, plat_duino
+description: // El Grove - Sensor de Temperatura utiliza Termistor para detectar la temperatura ambiente.
+title: // Grove Sensor de Temperatura
+keywords:
+//Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Temperature_Sensor_V1.2_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 

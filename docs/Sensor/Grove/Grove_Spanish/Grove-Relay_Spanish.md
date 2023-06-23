@@ -1,12 +1,14 @@
 ---
-name: Grove - Relay
-category: Actuator
-bzurl: https://www.seeedstudio.com/Grove-Relay-p-769.html
-oldwikiname:
-prodimagename: Twig-Relay.jpg
-surveyurl: https://www.surveymonkey.com/r/Grove_Relay
-sku: 103020005
-tags: io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg, plat_pi,plat_wio
+description: // El Grove - Módulo Relevador es un interruptor digital normalmente-abierto.
+title: //Grove - Módulo Relevador
+keywords:
+//Enter the upper-level directory where the file is stored (Grove, Modulo, interruptor, circuitos)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Relay_Spanish.md
+last_update:
+  date: // 06/20/23
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 

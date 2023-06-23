@@ -1,13 +1,13 @@
 ---
-name: Grove - Rotary Angle Sensor
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Rotary-Angle-Sensor-p-770.html
-oldwikiname: Grove_-_Rotary_Angle_Sensor
-prodimagename: Grove-Rotary_Angle_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020017 1.jpg
-surveyurl: https://www.research.net/r/Grove-Rotary_Angle_Sensor
-sku: 101020017
-tags: grove_analog, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg, plat_wio, plat_pi
+description: // El Sensor Rotatorio produce una salida analógica entre 0 y VCC (5V DC con el Seeeduino) en el conector D1.
+title: // Sensor Rotatorio
+keywords:
+//Enter the upper-level directory where the file is stored (Grove，Sensor, Angle,Rotary,Seeeduino)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Rotary_Angle_Sensor_Spanish.md
+last_update:
+  date: // 06/20/23
+  author: // Mario Andres De los Santos Hernandez
 ---
 
 ![](https://github.com/SeeedDocument/Grove-Rotary_Angle_Sensor/raw/master/img/rotary.jpg)

@@ -1,13 +1,14 @@
 ---
-name: Grove - Infrared Emitter
-category: Actuator
-bzurl: https://seeedstudio.com/Grove-Infrared-Emitter-p-993.html
-oldwikiname: Grove_-_Infrared_Emitter
-prodimagename: Grove-Infrared_Emitter.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020026 1.jpg
-surveyurl: https://www.research.net/r/Grove-Infrared_Emitter
-sku: 101020026
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_wio
+description: //El Emisor Infrarrojo es usado para transmitir señales infrarrojas a través de un LED Infrarrojo
+title: // Emisor Infrarrojo 
+keywords:
+// Grove-Infrared
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Infrared_Emiter_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 ![](https://github.com/SeeedDocument/Grove-Infrared_Emitter/raw/master/img/main.jpg)

@@ -1,3 +1,15 @@
+---
+description: // Grove Beginner Kit para Arduino es uno de los mejores kits introductorios a la plataforma de Arduino. Incluye una tarjeta de desarrollo complatible con Arduino y 10 sensores adicionales, todo en un solo PCB.
+title: // Baeginner Kit for Arduino
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Beginner-Kit-For-Arduino_Español
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+---
+
 # Grove Beginner Kit para Arduino
 
 Grove Beginner Kit para Arduino es uno de los mejores kits introductorios a la plataforma de Arduino. Incluye una tarjeta de desarrollo complatible con Arduino y 10 sensores adicionales, todo en un solo PCB. **Todos los módulos se encuentran conectados al Seeeduino por medio de <em>Stamp holes</em> en el PCB, por ello no es necesario utlizar cables Grove**. Por supuesto, puede retirar los módulos y utilizarlos por medio de cables Grove. Podrá crear cualquier proyecto que quiera con el Grove Beginner Kit para Arduino.

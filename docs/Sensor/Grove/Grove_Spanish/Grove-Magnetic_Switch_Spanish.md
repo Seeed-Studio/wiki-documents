@@ -1,13 +1,13 @@
 ---
-name: Grove - Magnetic Switch
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Magnetic-Switch-p-744.html
-oldwikiname: Grove_-_Magnetic_Switch
-prodimagename: Magnetic_Switch.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020038 1.jpg
-surveyurl: https://www.research.net/r/Grove-Magnetic_Switch
-sku: 101020038
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_bbg, plat_wio
+description: // Este es un módulo de Interruptor Magnético compatible con la plataforma Grove.
+title: // Modulo Magnetico
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Magnetic_Switch_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Magnetic_Switch/master/img/45d.jpg)

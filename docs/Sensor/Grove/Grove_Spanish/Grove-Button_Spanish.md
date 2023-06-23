@@ -1,11 +1,13 @@
 ---
-name: Grove - Button
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Button-p-766.html
-oldwikiname: Grove - Button
-prodimagename: Button.jpg
-surveyurl: https://www.surveymonkey.com/r/grove-button
-sku: 101020003
+description: //Grove - Botón es un botón de pulso momentario. Contiene un "momentario on/off" independiente.
+title: // Boton de pulso momentario
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: //Grove-Button_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernadez 
 ---
 
 ![](https://github.com/SeeedDocument/Grove_Button/raw/master/img/Button.jpg)

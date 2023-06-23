@@ -1,12 +1,15 @@
 ---
-name: Grove - Line Finder
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-Line-Finder-v1.1-p-2712.html
-oldwikiname: Grove - Line Finder
-prodimagename: Grovelinefinder1.jpg
-surveyurl: https://www.research.net/r/grove-line-finder
-sku: 101020009
+description: // El Seguidor de línea - Grove está diseñado para robot seguidor de línea.
+title: // Seguidor de linea
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Line_Finder_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
 ---
+
 
 
 ![](https://github.com/SeeedDocument/Grove_Line_Finder/raw/master/images/Grovelinefinder1.jpg)

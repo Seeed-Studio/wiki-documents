@@ -1,12 +1,15 @@
 ---
-name: Grove Creator Kit 
-category: Others
-bzurl:  
-oldwikiname:  
-prodimagename:
-surveyurl: 
-sku: 
+description: // Grove Creator Kit - ¡Aprende, Construye y Explora!
+title: // Grove Creator Kit - ¡Aprende, Construye y Explora!
+keywords:
+//(Grove，Kits，Electronica...)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Creator-Kit Wiki landing_Español.md
+last_update:
+  date: //06/20/2023
+  author: // Mario Andres De los Santos Hernandez
 ---
+
 
 
 ## Grove Creator Kit - ¡Aprende, Construye y Explora!

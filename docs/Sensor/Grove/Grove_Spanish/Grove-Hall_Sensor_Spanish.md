@@ -1,13 +1,14 @@
 ---
-name: Grove - Hall Sensor
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Hall-Sensor-p-965.html
-oldwikiname: Grove_-_Hall_Sensor
-prodimagename: Grove-Hall_Sensor_New.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/hall sensor.jpg
-surveyurl: https://www.research.net/r/Grove-Hall_Sensor
-sku: 101020046
-tags: grove_digital, io_5v, plat_duino, plat_linkit
+description: // El sensor Hall está basado en el efecto Hall, el cual es producto de la diferencia de voltaje a tráves de un conductor eléctrico
+title: // Hall Sensor
+keywords:
+//(Grove-Hall)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Hall_Sensor_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
+
 ---
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Hall_Sensor/master/img/Grove-Hall_Sensor_New.jpg)

@@ -1,13 +1,13 @@
 ---
-name: Grove - Chainable RGB LED
-category: Actuator
-bzurl: https://seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html
-oldwikiname: Grove_-_Chainable_RGB_LED
-prodimagename: Chanbalelednb1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/chanbalelednb1.jpg
-surveyurl: https://www.research.net/r/Grove-Chainable_RGB_LED
-sku: 104030006
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_bbg
+description: // LED RGB Encadenable - Grove está basado en el chip P9813, que es un controlador LED de todos los colores.
+title: //LED RGB Encadenable - Grove
+keywords: // Grove，Chainable, LED, RGB,Spanish
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Chainable_RGB_LED_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 ![](https://github.com/SeeedDocument/Grove-Chainable_RGB_LED/raw/master/img/Grove-Chainable_RGB_LED_V2.0.jpg)

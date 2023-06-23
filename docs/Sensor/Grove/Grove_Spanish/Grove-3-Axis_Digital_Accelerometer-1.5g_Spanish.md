@@ -1,13 +1,14 @@
 ---
-name: Grove - 3-Axis Digital Accelerometer(±1.5g)
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-3-Axis-Digital-Accelerometer(±1.5g)-p-765.html
-oldwikiname: Grove_-_3-Axis_Digital_Accelerometer(±1.5g)
-prodimagename: 3_aix_acc.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020039 1.jpg
-surveyurl: https://www.research.net/r/Grove-3-Axis_Digital_Accelerometer-1_5g
-sku: 101020039
-tags: grove_i2c, io_3v3, io_5v, plat_duino, plat_linkit, plat_wio
+description: // l Acelerómetro Digital de 3-Ejes es una parte clave en proyectos de detección de orientación, gestos y movimiento.
+title: //Grove - Acelerómetro Digital de 3-Ejes
+keywords:
+//Grove, Spanish, Acelerometro, Velocidad
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-3-Axis_Digital_Accelerometer
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 <table>

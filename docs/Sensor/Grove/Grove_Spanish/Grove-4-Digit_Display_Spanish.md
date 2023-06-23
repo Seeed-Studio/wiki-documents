@@ -1,13 +1,14 @@
 ---
-name: Grove - 4-Digit Display
-category: Display
-bzurl: https://seeedstudio.com/Grove-4-Digit-Display-p-1198.html
-oldwikiname: Grove_-_4-Digit_Display
-prodimagename: Grove-4_digit_display.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/4-Digital Display.jpg
-surveyurl: https://www.research.net/r/Grove-4-Digit_Display
-sku: 104030003
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_wio
+description: // El Display de 4 Segmentos - Grove es un módulo de 12 pines.
+title: // Display de 4 Segmentos
+keywords:
+// Grove，Display, pines, Arduino, Seeeduino
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-4-Digit_Display_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: //Mario Andres De los Santos Hernandez 
+
 ---
 
 [![](https://raw.githubusercontent.com/SeeedDocument/Grove-4-Digit_Display/master/img/Grove-4_digit_display.jpg)](http://www.seeedstudio.com/depot/grove-4digital-display-p-1198.html)

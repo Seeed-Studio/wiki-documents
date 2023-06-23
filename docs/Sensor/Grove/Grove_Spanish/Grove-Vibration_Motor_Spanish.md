@@ -1,13 +1,14 @@
 ---
-name: Grove - Vibration Motor
-category: Actuator
-bzurl: https://seeedstudio.com/Grove-Vibration-Motor-p-839.html
-oldwikiname: Grove_-_Vibration_Motor
-prodimagename: Gvib.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/gvib.jpg
-surveyurl: https://www.research.net/r/Grove-Vibration_Motor
-sku: 105020003
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
+description: // Este es un mini motor vibrador adaptado como indicador no audible.
+title: // Vibration Motor
+keywords:
+//Enter the upper-level directory where the file is stored (Grove，Motor, Vibracion)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Vibration_Motor_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Vibration_Motor/master/img/Gvib.jpg)

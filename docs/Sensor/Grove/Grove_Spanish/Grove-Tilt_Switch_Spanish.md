@@ -1,13 +1,14 @@
 ---
-name: Grove - Tilt Switch
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Tilt-Switch-p-771.html
-oldwikiname: Grove_-_Tilt_Switch
-prodimagename: Tilt1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/gbtlt.jpg
-surveyurl: https://www.research.net/r/Grove-Tilt_Switch
-sku: 101020025
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_pi, plat_bbg
+description: // El Grove - Interruptor de Inclinación (Grove-Tilt Switch) es equivalente a un botón, y es usando cómo una entrada digital. 
+title: // Grove - Interruptor de Inclinación
+keywords:
+//Enter the upper-level directory where the file is stored (Grove，Switch, Entrada digital)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Tilit_Switch_Spanish.md
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez
+
 ---
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Tilt_Switch/master/img/Tilt1.jpg)

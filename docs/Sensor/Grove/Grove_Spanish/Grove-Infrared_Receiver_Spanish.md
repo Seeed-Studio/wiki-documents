@@ -1,13 +1,14 @@
 ---
-name: Grove - Infrared Receiver
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Infrared-Receiver-p-994.html
-oldwikiname: Grove_-_Infrared_Receiver
-prodimagename: Grove-Infrared_Receiver.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020016 1.jpg
-surveyurl: https://www.research.net/r/Grove-Infrared_Receiver
-sku: 101020016
-tags: grove_digital, io_3v3, io_5v, plat_duino
+description: // El Receptor Infrarrojo es usado para recibor señales infrarojas e incluso como detención de control remoto.
+title: // Infrares Receiver
+keywords:
+//(Grove)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Infrared_Receiver_Spanish
+last_update:
+  date: // 06/2-/2023
+  author: // Mario Andres De los Santos Hernandez 
+
 ---
 
 ![](https://github.com/SeeedDocument/Grove-Infrared_Receiver/raw/master/img/Grove-Infrared_Receiver.jpg)

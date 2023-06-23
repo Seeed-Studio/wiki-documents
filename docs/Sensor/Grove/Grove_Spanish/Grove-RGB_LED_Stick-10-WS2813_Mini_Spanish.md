@@ -1,12 +1,14 @@
 ---
-name: Grove - RGB LED Stick (10 WS2813 Mini)
-category: Sensor
-bzurl: 
-oldwikiname: 
-prodimagename:
-surveyurl: 
-sku: 104020131
-tags:
+description: // Hemos integrado 10 LEDs RGB full-color en esta barra, con un solo pin de señal podrás controlar los 10 LED integrados con gran facilidad. 
+title: // RGB LED Stick 
+keywords:
+//Enter the upper-level directory where the file is stored (Grove，SenseCAP，reTerminal...)
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-RGB_LED_Stick-10-WS2813_Mini_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
+
 ---
 
 ![](https://github.com/SeeedDocument/Grove-RGB_LED_Stick-10-WS2813_Mini/raw/master/img/main.jpg)

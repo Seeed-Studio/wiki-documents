@@ -1,14 +1,14 @@
 ---
-name: Grove - PIR Motion Sensor
-category: Sensor
-bzurl: https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html
-oldwikiname: Grove - PIR Motion Sensor
-prodimagename: Breakout_for_LinkIt_Smart_7688_v2.0_product_view_700.jpg
-surveyurl: https://www.surveymonkey.com/r/grove-pir-motion-sensor
-sku: 101020020
-tags: io_3v3, io_5v, plat_duino, plat_pi
+description: // Este sensor permite detectar el movimiento, generalmente humano, que se encuentre en su rango. 
+title: // Motion Sensor 
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-PIR_Motion_Sensor_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
-
 
 ![](https://github.com/SeeedDocument/Grove_PIR_Motion_Sensor/raw/master/img/Grove_-_PIR_Motion_Sensor.jpg)
 

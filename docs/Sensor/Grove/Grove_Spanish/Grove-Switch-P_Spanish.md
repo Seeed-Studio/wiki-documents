@@ -1,14 +1,15 @@
 ---
-name: Grove - Switch(P)
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Switch(P)-p-1252.html
-oldwikiname: Grove_-_Switch(P)
-prodimagename: GroveSwitchP_01.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/GroveSwitchP.jpg
-surveyurl: https://www.research.net/r/Grove-Switch-P
-sku: 101020004
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
+description: // El Switch - Grove es un mini SPDT deslizable, ideal para situaciones de "ENCENDIDO/APAGADO".
+title: // Switch P
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Switch-P_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernadez 
 ---
+
 
 ![](https://github.com/SeeedDocument/Grove-Switch-P/raw/master/img/switch_p.jpg)
 

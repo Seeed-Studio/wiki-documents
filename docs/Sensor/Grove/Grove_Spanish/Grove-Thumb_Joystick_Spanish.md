@@ -1,14 +1,15 @@
 ---
-name: Grove - Thumb Joystick
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Thumb-Joystick-p-935.html
-oldwikiname: Grove_-_Thumb_Joystick
-prodimagename: Bgjoy1.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/product/bgjoy1.jpg
-surveyurl: https://www.research.net/r/Grove-Thumb_Joystick
-sku: 101020028
-tags: grove_analog, io_3v3, io_5v, plat_duino,plat_pi
+description: // Joystick de Pulgar es un módulo compatible con la linea Grove, el cual es muy similar al Joystick en el control del PS2 (PlayStation 2). 
+title: // Thumb joystick 
+keywords:
+//Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Thumb_Joystick_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
+
 
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Thumb_Joystick/master/img/Bgjoy1.jpg)
 

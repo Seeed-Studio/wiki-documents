@@ -1,15 +1,14 @@
 ---
-name: Grove - Touch Sensor
-category: Sensor
-bzurl: https://seeedstudio.com/Grove-Touch-Sensor-p-747.html
-oldwikiname: Grove_-_Touch_Sensor
-prodimagename: Grove-Touch_Sensor.jpg
-bzprodimageurl: http://statics3.seeedstudio.com/images/101020037 1.jpg
-surveyurl: https://www.research.net/r/Grove-Touch_Sensor
-sku: 101020037
-tags: grove_digital, io_3v3, io_5v, plat_duino, plat_linkit, plat_pi, plat_bbg
+description: // El Sensor Touch - Grove permite reemplazar la presión con el contacto.
+title: // Sensor Touch
+keywords:
+// Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: // Grove-Touch_Sensor_Spanish
+last_update:
+  date: // 06/20/2023
+  author: // Mario Andres De los Santos Hernandez 
 ---
-
 ![](https://raw.githubusercontent.com/SeeedDocument/Grove-Touch_Sensor/master/img/surface.jpg)
 
 El Sensor Touch - Grove permite reemplazar la presión con el contacto. Puede detectar el cambio de capacitancia cuando un dedo está cerca, así que no importa si lo está tocando directamente o sólo permanece cerca, el sensor emitirá HIGH. 
