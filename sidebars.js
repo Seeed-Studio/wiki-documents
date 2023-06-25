@@ -27,6 +27,29 @@ const sidebars = {
     'weekly_wiki',
 
     // {
+    //   type: 'category',
+    //   label: 'FAQ',
+    //   items: [
+    //     'FAQ/reTerminal/reterminal_black_screen',
+    //     'FAQ/reTerminal/flash_different_os_to_emmc',
+    //     'FAQ/reTerminal/log_rpios_use_ssh_over_wifi_ethernet',
+    //     'FAQ/reTerminal/upgrade-rpiOS_installed-packages',
+    //     'FAQ/reTerminal/flashing_os_on_non-eMMC_CM4_replacement',
+    //     'FAQ/reTerminal/Logging_in_OS_using_USB_to_serial_converter',
+    //     'FAQ/reTerminal/Wakeup_reTerminal_LCD_after_sleep',
+    //     'FAQ/reTerminal/Boot_OS_from_USB_flash_drive',
+    //     'FAQ/reTerminal/black_glue_around_CM4',
+    //     'FAQ/reTerminal/buzzer-leds-not-work_by_drivers',
+    //     'FAQ/reTerminal/install-ubuntu-on-reterminal',
+    //     'FAQ/reTerminal/Incorrect_screen_orientation_on_RPiOS_Bullseye',
+    //     'FAQ/reTerminal/troubleshooting-touch-screen-inaccuracy',
+    //     'FAQ/reTerminal/check_Encryption_Chip',
+    //     'FAQ/reTerminal/disable_screen_rotation_on_reTerminal',
+    //   ]
+    // },
+
+
+    // {
 
     //   type: 'doc',
     //   label: '--Sensor--',
@@ -603,10 +626,10 @@ const sidebars = {
                   type: 'category',
                   label: 'OpenAI X SenseCAP Indicator',
                   items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
                   ],
                 },
               ],
@@ -636,14 +659,14 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
                     'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
                     'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
-                {
-                  type: 'category',
-                  label: 'Grove',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
-                  ],
-                },
+                    {
+                      type: 'category',
+                      label: 'Grove',
+                      items: [
+                        'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
+                        'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
+                      ],
+                    },
                   ],
                 },
               ],
@@ -653,8 +676,8 @@ const sidebars = {
               type: 'category',
               label: 'Application',
               items: [
-                  'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
-                  'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
               ],
             },
           ],
@@ -2153,7 +2176,7 @@ const sidebars = {
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
             'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
           ],
-        },        
+        },
         {
           type: 'category',
           label: 'SenseCraft_Edge',
