@@ -2018,6 +2018,7 @@ const sidebars = {
             'Network/LinkStar/Application/h68k-ha-esphome',
             'Network/LinkStar/Application/plex_media_server',
             'Network/LinkStar/Application/wordpress_linkstar',
+            'Network/LinkStar/Application/grocy-bookstack-linkstar'
 
           ]
         }
