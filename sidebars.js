@@ -26,27 +26,47 @@ const sidebars = {
     'Getting_Started',
     'weekly_wiki',
 
-    // {
-    //   type: 'category',
-    //   label: 'FAQ',
-    //   items: [
-    //     'FAQ/reTerminal/reterminal_black_screen',
-    //     'FAQ/reTerminal/flash_different_os_to_emmc',
-    //     'FAQ/reTerminal/log_rpios_use_ssh_over_wifi_ethernet',
-    //     'FAQ/reTerminal/upgrade-rpiOS_installed-packages',
-    //     'FAQ/reTerminal/flashing_os_on_non-eMMC_CM4_replacement',
-    //     'FAQ/reTerminal/Logging_in_OS_using_USB_to_serial_converter',
-    //     'FAQ/reTerminal/Wakeup_reTerminal_LCD_after_sleep',
-    //     'FAQ/reTerminal/Boot_OS_from_USB_flash_drive',
-    //     'FAQ/reTerminal/black_glue_around_CM4',
-    //     'FAQ/reTerminal/buzzer-leds-not-work_by_drivers',
-    //     'FAQ/reTerminal/install-ubuntu-on-reterminal',
-    //     'FAQ/reTerminal/Incorrect_screen_orientation_on_RPiOS_Bullseye',
-    //     'FAQ/reTerminal/troubleshooting-touch-screen-inaccuracy',
-    //     'FAQ/reTerminal/check_Encryption_Chip',
-    //     'FAQ/reTerminal/disable_screen_rotation_on_reTerminal',
-    //   ]
-    // },
+    {
+      type: 'category',
+      label: 'FAQ',
+      items: [
+
+        {
+          type: 'category',
+          label: 'reterminal',
+          items: [
+            'FAQ/reTerminal/reterminal_black_screen',
+            'FAQ/reTerminal/flash_different_os_to_emmc',
+            'FAQ/reTerminal/log_rpios_use_ssh_over_wifi_ethernet',
+            'FAQ/reTerminal/upgrade-rpiOS_installed-packages',
+            'FAQ/reTerminal/flashing_os_on_non-eMMC_CM4_replacement',
+            'FAQ/reTerminal/Logging_in_OS_using_USB_to_serial_converter',
+            'FAQ/reTerminal/Wakeup_reTerminal_LCD_after_sleep',
+            'FAQ/reTerminal/Boot_OS_from_USB_flash_drive',
+            'FAQ/reTerminal/black_glue_around_CM4',
+            'FAQ/reTerminal/buzzer-leds-not-work_by_drivers',
+            'FAQ/reTerminal/install-ubuntu-on-reterminal',
+            'FAQ/reTerminal/Incorrect_screen_orientation_on_RPiOS_Bullseye',
+            'FAQ/reTerminal/troubleshooting-touch-screen-inaccuracy',
+            'FAQ/reTerminal/check_Encryption_Chip',
+            'FAQ/reTerminal/disable_screen_rotation_on_reTerminal',
+
+          ],
+        },
+        {
+          type: 'category',
+          label: 'ODYSSEY',
+          items: [
+            'FAQ/ODYSSEY/Troubleshooting_BIOS-Related_Issues',
+            'FAQ/ODYSSEY/not_recognize-onboard-microcontroller',
+            'FAQ/ODYSSEY/upgrade_BIOS',
+            'FAQ/ODYSSEY/Power_button',
+            'FAQ/ODYSSEY/reinstall_the_Original_Windows',
+          ]
+        }
+
+      ]
+    },
 
 
     // {
