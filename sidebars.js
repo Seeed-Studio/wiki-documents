@@ -2165,7 +2165,6 @@ const sidebars = {
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
-        // 'Edge/reTerminal-DM/reterminal-dm-sensecraft-edge-os-intro',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
         'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
         {
@@ -2307,7 +2306,15 @@ const sidebars = {
       type: 'category',
       label: 'Edge Series',
       items: [
-        'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+
+        {
+          type: 'category',
+          label: 'EdgeBox-RPI-200',
+          items: [
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+          ],
+        },
         {
           type: 'category',
           label: 'EdgeBox-ESP-100',
