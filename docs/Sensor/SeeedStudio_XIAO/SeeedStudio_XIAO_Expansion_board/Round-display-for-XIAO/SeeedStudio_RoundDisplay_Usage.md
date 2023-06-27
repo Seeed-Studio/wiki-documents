@@ -869,9 +869,9 @@ Upload the program and you will see the dial that automatically goes according t
 
 The Round Display supports the use of microSD cards to read and write data. Before using the microSD card, please format the microSD card to **FAT32** format to make sure it can be recognized and used properly.
 
-### All XIAO series
+### All XIAO series (In addition to the XIAO nRF52840 series)
 
-This section applies to all of XIAO, which is a simple program for reading and writing files.
+This section applies to all of XIAO (In addition to the XIAO nRF52840 series), which is a simple program for reading and writing files.
 
 ```cpp
 #include <SPI.h>
@@ -946,6 +946,77 @@ You will find that the screen TFT initialization is used in the program for the 
 
 Due to the hardware design, some of the pins are low by default, which will cause the microSD mount program to think there is no pull-up resistor causing the mount to fail. So when using the SD card function with Round Display, please make sure to initialize the screen display before initializing the SD card.
 :::
+
+### XIAO nRF52840
+
+If you are using the XIAO nRF52840 series then you may need to download the [SdFat library](https://github.com/greiman/SdFat) separately in order to use the SD card function.
+
+```cpp
+#include <SPI.h>
+#include "SdFat.h"
+#include <TFT_eSPI.h>
+
+TFT_eSPI tft = TFT_eSPI();
+SdFat SD;
+
+#define SD_CS_PIN D2
+File myFile;
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+
+  // Display initialization
+  tft.init();
+
+  Serial.print("Initializing SD card...");
+
+  if (!SD.begin(SD_CS_PIN)) {
+    Serial.println("initialization failed!");
+    return;
+  }
+  Serial.println("initialization done.");
+
+  // open the file. note that only one file can be open at a time,
+  // so you have to close this one before opening another.
+  myFile = SD.open("/test.txt", FILE_WRITE);
+
+  // if the file opened okay, write to it:
+  if (myFile) {
+    Serial.print("Writing to test.txt...");
+    myFile.println("testing 1, 2, 3.");
+    // close the file:
+    myFile.close();
+    Serial.println("done.");
+  } else {
+    // if the file didn't open, print an error:
+    Serial.println("error opening test.txt");
+  }
+
+  // re-open the file for reading:
+  myFile = SD.open("test.txt");
+  if (myFile) {
+    Serial.println("test.txt:");
+
+    // read from the file until there's nothing else in it:
+    while (myFile.available()) {
+      Serial.write(myFile.read());
+    }
+    // close the file:
+    myFile.close();
+  } else {
+    // if the file didn't open, print an error:
+    Serial.println("error opening test.txt");
+  }
+}
+
+void loop() {
+  // nothing happens after setup
+}
+```
 
 ### XIAO ESP32S3 & XIAO ESP32S3 Sense & XIAO ESP32C3
 
