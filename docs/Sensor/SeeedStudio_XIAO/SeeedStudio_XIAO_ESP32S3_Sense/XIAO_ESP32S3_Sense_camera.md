@@ -679,6 +679,10 @@ Since this project will use Round Display for XIAO, please read the contents of 
 
 Since the XIAO EPS32S3 Sense is designed with three pull-up resistors R4~R6 connected to the SD card slot, and the round display also has pull-up resistors, the SD card cannot be read when both are used at the same time. To solve this problem, we need to cut off J3 on the XIAO ESP32S3 Sense expansion board.
 
+:::tip
+However, **we need to thank engineer Mjrovai for the new method of using the microSD card slot on the XIAO ESP32S3 Sense at the same time**, which is also possible at software level. We can refer to **[his methods and procedures](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:500, height:'auto'}}/></div>
 
 After disconnecting J3, the SD card slot on XIAO ESP32S3 Sense will not work properly, so you need to insert a microSD card into the SD card slot on the Round Display.
@@ -1299,13 +1303,13 @@ Oh, my big face is circled.
 
 ### Q1: When XIAO ESP32S3 Sense and Round Display are used together, do I have to cut the J3 pin? Which SD card slot can be used?
 
-A: If you want to use a microSD card, then you have to cut the J3 pin when XIAO ESP32S3 Sense is used together with Round Display. The reason is that there are pull-up resistors in the design of the circuit of both expansion boards, so theoretically, if two pull-up resistors work at the same time, then the SD card slot will not work properly. An error message of SD card mount failure will appear. Since the pull-up resistor on the Round Display cannot be blocked, you need to cut J3 on the sense expansion board to make sure only one pull-up resistor is working when the two are used together. This also determines that when both are used together, there is and only the SD card slot on the Round Display is active.
+A: In principle, you need to cut the J3 pin when XIAO ESP32S3 Sense is used together with Round Display to use microSD card. The reason is that there are pull-up resistors in the design of the circuit of both expansion boards, so theoretically, if two pull-up resistors work at the same time, then the SD card slot will not work properly. An error message of SD card mount failure will appear. Since the pull-up resistor on the Round Display cannot be blocked, you need to cut J3 on the sense expansion board to make sure only one pull-up resistor is working when the two are used together. This also determines that when both are used together, there is and only the SD card slot on the Round Display is active.
+
+However, **we need to thank engineer Mjrovai for the new method of using the microSD card slot on the XIAO ESP32S3 Sense at the same time**, which is also possible at software level. We can refer to **[his methods and procedures](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
 
 
 
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

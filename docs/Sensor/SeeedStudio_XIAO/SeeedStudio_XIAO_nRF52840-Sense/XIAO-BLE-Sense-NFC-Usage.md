@@ -20,11 +20,11 @@ Both the **Seeed Studio XIAO nRF52840** and **Seeed Studio XIAO nRF52840 Sense**
 
 ## Preparatory work
 
-> The NFC function will perform well when we use the "Seeed nRF52 Boards Library".
+> The NFC function will perform well when we use the "Seeed nRF52 mbed-enabled Boards Library".
 
 For the board libraries installation, please refer to [this tutorial](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup) to finish installation. If you have already installed, we can move on and process the project.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" /></div>
 
 
 ## Hardware required
@@ -51,7 +51,7 @@ Solder the NFC antenna to the Seeed Studio XIAO nRF52840 (Sense) as follows:
 - **Step 1.** Open Arduino IDE and upload the following codes
 
 ```cpp
-#include <NFC.h>
+#include <NFCT.h>
 
 void setup() { 
   // set the NFC message as first parameter and the language code as second
@@ -61,8 +61,8 @@ void setup() {
 }
 
 void loop() {
-
 }
+
 ```
 
 Here we simply send the text string "Hello World!" 

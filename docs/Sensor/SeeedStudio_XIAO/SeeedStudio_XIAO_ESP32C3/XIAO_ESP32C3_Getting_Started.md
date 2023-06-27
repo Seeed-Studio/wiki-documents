@@ -270,6 +270,10 @@ You will see the following output when flashing is successful
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/esp-flash-9.png" style={{width:500, height:'auto'}}/></div>
 
+## MicroPython GitHub Repository
+
+- [MicroPython](https://github.com/IcingTomato/micropython_xiao_esp32c3)
+
 ## Resources
 
 - **[WiKi]** [First Look at the Seeed Studio XIAO ESP32C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html)
@@ -298,8 +302,6 @@ You will see the following output when flashing is successful
 - <a href="https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html" target="_blank"><span>Platform IO for Seeed Studio XIAO ESP32</span></a>
 
 ## Tech Support & Product Discussion
-
-
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

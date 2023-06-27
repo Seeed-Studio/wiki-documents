@@ -99,7 +99,7 @@ Then plug Base shield onto Seeeduino
 
 #### Software
 
-- **Step 1.** Download the [library](https://github.com/Seeed-Studio/Gesture_PAJ7620) from Github.
+- **Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_Gesture) from Github.
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 Software Installation.
 - **Step 3.** If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
@@ -136,7 +136,7 @@ void loop()
 
 ![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/IMG_0029.gif)
 
-- **Step 8.** Let's try the 9 gestures by select **File->Example->Gesture_PAJ7620->paj7620_9gestures**, then select Seeeduino v4 as board manager and correct COM port.
+- **Step 8.** Let's try the 9 gestures by select **File->Example->Grove_Gesture->paj7620_9gestures**, then select Seeeduino v4 as board manager and correct COM port.
 
 ```c++
 #include <Wire.h>
@@ -1087,7 +1087,7 @@ We define some register data of gesture, refer to the following table.
 
 - **[ZIP]** [Grove - Gesture_v1.0 sch pcb.zip](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/Grove_-_Gesture_v1.0_sch_pcb.zip)
 - **[Datasheet]** [PAJ7620U2_Datasheet_V0.8_20140611.pdf](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/PAJ7620U2_Datasheet_V0.8_20140611.pdf)
-- **[Library]** [Library Grove - Guesture](https://github.com/Seeed-Studio/Gesture_PAJ7620)
+- **[Library]** [Library Grove - Guesture](https://github.com/Seeed-Studio/Grove_Gesture)
 - **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/res/Grove_Gesture_CDC_File.zip)
 
 ## Project
