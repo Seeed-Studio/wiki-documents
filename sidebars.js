@@ -614,16 +614,6 @@ const sidebars = {
         'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
         {
           type: 'category',
-          label: 'Wio-WM1110 Dev Kit',
-          items: [
-           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Introduction',
-           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
-           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Hardware_Overview',
-           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Server_Configuration',
-              ],
-        },
-        {
-          type: 'category',
           label: 'SenseCAP Indicator',
           items: [
             {
@@ -1289,19 +1279,14 @@ const sidebars = {
     },
 
     {
-
       type: 'category',
-      label: 'mmWave radar sensor',
+      label: 'Wio WM1110 Dev Kit',
       items: [
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
-        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
-      ],
-
+       'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
+       'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
+       'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
+       'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
+          ],
     },
 
     {
@@ -1331,6 +1316,22 @@ const sidebars = {
           ],
 
 
+        },
+
+        {
+
+          type: 'category',
+          label: 'mmWave radar sensor',
+          items: [
+            'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
+            'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
+            'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+            'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
+            'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
+            'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
+            'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
+          ],
+    
         },
 
         {
