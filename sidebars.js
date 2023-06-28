@@ -614,6 +614,16 @@ const sidebars = {
         'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
         {
           type: 'category',
+          label: 'Wio-WM1110 Dev Kit',
+          items: [
+           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Introduction',
+           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
+           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Hardware_Overview',
+           'Sensor/SenseCAP/Wio-WM1110_Dev_Kit/Server_Configuration',
+              ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP Indicator',
           items: [
             {
