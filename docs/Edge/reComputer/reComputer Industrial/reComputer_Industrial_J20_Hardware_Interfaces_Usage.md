@@ -1354,9 +1354,9 @@ cd ..
 echo 318 > unexport
 ```
 
-## Fan
+## Monitor System Performance
 
-There is a built-in fan on the SoM and this can be controlled via the system. In order to set different fan profiles, it is better install **jtop** application which will not only be helpful to control the fan, but also to check other system details such as 
+We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as 
 
 - View CPU, GPU, RAM utilizations
 - Change power modes
