@@ -5,7 +5,7 @@ import Layout from '@theme/Layout'
 import Translate, { translate } from '@docusaurus/Translate'
 import styles from './styles.module.scss'
 import Link from '@docusaurus/Link'
-import { sortedUsers, Tags, TagList, ContributionList, type User, type TagType, Users } from '../../define/knowledgeBase'
+import { sortedUsers, Tags, TagList, ContributionList, type User, type TagType, Users } from '../../define/knowledgebase'
 import { useHistory, useLocation } from '@docusaurus/router'
 import { useState, useMemo, useEffect } from 'react'
 import { sortBy } from '../../utils/jsUtils';
