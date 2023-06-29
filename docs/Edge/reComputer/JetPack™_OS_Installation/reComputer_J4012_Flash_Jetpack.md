@@ -10,7 +10,7 @@ last_update:
   author: Lakshantha
 ---
 
-## Flash JetPack to reComputer J4012 (J401 carrier board)
+# Flash JetPack to reComputer J40/ J30 Series (J401 carrier board)
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png"/></div>
 
@@ -19,14 +19,14 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-In this wiki, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD connected to the reComputer J4012.
+In this wiki, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD connected to the reComputer J4012/ J4011/ J3010 and J3011. All these devices come with J401 carrier board inside and the flashing procedure is the same for all.
 
-reComputer J4012 comes with JetPack 5.1 pre-installed on the included NVMe SSD, so that you do not need to flash it. However, if you want to flash it again with JetPack, you can follow this guide.
+reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included NVMe SSD, so that you do not need to flash it. However, if you want to flash it again with JetPack, you can follow this guide.
 
 ## Prerequisites
 
 - Ubuntu Host PC (native or VM using VMware Workstation Player)
-- reComputer J4012
+- reComputer J4012/ J4011/ J3010 and J3011
 - USB Type-C data transmission cable
 
 ## Enter Force Recovery Mode
@@ -90,7 +90,14 @@ Before we can move on to the installation steps, we need to make sure that the r
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
 
-**Step 3.** Under the command line window of the host computer, enter the command `lsusb`. When the returned content has the `ID 0955:7323 NVidia Corp.` in it, it means that the reComputer is in the force recovery mode and we can proceed to the subsequent operations.
+**Step 3.** On the Linux host PC, open a Terminal window and enter the command `lsusb`. If the returned content has one of the following outputs according to the Jetson SoM you use, then the board is in force recovery mode.
+
+- For Orin NX 16GB: **0955:7323 NVidia Corp**
+- For Orin NX 8GB: **0955:7423 NVidia Corp**
+- For Orin Nano 8GB: **0955:7523 NVidia Corp**
+- For Orin Nano 4GB: **0955:7623 NVidia Corp**
+
+The below image is for Orin NX 16GB
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/3.png"/></div>
 
@@ -98,17 +105,21 @@ Before we can move on to the installation steps, we need to make sure that the r
 
 ## Flash to Jetson
 
-Here we will use NVIDIA L4T 35.2.1 to install Jetpack 5.1 on the reComputer J4012
+:::note
+Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
+:::
 
-**Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3521) the NVIDIA drivers on the host PC. The required drivers are shown below:
+Here we will use NVIDIA L4T 35.3.1 to install Jetpack 5.1.1 on the reComputer
+
+**Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3531) the NVIDIA drivers on the host PC. The required drivers are shown below:
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**Step 2:** Extract **Jetson_Linux_R35.1.0_aarch64.tbz2** and **Tegra_Linux_Sample-Root-Filesystem_R35.1.0_aarch64.tbz2** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
+**Step 2:** Extract **Jetson_Linux_R35.3.1_aarch64** and **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
 
 ```sh
-tar xf Jetson_Linux_R35.2.1_aarch64.tbz2
-sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.2.1_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+tar xf Jetson_Linux_R35.3.1_aarch64
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64 -C Linux_for_Tegra/rootfs/
 cd Linux_for_Tegra/
 sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
