@@ -215,16 +215,16 @@ const config = {
             label: 'Cloud & Chain',
             className: 'navbar_doc_items',
           },
-          {
-            label: 'Contribution',
-            className: 'navbar_doc_items',
-            to: '/Contribution',
-          },
-          {
-            label: 'KnowledgeBase',
-            className: 'navbar_doc_items',
-            to: '/KnowledgeBase',
-          },
+          // {
+          //   label: 'Contribution',
+          //   className: 'navbar_doc_items',
+          //   to: '/Contribution',
+          // },
+          // {
+          //   label: 'KnowledgeBase',
+          //   className: 'navbar_doc_items',
+          //   to: '/KnowledgeBase',
+          // },
           // {
           //   type: 'doc',
           //   docId: 'Solutions',
