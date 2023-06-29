@@ -62,7 +62,7 @@ const config = {
 
           sidebarPath: require.resolve('./sidebars.js'),
 
-          remarkPlugins: [math],
+          remarkPlugins: [],
           rehypePlugins: [katex],
 
           // Please change this to your repo.
