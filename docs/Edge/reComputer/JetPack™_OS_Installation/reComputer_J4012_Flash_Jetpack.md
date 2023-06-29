@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J4012_Flash_Jetpack
 last_update:
-  date: 3/2/2023
-  author: jianjing Huang
+  date: 6/29/2023
+  author: Lakshantha
 ---
 
 ## Flash JetPack to reComputer J4012 (J401 carrier board)
@@ -114,10 +114,21 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**Step 3:** Flash the system to the NVMe SSD
+**Step 3:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
 
 ```sh
-cd Linux_for_Tegra
+sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
+```
+
+For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+
+```sh
+sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
+```
+
+**Step 4:** Flash the system to the NVMe SSD
+
+```sh
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
