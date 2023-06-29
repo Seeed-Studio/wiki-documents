@@ -228,6 +228,12 @@ const config = {
           //   className: 'navbar_doc_items'
           // },
           {
+            to: 'https://wiki-gpt.seeedstudio.com/chat',
+            label: 'Chatbot 🤖️',
+            position: 'right',
+            className: 'navbar_doc_items',
+          },
+          {
             to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',
             position: 'right',
