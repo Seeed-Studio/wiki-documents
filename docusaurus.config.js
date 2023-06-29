@@ -221,6 +221,11 @@ const config = {
           //   to: '/Contribution',
           // },
           // {
+          //   label: 'KnowledgeBase',
+          //   className: 'navbar_doc_items',
+          //   to: '/KnowledgeBase',
+          // },
+          // {
           //   type: 'doc',
           //   docId: 'Solutions',
           //   position: 'left',
