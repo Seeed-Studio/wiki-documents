@@ -33,6 +33,13 @@
 .navbar_doc_items{
   display: inline-block;
   color: var(--text-color); 
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.navbar_doc_right_items{
+  display: inline-block;
+  color: var(--text-color); 
 }
 
 .navbar_logo_items{
@@ -617,3 +624,50 @@
   display: flex;
   justify-content: center;
 }
+
+
+/* version 2 */
+
+.all_container {
+  display: flex;
+  justify-content: center;
+}
+
+.top_nev_title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B3654;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0px;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  width: 100%; /* 最小按钮宽度 */
+  height: 5em; /* 最小按钮高度 */
+  text-align: center;
+}
+
+.sensecap_sensing_network {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B3654;
+  color: white;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  margin-bottom: 0.3em;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0px;
+  width: 100%; /* 最小按钮宽度 */
+  height: 10em; /* 最小按钮高度 */
+  text-align: left;
+  text-decoration: none;
+}
+

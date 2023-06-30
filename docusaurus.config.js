@@ -198,7 +198,7 @@ const config = {
             type: 'doc',
             docId: 'Sensor_Network',
             position: 'left',
-            label: 'Sensor Network',
+            label: 'Sensing & Network',
             className: 'navbar_doc_items',
           },
           {
@@ -221,7 +221,7 @@ const config = {
           //   to: '/Contribution',
           // },
           // {
-          //   label: 'KnowledgeBase',
+          //   label: 'Help Center',
           //   className: 'navbar_doc_items',
           //   to: '/KnowledgeBase',
           // },
@@ -236,13 +236,13 @@ const config = {
             to: 'https://wiki-gpt.seeedstudio.com/chat',
             label: 'Chatbot 🤖️',
             position: 'right',
-            className: 'navbar_doc_items',
+            className: 'navbar_doc_right_items',
           },
           {
             to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',
             position: 'right',
-            className: 'navbar_doc_items',
+            className: 'navbar_doc_right_items',
           },
           // {
           //   type: 'localeDropdown',
