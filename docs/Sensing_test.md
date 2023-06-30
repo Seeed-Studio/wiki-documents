@@ -52,11 +52,14 @@ You can discover this page with two large portions.
     <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> > Get One Now</font></span></a> 
     </span>
   </div>
+  <div className="all_custom-image">
+     <img width="200" src="https://files.seeedstudio.com/wiki/Wio-Terminal/res/oshw-logo.svg" alt="your-image-description" />
+  </div>
 </div>
 
 <div class="all_container">
   <div class="sensecap_sensing_network">
-    <span>SenseCAP LoRaWAN Sensors 
+    <span>SenseCAP LoRaWAN Sensors
     <br/>
     <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank" text-decoration= {"none"}><span><font color={'8DC21F'} size={"3"}> Wiki PDF Download ⏬</font></span></a>
     <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP S2101 - Temperature and Humidity</font> 
@@ -70,6 +73,9 @@ You can discover this page with two large portions.
     <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP S2105 - Soil Moisture, Temperature and EC</font>
     <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> > Get One Now</font></span></a> 
     </span>
+  </div>
+  <div className="all_custom-image">
+     <img width="500" src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="your-image-description" />
   </div>
 </div>
 

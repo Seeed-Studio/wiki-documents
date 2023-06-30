@@ -633,6 +633,20 @@
   justify-content: center;
 }
 
+.all_custom-image {
+  background-color: #1B3654;
+  margin-bottom: 0.4em;
+  margin-bottom: 0.4em;
+  height: 10em; /* 最小按钮高度 */
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.all_custom-image img {
+  display: flex;
+  height: 10em; /* 最小按钮高度 */
+}
+
 .top_nev_title {
   display: inline-flex;
   align-items: center;
@@ -643,8 +657,6 @@
   font-weight: bold;
   text-decoration: none;
   border-radius: 0px;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
   margin-bottom: 0.4em;
   width: 100%; /* 最小按钮宽度 */
   height: 5em; /* 最小按钮高度 */
@@ -657,8 +669,6 @@
   justify-content: center;
   background-color: #1B3654;
   color: white;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
   margin-bottom: 0.3em;
   font-size: 1.6rem;
   line-height: 1.3;
