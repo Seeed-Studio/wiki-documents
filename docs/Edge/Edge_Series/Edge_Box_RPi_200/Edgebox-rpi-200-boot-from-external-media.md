@@ -26,11 +26,13 @@ EdgeBox-RPi-200 series are all-in-one Raspberry Pi-based industrial edge computi
 </div>
 
 :::tipBefore you Proceed: 
-This Guide is only apply to the `EdgeBox-RPi-200 released after  30/03/2023`, where you can locate this information from the `S/N number` of `the product label sticker` the number highlighted in the image below `2312` indicate that `**23** is the **production year 2023**` and `**12** is the **prodcution week 12** of 2023` .
+Since we have updated the EEPROM of Raspberry Pi Compute Module 4 from the batch released after 30/03/2023, Which the boot order has changed to `NVME > USB-MSD > BCM-USB-MSD > SD CARD/eMMC > NETWORK > RESTART`, for more information please visit the [Update EEPROM for Compute Module 4](/Raspberry_pi_CM4_update_eeprom/) page. 
+
+**If you have purchased the Edgebox-RPI-200 prior than 30/03/2023, and you want to follow the guide to update EEPROM or to Flash Operating System on Edgebox-RPI-200, you will need to get a minimum development board which contains function for selecting the boot mode for Raspberry Pi CM4 which the [Dual Gigabit Ethernet NICs Carrier Board](https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html) is perfect for this.**
+
+Therefore, this Guide is only apply to the `EdgeBox-RPi-200 released after  30/03/2023`, where you can locate this information from the `S/N number` of `the product label sticker` the number highlighted in the image below `2312` indicate that `23` is the `production year 2023` and `12` is the `production week 12` of 2023.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/label.jpg" alt="pir" width="500" height="auto" /></div>
-
-Since we have updated the EEPROM of Raspberry Pi Compute Module 4, Which the boot order has changed to `NVME > USB-MSD > BCM-USB-MSD > SD CARD/eMMC > NETWORK > RESTART`, for more information please visit the [Update EEPROM for Compute Module 4](/Raspberry_pi_CM4_update_eeprom/) page.
 :::
 
 ## Prerequisites
