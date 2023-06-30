@@ -577,3 +577,43 @@
     width: 90%; /* Increase the width to 90% */
   }
 }
+
+.button2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B3654;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  width: 45%; /* 最小按钮宽度 */
+  height: 11em; /* 最小按钮高度 */
+  text-align: center;
+}
+
+.button2:hover {
+  background-color: #D3D3D3;
+  transform: scale(1);
+  text-decoration: none;
+}
+
+.button2 .label2 {
+  font-size: 1.4rem;
+  line-height: 0;
+  font-weight: bold;
+  transition: font-size 0.4s ease-in-out;
+}
+
+.button2:hover .label2 {
+  font-size: 1rem;
+  color: #D3D3D3;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+}
