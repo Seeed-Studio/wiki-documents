@@ -32,7 +32,9 @@ Grove Smart IR Gesture Sensor is an intelligent gesture recognition module equip
 - **High compatibility**: Compatible with the XIAO series interface and the Grove connector through I2C communication while supporting images displayed on PC through SPI communication
 - **Flexible Voltage Selection**: Grove Interface Compatible with 3.3V and 5V Systems
 
+## Hardware Overview
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/hardware.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Getting Started
 
