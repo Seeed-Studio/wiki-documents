@@ -15,7 +15,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/main.jpg" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/grove_gesture_paj7660">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Smart-IR-Gesture-Sensor-p-5721.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -23,8 +23,14 @@ last_update:
 
 ## Introduction
 
-## Hardware Overview
+Grove Smart IR Gesture Sensor is an intelligent gesture recognition module equipped with an infrared camera sensor and applied AI algorithm. It can detect over 15 gestures with wide detection while supporting both IIC and SPI communication. This module also allows Grove, Type-C, and Seeed Studio XIAO direct connecting.
 
+### Feature
+
+- **Compact AI gesture sensor**: Equip with an infrared camera sensor and apply AI algorithm to achieve gesture detection, in a compact size board of 4.3cm x 2.1cm
+- **Over 15 gestures with wide detection**: Support various gestures such as N-finger push, pinch, tap, grab, rotation, thumb up/down, static, etc, with a detection range of 5-40cm
+- **High compatibility**: Compatible with the XIAO series interface and the Grove connector through I2C communication while supporting images displayed on PC through SPI communication
+- **Flexible Voltage Selection**: Grove Interface Compatible with 3.3V and 5V Systems
 
 
 
@@ -246,7 +252,7 @@ Since you have downloaded the zip Library, open your Arduino IDE, click on **Ske
 
 <br></br>
 
-## Demo 1: Connect sensors to XIAO by IIC
+## Demo 1: Connect sensors to MCU by IIC
 
 ### Step 1. Turn the 4-position DIP switch to the IIC position.
 
