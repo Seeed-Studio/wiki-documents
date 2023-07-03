@@ -183,6 +183,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_sensor_paj7660',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
               ]
