@@ -22,7 +22,7 @@ const sidebars = {
 
   ProductSidebar: [
 
-
+    // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
 
@@ -632,15 +632,117 @@ const sidebars = {
       label: 'SenseCAP',
       items: [
         'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
+        
+        {
+          type: 'category',
+          label: 'SenseCAP LoRaWAN Sensor',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
+
+            {
+              type: 'category',
+              label: 'SenseCAP S210X Series',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                {
+                  type: 'category',
+                  label: 'Tutorials',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network',
+                  ],
+                },
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'SenseCAP A1101',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
+                //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
+              ],
+            },
+          ],
+
+        },
+
+        {
+          type: 'category',
+          label: ' SenseCAP ONE Weather Sensor',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
+            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
+            {
+              type: 'category',
+              label: 'SenseCAP One Compact Weather Station',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting Started with SenseCAP ONE Compact Weather Sensor',
+              ],
+            },
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'SenseCAP Sensor Probe',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+            'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
+            'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
+          ],
+
+        },
+
+        
+
+        {
+          type: 'category',
+          label: ' SenseCAP Data Logger',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
+            'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger',
+            {
+              type: 'category',
+              label: 'Tutorial',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger',
+                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger',
+              ],
+            },
+
+          ],
+        },
         {
           type: 'category',
           label: 'SenseCAP Indicator',
           items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
             {
               type: 'category',
-              label: 'Get Started with SenseCAP Indicator',
+              label: 'Getting Started',
               items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
                 'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
                 {
                   type: 'category',
@@ -704,106 +806,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SenseCAP LoRaWAN Sensor',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
-
-            {
-              type: 'category',
-              label: 'SenseCAP S210X Series',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
-                {
-                  type: 'category',
-                  label: 'Tutorials',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central',
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network',
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network',
-                  ],
-                },
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'SenseCAP A1101',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
-                //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
-              ],
-            },
-          ],
-
-        },
-
-        {
-          type: 'category',
-          label: 'SenseCAP Sensor Probe',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
-            'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
-          ],
-
-        },
-
-        {
-          type: 'category',
-          label: ' SenseCAP ONE Weather Sensor',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
-            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
-            {
-              type: 'category',
-              label: 'SenseCAP One Compact Weather Station',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting Started with SenseCAP ONE Compact Weather Sensor',
-              ],
-            },
-          ],
-        },
-
-        {
-          type: 'category',
-          label: ' SenseCAP Data Logger',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
-            'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger',
-            {
-              type: 'category',
-              label: 'Tutorial',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
-                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger',
-                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger',
-                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger',
-              ],
-            },
-
-          ],
-        },
-
-        {
-          type: 'category',
           label: 'SenseCAP Accessories',
           items: [
             'Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
@@ -815,7 +817,21 @@ const sidebars = {
 
     },
 
+    {
 
+      type: 'category',
+      label: 'mmWave radar sensor',
+      items: [
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
+        'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
+        'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
+        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
+      ],
+
+    },
 
     {
       type: 'category',
@@ -1298,21 +1314,7 @@ const sidebars = {
 
     },
 
-    {
 
-      type: 'category',
-      label: 'mmWave radar sensor',
-      items: [
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
-        'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
-        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
-      ],
-
-    },
 
     {
 
@@ -1342,6 +1344,7 @@ const sidebars = {
 
 
         },
+
 
         {
 
@@ -1517,6 +1520,16 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
 
               ]
+            },
+            {
+              type: 'category',
+              label: 'Wio WM1110 Dev Kit',
+              items: [
+               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
+               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
+               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
+               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
+                  ],
             },
 
             {
@@ -2062,6 +2075,7 @@ const sidebars = {
             'Network/LinkStar/Application/h68k-ha-esphome',
             'Network/LinkStar/Application/plex_media_server',
             'Network/LinkStar/Application/wordpress_linkstar',
+            'Network/LinkStar/Application/grocy-bookstack-linkstar'
 
           ]
         }
@@ -2184,7 +2198,6 @@ const sidebars = {
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
-        // 'Edge/reTerminal-DM/reterminal-dm-sensecraft-edge-os-intro',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
         'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
         {
@@ -2326,7 +2339,15 @@ const sidebars = {
       type: 'category',
       label: 'Edge Series',
       items: [
-        'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+
+        {
+          type: 'category',
+          label: 'EdgeBox-RPI-200',
+          items: [
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+          ],
+        },
         {
           type: 'category',
           label: 'EdgeBox-ESP-100',

@@ -62,7 +62,7 @@ const config = {
 
           sidebarPath: require.resolve('./sidebars.js'),
 
-          remarkPlugins: [math],
+          remarkPlugins: [],
           rehypePlugins: [katex],
 
           // Please change this to your repo.
@@ -198,7 +198,7 @@ const config = {
             type: 'doc',
             docId: 'Sensor_Network',
             position: 'left',
-            label: 'Sensor Network',
+            label: 'Sensing & Network',
             className: 'navbar_doc_items',
           },
           {
@@ -221,6 +221,11 @@ const config = {
           //   to: '/Contribution',
           // },
           // {
+          //   label: 'Help Center',
+          //   className: 'navbar_doc_items',
+          //   to: '/KnowledgeBase',
+          // },
+          // {
           //   type: 'doc',
           //   docId: 'Solutions',
           //   position: 'left',
@@ -228,10 +233,16 @@ const config = {
           //   className: 'navbar_doc_items'
           // },
           {
+            to: 'https://wiki-gpt.seeedstudio.com/chat',
+            label: 'Chatbot 🤖️',
+            position: 'right',
+            className: 'navbar_doc_right_items',
+          },
+          {
             to: 'https://github.com/Seeed-Studio/wiki-documents',
             label: 'GitHub 💭',
             position: 'right',
-            className: 'navbar_doc_items',
+            className: 'navbar_doc_right_items',
           },
           // {
           //   type: 'localeDropdown',

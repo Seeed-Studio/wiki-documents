@@ -7,7 +7,7 @@ tags:
 keywords:
   - Nvidia
   - reComputer
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Memory_Expansion
 last_update:
   date: 01/05/2023
