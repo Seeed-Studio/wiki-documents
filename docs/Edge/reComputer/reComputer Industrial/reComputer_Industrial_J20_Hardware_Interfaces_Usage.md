@@ -331,8 +331,6 @@ AT+CGDCONT=1,"IP","YOUR_APN"
 
 ### LoRa Module Connection Overview
 
-- LoRa RF works. But need to work on packet_forwarder for TTN
-
 Currently this board supports WM1302 SPI module. You can either use [US version](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html) or [EU version](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html) which is available on our Bazaar.
 
 - **Step 1:** Power off the board if is already on
@@ -1354,9 +1352,9 @@ cd ..
 echo 318 > unexport
 ```
 
-## Fan
+## Monitor System Performance
 
-There is a built-in fan on the SoM and this can be controlled via the system. In order to set different fan profiles, it is better install **jtop** application which will not only be helpful to control the fan, but also to check other system details such as 
+We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as 
 
 - View CPU, GPU, RAM utilizations
 - Change power modes

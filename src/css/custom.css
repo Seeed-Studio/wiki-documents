@@ -33,6 +33,13 @@
 .navbar_doc_items{
   display: inline-block;
   color: var(--text-color); 
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.navbar_doc_right_items{
+  display: inline-block;
+  color: var(--text-color); 
 }
 
 .navbar_logo_items{
@@ -577,3 +584,100 @@
     width: 90%; /* Increase the width to 90% */
   }
 }
+
+.button2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B3654;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  width: 45%; /* 最小按钮宽度 */
+  height: 11em; /* 最小按钮高度 */
+  text-align: center;
+}
+
+.button2:hover {
+  background-color: #D3D3D3;
+  transform: scale(1);
+  text-decoration: none;
+}
+
+.button2 .label2 {
+  font-size: 1.4rem;
+  line-height: 0;
+  font-weight: bold;
+  transition: font-size 0.4s ease-in-out;
+}
+
+.button2:hover .label2 {
+  font-size: 1rem;
+  color: #D3D3D3;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* version 2 */
+
+.all_container {
+  display: flex;
+  justify-content: center;
+}
+
+.all_custom-image {
+  background-color: #1B3654;
+  margin-bottom: 0.4em;
+  margin-bottom: 0.4em;
+  height: 10em; /* 最小按钮高度 */
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.all_custom-image img {
+  display: flex;
+  height: 10em; /* 最小按钮高度 */
+}
+
+.top_nev_title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B3654;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0px;
+  margin-bottom: 0.4em;
+  width: 100%; /* 最小按钮宽度 */
+  height: 5em; /* 最小按钮高度 */
+  text-align: center;
+}
+
+.sensecap_sensing_network {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B3654;
+  color: white;
+  margin-bottom: 0.3em;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0px;
+  width: 100%; /* 最小按钮宽度 */
+  height: 10em; /* 最小按钮高度 */
+  text-align: left;
+  text-decoration: none;
+}
+

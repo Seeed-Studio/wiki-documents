@@ -762,7 +762,7 @@ The OLED display on the XIAO expansion board uses the I2C protocol and is connec
 
 This example introduces how to use the OLED display on the Seeed Studio Expansion Base for XIAO ESP32S3.
 
-#### Step 1. Install the Seeed Studio XIAO SAMD21 on the Expansion board then conect the Type-C cable.
+#### Step 1. Install the Seeed Studio XIAO ESP32S3 on the Expansion board then conect the Type-C cable.
 
 #### Step 2. Install the u8g2 library.
 
@@ -911,7 +911,7 @@ As can be seen from the picture, due to the space limitations of XIAO, many wire
 :::
 
 :::caution
-For the sake of common sense, the J3 is simply described above as an interface that turns the SD card function on or off, but this is actually inaccurate. The actual circuit connection is shown below. Cutting off J3 actually disconnects the pull-up resistors from R4 to R5, which is the main reason why the SD card function is disabled while the SPI function is restored to normal.
+For the sake of common sense, the J3 is simply described above as an interface that turns the SD card function on or off, but this is actually inaccurate. The actual circuit connection is shown below. Cutting off J3 actually disconnects the pull-up resistors from R4 to R6, which is the main reason why the SD card function is disabled while the SPI function is restored to normal.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/93.png" style={{width:800, height:'auto'}}/></div>
 :::

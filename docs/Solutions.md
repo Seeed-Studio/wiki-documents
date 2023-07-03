@@ -9,6 +9,45 @@ last_update:
   author: Matthew
 ---
 
+<div class="container2">
+  <div href= "#" class="button2">
+      <div class="start_card_wrapper">
+          <span class="label2">SenseCAP Sensor Node<br /><font color={'1B3654'} size={"5"}>More industrial sensors in</font><br /><font color={'1B3654'} size={"4"}>“Sensor Network” topic</font><br /> SenseCAP Gateway<br /></span>
+      </div>
+  </div>
+  <a class="button2">
+      <div class="start_card_wrapper">
+        <span class="label2">More industrial sensors info in <br/> "Sensor Network" topic<a href="#"><font color={'1B3654'} size={"3"}>Device </font></a></span>
+      </div>
+  </a>
+</div>
+
+<div class="container2">
+  <a href= "#" class="button2">
+      <div class="start_card_wrapper">
+          <span class="label2">SenseCAP Sensor Node<br /><font color={'1B3654'} size={"5"}>More industrial sensors in</font><br /><font color={'1B3654'} size={"4"}>“Sensor Network” topic</font><br /> SenseCAP Gateway<br /></span>
+      </div>
+  </a>
+  <div class="button2">
+      <div class="start_card_wrapper">
+        <span class="label2">More industrial sensors info in <br/> "Sensor Network" topic</span>
+      </div>
+  </div>
+</div>
+
+<div class="container2">
+  <a href= "#" class="button2">
+      <div class="start_card_wrapper">
+          <span class="label2">SenseCAP Sensor Node<br /><font color={'1B3654'} size={"5"}>More industrial sensors in</font><br /><font color={'1B3654'} size={"4"}>“Sensor Network” topic</font><br /> SenseCAP Gateway<br /><a href="#"><font color={'1B3654'} size={"3"}>Device </font></a></span>
+      </div>
+  </a>
+  <div class="button2">
+      <div class="start_card_wrapper">
+        <span class="label2">More industrial sensors info in <br/> "Sensor Network" topic</span>
+      </div>
+  </div>
+</div>
+
 This topic here introduces the Seeed Studio product documentation regarding the solution and contribution published by Seeed Studio and the contributors. Case by case, all the developing and deploying based on Seeed Studio production will be shown here.
 
 You can discover this page with two large portions.
