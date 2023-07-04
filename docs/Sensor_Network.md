@@ -239,7 +239,7 @@ You can discover this page with two large portions.
 - Application for IoT or embedded ML methods acknowledge
 - Kit with free courses and more intriguing tutorials
 
-### Sensors and Sensors' Network 
+### Grove Ecosystem Sensors
 
 <!-- Grove Sensor -->
 
@@ -417,6 +417,8 @@ You can discover this page with two large portions.
             <a href="/Grove-Slide_Potentiometer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Slide Potentiometer </font></span></a>
     </div>
 </div>
+
+### Grove Communication Modules
 
 <!-- Grove Sensor Network -->
 
@@ -870,7 +872,7 @@ You can discover this page with two large portions.
 
 <!-- Embedded ML Scenarios -->
 
-### Embedde ML Scenarios
+### Embedded ML Scenarios
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>

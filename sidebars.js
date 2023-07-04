@@ -25,6 +25,7 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
+    // 'Sensor_Network',
 
     // {
     //   type: 'category',
