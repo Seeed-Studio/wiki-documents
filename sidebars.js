@@ -53,17 +53,7 @@ const sidebars = {
 
     //       ],
     //     },
-    //     {
-    //       type: 'category',
-    //       label: 'ODYSSEY',
-    //       items: [
-    //         'FAQ/ODYSSEY/Troubleshooting_BIOS-Related_Issues',
-    //         'FAQ/ODYSSEY/not_recognize-onboard-microcontroller',
-    //         'FAQ/ODYSSEY/upgrade_BIOS',
-    //         'FAQ/ODYSSEY/Power_button',
-    //         'FAQ/ODYSSEY/reinstall_the_Original_Windows',
-    //       ]
-    //     }
+
 
     //   ]
     // },
@@ -633,7 +623,7 @@ const sidebars = {
       label: 'SenseCAP',
       items: [
         'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
-        
+
         {
           type: 'category',
           label: 'SenseCAP LoRaWAN Sensor',
@@ -714,7 +704,7 @@ const sidebars = {
 
         },
 
-        
+
 
         {
           type: 'category',
@@ -1526,11 +1516,11 @@ const sidebars = {
               type: 'category',
               label: 'Wio WM1110 Dev Kit',
               items: [
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
-                  ],
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
+              ],
             },
 
             {

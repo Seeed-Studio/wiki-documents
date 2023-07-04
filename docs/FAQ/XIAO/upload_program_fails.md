@@ -13,11 +13,11 @@ If you encounter issues such as program **upload failures**, **abnormal program 
 :::successQuick browse
 Here are the troubleshooting methods for upload failures, abnormal program behavior, or device port not found errors for various types of XIAO:
 
-- [XIAO SAMD21]()
+<!-- - [XIAO SAMD21]()
 - [XIAO RP2040]()
 - XIAO nRF52840(Sense)
 - XIAO ESP32C3
-- XIAO ESP32S3(Sense)
+- XIAO ESP32S3(Sense) -->
 
 :::
 
