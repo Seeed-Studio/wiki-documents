@@ -28,14 +28,14 @@ You can discover this page with two large portions.
 ### Industrial Sensors and Probes
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Sensors & Probes</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP sensors and probes offer multiple ambient data sensing, with industrial hardware design.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S210X Series Sensors</font></div>
             <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of SenseCAP S210X Sereis User Guide</font></span></a>
             <br/>
@@ -49,8 +49,8 @@ You can discover this page with two large portions.
             <br/>
             <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Soil Moisture, Temperature and EC</font></span></a>
             <br/>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Probes</font></div>
             <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Liquid Level Detecting</font></span></a>
             <br/>
@@ -63,13 +63,13 @@ You can discover this page with two large portions.
             <a href="Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature & EC Probe</font></span></a>
             <br/>
             <a href="Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RS485 500cm Ultrasonic Level Sensor</font></span></a>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Multi-in-one Sensors</font></div>
-            <a href="Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperature, Humidity, Atmospheric Pressure, and Light</font></span></a>
+            <a href="/Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperature, Humidity, Atmospheric Pressure, and Light</font></span></a>
             <br/>
             <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of SenseCAP ONE Weather Sensor Sereis User Guide</font></span></a>
             <br/>
@@ -80,44 +80,44 @@ You can discover this page with two large portions.
             <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</font></span></a>
             <br/>
             <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</font></span></a>
-    </a>
+    </div>
 </div>
 
 ### Industrial AI-based Sensors 
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC21F'} size={"6"}>SenseCAP AI-based Sensors</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Built for reday-to-deploy intelligent scenarios, <strong>SenseCAP A1101</strong> with intelligent vision is really. </font></div>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP A1101 Vision AI</font></div>
             <a href="/SenseCAP-Vision-AI-Get-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started with SenseCAP A1101 Vision AI</font></span></a>
             <br/>
             <a href="/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Train and Deploy Your Own AI Model Into SenseCAP A1101</font></span></a>
             <br/>
             <a href="/One-Stop-Model-Training-with-Edge-Impulse" target="_blank"><span><font color={'FFFFFF'} size={"2"}>One Stop Model Training with Edge Impulse</font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>More Coming Soon</font></div>
-    </a>
+    </div>
 </div>
 
 
 ### Data Logger with Configuration Guide
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Data Logger</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Data Logger can connect to MODBUS-RTU RS485/Analog/GPIO sensors and transmit data from sensors to the LoRaWAN® / 4G network </font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S2100 Data Logger</font></div>
             <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP S2100 LoRaWAN® Data Logger</font></span></a>
             <br/>
@@ -129,8 +129,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Build LoRaWAN® Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger</font></span></a>
             <br/>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Sensor Hub 4G</font></div>
             <a href="Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP Sensor Hub 4G Data Logger</font></span></a>
             <br/>
@@ -138,20 +138,20 @@ You can discover this page with two large portions.
             <br/>
             <a href="https://files.seeedstudio.com/products/SenseCAP/114992170/Developer%20Guide%20for%20Private%20MQTT%20Messaging%20of%20SenseCAP%20SensorHub%20v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of Private MQTT Messaging of SenseCAP SensorHub Developer Guide</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 ### Gateway for Multiple Platform 
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Gateway</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway provides miles of wireless network coverage and data transmission capacity for Long Range / LoRaWAN® devices </font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Helium-Platform Gateway</font></div>
             <a href="Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Quick Start</font></span></a>
             <br/>
@@ -165,8 +165,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Light Gateway FAQ</font></span></a>
             <br/>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Multi-Platform Gateway</font></div>
             <a href="Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Overview of SenseCAP M2 Multi-Platform Gateway</font></span></a>
             <br/>
@@ -176,11 +176,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Connectting ChirpStack Platform </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Flux-Platform Gateway</font></div>
             <a href="Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square Overview</font></span></a>
             <br/>
@@ -188,27 +188,27 @@ You can discover this page with two large portions.
             <br/>
             <a href="Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square FAQ</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Outdoor / Indoor Gateway</font></div>
             <a href="Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN® Outdoor Gateway</font></span></a>
             <br/>
             <a href="/The-Things-Indoor-Gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}>The Things Indoor Gateway</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 ### Routers for Other Network Infrastructure
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Routers</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>The routers can connect a local network to the Internet, enabling devices communicate with each other.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reRouter</font></div>
             <a href="/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction with Hardware Overview</font></span></a>
             <br/>
@@ -219,15 +219,15 @@ You can discover this page with two large portions.
             <a href="/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Application: Plex Media Server Installation </font></span></a>
             <br/>
             <a href="/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Application: Mender Usage for reRouter </font></span></a>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LinkStar</font></div>
             <a href="/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction with Hardware Overview</font></span></a>
             <br/>
             <a href="/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Original OS Installation</font></span></a>
             <br/>
             <a href="/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Application: Building a smart home control centre around Home Assistant</font></span></a>
-    </a>
+    </div>
 </div>
 
 ## Easy IoT - Build Your Own
@@ -244,14 +244,14 @@ You can discover this page with two large portions.
 <!-- Grove Sensor -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Sensors</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Grove Sensors.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temp & Humi</font></div>
             <a href="/Grove-Temperature-Humidity-Sensor-DH20" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>,
             <a href="/Grove-Temperature_and_Humidity_Sensor_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
@@ -263,16 +263,16 @@ You can discover this page with two large portions.
             <a href="/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a>,
             <a href="/Grove-SHT4x" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temperature</font></div>
             <a href="/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808" target="_blank"><span><font color={'FFFFFF'} size={"2"}>I2C - MCP9808</font></span></a>
             <br/>
             <a href="/Grove-Thermal-Imaging-Camera-IR-Array" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Thermal Imaging</font></span></a>
             <br/>
             <a href="/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K" target="_blank"><span><font color={'FFFFFF'} size={"2"}>One Wire - MAX31850K</font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"} >Multiple in one</font></div>
             <a href="/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Temp/Humi/Pressure/Gas</font></span></a>
             <br/>
@@ -281,25 +281,25 @@ You can discover this page with two large portions.
             <a href="/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO2/Temp/Humi</font></span></a>,
             <a href="/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931" target="_blank"><span><font color={'FFFFFF'} size={"2"}> More... </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Vision AI</font></div>
             <a href="/Train-Deploy-AI-Model-Grove-Vision-AI" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Grove - Vision AI </font></span></a>
             <br/>
             <a href="/edge-impulse-vision-ai" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Fast Models Traning </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Soli Humidity</font></div>
             <a href="/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant" target="_blank"><span><font color={'FFFFFF'} size={"2"}> One Probe Type</font></span></a>
             <br/>
             <a href="/Grove-Moisture_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Two Probe Type</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Proximity</font></div>
             <a href="/Grove-Time_of_Flight_Distance_Sensor-VL53L0X" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TOF</font></span></a>,
             <a href="/Grove-80cm_Infrared_Proximity_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Infrared</font></span></a>
@@ -309,8 +309,8 @@ You can discover this page with two large portions.
             <a href="/Grove-Doppler-Radar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Doppler</font></span></a>,
             <a href="/Grove-Ultrasonic_Ranger" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Ultrasonic</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Air Quality</font></div>
             <a href="/Grove-Air_Quality_Sensor_v1.3" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air Quality</font></span></a>
             <br/>
@@ -318,8 +318,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove-Dust_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Dust Sensor</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gas</font></div>
             <a href="/Grove-Gas_Sensor-O2-MIX8410" target="_blank"><span><font color={'FFFFFF'} size={"2"}> O₂ </font></span></a>
             <a href="/Grove-CO2_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CO₂ </font></span></a>
@@ -329,11 +329,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove-Multichannel-Gas-Sensor-V2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Multichannel Gas </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Barometer</font></div>
             <a href="Grove-Barometer-High-Accuracy" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HP206C  </font></span></a>
             <br/>
@@ -343,8 +343,8 @@ You can discover this page with two large portions.
             <a href="/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DPS310 </font></span></a>,
             <a href="/Grove-Integrated-Pressure-Sensor-Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  MPX5700AP  </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Accelerometer</font></div>
             <a href="/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 3-axis </font></span></a>,
             <a href="/Grove-6-Axis_Accelerometer&Gyroscope_BMI088" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 6-axis </font></span></a>
@@ -352,8 +352,8 @@ You can discover this page with two large portions.
             <a href="/Grove-IMU_9DOF_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 9-axis </font></span></a>,
             <a href="/Grove-IMU_10DOF_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 10-axis </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Light</font></div>
             <a href="/Grove-Digital_Light_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Light </font></span></a>,
             <a href="/Grove-UV_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> UV </font></span></a>,
@@ -363,8 +363,8 @@ You can discover this page with two large portions.
             <a href="/Grove-Luminance_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Luminance </font></span></a>
             <br/>
             <a href="/Grove-Sunlight_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sunlight(Multiple Light) </font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Biometric</font></div>
             <a href="/Grove-Finger-clip_Heart_Rate_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Heart Rate </font></span></a>
             <br/>
@@ -372,11 +372,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove-GSR_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> GSR(Galvanic Skin) </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sound</font></div>
             <a href="/Grove-Sound_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sound </font></span></a>,
             <a href="/Grove-Loudness_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Loudness </font></span></a>
@@ -384,8 +384,8 @@ You can discover this page with two large portions.
             <a href="/Grove-Recorder_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Recorder </font></span></a>
             <br/>
             <a href="/Grove-Speech_Recognizer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Speech Recognizer </font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Touch</font></div>
             <a href="/Grove-Touch_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Touch </font></span></a>
             <br/>
@@ -393,8 +393,8 @@ You can discover this page with two large portions.
             <a href="/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Capacitive </font></span></a>
             <br/>
             <a href="/Grove-Round_Force_Sensor_FSR402" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Round Force Sensitive </font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Liquid</font></div>
             <a href="/Grove-Water_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water </font></span></a>,
             <a href="/Grove-Water-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water Level </font></span></a>
@@ -405,8 +405,8 @@ You can discover this page with two large portions.
             <a href="/Grove-PH-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PH </font></span></a>,
             <a href="/Grove-ORP-Sensor-Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ORP </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Motion</font></div>
             <a href="Grove-PIR_Motion_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
             <a href="Grove-Mouse_Encoder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse </font></span></a>
@@ -415,54 +415,54 @@ You can discover this page with two large portions.
             <a href="/Grove-Collision_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Collision </font></span></a>
             <br/>
             <a href="/Grove-Slide_Potentiometer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Slide Potentiometer </font></span></a>
-    </a>
+    </div>
 </div>
 
 <!-- Grove Sensor Network -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Sensor Network</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Grove Sensor Network, the transmittion methods offered to sensors.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LoRa®</font></div>
             <a href="/Grove_LoRa_E5_New_Version" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wio-E5 </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Bluetooth</font></div>
             <a href="/Grove-BLE-dual_model-v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> BLE(dual model) v1 </font></span></a>
             <br/>
             <a href="/Grove-Serial_Bluetooth_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Serial Bluetooth v3.0 </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wi-Fi</font></div>
             <a href="/Grove-UART_Wifi_V2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> UART Wi-Fi V2.0 </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>NFC</font></div>
             <a href="/Grove_NFC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> NFC Module </font></span></a>
             <br/>
             <a href="/Grove_NFC_Tag" target="_blank"><span><font color={'FFFFFF'} size={"2"}> NFC Tag </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>GPS</font></div>
             <a href="/Grove-GPS" target="_blank"><span><font color={'FFFFFF'} size={"2"}> GPS - SIM28</font></span></a>
             <br/>
             <a href="/Grove-GPS-Air530" target="_blank"><span><font color={'FFFFFF'} size={"2"}> GPS - Air530</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>RF</font></div>
             <a href="/Grove-Serial_RF_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Serial RF Pro </font></span></a>
             <br/>
@@ -470,8 +470,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove_LoRa_Radio" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 868MHz Long Range </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Standard Protocol</font></div>
             <a href="/Grove-I2C_ADC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Analog-to-Digital Converter </font></span></a>
             <br/>
@@ -479,20 +479,20 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove-I2C_FM_Receiver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Frequency Modulation Receiver </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Sensing Nodes -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Sensing Nodes</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> This is the introduction of Sensing Nodes, other sensors besides Grove ecosystem.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>mmWave Radar Sensor</font></div>
             <a href="/Radar_MR24HPC1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 24GHz mmWave Human Static Presence Module Lite - Configurable Parameter</font></span></a>
             <br/>
@@ -507,21 +507,21 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Microwave Sensor - 24GHz Doppler Radar Motion Sensor - MW2401TR11</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Beyond Grove / Retired Product -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Beyond Grove / Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> This is the introduction of Seeed Studio ageful sensors and communication modules.</font></div>
             <a href="/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click HERE </font></span></a> to see the full picture.
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sensors</font></div>
             <a href="/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Ultra Sonic range measurement module</font></span></a>
             <br/>
@@ -530,8 +530,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Photo_Reflective_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Photo Reflective Sensor </font></span></a>,
             <a href="/G3-4_Water_Flow_sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  Weight Sensor </font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sensors Network</font></div>
             <a href="/Wireless_Sensor_Node-Solar_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wireless Sensor Node - Solar Kit</font></span></a>
             <br/>
@@ -539,7 +539,7 @@ You can discover this page with two large portions.
             <br/>
             <a href="/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 2KM Long Range RF link kits w/ encoder and decoder</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 ### Microcontrollers
@@ -547,14 +547,14 @@ You can discover this page with two large portions.
 <!-- Open Source Controllers -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Open Source Controllers</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> This is the introduction of microcontrollers with open source.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
             <a href="/Seeeduino-XIAO" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
@@ -563,19 +563,19 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Seeeduino-XIAO-TinyUSB" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TinyUSB </font></span></a>,
             <a href="/Seeeduino-XIAO-by-Nanase" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Nanase </font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO RP2040</font></div>
             <a href="/XIAO-RP2040" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
             <a href="/XIAO-RP2040-with-MicroPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MicroPython </font></span></a>,
             <a href="/XIAO-RP2040-with-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CircuitPython </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO nRF52840</font></div>
             <a href="/XIAO_BLE" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
@@ -585,8 +585,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/XIAO-BLE-Sense-Bluetooth_Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth Low Energy</font></span></a> ,
             <a href="/XIAO-BLE-Sense-IMU-Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> NFC </font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
             <a href="/XIAO_ESP32C3_Getting_Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
@@ -594,11 +594,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="/XIAO_ESP32C3_WiFi_Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wi-Fi </font></span></a> ,
             <a href="/XIAO_ESP32C3_Bluetooth_Usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth Low Energy</font></span></a>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32S3</font></div>
             <a href="/xiao_esp32s3_getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
@@ -606,11 +606,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="/xiao_esp32s3_wifi_usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wi-Fi</font></span></a> ,
             <a href="/xiao_esp32s3_bluetooth" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth 5.0 </font></span></a>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal(Wio Series)</font></div>
             <a href="/Wio-Terminal-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
@@ -624,8 +624,8 @@ You can discover this page with two large portions.
             <a href="/Wio-Terminal-CircuitPython" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CircuitPython</font></span></a>,
             <a href="/Wio-Terminal-Network-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wi-Fi</font></span></a>,
             <a href="/Wio-Terminal-Bluetooth-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth</font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Series</font></div>
             <a href="/LoRa_E5_mini" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Wio-E5 Boards</font></span></a>
             <br/>
@@ -633,11 +633,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Wio_Tracker" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Wio Tracker Boards</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeeduino Series</font></div>
             <a href="/Seeeduino_v4.2" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino V4.2 Board</font></span></a>
             <br/>
@@ -645,8 +645,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Seeeduino_LoRAWAN" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeeduino LoRaWAN® Boards</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Arch</font></div>
             <a href="/Arch_Mix" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Arch Mix Board</font></span></a>
             <br/>
@@ -654,37 +654,37 @@ You can discover this page with two large portions.
             <br/>
             <a href="Arch_GPRS" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Arch GPRS Boards</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Arduino</font></div>
             <a href="/Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Arduino Introduction</font></span></a>
             <br/>
             <a href="/Getting_Started_with_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started with Arduino Boards</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Micro:bit</font></div>
             <a href="/microbit_wiki_page" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Micro:bit Introduction</font></span></a>
             <br/>
             <a href="/Grove_Inventor_Kit_for_microbit" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started with Micro:bit Boards</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Proprietary Controllers -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Proprietary Controllers</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of microcontrollers with proprietary platform usages.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Azure IoT</font></div>
             <a href="Azure_Sphere_MT3620_Development_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MT3620 Development Kit for Azure Sphere</font></span></a>
             <br/>
@@ -692,24 +692,24 @@ You can discover this page with two large portions.
             <br/>
             <a href="https://seeedjp.github.io/ReButton/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> reButton for Azure IoT Hub/IoT Central</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>AWS IoT</font></div>
             <a href="/SEEED-IOT-BUTTON-FOR-AWS" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Seeed Studio One-Click IoT Button For AWS</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Seeed Studio ageful microcontrollers.</font></div>
             <a href="/UartSB_Frame" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here </font></span></a> to see the full picture.
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>rePhone</font></div>
             <a href="/rePhone" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
@@ -717,8 +717,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/JavaScript_for_RePhone" target="_blank"><span><font color={'FFFFFF'} size={"2"}> JavaScript</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Xadow</font></div>
             <a href="/Xadow_BLE" target="_blank"><span><font color={'FFFFFF'} size={"2"}> BLE</font></span></a>,
             <a href="/Xadow_GPS_V2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> GPS</font></span></a>,
@@ -730,8 +730,8 @@ You can discover this page with two large portions.
             <a href="/Xadow_Audio" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Audio</font></span></a>,
             <a href="/Xado_OLED_128multiply64" target="_blank"><span><font color={'FFFFFF'} size={"2"}> OLED</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>BEE Series</font></div>
             <a href="/Mesh_Bee" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mesh Bee</font></span></a>
             <br/>
@@ -741,57 +741,57 @@ You can discover this page with two large portions.
             <a href="/RFbee_V1.1-Wireless_Arduino_compatible_node" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RFBee</font></span></a>,
             <a href="/UartSBee_v5" target="_blank"><span><font color={'FFFFFF'} size={"2"}> UARTBee</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Air Serial</font></div>
             <a href="//Air602_WiFi_Development_Board" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air602 WiFi Dev Board</font></span></a>,
             <br/>
             <a href="//Air602_Firmware_Programming_Manual" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air602 Firmware Manual</font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>W600</font></div>
             <a href="/W600_Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> W600 Module</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Artik</font></div>
             <a href="/Artik" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
             <a href="/Eagleye_530s" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Eagleye 530s</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Linklt</font></div>
             <a href="/LinkIt" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
             <a href="/LinkIt_ONE" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Linklt ONE</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Rainbowduino</font></div>
             <a href="/Rainbowduino_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Rainbowduino V3.0</font></span></a>
             <br/>
             <a href="/Rainbowduino_LED_driver_platform-ATmega328" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ATmega328</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Skeleton Bot</font></div>
             <a href="//Skeleton_Box" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction</font></span></a>
             <br/>
             <a href="//Skeleton_Bot-4WD_hercules_mobile_robotic_platform" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mobile Robotic Platform</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Others</font></div>
             <a href="/Hercules_Dual_15A_6-20V_Motor_Controller" target="_blank"><span><font color={'FFFFFF'} size={"3"}> More Discrete Product</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Application -->
@@ -803,14 +803,14 @@ You can discover this page with two large portions.
 <!-- Easy IoT Application -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Easy IoT Application</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of IoT Application easily applied and deployed.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP K1100</font></div>
             <span><font color={'FFFFFF'} size={"4"}> ☁️ LoRaWAN®-Network Application </font></span>
             <br/>
@@ -828,8 +828,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/TTN-Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}> > TTN Cloud Services</font></span></a>
             <br/>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP K1100</font></div>
             <span><font color={'FFFFFF'} size={"4"}> ☁️ WiFi-Network Application </font></span>
             <br/>
@@ -843,11 +843,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Wio-Terminal-Advanced-WiFi" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Advanced WiFi Usage</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal</font></div>
             <a href="/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Google Cloud IoT</font></span></a>
             <br/>
@@ -856,8 +856,8 @@ You can discover this page with two large portions.
             <a href="/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT Central</font></span></a>,
             <a href="/Wio-Terminal-Azure-IOT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT Hub</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio RP2040</font></div>
             <a href="/Use_MQTT_to_remotely_light_up_LED_lights" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use MQTT to remotely light up LED lights</font></span></a>
             <br/>
@@ -865,7 +865,7 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Wireless-Fall-Detection-Device" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wireless Fall Detection Device</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Embedded ML Scenarios -->
@@ -873,14 +873,14 @@ You can discover this page with two large portions.
 ### Embedde ML Scenarios
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Embedded ML Scenarios</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Embedded Machine Learning(TinyML) usage easily applied and trained.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal</font></div>
             <span><font color={'FFFFFF'} size={"4"}> TinyML with Edge Impulse </font></span>
             <br/>
@@ -894,8 +894,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Wio-Terminal-TinyML-EI-6" target="_blank"><span><font color={'FFFFFF'} size={"2"}>> Anomaly detection for Predictive Maintenance</font></span></a>
             <br/>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal</font></div>
             <span><font color={'FFFFFF'} size={"4"}> TinyML with TensorFlow Lite</font></span>
             <br/>
@@ -907,24 +907,24 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Wio-Terminal-Gesture-Recognition" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Gesture Recognition</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO SAMD21</font></div>
             <a href="/Contributor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Publish Soon</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO RP2040</font></div>
             <a href="/XIAO-RP2040-EI" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Motion Recognition with Edge Impulse</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO nRF52840</font></div>
             <a href="/XIAO-BLE-Sense-TFLite-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Getting Started it with TensorFlow Lite</font></span></a>
             <br/>
@@ -932,12 +932,12 @@ You can discover this page with two large portions.
             <br/>
             <a href="/XIAOEI" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Motion Recognition with Edge Impulse</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32C3</font></div>
             <a href="/xiaoesp32c3-chatgpt" target="_blank"><span><font color={'FFFFFF'} size={"2"}> > Use WiFiClient and HTTPClient on XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT in action</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Extensions -->
@@ -945,7 +945,7 @@ You can discover this page with two large portions.
 ### Extensions
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Arduino / Arduino Compatible - Extensions</font></div>
             <a href="/Bluetooth_Shield_V2" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Bluetooth Shield</font></span></a>,
             <a href="/Solar_Charger_Shield_V2.2" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Solar Charger Shield</font></span></a>,
@@ -954,11 +954,11 @@ You can discover this page with two large portions.
             <a href="/RS232_Shield" target="_blank"><span><font color={'FFFFFF'} size={"3"}> RS232 Shield</font></span></a>
             <br/>
             <a href="/Grove_Shield_for_Arduino_Nano" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Find out more</font></span></a>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal - Extensions</font></div>
             <a href="/Wio-Terminal-Audio-Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Audio Extension Board</font></span></a>,
             <a href="/Wio-Terminal-Ethernet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Ethernet Extension Board</font></span></a>
@@ -966,8 +966,8 @@ You can discover this page with two large portions.
             <a href="/Wio-Terminal-Battery-Chassis" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Battery Chassis</font></span></a>,
             <a href="/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Battery Chassis with LoRaWAN®</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO - Extensions</font></div>
             <a href="/Seeeduino-XIAO-Expansion-Board" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Board 1: 4 Grove ports / OLED / RTC / SD Card Slot</font></span></a>
             <br/>
@@ -975,22 +975,22 @@ You can discover this page with two large portions.
             <br/>
             <a href="/get_start_round_display" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Seeed Studio Round Display Extension Board for XIAO </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Raspberry Pi Pico - Extensions </font></div>
             <a href="/Grove-Starter-Kit-for-Raspberry-Pi-Pico" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Extension Board for Raspberry Pi Pico</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Series - Extensions</font></div>
             <a href="/Grove-Shield-for-Wio-Lite" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Shield for Wio Lite</font></span></a>
             <br/>
             <a href="/Wio-Extension-RTC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RTC for Wio Tracker</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 ### Accessories 
@@ -998,14 +998,14 @@ You can discover this page with two large portions.
 <!-- Grove Accessories -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Accessories</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Grove Accessories.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Display</font></div>
             <a><span><font color={'FFFFFF'} size={"2"}>OLED -</font></span></a>
             <a href="/Grove-OLED-Display-0.66-SSD1306_v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}>0.66"</font></span></a>,
@@ -1018,8 +1018,8 @@ You can discover this page with two large portions.
             <a href="/Grove-0.54_inch_Red_Quad_Alphanumeric_Display" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Quad </font></span></a>
             <a><span><font color={'FFFFFF'} size={"2"}> Alpha-LED</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Actuator</font></div>
             <a href="/Grove-I2C_Motor_Driver_V1.3" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  Motor Driver </font></span></a>
             <br/>
@@ -1028,15 +1028,15 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove-16-Channel_PWM_Driver-PCA9685" target="_blank"><span><font color={'FFFFFF'} size={"2"}>PWM Driver </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Time</font></div>
             <a href="/Grove-RTC" target="_blank"><span><font color={'FFFFFF'} size={"2"}>RTC - DS1307 based </font></span></a>
             <br/>
             <a href="/Grove_High_Precision_RTC" target="_blank"><span><font color={'FFFFFF'} size={"2"}>RTC - PCF85063TP based </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Current</font></div>
             <a href="/Grove-2.5A-DC-Current-Sensor-ACS70331" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 2.5A</font></span></a>,
             <a href="/Grove-10A_DC_Current_Sensor-ACS725" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 10A </font></span></a>
@@ -1045,11 +1045,11 @@ You can discover this page with two large portions.
             <a href="/Grove-5A_DC_AC_Current_Sensor-ACS70331" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ±5A DC/AC current sensor </font></span></a>
             <br/>
             <a href="/Grove-MOSFET" target="_blank"><span><font color={'FFFFFF'} size={"2"}> MOSFET </font></span></a>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LED</font></div>
             <a href="/Grove-Red_LED" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Red LED </font></span></a>
             <br/>
@@ -1057,8 +1057,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove-LED_ring" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RGB LED Ring </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Switch & Button</font></div>
             <a href="/Grove-Button" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Button </font></span></a>
             <br/>
@@ -1066,40 +1066,40 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove-Switch-P" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Panel Mount Switch </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Input / Output</font></div>
             <a href="/Grove-Differential_Amplifier_v1.2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Differential - Amplified </font></span></a>
             <br/>
             <a href="/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 8 Channel I2C Multiplexer </font></span></a>
             <br/>
             <a href="/Grove-Qwiic-Hub" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove to Qwiic Hub </font></span></a>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Case</font></div>
             <a href="/Grove-Wrapper" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove - Wrapper</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Beyond Grove / Retired Product -->
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Beyond Grove / Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Seeed Studio ageful accessories.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Display</font></div>
             <a href="/LCD_16-2_Characters-Green_Yellow_back_light" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LCD 16*2 </font></span></a>
             <br/>
             <a href="/LCD_8-2_Characters-Blue_back_light" target="_blank"><span><font color={'FFFFFF'} size={"2"}> LCD 8*2 </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Charge</font></div>
             <a href="/Lipo_Rider_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Lipo Rider Pro </font></span></a>
             <br/>
@@ -1107,23 +1107,23 @@ You can discover this page with two large portions.
             <br/>
             <a href="/DC_framework_miniature_solenoid_VL-0063" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DC framework </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Current</font></div>
             <a href="/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 1V to 12V DC Power Converter</font></span></a>
             <br/>
             <a href="/RS-232_To_TTL_Conveter-MAX3232IDR" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RS-232 To TTL Conveter</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LED</font></div>
             <a href="/FSM-55" target="_blank"><span><font color={'FFFFFF'} size={"2"}> FSM-55 LED</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Input / Output</font></div>
             <a href="/USB_To_Uart_5V_3V3" target="_blank"><span><font color={'FFFFFF'} size={"2"}> USB To UART 5V/3V3</font></span></a>
             <br/>
@@ -1131,15 +1131,15 @@ You can discover this page with two large portions.
             <br/>
 <a href="/AVR_USB_Programmer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AVR USB Programmer</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Case</font></div>
             <a href="/Bracket_for_Infrared_Proximity_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bracket Case for Infrared Proximity Sensor</font></span></a>
             <br/>
             <a href="/Shield-MaTrix-V0.9b" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Shield MaTrix V0.9</font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tools</font></div>
             <a href="/Bluetooth_Multimeter" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth Multimeter</font></span></a>
             <br/>
@@ -1147,7 +1147,7 @@ You can discover this page with two large portions.
             <br/>
             <a href="/RF_Explorer_Software" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RF Explorer Software</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <!-- Kit with Courses -->
@@ -1155,7 +1155,7 @@ You can discover this page with two large portions.
 ### Kit with Courses 
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Arduino</font></div>
             <a href="/Grove_Beginner_Kit_for_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Beginner Kit for Arduino </font></span></a>
             <br/>
@@ -1163,8 +1163,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Grove_Smart_Plant_Care_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Smart Plant Care Kit </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Wio Terminal</font></div>
             <a href="/Wio-Terminal-TinyML" target="_blank"><span><font color={'FFFFFF'} size={"2"}> What is TinyML </font></span></a>
             <br/>
@@ -1172,33 +1172,33 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Introduction_to_Artificial_Intelligence_for_Makers" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction to Artificial Intelligence for Makers </font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Seeed Studio XIAO</font></div>
             <a href="/XIAO-Kit-Courses" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Seeed Studio XIAO Kit with Courses </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'center'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Kits with Micro:bit</font></div>
             <a href="/Grove_Inventor_Kit_for_microbit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grove Inventor Kit for Micro:bit</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 ### Tutorials
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Arduino Boards Tutorial</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Arduino boards tutorials.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><a href="/Download-Arduino-and-install-Arduino_Driver" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Basic Usage</font></span></a></div>
             <a href="/Download-Arduino-and-install-Arduino_Driver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Download Arduino and install Arduino driver</font></span></a>
             <br/>
@@ -1212,8 +1212,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Use_External_Editor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use External Editor</font></span></a>
             <br/>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><a href="/Arduino-AWS-IOT-Bridge" target="_blank"><span><font color={'8DC215'} size={"5"}>📖 Arduino Enhanced Usage</font></span></a></div>
             <a href="/Suli" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Suli</font></span></a>,
             <a href="/Seeed_Arduino_Serial" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Seeed Arduino Serial</font></span></a>
@@ -1228,11 +1228,11 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Flashing-Arduino-Bootloader-DAPLink" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Flashing the Arduino Bootloader using DAP Link</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="intro_container">
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Compiling Platform for Arduino</font></div>
             <a href="/Software-PlatformIO" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PlatformIO </font></span></a>
             <br/>
@@ -1240,8 +1240,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Guide_for_Codecraft_using_Arduino" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Codecraft Platform for Arduino </font></span></a>
             <br/>
-    </a>
-    <a class="intro_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}> Arduino Boards Fun Projects</font></div>
             <a href="/IR_Remote" target="_blank"><span><font color={'FFFFFF'} size={"2"}> IR Remote</font></span></a>
             <br/>
@@ -1249,18 +1249,18 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Light_Sensor_and_LED_Bar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Light Sensor and LED Bar</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
 
 <div class="title_container">
-    <a class="title_item" style={{textAlign: 'center'}}>
+    <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Wio Terminal Tutorial</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Wio Terminal tutorials.</font></div>
-    </a>
+    </div>
 </div>
 
 <div class="independent_container">
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><a><span><font color={'8DC215'} size={"5"}>Basic Usage of Wio Terminal</font></span></a></div>
             <a href="/Wio-Terminal-Firmware" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to play retro games on Wio Terminal</font></span></a>
             <br/>
@@ -1281,8 +1281,8 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Wio-Terminal-Displaying-Photos" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to use Wio Terminal to display photos</font></span></a>
             <br/>
-    </a>
-    <a class="independent_item" style={{textAlign: 'left'}}>
+    </div>
+    <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Wio Terminal Fun Projects</font></div>
             <a href="/Azure_IoT_CC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Use Codecraft compling platform connect Azure IoT</font></span></a>
             <br/>
@@ -1296,5 +1296,5 @@ You can discover this page with two large portions.
             <br/>
             <a href="/Wio-Terminal-8720-dev" target="_blank"><span><font color={'FFFFFF'} size={"2"}> How to Use Wio Terminal as RTL8720DN Dev Board</font></span></a>
             <br/>
-    </a>
+    </div>
 </div>
