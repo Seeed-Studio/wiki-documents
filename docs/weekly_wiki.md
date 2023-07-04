@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/19/2023
+  date: 07/03/2023
   author: Matthew
 ---
 
@@ -15,21 +15,37 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is June 19th and a brand new week has begun! Check out what Seeed did last week!
+Today is July 7th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Geolocation Tracker with XIAO ESP32S3](/geolocation_tracker_with_XIAO_ESP32S3)
+### [Wio-WM1110 Dev Kit](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit/Introduction/)
 
-In this tutorial we'll explore two of the more popular ways to deploy XIAO (without the GPS module) to create a surprising tracker. One is to obtain location information from the IP address of the network to which XIAO is connected, to achieve positioning. The other is by using the Wi-Fi positioning system (commonly known as WiPS or WFPS).
+The WM1110 Dev Kit is based on Wio-WM1110 Wireless Module, integrates Semtech's LoRa® transceiver and a multi-purpose radio front-end for geolocation. The LoRa® transceiver provides low-power, high-sensitivity network coverage, while GNSS (GPS/Beidou) and Wi-Fi scanning offer all-round location coverage. while also providing connectivity options for a variety of peripherals.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32S3-Geolocation/main.jpg" alt="pir" width={500} height="auto" /></p>
+- [Getting Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-WM1110_Dev_Kit/)
+- [Hardware Overview](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Hardware_Overview/)
+- [Server Configuration](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Server_Configuration/)
 
-### [Grove 1.2-inch IPS Display](/grove_1.2inch_ips_display)
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993082-wio-wm1110-dev-kit-45font.jpg" alt="pir" width={500} height="auto" /></p>
 
-The Grove-1.2 Inch IPS Display is a meticulously crafted 1.2-inch serial liquid crystal display brought to you by Seeed Studio. Offering a superior resolution of 240x240, this display provides crystal clear, colorful image representation. The design rationale behind this display is to present a simple, high-quality display solution to meet the needs of various DIY or Internet of Things (IoT) projects.
+### [Grove Smart IR Gesture Sensor (PAJ7660)](/grove_gesture_paj7660)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-1.2inch-ips-display/2-Grove-1.2-Inch-IPS-Display-font.jpg" alt="pir" width={500} height="auto" /></p>
+Grove Smart IR Gesture Sensor is an intelligent gesture recognition module equipped with an infrared camera sensor and applied AI algorithm. It can detect over 15 gestures with wide detection while supporting both IIC and SPI communication. This module also allows Grove, Type-C, and Seeed Studio XIAO direct connecting.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/main.jpg" alt="pir" width={500} height="auto" /></p>
+
+### [Self-Hosted Solutions for Office Management with LinkStar](https://wiki.seeedstudio.com/grocy-bookstack-linkstar/)
+
+The integration of Grocy and BookStack within a self-hosted office server powered by a LinkStar router offers a compelling solution for efficient and organized operations. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/grocy_bookstack/grocy3.PNG" alt="pir" width={700} height="auto" /></p>
+
+### [EdgeBox RPi 200 boot From External Media](https://wiki.seeedstudio.com/EdgeBox-RPi-200-boot-from-external-media/)
+
+EdgeBox-RPi-200 series are all-in-one Raspberry Pi-based industrial edge computing controllers, combining multiple industrial purposes.
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" alt="pir" width={500} height="auto" /></p>
 
 <!-- ## Existed Wiki Updated
 
