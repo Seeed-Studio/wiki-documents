@@ -999,7 +999,7 @@ For more information, please also visit [How to install Arduino Libraries](https
     - Abra el IDE de Arduino .
     - Instale **U8g2 library**: Navegue a **Sketch** -> **Incluir Librería** -> **Gestionar Librerias** y busque la palabra "**U8g2**" en el **Gestionador Librerías**. La encontrará como **u8g2 library by oliver**, de click e instale.
 
-![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/U8g2-lib.png)
+![](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/img/U8g2-lib.png) 
 
   - Copie el siguiente código, Verifique para revisar errores en la sintaxis. Verifique que no hay ningún error, y puede subir el código.
 
@@ -1824,11 +1824,16 @@ Seeed Studio tiene su propia [Librería de Componentes (Open Parts Library (OPL)
 ## Soporte Técnico
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<a href="https://forum.seeedstudio.com/" className="button_forum" />
+
+<a href="https://www.seeedstudio.com/contacts" className="button_email" />
+
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div>
+  <a href="https://discord.gg/eWkprNDMU7" className="button_discord" /> 
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion" />
+</div>
+
 </div>
