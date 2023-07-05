@@ -2,16 +2,16 @@ import {translate} from '@docusaurus/Translate';
 import {sortBy} from '../utils/jsUtils';
 
 export type TagType =
-  | 'Frequent'
-  | 'Sensing'
-  | 'MCU'
-  | 'SBC'
-  | 'Edge'
-  | 'Network'
-  | 'Project'
-  | 'X86'
-  | 'Tech_Support'
-  | 'Cloud';
+  | 'favorite'
+  | 'opensource'
+  | 'product'
+  | 'design'
+  | 'i18n'
+  | 'versioning'
+  | 'large'
+  | 'Seeed'
+  | 'personal'
+  | 'rtl';
 
 export const Users: User[] = [
   {
@@ -20,7 +20,7 @@ export const Users: User[] = [
     preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://agile-ts.org/',
     source: 'https://github.com/agile-ts/documentation',
-    tags: ['Edge', 'Sensing'],
+    tags: ['opensource', 'design'],
   },
   {
     title: 'AI-Speaker',
@@ -28,7 +28,7 @@ export const Users: User[] = [
     preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://ai-speaker.com/',
     source: 'https://github.com/sviete/AIS-WWW',
-    tags: ['Edge'],
+    tags: ['opensource'],
   },
   {
     title: 'Aide Jeune',
@@ -41,11 +41,11 @@ export const Users: User[] = [
   },
   {
     title: "Akara's blog",
-    description: 'Tech_Support frontend blog for learning',
+    description: 'Personal frontend blog for learning',
     preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://messiahhh.github.io/blog/',
     source: 'https://github.com/messiahhh/blog',
-    tags: ['Edge', 'Tech_Support'],
+    tags: ['opensource', 'personal'],
   },
   {
     title: 'Algolia DocSearch',
@@ -54,7 +54,7 @@ export const Users: User[] = [
     preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://docsearch.algolia.com/',
     source: 'https://github.com/algolia/docsearch/tree/main/packages/website',
-    tags: ['Frequent', 'Edge', 'MCU'],
+    tags: ['favorite', 'opensource', 'product'],
   },
   {
     title: 'Apache APISIX',
@@ -63,7 +63,7 @@ export const Users: User[] = [
     preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://apisix.apache.org/',
     source: 'https://github.com/apache/apisix-website',
-    tags: ['Edge', 'SBC', 'Project'],
+    tags: ['opensource', 'i18n', 'large'],
   },
   {
     title: 'Apex FP',
@@ -71,136 +71,83 @@ export const Users: User[] = [
     preview: 'Wiki_Platform_GT_Logo.jpg',
     website: 'https://www.apexfp.org',
     source: 'https://github.com/ipavlic/apex-fp/tree/master/website',
-    tags: ['Edge'],
+    tags: ['opensource'],
   },
   {
     title: 'Astronomer',
     description:
-      'Enterprise-grade framework for Apache Airflow. MCUion-ready Airflow environments with just a few clicks',
+      'Enterprise-grade framework for Apache Airflow. Production-ready Airflow environments with just a few clicks',
     preview: 'astronomer.png',
     website: 'https://docs.astronomer.io',
     source: 'https://github.com/astronomer/docs',
-    tags: ['MCU', 'Network', 'Edge'],
+    tags: ['product', 'versioning', 'opensource'],
   },
 ]
 export const ContributionList=[
   {
+    title:'Community Activity Attending',
+    describe:'Join/check our community events, unleash your talents and bring your ideas into reality with Seeed Studio.',
     list:[
       {
-        title: 'reTerminal',
-        website: 'https://www.baidu.com',
-        title1: 'reTerminal 01',
-        website1: 'https://www.google.com',
-        title2: 'reTerminal 02',
-        website2: 'https://www.google.com',
-        title3: 'reTerminal 03',
-        website3: 'https://www.google.com',
-        title4: 'reTerminal 04',
-        website4: 'https://www.google.com',
-        title5: 'reTerminal 05',
-        website5: 'https://www.google.com',
+        title: 'Perception System for SDG',
         preview: 'Wiki_Platform_GT_Logo.jpg',
-        source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
-        tags: ['Edge', 'Sensing'],
-      },
-      {
-        title: 'Seeed Studio XIAO Series',
         website: 'https://www.baidu.com',
-        title1: 'reTerminal 01',
-        website1: 'https://www.google.com',
-        title2: 'reTerminal 02',
-        website2: 'https://www.google.com',
-        title3: 'reTerminal 03',
-        website3: 'https://www.google.com',
-        title4: 'reTerminal 04',
-        website4: 'https://www.google.com',
-        title5: 'reTerminal 05',
-        website5: 'https://www.google.com',
-        preview: 'Wiki_Platform_GT_Logo.jpg',
         source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
-        tags: ['Edge', 'Sensing'],
+        tags: ['opensource', 'design'],
       },
-      {
-        title: 'Odyssey',
-        website: 'https://www.baidu.com',
-        title1: 'reTerminal 01',
-        website1: 'https://www.google.com',
-        title2: 'reTerminal 02',
-        website2: 'https://www.google.com',
-        title3: 'reTerminal 03',
-        website3: 'https://www.google.com',
-        title4: 'reTerminal 04',
-        website4: 'https://www.google.com',
-        title5: 'reTerminal 05',
-        website5: 'https://www.google.com',
-        preview: 'Wiki_Platform_GT_Logo.jpg',
-        source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
-        tags: ['Edge', 'Sensing'],
-      },
-      {
-        title: 'Jetson Series',
-        website: 'https://www.baidu.com',
-        title1: 'reTerminal 01',
-        website1: 'https://www.google.com',
-        title2: 'reTerminal 02',
-        website2: 'https://www.google.com',
-        title3: 'reTerminal 03',
-        website3: 'https://www.google.com',
-        title4: 'reTerminal 04',
-        website4: 'https://www.google.com',
-        title5: 'reTerminal 05',
-        website5: 'https://www.google.com',
-        preview: 'Wiki_Platform_GT_Logo.jpg',
-        source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
-        tags: ['Edge', 'Sensing'],
-      },
-      
     ]
   },
   {
-    title:'MCU Ideas Launch Pad',
-    describe:'Accept our MCU application requirements, achieve them within the Sensingated timeframe, and win your reward.',
+    title:'Product Ideas Launch Pad',
+    describe:'Accept our product application requirements, achieve them within the designated timeframe, and win your reward.',
     list:[
       {
         title: 'XIAO ESP32C3 with Home Assistant',
         preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://wiki.seeedstudio.com/xiao-esp32c3-esphome/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/5/views/1?pane=issue&itemId=30468268',
-        tags: ['Edge', 'Sensing'],
+        tags: ['opensource', 'design'],
       },
       {
         title: 'XIAO ESP32S3 with Home Assistant',
         preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://wiki.seeedstudio.com/xiao-esp32c3-esphome/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/5/views/1',
-        tags: ['Edge', 'Sensing'],
+        tags: ['opensource', 'design'],
       },
     ]
   },
   {
-    title:'KnowlEdge Sharing in Wiki',
-    describe:'Share your knowlEdge with everyone on this open-source wiki platform, and submit through a "Pull Request" and receive your reward.',
+    title:'Knowledge Sharing in Wiki',
+    describe:'Share your knowledge with everyone on this open-source wiki platform, and submit through a "Pull Request" and receive your reward.',
     list:[
       {
         title: '[Page Update] Arduino Intro',
         preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
         source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
-        tags: ['Edge', 'Sensing'],
+        tags: ['opensource', 'design'],
       },
       {
         title: '[Page Add] Raspberry Pi Intro',
         preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
         source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30450213',
-        tags: ['Edge', 'Sensing'],
+        tags: ['opensource', 'design'],
       },
       {
         title: '[Bug Fix] Level 4 hyperlink bug',
         preview: 'Wiki_Platform_GT_Logo.jpg',
         website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469734',
         source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469734',
-        tags: ['Edge', 'Sensing'],
+        tags: ['opensource', 'design'],
+      },
+      {
+        title: '[Function Add] PDF button',
+        preview: 'Wiki_Platform_GT_Logo.jpg',
+        website: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469734',
+        source: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30469767',
+        tags: ['opensource', 'design'],
       },
     ]
   },
@@ -213,21 +160,21 @@ export const ContributionList=[
         preview: 'Jefferson.png',
         website: 'https://www.baidu.com/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
-        tags: ['Tech_Support', 'X86'],
+        tags: ['personal', 'Seeed'],
       },
       {
         title: 'Mrs. S',
         preview: 'huang.png',
         website: 'https://ai-speaker.com/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
-        tags: ['Tech_Support'],
+        tags: ['personal'],
       },
       {
         title: 'Mr. E',
         preview: 'liu.png',
         website: 'https://ai-speaker.com/',
         source: 'https://github.com/orgs/Seeed-Studio/projects/7',
-        tags: ['Tech_Support'],
+        tags: ['personal'],
       },
     ]
   },
@@ -248,8 +195,8 @@ export type Tag = {
 };
 
 export const Tags: {[type in TagType]: Tag} = {
-  Frequent: {
-    label: translate({message: 'Frequent'}),
+  favorite: {
+    label: translate({message: 'Favorite'}),
     description: translate({
       message:
         'Our favorite Docusaurus sites that you must absolutely check out!',
@@ -258,8 +205,26 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#e9669e',
   },
 
-  Sensing: {
-    label: translate({message: 'Sensing'}),
+  opensource: {
+    label: translate({message: 'Open-Source'}),
+    description: translate({
+      message: 'Open-Source Docusaurus sites can be useful for inspiration!',
+      id: 'showcase.tag.opensource.description',
+    }),
+    color: '#39ca30',
+  },
+
+  product: {
+    label: translate({message: 'Product'}),
+    description: translate({
+      message: 'Docusaurus sites associated to a commercial product!',
+      id: 'showcase.tag.product.description',
+    }),
+    color: '#dfd545',
+  },
+
+  design: {
+    label: translate({message: 'Design'}),
     description: translate({
       message:
         'Beautiful Docusaurus sites, polished and standing out from the initial template!',
@@ -268,17 +233,8 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#a44fb7',
   },
 
-  MCU: {
-    label: translate({message: 'MCU'}),
-    description: translate({
-      message: 'Docusaurus sites associated to a commercial prouct!',
-      id: 'showcase.tag.product.description',
-    }),
-    color: '#dfd545',
-  },
-
-  SBC: {
-    label: translate({message: 'SBC'}),
+  i18n: {
+    label: translate({message: 'I18n'}),
     description: translate({
       message:
         'Translated Docusaurus sites using the internationalization support with more than 1 locale.',
@@ -287,27 +243,8 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#127f82',
   },
 
-  X86: {
-    label: translate({message: 'X86'}),
-    description: translate({
-      message: 'Docusaurus sites of Seeed (formerly Facebook) projects',
-      id: 'showcase.tag.Seeed.description',
-    }),
-    color: '#4267b2', // Facebook blue
-  },
-
-  Edge: {
-    label: translate({message: 'Edge'}),
-    description: translate({
-      message: 'Open-Source Docusaurus sites can be useful for inspiration!',
-      id: 'showcase.tag.opensource.description',
-    }),
-    color: '#39ca30',
-  },
-
-
-  Network: {
-    label: translate({message: 'Network'}),
+  versioning: {
+    label: translate({message: 'Versioning'}),
     description: translate({
       message:
         'Docusaurus sites using the versioning feature of the docs plugin to manage multiple versions.',
@@ -316,19 +253,8 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#fe6829',
   },
 
-
-  Cloud: {
-    label: translate({message: 'Cloud'}),
-    description: translate({
-      message:
-        'Docusaurus sites using the right-to-left reading direction support.',
-      id: 'showcase.tag.rtl.description',
-    }),
-    color: '#ffcfc3',
-  },
-
-  Project: {
-    label: translate({message: 'Project'}),
+  large: {
+    label: translate({message: 'Large'}),
     description: translate({
       message:
         'Very large Docusaurus sites, including many more pages than the average!',
@@ -337,17 +263,34 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#8c2f00',
   },
 
+  Seeed: {
+    label: translate({message: 'Seeed'}),
+    description: translate({
+      message: 'Docusaurus sites of Seeed (formerly Facebook) projects',
+      id: 'showcase.tag.Seeed.description',
+    }),
+    color: '#4267b2', // Facebook blue
+  },
 
-  Tech_Support: {
-    label: translate({message: 'Tech Support'}),
+  personal: {
+    label: translate({message: 'Personal'}),
     description: translate({
       message:
-        'personal websites, blogs and digital gardens built with Docusaurus',
+        'Personal websites, blogs and digital gardens built with Docusaurus',
       id: 'showcase.tag.personal.description',
     }),
     color: '#14cfc3',
   },
 
+  rtl: {
+    label: translate({message: 'RTL Direction'}),
+    description: translate({
+      message:
+        'Docusaurus sites using the right-to-left reading direction support.',
+      id: 'showcase.tag.rtl.description',
+    }),
+    color: '#ffcfc3',
+  },
 };
 
 export const TagList = Object.keys(Tags) as TagType[];
@@ -356,7 +299,7 @@ function sortUsers() {
   // Sort by site name
   result = sortBy(result, (user) => user.title.toLowerCase());
   // Sort by favorite tag, favorites first
-  result = sortBy(result, (user) => !user.tags.includes('Frequent'));
+  result = sortBy(result, (user) => !user.tags.includes('favorite'));
   return result;
 }
 
@@ -366,7 +309,7 @@ function sortContribution() {
   // Sort by site name
   result = sortBy(result, (user) => user.title.toLowerCase());
   // Sort by favorite tag, favorites first
-  result = sortBy(result, (user) => !user.tags.includes('Frequent'));
+  result = sortBy(result, (user) => !user.tags.includes('favorite'));
   return result;
 }
 
