@@ -190,9 +190,7 @@ mqtt:
       state_off: 0
     - unique_id: indicator_switch4
       name: "Indicator Switch4"
-      state_topic: "indicator/
-
-/switch/state"
+      state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       value_template: "{{ value_json.switch4 }}"
       payload_on: '{"switch4":1}'
