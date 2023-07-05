@@ -35,15 +35,15 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
       <div class="start_card_wrapper">
           <a href= "https://wiki.seeedstudio.com/Sensor_Network/#industrial-sensors-and-probes" class="getting_started_label2">SenseCAP Industrial Sensors</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#routers-for-other-network-infrastructure" class="getting_started_label2"> - Datalogger</a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#data-logger-with-configuration-guide" class="getting_started_label2"> - Data Logger</a>
           <br/>
           <a href= "https://wiki.seeedstudio.com/Sensor_Network/#gateway-for-multiple-platform" class="getting_started_label2"> - Gateway </a>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#gateway-for-multiple-platform" class="getting_started_label2"> - Routers </a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#routers-for-other-network-infrastructure" class="getting_started_label2"> - Routers </a>
       </div>
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#sensors-and-sensors-network" class="getting_started_label2">Grove Entry-level Sensors</a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-ecosystem-sensors" class="getting_started_label2">Grove Entry-level Sensors</a>
           <br/>          <br/>
           <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-communication-modules" class="getting_started_label2">Grove Network Modules </a>
       </div>
@@ -55,7 +55,7 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#device" class="getting_started_label2">Devices</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#devices" class="getting_started_label2">Devices</a>
           <br/>
           <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating" class="getting_started_label3">> OS Installation and Firmware Updating</a>
           <br/>
@@ -69,23 +69,23 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#microcontrollers" class="getting_started_label2">Microcontrollers</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#microcontrollers" class="getting_started_label2">Microcontrollers</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#easy-iot-applications" class="getting_started_label3">> Easy IoT Applications</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#easy-iot-applications" class="getting_started_label3">> Easy IoT Applications</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#embedde-ml-scenarios" class="getting_started_label3">> Embedded ML Scenarios</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#embedded-ml-scenarios" class="getting_started_label3">> Embedded ML Scenarios</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#extensions" class="getting_started_label3">- Extensions</a>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#accessories" class="getting_started_label3">- Accessories</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions" class="getting_started_label3">- Extensions</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#accessories" class="getting_started_label3">- Accessories</a>
       </div>
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#single-board-computer" class="getting_started_label2">Single Board Computers</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#single-board-computers" class="getting_started_label2">Single Board Computers</a>
           <br/>
           <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating-1" class="getting_started_label3">> OS Installation and Firmware Updating</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions" class="getting_started_label3">- Extensions</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions-1" class="getting_started_label3">- Extensions</a>
           <br/>
           <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software-1" class="getting_started_label3">- Application / Software</a>
       </div>
@@ -98,7 +98,7 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#kit-with-courses" class="getting_started_label2">Kit with Microcontrollers</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label2">Kit with Microcontrollers</a>
           <br/>
           <a class="getting_started_label3">- Demos provided</a>
           <br/>
@@ -107,7 +107,7 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label2">Kit with Single Board Computers</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" class="getting_started_label2">Kit with Single Board Computers</a>
           <br/>
           <a class="getting_started_label3">- Demos provided</a>
           <br/>
@@ -121,7 +121,7 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-dashboard--portal" class="getting_started_label2">SenseCAP Cloud</a>
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-cloud-production" class="getting_started_label2">SenseCAP Cloud</a>
           <br/>
           <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-ai" class="getting_started_label2">SenseCAP AI</a>
           <br/><a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-hotspot-app" class="getting_started_label3">HotSpot APP</a>,

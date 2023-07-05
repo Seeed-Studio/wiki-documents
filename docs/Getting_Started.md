@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 03/03/2023
+  date: 07/05/2023
   author: Matthew
 ---
 
@@ -23,9 +23,114 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
 
 ## What does Wiki Platform Cover?
 
-- This part will be publish soon.
+- The wiki contents have been divided into **three topics** as shown on the top navigation. Each topic contains **two or three large portions**, facing different situations. 
 
-## Contributors
+- You will find documentation about concentrated, computational equipment for **practical purpose**, and industrial IoT scenarios, meanwhile, we offer documents about open development tools to help you **build your own**.
+
+## Sensing and Data Communicating
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#industrial-sensors-and-probes" class="getting_started_label2">SenseCAP Industrial Sensors</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#data-logger-with-configuration-guide" class="getting_started_label2"> - Data Logger</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#gateway-for-multiple-platform" class="getting_started_label2"> - Gateway </a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#routers-for-other-network-infrastructure" class="getting_started_label2"> - Routers </a>
+      </div>
+  </div>
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-ecosystem-sensors" class="getting_started_label2">Grove Entry-level Sensors</a>
+          <br/>          <br/>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-communication-modules" class="getting_started_label2">Grove Network Modules </a>
+      </div>
+  </div>
+</div>
+
+## Computing Devices, Boards and Modules
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#devices" class="getting_started_label2">Devices</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating" class="getting_started_label3">> OS Installation and Firmware Updating</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions--carrier-board" class="getting_started_label3">- Carrier Boards</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software" class="getting_started_label3">- Application / Software</a>
+      </div>
+  </div>
+</div>
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#microcontrollers" class="getting_started_label2">Microcontrollers</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#easy-iot-applications" class="getting_started_label3">> Easy IoT Applications</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#embedded-ml-scenarios" class="getting_started_label3">> Embedded ML Scenarios</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions" class="getting_started_label3">- Extensions</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#accessories" class="getting_started_label3">- Accessories</a>
+      </div>
+  </div>
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#single-board-computers" class="getting_started_label2">Single Board Computers</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating-1" class="getting_started_label3">> OS Installation and Firmware Updating</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions-1" class="getting_started_label3">- Extensions</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software-1" class="getting_started_label3">- Application / Software</a>
+      </div>
+  </div>
+</div>
+
+
+## Kit with Courses
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label2">Kit with Microcontrollers</a>
+          <br/>
+          <a class="getting_started_label3">- Demos provided</a>
+          <br/>
+          <a class="getting_started_label3">- Along with free courses</a>
+      </div>
+  </div>
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" class="getting_started_label2">Kit with Single Board Computers</a>
+          <br/>
+          <a class="getting_started_label3">- Demos provided</a>
+          <br/>
+          <a class="getting_started_label3">- Along with free courses</a>
+      </div>
+  </div>
+</div>
+
+## Cloud and Chain
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-cloud-production" class="getting_started_label2">SenseCAP Cloud</a>
+          <br/>
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-ai" class="getting_started_label2">SenseCAP AI</a>
+          <br/><a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-hotspot-app" class="getting_started_label3">HotSpot APP</a>,
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-mate-app" class="getting_started_label3">Mate APP</a>,
+          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-api" class="getting_started_label3">SenseCAP API</a>
+      </div>
+  </div>
+</div>
+
+## Ranger Program
 
 - This part will be publish soon.
 
