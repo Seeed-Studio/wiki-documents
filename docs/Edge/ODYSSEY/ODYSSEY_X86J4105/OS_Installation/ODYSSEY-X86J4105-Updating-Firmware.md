@@ -22,6 +22,14 @@ wikiurl:
 
 This tutorial demonstrates how to update the BIOS and EC (Embedded Controller) firmware for the ODYSSEY - X86.
 
+<div className="tips" style={{display: 'table', tableLayout: 'fixed', backgroundColor: '#fbd373', height: 'auto', width: '100%'}}>
+  <div className="left-icon" style={{display: 'table-cell', verticalAlign: 'middle', backgroundColor: '#FC4A1A', paddingTop: 10, boxSizing: 'border-box', height: 'auto', width: 38, textAlign: 'center'}}><img style={{width: 26, verticalAlign: 'middle'}} src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+  <div className="right-desc" style={{display: 'table-cell', verticalAlign: 'middle', paddingLeft: 15, boxSizing: 'border-box', width: 'calc(95% - 38px)'}}>
+    <p style={{color: '#000000', fontWeight: 'bold', marginTop: 10}}>PAY ATTENTION</p>
+    <p style={{color: '#000000', fontSize: 15}}> As <b>the provided firmware on the Wiki is supported to J4105/J4125-V1</b>, updating the BIOS firmware from the Wiki on a J4125-V2 board will cause the board to brick. Please ensure that you have  the correct version of ODYSSEY.</p>
+  </div>
+</div>
+
 ## Hardware Requirements
 
 - A Working Computer
@@ -52,11 +60,21 @@ BIOS is also like an OS and can be upgraded to fix bugs and enhance performance 
 
 ### Latest BIOS Firmware
 
+<div className="tips" style={{display: 'table', tableLayout: 'fixed', backgroundColor: '#fbd373', height: 'auto', width: '100%'}}>
+  <div className="left-icon" style={{display: 'table-cell', verticalAlign: 'middle', backgroundColor: '#FC4A1A', paddingTop: 10, boxSizing: 'border-box', height: 'auto', width: 38, textAlign: 'center'}}><img style={{width: 26, verticalAlign: 'middle'}} src="https://s3-us-west-2.amazonaws.com/static.seeed.cc/seeed/icon/Danger.svg" alt="attention icon" /></div>
+  <div className="right-desc" style={{display: 'table-cell', verticalAlign: 'middle', paddingLeft: 15, boxSizing: 'border-box', width: 'calc(95% - 38px)'}}>
+    <p style={{color: '#000000', fontWeight: 'bold', marginTop: 10}}>PAY ATTENTION</p>
+    <p style={{color: '#000000', fontSize: 15}}> As <b>the provided firmware on the Wiki is supported to J4105/J4125-V1</b>, updating the BIOS firmware from the Wiki on a J4125-V2 board will cause the board to brick. Please ensure that you have  the correct version of ODYSSEY.</p>
+  </div>
+</div>
+
+<br />
+
 **[SD-BS-CJ41G-300-101-K 07/26/2022 15:00:00](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/Documents/SD-BS-CJ41G-300-101-K.zip)**
 
 - Improve overall stability.
 
-**Note:** If you want the above BIOS with **bifurcation feature enabled**, please contact techsupport@seeed.io
+**Note:** If you want the above BIOS with **bifurcation feature enabled**, please contact <techsupport@seeed.io>
 
 With bifurcation feature, you will be able to use the M.2 M-Key for 4 PCIe x1. This enables you to connect four different PCIe x1 devices to the M.2 such as multiple network ports, multiple SSDs and other expansion devices. With the normal BIOS without bifurcation feature, M.2 M-Key can be used for only one PCIe x4.
 
@@ -101,8 +119,9 @@ With bifurcation feature, you will be able to use the M.2 M-Key for 4 PCIe x1. T
 
 >1. Fix the problem of incomplete display of startup Seeed logo screen.
 
-!!!Note
-        Latest BIOS support **auto-flash feature**, where you only need to place the files in the **root location of FAT32 format USB** and **select the USB-drive as boot up** option. It will automatic enters flashing.
+:::note
+Latest BIOS support **auto-flash feature**, where you only need to place the files in the **root location of FAT32 format USB** and **select the USB-drive as boot up** option. It will automatic enters flashing.
+:::
 
 ### Step 1 - Download the newest version of BIOS
 
@@ -244,11 +263,11 @@ The X86 also has a embedded controller that can be updated. Updating the EC has 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

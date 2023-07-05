@@ -366,7 +366,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Extensions / Carrier Board
+### Extensions
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>

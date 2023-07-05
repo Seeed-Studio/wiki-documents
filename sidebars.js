@@ -25,26 +25,37 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
+    // 'Sensor_Network',
 
     // {
     //   type: 'category',
     //   label: 'FAQ',
     //   items: [
-    //     'FAQ/reTerminal/reterminal_black_screen',
-    //     'FAQ/reTerminal/flash_different_os_to_emmc',
-    //     'FAQ/reTerminal/log_rpios_use_ssh_over_wifi_ethernet',
-    //     'FAQ/reTerminal/upgrade-rpiOS_installed-packages',
-    //     'FAQ/reTerminal/flashing_os_on_non-eMMC_CM4_replacement',
-    //     'FAQ/reTerminal/Logging_in_OS_using_USB_to_serial_converter',
-    //     'FAQ/reTerminal/Wakeup_reTerminal_LCD_after_sleep',
-    //     'FAQ/reTerminal/Boot_OS_from_USB_flash_drive',
-    //     'FAQ/reTerminal/black_glue_around_CM4',
-    //     'FAQ/reTerminal/buzzer-leds-not-work_by_drivers',
-    //     'FAQ/reTerminal/install-ubuntu-on-reterminal',
-    //     'FAQ/reTerminal/Incorrect_screen_orientation_on_RPiOS_Bullseye',
-    //     'FAQ/reTerminal/troubleshooting-touch-screen-inaccuracy',
-    //     'FAQ/reTerminal/check_Encryption_Chip',
-    //     'FAQ/reTerminal/disable_screen_rotation_on_reTerminal',
+
+    //     {
+    //       type: 'category',
+    //       label: 'reterminal',
+    //       items: [
+    //         'FAQ/reTerminal/reterminal_black_screen',
+    //         'FAQ/reTerminal/flash_different_os_to_emmc',
+    //         'FAQ/reTerminal/log_rpios_use_ssh_over_wifi_ethernet',
+    //         'FAQ/reTerminal/upgrade-rpiOS_installed-packages',
+    //         'FAQ/reTerminal/flashing_os_on_non-eMMC_CM4_replacement',
+    //         'FAQ/reTerminal/Logging_in_OS_using_USB_to_serial_converter',
+    //         'FAQ/reTerminal/Wakeup_reTerminal_LCD_after_sleep',
+    //         'FAQ/reTerminal/Boot_OS_from_USB_flash_drive',
+    //         'FAQ/reTerminal/black_glue_around_CM4',
+    //         'FAQ/reTerminal/buzzer-leds-not-work_by_drivers',
+    //         'FAQ/reTerminal/install-ubuntu-on-reterminal',
+    //         'FAQ/reTerminal/Incorrect_screen_orientation_on_RPiOS_Bullseye',
+    //         'FAQ/reTerminal/troubleshooting-touch-screen-inaccuracy',
+    //         'FAQ/reTerminal/check_Encryption_Chip',
+    //         'FAQ/reTerminal/disable_screen_rotation_on_reTerminal',
+
+    //       ],
+    //     },
+
+
     //   ]
     // },
 
@@ -613,7 +624,7 @@ const sidebars = {
       label: 'SenseCAP',
       items: [
         'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
-        
+
         {
           type: 'category',
           label: 'SenseCAP LoRaWAN Sensor',
@@ -694,7 +705,7 @@ const sidebars = {
 
         },
 
-        
+
 
         {
           type: 'category',
@@ -1506,11 +1517,11 @@ const sidebars = {
               type: 'category',
               label: 'Wio WM1110 Dev Kit',
               items: [
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
-               'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
-                  ],
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
+              ],
             },
 
             {

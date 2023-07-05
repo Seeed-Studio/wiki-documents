@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 last_update:
-  date: 5/31/2023
+  date: 7/03/2023
   author: Thomas
 ---
 
@@ -190,7 +190,7 @@ The upgrade will run automatically.
 
 Open your Arduino IDE, click on **Arduino IDE** > **Reference**, and copy the below URL to **Additional Boards Manager URLs**:
 
-`https://github.com/earlephilhower/arduino-pico/releases/download/global/package\_rp2040\_index.json`
+`https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_29.png"/></div>
 
@@ -206,21 +206,18 @@ Search "indicator" and install "Raspberry Pi Pico/RP2040" in the Boards Manager
 
 - **Step 3**: Add Libraries
 
-**Libraries for reference**：
+**Libraries for reference**:
 
-- [Serial communication protocol](https://github.com/bakercp/PacketSerial)
+* Sensirion Core: [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core)
+* PacketSerial : [Serial communication protoco](https://github.com/bakercp/PacketSerial)
+* Sensirion I2C SGP40 : [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
+* Sensirion I2C SCD4x : [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
+* Sensirion Gas Index Algorithm : [Transfer index library](https://github.com/Sensirion/arduino-gas-index-algorithm)
+*  Seeed_Arduino_AHT20 : [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20)
 
-- [SGP40 TVOC sensor library](https://github.com/Sensirion/arduino-i2c-sgp40)
+In the Arduino IDE, you can search for it in the `Library Manager`, e.g. `Seeed_Arduino_AHT20`, and then install it.
 
-- [Transfer index library: Sensirion Gas Index Algorithm](https://github.com/Sensirion/arduino-gas-index-algorithm)
-
-- [SCD41 CO2 sensor library](https://github.com/Sensirion/arduino-i2c-scd4x)
-
-- [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/)
-
-- [Sensirion Arduino Core library](https://github.com/Sensirion/arduino-core/)
-
-Navigate to **Sketch** -> **Include Library** -> **Add .ZIP Library**, then select the libraries you download.
+To install offline, you can download the repo zip from GitHub, navigate to **Sketch** -> **Include Library** -> **Add .ZIP Library**, then select the libraries you downloaded.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_32.png"/></div>
 
@@ -278,8 +275,10 @@ import TabItem from '@theme/TabItem';
 
 Check the port on your Device Manage
 
-- "USB 串行设备" is for RP2040
-- "USB-SERIAL" is for ESP32
+- "USB Serial Device(COMx)" or "USB 串行设备" is for RP2040
+- "USB-SERIAL CH340" is for ESP32
+
+In a nut shell, CH340 port is for ESP32.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
 

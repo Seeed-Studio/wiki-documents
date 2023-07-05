@@ -1,6 +1,6 @@
 ---
 description: reTerminal-FAQ
-title: Why does buzzer, LEDs do not work after installing the reTerminal drivers
+title: How to solve the issue of buzzer, LEDs do not work after installing the reTerminal drivers
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 # slug: /reterminal_black_screen
 last_update:

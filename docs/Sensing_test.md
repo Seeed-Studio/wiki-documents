@@ -16,13 +16,13 @@ You can discover this page with two large portions.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/sensor_network/sensor_network_publish.png" alt="pir" width={1000} height="auto" /></p>
 
-<div class="container2">
+<div class="all_container">
   <a href= "#" class="button2">
       <div class="start_card_wrapper">
           <span class="label2">Industrial IoT<br /><font color={'1B3654'} size={"5"}>industrial grade sensors with long range connectivity and intelligence</font><br /><br /> Specialized<br /></span>
       </div>
   </a>
-  <div class="button2">
+  <div class="all_container">
       <div class="start_card_wrapper">
         <span class="label2">More industrial sensors info in <br/> "Sensor Network" topic</span>
       </div>
@@ -31,7 +31,7 @@ You can discover this page with two large portions.
 
 <div class="all_container">
   <div class="top_nev_title">
-    <span>SenseCAP LoRaWAN Sensors <br/> <font color={'FFFFFF'} size={"3"}>SenseCAP sensors and probes offer multiple ambient data sensing, with industrial hardware design.</font> </span>
+    <span>SenseCAP Sensors & Probes<br/> <font color={'FFFFFF'} size={"3"}>SenseCAP sensors and probes offer multiple ambient data sensing, with industrial hardware design.</font> </span>
   </div>
 </div>
 
@@ -53,29 +53,133 @@ You can discover this page with two large portions.
     </span>
   </div>
   <div className="all_custom-image">
-     <img width="200" src="https://files.seeedstudio.com/wiki/Wio-Terminal/res/oshw-logo.svg" alt="your-image-description" />
+     <img width="500" src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="your-image-description" />
+  </div>
+</div>
+
+<div class="all_container">
+  <div className="all_custom-image">
+     <img width="500" src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="your-image-description" />
+  </div>
+  <div class="sensecap_sensing_network">
+    <span>SenseCAP Multi-in-one Sensors 
+    <br/>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank" text-decoration= {"none"}><span><font color={'8DC21F'} size={"3"}> Wiki PDF Download ⏬</font></span></a>
+    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP ORCH S4 - 4-in-1 weather sensor </font> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP ONE S500 - 5-in-1 weather sensor </font> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP ONE S700 - 7-in-1 weather sensor</font>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP ONE S900 - 9-in-1 weather sensor </font>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> > Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP ONE S1000 - 10-in-1 weather sensor</font>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> > Get One Now</font></span></a> 
+    </span>
   </div>
 </div>
 
 <div class="all_container">
   <div class="sensecap_sensing_network">
-    <span>SenseCAP LoRaWAN Sensors
-    <br/>
-    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank" text-decoration= {"none"}><span><font color={'8DC21F'} size={"3"}> Wiki PDF Download ⏬</font></span></a>
-    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP S2101 - Temperature and Humidity</font> 
+    <span>SenseCAP Sensor Probes
+    <br/> <font color={'FFFFFF'} size={"2"}>Liquid Level Detecting </font> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Wiki Website </font></span></a> 
     <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
-    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP S2102 - Wireless Light Intensity</font>
+    <br/> <font color={'FFFFFF'} size={"2"}>Water Leak Warning </font> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Wiki Website </font></span></a> 
     <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
-    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP S2103 - Temperature, Humidity and CO2</font>
-    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> > Get One Now</font></span></a> 
-    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP S2104 - Soil Moisture and Temperature</font>
-    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> > Get One Now</font></span></a> 
-    <br/> <font color={'FFFFFF'} size={"2"}>SenseCAP S2105 - Soil Moisture, Temperature and EC</font>
-    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> > Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>pH Meter for Soil Conditions and Water Quality</font>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Wiki Website </font></span></a> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>Soil Moisture & Temperature Probe </font>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Wiki Website </font></span></a> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>Soil Moisture & Temperature & EC Probe</font>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Wiki Website </font></span></a> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
+    <br/> <font color={'FFFFFF'} size={"2"}>RS485 500cm Ultrasonic Level Sensor</font>
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Wiki Website </font></span></a> 
+    <a href="Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'8DC21F'} size={"2"}> -> Get One Now</font></span></a> 
     </span>
   </div>
-  <div className="all_custom-image">
+    <div className="all_custom-image">
      <img width="500" src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="your-image-description" />
+  </div>
+</div>
+
+<div class="all_container">
+    <div className="all_custom-image">
+     <img width="500" src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="your-image-description" />
+  </div>
+  <div class="sensecap_sensing_network">
+    <span>SenseCAP Sensor Probes
+    <br/>
+    <div class="test_text2">pH Meter for Soil Conditions and Water Quality</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    </span>
+  </div>
+</div>
+
+<div class="all_container">
+    <div className="all_custom-image">
+     <img width="500" src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="your-image-description" />
+  </div>
+  <div class="sensecap_sensing_network">
+    <span>SenseCAP Sensor Probes
+    <br/>
+    <div class="test_text2">pH Meter for Soil Conditions and Water Quality</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    </span>
+  </div>
+</div>
+
+<div class="all_container">
+  <div class="sensecap_sensing_network">
+  <span>
+    <div class="test_text3">pH Meter for Soil Conditions and Water Quality</div>
+    <br/>
+    <div class="test_text2">pH Meter for Soil Conditions and Water Quality</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    <br/>
+    <div class="test_text2">SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</div>
+    <a class="test_text" href="#" target="_blank">1g1</a>
+    </span>
+  </div>
+      <div className="all_custom-image">
+     <img width="600" src="https://files.seeedstudio.com/wiki/Wio-Terminal/res/oshw-logo.svg" alt="your-image-description" />
   </div>
 </div>
 
