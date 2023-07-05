@@ -1,18 +1,19 @@
 ---
 description: XIAOESP32C3-FAQ
-title: The battery board of XIAO_ESP32C3 is not connected to any port, so the battery voltage cannot be read
+title: How to check the battery voltage
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 # slug: /reterminal_black_screen
 last_update:
   date: 6/28/2023
   author: cheng.tang
 ---
-### Check the battery voltage
+
+
 Due to the limitation of the number of pins in the ESP32C3, engineers had no extra pins to allocate to the battery for voltage measurement in order to ensure that the XIAO ESP32C3 has the same number of GPIOs as the other XIAO series available.
 
 But if you prefer to use a separate pin for battery voltage measurement, you can refer to the genius operation of [msfujino](https://forum.seeedstudio.com/u/msfujino). We would also like to give a special thanks to [msfujino](https://forum.seeedstudio.com/u/msfujino) for all the experience and efforts shared for the XIAO ESP32C3.
 
-The basic operating idea is: The battery voltage was divided by 1/2 with 200k and connected to the A0 port so that the voltage could be monitored.
+**The basic operating idea is:** The battery voltage was divided by 1/2 with 200k and connected to the A0 port so that the voltage could be monitored.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/3.png" alt="pir" width="300" height="auto"/></div>
 
