@@ -287,13 +287,23 @@ AT+CGDCONT=1,"IP","YOUR_APN"
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/89.jpg"/></div>
 
-On successful connection, it should output **OK** as you can see from the image below
+On successful connection, it should output **OK** as you can see from the image above
 
-- **Step 2:** Type **ifconfig** and you will see an IP address on the **usb0** interface
+- **Step 2:** Restart the 4G module by executing the following
 
-<div align="center"><img width ="0" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/93.png"/></div>
+```sh
+AT+CFUN=1,1
+```
 
-- **Step 3:** You can try to ping a website as follows to check whether there is internet connectivity
+Now you will lose connection to the 4G module on the serial terminals
+
+- **Step 3:** Close **minicom** by pressing **CTRL + A** and then **Q**
+
+- **Step 4:** Type **ifconfig** and you will see an IP address on the **usb0** interface
+
+<div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/93.png"/></div>
+
+- **Step 5:** You can try to ping a website as follows to check whether there is internet connectivity
 
 ```sh
 ping -I usb0 www.bing.com -c 5
