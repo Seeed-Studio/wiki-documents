@@ -221,8 +221,9 @@ const config = {
           //   to: '/Contribution',
           // },
           // {
-          //   label: 'Help Center',
-          //   className: 'navbar_doc_items',
+          //   label: 'Help Center🙋',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
           //   to: '/KnowledgeBase',
           // },
           // {

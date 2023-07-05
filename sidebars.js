@@ -25,8 +25,13 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
-    // 'Sensor_Network',
-
+    // 'Getting_Started_test',
+    {
+      type: 'doc',
+      id: 'Sensor_Network',
+      label: "Sensing",
+      className: 'sideboard_calss',
+    },
     // {
     //   type: 'category',
     //   label: 'FAQ',
@@ -68,23 +73,23 @@ const sidebars = {
 
     // },
 
-    {
-      type: 'html',
-      value: `
-    <style>
-      .sub_item {
-        width: 275px;
-        display:inline-block;
-        text-align:center;
-        font-size:20px;
-        margin-top: 10px;
-      }
-    </style>
-    <div style="width:100px;text-align:center">
-      <div class="sub_item"><strong> Sensing </strong></div>
-    </div>
-    `,
-    },
+    // {
+    //   type: 'html',
+    //   value: `
+    // <style>
+    //   .sub_item {
+    //     width: 275px;
+    //     display:inline-block;
+    //     text-align:center;
+    //     font-size:20px;
+    //     margin-top: 10px;
+    //   }
+    // </style>
+    // <div style="width:100px;text-align:center">
+    //   <div class="sub_item"><strong> Sensing </strong></div>
+    // </div>
+    // `,
+    // },
 
     {
 
@@ -1807,22 +1812,30 @@ const sidebars = {
 
     // },
 
+    // {
+    //   type: 'html',
+    //   value: `
+    // <style>
+    //   .sub_item {
+    //     width: 275px;
+    //     display:inline-block;
+    //     text-align:center;
+    //     font-size:20px;
+    //     margin-top: 10px;
+    //   }
+    // </style>
+    // <div style="width:100px;text-align:center">
+    //   <div class="sub_item"><strong> Network </strong></div>
+    // </div>
+    // `,
+    // },
+
+
     {
-      type: 'html',
-      value: `
-    <style>
-      .sub_item {
-        width: 275px;
-        display:inline-block;
-        text-align:center;
-        font-size:20px;
-        margin-top: 10px;
-      }
-    </style>
-    <div style="width:100px;text-align:center">
-      <div class="sub_item"><strong> Network </strong></div>
-    </div>
-    `,
+      type: 'doc',
+      id: 'Sensor_Network',
+      label: "Network",
+      className: 'sideboard_calss',
     },
 
     {
@@ -2103,22 +2116,29 @@ const sidebars = {
     },
 
 
+    // {
+    //   type: 'html',
+    //   value: `
+    // <style>
+    //   .sub_item {
+    //     width: 275px;
+    //     display:inline-block;
+    //     text-align:center;
+    //     font-size:20px;
+    //     margin-top: 10px;
+    //   }
+    // </style>
+    // <div style="width:100px;text-align:center">
+    //   <div class="sub_item"><strong> Edge </strong></div>
+    // </div>
+    // `,
+    // },
+
     {
-      type: 'html',
-      value: `
-    <style>
-      .sub_item {
-        width: 275px;
-        display:inline-block;
-        text-align:center;
-        font-size:20px;
-        margin-top: 10px;
-      }
-    </style>
-    <div style="width:100px;text-align:center">
-      <div class="sub_item"><strong> Edge </strong></div>
-    </div>
-    `,
+      type: 'doc',
+      id: 'Edge_Computing',
+      label: "Edge Computing",
+      className: 'sideboard_calss',
     },
 
     {
@@ -2495,22 +2515,29 @@ const sidebars = {
 
     // },
 
+    // {
+    //   type: 'html',
+    //   value: `
+    // <style>
+    //   .sub_item {
+    //     width: 275px;
+    //     display:inline-block;
+    //     text-align:center;
+    //     font-size:20px;
+    //     margin-top: 10px;
+    //   }
+    // </style>
+    // <div style="width:100px;text-align:center">
+    //   <div class="sub_item"><strong> Cloud and Chain </strong></div>
+    // </div>
+    // `,
+    // },
+
     {
-      type: 'html',
-      value: `
-    <style>
-      .sub_item {
-        width: 275px;
-        display:inline-block;
-        text-align:center;
-        font-size:20px;
-        margin-top: 10px;
-      }
-    </style>
-    <div style="width:100px;text-align:center">
-      <div class="sub_item"><strong> Cloud and Chain </strong></div>
-    </div>
-    `,
+      type: 'doc',
+      id: 'CloudnChain',
+      label: "Cloud and Chain",
+      className: 'sideboard_calss',
     },
 
     {

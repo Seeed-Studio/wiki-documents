@@ -749,3 +749,14 @@ text-decoration: none;
   text-decoration: none;
 }
 
+.sideboard_calss > a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 100%;
+  display:inline-block;
+  text-decoration: none;
+  text-align:center;
+  font-size:20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

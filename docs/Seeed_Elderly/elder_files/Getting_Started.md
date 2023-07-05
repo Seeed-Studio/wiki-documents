@@ -4,7 +4,6 @@ title: Getting Started
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: 111_test
 last_update:
   date: 03/03/2023
   author: Matthew
@@ -27,40 +26,6 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
 The wiki contents have been divided into **four topics** as shown on the top navigation. Each topic contains **two large portions**, facing two different situations. You will find documentation about concentrated, computational equipment for **practical purpose**, and industrial IoT scenarios, meanwhile, we offer documents about open development tools to help you **build your own**.
 
 ### IoT Platform & Sensor Foundation
-
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#industrial-sensors-and-probes" class="getting_started_label2">SenseCAP Industrial Sensors</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#gateway-for-multiple-platform" class="getting_started_label2">SenseCAP Gateway</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#routers-for-other-network-infrastructure" class="getting_started_label2">Other Communication Devices </a>
-      </div>
-  </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#sensors-and-sensors-network" class="getting_started_label2">Grove Ecosystem Sensors</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#accessories" class="getting_started_label2">Grove Accessories</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-communication-modules" class="getting_started_label2">Grove Communication Modules </a>
-      </div>
-  </div>
-</div>
-
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-dashboard--portal" class="getting_started_label2">SenseCAP Cloud</a>
-          <br/><a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-hotspot-app" class="getting_started_label2">HotSpot APP</a>,
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-mate-app" class="getting_started_label2">Mate APP</a>,
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-api" class="getting_started_label2">API</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-ai" class="getting_started_label2">SenseCAP AI Training</a>
-      </div>
-  </div>
-</div>
 
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#industrial-iot---specialized">
@@ -104,45 +69,6 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 
 ### Development Boards and Devices
 
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#device" class="getting_started_label2">Devices with high computing</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating" class="getting_started_label3">> OS Installation and Firmware Updating</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions--carrier-board" class="getting_started_label3">- Carrier Boards</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software" class="getting_started_label3">- Application / Software</a>
-      </div>
-  </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#single-board-computer" class="getting_started_label2">Single Board Computer</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#os-installation--firmware-updating-1" class="getting_started_label3">> OS Installation and Firmware Updating</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#extensions" class="getting_started_label3">- Extensions</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#application--software-1" class="getting_started_label3">- Application / Software</a>
-      </div>
-  </div>
-</div>
-
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#microcontrollers" class="getting_started_label2">Microcontrollers</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#extensions" class="getting_started_label3">- Extensions</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#easy-iot-application" class="getting_started_label3">- Easy IoT Applications</a>
-          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#embedde-ml-scenarios" class="getting_started_label3">- Embedded Machine Learning</a>
-      </div>
-  </div>
-</div>
-
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#microcontrollers---">
         <div class="start_card_wrapper">
@@ -168,8 +94,6 @@ The wiki contents have been divided into **four topics** as shown on the top nav
 
 ### Application with Software
 
-
-
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#application---">
         <div class="start_card_wrapper">
@@ -192,27 +116,6 @@ The wiki contents have been divided into **four topics** as shown on the top nav
   </div>
 
 ### Kit with Courses
-
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#kit-with-courses" class="getting_started_label2">Kit with Microcontrollers</a>
-          <br/>
-          <a class="getting_started_label3">- Demos provided</a>
-          <br/>
-          <a class="getting_started_label3">- Along with free courses</a>
-      </div>
-  </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label2">Kit with Single Board Computers</a>
-          <br/>
-          <a class="getting_started_label3">- Demos provided</a>
-          <br/>
-          <a class="getting_started_label3">- Along with free courses</a>
-      </div>
-  </div>
-</div>
 
  <div class="start_card_container">
     <a class="start_card_item" href="/Sensor_Network#kit-with-courses---">

@@ -25,8 +25,8 @@ const SearchNameQueryKey = 'name';
 function ShowcaseHeader() {
 	return (
 		<section className={styles.header}>
-			<h1> Welcom Rangers!</h1>
-			<p>This is the introductory page for the "Ranger Program". <br></br> Here, you can find all the contribution content we are looking for, as well as the progress and the achievement of them.</p>
+			<h1> Help Center</h1>
+			<p>Welcome! You can find frequently asked questions and troubled articales about product created by Seeed Studio here.</p>
 			{/* <Link className='button button--primary'> Seeed Studio</Link> */}
 		</section>
 	)
@@ -322,6 +322,51 @@ function ShowcaseCards() {
 														rel='noopener noreferrer'
 													>
 														{tag.title}
+													</a>
+												</div>
+												<div className={styles.card__title1}>
+													<a
+														href={tag.website1}
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														{tag.title1}
+													</a>
+												</div>
+												<div className={styles.card__title2}>
+													<a
+														href={tag.website2}
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														{tag.title2}
+													</a>
+												</div>
+												<div className={styles.card__title3}>
+													<a
+														href={tag.website3}
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														{tag.title3}
+													</a>
+												</div>
+												<div className={styles.card__title4}>
+													<a
+														href={tag.website4}
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														{tag.title4}
+													</a>
+												</div>
+												<div className={styles.card__title5}>
+													<a
+														href={tag.website5}
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														{tag.title5}
 													</a>
 												</div>
 												{/* <p className={styles.showcaseCardBody}>{tag.description}</p> */}

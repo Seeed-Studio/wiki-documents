@@ -4,6 +4,7 @@ title: Getting Started
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: 111_test
 last_update:
   date: 07/05/2023
   author: Matthew
@@ -130,18 +131,16 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
   </div>
 </div>
 
-## Ranger Program
+## Contributors
 
-- This part will be publish soon.
-
-<!-- This  platfrom can be deployed locally and everything will be editable.
+This  platfrom can be deployed locally and everything will be editable.
 
 We want your skills, your language and language competence. We need your professions, your knowledge of hardware and development capabilities of software.
 
 We are facing the age of information explosion, we want to ensure your presentations are stored with us. Welcome to Seeed Studio Contributor Program!
 
 Check our <strong><a href="https://github.com/Seeed-Studio/wiki-documents" target="_blank"><span><font color={'8DC215'} size={"3"}> Github source </font></span></a></strong> and  <strong><a href="https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> task list </font></span></a></strong>
-for more information. -->
+for more information.
 
 ## Weekly Wiki
 
