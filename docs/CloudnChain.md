@@ -6,7 +6,7 @@ keywords:
 - Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 01/20/2023
+  date: 07/05/2023
   author: Matthew
 ---
 
@@ -25,7 +25,7 @@ This topic here introduces the Seeed Studio product documentation regarding the 
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Proral</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Protal</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the SenseCAP Portal for data monitoring of SenseCAP sensors nodes and SenseCAP gateway.</font></div>
     </div>
 </div>
