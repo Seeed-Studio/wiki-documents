@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to disable screen rotation on reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /disable_screen_rotation_on_reTerminal
 last_update:
   date: 6/21/2023
   author: Seraphina

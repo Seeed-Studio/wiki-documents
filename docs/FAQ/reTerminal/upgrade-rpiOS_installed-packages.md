@@ -2,10 +2,10 @@
 description: reTerminal-FAQ
 title: How to upgrade Raspberry Pi OS and the installed packages
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /upgrade-rpiOS_installed-packages
 last_update:
   date: 6/21/2023
-  author: Seraphina
+  author: cheng.tang
 ---
 
 <!-- ## Q3: How to upgrade Raspberry Pi OS and the installed packages -->

@@ -2,7 +2,7 @@
 description: reTermiXIAO CAN Bus Expansion Boardnal-FAQ
 title: Can I use multiple XIAO CAN Bus Expansion Boards in the same CAN bus network?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /multiple_in_the_same_CAN
 last_update:
   date: 6/30/2023
   author: cheng.tang

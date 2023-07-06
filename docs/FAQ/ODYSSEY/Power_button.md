@@ -4,7 +4,7 @@ title: Different status of Power button of ODYSSEY - X86J41x5
 #keywords:
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-#slug:
+slug: /Power_button
 last_update:
   date: 2023.6.25   
   author: cheng.tang

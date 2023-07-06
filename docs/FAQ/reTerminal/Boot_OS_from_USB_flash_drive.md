@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to boot an OS from USB Flash Drive
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /Boot_OS_from_USB_flash_drive
 last_update:
   date: 6/21/2023
   author: Seraphina

@@ -2,7 +2,7 @@
 description: XIAO CAN Bus Expansion Board-FAQ
 title: Can I use the XIAO CAN Bus Expansion Board with other microcontrollers or development boards?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /in_other_microcontrollers_or_development_boards
 last_update:
   date: 6/30/2023
   author: cheng.tang

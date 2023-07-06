@@ -2,7 +2,7 @@
 description: XIAO CAN Bus Expansion Board-FAQ
 title: Are there any limitations on the maximum cable length for the CAN bus connection?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /limitations_on_the_maximum_cable_length
 last_update:
   date: 6/30/2023
   author: cheng.tang

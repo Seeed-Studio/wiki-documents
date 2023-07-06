@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: I have followed the tutorial and still can't get the TFT or LVGL program to compile properly, what should I do?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /the_maximum_baud_rate
 last_update:
   date: 6/30/2023
   author: cheng.tang
