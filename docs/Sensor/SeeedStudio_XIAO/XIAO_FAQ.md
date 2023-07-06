@@ -9,3 +9,5 @@ last_update:
 ---
 
 This document contains all the frequently asked questions related to XIAO. This will be very helpful if you are suffering from any issues when using the XIAO.
+
+#### Q1: What to do when upload fails/the program runs abnormally/the device port is not found?
