@@ -2,6 +2,7 @@
 description: ODYSSEY-FAQ
 title: Troubleshooting BIOS-Related Issues(WiFi/Bluetooth/Fan/Auto Power-On/Boot Guard/GPIO)
 #keywords:
+slug: /Troubleshooting_BIOS-Related_Issues
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 6/26/2023

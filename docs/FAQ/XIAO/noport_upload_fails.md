@@ -2,7 +2,7 @@
 description: XIAO-FAQ
 title:  What to do when upload fails/the program runs abnormally/the device port is not found?
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /upload_xiao_program_fails
+slug: /noport_upload_fails
 last_update:
   date: 6/21/2023
   author: Seraphina
@@ -20,11 +20,11 @@ In this Wiki, you can find solutions. Different models of XIAO have different tr
 :::successQuick browse
 Here are the troubleshooting methods for upload failures, abnormal program behavior, or device port not found errors for various types of XIAO. You can quickly index through the link below:
 
-- [**XIAO SAMD21**](/upload_xiao_program_fails/#for-xiao-samd21)
-- [**XIAO RP2040**](/upload_xiao_program_fails/#for-xiao-rp2040)
-- [**XIAO nRF52840(Sense)**](/upload_xiao_program_fails/#for-xiao-nrf52840-sense)
-- [**XIAO ESP32C3**](/upload_xiao_program_fails/#for-xiao-esp32c3)
-- [**XIAO ESP32S3(Sense)**](/upload_xiao_program_fails/#for-xiao-esp32s3-sense)
+- [**XIAO SAMD21**](/noport_upload_fails/#for-xiao-samd21)
+- [**XIAO RP2040**](/noport_upload_fails/#for-xiao-rp2040)
+- [**XIAO nRF52840(Sense)**](/noport_upload_fails/#for-xiao-nrf52840-sense)
+- [**XIAO ESP32C3**](/noport_upload_fails/#for-xiao-esp32c3)
+- [**XIAO ESP32S3(Sense)**](/noport_upload_fails/#for-xiao-esp32s3-sense)
 :::
 
 ## **For XIAO SAMD21**

@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to troubleshoot the black screen issue on reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /reterminal_black_screen
 last_update:
   date: 6/20/2023
   author: Seraphina
@@ -23,15 +23,15 @@ However, if your screen is not displaying properly and remains black, please fol
 
 ### If both lights are on
 
-  This situation occurs due to issues with the driver controlling the LCD screen. At this point, please follow the troubleshooting steps provided in the [**second step**](/FAQ/reTerminal/reterminal_black_screen/#second-confirm-whether-you-have-installed-a-new-system) and execute them by step.
+  This situation occurs due to issues with the driver controlling the LCD screen. At this point, please follow the troubleshooting steps provided in the [**second step**](/reterminal_black_screen/#second-confirm-whether-you-have-installed-a-new-system) and execute them by step.
 
 ## Step 2: Confirm whether you have installed a new system
 
 :::caution
 
-- If you flash new OS by yourself and the LCD screen fails to display properly, you need to [**install the necessary reTerminal drivers**](/FAQ/reTerminal/reterminal_black_screen/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) separately.
+- If you flash new OS by yourself and the LCD screen fails to display properly, you need to [**install the necessary reTerminal drivers**](/reterminal_black_screen/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) separately.
 
-- If you haven't flashed your own OS but the screen remains black, please proceed directly to [**Flash Raspberry Pi OS which is originally shipped with reTerminal**](/FAQ/reTerminal/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal).
+- If you haven't flashed your own OS but the screen remains black, please proceed directly to [**Flash Raspberry Pi OS which is originally shipped with reTerminal**](/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal).
 
 :::
 
@@ -86,9 +86,9 @@ Finally, you can use the LCD screen normally on the new system.
 If you have flashed to a different OS and want to switch back to the default Raspberry Pi OS which is shipped with reTerminal, you can follow the steps below
 :::
 
-We can flash **Raspberry Pi OS / 64-bit Ubuntu OS or other OS** on to the **eMMC storage** of the CM4 on the reTerminal. If you have never flashed a system on reTerminal before, we strongly advise you to follow [Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC](/FAQ/reTerminal/flash_different_os_to_emmc) to prepare for the system flashing, which includes **installing the necessary drivers**.
+We can flash **Raspberry Pi OS / 64-bit Ubuntu OS or other OS** on to the **eMMC storage** of the CM4 on the reTerminal. If you have never flashed a system on reTerminal before, we strongly advise you to follow [Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC](/flash_different_os_to_emmc) to prepare for the system flashing, which includes **installing the necessary drivers**.
 
-Once the [necessary drivers](/FAQ/reTerminal/flash_different_os_to_emmc) are installed, you just have to connect the USB Type-C port of the reTerminal to your PC. When you open File Explorer and see that the eMMC of Compute Module 4 is displayed as a USB mass storage device, you can perform the following steps:
+Once the [necessary drivers](/flash_different_os_to_emmc) are installed, you just have to connect the USB Type-C port of the reTerminal to your PC. When you open File Explorer and see that the eMMC of Compute Module 4 is displayed as a USB mass storage device, you can perform the following steps:
 
 - **1.** Download the Raspberry Pi OS by visiting the links below
 

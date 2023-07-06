@@ -2,7 +2,7 @@
 description: XIAO CAN Bus Expansion Board-FAQ
 title: How can I troubleshoot CAN bus communication issues?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /troubleshoot_CAN_communication_issues
 last_update:
   date: 6/30/2023
   author: cheng.tang

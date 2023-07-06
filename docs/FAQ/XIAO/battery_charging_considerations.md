@@ -2,7 +2,7 @@
 description: XIAO nRF52840(Sense)-FAQ
 title: What are the considerations when using XIAO nRF52840 (Sense) for battery charging?
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /battery_charging_considerations
 last_update:
   date: 6/28/2023
   author: cheng.tang

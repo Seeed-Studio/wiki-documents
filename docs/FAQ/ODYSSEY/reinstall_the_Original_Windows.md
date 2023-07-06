@@ -4,7 +4,7 @@ title: Re-Installing the Original Windows
 #keywords:
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-#slug:
+slug: /reinstall_the_Original_Windows
 last_update:
   date: 2025.6.25
   author: cheng.tang

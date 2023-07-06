@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: Why do I get a pin definition error when I compile a circular screen program for the XIAO SAMD21?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /pin_definition_error
 last_update:
   date: 6/30/2023
   author: cheng.tang

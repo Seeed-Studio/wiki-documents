@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /flash_different_os_to_emmc
 last_update:
   date: 6/21/2023
   author: Seraphina
@@ -43,7 +43,7 @@ Windows will now find the hardware and install the necessary drivers
 - **Step 4.** Open **file explorer** and you will see the eMMC of the Computer Module 4 shown as a **USB mass storage device**
 
 :::caution
-If you flash **the Raspberry Pi OS that originally shipped with reTerminal**, please return to this [Wiki](/FAQ/reTerminal/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal). <br/>
+If you flash **the Raspberry Pi OS that originally shipped with reTerminal**, please return to this [Wiki](/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal). <br/>
 Otherwise, please proceed with the following steps.
 :::
 
@@ -77,7 +77,7 @@ Please wait a few minutes until the flashing process is complete.
 
 - **Step 11.** Flip the **Boot Mode switch** back to the original position and assemble the reTerminal shell
 
-Now you can skip to **[here](/FAQ/reTerminal/log_rpios_use_ssh_over_wifi_ethernet)**
+Now you can skip to **[here](/log_rpios_use_ssh_over_wifi_ethernet)**
 
 ### For MAC
 
@@ -120,7 +120,7 @@ sudo ./rpiboot
 - **Step 6.** Connect reTerminal to the your Mac computer via USB Type-C cable
 
 :::caution
-If you flash **the Raspberry Pi OS that originally shipped with reTerminal**, please return to this [Wiki](/FAQ/reTerminal/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal). <br/>
+If you flash **the Raspberry Pi OS that originally shipped with reTerminal**, please return to this [Wiki](/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal). <br/>
 Otherwise, please proceed with the following steps.
 :::
 
@@ -202,7 +202,7 @@ sudo ./rpiboot
 - **Step 7.** Connect reTerminal to the PC via USB Type-C cable
 
 :::caution
-If you flash **the Raspberry Pi OS that originally shipped with reTerminal**, please return to this [Wiki](/FAQ/reTerminal/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal).<br/>
+If you flash **the Raspberry Pi OS that originally shipped with reTerminal**, please return to this [Wiki](/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal).<br/>
 Otherwise, please proceed with the following steps.
 :::
 

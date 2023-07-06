@@ -4,7 +4,7 @@ title: ODYSSEY - X86J41x5 doesn't power up
 #keywords:
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-#slug: 
+slug: /power_up
 last_update:
   date: 2025.6.25   
   author: cheng.tang

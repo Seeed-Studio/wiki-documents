@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to install Ubuntu on reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /install-ubuntu-on-reterminal
 last_update:
   date: 6/21/2023
   author: Seraphina

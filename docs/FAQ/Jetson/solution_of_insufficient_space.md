@@ -3,7 +3,7 @@ description: reComputer-FAQ
 title: The remaining space in the eMMC in the received reComputer is only about 2GB, how to solve the problem of insufficient space?
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-#slug:
+slug: /solution_of_insufficient_space
 last_update:
   date: 2023/6/30
   author: Seraphina

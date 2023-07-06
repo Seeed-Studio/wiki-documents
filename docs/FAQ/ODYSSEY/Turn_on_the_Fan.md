@@ -3,7 +3,7 @@ description: Fan is not turning on
 title: Fan is not turning on
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-#slug: 
+slug: /Turn_on_the_Fan
 last_update:
   date: 2025.6.25   
   author: cheng.tang

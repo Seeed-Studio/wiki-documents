@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to log in to Raspberry Pi OS/ Ubuntu OS or other OS using a USB to serial converter
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /Logging_in_OS_using_USB_to_serial_converter
 last_update:
   date: 6/21/2023
   author: Seraphina

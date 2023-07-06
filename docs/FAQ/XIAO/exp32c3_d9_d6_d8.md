@@ -2,7 +2,7 @@
 description: XIAOESP32C3-FAQ
 title: Note on XIAO ESP32C3 IO allocation
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /exp32c3_d9_d6_d8
 last_update:
   date: 6/28/2023
   author: cheng.tang

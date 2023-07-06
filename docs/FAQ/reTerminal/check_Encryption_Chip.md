@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to check if the Encryption Chip is ATECC608A-SSHDA-B or ATECC608A-TNGTLSS-G
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /check_Encryption_Chip
 last_update:
   date: 6/21/2023
   author: Seraphina

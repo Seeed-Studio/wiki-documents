@@ -2,7 +2,7 @@
 description: XIAO ESP32C3-FAQ
 title: I want to reflash the bootloader with factory firmware
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-#slug: /reterminal_black_screen
+slug: /reflash_the_bootloader
 last_update:
   date: 6/30/2023
   author: cheng.tang

@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to flash OS if I replace the CM4 with non-eMMC version
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /flashing_os_on_non-eMMC_CM4_replacement
 last_update:
   date: 6/21/2023
   author: Seraphina

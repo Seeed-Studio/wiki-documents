@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Why there is black glue around the chips on the CM4
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /black_glue_around_CM4
 last_update:
   date: 6/21/2023
   author: Seraphina

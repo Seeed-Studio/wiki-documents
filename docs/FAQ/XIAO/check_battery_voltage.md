@@ -2,7 +2,7 @@
 description: XIAOESP32C3-FAQ
 title: How to check the battery voltage
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /check_battery_voltage
 last_update:
   date: 6/28/2023
   author: cheng.tang
