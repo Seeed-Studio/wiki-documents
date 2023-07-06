@@ -26,7 +26,7 @@ Here we gonna show you how to connect Codecraft with Azure IoT based on Wio Term
 In this demo you will need the devices listed as below:
 
 - [WioTerminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) x1
-- Tpye-C Cable x1
+- Type-C Cable x1
 - Computer x1
 
 **Hardware Connect**
