@@ -1,6 +1,6 @@
 ---
 description: XIAO CAN Bus Expansion Board-FAQ
-title: What is the maximum baud rate supported by the XIAO CAN Bus Expansion Board?l
+title: What is the maximum baud rate supported by the XIAO CAN Bus Expansion Board?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /the_maximum_baud_rate
 last_update:

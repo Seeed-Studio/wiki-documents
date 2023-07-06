@@ -844,6 +844,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
+            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
             {
               type: 'category',
               label: 'Embedded ML',
@@ -871,6 +872,8 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+
             {
               type: 'category',
               label: 'Embedded ML',
@@ -891,6 +894,8 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
+            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+
             {
               type: 'category',
               label: 'Bluetooth Libraries',
@@ -925,6 +930,8 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
+            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+
             {
               type: 'category',
               label: 'Application',
@@ -944,6 +951,8 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+
             {
               type: 'category',
               label: 'For XIAO ESP32S3 Sense Version',
@@ -2148,7 +2157,8 @@ const sidebars = {
       items: [
         'Edge/reTerminal/reTerminal',
         'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
-        'Edge/reTerminal/reTerminal-FAQ',
+        'Edge/reTerminal/reTerminal-oldFAQ',
+        // 'Edge/reTerminal/reTerminal-FAQ',
         'Edge/reTerminal/reTerminal-piCam',
         {
           type: 'category',
@@ -2427,6 +2437,7 @@ const sidebars = {
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
             'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
+            // 'Edge/ODYSSEY/ODYSSEY_FAQ',
             {
               type: 'category',
               label: 'Application',

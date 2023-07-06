@@ -1,6 +1,6 @@
 ---
 description: XIAO-ESP32S3-FAQ
-title: Why does my XIAO have the problem of not being flush at the rounded corners? Is this a quality problem?
+title: Why does my XIAO have the problem of not being flush at the rounded corners
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /not_being_flush
 last_update:

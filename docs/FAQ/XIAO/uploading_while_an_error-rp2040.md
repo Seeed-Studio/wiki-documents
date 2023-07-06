@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: When uploading a program for XIAO RP2040, an error occurs:unaligned opcodes detected in executable segment?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /uploading_while_an_error
+slug: /uploading_while_an_error-rp2040
 last_update:
   date: 6/30/2023
   author: cheng.tang
