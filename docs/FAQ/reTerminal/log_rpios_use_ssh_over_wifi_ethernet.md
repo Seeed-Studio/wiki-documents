@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Log in to Raspberry Pi OS/ Ubuntu OS or Other OS using SSH over Wi-Fi/ Ethernet
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /log_rpios_use_ssh_over_wifi_ethernet
 last_update:
   date: 6/21/2023
   author: Seraphina

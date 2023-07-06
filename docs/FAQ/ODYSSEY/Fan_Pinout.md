@@ -3,7 +3,7 @@ description: ODYSSEY-FAQ
 title: Fan Pinout
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-#slug:
+slug: /Fan_Pinout
 last_update:
   date: 2025/6/25
   author: cheng.tang

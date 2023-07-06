@@ -2,7 +2,7 @@
 description: XIAO-ESP32S3-FAQ
 title: Why does my XIAO have the problem of not being flush at the rounded corners? Is this a quality problem?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /not_being_flush
 last_update:
   date: 6/30/2023
   author: cheng.tang

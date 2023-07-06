@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Troubleshooting Touch Screen Inaccuracy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /troubleshooting-touch-screen-inaccuracy
 last_update:
   date: 6/21/2023
   author: Seraphina

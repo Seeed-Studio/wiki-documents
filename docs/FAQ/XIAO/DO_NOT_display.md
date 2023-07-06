@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: Why doesn't the display show anything after I upload the program?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-# slug: /reterminal_black_screen
+slug: /DO_NOT_display
 last_update:
   date: 6/30/2023
   author: cheng.tang
