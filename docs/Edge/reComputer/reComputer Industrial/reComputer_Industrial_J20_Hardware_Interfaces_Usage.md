@@ -148,6 +148,68 @@ sudo reboot
 
 - **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off 
 
+Now we will create a script to always sync the system clock from the hardware clock in each boot.
+
+- **Step 8:** Create a new shell script using any text editor of your preference. Here we use **vi** text editor
+
+```sh
+sudo vi /usr/bin/hwtosys.sh 
+```
+
+- **Step 9:** Enter **insert mode** by pressing **i**, copy and paste the following content inside the file
+
+```sh
+#!/bin/bash
+
+sudo hwclock --hctosys
+```
+
+- **Step 10:** Make the script executable
+
+```sh
+sudo chmod +x /usr/bin/hwtosys.sh 
+```
+
+- **Step 11:** Create a systemd file
+
+```sh
+sudo nano /lib/systemd/system/hwtosys.service 
+```
+
+- **Step 12:** Add the following inside the file 
+
+```sh
+[Unit]
+Description=Change system clock from hardware clock
+
+[Service]
+ExecStart=/usr/bin/hwtosys.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+- **Step 13:** Reload systemctl daemon
+
+```sh
+sudo systemctl daemon-reload 
+```
+
+- **Step 14:** Enable the newly created service to start on boot and start the service
+
+```sh
+sudo systemctl enable hwtosys.service
+sudo systemctl start hwtosys.service
+```
+
+- **Step 15:** Verify the script is up and running as a systemd service
+
+```sh
+sudo systemctl status hwtosys.service
+```
+
+- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock 
+
 ## M.2 Key M
 
 Out of the box, reComputer Industrial includes a 128GB SSD connected to the M.2 Key M slot, which is pre-installed with JetPack system.
