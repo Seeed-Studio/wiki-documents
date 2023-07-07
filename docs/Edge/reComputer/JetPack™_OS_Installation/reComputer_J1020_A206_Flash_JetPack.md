@@ -89,7 +89,7 @@ Before we can move on to the installation steps, we need to make sure that our r
     </tr>
   </tbody></table>
 
-**Step 3.** Power up the reComputer with 12V/5A DC cable on the left of the reComputer and use a Tpye-C cable to connect the Linux Host PC on the right of the reComputer.
+**Step 3.** Power up the reComputer with 12V/5A DC cable on the left of the reComputer and use a Type-C cable to connect the Linux Host PC on the right of the reComputer.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputerJ2021_J202_Flash_Jetpack.png" /></div>
 

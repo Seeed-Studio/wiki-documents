@@ -92,7 +92,7 @@ Before we can move on to the installation steps, we need to make sure that the r
 
 
 
-**Step 3.** Using a Tpye-C cable to connect to the Linux Host PC with the `NX USB` (as shown in the image below) usb type C port on the reServer J2032, plug in the 12V/5A DC cable and then press the power button from the front to turn the the power for reServer J2032.
+**Step 3.** Using a Type-C cable to connect to the Linux Host PC with the `NX USB` (as shown in the image below) usb type C port on the reServer J2032, plug in the 12V/5A DC cable and then press the power button from the front to turn the the power for reServer J2032.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reServerJ2032/back_type_c.png" /></div>
 

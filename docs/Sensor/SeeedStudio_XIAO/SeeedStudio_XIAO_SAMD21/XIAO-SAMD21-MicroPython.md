@@ -26,7 +26,7 @@ First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and 
 ### **Hardware Setup**
 
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) x1
-- Tpye-C cable x1
+- Type-C cable x1
 - PC x1
 
 ### **Software Setup**

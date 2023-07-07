@@ -108,7 +108,7 @@ We assume you might want to be aware of some basic parameters of the product. Th
 | Operating Voltage                      |   5    |     V       |
 | Rate   |    115200     |          |
 | I2C Interface                          | seeed studio XIAO & Arduino   | -         |
-| Power Supply | dual 7-pin connector & Tpye-C    | -         |
+| Power Supply | dual 7-pin connector & Type-C    | -         |
 | Downloading & Firmware Burn Interface | Type-C    | -         |
 | Dimensions                             |   40*20*13        | mm        |
 
