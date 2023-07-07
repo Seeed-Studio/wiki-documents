@@ -834,6 +834,7 @@ const sidebars = {
       type: 'category',
       label: 'SeeedStudio XIAO',
       items: [
+        'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
         {
           type: 'category',
           label: 'SeeedStudio XIAO SAMD21',
@@ -844,7 +845,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
-            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+            'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
             {
               type: 'category',
               label: 'Embedded ML',
@@ -872,8 +873,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
-            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
-
+            'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
             {
               type: 'category',
               label: 'Embedded ML',
@@ -894,7 +894,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
-            // 'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+            'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
 
             {
               type: 'category',

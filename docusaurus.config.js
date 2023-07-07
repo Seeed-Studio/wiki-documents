@@ -163,6 +163,11 @@ const config = {
         // disableSwitch: true,
       },
 
+      tableofContents:{
+        minHeadingLevel: 2,
+        maxHeadingLevel: 4,
+        },
+
       giscus: {
         repo: 'Seeed-Studio/wiki-documents',
         repoId: 'MDEwOlJlcG9zaXRvcnkzMDM5NTk0Nzk=',
@@ -220,12 +225,12 @@ const config = {
           //   className: 'navbar_doc_items',
           //   to: '/Contribution',
           // },
-          // {
-          //   label: 'Help Center🙋',
-          //   position: 'right',
-          //   className: 'navbar_doc_right_items',
-          //   to: '/KnowledgeBase',
-          // },
+          {
+            label: 'Help Center🙋',
+            position: 'right',
+            className: 'navbar_doc_right_items',
+            to: '/knowledgebase',
+          },
           // {
           //   type: 'doc',
           //   docId: 'Solutions',

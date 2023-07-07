@@ -303,7 +303,7 @@ function ShowcaseCards() {
 							<section className={clsx(' margin-bottom--xl', styles.cards)}>
 
 								{item.list && item.list.map((tag, i) => {
-									const imagePath = require(`../../../assets/KnowledgeBase/${tag.preview}`).default;
+									const imagePath = require(`../../../assets/knowledgebase/${tag.preview}`).default;
 									return (
 										<li className={styles.card_item} key={i}>
 											<div className={styles.card_image}>
@@ -402,7 +402,7 @@ function ShowcaseCards() {
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
-			<div className={styles.KnowledgeBase}>
+			<div className={styles.knowledgebase}>
 				<div className={styles.wrapper}>
 					<ShowcaseHeader />
 					<ShowcaseFilters />
