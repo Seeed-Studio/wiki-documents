@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: How to wake up the reTerminal LCD after sleep
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Wakeup_reTerminal_LCD_after_sleepblack_screen
+slug: /Wakeup_reTerminal_LCD_after_sleep
 last_update:
   date: 6/21/2023
   author: Seraphina
