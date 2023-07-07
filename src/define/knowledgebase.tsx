@@ -87,51 +87,54 @@ export const ContributionList=[
   {
     list:[
       {
+        //reTerminal
         title1: '- How to troubleshoot the black screen issue on reTerminal',
-        website1: 'https://www.google.com',
+        website1: 'https://wiki.seeedstudio.com/reterminal_black_screen',
         title2: '- How to flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC',
-        website2: 'https://www.google.com',
+        website2: 'https://wiki.seeedstudio.com/flash_different_os_to_emmc',
         title3: '- Log in to Raspberry Pi OS/++Ubuntu OS or Other OS using SSH over Wi-Fi/ Ethernet',
-        website3: 'https://www.google.com',
+        website3: 'https://wiki.seeedstudio.com/log_rpios_use_ssh_over_wifi_ethernet',
         preview: 'knowledge_base1.png',
-        source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
+        source: 'https://wiki.seeedstudio.com/reTerminal-new_FAQ',
         tags: ['Edge', 'SBC'],
       },
       {
+        //XIAO
         title1: '- How to check the battery voltage',
-        website1: 'https://www.google.com',
+        website1: 'https://wiki.seeedstudio.com/check_battery_voltage',
         title2: '- Note on XIAO ESP32C3 IO allocation',
-        website2: 'https://www.google.com',
+        website2: 'https://wiki.seeedstudio.com/exp32c3_d9_d6_d8',
         title3: '- What to do when upload fails/the program runs abnormally/the device port is not found?',
-        website3: 'https://www.google.com',
+        website3: 'https://wiki.seeedstudio.com/noport_upload_fails',
         preview: 'knowledge_base2.png',
-        source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
+        source: 'https://wiki.seeedstudio.com/XIAO_FAQ',
         tags: ['Sensing', 'MCU'],
       },
     ]
   },
   {
+
     list:[
       {
+        // ODYSSEY
         title1: '- Re-Installing the Original Windows',
-        website1: 'https://www.google.com',
+        website1: 'https://wiki.seeedstudio.com/Troubleshooting_BIOS-Related_Issues',
         title2: '- Troubleshooting BIOS-Related Issues(WiFi/Bluetooth/Fan/Auto Power-On/Boot Guard/GPIO)',
-        website2: 'https://www.google.com',
+        website2: 'https://wiki.seeedstudio.com/reinstall_the_Original_Windows',
         title3: '- Arduino IDE doesnt recognize the onboard microcontroller on ODYSSEY - X86J4105/ X86J4125',
-        website3: 'https://www.google.com',
+        website3: 'https://wiki.seeedstudio.com/not_recognize-onboard-microcontroller',
         preview: 'knowledge_base3.png',
-        source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
+        source: 'https://wiki.seeedstudio.com/ODYSSEY_FAQ',
         tags: ['Edge', 'SBC', 'X86'],
       },
       {
+        //Jetson
         title1: '- The remaining space in the eMMC in the received reComputer is only about 2GB, how can I solve the problem of insufficient space?',
-        website1: 'https://www.google.com',
+        website1: 'https://wiki.seeedstudio.com/solution_of_insufficient_space',
         title2: '- Troubleshooting Installation',
-        website2: 'https://www.google.com',
-        title3: '- Note on XIAO ESP32C3 IO allocation',
-        website3: 'https://www.google.com',
+        website2: 'https://wiki.seeedstudio.com/Troubleshooting_Installation',
         preview: 'knowledge_base4.png',
-        source: 'https://github.com/orgs/Seeed-Studio/projects/4/views/1',
+        source: 'https://wiki.seeedstudio.com/Jetson_FAQ',
         tags: ['Edge'],
       },
     ]
