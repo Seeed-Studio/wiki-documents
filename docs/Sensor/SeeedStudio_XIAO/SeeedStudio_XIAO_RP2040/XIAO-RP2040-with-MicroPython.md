@@ -25,7 +25,7 @@ First, we are going to connect the Seeed Studio XIAO RP2040 to the computer and 
 ### **Hardware Setup**
 
 - [Seeed Studio XIAO RP2040](https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html) x1
-- Tpye-C cable x1
+- Type-C cable x1
 - PC x1
 
 ### **Software Setup**
