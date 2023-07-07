@@ -760,3 +760,287 @@ text-decoration: none;
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+
+/* 以下是XIAO专题页的内容 */
+
+.xiao_topic_page_pic {
+  background-color: #ffffff;
+  justify-content: center;
+  /* margin-top: 20px; */
+  margin-bottom: 0.4em;
+  margin-bottom: 0.4em;
+  height: 10em; /* 最小按钮高度 */
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.xiao_topic_page_vertical {
+  display: flex;
+  /* font-family: "Arial"; */
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  /* margin-bottom: 0.3em; */
+  /* font-size: 1.6rem; */
+  line-height: 1.3;
+  vertical-align: middle;
+  /* margin-left: 20px; */
+  /* margin-top: 1px; */
+  /* font-weight: bold; */
+  text-decoration: none;
+  border-radius: 0px;
+  width: 100%; /* 最小按钮宽度 */
+  /* height: 27em; 最小按钮高度 */
+  text-align: left;
+  text-decoration: none;
+}
+
+.xiao_topic_page_font1 {
+  display: inline-flex;
+  font-family: "Verdana";
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  /* margin-bottom: 0.3em; */
+  /* font-size: 1.6rem; */
+  line-height: 2.0;
+  margin-left: 20px;
+  margin-top: 45px;
+  /* font-weight: bold; */
+  text-decoration: none;
+  border-radius: 0px;
+  width: 100%; /* 最小按钮宽度 */
+  height: 10em; /* 最小按钮高度 */
+  text-decoration: none;
+}
+
+.feature1{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature1.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.feature1:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature1-1.jpg');
+  background-size: cover;
+}
+
+.feature2{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature2.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.feature2:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature2-2.jpg');
+  background-size: cover;
+}
+
+.feature3{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature3.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.feature3:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature3-3.jpg');
+  background-size: cover;
+}
+
+.feature4{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature4.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.feature4:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature4-4.jpg');
+  background-size: cover;
+}
+
+.form_without_frame {
+  border: none;
+  border-top: none;
+}
+
+.unorder_list{
+  list-style-type: disc;
+}
+
+.xiao_expansion_board{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.xiao_expansion_board:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg');
+  background-size: cover;
+}
+
+.xiao_grove_shield{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.xiao_grove_shield:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/grove-shield-for-xiao.png');
+  background-size: cover;
+}
+
+.xiao_round_display{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/round_display_for_xiao/rounddisplay.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.xiao_round_display:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/xiaorounddisplay.png');
+  background-size: cover;
+}
+
+.xiao_starter_kit{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/XIAO-Kit/XIAO-Kit.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px;
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  font-weight: 40%;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* 按钮宽度 */
+  height: 160px; /* 按钮高度 */
+}
+
+.xiao_starter_kit:hover {
+  transform: scale(1.2);
+  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/xiaokitpiv.png');
+  background-size: cover;
+}
+
