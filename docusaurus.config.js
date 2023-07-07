@@ -163,10 +163,10 @@ const config = {
         // disableSwitch: true,
       },
 
-      tableofContents:{
+      tableOfContents: {
         minHeadingLevel: 2,
-        maxHeadingLevel: 4,
-        },
+        maxHeadingLevel: 5,
+      },
 
       giscus: {
         repo: 'Seeed-Studio/wiki-documents',
