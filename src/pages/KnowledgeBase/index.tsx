@@ -382,7 +382,7 @@ function ShowcaseCards() {
 															'button button--secondary button--sm',
 															styles.showcaseCardSrcBtn,
 														)}>
-														<Translate id="showcase.card.sourceLink">Progress</Translate>
+														<Translate id="showcase.card.sourceLink">See More</Translate>
 													</Link>
 												</div>
 											)}

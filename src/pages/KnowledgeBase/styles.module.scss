@@ -50,7 +50,7 @@
 		display: grid;
 		gap: 24px;
 		margin-top: 24px;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 
 		.card_item {
 			// width: 33%
