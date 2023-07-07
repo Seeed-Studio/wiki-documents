@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: The screen orientation is incorrect after installing Raspberry Pi OS Bullseye
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reterminal_black_screenIncorrect_screen_orientation_on_RPiOS_Bullseye
+slug: /Incorrect_screen_orientation_on_RPiOS_Bullseye
 last_update:
   date: 6/21/2023
   author: Seraphina

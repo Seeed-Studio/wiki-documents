@@ -1,6 +1,6 @@
 ---
 description: XIAO ESP32C3-FAQ
-title: I want to reflash the bootloader with factory firmware
+title: How to reflash the bootloader with factory firmware
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reflash_the_bootloader
 last_update:
