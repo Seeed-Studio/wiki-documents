@@ -131,7 +131,7 @@ export const ContributionList=[
         //Jetson
         title1: '- The remaining space in the eMMC in the received reComputer is only about 2GB, how can I solve the problem of insufficient space?',
         website1: 'https://wiki.seeedstudio.com/solution_of_insufficient_space',
-        title2: '- Troubleshooting Installation',
+        title2: '- Troubleshooting Installation for NVIDIA Jetson boards',
         website2: 'https://wiki.seeedstudio.com/Troubleshooting_Installation',
         preview: 'knowledge_base4.png',
         source: 'https://wiki.seeedstudio.com/Jetson_FAQ',
