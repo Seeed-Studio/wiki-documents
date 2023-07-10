@@ -52,7 +52,7 @@ Here is a collection of hands-on preparation content for each XIAO, where you ca
 		</tr>
         <tr>
 			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+			<th>XIAO ESP32S3 (Sense)</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/4.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -89,7 +89,7 @@ Here is a collection of tutorials for each XIAO on how to use the pin function. 
 		</tr>
         <tr>
 			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+			<th>XIAO ESP32S3 (Sense)</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://yokahiyori.com/wp-content/uploads/2022/12/2022-15-22_DSC01683_b_169_r4-2048x1151.png" style={{width:250, height:'auto'}}/></div></td>
