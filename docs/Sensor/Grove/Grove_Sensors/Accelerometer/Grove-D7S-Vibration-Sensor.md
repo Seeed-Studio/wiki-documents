@@ -266,7 +266,7 @@ The sensor can operate at either 3.3V.
 - **[ZIP]** [Grove - D7S Vibration Sensor SCH&PCB](https://files.seeedstudio.com/wiki/grove-d7s-vibration-sensor/D7S-Vibration-Sensor.zip)
 - **[PDF]** [D7S Datasheet](https://files.seeedstudio.com/wiki/grove-d7s-vibration-sensor/en-d7s-957666.pdf)
 
-## Tech Support & Product Descussion
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
