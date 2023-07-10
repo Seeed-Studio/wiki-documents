@@ -1,6 +1,6 @@
 ---
 description: Wiki feature page for the XIAO series.
-title: Projects for XIAO Series
+title: XIAO Masterpieces
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,9 +10,26 @@ last_update:
   author: MengDu
 ---
 
-# XIAO Project Collection
+# XIAO Masterpieces:
 
-### Basic Beginnings
+The XIAO series development boards, where "XIAO" stands for small or little, are tiny development boards about the size of a fingernail, launched by Seeed Studio.
+
+We provide here a clear and easy-to-understand introduction to the applications of this series of development boards, with the hope of providing reference and assistance for your future use. Furthermore, we have compiled a collection of little masterpieces created using these small development boards and eagerly await your [submissions](https://wiki.seeedstudio.com/Contribution-Guide/).
+
+## Table of Contents
+
+- [**The Full-featured Usage**](#jump1)
+  - [**Getting Started**](#jump2)
+  - [**Pin Usage**](#jump3)
+  - [**Feature Usage(Bluetooth, Wi-Fi, other tutorials) of each board**](#jump4)
+  - [**Platform Support(Platform, MicroPython, CircuitPython)**](#jump5)
+- [**The Showcase of Creative Creations**](#jump6)
+  - [**Embedded Machine Learning(TinyML)**](#jump7)
+  - [**Distinguished Projects**](#jump8)
+
+## <span id="jump1">The Full-featured Usage</span>
+
+### <span id="jump2">Getting Started</span>
 
 Here is a collection of hands-on preparation content for each XIAO, where you can find the complete process of preparing the hardware and software for each XIAO. This will clear the way for you on your development journey.
 
@@ -49,7 +66,7 @@ Here is a collection of hands-on preparation content for each XIAO, where you ca
 </div>
 
 
-### Pin Usage
+### <span id="jump3">Pin Usage</span>
 
 Here is a collection of tutorials for each XIAO on how to use the pin function. The pin functions we usually refer to include the common GPIO, Digital, Analog, SPI, IIC, etc. Here, you will master the use of the basic functions of each XIAO. Connect your sensor system and get creative!
 
@@ -85,9 +102,11 @@ Here is a collection of tutorials for each XIAO on how to use the pin function. 
 	</table>
 </div>
 
-### Features Usage
+### <span id="jump4">Features Usage of Each Board</span>
 
 This section aims to list the tutorials in the Wiki on some of the function points specific to each XIAO model. It allows the user to apply these features.
+
+#### Seeed Studio XIAO SAMD21
 
 <div class="table-center">
 	<table align="center">
@@ -132,6 +151,8 @@ This section aims to list the tutorials in the Wiki on some of the function poin
 ---
 
 <br />
+
+#### Seeed Studio XIAO nRF52840 (Sense)
 
 <div class="table-center">
 	<table align="center">
@@ -205,6 +226,8 @@ This section aims to list the tutorials in the Wiki on some of the function poin
 
 <br />
 
+#### Seeed Studio XIAO ESP32C3
+
 <div class="table-center">
 	<table align="center">
 		<tr>
@@ -248,6 +271,8 @@ This section aims to list the tutorials in the Wiki on some of the function poin
 ---
 
 <br />
+
+#### Seeed Studio XIAO ESP32S3 (Sense)
 
 <div class="table-center">
 	<table align="center">
@@ -297,9 +322,11 @@ This section aims to list the tutorials in the Wiki on some of the function poin
 	</table>
 </div>
 
-### Platform Support
+### <span id="jump5">Platform Support for XIAO Series</span>
 
 This section will list the major platforms supported by XIAO, including PlatformIO, MicroPython, CircuitPython. support is updated in real time.
+
+#### Plarform IO
 
 <div class="table-center">
 	<table align="center">
@@ -338,6 +365,8 @@ This section will list the major platforms supported by XIAO, including Platform
 
 ---
 
+#### MicroPython
+
 <div class="table-center">
 	<table align="center">
 		<tr>
@@ -375,6 +404,8 @@ This section will list the major platforms supported by XIAO, including Platform
 
 ---
 
+#### CircuitPython
+
 <div class="table-center">
 	<table align="center">
 		<tr>
@@ -407,7 +438,11 @@ This section will list the major platforms supported by XIAO, including Platform
 	</table>
 </div>
 
-### TinyML
+## <span id="jump6">The Showcase of Creative Creations</span>
+
+We will continue to collect and showcase Seeed Studio XIAO's projects here.
+
+### <span id="jump7">Embedded Machine Learning(TinyML)</span>
 
 Some XIAO's do support embedded machine learning and we will list the relevant tutorial content on embedded machine learning here.
 
@@ -452,7 +487,7 @@ Some XIAO's do support embedded machine learning and we will list the relevant t
 	</table>
 </div>
 
-### Wonderful Programs
+### <span id="jump8">Distinguished Projects</span>
 
 <div class="table-center">
 	<table align="center">
