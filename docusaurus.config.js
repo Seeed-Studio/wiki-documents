@@ -182,6 +182,8 @@ const config = {
           hideable: true,
         },
       },
+      
+
       navbar: {
         // title: 'My Site',
         logo: {
