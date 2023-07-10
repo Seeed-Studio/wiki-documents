@@ -188,6 +188,12 @@ If you are using the factory firmware of the Seeed Studio XIAO nRF52840 or have 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEpowerresult.jpg" alt="pir" width={500} height="auto" /></p>
 
+### Accelerometer Examples and Low Power
+
+We are very grateful to our community partner **[daCoder](https://forum.seeedstudio.com/u/daCoder)** for his contribution to the XIAO nRF52840 low power consumption mode.
+
+You can find out more about the content of the projects he has worked on by clicking **[HERE](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**.
+
 ## Battery Charging current
 
 The battery charging current is selectable as 50mA or 100mA, where you can set **Pin13** as high or low to change it to 50mA or 100mA. The low current charging current is at the input model set up as HIGH LEVEL and the high current charging current is at the output model set up as LOW LEVEL.

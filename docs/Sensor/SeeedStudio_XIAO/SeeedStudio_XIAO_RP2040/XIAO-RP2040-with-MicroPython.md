@@ -192,6 +192,12 @@ If it works well, you will see the text "Hello,World!" displayed on the screen.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_16.png" /></div>
 
+## MicroPython Device Console
+
+Our partner **Neil** has written a command line console program for XIAO using MicroPython. With this programme you can easily upload, download and delete files. We thank him for his contribution to XIAO!
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
+
 ## Additional Resources
 
 Some additional libraries and sample codes are here:
@@ -211,3 +217,8 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
+
+
+
+
