@@ -231,6 +231,12 @@ print(i2c.readfrom(0x51, 4))
 
 Familiarity with micropython allows you to do more , we are looking forward to creating more value for you. Feel free to share your projects with us too!
 
+## MicroPython Device Console
+
+Our partner **Neil** has written a command line console program for XIAO using MicroPython. With this programme you can easily upload, download and delete files. We thank him for his contribution to XIAO!
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
