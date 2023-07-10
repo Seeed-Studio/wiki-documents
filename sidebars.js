@@ -835,6 +835,7 @@ const sidebars = {
       label: 'SeeedStudio XIAO',
       items: [
         'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+        // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Topic_page',
         {
           type: 'category',
           label: 'SeeedStudio XIAO SAMD21',

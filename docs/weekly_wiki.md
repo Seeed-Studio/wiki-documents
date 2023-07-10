@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/03/2023
+  date: 07/10/2023
   author: Matthew
 ---
 
@@ -15,47 +15,32 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is July 7th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 10th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Wio-WM1110 Dev Kit](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit/Introduction/)
+### [Seeed Studio Help Center Page](https://wiki.seeedstudio.com/knowledgebase/)
 
-The WM1110 Dev Kit is based on Wio-WM1110 Wireless Module, integrates Semtech's LoRa® transceiver and a multi-purpose radio front-end for geolocation. The LoRa® transceiver provides low-power, high-sensitivity network coverage, while GNSS (GPS/Beidou) and Wi-Fi scanning offer all-round location coverage. while also providing connectivity options for a variety of peripherals.
+We have launched the "Help Center Page", which has stored frequently asked questions about the use of the product, and will be continuously updated.
 
-- [Getting Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-WM1110_Dev_Kit/)
-- [Hardware Overview](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Hardware_Overview/)
-- [Server Configuration](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Server_Configuration/)
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki-platform/wiki_help_center.png" /></div>
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993082-wio-wm1110-dev-kit-45font.jpg" alt="pir" width={500} height="auto" /></p>
+#### [FAQ collection page for reTerminal](https://wiki.seeedstudio.com/reTerminal-new_FAQ/)
 
-### [Grove Smart IR Gesture Sensor (PAJ7660)](/grove_gesture_paj7660)
+This is the page collected frequently asked questions about reTerminal and stored in "Help Center Page".
 
-Grove Smart IR Gesture Sensor is an intelligent gesture recognition module equipped with an infrared camera sensor and applied AI algorithm. It can detect over 15 gestures with wide detection while supporting both IIC and SPI communication. This module also allows Grove, Type-C, and Seeed Studio XIAO direct connecting.
+#### [FAQ collection page for SeeedStudio XIAO Series](https://wiki.seeedstudio.com/XIAO_FAQ/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/main.jpg" alt="pir" width={500} height="auto" /></p>
+This is the page collected frequently asked questions about SeeedStudio XIAO Series and stored in "Help Center Page".
 
-### [Self-Hosted Solutions for Office Management with LinkStar](https://wiki.seeedstudio.com/grocy-bookstack-linkstar/)
+#### [FAQ collection page for ODYSSEY Boards](https://wiki.seeedstudio.com/ODYSSEY_FAQ/)
 
-The integration of Grocy and BookStack within a self-hosted office server powered by a LinkStar router offers a compelling solution for efficient and organized operations. 
+This is the page collected frequently asked questions about ODYSSEY Boards and stored in "Help Center Page".
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/grocy_bookstack/grocy3.PNG" alt="pir" width={700} height="auto" /></p>
+#### [FAQ collection page for reComputer Jetson Series](https://wiki.seeedstudio.com/Jetson_FAQ/)
 
-### [EdgeBox RPi 200 boot From External Media](https://wiki.seeedstudio.com/EdgeBox-RPi-200-boot-from-external-media/)
+This is the page collected frequently asked questions about reComputer Jetson Series and stored in "Help Center Page".
 
-EdgeBox-RPi-200 series are all-in-one Raspberry Pi-based industrial edge computing controllers, combining multiple industrial purposes.
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" alt="pir" width={500} height="auto" /></p>
-
-<!-- ## Existed Wiki Updated
-
-### [XIAO ESP32C3 accesses Home Assistant via ESPHome service](https://wiki.seeedstudio.com/xiao-esp32c3-esphome/#faq5-i-used-the-jlink-flash-firmware-but-i-got-the-error-programming-of-range-address-0x08000000-failed-block-verification-error-program-failed-failed-to-program-and-verify-target-)
-
-We have added `FAQ5`: I used the Jlink flash firmware, but I got the error "Programming of range @address 0x08000000 failed (block verification error) Program failed Failed to program and verify target"
-
-### [FAQs for reTerminal Usage](https://wiki.seeedstudio.com/reTerminal-FAQ/#connect-to-stm32-using-cm4-and-flash-the-firmware)
-
-We have updated the steps for `Connect to STM32 using CM4 and flash the firmware`. -->
 
 ## Past Weekly wiki
 
@@ -73,3 +58,5 @@ We have updated the steps for `Connect to STM32 using CM4 and flash the firmware
 - [weekly wiki on 5.29th](/Seeed_Elderly/weekly_wiki/wiki529)
 - [weekly wiki on 6.05th](/Seeed_Elderly/weekly_wiki/wiki605)
 - [weekly wiki on 6.12th](/Seeed_Elderly/weekly_wiki/wiki612)
+- [weekly wiki on 6.19th](/Seeed_Elderly/weekly_wiki/wiki619)
+- [weekly wiki on 7.03th](/Seeed_Elderly/weekly_wiki/wiki703)
