@@ -99,18 +99,18 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
       <div class="start_card_wrapper">
           <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label2">Kit with Microcontrollers</a>
           <br/>
-          <a class="getting_started_label3">- Demos provided</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#tutorials" class="getting_started_label3">- Demos provided</a>
           <br/>
-          <a class="getting_started_label3">- Along with free courses</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses" class="getting_started_label3">- Along with free courses</a>
       </div>
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
           <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" class="getting_started_label2">Kit with Single Board Computers</a>
           <br/>
-          <a class="getting_started_label3">- Demos provided</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#tutorials--faq" class="getting_started_label3">- Demos provided</a>
           <br/>
-          <a class="getting_started_label3">- Along with free courses</a>
+          <a href= "https://wiki.seeedstudio.com/Edge_Computing/#kit-with-courses-1" class="getting_started_label3">- Along with free courses</a>
       </div>
   </div>
 </div>
