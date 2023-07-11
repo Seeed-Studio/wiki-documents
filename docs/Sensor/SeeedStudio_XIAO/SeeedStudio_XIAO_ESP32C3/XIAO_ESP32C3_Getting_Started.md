@@ -51,7 +51,7 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 | Onboard Buttons       | Reset/ Boot Button             | N/A                    | Reset/ Boot Button                  | Reset Button                           | Reset Button                            |
 | Onboard LEDs          | Charge LED                            | N/A                    | Full-color RGB/ 3-in-one LED        | 3-in-one LED/ Charge LED               | 3-in-one LED/ Charge LED                |
 | Battery Charge Chip   | Built-in                       | N/A                    | N/A                                 | BQ25101                                | BQ25101                                 |
-| Programming Languages | Arduino                        | Arduino/ CircuitPython | Arduino/ MicroPython/ CircuitPython | Arduino/ MicroPython/ CircuitPython    | Arduino/ MicroPython/ CircuitPython     |
+| Programming Languages | Arduino/MicroPython               | Arduino/ CircuitPython | Arduino/ MicroPython/ CircuitPython | Arduino/ MicroPython/ CircuitPython    | Arduino/ MicroPython/ CircuitPython     |
 
 ## Hardware overview
 
