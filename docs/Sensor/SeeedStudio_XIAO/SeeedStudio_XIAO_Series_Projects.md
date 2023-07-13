@@ -1,6 +1,6 @@
 ---
 description: Wiki feature page for the XIAO series.
-title: XIAO Masterpieces
+title: XIAO MASTERPIECES
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,7 @@ last_update:
   author: MengDu
 ---
 
-# XIAO Masterpieces:
+# Seeed Studio XIAO MASTERPIECES
 
 The XIAO series development boards, where "XIAO" stands for small or little, are tiny development boards about the size of a fingernail, launched by Seeed Studio.
 
@@ -359,6 +359,42 @@ This section will list the major platforms supported by XIAO, including Platform
         <tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.platformio.org/en/stable/boards/espressif32/seeed_xiao_esp32c3.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32s3.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+---
+
+#### Zephyr
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th colspan="3">Zephyr</th>
+		</tr>
+        <tr>
+			<th>XIAO SAMD21</th>
+			<th>XIAO nRF52840 (Sense)</th>
+            <th>XIAO ESP32C3</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-samd21.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-ble.png" style={{width:300, height:'auto'}}/></div></td>
+            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32c3.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/arm/seeeduino_xiao/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/arm/xiao_ble/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/riscv/xiao_esp32c3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+        <tr>
+			<th>XIAO ESP32S3 (Sense)</th>
+		</tr>
+		<tr class="form_without_frame">
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32s3.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+        <tr class="form_without_frame">
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/xtensa/xiao_esp32s3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>

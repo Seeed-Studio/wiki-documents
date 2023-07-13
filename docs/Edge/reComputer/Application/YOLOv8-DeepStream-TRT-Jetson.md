@@ -209,13 +209,20 @@ cd ~
 git clone https://github.com/marcoslucianops/DeepStream-Yolo
 ```
 
-- **Step 2.** Copy **gen_wts_yoloV8.py** from **DeepStream-Yolo/utils** into **ultralytics** directory
+- **Step 2.** Checkout the repo to the following commit
 
 ```sh
-cp DeepStream-Yolo/utils/gen_wts_yoloV8.py ultralytics
+cd DeepStream-Yolo
+git checkout 68f762d5bdeae7ac3458529bfe6fed72714336ca
 ```
 
-- **Step 3.** Inside the ultralytics repo, download **pt file** from [YOLOv8 releases](https://github.com/ultralytics/assets/releases/) (example for YOLOv8s)
+- **Step 3.** Copy **gen_wts_yoloV8.py** from **DeepStream-Yolo/utils** into **ultralytics** directory
+
+```sh
+cp utils/gen_wts_yoloV8.py ~/ultralytics
+```
+
+- **Step 4.** Inside the ultralytics repo, download **pt file** from [YOLOv8 releases](https://github.com/ultralytics/assets/releases/) (example for YOLOv8s)
 
 ```sh
 wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8s.pt
@@ -223,7 +230,7 @@ wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8s.pt
 
 **NOTE:** You can use your custom model, but it is important to keep the YOLO model reference **(yolov8_)** in your **cfg** and **weights/wts** filenames to generate the engine correctly.
 
-- **Step 4.** Generate the cfg, wts and labels.txt (if available) files (example for YOLOv8s)
+- **Step 5.** Generate the cfg, wts and labels.txt (if available) files (example for YOLOv8s)
 
 ```sh
 python3 gen_wts_yoloV8.py -w yolov8s.pt
@@ -244,7 +251,7 @@ or
 -s 1280 1280
 ```
 
-- **Step 5.** Copy the generated **cfg**, **wts** and **labels.txt** (if generated) files into the **DeepStream-Yolo** folder
+- **Step 6.** Copy the generated **cfg**, **wts** and **labels.txt** (if generated) files into the **DeepStream-Yolo** folder
 
 ```sh
 cp yolov8s.cfg ~/DeepStream-Yolo
@@ -252,7 +259,7 @@ cp yolov8s.wts ~/DeepStream-Yolo
 cp labels.txt ~/DeepStream-Yolo
 ```
 
-- **Step 6.** Open the **DeepStream-Yolo** folder and compile the library
+- **Step 7.** Open the **DeepStream-Yolo** folder and compile the library
 
 ```sh
 cd ~/DeepStream-Yolo
@@ -260,7 +267,7 @@ CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.2/ 6.1.1 / 
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.1 / 6.0
 ```
 
-- **Step 7.** Edit the **config_infer_primary_yoloV8.txt** file according to your model (example for YOLOv8s with 80 classes)
+- **Step 8.** Edit the **config_infer_primary_yoloV8.txt** file according to your model (example for YOLOv8s with 80 classes)
 
 ```sh
 [property]
@@ -272,7 +279,7 @@ num-detected-classes=80
 ...
 ```
 
-- **Step 8.** Edit the **deepstream_app_config.txt** file
+- **Step 9.** Edit the **deepstream_app_config.txt** file
 
 ```sh
 ...
@@ -281,7 +288,7 @@ num-detected-classes=80
 config-file=config_infer_primary_yoloV8.txt
 ```
 
-- **Step 9.** Change the video source in **deepstream_app_config.txt** file. Here a default video file is loaded as you can see below
+- **Step 10.** Change the video source in **deepstream_app_config.txt** file. Here a default video file is loaded as you can see below
 
 ```sh
 ...

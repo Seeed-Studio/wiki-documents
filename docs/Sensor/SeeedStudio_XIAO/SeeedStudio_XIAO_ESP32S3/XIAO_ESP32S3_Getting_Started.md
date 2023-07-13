@@ -566,6 +566,8 @@ If you want to learn to use more of the deep sleep mode and wake-up functions, y
 
 We understand that some users are looking to flash UF2 files directly to XIAO, which will enable the process of batch flashing programs. Here we will describe this method.
 
+### Method I
+
 :::note
 Currently this method can only be used on Windows systems.
 :::
@@ -604,6 +606,12 @@ Once you have performed the above steps and you still want the XIAO ESP32S3 to a
 :::note
 Press Reset then Boot, and be quick!
 :::
+
+### Method II
+
+The project is composed of customizing the 2nd stage bootloader from IDF and UF2 factory application as 3rd stage bootloader. Note: since IDF is actively developed and change very often, it is included as submodule at lib/esp-idf, please run export script there to have your environment setup correctly.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/adafruit/tinyuf2/tree/master/ports/espressif"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
 
 ## Troubleshooting
 
