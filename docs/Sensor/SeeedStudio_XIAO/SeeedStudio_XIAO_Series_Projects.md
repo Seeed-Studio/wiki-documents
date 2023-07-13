@@ -1,6 +1,6 @@
 ---
 description: Wiki feature page for the XIAO series.
-title: XIAO Masterpieces
+title: XIAO MASTERPIECES
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,7 @@ last_update:
   author: MengDu
 ---
 
-# XIAO Masterpieces:
+# Seeed Studio XIAO MASTERPIECES
 
 The XIAO series development boards, where "XIAO" stands for small or little, are tiny development boards about the size of a fingernail, launched by Seeed Studio.
 
