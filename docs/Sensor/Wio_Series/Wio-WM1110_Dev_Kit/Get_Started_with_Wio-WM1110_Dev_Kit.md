@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_Wio-WM1110_Dev_Kit
 last_update:
-  date: 6/27/2023
+  date: 7/14/2023
   author: Jessie
 ---
 
@@ -112,8 +112,63 @@ After compiling and programming an unmodified example to ensure that your toolch
 
 
 
+## Connect to JLink
+
+* Wio WM1110 Dev Board
+* J-Link Debug Programmer
+
+### Hardware Connection
+
+Connect the J-Link Debug Programmer to the PC and also power Wio-WM110 Dev Board from the USB port.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/hardware_connection.png" alt="pir" width={800} height="auto" /></p>
 
 
+
+Connect as followed:
+**CLK** (Wio-WM1110 Dev Board) -> **SWCLK** (J-Link Debug Programmer Pin 7)
+**DIO** (Wio-WM1110 Dev Board) -> **SWDIO** (J-Link Debug Programmer Pin 9)
+**GND** (Wio-WM1110 Dev Board) -> **GND** (J-Link Debug Programmer)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/photo.png" alt="pir" width={800} height="auto" /></p>
+
+
+### Connect to JFlash
+
+Create a new project.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/open_new_project.png" alt="pir" width={800} height="auto" /></p>
+
+
+
+Click "..." to choose the device: Nordic Semi nRF52840_xxAA
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/choose_device.png" alt="pir" width={800} height="auto" /></p>
+
+Target Interface: SWD
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/project1.png" alt="pir" width={800} height="auto" /></p>
+
+
+Select OK and you should see the following screen:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/drop_file.png" alt="pir" width={800} height="auto" /></p>
+
+Drag and drop the radar firmware (.hex file) into this software and a window will pop up, we will just use its default starting address of 0x8000000.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/JFlash.png" alt="pir" width={800} height="auto" /></p>
+
+Clink Target -> Connect
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/target.png" alt="pir" width={800} height="auto" /></p>
+
+When the connection is successful it will show Connected successfully.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/connected.png" alt="pir" width={800} height="auto" /></p>
+
+Target -> Production Programming
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/program.png" alt="pir" width={800} height="auto" /></p>
 
 # Tech Support
 
