@@ -1,6 +1,6 @@
 ---
 description: Wiki feature page for the XIAO series.
-title: XIAO MASTERPIECES
+title: XIAO Exhibition
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
