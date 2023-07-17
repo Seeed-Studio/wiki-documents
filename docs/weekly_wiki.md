@@ -110,3 +110,4 @@ You can find out more about the content of the projects he has worked on by clic
 - [weekly wiki on 6.12th](/Seeed_Elderly/weekly_wiki/wiki612)
 - [weekly wiki on 6.19th](/Seeed_Elderly/weekly_wiki/wiki619)
 - [weekly wiki on 7.03th](/Seeed_Elderly/weekly_wiki/wiki703)
+- [weekly wiki on 7.10th](/Seeed_Elderly/weekly_wiki/wiki710)
