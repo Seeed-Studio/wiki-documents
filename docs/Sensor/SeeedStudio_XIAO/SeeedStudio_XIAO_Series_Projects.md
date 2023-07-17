@@ -1,6 +1,6 @@
 ---
 description: Wiki feature page for the XIAO series.
-title: XIAO MASTERPIECES
+title: XIAO EXHIBITION
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,7 @@ last_update:
   author: MengDu
 ---
 
-# Seeed Studio XIAO MASTERPIECES
+# Seeed Studio XIAO EXHIBITION
 
 The XIAO series development boards, where "XIAO" stands for small or little, are tiny development boards about the size of a fingernail, launched by Seeed Studio.
 
@@ -507,18 +507,36 @@ Some XIAO's do support embedded machine learning and we will list the relevant t
         <tr>
 			<th>XIAO nRF52840 Sense & Edge Impulse</th>
             <th>TensorFlow Lite on XIAO nRF52840 Sense</th>
+			<th>TinyML Made Easy: Sound Classification (KWS)</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/XIAOEInew14a.png" style={{width:200, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/train-punch.gif" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1485670/_U7e9Y2ayIw.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
         <tr class="form_without_frame">
             <td><font size={"1"}>Welcome to this quickstart wiki on using Edge Impulse with Seeed Studio XIAO nRF52840 Sense! In this guide, we will explore how to use the onboard IMU sensor to detect human motion and classify different actions.</font></td>
             <td><font size={"1"}>This wiki will demonstrate how you can use TensorFlow Lite on Seeed Studio XIAO nRF52840 Sense and detect gestures such as punching and flexing using the on-board accelerometer. Here the data training will be done on the device itself.</font></td>
+			<td><font size={"1"}>We are continuing our exploration of Machine Learning on a giant tiny device, the Seeed XIAO BLE Sense. And now, classifying sound waves.</font></td>
         </tr>
         <tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAOEI/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-BLE-Sense-TFLite-Getting-Started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mjrobot/tinyml-made-easy-sound-classification-kws-2fb3ab"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+		<tr  class="form_without_frame">
+			<th>TinyML Made Easy: Image Classification</th>
+			<th>TinyML Made Easy: Anomaly Detection & Motion Classification</th>
+		</tr>
+			<td><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1587471/_nOXij20mq1.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1472235/_d2Lefd6Xrq.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+		<tr  class="form_without_frame">
+			<td><font size={"1"}>Exploring Machine Learning on the tremendous new tiny device of the Seeed XIAO family, the ESP32S3 Sense.</font></td>
+			<td><font size={"1"}>Exploring Machine Learning on a giant tiny device, the Seeed XIAO BLE. Sense.</font></td>
+		</tr>
+		<tr class="form_without_frame">
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mjrobot/tinyml-made-easy-image-classification-cb42ae"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mjrobot/tinyml-made-easy-anomaly-detection-motion-classification-958fd2"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -605,7 +623,7 @@ Some XIAO's do support embedded machine learning and we will list the relevant t
         <tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/#microsd-card-application-based-on-gas-data-logging"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/blog/2023/02/11/unleash-the-power-of-tracking-with-xiao-the-unmissable-solution-for-accurate-reliable-and-affordable-tracking/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/wiki/xiao_topicpage/pet.png"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
