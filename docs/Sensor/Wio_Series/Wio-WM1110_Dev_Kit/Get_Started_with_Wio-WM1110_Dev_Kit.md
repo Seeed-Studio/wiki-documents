@@ -31,7 +31,7 @@ SES is an all-in-one solution for managing, building, testing and deploying embe
 
 
 :::tip 
-It's recommended to use 5.68 version on Mac OS.
+It's recommended to use 5.68 version.
 :::
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/5.68version.png" alt="pir" width={800} height="auto" /></p>
 
@@ -125,12 +125,16 @@ Connect the J-Link Debug Programmer to the PC and also power Wio-WM110 Dev Board
 
 
 
-Connect as followed:
-**CLK** (Wio-WM1110 Dev Board) -> **SWCLK** (J-Link Debug Programmer Pin 7)
-**DIO** (Wio-WM1110 Dev Board) -> **SWDIO** (J-Link Debug Programmer Pin 9)
+
+
+:::info Connect as followed:
+
+**3V3** (Wio-WM1110 Dev Board) -> **VTref** (J-Link Debug Programmer Pin 1)  
+**CLK** (Wio-WM1110 Dev Board) -> **SWCLK** (J-Link Debug Programmer Pin 7)  
+**DIO** (Wio-WM1110 Dev Board) -> **SWDIO** (J-Link Debug Programmer Pin 9)  
 **GND** (Wio-WM1110 Dev Board) -> **GND** (J-Link Debug Programmer)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/photo.png" alt="pir" width={800} height="auto" /></p>
+:::
 
 
 ### Connect to JFlash
