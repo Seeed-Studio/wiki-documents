@@ -27,6 +27,10 @@ const config = {
       src: 'https://viewer.altium.com/client/static/js/embed.js',
       async: true,
     },
+    {
+      src: 'http://website_fusion.seeedstudio.local/newFusion/js/scroll.js', // 添加你的 JavaScript 文件名、
+      async: true,
+    },
   ],
 
   // GitHub pages deployment config.
