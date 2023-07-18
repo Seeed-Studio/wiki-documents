@@ -99,19 +99,21 @@ Wio-WM1110 Dev Kit is a fully open source powerful IoT development platform for 
 **Built-in Sensors**
 
 **TH Sensor (SHT41)**
+
 |  | Range | Accuracy |
 | -------- | -------- | -------- |
 |Temperature  | -40~125°C |0.2°C|
 | Humidity | 0~100%RH |1.8%RH|
 
 
+
 **3-axis Accelerometer(LIS3DHTR)**
-| Range | Column 2 | Column 3 |
-| -------- | -------- | -------- |
-| ±2g, 4g, 8g, 16g  | Text     | Text     |
-| Bandwidth|0.5Hz ~ 625Hz|
 
+| Range | Bandwidth | Sensitivity(LSB/g) |
+| -------- | -------- | -------- | 
+| ±2g, 4g, 8g, 16g | 0.5Hz ~ 625Hz |1000 (±2g) ~ 83 (±16g)
 
+    
 **General**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/spec.png" alt="pir" width={800} height="auto" /></p>
 

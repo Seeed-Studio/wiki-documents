@@ -233,10 +233,10 @@ The LIS3DHTR sensor communicates with a microcontroller or other digital device 
 
 
 
-| Range | Column 2 | Column 3 |
-| -------- | -------- | -------- |
-| ±2g, 4g, 8g, 16g  | Text     | Text     |
-| Bandwidth|0.5Hz ~ 625Hz
+| Range | Bandwidth | Sensitivity(LSB/g) |
+| -------- | -------- | -------- | 
+| ±2g, 4g, 8g, 16g | 0.5Hz ~ 625Hz |1000 (±2g) ~ 83 (±16g)
+
 
     
 

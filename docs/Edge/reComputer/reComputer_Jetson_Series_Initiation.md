@@ -132,8 +132,8 @@ seeed@seeed-desktop:~$
 
 If your reComputer devicess crash and you want to reinstall the NVIDIA system. We here provide you the wiki about how to install NVIDIA System on reComputer. The provided wikis include A20X carrier boards and reComputer J1010 Carrier Board:
 
-- [Install NVIDIA system based on A20X carrier board](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards/)
-- [Install NVIDIA system based on reComputer J1010 Carrier Board](https://wiki.seeedstudio.com/install_NVIDIA_software_to_Jetson-10-1-A0/)
+- [Install NVIDIA system based on A20X carrier board](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack/)
+- [Install NVIDIA system based on reComputer J1010 Carrier Board](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/)
 
 ## Troubleshooting
 
@@ -157,9 +157,9 @@ This method is not applicable to the Jetson Nano module.
 
 - There are generally two ways to install a system for reComputer, the second is to use the **command lines**.
 
-- If you are using an **A20X carrier board**, the method to install the system using the command line is in [Flashing to eMMC with command-line](reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line).
+- If you are using an **A20X carrier board**, the method to install the system using the command line is in [Flashing to eMMC with command-line](/reComputer_J2021_J202_Flash_Jetpack#flashing-to-emmc-with-command-line).
 
-- If you are using the **reComputer J1010 Carrier Board**, then use the command line to install the system at [Flashing to eMMC with command-line](reComputer_J1010_J101_Flash_Jetpack#flashing-jetpack-os-via-command-line).
+- If you are using the **reComputer J1010 Carrier Board**, then use the command line to install the system at [Flashing to eMMC with command-line](/reComputer_J1010_J101_Flash_Jetpack#flashing-jetpack-os-via-command-line).
 
 They both essentially complete the installation of the system by using the following command.
 

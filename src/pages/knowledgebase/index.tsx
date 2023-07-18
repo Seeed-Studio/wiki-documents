@@ -56,11 +56,17 @@ function filterUsers(
 ) {
 	let template1List = []
 
+
 	if (searchName) {
 		// eslint-disable-next-line no-param-reassign
 		ContributionList.forEach((item) => {
 			const arr = item.list.filter((user) => {
-				return user.title.toLowerCase().includes(searchName.toLowerCase())
+				let flag1=false,flag2=false,flag3=false,flag4=false
+				flag1=user.title&&user.title.toLowerCase().includes(searchName.toLowerCase())
+				flag2=user.title1&&user.title1.toLowerCase().includes(searchName.toLowerCase())
+				flag3=user.title2&&user.title2.toLowerCase().includes(searchName.toLowerCase())
+				flag4=user.title3&&user.title3.toLowerCase().includes(searchName.toLowerCase())
+				return flag1||flag2||flag3||flag4
 			});
 			template1List.push({
 				...item,

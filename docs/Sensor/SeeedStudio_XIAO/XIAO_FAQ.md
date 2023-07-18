@@ -1,6 +1,6 @@
 ---
 description: XIAO-FAQ PAGE
-title: FAQs for XIAO Usage
+title: FAQs for XIAO Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_FAQ
 last_update:

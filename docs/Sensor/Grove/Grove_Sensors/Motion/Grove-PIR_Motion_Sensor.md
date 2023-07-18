@@ -99,8 +99,11 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 
 
 ```c
-/*macro definitions of PIR motion sensor pin and LED pin*/
-#define PIR_MOTION_SENSOR 2//Use pin 2 to receive the signal from the module
+/*
+macro definitions of PIR motion sensor pin
+Use pin 2 to receive the signal from the module
+*/
+#define PIR_MOTION_SENSOR 2
 
 
 void setup()
@@ -112,7 +115,9 @@ void setup()
 
 void loop()
 {
-    if(digitalRead(PIR_MOTION_SENSOR))//if it detects the moving people?
+    // If it detects moving people
+    // To know more about why digital numbers are used as boolean, check https://www.techtarget.com/whatis/definition/Boolean#:~:text=The%20Boolean%20data,1%20or%200
+    if(digitalRead(PIR_MOTION_SENSOR))
         Serial.println("Hi,people is coming");
     else
         Serial.println("Watching");
@@ -124,7 +129,7 @@ void loop()
 
 
 :::note
-    The detecting distance and holding time can be adjusted by adding two extra potentiometers on board. For the details please refer to the V1.2 Eagle below. The module can also be set as retriggerable or un- retriggerable by changing the jumper hat.
+    The detecting distance and holding time can be adjusted by adding two extra potentiometers on board. For the details please refer to the V1.2 Eagle below. The module can also be set as re-triggerable or un-retriggerable by changing the jumper hat.
 :::
 
 The result should be like:
