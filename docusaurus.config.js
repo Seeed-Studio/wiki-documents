@@ -143,6 +143,7 @@ const config = {
     'docusaurus-plugin-sass',
   ],
 
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
@@ -180,6 +181,7 @@ const config = {
       docs: {
         sidebar: {
           hideable: true,
+          autoCollapseCategories: true
         },
       },
       
@@ -425,6 +427,7 @@ const config = {
         isCloseable: false,
       },
     }),
+    
 }
 
 module.exports = config

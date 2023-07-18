@@ -100,13 +100,19 @@ const sidebars = {
         {
           type: 'category',
           label: 'Grove Sensor',
+          // collapsed: true,
+          // collapsible: true,
+          // link: {
+          //   type: "doc",
+          //   id: "Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One"
+          // },
           items: [
 
             {
               type: 'category',
               label: 'All in one',
               items: [
-                'Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One',
+                // 'Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-CO2&Temperature&HumiditySensor-SCD41',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
@@ -833,9 +839,15 @@ const sidebars = {
     {
       type: 'category',
       label: 'SeeedStudio XIAO',
+        collapsed: true,
+        collapsible: true,
+        link: {
+        type: "doc",
+        id: "Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects"
+        },
       items: [
         'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Introduction',
-        'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
+        // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
         'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
         {
           type: 'category',
@@ -3409,5 +3421,6 @@ const sidebars = {
   // ]
 
 };
+
 
 module.exports = sidebars;
