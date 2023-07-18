@@ -21,7 +21,6 @@ const sidebars = {
   // But you can create a sidebar manually
 
   ProductSidebar: [
-
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
@@ -29,7 +28,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'Sensor_Network',
-      label: "Sensing",
+      label: 'Sensing',
       className: 'sideboard_calss',
     },
     // {
@@ -60,10 +59,8 @@ const sidebars = {
     //       ],
     //     },
 
-
     //   ]
     // },
-
 
     // {
 
@@ -92,7 +89,6 @@ const sidebars = {
     // },
 
     {
-
       type: 'category',
       label: 'Grove',
       items: [
@@ -101,7 +97,6 @@ const sidebars = {
           type: 'category',
           label: 'Grove Sensor',
           items: [
-
             {
               type: 'category',
               label: 'All in one',
@@ -120,7 +115,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
-
               ],
             },
             {
@@ -136,7 +130,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TemperatureAndHumidity_Sensor-HDC1000',
                 'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-TemptureAndHumidity_Sensor-High-Accuracy_AndMini-v1.0',
                 'Sensor/Grove/Grove_Sensors/Temp&Humi/Grove-SHT4x',
-              ]
+              ],
             },
 
             {
@@ -156,7 +150,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Temperature/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808',
 
                 // 'Sensor/Grove/Grove_Sensors/Temperature/Sensor_temperature',
-              ]
+              ],
             },
 
             {
@@ -165,7 +159,7 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Sensors/Soli_Humidity/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant',
                 'Sensor/Grove/Grove_Sensors/Soli_Humidity/Grove-Moisture_Sensor',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -182,7 +176,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_sensor_paj7660',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -192,7 +186,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Dust_Sensor',
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Air_Quality_Sensor_v1.3',
                 'Sensor/Grove/Grove_Sensors/Air_Quality/Grove-Formaldehyde-Sensor',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -216,7 +210,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Multichannel_Gas_Sensor',
               ],
-
             },
             {
               type: 'category',
@@ -231,7 +224,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310',
                 'Sensor/Grove/Grove_Sensors/Barometer/Grove-Integrated-Pressure-Sensor-Kit',
               ],
-
             },
             {
               type: 'category',
@@ -280,7 +272,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Flame_Sensor',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-Infrared_Reflective_Sensor',
                 'Sensor/Grove/Grove_Sensors/Light/Grove-I2C_Color_Sensor',
-
               ],
             },
             {
@@ -311,7 +302,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Recorder',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Analog-Microphone',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Recorder_v2.0',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -326,8 +317,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-',
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI',
                 'Sensor/Grove/Grove_Sensors/Touch/Grove-I2C_Touch_Sensor',
-
-              ]
+              ],
             },
             {
               type: 'category',
@@ -345,7 +335,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-ORP-Sensor-kit',
                 'Sensor/Grove/Grove_Sensors/Liquid/Grove-PH_Sensor',
               ],
-
             },
             {
               type: 'category',
@@ -366,13 +355,8 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Step_Counter-BMA456',
               ],
-
             },
-
           ],
-
-
-
         },
 
         {
@@ -384,8 +368,7 @@ const sidebars = {
               label: 'LoRa',
               items: [
                 'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
-
-              ]
+              ],
             },
             {
               type: 'category',
@@ -395,8 +378,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth_v3.0',
                 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-BLE_v1',
                 'Sensor/Grove/Grove_Sensors_Network/Bluetooth/Grove-Serial_Bluetooth',
-
-              ]
+              ],
             },
             {
               type: 'category',
@@ -404,7 +386,7 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Sensors_Network/Wi-Fi/Grove-UART_Wifi',
                 'Sensor/Grove/Grove_Sensors_Network/Wi-Fi/Grove-UART_Wifi_V2',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -413,7 +395,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC_ST25',
                 'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC',
                 'Sensor/Grove/Grove_Sensors_Network/NFC/Grove_NFC_Tag',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -421,7 +403,7 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Sensors_Network/GPS/Grove-GPS',
                 'Sensor/Grove/Grove_Sensors_Network/GPS/Grove-GPS-Air530',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -432,7 +414,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-433MHz_Simple_RF_Link_Kit',
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove_LoRa_Radio',
                 'Sensor/Grove/Grove_Sensors_Network/RF/Grove-Serial_RF_Pro',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -445,15 +427,10 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Protoshield',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-RJ45_Adapter',
                 'Sensor/Grove/Grove_Sensors_Network/Standard_Protocol/Grove-Node',
-
-              ]
+              ],
             },
-
-          ]
+          ],
         },
-
-
-
 
         {
           type: 'category',
@@ -525,8 +502,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
-
-              ]
+              ],
             },
 
             {
@@ -535,7 +511,6 @@ const sidebars = {
               items: [
                 'Sensor/Grove/Grove_Accessories/Time/Grove-RTC',
                 'Sensor/Grove/Grove_Accessories/Time/Grove_High_Precision_RTC',
-
               ],
             },
 
@@ -552,7 +527,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Current/Grove-SPDT_Relay_30A',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-Screw_Terminal',
                 'Sensor/Grove/Grove_Accessories/Current/Grove-Electromagnet',
-
               ],
             },
             {
@@ -606,25 +580,20 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-Serial_Camera',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-16-bit-ADC-ADS1115',
                 'Sensor/Grove/Grove_Accessories/Input_Output/Grove-NOT',
-              ]
+              ],
             },
 
             {
               type: 'category',
               label: 'Case',
-              items: [
-                'Sensor/Grove/Grove_Accessories/Case/Grove-Wrapper',
-              ],
+              items: ['Sensor/Grove/Grove_Accessories/Case/Grove-Wrapper'],
             },
-
-          ]
+          ],
         },
-
       ],
     },
 
     {
-
       type: 'category',
       label: 'SenseCAP',
       items: [
@@ -675,7 +644,6 @@ const sidebars = {
               ],
             },
           ],
-
         },
 
         {
@@ -707,10 +675,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
             'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
           ],
-
         },
-
-
 
         {
           type: 'category',
@@ -728,7 +693,6 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger',
               ],
             },
-
           ],
         },
         {
@@ -809,13 +773,10 @@ const sidebars = {
             'Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
           ],
         },
-
       ],
-
     },
 
     {
-
       type: 'category',
       label: 'mmWave radar sensor',
       items: [
@@ -827,7 +788,6 @@ const sidebars = {
         'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
         'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
       ],
-
     },
 
     {
@@ -851,7 +811,7 @@ const sidebars = {
               label: 'Embedded ML',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Embedded ML/Seeeduino-XIAO-TinyML',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -859,11 +819,9 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/Seeeduino-XIAO-DAPLink',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
-              ]
+              ],
             },
-
           ],
-
         },
         {
           type: 'category',
@@ -879,7 +837,7 @@ const sidebars = {
               label: 'Embedded ML',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/Embedded ML/XIAO-RP2040-EI',
-              ]
+              ],
             },
           ],
         },
@@ -902,7 +860,7 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth-Usage',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -911,7 +869,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Getting-Started',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Mic',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -920,7 +878,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO-BLE-sidewalk',
               ],
             },
-          ]
+          ],
         },
         {
           type: 'category',
@@ -994,33 +952,22 @@ const sidebars = {
         {
           type: 'category',
           label: 'Kit with Courses',
-          items: [
-            'Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses',
-          ]
+          items: ['Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses'],
         },
       ],
     },
 
-
-
-
-
-
     {
-
       type: 'category',
       label: 'Wio Terminal',
       items: [
-
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         {
-
           type: 'category',
           label: 'Hardware Overview',
           items: [
             {
-
               type: 'category',
               label: 'LCD Usage',
               items: [
@@ -1034,12 +981,9 @@ const sidebars = {
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Histogram',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-APIs',
                 'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LVGL',
-
               ],
-
             },
             {
-
               type: 'category',
               label: 'Input/Output',
               items: [
@@ -1049,23 +993,16 @@ const sidebars = {
                 'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-I2C',
                 'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-SPI',
                 'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-Grove',
-
-
-
               ],
-
             },
             {
-
               type: 'category',
               label: 'IMU Usage',
               items: [
                 'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Overview',
                 'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Basic',
                 'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Tapping',
-
               ],
-
             },
             {
               type: 'category',
@@ -1085,7 +1022,6 @@ const sidebars = {
               ],
             },
             {
-
               type: 'category',
               label: 'Bluetooth',
               items: [
@@ -1093,9 +1029,7 @@ const sidebars = {
                 'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-terminal-BLE-introduction',
                 'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Web-Bluetooth',
                 'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/BLE-ibeacon-using-Wio-terminal',
-
               ],
-
             },
             {
               type: 'category',
@@ -1105,15 +1039,11 @@ const sidebars = {
               ],
             },
             {
-
               type: 'category',
               label: 'Buttons',
               items: [
-
                 'Sensor/Wio_Terminal/Hardware_Overview/Buttons/Wio-Terminal-Buttons',
-
               ],
-
             },
 
             {
@@ -1154,20 +1084,13 @@ const sidebars = {
                 'Sensor/Wio_Terminal/Hardware_Overview/Buzzer/Wio-Terminal-Buzzer',
               ],
             },
-
-
-
-
-          ]
+          ],
         },
         {
-
           type: 'category',
           label: 'Application',
           items: [
-
             {
-
               type: 'category',
               label: 'Easy IoT',
               items: [
@@ -1175,17 +1098,13 @@ const sidebars = {
                 'Sensor/Wio_Terminal/Application/Easy_IoT/Wio-Terminal-Azure-IOT',
                 'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
                 'Sensor/Wio_Terminal/Application/Easy_IoT/Get-Started-with-Wio-Terminal-and-Wappsto-IoT',
-
               ],
-
             },
             {
-
               type: 'category',
               label: 'Embedded ML ',
               items: [
                 {
-
                   type: 'category',
                   label: 'Projects based Edge Impulse ',
                   items: [
@@ -1196,7 +1115,6 @@ const sidebars = {
                     'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-5',
                     'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-6',
                   ],
-
                 },
                 {
                   type: 'category',
@@ -1206,22 +1124,14 @@ const sidebars = {
                     'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-2',
                     'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-3',
                     'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-Gesture-Recognition',
-                  ]
-
+                  ],
                 },
                 'Sensor/Wio_Terminal/Application/Embedded_ML/AIoTs_GPS_state_tester',
-
               ],
-
             },
-
-
-
           ],
-
         },
         {
-
           type: 'category',
           label: 'Extension Board',
           items: [
@@ -1230,36 +1140,26 @@ const sidebars = {
             'Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915',
             'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet',
             {
-
               type: 'category',
               label: 'Audio Extension Board',
               items: [
                 'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview',
                 'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Play-Record',
                 'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-GUI',
-
               ],
-
             },
-
-
-          ]
-
+          ],
         },
         {
-
           type: 'category',
           label: 'Kit with Courses',
           items: [
             'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML-Kit-Course',
             'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML',
             'Sensor/Wio_Terminal/Kit_with_Courses/Introduction_to_Artificial_Intelligence_for_Makers',
-
           ],
-
         },
         {
-
           type: 'category',
           label: 'Tutorial',
           items: [
@@ -1267,15 +1167,12 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
             'Sensor/Wio_Terminal/Tutorial/Edge_Impulse_CC',
             {
-
               type: 'category',
               label: 'Blynk for Wio Terminal',
               items: [
                 'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Wio-Terminal-Blynk',
                 'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
-
               ],
-
             },
             {
               type: 'category',
@@ -1311,24 +1208,16 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
             'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
-
           ],
-
         },
-
       ],
-
     },
 
-
-
     {
-
       type: 'category',
       label: 'Other Sensing Modules',
       items: [
         {
-
           type: 'category',
           label: 'Sensors',
           items: [
@@ -1347,13 +1236,9 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensors/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz',
             'Sensor/Beyond_Grove/Sensors/Gear_Stepper_Motor_Driver_Pack',
           ],
-
-
         },
 
-
         {
-
           type: 'category',
           label: 'Sensor Network',
           items: [
@@ -1366,18 +1251,13 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
             'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
             'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
-
           ],
-
-
         },
         {
-
           type: 'category',
           label: 'Accessories',
           items: [
             {
-
               type: 'category',
               label: 'Charge',
               items: [
@@ -1404,15 +1284,9 @@ const sidebars = {
                 'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.1',
                 'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply',
                 'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply_v1.1',
-
-
-
               ],
-
-
             },
             {
-
               type: 'category',
               label: 'Input/Output',
               items: [
@@ -1427,45 +1301,30 @@ const sidebars = {
                 'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
                 'Sensor/Beyond_Grove/Accessories/Input_Output/Codec-Adaptive_Wireless_Relay',
               ],
-
-
             },
             {
-
               type: 'category',
               label: 'Current',
               items: [
                 'Sensor/Beyond_Grove/Accessories/Current/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
                 'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
                 'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
-
-
               ],
-
-
             },
             {
-
               type: 'category',
               label: 'Case',
               items: [
                 'Sensor/Beyond_Grove/Accessories/Case/Bracket_for_Infrared_Proximity_Sensor',
                 'Sensor/Beyond_Grove/Accessories/Case/Shield-MaTrix-V0.9b',
               ],
-
-
             },
             {
-
               type: 'category',
               label: 'LED',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/LED/FSM-55',
-              ],
-
+              items: ['Sensor/Beyond_Grove/Accessories/LED/FSM-55'],
             },
             {
-
               type: 'category',
               label: 'Tools',
               items: [
@@ -1486,27 +1345,19 @@ const sidebars = {
                 'Sensor/Beyond_Grove/Accessories/Tools/Mini_Soldering_Iron',
                 'Sensor/Beyond_Grove/Accessories/Tools/RF_Explorer_Software',
               ],
-
             },
             {
-
               type: 'category',
               label: 'Display',
               items: [
                 'Sensor/Beyond_Grove/Accessories/Display/LCD_16-2_Characters-Green_Yellow_back_light',
                 'Sensor/Beyond_Grove/Accessories/Display/LCD_8-2_Characters-Blue_back_light',
               ],
-
             },
-
           ],
-
-
         },
       ],
-
     },
-
 
     {
       type: 'category',
@@ -1524,8 +1375,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
                 'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
                 'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
-
-              ]
+              ],
             },
             {
               type: 'category',
@@ -1544,7 +1394,7 @@ const sidebars = {
               items: [
                 'Sensor/Wio_Series/Wio_WM1302/WM1302_module',
                 'Sensor/Wio_Series/Wio_WM1302/WM1302_Pi_HAT',
-              ]
+              ],
             },
 
             {
@@ -1556,8 +1406,7 @@ const sidebars = {
                   label: 'Wio RP2040 Module',
                   items: [
                     'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_Module/Wio_RP2040_Module_Build-in_Wireless_2.4G',
-
-                  ]
+                  ],
                 },
 
                 {
@@ -1575,13 +1424,11 @@ const sidebars = {
                         'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_Socket_to_connect_to_the_forum',
                         'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-Fall-Detection-Device',
                         'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-desktop-atmosphere-lamp',
-
-                      ]
+                      ],
                     },
-
-                  ]
+                  ],
                 },
-              ]
+              ],
             },
 
             {
@@ -1595,7 +1442,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
                 'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
                 'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
-              ]
+              ],
             },
 
             {
@@ -1609,8 +1456,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
                 'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
                 'Sensor/Wio_Series/Wio_Tracker/Grove_Starter_Kit_for_Wio_LTE',
-
-              ]
+              ],
             },
 
             {
@@ -1623,30 +1469,23 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
                 'Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite',
                 'Sensor/Wio_Series/Wio_Lite/Grove_Base_Shield_for_NodeMCU_V1.0',
-              ]
+              ],
             },
             {
               type: 'category',
               label: 'Wio Node',
-              items: [
-                'Sensor/Wio_Series/Wio_Node/Wio_Node',
-              ]
+              items: ['Sensor/Wio_Series/Wio_Node/Wio_Node'],
             },
-
-          ]
+          ],
         },
 
-
-
         {
-
           type: 'category',
           label: 'Seeeduino Series',
           items: [
             'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
             'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
             {
-
               type: 'category',
               label: 'Seeeduino',
               items: [
@@ -1658,7 +1497,6 @@ const sidebars = {
                 'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
                 'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
               ],
-
             },
             'Sensor/Seeeduino Series/Seeeduino_Cloud',
             'Sensor/Seeeduino Series/Seeeduino-Cortex-M0',
@@ -1672,7 +1510,6 @@ const sidebars = {
             'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
             'Sensor/Seeeduino Series/Seeeduino-Nano',
             {
-
               type: 'category',
               label: 'Seeeduino Stalker',
               items: [
@@ -1684,7 +1521,6 @@ const sidebars = {
                 'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker',
                 'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
               ],
-
             },
             'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
             'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
@@ -1692,29 +1528,22 @@ const sidebars = {
             'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
 
             {
-
               type: 'category',
               label: 'Application',
               items: [
                 'Sensor/Seeeduino Series/Application/Driver_for_Seeeduino',
                 'Sensor/Seeeduino Series/Application/FM_Receiver',
               ],
-
             },
             {
-
               type: 'category',
               label: 'Kit with Courses',
               items: [
                 'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
                 'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
               ],
-
             },
-
           ],
-
-
         },
 
         {
@@ -1748,13 +1577,12 @@ const sidebars = {
                 'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
                 'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
                 'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
-              ]
+              ],
             },
-          ]
+          ],
         },
 
         {
-
           type: 'category',
           label: 'Arch',
           items: [
@@ -1770,11 +1598,9 @@ const sidebars = {
             'Sensor/Arch/Heart-Sound_Sensor',
             'Sensor/Arch/Grove-Starter_Kit_for_mbed',
           ],
-
         },
 
         {
-
           type: 'category',
           label: 'Azure Sphere MT3620',
           items: [
@@ -1784,34 +1610,21 @@ const sidebars = {
             'Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board',
             'Sensor/Azure Sphere MT3620/MT3620_Grove_Breakout',
           ],
-
         },
 
         {
-
           type: 'category',
           label: 'IOT Button for AWS',
-          items: [
-
-            'Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS',
-          ],
-
+          items: ['Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS'],
         },
 
         {
-
           type: 'category',
           label: 'Pi Pico',
-          items: [
-            'Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico',
-          ],
-
+          items: ['Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico'],
         },
-
       ],
-
     },
-
 
     // {
 
@@ -1839,16 +1652,14 @@ const sidebars = {
     // `,
     // },
 
-
     {
       type: 'doc',
       id: 'Sensor_Network',
-      label: "Network",
+      label: 'Network',
       className: 'sideboard_calss',
     },
 
     {
-
       type: 'category',
       label: 'SenseCAP Gateway',
       items: [
@@ -1887,7 +1698,6 @@ const sidebars = {
                 'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ',
               ],
             },
-
           ],
         },
 
@@ -1909,7 +1719,6 @@ const sidebars = {
           ],
         },
 
-
         {
           type: 'category',
           label: 'SenseCAP M2 Multi-Platform Gateway',
@@ -1926,26 +1735,20 @@ const sidebars = {
             },
           ],
         },
-
-
       ],
-
     },
 
     {
-
       type: 'category',
       label: 'SenseCAP K1100',
       items: [
         'Network/SenseCAP_K1100/K1100_Getting_Started',
         'Network/SenseCAP_K1100/K1100-quickstart',
         {
-
           type: 'category',
           label: 'LoRaWAN-Network Application',
           items: [
             {
-
               type: 'category',
               label: 'Sensors Basic Usage with Arduino',
               items: [
@@ -1955,17 +1758,14 @@ const sidebars = {
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
-
               ],
             },
             {
-
               type: 'category',
               label: 'Helium Cloud Services',
               items: [
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium-Introduction',
                 {
-
                   type: 'category',
                   label: 'Helium Connected & Azure Integrated',
                   items: [
@@ -1977,20 +1777,16 @@ const sidebars = {
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Integrate_into_Google_Sheets_via_Helium',
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Connect_AWS_via_helium',
               ],
-
             },
             {
-
               type: 'category',
               label: 'TTN Cloud Services',
               items: [
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/TTN-Introduction',
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/Connecting-to-TTN',
               ],
-
             },
             {
-
               type: 'category',
               label: 'SenseCAP & Node-Red for Cloud Services',
               items: [
@@ -2001,22 +1797,16 @@ const sidebars = {
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_twilio',
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_datacake',
                 'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_grafana',
-
-
               ],
-
             },
           ],
-
         },
         {
-
           type: 'category',
           label: 'Wi-Fi-Network Application',
           items: [
             'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Wio-Terminal-Advanced-WiFi',
             {
-
               type: 'category',
               label: 'Cloud Service',
               items: [
@@ -2024,10 +1814,8 @@ const sidebars = {
                 'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Quick-Start-to-using-Blynk',
                 'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Connect-Wio-Terminal-to-Google-Cloud',
               ],
-
             },
             {
-
               type: 'category',
               label: 'Azure IoT Platform Usage',
               items: [
@@ -2035,34 +1823,25 @@ const sidebars = {
                 'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/Develop-in-Microsoft-Azure-IoT-Central',
                 'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/K1100_Azure_to_PowerBI',
               ],
-
             },
-
           ],
-
         },
         {
-
           type: 'category',
           label: 'Embedded ML Application',
           items: [
             'Network/SenseCAP_K1100/Embedded_ML_Application/K1111-Edge-Impulse',
             'Network/SenseCAP_K1100/Embedded_ML_Application/Vision_AI_with_Customizable_Models',
           ],
-
         },
         {
-
           type: 'category',
           label: 'Contributors Project',
           items: [
             'Network/SenseCAP_K1100/Contributors_Project/IoT-into-the-wild-contest',
             'Network/SenseCAP_K1100/Contributors_Project/K1111-Quick-Start-Guide',
           ],
-
         },
-
-
       ],
     },
 
@@ -2089,15 +1868,13 @@ const sidebars = {
             'Network/LinkStar/Application/h68k-ha-esphome',
             'Network/LinkStar/Application/plex_media_server',
             'Network/LinkStar/Application/wordpress_linkstar',
-            'Network/LinkStar/Application/grocy-bookstack-linkstar'
-
-          ]
-        }
-      ]
+            'Network/LinkStar/Application/grocy-bookstack-linkstar',
+          ],
+        },
+      ],
     },
 
     {
-
       type: 'category',
       label: 'reRouter',
       items: [
@@ -2110,20 +1887,15 @@ const sidebars = {
             'Network/reRouter/Application/OpenWrt-Getting-Started',
             'Network/reRouter/Application/OpenWrt-Plex-Media-Server-on-Docker',
             'Network/reRouter/Application/Mender-Client-dual-GbE-CM4',
-          ]
-        }
+          ],
+        },
       ],
-
     },
     {
       type: 'category',
       label: 'TTN Gateway',
-      items: [
-        'Network/TTN_Gateway/The-Things-Indoor-Gateway',
-
-      ]
+      items: ['Network/TTN_Gateway/The-Things-Indoor-Gateway'],
     },
-
 
     // {
     //   type: 'html',
@@ -2146,12 +1918,11 @@ const sidebars = {
     {
       type: 'doc',
       id: 'Edge_Computing',
-      label: "Edge Computing",
+      label: 'Edge Computing',
       className: 'sideboard_calss',
     },
 
     {
-
       type: 'category',
       label: 'reTerminal',
       items: [
@@ -2177,7 +1948,6 @@ const sidebars = {
               items: [
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
-
               ],
             },
             {
@@ -2186,10 +1956,8 @@ const sidebars = {
               items: [
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
-
-              ]
+              ],
             },
-
           ],
         },
         {
@@ -2200,8 +1968,7 @@ const sidebars = {
             'Edge/reTerminal/OS_Installation/reTerminal-Yocto',
             'Edge/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal',
             // 'Edge/reTerminal/OS_Installation/',
-
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2209,7 +1976,7 @@ const sidebars = {
           items: [
             'Edge/reTerminal/Extension_Board/reTerminalBridge',
             'Edge/reTerminal/Extension_Board/reTerminal_Mount_Options',
-          ]
+          ],
         },
       ],
     },
@@ -2243,10 +2010,10 @@ const sidebars = {
     },
 
     {
-
       type: 'category',
       label: 'reComputer',
       items: [
+        'Edge/reComputer/RecomputerPage',
         'Edge/reComputer/reComputer_Jetson_Series_Introduction',
         'Edge/reComputer/reComputer_Jetson_Series_Initiation',
         'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
@@ -2265,7 +2032,7 @@ const sidebars = {
             'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
             'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
             'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2280,7 +2047,7 @@ const sidebars = {
             'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
             'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
             'Edge/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2290,8 +2057,7 @@ const sidebars = {
             'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
             'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
             'Edge/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
-          ]
-
+          ],
         },
         {
           type: 'category',
@@ -2300,7 +2066,7 @@ const sidebars = {
             'Edge/reComputer/reComputer Industrial/reComputer_Industrial_Getting_Started',
             'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
             'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2309,8 +2075,7 @@ const sidebars = {
             'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
             'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System',
             'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate',
-
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2322,15 +2087,12 @@ const sidebars = {
             'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
             'Edge/reComputer/Tutorials/Jetson-AI-developer-tools',
             'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
-          ]
-
+          ],
         },
       ],
-
     },
 
     {
-
       type: 'category',
       label: 'reServer',
       items: [
@@ -2340,8 +2102,7 @@ const sidebars = {
           items: [
             'Edge/reServer/reServer_X86/reServer-Getting-Started',
             'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
-
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2349,20 +2110,15 @@ const sidebars = {
           items: [
             'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
             'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
-
-          ]
+          ],
         },
       ],
-
     },
 
-
     {
-
       type: 'category',
       label: 'Edge Series',
       items: [
-
         {
           type: 'category',
           label: 'EdgeBox-RPI-200',
@@ -2374,12 +2130,9 @@ const sidebars = {
         {
           type: 'category',
           label: 'EdgeBox-ESP-100',
-          items: [
-            'Edge/Edge_Series/Edge_Box_ESP_100/Edgebox-ESP-100-Arduino',
-          ],
+          items: ['Edge/Edge_Series/Edge_Box_ESP_100/Edgebox-ESP-100-Arduino'],
         },
       ],
-
     },
 
     {
@@ -2395,9 +2148,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Application',
-          items: [
-            'Edge/Beagle_Bone/Application/BeagleBone_Solutions',
-          ]
+          items: ['Edge/Beagle_Bone/Application/BeagleBone_Solutions'],
         },
         {
           type: 'category',
@@ -2408,7 +2159,8 @@ const sidebars = {
             'Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0',
             'Edge/Beagle_Bone/Extension_Board/Skeleton_box_for_Beaglebone',
             'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
-            'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',]
+            'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
+          ],
         },
         {
           type: 'category',
@@ -2416,9 +2168,8 @@ const sidebars = {
           items: [
             'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
             'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-          ]
+          ],
         },
-
       ],
     },
 
@@ -2449,15 +2200,14 @@ const sidebars = {
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant',
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-Home-Assistant-Customize',
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome',
-                  ]
+                  ],
                 },
                 {
                   type: 'category',
                   label: 'Azure IoT for ODYSSEY',
                   items: [
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Azure_IoT_for_ODYSSEY/ODYSSEY-X86J4105-AzureIOT',
-
-                  ]
+                  ],
                 },
                 {
                   type: 'category',
@@ -2465,7 +2215,7 @@ const sidebars = {
                   items: [
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Client-ODYSSEY-X86',
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Server-ODYSSEY-X86',
-                  ]
+                  ],
                 },
                 {
                   type: 'category',
@@ -2474,9 +2224,9 @@ const sidebars = {
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Intel-OpenVINO',
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-NCS2',
                     'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Frigate',
-                  ]
+                  ],
                 },
-              ]
+              ],
             },
             {
               type: 'category',
@@ -2492,9 +2242,9 @@ const sidebars = {
                 'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-Android',
                 'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-FreeNAS',
                 'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/BalenaOS-X86-Getting-Started',
-              ]
+              ],
             },
-          ]
+          ],
         },
 
         {
@@ -2506,17 +2256,14 @@ const sidebars = {
           ],
         },
       ],
-
     },
 
     {
-
       type: 'category',
       label: 'Quantum Development Board',
       items: [
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
-
     },
 
     // {
@@ -2548,7 +2295,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'CloudnChain',
-      label: "Cloud and Chain",
+      label: 'Cloud and Chain',
       className: 'sideboard_calss',
     },
 
@@ -2597,9 +2344,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'SenseCAP Mate APP',
-      items: [
-        'Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP',
-      ],
+      items: ['Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP'],
     },
     {
       type: 'category',
@@ -2643,7 +2388,6 @@ const sidebars = {
       ],
     },
 
-
     {
       type: 'html',
       value: `
@@ -2663,11 +2407,9 @@ const sidebars = {
     },
 
     {
-
       type: 'category',
       label: 'Arduino',
       items: [
-
         'Top_Brand/Arduino/Arduino',
         'Top_Brand/Arduino/Getting_Started_with_Arduino',
         {
@@ -2735,7 +2477,7 @@ const sidebars = {
             'Top_Brand/Arduino/shield/EL_Shield',
             'Top_Brand/Arduino/shield/Seeed_BLE_Shield',
             'Top_Brand/Arduino/shield/Small_e-Paper_Shield_V2',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2767,7 +2509,7 @@ const sidebars = {
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Seeed_Relay_Page',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Barometer-Selection-Guide',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/How_To_Choose_The_Right_Cable',
-              ]
+              ],
             },
 
             {
@@ -2808,7 +2550,7 @@ const sidebars = {
                 'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Six-LCD_Demonstration',
                 'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Seven-Temperature',
                 'Top_Brand/Arduino/Tutorials/Arduino_Boards_Projects/Project_Eight-Thermostat',
-              ]
+              ],
             },
 
             {
@@ -2823,13 +2565,11 @@ const sidebars = {
                   items: [
                     'Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Guide_for_Codecraft_using_Arduino',
                     'Top_Brand/Arduino/Tutorials/Compiling_Platform/Codecraft_Platform_for_Arduino/Codecraft_Grove_Compatible_List',
-                  ]
+                  ],
                 },
               ],
             },
-
-
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2862,11 +2602,9 @@ const sidebars = {
           ],
         },
       ],
-
     },
 
     {
-
       type: 'category',
       label: 'Raspberry Pi',
       items: [
@@ -2877,14 +2615,14 @@ const sidebars = {
           items: [
             'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/Raspberry_Pi_3_Model_B',
             'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Board/remote_connect',
-          ]
+          ],
         },
         {
           type: 'category',
           label: 'Official Raspberry Pi Module',
           items: [
             'Top_Brand/Raspberry_Pi/Official_Raspberry_Pi_Module/Raspberry_pi_CM4_update_eeprom',
-          ]
+          ],
         },
 
         {
@@ -2907,7 +2645,7 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Pi_HAT/RS-485_Shield_for_Raspberry_Pi',
             'Top_Brand/Raspberry_Pi/Pi_HAT/Grove_AI_HAT_for_Edge_Computing',
             'Top_Brand/Raspberry_Pi/Pi_HAT/two-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi',
-          ]
+          ],
         },
 
         {
@@ -2917,7 +2655,7 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Accessories/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit',
             'Top_Brand/Raspberry_Pi/Accessories/Skeleton_box_for_Rasberry_Pi',
             'Top_Brand/Raspberry_Pi/Accessories/Raspberry_PI_Bplus_Case',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -2926,17 +2664,12 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
             'Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit',
             'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
-          ]
+          ],
         },
-
-
       ],
-
     },
 
-
     {
-
       type: 'category',
       label: 'NVIDIA',
       items: [
@@ -2946,16 +2679,13 @@ const sidebars = {
           type: 'category',
           label: 'Mini PC',
           items: [
-
             'Top_Brand/NVIDIA/Mini_PC/reComputer_A203E_Flash_System',
             'Top_Brand/NVIDIA/Mini_PC/reComputer_A205E_Flash_System',
             'Top_Brand/NVIDIA/Mini_PC/Mini_AI_Computer_T906',
           ],
-
         },
 
         {
-
           type: 'category',
           label: 'NVIDIA Jetson Alternative',
           items: [
@@ -2964,23 +2694,17 @@ const sidebars = {
             'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A607_Flash_JetPack',
             'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A603_Flash_JetPack',
           ],
-
         },
-
-
       ],
-
     },
 
     {
-
       type: 'category',
       label: 'Micro:bit',
       items: [
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
         'Top_Brand/Micro_bit/microbit_wiki_page',
       ],
-
     },
 
     {
@@ -3012,15 +2736,12 @@ const sidebars = {
     //       ]
     // },
 
-
     // 'Contribution/Contributors/How_To_Edit_A_Document',
     // 'Contribution/Contributors/Things_We_Make',
     'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
     'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
     'Contribution/Contributors/Honorary-Contributors',
     'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
-
-
 
     {
       type: 'html',
@@ -3041,15 +2762,10 @@ const sidebars = {
     },
 
     {
-
       type: 'category',
       label: 'Retired Product',
       items: [
-
         {
-
-
-
           type: 'category',
           label: 'reSpeaker',
           items: [
@@ -3064,7 +2780,7 @@ const sidebars = {
                 'Seeed_Elderly/reSpeaker/Application/Google_Assistant',
                 'Seeed_Elderly/reSpeaker/Application/Voice_Interaction',
                 'Seeed_Elderly/reSpeaker/Application/ReSpeaker_Core_V2_&_Wio_Link',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -3073,7 +2789,7 @@ const sidebars = {
                 'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Drive_Unit',
                 'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v2.0',
                 'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array',
-              ]
+              ],
             },
             {
               type: 'category',
@@ -3082,7 +2798,7 @@ const sidebars = {
                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
                 'Seeed_Elderly/reSpeaker/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT_Jetson',
-              ]
+              ],
             },
             'Seeed_Elderly/reSpeaker/ReSpeaker_4_Mic_Array_for_Raspberry_Pi',
             'Seeed_Elderly/reSpeaker/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi',
@@ -3090,10 +2806,7 @@ const sidebars = {
             'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
             'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
-
           ],
-
-
         },
 
         {
@@ -3116,10 +2829,9 @@ const sidebars = {
                 'Seeed_Elderly/rePhone/Program with rePhone/JavaScript_for_RePhone',
                 'Seeed_Elderly/rePhone/Program with rePhone/Lua_for_RePhone',
                 'Seeed_Elderly/rePhone/Program with rePhone/RePhone_APIs-Audio',
-
-              ]
+              ],
             },
-          ]
+          ],
         },
 
         {
@@ -3147,7 +2859,7 @@ const sidebars = {
             'Seeed_Elderly/Bee/GPS_Bee_kit',
             'Seeed_Elderly/Bee/Grove-XBee_Carrier',
             'Seeed_Elderly/Bee/Grove-Bee_Socket',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -3199,7 +2911,7 @@ const sidebars = {
             'Seeed_Elderly/Xadow/Xadow_Tutorial_Shaking_Shaking',
             'Seeed_Elderly/Xadow/Xadow_Wearable_Kit_For_Edison',
             'Seeed_Elderly/Xadow/Xadow_Motor_Driver',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -3210,14 +2922,14 @@ const sidebars = {
             'Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness',
             'Seeed_Elderly/Rainbowduino/Rainbowduino_LED_driver_platform-ATmega328',
             'Seeed_Elderly/Rainbowduino/Rainbowduino',
-          ]
+          ],
         },
         {
           type: 'category',
           label: 'reComputer Alpha',
           items: [
             'Seeed_Elderly/reComputer_Alpha/How-to-build-a-home-soft-router-and-NAS-With-ReComputer',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -3225,21 +2937,17 @@ const sidebars = {
           items: [
             'Seeed_Elderly/Air_Serial/Air602_WiFi_Development_Board',
             'Seeed_Elderly/Air_Serial/Air602_Firmware_Programming_Manual',
-          ]
+          ],
         },
         {
           type: 'category',
           label: 'NPi-i',
-          items: [
-            'Seeed_Elderly/NPi-i/NPi-i.MX6ULL-Dev-Board-Linux-SBC',
-          ]
+          items: ['Seeed_Elderly/NPi-i/NPi-i.MX6ULL-Dev-Board-Linux-SBC'],
         },
         {
           type: 'category',
           label: 'W600',
-          items: [
-            'Seeed_Elderly/W600/W600_Module',
-          ]
+          items: ['Seeed_Elderly/W600/W600_Module'],
         },
         {
           type: 'category',
@@ -3247,7 +2955,7 @@ const sidebars = {
           items: [
             'Seeed_Elderly/Artik/Artik',
             'Seeed_Elderly/Artik/Eagleye_530s',
-          ]
+          ],
         },
         {
           type: 'category',
@@ -3291,19 +2999,14 @@ const sidebars = {
             'Seeed_Elderly/Discrete Product/Danger_Shield_Complete_Kits',
             'Seeed_Elderly/Discrete Product/FST-01',
             'Seeed_Elderly/Discrete Product/Grove-Base_Shield_for_IOIO-OTG',
-          ]
-
+          ],
         },
-
       ],
-
     },
 
     'About',
     'License',
-
   ],
-
 
   // SenseCAPSidebar: [
   //   {
@@ -3363,7 +3066,6 @@ const sidebars = {
   //         ],
   //       },
 
-
   //       {
 
   //         type: 'category',
@@ -3413,7 +3115,6 @@ const sidebars = {
   //   },
 
   // ]
+}
 
-};
-
-module.exports = sidebars;
+module.exports = sidebars
