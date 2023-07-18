@@ -27,6 +27,10 @@ const config = {
       src: 'https://viewer.altium.com/client/static/js/embed.js',
       async: true,
     },
+    {
+      src: 'https://wiki.seeedstudio.com/client/static/js/embed.js',
+      async: true,
+    },
   ],
 
   // GitHub pages deployment config.
