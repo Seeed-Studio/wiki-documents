@@ -796,430 +796,9 @@ const sidebars = {
       ],
     },
 
-    {
-      type: 'category',
-      label: 'SeeedStudio XIAO',
-        collapsed: true,
-        collapsible: true,
-        link: {
-        type: "doc",
-        id: "Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects"
-        },
-      items: [
-        'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Introduction',
-        // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
-        'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
-        {
-          type: 'category',
-          label: 'SeeedStudio XIAO SAMD21',
-          items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
-            {
-              type: 'category',
-              label: 'Embedded ML',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Embedded ML/Seeeduino-XIAO-TinyML',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'TuTorial',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/Seeeduino-XIAO-DAPLink',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SeeedStudio XIAO RP2040',
-          items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
-            {
-              type: 'category',
-              label: 'Embedded ML',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/Embedded ML/XIAO-RP2040-EI',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SeeedStudio XIAO nRF52840 (Sense)',
-          items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
+    
 
-            {
-              type: 'category',
-              label: 'Bluetooth Libraries',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth-Usage',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Embedded ML',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Getting-Started',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Mic',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO-BLE-sidewalk',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SeeedStudio XIAO ESP32C3',
-          items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
-
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SeeedStudio XIAO ESP32S3 (Sense)',
-          items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
-            {
-              type: 'category',
-              label: 'For XIAO ESP32S3 Sense Version',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_mic',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_tf_and_filesystem',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_camera',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Applications',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Speech2chatgpt',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SeeedStudio XIAO Expansion board',
-          items: [
-            {
-              type: 'category',
-              label: 'Seeed Studio Round Display for XIAO',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_RoundDisplay_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
-              ],
-            },
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Kit with Courses',
-          items: ['Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses'],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'Wio Terminal',
-      items: [
-        'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
-        'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
-        {
-          type: 'category',
-          label: 'Hardware Overview',
-          items: [
-            {
-              type: 'category',
-              label: 'LCD Usage',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Overview',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Basic',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Graphics',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Fonts',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Linecharts',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Histogram',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-APIs',
-                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LVGL',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Input/Output',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Overview',
-                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Analog',
-                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Digital',
-                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-I2C',
-                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-SPI',
-                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-Grove',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'IMU Usage',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Overview',
-                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Basic',
-                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Tapping',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SD Card',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-Overview',
-                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-ReadWrite',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Wi-Fi',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Network-Overview',
-                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Wi-Fi',
-                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Advanced-Wi-Fi',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Bluetooth',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Bluetooth-Overview',
-                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-terminal-BLE-introduction',
-                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Web-Bluetooth',
-                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/BLE-ibeacon-using-Wio-terminal',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'RTC',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/RTC/Wio-Terminal-RTC',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Buttons',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Buttons/Wio-Terminal-Buttons',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: '5 Way Switch',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/five_Way_Switch/Wio-Terminal-Switch',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Light Sensor',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Light_Sensor/Wio-Terminal-Light',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Infrared Emitter',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Microphone',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Microphone/Wio-Terminal-Mic',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Buzzer',
-              items: [
-                'Sensor/Wio_Terminal/Hardware_Overview/Buzzer/Wio-Terminal-Buzzer',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            {
-              type: 'category',
-              label: 'Easy IoT',
-              items: [
-                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central',
-                'Sensor/Wio_Terminal/Application/Easy_IoT/Wio-Terminal-Azure-IOT',
-                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
-                'Sensor/Wio_Terminal/Application/Easy_IoT/Get-Started-with-Wio-Terminal-and-Wappsto-IoT',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Embedded ML ',
-              items: [
-                {
-                  type: 'category',
-                  label: 'Projects based Edge Impulse ',
-                  items: [
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-1',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-2',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-3',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-4',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-5',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-6',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'Projects based TensorFlow Lite',
-                  items: [
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-1',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-2',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-3',
-                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-Gesture-Recognition',
-                  ],
-                },
-                'Sensor/Wio_Terminal/Application/Embedded_ML/AIoTs_GPS_state_tester',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Extension Board',
-          items: [
-            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Battery-Chassis',
-            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Chassis-Battery_650mAh',
-            'Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915',
-            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet',
-            {
-              type: 'category',
-              label: 'Audio Extension Board',
-              items: [
-                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview',
-                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Play-Record',
-                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-GUI',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Kit with Courses',
-          items: [
-            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML-Kit-Course',
-            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML',
-            'Sensor/Wio_Terminal/Kit_with_Courses/Introduction_to_Artificial_Intelligence_for_Makers',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Tutorial',
-          items: [
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
-            'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
-            'Sensor/Wio_Terminal/Tutorial/Edge_Impulse_CC',
-            {
-              type: 'category',
-              label: 'Blynk for Wio Terminal',
-              items: [
-                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Wio-Terminal-Blynk',
-                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Wio Terminal USB Host',
-              items: [
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Overview',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Keyboard',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Mouse',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Xbox',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Wio Terminal USB Client',
-              items: [
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Overview',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Mouse',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-MIDI',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-HMI-Usermode-SDK',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-DAPLink',
-                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-Reading-Raspberry-Pi',
-              ],
-            },
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Gyro',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Storting-Analog-Data',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Photos',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Interactive-Face',
-            'Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
-            'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
-            'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
-            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
-          ],
-        },
-      ],
-    },
+    
 
     {
       type: 'category',
@@ -1367,272 +946,7 @@ const sidebars = {
       ],
     },
 
-    {
-      type: 'category',
-      label: 'Other Microcontrollers',
-      items: [
-        {
-          type: 'category',
-          label: 'Wio Series',
-          items: [
-            'Sensor/Wio_Series/Wio',
-            {
-              type: 'category',
-              label: 'Wio-E5',
-              items: [
-                'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
-                'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
-                'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Wio WM1110 Dev Kit',
-              items: [
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Wio WM1302',
-              items: [
-                'Sensor/Wio_Series/Wio_WM1302/WM1302_module',
-                'Sensor/Wio_Series/Wio_WM1302/WM1302_Pi_HAT',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Wio RP2040',
-              items: [
-                {
-                  type: 'category',
-                  label: 'Wio RP2040 Module',
-                  items: [
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_Module/Wio_RP2040_Module_Build-in_Wireless_2.4G',
-                  ],
-                },
-
-                {
-                  type: 'category',
-                  label: 'Wio RP2040 mini Dev Board',
-                  items: [
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio-RP2040-with-Arduino-WIFI',
-                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/LAN_Communications',
-                    {
-                      type: 'category',
-                      label: 'Application',
-                      items: [
-                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_MQTT_to_remotely_light_up_LED_lights',
-                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_Socket_to_connect_to_the_forum',
-                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-Fall-Detection-Device',
-                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-desktop-atmosphere-lamp',
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Wio Link',
-              items: [
-                'Sensor/Wio_Series/Wio_Link/Wio_Link',
-                'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
-                'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
-                'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
-                'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
-                'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
-                'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Wio Tracker',
-              items: [
-                'Sensor/Wio_Series/Wio_Tracker/Wio_Tracker',
-                'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat.1',
-                'Sensor/Wio_Series/Wio_Tracker/wio_gps_board',
-                'Sensor/Wio_Series/Wio_Tracker/LTE_Cat_1_Pi_HAT',
-                'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
-                'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
-                'Sensor/Wio_Series/Wio_Tracker/Grove_Starter_Kit_for_Wio_LTE',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'Wio Lite',
-              items: [
-                'Sensor/Wio_Series/Wio_Lite/Wio-Lite-AI-Getting-Started',
-                'Sensor/Wio_Series/Wio_Lite/Wio-Lite-W600',
-                'Sensor/Wio_Series/Wio_Lite/Wio-Lite-MG126',
-                'Sensor/Wio_Series/Wio_Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
-                'Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite',
-                'Sensor/Wio_Series/Wio_Lite/Grove_Base_Shield_for_NodeMCU_V1.0',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Wio Node',
-              items: ['Sensor/Wio_Series/Wio_Node/Wio_Node'],
-            },
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Seeeduino Series',
-          items: [
-            'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
-            'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
-            {
-              type: 'category',
-              label: 'Seeeduino',
-              items: [
-                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2',
-                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.0',
-                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2_Atmega-168P',
-                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2',
-                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v2.21',
-                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
-                'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
-              ],
-            },
-            'Sensor/Seeeduino Series/Seeeduino_Cloud',
-            'Sensor/Seeeduino Series/Seeeduino-Cortex-M0',
-            'Sensor/Seeeduino Series/Seeeduino_Ethernet',
-            'Sensor/Seeeduino Series/Seeeduino_GPRS',
-            'Sensor/Seeeduino Series/Seeeduino_Lite',
-            'Sensor/Seeeduino Series/Seeeduino_LoRAWAN',
-            'Sensor/Seeeduino Series/Seeeduino_Lotus',
-            'Sensor/Seeeduino Series/Seeeduino_Lotus_Cortex-M0-',
-            'Sensor/Seeeduino Series/Seeeduino_Mega',
-            'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
-            'Sensor/Seeeduino Series/Seeeduino-Nano',
-            {
-              type: 'category',
-              label: 'Seeeduino Stalker',
-              items: [
-                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
-                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3.1',
-                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v3_enclosure',
-                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
-                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v2.3',
-                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker',
-                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
-              ],
-            },
-            'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
-            'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
-            'Sensor/Seeeduino Series/Seeeduino_Arch',
-            'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
-
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/Seeeduino Series/Application/Driver_for_Seeeduino',
-                'Sensor/Seeeduino Series/Application/FM_Receiver',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Kit with Courses',
-              items: [
-                'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
-                'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
-              ],
-            },
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'LinkIt',
-          items: [
-            'Seeed_Elderly/LinkIt/LinkIt',
-            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
-            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
-            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
-            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
-            'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
-            'Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo',
-            {
-              type: 'category',
-              label: 'Linklt ONE',
-              items: [
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Analog_Interface',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Colorful_World',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Hello_World',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Light-Sensor',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Marquee',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt-ONE-Tutorial---Mini-Servo',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Push_Button',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-SMS_control_the_LED',
-                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-The_Basics',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
-              ],
-            },
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Arch',
-          items: [
-            'Sensor/Arch/Arch_Mix',
-            'Sensor/Arch/Arch_V1.1',
-            'Sensor/Arch/Arch_Pro',
-            'Sensor/Arch/Arch_BLE',
-            'Sensor/Arch/Arch_Link',
-            'Sensor/Arch/Arch_GPRS',
-            'Sensor/Arch/Arch_GPRS_V2',
-            'Sensor/Arch/Arch_Max',
-            'Sensor/Arch/Arch_Max_v1.1',
-            'Sensor/Arch/Heart-Sound_Sensor',
-            'Sensor/Arch/Grove-Starter_Kit_for_mbed',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Azure Sphere MT3620',
-          items: [
-            'Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit',
-            'Sensor/Azure Sphere MT3620/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit',
-            'Sensor/Azure Sphere MT3620/MT3620_Ethernet_Shield_v1.0',
-            'Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board',
-            'Sensor/Azure Sphere MT3620/MT3620_Grove_Breakout',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'IOT Button for AWS',
-          items: ['Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS'],
-        },
-
-        {
-          type: 'category',
-          label: 'Pi Pico',
-          items: ['Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico'],
-        },
-      ],
-    },
+   
 
     // {
 
@@ -2145,6 +1459,431 @@ const sidebars = {
 
     {
       type: 'category',
+      label: 'SeeedStudio XIAO',
+        collapsed: true,
+        collapsible: true,
+        link: {
+        type: "doc",
+        id: "Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects"
+        },
+      items: [
+        'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Introduction',
+        // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
+        'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO SAMD21',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
+            {
+              type: 'category',
+              label: 'Embedded ML',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Embedded ML/Seeeduino-XIAO-TinyML',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'TuTorial',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/Seeeduino-XIAO-DAPLink',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO RP2040',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+            {
+              type: 'category',
+              label: 'Embedded ML',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/Embedded ML/XIAO-RP2040-EI',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO nRF52840 (Sense)',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
+
+            {
+              type: 'category',
+              label: 'Bluetooth Libraries',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/XIAO-BLE-Sense-Bluetooth-Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Embedded ML',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Getting-Started',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Mic',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO-BLE-sidewalk',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO ESP32C3',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
+
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO ESP32S3 (Sense)',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+            {
+              type: 'category',
+              label: 'For XIAO ESP32S3 Sense Version',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_mic',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_tf_and_filesystem',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_camera',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Applications',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Speech2chatgpt',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SeeedStudio XIAO Expansion board',
+          items: [
+            {
+              type: 'category',
+              label: 'Seeed Studio Round Display for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_RoundDisplay_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
+              ],
+            },
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Kit with Courses',
+          items: ['Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses'],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Wio Terminal',
+      items: [
+        'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
+        'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
+        {
+          type: 'category',
+          label: 'Hardware Overview',
+          items: [
+            {
+              type: 'category',
+              label: 'LCD Usage',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Basic',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Graphics',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Fonts',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Anti-aliased-Fonts',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Loading-Image',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Linecharts',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-Histogram',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LCD-APIs',
+                'Sensor/Wio_Terminal/Hardware_Overview/LCD_Usage/Wio-Terminal-LVGL',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Input/Output',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Analog',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-Digital',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-I2C',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-IO-SPI',
+                'Sensor/Wio_Terminal/Hardware_Overview/Input&Output/Wio-Terminal-Grove',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'IMU Usage',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Basic',
+                'Sensor/Wio_Terminal/Hardware_Overview/IMU/Wio-Terminal-IMU-Tapping',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SD Card',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/SD_Card/Wio-Terminal-FS-ReadWrite',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wi-Fi',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Network-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Wi-Fi',
+                'Sensor/Wio_Terminal/Hardware_Overview/Wi-Fi/Wio-Terminal-Advanced-Wi-Fi',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Bluetooth',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Bluetooth-Overview',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-terminal-BLE-introduction',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/Wio-Terminal-Web-Bluetooth',
+                'Sensor/Wio_Terminal/Hardware_Overview/Bluetooth/BLE-ibeacon-using-Wio-terminal',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'RTC',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/RTC/Wio-Terminal-RTC',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Buttons',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Buttons/Wio-Terminal-Buttons',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: '5 Way Switch',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/five_Way_Switch/Wio-Terminal-Switch',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Light Sensor',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Light_Sensor/Wio-Terminal-Light',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Infrared Emitter',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Infrared_Emitter/Wio-Terminal-Infrared-Emitter',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Microphone',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Microphone/Wio-Terminal-Mic',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Buzzer',
+              items: [
+                'Sensor/Wio_Terminal/Hardware_Overview/Buzzer/Wio-Terminal-Buzzer',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            {
+              type: 'category',
+              label: 'Easy IoT',
+              items: [
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Wio-Terminal-Azure-IOT',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Connect-Wio-Terminal-to-Google-Cloud-IoT-Core',
+                'Sensor/Wio_Terminal/Application/Easy_IoT/Get-Started-with-Wio-Terminal-and-Wappsto-IoT',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Embedded ML ',
+              items: [
+                {
+                  type: 'category',
+                  label: 'Projects based Edge Impulse ',
+                  items: [
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-1',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-2',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-3',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-4',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-5',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_Edge_Impulse/Wio-Terminal-TinyML-EI-6',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Projects based TensorFlow Lite',
+                  items: [
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-1',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-2',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-TinyML-TFLM-3',
+                    'Sensor/Wio_Terminal/Application/Embedded_ML/Projects_based_TensorFlow_Lite/Wio-Terminal-Gesture-Recognition',
+                  ],
+                },
+                'Sensor/Wio_Terminal/Application/Embedded_ML/AIoTs_GPS_state_tester',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Extension Board',
+          items: [
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Battery-Chassis',
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Chassis-Battery_650mAh',
+            'Sensor/Wio_Terminal/Extension_Board/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915',
+            'Sensor/Wio_Terminal/Extension_Board/Wio-Terminal-Ethernet',
+            {
+              type: 'category',
+              label: 'Audio Extension Board',
+              items: [
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Overview',
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-Play-Record',
+                'Sensor/Wio_Terminal/Extension_Board/Audio_Extension_Board/Wio-Terminal-Audio-GUI',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML-Kit-Course',
+            'Sensor/Wio_Terminal/Kit_with_Courses/Wio-Terminal-TinyML',
+            'Sensor/Wio_Terminal/Kit_with_Courses/Introduction_to_Artificial_Intelligence_for_Makers',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Tutorial',
+          items: [
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
+            'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
+            'Sensor/Wio_Terminal/Tutorial/Edge_Impulse_CC',
+            {
+              type: 'category',
+              label: 'Blynk for Wio Terminal',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Wio-Terminal-Blynk',
+                'Sensor/Wio_Terminal/Tutorial/Blynk_for_Wio_Terminal/Blynk-wireless-OTA-functionality-to-Wio-Terminal',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wio Terminal USB Host',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Overview',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Keyboard',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Mouse',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Host/Wio-Terminal-USBH-Xbox',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wio Terminal USB Client',
+              items: [
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Overview',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Keyboard',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-Mouse',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-USBCLIENT-MIDI',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-HMI-Usermode-SDK',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-DAPLink',
+                'Sensor/Wio_Terminal/Tutorial/Wio_Terminal_USB_Client/Wio-Terminal-Reading-Raspberry-Pi',
+              ],
+            },
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Gyro',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Storting-Analog-Data',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Displaying-Photos',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Interactive-Face',
+            'Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
+            'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
+            'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
       label: 'BeagleBone®',
       items: [
         'Edge/Beagle_Bone/BeagleBone',
@@ -2274,6 +2013,272 @@ const sidebars = {
       ],
     },
 
+    {
+      type: 'category',
+      label: 'Other Microcontrollers',
+      items: [
+        {
+          type: 'category',
+          label: 'Wio Series',
+          items: [
+            'Sensor/Wio_Series/Wio',
+            {
+              type: 'category',
+              label: 'Wio-E5',
+              items: [
+                'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
+                'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
+                'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wio WM1110 Dev Kit',
+              items: [
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
+                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Wio WM1302',
+              items: [
+                'Sensor/Wio_Series/Wio_WM1302/WM1302_module',
+                'Sensor/Wio_Series/Wio_WM1302/WM1302_Pi_HAT',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Wio RP2040',
+              items: [
+                {
+                  type: 'category',
+                  label: 'Wio RP2040 Module',
+                  items: [
+                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_Module/Wio_RP2040_Module_Build-in_Wireless_2.4G',
+                  ],
+                },
+
+                {
+                  type: 'category',
+                  label: 'Wio RP2040 mini Dev Board',
+                  items: [
+                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio_RP2040_mini_Dev_Board-Onboard_Wifi',
+                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Wio-RP2040-with-Arduino-WIFI',
+                    'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/LAN_Communications',
+                    {
+                      type: 'category',
+                      label: 'Application',
+                      items: [
+                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_MQTT_to_remotely_light_up_LED_lights',
+                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Use_Socket_to_connect_to_the_forum',
+                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-Fall-Detection-Device',
+                        'Sensor/Wio_Series/Wio_RP2040/Wio_RP2040_mini_Dev_Board/Application/Wireless-desktop-atmosphere-lamp',
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Wio Link',
+              items: [
+                'Sensor/Wio_Series/Wio_Link/Wio_Link',
+                'Sensor/Wio_Series/Wio_Link/Wio_Link_Bootcamp_Kit',
+                'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Kit',
+                'Sensor/Wio_Series/Wio_Link/Wio_Link_Deluxe_Plus_Kit',
+                'Sensor/Wio_Series/Wio_Link/Wio_Link_Environment_Kit',
+                'Sensor/Wio_Series/Wio_Link/Wio_Link_Event_Kit',
+                'Sensor/Wio_Series/Wio_Link/Wio_Link_Starter_Kit',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Wio Tracker',
+              items: [
+                'Sensor/Wio_Series/Wio_Tracker/Wio_Tracker',
+                'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat.1',
+                'Sensor/Wio_Series/Wio_Tracker/wio_gps_board',
+                'Sensor/Wio_Series/Wio_Tracker/LTE_Cat_1_Pi_HAT',
+                'Sensor/Wio_Series/Wio_Tracker/Wio_LTE_Cat_M1_NB-IoT_Tracker',
+                'Sensor/Wio_Series/Wio_Tracker/Wio-Extension-RTC',
+                'Sensor/Wio_Series/Wio_Tracker/Grove_Starter_Kit_for_Wio_LTE',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'Wio Lite',
+              items: [
+                'Sensor/Wio_Series/Wio_Lite/Wio-Lite-AI-Getting-Started',
+                'Sensor/Wio_Series/Wio_Lite/Wio-Lite-W600',
+                'Sensor/Wio_Series/Wio_Lite/Wio-Lite-MG126',
+                'Sensor/Wio_Series/Wio_Lite/Wio_Lite_RISC_V_GD32VF103_with_ESP8266',
+                'Sensor/Wio_Series/Wio_Lite/Grove-Shield-for-Wio-Lite',
+                'Sensor/Wio_Series/Wio_Lite/Grove_Base_Shield_for_NodeMCU_V1.0',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wio Node',
+              items: ['Sensor/Wio_Series/Wio_Node/Wio_Node'],
+            },
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Seeeduino Series',
+          items: [
+            'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
+            'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
+            {
+              type: 'category',
+              label: 'Seeeduino',
+              items: [
+                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.2',
+                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v4.0',
+                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2_Atmega-168P',
+                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_V2.2',
+                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v2.21',
+                'Sensor/Seeeduino Series/Seeeduino/Seeeduino_v3.0',
+                'Sensor/Seeeduino Series/Seeeduino/Seeeduino',
+              ],
+            },
+            'Sensor/Seeeduino Series/Seeeduino_Cloud',
+            'Sensor/Seeeduino Series/Seeeduino-Cortex-M0',
+            'Sensor/Seeeduino Series/Seeeduino_Ethernet',
+            'Sensor/Seeeduino Series/Seeeduino_GPRS',
+            'Sensor/Seeeduino Series/Seeeduino_Lite',
+            'Sensor/Seeeduino Series/Seeeduino_LoRAWAN',
+            'Sensor/Seeeduino Series/Seeeduino_Lotus',
+            'Sensor/Seeeduino Series/Seeeduino_Lotus_Cortex-M0-',
+            'Sensor/Seeeduino Series/Seeeduino_Mega',
+            'Sensor/Seeeduino Series/Seeeduino_Mega_Protoshield_Kit',
+            'Sensor/Seeeduino Series/Seeeduino-Nano',
+            {
+              type: 'category',
+              label: 'Seeeduino Stalker',
+              items: [
+                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3-Waterproof_Solar_Kit',
+                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_V3.1',
+                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v3_enclosure',
+                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v1.0',
+                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker_v2.3',
+                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino_Stalker',
+                'Sensor/Seeeduino Series/Seeeduino Stalker/Seeeduino-Stalker_v3',
+              ],
+            },
+            'Sensor/Seeeduino Series/SeeedStudio-GD32-RISC-V-Dev-Board',
+            'Sensor/Seeeduino Series/Seeeduino-Crypto-ATmega4809-ECC608',
+            'Sensor/Seeeduino Series/Seeeduino_Arch',
+            'Sensor/Seeeduino Series/Seeeduino_Arch_V1.0',
+
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/Seeeduino Series/Application/Driver_for_Seeeduino',
+                'Sensor/Seeeduino Series/Application/FM_Receiver',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Kit with Courses',
+              items: [
+                'Sensor/Seeeduino Series/Kit with Courses/Grove_IoT_Starter_Kits_Powered_by_AWS',
+                'Sensor/Seeeduino Series/Kit with Courses/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+              ],
+            },
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'LinkIt',
+          items: [
+            'Seeed_Elderly/LinkIt/LinkIt',
+            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688',
+            'Seeed_Elderly/LinkIt/LinkIt_Smart_7688_Duo',
+            'Seeed_Elderly/LinkIt/Linkit_Connect_7681',
+            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688',
+            'Seeed_Elderly/LinkIt/Breakout_for_LinkIt_Smart_7688_v2.0',
+            'Seeed_Elderly/LinkIt/Arduino_Breakout_for_LinkIt_Smart_7688_Duo',
+            'Seeed_Elderly/LinkIt/Grove_Breakout_for_LinkIt_Smart_7688_Duo',
+            'Seeed_Elderly/LinkIt/Grove_Starter_kit_for_LinkIt_Smart7688_Duo',
+            {
+              type: 'category',
+              label: 'Linklt ONE',
+              items: [
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Analog_Interface',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Colorful_World',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Hello_World',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Light-Sensor',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Marquee',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt-ONE-Tutorial---Mini-Servo',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-Push_Button',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-SMS_control_the_LED',
+                'Seeed_Elderly/LinkIt/Linklt ONE/LinkIt_ONE_Tutorial-The_Basics',
+                'Seeed_Elderly/LinkIt/Linklt ONE/Sidekick_Basic_Kit_for_LinkIt_ONE',
+                'Seeed_Elderly/LinkIt/Linklt ONE/Grove-Starter_Kit_for_LinkIt_ONE',
+                'Seeed_Elderly/LinkIt/Linklt ONE/Secret_Box',
+              ],
+            },
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Arch',
+          items: [
+            'Sensor/Arch/Arch_Mix',
+            'Sensor/Arch/Arch_V1.1',
+            'Sensor/Arch/Arch_Pro',
+            'Sensor/Arch/Arch_BLE',
+            'Sensor/Arch/Arch_Link',
+            'Sensor/Arch/Arch_GPRS',
+            'Sensor/Arch/Arch_GPRS_V2',
+            'Sensor/Arch/Arch_Max',
+            'Sensor/Arch/Arch_Max_v1.1',
+            'Sensor/Arch/Heart-Sound_Sensor',
+            'Sensor/Arch/Grove-Starter_Kit_for_mbed',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Azure Sphere MT3620',
+          items: [
+            'Sensor/Azure Sphere MT3620/Azure_Sphere_MT3620_Development_Kit',
+            'Sensor/Azure Sphere MT3620/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit',
+            'Sensor/Azure Sphere MT3620/MT3620_Ethernet_Shield_v1.0',
+            'Sensor/Azure Sphere MT3620/MT3620_Mini_Dev_Board',
+            'Sensor/Azure Sphere MT3620/MT3620_Grove_Breakout',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'IOT Button for AWS',
+          items: ['Sensor/IOT_Button_For_AWS/SEEED-IOT-BUTTON-FOR-AWS'],
+        },
+
+        {
+          type: 'category',
+          label: 'Pi Pico',
+          items: ['Sensor/Pi_Pico/Grove-Starter-Kit-for-Raspberry-Pi-Pico'],
+        },
+      ],
+    },
     // {
 
     //   type: 'doc',
