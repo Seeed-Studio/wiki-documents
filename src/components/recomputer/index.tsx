@@ -5,17 +5,23 @@ const BrandSceneList = () => {
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedScenes, setSelectedScenes] = useState([]);
   const brands = [
-    { id: 1, name: '品牌33',link:'https://www.baidu.com/', scenes: [1, 2, 3] },
-    { id: 2, name: '品牌2', link:'https://www.baidu.com/',scenes: [3] },
-    { id: 3, name: '品牌3', link:'https://www.baidu.com/',scenes: [1] },
-    { id: 4, name: '品牌4',link:'https://www.baidu.com/', scenes: [5,4] },
+    { id: 1, name: 'CVEDIA-RT',link:'https://www.baidu.com/', scenes: [4] },
+    { id: 2, name: 'Lumeo', link:'https://www.baidu.com/',scenes: [4] },
+    { id: 3, name: 'alwaysAI', link:'https://www.baidu.com/',scenes: [1] },
+    { id: 4, name: 'YOLOv8',link:'https://www.baidu.com/', scenes: [1, 2, 4] },
+    { id: 5, name: 'YOLOv5',link:'https://www.baidu.com/', scenes: [2, 4] },
+    { id: 6, name: 'roboflow',link:'https://www.baidu.com/', scenes: [1, 4] },
+    { id: 7, name: 'Allxon1',link:'https://www.baidu.com/', scenes: [5] },
+    { id: 8, name: 'Deci',link:'https://www.baidu.com/', scenes: [3] },
+    { id: 9, name: 'Edge Impulse',link:'https://www.baidu.com/', scenes: [1, 2, 4] },
+    { id: 10, name: 'Cochl.Sense',link:'https://www.baidu.com/', scenes: [4] },
   ];
   const scenes = [
-    { id: 1, name: '场景1',link:'https://www.baidu.com/',img:'huang.png', brands: [1, 2, 3]},
-    { id: 2, name: '场景2',link:'https://www.baidu.com/', img:'huang.png',brands: [3] },
-    { id: 3, name: '场景3',link:'https://www.baidu.com/',img:'huang.png', brands: [1] },
-    { id: 4, name: '场景4',link:'https://www.baidu.com/', img:'huang.png',brands: [4] },
-    { id: 5, name: '场景5',link:'https://www.baidu.com/', img:'huang.png',brands: [3] },
+    { id: 1, name: 'Data Upload & Label',link:'https://www.baidu.com/',img:'huang.png', brands: [3, 4, 6, 9]},
+    { id: 2, name: 'Train',link:'https://www.baidu.com/', img:'huang.png',brands: [4, 5, 9] },
+    { id: 3, name: 'Optimize',link:'https://www.baidu.com/',img:'huang.png', brands: [8] },
+    { id: 4, name: 'Deploy',link:'https://www.baidu.com/', img:'huang.png',brands: [1, 2, 4, 5, 6, 9, 10] },
+    { id: 5, name: 'Remote Manage',link:'https://www.baidu.com/', img:'huang.png',brands: [7] },
   ];
   const handleBrandMouseEnter = (brand) => {
     setSelectedBrand(brand);

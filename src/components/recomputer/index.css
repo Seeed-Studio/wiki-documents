@@ -13,10 +13,11 @@
 	text-decoration: none;
 }
 .brand-list {
+	display: flex;
 	margin-right: 30px;
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: bold;
-	flex: 2;
+	flex: 2.5;
 }
 .scene-list {
 	flex: 3;
@@ -25,31 +26,37 @@
 .scene-list ul {
 	list-style: none;
 	padding: 0;
+
 }
 
 .brand-list li,
 .scene-list li {
 	cursor: pointer;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border: 1px solid var(--ifm-color-emphasis-300);
-	border-radius: 10px;
+	border-radius: 5px;
 	color: var(--text-color);
 }
 
 .brand-list li.selected,
 .brand-list li:hover {
 	border-color: #8fc31f;
-	background-color: #8fc31f;
+	background-image: url('https://files.seeedstudio.com/wiki/recomputerzhongwen/yolov8-logo.png');
+	background-size: cover;
+	background-position: center;
 	color: #fff;
 }
 .brand-list li.selected a,
 .brand-list li:hover a {
-	/* color: #8fc31f; */
+	color: #8fc31f;
 }
 .scene-list li:hover,
 .scene-list li.selected {
-	border-color: #8fc31f;
+	border-color: #000000;
 	box-shadow: 0 0 2px 1px var(--ifm-color-primary-dark);
+	background-color: #000000;
+	transition: transform 0.5s ease-in-out;
+	transform: scale(1.1);
 }
 .scene-list li.selected a,
 .scene-list li:hover a {
@@ -57,11 +64,25 @@
 }
 .scene-item {
 	display: flex;
+	font-size: 30px;
+	font-weight: bold;
 }
 .scene-item img {
-	width: 80px;
+	width: 100px;
 	margin-right: 12px;
 }
 .srene-title {
 	align-self: center;
 }
+/* .brand-item {
+	display: flex;
+	font-size: 30px;
+	font-weight: bold;
+}
+.brand-item img {
+	width: 100%;
+	margin-right: 12px;
+}
+.brand-title {
+	align-self: center;
+} */
