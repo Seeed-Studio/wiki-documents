@@ -2008,7 +2008,7 @@ const sidebars = {
       type: 'category',
       label: 'reComputer',
       items: [
-        'Edge/reComputer/RecomputerPage',
+        // 'Edge/reComputer/RecomputerPage',
         'Edge/reComputer/reComputer_Jetson_Series_Introduction',
         'Edge/reComputer/reComputer_Jetson_Series_Initiation',
         'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
