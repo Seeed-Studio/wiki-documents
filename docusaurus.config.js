@@ -28,7 +28,7 @@ const config = {
       async: true,
     },
     {
-      src: 'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/assets/js/scroll.js', // 添加你的 JavaScript 文件名、
+      src: 'https://raw.githubusercontent.com/Seeed-Studio/wiki-documents/docusaurus-version/assets/js/scroll.js', // 添加你的 JavaScript 文件名、
       async: true,
     },
   ],
