@@ -20,6 +20,8 @@ This guide walks you through the steps to set up all required servers. It also p
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/modem-e_flow.png" alt="pir" width={800} height="auto" /></p>
 
+*Figure 1. [LoRa Basics Modem-E Flow Architecture](https://lora-developers.semtech.com/themes/user/rst_to_ee/html/ModemEV14/_images/modem-e_flow.png)*
+
 
 
 
@@ -263,23 +265,29 @@ Doule click"TTN v3-Uplinks" node,and edit MQTT node.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/configure_mqtt1.png" alt="pir" width={800} height="auto" /></p>
 
-Doule click"TTN joinReq" node,and edit MQTT node.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/add_broker.png" alt="pir" width={800} height="auto" /></p>
-
-
 It's recommended to use TLS. Your can find the Server, Port in the [previous step](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Server_Configuration/#step-3-create-credentials:~:text=Copy%20the%20values%20from%20the%20following%20fields%3A%20Server%20Address%2C%20Username%2C%20and%20Password.).
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/TLS.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/TTN_TLS.png" alt="pir" width={800} height="auto" /></p>
 
 Then add the username and password to "Security".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/TTN_se.png" alt="pir" width={800} height="auto" /></p>
 
+Click Add and then click Done.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/add_and_done.png" alt="pir" width={600} height="auto" /></p>
+
+
+Doule click"TTN joinReq" node,and select the MQTT server we added in the previous step.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/select_server.png" alt="pir" width={800} height="auto" /></p>
+
+
+
 
 #### LoRa Cloud Configuration
 
-To configure the server, the MGS URL and MGS TOKEN values from the LoRa Cloud Modem & Geolocation Services setup step, are required, as is the device’s DevEUI.
+To configure the server, the MGS URL and MGS TOKEN values from the [previous step](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Server_Configuration/#step-2-get-a-token)
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/set_token.png" alt="pir" width={800} height="auto" /></p>
@@ -287,13 +295,14 @@ To configure the server, the MGS URL and MGS TOKEN values from the LoRa Cloud Mo
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/set_url.png" alt="pir" width={800} height="auto" /></p>
 
+Set the EUI of your device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/set_eui.png" alt="pir" width={800} height="auto" /></p>
 
-#### Configuring Node-RED User Interface Elements
 
+Click "Deploy" button to delpoy the flow.
 
-
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/deploy.png" alt="pir" width={800} height="auto" /></p>
 
 
 ### Data View
