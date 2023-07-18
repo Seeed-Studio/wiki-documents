@@ -28,7 +28,7 @@ const config = {
       async: true,
     },
     {
-      src: 'https://wiki.seeedstudio.com/client/static/js/embed.js',
+      src: 'http://website_fusion.seeedstudio.local/newFusion/js/scroll.js', // 添加你的 JavaScript 文件名、
       async: true,
     },
   ],
