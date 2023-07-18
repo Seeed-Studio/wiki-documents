@@ -1195,7 +1195,7 @@ import TabItem from '@theme/TabItem';
 **Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN®  Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
 
 
-**Step 2.** type `sudo raspi-config` in command line to open Rasberry Pi Software Configuration Tool:
+**Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
 
 - Select Interface Options
 - Select SPI, then select **Yes** to enable it
@@ -1276,7 +1276,7 @@ Search for **gateway_conf** in the corresponding file.
 **Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
 
 
-**Step 2.** type `sudo raspi-config` in command line to open Rasberry Pi Software Configuration Tool:
+**Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
 
 - Select Interface Options
 - Select I2C, then select **Yes** to enable it
