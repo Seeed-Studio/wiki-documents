@@ -26,7 +26,6 @@
 .scene-list ul {
 	list-style: none;
 	padding: 0;
-
 }
 
 .brand-list li,
@@ -41,14 +40,14 @@
 .brand-list li.selected,
 .brand-list li:hover {
 	border-color: #8fc31f;
-	background-image: url('https://files.seeedstudio.com/wiki/recomputerzhongwen/yolov8-logo.png');
 	background-size: cover;
 	background-position: center;
 	color: #fff;
 }
 .brand-list li.selected a,
 .brand-list li:hover a {
-	color: #8fc31f;
+	/* color: #8fc31f; */
+	color: transparent;
 }
 .scene-list li:hover,
 .scene-list li.selected {
