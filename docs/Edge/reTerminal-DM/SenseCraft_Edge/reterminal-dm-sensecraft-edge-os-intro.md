@@ -30,6 +30,7 @@ reTerminal DM will be Shipped with SenseCraft Edge OS as default Operating Syste
 :::note
 This OS is currently developed based on reTerminal DM and only works with Production version reTerminal DM, you can download [Sensecraft Edge OS](https://sourceforge.net/projects/reterminal-dm/files/Sensecraft-edge-OS-V0.3.10.tar.gz/download)
 :::
+
 ## Feature
 
 * **Touch-friendly UI design** specifically tailored for Human Machine Interface (HMI) devices, ensuring an intuitive and seamless user experience. 
