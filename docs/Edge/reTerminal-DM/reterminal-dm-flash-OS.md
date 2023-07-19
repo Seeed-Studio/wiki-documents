@@ -30,6 +30,10 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
     </a>
 </div>
 
+:::note
+The Sensecraft Edge OS can be download from [**Here**](https://sourceforge.net/projects/reterminal-dm/files/Sensecraft-edge-OS-V0.3.10.tar.gz/download), please note that this Sensecraft Edge OS is currently developed based on reTerminal DM and only works with Production version reTerminal DM
+:::
+
 ## Hardware Requirements
 
 You need to prepare the following hardware
@@ -288,7 +292,7 @@ As following the above flashing OS steps, the reTerminal DM should have SSH enab
 
 Now please connect the Ethernet cable to the reTerminal DM and a router which is on the same network as your host computer.
 
-:::tips
+:::tip
 
 To test if your reTerminal DM is on the same network with host computer, you can use `ping raspberrypi.local`
 
@@ -349,6 +353,21 @@ raspberry
 
 reTerminal DM comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately.
 
+:::tip
+
+**For install 32-bit OS driver, Please carefully follow the steps below:**
+
+The Operating System that pre-installed on reTerminal DM is 64-bit, if you wish to install 32-bit OS please use the following method to install the DTS drivers.
+
+Please follow the [**Access reTerminal DM via SSH**](#access-reterminal-dm-via-ssh) step, and then enter the following command:
+
+```sh
+echo arm_64bit=0 | sudo tee -a /boot/config.txt
+```
+Then continue the [**Install drivers after flashing new Raspbian OS process**](#install-reterminal-drivers-after-flashing-new-raspbian-os)
+
+:::
+
 - **Step 1.** Clone the following repo in the ssh shell you have connected to reTerminal DM from the above steps
 
 ```sh
@@ -381,23 +400,6 @@ sudo reboot
 Now your screen should light up and run normally.
 
 ## FAQ
-
-### 32-bit OS driver
-
-**Q: I want to use 32-bit Operating System how to install driver?**
-
-**A: Please carefully follow the steps below:**
-
-:::note
-The Operating System that pre-installed on reTerminal DM is 64-bit, if you wish to install 32-bit OS please use the following method to install the DTS drivers.
-:::
-
-Please follow the [**Access reTerminal DM via SSH**](#access-reterminal-dm-via-ssh) step, and then enter the following command:
-
-```sh
-echo arm_64bit=0 | sudo tee -a /boot/config.txt
-```
-Then continue the [**Install drivers after flashing new Raspbian OS process**](#install-reterminal-drivers-after-flashing-new-raspbian-os)
 
 ### Touch Screen orientation
 
