@@ -36,6 +36,12 @@ reComputer Industrial is equipped with **2x 2-lane 15pin MIPI CSI camera connect
   - [IMX219-160IR 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
   - [IMX219 M12/CS mount CMOS Camera Module](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
 
+- IMX477 cameras
+
+  - [Raspberry Pi High Quality Camera](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
+  - [Raspberry Pi HQ Camera - M12 mount](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
+  - [High Quality Camera for Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
+
 ### Connection Overview
 
 Here the 2 CSI camera connectors are marked as **CAM0 and CAM1**. You can either connect one camera to any connector out of the 2 or connect 2 cameras to both the connectors at the same time.
@@ -53,6 +59,38 @@ Here the 2 CSI camera connectors are marked as **CAM0 and CAM1**. You can either
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/10.png"/></div>
 
 ### Usage
+
+First you need to configure the board to load the appropriate driver for the specific camera that you will be using. For this JetPack system has an in-built tool to support IMX219 an IMX477 cameras.
+
+- **Step 1:** Open the terminal and execute the following
+
+```sh
+sudo /opt/nvidia/jetson-io/jetson-io.py
+```
+
+- **Step 2:** Select **Configure Jetson Nano CSI Connector**
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/119.jpg"/></div>
+
+- **Step 3:** Select **Configure for compatible hardware**
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/120.jpg"/></div>
+
+- **Step 4:** Select the camera that you want to use
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/121.jpg"/></div>
+
+- **Step 5:** Select **Save pin changes**
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/122.jpg"/></div>
+
+- **Step 6:** Select **Save and reboot to reconfigure pins**
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/123.jpg"/></div>
+
+- **Step 7:** Press any key on the keyboard and the device will reboot with the applied camera configuration
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/124.jpg"/></div>
 
 You can use CSI cameras in 2 different methods. Follow the below commands according to the camera connector 
 
