@@ -889,7 +889,7 @@ The reTerminal DM comes with a CM4 native Gigabit Ethernet interface that suppor
 
 #### 40-Pin GPIO
 
-The classic Raspberry Pi 40-pin GPIO design is retained inside the reTerminal DM, and the pin dentition remains the same as the Raspberry Pi 4B. Users need to open the back cover to use these GPIOs, It should be noted that due to the limited resources of CM4 IO, the 40-pin GPIO and many peripheral interfaces are multiplexed, so you need to pay special attention to the conﬂict when using GPIOs. For detailed pin assignment information, please refer to the following table.
+The classic Raspberry Pi 40-pin GPIO design is retained inside the reTerminal DM, and the pin dentition remains the same as the Raspberry Pi 4B. Users need to open the back cover to use these GPIOs, It should be noted that due to the limited resources of CM4 IO, the 40-pin GPIO and many peripheral interfaces are multiplexed, so you need to pay special attention to the conflict when using GPIOs. For detailed pin assignment information, please refer to the following table.
 
 <div class="table-center">
 
@@ -1177,6 +1177,76 @@ The CSI camera interface is reserved on the reTerminal DM mainboard, which can b
 Please note that the standard version of the reTerminal DM does not come with a camera opening on the front panel, therefore, the camera functionality is not available for the standard product. If you have a customized camera requirement, please contact odm@seeed.cc
 :::
 
+### 4G Module
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991135--lte-cat-4-ec25-eux-mini-pcie-font_1.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+**Materials Required**
+
+- reTerminal DM x 1 
+- EC25-EUX 4G Module x1
+- SIM Card x1
+
+**Step 1.** Please refer to the [EC25 4G Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) guide to install `EC25 4G Module` into the `4G/LTE PCIe slot` which you should see the *`4G/LTE`* slikscreen, and please also put in the 4G enabled sim-card in the [sim card slot](/reterminal-dm/#sim-card-slot), before you power up the system.
+
+**Step 2.** Check if EC25-EUX gets detectd by using ```lsusb```
+
+```
+lsusb
+lsusb -t
+```
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/lsusb.png"/></div>
+
+**Step 3.** Install the serial communication tool minicom.
+
+```sh
+sudo apt install minicom
+```
+
+**Step 4.** Connect EC25-EUX 4G module through minicom.
+
+```sh
+sudo minicom -D /dev/ttyUSB2 -b 1152008n1
+```
+
+once the serial connection opened, Type in AT and press 'Enter', and you should see OK.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image31.png"/></div>
+
+**Step 5.** Enable 4G module to connect to 4G network
+
+AT the same minicom serial window please type:
+
+```sh
+AT+QCFG="usbnet"
+```
+
+It will return something like ```+QCFG: "usbnet",0,``` but we need that to be set to 1 (ECM mode), so enter the following command:
+
+```sh
+AT+QCFG="usbnet",1
+```
+
+Then enter the following command to force the modem to reboot:
+
+```sh
+AT+CFUN=1,1
+```
+
+Then you could reboot or wait for a while for the moudel to get internet from your sim card carrier.
+
+You can also use the command `ifconfig` to query the networking status of reTerminal DM.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image33.png"/></div>
+
+
 ### LoraWAN®  Module
 
 :::note
@@ -1190,9 +1260,18 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="WM1302 SPI" label="WM1302 SPI">
+<TabItem value="WM1302 SPI Module" label="WM1302 SPI Module">
 
-**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN®  Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114992967-spi-us915.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+
+**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
 
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
@@ -1238,40 +1317,16 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 
 Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
 
-<!-- **Step 7.** Sign up at [TTN website](https://www.thethingsnetwork.org/) and log into your account. If you don't have one please registe. Then enter the Gateway interface and click "Get Starting"
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa1.png"/></div>
-
-Select your region.
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa2.png"/></div>
-
-Chose "Go to gateways"
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa3.png"/></div>
-
-Click **Add gateway** to add the device:
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image22.jpg"/></div>
-
-Among them, the value of **Gateway EUI** will be displayed in the log when the test is run in **step 4**. The Frequency plan in Lora options (take the European version as an example) select **Europe 863-870 MHz (SF9 for RX2 - recommended)**. Then click on **Create gateway**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image23.jpg"/></div>
-
-**Step 8.** Edit **global_conf.json.sx1250.US915** in the **sx1302_hal/packet_forwarder** folder.
-
-Search for **gateway_conf** in the corresponding file.
-
-- Then change the **gateway_ID** behind to the **Gateway EUI** filled in the webpage.
-
-- **server_address** is modified to the **Gateway Server address** in the web page.
-
-- Both **serv_port_up** and **serv_port_up** are modified to **1700**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image24.jpg"/></div> -->
-
 </TabItem>
-<TabItem value="WM1302 USB" label="WM1302 USB">
+<TabItem value="WM1302 USB Module" label="WM1302 USB Module">
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 **Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
 
@@ -1348,40 +1403,6 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
 
 Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
-
-<!-- **Step 7.** Sign up at [TTN website](https://www.thethingsnetwork.org/) and log into your account. If you don't have one please registe. Then enter the Gateway interface and click "Get Starting"
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa1.png"/></div>
-
-Select your region.
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa2.png"/></div>
-
-Chose "Go to gateways"
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa3.png"/></div>
-
-Click **Add gateway** to add the device:
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image22.jpg"/></div>
-
-Among them, the value of **Gateway EUI** will be displayed in the log when the test is run in **step 4**. The Frequency plan in Lora options (take the European version as an example) select **Europe 863-870 MHz (SF9 for RX2 - recommended)**. Then click on **Create gateway**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image23.jpg"/></div>
-
-**Step 8.** Edit **global_conf.json.sx1250.US915.USB** in the **sx1302_hal/packet_forwarder** folder.
-
-Search for **gateway_conf** in the corresponding file.
-
-- Then change the **gateway_ID** behind to the **Gateway EUI** filled in the webpage.
-
-- **server_address** is modified to the **Gateway Server address** in the web page.
-
-- Both **serv_port_up** and **serv_port_up** are modified to **1700**.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image24.jpg"/></div>
-
-**Step 9.** Run the command in **step 6** again, and you can see the connection information of the device on the web page later. -->
 
 </TabItem>
 </Tabs>
