@@ -91,23 +91,28 @@ const sidebars = {
     {
       type: 'category',
       label: 'Grove',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/Grove/Grove_System"
+          },
       items: [
-        'Sensor/Grove/Grove_System',
         {
           type: 'category',
           label: 'Grove Sensor',
-          // collapsed: true,
-          // collapsible: true,
-          // link: {
-          //   type: "doc",
-          //   id: "Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One"
-          // },
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/Grove/Grove_Sensors/Grove_Sensor_Intro"
+          },
           items: [
             {
               type: 'category',
-              label: 'All in one',
+              label: 'Multiple in one',
               items: [
-                // 'Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One',
+                'Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-CO2&Temperature&HumiditySensor-SCD41',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-CO2_Temperature_Humidity_Sensor-SCD30',
@@ -116,11 +121,12 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Vision AI',
+              label: 'AI-powered',
               items: [
-                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
-                'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
-                'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
+                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
+                'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
+                'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
+                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
               ],
             },
             {
@@ -179,7 +185,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_sensor_paj7660',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
               ],
@@ -367,7 +372,13 @@ const sidebars = {
 
         {
           type: 'category',
-          label: 'Grove Sensor Network',
+          label: 'Grove Network Module',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/Grove/Grove_Sensors_Network/Grove_network_module_intro"
+          },
           items: [
             {
               type: 'category',
@@ -441,6 +452,12 @@ const sidebars = {
         {
           type: 'category',
           label: 'Grove Accessories',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/Grove/Grove_Accessories/Grove_Accessories_Intro"
+          },
           items: [
             {
               type: 'category',
@@ -602,93 +619,121 @@ const sidebars = {
     {
       type: 'category',
       label: 'SenseCAP',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction",
+      },
       items: [
-        'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
-
         {
           type: 'category',
-          label: 'SenseCAP LoRaWAN Sensor',
+          label: 'SenseCAP Sensor',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/SenseCAP/SenseCAP_Intro/SenseCAP_Sensor_Intro",
+          },
           items: [
-            'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
 
             {
               type: 'category',
-              label: 'SenseCAP S210X Series',
+              label: 'SenseCAP LoRaWAN Sensor',
+    
               items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
+    
                 {
                   type: 'category',
-                  label: 'Tutorials',
+                  label: 'SenseCAP S210X Series',
                   items: [
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central',
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network',
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                    {
+                      type: 'category',
+                      label: 'Tutorials',
+                      items: [
+                        'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central',
+                        'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network',
+                        'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network',
+                      ],
+                    },
+                  ],
+                },
+    
+                {
+                  type: 'category',
+                  label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
+                  ],
+                },
+    
+                {
+                  type: 'category',
+                  label: 'SenseCAP A1101',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
+                    //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
                   ],
                 },
               ],
             },
-
+    
             {
               type: 'category',
-              label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+              label: ' SenseCAP ONE Weather Sensor',
               items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
+                {
+                  type: 'category',
+                  label: 'SenseCAP One Compact Weather Station',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting Started with SenseCAP ONE Compact Weather Sensor',
+                  ],
+                },
               ],
             },
-
+    
             {
               type: 'category',
-              label: 'SenseCAP A1101',
+              label: 'SenseCAP Sensor Probe',
               items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
-                //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
-              ],
-            },
-          ],
-        },
-
-        {
-          type: 'category',
-          label: ' SenseCAP ONE Weather Sensor',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
-            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
-            {
-              type: 'category',
-              label: 'SenseCAP One Compact Weather Station',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting Started with SenseCAP ONE Compact Weather Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+                'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
+                'Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
+                'Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
               ],
             },
           ],
         },
 
-        {
-          type: 'category',
-          label: 'SenseCAP Sensor Probe',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
-            'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
-          ],
-        },
+
 
         {
           type: 'category',
           label: ' SenseCAP Data Logger',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_Intro/SenseCAP_Data_Logger_Intro',
+          },
           items: [
-            'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
             'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger',
+            'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
             {
               type: 'category',
               label: 'Tutorial',
@@ -701,774 +746,40 @@ const sidebars = {
             },
           ],
         },
-        {
-          type: 'category',
-          label: 'SenseCAP Indicator',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
-            {
-              type: 'category',
-              label: 'Getting Started',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
-                {
-                  type: 'category',
-                  label: 'OpenAI X SenseCAP Indicator',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
-                  ],
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Development Tutorial',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Dive_into_the_Hardware',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/How_to_Create_your_own_UI',
-                {
-                  type: 'category',
-                  label: 'Develop with ESP32-S3',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Four-inch_Touch_Screen',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Wi-Fi',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'Develop with RP2040',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/CO2_Sensor_Built-in',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
-                    {
-                      type: 'category',
-                      label: 'Grove',
-                      items: [
-                        'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
-                        'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-            'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SenseCAP Accessories',
-          items: [
-            'Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
-            'Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
-          ],
-        },
+       
       ],
     },
 
     {
       type: 'category',
       label: 'mmWave radar sensor',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/mmWave_radar_sensor/mmwave_radar_Intro',
+      },
       items: [
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
         'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
         'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
         'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
-        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
-      ],
-    },
-
-    
-
-    
-
-    {
-      type: 'category',
-      label: 'Other Sensing Modules',
-      items: [
-        {
-          type: 'category',
-          label: 'Sensors',
-          items: [
-            'Sensor/Beyond_Grove/Sensors/Ultra_Sonic_range_measurement_module',
-            'Sensor/Beyond_Grove/Sensors/Water-Flow-Sensor',
-            'Sensor/Beyond_Grove/Sensors/Weight_Sensor_Load_Cell_0-500g',
-            'Sensor/Beyond_Grove/Sensors/G1_Water_Flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/G1_and_2_inch_Water_Flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/G1-8_Water_Flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/G3-4_Water_Flow_sensor',
-            'Sensor/Beyond_Grove/Sensors/M11_1.25_Water_flow_Sensor',
-            'Sensor/Beyond_Grove/Sensors/PIR_Motion_Sensor_Large_Lens_version',
-            'Sensor/Beyond_Grove/Sensors/Photo_Reflective_Sensor',
-            'Sensor/Beyond_Grove/Sensors/Photo_interrupter_OS25B10',
-            'Sensor/Beyond_Grove/Sensors/Piezo_Sensor-MiniSense_100',
-            'Sensor/Beyond_Grove/Sensors/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz',
-            'Sensor/Beyond_Grove/Sensors/Gear_Stepper_Motor_Driver_Pack',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Sensor Network',
-          items: [
-            'Sensor/Beyond_Grove/Sensor_Network/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder',
-            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_RF_link_kit',
-            'Sensor/Beyond_Grove/Sensor_Network/315MHz_Simple_RF_Link_Kit',
-            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_Wireless_car_key_fob_with_key_chain',
-            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_remote_relay_switch_kits-2_channels',
-            'Sensor/Beyond_Grove/Sensor_Network/433Mhz_RF_Link_Kit',
-            'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
-            'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
-            'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Accessories',
-          items: [
-            {
-              type: 'category',
-              label: 'Charge',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Charge/Essentials',
-                'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
-                'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
-                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_Pro',
-                'Sensor/Beyond_Grove/Accessories/Charge/Lipo-Rider-Plus',
-                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.3',
-                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
-                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
-                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
-                'Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70',
-                'Sensor/Beyond_Grove/Accessories/Charge/1.5W_Solar_Panel_81x137',
-                'Sensor/Beyond_Grove/Accessories/Charge/1w_Solar_Panel_80x100',
-                'Sensor/Beyond_Grove/Accessories/Charge/2.5W_Solar_Panel_116x160',
-                'Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160',
-                'Sensor/Beyond_Grove/Accessories/Charge/3.6V_Micro_hydro_generator',
-                'Sensor/Beyond_Grove/Accessories/Charge/Bicycle_Dynamo_With_Bracket-6V_3W',
-                'Sensor/Beyond_Grove/Accessories/Charge/Battery_kit_3.7V_520_mAh',
-                'Sensor/Beyond_Grove/Accessories/Charge/Logic_DC_Jack',
-                'Sensor/Beyond_Grove/Accessories/Charge/Qi_Wireless_Charger_Transmitter',
-                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider',
-                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.1',
-                'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply',
-                'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply_v1.1',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Input/Output',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V_3V3',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/125Khz_RFID_module-UART',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/Scream_out_loud-110dBA_fixed_tone_Siren',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/2.8inch-TFT_Touch_Shield_V1.0',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_3V3',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
-                'Sensor/Beyond_Grove/Accessories/Input_Output/Codec-Adaptive_Wireless_Relay',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Current',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Current/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
-                'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
-                'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Case',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Case/Bracket_for_Infrared_Proximity_Sensor',
-                'Sensor/Beyond_Grove/Accessories/Case/Shield-MaTrix-V0.9b',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'LED',
-              items: ['Sensor/Beyond_Grove/Accessories/LED/FSM-55'],
-            },
-            {
-              type: 'category',
-              label: 'Tools',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Tools/Bluetooth_Multimeter',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano',
-                'Sensor/Beyond_Grove/Accessories/Tools/Dfu-util',
-                'Sensor/Beyond_Grove/Accessories/Tools/Replacement_LCD_Screen_for_DSO_nano',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano_v3',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Development',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-OpenOCD_gdb',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Qemu_gdb',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-gcc',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad_Manual_by_the_community',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Beta_HW',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Building_Firmware',
-                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Calibration',
-                'Sensor/Beyond_Grove/Accessories/Tools/Mini_Soldering_Iron',
-                'Sensor/Beyond_Grove/Accessories/Tools/RF_Explorer_Software',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Display',
-              items: [
-                'Sensor/Beyond_Grove/Accessories/Display/LCD_16-2_Characters-Green_Yellow_back_light',
-                'Sensor/Beyond_Grove/Accessories/Display/LCD_8-2_Characters-Blue_back_light',
-              ],
-            },
-          ],
-        },
-      ],
-    },
-
-   
-
-    // {
-
-    //   type: 'doc',
-    //   label: '--Network--',
-    //   id: 'Sensor_Network',
-
-    // },
-
-    // {
-    //   type: 'html',
-    //   value: `
-    // <style>
-    //   .sub_item {
-    //     width: 275px;
-    //     display:inline-block;
-    //     text-align:center;
-    //     font-size:20px;
-    //     margin-top: 10px;
-    //   }
-    // </style>
-    // <div style="width:100px;text-align:center">
-    //   <div class="sub_item"><strong> Network </strong></div>
-    // </div>
-    // `,
-    // },
-
-    {
-      type: 'doc',
-      id: 'Sensor_Network',
-      label: 'Network',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'category',
-      label: 'SenseCAP Gateway',
-      items: [
-        'Network/SenseCAP_Network/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
-        {
-          type: 'category',
-          label: 'Helium Gateway',
-          items: [
-            {
-              type: 'category',
-              label: 'SenseCAP M1 Gateway',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ',
-                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP M2 Data Only',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
-              ],
-            },
-
-            {
-              type: 'category',
-              label: 'SenseCAP M2 Light Gateway',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start',
-                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ',
-              ],
-            },
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Flux Gateway',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
-            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'Outdoor Gateway',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'SenseCAP M2 Multi-Platform Gateway',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
-            {
-              type: 'category',
-              label: 'Tutorial',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT',
-                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network',
-                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack',
-              ],
-            },
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'SenseCAP K1100',
-      items: [
-        'Network/SenseCAP_K1100/K1100_Getting_Started',
-        'Network/SenseCAP_K1100/K1100-quickstart',
-        {
-          type: 'category',
-          label: 'LoRaWAN-Network Application',
-          items: [
-            {
-              type: 'category',
-              label: 'Sensors Basic Usage with Arduino',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Helium Cloud Services',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium-Introduction',
-                {
-                  type: 'category',
-                  label: 'Helium Connected & Azure Integrated',
-                  items: [
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Connecting-to-Helium',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Integrate-into-Azure-IoT-Hub',
-                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Configuring-Web-APP-Visualization',
-                  ],
-                },
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Integrate_into_Google_Sheets_via_Helium',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Connect_AWS_via_helium',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'TTN Cloud Services',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/TTN-Introduction',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/Connecting-to-TTN',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'SenseCAP & Node-Red for Cloud Services',
-              items: [
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_sensecap_node-red',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_Azure_IoT_Central',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_PowerBI',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_influxdb',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_twilio',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_datacake',
-                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_grafana',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Wi-Fi-Network Application',
-          items: [
-            'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Wio-Terminal-Advanced-WiFi',
-            {
-              type: 'category',
-              label: 'Cloud Service',
-              items: [
-                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Getting_started_with_Ubidots',
-                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Quick-Start-to-using-Blynk',
-                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Connect-Wio-Terminal-to-Google-Cloud',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Azure IoT Platform Usage',
-              items: [
-                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/Connect-Wio-Terminal-to-Azure-IoT-Central',
-                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/Develop-in-Microsoft-Azure-IoT-Central',
-                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/K1100_Azure_to_PowerBI',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Embedded ML Application',
-          items: [
-            'Network/SenseCAP_K1100/Embedded_ML_Application/K1111-Edge-Impulse',
-            'Network/SenseCAP_K1100/Embedded_ML_Application/Vision_AI_with_Customizable_Models',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Contributors Project',
-          items: [
-            'Network/SenseCAP_K1100/Contributors_Project/IoT-into-the-wild-contest',
-            'Network/SenseCAP_K1100/Contributors_Project/K1111-Quick-Start-Guide',
-          ],
-        },
-      ],
-    },
-
-    // {
-    // 有问题
-    //   type: 'category',
-    //   label: 'LinkStar',
-    //   items: [
-    //     'Network/LinkStar/Linkstar_Datasheet',
-    //     'Network/LinkStar/linkstar-install-system',
-    //     ],
-
-    // },
-    {
-      type: 'category',
-      label: 'LinkStar',
-      items: [
-        'Network/LinkStar/Linkstar_Datasheet',
-        'Network/LinkStar/linkstar-install-system',
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Network/LinkStar/Application/h68k-ha-esphome',
-            'Network/LinkStar/Application/plex_media_server',
-            'Network/LinkStar/Application/wordpress_linkstar',
-            'Network/LinkStar/Application/grocy-bookstack-linkstar',
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'reRouter',
-      items: [
-        'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
-        'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Network/reRouter/Application/OpenWrt-Getting-Started',
-            'Network/reRouter/Application/OpenWrt-Plex-Media-Server-on-Docker',
-            'Network/reRouter/Application/Mender-Client-dual-GbE-CM4',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'TTN Gateway',
-      items: ['Network/TTN_Gateway/The-Things-Indoor-Gateway'],
-    },
-
-    // {
-    //   type: 'html',
-    //   value: `
-    // <style>
-    //   .sub_item {
-    //     width: 275px;
-    //     display:inline-block;
-    //     text-align:center;
-    //     font-size:20px;
-    //     margin-top: 10px;
-    //   }
-    // </style>
-    // <div style="width:100px;text-align:center">
-    //   <div class="sub_item"><strong> Edge </strong></div>
-    // </div>
-    // `,
-    // },
-
-    {
-      type: 'doc',
-      id: 'Edge_Computing',
-      label: 'Edge Computing',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'category',
-      label: 'reTerminal',
-      items: [
-        'Edge/reTerminal/reTerminal',
-        'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
-        'Edge/reTerminal/reTerminal-piCam',
-        'Edge/reTerminal/reTerminal-FAQ',
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter',
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-Electron',
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
-            'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
-            'Edge/reTerminal/Application/Mender-Client-reTerminal',
-
-            {
-              type: 'category',
-              label: 'Home Assistant',
-              items: [
-                'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
-                'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Embedded ML',
-              items: [
-                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
-                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'OS Installation',
-          items: [
-            'Edge/reTerminal/OS_Installation/reTerminal-Buildroot-SDK',
-            'Edge/reTerminal/OS_Installation/reTerminal-Yocto',
-            'Edge/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal',
-            // 'Edge/reTerminal/OS_Installation/',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Extension Board',
-          items: [
-            'Edge/reTerminal/Extension_Board/reTerminalBridge',
-            'Edge/reTerminal/Extension_Board/reTerminal_Mount_Options',
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'reTerminal-DM',
-      items: [
-        'Edge/reTerminal-DM/reterminal-dm',
-        'Edge/reTerminal-DM/reterminal-dm-flash-OS',
-        'Edge/reTerminal-DM/reterminal-dm-warranty',
-        'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
-        {
-          type: 'category',
-          label: 'Node-Red',
-          items: [
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SenseCraft_Edge',
-          items: [
-            'Edge/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'reComputer',
-      items: [
-        // 'Edge/reComputer/RecomputerPage',
-        'Edge/reComputer/reComputer_Jetson_Series_Introduction',
-        'Edge/reComputer/reComputer_Jetson_Series_Initiation',
-        'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
-        'Edge/reComputer/reComputer_Jetson_GPIO',
-        'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
-        'Edge/reComputer/jetson_FAQ',
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Edge/reComputer/Application/Jetson-Nano-MaskCam',
-            'Edge/reComputer/Application/Security_Scan',
-            'Edge/reComputer/Application/HardHat',
-            'Edge/reComputer/Application/No-code-Edge-AI-Tool',
-            'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
-            'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
-            'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
-            'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Software',
-          items: [
-            'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
-            'Edge/reComputer/Software/Lumeo-Jetson-Getting-Started',
-            'Edge/reComputer/Software/jetson-docker-getting-started',
-            'Edge/reComputer/Software/DeciAI-Getting-Started',
-            'Edge/reComputer/Software/Allxon-Jetson-Getting-Started',
-            'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
-            'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
-            'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
-            'Edge/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'JetPack™ OS Installation',
-          items: [
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'reComputer Industrial',
-          items: [
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_Getting_Started',
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
-          ],
-        },
-        {
-          type: 'category',
-          label: ' Carrier Board for Jetson Moudule',
-          items: [
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System',
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Tutorials',
-          items: [
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
-            'Edge/reComputer/Tutorials/J1010_Boot_From_SD_Card',
-            'Edge/reComputer/Tutorials/J101_Enable_SD_Card',
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
-            'Edge/reComputer/Tutorials/Jetson-AI-developer-tools',
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'reServer',
-      items: [
-        {
-          type: 'category',
-          label: 'reServer X86',
-          items: [
-            'Edge/reServer/reServer_X86/reServer-Getting-Started',
-            'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'reServer Nvidia Jetson',
-          items: [
-            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
-            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'Edge Series',
-      items: [
-        {
-          type: 'category',
-          label: 'EdgeBox-RPI-200',
-          items: [
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'EdgeBox-ESP-100',
-          items: ['Edge/Edge_Series/Edge_Box_ESP_100/Edgebox-ESP-100-Arduino'],
-        },
       ],
     },
 
     {
       type: 'category',
       label: 'SeeedStudio XIAO',
-        collapsed: true,
-        collapsible: true,
-        link: {
+      collapsed: true,
+      collapsible: true,
+      link: {
         type: "doc",
-        id: "Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects"
-        },
+        id: 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Introduction',
+      },
       items: [
-        'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Introduction',
-        // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
+        'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
         'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
         {
           type: 'category',
@@ -1629,6 +940,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'Wio Terminal',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/Wio_Terminal/Wio_Terminal_Intro',
+      },
       items: [
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
@@ -1881,40 +1198,77 @@ const sidebars = {
         },
       ],
     },
-
     {
       type: 'category',
-      label: 'BeagleBone®',
+      label: 'SenseCAP Indicator',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
+      },
       items: [
-        'Edge/Beagle_Bone/BeagleBone',
-        'Edge/Beagle_Bone/BeagleBone_Blue',
-        'Edge/Beagle_Bone/BeagleBone_Green',
-        'Edge/Beagle_Bone/BeagleBone_Green_Wireless',
-        'Edge/Beagle_Bone/BeagleBone-Green-Gateway',
-        'Edge/Beagle_Bone/Beaglebone_Case',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+            {
+              type: 'category',
+              label: 'OpenAI X SenseCAP Indicator',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Development Tutorial',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Dive_into_the_Hardware',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/How_to_Create_your_own_UI',
+            {
+              type: 'category',
+              label: 'Develop with ESP32-S3',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Four-inch_Touch_Screen',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Wi-Fi',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Develop with RP2040',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/CO2_Sensor_Built-in',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
+                {
+                  type: 'category',
+                  label: 'Grove',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
         {
           type: 'category',
           label: 'Application',
-          items: ['Edge/Beagle_Bone/Application/BeagleBone_Solutions'],
-        },
-        {
-          type: 'category',
-          label: 'Extension Board',
           items: [
-            'Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series',
-            'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
-            'Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0',
-            'Edge/Beagle_Bone/Extension_Board/Skeleton_box_for_Beaglebone',
-            'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
-            'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Kit with Courses',
-          items: [
-            'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
-            'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
           ],
         },
       ],
@@ -1922,94 +1276,148 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'ODYSSEY',
+      label: 'Other Sensing Modules',
       items: [
-        // 'Edge/ODYSSEY/ODYSSEY_Getting_Started',
-
         {
           type: 'category',
-          label: 'ODYSSEY X86J4105',
+          label: 'Sensors',
           items: [
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
-            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
-            'Edge/ODYSSEY/ODYSSEY_FAQ',
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                {
-                  type: 'category',
-                  label: 'Home Assistant for ODYSSEY',
-                  items: [
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant',
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-Home-Assistant-Customize',
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'Azure IoT for ODYSSEY',
-                  items: [
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Azure_IoT_for_ODYSSEY/ODYSSEY-X86J4105-AzureIOT',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'Mender for ODYSSEY',
-                  items: [
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Client-ODYSSEY-X86',
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Server-ODYSSEY-X86',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'Computer Version',
-                  items: [
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Intel-OpenVINO',
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-NCS2',
-                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Frigate',
-                  ],
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'OS Installation',
-              items: [
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-OS',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Updating-Firmware',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/Jellyfin-on-Docker-Ubuntu-X86',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-openwrt',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-OPNsense',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-pfSense',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-TrueNAS',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-Android',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-FreeNAS',
-                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/BalenaOS-X86-Getting-Started',
-              ],
-            },
+            'Sensor/Beyond_Grove/Sensors/Ultra_Sonic_range_measurement_module',
+            'Sensor/Beyond_Grove/Sensors/Water-Flow-Sensor',
+            'Sensor/Beyond_Grove/Sensors/Weight_Sensor_Load_Cell_0-500g',
+            'Sensor/Beyond_Grove/Sensors/G1_Water_Flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/G1_and_2_inch_Water_Flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/G1-8_Water_Flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/G3-4_Water_Flow_sensor',
+            'Sensor/Beyond_Grove/Sensors/M11_1.25_Water_flow_Sensor',
+            'Sensor/Beyond_Grove/Sensors/PIR_Motion_Sensor_Large_Lens_version',
+            'Sensor/Beyond_Grove/Sensors/Photo_Reflective_Sensor',
+            'Sensor/Beyond_Grove/Sensors/Photo_interrupter_OS25B10',
+            'Sensor/Beyond_Grove/Sensors/Piezo_Sensor-MiniSense_100',
+            'Sensor/Beyond_Grove/Sensors/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz',
+            'Sensor/Beyond_Grove/Sensors/Gear_Stepper_Motor_Driver_Pack',
+            'Seeed_Elderly/Radar_Sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
           ],
         },
 
         {
           type: 'category',
-          label: 'ODYSSEY STM32MP157C',
+          label: 'Sensor Network',
           items: [
-            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/ODYSSEY-STM32MP157C',
-            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/SEEED-SOM-STM32MP157C',
+            'Sensor/Beyond_Grove/Sensor_Network/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder',
+            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_RF_link_kit',
+            'Sensor/Beyond_Grove/Sensor_Network/315MHz_Simple_RF_Link_Kit',
+            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_Wireless_car_key_fob_with_key_chain',
+            'Sensor/Beyond_Grove/Sensor_Network/315Mhz_remote_relay_switch_kits-2_channels',
+            'Sensor/Beyond_Grove/Sensor_Network/433Mhz_RF_Link_Kit',
+            'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
+            'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
+            'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
           ],
         },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'Quantum Development Board',
-      items: [
-        'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
+        {
+          type: 'category',
+          label: 'Accessories',
+          items: [
+            {
+              type: 'category',
+              label: 'Charge',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Charge/Essentials',
+                'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V',
+                'Sensor/Beyond_Grove/Accessories/Charge/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V',
+                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_Pro',
+                'Sensor/Beyond_Grove/Accessories/Charge/Lipo-Rider-Plus',
+                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.3',
+                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_miniature_solenoid_VL-0063',
+                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0520',
+                'Sensor/Beyond_Grove/Accessories/Charge/DC_framework_solenoid_HCNE1-0630',
+                'Sensor/Beyond_Grove/Accessories/Charge/0.5w_Solar_Panel_55x70',
+                'Sensor/Beyond_Grove/Accessories/Charge/1.5W_Solar_Panel_81x137',
+                'Sensor/Beyond_Grove/Accessories/Charge/1w_Solar_Panel_80x100',
+                'Sensor/Beyond_Grove/Accessories/Charge/2.5W_Solar_Panel_116x160',
+                'Sensor/Beyond_Grove/Accessories/Charge/3W_Solar_Panel_138x160',
+                'Sensor/Beyond_Grove/Accessories/Charge/3.6V_Micro_hydro_generator',
+                'Sensor/Beyond_Grove/Accessories/Charge/Bicycle_Dynamo_With_Bracket-6V_3W',
+                'Sensor/Beyond_Grove/Accessories/Charge/Battery_kit_3.7V_520_mAh',
+                'Sensor/Beyond_Grove/Accessories/Charge/Logic_DC_Jack',
+                'Sensor/Beyond_Grove/Accessories/Charge/Qi_Wireless_Charger_Transmitter',
+                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider',
+                'Sensor/Beyond_Grove/Accessories/Charge/Lipo_Rider_V1.1',
+                'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply',
+                'Sensor/Beyond_Grove/Accessories/Charge/5V-3.3V_Breadboard_Power_Supply_v1.1',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Input/Output',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V_3V3',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/125Khz_RFID_module-UART',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/13.56Mhz_RFID_module-IOS-IEC_14443_type_a',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/AVR_USB_Programmer',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/Scream_out_loud-110dBA_fixed_tone_Siren',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/2.8inch-TFT_Touch_Shield_V1.0',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_3V3',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/USB_To_Uart_5V',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/Bus_Pirate_v3_assembled',
+                'Sensor/Beyond_Grove/Accessories/Input_Output/Codec-Adaptive_Wireless_Relay',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Current',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Current/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A',
+                'Sensor/Beyond_Grove/Accessories/Current/Capacitance_Meter_Kit',
+                'Sensor/Beyond_Grove/Accessories/Current/RS-232_To_TTL_Conveter-MAX3232IDR',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Case',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Case/Bracket_for_Infrared_Proximity_Sensor',
+                'Sensor/Beyond_Grove/Accessories/Case/Shield-MaTrix-V0.9b',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'LED',
+              items: ['Sensor/Beyond_Grove/Accessories/LED/FSM-55'],
+            },
+            {
+              type: 'category',
+              label: 'Tools',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Tools/Bluetooth_Multimeter',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano',
+                'Sensor/Beyond_Grove/Accessories/Tools/Dfu-util',
+                'Sensor/Beyond_Grove/Accessories/Tools/Replacement_LCD_Screen_for_DSO_nano',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano_v3',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Development',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-OpenOCD_gdb',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-Qemu_gdb',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Nano-gcc',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad_Manual_by_the_community',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Beta_HW',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Building_Firmware',
+                'Sensor/Beyond_Grove/Accessories/Tools/DSO_Quad-Calibration',
+                'Sensor/Beyond_Grove/Accessories/Tools/Mini_Soldering_Iron',
+                'Sensor/Beyond_Grove/Accessories/Tools/RF_Explorer_Software',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Display',
+              items: [
+                'Sensor/Beyond_Grove/Accessories/Display/LCD_16-2_Characters-Green_Yellow_back_light',
+                'Sensor/Beyond_Grove/Accessories/Display/LCD_8-2_Characters-Blue_back_light',
+              ],
+            },
+          ],
+        },
       ],
     },
 
@@ -2279,6 +1687,699 @@ const sidebars = {
         },
       ],
     },
+
+    // {
+
+    //   type: 'doc',
+    //   label: '--Network--',
+    //   id: 'Sensor_Network',
+
+    // },
+
+    // {
+    //   type: 'html',
+    //   value: `
+    // <style>
+    //   .sub_item {
+    //     width: 275px;
+    //     display:inline-block;
+    //     text-align:center;
+    //     font-size:20px;
+    //     margin-top: 10px;
+    //   }
+    // </style>
+    // <div style="width:100px;text-align:center">
+    //   <div class="sub_item"><strong> Network </strong></div>
+    // </div>
+    // `,
+    // },
+
+    {
+      type: 'doc',
+      id: 'Sensor_Network',
+      label: 'Network',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'category',
+      label: 'SenseCAP Gateway',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/SenseCAP_Network/SenseCAP_Gateway_Intro',
+      },
+      items: [
+        'Network/SenseCAP_Network/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
+        {
+          type: 'category',
+          label: 'Helium Gateway',
+          items: [
+            {
+              type: 'category',
+              label: 'SenseCAP M1 Gateway',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_FAQ',
+                'Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SenseCAP M2 Data Only',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'SenseCAP M2 Light Gateway',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview',
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start',
+                'Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ',
+              ],
+            },
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Flux Gateway',
+          items: [
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start',
+            'Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Outdoor Gateway',
+          items: [
+            'Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'SenseCAP M2 Multi-Platform Gateway',
+          items: [
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
+            {
+              type: 'category',
+              label: 'Tutorial',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack',
+              ],
+            },
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'SenseCAP K1100',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/SenseCAP_K1100/SenseCAP_K1100_Intro',
+      },
+      items: [
+        'Network/SenseCAP_K1100/K1100-quickstart',
+        'Network/SenseCAP_K1100/K1100_Getting_Started',
+        {
+          type: 'category',
+          label: 'LoRaWAN-Network Application',
+          items: [
+            {
+              type: 'category',
+              label: 'Sensors Basic Usage with Arduino',
+              items: [
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Light-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-IMU-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Temp-Humi-Sensor-Grove-LoRa-E5',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Sensors_Basic_Usage_with_Arduino/K1100-Vision-AI-Module-Grove-LoRa-E5',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Helium Cloud Services',
+              items: [
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium-Introduction',
+                {
+                  type: 'category',
+                  label: 'Helium Connected & Azure Integrated',
+                  items: [
+                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Connecting-to-Helium',
+                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Integrate-into-Azure-IoT-Hub',
+                    'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Helium_Connected&Azure_Integrated/Configuring-Web-APP-Visualization',
+                  ],
+                },
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Integrate_into_Google_Sheets_via_Helium',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/Helium_Cloud_Services/Connect_AWS_via_helium',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'TTN Cloud Services',
+              items: [
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/TTN-Introduction',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/TTN_Cloud_Services/Connecting-to-TTN',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SenseCAP & Node-Red for Cloud Services',
+              items: [
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_sensecap_node-red',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_Azure_IoT_Central',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_PowerBI',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_influxdb',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_twilio',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_datacake',
+                'Network/SenseCAP_K1100/LoRaWAN-Network_Application/SenseCAP&Node-Red_for_Cloud_Services/K1100_SenseCAP_to_grafana',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Wi-Fi-Network Application',
+          items: [
+            'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Wio-Terminal-Advanced-WiFi',
+            {
+              type: 'category',
+              label: 'Cloud Service',
+              items: [
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Getting_started_with_Ubidots',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Quick-Start-to-using-Blynk',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Cloud_Service/Connect-Wio-Terminal-to-Google-Cloud',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Azure IoT Platform Usage',
+              items: [
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/Connect-Wio-Terminal-to-Azure-IoT-Central',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/Develop-in-Microsoft-Azure-IoT-Central',
+                'Network/SenseCAP_K1100/Wi-Fi-Network_Application/Azure_IoT_Platform_Usage/K1100_Azure_to_PowerBI',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Embedded ML Application',
+          items: [
+            'Network/SenseCAP_K1100/Embedded_ML_Application/K1111-Edge-Impulse',
+            'Network/SenseCAP_K1100/Embedded_ML_Application/Vision_AI_with_Customizable_Models',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Contributors Project',
+          items: [
+            'Network/SenseCAP_K1100/Contributors_Project/IoT-into-the-wild-contest',
+            'Network/SenseCAP_K1100/Contributors_Project/K1111-Quick-Start-Guide',
+          ],
+        },
+      ],
+    },
+
+    // {
+    // 有问题
+    //   type: 'category',
+    //   label: 'LinkStar',
+    //   items: [
+    //     'Network/LinkStar/Linkstar_Datasheet',
+    //     'Network/LinkStar/linkstar-install-system',
+    //     ],
+
+    // },
+    {
+      type: 'category',
+      label: 'LinkStar',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/LinkStar/Linkstar_Intro',
+      },
+      items: [
+        'Network/LinkStar/Linkstar_Datasheet',
+        'Network/LinkStar/linkstar-install-system',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Network/LinkStar/Application/h68k-ha-esphome',
+            'Network/LinkStar/Application/plex_media_server',
+            'Network/LinkStar/Application/wordpress_linkstar',
+            'Network/LinkStar/Application/grocy-bookstack-linkstar',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'reRouter',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/reRouter/reRouter_Intro',
+      },
+      items: [
+        'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
+        'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Network/reRouter/Application/OpenWrt-Getting-Started',
+            'Network/reRouter/Application/OpenWrt-Plex-Media-Server-on-Docker',
+            'Network/reRouter/Application/Mender-Client-dual-GbE-CM4',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'TTN Gateway',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/TTN_Gateway/The-Things-Indoor-Gateway',
+      },
+      items: ['Network/TTN_Gateway/The-Things-Indoor-Gateway'],
+    },
+
+    // {
+    //   type: 'html',
+    //   value: `
+    // <style>
+    //   .sub_item {
+    //     width: 275px;
+    //     display:inline-block;
+    //     text-align:center;
+    //     font-size:20px;
+    //     margin-top: 10px;
+    //   }
+    // </style>
+    // <div style="width:100px;text-align:center">
+    //   <div class="sub_item"><strong> Edge </strong></div>
+    // </div>
+    // `,
+    // },
+
+    {
+      type: 'doc',
+      id: 'Edge_Computing',
+      label: 'Edge Computing',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'category',
+      label: 'reTerminal',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/reTerminal/reTerminal_Intro',
+      },
+      items: [
+        'Edge/reTerminal/reTerminal',
+        'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
+        'Edge/reTerminal/reTerminal-piCam',
+        'Edge/reTerminal/reTerminal-FAQ',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-Electron',
+            'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
+            'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
+            'Edge/reTerminal/Application/Mender-Client-reTerminal',
+
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
+                'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Embedded ML',
+              items: [
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'OS Installation',
+          items: [
+            'Edge/reTerminal/OS_Installation/reTerminal-Buildroot-SDK',
+            'Edge/reTerminal/OS_Installation/reTerminal-Yocto',
+            'Edge/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal',
+            // 'Edge/reTerminal/OS_Installation/',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Extension Board',
+          items: [
+            'Edge/reTerminal/Extension_Board/reTerminalBridge',
+            'Edge/reTerminal/Extension_Board/reTerminal_Mount_Options',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'reTerminal-DM',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/reTerminal-DM/reterminal-dm',
+      },
+      items: [
+        'Edge/reTerminal-DM/reterminal-dm-flash-OS',
+        'Edge/reTerminal-DM/reterminal-dm-warranty',
+        'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
+        {
+          type: 'category',
+          label: 'Node-Red',
+          items: [
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
+            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SenseCraft_Edge',
+          items: [
+            'Edge/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'reComputer',
+      items: [
+        'Edge/reComputer/RecomputerPage',
+        'Edge/reComputer/reComputer_Jetson_Series_Introduction',
+        'Edge/reComputer/reComputer_Jetson_Series_Initiation',
+        'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
+        'Edge/reComputer/reComputer_Jetson_GPIO',
+        'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
+        'Edge/reComputer/jetson_FAQ',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Edge/reComputer/Application/Jetson-Nano-MaskCam',
+            'Edge/reComputer/Application/Security_Scan',
+            'Edge/reComputer/Application/HardHat',
+            'Edge/reComputer/Application/No-code-Edge-AI-Tool',
+            'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+            'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
+            'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
+            'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Software',
+          items: [
+            'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
+            'Edge/reComputer/Software/Lumeo-Jetson-Getting-Started',
+            'Edge/reComputer/Software/jetson-docker-getting-started',
+            'Edge/reComputer/Software/DeciAI-Getting-Started',
+            'Edge/reComputer/Software/Allxon-Jetson-Getting-Started',
+            'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
+            'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
+            'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
+            'Edge/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'JetPack™ OS Installation',
+          items: [
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
+            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reComputer Industrial',
+          items: [
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_Getting_Started',
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
+            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
+          ],
+        },
+        {
+          type: 'category',
+          label: ' Carrier Board for Jetson Moudule',
+          items: [
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System',
+            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Tutorials',
+          items: [
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
+            'Edge/reComputer/Tutorials/J1010_Boot_From_SD_Card',
+            'Edge/reComputer/Tutorials/J101_Enable_SD_Card',
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
+            'Edge/reComputer/Tutorials/Jetson-AI-developer-tools',
+            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'reServer',
+      items: [
+        {
+          type: 'category',
+          label: 'reServer X86',
+          items: [
+            'Edge/reServer/reServer_X86/reServer-Getting-Started',
+            'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reServer Nvidia Jetson',
+          items: [
+            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
+            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Edge Series',
+      items: [
+        {
+          type: 'category',
+          label: 'EdgeBox-RPI-200',
+          items: [
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'EdgeBox-ESP-100',
+          items: ['Edge/Edge_Series/Edge_Box_ESP_100/Edgebox-ESP-100-Arduino'],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'BeagleBone®',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/Beagle_Bone/BeagleBone',
+      },
+      items: [
+        'Edge/Beagle_Bone/BeagleBone_Blue',
+        'Edge/Beagle_Bone/BeagleBone_Green',
+        'Edge/Beagle_Bone/BeagleBone_Green_Wireless',
+        'Edge/Beagle_Bone/BeagleBone-Green-Gateway',
+        'Edge/Beagle_Bone/Beaglebone_Case',
+        {
+          type: 'category',
+          label: 'Application',
+          items: ['Edge/Beagle_Bone/Application/BeagleBone_Solutions'],
+        },
+        {
+          type: 'category',
+          label: 'Extension Board',
+          items: [
+            'Edge/Beagle_Bone/Extension_Board/Grove_Cape_for_BeagleBone_Series',
+            'Edge/Beagle_Bone/Extension_Board/Grove_Base_Cape_for_BeagleBone_v2',
+            'Edge/Beagle_Bone/Extension_Board/Motor_Bridge_Cape_v1.0',
+            'Edge/Beagle_Bone/Extension_Board/Skeleton_box_for_Beaglebone',
+            'Edge/Beagle_Bone/Extension_Board/BeagleBone_Green_HDMI_Cape',
+            'Edge/Beagle_Bone/Extension_Board/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Kit with Courses',
+          items: [
+            'Edge/Beagle_Bone/Kit_with_Courses/Grove_Starter_Kit_for_BeagleBone_Green',
+            'Edge/Beagle_Bone/Kit_with_Courses/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'ODYSSEY',
+      items: [
+        // 'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+
+        {
+          type: 'category',
+          label: 'ODYSSEY X86J4105',
+          items: [
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105',
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-GPIO',
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-Accessories',
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/Coral-Mini-PCIe-Accelerator-on-ODYSSEY-X86J4105',
+            'Edge/ODYSSEY/ODYSSEY_X86J4105/ODYSSEY-X86J4105-LTE-Module',
+            'Edge/ODYSSEY/ODYSSEY_FAQ',
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                {
+                  type: 'category',
+                  label: 'Home Assistant for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-X86-Home-Assistant',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/ODYSSEY-Home-Assistant-Customize',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Home-Assistant_for_ODYSSEY/Connect-Grove-to-Home-Assistant-ESPHome',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Azure IoT for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Azure_IoT_for_ODYSSEY/ODYSSEY-X86J4105-AzureIOT',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Mender for ODYSSEY',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Client-ODYSSEY-X86',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Mender_for_ODYSSEY/Mender-Server-ODYSSEY-X86',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Computer Version',
+                  items: [
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Intel-OpenVINO',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-NCS2',
+                    'Edge/ODYSSEY/ODYSSEY_X86J4105/Application/Computer_Version/ODYSSEY-X86J4105-Frigate',
+                  ],
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'OS Installation',
+              items: [
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-OS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Updating-Firmware',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/Jellyfin-on-Docker-Ubuntu-X86',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-openwrt',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-OPNsense',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-pfSense',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86-TrueNAS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-Android',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/ODYSSEY-X86J4105-Installing-FreeNAS',
+                'Edge/ODYSSEY/ODYSSEY_X86J4105/OS_Installation/BalenaOS-X86-Getting-Started',
+              ],
+            },
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'ODYSSEY STM32MP157C',
+          items: [
+            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/ODYSSEY-STM32MP157C',
+            'Edge/ODYSSEY/ODYSSEY_STM32MP157C/SEEED-SOM-STM32MP157C',
+          ],
+        },
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Quantum Development Board',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
+      },
+      items: [
+        'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
+      ],
+    },
+
     // {
 
     //   type: 'doc',
@@ -2422,8 +2523,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'Arduino',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Top_Brand/Arduino/Arduino',
+      },
       items: [
-        'Top_Brand/Arduino/Arduino',
         'Top_Brand/Arduino/Getting_Started_with_Arduino',
         {
           type: 'category',
@@ -2769,7 +2875,7 @@ const sidebars = {
       }
     </style>
     <div style="width:100px;text-align:center">
-      <div class="sub_item"><strong> Retired Product </strong></div>
+      <div class="sub_item"><strong> Discontinued Product </strong></div>
     </div>
     `,
     },

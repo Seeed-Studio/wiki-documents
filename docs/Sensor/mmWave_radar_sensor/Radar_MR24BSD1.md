@@ -1,6 +1,6 @@
 ---
-description: mmWave Sleep Breathing Monitoring Module
-title: mmWave Sleep Breathing Monitoring Module
+description: 24GHz mmWave Sleep Breathing Monitoring
+title: 24GHz mmWave Sleep Breathing Monitoring
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,6 +9,8 @@ last_update:
   date: 1/12/2023
   author: jianjing Huang
 ---
+
+# 24GHz mmWave Sensor - Sleep Breathing Monitoring (MR24BSD1)
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/60GHzradar/1.jpeg"/></div>
 

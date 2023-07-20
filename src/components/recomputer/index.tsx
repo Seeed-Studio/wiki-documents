@@ -11,7 +11,7 @@ const BrandSceneList = () => {
     { id: 4, name: 'YOLOv8',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/yolov8-logo.png', scenes: [1, 2, 4] },
     { id: 5, name: 'YOLOv5',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/jetsonaitools80.png', scenes: [2, 4] },
     { id: 6, name: 'roboflow',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/jetsonaitools81.png', scenes: [1, 4] },
-    { id: 7, name: 'Allxon1',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/jetsonaitools4.png', scenes: [5] },
+    { id: 7, name: 'Allxon',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/jetsonaitools4.png', scenes: [5] },
     { id: 8, name: 'Deci',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/jetsonaitools82.png', scenes: [3] },
     { id: 9, name: 'Edge Impulse',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/ei-logo.png', scenes: [1, 2, 4] },
     { id: 10, name: 'Cochl.Sense',link:'https://www.baidu.com/', bg:'https://files.seeedstudio.com/wiki/recomputerzhongwen/cochl-logo.png', scenes: [4] },
@@ -85,7 +85,7 @@ const handleMouseLeave=()=>{
             >
                 <a className='scene-item' target='_blank' href={scene.link}>
                 <img
-                        src={require("../../../assets/recomputer/huang.png").default}
+                        src={require("../../../assets/recomputer/nvidia_icon.png").default}
                       />
                 <div className='srene-title'>  {scene.name}</div>
                   </a> 

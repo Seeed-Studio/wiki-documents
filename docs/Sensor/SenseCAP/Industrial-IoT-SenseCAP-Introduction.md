@@ -1,21 +1,21 @@
 ---
-description: SenseCAP Introduction
-title: SenseCAP Introduction
+description: SenseCAP Ecosystem Introduction
+title: SenseCAP Ecosystem Introduction
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 1/16/2023
-  author: jianjing Huang
+  date: 7/19/2023
+  author: Matthew
 ---
-
-# Industrial IoT SenseCAP Introduction
-
-As [Seeed Industrial IoT product](https://solution.seeedstudio.com/) category now includes many new products catering to different IoT scenarios, we've noticed some customers don't know which products to choose for meeting their needs in particular IoT applications.
 
 ![SenseCAP Product & Service Category](https://files.seeedstudio.com/products/102991154/wiki%20images/structure%20new%20version.png)
 
-###### _(SenseCAP Product & Service Category)_
+## What is the SenseCAP Ecosystem?
+
+As [Seeed Industrial IoT product](https://solution.seeedstudio.com/) category now includes many new products catering to different IoT scenarios, we've noticed some customers don't know which products to choose for meeting their needs in particular IoT applications.
+
+<!-- ###### _(SenseCAP Product & Service Category)_ -->
 
 As a Seeed product series, SenseCAP consists of different hardware and software services, as you can see from the graph above. [SenseCAP](https://www.seeedstudio.com/SenseCAP-c-1339.html) is specifically designed for serving Industrial IoT needs of wireless sensing, with the main applications in smart agriculture, smart city, and other environmental sensing scenarios.
 
@@ -26,6 +26,13 @@ As a Seeed product series, SenseCAP consists of different hardware and software 
 Since 2018, we have been putting the accumulated resources, experience, and expertise into creating IIoT products for various environmental monitoring occasions. And we’ve spent months on putting the products into field tests in different countries and regions before making them generally available.
 
 Currently, the SenseCAP IIoT collection consists of [SenseCAP LoRaWAN Series gateways & sensors](https://www.seeedstudio.com/SenseCAP-c-1339.html), [Sensor Hub 2G/4G Data Logger](https://solution.seeedstudio.com/product/sensor-hub-2g-data-logger/) & [RS-485 sensors](https://www.seeedstudio.com/Industrial-IoT-c-1556.html?cat=1581), and [Meteorological Sensors](https://solution.seeedstudio.com/new-release-sensecap-one-industrial-grade-compact-weather-stations-for-meteorological-monitoring/). Other than hardware, we also provide software & Cloud services including SenseCAP API, SenseCAP APP, SenseCAP Portal, and SenseCAP Dashboard for easily managing the devices and data. Please see more details below.
+
+## Two parts for SenseCAP Ecosystem
+
+As you can see on the **left side colomn**, we maintain the SenseCAP Ecosystem into two parts:
+
+- [SenseCAP Industrial Sensor](/SenseCAP_Sensor_Intro)
+- [SenseCAP Data Logger](/SenseCAP_Data_Logger_Intro)
 
 ## Hardware Products
 

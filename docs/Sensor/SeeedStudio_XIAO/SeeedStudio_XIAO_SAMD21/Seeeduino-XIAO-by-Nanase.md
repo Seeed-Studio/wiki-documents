@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO SAMD21 by Nanase
-title: Seeed Studio XIAO SAMD21 by Nanase
+description: Seeed Studio XIAO SAMD21 with Nanase
+title: Seeed Studio XIAO SAMD21 with Nanase
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

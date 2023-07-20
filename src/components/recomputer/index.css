@@ -15,15 +15,21 @@
 .brand-list {
 	display: flex;
 	margin-right: 30px;
-	font-size: 20px;
+	font-size: 23px;
 	font-weight: bold;
 	flex: 2.5;
 }
 .scene-list {
 	flex: 3;
 }
-.brand-list ul,
+.brand-list ul
+{
+	width: 77%;
+	list-style: none;
+}
+
 .scene-list ul {
+	width: 100%;
 	list-style: none;
 	padding: 0;
 }

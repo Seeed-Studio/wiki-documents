@@ -1,6 +1,6 @@
 ---
-description: mmWave Breathing and Heartbeat Module
-title: mmWave Breathing and Heartbeat Module
+description: 60GHz mmWave Static Breathing and Heartbeat
+title: 60GHz mmWave Static Breathing and Heartbeat
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,6 +9,8 @@ last_update:
   date: 03/03/2023
   author: MengDu
 ---
+
+# 60GHz mmWave Sensor - Human Static Sleep Breathing Monitoring (MR60BHA1)
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div>
 

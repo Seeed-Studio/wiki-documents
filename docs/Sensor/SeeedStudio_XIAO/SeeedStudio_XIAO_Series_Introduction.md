@@ -67,6 +67,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
 <br />
@@ -96,6 +97,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
 <br />
@@ -128,6 +130,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
 <br />
@@ -150,6 +153,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_BLE/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
 <br />
@@ -179,6 +183,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_BLE/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
 <br />
@@ -209,6 +214,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
 <br />
@@ -238,6 +244,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Seeeduino-XIAO/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
 <br />
@@ -495,8 +502,8 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
         </td>
     </tr>
     <tr class="form_without_frame">
-        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
-        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
+        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Getting Started </font></span></strong></a></div></td>
+        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Getting Started </font></span></strong></a></div></td>
     </tr>
     </table>
 </html>
@@ -531,8 +538,8 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
         </td>
     </tr>
     <tr class="form_without_frame">
-        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
-        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-Starter-Kit-p-5378.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
+        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/get_start_round_display/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Getting Started </font></span></strong></a></div></td>
+        <td class="form_without_frame"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-Kit-Courses/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More </font></span></strong></a></div></td>
     </tr>
     </table>
 </html>
