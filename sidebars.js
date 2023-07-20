@@ -2121,6 +2121,7 @@ const sidebars = {
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
           ],
         },
         {
