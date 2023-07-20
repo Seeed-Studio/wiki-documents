@@ -546,6 +546,10 @@ raspi-gpio get
 
 ###### Digital Input
 
+Here is a schematic shown on how to wiring sensors to DI:
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/sensor.png" /></div>
+
 To get specific GPIO status, Please enter following command in the `Terminal` :
 
 ```sh
@@ -567,6 +571,10 @@ raspi-gpio get 16
 Which the current pin level of the `GPIO16` is `0` which means `Low` which also means the current Terminal Digital Input `DI1` is `High` according to the above table
 
 ###### Digital Output
+
+Here is a schematic shown on how to wiring Load to DO:
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/DO.png" /></div>
 
 To Control the Digital output state value, first of all we need to set the pin state to `Output` and `pulling Down`:
 
