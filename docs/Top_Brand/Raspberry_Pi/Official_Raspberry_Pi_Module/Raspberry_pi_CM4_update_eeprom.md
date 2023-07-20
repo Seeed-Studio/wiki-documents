@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_pi_CM4_update_eeprom
 last_update:
   date: 2/15/2023
-  author: jianjing Huang
+  author: Peter Pan
 ---
 <!-- ---
 name: Update eeprom
