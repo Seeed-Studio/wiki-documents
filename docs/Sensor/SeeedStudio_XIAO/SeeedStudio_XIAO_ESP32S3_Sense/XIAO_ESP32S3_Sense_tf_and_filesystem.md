@@ -1,6 +1,6 @@
 ---
 description: This tutorial describes how to use the microSD card and file system on the XIAO ESP32S3.
-title: File System and XIAO ESP32S3 Sense
+title: MicroSD card for Sense Version
 keywords:
 - xiao esp32s3
 - esp32s3

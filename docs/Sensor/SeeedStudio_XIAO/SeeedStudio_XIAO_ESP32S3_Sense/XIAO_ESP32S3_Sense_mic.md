@@ -1,6 +1,6 @@
 ---
 description: This article describes how to use the microphone on the XIAO ESP32S3 Sense expansion board.
-title: Usage of Seeed Studio XIAO ESP32S3 microphone
+title: Microphone Usage for Sense Version
 keywords:
 - Template
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png

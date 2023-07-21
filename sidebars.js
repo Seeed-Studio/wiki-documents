@@ -771,7 +771,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'SeeedStudio XIAO',
+      label: 'XIAO',
       collapsed: true,
       collapsible: true,
       link: {
@@ -780,17 +780,21 @@ const sidebars = {
       },
       items: [
         'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
-        'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+
         {
           type: 'category',
-          label: 'SeeedStudio XIAO SAMD21',
+          label: 'XIAO SAMD21',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
+              ],
+            },
             {
               type: 'category',
               label: 'Embedded ML',
@@ -802,6 +806,8 @@ const sidebars = {
               type: 'category',
               label: 'TuTorial',
               items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/Seeeduino-XIAO-DAPLink',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
               ],
@@ -810,12 +816,18 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO RP2040',
+          label: 'XIAO RP2040',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+              ],
+            },
             {
               type: 'category',
               label: 'Embedded ML',
@@ -827,16 +839,27 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO nRF52840 (Sense)',
+          label: 'XIAO nRF52840 (Sense)',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
-
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Hardware Usage',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
+              ],
+            },
             {
               type: 'category',
               label: 'Bluetooth Libraries',
@@ -865,13 +888,19 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO ESP32C3',
+          label: 'XIAO ESP32C3',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
 
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
+            {
+              type: 'category',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
+              ],
+            },
             {
               type: 'category',
               label: 'Application',
@@ -885,20 +914,26 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO ESP32S3 (Sense)',
+          label: 'XIAO ESP32S3 (Sense)',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
             {
               type: 'category',
-              label: 'For XIAO ESP32S3 Sense Version',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Hardware Usage',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_mic',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_tf_and_filesystem',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_camera',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
+
               ],
             },
             {
@@ -906,27 +941,28 @@ const sidebars = {
               label: 'Applications',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Speech2chatgpt',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/Draw_dials_with_Display_and_lvgl',
               ],
             },
           ],
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO Expansion board',
+          label: 'Expansion Boards for XIAO',
           items: [
             {
               type: 'category',
-              label: 'Seeed Studio Round Display for XIAO',
+              label: 'Round Display for XIAO',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_RoundDisplay_Usage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
               ],
             },
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
           ],
         },
         {
@@ -934,6 +970,7 @@ const sidebars = {
           label: 'Kit with Courses',
           items: ['Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses'],
         },
+        'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
       ],
     },
 
@@ -2112,11 +2149,13 @@ const sidebars = {
       ],
     },
 
+    // 'Edge/reComputer/RecomputerPage',
+
     {
       type: 'category',
       label: 'reComputer',
       items: [
-        'Edge/reComputer/RecomputerPage',
+
         'Edge/reComputer/reComputer_Jetson_Series_Introduction',
         'Edge/reComputer/reComputer_Jetson_Series_Initiation',
         'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',

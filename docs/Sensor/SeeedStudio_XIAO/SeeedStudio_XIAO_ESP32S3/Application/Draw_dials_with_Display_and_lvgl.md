@@ -1,6 +1,6 @@
 ---
 description: Using LVGL and TFT on the Seeed Studio Round Display for XIAO
-title: Using LVGL and TFT on the Seeed Studio Round Display for XIAO
+title: Using LVGL and TFT on the Round Display for XIAO with XIAO ESP32S3 (Sense)
 keywords:
 - XIAO
 - Round Dislay
@@ -22,7 +22,7 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
+Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl
 <br></br>
 
 

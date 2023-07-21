@@ -1,6 +1,6 @@
 ---
 description: Seeed Studio XIAO Expansion board
-title: Seeed Studio XIAO Expansion board
+title: Expansion Board Base for XIAO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

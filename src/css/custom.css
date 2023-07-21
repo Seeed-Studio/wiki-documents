@@ -47,6 +47,22 @@
   justify-content: space-around;
 }
 
+/* .navbar_logo_items img {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar_logo_items {
+  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/main.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.navbar--light .navbar_logo_items {
+  background-image: url("https://files.seeedstudio.com/wiki/wiki_english/docs/images/top_banner.png");
+} */
+
 /* Left Column */
 .download_container {
   display: flex;

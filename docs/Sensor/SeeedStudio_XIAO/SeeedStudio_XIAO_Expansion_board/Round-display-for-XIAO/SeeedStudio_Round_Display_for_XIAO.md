@@ -1,6 +1,6 @@
 ---
 description: XIAO Round Dislay Basic Tutorial
-title: Getting Started with Seeed Studio Round Display for XIAO
+title: Getting Started
 keywords:
 - XIAO
 - Round Dislay

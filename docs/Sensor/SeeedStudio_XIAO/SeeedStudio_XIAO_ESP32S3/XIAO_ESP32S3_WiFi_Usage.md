@@ -1,6 +1,6 @@
 ---
 description: WiFi usage with Seeed Studio XIAO ESP32S3.
-title: WiFi usage with Seeed Studio XIAO ESP32S3 (Sense)
+title: WiFi for both versions
 keywords:
 - esp32s3
 - xiao

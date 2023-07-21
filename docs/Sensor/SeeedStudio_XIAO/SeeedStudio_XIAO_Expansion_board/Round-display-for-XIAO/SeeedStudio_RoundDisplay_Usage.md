@@ -1,6 +1,6 @@
 ---
 description: This tutorial introduces the use of the expansion board function of the circular screen.
-title: Use of the Seeed Studio Round Display extension
+title: Hardware Usage
 keywords:
 - Round display
 - XIAO

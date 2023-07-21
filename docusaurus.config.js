@@ -194,8 +194,8 @@ const config = {
         // title: 'My Site',
         logo: {
           alt: 'Seeed Studio',
-          src:
-            'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
+          src: 'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
+          srcDark: 'https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png',
           href: 'Getting_Started',
           className: 'navbar_logo_items',
         },

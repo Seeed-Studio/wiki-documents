@@ -1,6 +1,6 @@
 ---
 description: Bluetooth usage with Seeed Studio XIAO ESP32S3.
-title: Bluetooth Usage with Seeed Studio XIAO ESP32S3 (Sense)
+title: Bluetooth for both versions
 keywords:
 - esp32s3
 - xiao

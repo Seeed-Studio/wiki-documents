@@ -1,6 +1,6 @@
 ---
 description: EdgeLab Getting Start with Seeed Studio XIAO ESP32S3.
-title: EdgeLab Getting Start with Seeed Studio XIAO ESP32S3 (Sense)
+title: EdgeLab with XIAO ESP32S3 (Sense)
 keywords:
 - esp32s3
 - xiao

@@ -1,6 +1,6 @@
 ---
 description: Seeed Studio XIAO SAMD21 with CircuitPython
-title: Seeed Studio XIAO SAMD21 with CircuitPython
+title: CircuitPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
