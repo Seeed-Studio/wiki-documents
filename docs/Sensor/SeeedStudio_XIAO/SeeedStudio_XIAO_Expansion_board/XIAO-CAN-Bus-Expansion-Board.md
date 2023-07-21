@@ -66,8 +66,8 @@ Please refer to the XIAO CAN Bus Expansion Board datasheet and examples for deta
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/hw.jpg" alt="pir" width={500} height="auto" /></p>
 
-1. CAN-H
-2. GND
+1. GND
+2. CAN-H
 3. CAN-L
 4. LED Indicators for RX/TX
 5. SN65NVD230
@@ -87,11 +87,10 @@ We provide an [Arduino library for the MCP2515 board](https://github.com/limengd
 
 The library includes several examples, including:
 
-* ***OBDII-PIDs*** -  retrieve data from the OBD-II interface
-* ***send*** - send a frame to the CAN bus
-* ***recv*** - receive a frame from the CAN bus
-* ***set_mask_filter_recv*** - receive a frame from the CAN bus with mask and filter settings
-
+- ***OBDII-PIDs*** -  retrieve data from the OBD-II interface
+- ***send*** - send a frame to the CAN bus
+- ***recv*** - receive a frame from the CAN bus
+- ***set_mask_filter_recv*** - receive a frame from the CAN bus with mask and filter settings
 
 ### 1. Set the Baud rate
 
@@ -141,15 +140,17 @@ init_Filt(unsigned char num, unsigned char ext, unsigned char ulData);
 - **ulData** represents the content of the mask of filter.
 
 ### 3. Check Receive
+
 The MCP2515 controller chip has the ability to operate in either a polled mode or an interrupt mode. In polled mode, the software regularly checks for a received frame. In interrupt mode, additional pins can be used to signal that a frame has been received or transmit has completed. This allows for more efficient use of resources as the processor does not need to constantly check for incoming data.
 
-This function is used to check if there are any received frames waiting in the receive buffer. If there are, the function will return true, otherwise it will return false. You can use this function in a loop to continuously check for received frames. 
+This function is used to check if there are any received frames waiting in the receive buffer. If there are, the function will return true, otherwise it will return false. You can use this function in a loop to continuously check for received frames.
 
 ```c
 INT8U MCP_CAN::checkReceive(void);
 ```
 
 ### 4. Get CAN ID
+
 You can use the following function to get the length of the data received from the "send" node.
 
 ```c
@@ -164,10 +165,10 @@ CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
 
 This function is used to send data onto the CAN Bus. The parameters are as follows:
 
-* **id** - The ID of can frame.
-* **ext** - A boolean value representing the status of the frame. '0' means standard frame. '1' means extended frame.
-* **len** - The length of the frame.
-* **data_buf** - The content of the message.
+- **id** - The ID of can frame.
+- **ext** - A boolean value representing the status of the frame. '0' means standard frame. '1' means extended frame.
+- **len** - The length of the frame.
+- **data_buf** - The content of the message.
 
 For example, In the 'send' example, we have:
 
@@ -186,9 +187,8 @@ CAN.readMsgBuf(unsigned char len, unsigned char buf);
 
 In conditions that masks and filters have been set. This function can only get frames that meet the requirements of masks and filters.
 
-* **len** represents the data length.
-* **buf** is where you store the data.
-
+- **len** represents the data length.
+- **buf** is where you store the data.
 
 ## Getting Started
 
@@ -263,12 +263,10 @@ void loop()
 
 - **Step 5.** After a successful code upload, you will notice that the RX and TX LEDs light up, indicating that the CAN bus is actively transmitting data. If your CAN bus is connected to other devices, these LEDs will blink instead of remaining constantly lit.
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/CAN_DEV_XIAO.rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Troubleshooting
 
@@ -305,21 +303,16 @@ If you encounter any issues with CAN bus communication, you can follow these ste
 - **[PDF]** [Datasheet - MCP2515](https://files.seeedstudio.com/wiki/xiao_can_bus_board/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf)
 - **[PDF]** [Datasheet - SN65HVD230](https://files.seeedstudio.com/wiki/xiao_can_bus_board/20001667G-1115479.pdf)
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
