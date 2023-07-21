@@ -2085,9 +2085,10 @@ const sidebars = {
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Edge/reTerminal-DM/reterminal-dm',
+        id: 'Edge/reTerminal-DM/reTerminal-dm_Intro',
       },
       items: [
+        'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
         'Edge/reTerminal-DM/reterminal-dm-warranty',
         'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
@@ -2220,6 +2221,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'Edge Series',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/Edge_Series/Edge_series_Intro',
+      },
       items: [
         {
           type: 'category',
@@ -2285,8 +2292,14 @@ const sidebars = {
     {
       type: 'category',
       label: 'ODYSSEY',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/ODYSSEY/ODYSSEY_Intro',
+      },
       items: [
-        // 'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+        //  'Edge/ODYSSEY/ODYSSEY_Getting_Started',
 
         {
           type: 'category',
@@ -2727,8 +2740,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'Raspberry Pi',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Top_Brand/Raspberry_Pi/Raspberry_Pi',
+      },
       items: [
-        'Top_Brand/Raspberry_Pi/Raspberry_Pi',
         {
           type: 'category',
           label: 'Official Raspberry Pi Board',
@@ -2821,9 +2839,14 @@ const sidebars = {
     {
       type: 'category',
       label: 'Micro:bit',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Top_Brand/Micro_bit/microbit_wiki_page',
+      },
       items: [
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
-        'Top_Brand/Micro_bit/microbit_wiki_page',
       ],
     },
 
@@ -2883,7 +2906,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'Retired Product',
+      label: 'Product List',
       items: [
         {
           type: 'category',
