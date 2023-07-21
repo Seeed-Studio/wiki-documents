@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-WM1110_Dev_Kit_Server_Configuration
 last_update:
-  date: 6/26/2023
+  date: 7/21/2023
   author: Jessie
 ---
 
@@ -208,7 +208,6 @@ If Node-RED is installed as a global npm package, then execute the command node-
 node-red
 ```
 
-
 This will allow you to see the Node-RED editor on http://localhost:1880.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/node-red.png" alt="pir" width={600} height="auto" /></p>
@@ -221,6 +220,33 @@ The user interface has three key areas:
 * **Palette**: This is where you can select nodes; these are functional blocks that can be dragged-and-dropped, and then can be linked together to create a flow.
 * **Flow**: This is the source code of the program. In this pane, you can link nodes together to create an application.
 * **Sidebar**: The Sidebar displays any Help or debugging information available for the selected node.
+
+### Install libraries
+
+To set up the demonstration, we will install 2 additional libraries:
+
+* [node-red-contrib-loracloud-utils](https://www.npmjs.com/package/@semtech-wsp-apps/node-red-contrib-loracloud-utils): Handles connections to LoRa Cloud™ servers
+
+
+* [node-red-contrib-web-worldmap](https://www.npmjs.com/package/node-red-contrib-web-worldmap): World map web page for plotting "things" on
+
+Click the menu in the top right corner and select "Manage palette".
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/install.png" alt="pir" width={800} height="auto" /></p>
+
+
+Select Install on the Palette menu.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/install_pak.png" alt="pir" width={800} height="auto" /></p>
+
+Search for "node-red-contrib-loracloud-utils" and install.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/install_loracloud.png" alt="pir" width={800} height="auto" /></p>
+
+
+Repeat these steps to install the "node-red-contrib-web-worldmap" libraries.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/install_worldmap.png" alt="pir" width={800} height="auto" /></p>
 
 ### Importing the Flow
 
