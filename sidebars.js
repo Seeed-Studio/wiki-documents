@@ -2027,6 +2027,7 @@ const sidebars = {
             'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
             'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
             'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
+            'Edge/reComputer/Application/YOLOv8-TRT-Jetson',
           ],
         },
         {
