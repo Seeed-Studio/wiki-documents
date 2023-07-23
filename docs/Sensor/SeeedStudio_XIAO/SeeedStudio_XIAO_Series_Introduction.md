@@ -1,6 +1,6 @@
 ---
 description: SeeedStudio XIAO Series Introduction
-title: XIAO INTRODUCION
+title: XIAO INTRODUCTION
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -11,8 +11,6 @@ last_update:
 ---
 
 # Seeed Studio XIAO INTRODUCION
-
-<br/> <br/> <br/>
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">

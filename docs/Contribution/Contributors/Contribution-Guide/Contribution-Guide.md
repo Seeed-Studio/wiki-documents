@@ -87,3 +87,11 @@ Show us what you have edited and click "creat pull request" button to us.
 ![image7](https://files.seeedstudio.com/wiki/wiki-platform/contributor/PR_Guide/7.jpg)
 
 Thank you for your contributions!
+
+## FAQ
+
+### 1. Where do I keep the images?
+
+You can simply place them in the same path as the .md file you changed, and then name them with number in the order they are used in the file.
+
+Hint: Check the folder in ``"wiki-documents/docs/Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally.md"``

@@ -34,6 +34,11 @@ As you can see on the **left side colomn**, we maintain the SenseCAP Ecosystem i
 - [SenseCAP Industrial Sensor](/SenseCAP_Sensor_Intro)
 - [SenseCAP Data Logger](/SenseCAP_Data_Logger_Intro)
 
+## ✨ Contributor Project
+
+- We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
+- [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33960915) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
+
 ## Hardware Products
 
 All Seeed IIoT hardware products are designed with industry standards, IP66 rated, and encapsulated in UV-resistant materials to ensure great robustness. They are suitable to be deployed in outdoor scenarios with severe conditions.

@@ -107,6 +107,12 @@ last_update:
     </div>
 </div>
 
+## ✨ Contributor Project
+
+- We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
+- [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33961692) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
+
+
 ## SenseCAP Tech Support
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

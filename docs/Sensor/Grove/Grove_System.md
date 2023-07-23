@@ -57,6 +57,11 @@ For more information and the method of participation, you can find it [here](htt
 
 ![fusion activity](https://www.seeedstudio.com/blog/wp-content/uploads/2022/07/Grove%E6%B4%BB%E5%8A%A81200x.png)
 
+## ✨ Contributor Project
+
+- We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
+- [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33931997) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
+
 ## Grove Projects
 
 Here are some project made with Grove for your reference, more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](https://www.instructables.com/howto/Grove/).

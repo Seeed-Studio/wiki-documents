@@ -53,12 +53,19 @@ last_update:
     </div>
 </div>
 
+
+## ✨ Contributor Project
+
+- We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
+- [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963038) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
+
 ## FAQ
 
 - [How to troubleshoot the black screen issue on reTerminal](https://wiki.seeedstudio.com/reterminal_black_screen)
 - [How to flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC](https://wiki.seeedstudio.com/flash_different_os_to_emmc)
 - [Log in to Raspberry Pi OS/++Ubuntu OS or Other OS using SSH over Wi-Fi/ Ethernet](https://wiki.seeedstudio.com/log_rpios_use_ssh_over_wifi_ethernet)
 - [Find out more](https://wiki.seeedstudio.com/reTerminal-new_FAQ/)
+
 
 ## Tech Support & Product Discussion
 
