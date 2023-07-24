@@ -24,6 +24,7 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
+    'TinyML_Topic',
     // 'Getting_Started_test',
     {
       type: 'doc',
