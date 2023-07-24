@@ -126,6 +126,12 @@ The Arduino code here furnished permits to dialog with the sensor and to modify 
 |[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[**Get ONE Now**](https://www.seeedstudio.com/Grove-Lightning-Sensor-AS3935-p-5603.html)|
 
 
+:::caution
+Please check that the front pads of the sensor have been soldered before use. If the position indicated in the picture is not soldered, you may experience problems with the IIC device not being detected when executing the programme later.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/7.jpg" style={{width:400, height:'auto'}}/></div>
+:::
+
 **Step 3**. Connect Grove Lightning Sensor to port I2C of Seeeduino V4.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/3.jpg" style={{width:700, height:'auto'}}/></div>
