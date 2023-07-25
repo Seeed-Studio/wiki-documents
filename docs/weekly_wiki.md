@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/10/2023
+  date: 07/24/2023
   author: Matthew
 ---
 
@@ -15,82 +15,75 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is July 10th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 24th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Introdcution for XIAO Series](https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/)
+### [Deploy YOLOv8 on NVIDIA Jetson using TensorRT](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson)
 
-XIAO is a combination of compactness, capability, and user-friendly design. The whole XIAO Series features compact design withall SMD components are placed on the same side of the board, so designers can easily integrate XIAO into their own boards for rapid mass production.
+This wiki guide explains how to deploy a YOLOv8 model into NVIDIA Jetson Platform and perform inference using TensorRT. Here we use TensorRT to maximize the inference performance on the Jetson platform.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/xiao_topicpage/main.png" /></div>
+Different computer vision tasks will be introduced here such as:
 
-### [Seeed Studio XIAO EXHIBITION](https://wiki.seeedstudio.com/xiao_topic_page/)
+- Object Detection
+- Image Segmentation
+- Image Classification
+- Pose Estimation
+- Object Tracking
 
-We provide here a clear and easy-to-understand introduction to the applications of this series of development boards, with the hope of providing reference and assistance for your future use. Furthermore, we have compiled a collection of little masterpieces created using these small development boards and eagerly await your [submissions](https://wiki.seeedstudio.com/Contribution-Guide/).
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/8.gif" style={{width:800, height:'auto'}}/></div>
 
-Here are some examples:
+### [EdgeBox RPi 200 Balena OS Setup](https://wiki.seeedstudio.com/Edgebox-rpi-200-balena-OS-setup/)
 
-<div class="table-center">
-	<table align="center">
-        <tr>
-			<th>XIAO ESP32C3 & ChatGPT</th>
-            <th>Miniature ChatGPT Voice Assistant based on XIAO ESP32S3</th>
-            <th>Geolocation Tracker with XIAO ESP32S3</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/16.gif" style={{width:300, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/22.jpg" style={{width:280, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32S3-Geolocation/main.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiaoesp32c3-chatgpt/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_speech2chatgpt/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/geolocation_tracker_with_XIAO_ESP32S3/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
-  </table>
-</div>
+Balena is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" style={{width:800, height:'auto'}}/></div>
+
+### [TinyML Topic Page](https://wiki.seeedstudio.com/tinyml_topic/)
+
+TinyML is a field of study in Machine Learning and Embedded Systems that explores machine learning on small, low-powered microcontrollers, enabling secure, low-latency, low-power and low-bandwidth machine learning inferencing on edge devices. If you're excited about TinyML but not sure where to start, our one-stop guide is perfect for you. This guide provides an overview of what TinyML is, the opportunities it offers, and step-by-step instructions on how to get started. Join this exciting field and start your TinyML journey today!
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/main.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## Existed Wiki Updated
 
-### [Deep sleep mode for Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#deep-sleep-mode-and-wake-up)
+### [Add IMX219 and IMX477 camera usages to reComputer Industrial J20 Series](https://wiki.seeedstudio.com/reComputer_Industrial_J20_Hardware_Interfaces_Usage/#usage)
 
-We have updated the Deep sleep mode and wake-up mode for XIAO ESP323.
+Add IMX219 and IMX477 camera usages to reComputer Industrial J20 Series
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO_WiFi/15.png" /></div>
+### [Add IMX219 and IMX477 camera usages to reComputer Industrial J40, J30 Series](https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/#usage)
 
-### [Deep sleep mode for Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#deep-sleep-mode-and-wake-up)
+Add IMX219 and IMX477 camera usages to reComputer Industrial J40, J30 Series
 
-We have updated the Deep sleep mode and wake-up mode for XIAO ESP3S3.
+### [Add 4G module usage on reterminal DM](https://wiki.seeedstudio.com/reterminal-dm/#4g-module)
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO_WiFi/16.png" /></div>
+Add 4G module usage on reterminal DM
 
-### [Connect to JLink with Wio WM1110](https://wiki.seeedstudio.com/Get_Started_with_Wio-WM1110_Dev_Kit/#connect-to-jlink)
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991135--lte-cat-4-ec25-eux-mini-pcie-font_1.jpg" alt="pir" width={500} height="auto" /></p>
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/program.png" /></div>
+### [Update sensecraft edge OS download link and add tips about 32-bit driver](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)
+
+Update sensecraft edge OS download link and add tips about 32-bit driver
+
+### [XIAO Canbus Expansion board](https://wiki.seeedstudio.com/xiao-can-bus-expansion/)
+
+Thanks for the notices, we have changed pin promopt to the correct ones:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/hw.jpg" alt="pir" width={500} height="auto" /></p>
+
+1. GND
+2. CAN-H
+3. CAN-L
+4. LED Indicators for RX/TX
+5. SN65NVD230
+
+### [Add reTerminal DM DI/DO wiring samples](https://wiki.seeedstudio.com/xiao-can-bus-expansion/)
+
+### [Upload PCB Source file for reTermianl Bridge](https://wiki.seeedstudio.com/reTerminalBridge/#resource)
+
+### [Add Wio 1110 libraries Installation steps](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Server_Configuration/#install-libraries)
 
 ## The Efforts of Contributor
-
-### [MicroPython Device Console for Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040-with-MicroPython/#micropython-device-console)
-
-Our contributor **Neil** has written a command line console program for XIAO using MicroPython. With this programme you can easily upload, download and delete files. We thank him for his contribution to XIAO!
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
-
-### [MicroPython Device Console for Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-SAMD21-MicroPython/#micropython-device-console)
-
-Our partner **Neil** has written a command line console program for XIAO using MicroPython. With this programme you can easily upload, download and delete files. We thank him for his contribution to XIAO!
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
-
-### [Accelerometer Examples and Low Power for XIAO nRF52840](https://wiki.seeedstudio.com/XIAO_BLE/#accelerometer-examples-and-low-power)
-
-We are very grateful to our community contributor **[daCoder](https://forum.seeedstudio.com/u/daCoder)** for his contribution to the XIAO nRF52840 low power consumption mode.
-
-You can find out more about the content of the projects he has worked on by clicking **[HERE](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**.
-
-
 
 ## Past Weekly wiki
 
@@ -111,3 +104,4 @@ You can find out more about the content of the projects he has worked on by clic
 - [weekly wiki on 6.19th](/Seeed_Elderly/weekly_wiki/wiki619)
 - [weekly wiki on 7.03th](/Seeed_Elderly/weekly_wiki/wiki703)
 - [weekly wiki on 7.10th](/Seeed_Elderly/weekly_wiki/wiki710)
+- [weekly wiki on 7.17th](/Seeed_Elderly/weekly_wiki/wiki717)

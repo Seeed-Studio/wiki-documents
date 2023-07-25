@@ -1,6 +1,6 @@
 ---
-description: EdgeBox RPi 200 Balena OS Setup
-title: EdgeBox RPi 200 Balena OS Setup
+description: EdgeBox RPi 200 balena OS Setup
+title: EdgeBox RPi 200 balena OS Setup
 keywords:
   - Edge
   - EdgeBox-RPi-200
@@ -11,17 +11,15 @@ last_update:
   author: Marc Pous & Peter Pan
 ---
 
-
-
 ## What is balena?
 
-Balena is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. Balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
+balena is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" alt="pir" width="700" height="auto" /></div>
 
-BalenaOS is the key component of the balena ecosystem. BalenaOS is an open-source Linux-based operating system, made by balena, which is purpose-built for running containerized applications on embedded devices through balenaEngine, a lightweight, container engine optimized for IoT devices. It's optimized for reliability, robustness, and security, crucial factors for IoT and edge computing environments. Built on the Yocto project, balenaOS supports more than 100 different hardware platforms and includes built-in features like host OS updates and a supervisor API for controlling applications. By leveraging Docker containers, balenaOS ensures application portability and simplifies the development process.
+balenaOS is the key component of the balena ecosystem. balenaOS is an open-source Linux-based operating system, made by balena, which is purpose-built for running containerized applications on embedded devices through balenaEngine, a lightweight, container engine optimized for IoT devices. It's optimized for reliability, robustness, and security, crucial factors for IoT and edge computing environments. Built on the Yocto project, balenaOS supports more than 100 different hardware platforms and includes built-in features like host OS updates and a supervisor API for controlling applications. By leveraging Docker containers, balenaOS ensures application portability and simplifies the development process.
 
-BalenaCloud provides a central dashboard to manage your fleet of IoT devices. It simplifies device management with functionality for remote updates, device and applications monitoring, troubleshooting and secure device access. With BalenaCloud, you can easily monitor how to deploy applications to one device or thousands of devices with a single git push, balena CLI push or via built-in continuous integration and continuous deployment of your choice. Balena is a scalable and robust IoT solution for anyone looking to efficiently manage a fleet of IoT devices, the software and host OS running on them.
+balenaCloud provides a central dashboard to manage your fleet of IoT devices. It simplifies device management with functionality for remote updates, device and applications monitoring, troubleshooting and secure device access. With balenaCloud, you can easily monitor how to deploy applications to one device or thousands of devices with a single git push, balena CLI push or via built-in continuous integration and continuous deployment of your choice. balena is a scalable and robust IoT solution for anyone looking to efficiently manage a fleet of IoT devices, the software and host OS running on them.
 
 ## Edgebox-RPI-200
 
