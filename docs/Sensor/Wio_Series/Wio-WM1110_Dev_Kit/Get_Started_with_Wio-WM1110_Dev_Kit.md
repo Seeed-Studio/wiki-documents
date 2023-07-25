@@ -117,7 +117,7 @@ After compiling the application, you can program it to the Dev board.
 Click "Target" -- "Connect J-Link"
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/connect-to-JLink.png" alt="pir" width={800} height="auto" /></p>
 
-Click "Build" -- "Build and Run" to build the blinkly project.
+Click "Build" -- "Build and Run" to build the blinky project.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/run.png" alt="pir" width={800} height="auto" /></p>
 
