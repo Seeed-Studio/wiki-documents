@@ -44,8 +44,6 @@ last_update:
             <br/>
             <a href="https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started</font></span></a>
             <br/>
-            <a href="https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather%20Sensor_Trouble_Shooting/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Trouble Shooting </font></span></a>
-            <br/>
             <br/>
             <a><span><font color={'FFFFFF'} size={"2"}> - Air Temperature, Air Humidity, Barometric Pressure, Wind Speed, Wind Direction, Light Intensity, UV Index,  Rainfall Intensity</font></span></a>
             <br/>
