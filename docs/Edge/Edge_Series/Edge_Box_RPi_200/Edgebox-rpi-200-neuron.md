@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edgebox-rpi-200-neuron
 last_update:
   date: 07/20/2023
-  author: Marc Pous & Kasun Thushara
+  author: José Granero Nueda & Kasun Thushara
 ---
 
 ## What is N3uron?
@@ -103,12 +103,13 @@ Authentication:
 
 ``` 
 
-Click on Save to apply changes and reload the module.
+Click on **Save** to apply changes and reload the module.
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron7.png" alt="pir" width="600" height="auto" /></div>
 
 - **Step 5**: Navigate to the OPC Browser section inside the module and select the previously created DataSim client.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron8.png" alt="pir" width="600" height="auto" /></div>
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron9.png" alt="pir" width="600" height="auto" /></div>
 
 ### Create a tag
@@ -118,6 +119,7 @@ Click on Save to apply changes and reload the module.
 - **Step 2**: Now you can find the newly created tag in Config→Tags and view its value in the [Real Time section](https://docs.n3uron.com/docs/platform-visualizing-real-time-values).
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron10.png" alt="pir" width="600" height="auto" /></div>
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron11.png" alt="pir" width="600" height="auto" /></div>
 
 ### Create a template
@@ -129,6 +131,7 @@ By creating and using [Templates](https://docs.n3uron.com/docs/platform-template
 Just drag and drop the desired object into the templates section and start building your template using [custom properties](https://docs.n3uron.com/docs/platform-templates-custom-properties), [inheritance](https://docs.n3uron.com/docs/platform-templates-inheritance) and [more](https://docs.n3uron.com/docs/platform-templates-nesting).
 
 ### Configure MQTT Client
+
 **Step 1**: Go to Config→Modules, click on the menu and then create a **New Module** named MqttClient.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron12.png" alt="pir" width="600" height="auto" /></div>
@@ -153,15 +156,18 @@ Port: 1883
 - **Step 5**: Create a New Publisher and set a destination topic, for example “/n3/edgebox”.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron16.png" alt="pir" width="600" height="auto" /></div>
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron17.png" alt="pir" width="600" height="auto" /></div>
 
-- **Step 6**: Create a Tag Filter to match all tags in this node, the Tag Filter is how we tell the module which tags should be published to the broker. Click on Save to apply all the changes and reload the module. 
+- **Step 6**: Create a **Tag Filter** to match all tags in this node, the Tag Filter is how we tell the module which tags should be published to the broker. Click on **Save** to apply all the changes and reload the module. 
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron18.png" alt="pir" width="600" height="auto" /></div>
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron19.png" alt="pir" width="600" height="auto" /></div>
 
 
 - **Step 7**: Head to Diagnostics and enable the Real-Time logs for the MqttClient module, wait to see the logs emitted by the module every time it publishes new data to the broker.
+
  <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron20.png" alt="pir" width="600" height="auto" /></div>
 
 What you've seen is just the beginning. Embrace the limitless possibilities offered by its impressive array of nearly 50 modules. Dare to dream big, innovate, and take your projects to new heights with N3uron's cutting-edge features. For a deeper dive into this powerful platform, visit [https://n3uron.com/](https://n3uron.com/) and embark on an exciting journey of discovery!
