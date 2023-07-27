@@ -2,9 +2,12 @@ name: Deploy to GitHub Pages
 
 on:
   pull_request:
-    branches: [main]
+    branches: [docusaurus-version]
   push:
-    branches: [main]
+    branches: [docusaurus-version]
+    
+env:
+  NODE_OPTIONS: --max_old_space_size=4096
 
 jobs:
   test-deploy:
