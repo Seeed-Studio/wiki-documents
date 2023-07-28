@@ -31,7 +31,9 @@ By using OpenWrt you can have various features such as:
 
 Now let's dive into using OpenWrt on Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4 and ODYSSEY - X86J4125.
 
-**Note:** This guide works for ODYSSEY - X86J4105 as well.
+:::note
+This guide works for ODYSSEY - X86J4105 as well.
+:::
 
 ## Hardware Required
 
@@ -56,7 +58,9 @@ Now we need to flash OpenWrt image on to the eMMC storage of the board so that i
 
 - **Step 1.** Download the **latest OpenWrt Image** compiled by Seeed for this board from [here](https://1drv.ms/u/s!AqG2uRmVUhlSh0NHMLMmQKLyASvi?e=mup3cd)
 
-**Note:** Choose **openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz** file
+:::note
+Choose **openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz** file
+:::
 
 - **Step 2.** Download and run [this installer](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) to install the necessary drivers and the boot tool
 
@@ -92,7 +96,9 @@ Please wait a few minutes until the flashing process is complete.
 
 - **Step 1.** Download the **latest OpenWrt Image** compiled by Seeed for this board from [here](https://1drv.ms/u/s!AqG2uRmVUhlSh0NHMLMmQKLyASvi?e=mup3cd)
 
-**Note:** Choose **openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz** file
+:::note
+Choose **openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz** file
+:::
 
 - **Step 2.** Open a **Terminal** window and type the following to update the **packages list**
 
@@ -112,7 +118,9 @@ sudo apt install git
 sudo date MMDDhhmm
 ```
 
-**NOTE:** Where **MM** is the month, **DD** is the date, and **hh** and **mm** are hours and minutes respectively.
+:::note
+Where **MM** is the month, **DD** is the date, and **hh** and **mm** are hours and minutes respectively.
+:::
 
 - **Step 5.** Clone the **usbboot** tool repository
 
@@ -183,7 +191,9 @@ Now we need to install OpenWrt on to the eMMC/ HDD/ SSD of the ODYSSEY - X86J412
 
 - **Step 1.** Download the **latest OpenWrt Image** compiled by Seeed for this board from [here](https://1drv.ms/u/s!AqG2uRmVUhlSh0NHMLMmQKLyASvi?e=mup3cd)
 
-**Note:** Choose **openwrt-x86-64-generic-ext4-combined-efi.img.gz** file
+:::note
+Choose **openwrt-x86-64-generic-ext4-combined-efi.img.gz** file
+:::
 
 - **Step 2.** Insert a USB drive to the PC
 
@@ -235,7 +245,9 @@ Now OpenWrt will start to run live from the USB drive.
 
 - **Step 6.** Click **Choose File** under **Upload** and select the OpenWrt image that we downloaded before
 
-**Note:** Make sure the **.gz** file is extracted to the **.img** file before
+:::note
+Make sure the **.gz** file is extracted to the **.img** file before
+:::
 
 - **Step 7.** Click **Upload**
 
@@ -255,8 +267,9 @@ Now the image is saved under **/tmp/upload/** directory
 dd if=/tmp/upload/openwrt-x86-64-generic-ext4-combined-efi.img of=/dev/sda 
 ```
 
-**Note:** **/dev/sda** correponds to the storage device connected
-
+:::note
+**/dev/sda** correponds to the storage device connected
+:::
 - **Step 11.** Once it's finished flashing to the storage device, reboot the board, remove the USB drive and it will start to boot OpenWrt from the connected storage device.
 
 ## Run OpenWrt
@@ -281,7 +294,9 @@ Finally we will move on to testing the network speeds on the Dual Gigabit Ethern
 
 We will first use Dual Gigabit Ethernet Carrier Board as a server and ODYSSEY - X86J4125 as a client for the network test
 
-**Note:** Make sure to change the IP address of the LAN interface on the ODYSSEY board to **192.168.3.1** by [following this](https://wiki.seeedstudio.com/OpenWrt-Getting-Started/#q1-what-if-i-connect-the-openwrt-router-to-my-exisiting-router-which-has-a-default-gateway-ip-of-19216821)
+:::note
+Make sure to change the IP address of the LAN interface on the ODYSSEY board to **192.168.3.1** by [following this](https://wiki.seeedstudio.com/OpenWrt-Getting-Started/#q1-what-if-i-connect-the-openwrt-router-to-my-exisiting-router-which-has-a-default-gateway-ip-of-19216821)
+:::
 
 - **Step 1.** Connect the boards as follows
 
@@ -301,8 +316,9 @@ We will first use Dual Gigabit Ethernet Carrier Board as a server and ODYSSEY - 
 
 - Navigate to **System > TTYD Terminal** and login with **root** as the username
 
-**Note:** Make sure both devices are not on the same IP range on the LAN interface
-
+:::note
+Make sure both devices are not on the same IP range on the LAN interface
+:::
 - **Step 3.** Install **iperf3** network performance test tool on both devices
 
 ```sh
@@ -322,14 +338,18 @@ iperf3 -s
 iperf3 -c 192.168.2.1
 ```
 
-**Note:** Here the IP address of the Dual Gigabit Board server is written
+:::note
+Here the IP address of the Dual Gigabit Board server is written
+:::
 
 Now you will see the network speed test results as follows
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/TTYD-CM4-server.png
 " alt="pir" width="1000" height="auto"/></p>
 
-**Note:** Here you can see the speed is close to 1Gbps
+:::note
+Here you can see the speed is close to 1Gbps
+:::
 
 ### ODYSSEY as a Server and Dual Gigabit Board as a Client
 
@@ -351,165 +371,17 @@ iperf3 -s
 iperf3 -c 192.168.3.1
 ```
 
-**Note:** Here the IP address of the ODYSSEY-X86 server is written
+:::note
+Here the IP address of the ODYSSEY-X86 server is written
+:::
 
 Now you will see the network speed test results as follows
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/TTYD-X86-server.png" alt="pir" width="1000" height="auto"/></p>
 
-**Note:** Here you can see the speed is close to 1Gbps
-
-## FAQ
-
-### Q1: What if I connect the OpenWrt router to my existing router which has a default gateway IP of 192.168.2.1?
-
-Seeed OpenWrt image comes preconfigured with the necessary network settings. You might only need to change one network setting for the scenario which involves the Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4 or ODYSSEY - X86J4125 connecting to your existing router, and the router has the default gateway IP set to 192.168.2.1 which is the same as the default gateway IP for OpenWrt. In this scenario, you need to change the default IP of LAN interface on OpenWrt as follows:
-
-- **Step 1.** Open a web browser and log in to the OpenWrt portal by typing **192.168.2.1**
-
-- **Step 2.** Navigate to **System > TTYD Terminal** and login with **root** as the username
-
-- **Step 3.** Open the following file
-
-```sh
-vi /etc/config/network
-```
-
-- **Step 4.** Change the static IP address on the LAN interface as follows
-
-```sh
-config interface 'lan'
-        option type 'bridge'
-        option ifname 'eth0'
-        option proto 'static'
-        option ipaddr '192.168.3.1'
-        option netmask '255.255.255.0'
-        option ip6assign '60'
-```
-
-**Note:** Here the static IP is changhed to **192.168.3.1**. However, you can type any IP address of your choice
-
-- **Step 4.** Reboot the router
-
-```sh
-reboot
-```
-
-### Q2: What if I have the Dual Gigabit Ethernet Carrier Board non-CM4 version and attach a CM4 without emmC?
-
-If you want to use a Compute Module 4 without eMMC on the Dual Gigabit Ethernet Carrier Board, then you need to flash OpenWrt on to a micro-SD card and insert it into the board. Follow the steps below according to your operating system.
-
-- **Step 1.** Insert a micro-SD card to the computer using a **micro-SD card reader** connected to the computer, or by using a **built-in card reader** on a laptop
-
-- **Step 2.** Download **balenaEtcher** software by visiting [this link](https://www.balena.io/etcher) according to your operating system
-
-- **Step 3.** Run **balenaEtcher** as **administrator**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/balena-home.jpg" alt="pir" width="650" height="auto"/></p>
-
-- **Step 4.** Click **Flash from file** and point to the OpenWrt image file that you downloaded before
-
-- **Step 5.** Click **Select target** and select the connected micro-SD card
-
-- **Step 6.** Finally, click **Flash!**
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/OpenWrt/balena-finish.jpg" alt="pir" width="650" height="auto"/></p>
-
-Please wait a few minutes until the flashing process is complete.
-
-- **Step 7.** Eject the micro-SD card from computer and insert it into the Dual Gigabit Ethernet Carrier Board
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/micro-sd-install.png" alt="pir" width="400" height="auto"/></p>
-
-### Q3: I cannot successfully set up Rclone from web UI
-
-Rclone is a program to manage files on cloud storage drives. You can use it to make sure your cloud files are always in sync with the local storage.
-
-Eventhough there is a UI to configure Rclone within OpenWrt Luci interface, you need to first do all the configurations within a command line. After that only you will be able to view your files by using the web UI.
-
-Please follow the steps below:
-
-- **Step 1.** Visit **OpenWrt Luci web UI** and navigate to `Services > Terminal`
-
-- **Step 2.** Log in with your OpenWrt credentials
-
-- **Step 3.** Start the **rclone configuration process** by typing the following
-
-```sh
-rclone config
-```
-
-- **Step 4.** Press **n** and press **Enter** to create a new remote.
-
-- **Step 5.** Type a name of your choice for the new remote
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-1.1.png" alt="pir" width="600" height="auto"/></p>
-
-- **Step 6.** Find the **type of storage** you are creating a remote connection to, and enter the corresponding number from the long list
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-2.png" alt="pir" width="450" height="auto"/></p>
-
-**Note:** Here number **13** is chosen for **Google Drive** as an example
-
-- **Step 7.** When you are prompted for a **Client ID**, press **Enter** to accept the default
-
-- **Step 8.** When you are prompted for a **Client Secret**, press **Enter** to accept the default
-
-- **Step 9.** Choose **1** as the scope that rclone should use when requesting access from the drive
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-3.png" alt="pir" width="550" height="auto"/></p>
-
-**Note:** This will give full access to all the files in the drive
-
-- **Step 10.** When you are prompted for **root folder ID**, press **Enter** to accept the default
-
-- **Step 11.** When you are prompted for **service account credentials JSON file path**, press **Enter** to accept the default
-
-- **Step 12.** On **Edit advanced config**  prompt, press **Enter** which selects **No** by default
-
-- **Step 13.** On **Use auto config** menu, press **n** and then press **Enter**
-
-- **Step 14.** Copy and paste the link shown on a web browser
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-4.png" alt="pir" width="500" height="auto"/></p>
-
-- **Step 15.** Sign in to your Google account and **Allow** access
-
-- **Step 16.** **Copy** the code shown on the **Google sign in page** and **paste** it inside the **command line** that we used before
-
-- **Step 17.** On **Configure as a team drive** press **Enter** to accept the default
-
-- **Step 18.** Press **Enter** to confirm the creation of the remote
-
-You will see the output as follows:
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-5.png" alt="pir" width="300" height="auto"/></p>
-
-- **Step 19.** Type **q** to quit the configuration
-
-- **Step 20.** Navigate to `NAS > Rclone`, check the box next to **run Rclone as daemon** and click **SAVE & APPLY**
-
-- **Step 21.** Copy the **rclone address**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-6.png" alt="pir" width="600" height="auto"/></p>
-
-- **Step 22.** Click **WEBUI REACT** and a new web page will open
-
-- **Step 23.** Paste the previously copied **rclone address** on to the first blank column
-
-- **Step 24.** Type **admin** for both username and password, and press **Verify**
-
-You will see the following output if the connection is verified
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-7.png" alt="pir" width="300" height="auto"/></p>
-
-- **Step 25.** Click **Login** and go to **Explore** from the side menu
-
-- **Step 26.** Type the name of the remote we created before and click **Open**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/rclone/rclone-8.png" alt="pir" width="1000" height="auto"/></p>
-
-Now you will see all your files in available in your drive
+:::note
+Here you can see the speed is close to 1Gbps
+:::
 
 ## Resources
 

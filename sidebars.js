@@ -2012,6 +2012,7 @@ const sidebars = {
       items: [
         'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
         'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+        'Network/reRouter/FAQs_For_openWrt',
         {
           type: 'category',
           label: 'Application',
