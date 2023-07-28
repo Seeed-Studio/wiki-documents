@@ -1058,5 +1058,229 @@ text-decoration: none;
 
 /* 以下是TinyML专题页的内容 */
 
+.button_edgelab_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+.button_edgelab{
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png");
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 1000px; /* 按钮宽度 */
+  height: 500px; /* 按钮高度 */
+}
+
+.button_edgelab:hover {
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
+  background-size: cover;
+}
+
+.button_edgeimpulse{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/edgeimpulse.png");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 700px; /* 按钮宽度 */
+  height: 500px; /* 按钮高度 */
+}
+
+.button_edgeimpulse:hover {
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgeimpulse.png');
+  background-size: cover;
+}
+
+.button_tensorflowlite{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/tensorflowlite.png");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 780px; /* 按钮宽度 */
+  height: 360px; /* 按钮高度 */
+}
+
+.button_tensorflowlite:hover {
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/tensorflowlite.png');
+  background-size: cover;
+}
+
+.button_codecraft{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/cc.jpg");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 1000px; /* 按钮宽度 */
+  height: 500px; /* 按钮高度 */
+}
+
+.button_codecraft:hover {
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/cc.jpg');
+  background-size: cover;
+}
+
+.button_xiao{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/xiao.jpg");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 900px; /* 按钮宽度 */
+  height: 400px; /* 按钮高度 */
+}
+
+.button_xiao:hover{
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/xiao.jpg');
+  background-size: cover;
+}
+
+.button_wiotinyml{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 1000px; /* 按钮宽度 */
+  height: 500px; /* 按钮高度 */
+}
+
+.button_wiotinyml:hover{
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png');
+  background-size: cover;
+}
+
+.button_udemy{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/udemy.png");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 800px; /* 按钮宽度 */
+  height: 500px; /* 按钮高度 */
+}
+
+.button_udemy:hover{
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/udemy.png');
+  background-size: cover;
+}
+
+.table-nobg {
+  display: table;
+  margin: 0 auto;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.table-trnobg{
+  border: none;
+  border-top: none;
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+}
+
 
 
