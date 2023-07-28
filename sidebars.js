@@ -988,6 +988,7 @@ const sidebars = {
       items: [
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
+        'Sensor/Wio_Terminal/Software-FreeRTOS',
         {
           type: 'category',
           label: 'Hardware Overview',
@@ -1585,6 +1586,7 @@ const sidebars = {
           label: 'Seeeduino Series',
           items: [
             'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
+            'Sensor/Seeeduino Series/Seeed_Arduino_Boards',
             'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
             {
               type: 'category',
@@ -2664,7 +2666,6 @@ const sidebars = {
               items: [
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Download-Arduino-and-install-Arduino_Driver',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/A_Handy_Serial_Library',
-                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Seeed_Arduino_Boards',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/How_to_install_Arduino_Library',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/How_to_use_and_write_a_library',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Upload_Code',
@@ -2695,7 +2696,6 @@ const sidebars = {
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Seeed_Arduino_Serial',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/I2C_And_I2C_Address_of_Seeed_Product',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/ODYSSEY-X86J4105-Firmata',
-                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-FreeRTOS',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-SWD',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-AWS-IOT-Bridge',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-DAPLink',

@@ -1,6 +1,6 @@
 ---
-description: FreeRTOS for Arduino Boards
-title:  FreeRTOS for Arduino Boards
+description: FreeRTOS with Wio Terminal
+title:  FreeRTOS with Wio Terminal
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
-# Arduino FreeRTOS Tutorial - How to use FreeRTOS to Multi-tasking in Arduino
+# How to use FreeRTOS to Multi-tasking in Arduino
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/FreeRTOS/full.gif"/></div>
 
