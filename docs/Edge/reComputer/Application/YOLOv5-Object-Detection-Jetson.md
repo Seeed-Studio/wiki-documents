@@ -310,7 +310,7 @@ If you go back to Google Colab, you can see more details as follows:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOv5-2/36.png" /></div>
 
-Here the accuracy (mAP@.5) is about 90% and 99.4% for leaf and flower respectively, while the total accuracy (mAP@.5) is about 94.7%.
+Here the accuracy `mAP@.5` is about 90% and 99.4% for leaf and flower respectively, while the total accuracy `mAP@.5` is about 94.7%.
 
 ### Use Google Colab with Roboflow api
 
@@ -324,7 +324,7 @@ After the training is done, you will see an output as follows:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/37.png" /></div>
 
-Here the accuracy (mAP@.5) is about 91.6% and 99.4% for leaf and flower respectively, while the total accuracy (mAP@.5) is about 95.5%.
+Here the accuracy `mAP@.5` is about 91.6% and 99.4% for leaf and flower respectively, while the total accuracy `mAP@.5` is about 95.5%.
 
 - **Step 2.** Under **Files** tab, if you navigate to `runs/train/exp/weights`, you will see a file called **best.pt**. This is the generated model from training. Download this file and copy to your Jetson device because this is the model we are going to use later for inferencing on the Jetson device.
 
@@ -369,7 +369,7 @@ After the training is done, you will see an output as follows:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/65.png" /></div>
 
-Here the accuracy (mAP@.5) is about 90.6% and 99.4% for leaf and flower respectively, while the total accuracy (mAP@.5) is about 95%.
+Here the accuracy `mAP@.5` is about 90.6% and 99.4% for leaf and flower respectively, while the total accuracy `mAP@.5` is about 95%.
 
 - **Step 5.** If you navigate to `runs/train/exp/weights`, you will see a file called **best.pt**. This is the generated model from training. Copy and paste this file to your Jetson device because this is the model we are going to use later for inferencing on the Jetson device.
 
