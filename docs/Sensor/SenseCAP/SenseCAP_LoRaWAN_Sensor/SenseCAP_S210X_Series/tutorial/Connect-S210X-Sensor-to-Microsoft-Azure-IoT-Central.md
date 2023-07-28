@@ -5,13 +5,14 @@ keywords:
 - SenseCAP LoRaWAN Sensor& Microsoft Azure IoT Central
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 5/24/2023
+  date: 7/26/2023
   author: Jessie
 ---
 
-# Connect S210X Sensor to Microsoft Azure IoT Central Via Node-RED
 
-**SenseCAP S210X Series Sensors** are with the IP66 rating, -40 ~ +85C ° operating temperature and a built-in 19Ah high-capacity battery, combined with the devices' low power consumption, the series can operate in harsh outdoor environments for up to 10 years with a range of up to 10km. 
+SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway. Users can install the device, bind it using the QR code and configure the network, then data can be viewed from the SenseCAP portal, which supports popular IoT protocols such as HTTP and MQTT.
+
+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/001.png" alt="pir" width={600} height="auto" /></p>
 
@@ -19,47 +20,52 @@ last_update:
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/catalogsearch/result/?q=S210x" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
 
-In this tutorial, we will introduce how to connect S210X series Sensors to the Microsoft Azure IoT Central via Node-RED
-## **SenseCAP & Node-RED**
+In this tutorial, we will introduce how to connect S210X series Sensors to the Microsoft Azure IoT Central via Node-RED.
+
+## SenseCAP & Node-RED
+
 This chapter, the first in a series, walks you through installing and using Node-red and calling the SenseCAP API to connect to Node-RED.
 
 This chapter is to make it easier for our users to connect data from the SenseCAP platform to various other Paas platforms for more in-depth data processing.
 
 **Node-RED**
 
-Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
-
-It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click. 
+Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/002.png" alt="pir" width={600} height="auto" /></p>
 
 
-#### **Install Node.Js**
+### Install Node.Js
+
 To install Node-RED locally you will need a supported version of Node.js.
 
-Node-RED currently recommends [**Node 14.x LTS](https://nodejs.org/en/)**.**
+Node-RED currently recommends [Node 14.x LTS](https://nodejs.org/en/).
 
-#### **Installing Node-RED with npm**
+### Installing Node-RED with npm
+
 To install Node-RED you can use the npm command that comes with node.js:
 
+```cpp
 sudo npm install -g --unsafe-perm node-red
+```
 
-Note: If you are using Windows, do not start the command with **sudo**.
+:::info Note
+If you are using Windows, do not start the command with "sudo".
+:::
 
-That command will install Node-RED as a global module along with its dependencies.
-
+This command will install Node-RED as a global module along with its dependencies.
 Once installed as a global module you can use this command to start Node-RED in your terminal. 
 
+```cpp
 node-red
+```
 
 ![IMG\_258](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/003.png)
 
 Then you can then access the Node-RED editor by pointing your browser at [http://localhost:1880](http://localhost:1880/).
 
-#### **Get the SenseCAP API**
+### Get the SenseCAP API
 Before proceeding to this section, make sure you have bound your S210x device in the SenseCAP console.
-
-Note: If you haven't bound the device, please check ? first 
 
 Log in to the [**SenseCAP console**](https://sensecap.seeed.cc/portal/#/dashboard). In the drop-down bar to the right of the user name at the top of the dashboard, we can find the **Organization Information**, please select it to get the **Organization ID**
 
@@ -72,10 +78,11 @@ Then, we also need to get the API key for SenseCAP. Please click on **Security 
 Click on the **API ID** you created and you will get her **Access API keys**, please copy it and the **Organization ID**, we will use them in the later steps.
 
 ![IMG\_261](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/006.png)
-#### **Node-RED Configuration**
+
+### Node-RED Configuration
 ![IMG\_262](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/007.png)
 
-**Step 1.** Add a new mqtt-broker node
+* **Step 1.** Add a new mqtt-broker node
 
 Drag out an **mqtt in** node, double-click it to enter the configuration page, then click the edit button after **Add new mqtt-broker**.
 
@@ -122,7 +129,10 @@ Topic format:
 |Channel|A physical interface on the device to connect to the sensor, default:1|
 |Reserved|Reserved field|
 |MeasurementID|[measurement_list](https://sensecap-docs.seeed.cc/measurement_list.html)|
-**Note**: "+" indicates that this field has no filter conditions and can match all. "/+/+/+/+" means to listen to all "DeviceEUI", "Channel", "Reserved", "MeasurementID"
+
+:::info Note
+"+" indicates that this field has no filter conditions and can match all. "/+/+/+/+" means to listen to all "DeviceEUI", "Channel", "Reserved", "MeasurementID"
+:::
 
 Example：/device\_sensor\_data/424988\*\*\*\*44/2CF7F\*\*\*0002/+/+/+
 
@@ -130,7 +140,7 @@ This topic means receiving all remote sensing data of the current device.
 
 ![IMG\_266](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/011.png)
 
-**Step 2.** Add debug node
+* **Step 2.** Add debug node
 
 Drag out a **debug** node, connect to the **mqtt-in** node, then click **Deploy**
 
@@ -140,18 +150,19 @@ After the deployment is successful, you will see "**Connected**" under the **mqt
 
 
 
-
-## **SenseCAP & Node\_RED & Azure IoT Central**
+## **SenseCAP & Node-RED & Azure IoT Central**
 
 [**Microsoft Azure IoT Central**](https://azure.microsoft.com/en-us/services/iot-central) is a fully managed global IoT SaaS (software as a service) solution that makes it easy to connect, monitor and manage your IoT assets at scale. It is highly secure, scales with your business as it grows, ensures that your investments are repeatable and integrates with your existing business apps. It also bridges the gap between your business applications and IoT data. Finally it offers centralized management to reconfigure and update your devices.
 
 The content of this chapter will continue to use the Node-RED introduced earlier and facilitate the management of the S210X Sensor suite in Microsoft Azure IoT Central through the use of Node-RED.
-#### **Microsoft Azure IoT Central Configuration**
-**Step 1.** Log in to Azure IoT Central.
+
+### Microsoft Azure IoT Central Configuration
+
+* **Step 1.** Log in to Azure IoT Central.
 
 Please visit [**Azure IoT Central**](https://apps.azureiotcentral.com/home) website, click **Build** from the navigation menu on the left, and click **Custom apps**. ![IMG\_268](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/013.png)
 
-**Step 2.** Fill in the **Application name** and choose the **Pricing plan**. Application URL will be created automatically when you fill in the application name. 
+* **Step 2.** Fill in the **Application name** and choose the **Pricing plan**. Application URL will be created automatically when you fill in the application name. 
 
 ![IMG\_269](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/014.png)
 
@@ -159,11 +170,11 @@ Note: If you are a new user of Azure IoT Central, we recommend that you select F
 
 ![IMG\_270](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/015.png)
 
-**Step 3.** Click **Create** to create the new application. Now you have successfully set up Azure IoT Central!
+* **Step 3.** Click **Create** to create the new application. Now you have successfully set up Azure IoT Central!
 
 ![IMG\_271](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/016.png)
 
-**Step 4.** Create a Device Template
+* **Step 4.** Create a Device Template
 
 Please create a new device template by clicking on **Device templates** in the left-hand menu bar.
 
@@ -175,7 +186,7 @@ Name your device template and click **create**
 
 ![IMG\_274](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/019.png)
 
-**Step 5.** Create a Device
+* **Step 5.** Create a Device
 
 Click on **Devices -> S2103** under the left menu bar. ![IMG\_275](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/020.png)
 
@@ -187,14 +198,15 @@ Please make a note of this information, which we will use in the next steps.
 
 ![IMG\_277](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/022.png)
 
-#### **Node-RED Configuration**
-**Step 1.** Install Azure IoT Paletts
+### **Node-RED Configuration**
+
+* **Step 1.** Install Azure IoT Paletts
 
 Click on the upper-right menu bar and select Settings ![IMG\_278](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/023.png)
 
 Search and install "node-red-contrib-azure-iot-central" in the **Paletts - Install** ![IMG\_279](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/024.png)
 
-**Step 2.** Configure the Azure IoT Central node
+* **Step 2.** Configure the Azure IoT Central node
 
 Drag out the **Azure IoT Central** node from the **function** bar on the left, double-click it to enter the configuration page, then click the edit button to edit **Azure IoT Central** node
 
@@ -210,7 +222,7 @@ Scope ID/Device ID/Primary Key: We have obtained it before
 
 ![IMG\_281](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/026.png)
 
-**Step 3.** Configure the function node
+* **Step 3.** Configure the function node
 
 Data reporting to Azure IoT Central needs to follow a specific data format, so it's necessary to add a function building block to process the data format.
 
@@ -244,14 +256,13 @@ Drag out the **function** node from the function bar on the left, double-click i
 ```
 
 
-
 If you want to see the logging information of the data, you can add a debug node after the function node.
 
 ![IMG\_283](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/028.png)
 
 Once the S210X Sensor starts powering up and working and starts sending data to the SenseCAP PaaS server, then we can check the data on Azure IoT Central.
 
-#### **Data Presentation**
+### **Data Presentation**
 The data visible in the **Raw data** column are placed in **Unmodeled data**, so we need to parse the data according to the code above.
 
 Add the capability that you need, then click **save** and **publish**
