@@ -383,6 +383,9 @@ Now you will see the network speed test results as follows
 Here you can see the speed is close to 1Gbps
 :::
 
+## FAQ
+For details, please click [**here**](/FAQs_For_openWrt)
+
 ## Resources
 
 - **[Web Page]** [OpenWrt Offficial Documentation](https://openwrt.org)
