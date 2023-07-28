@@ -145,14 +145,13 @@ If you want a more detailed list, please check [this link](https://github.com/py
 
 The fastest way to get started with YOLOv8 is to use pre-trained models provided by YOLOv8. However, these are PyTorch models and therefore will only utilize the CPU when inferencing on the Jetson. If you want the best performance of these models on the Jetson while running on the GPU, you can export the PyTorch models to TensorRT by following this section of the wiki.
 
-detection - helmet
-classification - panda
-segmentation - traffic
-pose - exercise
-tracking - people
+<!-- Code -->
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-### Object Detection
+<Tabs>
+<TabItem value="detec" label="Object Detection">
 
 YOLOv8 offers 5 pre-trained PyTorch model weights for object detection, trained on COCO dataset at input image size 640x640. You can find them below
 
@@ -241,7 +240,8 @@ If you face any errors when executing the above commands, try adding "device=0" 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/2.gif
 " style={{width:1000, height:'auto'}}/></div>
 
-### Image Classification
+</TabItem>
+<TabItem value="classfiy" label="Image Classification">
 
 YOLOv8 offers 5 pre-trained PyTorch model weights for image classification, trained on ImageNet at input image size 224x224. You can find them below
 
@@ -335,7 +335,8 @@ If you face any errors when executing the above commands, try adding "device=0" 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/5.gif
 " style={{width:1000, height:'auto'}}/></div>
 
-### Image Segmentation
+</TabItem>
+<TabItem value="segment" label="Image Segmentation">
 
 YOLOv8 offers 5 pre-trained PyTorch model weights for image segmentation, trained on COCO dataset at input image size 640x640. You can find them below
 
@@ -429,7 +430,8 @@ If you face any errors when executing the above commands, try adding "device=0" 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/3.gif
 " style={{width:1000, height:'auto'}}/></div>
 
-### Pose Estimation
+</TabItem>
+<TabItem value="pose" label="Pose Estimation">
 
 YOLOv8 offers 6 pre-trained PyTorch model weights for pose estimation, trained on COCO keypoints dataset at input image size 640x640. You can find them below
 
@@ -533,7 +535,8 @@ If you face any errors when executing the above commands, try adding "device=0" 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/4.gif
 " style={{width:1000, height:'auto'}}/></div>
 
-### Object Tracking
+</TabItem>
+<TabItem value="track" label="Object Tracking">
 
 Object tracking is a task that involves identifying the location and class of objects, then assigning a unique ID to that detection in video streams.
 
@@ -564,6 +567,13 @@ If you face any errors when executing the above commands, try adding "device=0" 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/7.gif
 " style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
+
+<!-- Code END -->
+
+---
 
 ## Use TensorRT to Improve Inference Speed
 
@@ -660,6 +670,251 @@ For example, with object detection:
 ```sh
 yolo detect predict model=yolov8n.engine source='0' show=True
 ```
+
+## Bring Your Own AI Model
+
+### Data Collection and Labelling
+
+If you have a specific AI application and want to bring your own AI model that is suitable for your application, you can collect your own dataset, label them and then train using YOLOv8. 
+
+If you do not want to collect data by yourself, you can also choose public datasets which are readily available. You can download a number of publically available datasets such as the [COCO dataset](https://cocodataset.org), [Pascal VOC dataset](http://host.robots.ox.ac.uk/pascal/VOC) and much more. [Roboflow Universe](https://universe.roboflow.com) is a recommended platform which provides a wide-range of datasets and it has [90,000+ datasets with 66+ million images](https://blog.roboflow.com/computer-vision-datasets-and-apis) available for building computer vision models. Also, you can simply search open-source datasets on Google and choose from a variety of datasets available.
+
+If you have your own dataset and want to annotate the images, we recommend you to use the annotation tool provided by [Roboflow](https://roboflow.com). Please follow [this part of the wiki](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow) to learn more about it. You can also follow [this guide](https://docs.roboflow.com/annotate/use-roboflow-annotate) from Roboflow about annotation. 
+
+### Training
+
+Here we have 3 methods to train a model. 
+
+1. First way would be to use [Ultralytics HUB](https://ultralytics.com/hub). You can easily integrate Roboflow into Ultralytics HUB so that all your Roboflow projects will be readily available for training. Here it offers a Google Colab notebook to easily start the training process and also view the training progress in real-time. 
+
+2. Second way would be to use a Google Colab workspace created by us to make the training process easier. Here we use Roboflow API to download the dataset from Roboflow project.
+
+3. Third way would be to use a local PC for the training process. Here you need to make sure you have a powerful enough GPU and also need to manually download the dataset.
+
+<!-- Code -->
+
+<Tabs>
+<TabItem value="Ultralytics" label="Ultralytics HUB + Roboflow + Google Colab">
+
+Here we use Ultralytics HUB to load the Roboflow project and then train on Google Colab.
+
+- **Step 1.** Visit [this URL](https://hub.ultralytics.com/signup) and sign up for an Ultralytics account
+
+- **Step 2.** Once you sign in with the newly created account, you will be greeted with the following dashboard
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/2.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 3.** Visit [this URL](https://app.roboflow.com/login) and sign up for a Roboflow account
+
+- **Step 4.** Once you sign in with the newly created account, you will be greeted with the following dashboard
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/11.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 5.** Create a new workspace and create a new project under the workspace by following [this wiki guide](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/#annotate-dataset-using-roboflow) we have prepared. You can also [check here](https://blog.roboflow.com/getting-started-with-roboflow) to learn more from official Roboflow documentation.
+
+- **Step 6.** Once you have a couple of projects inside your workspace, it will look like below 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/12.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 7.** Go to **Settings** and click **Roboflow API**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/13.jpg
+" style={{width:300, height:'auto'}}/></div>
+
+- **Step 8.** Click the **copy** button to copy the **Private API Key**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/14.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 9.** Come back to Ultralytics HUB dashboard, click on **Integrations**, paste the API Key we copied before into the empty column and click **Add**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/15.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 10** If you see your workspace name listed, that means the integration is successful
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/16.jpg
+" style={{width:550, height:'auto'}}/></div>
+
+- **Step 11** Navigate to **Datasets** and you will see all your Roboflow projects here
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/17.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 12** Click on a project to check more about the dataset. Here I have selected a dataset which can detect healthy and damaged apples
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/18.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 13** Click **Train Model**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/19.jpg
+" style={{width:500, height:'auto'}}/></div>
+
+- **Step 14** Select the **Architecture**, set a **Model name (optional)** and then click **Continue**. Here we have selected YOLOv8s as the model architecture
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/22.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 15** Under **Advanced options**, configure the settings as to your preference, copy and past the Colab code (this will be pasted late into Colab workspace) and then click **Open Google Colab**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/24.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 16** Sign in to your Google account if you have not already signed in
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/25.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 17** Navigate to `Runtime > Change runtime type`
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/26.jpg
+" style={{width:500, height:'auto'}}/></div>
+
+- **Step 18** Select **GPU** under **Hardware accelerator**, the highest available under **GPU type** and click **Save**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/27.jpg
+" style={{width:500, height:'auto'}}/></div>
+
+- **Step 19** Click **Connect**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/28.jpg
+" style={{width:250, height:'auto'}}/></div>
+
+- **Step 20** Click on **RAM, Disk** button to check the hardware resource usage
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/31.jpg
+" style={{width:600, height:'auto'}}/></div>
+
+- **Step 21** Click on the **Play** button to run the first code cell
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/29.jpg
+" style={{width:750, height:'auto'}}/></div>
+
+- **Step 22** Paste the code cell we copied from Ultralytics HUB before under the **Start** section and run it to start training 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/30.jpg
+" style={{width:650, height:'auto'}}/></div>
+
+- **Step 23** Now if you go back to Ultralytics HUB, you will see the message **Connected**. Click **Done**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/32.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 24** Here you will see **Box Loss, Class Loss and Object Loss** in real-time as the model is training on Google Colab
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/33.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 25** After the training is finished, you will see the following output on Google Colab
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/34.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 26** Now go back to Ultralytics HUB, go to **Preview** tab and upload a test image to check how the trained model is performing
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/35.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 26** Finally go to **Deploy** tab and download the trained model in the format you prefer to inference with YOLOv8. Here we have chosen PyTorch.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/36.png
+" style={{width:1000, height:'auto'}}/></div>
+
+Now you can use this downloaded model with the tasks that we have explained in this wiki before. You just need to replace the model file with your model.
+
+For example:
+```
+yolo detect predict model=<your_model.pt> source='0' show=True
+```
+
+</TabItem>
+<TabItem value="Roboflow" label="Roboflow + Google Colab">
+
+Here we use a Google Colaboratory environment to perform training on the cloud. Furthermore, we use Roboflow api within Colab to easily download our dataset.
+
+- **Step 1.** Click [here](https://colab.research.google.com/gist/lakshanthad/9fbe33058cb7cab49ac8fc345143d849/yolov5-training-for-jetson.ipynb) to open an already prepared Google Colab workspace and go through the steps mentioned in the workspace
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/39.jpg
+" style={{width:800, height:'auto'}}/></div>
+
+After the training is done, you will see an output as follows:
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/40.jpg
+" style={{width:800, height:'auto'}}/></div>
+
+- **Step 2.** Under Files tab, if you navigate to `runs/train/exp/weights`, you will see a file called **best.pt**. This is the generated model from training. Download this file and copy to your Jetson device because this is the model we are going to use later for inferencing on the Jetson device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/41.jpg
+" style={{width:500, height:'auto'}}/></div>
+
+Now you can use this downloaded model with the tasks that we have explained in this wiki before. You just need to replace the model file with your model.
+
+For example:
+```
+yolo detect predict model=<your_model.pt> source='0' show=True
+```
+
+</TabItem>
+<TabItem value="PC" label="Roboflow + Local PC">
+
+Here you can use a PC with a Linux OS for training. We have used an Ubuntu 20.04 PC for this wiki.
+
+- **Step 1.** Install pip if you do not have pip in your system
+
+```sh
+sudo apt install python3-pip -y
+```
+
+- **Step 2.** Install Ultralytics along with dependencies
+
+```sh
+pip install ultralytics
+```
+
+- **Step 3.** On Roboflow, inside your project, go to **Versions**, select **Export Dataset**, select **Format** as **YOLOv8**, choose **download zip to computer** and click **Continue**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/42.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 4.** Extract the downloaded zip file
+
+- **Step 5.** Execute the following to start training. Here you need to replace **path_to_yaml** with the .yaml file location which is inside the extracted zip file before
+
+```sh
+yolo train data=<path_to_yaml> model=yolov8s.pt epochs=100 imgsz=640 batch=-1
+```
+
+:::note
+Here the image size is set to 640x640. We use batch-size as -1 because that will automatically determine the best batch size. You can also change epoch according to your preference. Here you can change the pre-trained model to any detect, segment, classify, pose model.
+:::
+
+After the training is done, you will see an output as follows:
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/43.png
+" style={{width:1000, height:'auto'}}/></div>
+
+- **Step 6.** Under **runs/detect/train/weights**, you will see a file called **best.pt**. This is the generated model from training. Download this file and copy to your Jetson device because this is the model we are going to use later for inferencing on the Jetson device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/44.png
+" style={{width:500, height:'auto'}}/></div>
+
+Now you can use this downloaded model with the tasks that we have explained in this wiki before. You just need to replace the model file with your model.
+
+For example:
+```
+yolo detect predict model=<your_model.pt> source='0' show=True
+```
+
+</TabItem>
+</Tabs>
+
+<!-- Code END -->
+
+---
 
 ## Bonus Demo: Exercise Detector and Counter with YOLOv8
 

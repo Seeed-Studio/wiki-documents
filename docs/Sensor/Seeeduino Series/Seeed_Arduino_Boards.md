@@ -1,18 +1,13 @@
 ---
 description: How to Add Seeed boards to Arduino IDE
 title: How to Add Seeed boards to Arduino IDE
-tags:
-  - Tutorial
 keywords:
   - Tutorial
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Arduino_Boards
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
-no_comments: false # for Disqus
-
 ---
 
 
@@ -28,7 +23,7 @@ Seeed had designed so many boards that work with Arduino IDE, include,
 The board mentioned above is the AT SAMD21 Microcontroller series,Please copy the below url to *Additional Boards Manager URLs* in the step2 .
 :::
 
-```c
+```
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
@@ -46,13 +41,12 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 * [LinkIt ONE](https://wiki.seeedstudio.com/LinkIt_ONE/)
 * [RePhone Series](https://wiki.seeedstudio.com/RePhone/)
 
-:::cautionattention
+:::note
 The board mentioned above from Seeeduino V3 to RePhone Series isn't the AT SAMD21 Microcontroller series,Please copy the below url to *Additional Boards Manager URLs* in the step2.
 :::
 
-```c++
+```
 https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json
-
 ```
 
 Thanks to the new features of Arduino IDE, it's easy to add those board to your Arduino IDE now.
@@ -75,8 +69,6 @@ Open your Arudino IDE, click on **File > Preferences**, and copy below url to *A
 
 Click on **Toos > Board > Board Manager**.
 
- ![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json) <!--图片链接有误-->
-
 Now you can search the board by name, if you need to use `LinkIt ONE`, then just search `LinkIt`; and if you need to use `RePhone Series`,
 just tap `RePhone`. In this wiki, we will take `Seeeduino Stalker V3` example.
 
@@ -89,8 +81,6 @@ Click Seeeduino Stalker V3 then an **Install** button appear, click on it to fin
 After Step 3 was successful, a board named Seeeduino Stalker V3 will show up at the boards list.
 
 Click on **Tools > Board**, *Seeeduino Stalker V3* is available now.
-
-![](https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_legacy_seeeduino_boards_index.json)<!--图片链接有误-->
 
 ## Tech Support & Product Discussion
 
