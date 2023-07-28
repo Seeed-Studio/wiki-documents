@@ -5,7 +5,7 @@ keywords:
   - Edge
   - EdgeBox-RPi-200
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Edgebox-rpi-200-neuron
+slug: /Edgebox-rpi-200-n3uron
 last_update:
   date: 07/20/2023
   author: José Granero Nueda & Kasun Thushara
