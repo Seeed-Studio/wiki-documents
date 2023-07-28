@@ -183,7 +183,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 
 <br />
 
-## Cooperation platforms
+## Support Platforms
 
 Our devices is now supported by a very large number of co-operative platforms and cases.
 
@@ -317,6 +317,8 @@ Let's take a look at the kinds of interesting things that TinyML can achieve!
 	</table>
 </div>
 
+---
+
 ### TinyML on Wio Terminal
 
 Wio Terminal is a powerful and easy-to-use development board designed for makers, hobbyists, and IoT enthusiasts. It features a 2.4-inch LCD screen, Wi-Fi and Bluetooth connectivity, an array of sensors, and a variety of input/output interfaces.
@@ -357,6 +359,8 @@ Wio Terminal supports a range of programming languages including Arduino, MicroP
 	</table>
 </div>
 
+---
+
 ### TinyML on Grove Vision AI
 
 <div class="table-center">
@@ -378,6 +382,8 @@ Wio Terminal supports a range of programming languages including Arduino, MicroP
 		</tr>
 	</table>
 </div>
+
+---
 
 ### TinyML on SenseCAP A1101
 
@@ -604,65 +610,65 @@ Using TinyML technology it is possible to combine sensor data with machine learn
 
 ---
 
-### SDG
+### Retail
 
-TinyML can be applied in areas such as smart energy management, smart traffic management, agricultural optimisation, health monitoring and smart environmental monitoring, helping to achieve the Sustainable Development Goals (SDGs) and promoting sustainable social, economic and environmental development.
+TinyML technology can be applied in the retail industry for sales forecasting, customer behaviour analysis, resource optimisation, loss prevention and smart marketing, helping to achieve smarter and more efficient business management and operations.
 
 <div class="table-center">
 	<table align="center">
     <tr class="table-trnobg">
-			<th class="table-trnobg">Smart Lake - early detection of algae bloom</th>
-      <th class="table-trnobg">IoT AI-driven Tree Disease Identifier w/ Edge Impulse & MMS</th>
-      <th class="table-trnobg">Wildlife Sanctuary Monitor</th>
+			<th class="table-trnobg">Pet Activity Tracker using XIAO nRF52840 Sense & Edge Impulse</th>
+      <th class="table-trnobg">BLE AI-driven Smartwatch Detecting Potential Sun Damage</th>
+      <th class="table-trnobg">Smart Air Cooler using Person Sensor.Ft Useful Sensor</th>
 		</tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1498224/_dDVOnd2yVz.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/mms.gif" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1494879/_vVl6arJ5L8.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:1000, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1424908/_vDVFksQ0VV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/smartwatch.gif" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1509781/_hEJTTPV6Rb.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr class="table-trnobg"></tr>
-    	<tr class="table-trnobg">
-			<td class="table-trnobg"><font size={"1"}>Using data from different sensors and ML on the edge, this device can detect early sign of algae bloom and notify authorities or citizens.</font></td>
-			<td class="table-trnobg"><font size={"1"}>Detect tree diseases and get informed of the results via MMS to prevent them from spreading and harming forests, farms, and arable lands.</font></td>
-			<td class="table-trnobg"><font size={"1"}>A wildlife sanctuary environment and animal monitor to maintain the sustainability of the sanctuary.</font></td>
+    <tr class="table-trnobg">
+			<td class="table-trnobg"><font size={"1"}>Our pets deserve more to stay active. A tinyML model predicts activities based on the data coming from 3 Axis IMU.</font></td>
+			<td class="table-trnobg"><font size={"1"}>Log UV & weather data on an SD card to train an Edge Impulse model. Then, run it to get informed of sun damage over BLE via an Android app.</font></td>
+      <td class="table-trnobg"><font size={"1"}>As every other device is getting smarter in this Era why not add intelligence to our dear old Summer friend Air Coolers? However, what if a sensor could directly present extracted features of image data? Wouldn't that be interesting?</font></td>
     </tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mithun-das/smart-lake-early-detection-of-algae-bloom-6494c9"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kutluhan-aktar/iot-ai-driven-tree-disease-identifier-w-edge-impulse-mms-1b5ff6"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/hendra/wildlife-sanctuary-monitor-4162ec"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mithun-das/pet-activity-tracker-using-xiao-ble-sense-edge-impulse-858d73"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kutluhan-aktar/ble-ai-driven-smartwatch-detecting-potential-sun-damage-7d08be"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/phatta/smart-air-cooler-using-person-sensor-ft-useful-sensor-7daa73"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
     <tr></tr>
     <tr class="table-trnobg">
-			<th class="table-trnobg">Plastic Bottle Detector For Lake</th>
-      <th class="table-trnobg">Penguin Counting and Monitoring</th>
-      <th class="table-trnobg">Gate Keeper - An IoT Based Elephant Detection System</th>
-		</tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1499166/_i5AfIuVOPD.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1501504/image_YwTN2w1Ca6.png?auto=compress%2Cformat&w=740&h=555&fit=max" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1500778/inshot_20220925_2048546541_MCWMtzTNBg.jpg?auto=compress%2Cformat&w=740&h=555&fit=max" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr class="table-trnobg"></tr>
-    	<tr class="table-trnobg">
-			<td class="table-trnobg"><font size={"1"}>To fight against plastic pollution for marine life. Inspired by the iconic movie character WALL-E, my project aims to raise awareness about the issue of littering and the impact it has on the environment.</font></td>
-			<td class="table-trnobg"><font size={"1"}>A POC for the build of AI object recognition camera's to detect and count Little Blue Penguins as they come ashore and go to sea.</font></td>
-			<td class="table-trnobg"><font size={"1"}>Will guide you to build an IoT based elephant detector based on Grove AI Vision Module and Wio Terminal.</font></td>
+			<th class="table-trnobg">TinyML 🧠 and Azure IoT with Edge Impulse and Wio Terminal</th>
+      <th class="table-trnobg">NMCS: No More Coffee Spills!</th>
+      <th class="table-trnobg">AI powered thermal camera for safe camping</th>
     </tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/JuanYi/plastic-bottle-detector-for-lake-353996"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mediapod/penguin-counting-and-monitoring-2bdc1c"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/482632/gate-keeper-an-iot-based-elephant-detection-system-ae726c"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td class="table-trnobg"><iframe width="300" height="200" src="https://www.youtube.com/embed/JCirUbyY60s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1579836/_rL5FcyTm6U.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1367564/_W4FrYx6LrV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td class="table-trnobg"><font size={"1"}>Spring is here, so I can upgrade my Azure IoT Squirrel Feeder and now add Computer Vision capabilities. In order to do this, I'll add TinyML capabilities to my feeder using Edge Impulse to the current scenario. </font></td>
+      <td class="table-trnobg"><font size={"1"}>NMCS is a device that uses its hearing and seeing skills to make sure that your coffee doesn't spill when making your energy booster.</font></td>
+      <td class="table-trnobg"><font size={"1"}>TinyML model running Wio Terminal can identify if animal or human is approaching even in the dark and alert campers.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.youtube.com/watch?v=JCirUbyY60s"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/sashrikad/nmcs-no-more-coffee-spills-55897a"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mithun-das/ai-powered-thermal-camera-for-safe-camping-8fc887"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
 	</table>
 </div>
 
 ---
 
-### Smart Agriculture
+### Farming
 
 Using TinyML technology it is possible to combine sensor data with machine learning models to automate irrigation, weather forecasting, and crop disease and pest detection.
 
@@ -685,7 +691,7 @@ Using TinyML technology it is possible to combine sensor data with machine learn
 			<td class="table-trnobg"><font size={"1"}>Collect irrigation level data by thermal imaging, build and train a neural network model, and run the model directly on Wio Terminal.</font></td>
 			<td class="table-trnobg"><font size={"1"}>In today’s article we’re going to use Wio Terminal and Tensorflow Lite for Microcontrollers to create an intelligent meteostation, able to predict the weather and precipitation for next 24 hours based on local data from BME280 environmental sensor.</font></td>
     </tr>
-		<tr class="table-trnobg"></tr>
+		<tr></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/rahulkhanna/vision-based-sand-depletion-prevention-kit-vsdp-bde664"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kutluhan-aktar/irrigation-level-assessment-by-thermal-imaging-w-tensorflow-c60b2c"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
@@ -695,86 +701,80 @@ Using TinyML technology it is possible to combine sensor data with machine learn
     <tr class="table-trnobg">
 			<th class="table-trnobg">Edible Algae Growing Cycle Monitor</th>
       <th class="table-trnobg">IoT Food Spoilage Sensor and Monitoring Dashboard</th>
+      <th class="table-trnobg">Smart Lake - early detection of algae bloom</th>
 		</tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1510607/_dve7mQFzUj.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1502746/_dSmk8zVpyV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1498224/_dDVOnd2yVz.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr class="table-trnobg"></tr>
     	<tr class="table-trnobg">
 			<td class="table-trnobg"><font size={"1"}>I've decided to come up with a system that will help grow Spirulina Algae in a self contained space.</font></td>
 			<td class="table-trnobg"><font size={"1"}>DeViridi is a smart IoT powered tool which can be used to: monitor food storage conditions and determine food spoilage.</font></td>
+      <td class="table-trnobg"><font size={"1"}>Using data from different sensors and ML on the edge, this device can detect early sign of algae bloom and notify authorities or citizens.</font></td>
     </tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/skruglewicz/edible-algae-growing-cycle-monitor-bca939"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/cyborgash122/deviridi-iot-food-spoilage-sensor-and-monitoring-dashboard-e2f933"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mithun-das/smart-lake-early-detection-of-algae-bloom-6494c9"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
-	</table>
-</div>
-
----
-
-### Smart Cities
-
-Using TinyML technology it is possible to combine sensor data with machine learning models for urban traffic management, environmental monitoring and city planning.
-
-<div class="table-center">
-	<table align="center">
+    <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-			<th class="table-trnobg">Web browser operated robot for gas leak detection</th>
-      <th class="table-trnobg">Smart Air Cooler using Person Sensor.Ft Useful Sensor</th>
-      <th class="table-trnobg">Pipeline Clog Detection with a Flowmeter and TinyML</th>
-		</tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1548875/_F9M97NN1KO.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1509781/_hEJTTPV6Rb.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><iframe title="vimeo-player" src="https://player.vimeo.com/video/784835596?h=cc9173caab" width="300" height="230" frameborder="0" allowfullscreen></iframe></td>
-		</tr>
-		<tr class="table-trnobg"></tr>
-    	<tr class="table-trnobg">
-			<td class="table-trnobg"><font size={"1"}>Green Hydrogen is an alternative energy that reduces emissions and cares for our planet. However, it is still on its early stages and safety is a major concern as hydrogen leaks should be avoided by all means. In order enable an early detection of gas leaks, we wanted to build a big remote operated robot to carry the required sensing equipment.</font></td>
-			<td class="table-trnobg"><font size={"1"}>As every other device is getting smarter in this Era why not add intelligence to our dear old Summer friend Air Coolers? However, what if a sensor could directly present extracted features of image data? Wouldn't that be interesting?</font></td>
-			<td class="table-trnobg"><font size={"1"}>As a proposed solution to the problem of pipeline clogs in industrial operations, we are introducing the use of artificial intelligence (AI) and machine learning. Our AI system uses flow rate sensor data to detect clogs in pipelines by analyzing changes in flow rates that may indicate a blockage.</font></td>
+      <th class="table-trnobg">IoT AI-driven Tree Disease Identifier w/ Edge Impulse & MMS</th>
+      <th class="table-trnobg">Plastic Bottle Detector For Lake</th>
+      <th class="table-trnobg">NOMOS: Mosquito growth monitoring system</th>
     </tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/ivan-arakistain/web-browser-operated-robot-for-gas-leak-detection-4cbe1b"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/phatta/smart-air-cooler-using-person-sensor-ft-useful-sensor-7daa73"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.edgeimpulse.com/experts/prototype-and-concept-projects/clog-detection-with-ai"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/mms.gif" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1499166/_i5AfIuVOPD.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1498662/_4hNXTHVvlf.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+    </tr>
+		<tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+			<td class="table-trnobg"><font size={"1"}>Detect tree diseases and get informed of the results via MMS to prevent them from spreading and harming forests, farms, and arable lands.</font></td>
+      <td class="table-trnobg"><font size={"1"}>To fight against plastic pollution for marine life. Inspired by the iconic movie character WALL-E, my project aims to raise awareness about the issue of littering and the impact it has on the environment.</font></td>
+      <td class="table-trnobg"><font size={"1"}>Mosquito growth monitoring system based on temperature, humidity, and water flow at the sewer lines to minimize the spread of dengue fever.</font></td>
+    </tr>
+		<tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kutluhan-aktar/iot-ai-driven-tree-disease-identifier-w-edge-impulse-mms-1b5ff6"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/JuanYi/plastic-bottle-detector-for-lake-353996"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/rifqiabdillah/nomos-mosquito-growth-monitoring-system-6def4c"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
     <tr></tr>
     <tr class="table-trnobg">
-			<th class="table-trnobg">NOMOS: Mosquito growth monitoring system</th>
-      <th class="table-trnobg">Detect the Drain Blockage with Tiny ML + LoRa</th>
-      <th class="table-trnobg"></th>
-		</tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1498662/_4hNXTHVvlf.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1580113/_N3O8kRxik8.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr class="table-trnobg"></tr>
-    	<tr class="table-trnobg">
-			<td class="table-trnobg"><font size={"1"}>Mosquito growth monitoring system based on temperature, humidity, and water flow at the sewer lines to minimize the spread of dengue fever.</font></td>
-			<td class="table-trnobg"><font size={"1"}>Using an outdoor smart sensor - A1101 to detect the accumulation of leaves, flower and other debris for a balcony drain and alert its user.</font></td>
-			<td class="table-trnobg"><font size={"1"}></font></td>
+			<th class="table-trnobg">Build a TinyML Smart Weather Station with Wio Terminal!</th>
+      <th class="table-trnobg">Fight Fire 🔥 - Wild Fire Prediction using TinyML</th>
+      <th class="table-trnobg">Early flash flood warn system</th>
     </tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/rifqiabdillah/nomos-mosquito-growth-monitoring-system-6def4c"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/vitaminCC/detect-the-drain-blockage-with-tiny-ml-lora-6d8957"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href=""><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1264506/_2yKmoX1X3P.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1503029/_Uq5VHx9Sf0.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1503004/_dDriQ77DIf.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+    	<tr class="table-trnobg">
+			<td class="table-trnobg"><font size={"1"}>Learn to build your very own smart weather station powered by machine learning, from data acquisition to training to deployment!</font></td>
+      <td class="table-trnobg"><font size={"1"}>Fight Fire is a wildfire prediction device that will help the firefighting authority to respond quickly to the wildfire.</font></td>
+      <td class="table-trnobg"><font size={"1"}>This idea aims to provide a solution to generate early warnings that allow timely reaction to disasters due to floods or avalanches.</font></td>
+    </tr>
+		<tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/supperted825/build-a-tinyml-smart-weather-station-with-wio-terminal-1ec8ee"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/user102774/fight-fire-wild-fire-prediction-using-tinyml-df7572"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mrmolex/early-flash-flood-warn-system-8cfdee"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
 	</table>
 </div>
 
 ---
 
-### Industrial Automation
+### Industrial
 
 Using TinyML technology it is possible to combine sensor data with machine learning models to automate and optimise production processes such as quality control and equipment maintenance.
 
@@ -803,80 +803,36 @@ Using TinyML technology it is possible to combine sensor data with machine learn
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kutluhan-aktar/iot-ai-driven-yogurt-processing-texture-prediction-blynk-560c52"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/450327/oil-tank-leak-detection-using-tinyml-by-sashrika-29222f"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
-	</table>
-</div>
-
----
-
-### Smart Home
-
-Using TinyML technology it is possible to combine sensor data with machine learning models to automate control and optimise energy consumption, such as controlling thermostats, lights and home appliances.
-
-<div class="table-center">
-	<table align="center">
+    <tr></tr>
     <tr class="table-trnobg">
-			<th class="table-trnobg">Build a TinyML Smart Weather Station with Wio Terminal!</th>
-      <th class="table-trnobg">TinyML 🧠 and Azure IoT with Edge Impulse and Wio Terminal</th>
-      <th class="table-trnobg">NMCS: No More Coffee Spills!</th>
-		</tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1264506/_2yKmoX1X3P.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><iframe width="300" height="200" src="https://www.youtube.com/embed/JCirUbyY60s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1579836/_rL5FcyTm6U.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr class="table-trnobg"></tr>
-    	<tr class="table-trnobg">
-			<td class="table-trnobg"><font size={"1"}>Learn to build your very own smart weather station powered by machine learning, from data acquisition to training to deployment!</font></td>
-			<td class="table-trnobg"><font size={"1"}>Spring is here, so I can upgrade my Azure IoT Squirrel Feeder and now add Computer Vision capabilities. In order to do this, I'll add TinyML capabilities to my feeder using Edge Impulse to the current scenario. </font></td>
-			<td class="table-trnobg"><font size={"1"}>NMCS is a device that uses its hearing and seeing skills to make sure that your coffee doesn't spill when making your energy booster.</font></td>
+			<th class="table-trnobg">Web browser operated robot for gas leak detection</th>
+      <th class="table-trnobg">Pipeline Clog Detection with a Flowmeter and TinyML</th>
+      <th class="table-trnobg">Detect the Drain Blockage with Tiny ML + LoRa</th>
     </tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/supperted825/build-a-tinyml-smart-weather-station-with-wio-terminal-1ec8ee"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.youtube.com/watch?v=JCirUbyY60s"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/sashrikad/nmcs-no-more-coffee-spills-55897a"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
-	</table>
-</div>
-
----
-
-### Smart Security
-
-Using TinyML technology it is possible to combine sensor data with machine learning models to automate intrusion detection, face recognition and security monitoring.
-
-<div class="table-center">
-	<table align="center">
-    <tr class="table-trnobg">
-			<th class="table-trnobg">AI powered thermal camera for safe camping</th>
-      <th class="table-trnobg">Fight Fire 🔥 - Wild Fire Prediction using TinyML</th>
-      <th class="table-trnobg">Early flash flood warn system</th>
-		</tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1367564/_W4FrYx6LrV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1503029/_Uq5VHx9Sf0.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1503004/_dDriQ77DIf.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1548875/_F9M97NN1KO.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><iframe title="vimeo-player" src="https://player.vimeo.com/video/784835596?h=cc9173caab" width="300" height="230" frameborder="0" allowfullscreen></iframe></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1580113/_N3O8kRxik8.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
+    </tr>
 		<tr class="table-trnobg"></tr>
     	<tr class="table-trnobg">
-			<td class="table-trnobg"><font size={"1"}>TinyML model running Wio Terminal can identify if animal or human is approaching even in the dark and alert campers.</font></td>
-			<td class="table-trnobg"><font size={"1"}>Fight Fire is a wildfire prediction device that will help the firefighting authority to respond quickly to the wildfire.</font></td>
-			<td class="table-trnobg"><font size={"1"}>This idea aims to provide a solution to generate early warnings that allow timely reaction to disasters due to floods or avalanches.</font></td>
-    	</tr>
+			<td class="table-trnobg"><font size={"1"}>Green Hydrogen is an alternative energy that reduces emissions and cares for our planet. However, it is still on its early stages and safety is a major concern as hydrogen leaks should be avoided by all means. In order enable an early detection of gas leaks, we wanted to build a big remote operated robot to carry the required sensing equipment.</font></td>
+      <td class="table-trnobg"><font size={"1"}>As a proposed solution to the problem of pipeline clogs in industrial operations, we are introducing the use of artificial intelligence (AI) and machine learning. Our AI system uses flow rate sensor data to detect clogs in pipelines by analyzing changes in flow rates that may indicate a blockage.</font></td>
+      <td class="table-trnobg"><font size={"1"}>Using an outdoor smart sensor - A1101 to detect the accumulation of leaves, flower and other debris for a balcony drain and alert its user.</font></td>
+    </tr>
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mithun-das/ai-powered-thermal-camera-for-safe-camping-8fc887"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/user102774/fight-fire-wild-fire-prediction-using-tinyml-df7572"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mrmolex/early-flash-flood-warn-system-8cfdee"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/ivan-arakistain/web-browser-operated-robot-for-gas-leak-detection-4cbe1b"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.edgeimpulse.com/experts/prototype-and-concept-projects/clog-detection-with-ai"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/vitaminCC/detect-the-drain-blockage-with-tiny-ml-lora-6d8957"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
 	</table>
 </div>
 
 ---
 
-### Health Surveillance
+### Healthcare
 
 TinyML can be applied to health monitoring to help the medical industry achieve more efficient and accurate health monitoring.
 
@@ -906,37 +862,7 @@ TinyML can be applied to health monitoring to help the medical industry achieve 
 
 ---
 
-### Smart Wearable
-
-Using TinyML technology it is possible to combine sensor data with machine learning models for motion monitoring, health monitoring and gesture recognition.
-
-<div class="table-center">
-	<table align="center">
-    <tr class="table-trnobg">
-			<th class="table-trnobg">Pet Activity Tracker using XIAO nRF52840 Sense & Edge Impulse</th>
-      <th class="table-trnobg">BLE AI-driven Smartwatch Detecting Potential Sun Damage</th>
-		</tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1424908/_vDVFksQ0VV.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/smartwatch.gif" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr class="table-trnobg"></tr>
-    <tr class="table-trnobg">
-			<td class="table-trnobg"><font size={"1"}>Our pets deserve more to stay active. A tinyML model predicts activities based on the data coming from 3 Axis IMU.</font></td>
-			<td class="table-trnobg"><font size={"1"}>Log UV & weather data on an SD card to train an Edge Impulse model. Then, run it to get informed of sun damage over BLE via an Android app.</font></td>
-    </tr>
-		<tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mithun-das/pet-activity-tracker-using-xiao-ble-sense-edge-impulse-858d73"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kutluhan-aktar/ble-ai-driven-smartwatch-detecting-potential-sun-damage-7d08be"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
-	</table>
-</div>
-
----
-
-### Autopilot
+### Transportation
 
 <div class="table-center">
 	<table align="center">
@@ -954,6 +880,38 @@ Using TinyML technology it is possible to combine sensor data with machine learn
 		<tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/vincekok/voice-activated-robo-car-on-microcontroller-with-tinyml-39a8fb"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+---
+
+### Animal Husbandry
+
+<div class="table-center">
+	<table align="center">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">Wildlife Sanctuary Monitor</th>
+      <th class="table-trnobg">Penguin Counting and Monitoring</th>
+      <th class="table-trnobg">Gate Keeper - An IoT Based Elephant Detection System</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1494879/_vVl6arJ5L8.blob?auto=compress%2Cformat&w=900&h=675&fit=min" style={{width:700, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1501504/image_YwTN2w1Ca6.png?auto=compress%2Cformat&w=740&h=555&fit=max" style={{width:280, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1500778/inshot_20220925_2048546541_MCWMtzTNBg.jpg?auto=compress%2Cformat&w=740&h=555&fit=max" style={{width:300, height:'auto'}}/></div></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><font size={"1"}>A wildlife sanctuary environment and animal monitor to maintain the sustainability of the sanctuary.</font></td>
+      <td class="table-trnobg"><font size={"1"}>A POC for the build of AI object recognition camera's to detect and count Little Blue Penguins as they come ashore and go to sea.</font></td>
+      <td class="table-trnobg"><font size={"1"}>Will guide you to build an IoT based elephant detector based on Grove AI Vision Module and Wio Terminal.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/hendra/wildlife-sanctuary-monitor-4162ec"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/mediapod/penguin-counting-and-monitoring-2bdc1c"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/482632/gate-keeper-an-iot-based-elephant-detection-system-ae726c"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
