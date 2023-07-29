@@ -61,7 +61,7 @@ N3uron can be easily installed with our one-step automated installation script, 
 ```sh
 sudo curl -fsSL https://get.n3uron.com/install.sh | sudo bash
 ``` 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron3.png" alt="pir" width="600" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/gif1.gif" alt="pir" width="600" height="auto" /></div>
 
 In a few seconds you’ll have N3uron installed, up and running.
 
@@ -115,6 +115,7 @@ Click on **Save** to apply changes and reload the module.
 ### Create a tag
 
 - **Step 1**: Drag and drop the desired object from the browser to the data model section.
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/gif2.gif" alt="pir" width="600" height="auto" /></div>
 
 - **Step 2**: Now you can find the newly created tag in Config→Tags and view its value in the [Real Time section](https://docs.n3uron.com/docs/platform-visualizing-real-time-values).
 
@@ -130,6 +131,7 @@ By creating and using [Templates](https://docs.n3uron.com/docs/platform-template
 
 Just drag and drop the desired object into the templates section and start building your template using [custom properties](https://docs.n3uron.com/docs/platform-templates-custom-properties), [inheritance](https://docs.n3uron.com/docs/platform-templates-inheritance) and [more](https://docs.n3uron.com/docs/platform-templates-nesting).
 
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/gif3.gif" alt="pir" width="600" height="auto" /></div>
 ### Configure MQTT Client
 
 **Step 1**: Go to Config→Modules, click on the menu and then create a **New Module** named MqttClient.
