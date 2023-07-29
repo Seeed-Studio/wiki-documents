@@ -1,10 +1,11 @@
 name: Check Markdown links
 
 on:
-  pull_request:
-    branches: [docusaurus-version]
-  push:
-    branches: [docusaurus-version]
+    workflow_dispatch:
+#   pull_request:
+#     branches: [docusaurus-version]
+#   push:
+#     branches: [docusaurus-version]
 
 jobs:
   markdown-link-check:

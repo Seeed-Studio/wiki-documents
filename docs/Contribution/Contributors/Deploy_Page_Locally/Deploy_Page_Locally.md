@@ -10,6 +10,8 @@ last_update:
   author: Matthew
 ---
 
+# Deploy Wiki Platform Locally
+
 ### 1. Fork and Download the Repository
 
 a. Please visit the [Seeed Studio Wiki Platform's Github Repository](https://github.com/Seeed-Studio/wiki-documents/tree/docusaurus-version) and then `fork` the 'wiki-documents' repository of your own.
