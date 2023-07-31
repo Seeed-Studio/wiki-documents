@@ -160,9 +160,9 @@ Here, even though **HIGH** is used, the LED will be **OFF**. You need to replace
 
 Refer to the following pin mappings of the LEDs and use them in your codes:
 
-- Red LED - LED_BUILTIN or LEDR
-- Green LED - LEDG
-- Blue LED - LEDB
+- Red LED = LED_BUILTIN or LED_RED
+- Blue LED = LED_BLUE
+- Green LED = LED_GREEN
 
 ## Power Consumption Verification
 

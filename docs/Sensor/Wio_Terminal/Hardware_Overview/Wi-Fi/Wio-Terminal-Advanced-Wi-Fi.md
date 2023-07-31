@@ -609,7 +609,9 @@ void loop(void)
 
 ### mDNS-SD Example
 
-This is a [mDNS-SD(Service Discovery)](https://en.wikipedia.org/wiki/Zero-configuration_networking#DNS-SD) example which allows you to discover services in the same network.
+This is a [mDNS-SD(Service Discovery)](https://github.com/Seeed-Studio/Seeed_Arduino_rpcmDNS/blob/main/examples/mDNS-SD_Extended/mDNS-SD_Extended.ino) example which allows you to discover services in the same network.
+
+About [DNS-based service discovery](https://en.wikipedia.org/wiki/Zero-configuration_networking#DNS-SD)
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Advanced-Wi-Fi/mdns-sd.png" /></div>
 

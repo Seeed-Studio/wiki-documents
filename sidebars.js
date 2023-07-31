@@ -786,6 +786,7 @@ const sidebars = {
           label: 'XIAO SAMD21',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-Zephyr-RTOS',
             {
               type: 'category',
               label: 'Programming Language',
@@ -793,6 +794,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
+                
               ],
             },
             {
@@ -842,6 +844,7 @@ const sidebars = {
           label: 'XIAO nRF52840 (Sense)',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-nRF52840-Zephyr-RTOS',
             {
               type: 'category',
               label: 'Programming Language',
@@ -891,8 +894,9 @@ const sidebars = {
           label: 'XIAO ESP32C3',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
-
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO-ESP32C3-Zephyr',
+            
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -918,6 +922,8 @@ const sidebars = {
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-Zephyr-RTOS',
+            
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -2005,6 +2011,7 @@ const sidebars = {
       items: [
         'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
         'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+        'Network/reRouter/FAQs_For_openWrt',
         {
           type: 'category',
           label: 'Application',
@@ -2278,6 +2285,8 @@ const sidebars = {
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
+            
           ],
         },
         {
