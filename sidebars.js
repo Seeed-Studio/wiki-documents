@@ -92,12 +92,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'Grove',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: "doc",
-            id: "Sensor/Grove/Grove_System"
-          },
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "Sensor/Grove/Grove_System"
+      },
       items: [
         {
           type: 'category',
@@ -641,10 +641,10 @@ const sidebars = {
             {
               type: 'category',
               label: 'SenseCAP LoRaWAN Sensor',
-    
+
               items: [
                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
-    
+
                 {
                   type: 'category',
                   label: 'SenseCAP S210X Series',
@@ -661,7 +661,7 @@ const sidebars = {
                     },
                   ],
                 },
-    
+
                 {
                   type: 'category',
                   label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
@@ -670,7 +670,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
                   ],
                 },
-    
+
                 {
                   type: 'category',
                   label: 'SenseCAP A1101',
@@ -684,7 +684,7 @@ const sidebars = {
                 },
               ],
             },
-    
+
             {
               type: 'category',
               label: ' SenseCAP ONE Weather Sensor',
@@ -701,7 +701,7 @@ const sidebars = {
                 },
               ],
             },
-    
+
             {
               type: 'category',
               label: 'SenseCAP Sensor Probe',
@@ -746,7 +746,7 @@ const sidebars = {
             },
           ],
         },
-       
+
       ],
     },
 
@@ -1196,7 +1196,6 @@ const sidebars = {
           items: [
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
             'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
-            'Sensor/Wio_Terminal/Tutorial/Edge_Impulse_CC',
             {
               type: 'category',
               label: 'Blynk for Wio Terminal',

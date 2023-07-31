@@ -12,6 +12,10 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/img/Grove_Starter_kit_for_LinkIt_Smart7688_Duo_Product_view_1200_s.jpg)
 
+:::dangernote
+Due to the closure of MediaTek Labs, all related links have become invalid. If you need to download relevant files, please search for them on the following link: [https://github.com/MediaTek-Labs](https://github.com/MediaTek-Labs).
+:::
+
 Grove Starter kit for LinkIt Smart7688 Duo is a starter kit which contains fundamental and essential functional modules, such as encoder and OLED display. This kit will save you a lot on expenses and you can build an experimental model for your product. All modules are interfaced with patented Grove interface of Seeed. With this kind of interface, you can accelerate your prototyping process. Also, a novice can get basic applications started with a step-by-step guide provided by Seeed.
 
 About LinkIt<sup>TM</sup> Smart 7688 Duo, LinkIt<sup>TM</sup> Smart 7688 Duo(a compact controller board) is an open development board, based on the OpenWrt Linux distribution, MT7688 and ATmega32u4. The board is designed especially to enable the prototyping of Rich Application IoT devices for smart house.
