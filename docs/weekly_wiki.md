@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/24/2023
+  date: 07/31/2023
   author: Matthew
 ---
 
@@ -15,75 +15,40 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is July 24th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 31st and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Deploy YOLOv8 on NVIDIA Jetson using TensorRT](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson)
+### [XIAO ESP32S3 Sense & Edge Impulse Keywords Spotting](https://wiki.seeedstudio.com/xiao_esp32s3_keyword_spotting/)
 
-This wiki guide explains how to deploy a YOLOv8 model into NVIDIA Jetson Platform and perform inference using TensorRT. Here we use TensorRT to maximize the inference performance on the Jetson platform.
+This wiki guide explains how to use TinyML   through implementing a Keyword Spotting (KWS) system on the XIAO ESP32S3 Sense microcontroller board, with the help of Edge Impulse for data collection and model training.
 
-Different computer vision tasks will be introduced here such as:
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/1.png" style={{width:800, height:'auto'}}/></div>
 
-- Object Detection
-- Image Segmentation
-- Image Classification
-- Pose Estimation
-- Object Tracking
+### [Zephyr -- Exhibition for XIAO series](https://wiki.seeedstudio.com/xiao_topic_page/#zephyr)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/8.gif" style={{width:800, height:'auto'}}/></div>
+The **Zephyr** OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
 
-### [EdgeBox RPi 200 Balena OS Setup](https://wiki.seeedstudio.com/Edgebox-rpi-200-balena-OS-setup/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png" style={{width:800, height:'auto'}}/></div>
 
-Balena is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications.
+### [EdgeBox RPi 200 with N3uron](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" style={{width:800, height:'auto'}}/></div>
+N3uron is a complete Industrial Edge Platform for IIoT & DataOps that enables seamless integration between the industrial plant floor and third-party applications, whether on-premise or in the cloud. With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
 
-### [TinyML Topic Page](https://wiki.seeedstudio.com/tinyml_topic/)
-
-TinyML is a field of study in Machine Learning and Embedded Systems that explores machine learning on small, low-powered microcontrollers, enabling secure, low-latency, low-power and low-bandwidth machine learning inferencing on edge devices. If you're excited about TinyML but not sure where to start, our one-stop guide is perfect for you. This guide provides an overview of what TinyML is, the opportunities it offers, and step-by-step instructions on how to get started. Join this exciting field and start your TinyML journey today!
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/main.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Existed Wiki Updated
 
-### [Add IMX219 and IMX477 camera usages to reComputer Industrial J20 Series](https://wiki.seeedstudio.com/reComputer_Industrial_J20_Hardware_Interfaces_Usage/#usage)
+### [Update: YOLOv8 wiki train your own AI model](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/#bring-your-own-ai-model)
 
-Add IMX219 and IMX477 camera usages to reComputer Industrial J20 Series
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/2.jpg
+" style={{width:1000, height:'auto'}}/></div>
 
-### [Add IMX219 and IMX477 camera usages to reComputer Industrial J40, J30 Series](https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/#usage)
+### [Update Knowledge DataBase in OpenWrt](https://wiki.seeedstudio.com/FAQs_For_openWrt/)
 
-Add IMX219 and IMX477 camera usages to reComputer Industrial J40, J30 Series
-
-### [Add 4G module usage on reterminal DM](https://wiki.seeedstudio.com/reterminal-dm/#4g-module)
-
-Add 4G module usage on reterminal DM
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991135--lte-cat-4-ec25-eux-mini-pcie-font_1.jpg" alt="pir" width={500} height="auto" /></p>
-
-### [Update sensecraft edge OS download link and add tips about 32-bit driver](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)
-
-Update sensecraft edge OS download link and add tips about 32-bit driver
-
-### [XIAO Canbus Expansion board](https://wiki.seeedstudio.com/xiao-can-bus-expansion/)
-
-Thanks for the notices, we have changed pin promopt to the correct ones:
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/hw.jpg" alt="pir" width={500} height="auto" /></p>
-
-1. GND
-2. CAN-H
-3. CAN-L
-4. LED Indicators for RX/TX
-5. SN65NVD230
-
-### [Add reTerminal DM DI/DO wiring samples](https://wiki.seeedstudio.com/xiao-can-bus-expansion/)
-
-### [Upload PCB Source file for reTermianl Bridge](https://wiki.seeedstudio.com/reTerminalBridge/#resource)
-
-### [Add Wio 1110 libraries Installation steps](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Server_Configuration/#install-libraries)
 
 ## The Efforts of Contributor
+
 
 ## Past Weekly wiki
 
@@ -105,3 +70,4 @@ Thanks for the notices, we have changed pin promopt to the correct ones:
 - [weekly wiki on 7.03th](/Seeed_Elderly/weekly_wiki/wiki703)
 - [weekly wiki on 7.10th](/Seeed_Elderly/weekly_wiki/wiki710)
 - [weekly wiki on 7.17th](/Seeed_Elderly/weekly_wiki/wiki717)
+- [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
