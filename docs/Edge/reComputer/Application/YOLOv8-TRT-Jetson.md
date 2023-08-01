@@ -32,7 +32,7 @@ Different computer vision tasks will be introduced here such as:
 - [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) or any other NVIDIA Jetson device running JetPack 5.1.1 or higher
 
 :::note
-This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) powered by NVIDIA Jetson orin NX 16GB module 
+This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and reComputer Industrial J4012[https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html] powered by NVIDIA Jetson orin NX 16GB module 
 :::
 
 ## Flash JetPack to Jetson
@@ -241,7 +241,7 @@ If you face any errors when executing the above commands, try adding "device=0" 
 " style={{width:1000, height:'auto'}}/></div>
 
 :::note
-The above is run on a reComputer J4012 and uses YOLOv8s model trained with 640x640 input and uses TensorRT FP16 precision.
+The above is run on a reComputer J4012/ reComputer Industrial J4012 and uses YOLOv8s model trained with 640x640 input and uses TensorRT FP16 precision.
 :::
 
 </TabItem>
@@ -341,7 +341,7 @@ If you face any errors when executing the above commands, try adding "device=0" 
 " style={{width:1000, height:'auto'}}/></div>
 
 :::note
-The above is run on a reComputer J4012 and uses YOLOv8s-cls model trained with 224x224 input and uses TensorRT FP16 precision. Also, make sure to pass the argument **imgsz=224** inside the inference command with TensorRT exports because the inference engine accepts 640 image size by default when using TensorRT models.
+The above is run on a reComputer J4012/ reComputer Industrial J4012 and uses YOLOv8s-cls model trained with 224x224 input and uses TensorRT FP16 precision. Also, make sure to pass the argument **imgsz=224** inside the inference command with TensorRT exports because the inference engine accepts 640 image size by default when using TensorRT models.
 :::
 
 </TabItem>
@@ -440,7 +440,7 @@ If you face any errors when executing the above commands, try adding "device=0" 
 " style={{width:1000, height:'auto'}}/></div>
 
 :::note
-The above is run on a reComputer J4012 and uses YOLOv8s-seg model trained with 640x640 input and uses TensorRT FP16 precision.
+The above is run on a reComputer J4012/ reComputer Industrial J4012 and uses YOLOv8s-seg model trained with 640x640 input and uses TensorRT FP16 precision.
 :::
 
 </TabItem>
@@ -933,7 +933,7 @@ yolo detect predict model=<your_model.pt> source='0' show=True
 
 ### Preparation
 
-We have done performance benchmarks for all computer vision tasks supported by YOLOv8 running on reComputer J4012 powered by NVIDIA Jetson Orin NX 16GB module. 
+We have done performance benchmarks for all computer vision tasks supported by YOLOv8 running on reComputer J4012/ reComputer Industrial J4012 powered by NVIDIA Jetson Orin NX 16GB module. 
 
 Included in the samples directory is a command-line wrapper tool called [trtexec](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html#trtexec). trtexec is a tool to use TensorRT without having to develop your own application. The trtexec tool has three main purposes:
 
@@ -981,7 +981,7 @@ However, if you want **INT8** precision which offers better performance than **F
 
 ### Results
 
-Below we summarize the results that we get from all the four computer vision tasks running on reComputer J4012.
+Below we summarize the results that we get from all the four computer vision tasks running on reComputer J4012/ reComputer Industrial J4012.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/45.png
 " style={{width:1000, height:'auto'}}/></div>
