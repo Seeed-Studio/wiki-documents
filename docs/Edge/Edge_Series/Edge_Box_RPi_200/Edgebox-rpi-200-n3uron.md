@@ -132,6 +132,7 @@ By creating and using [Templates](https://docs.n3uron.com/docs/platform-template
 Just drag and drop the desired object into the templates section and start building your template using [custom properties](https://docs.n3uron.com/docs/platform-templates-custom-properties), [inheritance](https://docs.n3uron.com/docs/platform-templates-inheritance) and [more](https://docs.n3uron.com/docs/platform-templates-nesting).
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/gif3.gif" alt="pir" width="600" height="auto" /></div>
+
 ### Configure MQTT Client
 
 **Step 1**: Go to Config→Modules, click on the menu and then create a **New Module** named MqttClient.
