@@ -253,9 +253,9 @@ If you want to use the **TFT_eSPI** library for display driving, you must **comm
 
 As we can probably tell from the above tutorial, Round Display mainly uses **LVGL**, **TFT_eSPI** and **Arduino GFX** libraries. For the sake of space, we will introduce the use of **LVGL** and **TFT_eSPI** libraries separately with the example of drawing a dial.
 
-- You can learn about the interface and use of the **TFT_eSPI** library by clicking **[here](https://www.seeedstudio.com/using_lvgl_and_tft_on_round_display#common-interfaces-for-tft-library)**.
+- You can learn about the interface and use of the **TFT_eSPI** library by clicking **[here](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display#common-interfaces-for-tft-library)**.
 
-- You can learn about the interface and use of the **LVGL** library by clicking **[here](https://www.seeedstudio.com/using_lvgl_and_tft_on_round_display#common-interfaces-for-lvgl-library)**.
+- You can learn about the interface and use of the **LVGL** library by clicking **[here](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display#common-interfaces-for-lvgl-library)**.
 
 - You can learn about the interface and use of the **Arduino GFX** library by clicking **[here](https://github.com/moononournation/Arduino_GFX)**.
 

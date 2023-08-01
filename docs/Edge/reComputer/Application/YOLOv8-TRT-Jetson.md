@@ -240,6 +240,10 @@ If you face any errors when executing the above commands, try adding "device=0" 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/2.gif
 " style={{width:1000, height:'auto'}}/></div>
 
+:::note
+The above is run on a reComputer J4012 and uses YOLOv8s model trained with 640x640 input and uses TensorRT FP16 precision.
+:::
+
 </TabItem>
 <TabItem value="classfiy" label="Image Classification">
 
@@ -332,8 +336,13 @@ yolo classify predict model=yolov8n-cls.pt source='0' show=True
 If you face any errors when executing the above commands, try adding "device=0" at the end of the command
 :::
 
+(update with 224 inference)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/5.gif
 " style={{width:1000, height:'auto'}}/></div>
+
+:::note
+The above is run on a reComputer J4012 and uses YOLOv8s-cls model trained with 224x224 input and uses TensorRT FP16 precision. Also, make sure to pass the argument **imgsz=224** inside the inference command with TensorRT exports because the inference engine accepts 640 image size by default when using TensorRT models.
+:::
 
 </TabItem>
 <TabItem value="segment" label="Image Segmentation">
@@ -429,6 +438,10 @@ If you face any errors when executing the above commands, try adding "device=0" 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/3.gif
 " style={{width:1000, height:'auto'}}/></div>
+
+:::note
+The above is run on a reComputer J4012 and uses YOLOv8s-seg model trained with 640x640 input and uses TensorRT FP16 precision.
+:::
 
 </TabItem>
 <TabItem value="pose" label="Pose Estimation">
@@ -915,6 +928,63 @@ yolo detect predict model=<your_model.pt> source='0' show=True
 <!-- Code END -->
 
 ---
+
+## Performance Benchmarks
+
+### Preparation
+
+We have done performance benchmarks for all computer vision tasks supported by YOLOv8 running on reComputer J4012 powered by NVIDIA Jetson Orin NX 16GB module. 
+
+Included in the samples directory is a command-line wrapper tool called [trtexec](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html#trtexec). trtexec is a tool to use TensorRT without having to develop your own application. The trtexec tool has three main purposes:
+
+- Benchmarking networks on random or user-provided input data.
+- Generating serialized engines from models.
+- Generating a serialized timing cache from the builder.
+
+Here we can use trtexec tool to quickly benchmark the models with different parameter. But first of all, you need to have an onnx model and we can genrate this onnx model by using ultralytics yolov8.
+
+- **Step 1.** Build ONNX using:
+
+```sh
+yolo mode=export model=yolov8s.pt format=onnx
+```
+
+- **Step 2.** Build engine file using trtexec as follows:
+
+```sh
+cd /usr/src/tensorrt/bin
+./trtexec --onnx=<path_to_onnx_file> --saveEngine=<path_to_save_engine_file>
+```
+
+For example:
+
+```sh
+./trtexec --onnx=/home/nvidia/yolov8s.onnx --saveEngine=/home/nvidia/yolov8s.engine
+```
+
+This will output performance results as follows along with a generated .engine file. By default it will convert ONNX to an TensorRT optimized file in FP32 precision and you can see the output as follows
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/46.jpg
+" style={{width:1000, height:'auto'}}/></div>
+
+If you want **FP16** precision which offers better performance than **FP32**, you can execute the above command as follows
+
+```sh
+./trtexec --onnx=/home/nvidia/yolov8s.onnx --fp16 --saveEngine=/home/nvidia/yolov8s.engine 
+```
+
+However, if you want **INT8** precision which offers better performance than **FP16**, you can execute the above command as follows
+
+```sh
+./trtexec --onnx=/home/nvidia/yolov8s.onnx --int8 --saveEngine=/home/nvidia/yolov8s.engine 
+```
+
+### Results
+
+Below we summarize the results that we get from all the four computer vision tasks running on reComputer J4012.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/45.png
+" style={{width:1000, height:'auto'}}/></div>
 
 ## Bonus Demo: Exercise Detector and Counter with YOLOv8
 

@@ -22,8 +22,8 @@ In addition, we will build a Home Assistant with human presence detection in com
 
 ## Getting Started
 
-:::caution
-As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
+:::tip
+As of 31 July 2023, the previous issue that would cause the radar to completely die has now been fixed, so please update the library files and configurator for this tutorial species to work properly.
 :::
 
 If you want to follow this tutorial through everything, you will need to prepare the following.
@@ -226,7 +226,7 @@ Enter the following command in the terminal.
 
 ```
 cd /config/esphome/
-curl -o R24dvd.h https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/R24dvd.h
+curl -o R24dvd_new.h https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/R24dvd_new.h
 ```
 
 In this way, you have installed the dependencies needed for the sensors under the specified path in Home Assistant.
@@ -249,7 +249,7 @@ We go to the terminal in ESPHome.
 Enter the following command in the terminal.
 
 ```
-curl -o R24dvd.h https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/R24dvd.h
+curl -o R24dvd_new.h https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/R24dvd_new.h
 ```
 
 Wait a few moments and the sensor library will be downloaded to the ESPHome Container root directory.
@@ -335,19 +335,476 @@ Please note that we need to make changes to this yaml file. We have divided the 
 - In the **①** of the content, please do not change the device name except the one you have configured, please refer to the code below for the rest of the content.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/main/xiaoesp32c3-mr24hpc1_part1.yaml">
+    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/main/xiaoesp32c3-mr24hpc1_part1_new.yaml">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
+
+<br />
+
+```
+# part 1:
+esphome:
+  name: <your device name>    //Please note that your device name is retained here
+  platformio_options:
+    board_build.flash_mode: dio
+    board_build.mcu: esp32c3
+  includes:
+  - R24dvd_new.h
+
+esp32:
+  board: esp32-c3-devkitm-1
+  variant: esp32c3
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  hardware_uart: USB_SERIAL_JTAG
+  level: DEBUG
+```
 
 
 - In the **②** of the content, delete the words "captive_portal:" and replace with the following.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/main/xiaoesp32c3-mr24hpc1_part2.yaml">
+    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/main/xiaoesp32c3-mr24hpc1_part2_new.yaml">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
+
+<br />
+
+<details>
+
+<summary>Click here to preview the full code</summary>
+
+```
+uart:
+  id: uart_bus
+  baud_rate:  115200
+  rx_pin: 5
+  tx_pin: 4
+
+select:
+  - platform: template
+    name: "Standard Scene mode"
+    id: scene_mode
+    icon: mdi:hoop-house
+    optimistic: true
+    options:
+      - "Living room"
+      - "Area detection"
+      - "Washroom"
+      - "Bedroom"
+    initial_option: "Living room"
+    set_action:
+      - logger.log:
+            format: "set action option: %s"
+            args: ["x.c_str()"]
+      - uart.write: !lambda
+                  auto index = id(scene_mode).index_of(x);
+                  uint8_t value = (uint8_t)index.value() + 1;
+                  uint8_t crc = value + 0xB9;
+                  return {0x53,0x59,0x05,0x07,0x00,0x01,value,crc,0x54,0x43};
+
+  - platform: template
+    name: "Standard unmanned time"
+    id: unmanned_time
+    icon: mdi:timeline-clock
+    optimistic: true
+    options:
+      - "None"
+      - "10s"
+      - "30s"
+      - "1min"
+      - "2min" 
+      - "5min" 
+      - "10min"
+      - "30min"
+      - "1hour"
+    initial_option: "None"
+    set_action:
+      - logger.log:
+            format: "Chosen option: %s"
+            args: ["x.c_str()"]
+      - uart.write: !lambda
+                  auto index = id(unmanned_time).index_of(x);
+                  uint8_t value = (uint8_t)index.value();
+                  uint8_t crc = value + 0x37;
+                  return {0x53,0x59,0x80,0x0a,0x00,0x01,value,crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Presence of perception boundary"
+    id: custom_presence_of_perception_boundary
+    optimistic: true
+    options:
+      - "0.5m"
+      - "1.0m"
+      - "1.5m"
+      - "2.0m" 
+      - "2.5m" 
+      - "3.0m"
+      - "3.5m"
+      - "4.0m"
+      - "4.5m"
+      - "5.0m"
+    set_action:
+      - logger.log:
+            format: "Chosen option: %s"
+            args: ["x.c_str()"]
+      - uart.write: !lambda
+                  auto index = id(unmanned_time).index_of(x);
+                  uint8_t value = (uint8_t)index.value() + 1;
+                  uint8_t crc = value + 0xBF;
+                  return {0x53,0x59,0x08,0x0a,0x00,0x01,value,crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Motion trigger boundary"
+    id: custom_motion_trigger_boundary
+    optimistic: true
+    options:
+      - "0.5m"
+      - "1.0m"
+      - "1.5m"
+      - "2.0m" 
+      - "2.5m" 
+      - "3.0m"
+      - "3.5m"
+      - "4.0m"
+      - "4.5m"
+      - "5.0m"
+    set_action:
+      - logger.log:
+            format: "Chosen option: %s"
+            args: ["x.c_str()"]
+      - uart.write: !lambda
+                  auto index = id(unmanned_time).index_of(x);
+                  uint8_t value = (uint8_t)index.value() + 1;
+                  uint8_t crc = value + 0xC0;
+                  return {0x53,0x59,0x08,0x0b,0x00,0x01,value,crc,0x54,0x43};
+ 
+number:
+  - platform: template
+    id: sensitivity
+    name: "Standard sensitivity"
+    icon: mdi:archive-check-outline
+    min_value: 0
+    max_value: 3
+    optimistic: false
+    step: 1
+    update_interval: 2s
+    set_action:
+      - uart.write: !lambda
+                    uint8_t crc = x + 0xBA;
+                    return {0x53,0x59,0x05,0x08,0x00,0x01,(uint8_t)x,crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Standard Maximum detectable range of moving target"
+    id: moving_target_detection_max_distance
+    icon: mdi:map-marker-path
+    unit_of_measurement: "cm"
+    min_value: 0
+    max_value: 65536
+    step: 500
+    set_action:
+      - uart.write: !lambda
+                    int h_num = (int)x >> 8;
+                    int l_num = (int)x & 0xff;
+                    int crc = 0xB6 + h_num + l_num;
+                    return {0x53,0x59,0x07,0x01,0x00,0x02,(uint8_t)(h_num),(uint8_t)(l_num),(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Standard Maximum detectable range of stationary target"
+    id: static_target_detection_max_distance
+    icon: mdi:map-marker-path
+    unit_of_measurement: cm
+    min_value: 0
+    max_value: 65536
+    step: 500
+    set_action:
+      - uart.write: !lambda
+                    int h_num = (int)x >> 8;
+                    int l_num = (int)x & 0xff;
+                    int crc = 0xB9 + h_num + l_num;
+                    return {0x53,0x59,0x07,0x04,0x00,0x02,(uint8_t)(h_num),(uint8_t)(l_num),(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Judgment threshold exists"
+    id: custom_judgment_threshold_exists
+    min_value: 0
+    max_value: 250
+    step: 1
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0xBD + (int)x;
+                    return {0x53,0x59,0x08,0x08,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Motion amplitude trigger threshold"
+    id: custom_motion_amplitude_trigger_threshold
+    min_value: 0
+    max_value: 250
+    step: 1
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0xBE + (int)x;
+                    return {0x53,0x59,0x08,0x09,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Mode Settings"
+    id: custom_mode_settings
+    icon: mdi:cog
+    min_value: 0
+    max_value: 250
+    step: 1
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0xBB + (int)x;
+                    return {0x53,0x59,0x05,0x09,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Mode Settings End"
+    id: custom_mode_setting_completed
+    icon: mdi:cog
+    min_value: 0
+    max_value: 250
+    step: 1
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0xBC + (int)x;
+                    return {0x53,0x59,0x05,0x0a,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Custom Mode Query"
+    icon: mdi:cog
+    id: custom_mode_query
+    min_value: 0
+    max_value: 250
+    step: 1
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0x3B + (int)x;
+                    return {0x53,0x59,0x05,0x89,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Motion trigger time"
+    id: custom_motion_trigger_time
+    icon: mdi:camera-timer
+    unit_of_measurement: "ms"
+    min_value: 0
+    max_value: 4294967295
+    step: 5000
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0xC4 + (int)x;
+                    int h24_num = ((int)x >> 24) & 0xff;
+                    int h16_num = ((int)x >> 16) & 0xff;
+                    int h8_num = ((int)x >> 8) & 0xff;
+                    int l8_num = (int)x & 0xff;
+                    return {0x53,0x59,0x08,0x0c,0x00,0x04,(uint8_t)h24_num,(uint8_t)h16_num,(uint8_t)h8_num,(uint8_t)l8_num,(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Movement to rest time"
+    id: custom_movement_to_rest_time
+    icon: mdi:camera-timer
+    unit_of_measurement: "ms"
+    min_value: 0
+    max_value: 4294967295
+    step: 5000
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0xC5 + (int)x;
+                    int h24_num = ((int)x >> 24) & 0xff;
+                    int h16_num = ((int)x >> 16) & 0xff;
+                    int h8_num = ((int)x >> 8) & 0xff;
+                    int l8_num = (int)x & 0xff;
+                    return {0x53,0x59,0x08,0x0d,0x00,0x04,(uint8_t)h24_num,(uint8_t)h16_num,(uint8_t)h8_num,(uint8_t)l8_num,(uint8_t)crc,0x54,0x43};
+ 
+  - platform: template
+    name: "Custom Time of entering unmanned state"
+    id: custom_time_of_enter_unmanned
+    icon: mdi:camera-timer
+    unit_of_measurement: "ms"
+    min_value: 0
+    max_value: 4294967295
+    step: 5000
+    set_action:
+      - uart.write: !lambda
+                    int crc = 0xC6 + (int)x;
+                    int h24_num = ((int)x >> 24) & 0xff;
+                    int h16_num = ((int)x >> 16) & 0xff;
+                    int h8_num = ((int)x >> 8) & 0xff;
+                    int l8_num = (int)x & 0xff;
+                    return {0x53,0x59,0x08,0x0e,0x00,0x04,(uint8_t)h24_num,(uint8_t)h16_num,(uint8_t)h8_num,(uint8_t)l8_num,(uint8_t)crc,0x54,0x43};
+ 
+text_sensor:
+- platform: custom
+  lambda: |-
+    auto my_custom_sensor = new MyCustomTextSensor();
+    App.register_component(my_custom_sensor);
+    return {my_custom_sensor->Heartbeat};
+ 
+  text_sensors:
+    - name: "Standard Heartbeat"
+      icon: mdi:connection
+ 
+- platform: template
+  name: "Standard Product model"
+  id: product_mode
+  icon: mdi:information-outline
+  on_raw_value:
+    then:
+      - logger.log: text_sensor on_raw_value
+ 
+- platform: template
+  name: "Standard Product ID"
+  id: product_id
+  icon: mdi:information-outline
+ 
+- platform: template
+  name: "Standard Hardware model"
+  id: hardware_model
+  icon: mdi:information-outline
+ 
+- platform: template
+  name: "Standard Firmware version"
+  id: firmware_version
+  icon: mdi:information-outline
+ 
+- platform: template
+  name: "Standard protocol type"
+  id: protocol_type
+  icon: mdi:information-outline
+ 
+- platform: template
+  name: "Standard moving direction"
+  id: keep_away
+  icon: mdi:walk
+ 
+- platform: template
+  name: "Standard Sports information"
+  id: motion_status
+  icon: mdi:human-greeting
+ 
+- platform: template
+  name: "Standard Presence information"
+  id: someoneExists
+  icon: "mdi:motion-sensor"
+ 
+- platform: template
+  name: "Custom Presence of detection"
+  id: custom_presence_of_detection
+  icon: mdi:signal-distance-variant
+ 
+# - platform: template
+#   name: "Custom Motion distance"
+#   id: custom_motion_distance
+ 
+# - platform: template
+#   name: "Custom Static distance"
+#   id: custom_static_distance
+ 
+# - platform: template
+#   name: "Custom Spatial static value"
+#   id: custom_spatial_static_value
+ 
+# - platform: template
+#   name: "Custom Spatial motion value"
+#   id: custom_spatial_motion_value
+ 
+# - platform: template
+#   name: "Custom Motion speed"
+#   id: custom_motion_speed
+ 
+ 
+button:
+  - platform: template
+    name: "Standard reset"
+    id: "reset"
+    icon: mdi:reload
+    on_press:
+      then:
+        - logger.log: Button Pressed
+        - uart.write: [0x53,0x59,0x01,0x02,0x00,0x01,0x0F,0xBF,0x54,0x43]
+ 
+switch:
+  - platform: template
+    id: output_info_switch
+    name: "Custom Infor output switch"
+    icon: mdi:electric-switch
+    assumed_state: true
+    turn_on_action:
+      - uart.write: [0x53,0x59,0x08,0x00,0x00,0x01,0x01,0xB6,0x54,0x43]
+      - delay: 1s
+      - lambda: !lambda |-
+          id(product_mode).publish_state("");
+          id(product_id).publish_state("");
+          id(hardware_model).publish_state("");
+          id(firmware_version).publish_state("");
+          id(protocol_type).publish_state("");
+    turn_off_action:
+      - uart.write: [0x53,0x59,0x08,0x00,0x00,0x01,0x00,0xB5,0x54,0x43]
+
+sensor:
+- platform: custom
+  lambda: |-
+    auto my_custom_sensor = new UartReadLineSensor(id(uart_bus));
+    App.register_component(my_custom_sensor);
+    return {
+      my_custom_sensor->movementSigns,
+      my_custom_sensor->inited,
+    };
+  sensors:
+    - name: "Standard body movement"
+      id: movementSigns
+      icon: "mdi:human-greeting-variant"
+      device_class: "temperature"
+      state_class: "measurement"
+
+    - name: "Standard inited"
+      id: inited
+      icon: mdi:all-inclusive
+ 
+- platform: template
+  name: "Custom Motion distance"
+  id: custom_motion_distance
+  icon: mdi:signal-distance-variant
+  on_value:
+    then:
+      # - logger.log: Custom Motion distance on_value
+      - logger.log:
+            format: "Custom Motion distance on_value : %d"
+            args: ["x"]
+  on_raw_value:
+    then:
+      - logger.log:
+            format: "Custom Motion distance on_raw_value : %d"
+            args: ["x"]
+ 
+ 
+- platform: template
+  name: "Custom Static distance"
+  id: custom_static_distance
+  icon: mdi:signal-distance-variant
+
+- platform: template
+  name: "Custom Spatial static value"
+  id: custom_spatial_static_value
+  icon: mdi:counter
+
+- platform: template
+  name: "Custom Spatial motion value"
+  id: custom_spatial_motion_value
+  icon: mdi:counter
+
+- platform: template
+  name: "Custom Motion speed"
+  id: custom_motion_speed
+  icon: mdi:run-fast
+```
+
+</details>
 
 
 Then, please click on the **Save** button in the top right corner.
@@ -485,10 +942,6 @@ At this point, the steps to add the device have been successfully completed.
 
 ### Step 8. 24GHz mmWave Module Lite functions overview
 
-:::caution
-As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
-:::
-
 We come to the Home Assistant's overview tab. We give a general overview of the basic functions of the operating panel.
 
 Firstly, there is the **Custom Infor output switch**. The icon on the left indicates that the information output is switched off, while the icon on the right indicates that the information output is switched on. If you want to see the sensor return information in real time, then you should have to click on the lightning bolt icon on the right.
@@ -505,15 +958,7 @@ Due to space limitations, you can refer to the following two documents for more 
 - [24GHz mmWave Human Static Presence Module Lite User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_User_Manual.pdf)
 - [24GHz mmWave Human Static Presence Module Lite sensor Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
 
-:::caution
-As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
-:::
-
 ### Step 9. Configure Home Assistant panel
-
-:::caution
-As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
-:::
 
 If you find the default cards very boring and unfriendly for presenting data, Home Assistant offers a wide range of ready-made dashboards to choose from.
 
@@ -574,7 +1019,9 @@ You can re-plug the xiao to let it try to search for WiFi and connect again.
 ### FAQ4: My XIAO ESP32C3 is connected to network, but why don't I see the sensor data refreshed?
 
 :::caution
-As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down, we would like to inform you that the engineers of Seeed Studio are currently working intensively to troubleshoot the problem, until then, please do not adjust the values of the dashboard at will !!!
+As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down.
+
+As of 31 July 2023, the previous issue that would cause the radar to completely die has now been fixed, so please update the library files and configurator for this tutorial species to work properly.
 :::
 
 > A: In the previous Wiki content, we used the default UART pins (D6, D7) to receive and send data from the radar, but many users feedback there is a need to re-power the radar before it can work. In response, we **updated the Wiki** content and procedures to replace the serial ports of the radar with **D2 and D3**, and after testing, this fixes the problem very well.
