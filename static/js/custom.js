@@ -34,7 +34,7 @@ window.onload = function () {
      <strong>
        <span>
          <font color="FFFFFF" size="4">
-         Getting Started
+         Back to the Start
          </font>
        </span>
      </strong>
@@ -49,7 +49,7 @@ window.onload = function () {
    <strong>
      <span>
        <font color="FFFFFF" size="4">
-        Github
+        Report on GitHub
        </font>
      </span>
    </strong>
