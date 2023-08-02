@@ -11,7 +11,7 @@ last_update:
   author: Lakshantha
 ---
 
-# Deploy YOLOv8 on NVIDIA Jetson using TensorRT and DeepStream SDK
+# Deploy YOLOv8 on NVIDIA Jetson using TensorRT and DeepStream SDK Support
 
 This guide explains how to deploy a trained AI model into NVIDIA Jetson Platform and perform inference using TensorRT and DeepStream SDK. Here we use TensorRT to maximize the inference performance on the Jetson platform.
 
