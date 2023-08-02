@@ -1,40 +1,40 @@
-.dvc_container {
+.hardware_container {
 	display: flex;
 	max-width: 950px;
 	padding: 20px 0;
 	margin: 0 auto;
 }
-.dvc_container a {
+.hardware_container a {
 	width: 100%;
 	height: 100%;
 	color: var(--text-color);
 }
-.dvc_container a:hover {
+.hardware_container a:hover {
 	text-decoration: none;
 }
-.dvc_container .brand-list {
+.hardware_container .brand-list {
 	display: flex;
 	margin-right: 30px;
 	font-size: 23px;
 	font-weight: bold;
 	flex: 2.5;
 }
-.dvc_container .scene-list {
+.hardware_container .scene-list {
 	flex: 3;
 }
-.dvc_container .brand-list ul {
+.hardware_container .brand-list ul {
 	width: 77%;
 	list-style: none;
 }
 
-.dvc_container .scene-list ul {
+.hardware_container .scene-list ul {
 	width: 100%;
 	list-style: none;
 	padding: 0;
 }
 
-.dvc_container .brand-list li,
-.dvc_container .scene-list li {
+.hardware_container .brand-list li,
+.hardware_container .scene-list li {
 	cursor: pointer;
 	margin-bottom: 10px;
 	border: 1px solid var(--ifm-color-emphasis-300);
@@ -42,39 +42,39 @@
 	color: var(--text-color);
 }
 
-.dvc_container .brand-list li.selected,
-.dvc_container .brand-list li:hover {
+.hardware_container .brand-list li.selected,
+.hardware_container .brand-list li:hover {
 	border-color: #8fc31f;
 	background-size: cover;
 	background-position: center;
 	color: #fff;
 }
-.dvc_container .brand-list li.selected a,
-.dvc_container .brand-list li:hover a {
+.hardware_container .brand-list li.selected a,
+.hardware_container .brand-list li:hover a {
 	/* color: #8fc31f; */
 	color: transparent;
 }
-.dvc_container .scene-list li:hover,
-.dvc_container .scene-list li.selected {
+.hardware_container .scene-list li:hover,
+.hardware_container .scene-list li.selected {
 	border-color: #000000;
 	box-shadow: 0 0 2px 1px var(--ifm-color-primary-dark);
 	background-color: #000000;
 	transition: transform 0.5s ease-in-out;
 	transform: scale(1.1);
 }
-.dvc_container .scene-list li.selected a,
-.dvc_container .scene-list li:hover a {
+.hardware_container .scene-list li.selected a,
+.hardware_container .scene-list li:hover a {
 	color: #8fc31f;
 }
-.dvc_container .scene-item {
+.hardware_container .scene-item {
 	display: flex;
 	font-size: 30px;
 	font-weight: bold;
 }
-.dvc_container .scene-item img {
+.hardware_container .scene-item img {
 	width: 100px;
 	margin-right: 12px;
 }
-.dvc_container .srene-title {
+.hardware_container .srene-title {
 	align-self: center;
 }

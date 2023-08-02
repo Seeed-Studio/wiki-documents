@@ -2172,6 +2172,7 @@ const sidebars = {
         'Edge/reComputer/reComputer_Jetson_GPIO',
         'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
         'Edge/reComputer/jetson_FAQ',
+        'Edge/reComputer/RecomputerPage',
         {
           type: 'category',
           label: 'Application',

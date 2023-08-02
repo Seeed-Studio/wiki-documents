@@ -28,7 +28,7 @@ const config = {
       async: true,
     },
     {
-      src: '/js/scroll.js', // 添加你的 JavaScript 文件名、
+      src: '/js/custom.js', // 添加你的 JavaScript 文件名、
       async: true,
     },
   ],
@@ -147,7 +147,6 @@ const config = {
     'docusaurus-plugin-sass',
   ],
 
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
@@ -185,17 +184,18 @@ const config = {
       docs: {
         sidebar: {
           hideable: true,
-          autoCollapseCategories: true
+          autoCollapseCategories: true,
         },
       },
-      
 
       navbar: {
         // title: 'My Site',
         logo: {
           alt: 'Seeed Studio',
-          src: 'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
-          srcDark: 'https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png',
+          src:
+            'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
+          srcDark:
+            'https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png',
           href: 'Getting_Started',
           className: 'navbar_logo_items',
         },
@@ -431,7 +431,6 @@ const config = {
         isCloseable: false,
       },
     }),
-    
 }
 
 module.exports = config
