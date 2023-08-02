@@ -1234,6 +1234,7 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-HMI',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
             'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
             'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
