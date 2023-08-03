@@ -1,6 +1,6 @@
 ---
-description: Edge Seties Guide
-title: Edge Seties Guide
+description: Edge Series Guide
+title: Edge Series Guide
 keywords:
 - Edge Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
