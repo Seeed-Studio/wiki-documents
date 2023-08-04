@@ -1,10 +1,7 @@
 ---
 description: RGBW_Stripe_WireLess_Shield_V1.0
 title: RGBW Stripe WireLess Shield V1.0
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RGBW_Stripe_WireLess_Shield_V1.0
 last_update:

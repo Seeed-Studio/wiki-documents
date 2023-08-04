@@ -1,10 +1,7 @@
 ---
 description: Seeed Relay Selection Guide
 title: Seeed Relay Selection Guide
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Seeed_Relay_Page
 last_update:

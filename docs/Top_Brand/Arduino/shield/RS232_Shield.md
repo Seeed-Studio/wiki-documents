@@ -1,10 +1,7 @@
 ---
 description: RS232_Shield
 title: RS232 Shield
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RS232_Shield
 last_update:

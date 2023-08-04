@@ -1,11 +1,6 @@
 ---
 description: ODYSSEY - X86J4105
 title: Intel OpenVINO Toolkit
-tags:
-  - ODYSSEY
-keywords:
-  - ODYSSEY
-
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86J4105-Intel-OpenVINO
 last_update:

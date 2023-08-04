@@ -1,10 +1,7 @@
 ---
 description: Use External Editor
 title: Use External Editor
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Use_External_Editor
 last_update:

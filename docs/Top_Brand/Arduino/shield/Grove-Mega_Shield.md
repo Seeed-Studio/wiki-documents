@@ -1,10 +1,7 @@
 ---
 description: Grove-Mega_Shield
 title: Grove-Mega Shield
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Mega_Shield
 last_update:

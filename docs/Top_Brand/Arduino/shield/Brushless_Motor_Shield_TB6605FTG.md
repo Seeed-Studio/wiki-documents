@@ -1,12 +1,6 @@
 ---
 description: Brushless_Motor_Shield_TB6605FTG
 title: Brushless Motor Shield TB6605FTG
-tags:
-  - Shield
-  - motor
-keywords:
-  - Shield
-  - motor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Brushless_Motor_Shield_TB6605FTG
 last_update:

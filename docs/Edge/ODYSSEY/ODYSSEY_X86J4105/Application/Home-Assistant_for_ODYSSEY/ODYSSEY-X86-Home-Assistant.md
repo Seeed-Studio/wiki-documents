@@ -1,11 +1,7 @@
 ---
-description: ODYSSEY - X86J41x5
+description: Getting Started with Home Assistant on ODYSSEY-X86
 title: Getting Started with Home Assistant
 tags:
-  - ODYSSEY
-  - Home Assistant
-keywords:
-  - ODYSSEY
   - Home Assistant
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86-Home-Assistant

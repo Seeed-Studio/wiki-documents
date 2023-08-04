@@ -1,12 +1,6 @@
 ---
 description: ODYSSEY - X86J4105
 title: ODYSSEY Getting Started
-tags:
-  - ODYSSEY
-  - Getting started
-keywords:
-  - ODYSSEY
-  - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY_Getting_Started
 last_update:
@@ -14,6 +8,8 @@ last_update:
   author: w0x7ce
 
 ---
+
+Please check with the latest version: https://wiki.seeedstudio.com/ODYSSEY-X86J4105/
 
 <!-- ---
 name: ODYSSEY - X86J4105

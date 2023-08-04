@@ -1,10 +1,7 @@
 ---
 description: How to Choose A Gas Sensor
 title: How to Choose A Gas Sensor
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /How-to-Choose-A-Gas-Sensor
 last_update:
