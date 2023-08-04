@@ -1,10 +1,7 @@
 ---
 description: Spartan_Edge_Accelerator_Board
 title: Spartan Edge Accelerator Board
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Spartan-Edge-Accelerator-Board
 last_update:

@@ -1,12 +1,6 @@
 ---
 description: CAN-BUS_Shield_V2.0
 title: CAN-BUS Shield V2.0
-tags:
-  - Shield
-  - CAN-BUS
-keywords:
-  - Shield
-  - CAN-BUS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CAN-BUS_Shield_V2.0
 last_update:

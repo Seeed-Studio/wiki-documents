@@ -1,12 +1,6 @@
 ---
 description: reServer X86
-title: Getting Started with reServer
-tags:
-  - reServer
-  - Getting started
-keywords:
-  - reServer
-  - Getting started
+title: Getting Started with reServer X86
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /reServer-Getting-Started
 last_update:

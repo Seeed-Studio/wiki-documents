@@ -1,10 +1,7 @@
 ---
 description: Upload Code
 title: Upload Code
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Upload_Code
 last_update:

@@ -1,10 +1,7 @@
 ---
 description: Download Arduino and install Arduino driver
 title: Download Arduino and install Arduino driver
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Download-Arduino-and-install-Arduino_Driver
 last_update:

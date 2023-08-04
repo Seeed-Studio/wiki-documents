@@ -1,11 +1,6 @@
 ---
 description: How To Choose The Right Cable
 title: How To Choose The Right Cable
-tags:
-
-- Tutorial
-keywords:
-- Tutorial
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /How_To_Choose_The_Right_Cable
 last_update:

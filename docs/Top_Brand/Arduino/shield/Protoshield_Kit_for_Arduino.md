@@ -1,10 +1,7 @@
 ---
 description: Protoshield_Kit_for_Arduino
 title: Protoshield Kit for Arduino
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Protoshield_Kit_for_Arduino
 last_update:

@@ -1,10 +1,7 @@
 ---
 description: Arduino Common Error
 title: Arduino Common Error
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Arduino_Common_Error
 last_update:

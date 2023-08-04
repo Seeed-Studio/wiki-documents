@@ -1,10 +1,7 @@
 ---
 description: Grove_Shield_for_Arduino_Nano
 title: Grove Shield for Arduino Nano
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Shield_for_Arduino_Nano
 last_update:

@@ -1,12 +1,6 @@
 ---
 description: NFC_Shield_V2.0
 title: NFC Shield V2.0
-tags:
-  - Shield
-  - NFC
-keywords:
-  - Shield
-  - NFC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /NFC_Shield_V2.0
 last_update:

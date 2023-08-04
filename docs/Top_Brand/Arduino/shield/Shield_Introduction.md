@@ -1,10 +1,7 @@
 ---
 description: Shield_Introduction
 title: Shield Introduction
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Shield_Introduction
 last_update:

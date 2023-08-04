@@ -1,10 +1,7 @@
 ---
 description: How To Use Sketchbook
 title: How To Use Sketchbook
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /How_To_Use_Sketchbook
 last_update:
