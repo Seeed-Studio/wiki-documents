@@ -1,12 +1,6 @@
 ---
 description: Bluetooth_Shield_V2
 title: Bluetooth Shield V2
-tags:
-  - Shield
-  - bluetooth
-keywords:
-  - Shield
-  - bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_Shield_V2
 last_update:

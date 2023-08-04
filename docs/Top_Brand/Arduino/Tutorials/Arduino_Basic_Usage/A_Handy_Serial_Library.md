@@ -1,10 +1,7 @@
 ---
 description: A Handy Serial Library
 title: A Handy Serial Library
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /A_Handy_Serial_Library
 last_update:

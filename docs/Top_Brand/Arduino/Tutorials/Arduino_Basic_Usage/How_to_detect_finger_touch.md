@@ -1,10 +1,7 @@
 ---
 description: How to detect finger touch
 title: How to detect finger touch
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /How_to_detect_finger_touch
 last_update:

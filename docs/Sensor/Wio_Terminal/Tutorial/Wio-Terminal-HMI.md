@@ -1,6 +1,6 @@
 ---
 description: Build a HMI Display for Raspberry Pi using Wio Terminal
-title: Build a HMI Display for Raspberry Pi using Wio Terminal
+title: Build a HMI Display for Raspberry Pi
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

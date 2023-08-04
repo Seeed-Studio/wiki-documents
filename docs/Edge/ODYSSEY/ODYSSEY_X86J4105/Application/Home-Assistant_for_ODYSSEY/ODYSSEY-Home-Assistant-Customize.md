@@ -1,18 +1,13 @@
 ---
-description: ODYSSEY - X86J41x5
+description: How to Customize Home Assistant on ODYSSEY
 title: How to Customize Home Assistant
 tags:
-  - ODYSSEY
-  - Home Assistant
-keywords:
-  - ODYSSEY
   - Home Assistant
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-Home-Assistant-Customize
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 # How to Customize Home Assistant

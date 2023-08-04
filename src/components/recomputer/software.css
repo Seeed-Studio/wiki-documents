@@ -18,6 +18,10 @@
 	font-size: 23px;
 	font-weight: bold;
 	flex: 2.5;
+	justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+	text-align: center;
+
 }
 .software_container .scene-list {
 	flex: 3;
@@ -48,11 +52,14 @@
 	background-size: cover;
 	background-position: center;
 	color: #fff;
+	transition: transform 0.5s ease-in-out;
+	transform: scale(1.1);
 }
 .software_container .brand-list li.selected a,
 .software_container .brand-list li:hover a {
 	/* color: #8fc31f; */
 	color: transparent;
+	display: block;
 }
 .software_container .scene-list li:hover,
 .software_container .scene-list li.selected {

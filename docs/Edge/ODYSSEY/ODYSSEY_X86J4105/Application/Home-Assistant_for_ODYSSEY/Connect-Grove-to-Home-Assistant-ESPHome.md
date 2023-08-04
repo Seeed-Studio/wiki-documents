@@ -1,18 +1,13 @@
 ---
-description: ODYSSEY - X86J41x5
+description: Connect Grove Modules to Home Assistant using ESPHome on ODYSSEY and Seeed Studio XIAO ESP32C3
 title: Connect Grove Modules to Home Assistant using ESPHome
 tags:
-  - ODYSSEY
-  - Home Assistant
-keywords:
-  - ODYSSEY
   - Home Assistant
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Connect-Grove-to-Home-Assistant-ESPHome
 last_update:
   date: 03/16/2023
   author: Lakshantha
-
 ---
 
 # Connect Grove Modules to Home Assistant using ESPHome
