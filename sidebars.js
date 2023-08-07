@@ -994,6 +994,7 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
+        'Sensor/Wio_Terminal/ArduPy',
         {
           type: 'category',
           label: 'Hardware Overview',
@@ -1234,6 +1235,7 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-HMI',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
             'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
             'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
@@ -2025,13 +2027,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'TTN Gateway',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Network/TTN_Gateway/The-Things-Indoor-Gateway',
-      },
+      label: 'Other Network Devices',
       items: ['Network/TTN_Gateway/The-Things-Indoor-Gateway'],
     },
 
@@ -2158,112 +2154,157 @@ const sidebars = {
       ],
     },
 
-    // 'Edge/reComputer/RecomputerPage',
-
     {
       type: 'category',
-      label: 'reComputer',
+      label: 'NVIDIA Jetson®',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/NVIDIA_Jetson/RecomputerPage',
+      },
       items: [
+        {
+          type: 'category',
+          label: 'reComputer',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_Introduction',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Hardware Usage',
+              items: [
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_Initiation',
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_Hardware_Layout',
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_GPIO',
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_GPIO_Grove',
+              'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
+              'Edge/NVIDIA_Jetson/reComputer/Tutorials/J1010_Boot_From_SD_Card',
+              'Edge/NVIDIA_Jetson/reComputer/Tutorials/J101_Enable_SD_Card',
+              ],
+            },
 
-        'Edge/reComputer/reComputer_Jetson_Series_Introduction',
-        'Edge/reComputer/reComputer_Jetson_Series_Initiation',
-        'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
-        'Edge/reComputer/reComputer_Jetson_GPIO',
-        'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
-        'Edge/reComputer/jetson_FAQ',
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Edge/reComputer/Application/Jetson-Nano-MaskCam',
-            'Edge/reComputer/Application/Security_Scan',
-            'Edge/reComputer/Application/HardHat',
-            'Edge/reComputer/Application/No-code-Edge-AI-Tool',
-            'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
-            'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
-            'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
-            'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
-            'Edge/reComputer/Application/YOLOv8-TRT-Jetson',
+
+            {
+              type: 'category',
+              label: 'Software with AI methods',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/Software/CVEDIA-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Lumeo-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/DeciAI-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Allxon-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/alwaysAI-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/HardHat',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv5-Object-Detection-Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'JetPack™ OS Flash',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
+                {
+                  type: 'category',
+                  label: 'Other Carrier Boards for reComputer',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A603_Flash_JetPack',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A607_Flash_JetPack',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A203_Flash_System',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',    
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',            
+                  ],
+                },
+              ],
+            },
+
+
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/Application/Jetson-Nano-MaskCam',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Security_Scan',
+                'Edge/NVIDIA_Jetson/reComputer/Application/No-code-Edge-AI-Tool',
+                'Edge/NVIDIA_Jetson/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Traffic-Management-DeepStream-SDK',
+                'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'NVIDIA Official resources',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/Jetson-AI-developer-tools',
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Series_Resource',
+              ],
+            },
+            'Edge/NVIDIA_Jetson/reComputer/jetson_FAQ',
           ],
         },
-        {
-          type: 'category',
-          label: 'Software',
-          items: [
-            'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
-            'Edge/reComputer/Software/Lumeo-Jetson-Getting-Started',
-            'Edge/reComputer/Software/jetson-docker-getting-started',
-            'Edge/reComputer/Software/DeciAI-Getting-Started',
-            'Edge/reComputer/Software/Allxon-Jetson-Getting-Started',
-            'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
-            'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
-            'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
-            'Edge/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'JetPack™ OS Installation',
-          items: [
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
-          ],
-        },
+
         {
           type: 'category',
           label: 'reComputer Industrial',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
+          },
           items: [
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_Getting_Started',
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
+            'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
+            'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
           ],
         },
-        {
-          type: 'category',
-          label: ' Carrier Board for Jetson Moudule',
-          items: [
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System',
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Tutorials',
-          items: [
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
-            'Edge/reComputer/Tutorials/J1010_Boot_From_SD_Card',
-            'Edge/reComputer/Tutorials/J101_Enable_SD_Card',
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
-            'Edge/reComputer/Tutorials/Jetson-AI-developer-tools',
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
-          ],
-        },
-      ],
-    },
 
-    {
-      type: 'category',
-      label: 'reServer',
-      items: [
         {
           type: 'category',
-          label: 'reServer X86',
+          label: 'Mini PC',
           items: [
-            'Edge/reServer/reServer_X86/reServer-Getting-Started',
-            'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+            'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A203E_Flash_System',
+            'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A205E_Flash_System',
+            'Edge/NVIDIA_Jetson/Mini_PC/Mini_AI_Computer_T906',
           ],
         },
+
         {
           type: 'category',
-          label: 'reServer Nvidia Jetson',
+          label: 'NVIDIA Jetson H01',
           items: [
-            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
-            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
+            'Edge/NVIDIA_Jetson/NVIDIA_Jetson_Alternative/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
           ],
         },
+
+        {
+          type: 'category',
+          label: 'reServer NVIDIA Jetson',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
+          },
+          items: [
+            'Edge/NVIDIA_Jetson/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
+          ],
+        },
+
       ],
     },
 
@@ -2433,14 +2474,16 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'Quantum Development Board',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
-      },
+      label: 'Other Edge Devices',
       items: [
+          {
+            type: 'category',
+            label: 'reServer X86',
+            items: [
+              'Edge/reServer/reServer_X86/reServer-Getting-Started',
+              'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+            ],
+          },
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
     },
@@ -2851,35 +2894,6 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
             'Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit',
             'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'NVIDIA',
-      items: [
-        // 'Top_Brand/NVIDIA/NVIDIA_Getting_Started',
-
-        {
-          type: 'category',
-          label: 'Mini PC',
-          items: [
-            'Top_Brand/NVIDIA/Mini_PC/reComputer_A203E_Flash_System',
-            'Top_Brand/NVIDIA/Mini_PC/reComputer_A205E_Flash_System',
-            'Top_Brand/NVIDIA/Mini_PC/Mini_AI_Computer_T906',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'NVIDIA Jetson Alternative',
-          items: [
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A607_Flash_JetPack',
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A603_Flash_JetPack',
           ],
         },
       ],

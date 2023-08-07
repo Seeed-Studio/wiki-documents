@@ -1,10 +1,7 @@
 ---
 description: Guide to use demos downloaded from Seeed's Github
 title: Use Demos from Seeed Studio's Github
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:

@@ -1,12 +1,6 @@
 ---
 description: Energy_Shield
 title: Energy Shield
-tags:
-  - Shield
-  - energy
-keywords:
-  - Shield
-  - energy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Energy_Shield
 last_update:

@@ -1,12 +1,6 @@
 ---
 description: Motor_Shield_V2.0
 title: Motor Shield V2.0
-tags:
-  - Shield
-  - motor
-keywords:
-  - Shield
-  - motor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Motor_Shield_V2.0
 last_update:

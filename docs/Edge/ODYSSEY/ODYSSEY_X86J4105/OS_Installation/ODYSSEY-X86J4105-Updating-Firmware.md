@@ -1,10 +1,6 @@
 ---
 description: ODYSSEY - X86J41x5
 title: Firmware Upgrade
-tags:
-  - ODYSSEY
-keywords:
-  - ODYSSEY
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86J4105-Updating-Firmware
 last_update:

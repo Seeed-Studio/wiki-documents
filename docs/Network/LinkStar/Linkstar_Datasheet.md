@@ -1,12 +1,6 @@
 ---
 description: ODYSSEY - X86J4105
 title: LinkStar Introduction
-tags:
-  - LinkStar
-  - Getting started
-keywords:
-  - LinkStar
-  - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Linkstar_Datasheet
 last_update:

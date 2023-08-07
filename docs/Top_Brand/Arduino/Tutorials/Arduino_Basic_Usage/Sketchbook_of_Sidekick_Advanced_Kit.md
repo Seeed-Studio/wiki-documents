@@ -1,10 +1,7 @@
 ---
 description: Sketchbook of Sidekick Advanced Kit
 title: Sketchbook of Sidekick Advanced Kit
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Sketchbook_of_Sidekick_Advanced_Kit
 last_update:

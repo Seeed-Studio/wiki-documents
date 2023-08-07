@@ -1,12 +1,6 @@
 ---
 description: ODYSSEY – STM32MP157C
 title: ODYSSEY – STM32MP157C
-tags:
-  - ODYSSEY
-  - Getting started
-keywords:
-  - ODYSSEY
-  - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-STM32MP157C
 last_update:

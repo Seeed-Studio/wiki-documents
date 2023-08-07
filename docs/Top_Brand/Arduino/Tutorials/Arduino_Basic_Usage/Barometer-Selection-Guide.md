@@ -1,10 +1,7 @@
 ---
 description: Seeed Barometer Sensor Selection Guide
 title: Seeed Barometer Sensor Selection Guide
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Barometer-Selection-Guide
 last_update:

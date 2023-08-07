@@ -1,10 +1,7 @@
 ---
 description: How to use and write a library
 title: How to use and write a library
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /How_to_use_and_write_a_library
 last_update:

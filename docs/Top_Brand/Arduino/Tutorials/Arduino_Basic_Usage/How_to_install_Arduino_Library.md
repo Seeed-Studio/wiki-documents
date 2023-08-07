@@ -1,10 +1,7 @@
 ---
 description: How to install an Arduino library
 title: How to install an Arduino library
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /How_to_install_Arduino_Library
 last_update:

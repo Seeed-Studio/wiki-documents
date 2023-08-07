@@ -1,9 +1,6 @@
 ---
 description: Create a doc page with rich content.
 title: A doc with tags
-tags:
-  - Demo
-  - Getting started
 keywords:
   - docs
   - docusaurus

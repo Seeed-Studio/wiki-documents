@@ -1,10 +1,7 @@
 ---
 description: 4A_Motor_Shield
 title: 4A Motor Shield
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /4A_Motor_Shield
 last_update:

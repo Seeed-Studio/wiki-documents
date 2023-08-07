@@ -1,10 +1,6 @@
 ---
 description: reServer X86
 title: Upgrading BIOS and Installing Drivers
-tags:
-  - reServer
-keywords:
-  - reServer
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /reServer-Update-BIOS-Install-Drivers
 last_update:
