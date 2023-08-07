@@ -10,6 +10,10 @@ last_update:
   author: shuxu hu
 ---
 
+:::dangernote
+Due to the closure of MediaTek Labs, all related links have become invalid. If you need to download relevant files, please search for them on the following link: [https://github.com/MediaTek-Labs](https://github.com/MediaTek-Labs).
+:::
+
 ---
 **Breakout for LinkIt Smart 7688 v2.0** is a Grove port integrated expansion board for LinkItTM Smart 7688 development board. This breakout board will help beginners to get started fast because it can save a lot of work and make prototyping easier through simplified wiring. It comes with USB, Ethernet, and 3.5mm Audio ports and supports serial buses like I2C, UART.
 

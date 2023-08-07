@@ -12,6 +12,10 @@ last_update:
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Linkit_Smart_product.jpg)
 
+:::dangernote
+Due to the closure of MediaTek Labs, all related links have become invalid. If you need to download relevant files, please search for them on the following link: [https://github.com/MediaTek-Labs](https://github.com/MediaTek-Labs).
+:::
+
 LinkIt Smart 7688 (a compact controller board) is an open development board, based on the OpenWrt Linux distribution and MT7688 ([datasheet](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/MT7688_datasheet.pdf)). The board is designed especially for the prototyping of Rich Application IoT devices for Smart-Home. The board offers sufficient memory and storage to enable robust video processing. The platform also offers options to create device applications in Python, Node.js and C programming languages.
 This board is only a part of MediaTek LinkIt Smart 7688 platform which includes other development boards.
 
