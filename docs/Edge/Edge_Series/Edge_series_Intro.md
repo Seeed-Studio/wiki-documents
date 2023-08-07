@@ -12,7 +12,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/Edge_Series_wiki_front.png" style={{width:1000, height:'auto'}}/></div>
 
-## Edge Seties Introduction
+## Edge Series Introduction
 
 - **[PDF]**[EdgeBox-ESP-100 - ESP32-based/ RS485 / Ethernet](https://files.seeedstudio.com/wiki/edge_box_esp/EdgeBox-ESP-100-User_Manual.pdf)
 - **[PDF]**[EdgeBox-RPI-200 - Raspberry Pi CM4-based / IEC](https://files.seeedstudio.com/wiki/Edge_Box/EdgeBox-RPi-200_Edge_Computing_Controller_User_Manual.pdf)
