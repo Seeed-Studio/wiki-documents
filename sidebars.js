@@ -1491,9 +1491,14 @@ const sidebars = {
               items: [
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
-              ],
+                {
+                  type: 'category',
+                  label: 'Development Tutorial',
+                  items: [
+                    'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Development_Tutorial/Hardware_Overview',
+                  ],
+                },  
+              ], 
             },
 
             {
