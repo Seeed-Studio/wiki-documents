@@ -17,7 +17,7 @@ The Wio WM1110 Dev Kit is an open source platform for building IoT projects. It 
 In this tutorial, we will introduce the hardware overview and how to develop your own application! 
 
 
-# Hardware Overview
+## Hardware Overview
 
 The Wio-WM1110 Dev Kit is based on [Wio-WM1110 Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html),integrates Semtech's LoRa® transceiver and a multi-purpose radio front-end for geolocation, the board has a built-in TH sensor and a 3-axis Accelerometer, also providing connectivity options for a variety of peripherals.
 
@@ -26,17 +26,20 @@ The Wio-WM1110 Dev Kit is based on [Wio-WM1110 Module](https://www.seeedstudio.c
 
 
 
-# Pinout
+## Pinout
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/PIN.png" alt="pir" width={800} height="auto" /></p>
 
 
 
+
 ## LoRaWAN® Communication
 
-### Define the keys
+### Setup the Triad Info
 
-Define the JoinEUI/DevEUI/APPEUI in config file.
+Before a device can communicate via the NS, we need to register it with the triad information.
+
+Wio-WM1110 DK allows users to set the DevEUI, AppEUI, and AppKey, so you can set up our own parameters in the 'lorawan_key_config.h' file, then flash it onto the DK.
 
 ```cpp
 ...\Seeed_Wio_WM1110_Dev_Board\apps\common\lorawan_key_config.h
@@ -83,7 +86,7 @@ The GNSS scanner of the Wio-WM1110 has two modes of operations: autonomous and a
 * Up-to-date reduced size Almanac information (less than 3 months old)
 
 
-#### Geolocation GNSS Example 
+**Geolocation GNSS Example**
 
 This example illustrates the GNSS scan procedure:
 
@@ -130,7 +133,7 @@ By discovering the Wi-Fi b/g/n access points available in the vicinity of the de
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Schematic02.png" alt="pir" width={800} height="auto" /></p>
 
 
-#### Geolocation Wi-Fi Example 
+**Geolocation Wi-Fi Example**
 
 This application demonstrates the usage of the Wi-Fi geolocation middleware and
 how the LoRa Basics Modem should be configured to meet the prerequisites for
@@ -155,7 +158,7 @@ set to define the configurable parameters of the application.
 
 ### GNSS and Wi-Fi
 
-#### Geolocation GNSS and Wi-Fi example
+**Geolocation GNSS and Wi-Fi example**
 This example illustrates the combination of GNSS and Wi-Fi scan procedures:
 
 - configuration of the LoRa Basics Modem library; and
@@ -190,9 +193,30 @@ If manual mode is selected for assistance position, the following constants defi
 The GNSS scan mode selected by default is `GNSS_MW_MODE_MOBILE`, meaning that this application example targets mobile objects.
 
 
+## BLE
+
+Low Energy Bluetooth (BLE), also known as Bluetooth Low Energy, is a wireless communication technology designed to provide a low-power and low-complexity communication method for devices that require long-term power supply, low data transfer rates, and short communication distances. Optimized based on Bluetooth technology, BLE has lower power consumption and a simpler protocol stack, making it suitable for low-power and Internet of Things (IoT) applications.
+
+The Wio-WM1110 has a Low Energy Bluetooth based on the nRF52840 chip.
 
 
-## Built-in Sensors
+**Testing with the Bluetooth routine**
+
+There is a 'Bluetooth: Peripheral UART' sample on the SDK. The test requires that you have connected to the sample and have the connected terminal emulator open.
+
+The BLE demo located at:
+`nRF5_SDK_17.1.0_ddde560/examples/ble_peripheral/ble_app_uart/pca10056/s140/ses/`
+
+
+* [Testing with a mobile device](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_mobile.html)
+
+* [Testing with a computer](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_desktop.html)
+
+
+
+
+
+## On-board Sensors
 
 ### TH Sensor(SHT41)
 
@@ -245,14 +269,14 @@ The LIS3DHTR sensor communicates with a microcontroller or other digital device 
 
 
 
-# Resources
+## Resources
 
 [Seeed_Wio_WM1110_Dev_Board](https://github.com/Seeed-Studio/Seeed_Wio_WM1110_Dev_Board)
 
 [nRF5-SDK](https://www.nordicsemi.com/Products/Development-software/nRF5-SDK/Download#infotabs)
 
 
-# Tech Support
+## Tech Support
 
 **Need help with your Wio-WM1110 Dev Kit? We're here to assist you!**
 
