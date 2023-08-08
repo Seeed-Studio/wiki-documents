@@ -204,7 +204,7 @@ The battery charging current is selectable as 50mA or 100mA, where you can set *
 
 ```cpp
 void setup(){
-pinMode P0_13, OUTPUT);
+pinMode (P0_13, OUTPUT);
 }
 void loop() {
 digitalWrite(P0_13, HIGH);
@@ -215,7 +215,7 @@ digitalWrite(P0_13, HIGH);
 
 ```cpp
 void setup(){
-pinMode P0_13, OUTPUT);
+pinMode (P0_13, OUTPUT);
 }
 void loop() {
 digitalWrite(P0_13, LOW);
