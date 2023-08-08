@@ -912,7 +912,6 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-sensecapai',
               ],
             },
           ],
@@ -2579,6 +2578,7 @@ const sidebars = {
       label: 'SenseCAP AI',
       items: [
         'Cloud_Chain/SenseCAP_AI/How_to_Use SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP',
+        'Cloud_Chain/SenseCAP_AI/xiao-esp32c3-sensecapai',
       ],
     },
     {
