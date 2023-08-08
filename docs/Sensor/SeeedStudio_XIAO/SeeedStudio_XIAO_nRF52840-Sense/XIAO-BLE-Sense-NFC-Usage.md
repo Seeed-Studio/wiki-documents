@@ -1,6 +1,6 @@
 ---
-description: NFC Usage on Seeed Studio XIAO nRF52840 (Sense)
-title: NFC Usage on Seeed Studio XIAO nRF52840 (Sense)
+description: NFC Usage for XIAO nRF52840 (Sense)
+title: NFC Usage for both versions
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

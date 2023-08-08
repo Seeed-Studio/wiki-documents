@@ -1,10 +1,7 @@
 ---
 description: Relay_Shield_v3
 title: Relay Shield v3
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Relay_Shield_v3
 last_update:

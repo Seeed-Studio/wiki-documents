@@ -1,6 +1,6 @@
 ---
 description: 6-Axis IMU Usage on Seeed Studio XIAO nRF52840 Sense
-title: 6-Axis IMU Usage on Seeed Studio XIAO nRF52840 Sense
+title: IMU Usage for XIAO nRF52840 Sense
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

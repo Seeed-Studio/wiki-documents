@@ -1,10 +1,7 @@
 ---
 description: Music_Shield_V2.2
 title: Music Shield V2.2
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Music_Shield_V2.2
 last_update:

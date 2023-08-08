@@ -1,6 +1,6 @@
 ---
 description: Pin Multiplexing on Seeed Studio XIAO ESP32C3
-title: Pin Multiplexing on Seeed Studio XIAO ESP32C3
+title: Pin Multiplexing
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

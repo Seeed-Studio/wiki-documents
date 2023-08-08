@@ -1,10 +1,6 @@
 ---
 description: ODYSSEY - X86J41x5
 title: Coral Mini PCIe Accelerator for ODYSSEY
-tags:
-  - ODYSSEY
-keywords:
-  - ODYSSEY
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Coral-Mini-PCIe-Accelerator-x86
 last_update:

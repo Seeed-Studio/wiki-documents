@@ -1,6 +1,6 @@
 ---
 description: This tutorial explains how to use the XIAO ESP32S3, record a voice, recognise the voice and then ask ChatGPT a question and get an answer to display on the screen.
-title: Miniature ChatGPT Voice Assistant based on XIAO ESP32S3
+title: Miniature ChatGPT Voice Assistant based on XIAO ESP32S3 Sense
 keywords:
 - xiao esp32s3 sense
 - chatGPT

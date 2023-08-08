@@ -12,7 +12,7 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/top_banner.png)
 
-## What is the Grove System?
+## What is the Grove Ecosystem?
 
 Grove is a modular, standardized connector prototyping system. Compared to systems using jumpers or solder, Grove's modular building-block approach makes assembling real electronics easy.
 
@@ -22,14 +22,22 @@ The Base unit, generally a microprocessor, allows for easy connection of any inp
 
 You don't need a Base unit to connect up to Grove modules. You can use a cable (Grove to Pin Header Converter) to run from the pins on the Raspberry Pi or Arduino to the Grove connectors.
 
-![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/grove_cover.png)
+<!-- ![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/grove_cover.png) -->
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/grove.html"><strong><span><font color={'FFFFFF'} size={"4"}> Grow Your Idea</font></span></strong>
     </a>
 </div>
 
-## Grove Selection Guides
+## Three parts for Grove Ecosystem
+
+As you can see on the **left side colomn**, we maintain the Grove Ecosystem into three parts:
+
+- [Grove Sensor](/Grove_Sensor_Intro)
+- [Grove Network Module](/Grove_network_module_intro)
+- [Grove Accessories](/Grove_Accessories_Intro)
+
+<!-- ## Grove Selection Guides
 
 - [Seeed Accelerometer Selection Guide](https://wiki.seeedstudio.com/Sensor_accelerometer/)
 - [Seeed Barometer Selection Guide](https://wiki.seeedstudio.com/Barometer-Selection-Guide/)
@@ -39,7 +47,20 @@ You don't need a Base unit to connect up to Grove modules. You can use a cable (
 - [Seeed Light Sensor Selection Guide](https://wiki.seeedstudio.com/Sensor_light/)
 - [Seeed Relay Selection Guide](https://wiki.seeedstudio.com/Seeed_Relay_Page/)
 - [Seeed Sound Selection Guide](https://wiki.seeedstudio.com/Sensor_sound/)
+ -->
 
+## Co-Create Grvoe sensors with Seeed Studio Fusion
+
+Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engineers turn their Grove designs into real products. Participants have the chance to win over $300USD in cash prize and have their designs manufactured and sold on Seeed Bazaar(Product sales page).
+
+For more information and the method of participation, you can find it [here](https://www.seeedstudio.com/blog/2022/07/15/ignite-your-passion-fire-your-thoughts-develop-your-grove-sensor-with-seeed-fusion-for-a-chance-to-win-over-300usd-cash-prize%ef%bf%bc/).
+
+![fusion activity](https://www.seeedstudio.com/blog/wp-content/uploads/2022/07/Grove%E6%B4%BB%E5%8A%A81200x.png)
+
+## ✨ Contributor Project
+
+- We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
+- [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33931997) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
 
 ## Grove Projects
 

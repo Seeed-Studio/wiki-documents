@@ -23,9 +23,14 @@ The Grove - Creator Kit is one of the best kits for creators of any age, whether
 
 <!-- <a href="https://www.seeedstudio.com/grove.html"><img src="https://files.seeedstudio.com/wiki/Bazaar_Document/banner.jpg"></a> -->
 
-<p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/grove.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-Here is an introductory video of the Grove Creator Kit!
+<!-- <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/grove.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+Here is an introductory video of the Grove Creator Kit! -->
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Creator-Kit-g-p-5192.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 
 

@@ -1,10 +1,6 @@
 ---
 description: ODYSSEY - X86J41x5
 title: Jellyfin Media Server Installation
-tags:
-  - ODYSSEY
-keywords:
-  - ODYSSEY
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /Jellyfin-on-Docker-Ubuntu-X86
 last_update:

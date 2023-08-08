@@ -31,16 +31,16 @@ while also providing connectivity options for a variety of peripherals.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/schematic4.png" alt="pir" width={800} height="auto" /></p>
 
 
-# Features
+## Features
 * **Low-Power High-Sensitivity LoRa/(G)FSK Half-Duplex RF Transceiver**: Frequency bands support in the range 863- 928MHz
 * **Multi-Purpose Radio Front-End for Geolocation**: GNSS (GPS/ BeiDou),Wi-Fi,Bluetooth
 * **Rich GPIOs**: Over 400 Grove-compatible GPIOs for flexible expansion options.
 * **Open Source Platform**: Leverage the extensive LR1110 and nRF52840 open source ecosystem for infinite application possibilities.
 
-## Low Power LoRa® Transceiver
+### Low Power LoRa® Transceiver
 Benefit from Semtech‘s LoRa Edge™ LR1110, the Wio-WM1110 Dev Kit provides long-distance, low-power LoRa® communication. To learn about Long Range and its features such as network architecture and applications, you can check out  An introduction of LoRa® and LoRa®WAN® technology, It explains what Long Range is, how it works, and its pros and cons.
 
-## Location Service
+### Location Service
 The Wio-WM1110 Dev Kit integrates Multi-Purpose Radio Front-End Targeting Geolocation Purposes. It's equipped with GNSS dedicated for outdoor positioning, as well as WI-FI and Bluetooth low-power scanning for indoor positioning. 
 It's able to automatically transition between outdoor and indoor activities, replacing the need to build different trackers for indoor or outdoor use, this provides all-around location coverage while reducing complexity and cost.
 
@@ -57,26 +57,27 @@ Complementary to outdoor GNSS, WM1110 Dev Kit also supports Wi-Fi ultra-low-powe
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Schematic02.png" alt="pir" width={800} height="auto" /></p>
 
-## Rich peripherals
+### Rich peripherals
 In addition to the built-in TH sensor and 3-axis Accelerometer, this kit also includes a series of peripheral interfaces,supports ADC/UART and IIC transmission protocols, which can be connected to 400+ Grove modules, allowing for easy upgrades to smarter solutions. It's also compatible with Arduino, providing developers with unlimited possibilities.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_4.png" alt="pir" width={800} height="auto" /></p>
 
 
-## Develop User Applications
+### Develop User Applications
 Wio-WM1110 Dev Kit is a fully open source powerful IoT development platform for developers, also includes a set of example applications and code samples, as well as a software development kit (SDK) to help you get started.
 
 
-# Schematic Diagram
+## Schematic Diagram
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/schematic_1.png" alt="pir" width={800} height="auto" /></p>
 
 
 
-# Specifications
+## Specifications
 
 
 **LoRa® and Positioning (Semtech LR1110)**
+
 |LoRa®WAN Protocol|V1.0.4|
 | :- | :- |
 |Frequency|863~928MHz|
@@ -120,7 +121,7 @@ Wio-WM1110 Dev Kit is a fully open source powerful IoT development platform for 
 
 
 
-# Tech Support
+## Tech Support
 
 **Need help with your Wio-WM1110 Dev Kit? We're here to assist you!**
 

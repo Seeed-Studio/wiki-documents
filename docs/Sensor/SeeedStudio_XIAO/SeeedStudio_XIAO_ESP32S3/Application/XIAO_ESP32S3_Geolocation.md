@@ -1,6 +1,6 @@
 ---
 description: Making an ultra-compact global positioning tracker with the XIAO ESP32S3.
-title: Geolocation Tracker with XIAO ESP32S3
+title: Geolocation Tracker with XIAO ESP32S3 (Sense)
 keywords:
 - location
 - tracker

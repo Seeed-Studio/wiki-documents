@@ -1,6 +1,6 @@
 ---
-description: mmWave Breathing and Heartbeat Module
-title: mmWave Breathing and Heartbeat Module
+description: 60GHz mmWave Static Breathing and Heartbeat
+title: 60GHz mmWave Static Breathing and Heartbeat
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,6 +9,8 @@ last_update:
   date: 03/03/2023
   author: MengDu
 ---
+
+# 60GHz mmWave Sensor - Human Static Sleep Breathing Monitoring (MR60BHA1)
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div>
 
@@ -1148,16 +1150,19 @@ If you need to send your own command frames, then you need to define the correct
 
 :::tip
 **Regarding the calculation of the check digit "sum".**
+
 All data frames have a checksum bit to ensure that the data is sent or received accurately. The checksum bit is usually in the penultimate bit of the data frame. It is calculated by adding up all the bits preceding the check bit and taking the lower two bits in hexadecimal.
 Let's take the example of a data frame that queries the device ID.
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/6.png"/></div>
+<div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/6.png"/></div>
+
 It can be seen that the checksum bit is in the penultimate bit of the entire data frame. Then we start by adding all the previous hexadecimal numbers.
 
-  `0x53 + 0x59 + 0x02 + 0xA2 + 0x00 + 0x01 + 0x0F = 0x015F`
+`0x53 + 0x59 + 0x02 + 0xA2 + 0x00 + 0x01 + 0x0F = 0x0160`
 
-Then we need to take the lower two digits of it, which would be **5F**, so the checksum of this data frame is **5F**. If we want to look up the ID of the Sensor, then you can define the following array.
+Then we need to take the lower two digits of it, which would be **60**, so the checksum of this data frame is **60**. If we want to look up the ID of the Sensor, then you can define the following array.
 
-  `const unsigned char DevID_buff[10] = {0x53, 0x59, 0x02, 0xA1, 0x00, 0x01, 0x0F, 0x5F, 0x54, 0x43};`
+`const unsigned char DevID_buff[10] = {0x53, 0x59, 0x02, 0xA1, 0x00, 0x01, 0x0F, 0x60, 0x54, 0x43};`
+
 :::
 
 Upload program. Opening your serial monitor to a baud rate of 115200 should show the result. The output should look something like the below image.

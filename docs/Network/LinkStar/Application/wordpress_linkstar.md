@@ -1,6 +1,6 @@
 ---
-description: Streamlining Web Development; The Perfect Duo - Linkstar and WordPress
-title: Streamlining Web Development; The Perfect Duo - Linkstar and WordPress
+description: Streamlining Web Development, The Perfect Duo - Linkstar and WordPress
+title: Streamlining Web Development, The Perfect Duo - Linkstar and WordPress
 keywords:
   - LinkStar
   - Getting started

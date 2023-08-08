@@ -24,6 +24,7 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
+    'TinyML_Topic',
     // 'Getting_Started_test',
     {
       type: 'doc',
@@ -91,15 +92,26 @@ const sidebars = {
     {
       type: 'category',
       label: 'Grove',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "Sensor/Grove/Grove_System"
+      },
       items: [
-        'Sensor/Grove/Grove_System',
         {
           type: 'category',
           label: 'Grove Sensor',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/Grove/Grove_Sensors/Grove_Sensor_Intro"
+          },
           items: [
             {
               type: 'category',
-              label: 'All in one',
+              label: 'Multiple in one',
               items: [
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove_SEN5X_All_in_One',
                 'Sensor/Grove/Grove_Sensors/All_in_one/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680',
@@ -110,11 +122,12 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Vision AI',
+              label: 'AI-powered',
               items: [
-                'Sensor/Grove/Grove_Sensors/Vision_AI/Grove-Vision-AI-Module',
-                'Sensor/Grove/Grove_Sensors/Vision_AI/Train-Deploy-AI-Model-Grove-Vision-AI',
-                'Sensor/Grove/Grove_Sensors/Vision_AI/edge-impulse-vision-ai',
+                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
+                'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
+                'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
+                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
               ],
             },
             {
@@ -173,7 +186,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Time_of_Flight_Distance_Sensor-VL53L0X',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
-                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_sensor_paj7660',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
               ],
@@ -361,7 +373,13 @@ const sidebars = {
 
         {
           type: 'category',
-          label: 'Grove Sensor Network',
+          label: 'Grove Network Module',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/Grove/Grove_Sensors_Network/Grove_network_module_intro"
+          },
           items: [
             {
               type: 'category',
@@ -435,6 +453,12 @@ const sidebars = {
         {
           type: 'category',
           label: 'Grove Accessories',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/Grove/Grove_Accessories/Grove_Accessories_Intro"
+          },
           items: [
             {
               type: 'category',
@@ -596,27 +620,66 @@ const sidebars = {
     {
       type: 'category',
       label: 'SenseCAP',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction",
+      },
       items: [
-        'Sensor/SenseCAP/Industrial-IoT-SenseCAP-Introduction',
-
         {
           type: 'category',
-          label: 'SenseCAP LoRaWAN Sensor',
+          label: 'SenseCAP Sensor',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: "Sensor/SenseCAP/SenseCAP_Intro/SenseCAP_Sensor_Intro",
+          },
           items: [
-            'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
 
             {
               type: 'category',
-              label: 'SenseCAP S210X Series',
+              label: 'SenseCAP LoRaWAN Sensor',
+
               items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
+
                 {
                   type: 'category',
-                  label: 'Tutorials',
+                  label: 'SenseCAP S210X Series',
                   items: [
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central',
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network',
-                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                    {
+                      type: 'category',
+                      label: 'Tutorials',
+                      items: [
+                        'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central',
+                        'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network',
+                        'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network',
+                      ],
+                    },
+                  ],
+                },
+
+                {
+                  type: 'category',
+                  label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
+                  ],
+                },
+
+                {
+                  type: 'category',
+                  label: 'SenseCAP A1101',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
+                    //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
                   ],
                 },
               ],
@@ -624,65 +687,53 @@ const sidebars = {
 
             {
               type: 'category',
-              label: 'SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor',
+              label: ' SenseCAP ONE Weather Sensor',
               items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather Sensor_Trouble_Shooting',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/Tutorials-Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
+                {
+                  type: 'category',
+                  label: 'SenseCAP One Compact Weather Station',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting Started with SenseCAP ONE Compact Weather Sensor',
+                  ],
+                },
               ],
             },
 
             {
               type: 'category',
-              label: 'SenseCAP A1101',
+              label: 'SenseCAP Sensor Probe',
               items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/SenseCAP-Vision-AI-Get-Started',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Deploy-AI-Model-A1101',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/One-Stop-Model-Training-with-Edge-Impulse',
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101',
-                //                 'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_A1101/Train_and_Deploy_Your_Own_AI_Model_with_Edge_Impulse_into_A1101',
+                'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
+                'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
+                'Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
+                'Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
               ],
             },
           ],
         },
 
-        {
-          type: 'category',
-          label: ' SenseCAP ONE Weather Sensor',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
-            'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
-            {
-              type: 'category',
-              label: 'SenseCAP One Compact Weather Station',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting Started with SenseCAP ONE Compact Weather Sensor',
-              ],
-            },
-          ],
-        },
 
-        {
-          type: 'category',
-          label: 'SenseCAP Sensor Probe',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
-            'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
-            'Sensor/SenseCAP/SenseCAP_Probe/RS485_750cm_Ultrasonic_Sensor-1',
-          ],
-        },
 
         {
           type: 'category',
           label: ' SenseCAP Data Logger',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_Intro/SenseCAP_Data_Logger_Intro',
+          },
           items: [
-            'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
             'Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger',
+            'Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger',
             {
               type: 'category',
               label: 'Tutorial',
@@ -695,118 +746,57 @@ const sidebars = {
             },
           ],
         },
-        {
-          type: 'category',
-          label: 'SenseCAP Indicator',
-          items: [
-            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
-            {
-              type: 'category',
-              label: 'Getting Started',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
-                {
-                  type: 'category',
-                  label: 'OpenAI X SenseCAP Indicator',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
-                  ],
-                },
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Development Tutorial',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Dive_into_the_Hardware',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/How_to_Create_your_own_UI',
-                {
-                  type: 'category',
-                  label: 'Develop with ESP32-S3',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Four-inch_Touch_Screen',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Wi-Fi',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'Develop with RP2040',
-                  items: [
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/CO2_Sensor_Built-in',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
-                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
-                    {
-                      type: 'category',
-                      label: 'Grove',
-                      items: [
-                        'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
-                        'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-            'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'SenseCAP Accessories',
-          items: [
-            'Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15',
-            'Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9',
-          ],
-        },
+
       ],
     },
 
     {
       type: 'category',
       label: 'mmWave radar sensor',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/mmWave_radar_sensor/mmwave_radar_Intro',
+      },
       items: [
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
         'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
         'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
         'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
-        'Sensor/mmWave_radar_sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
       ],
     },
 
     {
       type: 'category',
-      label: 'SeeedStudio XIAO',
+      label: 'XIAO',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Introduction',
+      },
       items: [
-        'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Introduction',
         'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Series_Projects',
-        'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
+
         {
           type: 'category',
-          label: 'SeeedStudio XIAO SAMD21',
+          label: 'XIAO SAMD21',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-Zephyr-RTOS',
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
+                
+              ],
+            },
             {
               type: 'category',
               label: 'Embedded ML',
@@ -818,6 +808,8 @@ const sidebars = {
               type: 'category',
               label: 'TuTorial',
               items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-TinyUSB',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SPI-Communication-Interface',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/Seeeduino-XIAO-DAPLink',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
               ],
@@ -826,12 +818,18 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO RP2040',
+          label: 'XIAO RP2040',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+              ],
+            },
             {
               type: 'category',
               label: 'Embedded ML',
@@ -843,16 +841,28 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO nRF52840 (Sense)',
+          label: 'XIAO nRF52840 (Sense)',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
-
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-nRF52840-Zephyr-RTOS',
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Hardware Usage',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-PDM-Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_QSPI-Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-Pin-Multiplexing',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-NFC-Usage',
+              ],
+            },
             {
               type: 'category',
               label: 'Bluetooth Libraries',
@@ -881,13 +891,20 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO ESP32C3',
+          label: 'XIAO ESP32C3',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
-
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO-ESP32C3-Zephyr',
+            
+            {
+              type: 'category',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_WiFi_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Bluetooth_Usage',
+              ],
+            },
             {
               type: 'category',
               label: 'Application',
@@ -895,26 +912,35 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-sensecapai',
               ],
             },
           ],
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO ESP32S3 (Sense)',
+          label: 'XIAO ESP32S3 (Sense)',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-Zephyr-RTOS',
+            
             {
               type: 'category',
-              label: 'For XIAO ESP32S3 Sense Version',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_WiFi_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Bluetooth_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Hardware Usage',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_mic',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_tf_and_filesystem',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_camera',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
+
               ],
             },
             {
@@ -922,27 +948,29 @@ const sidebars = {
               label: 'Applications',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Speech2chatgpt',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Keyword_Spotting',
               ],
             },
           ],
         },
         {
           type: 'category',
-          label: 'SeeedStudio XIAO Expansion board',
+          label: 'Expansion Boards for XIAO',
           items: [
             {
               type: 'category',
-              label: 'Seeed Studio Round Display for XIAO',
+              label: 'Round Display for XIAO',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_RoundDisplay_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
               ],
             },
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
           ],
         },
         {
@@ -950,15 +978,24 @@ const sidebars = {
           label: 'Kit with Courses',
           items: ['Sensor/SeeedStudio_XIAO/Kit_with_Courses/XIAO-Kit-Courses'],
         },
+        'Sensor/SeeedStudio_XIAO/XIAO_FAQ',
       ],
     },
 
     {
       type: 'category',
       label: 'Wio Terminal',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/Wio_Terminal/Wio_Terminal_Intro',
+      },
       items: [
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
+        'Sensor/Wio_Terminal/Software-FreeRTOS',
+        'Sensor/Wio_Terminal/ArduPy',
         {
           type: 'category',
           label: 'Hardware Overview',
@@ -1161,7 +1198,6 @@ const sidebars = {
           items: [
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
             'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
-            'Sensor/Wio_Terminal/Tutorial/Edge_Impulse_CC',
             {
               type: 'category',
               label: 'Blynk for Wio Terminal',
@@ -1200,10 +1236,86 @@ const sidebars = {
             'Sensor/Wio_Terminal/Tutorial/Barometric-Pressure-sensor-using-the-Wio-terminal',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-COVID19',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Thermal-Camera',
+            'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-HMI',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Sound-Meter',
             'Sensor/Wio_Terminal/Tutorial/Getting_started_wizard',
             'Sensor/Wio_Terminal/Tutorial/Edge-Impulse-Tuner',
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Reading-Github',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'SenseCAP Indicator',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Introduction',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+            {
+              type: 'category',
+              label: 'OpenAI X SenseCAP Indicator',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/Overview',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/How_to_Set_the_API_Key',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/ChatGPT_Indicator',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/OpenAI_X_SenseCAP_Indicator/DALL·E_AI_Picture_Generator',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Development Tutorial',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Dive_into_the_Hardware',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/How_to_Create_your_own_UI',
+            {
+              type: 'category',
+              label: 'Develop with ESP32-S3',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Four-inch_Touch_Screen',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Wi-Fi',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Develop with RP2040',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/CO2_Sensor_Built-in',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/tVOC_Sensor_Built-in',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Buzzer',
+                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Micro_SD',
+                {
+                  type: 'category',
+                  label: 'Grove',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_ADC',
+                    'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_RP2040/Grove/Grove_IIC',
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
           ],
         },
       ],
@@ -1231,6 +1343,7 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensors/Piezo_Sensor-MiniSense_100',
             'Sensor/Beyond_Grove/Sensors/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz',
             'Sensor/Beyond_Grove/Sensors/Gear_Stepper_Motor_Driver_Pack',
+            'Seeed_Elderly/Radar_Sensor/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11',
           ],
         },
 
@@ -1379,9 +1492,14 @@ const sidebars = {
               items: [
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
-              ],
+                {
+                  type: 'category',
+                  label: 'Development Tutorial',
+                  items: [
+                    'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Development_Tutorial/Hardware_Overview',
+                  ],
+                },  
+              ], 
             },
 
             {
@@ -1480,6 +1598,7 @@ const sidebars = {
           label: 'Seeeduino Series',
           items: [
             'Sensor/Seeeduino Series/Getting_Started_with_Seeeduino',
+            'Sensor/Seeeduino Series/Seeed_Arduino_Boards',
             'Sensor/Seeeduino Series/Seeeduino_Buying_Guide',
             {
               type: 'category',
@@ -1658,6 +1777,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'SenseCAP Gateway',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/SenseCAP_Network/SenseCAP_Gateway_Intro',
+      },
       items: [
         'Network/SenseCAP_Network/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
         {
@@ -1737,9 +1862,15 @@ const sidebars = {
     {
       type: 'category',
       label: 'SenseCAP K1100',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/SenseCAP_K1100/SenseCAP_K1100_Intro',
+      },
       items: [
-        'Network/SenseCAP_K1100/K1100_Getting_Started',
         'Network/SenseCAP_K1100/K1100-quickstart',
+        'Network/SenseCAP_K1100/K1100_Getting_Started',
         {
           type: 'category',
           label: 'LoRaWAN-Network Application',
@@ -1854,6 +1985,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'LinkStar',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/LinkStar/Linkstar_Intro',
+      },
       items: [
         'Network/LinkStar/Linkstar_Datasheet',
         'Network/LinkStar/linkstar-install-system',
@@ -1873,9 +2010,16 @@ const sidebars = {
     {
       type: 'category',
       label: 'reRouter',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/reRouter/reRouter_Intro',
+      },
       items: [
         'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
         'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+        'Network/reRouter/FAQs_For_openWrt',
         {
           type: 'category',
           label: 'Application',
@@ -1889,7 +2033,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'TTN Gateway',
+      label: 'Other Network Devices',
       items: ['Network/TTN_Gateway/The-Things-Indoor-Gateway'],
     },
 
@@ -1921,6 +2065,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'reTerminal',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/reTerminal/reTerminal_Intro',
+      },
       items: [
         'Edge/reTerminal/reTerminal',
         'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
@@ -1979,6 +2129,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'reTerminal-DM',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/reTerminal-DM/reTerminal-dm_Intro',
+      },
       items: [
         'Edge/reTerminal-DM/reterminal-dm',
         'Edge/reTerminal-DM/reterminal-dm-flash-OS',
@@ -2006,114 +2162,167 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'reComputer',
+      label: 'NVIDIA Jetson®',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/NVIDIA_Jetson/RecomputerPage',
+      },
       items: [
-        // 'Edge/reComputer/RecomputerPage',
-        'Edge/reComputer/reComputer_Jetson_Series_Introduction',
-        'Edge/reComputer/reComputer_Jetson_Series_Initiation',
-        'Edge/reComputer/reComputer_Jetson_Series_Hardware_Layout',
-        'Edge/reComputer/reComputer_Jetson_GPIO',
-        'Edge/reComputer/reComputer_Jetson_Series_GPIO_Grove',
-        'Edge/reComputer/jetson_FAQ',
         {
           type: 'category',
-          label: 'Application',
+          label: 'reComputer',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_Introduction',
+          },
           items: [
-            'Edge/reComputer/Application/Jetson-Nano-MaskCam',
-            'Edge/reComputer/Application/Security_Scan',
-            'Edge/reComputer/Application/HardHat',
-            'Edge/reComputer/Application/No-code-Edge-AI-Tool',
-            'Edge/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
-            'Edge/reComputer/Application/Traffic-Management-DeepStream-SDK',
-            'Edge/reComputer/Application/YOLOv5-Object-Detection-Jetson',
-            'Edge/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson',
-            'Edge/reComputer/Application/YOLOv8-TRT-Jetson',
+            {
+              type: 'category',
+              label: 'Hardware Usage',
+              items: [
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_Initiation',
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_Hardware_Layout',
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_GPIO',
+              'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_GPIO_Grove',
+              'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
+              'Edge/NVIDIA_Jetson/reComputer/Tutorials/J1010_Boot_From_SD_Card',
+              'Edge/NVIDIA_Jetson/reComputer/Tutorials/J101_Enable_SD_Card',
+              ],
+            },
+
+
+            {
+              type: 'category',
+              label: 'Software with AI methods',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/Software/CVEDIA-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Lumeo-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/DeciAI-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Allxon-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/alwaysAI-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/HardHat',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv5-Object-Detection-Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'JetPack™ OS Flash',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
+                'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
+                {
+                  type: 'category',
+                  label: 'Other Carrier Boards for reComputer',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A603_Flash_JetPack',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A607_Flash_JetPack',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A203_Flash_System',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',    
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',            
+                  ],
+                },
+              ],
+            },
+
+
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/Application/Jetson-Nano-MaskCam',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Security_Scan',
+                'Edge/NVIDIA_Jetson/reComputer/Application/No-code-Edge-AI-Tool',
+                'Edge/NVIDIA_Jetson/reComputer/Application/DashCamNet-with-Jetson-Xavier-NX-Multicamera',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Traffic-Management-DeepStream-SDK',
+                'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
+              ],
+            },
+
+            {
+              type: 'category',
+              label: 'NVIDIA Official resources',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/Jetson-AI-developer-tools',
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
+                'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Series_Resource',
+              ],
+            },
+            'Edge/NVIDIA_Jetson/reComputer/jetson_FAQ',
           ],
         },
-        {
-          type: 'category',
-          label: 'Software',
-          items: [
-            'Edge/reComputer/Software/CVEDIA-Jetson-Getting-Started',
-            'Edge/reComputer/Software/Lumeo-Jetson-Getting-Started',
-            'Edge/reComputer/Software/jetson-docker-getting-started',
-            'Edge/reComputer/Software/DeciAI-Getting-Started',
-            'Edge/reComputer/Software/Allxon-Jetson-Getting-Started',
-            'Edge/reComputer/Software/Update-Jetson-Linux-OTA-Using-Allxon',
-            'Edge/reComputer/Software/alwaysAI-Jetson-Getting-Started',
-            'Edge/reComputer/Software/reComputer_Jetson_Series_Resource',
-            'Edge/reComputer/Software/Cochl.Sense-Jetson-Getting-Started',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'JetPack™ OS Installation',
-          items: [
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1010_J101_Flash_Jetpack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J2021_J202_Flash_Jetpack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J1020_A206_Flash_JetPack',
-            'Edge/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
-          ],
-        },
+
         {
           type: 'category',
           label: 'reComputer Industrial',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
+          },
           items: [
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_Getting_Started',
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
-            'Edge/reComputer/reComputer Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
+            'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
+            'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
           ],
         },
-        {
-          type: 'category',
-          label: ' Carrier Board for Jetson Moudule',
-          items: [
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A203_Flash_System',
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/reComputer_A205_Flash_System',
-            'Edge/reComputer/Carrier_Board_for_Jetson_Moudule/Jetson-Mate',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Tutorials',
-          items: [
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
-            'Edge/reComputer/Tutorials/J1010_Boot_From_SD_Card',
-            'Edge/reComputer/Tutorials/J101_Enable_SD_Card',
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Tutorials_Exercise',
-            'Edge/reComputer/Tutorials/Jetson-AI-developer-tools',
-            'Edge/reComputer/Tutorials/reComputer_Jetson_Series_Projects',
-          ],
-        },
-      ],
-    },
 
-    {
-      type: 'category',
-      label: 'reServer',
-      items: [
         {
           type: 'category',
-          label: 'reServer X86',
+          label: 'Mini PC',
           items: [
-            'Edge/reServer/reServer_X86/reServer-Getting-Started',
-            'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+            'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A203E_Flash_System',
+            'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A205E_Flash_System',
+            'Edge/NVIDIA_Jetson/Mini_PC/Mini_AI_Computer_T906',
           ],
         },
+
         {
           type: 'category',
-          label: 'reServer Nvidia Jetson',
+          label: 'NVIDIA Jetson H01',
           items: [
-            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
-            'Edge/reServer/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
+            'Edge/NVIDIA_Jetson/NVIDIA_Jetson_Alternative/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
           ],
         },
+
+        {
+          type: 'category',
+          label: 'reServer NVIDIA Jetson',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
+          },
+          items: [
+            'Edge/NVIDIA_Jetson/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
+          ],
+        },
+
       ],
     },
 
     {
       type: 'category',
       label: 'Edge Series',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/Edge_Series/Edge_series_Intro',
+      },
       items: [
         {
           type: 'category',
@@ -2123,6 +2332,8 @@ const sidebars = {
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
+            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
+            
           ],
         },
         {
@@ -2136,8 +2347,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'BeagleBone®',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/Beagle_Bone/BeagleBone',
+      },
       items: [
-        'Edge/Beagle_Bone/BeagleBone',
         'Edge/Beagle_Bone/BeagleBone_Blue',
         'Edge/Beagle_Bone/BeagleBone_Green',
         'Edge/Beagle_Bone/BeagleBone_Green_Wireless',
@@ -2174,8 +2390,14 @@ const sidebars = {
     {
       type: 'category',
       label: 'ODYSSEY',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/ODYSSEY/ODYSSEY_Intro',
+      },
       items: [
-        // 'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+        //  'Edge/ODYSSEY/ODYSSEY_Getting_Started',
 
         {
           type: 'category',
@@ -2258,8 +2480,16 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'Quantum Development Board',
+      label: 'Other Edge Devices',
       items: [
+          {
+            type: 'category',
+            label: 'reServer X86',
+            items: [
+              'Edge/reServer/reServer_X86/reServer-Getting-Started',
+              'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+            ],
+          },
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
     },
@@ -2407,8 +2637,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'Arduino',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Top_Brand/Arduino/Arduino',
+      },
       items: [
-        'Top_Brand/Arduino/Arduino',
         'Top_Brand/Arduino/Getting_Started_with_Arduino',
         {
           type: 'category',
@@ -2487,7 +2722,6 @@ const sidebars = {
               items: [
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Download-Arduino-and-install-Arduino_Driver',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/A_Handy_Serial_Library',
-                'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Seeed_Arduino_Boards',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/How_to_install_Arduino_Library',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/How_to_use_and_write_a_library',
                 'Top_Brand/Arduino/Tutorials/Arduino_Basic_Usage/Upload_Code',
@@ -2518,7 +2752,6 @@ const sidebars = {
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Seeed_Arduino_Serial',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/I2C_And_I2C_Address_of_Seeed_Product',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/ODYSSEY-X86J4105-Firmata',
-                'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-FreeRTOS',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Software-SWD',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-AWS-IOT-Bridge',
                 'Top_Brand/Arduino/Tutorials/Arduino_Enhanced_Usage/Arduino-DAPLink',
@@ -2605,8 +2838,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'Raspberry Pi',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Top_Brand/Raspberry_Pi/Raspberry_Pi',
+      },
       items: [
-        'Top_Brand/Raspberry_Pi/Raspberry_Pi',
         {
           type: 'category',
           label: 'Official Raspberry Pi Board',
@@ -2669,39 +2907,15 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'NVIDIA',
-      items: [
-        // 'Top_Brand/NVIDIA/NVIDIA_Getting_Started',
-
-        {
-          type: 'category',
-          label: 'Mini PC',
-          items: [
-            'Top_Brand/NVIDIA/Mini_PC/reComputer_A203E_Flash_System',
-            'Top_Brand/NVIDIA/Mini_PC/reComputer_A205E_Flash_System',
-            'Top_Brand/NVIDIA/Mini_PC/Mini_AI_Computer_T906',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'NVIDIA Jetson Alternative',
-          items: [
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_Xavier_AGX_H01_Driver_Installation',
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A607_Flash_JetPack',
-            'Top_Brand/NVIDIA/NVIDIA_Jetson_Alternative/A603_Flash_JetPack',
-          ],
-        },
-      ],
-    },
-
-    {
-      type: 'category',
       label: 'Micro:bit',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Top_Brand/Micro_bit/microbit_wiki_page',
+      },
       items: [
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
-        'Top_Brand/Micro_bit/microbit_wiki_page',
       ],
     },
 
@@ -2754,14 +2968,14 @@ const sidebars = {
       }
     </style>
     <div style="width:100px;text-align:center">
-      <div class="sub_item"><strong> Retired Product </strong></div>
+      <div class="sub_item"><strong> Discontinued Product </strong></div>
     </div>
     `,
     },
 
     {
       type: 'category',
-      label: 'Retired Product',
+      label: 'Product List',
       items: [
         {
           type: 'category',

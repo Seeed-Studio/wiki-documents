@@ -1,6 +1,6 @@
 ---
 description: This tutorial will explain how to properly use the camera on the XIAO ESP32S3 Sense.
-title: Camera Usage in Seeed Studio XIAO ESP32S3 Sense
+title: Camera Usage for Sense Version
 keywords:
 - xiao esp32s3
 - esp32s3

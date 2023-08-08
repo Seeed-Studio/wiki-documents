@@ -1,10 +1,7 @@
 ---
 description: A Comparison of Different Grove Temperature Sensors
 title: A Comparison of Different Grove Temperature Sensors
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /A_Comparison_of_Different_Grove_Temperature_Sensors
 last_update:

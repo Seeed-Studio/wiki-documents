@@ -1,10 +1,7 @@
 ---
 description: Solar Charger Shield V2.2
 title: Solar Charger Shield V2.2
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Solar_Charger_Shield_V2.2
 last_update:

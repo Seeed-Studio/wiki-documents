@@ -137,6 +137,16 @@ export const ContributionList=[
         source: 'https://wiki.seeedstudio.com/Jetson_FAQ',
         tags: ['Edge'],
       },
+      {
+        //OpenWRT
+        title1: '- How do I fix my device when I faced the "Read Only Root filesystem"?',
+        website1: 'https://wiki.seeedstudio.com/change_default_gateway_IP',
+        title2: '- What if I have the Dual Gigabit Ethernet Carrier Board non-CM4 version and attach a CM4 without emmC?',
+        website2: 'https://wiki.seeedstudio.com/use_a_CM4_witout_eMMC',
+        preview: 'knowledge_base5.png',
+        source: 'https://wiki.seeedstudio.com/FAQs_For_openWrt',
+        tags: ['Network'],
+      },
     ]
   },
  

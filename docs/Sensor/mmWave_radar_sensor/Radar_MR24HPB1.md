@@ -1,6 +1,6 @@
 ---
-description: mmWave Human Static Presence Sensor
-title: mmWave Human Static Presence Sensor
+description: 24GHz mmWave Human Static Presence
+title: 24GHz mmWave Human Static Presence
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,6 +9,8 @@ last_update:
   date: 1/12/2023
   author: jianjing Huang
 ---
+
+# 24GHz mmWave Sensor - Human Static Presence Module (MR24HPC1)
 
 ![](https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg)
 

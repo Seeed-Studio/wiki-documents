@@ -1,12 +1,6 @@
 ---
 description: ODYSSEY - X86J41x5
 title: Getting Started with ODYSSEY - X86J41x5
-tags:
-  - ODYSSEY
-  - Getting started
-keywords:
-  - ODYSSEY
-  - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86J4105
 last_update:

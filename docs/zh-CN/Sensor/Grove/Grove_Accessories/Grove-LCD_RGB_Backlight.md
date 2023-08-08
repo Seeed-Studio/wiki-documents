@@ -13,6 +13,8 @@ last_update:
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_LCD_RGB_Backlight/images/intro.jpg)
 
+英文 wiki: https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/
+
 想要完成丰富多彩的的单色背光显示吗？ 通过这个模块您可以将显示的颜色设置为任何您喜欢的颜色
 它具有简单而且简洁的界面。 它以I2C总线作为微控制器的通信方式。
 因此，数据交换和背光控制所需的引脚数可以从10个减少到2个，从而减轻了IO口的使用 此外，Grove - LCD RGB Backlight支持用户自己定义的字符。 想要得到

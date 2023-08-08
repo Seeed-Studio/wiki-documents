@@ -1,6 +1,6 @@
 ---
-description: mmWave Human Static Presence Module Lite
-title: mmWave Human Static Presence Module Lite
+description: 24GHz mmWave Human Static Presence Lite
+title: 24GHz mmWave Human Static Presence Lite
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

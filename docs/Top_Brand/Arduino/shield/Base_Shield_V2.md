@@ -1,10 +1,7 @@
 ---
 description: Base_Shield_V2
 title: Base Shield V2
-tags:
-  - Shield
-keywords:
-  - Shield
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Base_Shield_V2
 last_update:

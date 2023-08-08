@@ -1,6 +1,6 @@
 ---
-description: mmWave Fall Detection Sensor
-title: mmWave Fall Detection Sensor
+description: 24GHz mmWave Human Fall Detection
+title: 24GHz mmWave Human Fall Detection
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,6 +10,7 @@ last_update:
   author: jianjing Huang
 ---
 
+# 24GHz mmWave Sensor - Human Fall Detection Sensor(MR24FDB1)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg" style={{width:400, height:'auto'}}/></div>
 

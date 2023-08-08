@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Seeed Studio XIAO SAMD21
-title: Getting Started with Seeed Studio XIAO SAMD21
+title: Getting Started
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,6 +9,8 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 ---
+
+# Getting Started with Seeed Studio XIAO SAMD21
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 

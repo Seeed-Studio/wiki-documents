@@ -1,10 +1,7 @@
 ---
 description: GPS-Modules-Selection-Guide
 title: GPS Modules Selection Guide
-tags:
-  - Tutorial
-keywords:
-  - Tutorial
+
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /GPS-Modules-Selection-Guide
 last_update:

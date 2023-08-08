@@ -1,12 +1,6 @@
 ---
 description: Camera_Shield
 title: Camera Shield
-tags:
-  - Shield
-  - camera
-keywords:
-  - Shield
-  - camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Camera_Shield
 last_update:

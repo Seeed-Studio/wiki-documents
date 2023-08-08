@@ -1,6 +1,6 @@
 ---
 description: Seeed Studio XIAO RP2040 with CircuitPython
-title: Seeed Studio XIAO RP2040 with CircuitPython
+title: CircuitPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

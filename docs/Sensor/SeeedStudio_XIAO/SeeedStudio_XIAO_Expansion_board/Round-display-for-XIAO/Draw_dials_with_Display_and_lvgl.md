@@ -1,6 +1,6 @@
 ---
 description: Using LVGL and TFT on the Seeed Studio Round Display for XIAO
-title: Using LVGL and TFT on the Seeed Studio Round Display for XIAO
+title: Using LVGL and TFT for all XIAO Series
 keywords:
 - XIAO
 - Round Dislay
@@ -13,7 +13,7 @@ last_update:
   author: MengDu
 ---
 
-# Using LVGL and TFT on the Seeed Studio Round Display for XIAO
+# Using LVGL and TFT on the Seeed Studio Round Display for all XIAO series
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/000.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -22,7 +22,7 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
+Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl
 <br></br>
 
 
@@ -34,7 +34,7 @@ Before you enter the study, we would like you to be prepared for the following.
 
 ### Hardware Preparation
 
-For demonstration purposes, this tutorial will use the **XIAO ESP32S3** as the master control. If you want to use other XIAO products, the tutorials and methods in this article are also applicable.
+For demonstration purposes, this tutorial will use the **XIAO ESP32S3** as the master control.
 
 <table align="center">
 	<tr>
@@ -59,6 +59,44 @@ For demonstration purposes, this tutorial will use the **XIAO ESP32S3** as the m
 	</tr>
 </table>
 
+If you want to use other XIAO products, the tutorials and methods in this article are also applicable.
+
+<table align="center">
+	<tr>
+		<th>Seeed Studio XIAO SAMD21</th>
+		<th>Seeed Studio XIAO RP2040</th>
+		<th>Seeed Studio XIAO nRF52840 (Sense)</th>
+		<th>Seeed Studio XIAO ESP32C3</th>
+	</tr>
+	<tr>
+		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:400, height:'auto'}}/></div></td>
+		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
+		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
+	</tr>
+    <tr>
+	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    		</a>
+		</div></td>
+		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    		</a>
+		</div></td>
+		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    		</a>
+		</div></td>
+		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    		<a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    		</a>
+		</div></td>
+	</tr>
+</table>
 
 When installing the XIAO with Round Display, please let the XIAO's Type-C connector face the outside of the Round Display, and then connect each pin against the dual 7-pin headers.
 

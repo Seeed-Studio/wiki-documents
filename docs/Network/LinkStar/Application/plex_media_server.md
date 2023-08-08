@@ -1,6 +1,6 @@
 ---
-description: The Future of Home Entertainment; LinkStar-H68K Router and Plex Media Server
-title: The Future of Home Entertainment; LinkStar-H68K Router and Plex Media Server
+description: The Future of Home Entertainment, LinkStar-H68K Router and Plex Media Server
+title: The Future of Home Entertainment, LinkStar-H68K Router and Plex Media Server
 keywords:
   - LinkStar
   - Getting started

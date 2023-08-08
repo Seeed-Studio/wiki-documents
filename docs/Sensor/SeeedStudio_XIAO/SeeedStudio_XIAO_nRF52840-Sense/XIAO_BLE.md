@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
-title: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
+title: Getting Started
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,6 +9,8 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 ---
+
+# Getting Started with Seeed Studio XIAO nRF52840 (Sense)
 
 <meta name="google-site-verification" content="2bq3L0F_PFVokQM-qT-al7x9FcSNJOO8TtJfAHW43lE" />
 
@@ -158,9 +160,9 @@ Here, even though **HIGH** is used, the LED will be **OFF**. You need to replace
 
 Refer to the following pin mappings of the LEDs and use them in your codes:
 
-- Red LED - LED_BUILTIN or LEDR
-- Green LED - LEDG
-- Blue LED - LEDB
+- Red LED = LED_BUILTIN or LED_RED
+- Blue LED = LED_BLUE
+- Green LED = LED_GREEN
 
 ## Power Consumption Verification
 
@@ -202,7 +204,7 @@ The battery charging current is selectable as 50mA or 100mA, where you can set *
 
 ```cpp
 void setup(){
-pinMode P0_13, OUTPUT);
+pinMode (P0_13, OUTPUT);
 }
 void loop() {
 digitalWrite(P0_13, HIGH);
@@ -213,7 +215,7 @@ digitalWrite(P0_13, HIGH);
 
 ```cpp
 void setup(){
-pinMode P0_13, OUTPUT);
+pinMode (P0_13, OUTPUT);
 }
 void loop() {
 digitalWrite(P0_13, LOW);

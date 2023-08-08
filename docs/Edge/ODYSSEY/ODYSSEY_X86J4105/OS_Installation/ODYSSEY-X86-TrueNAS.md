@@ -1,10 +1,6 @@
 ---
 description: ODYSSEY - X86J4105
 title: TrueNAS Installation
-tags:
-  - ODYSSEY
-keywords:
-  - ODYSSEY
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /ODYSSEY-X86-TrueNAS
 last_update:

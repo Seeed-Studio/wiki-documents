@@ -1,12 +1,6 @@
 ---
 description: Seeed SOM – STM32MP157C 
 title: Seeed Studio SOM STM32MP157C
-tags:
-  - ODYSSEY
-  - Getting started
-keywords:
-  - ODYSSEY
-  - Getting started
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /SEEED-SOM-STM32MP157C
 last_update:

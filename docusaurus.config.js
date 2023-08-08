@@ -28,7 +28,7 @@ const config = {
       async: true,
     },
     {
-      src: '/js/scroll.js', // 添加你的 JavaScript 文件名、
+      src: '/js/custom.js', // 添加你的 JavaScript 文件名、
       async: true,
     },
   ],
@@ -184,9 +184,9 @@ const config = {
       docs: {
         sidebar: {
           hideable: true,
+          autoCollapseCategories: true,
         },
       },
-      
 
       navbar: {
         // title: 'My Site',
@@ -194,6 +194,8 @@ const config = {
           alt: 'Seeed Studio',
           src:
             'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
+          srcDark:
+            'https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png',
           href: 'Getting_Started',
           className: 'navbar_logo_items',
         },
@@ -423,7 +425,7 @@ const config = {
         id: 'support_us',
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
-          'More functionality will be added over time! Welcome to <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/Seeed-Studio/wiki-documents/discussions/69">share</a> your thoughts with us!',
+          'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
         isCloseable: false,
