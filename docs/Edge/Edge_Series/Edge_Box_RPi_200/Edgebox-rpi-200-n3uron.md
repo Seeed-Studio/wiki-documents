@@ -77,19 +77,32 @@ Let’s see a step-by-step example of how N3uron facilitates data collection thr
 
 ### Configure OPC UA Client
 
-- **Step 1** : Open the N3uron WebUI and navigate to Config→Modules, click on the menu and then create a **New Module**, we’ll name it **OpcUaClient**.
+- **Step 1** : Please open your favourite browser on a different machine on the local network to access the N3uron WebUI, use the Edgebox-RPI-200's IP address and the port that was configured for the WebUI (by default 8003 for HTTP or 8443 for HTTPS).
+
+Default N3uron WebUI users.
+
+<div class="table-center">
+
+|            |   Full access |  Read-only access |  
+|---         |     ---       |        ---        |
+|  User:     |    admin      |       user        |
+|  Password: |    n3uron     |       n3uron      |
+
+</div>
+
+- **Step 2** : Open the N3uron WebUI and navigate to Config→Modules, click on the menu and then create a **New Module**, we’ll name it **OpcUaClient**. 
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron4.png" alt="pir" width="600" height="auto" /></div>
 
-- **Step 2**: Select **OpcUaClient** as the module type, then, click on the **Save** button below to instantiate the module.
+- **Step 3**: Select **OpcUaClient** as the module type, then, click on the **Save** button below to instantiate the module.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron5.png" alt="pir" width="600" height="auto" /></div>
 
-- **Step 3**: The newly created module will appear under Modules, navigate to its configuration and create a **New Client**, we’ll name it **DataSim**.
+- **Step 4**: The newly created module will appear under Modules, navigate to its configuration and create a **New Client**, we’ll name it **DataSim**.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron6.png" alt="pir" width="600" height="auto" /></div>
 
-- **Step 4**: Configure the OPC UA Client to connect to our DataSim endpoint as follows:
+- **Step 5**: Configure the OPC UA Client to connect to our DataSim endpoint as follows:
 
 ```sh
 Endpoint URL: opc.tcp://datasim.n3uron.com:4840
