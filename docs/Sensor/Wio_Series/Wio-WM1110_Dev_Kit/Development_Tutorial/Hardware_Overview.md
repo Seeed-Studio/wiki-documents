@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-WM1110_Dev_Kit_Hardware_Overview
 last_update:
-  date: 6/27/2023
+  date: 8/8/2023
   author: Jessie
 ---
 
