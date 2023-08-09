@@ -105,14 +105,74 @@ With all the software in place it's time to connect the development board to Edg
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition10.png" alt="pir" width={1000} height="auto" /></p>
 
-- **Step 4.** Connect the XIAO nRF52840 Sense to Edge Inpulse
 
-Move to Edge Impulse "Data acquisition" page, the outcome should be like this if the connection is successful. You can find the Device of "Seeed Studio XIAO nRF52840 Sense" is shown on the right of the page.
+## Data Acquisition & Training
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition13.png" alt="pir" width={1000} height="auto" /></p>
+:::note
+In this step we are trying collect the "Accelerometer data" from the Seeed Studio XIAO nRF52840 Sense onboard IMU to build a dataset and then later train the model with EdgeImpulse platform. 
+:::
+
+- **Step 4.** Upload "Accelerometer Raw Data" sketch to Seeed Studio XIAO nRF52840 Sense. 
+
+[Download Seeed_Arduino_LSM6DS3 Library](https://github.com/Seeed-Studio/Seeed_Arduino_LSM6DS3) as a zip file
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/LSM6DS3-github-zip.png" alt="pir" width={1000} height="auto" /></p>
 
 
-## Training data acquisition
+Open Arduino IDE, navigate to `Sketch > Include Library > Add .ZIP Library...` and open the downloaded zip file.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
+
+Upload the below codes and open the **Serial Monitor**
+
+```
+// XIAO BLE Sense LSM6DS3 Accelerometer Raw Data 
+
+#include "LSM6DS3.h"
+#include "Wire.h"
+
+//Create a instance of class LSM6DS3
+LSM6DS3 myIMU(I2C_MODE, 0x6A);  //I2C device address 0x6A
+
+#define CONVERT_G_TO_MS2 9.80665f
+#define FREQUENCY_HZ 50
+#define INTERVAL_MS (1000 / (FREQUENCY_HZ + 1))
+
+static unsigned long last_interval_ms = 0;
+
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial)
+    ;
+
+  if (myIMU.begin() != 0) {
+    Serial.println("Device error");
+  } else {
+    Serial.println("Device OK!");
+  }
+}
+
+
+
+void loop() {
+  if (millis() > last_interval_ms + INTERVAL_MS) {
+    last_interval_ms = millis();
+    Serial.print(myIMU.readFloatAccelX() * CONVERT_G_TO_MS2, 4);
+    Serial.print('\t');
+    Serial.print(myIMU.readFloatAccelY() * CONVERT_G_TO_MS2, 4);
+    Serial.print('\t');
+    Serial.println(myIMU.readFloatAccelZ() * CONVERT_G_TO_MS2, 4);
+  }
+}
+
+
+```
+
+Now you will see the accelerometer and gyroscope  data displayed one after the other on the serial monitor as below!
+
+<p style={{textAlign: 'center'}}><img src="https://workshop.makergram.com/assets/images/raawIMUSerial-095365f65dd0cde808620906ab5a7ab8.png" alt="IMU Raw" width={800} height="auto" /></p>
+
 
 - **Step 5.** Run the command in your `terminal` or `cmd` or `powershell` to start it.
 
@@ -128,20 +188,24 @@ Name the accelerometer and the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition12.png" alt="pir" width={800} height="auto" /></p>
 
+- **Step 7.** Connect the XIAO nRF52840 Sense to Edge Inpulse
 
-- **Step 7.**  Select the sensor as "3 axes". Name your label as `up` and `down`, modify Sample length (ms.) to 20000 and click start sampling.
+Move to Edge Impulse "Data acquisition" page, the outcome should be like this if the connection is successful. You can find the Device of "Seeed Studio XIAO nRF52840 Sense" is shown on the right of the page.
+
+
+- **Step 8.**  Select the sensor as "3 axes". Name your label as `up` and `down`, modify Sample length (ms.) to 20000 and click start sampling.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition13.png" alt="pir" width={1000} height="auto" /></p>
 
-- **Step 8.** Swing the Seeed Studio XIAO nRF52840 Sense up and down and keep the motion for 20 seconds. You can find the acquistion is shown up like this:
+- **Step 9.** Swing the Seeed Studio XIAO nRF52840 Sense up and down and keep the motion for 20 seconds. You can find the acquistion is shown up like this:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition14.png" alt="pir" width={1000} height="auto" /></p>
 
-- **Step 9.** Split the data by clicking the raw data right top and choose "Split Sample". Click +Add Segment and then click the graph. Repeat it more than 20 time to add segments. Click Split and you will see the the sample data each for 1 second.
+- **Step 10.** Split the data by clicking the raw data right top and choose "Split Sample". Click +Add Segment and then click the graph. Repeat it more than 20 time to add segments. Click Split and you will see the the sample data each for 1 second.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition30.png" alt="pir" width={600} height="auto" /></p>
 
-- **Step 10.** Repeat **Step 8.** and **Step 9.** and label data with different name to click different motion data, like `left` and `right`, `clockwise`, `anticlockwise` and so on. The example provided is classifying up and down, left and right, and circle. You can change it as you may want to change here.
+- **Step 11.** Repeat **Step 8.** and **Step 9.** and label data with different name to click different motion data, like `left` and `right`, `clockwise`, `anticlockwise` and so on. The example provided is classifying up and down, left and right, and circle. You can change it as you may want to change here.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition16.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -151,19 +215,19 @@ In Step 9. the split time is 1 second which means you at least do one swing of u
 
 ## Building a machine learning model
 
-- **Step 11.** Rebalance the dataset, Click **Dashboard** and drop down page to find **Perform train** / **test split**
+- **Step 12.** Rebalance the dataset, Click **Dashboard** and drop down page to find **Perform train** / **test split**
 
 Click Perform train / test split and choose Yes and confirm it
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition17.png" alt="pir" width={800} height="auto" /></p>
 
-- **Step 12.** Create Impulse
+- **Step 13.** Create Impulse
 
 Click **Create impulse** -> Add a processing block -> Choose **Spectral Analysis** -> Add a learning block -> Choose **Classification (Keras)** -> Save Impulse
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/XIAOEInew1.png" alt="pir" width={800} height="auto" /></p>
 
-- **Step 13.** Spectral features
+- **Step 14.** Spectral features
 
 Click and Set up
 
@@ -177,7 +241,7 @@ The output page should be like:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/XIAOEInew4.png" alt="pir" width={800} height="auto" /></p>
 
-- **Step 14.** Training your model
+- **Step 15.** Training your model
 
 Click NN Classifier -> Click Start training -> Choose Unoptimized (float32)
 
@@ -189,7 +253,7 @@ The precision of the training model is very important to the final result. If yo
 
 ## Deploying to Seeed Studio XIAO nRF52840 Sense
 
-- **Step 15.** Model testing
+- **Step 16.** Model testing
 
 Click Model testing -> Click Classify all
 
@@ -199,23 +263,23 @@ Click Model testing -> Click Classify all
 If your accuracy is low, you can check you dataset by increasing the training set and extending the sample time
 :::
 
-- **Step 16.** Build Arduino library
+- **Step 17.** Build Arduino library
 
 Click Deployment -> Click Arduino Library -> Click **Build** -> Download the .ZIP file
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/XIAOEInew7.png" alt="pir" width={400} height="auto" /></p>
 
-- **Step 17.** The name of .ZIP file is very important, it is set up as your name of the Edge Impulse project by default. Like here the project of the name is "XIAO-BLE-gestures_inferencing". Select the file as ""Add the ".ZIP file" to your Arduino libraries
+- **Step 18.** The name of .ZIP file is very important, it is set up as your name of the Edge Impulse project by default. Like here the project of the name is "XIAO-BLE-gestures_inferencing". Select the file as ""Add the ".ZIP file" to your Arduino libraries
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition35.png" alt="pir" width={300} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition36.png" alt="pir" width={500} height="auto" /></p>
 
-- **Step 18.** Download the code [here](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/XIAOEI.ino). Change the name of your headfile as the name of your own and upload it.
+- **Step 19.** Download the code [here](https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/XIAOEI.ino). Change the name of your headfile as the name of your own and upload it.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition33.png" alt="pir" width={800} height="auto" /></p>
 
-- **Step 19.** Move or hold the Seeed Studio XIAO nRF52840 Sense and check the results:
+- **Step 20.** Move or hold the Seeed Studio XIAO nRF52840 Sense and check the results:
 
 Click the monitor on the top right corner of Arduino.
 
