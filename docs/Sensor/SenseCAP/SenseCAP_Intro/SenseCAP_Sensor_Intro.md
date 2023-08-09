@@ -53,13 +53,13 @@ last_update:
 <div class="intro_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP A1101 - Vision AI Sensor</font></div>
-            <a href="http://localhost:3000/SenseCAP-Vision-AI-Get-Started/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with SenseCAP Vision AI</font></span></a>
+            <a href="https://wiki.seeedstudio.com/SenseCAP-Vision-AI-Get-Started/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with SenseCAP Vision AI</font></span></a>
             <br/>
-            <a href="http://localhost:3000/Train-Deploy-AI-Model-A1101/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Train and Deploy Your Own AI Model Into SenseCAP A1101</font></span></a>
+            <a href="https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Train and Deploy Your Own AI Model Into SenseCAP A1101</font></span></a>
             <br/>
-            <a href="http://localhost:3000/One-Stop-Model-Training-with-Edge-Impulse/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> One Stop Model Training with Edge Impulse</font></span></a>
+            <a href="https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> One Stop Model Training with Edge Impulse</font></span></a>
             <br/>
-            <a href="http://localhost:3000/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Train Water Meter Digits Recognition Model with SenseCAP A1101</font></span></a>
+            <a href="https://wiki.seeedstudio.com/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Train Water Meter Digits Recognition Model with SenseCAP A1101</font></span></a>
     </div>
 </div>
 
