@@ -263,7 +263,374 @@ The LIS3DHTR sensor communicates with a microcontroller or other digital device 
 
 
     
+## Grove
 
+
+There are 3 Grove interfaces in the DK, which can be connected to 400+ Grove modules, and supports ADC/UART and IIC transmission protocols.
+
+### Grove IIC
+
+There is a Grove IIC port on the DK, with `SDA` on pin 27 and `SCL` on pin 26. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_iic.png" alt="pir" width={300} height="auto" /></p>
+
+To connect to a Grove IIC module, the sensor power must be enabled：`I2C_PWR` (pin 7). This pin controls the pull-up voltage on the IIC signal line:
+
+```cpp
+#define IIC_POWER          7
+#define SCL               26
+#define SDA               27
+```
+TWI needs to be enabled in the `sdk_config.h` file before usage.
+
+```cpp
+// <e> NRFX_TWIM_ENABLED - nrfx_twim - TWIM peripheral driver
+//==========================================================
+#ifndef NRFX_TWIM_ENABLED
+#define NRFX_TWIM_ENABLED 1
+#endif
+
+// <e> TWIS_ENABLED - nrf_drv_twis - TWIS peripheral driver - legacy layer
+//==========================================================
+#ifndef TWIS_ENABLED
+#define TWIS_ENABLED 1
+#endif
+```
+
+**Example code**
+
+This example reads the value of the [SHT41 Temperature and Humidity sensor](https://wiki.seeedstudio.com/Grove-SHT4x/) through the IIC interface, and prints it to the serial monitor.
+
+**Code**
+
+```cpp
+#include "nrf_gpio.h"
+#include "nrf_gpiote.h"
+#include "nrf_drv_gpiote.h"
+#include "nrf_delay.h"
+#include "app_error.h"
+#include "sht41.h"
+#include "nrf_drv_twi.h"
+
+static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE( 0 );
+
+static const nrf_drv_twi_config_t twi_config = {
+               .scl                = SCL,
+		.sda                = SDA,
+		.frequency          = NRF_DRV_TWI_FREQ_100K,
+		.interrupt_priority = APP_IRQ_PRIORITY_HIGH,
+		.clear_bus_init     = false
+	};
+
+int main(void)
+{   
+    float   temp = 0;
+    //hal_i2c_master_init( );
+    //hal_gpio_init_out( IIC_POWER, HAL_GPIO_SET );
+    nrf_gpio_cfg_output(IIC_POWER);
+    nrf_gpio_pin_set(IIC_POWER);
+
+    ret_code_t err_code;
+    
+    err_code = nrf_drv_twi_init( &m_twi, &twi_config, IIC_handler, NULL );
+    APP_ERROR_CHECK( err_code );
+
+    nrf_drv_twi_enable( &m_twi );
+   
+    nrf_delay_ms(10);
+    SHT41Init();   
+    while(1){
+        SHT41GetTemperature(&temp);
+        nrf_delay_ms(1000);  
+        printf("%f\n",temp);
+    }
+
+}
+```
+
+
+### Grove UART
+
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_uart.png" alt="pir" width={300} height="auto" /></p>
+
+The Wio-WM1110 DK has two UART peripherals, namely `uart0` and `uart1`.  `uart0` pins are connected to the CH340C for debugging purposes, while `uart1` serves as a Grove UART Port.
+
+Referring to the schematic, TXD is located on pin 8 and RXD is on pin 6. 
+
+:::tip Note
+Except for analog interfaces like ADC, the nRF52840 chip has fixed pins for other digital peripherals. However, other digital peripherals can be remapped to any pin. For example, the RXD and TXD pin configurations can be swapped.
+:::
+
+UART needs to be enabled in the `sdk_config.h` file before usage:
+
+```cpp
+/ <e> NRFX_UARTE_ENABLED - nrfx_uarte - UARTE peripheral driver
+//==========================================================
+#ifndef NRFX_UARTE_ENABLED
+#define NRFX_UARTE_ENABLED 1
+#endif
+// <o> NRFX_UARTE0_ENABLED - Enable UARTE0 instance 
+#ifndef NRFX_UARTE0_ENABLED
+#define NRFX_UARTE0_ENABLED 1
+#endif
+
+// <o> NRFX_UARTE1_ENABLED - Enable UARTE1 instance 
+#ifndef NRFX_UARTE1_ENABLED
+#define NRFX_UARTE1_ENABLED 1
+#endif
+
+// <e> UART_ENABLED - nrf_drv_uart - UART/UARTE peripheral driver - legacy layer
+//==========================================================
+#ifndef UART_ENABLED
+#define UART_ENABLED 1
+#endif
+```
+**Code**
+
+```cpp
+#define     LED1                      13
+#define     LED2                      14
+#define     TXD                       8
+#define     RXD                       6
+#define     UART_TX_RX_BUF_SIZE       256
+```
+
+**Example code**
+
+The following sample code implements the functions of serial port transmission and reception with feedback.
+
+```cpp
+#include "nrf_gpio.h"
+#include "nrf_gpiote.h"
+#include "nrf_drv_gpiote.h"
+#include "nrf_delay.h"
+#include "smtc_hal.h"
+#include "app_uart.h"
+#include "app_error.h"
+#include "nrf_uart.h"
+#include "nrf_drv_uart.h"
+
+static void uart_handleEvent( app_uart_evt_t *pEvent );
+
+APP_UART_DEF( uart, 0, UART_TX_RX_BUF_SIZE, uart_handleEvent );
+
+static app_uart_comm_params_t const commParams =
+{
+    .rx_pin_no    = RXD,
+    .tx_pin_no    = TXD,
+    .rts_pin_no   = NRF_UART_PSEL_DISCONNECTED,
+    .cts_pin_no   = NRF_UART_PSEL_DISCONNECTED,                    
+    .flow_control = APP_UART_FLOW_CONTROL_DISABLED,
+    .use_parity   = false,
+    .baud_rate    = NRF_UART_BAUDRATE_115200
+};
+
+void uart_tx( uint8_t* buff, uint16_t len )
+{
+        for( uint16_t i = 0; i < len; i++ )
+        {
+            app_uart_put( &uart, buff[i] );
+        }
+}
+
+
+int main(void)
+{
+    uint32_t err_code;
+    uart.comm_params = &commParams;
+    uint8_t arr[] = "hello world\n";
+    nrf_gpio_cfg_output(LED1);
+    nrf_gpio_cfg_output(LED2);
+    nrf_gpio_pin_clear(LED1);
+    nrf_gpio_pin_clear(LED2);
+    app_uart_init( &uart, &uart_buffers, APP_IRQ_PRIORITY_LOWEST );
+    
+    
+    while( 1 )
+    {
+        nrf_delay_ms(1000);
+        nrf_gpio_pin_toggle(LED2);
+        uart_tx(arr,strlen(arr));
+    }
+}
+            
+void uart_handleEvent(app_uart_evt_t * p_event)
+{
+	uint8_t dat;
+    if (p_event->evt_type == APP_UART_COMMUNICATION_ERROR)
+    {
+        APP_ERROR_HANDLER(p_event->data.error_communication);
+    }
+    else if (p_event->evt_type == APP_UART_FIFO_ERROR)
+    {
+        APP_ERROR_HANDLER(p_event->data.error_code);
+    }
+	
+    else if (p_event->evt_type == APP_UART_DATA_READY)
+	{
+		app_uart_get(&uart,&dat); 
+		app_uart_put(&uart,dat); 
+	}
+    else if (p_event->evt_type == APP_UART_TX_EMPTY) 
+	{
+		nrf_gpio_pin_toggle(LED1);
+	}
+}
+```
+
+
+### Grove ADC
+
+There are eight ADC peripherals (0~7) on the DK, `ADC6` and `ADC7` are used as the Grove ADCT Port. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_adc.png" alt="pir" width={300} height="auto" /></p>
+
+:::tip Note
+ADC pins are fixed and cannot be remapped.
+:::
+
+The corresponding relationships for ADC pins are shown in the table below:
+
+
+|ADC0|ADC1|ADC2|ADC3|ADC4|ADC5|ADC6|ADC7|
+|:-------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|2|3|4|5|28|29|30|31
+
+
+SAADC needs to be enabled in the `sdk_config.h` file before usage:
+
+```cpp
+// <e> SAADC_ENABLED - nrf_drv_saadc - SAADC peripheral driver - legacy layer
+//==========================================================
+#ifndef SAADC_ENABLED
+#define SAADC_ENABLED 1
+#endif
+// <e> NRFX_SAADC_ENABLED - nrfx_saadc - SAADC peripheral driver
+//==========================================================
+#ifndef NRFX_SAADC_ENABLED
+#define NRFX_SAADC_ENABLED 1
+#endif
+// <o> SAADC_CONFIG_RESOLUTION  - Resolution
+ 
+// <0=> 8 bit 
+// <1=> 10 bit 
+// <2=> 12 bit 
+// <3=> 14 bit 
+
+#ifndef SAADC_CONFIG_RESOLUTION
+#define SAADC_CONFIG_RESOLUTION 2
+#endif
+```
+
+**Example code**
+
+This is an example program for ADC6, which implements the function of reading the analog input value of a single channel of the ADC6 pin and outputting the measured ADC value through the UART:
+
+**Code**
+
+```cpp
+#include "nrf_gpio.h"
+#include "nrf_gpiote.h"
+#include "nrf_drv_gpiote.h"
+#include "nrf_delay.h"
+#include "app_uart.h"
+#include "app_error.h"
+#include "nrf_uart.h"
+#include "nrf_drv_uart.h"
+#include "nrf_drv_saadc.h"
+#define     LED1                     13
+#define     LED2                     14
+#define     TXD                       8
+#define     RXD                       6
+#define     UART_TX_RX_BUF_SIZE       256
+
+static void uart_handleEvent( app_uart_evt_t *pEvent );
+
+APP_UART_DEF( uart, 0, UART_TX_RX_BUF_SIZE, uart_handleEvent );
+
+static app_uart_comm_params_t const commParams =
+{
+    .rx_pin_no    = RXD,
+    .tx_pin_no    = TXD,
+    .rts_pin_no   = NRF_UART_PSEL_DISCONNECTED,
+    .cts_pin_no   = NRF_UART_PSEL_DISCONNECTED,                    
+    .flow_control = APP_UART_FLOW_CONTROL_DISABLED,
+    .use_parity   = false,
+    .baud_rate    = NRF_UART_BAUDRATE_115200
+};
+
+void uart_tx( uint8_t* buff, uint16_t len )
+{
+        for( uint16_t i = 0; i < len; i++ )
+        {
+            app_uart_put( &uart, buff[i] );
+        }
+}
+
+void ADC_Interrupt(nrfx_saadc_evt_t const *p_event){
+    
+}
+
+void uart_handleEvent(app_uart_evt_t * p_event)
+{
+	uint8_t dat;
+    if (p_event->evt_type == APP_UART_COMMUNICATION_ERROR)
+    {
+        APP_ERROR_HANDLER(p_event->data.error_communication);
+    }
+    else if (p_event->evt_type == APP_UART_FIFO_ERROR)
+    {
+        APP_ERROR_HANDLER(p_event->data.error_code);
+    }
+	
+    else if (p_event->evt_type == APP_UART_DATA_READY)
+	{
+		app_uart_get(&uart,&dat); 
+		//app_uart_put(&uart,dat); 
+	}
+    else if (p_event->evt_type == APP_UART_TX_EMPTY) 
+	{
+		//nrf_gpio_pin_toggle(LED1);
+	}
+}
+
+int main(void)
+{
+    nrf_saadc_value_t  saadc_val = 0; 
+    uint8_t arr[32];
+    nrf_saadc_channel_config_t channel_config = 
+    {                                                   
+        .resistor_p = NRF_SAADC_RESISTOR_DISABLED,      
+        .resistor_n = NRF_SAADC_RESISTOR_DISABLED,      
+        .gain       = NRF_SAADC_GAIN1_6,                
+        .reference  = NRF_SAADC_REFERENCE_INTERNAL,     
+        .acq_time   = NRF_SAADC_ACQTIME_10US,           
+        .mode       = NRF_SAADC_MODE_SINGLE_ENDED,      
+        .burst      = NRF_SAADC_BURST_DISABLED,         
+        .pin_p      = NRF_SAADC_INPUT_AIN6,       
+        .pin_n      = NRF_SAADC_INPUT_DISABLED          
+    };
+    
+    nrf_drv_saadc_init(NULL, ADC_Interrupt);
+    nrf_drv_saadc_channel_init(0, &channel_config);
+
+    uart.comm_params = &commParams;
+    app_uart_init( &uart, &uart_buffers, APP_IRQ_PRIORITY_LOWEST );
+
+    nrf_gpio_cfg_output(LED2);
+    while( 1 )
+    {
+        nrf_drv_saadc_sample_convert (0,&saadc_val);
+        sprintf(arr,"value:%d\n",saadc_val);
+        uart_tx(arr,strlen(arr));
+        nrf_delay_ms(1000);
+        nrf_gpio_pin_toggle(LED2);
+    }
+}
+
+```
 
 
 
