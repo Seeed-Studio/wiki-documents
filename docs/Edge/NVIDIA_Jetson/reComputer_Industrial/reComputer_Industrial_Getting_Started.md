@@ -1,6 +1,6 @@
 ---
 description: reComputer Industrial Getting Started
-title: reComputer Industrial Getting Started
+title: reComputer Industrial
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -239,7 +239,15 @@ reComputer industrial has 2 RJ45 GbE ports, one of which is a PoE PSE port for p
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/4.jpg"/></div>
 
-## Prerequisites
+## Flash JetPack
+
+reComputer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This included SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps.
+
+:::note
+If you want to use SSDs with reComputer Industrial, we only recommend you choose the [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), the [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), and the [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) versions from Seeed.
+:::
+
+### Prerequisites
 
 You need to prepare the following hardware before getting started with reComputer Industrial
 
@@ -251,13 +259,7 @@ You need to prepare the following hardware before getting started with reCompute
 - HDMI cable
 - Keyboard and Mouse
 
-## Flash JetPack
-
-reComputer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This included SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps.
-
-:::note
-If you want to use SSDs with reComputer Industrial, we only recommend you choose the [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), the [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), and the [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) versions from Seeed.
-:::
+### Download System Image
 
 - **Step 1:** Visit [this page](https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/) to download the system image to your Ubuntu PC corresponding to the board you are using. Here each will included around 3 **tar.gz** files and you need to download all of them at first. For example, for Orin NX 16GB version, you need to download the below 3 files
 
@@ -285,7 +287,9 @@ After that the 3 downloaded files will be merged into one file under a new direc
 tar -xvf industrial-orin-nx-16-v0.3.tar.gz
 ```
 
-- **Step 4:** Now you need to enter recovery mode on the reComputer Industrial board in order flash the device. Connect a USB Type-C cable between **USB2.0 DEVICE** port and your PC. Use a pin and insert into the **RECOVERY** hole to press the recovery button and while holding this, connect the included **2-Pin Terminal block power connector** to the power connector on the board (make sure to use the 2 screws to screw the terminal in place) and connect the included power adapter with a power cord to turn on the board
+### Enter Force Recovery Mode
+
+Now you need to enter recovery mode on the reComputer Industrial board in order flash the device. Connect a USB Type-C cable between **USB2.0 DEVICE** port and your PC. Use a pin and insert into the **RECOVERY** hole to press the recovery button and while holding this, connect the included **2-Pin Terminal block power connector** to the power connector on the board (make sure to use the 2 screws to screw the terminal in place) and connect the included power adapter with a power cord to turn on the board
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/97.png"/></div>
 
@@ -293,14 +297,16 @@ tar -xvf industrial-orin-nx-16-v0.3.tar.gz
 Make sure you power on the device while holding the RECOVERY button or otherwise it will not enter recovery mode
 :::
 
-- **Step 5:** On the Ubuntu host PC, open a Terminal window and enter the command **lsusb**. If the returned content has one of the following outputs according to the Jetson SoM you use, then the board is in force recovery mode.
+On the Ubuntu host PC, open a Terminal window and enter the command **lsusb**. If the returned content has one of the following outputs according to the Jetson SoM you use, then the board is in force recovery mode.
 
 - For Orin NX 16GB: **0955:7323 NVidia Corp**
 - For Orin NX 8GB: **0955:7423 NVidia Corp**
 - For Orin Nano 8GB: **0955:7523 NVidia Corp**
 - For Orin Nano 4GB: **0955:7623 NVidia Corp**
 
-- **Step 6:** Navigate to the extracted file from before and execute the flash command as follows 
+### Flash to Jetson
+
+Navigate to the extracted file from before and execute the flash command as follows 
 
 ```sh
 cd mfi_p3509-a02+p3767-0000

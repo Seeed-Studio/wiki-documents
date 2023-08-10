@@ -5,20 +5,30 @@ import SoftwarePage from './software'
 const computerPageA = () => {
   return (
     <div>
-      Updates to this page is <a href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30495963">in progress</a>, you can check this page with <a href="#NVIDIA_index_hardware">Jetpack Flash and Series Guideline</a> and <a href="#NVIDIA_index_software">Software wit AI Methods</a>
-      <div id="NVIDIA_index_hardware" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>Jetpack Flash and Series Guideline</div>
+      
+
+      <div id="NVIDIA_index_hardware" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>Jetpack Flash and Hardware Usage</div>
+      Most of our reComputer Jetson products come with NVIDIA JetPack system pre-installed on the device. However, if you want to flash these devices again or flash other devices 
+      which do not come with JetPack system, you can follow the below links for step-by-step guidance. We have also included guidance on how to use different hardware peripherals
+      on these NVIDIA Jetson powered devices. 
+      <div style={{ color: "#8DC215", fontStyle: 'italic'}}>
+      Note: Hover your mouse over the product name on the left hand side and click it to enter the relevant wiki pages. Also hover your mouse over the product series name
+      on the right hand side to have a glimpse of the products included in that series. 
+      </div>
       <HardwarePage></HardwarePage>
-      <div style={{ textAlign: "center", fontSize: "1.2rem", fontWeight: "bold"  }}>
-        More Information:
+      <div id="NVIDIA_index_software" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>AI Developer Tools</div>
+      After you have access to an NVIDIA Jetson device, you can start developing different AI applications to suite different scenarios. The very first step of an AI project is to 
+      obtain data for training. Then you need to label the data and train an AI model. After that, you can optimize this model to make sure the model runs the best on the selected
+      device. Finally, you deploy this AI model to the NVIDIA Jetson device so that you can start building applications. You can also manage these applications remotely so that,
+      you can track the device performance metrics to ensure the device is performing well in the field.
+      We have prepared wiki guides that covers the entire AI workflow as explained above using different software providers and tools. 
+      <div style={{ color: "#8DC215", fontStyle: 'italic'}}>
+      Note: Hover your mouse over the software tool on the left hand side and click it to enter the relevant wiki pages. Also, hover your mouse over the task on the    
+      right hand columns
+      to have a glimpse of the software providers and tools relevant for that task.
       </div>
-      <div id="NVIDIA_index_software" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold"  }}>
-        For other carrier boards jetpack flash: <a href="https://wiki.seeedstudio.com/reComputer_A603_Flash_System/">A603</a>, <a href="https://wiki.seeedstudio.com/reComputer_A607_Flash_System/">A607</a>, <a href="https://wiki.seeedstudio.com/reComputer_A203_Flash_System/">A203</a>, <a href="https://wiki.seeedstudio.com/reComputer_A205_Flash_System/">A205</a>, <a href="https://wiki.seeedstudio.com/Jetson-Mate/">Jetson Mate</a> carrier board.
-      </div>
-      <div id="NVIDIA_index_software" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold"  }}>
-        For discontinued products jetpack flash: <a href="https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/">reComputer J1010</a>, <a href="https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/">reComputer J1020 v1</a>
-      </div>
-      <div style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>Software with AI Methods</div>
       <SoftwarePage></SoftwarePage>
+      Updates to this page are in <a href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30495963">in progress</a>. Stay tuned!
     </div>
   );
 };

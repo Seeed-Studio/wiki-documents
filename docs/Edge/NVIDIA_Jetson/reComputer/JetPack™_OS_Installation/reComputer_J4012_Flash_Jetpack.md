@@ -10,26 +10,185 @@ last_update:
   author: Lakshantha
 ---
 
-# Flash JetPack to reComputer J40/ J30 Series (J401 carrier board)
+# Getting Started with reComputer J40/ J30 Series (J401 carrier board)
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png"/></div>
+
+reComputer series for Jetson are compact edge computers built with NVIDIA advanced AI embedded systems: J10 (Nano 4GB), J20 (Jetson Xavier NX 8GB and Jetson Xavier 16GB), J40 (Jetson Orin NX 16GB and Jetson Orin NX 8GB) and J30 (Jetson Orin Nano 8GB and Jetson Orin Nano 4GB)  module and reComputer J401 carrier board.
+
+With rich extension modules, industrial peripherals, and thermal management, reComputer for Jetson is ready to help you accelerate and scale the next-gen AI product by deploying popular DNN models and ML frameworks to the edge and inferencing with high performance, for tasks like real-time classification and object detection, pose estimation, semantic segmentation, and natural language processing (NLP).
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-In this wiki, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD connected to the reComputer J4012/ J4011/ J3010 and J3011. All these devices come with J401 carrier board inside and the flashing procedure is the same for all.
+## Features 
+
+- **Brilliant AI Performance for production:** on-device processing with up to 100 TOPS AI performance with low power and low latency
+- **Hand-size edge AI device:** compact size at 130mm x120mm x 58.5mm, includes NVIDIA Jetson Orin NX/ Orin Nano production module, a cooling fan with a heatsink, enclosure, and a power adapter. Support desktop, wall mount, fit in anywhere
+- **Expandable with rich I/Os:** 4x USB 3.2, HDMI 2.1, 2xCSI, 1xRJ45 for GbE, M.2 Key E, M.2 Key M, CAN, and GPIO
+- **Accelerate solution to market:** pre-installed Jetpack with NVIDIA JetPack™ 5.1.1 on the included 128GB NVMe SSD, Linux OS BSP, 128GB SSD, support Jetson software and leading AI frameworks and software platforms
+- **Certifications:** FCC, CE, RoHS, UKCA
+
+## Specifications
+
+<table>
+  <thead>
+    <tr>
+      <th>Specifications</th>
+      <th><a href="https://www.seeedstudio.com/reComputer-J3010-w-o-power-adapter-p-5631.html?queryID=e8d0ae9b2e338e8a860f07dacef58f6e&objectID=5631&indexName=bazaar_retailer_products">reComputer J3010</a></th>
+      <th><a href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html" target="_blank" rel="noopener noreferrer">reComputer J3011</a></th>
+      <th><a href="https://www.seeedstudio.com/reComputer-J4011-w-o-power-adapter-p-5629.html?queryID=5577f61da645361a7aad9179bc04efc2&objectID=5629&indexName=bazaar_retailer_products">reComputer J4011</a></th>
+      <th><a href="https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html?queryID=639ef60cde4a38ccc9ff2f82070d4854&objectID=5628&indexName=bazaar_retailer_products">reComputer J4012</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Module</td>
+      <td>Jetson Orin Nano 4GB</td>
+      <td>Jetson Orin Nano 8GB</td>
+      <td>Jetson Orin NX 8GB</td>
+      <td>Jetson Orin NX 16GB</td>
+    </tr>
+    <tr>
+      <td>AI Performance</td>
+      <td>20 TOPS</td>
+      <td>40 TOPS</td>
+      <td colSpan={2}>70 TOPS</td>
+    </tr>
+    <tr>
+      <td>GPU</td>
+      <td colSpan={2}>512-core NVIDIA Ampere architecture GPU with 16 Tensor Cores</td>
+      <td colSpan={2}>1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores</td>
+    </tr>
+    <tr>
+      <td>GPU Max Frequency</td>
+      <td colSpan={2}>625 MHz</td>
+      <td colSpan={2}>765 MHz</td>
+    </tr>
+    <tr>
+      <td>CPU</td>
+      <td colSpan={2}>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU<br />1.5MB L2 + 4MB L3</td>
+      <td colSpan={2}>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU 1.5MB L2 + 4MB L3</td>
+    </tr>
+    <tr>
+      <td>CPU Max Frequency</td>
+      <td colSpan={2}>1.5 GHz</td>
+      <td colSpan={2}>2 GHz</td>
+    </tr>
+    <tr>
+      <td>Memory</td>
+      <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
+      <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
+      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+    </tr>
+    <tr>
+      <td>DL Accelerator</td>
+      <td colSpan={2}>/</td>
+      <td colSpan={2}>1x NVDLA v2</td>
+    </tr>
+    <tr>
+      <td>DLA Max Frequency</td>
+      <td colSpan={2}>/</td>
+      <td colSpan={2}>614 MHz</td>
+    </tr>
+    <tr>
+      <td>Vision Accelerator</td>
+      <td colSpan={2}>/</td>
+      <td colSpan={2}>1x PVA v2</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td colSpan={4}>128GB NVMe SSD</td>
+    </tr>
+    <tr>
+      <td>Video Encoder</td>
+      <td colSpan={2}>1080p30 supported by 1-2 CPU cores</td>
+      <td colSpan={2}>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
+    </tr>
+    <tr>
+      <td>Video Decoder</td>
+      <td colSpan={2}>1x 4K60 (H.265)<br />2x 4K30 (H.265)<br />5x 1080p60 (H.265)<br />11x 1080p30 (H.265)</td>
+      <td colSpan={2}>1x 8K30 (H.265) | 2x 4K60 (H.265) | 4x 4K30 (H.265)<br />9x 1080p60 (H.265) | 18x 1080p30 (H.265)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td colSpan={4}>1* HDMI 2.1</td>
+    </tr>
+    <tr>
+      <td>CSI Camera</td>
+      <td colSpan={4}>2* CSI （2-lane 15pin）</td>
+    </tr>
+    <tr>
+      <td>Networking</td>
+      <td colSpan={4}>1* Gigabit Ethernet (10/100/1000M)</td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td colSpan={4}>4* USB 3.2 Type-A (10Gbps); 1* USB2.0 Type-C (Device Mode)</td>
+    </tr>
+    <tr>
+      <td>M.2 Key M</td>
+      <td colSpan={4}>1* M.2 Key M</td>
+    </tr>
+    <tr>
+      <td>M.2 Key E</td>
+      <td colSpan={4}>1* M.2 Key E</td>
+    </tr>
+    <tr>
+      <td>Fan</td>
+      <td colSpan={4}>1* 4 pin Fan Connector(5V PWM)</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td colSpan={4}>1* CAN</td>
+    </tr>
+    <tr>
+      <td>Multifunctional Port</td>
+      <td colSpan={4}>1* 40-Pin Expansion header,1* 12-Pin Control and UART header</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td colSpan={4}>RTC 2-pin, RTC socket (supports CR1220 but not included)</td>
+    </tr>
+    <tr>
+      <td>Power</td>
+      <td colSpan={4}>9-19V</td>
+    </tr>
+    <tr>
+      <td>Power Supply</td>
+      <td colSpan={4}>Power adapter not included</td>
+    </tr>
+    <tr>
+      <td>Temperature</td>
+      <td colSpan={4}>-10℃~60℃</td>
+    </tr>
+    <tr>
+      <td>Mechanical</td>
+      <td colSpan={4}>130mm x120mm x 58.5mm</td>
+    </tr>
+  </tbody>
+</table>
+
+## Hardware Overview 
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-J4012/6.png"/></div>
+
+## Flash JetPack
+
+Here, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD connected to the reComputer J4012/ J4011/ J3010 and J3011. All these devices come with J401 carrier board inside and the flashing procedure is the same for all.
 
 reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included NVMe SSD, so that you do not need to flash it. However, if you want to flash it again with JetPack, you can follow this guide.
 
-## Prerequisites
+### Prerequisites
 
 - Ubuntu Host PC (native or VM using VMware Workstation Player)
 - reComputer J4012/ J4011/ J3010 and J3011
 - USB Type-C data transmission cable
 
-## Enter Force Recovery Mode
+### Enter Force Recovery Mode
 
 Before we can move on to the installation steps, we need to make sure that the reComputer is in force recovery mode.
 
@@ -103,7 +262,7 @@ The below image is for Orin NX 16GB
 
 **Step 4.** Remove the jumper wire
 
-## Flash to Jetson
+### Flash to Jetson
 
 :::note
 Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
