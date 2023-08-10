@@ -55,7 +55,31 @@ For Seeed Jetson-powered devices flashing guides, please refer to the below link
 Make sure to Flash JetPack version 5.1.1 because that is the version we have verified for this wiki 
 :::
 
-## Install Ultralytics Package
+## Deploy YOLOV8 to Jetson in One Line of Code!
+
+After you flash the Jetson device with JetPack and SDK components, you can simply run the below commands to run YOLOv8 models. This will first download and install the necessary packages, dependencies, setup the environment and download pretrained models from YOLOv8 to perform object detection, Image segmentation, pose estimation and image classifications tasks!
+
+```sh
+git clone https://github.com/yuyoujiang/Run-YOLOv8-in-One-Line-on-Jetson && python Run-YOLOv8-in-One-Line-on-Jetson/run.py <device_password>
+```
+
+:::note
+The below arguments can be passed with the above command:
+- <device_password> : This is a positional argument. A password may be required to install the necessary dependencies.
+- --task : The CV task what you want to test. Supports "detect", "classify", "segment" and "pose". Default to detect. Refer to [here](https://docs.ultralytics.com/tasks) for more information.
+- --model : The model name. You can find the name of the model you want to use [here](https://docs.ultralytics.com/models/yolov8/#supported-modes). Default to yolov8n.
+- --use_trt : Use tensorTR for inference. If can't find a tensorRT model, create one with FP32 quantization
+- --use_half : FP16 quantization when export a tensorRT model. You need to pass this together with the above "--use_trt" argument
+- --source : path to input video or camera id. Refer to [here](https://docs.ultralytics.com/modes)
+:::
+
+After the above command is run, you can jump to [this section](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/#bring-your-own-ai-model) of the wiki to learn about training your own YOLOv8 model.
+
+## Manual Set Up of YOLOv8 for NVIDIA Jetson
+
+If the above script has some erros, you can go through the below steps one-by-one to prepare the Jetson device with YOLOv8.
+
+### Install Ultralytics Package
 
 - **Step 1.** Access the terminal of Jetson device, install pip and upgrade it
 
@@ -83,7 +107,7 @@ pip3 install numpy -U
 sudo reboot
 ```
 
-## Uninstall Torch and Torchvision
+### Uninstall Torch and Torchvision
 
 The above ultralytics installation will install Torch and Torchvision. However, these 2 packages installed via pip are not compatible to run on Jetson platform wwhich is based on **ARM aarch64 architecture**. Therefore we need to manually install pre-built PyTorch pip wheel and compile/ install Torchvision from source.
 
@@ -91,7 +115,7 @@ The above ultralytics installation will install Torch and Torchvision. However, 
 pip3 uninstall torch torchvision
 ```
 
-## Install PyTorch and Torchvision
+### Install PyTorch and Torchvision
 
 Visit [this page](https://forums.developer.nvidia.com/t/pytorch-for-jetson) to access all the PyTorch and Torchvision links.
 
