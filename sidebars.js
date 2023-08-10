@@ -24,7 +24,19 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
-    'TinyML_Topic',
+    {
+      type: 'category',
+      label: 'TinyML',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "TinyML/TinyML_Topic",
+      },
+      items: [
+        'TinyML/TinyML_workshop_course',
+      ]
+    },
     // 'Getting_Started_test',
     {
       type: 'doc',
