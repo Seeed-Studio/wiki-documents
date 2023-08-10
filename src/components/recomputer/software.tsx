@@ -6,22 +6,22 @@ const SoftwarePage = () => {
   const [selectedScenes, setSelectedScenes] = useState([]);
   const brands = [
     { id: 1, name: 'CVEDIA-RT',link:'https://wiki.seeedstudio.com/CVEDIA-Jetson-Getting-Started/',bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index.png', scenes: [4] },
-    { id: 2, name: 'Lumeo', link:'https://wiki.seeedstudio.com/Lumeo-Jetson-Getting-Started/',bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index2.png', scenes: [4] },
-    { id: 3, name: 'alwaysAI', link:'https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/',bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index3.png', scenes: [1] },
-    { id: 4, name: 'YOLOv8',link:'/tags/yolov-8/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index4.png', scenes: [1, 2, 4] },
+    { id: 2, name: 'Lumeo', link:'https://wiki.seeedstudio.com/Lumeo-Jetson-Getting-Started/',bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index2.png', scenes: [4,5] },
+    { id: 3, name: 'alwaysAI', link:'https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/',bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index3.png', scenes: [1,2,4,5] },
+    { id: 4, name: 'YOLOv8',link:'/tags/yolov-8/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index4.png', scenes: [2, 4] },
     { id: 5, name: 'YOLOv5',link:'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index5.png', scenes: [2, 4] },
-    { id: 6, name: 'roboflow',link:'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index6.png', scenes: [1, 4] },
+    { id: 6, name: 'roboflow',link:'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index6.png', scenes: [1, 2, 4] },
     { id: 7, name: 'Allxon',link:'https://wiki.seeedstudio.com/Update-Jetson-Linux-OTA-Using-Allxon/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index7.png', scenes: [5] },
-    { id: 8, name: 'Deci',link:'https://wiki.seeedstudio.com/DeciAI-Getting-Started/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index8.png', scenes: [3] },
+    { id: 8, name: 'Deci',link:'https://wiki.seeedstudio.com/DeciAI-Getting-Started/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index8.png', scenes: [3,2,4] },
     { id: 9, name: 'Edge Impulse',link:'https://wiki.seeedstudio.com/HardHat/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index9.png', scenes: [1, 2, 4] },
-    { id: 10, name: 'Cochl.Sense',link:'https://wiki.seeedstudio.com/Cochl.Sense-Jetson-Getting-Started/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index10.png', scenes: [4] },
+    { id: 10, name: 'Cochl.Sense',link:'https://wiki.seeedstudio.com/Cochl.Sense-Jetson-Getting-Started/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index10.png', scenes: [4,5] },
   ];
   const scenes = [
-    { id: 1, name: 'Data Upload & Label',link:'/tags/data-label/',img:'huang.png', brands: [3, 4, 6, 9]},
-    { id: 2, name: 'AI Model Train',link:'/tags/ai-model-train/', img:'huang.png',brands: [4, 5, 9] },
-    { id: 3, name: 'AI Model Optimize',link:'/tags/ai-model-optimize/',img:'huang.png', brands: [8] },
-    { id: 4, name: 'AI Model Deploy',link:'/tags/ai-model-deploy/', img:'huang.png',brands: [1, 2, 4, 5, 6, 9, 10] },
-    { id: 5, name: 'Remote Manage',link:'/tags/remote-manage/', img:'huang.png',brands: [7] },
+    { id: 1, name: 'Data Upload & Label',img:'huang.png', brands: [3, 6, 9]},
+    { id: 2, name: 'AI Model Train', img:'huang.png',brands: [4, 5, 9, 3, 6, 8] },
+    { id: 3, name: 'AI Model Optimize', img:'huang.png', brands: [8] },
+    { id: 4, name: 'AI Model Deploy', img:'huang.png',brands: [1, 2, 4, 5, 6, 9, 10, 3, 8] },
+    { id: 5, name: 'Remote Manage', img:'huang.png',brands: [7,2,3,10] },
   ];
   const handleBrandMouseEnter = (brand) => {
     setSelectedBrand([brand]);
