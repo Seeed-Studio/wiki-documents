@@ -2183,12 +2183,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'reComputer',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: "doc",
-            id: 'Edge/NVIDIA_Jetson/reComputer/reComputer_Jetson_Series_Introduction',
-          },
           items: [
             {
               type: 'category',
@@ -2273,26 +2267,38 @@ const sidebars = {
           ],
         },
 
+        // {
+        //   type: 'category',
+        //   label: 'reComputer Industrial',
+        //   collapsed: true,
+        //   collapsible: true,
+        //   link: {
+        //     type: "doc",
+        //     id: 'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
+        //   },
+        //   items: [
+        //     'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
+        //     'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
+        //   ],
+        // },
+
+        'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
+
         {
           type: 'category',
-          label: 'reComputer Industrial',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: "doc",
-            id: 'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
-          },
+          label: 'AI PC',
           items: [
-            'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J20_Hardware_Interfaces_Usage',
-            'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage',
+            'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A203E_Flash_System',
+            'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A205E_Flash_System',
+            'Edge/NVIDIA_Jetson/Mini_PC/Mini_AI_Computer_T906',
           ],
         },
 
         {
           type: 'category',
-          label: 'Mini PC',
+          label: 'Carrier Board',
           items: [
-            'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A203E_Flash_System',
+            'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A203_Flash_System',
             'Edge/NVIDIA_Jetson/Mini_PC/reComputer_A205E_Flash_System',
             'Edge/NVIDIA_Jetson/Mini_PC/Mini_AI_Computer_T906',
           ],
@@ -2307,19 +2313,7 @@ const sidebars = {
           ],
         },
 
-        {
-          type: 'category',
-          label: 'reServer NVIDIA Jetson',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: "doc",
-            id: 'Edge/NVIDIA_Jetson/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
-          },
-          items: [
-            'Edge/NVIDIA_Jetson/reServer_Nvidia_Jetson/reServer_J2032_Flash_Jetpack',
-          ],
-        },
+        'Edge/NVIDIA_Jetson/reServer_Nvidia_Jetson/reServer_J2032_Getting_Started',
 
       ],
     },

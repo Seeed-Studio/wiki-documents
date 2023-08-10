@@ -1,25 +1,16 @@
 ---
 description: reServer J2032
-title: Getting Started with reServer J2032
+title: reServer Jetson
 image: https://avatars.githubusercontent.com/u/10758833
 slug: /reServer_J2032_Getting_Started
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
-<!-- ---
-name: reServer J2032
-category: reServer J2032
-bzurl: 
-wikiurl: 
-sku: 
---- -->
 
 # Getting Started with reServer J2032
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/J2032_product_image.png" alt="pir" width={800} height="auto" /></p>
-
 
 reServer J2032 is the new powerful Edge AI compute device that we proudly introduced to our reThings family, it adopted the sleek reServer form-factor case design which packed the powerful unit in an extremely compact shape. This smart tiny server is not only able to work easily and efficiently from the edge to the cloud but also adding AI processing power into the formula.
 
@@ -567,6 +558,9 @@ The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/reserverpm2.jpg" alt="pir" width={1000} height="auto" /></p>
 
+## Flash JetPack
+
+reServer J2032 already comes pre-flashed with JetPack out-of-the-box. But if you want to reflash the device, please follow [this wiki](https://wiki.seeedstudio.com/reServer_J2032_Flash_Jetpack).
 
 ## Quick Start with reServer Peripheral and Module Assembly
 
