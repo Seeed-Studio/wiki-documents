@@ -24,7 +24,19 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
-    'TinyML_Topic',
+    {
+      type: 'category',
+      label: 'TinyML',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "TinyML/TinyML_Topic",
+      },
+      items: [
+        'TinyML/TinyML_workshop_course',
+      ]
+    },
     // 'Getting_Started_test',
     {
       type: 'doc',
@@ -923,7 +935,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-Zephyr-RTOS',
-            
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_CircuitPython',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -939,7 +951,6 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_mic',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_tf_and_filesystem',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/XIAO_ESP32S3_Sense_camera',
-
               ],
             },
             {
@@ -1491,9 +1502,14 @@ const sidebars = {
               items: [
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Get_Started_with_Wio-WM1110_Dev_Kit',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Hardware_Overview',
-                'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Server_Configuration',
-              ],
+                {
+                  type: 'category',
+                  label: 'Development Tutorial',
+                  items: [
+                    'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Development_Tutorial/Hardware_Overview',
+                  ],
+                },  
+              ], 
             },
 
             {
@@ -2567,6 +2583,7 @@ const sidebars = {
       label: 'SenseCAP AI',
       items: [
         'Cloud_Chain/SenseCAP_AI/How_to_Use SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP',
+        'Cloud_Chain/SenseCAP_AI/xiao-esp32c3-sensecapai',
       ],
     },
     {

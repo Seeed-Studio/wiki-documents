@@ -103,7 +103,8 @@ This topic here introduces the Seeed Studio product documentation regarding the 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP AI </font></div>
             Use SenseCAP AI on SenseCAP Portal and SenseCAP Mate APP.
             <br/>
-            > <a href="https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started</font></span></a>
+            > <a href="https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started</font></span></a> 
+            > <a href="https://wiki.seeedstudio.com/xiao_esp32c3_sensecapai/" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Using XIAO ESP32C3 to connect</font></span></a>
     </div>
 </div>
 

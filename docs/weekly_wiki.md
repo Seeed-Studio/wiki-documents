@@ -5,8 +5,8 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/31/2023
-  author: Matthew
+  date: 08/07/2023
+  author: Cessarr
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
@@ -15,37 +15,39 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is July 31st and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 7st and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [XIAO ESP32S3 Sense & Edge Impulse Keywords Spotting](https://wiki.seeedstudio.com/xiao_esp32s3_keyword_spotting/)
+### [Build a HMI Display for Raspberry Pi using Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-HMI/)
 
-This wiki guide explains how to use TinyML   through implementing a Keyword Spotting (KWS) system on the XIAO ESP32S3 Sense microcontroller board, with the help of Edge Impulse for data collection and model training.
+Thanks for the anonymous tip letting us know that there is an wiki about Wio Terminal missing.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/1.png" style={{width:800, height:'auto'}}/></div>
+![](https://files.seeedstudio.com/wiki/Wio-Terminanl-HMI/Wio-Terminal-HMI.gif)
 
-### [Zephyr -- Exhibition for XIAO series](https://wiki.seeedstudio.com/xiao_topic_page/#zephyr)
+### [NVIDIA® Jetson™-Powered Edge Devices](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
 
-The **Zephyr** OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
+This is the page regarding all the computing devices powered by NVIDIA® Jetson™ modules:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Zephyr_logo.png" style={{width:800, height:'auto'}}/></div>
+- reComputer
+- reComputer Industrial
+- miniPC
+- NVIDIA Jetson H01
+- reServer NVIDIA Jetson
 
-### [EdgeBox RPi 200 with N3uron](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/)
-
-N3uron is a complete Industrial Edge Platform for IIoT & DataOps that enables seamless integration between the industrial plant floor and third-party applications, whether on-premise or in the cloud. With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron1.png" style={{width:800, height:'auto'}}/></div>
+You can also find the software that is related to the AI methods.
 
 ## Existed Wiki Updated
 
-### [Update: YOLOv8 wiki train your own AI model](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/#bring-your-own-ai-model)
+### [Note on linkit](https://github.com/MediaTek-Labs)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/2.jpg
-" style={{width:1000, height:'auto'}}/></div>
+Due to the closure of MediaTek Labs, all related links have become invalid. If you need to download relevant files, please search for them on the following link: [The relevant files about linkit](https://github.com/MediaTek-Labs).
 
-### [Update Knowledge DataBase in OpenWrt](https://wiki.seeedstudio.com/FAQs_For_openWrt/)
+### Add the new button on 'Page not Found'
 
+- Due to the transition to a new wiki platform, we unfortunately experienced some loss of pages.
+- We apologize for any inconvenience this may have caused and appreciate if you can help us with report.
+- The hyperlink button “Report on GitHub” have been added on the ["Page no Found"](https://wiki.seeedstudio.com/pagenofound) page.
 
 ## The Efforts of Contributor
 
@@ -71,3 +73,4 @@ N3uron is a complete Industrial Edge Platform for IIoT & DataOps that enables se
 - [weekly wiki on 7.10th](/Seeed_Elderly/weekly_wiki/wiki710)
 - [weekly wiki on 7.17th](/Seeed_Elderly/weekly_wiki/wiki717)
 - [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
+- [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)

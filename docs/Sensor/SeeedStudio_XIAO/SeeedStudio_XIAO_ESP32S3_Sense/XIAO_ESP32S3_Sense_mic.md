@@ -142,7 +142,7 @@ The `read()` function is called on the I2S object to read a single audio sample 
 
 In this next project, we will guide you how to combine the functions of the microSD card and save the recorded sound to the microSD card. Then for this project, please prepare the microSD card and format it to **FAT32** format in advance.
 
-If this is your first time using a microSD card on the XIAO ESP32S3, you can read the [file system Wiki](http://localhost:3001/xiao_esp32s3_sense_filesystem#prepare-the-microsd-card) content to learn about microSD card installation and preparation.
+If this is your first time using a microSD card on the XIAO ESP32S3, you can read the [file system Wiki](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/#prepare-the-microsd-card) content to learn about microSD card installation and preparation.
 
 The following is the Arduino program for this project.
 
