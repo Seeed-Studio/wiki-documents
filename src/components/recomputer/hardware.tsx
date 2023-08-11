@@ -25,7 +25,7 @@ const HardwarePage = () => {
   const scenes = [
     { id: 1, name: 'reComputer',img:'17.png', brands: [1, 2, 3]},
     { id: 2, name: 'reComputer Industrial', img:'19.png',brands: [4] },
-    { id: 3, name: 'AI PC',img:'20.png', brands: [5, 6, 7, 8, 9, 10] },
+    { id: 3, name: 'Mini AI PC',img:'20.png', brands: [5, 6, 7, 8, 9, 10] },
     { id: 4, name: 'Carrier Board',img:'21.png', brands: [ 11, 12, 13, 14, 15] },
     { id: 5, name: 'reServer Jetson', img:'22.png',brands: [16] },
   ];
