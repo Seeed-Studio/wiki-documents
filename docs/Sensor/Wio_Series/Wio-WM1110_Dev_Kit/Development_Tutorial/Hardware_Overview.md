@@ -268,6 +268,9 @@ The LIS3DHTR sensor communicates with a microcontroller or other digital device 
 
 There are 3 Grove interfaces in the DK, which can be connected to 400+ Grove modules, and supports ADC/UART and IIC transmission protocols.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/grove_pins.png" alt="pir" width={600} height="auto" /></p>
+
+
 ### Grove IIC
 
 There is a Grove IIC port on the DK, with `SDA` on pin 27 and `SCL` on pin 26. 
@@ -278,22 +281,33 @@ To connect to a Grove IIC module, the sensor power must be enabled：`I2C_PWR` (
 
 ```cpp
 #define IIC_POWER          7
-#define SCL               26
-#define SDA               27
 ```
 TWI needs to be enabled in the `sdk_config.h` file before usage.
 
 ```cpp
-// <e> NRFX_TWIM_ENABLED - nrfx_twim - TWIM peripheral driver
+// <e> TWI_ENABLED - nrf_drv_twi - TWI/TWIM peripheral driver - legacy layer
 //==========================================================
-#ifndef NRFX_TWIM_ENABLED
-#define NRFX_TWIM_ENABLED 1
+#ifndef TWI_ENABLED
+#define TWI_ENABLED 1
 #endif
-
-// <e> TWIS_ENABLED - nrf_drv_twis - TWIS peripheral driver - legacy layer
+// <e> TWI0_ENABLED - Enable TWI0 instance
 //==========================================================
-#ifndef TWIS_ENABLED
-#define TWIS_ENABLED 1
+#ifndef TWI0_ENABLED
+#define TWI0_ENABLED 1
+#endif
+// <q> TWI0_USE_EASY_DMA  - Use EasyDMA (if present)
+#ifndef TWI0_USE_EASY_DMA
+#define TWI0_USE_EASY_DMA 1
+#endif
+// </e>
+// <e> TWI1_ENABLED - Enable TWI1 instance
+//==========================================================
+#ifndef TWI1_ENABLED
+#define TWI1_ENABLED 1
+#endif
+// <q> TWI1_USE_EASY_DMA  - Use EasyDMA (if present)
+ #ifndef TWI1_USE_EASY_DMA
+#define TWI1_USE_EASY_DMA 1
 #endif
 ```
 
@@ -301,7 +315,6 @@ TWI needs to be enabled in the `sdk_config.h` file before usage.
 
 This example reads the value of the [SHT41 Temperature and Humidity sensor](https://wiki.seeedstudio.com/Grove-SHT4x/) through the IIC interface, and prints it to the serial monitor.
 
-**Code**
 
 ```cpp
 #include "nrf_gpio.h"
@@ -312,52 +325,48 @@ This example reads the value of the [SHT41 Temperature and Humidity sensor](http
 #include "sht41.h"
 #include "nrf_drv_twi.h"
 
-static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE( 0 );
-
-static const nrf_drv_twi_config_t twi_config = {
-               .scl                = SCL,
-		.sda                = SDA,
-		.frequency          = NRF_DRV_TWI_FREQ_100K,
-		.interrupt_priority = APP_IRQ_PRIORITY_HIGH,
-		.clear_bus_init     = false
-	};
-
 int main(void)
 {   
     float   temp = 0;
-    //hal_i2c_master_init( );
-    //hal_gpio_init_out( IIC_POWER, HAL_GPIO_SET );
-    nrf_gpio_cfg_output(IIC_POWER);
-    nrf_gpio_pin_set(IIC_POWER);
-
-    ret_code_t err_code;
-    
-    err_code = nrf_drv_twi_init( &m_twi, &twi_config, IIC_handler, NULL );
-    APP_ERROR_CHECK( err_code );
-
-    nrf_drv_twi_enable( &m_twi );
-   
+    float   humi = 0;
+    hal_i2c_master_init( );
+    hal_gpio_init_out( SENSOR_POWER, HAL_GPIO_SET ); 
     nrf_delay_ms(10);
-    SHT41Init();   
+
+    SHT41Init();
+    
     while(1){
-        SHT41GetTemperature(&temp);
+        SHT41GetTempAndHumi(&temp,&humi);
         nrf_delay_ms(1000);  
-        printf("%f\n",temp);
+        printf("temperature:%.3f humidity:%.3f\n",temp,humi);
     }
 
 }
 ```
 
+Then you will get the temperature and humidity values:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/valueSHT41.png" alt="pir" width={500} height="auto" /></p>
+
 
 ### Grove UART
 
 
+The Wio-WM1110 DK has two UART peripherals, namely `uart0` and `uart1`.  `uart0` pins are connected to the CH340C for debugging purposes, while `uart1` serves as a Grove UART Port.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_uart.png" alt="pir" width={300} height="auto" /></p>
 
-The Wio-WM1110 DK has two UART peripherals, namely `uart0` and `uart1`.  `uart0` pins are connected to the CH340C for debugging purposes, while `uart1` serves as a Grove UART Port.
 
 Referring to the schematic, TXD is located on pin 8 and RXD is on pin 6. 
+
+
+```cpp
+#define     LED1                      13
+#define     LED2                      14
+#define     TXD                       8
+#define     RXD                       6
+#define     UART_TX_RX_BUF_SIZE       256
+```
 
 :::tip Note
 Except for analog interfaces like ADC, the nRF52840 chip has fixed pins for other digital peripherals. However, other digital peripherals can be remapped to any pin. For example, the RXD and TXD pin configurations can be swapped.
@@ -387,19 +396,13 @@ UART needs to be enabled in the `sdk_config.h` file before usage:
 #define UART_ENABLED 1
 #endif
 ```
-**Code**
 
-```cpp
-#define     LED1                      13
-#define     LED2                      14
-#define     TXD                       8
-#define     RXD                       6
-#define     UART_TX_RX_BUF_SIZE       256
-```
+
 
 **Example code**
 
 The following sample code implements the functions of serial port transmission and reception with feedback.
+
 
 ```cpp
 #include "nrf_gpio.h"
@@ -481,6 +484,8 @@ void uart_handleEvent(app_uart_evt_t * p_event)
 ```
 
 
+
+
 ### Grove ADC
 
 There are eight ADC peripherals (0~7) on the DK, `ADC6` and `ADC7` are used as the Grove ADCT Port. 
@@ -528,7 +533,7 @@ SAADC needs to be enabled in the `sdk_config.h` file before usage:
 
 This is an example program for ADC6, which implements the function of reading the analog input value of a single channel of the ADC6 pin and outputting the measured ADC value through the UART:
 
-**Code**
+
 
 ```cpp
 #include "nrf_gpio.h"
@@ -631,6 +636,7 @@ int main(void)
 }
 
 ```
+
 
 
 
