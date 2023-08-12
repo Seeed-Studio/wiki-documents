@@ -146,7 +146,10 @@ last_update:
 
 ### Hyperlink
 
+```cpp
 <a  href="link" target="_blank"><span> PDF Download of SenseCAP S210X Sereis User Guide</span></a>
+```
+
 
 ### Highlight code
 
