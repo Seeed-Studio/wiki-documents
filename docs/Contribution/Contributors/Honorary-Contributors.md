@@ -20,6 +20,25 @@ last_update:
 			<th colspan="3">Collaborated Project</th>
 		</tr>
     <tr>
+			<th>CircuitPython for ESP32S3</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32S3_CircuitPython/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki Page</font></span></strong></a></div>
+      <br/>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35178340"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Isaac </font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th colspan="3">Collaborated Project</th>
+		</tr>
+    <tr>
 			<th>Build Your Own Weather Dashboard Using Grafana</th>
       <th>Hard Hat Detection with NVIDIA Jetson</th>
 		</tr>

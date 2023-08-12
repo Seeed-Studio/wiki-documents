@@ -24,19 +24,19 @@ const sidebars = {
     // 'Sensing_test',
     'Getting_Started',
     'weekly_wiki',
-    {
-      type: 'category',
-      label: 'TinyML',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: "TinyML/TinyML_Topic",
-      },
-      items: [
-        'TinyML/TinyML_workshop_course',
-      ]
-    },
+    // {
+    //   type: 'category',
+    //   label: 'TinyML',
+    //   collapsed: true,
+    //   collapsible: true,
+    //   link: {
+    //     type: "doc",
+    //     id: "TinyML/TinyML_Topic",
+    //   },
+    //   items: [
+    //     'TinyML/TinyML_workshop_course',
+    //   ]
+    // },
     // 'Getting_Started_test',
     {
       type: 'doc',
@@ -2923,6 +2923,32 @@ const sidebars = {
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
       ],
     },
+
+    {
+      type: 'doc',
+      id: 'TinyML/TinyML_Topic',
+      label: 'TinyML',
+      className: 'sideboard_calss',
+    },
+
+    
+    {
+      type: 'category',
+      label: 'TinyML Workshop',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
+      },
+      items: [
+           'TinyML/TinyML_Workshop/Edgelab',
+          //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
+          //  'TinyML/TinyML_Workshop/Image_recognition_project',
+          //  'TinyML/TinyML_Workshop/Key_Word_Spotting',
+      ],
+    },
+
 
     {
       type: 'html',
