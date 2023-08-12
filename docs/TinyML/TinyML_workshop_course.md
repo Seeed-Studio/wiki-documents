@@ -10,6 +10,7 @@ last_update:
   author: MengDu
 ---
 
+
 # TinyML Workshop Course
 
 Welcome to the course on using EdgeLab and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize EdgeLab and Edge Impulse platforms effectively. We will explore the functionalities of EdgeLab, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
@@ -37,6 +38,24 @@ By participating in this course, you will gain the following skills and knowledg
 - Ability to deploy models to the XIAO ESP32S3 using the Edge Impulse platform.
 
 Whether you are a beginner or an experienced developer with some machine learning background, this course will provide you with invaluable practical experience and skills to apply TinyML in IoT projects. Let's embark on this exciting learning journey together!
+
+# Familiarize the tools that we are using. 
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "#1-edgelab" class="getting_started_label2">EdgeLab</a>
+          <br/>Use pre-made tinyML models and experiment quickly.
+      </div>
+  </div>
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "#2-edge-impulse" class="getting_started_label2">Edge Impulse</a>
+          <br/>Create ML model and generate arduino libraries. 
+      </div>
+  </div>
+</div>
+
 
 ## 1. EdgeLab
 
@@ -199,6 +218,23 @@ If you also want to experience this water meter that generates readings automati
 
 
 ## 2. Edge Impulse
+
+Edge Impulse is the leading development platform for machine learning on edge devices, free for developers, and trusted by enterprises worldwide.
+
+* With Edge Impulse, software developers, engineers, and domain experts can solve real problems using machine learning on edge devices without a Ph.D. or advanced embedded engineering skills. From getting started to MLOps in production, Edge Impulse provides maximum efficiency and speed on a wide range of hardware from MCUs to CPUs.  
+
+<div style={{textAlign:'center'}}><img src="https://workshop.makergram.com/assets/images/EI_homepage-012378fc3425daa13ba327cd01dda3bd.png" style={{width:1000, height:'auto'}}/></div> 
+
+With EdgeImpulse we can 
+* Collect dataset from the device direclty 
+* Collect dataset from other source like .zip file, via api or other third party cloud ingestion 
+* Create test and train data and put them in different lables  
+* Train our model 
+* Able to Select approriate ML algoirthms - EI provide recommended ML algorithms based on our dataset
+* Deploy it on our harware 
+* TinyML project collabration with version controlling 
+* and much more that helps you to build tinyML applications. 
+
 
 ### 2.1 Quick hands-on experience
 
