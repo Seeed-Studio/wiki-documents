@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 toc_max_heading_level: 4
 last_update:
-  date: 7/24/2023
+  date: 8/15/2023
   author: Thomas
 ---
 
@@ -57,74 +57,335 @@ The default shipping firmware of the SenseCAP Indicator is fully open source for
 
 ### **ESP-IDF** {#ESP-IDF}
 
-> ESP-IDF(Espressif IoT Development Framework) is a software development framework provided by Espressif Systems for designing firmware and applications specifically for their ESP32 and ESP8266 series of microcontrollers. For further information, you can refer to the [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html)
+> ESP-IDF (Espressif IoT Development Framework) is a software development framework provided by Espressif Systems for designing firmware and applications specifically for their ESP32 and ESP8266 series of microcontrollers. For further information, you can refer to the [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32s3/index.html)
+
+If you've opted to compile the source code into firmware, you'll require the ESP-IDF to perform the compilation process.
+
+#### **Download and install**
+<!-- 提前说明要用5.0的版本，对于 Windows 怎么处理？其他版本的可以进行调整 -->
+
+<Tabs
+  groupId="operating-systems"
+  defaultValue={navigator.platform.includes('Win') ? 'Win' : 'Unix'}
+  values={[
+    {label: 'Windows', value: 'Win'},
+    {label: 'Linux and MacOS', value: 'Unix'},
+  ]}>
+  <TabItem value="Win">
+
+<!-- Windows -->
+> Espressif Docs: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/windows-setup.html)
+
+**Installation: Using offline installer**
+
+For Windows users, you have the option to download the ESP-IDF offline installer directly. Here's the link: [🖱️Donwload Offline Installer v5.0](https://github.com/espressif/idf-installer/releases/download/offline-5.0/esp-idf-tools-setup-offline-5.0.exe)
 
 
-**Download and install the toolchain:**
+**Installation: Using the Recommended Script**
 
-- For Windows: [Standard Setup of Toolchain for Windows - Espressif Docs](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/windows-setup.html)
-- For MacOS and Linux: [Standard Toolchain Setup for Linux and macOS - Espressif Docs](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/linux-macos-setup.html)
+If you have Python installed on your computer, using the [Git repository](https://github.com/espressif/esp-idf.git) to install ESP-IDF is the recommended method. Here's how:
 
-#### Build Project
+1. Choose a folder to set up your ESP-IDF (IDF_PATH). Open a command prompt or terminal.
+```ps
+mkdir -p ~/esp
+cd ~/esp
+git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git esp-idf-v5.0
 
-If you choose to compile source code into firmware, you'll need the ESP-IDF to compile.
+cd ~/esp/esp-idf-v5.0
+./install.bat esp32s3
+```
 
-:::caution **Note**:
+2. The ESP-IDF tools will be installed by default in `C:\Users\<username>\.espressif`.
 
-SenseCAP ESP32 SDK uses the 120 MHz frequency , <!--为避免出现 `FLASH and PSRAM Mode configuration are not supported` -->please add a [patch](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/tools/patch).
+3. To activate the console, run the following command:
 
-This patch is intended to achieve the best performance of RGB LCD by using the PSRAM Octal 120 MHz feature, and it's only used for the **release/v5.0** branch of ESP-IDF. So do not choose a version higher than v5.0.
+```sh
+C:\Users\<username>\esp\esp-idf-v5.0\export.bat # to activate console
+```
+
+4. Try building a project now.
+
+
+  </TabItem>
+
+<!-- Windows End -->
+
+  <TabItem value="Unix">
+
+<!-- Unix -->
+
+> Espressif Docs: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/linux-macos-setup.html)
+
+
+If in Linux or MacOS, you can follow this guide to change the version of git repo.
+```
+git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git
+install.sh
+export.sh
+```
+
+  </TabItem>
+
+<!-- Unix End -->
+
+</Tabs>
+
+:::note **Note**:
+The default installation paths for the ESP-IDF tools differ between the offline installer and the installer script. If you encounter issues even after patching the IDF, you can try **deleting** the `sdkconfig` file and the `build` folder.
+:::
+
+:::tip **TIP**:
+- If you want to update a verion from previous. Please refer to the [Updating ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32/versions.html#updating-esp-idf).
+:::
+
+---
+
+#### Patching ESP-IDF
+:::caution Important:
+
+Why is Patching Needed? The SenseCAP ESP32 SDK operates at a frequency of 120 MHz. To prevent the occurrence of the FLASH and PSRAM Mode configuration are not supported error, it's necessary to apply a patch.
+
+This patch is designed to optimize the RGB LCD's performance using the PSRAM Octal 120 MHz feature. It's specifically intended for use with the release/v5.0 branch of ESP-IDF. Please avoid using a version higher than v5.0.
 
 :::
-##### How to patch IDF?
 
-as there is a script....#TODO
+> For details: [IDF Patch · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md)
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/patch.png"/></div>
 
+**1. Using Git**
 
-Go to any example:
+If you're comfortable with Git, you can patch the ESP-IDF using this method.
+
+```sh
+cd <root directory of IDF>
+
+git apply --whitespace=fix <path of the patch>/release5.0_psram_octal_120m.patch # Nothing return if success
+```
+**2. Using Script**
+
+To apply the patch using the script, follow these steps:
+
+1. **Activate the ESP-IDF Environment:**
+
+   Before applying the patch, activate the ESP-IDF environment. This ensures that the necessary dependencies are available. You can activate the environment by navigating to the ESP-IDF directory and running the appropriate script. For example:
+
+   ```sh
+   source /path/to/esp-idf/export.sh
+   ```
+
+2. **Run the Patch Installation Command:**
+
+   Once the environment is activated, run the following command to install the patch:
+
+   ```sh
+   ./install_patch.sh
+   ```
+
+This script will handle the patch installation process for you. It's designed to streamline the patching process and ensure that the changes are applied correctly to your ESP-IDF setup.
+
+
+:::tip **Note**:
+If your current ESP-IDF version is not V5.x.x, you have the option to update it. Follow this link for guidance: [Updating ESP-IDF Versions](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/versions.html#updating-esp-idf). In Windows, open the console of the IDF and navigate to the specified directory.
+:::
+
+To verify the patch, you can proceed to any example and use the following command:
+
 ```cmd
 idf.py build
 ```
-#### Frimware Flashing
-<!-- 请区分下 编译后的固件和直接下载的固件的下载方式 利用 IDF  !!! -->
-The following command to build, flash and monitor the project:
+
+This will help ensure that your ESP-IDF is properly patched and ready for use.
+
+#### Building Project and flashing
+
+If you opt to compile the source code into firmware, you'll require the ESP-IDF to perform the compilation process.
+
+:::caution **Note**:
+The SenseCAP ESP32 SDK operates at a frequency of 120 MHz. To prevent potential issues such as the FLASH and PSRAM Mode configuration are not supported error, ensure that you apply the necessary [patch](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/tools/patch).
+
+This patch is intended to achieve the best performance of RGB LCD by using the PSRAM Octal 120 MHz feature, and it's only used for the **release/v5.0** branch of ESP-IDF. So do not choose a version higher than v5.0.
+:::
+
+<!-- Please differentiate between flashing compiled firmware and directly downloading firmware using IDF! -->
+
+To build, flash, and monitor your project, execute the following command:
 
 ```
-cd  <your_sdk_path>/examples/default_factory_firmware/
+cd  <your_sdk_path>/examples/indicator_basis/
 idf.py -p PORT build flash monitor
 ```
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/upgrade.png"/></div>
 
-<!-- 这一部分的补丁为什么不放在后面的Q/A？还有 Compile Code 是不是太少了？根本就没有 Compile code 就直接 flash了 -->
+<!-- Need to change the PIcure -->
 
----
+Up to this point, by typing the command `idf.py -p PORT flash`, the firmware has been successfully flashed into the ESP32-S3.
 
-Then you can use the esptool.py provided by ESP-IDF to flash a firmware.
-
-Run the following command to build and flash the project:
-
-```
-cd  <your_sdk_path>/examples/factory/
-esptool.py write_flash 0x0 default_factory_firmware_ESP32-S3.bin
-```
-
-#### Build and flash
-
-Or you can just combine these two steps:
-```cmd
-idf.py -p PORT build flash
-```
+<!-- Why is this patch not placed in the later Q/A section? Also, are there too few Compile Code instructions? There's no Compile Code, just direct flashing. -->
 
 ### **Esptool** {#ESPTOOL}
 
-ESPtool can be an indipendent app that do not reliable the ESP-IDF, and it's easy to use with serveral commands.
+> [ESPtool - GitHub](https://github.com/espressif/esptool) is a Python-based, open-source utility that provides a platform-independent way to communicate with the ROM bootloader in Espressif chips.
 
-#### How to use?
+Esptool can be used as part of your Python script. In this guide, we'll use the `packaged software` available on the [Esptool releases page](https://github.com/espressif/esptool/releases). Choose the software that corresponds to your computer's operating system.
 
-#### Script
+#### Using Esptool for Flashing
+
+There are two scripts provided that showcase how to effectively utilize Esptool for flashing firmware onto ESP32-S3 microcontrollers.
+
+:::note **Note**:
+Please be aware that the provided scripts are tailored for Windows operating systems. If you are using a different operating system, you will need to adapt the scripts to suit your environment.
+:::
+
+The merge.bat script is particularly useful as it intelligently consolidates the bootloader, partition table, and indicator basis binaries into a single firmware file. Once merged, this firmware can be seamlessly flashed onto the ESP32-S3 using the flash.bat script. When prompted, input the COM port corresponding to your device, and the flashing process will initiate. The complete operation can be summarized as follows:
+
+
+```sh title="merge.bat"
+esptool.exe --chip esp32s3 ^
+merge_bin -o sensecap_indicator_basis_v1.0.0.bin ^ # Target file name
+--flash_mode dio ^
+--flash_size 8MB ^
+0x0 ../../build/bootloader/bootloader.bin ^
+0x8000 ../../build/partition_table/partition-table.bin ^
+0x10000 ../../build/indicator_basis.bin
+```
+
+Alternatively, if you prefer to flash individual binary files instead of merging files then flashing, you can directly use the `just_flash.bat` script:
+
+```sh title="just_flash.bat"
+esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z ^
+0x0 ../../build/bootloader/bootloader.bin ^
+0x8000 ../../build/partition_table/partition-table.bin ^
+0x10000 ../../build/indicator_basis.bin
+```
+
+And for a straightforward flashing process using the merged firmware:
+
+```sh title="flash.bat"
+esptool.exe --chip esp32s3 --port COMx --baud 921600 write_flash -z 0x0 indicator_basis_v1.0.0.bin
+```
+
+> Pay close attention to the starting(0x0) address, especially when not merging binaries. For separate binary files, refer to the instructions in [Flash Download Tools for separate binary files](#Address_Note). Following these guidelines ensures error-free flashing.
+
+To utilize these scripts, save the code into separate text files named `merge.bat` and `flash.bat` within the project folder. This organizational approach simplifies access and usage.
+
+By employing these scripts, you streamline both firmware preparation and the flashing stages, contributing to a smoother and more reliable process.
+
+```
+├── indicator_basis
+│   ├── CMakeLists.txt
+│   ├── build
+│   ├── docs
+│   ├── main
+│   ├── partitions.csv
+│   ├── sdkconfig
+│   └── .defaults
+│   └── flash.bat
+│   └── merge.bat
+```
+
+1. Merge the binaries using `merge.bat`.
+2. Flash the merged firmware using `flash.bat`.
+
+#### Flashing Firmware
+
+For flashing firmware, you can use the provided `flash.bat` script. This script is designed to simplify the process of flashing your firmware onto the ESP32-S3 microcontroller.
+
+<details>
+<summary>Show flash.bat code</summary>
+
+  ```bat
+    @echo off
+    setlocal
+    cd /d "%~dp0"
+    :: Set Chip
+    set chip=esp32s3
+
+    :: Set Baud
+    set baud=921600
+
+    :: List COM ports
+    echo Available ports and devices:
+    echo.
+    for /F "tokens=* delims=" %%A in ('wmic path Win32_PnPEntity get Name ^| findstr /C:"COM" ^| findstr /C:"CH340"') do (
+      echo %%A
+    )
+
+    :: Prompt for port
+    :chooseport
+    echo.
+    echo Please enter the COM port to use (e.g., COM5):
+    set /p port=
+
+    :: Check if chosen port is valid and contains "CH340"
+    for /F "tokens=* delims=" %%A in ('wmic path Win32_PnPEntity get Name ^| findstr /C:"%port%" ^| findstr /C:"CH340"') do (
+      set device=%%A
+      goto :flash
+    )
+
+    echo Port %port% not found
+    goto :chooseport
+
+    :flash:: Print chosen parameters
+    echo.
+    echo You have chosen:
+    echo Chip: %chip%
+    echo Port: %port% - %device%
+    echo Baud: %baud%
+    @REM echo Press any key to continue to...
+    @REM pause >nul
+
+    :: Run esptool for the single file
+    esptool.exe --chip %chip% --port %port% --baud %baud% write_flash -z 0x0 indicator_basis_v1.0.0.bin
+
+    if ERRORLEVEL 1 (
+      echo Flashing with the single file failed with error %ERRORLEVEL%.
+      goto :end
+    )
+
+    :: End of script
+    :end
+    endlocal
+  ```
+
+</details>
+
+
+#### Merging Binaries
+The provided `merge.bat` script can be used to merge the necessary binary files into one firmware file. This script simplifies the process and ensures correct merging for successful flashing, which allows you to flash a sigal bin file as not to [flash separate files](#Address_Note).
+
+<details>
+<summary>Show merge.bat code</summary>
+
+  ```bat
+    @echo off
+    SETLOCAL
+
+    SET CurrentDir=%cd%
+
+    SET ScriptDir=%~dp0
+
+    SET CurrentDir=%CurrentDir:~0,-1%
+    SET ScriptDir=%ScriptDir:~0,-1%
+
+    IF NOT "%CurrentDir%"=="%ScriptDir%" (
+        cd /d "%ScriptDir%"
+    )
+
+    esptool.exe --chip esp32s3 ^
+    merge_bin -o indicator_basis_v1.0.0.bin ^
+    --flash_mode dio ^
+    --flash_size 8MB ^
+    0x0 ../../build/bootloader/bootloader.bin ^
+    0x8000 ../../build/partition_table/partition-table.bin ^
+    0x10000 ../../build/indicator_basis.bin
+
+    ENDLOCAL
+  ```
+</details>
+
+
 ### **Flash Download Tools** (Windows only) {#Flash_Tools}
 
 > **Flash Download Tools** are used for programming or flashing firmware onto ESP8266 and ESP32 series of microcontrollers. They provide a graphical user interface (GUI) for users to easily flash firmware onto the ESP microcontrollers.
@@ -177,20 +438,17 @@ When it shows `FINISH`, the firmware flashing has been completed.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/finish.png"/></div>
 
----
+#### Flash Download Tools for separate binary files {#Address_Note}
 
-:::tip **Note**:
-In the above guide, the binary file merged three bins into one, which name is `Default_Factory_Firmware_ESP32-S3.bin`
+In the previously mentioned guide, the binary file "Default_Factory_Firmware_ESP32-S3.bin" merges three binaries into one.
 
-However, when you use ESP-IDF to build firmware, there comes error if you still flash a sigal file. You need to find **three binary files** that you built and write the correct address (you can put your own address) on the right side:
+However, if you're using ESP-IDF to build firmware, directly flashing a single file might result in errors. Instead, you'll need to find **three separate binary files** that you've built and specify the correct addresses (you can use your own addresses) as follows:
 
 - **bootloader.bin** ----> **0x0**
 - **partion-table.bin** ----> **0x6800**
 - **termial_demo.bin** ----> **0x10000**
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/3binfiles.png"/></div>
-:::
-
 
 ## For **RP2040**
 
@@ -333,8 +591,15 @@ The command format consists of the packet type and packet parameters.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs>
-<TabItem value="Windows" label="Windows">
+<Tabs
+  groupId="operating-systems"
+  defaultValue={navigator.platform.includes('Win') ? 'Win' : 'Unix'}
+  values={[
+    {label: 'Windows', value: 'Win'},
+    {label: 'MacOS', value: 'Unix'},
+  ]}
+  >
+<TabItem value="Win" >
 
 Check the port on your Device Manage
 
@@ -346,7 +611,7 @@ In a nut shell, CH340 port is for ESP32.
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
 
 </TabItem>
-<TabItem value="Mac" label="Mac">
+<TabItem value="Unix">
 
 - "/dev/cu.usbmodem" is for RP2040
 
