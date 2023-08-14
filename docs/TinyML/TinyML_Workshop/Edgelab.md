@@ -1,6 +1,6 @@
 ---
 description: Introduction to EdgeLab.
-title: EdgeLab Introduction
+title: EdgeLab
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,9 +10,11 @@ last_update:
   author: Salman
 ---
 
-## 1. EdgeLab
+## EdgeLab
 
-### 1.1 Power-on Ready Embedded AI
+Seeed Studio [EdgeLab](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices. With EdgeLab we can easily get-started with tinyML project and work on it. Let's get started. 
+
+### 1. Get started with Face Recognition.
 
 We flash the EdgeLab program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
 
@@ -57,7 +59,84 @@ Finally, we come to the Monitor section, click once on **Stop** in the upper rig
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/9.png" style={{width:1000, height:'auto'}}/></div> 
 
 
-### 1.2 Select & Replace Custom Models
+
+### 2. Key Word Spotting(KWS) to control XIAO onboard LED. 
+
+#### Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+### How it's works!
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div> 
+
+
+
+**Step 2.1. Download all necessary files**
+
+Download the three binary files below.
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<td>bootloader.bin</td>
+			<td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/bootloader.bin" target="_blank"><b>Download</b></a></td>
+		</tr>
+		<tr>
+			<td>partition-table.bin</td>
+			<td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/partition-table.bin" target="_blank"><b>Download</b></a></td>
+		</tr>
+    <tr>
+      <td>XIAO_ESP32S3_Speech_Recognition.bin</td>
+      <td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/apps.ino.bin" target="_blank"><b>Download</b></a></td>
+    </tr>
+	</table>
+</div>
+
+**Step 2. Flash all files to XIAO**
+
+Please click the button below to come to ESPTool's Flash Tools page.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+	<a class="get_one_now_item" href="https://espressif.github.io/esptool-js/">
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to ESP Tool</font></span></strong></a>
+</div><br />
+
+Once you are on the web page, please click on the **Connect** button and then select the port number of your XIAO. Again, it should be clearly labeled **USB JTAG**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/12.png" style={{width:1000, height:'auto'}}/></div> 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/13.png" style={{width:1000, height:'auto'}}/></div> 
+
+Once the connection is correct, we can select the file to upload. Then please follow the format below, filling in the flash address and selecting the correct file in turn.
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<td>0x0000</td>
+			<td>bootloader.bin</td>
+		</tr>
+		<tr>
+			<td>0x8000</td>
+			<td>partition-table.bin</td>
+		</tr>
+    <tr>
+      <td>0x10000</td>
+      <td>XIAO_ESP32S3_Speech_Recognition.bin</td>
+    </tr>
+	</table>
+</div>
+
+Then click Program, watch the progress bar for all the files and make sure each file is flashed successfully before you leave.
+
+**Step 3.** Reboot to watch the effect
+
+Once all the files have been uploaded successfully, you can press the reset button to allow the program to start executing. The effect of this sample program is that when the microphone of the XIAO ESP32S3 Sense detects the Hello command that you utter, the built-in LED orange light will illuminate. When the Stop command you say is monitored, the orange light goes off.
+
+
+
+### 3. More Custom Prebuild Models
 
 :::tip
 In addition to the face models prepared in advance, we are also supporting more models for XIAO ESP32S3, so stay tuned!
@@ -165,6 +244,14 @@ Let's go back to EdgeLab, connect the XIAO according to the previous configurati
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/10.gif" style={{width:800, height:'auto'}}/></div> 
 
+<hr></hr>
+
+# ToDo
+- [ ] Load and Run **Face Recognition Model** with EdgeLab. 
+- [ ] Load and Run **Keywordspotting Model** with EdgeLab. 
+
 :::tip
 If you also want to experience this water meter that generates readings automatically, you can download the zip package by clicking **[here](https://files.seeedstudio.com/wiki/tinyml-topic/clock-master.zip)**, unzip it and then double click to open the html file in the root directory.
 :::
+
+

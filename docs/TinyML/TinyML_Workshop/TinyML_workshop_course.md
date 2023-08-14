@@ -49,13 +49,13 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "#1-edgelab" class="getting_started_label2">1.1 EdgeLab</a>
+          <a href= "/edgelab" class="getting_started_label2">1.1 EdgeLab</a>
           <br/>Use pre-made tinyML models and experiment quickly.
       </div>
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "#2-edge-impulse" class="getting_started_label2">1.2 Edge Impulse</a>
+          <a href= "/edgeimpulse" class="getting_started_label2">1.2 Edge Impulse</a>
           <br/>Create ML model and generate arduino libraries. 
       </div>
   </div>
@@ -66,13 +66,13 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "#1-edgelab" class="getting_started_label2">2.1 Control Lights with Voice </a>
+          <a href= "/tinyml_course_Key_Word_Spotting" class="getting_started_label2">2.1 Control Lights with Voice </a>
           <br/>Learn how to intergrate arduino tinyML libraries. 
       </div>
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "#2-edge-impulse" class="getting_started_label2">2.2 Cat and Dog Image classification </a>
+          <a href= "/tinyml_course_Image_recognition_project" class="getting_started_label2">2.2 Cat and Dog Image classification </a>
           <br/>Classify dog and cat images using computervision. 
       </div>
   </div>
@@ -94,6 +94,8 @@ To complete the workshop, we need go through the instructions below, and each pa
       </div>
   </div>
 </div>
+
+Please go one by one to the above topic and complete the ToDo to go to the next level. All the best and happy making 🙌.
 
 
 ## Tech Support & Product Discussion

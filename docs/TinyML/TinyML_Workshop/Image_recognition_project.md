@@ -1,6 +1,6 @@
 ---
 description: Introduction to EdgeLab.
-title: Image recognition project
+title: Image recognition
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
