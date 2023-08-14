@@ -4,7 +4,7 @@ title: How To Set The API Key
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /SenseCAP_Indicator_How_to_Set_the_API_Key
+slug: /Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key
 last_update:
   date: 5/31/2023
   author: Thomas
