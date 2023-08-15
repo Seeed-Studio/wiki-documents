@@ -155,66 +155,58 @@ Please download all the files below in order and select the model you want to us
 	</table>
 </div>
 
-**Step 2. Flash all files to XIAO**
+**Step 2. Erase Flash to XIAO**
 
-Please click the button below to come to ESPTool's Flash Tools page.
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://espressif.github.io/esptool-js/">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to ESP Tool</font></span></strong></a>
-</div><br />
-
-Once you are on the web page, please click on the **Connect** button and then select the port number of your XIAO. Again, it should be clearly labeled **USB JTAG**.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/12.png" style={{width:1000, height:'auto'}}/></div> 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/13.png" style={{width:1000, height:'auto'}}/></div> 
-
-Once the connection is correct, we can select the file to upload. Then please follow the format below, filling in the flash address and selecting the correct file in turn.
-
-<div class="table-center">
-	<table align="center">
-		<tr>
-			<td>0x0000</td>
-			<td>bootloader.bin</td>
-		</tr>
-		<tr>
-			<td>0x8000</td>
-			<td>partition-table.bin</td>
-		</tr>
-    <tr>
-      <td>0x10000</td>
-      <td>edgelab.bin</td>
-    </tr>
-    <tr>
-      <td>0x400000</td>
-      <td>models_file_name.tflite</td>
-    </tr>
-	</table>
-</div>
-
-Take the **yolov5 Digital Meter Water** model as an example, the effect after complete filling is shown in the picture.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/11.png" style={{width:1000, height:'auto'}}/></div> 
-
-Then click Program, watch the progress bar for all the files and make sure each file is flashed successfully before you leave.
-
-:::tip
-Since ESPTool doesn't have a reset program by default, after uploading all the files, we still need to manually re-plug the XIAO's cable to let it restart.
-:::
-
-Let's go back to EdgeLab, connect the XIAO according to the previous configuration method, start **Invoke**, and you'll see the water meter reading!
+Please click the button below to come to EdgeLab's Flash Tools page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab</font></span></strong></a>
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab Flash</font></span></strong></a>
 </div><br />
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/14.png" style={{width:1000, height:'auto'}}/></div>
+
+At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and EdgeLab will automatically search and connect your XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/15.png" style={{width:1000, height:'auto'}}/></div>
+
+Then we erase the firmware first.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/21.png" style={{width:1000, height:'auto'}}/></div>
+
+**Step 3. Flash all files to XIAO**
+
+Then, please see **Burn firmwave** toolbar. Let's start by clicking on the three firmwares we just downloaded and uploading them to the corresponding area in turn.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/16.png" style={{width:1000, height:'auto'}}/></div>
+
+Then, click the **Burn** button in the upper right corner to flash the desired firmware to the XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/17.png" style={{width:1000, height:'auto'}}/></div>
+
+Once the firmware is flashed, the **Burn** button will return to blue, at which point we can upload the model file for XIAO to execute TinyML. Select your downloaded `.tflite` model file and click the **Upload** button.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/18.png" style={{width:1000, height:'auto'}}/></div>
+
+Once the model is uploaded, we go back to the **[Dashboard](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace)** and EdgeLab automatically connects to XIAO and loads your model. We can directly click the **Invoke** button to observe the effect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/10.gif" style={{width:800, height:'auto'}}/></div> 
 
 :::tip
 If you also want to experience this water meter that generates readings automatically, you can download the zip package by clicking **[here](https://files.seeedstudio.com/wiki/tinyml-topic/clock-master.zip)**, unzip it and then double click to open the html file in the root directory.
 :::
+
+**Step 4**. Replace model
+
+:::tip
+Uploading the firmware is a one-time operation, so if you want to change the model, the next time you just need to change the model file directly, without re-uploading the firmware.
+:::
+
+We click **Deploy** from the dashboard and EdgeLab automatically connects to XIAO. Then we just need to directly select the model file you want to replace, no need to re-upload the firmware again.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/19.png" style={{width:1000, height:'auto'}}/></div> 
+
+Once the model has been replaced, you can return to the dashboard to continue observing the results.
 
 
 ## 2. Edge Impulse
@@ -261,43 +253,36 @@ Download the three files below.
 	</table>
 </div>
 
-**Step 2. Flash all files to XIAO**
+**Step 2. Erase Flash to XIAO**
 
-Please click the button below to come to ESPTool's Flash Tools page.
+Please click the button below to come to EdgeLab's Flash Tools page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://espressif.github.io/esptool-js/">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to ESP Tool</font></span></strong></a>
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab Flash</font></span></strong></a>
 </div><br />
 
-Once you are on the web page, please click on the **Connect** button and then select the port number of your XIAO. Again, it should be clearly labeled **USB JTAG**.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/14.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/12.png" style={{width:1000, height:'auto'}}/></div> 
+At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and EdgeLab will automatically search and connect your XIAO.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/13.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/15.png" style={{width:1000, height:'auto'}}/></div>
 
-Once the connection is correct, we can select the file to upload. Then please follow the format below, filling in the flash address and selecting the correct file in turn.
+Then we erase the firmware first.
 
-<div class="table-center">
-	<table align="center">
-		<tr>
-			<td>0x0000</td>
-			<td>bootloader.bin</td>
-		</tr>
-		<tr>
-			<td>0x8000</td>
-			<td>partition-table.bin</td>
-		</tr>
-    <tr>
-      <td>0x10000</td>
-      <td>XIAO_ESP32S3_Speech_Recognition.bin</td>
-    </tr>
-	</table>
-</div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/21.png" style={{width:1000, height:'auto'}}/></div>
 
-Then click Program, watch the progress bar for all the files and make sure each file is flashed successfully before you leave.
+**Step 3. Flash all files to XIAO**
 
-**Step 3.** Reboot to watch the effect
+Then, please see **Burn firmwave** toolbar. Let's start by clicking on the three firmwares we just downloaded and uploading them to the corresponding area in turn.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/20.png" style={{width:1000, height:'auto'}}/></div>
+
+Then, click the **Burn** button in the upper right corner to flash the desired firmware to the XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/22.png" style={{width:1000, height:'auto'}}/></div>
+
+**Step 4**. Reboot to watch the effect
 
 Once all the files have been uploaded successfully, you can press the reset button to allow the program to start executing. The effect of this sample program is that when the microphone of the XIAO ESP32S3 Sense detects the Hello command that you utter, the built-in LED orange light will illuminate. When the Stop command you say is monitored, the orange light goes off.
 
@@ -877,6 +862,27 @@ MJRoBot also has very many interesting projects about the XIAO ESP32S3.
 
 - [Exploring Machine Learning with the new XIAO ESP32S3](https://www.hackster.io/mjrobot/exploring-machine-learning-with-the-new-xiao-esp32s3-6463e5)
 - [TinyML Made Easy: Image Classification](https://www.hackster.io/mjrobot/tinyml-made-easy-image-classification-cb42ae)
+
+## Troubleshooting
+
+### Q1: I get an error after clicking the connect button?
+
+A: If you are encountering an error message after connecting, such as the error shown below.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/23.png" style={{width:600, height:'auto'}}/></div>
+
+There are three possibilities for this to occur.
+1. XIAO's port is occupied by another program. At this time, please check if you have turned on the Arduino's serial port monitor or other serial port software, please turn them off. If you are never able to rule out what is occupying the port, try re-plugging the XIAO or restarting the computer.
+2. It could be that your data cable is abnormal. Please replace the data cable with a good quality one to transfer data.
+3. It may be that the browser is not supported. Edge or Google Chrome is recommended.
+
+### Q2: Invoke doesn't show an image after uploading a model?
+
+A: It is possible that the XIAO was not reset successfully, you can try to press the reset button on the XIAO or re-plug the connected XIAO.
+
+### Q3: After erasing the firmware, uploading the model directly has no effect?
+
+A: The Erase Firmware function will erase the APP firmware from the XIAO, so if you want to change the model, you don't need to click the Erase Firmware button. If you click on erase firmware, then you need to upload the firmware all over again before you can upload the model file again. Generally the erase firmware action is only required if you switch from EdgeLab to Edge Impulse or vice versa.
 
 ## Resources
 
