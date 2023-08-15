@@ -80,7 +80,7 @@ It's like a generic arduino library, we need to install it on Arduino IDE first 
 
 ### Speech keyword recognition (Yes & No) Arduino Library
 #### Step 1. Downaload KWS Demo libray 
-Download [Speech keyword recognition (Hello & Stop) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)  the KWS demo library as .Zip. 
+Download [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)  library as .Zip. 
 
 #### Step 2. Add ZIP Library to Arduino IDE. 
 
@@ -405,7 +405,31 @@ Copy the above code or download from [here](https://github.com/salmanfarisvp/Tin
 ```
 
 In the above code, we can see where did make the decisions to **TURN ON** the **LED**, and **OFF** it. We can also put other logic here and make KWS to control our projects.
+<hr></hr>
 
+### Fruit identification (apples, bananas, grapes) Arduino Library
+#### Step 1. Downaload Fruit identification libray 
+Download [Speech keyword recognition (Yes & No) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)  library as .Zip.
+
+#### Step 2. Add ZIP Library to Arduino IDE. 
+
+Since you have downloaded the zip Library, open your Arduino IDE, click on Sketch > Include Library > Add .ZIP Library.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div> 
+
+Choose the zip file you just downloaded，and if the library install correct, you will see Library added to your libraries in the notice window. Which means the library is installed successfully.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div> 
+
+#### Step 3. Run the example sketch 
+
+You can find the example sketch under the **Files -> Examples -> xiao-esp323-fruits-classify_inferencing -> XIAO-ESP32S3-Sense**
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/fruitClassifications_Lib_path.png" style={{width:1000, height:'auto'}}/></div> 
+
+#### Try out the demo. 
+
+Open the data set sample page from [here](https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition) and open the fruit image, then point the XIAO ESP32S3 camera to the fruit image and see results on the screen. 
 
 
 # ToDo
