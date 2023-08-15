@@ -641,6 +641,20 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'SenseCAP T1000 Tracker',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+          },
+          items: [
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP Sensor',
           collapsed: true,
           collapsible: true,
@@ -760,19 +774,6 @@ const sidebars = {
       ],
     },
 
-    {
-      type: 'category',
-      label: 'SenseCAP T1000 Tracker',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Sensor/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
-      },
-      items: [
-        'Sensor/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
-      ],
-    },
 
     {
       type: 'category',

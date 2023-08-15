@@ -2,7 +2,7 @@
 description: SenseCAP_T1000_tracker_Introduction
 title: Introduction
 keywords:
-- enseCAP_T1000_tracker
+- SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 last_update:
