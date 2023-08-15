@@ -10,6 +10,8 @@ last_update:
   date: 8/15/2023
   author: Thomas
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # **How To Flash The Native Firmware**
 
@@ -62,77 +64,67 @@ The default shipping firmware of the SenseCAP Indicator is fully open source for
 If you've opted to compile the source code into firmware, you'll require the ESP-IDF to perform the compilation process.
 
 #### **Download and install**
+
 <!-- 提前说明要用5.0的版本，对于 Windows 怎么处理？其他版本的可以进行调整 -->
 
 <Tabs
-  groupId="operating-systems"
-  defaultValue={navigator.platform.includes('Win') ? 'Win' : 'Unix'}
-  values={[
-    {label: 'Windows', value: 'Win'},
-    {label: 'Linux and MacOS', value: 'Unix'},
-  ]}>
-  <TabItem value="Win">
+groupId="operating-systems"
+defaultValue='Win'
+values={[
+{label: 'Windows', value: 'Win'},
+{label: 'Linux and MacOS', value: 'Unix'},
+]}>
+<TabItem value="Win">
 
-<!-- Windows -->
-> Espressif Docs: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/windows-setup.html)
+  > Espressif Docs: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/windows-setup.html)
 
-**Installation: Using offline installer**
+  **Installation: Using offline installer**
 
-For Windows users, you have the option to download the ESP-IDF offline installer directly. Here's the link: [🖱️Donwload Offline Installer v5.0](https://github.com/espressif/idf-installer/releases/download/offline-5.0/esp-idf-tools-setup-offline-5.0.exe)
+  For Windows users, you have the option to download the ESP-IDF offline installer directly. Here's the link: [🖱️Donwload Offline Installer v5.0](https://github.com/espressif/idf-installer/releases/download/offline-5.0/esp-idf-tools-setup-offline-5.0.exe)
 
+  **Installation: Using the Recommended Script**
 
-**Installation: Using the Recommended Script**
+  If you have Python installed on your computer, using the [Git repository](https://github.com/espressif/esp-idf.git) to install ESP-IDF is the recommended method. Here's how:
+  1. Choose a folder to set up your ESP-IDF (IDF_PATH). Open a command prompt or terminal.
 
-If you have Python installed on your computer, using the [Git repository](https://github.com/espressif/esp-idf.git) to install ESP-IDF is the recommended method. Here's how:
+  ```ps
+  mkdir -p ~/esp
+  cd ~/esp
+  git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git esp-idf-v5.0
+  cd ~/esp/esp-idf-v5.0
+  ./install.bat esp32s3
+  ```
 
-1. Choose a folder to set up your ESP-IDF (IDF_PATH). Open a command prompt or terminal.
-```ps
-mkdir -p ~/esp
-cd ~/esp
-git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git esp-idf-v5.0
+  2. The ESP-IDF tools will be installed by default in `C:\Users\
+  username
+  \.espressif`.
 
-cd ~/esp/esp-idf-v5.0
-./install.bat esp32s3
-```
+  3. To activate the console, run the following command:
 
-2. The ESP-IDF tools will be installed by default in `C:\Users\<username>\.espressif`.
+  ```sh
+  C:\Users\
+  username
+  \esp\esp-idf-v5.0\export.bat # to activate console
+  ```
 
-3. To activate the console, run the following command:
+  4. Try building a project [now](#BUILD).
 
-```sh
-C:\Users\<username>\esp\esp-idf-v5.0\export.bat # to activate console
-```
+</TabItem>
 
-4. Try building a project now.
+<TabItem value="Unix">
 
+  > Espressif Docs: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/linux-macos-setup.html)
 
-  </TabItem>
+  If in Linux or MacOS, you can follow this guide to change the version of git repo.
 
-<!-- Windows End -->
+  ```
+  git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git
+  install.sh
+  export.sh
+  ```
 
-  <TabItem value="Unix">
-
-<!-- Unix -->
-
-> Espressif Docs: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/linux-macos-setup.html)
-
-
-If in Linux or MacOS, you can follow this guide to change the version of git repo.
-```
-git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git
-install.sh
-export.sh
-```
-
-  </TabItem>
-
-<!-- Unix End -->
-
+</TabItem>
 </Tabs>
-
-:::note **Note**:
-The default installation paths for the ESP-IDF tools differ between the offline installer and the installer script. If you encounter issues even after patching the IDF, you can try **deleting** the `sdkconfig` file and the `build` folder.
-:::
 
 :::tip **TIP**:
 - If you want to update a verion from previous. Please refer to the [Updating ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32/versions.html#updating-esp-idf).
@@ -142,11 +134,13 @@ The default installation paths for the ESP-IDF tools differ between the offline 
 
 #### Patching ESP-IDF
 :::caution Important:
+Understanding the Need for Patching: [LVGL](https://lvgl.io/), operates within the SenseCAP ESP32 SDK at a clock frequency of 120 MHz. However, to prevent encountering the "FLASH and PSRAM Mode configuration are not supported" error, it's crucial to apply a specific patch.
 
-Why is Patching Needed? The SenseCAP ESP32 SDK operates at a frequency of 120 MHz. To prevent the occurrence of the FLASH and PSRAM Mode configuration are not supported error, it's necessary to apply a patch.
+This patch is designed to optimize the RGB LCD's performance using the PSRAM Octal 120 MHz feature. It's specifically intended for use with the release/v5.0 branch of ESP-IDF. Please avoid using a version higher than `v5.0`.
+:::
 
-This patch is designed to optimize the RGB LCD's performance using the PSRAM Octal 120 MHz feature. It's specifically intended for use with the release/v5.0 branch of ESP-IDF. Please avoid using a version higher than v5.0.
-
+:::note **Note**:
+The default installation paths for the ESP-IDF tools differ between the offline installer and the installer script. If you encounter issues even after patching the IDF successfully , you can try **deleting** the `sdkconfig` file and the `build` folder.
 :::
 
 > For details: [IDF Patch · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md)
@@ -197,15 +191,9 @@ idf.py build
 
 This will help ensure that your ESP-IDF is properly patched and ready for use.
 
-#### Building Project and flashing
+#### Building Project and flashing {#BUILD}
 
 If you opt to compile the source code into firmware, you'll require the ESP-IDF to perform the compilation process.
-
-:::caution **Note**:
-The SenseCAP ESP32 SDK operates at a frequency of 120 MHz. To prevent potential issues such as the FLASH and PSRAM Mode configuration are not supported error, ensure that you apply the necessary [patch](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/tools/patch).
-
-This patch is intended to achieve the best performance of RGB LCD by using the PSRAM Octal 120 MHz feature, and it's only used for the **release/v5.0** branch of ESP-IDF. So do not choose a version higher than v5.0.
-:::
 
 <!-- Please differentiate between flashing compiled firmware and directly downloading firmware using IDF! -->
 
@@ -293,98 +281,78 @@ By employing these scripts, you streamline both firmware preparation and the fla
 For flashing firmware, you can use the provided `flash.bat` script. This script is designed to simplify the process of flashing your firmware onto the ESP32-S3 microcontroller.
 
 <details>
-<summary>Show flash.bat code</summary>
-
-  ```bat
-    @echo off
-    setlocal
-    cd /d "%~dp0"
-    :: Set Chip
-    set chip=esp32s3
-
-    :: Set Baud
-    set baud=921600
-
-    :: List COM ports
-    echo Available ports and devices:
-    echo.
-    for /F "tokens=* delims=" %%A in ('wmic path Win32_PnPEntity get Name ^| findstr /C:"COM" ^| findstr /C:"CH340"') do (
-      echo %%A
-    )
-
-    :: Prompt for port
-    :chooseport
-    echo.
-    echo Please enter the COM port to use (e.g., COM5):
-    set /p port=
-
-    :: Check if chosen port is valid and contains "CH340"
-    for /F "tokens=* delims=" %%A in ('wmic path Win32_PnPEntity get Name ^| findstr /C:"%port%" ^| findstr /C:"CH340"') do (
-      set device=%%A
-      goto :flash
-    )
-
-    echo Port %port% not found
-    goto :chooseport
-
-    :flash:: Print chosen parameters
-    echo.
-    echo You have chosen:
-    echo Chip: %chip%
-    echo Port: %port% - %device%
-    echo Baud: %baud%
-    @REM echo Press any key to continue to...
-    @REM pause >nul
-
-    :: Run esptool for the single file
-    esptool.exe --chip %chip% --port %port% --baud %baud% write_flash -z 0x0 indicator_basis_v1.0.0.bin
-
-    if ERRORLEVEL 1 (
-      echo Flashing with the single file failed with error %ERRORLEVEL%.
-      goto :end
-    )
-
-    :: End of script
-    :end
-    endlocal
-  ```
-
+   <summary>Show flash.bat code</summary>
+   ```bat
+   @echo off
+   setlocal
+   cd /d "%~dp0"
+   :: Set Chip
+   set chip=esp32s3
+   :: Set Baud
+   set baud=921600
+   :: List COM ports
+   echo Available ports and devices:
+   echo.
+   for /F "tokens=* delims=" %%A in ('wmic path Win32_PnPEntity get Name ^| findstr /C:"COM" ^| findstr /C:"CH340"') do (
+   echo %%A
+   )
+   :: Prompt for port
+   :chooseport
+   echo.
+   echo Please enter the COM port to use (e.g., COM5):
+   set /p port=
+   :: Check if chosen port is valid and contains "CH340"
+   for /F "tokens=* delims=" %%A in ('wmic path Win32_PnPEntity get Name ^| findstr /C:"%port%" ^| findstr /C:"CH340"') do (
+   set device=%%A
+   goto :flash
+   )
+   echo Port %port% not found
+   goto :chooseport
+   :flash:: Print chosen parameters
+   echo.
+   echo You have chosen:
+   echo Chip: %chip%
+   echo Port: %port% - %device%
+   echo Baud: %baud%
+   @REM echo Press any key to continue to...
+   @REM pause >nul
+   :: Run esptool for the single file
+   esptool.exe --chip %chip% --port %port% --baud %baud% write_flash -z 0x0 indicator_basis_v1.0.0.bin
+   if ERRORLEVEL 1 (
+   echo Flashing with the single file failed with error %ERRORLEVEL%.
+   goto :end
+   )
+   :: End of script
+   :end
+   endlocal
+   ```
 </details>
-
 
 #### Merging Binaries
 The provided `merge.bat` script can be used to merge the necessary binary files into one firmware file. This script simplifies the process and ensures correct merging for successful flashing, which allows you to flash a sigal bin file as not to [flash separate files](#Address_Note).
 
 <details>
-<summary>Show merge.bat code</summary>
-
-  ```bat
-    @echo off
-    SETLOCAL
-
-    SET CurrentDir=%cd%
-
-    SET ScriptDir=%~dp0
-
-    SET CurrentDir=%CurrentDir:~0,-1%
-    SET ScriptDir=%ScriptDir:~0,-1%
-
-    IF NOT "%CurrentDir%"=="%ScriptDir%" (
-        cd /d "%ScriptDir%"
-    )
-
-    esptool.exe --chip esp32s3 ^
-    merge_bin -o indicator_basis_v1.0.0.bin ^
-    --flash_mode dio ^
-    --flash_size 8MB ^
-    0x0 ../../build/bootloader/bootloader.bin ^
-    0x8000 ../../build/partition_table/partition-table.bin ^
-    0x10000 ../../build/indicator_basis.bin
-
-    ENDLOCAL
-  ```
+   <summary>Show merge.bat code</summary>
+   ```bat
+   @echo off
+   SETLOCAL
+   SET CurrentDir=%cd%
+   SET ScriptDir=%~dp0
+   SET CurrentDir=%CurrentDir:~0,-1%
+   SET ScriptDir=%ScriptDir:~0,-1%
+   IF NOT "%CurrentDir%"=="%ScriptDir%" (
+   cd /d "%ScriptDir%"
+   )
+   esptool.exe --chip esp32s3 ^
+   merge_bin -o indicator_basis_v1.0.0.bin ^
+   --flash_mode dio ^
+   --flash_size 8MB ^
+   0x0 ../../build/bootloader/bootloader.bin ^
+   0x8000 ../../build/partition_table/partition-table.bin ^
+   0x10000 ../../build/indicator_basis.bin
+   ENDLOCAL
+   ```
 </details>
-
 
 ### **Flash Download Tools** (Windows only) {#Flash_Tools}
 
@@ -401,11 +369,37 @@ Follow the steps to flash a pre-compiled firmware:
 
 - **Step 2**: Select the following options:
 
-| Option        | Param    |
-| :---:         | :---:    |
-| **Chip Type** | ESP32-S3 |
-| **WorkMode**  | Develop  |
-| **LoadMode**  | UART     |
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Option</th>
+        <th>Param</th>
+    </tr>
+    <tr>
+        <td>
+        <div style={{textAlign: 'center'}}><strong>Chip Type</strong></div>
+        </td>
+        <td><div  style={{textAlign: 'center'}}>ESP32-S3</div>
+        </td>
+    </tr>
+    <tr>
+      <td>
+      <div  style={{textAlign: 'center'}}> <strong>WorkMode</strong></div>
+      </td>
+      <td>
+      <div  style={{textAlign: 'center'}}> Develop </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <div  style={{textAlign: 'center'}}> <strong>LoadMode</strong></div>
+      </td>
+      <td>
+      <div  style={{textAlign: 'center'}}> UART </div>
+      </td>
+    </tr>
+  </table>
+</div>
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_59.png"/></div>
 
@@ -415,10 +409,29 @@ Follow the steps to flash a pre-compiled firmware:
 
 * **Step 5**: Configure SPI Flash:
 
-| Option        | Param |
-| ------------- | ----- |
-| **SPI SPEED** | 40MHz |
-| **SPI MODE**  | DIO   |
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Option</th>
+        <th>Param</th>
+    </tr>
+    <tr>
+        <td>
+        <div style={{textAlign: 'center'}}><strong>SPI SPEED</strong></div>
+        </td>
+        <td><div  style={{textAlign: 'center'}}>40MHz</div>
+        </td>
+    </tr>
+    <tr>
+      <td>
+      <div  style={{textAlign: 'center'}}> <strong>SPI MODE</strong></div>
+      </td>
+      <td>
+      <div  style={{textAlign: 'center'}}> DIO </div>
+      </td>
+    </tr>
+  </table>
+</div>
 
 - **Step 6**: Configure the Download Panel:
 
@@ -583,46 +596,30 @@ The command format consists of the packet type and packet parameters.
 [SenseCAP Indicator RP2040 Demo](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main)
 
 ## FAQ
+
 <details>
-  <summary>How to distinguish the serial port?</summary>
-
-<!-- Tab -->
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs
-  groupId="operating-systems"
-  defaultValue={navigator.platform.includes('Win') ? 'Win' : 'Unix'}
-  values={[
+    <summary>How to distinguish the serial port?</summary>
+    <Tabs
+    groupId="operating-systems"
+    defaultValue='Win'
+    values={[
     {label: 'Windows', value: 'Win'},
     {label: 'MacOS', value: 'Unix'},
-  ]}
-  >
-<TabItem value="Win" >
-
-Check the port on your Device Manage
-
-- "USB Serial Device(COMx)" or "USB 串行设备" is for RP2040
-- "USB-SERIAL CH340" is for ESP32
-
-In a nut shell, CH340 port is for ESP32.
-
-<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
-
-</TabItem>
-<TabItem value="Unix">
-
-- "/dev/cu.usbmodem" is for RP2040
-
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
-
-</TabItem>
-</Tabs>
-
-<!-- End of Tab -->
+    ]}
+    >
+    <TabItem value="Win" >
+      Check the port on your Device Manage
+      - "USB Serial Device(COMx)" or "USB 串行设备" is for RP2040
+      - "USB-SERIAL CH340" is for ESP32
+      In a nut shell, CH340 port is for ESP32.
+      <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_39.png"/></div>
+    </TabItem>
+    <TabItem value="Unix">
+      - "/dev/cu.usbmodem" is for RP2040
+      <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
+    </TabItem>
+    </Tabs>
 </details>
-
 
 # **Tech Support**
 
