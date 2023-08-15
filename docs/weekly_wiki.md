@@ -1,12 +1,12 @@
 ---
 description: Weekly Wiki
-title: Weekly Wiki
+title: Weekly Wiki ✨
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/07/2023
-  author: Cessarr
+  date: 08/14/2023
+  author: Matthew
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
@@ -15,42 +15,53 @@ last_update:
 
 This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
-Today is August 7st and a brand new week has begun! Check out what Seeed Studio did last week!
+✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
+
+Today is August 14th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Build a HMI Display for Raspberry Pi using Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-HMI/)
+### [Using XIAO ESP32C3 to connect to SenseCAP AI for planting advice](https://wiki.seeedstudio.com/xiao_esp32c3_sensecapai/)
 
-Thanks for the anonymous tip letting us know that there is an wiki about Wio Terminal missing.
+During this time, Seeed Studio's SenseCAP platform developed and released new AI features. Currently the main features of SenseCAP AI are focused on providing constructive planting advice to growers, and will be updated with richer AI features in the near future!
 
-![](https://files.seeedstudio.com/wiki/Wio-Terminanl-HMI/Wio-Terminal-HMI.gif)
+This tutorial, then, will bridge the XIAO ESP32 series with the SenseCAP platform, detailing how to use the XIAO and Grove series sensors to upload data to SenseCAP and get constructive suggestions from the AI based on these sensor values.
 
-### [NVIDIA® Jetson™-Powered Edge Devices](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP_AI/1.png" style={{width:600, height:'auto'}}/></div>
 
-This is the page regarding all the computing devices powered by NVIDIA® Jetson™ modules:
+### [TinyML Workshop Course](https://wiki.seeedstudio.com/tinyml_workshop_course/)
 
-- reComputer
-- reComputer Industrial
-- miniPC
-- NVIDIA Jetson H01
-- reServer NVIDIA Jetson
-
-You can also find the software that is related to the AI methods.
+Welcome to the course on using EdgeLab and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize EdgeLab and Edge Impulse platforms effectively. We will explore the functionalities of EdgeLab, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
 
 ## Existed Wiki Updated
 
-### [Note on linkit](https://github.com/MediaTek-Labs)
+### [Collection Page for NVIDIA Jetson devices by Seeed Studio](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
 
-Due to the closure of MediaTek Labs, all related links have become invalid. If you need to download relevant files, please search for them on the following link: [The relevant files about linkit](https://github.com/MediaTek-Labs).
+We are almost done updating the collection page for NVIDIA Jetson devices. And welcome [discuss it on our workflow and share your opinions](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30495963)!
 
-### Add the new button on 'Page not Found'
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/NVIDIA_Jetson_collection_front.jpg" style={{width:600, height:'auto'}}/></div>
 
-- Due to the transition to a new wiki platform, we unfortunately experienced some loss of pages.
-- We apologize for any inconvenience this may have caused and appreciate if you can help us with report.
-- The hyperlink button “Report on GitHub” have been added on the ["Page no Found"](https://wiki.seeedstudio.com/pagenofound) page.
+### [Add grove example to Wio WM1110 dev kit](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Hardware_Overview/#grove)
 
-## The Efforts of Contributor
+There are 3 Grove interfaces in the DK, which can be connected to 400+ Grove modules, and supports ADC/UART and IIC transmission protocols.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/grove_pins.png" style={{width:600, height:'auto'}}/></div>
+
+### [Deploy YOLOV8 to Jetson in One Line of Code!](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/#deploy-yolov8-to-jetson-in-one-line-of-code)
+
+After you flash the Jetson device with JetPack and SDK components, you can simply run the below commands to run YOLOv8 models. This will first download and install the necessary packages, dependencies, setup the environment and download pretrained models from YOLOv8 to perform object detection, Image segmentation, pose estimation and image classifications tasks!
+
+## The Efforts of Contributor✨
+
+### [CircuitPython for ESP32S3](https://wiki.seeedstudio.com/XIAO_ESP32S3_CircuitPython/)
+
+Thanks our contributor - Isaac for adding a wiki page about connecting XIAO ESP32S3 and Grove - OLED screen and displaying text on the screen, programming with CircuitPython.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" /></div>
+
+### [Added missing accelerometer raw data sketch and steps](https://github.com/Seeed-Studio/wiki-documents/pull/487/files)
+
+Thanks our contributor - Salman for updating missing accelerometer raw data sketch and steps to the [Edge Impulse on XIAO nRF52840](https://wiki.seeedstudio.com/XIAOEI/) wiki.
 
 ## Past Weekly wiki
 
@@ -74,3 +85,4 @@ Due to the closure of MediaTek Labs, all related links have become invalid. If y
 - [weekly wiki on 7.17th](/Seeed_Elderly/weekly_wiki/wiki717)
 - [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
 - [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
+- [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
