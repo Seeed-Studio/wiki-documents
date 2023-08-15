@@ -732,8 +732,6 @@ const sidebars = {
           ],
         },
 
-
-
         {
           type: 'category',
           label: ' SenseCAP Data Logger',
@@ -759,6 +757,20 @@ const sidebars = {
           ],
         },
 
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'SenseCAP T1000 Tracker',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+      },
+      items: [
+        'Sensor/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
       ],
     },
 
@@ -806,7 +818,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
-                
+
               ],
             },
             {
@@ -908,7 +920,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO-ESP32C3-Zephyr',
-            
+
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -981,6 +993,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
           ],
         },
         {
@@ -1508,8 +1521,8 @@ const sidebars = {
                   items: [
                     'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Development_Tutorial/Hardware_Overview',
                   ],
-                },  
-              ], 
+                },
+              ],
             },
 
             {
@@ -2231,8 +2244,8 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A603_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A607_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A203_Flash_System',
-                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',    
-                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',            
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',
                   ],
                 },
               ],
@@ -2337,7 +2350,7 @@ const sidebars = {
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
-            
+
           ],
         },
         {
@@ -2931,7 +2944,7 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
-    
+
     {
       type: 'category',
       label: 'TinyML Workshop',

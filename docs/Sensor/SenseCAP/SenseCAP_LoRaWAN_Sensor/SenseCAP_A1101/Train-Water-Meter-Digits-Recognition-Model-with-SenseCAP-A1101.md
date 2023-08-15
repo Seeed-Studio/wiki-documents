@@ -268,6 +268,49 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 As you can see above, the numbers are being detected with bounding boxes around them. 
 
+## 4. Perform inference with SenseCAP A1101 on SenseCAP Mate
+In addition to perform inference on the browser, we can also use the SenseCAP Mate to implement model inference, which we will implement it step by step.
+- **Step 1.**  We need to upgrade the A1101 firmware to version 2.0 and drop the water meter digits recognition model into A1101
+
+
+  Firmware: [SenseCAP-A1101_v02-00.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/sensecap_ai_v02-00.uf2)
+
+
+  Model: [water_meter.uf2](https://github.com/QingWind6/Seeed_Arduino_GroveAI/releases/download/untagged-3561bb2a644f1cfa8fa5/Water_Meter.uf2)
+
+
+- **Step 2.**  [Click here](https://seeed-studio.github.io/edgelab-web-app/) to open a preview window of the camera stream
+
+
+- **Step 3.**  Click **Connect** button. Then you will see a pop up on the browser. Select **SenseCAP A1101** - Paired and click Connect
+
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step3.jpg"/></div>
+
+
+- **Step 4(Optional).** Select Digital Meter in Model and Digital Meter in Algorithm, click Save and then click Invoke. And now we can view real-time inference results using the preview window.
+
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step4.jpg"/></div>
+
+
+- **Step 5.** Open SenseCAP Mate and get paired with your own A1101, select the same Model and Algorithm as above. Then click General and click Detect on the bottom.
+
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step_all.jpg"/></div>
+
+
+- **Step 6.** As you can see below, the AI Preview shows the digital meter recognition results.
+
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step5.jpg"/></div>
+
+
+After completing the above steps, we will try to add our own A1101 to the device. Through the following 4 steps, we can view the result data of device identification anytime and anywhere through the cloud platform like SenseCAP Mate.
+
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4stepfinal.png"/></div>
+
 
 
 ## Resources

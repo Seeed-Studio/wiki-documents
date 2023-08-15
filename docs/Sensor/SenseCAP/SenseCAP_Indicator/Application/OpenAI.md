@@ -52,7 +52,7 @@ To quickly build the user interface (UI), you can use [SquareLine Studio](https:
 
 - Model: The Model contains the `indicator_openai.c` file, which includes the `indicator_openai_init()` function. When executed at the Model entry, this function sends requests to OpenAI, receives responses, and parses them for display on the screen through the View.
 
-Here are the key functions and workflow of the Model (once [the API Key](/SenseCAP_Indicator_How_to_Set_the_API_Key) is saved):
+Here are the key functions and workflow of the Model (once [the API Key](/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key) is saved):
 
 #### **ChatGPT flowchart**
 
@@ -881,7 +881,7 @@ int indicator_openai_init(void)
 1. [SenseCAP Indicator X ChatGPT](/SenseCAP_Indicator_ChatGPT)
 2. [SenseCAP Indicator X DALL·E](/SenseCAP_Indicator_DALL·E)
 3. **Demo SDK**: The Demo SDK for the SenseCAP Indicator is available on [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
-4. **SenseCAP Indicator User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](https://wiki.seeedstudio.com/SenseCAP_Indicator_Get_Started).
+4. **SenseCAP Indicator User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator).
 5. **Chat completions OpenAI Guide**: If you're new to Chat API, this guide will help you get you on board. You can find it [here](https://platform.openai.com/docs/guides/chat/chat-completions-beta).
 6. **`indicator_openai.c` File**: This file contains the main functions for the `ChatGPT` and `DALL·E` integration. You can view it [here](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_openai/main/model/indicator_openai.c).
 7. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
