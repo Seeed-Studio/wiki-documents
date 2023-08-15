@@ -80,7 +80,7 @@ It's like a generic arduino library, we need to install it on Arduino IDE first 
 
 ### Speech keyword recognition (Yes & No) Arduino Library
 #### Step 1. Downaload KWS Demo libray 
-[Click]([Speech keyword recognition (Hello & Stop) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)) to download the KWS demo library as .Zip. 
+Download [Speech keyword recognition (Hello & Stop) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)  the KWS demo library as .Zip. 
 
 #### Step 2. Add ZIP Library to Arduino IDE. 
 
