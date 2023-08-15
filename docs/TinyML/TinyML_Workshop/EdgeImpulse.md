@@ -61,6 +61,7 @@ void loop() {
 Makesure to select the right board and correct port before uploading. 
 
 
+
 #### ToDO
 - [ ] Install XIAO ESPS3 Board on Arduino IDE
 - [ ] Compile and Upload Blink Example on XIAO ESPS3
@@ -70,13 +71,14 @@ Makesure to select the right board and correct port before uploading.
 
 We're also moving forward in parallel with making some Edge Impulse exported Arduino libraries that have been verified and edited to work directly with XIAO ESP32S3 Sense. When we are using the Libraries, we have more control in our program and we can make decisions. 
 
-- [Speech keyword recognition (Hello & Stop) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_Esp32_KWS_inferencing.zip)
+- [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_Esp32_KWS_inferencing.zip)
 - [Fruit identification (apples, bananas, grapes) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)
 
 ### How to use the Edge Impulse Arduino Libraies. 
 
-It's like a generic arduino library, 
+It's like a generic arduino library, we need to install it on Arduino IDE first and use the example code to run the Demo. 
 
+### Speech keyword recognition (Yes & No) Arduino Library
 #### Step 1. Downaload KWS Demo libray 
 [Click]([Speech keyword recognition (Hello & Stop) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)) to download the KWS demo library as .Zip. 
 
@@ -406,9 +408,11 @@ In the above code, we can see where did make the decisions to **TURN ON** the **
 
 
 
-## ToDo
+# ToDo
 - [ ] Install XIAO ESPS3 on Arduino
 - [ ] Compile and Upload 
+- [ ] Install KWS Arduino library and run example. 
+- [ ] Install Image Recongition library and run example.
 
 ## Resources
 

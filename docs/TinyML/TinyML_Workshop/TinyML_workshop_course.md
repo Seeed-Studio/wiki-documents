@@ -66,7 +66,7 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/tinyml_course_Key_Word_Spotting" class="getting_started_label2">2.1 Control Lights with Voice </a>
+          <a href= "/edgeimpulse#speech-keyword-recognition-yes--no-arduino-library" class="getting_started_label2">2.1 Control Lights with Voice </a>
           <br/>Learn how to intergrate arduino tinyML libraries. 
       </div>
   </div>
@@ -83,13 +83,13 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "#1-edgelab" class="getting_started_label2">3.1 Build Your own key word based project </a>
+          <a href= "/tinyml_course_Key_Word_Spotting" class="getting_started_label2">3.1 Build Your own key word based project </a>
           <br/>Learn how to build voice recognition tinyML project scratch.  
       </div>
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "#2-edge-impulse" class="getting_started_label2">3.2 Build Your own Image classification project </a>
+          <a href= "/tinyml_course_Image_recognition_project" class="getting_started_label2">3.2 Build Your own Image classification project </a>
           <br/>Learn how to build Image classification project from scratch. 
       </div>
   </div>

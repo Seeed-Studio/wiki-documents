@@ -563,6 +563,9 @@ static void microphone_inference_end(void)
 
 The idea is that the LED will be ON whenever the keyword **HELLO** is detected. In the same way, instead of turn-on a LED, this could be a "trigger" for an external device, as we saw in the introduction.
 
+# ToDo
+- [ ] Build your own KWS project and run on XIAO ESPS3 Sense. 
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/11.png" style={{width:700, height:'auto'}}/></div>
 
 #### Special Thanks
