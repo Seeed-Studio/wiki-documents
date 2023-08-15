@@ -81,15 +81,15 @@ Download the three binary files below.
 	<table align="center">
 		<tr>
 			<td>bootloader.bin</td>
-			<td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/bootloader.bin" target="_blank"><b>Download</b></a></td>
+			<td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/xiao_esp32_yes_no.ino.bootloader.bin"target="_blank"><b>Download</b></a></td>
 		</tr>
 		<tr>
 			<td>partition-table.bin</td>
-			<td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/partition-table.bin" target="_blank"><b>Download</b></a></td>
+			<td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/xiao_esp32_yes_no.ino.partitions.bin" target="_blank"><b>Download</b></a></td>
 		</tr>
     <tr>
       <td>XIAO_ESP32S3_Speech_Recognition.bin</td>
-      <td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/apps.ino.bin" target="_blank"><b>Download</b></a></td>
+      <td><a href="https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/bin/xiao_esp32_yes_no.ino.bin" target="_blank"><b>Download</b></a></td>
     </tr>
 	</table>
 </div>
