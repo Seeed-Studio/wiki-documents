@@ -56,6 +56,20 @@ Installing the expansion board is very simple, you just need to align the connec
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
+We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV5640, on our shelves, and if you purchase it, you can replace the camera to use it.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				</a>
+</div>
+
+:::tip
+All the programs about cameras in the Wiki are compatible with both OV5640 and OV2640 cameras.
+:::
+
 ### Prepare the microSD card
 
 XIAO ESP32S3 Sense supports microSD cards up to **32GB**, so if you are ready to buy a microSD card for XIAO, please refer to this specification. And format the microSD card to **FAT32** format before using the microSD card.
