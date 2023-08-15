@@ -89,7 +89,7 @@ To complete the workshop, we need go through the instructions below, and each pa
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/tinyml_course_Image_recognition_project" class="getting_started_label2">3.2 Build Your own Image classification project </a>
+          <a href= "/tinyml_course_Image_classification_project" class="getting_started_label2">3.2 Build Your own Image classification project </a>
           <br/>Learn how to build Image classification project from scratch. 
       </div>
   </div>
