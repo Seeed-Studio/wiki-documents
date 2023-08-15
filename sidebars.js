@@ -641,6 +641,20 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'SenseCAP T1000 Tracker',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+          },
+          items: [
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP Sensor',
           collapsed: true,
           collapsible: true,
@@ -760,19 +774,6 @@ const sidebars = {
       ],
     },
 
-    {
-      type: 'category',
-      label: 'SenseCAP T1000 Tracker',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Sensor/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
-      },
-      items: [
-        'Sensor/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
-      ],
-    },
 
     {
       type: 'category',
@@ -919,6 +920,7 @@ const sidebars = {
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO-ESP32C3-Zephyr',
 
             {
@@ -2944,24 +2946,24 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
+    'TinyML/TinyML_Workshop/TinyML_workshop_course',
 
-    {
-      type: 'category',
-      label: 'TinyML Workshop',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
-      },
-      items: [
-           'TinyML/TinyML_Workshop/Edgelab',
-           'TinyML/TinyML_Workshop/EdgeImpulse',
-          //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
-          'TinyML/TinyML_Workshop/Key_Word_Spotting',
-           'TinyML/TinyML_Workshop/Image_recognition_project',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'TinyML Workshop',
+    //   collapsed: true,
+    //   collapsible: true,
+    //   link: {
+    //     type: "doc",
+    //     id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
+    //   },
+    //   items: [
+    //        'TinyML/TinyML_Workshop/Edgelab',
+    //       //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
+    //       //  'TinyML/TinyML_Workshop/Image_recognition_project',
+    //       //  'TinyML/TinyML_Workshop/Key_Word_Spotting',
+    //   ],
+    // },
 
 
     {
