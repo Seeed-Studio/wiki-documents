@@ -72,7 +72,7 @@ To complete the workshop, we need go through the instructions below, and each pa
   </div>
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/tinyml_course_Image_recognition_project" class="getting_started_label2">2.2 Fruit identification </a>
+          <a href= "/edgeimpulse#fruit-identification-apples-bananas-grapes-arduino-library" class="getting_started_label2">2.2 Fruit identification </a>
           <br/>Classify Apples, Banana and Grapes images using computervision. 
       </div>
   </div>
