@@ -2962,7 +2962,7 @@ const sidebars = {
            'TinyML/TinyML_Workshop/EdgeImpulse',
           //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
           'TinyML/TinyML_Workshop/Key_Word_Spotting',
-           'TinyML/TinyML_Workshop/Image_recognition_project',
+           'TinyML/TinyML_Workshop/Image_classification_project',
       ],
     },
 
