@@ -662,6 +662,14 @@ const sidebars = {
          //  'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
         ],
        },
+       {
+        type: 'category',
+        label: 'Helium Cloud Services',
+        items: [
+       //'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Connect_to_Helium_Network',
+       'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
+    ],
+   }, 
         ],  
         },
 

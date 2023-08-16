@@ -1,16 +1,16 @@
 ---
 description: SenseCAP_T1000_tracker_and_Datacake_Integrated
-title: Datacake Integrated
+title: Datacake Integrated(TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /SenseCAP_T1000_tracker_Datacake
+slug: /SenseCAP_T1000_tracker_Datacake_TTS
 last_update:
   date: 8/15/2023
   author: Jessie
 ---
 
-Datacake is a multi-purpose IoT platform, which provides the possibility of building custom IoT applications, without requiring programming skills.
+[Datacake](https://datacake.co/) is a multi-purpose IoT platform, which provides the possibility of building custom IoT applications, without requiring programming skills.
 
 To meet the growing need for building IoT applications, we’ve been working with Datacake to create templates to enable the community to add [SenseCAP T1000 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) to Datacake through The Things Network conveniently and easily.
 

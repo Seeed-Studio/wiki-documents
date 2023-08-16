@@ -1,10 +1,10 @@
 ---
 description: SenseCAP_T1000_tracker_and_Ubidots_Integrated
-title: Ubidots Integrated
+title: Ubidots Integrated(TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /SenseCAP_T1000_tracker_Ubidots
+slug: /SenseCAP_T1000_tracker_Ubidots_TTS
 last_update:
   date: 8/16/2023
   author: Jessie

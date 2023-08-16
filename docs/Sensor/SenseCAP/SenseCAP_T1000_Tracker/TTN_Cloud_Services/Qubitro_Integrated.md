@@ -1,17 +1,17 @@
 ---
 description: SenseCAP_T1000_tracker_and_Qubitro_Integrated
-title: Qubitro Integrated
+title: Qubitro Integrated(TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /SenseCAP_T1000_tracker_Qubitro
+slug: /SenseCAP_T1000_tracker_Qubitro_TTS
 last_update:
   date: 8/15/2023
   author: Jessie
 ---
 
 
-Qubitro is a Device Data Platform (DDP) for developers that provides the tools, workflows, and infrastructure you need to develop solutions faster, without the need of manual integration of multiple services.
+[Qubitro](https://www.qubitro.com/) is a Device Data Platform (DDP) for developers that provides the tools, workflows, and infrastructure you need to develop solutions faster, without the need of manual integration of multiple services.
 Qubitro supports popular data sources out-of-the-box and provides tools for real-time collaboration on your projects combined with scalable infrastructure.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/qubitro_in1.png" alt="pir" width={800} height="auto" /></p>
