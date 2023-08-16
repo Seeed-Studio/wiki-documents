@@ -652,8 +652,29 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
-          ],
+          {
+            type: 'category',
+            label: 'TTN Cloud Services',
+            items: [
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Connect_to_The_Things_Network',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Datacake_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Ubidots_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Qubitro_Integrated',
+         //  'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
+                   ],
+          },
+          {
+        type: 'category',
+        label: 'Helium Cloud Services',
+        items: [
+       //'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Connect_to_Helium_Network',
+       'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
+               ],
+          }, 
+            
+              ],
         },
+        
         {
           type: 'category',
           label: 'SenseCAP Sensor',
@@ -1342,6 +1363,7 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/LoRa',
           ],
         },
       ],
