@@ -2948,22 +2948,23 @@ const sidebars = {
 
     'TinyML/TinyML_Workshop/TinyML_workshop_course',
 
-    // {
-    //   type: 'category',
-    //   label: 'TinyML Workshop',
-    //   collapsed: true,
-    //   collapsible: true,
-    //   link: {
-    //     type: "doc",
-    //     id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
-    //   },
-    //   items: [
-    //        'TinyML/TinyML_Workshop/Edgelab',
-    //       //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
-    //       //  'TinyML/TinyML_Workshop/Image_recognition_project',
-    //       //  'TinyML/TinyML_Workshop/Key_Word_Spotting',
-    //   ],
-    // },
+    {
+      type: 'category',
+      label: 'TinyML Workshop',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
+      },
+      items: [
+           'TinyML/TinyML_Workshop/Edgelab',
+           'TinyML/TinyML_Workshop/EdgeImpulse',
+          //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
+          'TinyML/TinyML_Workshop/Key_Word_Spotting',
+           'TinyML/TinyML_Workshop/Image_classification_project',
+      ],
+    },
 
 
     {
