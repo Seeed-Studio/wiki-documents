@@ -224,7 +224,7 @@ Please refer to the diagram below for the connection to XIAO.
    Hud Dev Kit      - 9
 */
 
-#define SPI_CS_PIN  9 
+#define SPI_CS_PIN  D7
 
 MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 

@@ -190,6 +190,7 @@ const sidebars = {
               type: 'category',
               label: 'Proximity',
               items: [
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Sensor_SMS812',
                 'Sensor/Grove/Grove_Sensors/Proximity/Sensor_distance',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Ranger',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-IR_Distance_Interrupter_v1.2',
@@ -660,11 +661,20 @@ const sidebars = {
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Ubidots_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Qubitro_Integrated',
          //  'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
-        ],
-       },
-        ],
+                   ],
+          },
+          {
+        type: 'category',
+        label: 'Helium Cloud Services',
+        items: [
+       //'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Connect_to_Helium_Network',
+       'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
+               ],
+          }, 
+            
+              ],
         },
-
+        
         {
           type: 'category',
           label: 'SenseCAP Sensor',
