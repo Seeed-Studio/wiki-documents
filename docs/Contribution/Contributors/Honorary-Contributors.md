@@ -21,14 +21,19 @@ last_update:
 		</tr>
     <tr>
 			<th>CircuitPython for ESP32S3</th>
+			<th>MicroPython for ESP32C3</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython10.jpg" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32S3_CircuitPython/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki Page</font></span></strong></a></div>
       <br/>
       <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35178340"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Isaac </font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32C3_MicroPython/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki Page</font></span></strong></a></div>
+      <br/>
+      <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35177053"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Zachay-NAU </font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>

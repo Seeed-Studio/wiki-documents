@@ -210,9 +210,6 @@ Currently we use [The Things Network V3](https://lora-developers.semtech.com/bui
 
 To begin, register for an account with The Things Industries or The Things Network.
 
-Refer to the page What is the difference between The Things Industries and The Things Network? to understand the differences between The Things Industries and The Things Network.
-
-This section use indistincly The Things Industries or The Things Network.
 
 #### Step 1: Create an application
 
@@ -235,7 +232,9 @@ Click "Register end device".
 
 Set the following parameters:
 **Frequency Plan**: Select the appropriate Frequency plan for the target region
+
 **LoRaWAN version**:LoRaWAN Specification 1.0.3
+
 **Regional Parameters version**: V1.0.3 REV A
 
 
