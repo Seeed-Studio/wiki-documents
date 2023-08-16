@@ -276,7 +276,7 @@ In addition to perform inference on the browser, we can also use the SenseCAP Ma
   Firmware: [SenseCAP-A1101_v02-00.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/sensecap_ai_v02-00.uf2)
 
 
-  Model: [water_meter.uf2](https://github.com/QingWind6/Seeed_Arduino_GroveAI/releases/download/V2.0/digital_meter.uf2)
+  Model: [water_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/meter_water_pre_6.uf2)、[pfld_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/pfld_meter_pre_5.uf2)
 
 
 - **Step 2.**  [Click here](https://seeed-studio.github.io/edgelab-web-app/) to open a preview window of the camera stream
