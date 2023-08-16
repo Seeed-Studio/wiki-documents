@@ -662,7 +662,7 @@ const sidebars = {
          //  'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
         ],
        },
-        ],  
+        ],
         },
 
         {
@@ -1353,6 +1353,7 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/LoRa',
           ],
         },
       ],
