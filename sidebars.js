@@ -2946,7 +2946,7 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
-    'TinyML/TinyML_Workshop/TinyML_workshop_course',
+    'TinyML/TinyML_Workshop',
 
     {
       type: 'category',
