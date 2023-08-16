@@ -13,6 +13,18 @@ last_update:
 
 This chapter will guide you to setup the SenseCAP T1000 Tracker via SenseCAP Mate APP.
 
+<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=jj6XN8IcchI" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/SenseCAP_Tracker_T1000-AB_User_Guide.pdf">
+            <strong><span><font color={'FFFFFF'} size={"4"}> User Guide Download</font></span></strong>
+    </a>
+</div>
+
+
+
+
+
 ## Device Functions
 
 ### Work Mode
