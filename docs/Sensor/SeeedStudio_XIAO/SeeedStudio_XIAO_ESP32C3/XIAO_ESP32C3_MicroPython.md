@@ -90,7 +90,7 @@ Please follow the steps in the picture
 
 2. Download the latest firmware (This Tutorial is v1.20.0 (2023-04-26) .bin)
 
-``` https://micropython.org/download/esp32c3-usb/```
+``` https://micropython.org/download/esp32c3/```
 
 3. Put the latest firm in this file location and open the file in CMD
 

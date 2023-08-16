@@ -190,6 +190,7 @@ const sidebars = {
               type: 'category',
               label: 'Proximity',
               items: [
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Sensor_SMS812',
                 'Sensor/Grove/Grove_Sensors/Proximity/Sensor_distance',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Ranger',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-IR_Distance_Interrupter_v1.2',
