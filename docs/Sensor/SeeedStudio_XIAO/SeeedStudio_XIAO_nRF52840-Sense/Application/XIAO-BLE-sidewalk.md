@@ -1,6 +1,6 @@
 ---
-description: Introducing how to deploy Sidewalk's services on the XIAO nRF52840.
-title: Seeed Studio XIAO nRF52840 on Sidewalk
+description: Introducing how to deploy Amazon Sidewalk's services on the XIAO nRF52840.
+title: Seeed Studio XIAO nRF52840 on Amazon Sidewalk
 keywords:
 - sidewalk
 - XIAO BLE
@@ -11,29 +11,37 @@ last_update:
   author: MengDu
 ---
 
-# Seeed Studio XIAO nRF52840 on Sidewalk
+# Seeed Studio XIAO nRF52840 on Amazon Sidewalk
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/19.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Amazon Sidewalk is a wireless network protocol developed by Amazon that allows compatible devices to share a small portion of their internet bandwidth with nearby devices. The goal of Sidewalk is to create a larger, more resilient network that can extend the range of smart home devices and improve their connectivity.
+Seeed Studio is proud to be a part of the Amazon Sidewalk ecosystem partners, providing Sidewalk-enabled products and solutions that enable diverse IoT use-cases on the Sidewalk network.
 
-The devices that can participate in the Sidewalk network include Amazon's Echo, Ring, and Tile devices, as well as select third-party smart home devices. It is pleasing to note that Seeed Studio has recently completed support for Sidewalk with the XIAO nRF52840. The network operates using a portion of the 900 MHz spectrum and Bluetooth Low Energy (BLE) technology, which are designed to provide a low-power, long-range signal that can penetrate walls and other obstacles.
+Amazon Sidewalk is a secure community network that uses Amazon Sidewalk Gateways (also called Sidewalk Bridges), such as compatible Amazon Echo and Ring devices, to provide cloud connectivity for IoT endpoint devices.
 
-Amazon Sidewalk is currently available in select regions and is opt-in by default. Users can choose to disable Sidewalk on their devices if they prefer not to participate in the network.
+Amazon Sidewalk enables low-bandwidth and long-range connectivity at home and beyond using Bluetooth Low Energy for short-distance communication and LoRa and FSK radio protocols at 900MHz frequencies to cover longer distances.  The Sidewalk Gateways share a small portion of the user’s internet bandwidth, which is then used to connect endpoints to the network. The strength of Amazon Sidewalk network increases with an increase in the number of gateways. Learn more about [Amazon Sidewalk](https://www.aboutamazon.com/news/devices/everything-you-need-to-know-about-amazon-sidewalk).
 
 :::note
-Amazon Sidewalk is available only in the United States of America. To an extent, any Sidewalk gateway functionality might be used outside of the U.S., however, it should be used only for the Amazon Sidewalk endpoint development purposes. In addition, we recommend that you consult with your local regulatory bodies, and check if the gateway is allowed to operate its radio in your locale, as U.S. license-free band devices, only for development.
+Amazon Sidewalk is currently available in the US. Developers are allowed to utilize the Sidewalk gateway functionality outside the U.S. solely for their Sidewalk-enabled endpoint development and testing purposes only. In addition, we recommend that you consult with your local regulatory bodies and verify if the gateway is permitted to operate its radio in your locale, as U.S. license-free band devices are only intended for development purposes.
 :::
+
+## Seeed Studio XIAO nRF52840 for Amazon Sidewalk
+
+The XIAO nRF52840 is a wireless module qualified for Amazon Sidewalk, providing IoT device connectivity via Bluetooth Low Energy radio technology on Amazon Sidewalk network.
+
+The model has a powerful and compact SoM (System-on-Module) design for Amazon Sidewalk integration. With its built-in nRF52840 chipset, this module offers BLE capabilities, enabling seamless connectivity for IoT applications. The Seeed Studio XIAO boasts a small form factor, making it ideal for space-constrained deployments. With its reliable performance and support for Amazon Sidewalk, it simplifies and accelerates the development of secure and reliable IoT solutions.
+
+For more details of the module’s technical specification, click [here](https://wiki.seeedstudio.com/XIAO_BLE/).
 
 The documentation will guide you through:
 
-1. Install and configure Sidewalk's development environment.
+1. Install and configure Amazon Sidewalk's development environment.
 
 2. Configure your cloud services and managing your XIAO nRF52840.
 
-3. Run Sidewalk's BLE example program.
+3. Run Amazon Sidewalk's BLE example program.
 
-Once completed, you will be able to run a sample application and test it with Sidewalk.
+Once completed, you will be able to run a sample application and test it with Amazon Sidewalk.
 
 ## Hardware preparation
 
@@ -47,14 +55,14 @@ To complete the content of this sample tutorial, the following may be necessary 
 	<table align="center">
 		<tr>
 			<th>XIAO nRF52840 Sense</th>
-			<th>Sidewalk gateway</th>
+			<th>Amazon Sidewalk gateway (Echo Gen4)</th>
             <th>Grove - Red LED Button</th>
             <th>J-Link</th>
             <th>USB to UART</th>
 		</tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" style={{width:250, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/20.png" style={{width:250, height:'auto'}}/></div></td>
+            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/20.jpeg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Red_LED_Button/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/21.png" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/22.png" style={{width:250, height:'auto'}}/></div></td>
@@ -76,6 +84,10 @@ To complete the content of this sample tutorial, the following may be necessary 
 		</tr>
 	</table>
 </div>
+
+:::tip
+To facilitate Amazon Sidewalk testing and endpoint development for non-US developers working outside the **US-East-1** (Northern Virginia) region, a VPN setup is necessary. This enables seamless access and ensures efficient participation in the development process.
+:::
 
 
 ### Optional
@@ -107,7 +119,7 @@ For easy wiring and Grove expansion, or for easy connection to XIAO via JLink, y
 	</table>
 </div>
 
-## Configure Sidewalk's development environment
+## Configure Amazon Sidewalk's development environment
 
 :::tip
 The original tutorial for the quick installation of the nRF Connect SDK can be read [here](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.3.0/nrf/getting_started/assistant.html#installing-automatically).
@@ -160,7 +172,7 @@ The installation time is related to the network in your environment and the inst
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/4.png" style={{width:800, height:'auto'}}/></div>
 
-### Downloading Sidewalk repository
+### Downloading Amazon Sidewalk repository
 
 After installation, there are two ways you can build an application:
 
@@ -184,13 +196,13 @@ Your directory structure should look as follows:
 |___ ...
 ```
 
-**Step 8**. Clone the [Sidewalk application repository](https://github.com/nrfconnect/sdk-sidewalk) from the sdk-sidewalk repository to the nRF Connect SDK folder, and name it `sidewalk` by running the following command:
+**Step 8**. Clone the [Amazon Sidewalk application repository](https://github.com/nrfconnect/sdk-sidewalk) from the sdk-sidewalk repository to the nRF Connect SDK folder, and name it `sidewalk` by running the following command:
 
 ```
 git clone https://github.com/nrfconnect/sdk-sidewalk.git sidewalk
 ```
 
-**Step 9**. Install Python requirements for Sidewalk.
+**Step 9**. Install Python requirements for Amazon Sidewalk.
 
 ```
 pip install -r sidewalk/requirements.txt
@@ -200,7 +212,7 @@ pip install -r sidewalk/requirements.txt
 If your computer does not already have a Python environment installed, please read the tutorial [here](https://www.digitalocean.com/community/tutorials/install-python-windows-10) to install the latest Python 3 on your computer.
 :::
 
-**Step 10**. Set the Sidewalk application manifest and update.
+**Step 10**. Set the Amazon Sidewalk application manifest and update.
 
 Check the current manifest path:
 
@@ -214,7 +226,7 @@ The path returned should be similar to the following format.
 > /path-to-ncs-folder/nrf/west.yml
 ```
 
-Set the manifest path to the Sidewalk repository:
+Set the manifest path to the Amazon Sidewalk repository:
 
 ```
 west config manifest.path sidewalk
@@ -245,7 +257,7 @@ Please keep the Bash window open, we'll be back in a few minutes.
 ## Configure your AWS cloud services
 
 :::tip
-The original tutorial for the Setting up your Sidewalk product can be read [here](https://nrfconnect.github.io/sdk-sidewalk/setting_up_sidewalk_environment/setting_up_sidewalk_product.html).
+The original tutorial for the Setting up your Amazon Sidewalk product can be read [here](https://nrfconnect.github.io/sdk-sidewalk/setting_up_sidewalk_environment/setting_up_sidewalk_product.html).
 :::
 
 Next we need to configure AWS Cloud Services so that the device is connected to your AWS account via a key.
@@ -304,7 +316,7 @@ Make sure *Simplicity Commander* (for SiLabs) are present in your system PATH en
 
 Try calling `commander --version` in the terminal to make sure the Simplicity Commander is available.
 
-## Run Sidewalk's BLE example
+## Run Amazon Sidewalk's BLE example
 
 :::tip
 The original tutorial for the Template Bluetooth LE can be read [here](https://nrfconnect.github.io/sdk-sidewalk/testing_samples/sidewalk_application_samples/template_ble.html#template-ble).
@@ -312,7 +324,7 @@ The original tutorial for the Template Bluetooth LE can be read [here](https://n
 
 ### Provisioning generation
 
-**Step 1**. Go to AWS IoT Core for Sidewalk tools:
+**Step 1**. Go to AWS IoT Core for Amazon Sidewalk tools:
 
 ```
 cd aws-iot-core-for-amazon-sidewalk-sample-app
@@ -398,7 +410,7 @@ For this part of the tutorial you can read the [official tutorials](https://nrfc
 
 ### Samples overview
 
-The sample demonstrates a template for Sidewalk End Node application. It is optimized for Bluetooth LE.
+The sample demonstrates a template for Amazon Sidewalk End Node application. It is optimized for Bluetooth LE.
 
 The sample supports the following development kits:
 
@@ -406,13 +418,13 @@ The sample supports the following development kits:
 | ------------------ | --- | ---------- | ------------ |
 | nRF52840 DK        | PCA10056 | nrf52840dk_nrf52840 | nrf52840dk_nrf52840 |
 
-As Sidewalk has not yet merged our PR submission, we will currently support the XIAO nRF52840 by modifying the supported nRF52840 DK platform.
+As Amazon Sidewalk has not yet merged our PR submission, we will currently support the XIAO nRF52840 by modifying the supported nRF52840 DK platform.
 
 | Hardware platforms | Board name | Build target |
 | ------------------ | ---------- | ------------ |
 | Seeed Studio XIAO nRF52840 | nrf52840dk_nrf52840 | nrf52840dk_nrf52840 |
 
-The sample shows implementation of the Sidewalk API for the Bluetooth LE transport protocol. It is a memory-optimized example of Sidewalk configuration where only Bluetooth LE transport protocol is supported. Because of the smaller footprint, both bootloader partitions for the application are placed in the internal flash memory of the supported SoC (nRF52840).
+The sample shows implementation of the Amazon Sidewalk API for the Bluetooth LE transport protocol. It is a memory-optimized example of Amazon Sidewalk configuration where only Bluetooth LE transport protocol is supported. Because of the smaller footprint, both bootloader partitions for the application are placed in the internal flash memory of the supported SoC (nRF52840).
 
 #### User Interface
 
@@ -422,22 +434,22 @@ The button assignment is as follows:
 
 - **Button 1 (long press) -- D1**:
 
-    Factory Reset - The application informs the Sidewalk stack about the factory reset event. The Sidewalk library clears its configuration from the non-volatile storage. After a successful reset, the device needs to be registered with the cloud services again.
+    Factory Reset - The application informs the Amazon Sidewalk stack about the factory reset event. The Amazon Sidewalk library clears its configuration from the non-volatile storage. After a successful reset, the device needs to be registered with the cloud services again.
 
 - **Button 2 -- D3**:
 
-    Toggle Connection Request - The device requests the Sidewalk Gateway to initiate a connection while the device is advertising through Bluetooth LE. After the connection is dropped, the user has to set the beacon state again. Gateways may not always be able to process this request, as it depends on the number of devices connected to it.
+    Toggle Connection Request - The device requests the Amazon Sidewalk Gateway to initiate a connection while the device is advertising through Bluetooth LE. After the connection is dropped, the user has to set the beacon state again. Gateways may not always be able to process this request, as it depends on the number of devices connected to it.
 
 - **Button 3 -- D4**:
 
-    Send Hello - This action will queue a message to the cloud. If Sidewalk is not ready, it will simply show an error without sending the message. The queue will be processed eventually, and all the queued messages will be sent.
+    Send Hello - This action will queue a message to the cloud. If Amazon Sidewalk is not ready, it will simply show an error without sending the message. The queue will be processed eventually, and all the queued messages will be sent.
 
 - **Button 4 (short press) -- D9**:
 
     Set fake battery level - The action sets a simulated battery level.
 
 - **Button 4 (long press) -- D9**:
-    Enter DFU state - This action disables the Sidewalk stack and starts the Bluetooth LE SMP Server. You can update the firmware image using nRF Connect for mobile application. To exit DFU state, perform a power cycle on your device.
+    Enter DFU state - This action disables the Amazon Sidewalk stack and starts the Bluetooth LE SMP Server. You can update the firmware image using nRF Connect for mobile application. To exit DFU state, perform a power cycle on your device.
 
 LEDs represent the current state of the application (Not yet achieved):
 
@@ -518,11 +530,10 @@ Please connect the XIAO nRF52840 to the JLink via the SWD interface.
 | SWDIO                      | SWIO  |
 | SWCLK                      | SWCK  |
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/24.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/24.jpg" style={{width:600, height:'auto'}}/></div>
 
 If you do not intend to use the XIAO expansion board, then you can refer to the [XIAO nRF52840 Wiki](https://wiki.seeedstudio.com/XIAO_BLE#access-the-swd-pins-for-debugging-and-reflashing-bootloader) on the use of the SWD interface to additionally solder duplex wire to the JLink.
 
-    
 **Step 3**. Open Programmer and burn both firmware to the XIAO nRF52840.
 
 Click the **Add file** button in the top left corner of the software and add the **merged.hex** file and **Nordic_MFG.hex** prepared in this article respectively.
@@ -547,7 +558,7 @@ When you have finished you can click on **Read** to see if the shape of the memo
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/17.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 4**. Assemble the Sidewalk device and make it work.
+**Step 4**. Assemble the Amazon Sidewalk device and make it work.
 
 In the preview of the example we have marked the pin positions to which the LEDs and Button are connected. Next we will need to use the four Grove LED Buttons, which not only allow us to control the work of the XIAO, but also show the different working states by means of the LEDs on the buttons.
 
@@ -564,7 +575,7 @@ In the preview of the example we have marked the pin positions to which the LEDs
 | RX (D7)                    |      |         | TX          |
 | TX (D6)                    |      |         | RX          |
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/25.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/25.jpg" style={{width:600, height:'auto'}}/></div>
 
 The XIAO is powered via USB and then the XIAO nRF52840 is controlled using pushbuttons and the XIAO operation log is available via UART.
 
@@ -572,8 +583,6 @@ The XIAO is powered via USB and then the XIAO nRF52840 is controlled using pushb
 
 
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

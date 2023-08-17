@@ -481,8 +481,6 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
 
 #### Step 3.2: Implement Sensor Data Structure
 
-As to more easily add new sensors, there is a `SensorData_t` struct to store the sensor data. You can add your sensor data to the struct.
-
 <Tabs>
   <TabItem value="Indicator/main/Sensors/sen5x.h">
 
@@ -563,7 +561,7 @@ As to more easily add new sensors, there is a `SensorData_t` struct to store the
 
 ##### Set up LoRa Parameters
 
-Open the configuration file and set the necessary LoRa parameters such as frequency, spreading factor, and bandwidth. These settings must match between the two SenseCAP Indicator boards for successful communication.
+set the necessary LoRa parameters such as frequency, spreading factor, and bandwidth. These settings must match between the two LoRa channel for successful communication.
 
 ```cpp
 #define RF_FREQUENCY               868000000 // Hz
