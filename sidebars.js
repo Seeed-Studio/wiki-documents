@@ -1507,6 +1507,8 @@ const sidebars = {
               type: 'category',
               label: 'Display',
               items: [
+                'Sensor/Beyond_Grove/Accessories/Display/1-69inch_LCD_SPI_display',
+                'Sensor/Beyond_Grove/Accessories/Display/1-47inch_LCD_SPI_display',
                 'Sensor/Beyond_Grove/Accessories/Display/LCD_16-2_Characters-Green_Yellow_back_light',
                 'Sensor/Beyond_Grove/Accessories/Display/LCD_8-2_Characters-Blue_back_light',
               ],
