@@ -95,16 +95,12 @@ values={[
   ./install.bat esp32s3
   ```
 
-  2. The ESP-IDF tools will be installed by default in `C:\Users\
-  username
-  \.espressif`.
+  2. The ESP-IDF tools will be installed by default in `C:\Users\username\.espressif`.
 
   3. To activate the console, run the following command:
 
   ```sh
-  C:\Users\
-  username
-  \esp\esp-idf-v5.0\export.bat # to activate console
+  C:\Users\username\esp\esp-idf-v5.0\export.bat # to activate console
   ```
 
   4. Try building a project [now](#BUILD).
