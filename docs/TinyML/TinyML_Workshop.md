@@ -1,16 +1,301 @@
 ---
-description:  Key Word Spotting
-title: Key Word Spotting
+description: TinyML Workshop Course.
+title: TinyML Workshop Course
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /tinyml_course_Key_Word_Spotting
+slug: /tinyml_workshop_course
 last_update:
   date: 08/09/2023
-  author: Salman
+  author: MengDu
 ---
 
-###  Edge Impulse KWS application in XIAO ESP32S3 Sense
+
+# TinyML Workshop Course
+
+Welcome to the course on using EdgeLab and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize EdgeLab and Edge Impulse platforms effectively. We will explore the functionalities of EdgeLab, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/3.jpg" style={{width:1000, height:'auto'}}/></div>
+
+
+Throughout this course, we will delve into the usage of EdgeLab(Beta) as a powerful online development environment. It will guide you through data management, preprocessing, feature engineering, model design, training, evaluation, and optimization. We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
+
+<div class="button_tech_support_container">
+<a href="https://seeed-studio.github.io/EdgeLab/introduction/what_is_edgelab" class="button_edgelab"></a> 
+</div>
+
+Next, we will shift our focus to the Edge Impulse platform. Designed specifically for embedded devices, Edge Impulse offers an end-to-end solution for developing and deploying TinyML models. We will learn how to export models trained in EdgeLab to Edge Impulse and deploy them on the XIAO ESP32S3. Additionally, we will explore Edge Impulse's features, including real-time data collection, model quantization and optimization, and the ability to perform real-time inference on the device.
+
+<div class="button_tech_support_container">
+<a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a> 
+</div>
+
+By participating in this course, you will gain the following skills and knowledge:
+
+- Familiarity with the fundamental features and workflow of EdgeLab.
+- Proficiency in essential steps such as data preprocessing, model training, and evaluation.
+- Understanding of TinyML concepts and their application scenarios.
+- Ability to deploy models to the XIAO ESP32S3 using the Edge Impulse platform.
+
+Whether you are a beginner or an experienced developer with some machine learning background, this course will provide you with invaluable practical experience and skills to apply TinyML in IoT projects. Let's embark on this exciting learning journey together!
+
+# Familiarize the tools that we are using. 
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "#1-edgelab" class="getting_started_label2">EdgeLab</a>
+          <br/>Use pre-made tinyML models and experiment quickly.
+      </div>
+  </div>
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "#2-edge-impulse" class="getting_started_label2">Edge Impulse</a>
+          <br/>Create ML model and generate arduino libraries. 
+      </div>
+  </div>
+</div>
+
+
+## 1. EdgeLab
+
+### 1.1 Power-on Ready Embedded AI
+
+We flash the EdgeLab program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
+
+#### Step 1. Install XIAO ESP32S3 Sense expansion board
+
+First, we need to properly connect the XIAO ESP32S3 Sense expansion board to the XIAO. Installing the expansion board is very simple, you just need to align the connector on the expansion board with the B2B connector on the XIAO ESP32S3, press it hard and hear a "click", the installation is complete.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
+
+
+#### Step 2. Connecting the XIAO to your PC
+
+Connect the XIAO to your PC using a data cable with data transfer function.
+
+#### Step 3. Go to the EdgeLab page and connect the XIAO
+
+Click the button below to go to the EdgeLab homepage.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab</font></span></strong></a>
+</div><br />
+
+Once we are on the homepage of EdgeLab, we first need to select the interface type for the connection as **Serial** and then click the **Connect** button.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/5.png" style={{width:700, height:'auto'}}/></div>
+
+The browser will then pop up a window. We need to select the correct port for XIAO here. For **Windows**, this port usually starts with **COM**, and in case of **MacOS**, this port usually starts with **/dev/tty**. And it will have the words **USB JTAG**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/6.png" style={{width:700, height:'auto'}}/></div>
+
+Clicking the **Connect** button will only result in an automatic refresh of the **Refresh** in the Configuration section below, where the XIAO firmware is being loaded and configuration information is being read.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/7.png" style={{width:500, height:'auto'}}/></div>
+
+Once the **Refresh** button is back to blue, we can select the model and display the effect. The current model name for face recognition is **User-Defined 1**. After selecting it, click the **Save** button in the lower left corner.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/8.png" style={{width:500, height:'auto'}}/></div>
+
+Finally, we come to the Monitor section, click once on **Stop** in the upper right corner, and then click **Invoke**, if everything runs smoothly, you can see the real-time screen effect.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/9.png" style={{width:1000, height:'auto'}}/></div> 
+
+
+### 1.2 Select & Replace Custom Models
+
+:::tip
+In addition to the face models prepared in advance, we are also supporting more models for XIAO ESP32S3, so stay tuned!
+:::
+
+#### Download Models
+
+- [yolov5 Face Detection](https://files.seeedstudio.com/wiki/tinyml-topic/face_detection.tflite)
+
+  Preview:
+
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/face_detection.png" style={{width:600, height:'auto'}}/></div>
+
+- [yolov5 Digital Meter Water](https://files.seeedstudio.com/wiki/tinyml-topic/Digital_Meter_Seg7.tflite)
+
+  Preview:
+
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/digital_meter_number_detection.png" style={{width:600, height:'auto'}}/></div>
+
+- [yolov5 Meter Water](https://files.seeedstudio.com/wiki/tinyml-topic/Meter_Water.tflite)
+
+  Preview:
+
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/water_meter_number_detection.png" style={{width:600, height:'auto'}}/></div>
+
+#### Models Usage
+
+If you want to use a custom model, follow the instructions below.
+
+**Step 1. Download all necessary files**
+
+Please download all the files below in order and select the model you want to use from above and download it. In general, to run a model you need to have at least **four** of the above files ready.
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<td>bootloader.bin</td>
+			<td><a href="https://files.seeedstudio.com/wiki/tinyml-topic/res/bootloader.bin" target="_blank"><b>Download</b></a></td>
+		</tr>
+		<tr>
+			<td>partition-table.bin</td>
+			<td><a href="https://files.seeedstudio.com/wiki/tinyml-topic/res/partition-table.bin" target="_blank"><b>Download</b></a></td>
+		</tr>
+    <tr>
+      <td>edgelab.bin</td>
+      <td><a href="https://files.seeedstudio.com/wiki/tinyml-topic/res/edgelab.bin" target="_blank"><b>Download</b></a></td>
+    </tr>
+	</table>
+</div>
+
+**Step 2. Erase Flash to XIAO**
+
+Please click the button below to come to EdgeLab's Flash Tools page.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab Flash</font></span></strong></a>
+</div><br />
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/14.png" style={{width:1000, height:'auto'}}/></div>
+
+At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and EdgeLab will automatically search and connect your XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/15.png" style={{width:1000, height:'auto'}}/></div>
+
+Then we erase the firmware first.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/21.png" style={{width:1000, height:'auto'}}/></div>
+
+**Step 3. Flash all files to XIAO**
+
+Then, please see **Burn firmwave** toolbar. Let's start by clicking on the three firmwares we just downloaded and uploading them to the corresponding area in turn.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/16.png" style={{width:1000, height:'auto'}}/></div>
+
+Then, click the **Burn** button in the upper right corner to flash the desired firmware to the XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/17.png" style={{width:1000, height:'auto'}}/></div>
+
+Once the firmware is flashed, the **Burn** button will return to blue, at which point we can upload the model file for XIAO to execute TinyML. Select your downloaded `.tflite` model file and click the **Upload** button.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/18.png" style={{width:1000, height:'auto'}}/></div>
+
+Once the model is uploaded, we go back to the **[Dashboard](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace)** and EdgeLab automatically connects to XIAO and loads your model. We can directly click the **Invoke** button to observe the effect.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/10.gif" style={{width:800, height:'auto'}}/></div> 
+
+:::tip
+If you also want to experience this water meter that generates readings automatically, you can download the zip package by clicking **[here](https://files.seeedstudio.com/wiki/tinyml-topic/clock-master.zip)**, unzip it and then double click to open the html file in the root directory.
+:::
+
+**Step 4**. Replace model
+
+:::tip
+Uploading the firmware is a one-time operation, so if you want to change the model, the next time you just need to change the model file directly, without re-uploading the firmware.
+:::
+
+We click **Deploy** from the dashboard and EdgeLab automatically connects to XIAO. Then we just need to directly select the model file you want to replace, no need to re-upload the firmware again.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/19.png" style={{width:1000, height:'auto'}}/></div> 
+
+Once the model has been replaced, you can return to the dashboard to continue observing the results.
+
+
+## 2. Edge Impulse
+
+Edge Impulse is the leading development platform for machine learning on edge devices, free for developers, and trusted by enterprises worldwide.
+
+* With Edge Impulse, software developers, engineers, and domain experts can solve real problems using machine learning on edge devices without a Ph.D. or advanced embedded engineering skills. From getting started to MLOps in production, Edge Impulse provides maximum efficiency and speed on a wide range of hardware from MCUs to CPUs.  
+
+<div style={{textAlign:'center'}}><img src="https://workshop.makergram.com/assets/images/EI_homepage-012378fc3425daa13ba327cd01dda3bd.png" style={{width:1000, height:'auto'}}/></div> 
+
+With EdgeImpulse we can 
+* Collect dataset from the device direclty 
+* Collect dataset from other source like .zip file, via api or other third party cloud ingestion 
+* Create test and train data and put them in different lables  
+* Train our model 
+* Able to Select approriate ML algoirthms - EI provide recommended ML algorithms based on our dataset
+* Deploy it on our harware 
+* TinyML project collabration with version controlling 
+* and much more that helps you to build tinyML applications. 
+
+
+### 2.1 Quick hands-on experience
+
+Before going through the full process of learning Edge Impulse, we provide the full program firmware and you can see the results by flashing this firmware directly to XIAO ESP32S3 Sense.
+
+**Step 1. Download all necessary files**
+
+Download the three files below.
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<td>bootloader.bin</td>
+			<td><a href="https://files.seeedstudio.com/wiki/tinyml-topic/res/speech_demo/bootloader.bin" target="_blank"><b>Download</b></a></td>
+		</tr>
+		<tr>
+			<td>partition-table.bin</td>
+			<td><a href="https://files.seeedstudio.com/wiki/tinyml-topic/res/speech_demo/partition-table.bin" target="_blank"><b>Download</b></a></td>
+		</tr>
+    <tr>
+      <td>XIAO_ESP32S3_Speech_Recognition.bin</td>
+      <td><a href="https://files.seeedstudio.com/wiki/tinyml-topic/res/speech_demo/XIAO_ESP32S3_Speech_Recognition.bin" target="_blank"><b>Download</b></a></td>
+    </tr>
+	</table>
+</div>
+
+**Step 2. Erase Flash to XIAO**
+
+Please click the button below to come to EdgeLab's Flash Tools page.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab Flash</font></span></strong></a>
+</div><br />
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/14.png" style={{width:1000, height:'auto'}}/></div>
+
+At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and EdgeLab will automatically search and connect your XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/15.png" style={{width:1000, height:'auto'}}/></div>
+
+Then we erase the firmware first.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/21.png" style={{width:1000, height:'auto'}}/></div>
+
+**Step 3. Flash all files to XIAO**
+
+Then, please see **Burn firmwave** toolbar. Let's start by clicking on the three firmwares we just downloaded and uploading them to the corresponding area in turn.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/20.png" style={{width:1000, height:'auto'}}/></div>
+
+Then, click the **Burn** button in the upper right corner to flash the desired firmware to the XIAO.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/22.png" style={{width:1000, height:'auto'}}/></div>
+
+**Step 4**. Reboot to watch the effect
+
+Once all the files have been uploaded successfully, you can press the reset button to allow the program to start executing. The effect of this sample program is that when the microphone of the XIAO ESP32S3 Sense detects the Hello command that you utter, the built-in LED orange light will illuminate. When the Stop command you say is monitored, the orange light goes off.
+
+
+### 2.2 Available Edge Impulse libraries
+
+We're also moving forward in parallel with making some Edge Impulse exported Arduino libraries that have been verified and edited to work directly with XIAO ESP32S3 Sense.
+
+- [Speech keyword recognition (Hello & Stop) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/speech_demo/xiao-esp32s3-speech_inferencing.zip)
+- [Fruit identification (apples, bananas, grapes) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)
+
+
+### 2.3 Edge Impulse KWS application in XIAO ESP32S3 Sense
 
 This tutorial will guide you through implementing a Keyword Spotting (KWS) system using TinyML on the XIAO ESP32S3 Sense microcontroller board, with the help of Edge Impulse for data collection and model training. KWS is essential for voice recognition systems, and with the power of TinyML, it's achievable on smaller, low-power devices. Let's build our own KWS system using Edge Impulse and XIAO ESP32S3 Sense!
 
@@ -563,9 +848,6 @@ static void microphone_inference_end(void)
 
 The idea is that the LED will be ON whenever the keyword **HELLO** is detected. In the same way, instead of turn-on a LED, this could be a "trigger" for an external device, as we saw in the introduction.
 
-# ToDo
-- [ ] Build your own KWS project and run on XIAO ESPS3 Sense. 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/11.png" style={{width:700, height:'auto'}}/></div>
 
 #### Special Thanks
@@ -580,3 +862,63 @@ MJRoBot also has very many interesting projects about the XIAO ESP32S3.
 
 - [Exploring Machine Learning with the new XIAO ESP32S3](https://www.hackster.io/mjrobot/exploring-machine-learning-with-the-new-xiao-esp32s3-6463e5)
 - [TinyML Made Easy: Image Classification](https://www.hackster.io/mjrobot/tinyml-made-easy-image-classification-cb42ae)
+
+## Troubleshooting
+
+### Q1: I get an error after clicking the connect button?
+
+A: If you are encountering an error message after connecting, such as the error shown below.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/23.png" style={{width:600, height:'auto'}}/></div>
+
+There are three possibilities for this to occur.
+1. XIAO's port is occupied by another program. At this time, please check if you have turned on the Arduino's serial port monitor or other serial port software, please turn them off. If you are never able to rule out what is occupying the port, try re-plugging the XIAO or restarting the computer.
+2. It could be that your data cable is abnormal. Please replace the data cable with a good quality one to transfer data.
+3. It may be that the browser is not supported. Edge or Google Chrome is recommended.
+
+### Q2: Invoke doesn't show an image after uploading a model?
+
+A: It is possible that the XIAO was not reset successfully, you can try to press the reset button on the XIAO or re-plug the connected XIAO.
+
+### Q3: After erasing the firmware, uploading the model directly has no effect?
+
+A: The Erase Firmware function will erase the APP firmware from the XIAO, so if you want to change the model, you don't need to click the Erase Firmware button. If you click on erase firmware, then you need to upload the firmware all over again before you can upload the model file again. Generally the erase firmware action is only required if you switch from EdgeLab to Edge Impulse or vice versa.
+
+## Resources
+
+- **[GITHUB]** [EdgeLab Models](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
+- **[GITHUB]** [Project Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
+- **[EDGE-IMPULSE]** [edge impulse KWS demo](https://studio.edgeimpulse.com/public/256022/latest)
+- **[EDGE-IMPULSE]** [edge impulse Fruits classify demo](https://studio.edgeimpulse.com/public/269519/latest)
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

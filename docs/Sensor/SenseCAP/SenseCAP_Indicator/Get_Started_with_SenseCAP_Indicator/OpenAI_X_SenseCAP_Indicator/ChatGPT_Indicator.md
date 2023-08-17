@@ -31,7 +31,7 @@ Select the Wi-Fi, input the password and connect it.
 
 ## Step 2. Set the API Key
 
-Click "Set API Key" and scan the QR code, then set it according to the [tutorial](/SenseCAP_Indicator_How_to_Set_the_API_Key).
+Click "Set API Key" and scan the QR code, then set it according to the [tutorial](/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key).
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/apikey.png"/></div>
 

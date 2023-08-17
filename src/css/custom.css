@@ -27,19 +27,19 @@
   --ifm-color-primary-light: #8dc215;
   --ifm-color-primary-lighter: #8dc215;
   --ifm-color-primary-lightest: #8dc215;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgb(80, 80, 100);
 }
 
 .navbar_doc_items{
   display: inline-block;
-  color: var(--text-color); 
+  color: var(--text-color);
   font-size: 0.85rem;
   font-weight: bold;
 }
 
 .navbar_doc_right_items{
   display: inline-block;
-  color: var(--text-color); 
+  color: var(--text-color);
 }
 
 .navbar_logo_items{

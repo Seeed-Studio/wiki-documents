@@ -43,7 +43,7 @@ Sensecap Indicator integrates two popular models ChatGPT and DALL·E via API, em
 
 You can refer to the links below for more help:
 
-- [How to Set the API Key](/SenseCAP_Indicator_How_to_Set_the_API_Key)
+- [How to Set the API Key](/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)
 - [ChatGPT Indicator](/SenseCAP_Indicator_ChatGPT)
 - [DALL·E AI Picture Generator](/SenseCAP_Indicator_DALL·E)
 

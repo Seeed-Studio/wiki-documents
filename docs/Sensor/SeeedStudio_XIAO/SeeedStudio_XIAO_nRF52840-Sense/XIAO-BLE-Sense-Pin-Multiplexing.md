@@ -106,17 +106,17 @@ void loop() {
 ```
 
 ## Serial
-
-Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message
+Use Serial1 to use the UART via GPIO instead of USB. You can use both concurrently as well.
+Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message. 
 
 ```c++
 void setup() {
-    Serial.begin(115200);
-    while (!Serial);
+    Serial1.begin(115200);
+    while (!Serial1);
 }
  
 void loop() {
-    Serial.println("Hello World!");
+    Serial1.println("Hello World!");
     delay(1000);
 }
 ```

@@ -4,7 +4,7 @@ title: Introduction
 keywords:
 - Get Started SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /SenseCAP_Indicator_Get_Started
+slug: /Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator
 last_update:
   date: 6/05/2023
   author: Thomas
