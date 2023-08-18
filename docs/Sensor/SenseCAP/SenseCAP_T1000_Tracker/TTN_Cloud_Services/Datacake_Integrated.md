@@ -25,21 +25,21 @@ To begin, register an account on [Datacake](https://app.datacake.de/signup).
 
 ### Create a Workspace
 
-First, create a Workspace on Datacake by navigating to the 'Create Workspace' button in the upper left corner.
+First, create a Workspace on Datacake by navigating to the **Create Workspace** button in the upper left corner.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake-workspace.png" alt="pir" width={800} height="auto" /></p>
 
 
 ### Add Device
 
-Click 'Devices' on the left hand menu. 
-To add a new device, click the 'Add Device' button on the right.
+Click **Devices** on the left hand menu. 
+To add a new device, click the **Add Device** button on the right.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_add.png" alt="pir" width={800} height="auto" /></p>
 
 
-Choose 'LoRaWAN' to add LoRaWAN devices.
+Choose **LoRaWAN** to add LoRaWAN devices.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/lorawan.png" alt="pir" width={800} height="auto" /></p>
 
@@ -59,7 +59,7 @@ Device Template: Seeed SenseCAP T1000
 ### Get a API Token
 
 
-Navigate to 'Account Settings' on your Datacake workspace, and copy your API Token.
+Navigate to **Account Settings** on your Datacake workspace, and copy your API Token.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_api.png" alt="pir" width={800} height="auto" /></p>
 
@@ -71,13 +71,18 @@ Navigate to 'Account Settings' on your Datacake workspace, and copy your API Tok
 
 
 
-Navigate to 'Webhooks' label of your application and then click 'Add Webhook'.
+On The Things Stack, navigate to **Integrations** → **Webhooks**, and click **Add Webhook**.
+
+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add_webhook1.png" alt="pir" width={800} height="auto" /></p>
 
 
+Choose the Datacake Webhook template. 
 
-To integrate, you only need to fill out the Webhook ID field and paste the API token from Datacake for the authorization.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_ts.png" alt="pir" width={800} height="auto" /></p>
+
+Name your integration by filling in the Webhook ID and paste the API token from Datacake for the authorization.
 
 
 

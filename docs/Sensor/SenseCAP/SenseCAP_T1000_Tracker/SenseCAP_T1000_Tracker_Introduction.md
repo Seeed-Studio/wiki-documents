@@ -20,7 +20,7 @@ last_update:
 
 
 
-**SenseCAP T1000 Tracker will be live on KICK STARTER on August 22, 2023(PT)!!!**
+**✨✨✨SenseCAP T1000 Tracker will be live on KICK STARTER on August 22, 2023(PT)✨✨✨**
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-t1000-track-what-you-care-with-no-boundaries?ref=discovery">
