@@ -270,13 +270,18 @@ As you can see above, the numbers are being detected with bounding boxes around 
 
 ## 4. Perform inference with SenseCAP A1101 on SenseCAP Mate
 In addition to perform inference on the browser, we can also use the SenseCAP Mate to implement model inference, which we will implement it step by step.
-- **Step 1.**  We need to upgrade the A1101 firmware to version 2.0 and drop the water meter digits recognition model into A1101
+- **Step 1.**  First, we need to erase the firmware of A1101, which can be achieved by using erase_model.uf2. Then upgrade the A1101 firmware to the latest version and drop the water meter digits recognition model into A1101
 
 
-  Firmware: [SenseCAP-A1101_v02-00.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/sensecap_ai_v02-00.uf2)
+
+  *Firmware*: [erase_model.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/erase_model.uf2)、[SenseCAP-A1101_v02-00.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/sensecap_ai_v02-00.uf2)
 
 
-  Model: [water_meter.uf2](https://github.com/QingWind6/Seeed_Arduino_GroveAI/releases/download/untagged-3561bb2a644f1cfa8fa5/Water_Meter.uf2)
+
+  *Model*: [water_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/meter_water_pre_6.uf2)、[pfld_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/pfld_meter_pre_5.uf2)、[digital_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/meter_seg7_pre_6.uf2)
+
+
+  ***Note:*** water_meter and digital_meter both identify the model name as user-define6 on the desktop and display digital_meter on the APP side. The model name identified by pfld_meter is user-define5, and Point_meter is displayed on the APP side. Users need to upload models according to their actual usage requirements during the deployment process
 
 
 - **Step 2.**  [Click here](https://seeed-studio.github.io/edgelab-web-app/) to open a preview window of the camera stream

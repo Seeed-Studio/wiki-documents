@@ -130,18 +130,41 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
   </div>
 </div>
 
-## Ranger Program
+## ✨ Contributor Program
 
-- This part will be publish soon.
+The Seeed Studio Contributor Program is a collaborative program designed to unite our friends from the community and co-build innovative solutions with us.
 
-<!-- This  platfrom can be deployed locally and everything will be editable.
+<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/08/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230817161402.png" alt="pir" width={800} height="auto" /></p>
 
-We want your skills, your language and language competence. We need your professions, your knowledge of hardware and development capabilities of software.
 
-We are facing the age of information explosion, we want to ensure your presentations are stored with us. Welcome to Seeed Studio Contributor Program!
+### How do we work with contributors?
 
-Check our <strong><a href="https://github.com/Seeed-Studio/wiki-documents" target="_blank"><span><font color={'8DC215'} size={"3"}> Github source </font></span></a></strong> and  <strong><a href="https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/TASK.md" target="_blank"><span><font color={'8DC215'} size={"3"}> task list </font></span></a></strong>
-for more information. -->
+We welcome contributions from all individuals who wish to help us improve our wiki platform.
+
+1. We have [a bunch of assignments available(keep update)](https://github.com/orgs/Seeed-Studio/projects/6/views/1) on GitHub to enhance the wiki contents for contributors to select, each with detailed description.
+2. The contributors can submit their content via "Pull Request" when the assignments have been finished.
+3. The maintainers will merge the submission and record the contributions.
+
+### What do we offer?
+
+We want to express our gratitude to our contributors by offering a range of rewards.  Depending on the difficulties(Tier 0/1/2/3), the time we expect(Days 1/3/7/15),  the actual  submission time and the actual submission contents, we will offer different levels of rewards.
+
+1. We will provide our products or cash bonus to our contributors as a token of appreciation.
+2. For those contributors who join our "Ranger Program"(announced soon), we offer even more exciting rewards, including access to our prototype products.
+3. In addition, all contributors and their contributions will be acknowledged and showcased on our wiki platform.
+
+### What exactly kinds of tasks are there?
+
+We’ve already dropped some tasks on GitHub. As of now, the task types span:
+
+1. Various applications and software deployments for Seeed Studio based products, from MCU board applications to industrial-grade device software deployments.
+
+2. Iteration of webpage structure and content, from simple grammar corrections to entire page content updates.
+
+3. Any thoughts about “solution-based” prototype, a deployable resolution, or just an interesting project idea. (Examples of relevant aspects: Digital automation; Decentralized digital transformation; Infrastructures deployable in the wild; Carbon neutrality; Sustainable Development Goals(SDGs); Problem solved in daily life; TinyML; etc.)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/contributor_program.png" alt="pir" width={900} height="auto" /></p>
+
 
 ## Weekly Wiki
 

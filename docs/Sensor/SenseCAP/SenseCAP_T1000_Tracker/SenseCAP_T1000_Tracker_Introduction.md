@@ -2,7 +2,7 @@
 description: SenseCAP_T1000_tracker_Introduction
 title: Introduction
 keywords:
-- enseCAP_T1000_tracker
+- SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 last_update:
@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-SenseCAP T1000 is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
+[**SenseCAP T1000**](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" alt="pir" width={800} height="auto" /></p>
@@ -20,12 +20,14 @@ SenseCAP T1000 is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth
 
 
 
-SenseCAP T1000 Tracker will be live on KICK STARTER soon! ! !
+**✨✨✨SenseCAP T1000 Tracker will be live on KICK STARTER on August 22, 2023(PT)✨✨✨**
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://bit.ly/3NucUUB">
+    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-t1000-track-what-you-care-with-no-boundaries?ref=discovery">
             <strong><span><font color={'FFFFFF'} size={"4"}> KICK STARTER </font></span></strong>
     </a>
 </div>
+
 
 
 

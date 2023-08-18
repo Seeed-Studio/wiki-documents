@@ -190,6 +190,7 @@ const sidebars = {
               type: 'category',
               label: 'Proximity',
               items: [
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Sensor_SMS812',
                 'Sensor/Grove/Grove_Sensors/Proximity/Sensor_distance',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Ultrasonic_Ranger',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-IR_Distance_Interrupter_v1.2',
@@ -641,6 +642,41 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'SenseCAP T1000 Tracker',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+          },
+          items: [
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
+          {
+            type: 'category',
+            label: 'TTN Cloud Services',
+            items: [
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Connect_to_The_Things_Network',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Datacake_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Ubidots_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Qubitro_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/TagoIO_Integrated',
+         'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
+                   ],
+          },
+          {
+        type: 'category',
+        label: 'Helium Cloud Services',
+        items: [
+       'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
+               ],
+          }, 
+            
+              ],
+        },
+        
+        {
+          type: 'category',
           label: 'SenseCAP Sensor',
           collapsed: true,
           collapsible: true,
@@ -732,8 +768,6 @@ const sidebars = {
           ],
         },
 
-
-
         {
           type: 'category',
           label: ' SenseCAP Data Logger',
@@ -761,6 +795,7 @@ const sidebars = {
 
       ],
     },
+
 
     {
       type: 'category',
@@ -806,7 +841,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
-                
+
               ],
             },
             {
@@ -907,8 +942,9 @@ const sidebars = {
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_MicroPython',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO-ESP32C3-Zephyr',
-            
+
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -1327,6 +1363,7 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/LoRa',
           ],
         },
       ],
@@ -1470,6 +1507,8 @@ const sidebars = {
               type: 'category',
               label: 'Display',
               items: [
+                'Sensor/Beyond_Grove/Accessories/Display/1-69inch_LCD_SPI_display',
+                'Sensor/Beyond_Grove/Accessories/Display/1-47inch_LCD_SPI_display',
                 'Sensor/Beyond_Grove/Accessories/Display/LCD_16-2_Characters-Green_Yellow_back_light',
                 'Sensor/Beyond_Grove/Accessories/Display/LCD_8-2_Characters-Blue_back_light',
               ],
@@ -1509,8 +1548,8 @@ const sidebars = {
                   items: [
                     'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Development_Tutorial/Hardware_Overview',
                   ],
-                },  
-              ], 
+                },
+              ],
             },
 
             {
@@ -2232,8 +2271,8 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A603_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A607_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A203_Flash_System',
-                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',    
-                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',            
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',
                   ],
                 },
               ],
@@ -2338,7 +2377,7 @@ const sidebars = {
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
             'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
-            
+
           ],
         },
         {
@@ -2932,7 +2971,8 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
-    
+    'TinyML/TinyML_Workshop',
+
     {
       type: 'category',
       label: 'TinyML Workshop',
@@ -2944,9 +2984,10 @@ const sidebars = {
       },
       items: [
            'TinyML/TinyML_Workshop/Edgelab',
+           'TinyML/TinyML_Workshop/EdgeImpulse',
           //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
-          //  'TinyML/TinyML_Workshop/Image_recognition_project',
-          //  'TinyML/TinyML_Workshop/Key_Word_Spotting',
+          'TinyML/TinyML_Workshop/Key_Word_Spotting',
+           'TinyML/TinyML_Workshop/Image_classification_project',
       ],
     },
 

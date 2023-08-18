@@ -16,6 +16,7 @@ last_update:
 
 
 <br />
+
 ## Overview
 
 SenseCAP Indicator is a powerful tool that harnesses the capabilities of OpenAI's ChatGPT and DALL·E models through API integration. Developed by OpenAI, a renowned name in the field of artificial intelligence, SenseCAP Indicator allows users to experience the fascinating potential of AI in various scenarios.
