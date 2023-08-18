@@ -4,7 +4,7 @@ title: Raspberry Pi Introduction
 keywords:
 - Raspberry Pi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Raspberry_Pi
+slug: /Raspberry_Pi_old
 last_update:
   date: 7/20/2023
   author: Matthew

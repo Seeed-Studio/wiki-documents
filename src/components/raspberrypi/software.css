@@ -1,0 +1,87 @@
+.software_container {
+	display: flex;
+	max-width: 950px;
+	padding: 20px 0;
+	margin: 0 auto;
+}
+.software_container a {
+	width: 100%;
+	height: 100%;
+	color: var(--text-color);
+}
+.software_container a:hover {
+	text-decoration: none;
+}
+.software_container .brand-list {
+	display: flex;
+	margin-right: 30px;
+	font-size: 23px;
+	font-weight: bold;
+	flex: 2.5;
+	justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+	text-align: center;
+
+}
+.software_container .scene-list {
+	flex: 3;
+}
+.software_container .brand-list ul {
+	width: 77%;
+	list-style: none;
+}
+
+.software_container .scene-list ul {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+}
+
+.software_container .brand-list li,
+.software_container .scene-list li {
+	cursor: pointer;
+	margin-bottom: 10px;
+	border: 1px solid var(--ifm-color-emphasis-300);
+	border-radius: 5px;
+	color: var(--text-color);
+}
+
+.software_container .brand-list li.selected,
+.software_container .brand-list li:hover {
+	border-color: #8fc31f;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	transition: transform 0.5s ease-in-out;
+	transform: scale(1.1);
+}
+.software_container .brand-list li.selected a,
+.software_container .brand-list li:hover a {
+	/* color: #8fc31f; */
+	color: transparent;
+	display: block;
+}
+.software_container .scene-list li:hover,
+.software_container .scene-list li.selected {
+	border-color: #000000;
+	box-shadow: 0 0 2px 1px var(--ifm-color-primary-dark);
+	background-color: #000000;
+	transition: transform 0.5s ease-in-out;
+	transform: scale(1.1);
+}
+.software_container .scene-list li.selected a,
+.software_container .scene-list li:hover a {
+	color: #8fc31f;
+}
+.software_container .scene-item {
+	display: flex;
+	font-size: 30px;
+	font-weight: bold;
+}
+.software_container .scene-item img {
+	width: 100px;
+	margin-right: 12px;
+}
+.software_container .srene-title {
+	align-self: center;
+}
