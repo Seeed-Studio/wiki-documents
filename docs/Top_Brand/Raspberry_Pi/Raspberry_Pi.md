@@ -6,17 +6,42 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_old
 last_update:
-  date: 7/20/2023
-  author: Matthew
+  date: 08/08/2023
+  author: thompcd
 ---
 
-## What is Raspberry Pi?
+# RASPBERRY PI INTRODUCTION
 
-Raspberry Pi is originally designed and created by a non-profit organization in UK, the intension of creating this single-board it to promote the teaching of basic computer science in schools and developing countries. It is a credit-card size computer that preinstalls Linux, despite the small size, it can handle most of the same tasks as your desktop PC.
+<br />
+<br />
+<br />
 
-Several generations of Raspberry Pis have been released. The first generation (Pi 1) was released in February 2012 in basic model A and a higher specification model B. A+ and B+ models were released a year later. Raspberry Pi 2 model B was released in February 2015 and Raspberry Pi 3 model B in February 2016.
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/pi.png" alt="raspberry pi 4" style={{width:1000, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Raspberry Pi was originally designed and created by a non-profit organization in UK with the intention to promote teaching basic computer science at an affordable cost to ensure the platform was available to the widest audience possible. Several generations and models of Raspberry Pis have been released that have expanded their footprints, power and applications.<br/>
+        At Seeed Studio, we provide both Raspberry Pis and complementary accessories and starter kits that can help you create projects centered around the product. Additionally, we have created numbers of tutorials in Seeed’s Raspberry Pi community where you can easily find references to build your own circuits or write your own applications.
+        </font>
+    </div>
+</div>
 
-At Seeed Studio, we provide not only different raspberry pi boards that mentioned above , but also provide different accessories and starter kits that can help you creating raspberry pi project. What’s more, we have created numbers of tutorials in Seeed’s raspberry pi community where you can easily building circuits of raspberry pi.
+<br/> <br/>
+
+## Features
+
+<div class="button_tech_support_container">
+<div>Hello</div>
+<div>It's me</div>
+
+</div>
+
+<div class="button_tech_support_container">
+<a class="feature3"></a> 
+<a class="feature4"></a> 
+</div>
+
 
 ## Getting Started
 

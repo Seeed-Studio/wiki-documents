@@ -15,7 +15,7 @@ const rpiPage = () => {
       on the right hand side to have a glimpse of the products included in that series. 
       </div>
       <ProjectsPage></ProjectsPage>
-      <div id="rpi_index_software" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>AI Developer Tools</div>
+      {/* <div id="rpi_index_software" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>AI Developer Tools</div>
       After you have access to an rpi Jetson device, you can start developing different AI applications to suite different scenarios. The very first step of an AI project is to 
       obtain data for training. Then you need to label the data and train an AI model. After that, you can optimize this model to make sure the model runs the best on the selected
       device. Finally, you deploy this AI model to the rpi Jetson device so that you can start building applications. You can also manage these applications remotely so that,
@@ -26,7 +26,7 @@ const rpiPage = () => {
       right hand columns
       to have a glimpse of the software providers and tools relevant for that task.
       </div>
-      <SoftwarePage></SoftwarePage>
+      <SoftwarePage></SoftwarePage> */}
       Updates to this page are in <a href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30495963">in progress</a>. Stay tuned!
     </div>
   );
