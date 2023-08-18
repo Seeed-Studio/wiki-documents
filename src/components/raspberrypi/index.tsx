@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
-import HardwarePage from './hardware'
+import ProjectsPage from './projects'
 import SoftwarePage from './software'
 
-const computerPageA = () => {
+const rpiPage = () => {
   return (
     <div>
       
 
-      <div id="rpi_index_hardware" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>Jetpack Flash and Hardware Usage</div>
-      Most of our reComputer Jetson products come with rpi JetPack system pre-installed on the device. However, if you want to flash these devices again or flash other devices 
-      which do not come with JetPack system, you can follow the below links for step-by-step guidance. We have also included guidance on how to use different hardware peripherals
-      on these rpi Jetson powered devices. 
+      <div id="rpi_index_hardware" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>Browse RPi Projects</div>
+      The Raspberry Pi platform boasts a large user base full of open-source and DIY enthusiasts, ranging from DIY beginners to career professionals.
+      View our collection of Raspberry Pi contributor project guides below.
       <div style={{ color: "#8DC215", fontStyle: 'italic'}}>
-      Note: Hover your mouse over the product name on the left hand side and click it to enter the relevant wiki pages. Also hover your mouse over the product series name
+      Note: Hover your mouse over the project category on the left hand side and click it to enter the relevant wiki pages. You can also hove your mouse over the project series name
       on the right hand side to have a glimpse of the products included in that series. 
       </div>
-      <HardwarePage></HardwarePage>
+      <ProjectsPage></ProjectsPage>
       <div id="rpi_index_software" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>AI Developer Tools</div>
       After you have access to an rpi Jetson device, you can start developing different AI applications to suite different scenarios. The very first step of an AI project is to 
       obtain data for training. Then you need to label the data and train an AI model. After that, you can optimize this model to make sure the model runs the best on the selected
@@ -33,4 +32,4 @@ const computerPageA = () => {
   );
 };
 
-export default computerPageA;
+export default rpiPage;

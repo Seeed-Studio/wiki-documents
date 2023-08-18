@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './hardware.css';
+import './projects.css';
 
-const HardwarePage = () => {
+const ProjectsPage = () => {
   const [selectedBrand, setSelectedBrand] = useState([]);
   const [selectedScenes, setSelectedScenes] = useState([]);
   const brands = [
@@ -104,4 +104,4 @@ const handleMouseLeave=()=>{
   );
 };
 
-export default HardwarePage;
+export default ProjectsPage;
