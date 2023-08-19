@@ -12,11 +12,16 @@ last_update:
   author: thompcd
 ---
 
-import RpiPage from '@site/src/components/raspberrypi';
+import HeroSection from '@site/src/components/raspberrypi/hero'
+import FamilyValueSection from '@site/src/components/raspberrypi/value'
+import ProjectsPage from '@site/src/components/raspberrypi/projects'
 
-<RpiPage title="Raspberry Pi Hardware" />
+<HeroSection />
 
-# Compare RPi Models
+## Why Choose Raspberry Pi?
+<FamilyValueSection />
+
+## Compare RPi Models
 | Model    | Memory                                 | Form Factor | Ethernet | Wifi | Processor Type | Processor Speed |
 |-------   |--------                                |-------------|----------|----- |----------------|-----------------|
 | 3B+      | 512 MB RAM                             | Standard [a]          | ✅ |✅ |ARM1136JZF| 700MHz            |
@@ -24,3 +29,12 @@ import RpiPage from '@site/src/components/raspberrypi';
 | Zero W/WH| 512 MB RAM                             | Ultra-compact [c]     | ❌ |✅ |BCM2835   | Dual Core @1GHz   |
 | CM4      | 2/4/8 GB RAM up to 32GB eMMC storage   | Ultra-compact [c]     | ❌ |❌ |BCM2711   | Quad Core @1.5GHz |
 | 4B       | 2/4/8 GB RAM                           | Standard [a]          | ✅ |✅ |BCM2711   | Quad Core @1.5 GHz|
+
+## Browse RPi Projects
+The Raspberry Pi platform boasts a large user base full of open-source and DIY enthusiasts, ranging from DIY beginners to career professionals.
+View our collection of Raspberry Pi contributor project guides below.
+Note: Hover your mouse over the project category on the left hand side and click it to enter the relevant wiki pages. You can also hove your mouse over the project series name
+on the right hand side to have a glimpse of the products included in that series.
+<ProjectsPage />
+
+Updates to this page are in <a href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30495963">in progress</a>. Stay tuned!
