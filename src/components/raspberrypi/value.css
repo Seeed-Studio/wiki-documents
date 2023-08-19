@@ -1,0 +1,42 @@
+.feature{
+    /* display: inline-block; */
+    /* background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature1.jpg"); */
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 2px;
+    padding: 10px 20px;
+    /* color: rgb(0, 0, 0);text color */
+    font-size: 100px;
+    font-weight: 40%;
+    text-decoration: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    /* width: 400px;  */
+    /* height: 160px;  */
+  }
+  
+  .feature:hover {
+    transform: scale(1.2);
+    /* background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature1-1.jpg'); */
+    background-size: cover;
+  }
+
+  .feature-container {
+    /* display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 320px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
