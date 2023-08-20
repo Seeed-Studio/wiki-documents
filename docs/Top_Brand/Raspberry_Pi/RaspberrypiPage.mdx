@@ -21,14 +21,20 @@ import HatSection from '@site/src/components/raspberrypi/hats'
 ## Why Choose Raspberry Pi?
 <FamilyValueSection />
 
-## Compare RPi Models
-| Model    | Memory                                 | Form Factor | Ethernet | Wifi | Processor Type | Processor Speed |
-|-------   |--------                                |-------------|----------|----- |----------------|-----------------|
-| 3B+      | 512 MB RAM                             | Standard [a]          | ✅ |✅ |ARM1136JZF| 700MHz            |
-| Zero     | 512 MB RAM                             | Ultra-compact [c]     | ❌ |❌ |BCM2835   | 1GHz              |
-| Zero W/WH| 512 MB RAM                             | Ultra-compact [c]     | ❌ |✅ |BCM2835   | Dual Core @1GHz   |
-| CM4      | 2/4/8 GB RAM up to 32GB eMMC storage   | Ultra-compact [c]     | ❌ |❌ |BCM2711   | Quad Core @1.5GHz |
-| 4B       | 2/4/8 GB RAM                           | Standard [a]          | ✅ |✅ |BCM2711   | Quad Core @1.5 GHz|
+## Compare Raspberry Pi Models
+|               | 3B+           |   Zero      |   Zero 2 W/WH     |   4B          |   CM4     | Pico | Pico WH |
+|   :---:       | :---:         |   :---:     |   :---:         |   :---:       |   :---:   | :---: | :---: |
+|   RAM         |1GB          |512MB          |512MB          |2/4/8 GB       |2/4/8 GB   | 264 KB |264 KB |
+|   Storage     |Micro SD          |Micro SD          |Micro SD          |Micro SD      |Up to 32GB eMMC   | 2 MB |2 MB |
+|   Processor Type     |ARMv8 x86       |ARMv6         |ARMv6        |ARMv8 x64     |ARMv8 x64 |ARM M0+ |ARM M0+ |
+| Processor Speed | Quad Core @1.4GHz  |1GHz |Quad Core @1GHz |Quad Core @1.5GHz|Quad Core @1.5GHz|Dual Core @133MHz|Dual Core @133MHz|
+| Form Factor   | Standard [a]    |pHat |pHat |Standard [a] | Ultra-compact [c] |Through-Hole SOM |Through-Hole SOM |
+|Ethernet   |✅|❌|❌|✅|✅|❌|❌|
+|Wifi       |❌|❌|✅|✅|❌|❌|✅|
+|Bluetooth  |❌|❌|✅|✅|❌|❌|✅|
+|USB Ports|x4(A)|x1(Micro)|x1(Micro)|x4(A),x1(C)|❌|x1(Micro)|x1(Micro)|
+|I2C Ports|x1|x1|x1|x1|x1|x1|x2|x2|
+|SPI Ports|x1|x1|x1|x1|x1|x1|x2|x2|
 
 ## Getting Started
 
