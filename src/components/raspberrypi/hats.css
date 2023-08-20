@@ -36,3 +36,7 @@
     align-self: center;
     justify-self: center;
 }
+
+.reverse{
+    order: -1;
+}
