@@ -17,10 +17,10 @@ const value = () => {
             <div id='rpifeature3' className='feature'>🚀 Ease of use</div>
             <div id='rpifeature4' className='feature'>🐜 Size</div>
       </div>
+      {/* todo: change content on hover
       <div className='feature-explanation'>
-        {/* todo: make variable on hover */}
-        <p id='rpifeaturecontent'>The Raspberry Pi is a low-cost computer that is affordable for everyone. The price of a Raspberry Pi ranges from $5 to $55, depending on the model</p>
-      </div>
+        <p>{name}</p>
+      </div> */}
     </div>
   );
 };
