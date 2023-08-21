@@ -38,7 +38,7 @@ With rich extension modules, industrial peripherals, and thermal management, reC
     <tr>
       <th>Specifications</th>
       <th><a href="https://www.seeedstudio.com/reComputer-J3010-w-o-power-adapter-p-5631.html?queryID=e8d0ae9b2e338e8a860f07dacef58f6e&objectID=5631&indexName=bazaar_retailer_products">reComputer J3010</a></th>
-      <th><a href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html" target="_blank" rel="noopener noreferrer">reComputer J3011</a></th>
+      <th><a href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html">reComputer J3011</a></th>
       <th><a href="https://www.seeedstudio.com/reComputer-J4011-w-o-power-adapter-p-5629.html?queryID=5577f61da645361a7aad9179bc04efc2&objectID=5629&indexName=bazaar_retailer_products">reComputer J4011</a></th>
       <th><a href="https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html?queryID=639ef60cde4a38ccc9ff2f82070d4854&objectID=5628&indexName=bazaar_retailer_products">reComputer J4012</a></th>
     </tr>
@@ -55,22 +55,26 @@ With rich extension modules, industrial peripherals, and thermal management, reC
       <td>AI Performance</td>
       <td>20 TOPS</td>
       <td>40 TOPS</td>
-      <td colSpan={2}>70 TOPS</td>
+      <td>70 TOPS</td>
+      <td>100 TOPS</td>
     </tr>
     <tr>
       <td>GPU</td>
-      <td colSpan={2}>512-core NVIDIA Ampere architecture GPU with 16 Tensor Cores</td>
+      <td>512-core NVIDIA Ampere architecture GPU with 16 Tensor Cores</td>
+      <td>1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores</td>
       <td colSpan={2}>1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores</td>
     </tr>
     <tr>
       <td>GPU Max Frequency</td>
       <td colSpan={2}>625 MHz</td>
-      <td colSpan={2}>765 MHz</td>
+      <td>765 MHz</td>
+      <td>918 MHz</td>
     </tr>
     <tr>
       <td>CPU</td>
       <td colSpan={2}>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU<br />1.5MB L2 + 4MB L3</td>
-      <td colSpan={2}>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU 1.5MB L2 + 4MB L3</td>
+      <td>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU 1.5MB L2 + 4MB L3</td>
+      <td>8-core Arm® Cortex®-A78AE v8.2 64-bit CPU 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>CPU Max Frequency</td>
@@ -87,7 +91,8 @@ With rich extension modules, industrial peripherals, and thermal management, reC
     <tr>
       <td>DL Accelerator</td>
       <td colSpan={2}>/</td>
-      <td colSpan={2}>1x NVDLA v2</td>
+      <td>1x NVDLA v2</td>
+      <td>2x NVDLA v2</td>
     </tr>
     <tr>
       <td>DLA Max Frequency</td>
@@ -268,6 +273,14 @@ The below image is for Orin NX 16GB
 Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
 :::
 
+<!-- Code -->
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="JP5.1.1" label="JP5.1.1">
+
 Here we will use NVIDIA L4T 35.3.1 to install Jetpack 5.1.1 on the reComputer
 
 **Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3531) the NVIDIA drivers on the host PC. The required drivers are shown below:
@@ -307,6 +320,73 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+</TabItem>
+<TabItem value="JP5.1.2" label="JP5.1.2">
+
+Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the reComputer
+
+**Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3541) the NVIDIA drivers on the host PC. The required drivers are shown below:
+
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
+
+**Step 2:** Extract **Jetson_Linux_R35.4.1_aarch64** and **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
+
+```sh
+tar xf Jetson_Linux_R35.4.1_aarch64
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64 -C Linux_for_Tegra/rootfs/
+cd Linux_for_Tegra/
+sudo ./apply_binaries.sh
+sudo ./tools/l4t_flash_prerequisites.sh
+```
+
+Now we need to apply a patch from NVIDIA which is needed for JP5.1.2 and explained [here](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf) in section 4.2.3 of the official NVIDIA JetPack Release Notes.
+
+**Step 3:** Navigate to the following directory
+
+```sh
+cd Linux_for_Tegra/bootloader/t186ref/BCT
+```
+
+**Step 4:** Open the file **"tegra234-mb2-bct-scr-p3767-0000.dts"** and add the following lines under  **tfc** section
+
+```sh
+tfc {
+    reg@322 { /* GPIO_M_SCR_00_0 */
+    exclusion-info = <2>;
+    value = <0x38008080>;
+    };
+```
+
+**Step 5:** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+
+```sh
+cd Linux_for_Tegra
+sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
+```
+
+For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+
+```sh
+sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
+```
+
+**Step 6:** Flash the system to the NVMe SSD
+
+```sh
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+  -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
+  --showlogs --network usb0 p3509-a02+p3767-0000 internal
+```
+
+You will see the following output if the flashing process is successful
+
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+</TabItem>
+</Tabs>
+
+<!-- Code END -->
 
 ## Tech Support & Product Discussion
 
