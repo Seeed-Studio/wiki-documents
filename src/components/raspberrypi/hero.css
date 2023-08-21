@@ -1,0 +1,10 @@
+
+.hero_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+hero-content p{
+    font-size: 2.1;
+}

@@ -1,0 +1,35 @@
+.feature{
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-color: #8dc215;
+    opacity: 80%;
+    color: #111;
+    font-weight: 40%;
+    text-decoration: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .feature:hover {
+    transform: scale(1.2);
+    background-size: cover;
+  }
+
+  .feature-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .feature-explanation{
+    height: auto;
+    padding: 48px;
+    padding-bottom: 0px;
+    font-size: larger;
+  }
