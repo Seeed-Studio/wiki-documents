@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/14/2023
+  date: 08/21/2023
   author: Matthew
 ---
 
@@ -17,51 +17,57 @@ This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Eac
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 14th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 21st and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Using XIAO ESP32C3 to connect to SenseCAP AI for planting advice](https://wiki.seeedstudio.com/xiao_esp32c3_sensecapai/)
+### [SenseCAP T1000 Tranker](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker/Introduction/)
 
-During this time, Seeed Studio's SenseCAP platform developed and released new AI features. Currently the main features of SenseCAP AI are focused on providing constructive planting advice to growers, and will be updated with richer AI features in the near future!
+SenseCAP T1000 is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
 
-This tutorial, then, will bridge the XIAO ESP32 series with the SenseCAP platform, detailing how to use the XIAO and Grove series sensors to upload data to SenseCAP and get constructive suggestions from the AI based on these sensor values.
+- [Getting Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/)
+- [Connecting TTN Network](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/)
+- [Connecting Helium Network](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Ubidots_Helium/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP_AI/1.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" style={{width:800, height:'auto'}}/></div>
 
-### [TinyML Workshop Course](https://wiki.seeedstudio.com/tinyml_workshop_course/)
+### [SenseCAP Indicator x LoRa Application Development](https://wiki.seeedstudio.com/SenseCAP_Indicator_LoRa/)
 
-Welcome to the course on using EdgeLab and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize EdgeLab and Edge Impulse platforms effectively. We will explore the functionalities of EdgeLab, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
+We have published a wiki about using SenseCAP Indicator for peer-to-peer data transfer under the LoRa network.
+
+This demonstration showcases how to establish a basic LoRa communication between the SenseCAP Indicator and the XIAO board using the Wio-E5 as an intermediary. The SenseCAP Indicator retrieves sensor data from the XIAO, which is then transmitted via Wio-E5. The transmitted payload is subsequently received by the SenseCAP Indicator, which deciphers and outputs. the result and displays the data on its screen.
 
 ## Existed Wiki Updated
 
-### [Collection Page for NVIDIA Jetson devices by Seeed Studio](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
+### [Andanced OV5640 camera Sensor for XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#installation-of-expansion-boards-for-sense)
 
-We are almost done updating the collection page for NVIDIA Jetson devices. And welcome [discuss it on our workflow and share your opinions](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30495963)!
+We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV5640, on our shelves, and if you purchase it, you can replace the camera to use it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/NVIDIA_Jetson_collection_front.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:600, height:'auto'}}/></div>
 
-### [Add grove example to Wio WM1110 dev kit](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Hardware_Overview/#grove)
+### [Update Indicator flash firmware](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-esp32-s3)
 
-There are 3 Grove interfaces in the DK, which can be connected to 400+ Grove modules, and supports ADC/UART and IIC transmission protocols.
+We have updated the firmware for SenseCAP Indicator(both ESP32S3 and RP2040 chip)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/grove_pins.png" style={{width:600, height:'auto'}}/></div>
+### [Flash TinyML model on XIAO ESP32S3 Sense using EdgeLab function](https://wiki.seeedstudio.com/edgelab/#1-get-started-with-face-recognition)
 
-### [Deploy YOLOV8 to Jetson in One Line of Code!](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/#deploy-yolov8-to-jetson-in-one-line-of-code)
+We flash the EdgeLab program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
 
-After you flash the Jetson device with JetPack and SDK components, you can simply run the below commands to run YOLOv8 models. This will first download and install the necessary packages, dependencies, setup the environment and download pretrained models from YOLOv8 to perform object detection, Image segmentation, pose estimation and image classifications tasks!
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/8.png" style={{width:300, height:'auto'}}/></div>
+
+
 
 ## The Efforts of Contributor✨
 
-### [CircuitPython for ESP32S3](https://wiki.seeedstudio.com/XIAO_ESP32S3_CircuitPython/)
+### [MicroPython for ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_MicroPython/)
 
-Thanks our contributor - Isaac for adding a wiki page about connecting XIAO ESP32S3 and Grove - OLED screen and displaying text on the screen, programming with CircuitPython.
+Thanks our contributor - Zachary for adding a wiki page about connecting XIAO ESP32C3 and Seeed Studio Expansion Board to build a Wi-Fi signal strength tracker, which proves invaluable when establishing a high-speed, high-quality family network, programming with MicroPython.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython10.jpg" /></div>
 
-### [Added missing accelerometer raw data sketch and steps](https://github.com/Seeed-Studio/wiki-documents/pull/487/files)
+### [Thanks our contributor for organizing tinyML workshop page](https://wiki.seeedstudio.com/tinyml_workshop_course_new/)
 
-Thanks our contributor - Salman for updating missing accelerometer raw data sketch and steps to the [Edge Impulse on XIAO nRF52840](https://wiki.seeedstudio.com/XIAOEI/) wiki.
+Thanks our contributor - Salman for organizing tinyML workshop page to make the course more logical.
 
 ## Past Weekly wiki
 
@@ -86,3 +92,4 @@ Thanks our contributor - Salman for updating missing accelerometer raw data sket
 - [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
 - [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
 - [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
+- [weekly wiki on 8.14th](/Seeed_Elderly/weekly_wiki/wiki814)
