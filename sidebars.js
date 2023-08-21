@@ -2141,6 +2141,7 @@ const sidebars = {
               type: 'category',
               label: 'Home Assistant',
               items: [
+                'Edge/reTerminal/Application/Home_Assistant/reterminal_frigate',
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
               ],
