@@ -56,7 +56,7 @@ Select **>** to continue and then hit the checkmark to finish.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/name-description.png" alt="pir" width={800} height="auto" /></p>
 
 
-### Configura the Decoder
+### Configure the Decoder
 
 
 Once created the plugin, go to the decoder section, delete all the code and replace it for the following:

@@ -55,8 +55,6 @@ We flash the EdgeLab program in advance for all XIAO ESP32S3 Sense participating
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/8.png" style={{width:300, height:'auto'}}/></div>
 
-
-
 ## The Efforts of Contributor✨
 
 ### [MicroPython for ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_MicroPython/)
