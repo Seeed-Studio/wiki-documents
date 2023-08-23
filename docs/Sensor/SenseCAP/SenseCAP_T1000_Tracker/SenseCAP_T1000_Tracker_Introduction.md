@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 last_update:
-  date: 8/14/2023
+  date: 8/23/2023
   author: Jessie
 ---
 
@@ -20,7 +20,7 @@ last_update:
 
 
 
-**✨✨✨SenseCAP T1000 Tracker will be live on KICK STARTER on August 22, 2023(PT)✨✨✨**
+**✨✨✨SenseCAP T1000 Tracker is LIVE on KICK STARTER now!!!✨✨✨**
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-t1000-track-what-you-care-with-no-boundaries?ref=discovery">
