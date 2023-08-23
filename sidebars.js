@@ -2021,6 +2021,13 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'SenseCAP LoRaWAN Starter Kit',
+      items: [
+        'Network/SenseCAP_LoRaWAN_Starter_Kit/M2_Kit_Getting_Started',
+      ],
+    },
 
     // {
     // 有问题
