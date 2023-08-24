@@ -228,7 +228,7 @@ When the code finishes uploaded, the LED will goes on when Hall Sensor detects c
 
 - **[Demo]** [Hall Sensor Demo Code](https://files.seeedstudio.com/wiki/Grove-Hall_Sensor/res/Grove-Hall_Sensor_Demo_Code.zip)
 
-- **[Datasheet]** [A1101 datasheet](http://www.allegromicro.com/en/Products/Part_Numbers/1101/1101.pdf)
+- **[Datasheet]** [A1101 datasheet](https://files.seeedstudio.com/wiki/Grove-Hall_Sensor/res/datasheet.pdf)
 
 - **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Hall_Sensor/res/Grove_Hall_Sensor_CDC_File.zip)
 

@@ -807,6 +807,7 @@ const sidebars = {
         id: 'Sensor/mmWave_radar_sensor/mmwave_radar_Intro',
       },
       items: [
+        'Sensor/mmWave_radar_sensor/mmwave_human_kit',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
         'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
