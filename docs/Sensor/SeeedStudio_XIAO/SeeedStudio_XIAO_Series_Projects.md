@@ -302,7 +302,7 @@ This section aims to list the tutorials in the Wiki on some of the function poin
         <tr>
 			<th>XIAO ESP32S3 Sense File System</th>
             <th>XIAO ESP32S3 Sense Camera Usage</th>
-            <th>XIAO ESP32S3 & EdgeLab</th>
+            <th>XIAO ESP32S3 & SenseCraft Model Assistant</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/72.jpg" style={{width:350, height:'auto'}}/></div></td>
@@ -312,7 +312,7 @@ This section aims to list the tutorials in the Wiki on some of the function poin
         <tr class="form_without_frame">
             <td><font size={"1"}>In this tutorial, we will focus on the use of the file system of XIAO ESP32S3, mainly on the use of the microSD card slot for the Sense version. At the same time, we will introduce the official ESP file system SPIFFS, the chip's built-in Flash, etc.</font></td>
             <td><font size={"1"}>In this tutorial, we will walk you through using the camera module on the XIAO ESP32S3 Sense.</font></td>
-            <td><font size={"1"}>EdgeLab is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implemention more user-friendly, achieving faster and more accurate inference on embedded devices.</font></td>
+            <td><font size={"1"}>SenseCraft Model Assistant is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implemention more user-friendly, achieving faster and more accurate inference on embedded devices.</font></td>
         </tr>
         <tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>

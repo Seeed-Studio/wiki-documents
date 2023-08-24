@@ -49,9 +49,9 @@ We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV564
 
 We have updated the firmware for SenseCAP Indicator(both ESP32S3 and RP2040 chip)
 
-### [Flash TinyML model on XIAO ESP32S3 Sense using EdgeLab function](https://wiki.seeedstudio.com/edgelab/#1-get-started-with-face-recognition)
+### [Flash TinyML model on XIAO ESP32S3 Sense using SenseCraft Model Assistant function](https://wiki.seeedstudio.com/edgelab/#1-get-started-with-face-recognition)
 
-We flash the EdgeLab program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
+We flash the SenseCraft Model Assistant program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/8.png" style={{width:300, height:'auto'}}/></div>
 

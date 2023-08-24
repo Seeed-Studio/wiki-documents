@@ -1,6 +1,6 @@
 ---
-description: Introduction to EdgeLab.
-title: EdgeLab
+description: Introduction to SenseCraft Model Assistant.
+title: SenseCraft Model Assistant
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,13 +10,13 @@ last_update:
   author: Salman
 ---
 
-## EdgeLab
+## SenseCraft Model Assistant
 
-Seeed Studio [EdgeLab](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices. With EdgeLab we can easily get-started with tinyML project and work on it. Let's get started. 
+Seeed Studio [SenseCraft Model Assistant](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices. With SenseCraft Model Assistant we can easily get-started with tinyML project and work on it. Let's get started. 
 
 ### 1. Get started with Face Recognition.
 
-We flash the EdgeLab program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
+We flash the SenseCraft Model Assistant program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
 
 #### Step 1. Install XIAO ESP32S3 Sense expansion board
 
@@ -29,16 +29,16 @@ First, we need to properly connect the XIAO ESP32S3 Sense expansion board to the
 
 Connect the XIAO to your PC using a data cable with data transfer function.
 
-#### Step 3. Go to the EdgeLab page and connect the XIAO
+#### Step 3. Go to the SenseCraft Model Assistant page and connect the XIAO
 
-Click the button below to go to the EdgeLab homepage.
+Click the button below to go to the SenseCraft Model Assistant homepage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab</font></span></strong></a>
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
-Once we are on the homepage of EdgeLab, we first need to select the interface type for the connection as **Serial** and then click the **Connect** button.
+Once we are on the homepage of SenseCraft Model Assistant, we first need to select the interface type for the connection as **Serial** and then click the **Connect** button.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/5.png" style={{width:700, height:'auto'}}/></div>
 
@@ -96,11 +96,11 @@ Download the three binary files below.
 
 **Step 2. Flash all files to XIAO**
 
-Please click the button below to come to EdgeLab Flash Tools page.
+Please click the button below to come to SenseCraft Model Assistant Flash Tools page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab</font></span></strong></a>
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
 Once you are on the web page, please click on the **Connect** button from **Deployment** and then select the port number of your XIAO. Again, it should be clearly labeled **USB JTAG**.
@@ -204,7 +204,7 @@ Please download all the files below in order and select the model you want to us
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab</font></span></strong></a>
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
 Once you are on the web page, please click on the **Connect** button from **Deployment** and then select the port number of your XIAO. Again, it should be clearly labeled **USB JTAG**.
@@ -264,11 +264,11 @@ Then click **Burn**, watch the progress bar for all the files and make sure each
 Since ESPTool doesn't have a reset program by default, after uploading all the files, we still need to manually re-plug the XIAO's cable to let it restart.
 :::
 
-Let's go back to EdgeLab Dashboard, connect the XIAO according to the previous configuration method, start **Invoke**, and you'll see the water meter reading!
+Let's go back to SenseCraft Model Assistant Dashboard, connect the XIAO according to the previous configuration method, start **Invoke**, and you'll see the water meter reading!
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab </font></span></strong></a>
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant </font></span></strong></a>
 </div><br />
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/10.gif" style={{width:800, height:'auto'}}/></div> 
@@ -276,8 +276,8 @@ Let's go back to EdgeLab Dashboard, connect the XIAO according to the previous c
 <hr></hr>
 
 # ToDo
-- [ ] Load and Run **Face Recognition Model** with EdgeLab. 
-- [ ] Load and Run **Keywordspotting Model** with EdgeLab. 
+- [ ] Load and Run **Face Recognition Model** with SenseCraft Model Assistant. 
+- [ ] Load and Run **Keywordspotting Model** with SenseCraft Model Assistant. 
 
 :::tip
 If you also want to experience this water meter that generates readings automatically, you can download the zip package by clicking **[here](https://files.seeedstudio.com/wiki/tinyml-topic/clock-master.zip)**, unzip it and then double click to open the html file in the root directory.
