@@ -792,7 +792,7 @@ const sidebars = {
             },
           ],
         },
-
+        "Sensor/SenseCAP/SenseCAP_Decoder",
       ],
     },
 
