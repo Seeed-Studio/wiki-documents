@@ -21,7 +21,7 @@ Today is August 21st and a brand new week has begun! Check out what Seeed Studio
 
 ## Latest Wiki Launched
 
-### [SenseCAP T1000 Tranker](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker/Introduction/)
+### [SenseCAP T1000 Tracker](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker/Introduction/)
 
 SenseCAP T1000 is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
 
