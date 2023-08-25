@@ -1,17 +1,16 @@
 ---
-description: The Sensor Prototype Kit Introduction
-title: The Sensor Prototype Kit Introduction
-# slug: /ABC
+description: SenseCAP LoRaWAN Starter Kit Getting Started
+title: SenseCAP LoRaWAN Starter Kit Getting Started
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /K1100-Getting-Started
+slug: /M2_Kit_Getting_Started
 last_update:
-  date: 11/30/2022
-  author: MengDu
+  date: 8/23/2023
+  author: KeweiLee
 ---
 
 
 
-# SenseCAP - The Sensor Prototype Kit Overview
+# SenseCAP LoRaWAN Starter Kit Getting Started
 
 In the digital age where IoT and big data are becoming more prevalent, massive data collection through sensors is required to facilitate digital transformation. Under such a background, SenseCAP K1100 comes with all the essential sensors and devices, including a Wio Terminal, an AI Vision Sensor, and a LoRa®-enabled module - that together allows users of all backgrounds and levels to create DIY sensors for data collection and solving real-world challenges.
 

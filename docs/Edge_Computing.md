@@ -352,7 +352,7 @@ You can discover this page with three large portions.
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Seeed Studio XIAO ESP32S3</font></div>
             <a href="/xiao_esp32s3_getting_started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started </font></span></a>
             <br/>
-            <a href="/xiao_esp32s3_edgelab" target="_blank"><span><font color={'FFFFFF'} size={"2"}> EdgeLab Usage </font></span></a>
+            <a href="/xiao_esp32s3_edgelab" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCraft Model Assistant Usage </font></span></a>
             <br/>
             <a href="/xiao_esp32s3_wifi_usage" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Wi-Fi</font></span></a> ,
             <a href="/xiao_esp32s3_bluetooth" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth 5.0 </font></span></a>

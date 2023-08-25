@@ -1399,6 +1399,7 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 
 - **[PDF]** [Breathing and Heartbeat Radar Sensor Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/MR60BHA1_Datasheet.pdf)
 - **[PDF]** [Breathing and Heartbeat Radar Sensor User Manual-V1.9](https://files.seeedstudio.com/wiki/60GHzradar/new_res/MR60BHA1_user_manual-V1.9.pdf)
+- **[PDF]** [Breathing and Heartbeat Radar Sensor User Manual-V2.3](https://files.seeedstudio.com/wiki/60GHzradar/new_res/MR60BHA1_userManual_V2.3.pdf)
 - **[EXE]** [Upper Computer Software_old version](https://files.seeedstudio.com/wiki/60GHzradar/Human-Vital-Sign-Radar.exe)
 - **[EXE]** [Upper Computer Software_new version](https://files.seeedstudio.com/wiki/60GHzradar/MR60BHA1_new.exe)
 - **[PPTX]** [Seeed mmWave sensor series V2.0](https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx)
