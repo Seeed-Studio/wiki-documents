@@ -16,6 +16,23 @@ last_update:
 
 <div class="table-center">
 	<table align="center">
+    <tr>
+			<th>Raspberry Pi Platform Devices Guide</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/r/a/raspberry-pi-preview_2.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry_Pi/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963820"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 thompcd </font></span></strong></a></div>        
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
 		<tr>
 			<th colspan="3">Collaborated Project</th>
 		</tr>
