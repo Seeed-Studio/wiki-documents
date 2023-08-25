@@ -2,7 +2,8 @@
 description: SenseCAP_T1000_tracker_and_Datacake_Integrated
 title: Datacake Integrated(TTS)
 keywords:
-- SenseCAP_T1000_tracker
+- SenseCAP
+- tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker_Datacake_TTS
 last_update:
