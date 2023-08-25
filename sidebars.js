@@ -792,7 +792,7 @@ const sidebars = {
             },
           ],
         },
-
+        "Sensor/SenseCAP/SenseCAP_Decoder",
       ],
     },
 
@@ -807,6 +807,7 @@ const sidebars = {
         id: 'Sensor/mmWave_radar_sensor/mmwave_radar_Intro',
       },
       items: [
+        'Sensor/mmWave_radar_sensor/mmwave_human_kit',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
         'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
@@ -2019,6 +2020,13 @@ const sidebars = {
             'Network/SenseCAP_K1100/Contributors_Project/K1111-Quick-Start-Guide',
           ],
         },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'SenseCAP LoRaWAN Starter Kit',
+      items: [
+        'Network/SenseCAP_LoRaWAN_Starter_Kit/M2_Kit_Getting_Started',
       ],
     },
 

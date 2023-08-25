@@ -1,11 +1,10 @@
 ---
-description: EdgeLab Getting Start with Seeed Studio XIAO ESP32S3.
-title: EdgeLab with XIAO ESP32S3 (Sense)
+description: SenseCraft Model Assistant Getting Start with Seeed Studio XIAO ESP32S3.
+title: SenseCraft Model Assistant with XIAO ESP32S3 (Sense)
 keywords:
 - esp32s3
 - xiao
 - tinyml
-- edgelab
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_edgelab
 last_update:
@@ -13,10 +12,10 @@ last_update:
   author: LynnL4
 ---
 
-# EdgeLab Getting Start with Seeed Studio XIAO ESP32S3
+# SenseCraft Model Assistant Getting Start with Seeed Studio XIAO ESP32S3
 
 ## Introduction
-[EdgeLab](https://edgelab.readthedocs.io/en/latest/) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implemention more user-friendly, achieving faster and more accurate inference on embedded devices.
+[SenseCraft Model Assistant](https://edgelab.readthedocs.io/en/latest/) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implemention more user-friendly, achieving faster and more accurate inference on embedded devices.
 
 ## Hardware Required
 - [Seeed Studio XIAO ESP32S3 Sense](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)
@@ -25,8 +24,8 @@ last_update:
 
 ## Software Required
 - ESP-IDF v4.4
-- EdgeLab v0.1.0
-- Example Code: [edgelab-example-esp32](https://github.com/Seeed-Studio/edgelab-example-esp32)
+- SenseCraft Model Assistant v0.1.0
+- Example Code: [SenseCraft Model Assistant-example-esp32](https://github.com/Seeed-Studio/edgelab-example-esp32)
 
 ## How to Install 
 ### Install ESP-IDF
@@ -68,9 +67,9 @@ Configure the example
 idf.py menuconfig
 ```
 
-- Select the Camera Module in `Component config` -> `Edgelab Configuration` -> `Camera Configuration` -> `Select Camera Pinout`
+- Select the Camera Module in `Component config` -> `SenseCraft Model Assistant Configuration` -> `Camera Configuration` -> `Select Camera Pinout`
 ![img](https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-camera.png)
-- Select the LCD Module in `Component config` -> `Edgelab Configuration` -> `LCD Configuration` -> `Select LCD Pinout`
+- Select the LCD Module in `Component config` -> `SenseCraft Model Assistant Configuration` -> `LCD Configuration` -> `Select LCD Pinout`
 ![img](https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-lcd.png)
 
 

@@ -13,18 +13,18 @@ last_update:
 
 # TinyML Workshop Course
 
-Welcome to the course on using EdgeLab and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize EdgeLab and Edge Impulse platforms effectively. We will explore the functionalities of EdgeLab, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
+Welcome to the course on using SenseCraft Model Assistant and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize SenseCraft Model Assistant and Edge Impulse platforms effectively. We will explore the functionalities of SenseCraft Model Assistant, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/3.jpg" style={{width:1000, height:'auto'}}/></div>
 
 
-Throughout this course, we will delve into the usage of EdgeLab(Beta) as a powerful online development environment. It will guide you through data management, preprocessing, feature engineering, model design, training, evaluation, and optimization. We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
+Throughout this course, we will delve into the usage of SenseCraft Model Assistant(Beta) as a powerful online development environment. It will guide you through data management, preprocessing, feature engineering, model design, training, evaluation, and optimization. We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
 
 <div class="button_tech_support_container">
 <a href="https://seeed-studio.github.io/EdgeLab/introduction/what_is_edgelab" class="button_edgelab"></a> 
 </div>
 
-Next, we will shift our focus to the Edge Impulse platform. Designed specifically for embedded devices, Edge Impulse offers an end-to-end solution for developing and deploying TinyML models. We will learn how to export models trained in EdgeLab to Edge Impulse and deploy them on the XIAO ESP32S3. Additionally, we will explore Edge Impulse's features, including real-time data collection, model quantization and optimization, and the ability to perform real-time inference on the device.
+Next, we will shift our focus to the Edge Impulse platform. Designed specifically for embedded devices, Edge Impulse offers an end-to-end solution for developing and deploying TinyML models. We will learn how to export models trained in SenseCraft Model Assistant to Edge Impulse and deploy them on the XIAO ESP32S3. Additionally, we will explore Edge Impulse's features, including real-time data collection, model quantization and optimization, and the ability to perform real-time inference on the device.
 
 <div class="button_tech_support_container">
 <a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a> 
@@ -32,7 +32,7 @@ Next, we will shift our focus to the Edge Impulse platform. Designed specificall
 
 By participating in this course, you will gain the following skills and knowledge:
 
-- Familiarity with the fundamental features and workflow of EdgeLab.
+- Familiarity with the fundamental features and workflow of SenseCraft Model Assistant.
 - Proficiency in essential steps such as data preprocessing, model training, and evaluation.
 - Understanding of TinyML concepts and their application scenarios.
 - Ability to deploy models to the XIAO ESP32S3 using the Edge Impulse platform.
@@ -44,7 +44,7 @@ Whether you are a beginner or an experienced developer with some machine learnin
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "#1-edgelab" class="getting_started_label2">EdgeLab</a>
+          <a href= "#1-SenseCraft Model Assistant" class="getting_started_label2">SenseCraft Model Assistant</a>
           <br/>Use pre-made tinyML models and experiment quickly.
       </div>
   </div>
@@ -57,11 +57,11 @@ Whether you are a beginner or an experienced developer with some machine learnin
 </div>
 
 
-## 1. EdgeLab
+## 1. SenseCraft Model Assistant
 
 ### 1.1 Power-on Ready Embedded AI
 
-We flash the EdgeLab program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
+We flash the SenseCraft Model Assistant program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
 
 #### Step 1. Install XIAO ESP32S3 Sense expansion board
 
@@ -74,16 +74,16 @@ First, we need to properly connect the XIAO ESP32S3 Sense expansion board to the
 
 Connect the XIAO to your PC using a data cable with data transfer function.
 
-#### Step 3. Go to the EdgeLab page and connect the XIAO
+#### Step 3. Go to the SenseCraft Model Assistant page and connect the XIAO
 
-Click the button below to go to the EdgeLab homepage.
+Click the button below to go to the SenseCraft Model Assistant homepage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab</font></span></strong></a>
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
-Once we are on the homepage of EdgeLab, we first need to select the interface type for the connection as **Serial** and then click the **Connect** button.
+Once we are on the homepage of SenseCraft Model Assistant, we first need to select the interface type for the connection as **Serial** and then click the **Connect** button.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/5.png" style={{width:700, height:'auto'}}/></div>
 
@@ -157,16 +157,16 @@ Please download all the files below in order and select the model you want to us
 
 **Step 2. Erase Flash to XIAO**
 
-Please click the button below to come to EdgeLab's Flash Tools page.
+Please click the button below to come to SenseCraft Model Assistant's Flash Tools page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab Flash</font></span></strong></a>
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant Flash</font></span></strong></a>
 </div><br />
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/14.png" style={{width:1000, height:'auto'}}/></div>
 
-At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and EdgeLab will automatically search and connect your XIAO.
+At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and SenseCraft Model Assistant will automatically search and connect your XIAO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/15.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -188,7 +188,7 @@ Once the firmware is flashed, the **Burn** button will return to blue, at which 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/18.png" style={{width:1000, height:'auto'}}/></div>
 
-Once the model is uploaded, we go back to the **[Dashboard](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace)** and EdgeLab automatically connects to XIAO and loads your model. We can directly click the **Invoke** button to observe the effect.
+Once the model is uploaded, we go back to the **[Dashboard](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace)** and SenseCraft Model Assistant automatically connects to XIAO and loads your model. We can directly click the **Invoke** button to observe the effect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/10.gif" style={{width:800, height:'auto'}}/></div> 
 
@@ -202,7 +202,7 @@ If you also want to experience this water meter that generates readings automati
 Uploading the firmware is a one-time operation, so if you want to change the model, the next time you just need to change the model file directly, without re-uploading the firmware.
 :::
 
-We click **Deploy** from the dashboard and EdgeLab automatically connects to XIAO. Then we just need to directly select the model file you want to replace, no need to re-upload the firmware again.
+We click **Deploy** from the dashboard and SenseCraft Model Assistant automatically connects to XIAO. Then we just need to directly select the model file you want to replace, no need to re-upload the firmware again.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/19.png" style={{width:1000, height:'auto'}}/></div> 
 
@@ -255,16 +255,16 @@ Download the three files below.
 
 **Step 2. Erase Flash to XIAO**
 
-Please click the button below to come to EdgeLab's Flash Tools page.
+Please click the button below to come to SenseCraft Model Assistant's Flash Tools page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to EdgeLab Flash</font></span></strong></a>
+	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant Flash</font></span></strong></a>
 </div><br />
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/14.png" style={{width:1000, height:'auto'}}/></div>
 
-At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and EdgeLab will automatically search and connect your XIAO.
+At this point, please connect the XIAO ESP32S3 Sense directly to your computer. Then click the **Connect** button and SenseCraft Model Assistant will automatically search and connect your XIAO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/15.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -882,11 +882,11 @@ A: It is possible that the XIAO was not reset successfully, you can try to press
 
 ### Q3: After erasing the firmware, uploading the model directly has no effect?
 
-A: The Erase Firmware function will erase the APP firmware from the XIAO, so if you want to change the model, you don't need to click the Erase Firmware button. If you click on erase firmware, then you need to upload the firmware all over again before you can upload the model file again. Generally the erase firmware action is only required if you switch from EdgeLab to Edge Impulse or vice versa.
+A: The Erase Firmware function will erase the APP firmware from the XIAO, so if you want to change the model, you don't need to click the Erase Firmware button. If you click on erase firmware, then you need to upload the firmware all over again before you can upload the model file again. Generally the erase firmware action is only required if you switch from SenseCraft Model Assistant to Edge Impulse or vice versa.
 
 ## Resources
 
-- **[GITHUB]** [EdgeLab Models](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
+- **[GITHUB]** [SenseCraft Model Assistant Models](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
 - **[GITHUB]** [Project Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
 - **[EDGE-IMPULSE]** [edge impulse KWS demo](https://studio.edgeimpulse.com/public/256022/latest)
 - **[EDGE-IMPULSE]** [edge impulse Fruits classify demo](https://studio.edgeimpulse.com/public/269519/latest)

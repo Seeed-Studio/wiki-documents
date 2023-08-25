@@ -1,6 +1,6 @@
 ---
-description: Wio Terminal Guide
-title: Wio Terminal Guide
+description: SenseCAP Gateway Guide
+title: SenseCAP Gateway Guide
 keywords:
 - SenseCAP Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
