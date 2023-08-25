@@ -67,7 +67,7 @@ Considering the power requirements of the USB Coral accelerator, we strongly rec
 :::
 ### Software preparation
 
-We recommend installing the latest version of Raspberry Pi OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [guide](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc).
+We recommend installing the latest version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [guide](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc).
 
 ## Install Home Assistant Supervised OS to Raspberry pi.
 
@@ -112,6 +112,7 @@ Installing Docker is pivotal. It's vital to avoid installing Portainer, as it mi
 
 ```sh
 curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
 ```
 - **Add Docker user to the system**
 
@@ -140,7 +141,7 @@ systemd.unified_cgroup_hierarchy=false
 ```sh
 sudo nano /boot/cmdline.txt
 ```
-- **Add this line and save it.**
+- **Add this line end of the phrase and save it.**
 
 ```sh
 
@@ -150,12 +151,12 @@ systemd.unified_cgroup_hierarchy=false apparmor=1 security=apparmor
 Download the suitable OS-Agent based on your CPU architecture, and then proceed to install it: **For Raspberry pi 64 bit OS is linux aarch64**.
 
 ```sh
-https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent_1.3.0_linux_aarch64.deb
+wget https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent_1.3.0_linux_aarch64.deb
 ```
 - **Install Home Asssitant OS Agent**
 
 ```sh
-dpkg -i os-agent_1.4.1_linux_aarch64.deb
+sudo dpkg -i os-agent_1.3.0_linux_aarch64.deb
 ```
 - **Ensure the installation was successful by running**
 
@@ -168,14 +169,14 @@ gdbus introspect --system --dest io.hass.os --object-path /io/hass/os
 - **Download the latest Home Assistant Supervised package:**
 
 ```sh
-https://github.com/home-assistant/supervised-installer/releases/download/1.3.0/homeassistant-supervised.deb
+wget https://github.com/home-assistant/supervised-installer/releases/download/1.3.0/homeassistant-supervised.deb
 ```
 ### Step 6: Home Assistant Supervised Installation
 
 Important: This step necessitates a LAN connection, as Wi-Fi might be disrupted during the process:
 
 ```sh
-dpkg -i homeassistant-supervised.deb
+sudo dpkg -i homeassistant-supervised.deb
 ```
 ### Step 7: Address Installation Errors
 
@@ -185,14 +186,32 @@ In case of installation errors, rectify them by running:
 sudo apt --fix-broken install
 ```
 
-Upon successful correction, a blue screen will appear, allowing you to select your Raspberry Pi model.
+Upon successful correction, a blue screen will appear, allowing you to select  **Raspberry Pi4 64** model.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" /></center>
 
 ### Step 8: Finalize Installation and Wi-Fi Setup
 
-Allow a few minutes for Home Assistant to become accessible at http://[your_raspberry_IP]:8123. If you encounter Wi-Fi connectivity issues after rebooting, follow these steps:
+Allow a few minutes for Home Assistant to become accessible at http://[your_raspberry_IP]:8123. 
+:::note
 
+If you encounter Wi-Fi connectivity issues after rebooting, follow these steps
+
+:::
+
+
+- To enable 'dhcpcd', execute the following command:
+```sh
+sudo systemctl enable dhcpcd
+```
+- Disable the networking service with the command:
+```sh
+sudo systemctl disable networking
+```
+- Reboot the Raspberry Pi to apply the changes:
+```sh
+sudo reboot
+```
 :::note
 
 To resolve the "Network Manager issues,"(find in settings) you can rectify the situation by initiating and subsequently enabling the Network Manager. Utilize the following command to accomplish this:
