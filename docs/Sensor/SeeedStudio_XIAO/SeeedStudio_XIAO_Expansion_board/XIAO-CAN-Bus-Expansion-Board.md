@@ -73,6 +73,10 @@ Please refer to the XIAO CAN Bus Expansion Board datasheet and examples for deta
 5. SN65NVD230
 6. MCP2515
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/3.png" alt="pir" width={500} height="auto" /></p>
+
+XIAO CAN BUS Expansion Board has a pad P1 on the back of the board, which will add a termination resistor to the device after shorting. Considering that some users' communication devices may already have a terminating resistor, XIAO CAN-BUS does not short P1 by default, if you find that CAN communication cannot send or receive messages, you can try to short P1 pad to get a 120 ohm terminating resistor.
+
 ## Arduino Library Overview
 
 We provide an [Arduino library for the MCP2515 board](https://github.com/limengdu/Arduino_CAN_BUS_MCP2515).
