@@ -92,6 +92,7 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 
 | Firmware Version | Download Address |
 |:----------------:|:----------------:|
+| Jlink_MR60FDA1-V0821.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/Jlink_MR60FDA1-230821.bin) |
 | Jlink_MR60FDA1-V0728.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/Jlink_MR60FDA1-V0728.bin) |
 | Jlink_MR60FDA1-V114.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/Jlink_MR60FDA1-V114.bin) |
 
@@ -168,6 +169,7 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 
 | Firmware Version | Download Address |
 |:----------------:|:----------------:|
+| UART_MR60FDA1-230821.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/UART_MR60FDA1-230821.bin) |
 | UART_MR60FDA1-230728.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/UART_MR60FDA1-230728.bin) |
 | UART_MR60FDA1-230227.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60FDA1-230227.bin) |
 

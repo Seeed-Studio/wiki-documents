@@ -421,7 +421,7 @@ This section will list the major platforms supported by XIAO, including Platform
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-SAMD21-MicroPython/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-with-MicroPython/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://micropython.org/download/seeed_xiao_nrf52/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://micropython.org/download/SEEED_XIAO_NRF52/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
         <tr>
 			<th>XIAO ESP32C3</th>

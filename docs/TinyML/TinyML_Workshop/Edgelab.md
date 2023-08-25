@@ -12,7 +12,7 @@ last_update:
 
 ## SenseCraft Model Assistant
 
-Seeed Studio [SenseCraft Model Assistant](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices. With SenseCraft Model Assistant we can easily get-started with tinyML project and work on it. Let's get started. 
+Seeed Studio [SenseCraft Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices. With SenseCraft Model Assistant we can easily get-started with tinyML project and work on it. Let's get started. 
 
 ### 1. Get started with Face Recognition.
 
@@ -34,7 +34,7 @@ Connect the XIAO to your PC using a data cable with data transfer function.
 Click the button below to go to the SenseCraft Model Assistant homepage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace">
 	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
@@ -267,7 +267,7 @@ Since ESPTool doesn't have a reset program by default, after uploading all the f
 Let's go back to SenseCraft Model Assistant Dashboard, connect the XIAO according to the previous configuration method, start **Invoke**, and you'll see the water meter reading!
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace">
 	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant </font></span></strong></a>
 </div><br />
 
