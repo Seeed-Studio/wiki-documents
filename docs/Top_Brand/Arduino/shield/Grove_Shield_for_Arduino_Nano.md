@@ -51,13 +51,17 @@ Grove Shield for Arduino Nano provides you a simple way to connect with Arduino 
   </tr>
   </tbody></table>
 
-We have updated Grove Shield to V1.1, supports the Arduino Nano 33 series development board.
+Grove Shield V1.0 to V1.1, supports the Arduino Nano 33 series development board.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/change.png" alt="pir" width={600} height="auto" /></p>
 
-V1.1 Change Note:
+**V1.1 Change Note**: Add VCC 3.3V/5V Switch
 
-Add VCC 3.3V/5V Switch
+So far, Grove Shield has been upgraded to version v1.3.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/UUXvr7pmnK.png" alt="pir" width={350} height="auto" /></p>
+
+**V1.3 Change Note**: Version V1.3 of the Grove Shield cuts the wires connecting the RST and RSE pins on both sides.
 
 ## Compatible Boards
 
@@ -74,6 +78,16 @@ V1.1 Support List:
 - Arduino Nano 33 IoT*
 - Arduino Nano 33 BLE*
 - Arduino Nano 33 BLE Sense*
+
+V1.3 Support List:
+
+- Arduino Nano
+- Seeeduino Nano
+- Arduino Nano Every
+- Arduino Nano 33 IoT*
+- Arduino Nano 33 BLE*
+- Arduino Nano 33 BLE Sense*
+- Arduino ESP32 Nano
 
 :::caution
 To work with Arduino 33 serial boards, please switch the VCC power to 3.3V. If the VCC power supply is switched to 5V, the development board may be damaged!
