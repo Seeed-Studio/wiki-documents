@@ -2208,6 +2208,14 @@ const sidebars = {
             'Edge/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
           ],
         },
+
+        {
+          type: 'category',
+          label: 'Home-Assistant',
+          items: [
+            'Edge/reTerminal-DM/Home-Assistant/reterminal-DM-Frigate',
+          ],
+        },
       ],
     },
 
