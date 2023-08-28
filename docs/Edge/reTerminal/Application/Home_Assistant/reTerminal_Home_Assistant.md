@@ -72,7 +72,16 @@ sudo apt update
 - **Step 3.** Install dependencies
 
 ```sh
-sudo apt install jq wget curl avahi-daemon udisks2 libglib2.0-bin network-manager dbus -y
+sudo apt-get install \
+apparmor \
+jq \
+wget \
+curl \
+udisks2 \
+libglib2.0-bin \
+network-manager \
+dbus \
+systemd-journal-remote -y
 ```
 
 - **Step 4.** Fix broken installations
@@ -116,6 +125,30 @@ If you see an output like below, that means Docker is installed properly
 ```
 Docker version 20.10.18, build b40c2f6
 ```
+:::note
+
+Home Assistant Supervisor's compatibility hinges on a specific Docker CGroup v1. To ensure this compatibility, the following changes need to be made:
+
+:::
+- **Open this file using editor**
+
+```sh
+sudo nano /etc/default/grub
+```
+- **Add this line and save it.**
+
+```sh
+systemd.unified_cgroup_hierarchy=false
+```
+- **Open this file**
+```sh
+sudo nano /boot/cmdline.txt
+```
+- **Add this line end of the phrase and save it.**
+
+```sh
+systemd.unified_cgroup_hierarchy=false apparmor=1 security=apparmor
+```
 
 - **Step 10.** Visit [Home Assistant OS Agent page](https://github.com/home-assistant/os-agent/releases), under the latest release, right click on file that ends with ***linux_armv7.deb** and copy the link
 
@@ -156,7 +189,7 @@ Similarly, the tested stable and working release for Home Assistant-Supervised s
 :::
 
 ```sh
-wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
+wget https://github.com/home-assistant/supervised-installer/releases/download/1.3.0/homeassistant-supervised.deb
 ```
 
 - **Step 14.** Install Home Assistant-Supervised
@@ -179,41 +212,33 @@ The output will be as follows
 
 <center><img width={550} src="https://files.seeedstudio.com/wiki/Home-Assistant/7.png" /></center>
 
-Now to check whether all the services are installed and are up and running, we need to install [Portainer](https://www.portainer.io), which is a Docker management platform. Here we will see all our containers running.
+:::note
 
-- **Step 17.** Create a volume for Portainer
+If you encounter Wi-Fi connectivity issues after rebooting, follow these steps
 
+:::
+
+
+- To enable 'dhcpcd', execute the following command:
 ```sh
-sudo docker volume create portainer_data
+sudo systemctl enable dhcpcd
 ```
-
-- **Step 18.** Install Portainer
-
+- Disable the networking service with the command:
 ```sh
-sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest -H unix:///var/run/docker.sock
+sudo systemctl disable networking
 ```
-
-- **Step 19.** Open a web browser on PC and access Portainer as follows
-
+- Reboot the Raspberry Pi to apply the changes:
 ```sh
-homeassistant.local:9000
+sudo reboot
 ```
+:::note
 
-- **Step 20.** Create a user by entering a username and a password
+To resolve the "Network Manager issues,"(find in settings) you can rectify the situation by initiating and subsequently enabling the Network Manager. Utilize the following command to accomplish this:
 
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/8.png" /></center>
-
-- **Step 21.** On Portainer dashboard, click primary
-
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/10.jpg" /></center>
-
-- **Step 22.** Click Containers
-
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/11.jpg" /></center>
-
-If you see the following containers up and running, that means Home Assistant is installed successfully
-
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/12.png" /></center>
+:::
+```sh
+sudo systemctl enable NetworkManager
+```
 
 ## View Home Assistant Dashboard UI on web browser
 
