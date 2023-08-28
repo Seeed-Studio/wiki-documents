@@ -20,11 +20,11 @@ last_update:
 
 
 
-**✨✨✨SenseCAP T1000 Tracker is LIVE on KICK STARTER now!!!✨✨✨**
+**✨✨✨SenseCAP T1000 Tracker is LIVE on KICKSTARTER now!!!✨✨✨**
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-t1000-track-what-you-care-with-no-boundaries?ref=discovery">
-            <strong><span><font color={'FFFFFF'} size={"4"}> KICK STARTER </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> KICKSTARTER </font></span></strong>
     </a>
 </div>
 
