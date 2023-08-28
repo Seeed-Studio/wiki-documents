@@ -26,7 +26,7 @@ after the registration,  you are ready to go to AWS IoT in the console.
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9e5f743-d553-4199-abde-8648b2615e24/Untitled.png)
 
-# Add Gateway in AWS IoT Core for LoRaWAN
+### Add Gateway
 
 On the left menu,select LPWAN devices → Gateways
 
@@ -76,7 +76,7 @@ now, you will see the Gateway connected with AWS
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/93504adb-97f8-4db0-98bf-ef5e010a0bbd/Untitled.png)
 
-# Add Devices
+### Add Devices
 
 add SenseCAP Tracker to AWS IoT Core
 
@@ -120,7 +120,7 @@ and select the destination just configured
 
 untill now, the device has been added to AWS IoT Core.
 
-# Decode the Tracker data
+### Decode the Tracker data
 
 The SenseCAP Tracker will uplink the payload via LoRaWAN network，and the payload is under specified format to save the bandwith, so it is hard to read.
 
@@ -138,7 +138,7 @@ For example, what I've shown here is [a39w0g3w5os1ti-ats.iot.us-east-1.amazonaws
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/664799ad-43a6-43b0-b0af-b2f0fcc8216f/Untitled.png)
 
-### Create Message Rules
+#### Create Message Rules
 
 Click Message routing → Rules, and click “Create Rule” button.
 
@@ -194,12 +194,15 @@ Watch the data on page “MQTT test client”, input `#` and click “Subscribe�
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be29c5b2-8ba1-4037-8dca-64874f9492a1/Untitled.png)
 
-### Attachments:
+#### Attachments:
 
-- Lambda Function Script
-    
-    ```jsx
-    const AWS = require('aws-sdk');
+
+
+<details> 
+<summary>Lambda Function Script</summary>
+
+```cpp
+const AWS = require('aws-sdk');
     const iotdata = new AWS.IotData({
         endpoint: 'a39w0g3w5os1ti-ats.iot.us-east-1.amazonaws.com'
     });
@@ -746,6 +749,6 @@ Watch the data on page “MQTT test client”, input `#` and click “Subscribe�
           body: 'Error publishing message'
         };
       }
-    };
-    
-    ```
+    };    
+```
+</details>
