@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/21/2023
+  date: 08/28/2023
   author: Matthew
 ---
 
@@ -21,51 +21,43 @@ Today is August 21st and a brand new week has begun! Check out what Seeed Studio
 
 ## Latest Wiki Launched
 
-### [SenseCAP T1000 Tracker](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker/Introduction/)
+### [Frigate intergrating with Home Assistant with reTerminal DM](https://wiki.seeedstudio.com/reterminal-DM-Frigate/)
 
-SenseCAP T1000 is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
+In this article, we'll explore the synergy between Seeed Studio reTerminalDM, Home Assistant OS, and the Frigate add-on with Coral AI USB TPU. This trio offers a unique opportunity for a centralized, privacy-conscious, and AI-driven home automation setup that enhances your lifestyle while ensuring safety.
 
-- [Getting Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/)
-- [Connecting TTN Network](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/)
-- [Connecting Helium Network](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Ubidots_Helium/)
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/HA/reterminalDM.gif" /></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" style={{width:800, height:'auto'}}/></div>
+### [Frigate intergrating with Home Assistant with reTerminal](https://wiki.seeedstudio.com/reterminal_frigate/)
 
-### [SenseCAP Indicator x LoRa Application Development](https://wiki.seeedstudio.com/SenseCAP_Indicator_LoRa/)
+In this article, we'll explore the synergy between Seeed Studio reTerminal, Home Assistant OS, and the Frigate add-on with Coral AI USB TPU. This trio offers a unique opportunity for a centralized, privacy-conscious, and AI-driven home automation setup that enhances your lifestyle while ensuring safety.
 
-We have published a wiki about using SenseCAP Indicator for peer-to-peer data transfer under the LoRa network.
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate2.gif" /></div>
 
-This demonstration showcases how to establish a basic LoRa communication between the SenseCAP Indicator and the XIAO board using the Wio-E5 as an intermediary. The SenseCAP Indicator retrieves sensor data from the XIAO, which is then transmitted via Wio-E5. The transmitted payload is subsequently received by the SenseCAP Indicator, which deciphers and outputs. the result and displays the data on its screen.
+### [SenseCAP Decoder](https://wiki.seeedstudio.com/SenseCAP_Decoder/)
+
+SenseCAP decoder is used for decoding the LoRaWAN messages sent from the SenseCAP LoRaWAN® devices. After decoding, users' applications will get more friendly and readable messages.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/check-data.png" /></div>
 
 ## Existed Wiki Updated
 
-### [Andanced OV5640 camera Sensor for XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#installation-of-expansion-boards-for-sense)
+### [SenseCAP T1000 Tranker Ubidots Decoder](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Ubidots_TTS/#configure-the-decoder)
 
-We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV5640, on our shelves, and if you purchase it, you can replace the camera to use it.
+We have upgraded the devoder for Ubidots.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:600, height:'auto'}}/></div>
+### [Add JetPack 5.1.2 flash instructions for reComputer J40 series](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#flash-to-jetson)
 
-### [Update Indicator flash firmware](https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/#for-esp32-s3)
+We have upgraded the new JetPack 5.1.2 flash instructions for reComputer J40 series.
 
-We have updated the firmware for SenseCAP Indicator(both ESP32S3 and RP2040 chip)
+### [New Firmware for 60GHz mmWave Sensor - Fall Detection Module Pro (MR60FDA1)](https://wiki.seeedstudio.com/Radar_MR60FDA1/#firmware-version-updates)
 
-### [Flash TinyML model on XIAO ESP32S3 Sense using SenseCraft Model Assistant function](https://wiki.seeedstudio.com/edgelab/#1-get-started-with-face-recognition)
-
-We flash the SenseCraft Model Assistant program in advance for all XIAO ESP32S3 Sense participating in the Workshop, and pre-set the model for face recognition. Simply connect the XIAO ESP32S3 Sense to your PC via a data cable to instantly display face recognition.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/8.png" style={{width:300, height:'auto'}}/></div>
+We have added new version for 60GHz mmWave Sensor - Fall Detection Module Pro (MR60FDA1).
 
 ## The Efforts of Contributor✨
 
-### [MicroPython for ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_MicroPython/)
+### [Thanks our contributor for updating the collection page for Raspberry Pi](https://wiki.seeedstudio.com/Raspberry_Pi/)
 
-Thanks our contributor - Zachary for adding a wiki page about connecting XIAO ESP32C3 and Seeed Studio Expansion Board to build a Wi-Fi signal strength tracker, which proves invaluable when establishing a high-speed, high-quality family network, programming with MicroPython.
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython10.jpg" /></div>
-
-### [Thanks our contributor for organizing tinyML workshop page](https://wiki.seeedstudio.com/tinyml_workshop_course_new/)
-
-Thanks our contributor - Salman for organizing tinyML workshop page to make the course more logical.
+Thanks our contributor - [thompcd](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963820) for updating the collection page for Raspberry Pi! The page is looking good now!
 
 ## Past Weekly wiki
 
@@ -90,4 +82,4 @@ Thanks our contributor - Salman for organizing tinyML workshop page to make the 
 - [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
 - [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
 - [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
-- [weekly wiki on 8.14th](/Seeed_Elderly/weekly_wiki/wiki814)
+- [weekly wiki on 8.21st](/Seeed_Elderly/weekly_wiki/wiki821)

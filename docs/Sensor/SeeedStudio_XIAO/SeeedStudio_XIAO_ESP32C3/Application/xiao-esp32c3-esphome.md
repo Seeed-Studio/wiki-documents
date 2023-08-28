@@ -79,7 +79,7 @@ According to the table above, it is most appropriate to install **Home Assistant
 We have also written how to install Home Assistant for some of Seeed Studio products, please refer to them.
 
 - [Getting Started with Home Assistant on ODYSSEY-X86](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)
-- [Getting Started with Home Assistant on reTerminal](https://wiki.seeedstudio.com/reTerminal-Home-Assistant/)
+- [Getting Started with Home Assistant on reTerminal](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)
 - [Getting Started with Home Assistant on LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
 ## Install ESPHome in Home Assistant
