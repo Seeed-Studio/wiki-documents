@@ -106,12 +106,16 @@ last_update:
 	<table align="center">
     <tr>
 			<th>Xiao Sense Accelerometer Examples and Low Power</th>
+			<th>Grove - Wio-e5 library for Arduino Boards</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801"><strong><span><font color={'FFFFFF'} size={"4"}> 👍 daCoder</font></span></strong></a></div>
+        </td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801"><strong><span><font color={'FFFFFF'} size={"4"}> 👍 Andres</font></span></strong></a></div>
         </td>
 		</tr>
 	</table>

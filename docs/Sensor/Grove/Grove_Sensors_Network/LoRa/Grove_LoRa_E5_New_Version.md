@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_LoRa_E5_New_Version
 last_update:
-  date: 01/06/2022
-  author: gunengyu
+  date: 28/08/2023
+  author: Matthew
 ---
 
 ![](https://files.seeedstudio.com/products/113020091/%E5%AE%98%E7%BD%91/11302009_Preview-34.png)
@@ -129,6 +129,11 @@ By connecting Grove - Wio-E5 to your development boards, your devices are able t
 - IoT device testing and development
 
 ![](https://files.seeedstudio.com/products/317990687/image/application.png)
+
+## ✨ Contributor Project
+
+- Thanks for one of Seeed Studio's friend Andres to build the [Grove - Wio-e5 library, providing multiple examples](https://github.com/andresoliva/LoRa-E5), suitable for Arduino boards like Arduino Nano 33 BLE Sense, and more importantly [compatible with the XIAO ESP32S3 Sense](https://github.com/andresoliva/LoRa-E5).
+- This will allow the user an easy, clear and safe interaction with the SeedStudio LoRa module Grove - Wio-E5 and hopefully be used as both an educational tool for those **who are doing their first steps into LoRa** as well as **prepared for the ones looking for using this module in low-power projects**.
 
 ## Application Notes
 
