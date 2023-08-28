@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_LoRa_E5_New_Version
 last_update:
-  date: 28/08/2023
+  date: 08/28/2023
   author: Matthew
 ---
 
