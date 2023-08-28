@@ -17,7 +17,7 @@ last_update:
 
 Seeed Studio is proud to be a part of the Amazon Sidewalk ecosystem partners, providing Sidewalk-enabled products and solutions that enable diverse IoT use-cases on the Sidewalk network.
 
-Amazon Sidewalk is a secure community network that uses Amazon Sidewalk Gateways (also called Sidewalk Bridges), such as compatible Amazon Echo and Ring devices, to provide cloud connectivity for IoT endpoint devices.
+Amazon Sidewalk is a secure wireless community network that uses Amazon Sidewalk Gateways (also called Sidewalk Bridges), such as compatible Amazon Echo and Ring devices, to provide cloud connectivity for IoT endpoint devices.
 
 Amazon Sidewalk enables low-bandwidth and long-range connectivity at home and beyond using Bluetooth Low Energy for short-distance communication and LoRa and FSK radio protocols at 900MHz frequencies to cover longer distances.  The Sidewalk Gateways share a small portion of the user’s internet bandwidth, which is then used to connect endpoints to the network. The strength of Amazon Sidewalk network increases with an increase in the number of gateways. Learn more about [Amazon Sidewalk](https://www.aboutamazon.com/news/devices/everything-you-need-to-know-about-amazon-sidewalk).
 

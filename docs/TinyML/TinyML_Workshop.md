@@ -79,7 +79,7 @@ Connect the XIAO to your PC using a data cable with data transfer function.
 Click the button below to go to the SenseCraft Model Assistant homepage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace">
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace">
 	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
@@ -188,7 +188,7 @@ Once the firmware is flashed, the **Burn** button will return to blue, at which 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/18.png" style={{width:1000, height:'auto'}}/></div>
 
-Once the model is uploaded, we go back to the **[Dashboard](https://seeed-studio.github.io/edgelab-web-app/#/dashboard/workplace)** and SenseCraft Model Assistant automatically connects to XIAO and loads your model. We can directly click the **Invoke** button to observe the effect.
+Once the model is uploaded, we go back to the **[Dashboard](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace)** and SenseCraft Model Assistant automatically connects to XIAO and loads your model. We can directly click the **Invoke** button to observe the effect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/10.gif" style={{width:800, height:'auto'}}/></div> 
 
