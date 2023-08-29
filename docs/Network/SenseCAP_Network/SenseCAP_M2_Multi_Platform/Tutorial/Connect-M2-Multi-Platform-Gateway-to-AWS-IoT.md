@@ -5,162 +5,152 @@ keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 02/14/2023
-  author: Matthew
+  date: 08/29/2023
+  author: Jessie
 ---
 
 
+## AWS IoT Configuration
+
+Log in to [AWS](https://signin.aws.amazon.com).
+If you don’t have an AWS account, please create a new account first.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS2.PNG" alt="pir" width={800} height="auto" /></p>
+
+### Add Gateway
 
 
-### ChirpStack Configuration
+Navigate to **Internet of Things** > **IoT Core**
 
-ChirpStack provides open-source components for LoRaWAN networks. Together they form a ready-to-use solution including an user-friendly web-interface for device management and APIs for integration.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS1.PNG" alt="pir" width={800} height="auto" /></p>
 
-#### Add Gateway
+Select **LPWAN devices** > **Gateway** to add a gateway
 
-Before starting, please [Login](https://www.chirpstack.io/application-server/use/login/) into the [ChirpStack Application Server](https://www.chirpstack.io/application-server/). 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS4.PNG" alt="pir" width={800} height="auto" /></p>
 
-The default credentials are:Username: admin;Password: admin
+**Gateway's EUI:** The gateway EUIcan be found on the device label or [Local Console ](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf)
+
+**Frequency band:** Select the Frequency plan according to the actual choice.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS2.PNG" alt="pir" width={800} height="auto" /></p>
+
+
+#### Create certificate
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS7.PNG" alt="pir" width={800} height="auto" /></p>
+
+Download the certificate files and server trust certificates.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS6.PNG" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS5.PNG" alt="pir" width={800} height="auto" /></p>
+
+Choose the Role: **IoT Wireless Gateway Cert Manager Role**, then submit the configuration.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS9.PNG" alt="pir" width={800} height="auto" /></p>
+
+#### Check gateway connection status
+
+Navigate to the Gateways page and choose the gateway you've added.
+
+In the LoRaWAN specific details section of the Gateway details page, you'll see the connection status and the date and time the last uplink was received.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS8.PNG" alt="pir" width={800} height="auto" /></p>
+
+### Add Profiles
+
+Device and service profiles can be defined to describe common device configurations. These profiles describe configuration parameters that are shared by devices to make it easier to add those devices. AWS IoT Core for LoRaWAN supports device profiles and service profiles.
+
+#### Add devices profiles
+
+Navigate to **Devices** > **Profiles**, click Add device profile
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS11.PNG" alt="pir" width={800} height="auto" /></p>
+
+Provide a Device profile name, select the Frequency band (RfRegion)that you're using for the device and gateway, and keep the other settings to the default values.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS10.PNG" alt="pir" width={800} height="auto" /></p>
+
+#### Add service profiles
+
+Navigate to **Devices** > **Profiles**, click Add service profile
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS13.PNG" alt="pir" width={800} height="auto" /></p>
+
+It's recommend that you leave the setting AddGWMetaData enabled so that you'll receive additional gateway metadata for each payload, such as RSSIand SNR for the data transmission.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS12.PNG" alt="pir" width={800} height="auto" /></p>
+
+### Add Destination
+
+Navigate to **Devices** > **Destination**, click Add destination
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS15.PNG" alt="pir" width={800} height="auto" /></p>
+
+Publish to AWS IoT Core message broker
+
+**Permissions**: Select an existing service role > IoT Wireless Gateway Cert Manager Role
 
 :::tip Note
-If you have not yet connected your [ChirpStack Application Server](https://www.chirpstack.io/project/application-server/) instance with a [ChirpStack Network Server](https://www.chirpstack.io/project/network-server/) instance, you need do this first. See [Network servers](https://www.chirpstack.io/application-server/use/network-servers/). Also you need connect the organization with the network-server by creating a [Service profile](https://www.chirpstack.io/application-server/use/service-profiles/).
+Adestination name can only have alphanumeric, - (hyphen)and \_ (underscore) characters and it can't have any spaces.
 :::
 
-Navigate to **Gateways > Add gateway**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/add-gateway.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS14.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Gateway name**: A name of your gateway
+### Add LoRaWAN Devices
 
-**Gateway EUI**: Gateway EUI can be found on the device label or Local Console
+#### Add wireless device
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_2.png" alt="pir" width={800} height="auto" /></p>
+Navigate to **LPWAN devices** > **Devices**, click Add wireless device
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS18.PNG" alt="pir" width={800} height="auto" /></p>
 
+#### Configure device
 
+**Wireless device specification**: OTAAv1.0x (when you use OTAA, your LoRaWAN device sends a join request and the Network Server can allow the request) 
 
-#### Add device profile
+**DevEUI:** The device EUIcan be found the the device label or Local Console
 
-Before you can add your device to ChirpStack, you have to create a [Device-profile](https://www.chirpstack.io/application-server/use/device-profiles/) if you haven't done this already.
+**App Key** and **App EUI**can be found in this HTTP API: https://sensecap.seeed.cc/makerapi/device/view\_device\_info?nodeEui=xxx&device Code=xxx
 
-Navigate to **Device profile> Add device profile**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS16.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_3.png" alt="pir" width={800} height="auto" /></p>
 
+#### Check device connection status
 
-**Name**: A name of your deivce profile
+Navigate to the **Devices** page and choose the device you've added.
 
-**Region**:Select the Region plan according to your gateway.
+In the Details section of the Wireless devices details page, you'll see the date and time the last uplink was received.
 
-**MAC version**: LoRaWAN 1.0.3
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Regional parameters revision**: A
+## Gateway Configuration
 
-**ADR algorithm**: Default ADR algorithm( LoRa only)
+Log into Local Console Check out the device's Q[uick Start to](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf) login.
 
-:::note
-Select MAC version/Regional parameters revision/ADR algorithm according to your device. For details, please refer to:https://lora-alliance.org/resource\_hub/
-:::
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS22.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_4.png" alt="pir" width={800} height="auto" /></p>
+### LoRaWAN Network Settings
 
+Navigate to **LoRa** > **LoRa Network**
 
+**Mode**: Basics Station
 
+**Gateway EUI**: It will automatically get the EUIof the connected gateway
 
+**Server**: Choose CUPS Server or LNS Server (For CUPS, port is 443; for LNS, port is 8887)
 
-#### Add device
+Learn more about [CUPS and LNS Server](https://lora-developers.semtech.com/build/software/lora-basics/lora-basics-for-gateways/)
 
-Navigate to **Application > Add Application**
+**Authenentication Mode**: TLS Server and Client Authentication
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS21.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_5.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS23.PNG" alt="pir" width={800} height="auto" /></p>
 
 
-
-Click the application to which you want to add your device. Under the **Devices** tab, click **Add device**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_6.png" alt="pir" width={800} height="auto" /></p>
-
-
-
-**Name**: A name of your device
-
-**Device EUI**: Device EUI can be found on the device label or SenseCAP Mate APP
-
-**Device profile**: Choose the device profile we create in 1.2 step1.
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_7.png" alt="pir" width={800} height="auto" /></p>
-
-
-
-
-### Gateway Configuration
-
-Configure the gateway via the Web UI,please check the [Quick Start ](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf)to log into Local Console first.
-
-#### LoRa Network Settings
-
-Navigate to **LoRa > LoRa Network** 
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_8.png" alt="pir" width={800} height="auto" /></p>
-
-
-
-
-
-
-
-
-
-**Mode:** Packet Forward
-
-Packet Forwarder Settings:
-
-**Gateway EUI**: It will automatically get the EUI of the connected gateway 
-
-**Server Address**: Your ChirpStack Server address
-
-**Server Port(Up/Down)**: 1700
-
-Other settings can be left as default, or can be changed to suit your requirements.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_9.png" alt="pir" width={800} height="auto" /></p>
-
-
-
-#### Channel Plan Settings
-
-Navigate to **LoRa > Channel Plan** 
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_10.png" alt="pir" width={800} height="auto" /></p>
-
-
-Select the Region and Frequency plan according to the actual choice.
-
-After setting, click **Save&Apply**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_11.png" alt="pir" width={800} height="auto" /></p>
-
-
-
-
-### Data View
-
-#### Gateway data
-
-Navigate to **Gateways**, choose the gateway you want to check.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_12.png" alt="pir" width={800} height="auto" /></p>
-
-
-#### Device data
-
-After adding your LoRaWAN device to ChirpStack, validate that your device is able activate (in case of OTAA) and send data.
-
-Navigate to **Applications** > **Devices**, choose the device you want to check.
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_13.png" alt="pir" width={800} height="auto" /></p>
-
+Click on Save&Apply when you finish the settings.
 
