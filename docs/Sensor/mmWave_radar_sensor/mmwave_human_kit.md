@@ -20,7 +20,7 @@ last_update:
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/mmwave_human_detection_kit">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -112,40 +112,6 @@ In addition to this, the XIAO ESP32C3 relies on the open source project ESPHome 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/2.png" style={{width:1000, height:'auto'}}/></div>
 
-### Hardware Preparation
-
-This tutorial only requires the kit and USB cable to be ready.
-
-<div class="table-center">
-	<table align="center">
-		<tr>
-			<th>mmWave Human Detection Sensor Kit</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/1.png" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="/mmwave_human_detection_kit">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
-</div>
-
-If you need to replace the radar or install the Grove module, you can refer to the moving pictures below to do so. The four screws for the housing are on the back of the product, remove them and then tap gently to remove the front cover.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/24.gif" style={{width:650, height:'auto'}}/></div>
-
-If you want to install the Grove module, you can refer to the image below to install it. We recommend that the Grove connector faces outward and the Grove cable is hidden underneath the Grove module.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/25.gif" style={{width:650, height:'auto'}}/></div>
-
-:::note
-In addition to the installation of modules, the installation of kits requires special attention. The installation position of the kit will directly affect the accuracy of the monitoring, please refer to the relevant instructions in the **[Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)** for installation.
-:::
-
 ## Three minutes to get started ESPHome
 
 Out of the factory kit, the XIAO ESP32C3 has been flashed with firmware that is ready to power up, and we were able to get the kit working on Home Assistant in a very short time. The video below will show you the exact steps to get started quickly.
@@ -163,6 +129,10 @@ Please supply power to the kit via a USB-C type cable. Be careful that the power
 ### Step 2. Connect to the kit's hotspot "mmwave-kit"
 
 After the kit is powered on, a hotspot named **mmwave-kit** will be opened automatically, please search and connect to the hotspot. You can use your cell phone to connect to this network so you don't have to switch networks on your computer as often.
+
+:::note
+The password for the `mmwave-kit` network is `seeedstudio`.
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/3.png" style={{width:400, height:'auto'}}/></div>
 
@@ -453,6 +423,18 @@ Enquiry Function is provided for users to enquire some required information by t
 The display of this card is not updated automatically, only the button is clicked once to get the information. If you need to look up more than one message, then please make sure that the radar can have enough time to send and receive messages before clicking different buttons a few short seconds apart.
 
 ## Customized secondary development
+
+If you need to replace the radar or install the Grove module, you can refer to the moving pictures below to do so. The four screws for the housing are on the back of the product, remove them and then tap gently to remove the front cover.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/24.gif" style={{width:650, height:'auto'}}/></div>
+
+If you want to install the Grove module, you can refer to the image below to install it. We recommend that the Grove connector faces outward and the Grove cable is hidden underneath the Grove module.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/25.gif" style={{width:650, height:'auto'}}/></div>
+
+:::note
+In addition to the installation of modules, the installation of kits requires special attention. The installation position of the kit will directly affect the accuracy of the monitoring, please refer to the relevant instructions in the **[Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)** for installation.
+:::
 
 This kit is mainly oriented to the direction of the smart home, the secondary development of the content we will not go into too much detail, but we will provide the secondary development of the information and content you may need, please refer to.
 
