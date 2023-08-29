@@ -108,14 +108,13 @@ Navigate to **LPWAN devices** > **Devices**, click Add wireless device
 
 #### Configure device
 
-**Wireless device specification**: OTAAv1.0x (when you use OTAA, your LoRaWAN device sends a join request and the Network Server can allow the request) 
+**Wireless device specification**: OTAAv1.0x 
 
-**DevEUI:** The device EUIcan be found the the device label or Local Console
+**DevEUI:** The `device EUI/APP EUI/APP` key can be found the the device label.
 
-**App Key** and **App EUI**can be found in this HTTP API: https://sensecap.seeed.cc/makerapi/device/view\_device\_info?nodeEui=xxx&device Code=xxx
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS16.PNG" alt="pir" width={800} height="auto" /></p>
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
 
 
