@@ -72,7 +72,6 @@ If this is your first time to use Arduino, [Arduino’s website](https://www.ard
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Device02.png" alt="pir" width="1000" height="auto"/></p>
 
-
 Now, the helium console setup is done. we can move to the Software part and upload data to the helium console over the helium LoRa network. 
 
 
