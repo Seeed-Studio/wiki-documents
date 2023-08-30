@@ -306,9 +306,7 @@ void loop()
     if (indevice > 7)
         indevice=0;
        
-    Wire.beginTransmission(indevice);
     Wire.requestFrom(indevice, 1);    // Request 1 bytes from slave device 
-    Wire.endTransmission();
     
     if (LITERAL_mode ==1)
       {
@@ -614,7 +612,6 @@ void loop()
             } 
             delay(200);
             Wire.requestFrom(indevice,1); // request bytes from register XY
-            Wire.endTransmission();       //release the line!
              //-----------------------------------------------------------------------
 
             c=0;
@@ -694,7 +691,6 @@ void loop()
                 Serial.print("REGISTER address = 0x3A");         // Print the character
               }
             Wire.requestFrom(indevice,1); // request bytes from register XY
-            Wire.endTransmission();   //release the line!
             //-------------------------------------------------------------------------
             c=0;
             while(Wire.available())
@@ -725,7 +721,6 @@ void loop()
                Serial.print("REGISTER address = 0x3B");         // Print the character
               }
             Wire.requestFrom(indevice,1); // request bytes from register XY
-            Wire.endTransmission();   //release the line!
             c=0;
             while(Wire.available())
              {
@@ -822,7 +817,6 @@ void loop()
             Wire.write(0x03); //address to be read
             Wire.endTransmission(false);   //do not release the line!
             Wire.requestFrom(indevice,1); // request bytes from register XY
-            Wire.endTransmission();       //release the line
             c=0;
             while(Wire.available())
             {
@@ -892,7 +886,6 @@ void loop()
             Wire.write(0x07); //address to be read
             Wire.endTransmission(false);   //do not release the line!
             Wire.requestFrom(indevice,1); // request bytes from register XY
-            Wire.endTransmission();       //release the line
             c=0;
             while(Wire.available())
             {
@@ -907,7 +900,6 @@ void loop()
             Wire.write(0x04);              //address to be read
             Wire.endTransmission(false);   //do not release the line!
             Wire.requestFrom(indevice,1);  // request bytes from register XY
-            Wire.endTransmission();        //release the line
             c=0;
             while(Wire.available())
             {
@@ -922,7 +914,6 @@ void loop()
             Wire.write(0x05); //address to be read
             Wire.endTransmission(false);   //do not release the line!
             Wire.requestFrom(indevice,1); // request bytes from register XY
-            Wire.endTransmission();       //release the line
             c=0;
             while(Wire.available())
             {
@@ -936,7 +927,6 @@ void loop()
             Wire.write(0x06); //address to be read
             Wire.endTransmission(false);   //do not release the line!
             Wire.requestFrom(indevice,1); // request bytes from register XY
-            Wire.endTransmission();       //release the line
             c=0;
             while(Wire.available())
             {
