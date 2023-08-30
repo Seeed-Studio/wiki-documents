@@ -62,7 +62,7 @@ If this is your first time to use Arduino, [Arduino’s website](https://www.ard
 
 - **Step 3.** Then click on "Add New Device"
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/CreateaDevice01.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/CreateaDevice01.png" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 4.** Here, **1) Add device a new** , **2) Copy the Dev EUI** , **3) Copy the App EUI**, **4) Copy the App Key**, **5) Finally Click Save**.
 
@@ -70,25 +70,10 @@ If this is your first time to use Arduino, [Arduino’s website](https://www.ard
 
 - **Step 5.** Now you can see the device under the "Devices" section. 
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Device02.png" alt="pir" width="400" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Device02.png" alt="pir" width="1000" height="auto"/></p>
 
 
 Now, the helium console setup is done. we can move to the Software part and upload data to the helium console over the helium LoRa network. 
-
-<!-- - **Step 6.** Fill **Application ID** and click **Create application**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/6.png" alt="pir" width="500" height="auto"/></p>
-
-**Note:** Here **Application name** and **Description** are not compulsory fields. If **Application name** is left blank, it will use the same name as **Application ID** by default
-
-The following is the newly created application
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/7.png" alt="pir" width="1000" height="auto"/></p>
-
-- **Step 7**: Navigate to `Payload formatters > Uplink`, select **Formatter Type** as **Javascript** and fill the **Formatter parameter** as follows
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-E5/1.png" alt="pir" width="550" height="auto"/></p> -->
-
 
 
 ### Software Preparation
@@ -361,12 +346,15 @@ AT+CMSGHEX="001E0008"
 
 Once you see the message like this **+JOIN: Network joined**, open the **"REAL TIME PACKETS"** section and see uplink information. 
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/realtimepkts.png" alt="pir" width={500} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/realtimepkts.png" alt="pir" width={1000} height="auto" /></p> 
 
 You can also see the event log at the **"Event Log"** section. 
 
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/eventlog.png" alt="pir" width={1000} height="auto" /></p> 
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/eventlog.png" alt="pir" width={500} height="auto" /></p> 
+and if we open the Debug window, we can see the live data payload and other informations. 
+
+<p style={{textAlign: 'center'}}><img src="https://github.com/salmanfarisvp/resource/blob/main/Images/LoRa/Helium/Networksetup/payload.png?raw=true" alt="pir" width={1000} height="auto" /></p> 
 
 ## Resources
 
