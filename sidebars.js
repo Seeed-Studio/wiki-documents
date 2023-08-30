@@ -399,6 +399,9 @@ const sidebars = {
               label: 'LoRa',
               items: [
                 'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
+                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_Wio_E5_P2P',
+                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_Wio_E5_TTN_Demo',
+                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_Wio_E5_Helium_Demo',
               ],
             },
             {
