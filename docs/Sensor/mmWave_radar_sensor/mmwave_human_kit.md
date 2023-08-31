@@ -495,6 +495,48 @@ Finally, just select **Wireless** to upload the program.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/23.png" style={{width:500, height:'auto'}}/></div>
 
+## Restore Factory Firmware
+
+If you're experiencing issues with your device not working properly, try restoring the factory firmware and re-adding the device to Home Assistant.
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/releases">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+- Option 1: using the [ESPhome Web tool](https://web.esphome.io/?dashboard_install) to upload.
+
+Open the [ESPhome Web tool](https://web.esphome.io/?dashboard_install) with Chrome or Edge web browser.
+
+Click **CONNECT**.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/34.png" /></div>
+
+select the XIAO ESP32 serial port in the popup window.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/64.png" /></div>
+
+Click **INSTALL** and then select the `.bin` file downloaded from above steps.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/35.png" /></div>
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/38.png" /></div>
+
+
+- Option 2: Using the [esphome-flasher tool](https://github.com/esphome/esphome-flasher).
+
+If you are still unable to upload firmware using method one after installing the driver and changing browsers, then you can try using method two. Please refer to the official tutorial for specific installation methods and instructions.
+
+:::tip
+If you wish to observe the log messages of the XIAO ESP32C3, you can also view them through the View Logs button of this software.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/41.png" /></div>
+:::
+
+Once the firmware has been uploaded successfully, you will be able to see the network called **mmwave-kit**. Please refer to the [Three minutes to get started ESPHome](#three-minutes-to-get-started-esphome) content to reconfigure the device.
+
+
 ## Resources
 
 - **[GITHUB]** [Project open source](https://github.com/limengdu/MR24HPC1_HomeAssistant/tree/mmwave-kit)
