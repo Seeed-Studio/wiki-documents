@@ -18,14 +18,20 @@ last_update:
 	<table align="center">
     <tr>
 			<th>Raspberry Pi Platform Devices Guide</th>
+		    <th>MicroPython Designed for XIAO ESP32S3 Sense</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/r/a/raspberry-pi-preview_2.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/run_the_client.jpeg" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry_Pi/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
 		    <br/>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963820"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 thompcd </font></span></strong></a></div>        
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963820"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 thompcd </font></span></strong></a></div>
+			</td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32S3_Micropython/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979545"><strong><span><font color={'FFFFFF'} size={"2"}> 💡 shariltumin / Hendra</font></span></strong></a></div>
 			</td>
 		</tr>
 	</table>
