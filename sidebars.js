@@ -1371,6 +1371,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/LoRa',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Matter',
           ],
         },
       ],
