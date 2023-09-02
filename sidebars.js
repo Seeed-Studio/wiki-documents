@@ -975,6 +975,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-Zephyr-RTOS',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_CircuitPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Micropython',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -1899,6 +1900,7 @@ const sidebars = {
           label: 'SenseCAP M2 Multi-Platform Gateway',
           items: [
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             {
               type: 'category',
               label: 'Tutorial',

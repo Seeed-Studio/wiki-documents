@@ -15,6 +15,8 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/19.jpg" style={{width:1000, height:'auto'}}/></div>
 
+## Introduction
+
 Seeed Studio is proud to be a part of the Amazon Sidewalk ecosystem partners, providing Sidewalk-enabled products and solutions that enable diverse IoT use-cases on the Sidewalk network.
 
 Amazon Sidewalk is a secure wireless community network that uses Amazon Sidewalk Gateways (also called Sidewalk Bridges), such as compatible Amazon Echo and Ring devices, to provide cloud connectivity for IoT endpoint devices.
@@ -24,6 +26,36 @@ Amazon Sidewalk enables low-bandwidth and long-range connectivity at home and be
 :::note
 Amazon Sidewalk is currently available in the US. Developers are allowed to utilize the Sidewalk gateway functionality outside the U.S. solely for their Sidewalk-enabled endpoint development and testing purposes only. In addition, we recommend that you consult with your local regulatory bodies and verify if the gateway is permitted to operate its radio in your locale, as U.S. license-free band devices are only intended for development purposes.
 :::
+
+### Amazon Sidewalk’s differentiation
+
+What makes Sidewalk different than other networks that are available today:
+
+- **Persistent connectivity**
+
+    Amazon Sidewalk network is powered by millions of participating Amazon Echo and Ring devices as Amazon Sidewalk Bridges, to give cloud connectivity to IoT devices. This ensures persistent connectivity for devices that are outside the range of a home Wi-Fi network or that depend on a mobile app or proprietary gateway for a cloud connection.
+
+- **Connection versatility**
+
+    Amazon Sidewalk allows smart devices to communicate via wireless protocols such as Bluetooth Low Energy (BLE) and 900MHz/sub-GHz wave.  This offers a secure, reliable, and versatile connection to support a wide range of IoT use cases.
+
+- **Automatic device onboarding**
+
+    Amazon Sidewalk touchless registration process starts automatically when the Sidewalk gateway and an unregistered endpoint are in close range of each other. Customers can connect their Sidewalk-enabled devices to the Amazon Sidewalk network without any complex configuration. This ease of setup enhances the overall user experience.
+ 
+- **Cost**
+
+    Amazon Sidewalk is a free-to-connect network that offers coverage to more than 90% of the U.S. population. You don’t need to build or manage a separate network infrastructure, which helps in lowering capital investment and operational costs."
+
+- **Simple development experience**
+
+    Sidewalk-enabled devices come pre-provisioned with security certificates required to establish an encrypted connection with AWS IoT Core. This empowers you to create IoT solutions that rapidly connect your edge devices to AWS, facilitating a seamless plug-and-play setup experience for customers."
+
+- **Privacy and Security**
+
+    Amazon Sidewalk is designed with multiple privacy and security features to protect data traveling on the network, ensuring customer data and privacy protection.
+
+For more information, see this [Amazon Sidewalk Privacy and Security whitepaper](https://m.media-amazon.com/images/G/01/sidewalk/final_privacy_security_whitepaper.pdf).
 
 ## Seeed Studio XIAO nRF52840 for Amazon Sidewalk
 
@@ -581,6 +613,9 @@ The XIAO is powered via USB and then the XIAO nRF52840 is controlled using pushb
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/18.png" style={{width:600, height:'auto'}}/></div>
 
+## Resources
+
+- **[WIKI]** [Amazon Sidewalk specification](https://docs.sidewalk.amazon/specifications/)
 
 ## Tech Support & Product Discussion
 
