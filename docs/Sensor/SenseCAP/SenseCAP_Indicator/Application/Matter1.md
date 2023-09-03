@@ -56,6 +56,10 @@ After those version has been installed please install the patch provided by Seee
 
 ## Configuring your environment and building {#configure_and_build}
 
+### Using Visual Studio Code to configure and build
+
+<iframe class="youtube-video" src="https://www.youtube.com/embed/eZPII0yaDa4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### Using the CLI to configure and build
 
 ```sh
