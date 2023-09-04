@@ -66,9 +66,34 @@ There shoule be four files inside, you'll use them later to configure the gatewa
 If you haven't created the IoTWirelessGatewayCertManagerRole IAM role for your account, create the role before you continue adding the gateway. 
 Your gateways won't be able to communicate with AWS IoT without this role.
 
-Choose the Role: IoT Wireless Gateway Cert Manager Role, then submit the configuration.
+Choose the Role: `IoT Wireless Gateway Cert Manager Role`, then submit the configuration.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/permissions.png" alt="pir" width={800} height="auto" /></p>
+
+
+Copy the CUPS URL, we will use it in the next step.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cups.png" alt="pir" width={800} height="auto" /></p>
+
+### Gateway Configuration
+
+Login to the Luci configure page of the gateway, check [Get_Started](https://files.seeedstudio.com/products/SenseCAP%20M2/Quick%20Start%20for%20SenseCAP%20M2%20Multi-Platfrom%20Gateway%20&%20Sensors.pdf) for more details.
+
+Navigate to `LoRa` > `LoRa Network`.
+
+`Mode`: Basic Station<br/>
+`Gateway EUI`: Your gateway eui<br/>
+`Server`: CUPS Server<br/>
+`URL`: The CUPS URL we copied before<br/>
+`Authentication Mode`: TLS Server and Client Authentication
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS21.PNG" alt="pir" width={800} height="auto" /></p>
+
+Copy the content of the certificate file we downloaded before(the certificate can be opened in text form).
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS23.PNG" alt="pir" width={800} height="auto" /></p>
+
 
 
 Navigate to the Gateways page and choose the gateway you've added.
@@ -111,9 +136,9 @@ Navigate to `Devices` > `Destination`, click `Add destination`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS15.PNG" alt="pir" width={800} height="auto" /></p>
 
-Publish to AWS IoT Core message broker
+`Publish to AWS IoT Core message broker`
 
-Permissions: Select an existing service role > IoT Wireless Gateway Cert Manager Role
+Permissions: Select an existing service role > `IoT Wireless Gateway Cert Manager Role`
 
 :::info
 Adestination name can only have alphanumeric, - (hyphen)and _ (underscore) characters and it can't have any spaces.
@@ -129,6 +154,9 @@ Navigate to `LPWAN devices` > `Devices`, click `Add wireless device`.
 `Wireless device specification`: OTAAv1.0x
 
 `DevEUI/APP EUI/APP key`: can be found in the SenseCAP Mate APP, check [Get_Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#get-started) for more details.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
 
 Select the device profile and destination you created in the previous step. 
 
@@ -172,7 +200,10 @@ Name your rule and submit it.
 
 
 `SQL version`:2016-03-23<br/>
-`SQL statement`: SELECT * FROM “lorawan-device”
+`SQL statement`: 
+```cpp
+SELECT * FROM “lorawan-device”
+```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sql.png" alt="pir" width={800} height="auto" /></p>
 
@@ -191,6 +222,8 @@ Click `Create function` button to create a new function.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cre-function.png" alt="pir" width={800} height="auto" /></p>
 
 On the following funcition config page, remove all the code and replace it with the following script,  then click `Deploy` button.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod.png" alt="pir" width={800} height="auto" /></p>
 
 <details> 
 <summary>Lambda Function Script</summary>
@@ -781,6 +814,9 @@ Then, click `Create` and complete the rule creation.
 Check the data on page `MQTT test client`, input `#` and click `Subscribe` button, you will see the data.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview.png" alt="pir" width={800} height="auto" /></p>
+
+
+
 
 ## Resource
 
