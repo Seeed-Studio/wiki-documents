@@ -7,196 +7,190 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_Tracker_AWS
 last_update:
-  date: 8/24/2023
+  date: 8/31/2023
   author: Jessie
 ---
 
 
+[AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/iot-gs.html) provides the cloud services that connect your IoT devices to other devices and AWS cloud services. AWS IoT provides device software that can help you integrate your IoT devices into AWS IoT-based solutions. If your devices can connect to AWS IoT, AWS IoT can connect them to the cloud services that AWS provides.
 
 
-# Create the AWS Account
+Login to [AWS IoT console](https://console.aws.amazon.com/iot/home)
 
-Go to https://signin.aws.amazon.com/ to create an AWS account. 
+:::info
+If you do not have an AWS account, click [here](https://portal.aws.amazon.com/billing/signup) to create one.
+:::
 
-This will need your email, name, credit card info.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9248071e-0111-4bf4-b800-9df3991abe01/Untitled.png)
+## Add Gateway
 
-after the registration,  you are ready to go to AWS IoT in the console. 
+Navigate to `Internet of Things`, then click `IoT Core`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9e5f743-d553-4199-abde-8648b2615e24/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/iot=core.png" alt="pir" width={800} height="auto" /></p>
 
-### Add Gateway
+On the left menu,select `LPWAN devices` → `Gateways`, click `Add gateway`
 
-On the left menu,select LPWAN devices → Gateways
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-gateway.png" alt="pir" width={800} height="auto" /></p>
 
-you can use the SenseCAP M2 gateway
 
-[SenseCAP M2 Multi-Platform LoRaWAN Indoor Gateway(SX1302) - US915](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)
+`Gateway's EUI`: The EUI of your gateway, you can find it on the device label.<br/>
+`Frequency`: The gateway's frequency band.<br/>
+`Name`: Name your gateway(optional)<br/>
+`SubBand`: Optionally, you can also specify LoRaWAN configuration data such as the subbands that you want to use and filters that can control the flow of traffic. For more information, see [Configure position of wireless resources with AWS IoT Core for LoRaWAN](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-configure-location.html).
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b98ad083-a3ac-4c34-8356-d021bae0a1c5/Untitled.png)
 
-click add Gateway
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/29520da8-c666-4173-a59b-961c9539eb19/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/gateway-eui.png" alt="pir" width={800} height="auto" /></p>
 
-Input the Gateway EUI which you can get it in the Gateway admin console
+## Configure your gateway
 
-set the frequency plan, US915 for United States and set the sub band as 2
+### Gateway Certificate
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/00041846-86bd-4063-9fd8-ed891c2f088e/Untitled.png)
+To authenticate your gateway so that it can securely communicate with AWS IoT, your LoRaWAN gateway must present a private key and certificate to AWS IoT Core for LoRaWAN.
 
-next, create the certificate, which will be need in the gateway configuration. with this cerificate, the SenseCAP M2 can connect to AWS IoT Core LoRaWAN.
+Click `Create certificate`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/429f35e8-088f-49c5-a576-0f22ccbd0d5e/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/create-cer.png" alt="pir" width={800} height="auto" /></p>
 
-download and save the certificate files and the server trust certificates.
+Download and save the certificate files and the server trust certificates.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6b3a2e18-41d6-4362-b102-86db1e9d254d/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS6.PNG" alt="pir" width={800} height="auto" /></p>
 
-unzip it, there are four files inside.
+There shoule be four files inside, you'll use them later to configure the gateway.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3274ce4b-9b9d-4cb0-aee5-2aea4cb44935/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/files.png" alt="pir" width={800} height="auto" /></p>
 
-next create a role fro the gateway.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b356b9c5-2ce3-438d-8e17-fdd0c3396441/Untitled.png)
+### Gateway Permission
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4ea4591-b8b9-40e9-b155-7e5f4f673a73/Untitled.png)
+If you haven't created the IoTWirelessGatewayCertManagerRole IAM role for your account, create the role before you continue adding the gateway. 
+Your gateways won't be able to communicate with AWS IoT without this role.
 
-copy the CUPs url, this is important, which tells the gateway where the data should be sent to.
+Choose the Role: IoT Wireless Gateway Cert Manager Role, then submit the configuration.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d793332-e63d-4c8e-b620-6a01f43f2894/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/permissions.png" alt="pir" width={800} height="auto" /></p>
 
-config the SenseCAP M2 with the right selection, and certificate from those downloaded files.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/851dc68d-e323-4e8d-99ab-fe203812b7d3/Untitled.png)
+Navigate to the Gateways page and choose the gateway you've added.
 
-now, you will see the Gateway connected with AWS
+In the LoRaWAN specific details section of the Gateway details page, you'll see the connection status and the date and time the last uplink was received.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/93504adb-97f8-4db0-98bf-ef5e010a0bbd/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/gate-connected.png" alt="pir" width={800} height="auto" /></p>
 
-### Add Devices
 
-add SenseCAP Tracker to AWS IoT Core
 
-first, you need to add device profile
+## Add Profiles
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b1ff0dc7-bfef-4323-af43-255a9e27ab03/Untitled.png)
+Device and service profiles can be defined to describe common device configurations. These profiles describe configuration parameters that are shared by devices to make it easier to add those devices. AWS IoT Core for LoRaWAN supports device profiles and service profiles.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d2d236d4-e541-461a-91a9-07983f863284/Untitled.png)
+### Add devices profiles
 
-and create the device service profile
+Navigate to `Devices` > `Profiles`, click `Add device profile`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa2c3d24-70d5-4d8d-a0f3-fdb972a17786/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS11.PNG" alt="pir" width={800} height="auto" /></p>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69351329-9690-4adb-b94f-948166945c52/Untitled.png)
+Provide a Device profile name, select the Frequency band (RfRegion)that you're using for the device and gateway, and keep the other settings to the default values.
 
-then add  desination, which will tell where the data should go.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed06b7b1-67c5-4e7a-a5b5-b04322bd6dbb/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/proflie2.png" alt="pir" width={800} height="auto" /></p>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60238551-9588-4054-9edc-8fd92a34da35/Untitled.png)
+### Add service profiles
 
-next, add the detail SenseCAP Tracker T1000
+Navigate to `Devices` > `Profiles`, click `Add service profile`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70e3d36f-930e-4c2e-bfbc-53064ac9e52d/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS13.PNG" alt="pir" width={800} height="auto" /></p>
 
-read out the device EUI , Appkey, and AppEUI from the SenseCAP T1000 from the SenseCAP Mate App
+It's recommend that you leave the setting `AddGWMetaData` enabled so that you'll receive additional gateway metadata for each payload, such as RSSIand SNR for the data transmission.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e454e5ad-cd48-4f8b-bc65-32f8007b8cb9/Untitled.jpeg)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/profile4.png" alt="pir" width={800} height="auto" /></p>
 
-and paste it in the AWS
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54f8d35e-1905-4dcb-8bf5-2b9d66735810/Untitled.png)
+### Add Destination
 
-select the device profile just created
+Navigate to `Devices` > `Destination`, click `Add destination`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c158cdfb-6058-4518-b330-0513378ecf25/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS15.PNG" alt="pir" width={800} height="auto" /></p>
 
-and select the destination just configured
+Publish to AWS IoT Core message broker
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0364f6c4-6519-426b-8b2b-4678f6de05fe/Untitled.png)
+Permissions: Select an existing service role > IoT Wireless Gateway Cert Manager Role
 
-untill now, the device has been added to AWS IoT Core.
+:::info
+Adestination name can only have alphanumeric, - (hyphen)and _ (underscore) characters and it can't have any spaces.
+:::
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS14.PNG" alt="pir" width={800} height="auto" /></p>
 
-### Decode the Tracker data
+## Add LoRaWAN Devices
 
-The SenseCAP Tracker will uplink the payload via LoRaWAN network，and the payload is under specified format to save the bandwith, so it is hard to read.
+### Add wireless device
 
-So we need to decode it, and save the data somewhere in AWS.
+Navigate to `LPWAN devices` > `Devices`, click `Add wireless device`.
 
-we need to create a rules for the Tracker.
+`Wireless device specification`: OTAAv1.0x
 
-For prepare, you need to record the “`Endpoint`" first, go to AWS IoT core home page, and click “Settings”
+`DevEUI/APP EUI/APP key`: can be found in the SenseCAP Mate APP, check [Get_Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#get-started) for more details.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23678ace-8bb4-48f6-b84c-24cb976fbc20/Untitled.png)
+Select the device profile and destination you created in the previous step. 
 
-Record the “`Endpoint`” address in the page, you will need to use it in the next step.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/device-eui2.png" alt="pir" width={800} height="auto" /></p>
 
-For example, what I've shown here is [a39w0g3w5os1ti-ats.iot.us-east-1.amazonaws.com](http://a39w0g3w5os1ti-ats.iot.us-east-1.amazonaws.com/).
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/664799ad-43a6-43b0-b0af-b2f0fcc8216f/Untitled.png)
+Navigate to the Devices page and choose the device you added before.
 
-#### Create Message Rules
+In the Details section of the Wireless devices details page, you'll see the date received.
 
-Click Message routing → Rules, and click “Create Rule” button.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/477b92b6-5ada-456c-8284-c2feb3d0bbc1/Untitled.png)
 
-Input a rule name(“`sensecap_lorawan_rule`” for example), and then click “Next”.
+## Configure the decoder
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08834105-8318-4110-b6da-d2bf6aaf5065/Untitled.png)
 
-Select “`2016-03-23`” from SQL version, and input the following content, as the contents of “SQL statement”:
+The SenseCAP Tracker will uplink the payload via LoRaWAN network，and the payload is under a specified format to save the bandwidth, which may make it challenging to read. To address this, we offer a dedicated decoder that users can employ to accurately decode the data.
 
-`SELECT * FROM “lorawan-device”`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a88583d-c368-4b93-bc7d-512c23904b56/Untitled.png)
+Navigae to `Settings`.
 
-Same page, scroll down to “Rule actions” section, and select “`Lambda`” from “Action 1”.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/settings.png" alt="pir" width={800} height="auto" /></p>
 
-Next is an empty drop-down menu for the “Lambda function”, we need to create a function first, click “Create a Lambda function” and jump to another page.
+Record the “`Endpoint`” address in the page, you will need it in the next step.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4714ff51-1732-48ec-874f-154002d830fe/Untitled.png)
+For example:[a39w0g3w5os1ti-ats.iot.us-east-1.amazonaws.com](http://a39w0g3w5os1ti-ats.iot.us-east-1.amazonaws.com/).
 
-Refer to the screenshot below, input “Function name” and select the correct “Runtime”, and then, click “Create function” button to create a new function.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/74aa467c-5cea-48be-9ac5-0197bd3b61f3/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/settings2.png" alt="pir" width={800} height="auto" /></p>
 
-On the following funcition config page, remove all the code and replace it with the script attached at the end of the guide, then click “Deploy” button.
 
-In the third line of the script, you need to replace the address in single quotes with the `Endpoint` address you recorded earlier.
+### Create Message Rules
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/41be0130-5810-4258-acfe-48f1d394e7ca/Untitled.png)
+Navigate to `Message routing` tab → `Rules`, and click `Create Rule` button.
 
-Click “Configuration” → “Permissions” → “Edit”
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules.png" alt="pir" width={800} height="auto" /></p>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48bd5034-9a5d-4816-beaf-52cce8fef264/Untitled.png)
+Name your rule and submit it.
 
-Click "View the xxxxxxxxxxx role" at the bottom.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules2.png" alt="pir" width={800} height="auto" /></p>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/504cb812-54ea-42b1-9e78-5840d5931f63/Untitled.png)
 
-Click “Add permissions” → “Attach policies”.
+`SQL version`:2016-03-23<br/>
+`SQL statement`: SELECT * FROM “lorawan-device”
 
-Search “[AdministratorAccess](https://us-east-1.console.aws.amazon.com/iamv2/home#/policies/details/arn%3Aaws%3Aiam%3A%3Aaws%3Apolicy%2FAdministratorAccess)”, check the box left it, and then click “Add Permissions”.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sql.png" alt="pir" width={800} height="auto" /></p>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9d36e37b-f0ef-4f9c-99ba-7150403b42c5/Untitled.png)
 
-Go back to “Create rule” page, click refresh button and select the lambda function you created.
+Scroll down to `Rule actions` section, and select “`Lambda`” from “Action 1”, then click `Create a Lambda function`.
 
-Then, click “Create” and complete the rule creation.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rule-action.png" alt="pir" width={800} height="auto" /></p>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/302ae5ad-8c74-40f3-9961-64c791d5d568/Untitled.png)
+`Author from scratch`<br/>
+`Function name`: Name your function.<br/>
+`Runtime`: Node.js 14.x<br/>
+`Architexture`: x86_64
 
-Watch the data on page “MQTT test client”, input `#` and click “Subscribe” button, you will see the tracker’s data.
+Click `Create function` button to create a new function.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be29c5b2-8ba1-4037-8dca-64874f9492a1/Untitled.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cre-function.png" alt="pir" width={800} height="auto" /></p>
 
-#### Attachments:
-
-
+On the following funcition config page, remove all the code and replace it with the following script,  then click `Deploy` button.
 
 <details> 
 <summary>Lambda Function Script</summary>
@@ -752,3 +746,44 @@ const AWS = require('aws-sdk');
     };    
 ```
 </details>
+
+In the third line of the script, you need to replace the address in single quotes with the `Endpoint` address you recorded in the previous step.
+
+```cpp
+endpoint: 'your Endpoint'
+```
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/settings2.png" alt="pir" width={800} height="auto" /></p>
+
+### Configure the Permission
+
+Click `Configuration` → `Permissions` → `Edit`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod-per.png" alt="pir" width={800} height="auto" /></p>
+
+Click `View the xxxxxxxxxxx` role at the bottom.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/existing-role.png" alt="pir" width={800} height="auto" /></p>
+
+Click `Add permissions` → `Attach policies`.
+
+Search “[AdministratorAccess](https://us-east-1.console.aws.amazon.com/iamv2/home#/policies/details/arn%3Aaws%3Aiam%3A%3Aaws%3Apolicy%2FAdministratorAccess)”, check the box left it, and then click “Add Permissions”.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies.png" alt="pir" width={800} height="auto" /></p>
+
+Go back to `Create rule` page, click refresh button and select the lambda function you created.
+
+Then, click `Create` and complete the rule creation.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies2.png" alt="pir" width={800} height="auto" /></p>
+
+Check the data on page `MQTT test client`, input `#` and click `Subscribe` button, you will see the data.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview.png" alt="pir" width={800} height="auto" /></p>
+
+## Resource
+
+[SenseCAP T1000 Tracker Decoder for AWS](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/AWS/SenseCAP_T1000_AWS_Decoder.js)
+
+
