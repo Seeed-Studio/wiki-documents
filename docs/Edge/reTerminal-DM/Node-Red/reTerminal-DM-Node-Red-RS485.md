@@ -230,7 +230,7 @@ STEP 2-3: Please carefully following the steps below for configure the Modbus po
 
 STEP 2-3-1: set the type to Serial Expert from the dropdown list
 
-STEP 2-3-2: select the Serial port `/dev/ttyACM1`
+STEP 2-3-2: select the Serial port `/dev/ttyCH343USB1`
 
 STEP 2-3-3: configue the serial port options as shown in the image below
 
