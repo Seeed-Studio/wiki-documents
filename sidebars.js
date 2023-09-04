@@ -397,11 +397,17 @@ const sidebars = {
             {
               type: 'category',
               label: 'LoRa',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: "Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version"
+              },
               items: [
-                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
-                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_Wio_E5_P2P',
-                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_Wio_E5_TTN_Demo',
-                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_Wio_E5_Helium_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_P2P',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
               ],
             },
             {
