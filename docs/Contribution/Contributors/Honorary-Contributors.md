@@ -17,6 +17,23 @@ last_update:
 <div class="table-center">
 	<table align="center">
     <tr>
+			<th>SenseCAP Indicator x Matter Application Development</th>
+		</tr>
+		<tr>
+			<td><iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_Matter/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925578"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Tim </font></span></strong></a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
+    <tr>
 			<th>Raspberry Pi Platform Devices Guide</th>
 		    <th>MicroPython Designed for XIAO ESP32S3 Sense</th>
 		</tr>
