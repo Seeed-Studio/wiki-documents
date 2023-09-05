@@ -82,3 +82,4 @@ Thanks our contributor Salman for reorganizing the wiki of Grove - Wio-e5 upload
 - [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
 - [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
 - [weekly wiki on 8.21st](/Seeed_Elderly/weekly_wiki/wiki821)
+- [weekly wiki on 8.28th](/Seeed_Elderly/weekly_wiki/wiki828)
