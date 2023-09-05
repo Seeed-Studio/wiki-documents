@@ -55,8 +55,6 @@ What makes Sidewalk different than other networks that are available today:
 
     Amazon Sidewalk is designed with multiple privacy and security features to protect data traveling on the network, ensuring customer data and privacy protection.
 
-For more information, see this [Amazon Sidewalk Privacy and Security whitepaper](https://m.media-amazon.com/images/G/01/sidewalk/final_privacy_security_whitepaper.pdf).
-
 ## Seeed Studio XIAO nRF52840 for Amazon Sidewalk
 
 The XIAO nRF52840 is a wireless module qualified for Amazon Sidewalk, providing IoT device connectivity via Bluetooth Low Energy radio technology on Amazon Sidewalk network.
@@ -615,7 +613,8 @@ The XIAO is powered via USB and then the XIAO nRF52840 is controlled using pushb
 
 ## Resources
 
-- **[WIKI]** [Amazon Sidewalk specification](https://docs.sidewalk.amazon/specifications/)
+- [Amazon Sidewalk specification](https://docs.sidewalk.amazon/specifications/)
+- [Amazon Sidewalk Privacy and Security whitepaper](https://m.media-amazon.com/images/G/01/sidewalk/final_privacy_security_whitepaper.pdf)
 
 ## Tech Support & Product Discussion
 
