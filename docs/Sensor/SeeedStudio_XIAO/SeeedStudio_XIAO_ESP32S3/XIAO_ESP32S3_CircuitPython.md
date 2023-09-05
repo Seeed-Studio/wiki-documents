@@ -45,7 +45,7 @@ I am using Seeed Studio XIAO ESPS3 and Seeed Studio Grove OLED Display 0.96 as t
 
 ## Software Preparation
 
-I am using Thonny IDE software(Windows) and some related libraries and files
+I am using Thonny IDE software(Windows) and some related libraries and files.
 
 <div class="table-center">
   <table align="center">
@@ -67,6 +67,12 @@ I am using Thonny IDE software(Windows) and some related libraries and files
     </tr>
   </table>
 </div>
+
+:::info
+Before using it, it is required for me to state the software/firmware I'm using here is designed for the ESP32S3 chip. Hence when you are trying to use pin, make sure the General Purpose Input/Output instead of the pin on the board.<br/>
+For example, when you are trying to use the pin in the first row on the left. Make sure it is `GPIO1` instead of `A0` or `D0`.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:500, height:'auto'}}/></div>
+:::
 
 ## Getting Started
 
@@ -131,7 +137,7 @@ The "adafruit_ssd1306.mpy" file and "adafruit_framebuf.mpy" file are necessary w
 The adafruit_framebuf library uses a font file named font5x8.bin to render text. This file needs to be accessible within the environment where your code is executed.
 :::
 
-### Write code and upload to achieve OLED display
+### Write code(IIC) and upload to achieve OLED display
 
 1. After adding the files, I can now import the adafruit_ssd1306 library into the code using the command import adafruit_ssd1306 and the environment is now configured to drive the OLED display. The code is shown below:
 
