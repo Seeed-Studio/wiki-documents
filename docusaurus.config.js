@@ -95,10 +95,6 @@ const config = {
             'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
         },
 
-        // googleAnalytics: {
-        //   trackingID: 'UA-77925723-11',
-        //   anonymizeIP: true,
-        // },
         googleTagManager: {
           containerId: 'GTM-W2VX3NP',
         },
