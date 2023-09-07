@@ -21,11 +21,24 @@ a love heart or some other foreign characters? Just take advantage of this featu
 This product is a replacement of Grove - Serial LCD. If you are looking for primitive 16x2 LCD modules, we
 have green yellow backlight version and blue backlight version on sale also.
 
-<!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p> -->
-[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 :::note
-    This document works for Grove-LCD RGB Backlight Version 1.0, 2.0 and 4.0.
+Grove-LCD RGB Backlight has been updated from V4.0 to V5.0, and the code has also been upgraded for compatibility. Now you can use the new compatible code to drive the more powerful Grove-LCD RGB Backlight V5.0.
+
+Below is the changelog:
+
+- New 5v/3.3v compatibility.
+- RGB I2C Address changed from 0x62 to 0x30.
+- RGB driver chip is updated from PCA9632 to SGM31323.
+- Updated PCB silkscreen from "Grove-LCD RGB Backlight V4.0" to "Grove-LCD RGB Backlight V5.0".
+- Fixed other known issues
+
+New code (compatible with both v4.0 and v5.0):https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight/
 :::
 ## Version
 

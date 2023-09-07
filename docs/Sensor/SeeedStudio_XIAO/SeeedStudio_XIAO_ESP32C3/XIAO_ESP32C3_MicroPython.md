@@ -67,6 +67,12 @@ I am using Seeed Studio XIAO ESP32C3 and Expansion Board Base for XIAO as the ha
   </table>
 </div>
 
+:::info
+Before using it, it is required for me to state the software/firmware I'm using here is designed for the ESP32C3 chip. Hence when you are trying to use pin, make sure the General Purpose Input/Output instead of the pin on the board.<br/>
+For example, when you are trying to use the pin in the first row on the left. Make sure it is `GPIO2` instead of `A0` or `D0`.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png" style={{width:500, height:'auto'}}/></div>
+:::
+
 
 ## Getting Started
 

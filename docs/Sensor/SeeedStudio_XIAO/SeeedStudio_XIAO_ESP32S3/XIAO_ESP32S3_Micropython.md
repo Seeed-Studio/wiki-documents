@@ -63,6 +63,11 @@ In this guide I will be using **windows 10** alongside with Thonny IDE and espto
   </table>
 </div>
 
+### 👍 Greatly Thanks
+
+<strong><font color={'8DC215'} size={"3"}>The firmware designed for XIAO ESP32S3 Sense board, using in this wiki is made by our friend: shariltumin, whom we are really greatful for.</font></strong>
+
+
 ## Getting Started
 
 The firmware is designed only for XIAO ESP32S3 MicroPython programming. We will first flash the firmware and then use the example on it.
@@ -165,10 +170,6 @@ By using this examples you can make a fast and simple CCTV project and since the
 ## Troubleshooting
 
 If the camera is not initialized successfully and can't reconnect to the wifi try to unplugged the board and relaunch Thonny IDE.
-
-## 👍 Greatly Thanks
-
-<strong><font color={'8DC215'} size={"3"}>The firmware using in this wiki is made by our friend, shariltumin whom we are really greatful for.</font></strong>
 
 ## ✨ Contributor Project
 
