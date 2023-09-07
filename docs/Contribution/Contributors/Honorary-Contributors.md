@@ -17,15 +17,38 @@ last_update:
 <div class="table-center">
 	<table align="center">
     <tr>
+			<th>SenseCAP Indicator x Matter Application Development</th>
+		</tr>
+		<tr>
+			<td><iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_Matter/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925578"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Tim </font></span></strong></a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
+    <tr>
 			<th>Raspberry Pi Platform Devices Guide</th>
+		    <th>MicroPython Designed for XIAO ESP32S3 Sense</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/r/a/raspberry-pi-preview_2.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/run_the_client.jpeg" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry_Pi/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
 		    <br/>
-            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963820"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 thompcd </font></span></strong></a></div>        
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963820"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 thompcd </font></span></strong></a></div>
+			</td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32S3_Micropython/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979545"><strong><span><font color={'FFFFFF'} size={"2"}> 💡 shariltumin / Hendra</font></span></strong></a></div>
 			</td>
 		</tr>
 	</table>
@@ -106,12 +129,16 @@ last_update:
 	<table align="center">
     <tr>
 			<th>Xiao Sense Accelerometer Examples and Low Power</th>
+			<th>Grove - Wio-e5 library for Arduino Boards</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801"><strong><span><font color={'FFFFFF'} size={"4"}> 👍 daCoder</font></span></strong></a></div>
+        </td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801"><strong><span><font color={'FFFFFF'} size={"4"}> 👍 Andres</font></span></strong></a></div>
         </td>
 		</tr>
 	</table>
