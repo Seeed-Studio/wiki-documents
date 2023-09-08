@@ -613,10 +613,10 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
   
  <div style={{ display: 'flex', justifyContent: 'center' }}>
   <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html">
-    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114992981_45-font-feature_1.jpg" alt="图片1" width={450} height="auto" style={{ marginRight: '20px' }} />
+    <img src="https://files.seeedstudio.com/wiki/LoRa/LoRaWAN%20Gateway%20Kit/114992981_45-M2_1.jpg" alt="图片1" width={450} height="auto" style={{ marginRight: '20px' }} />
   </a>
   <a href="https://www.seeedstudio.com/SenseCAP-LoRaWAN-Starter-Kit-EU868-p-5789.html">
-    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993166-sensecap-lorawan-starter-kit-eu-45font.jpg" alt="图片2" width={450} height="auto" />
+    <img src="https://files.seeedstudio.com/wiki/LoRa/LoRaWAN%20Gateway%20Kit/1-114993166-sensecap-lorawan-starter-kit-eu-45font.jpg" alt="图片2" width={450} height="auto" />
   </a>
 </div>
 
