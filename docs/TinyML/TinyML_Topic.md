@@ -200,7 +200,7 @@ SenseCraft Model Assistant is an open-source project focused on embedded AI, dev
 SenseCraft Model Assistant currently supports anomaly detection, computer vision, and scenario-specific algorithms, with more to be added in the future.
 
 <div class="button_tech_support_container">
-<a href="https://seeed-studio.github.io/EdgeLab/introduction/what_is_edgelab" class="button_edgelab"></a> 
+<a href="https://sensecraftma.seeed.cc/introduction/what_is_sscma" class="button_edgelab"></a> 
 </div>
 
 It provides a user-friendly platform for training on collected data and visualizing algorithm performance, and its models are designed to run on low-cost hardware such as ESP32, Arduino development boards, and Raspberry Pi.

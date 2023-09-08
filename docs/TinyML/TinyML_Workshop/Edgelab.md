@@ -99,7 +99,7 @@ Download the three binary files below.
 Please click the button below to come to SenseCraft Model Assistant Flash Tools page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace">
 	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
@@ -203,7 +203,7 @@ Please download all the files below in order and select the model you want to us
 **Step 2. Flash all files to XIAO**
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/edgelab-web-app/#/deployment/deploy">
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace">
 	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 

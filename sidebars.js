@@ -397,8 +397,17 @@ const sidebars = {
             {
               type: 'category',
               label: 'LoRa',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: "Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version"
+              },
               items: [
-                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_P2P',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
               ],
             },
             {
@@ -652,6 +661,7 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
           {
             type: 'category',
             label: 'TTN Cloud Services',
@@ -975,6 +985,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-Zephyr-RTOS',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_CircuitPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Micropython',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -1367,6 +1378,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/LoRa',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Matter',
           ],
         },
       ],
@@ -1898,6 +1910,7 @@ const sidebars = {
           label: 'SenseCAP M2 Multi-Platform Gateway',
           items: [
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             {
               type: 'category',
               label: 'Tutorial',
