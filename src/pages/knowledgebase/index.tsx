@@ -26,7 +26,7 @@ function ShowcaseHeader() {
 	return (
 		<section className={styles.header}>
 			<h1> Help Center</h1>
-			<p>Welcome! You can find frequently asked questions and troubled articales about product created by Seeed Studio here.</p>
+			<p>Welcome! You can find frequently asked questions and troubled articales about product created by Seeed Studio here. <br/>And we provide our tech support platforms here.</p>
 			{/* <Link className='button button--primary'> Seeed Studio</Link> */}
 		</section>
 	)
@@ -251,7 +251,7 @@ function SearchBar() {
 			<input
 				id="searchbar"
 				placeholder={translate({
-					message: 'Search for site name...',
+					message: 'Search for product in this page...',
 					id: 'showcase.searchBar.placeholder',
 				})}
 				value={value ?? undefined}

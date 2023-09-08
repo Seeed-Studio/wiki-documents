@@ -95,9 +95,8 @@ const config = {
             'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
         },
 
-        googleAnalytics: {
-          trackingID: 'UA-77925723-11',
-          anonymizeIP: true,
+        googleTagManager: {
+          containerId: 'GTM-W2VX3NP',
         },
 
         //         blog: {
@@ -200,13 +199,13 @@ const config = {
           className: 'navbar_logo_items',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'Getting_Started',
-            position: 'left',
-            label: 'Getting Started',
-            className: 'navbar_doc_items',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'Getting_Started',
+          //   position: 'left',
+          //   label: 'Getting Started',
+          //   className: 'navbar_doc_items',
+          // },
           {
             type: 'doc',
             docId: 'Sensor_Network',
@@ -228,13 +227,20 @@ const config = {
             label: 'Cloud & Chain',
             className: 'navbar_doc_items',
           },
+
           // {
           //   label: 'Contribution',
           //   className: 'navbar_doc_items',
           //   to: '/Contribution',
           // },
           {
-            label: 'Help Center🙋',
+            to: 'https://www.seeedstudio.com/',
+            label: 'Bazaar 🛍️',
+            position: 'right',
+            className: 'navbar_doc_right_items',
+          },
+          {
+            label: 'Help 🙋',
             position: 'right',
             className: 'navbar_doc_right_items',
             to: '/knowledgebase',
@@ -253,10 +259,10 @@ const config = {
             className: 'navbar_doc_right_items',
           },
           {
-            to: 'https://github.com/Seeed-Studio/wiki-documents',
-            label: 'GitHub 💭',
+            href: 'https://github.com/Seeed-Studio/wiki-documents',
             position: 'right',
-            className: 'navbar_doc_right_items',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
           // {
           //   type: 'localeDropdown',
