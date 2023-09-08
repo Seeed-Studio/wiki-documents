@@ -2239,6 +2239,13 @@ const sidebars = {
             'Edge/reTerminal-DM/Home-Assistant/reterminal-DM-Frigate',
           ],
         },
+        {
+          type: 'category',
+          label: 'Embedded_ML',
+          items: [
+            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
+          ],
+        },
       ],
     },
 
