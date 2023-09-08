@@ -1,6 +1,6 @@
 ---
-description:  Train your own data set with Yolov5 and reTerminal DM
-title:  Train your own data set with Yolov5 and reTerminal DM
+description:  Train your own data set with Yolov5 and Deploy on reTerminal DM
+title:  Train your own data set with Yolov5 and Deploy on reTerminal DM
 keywords:
   - Edge
   - reTerminal DM Application
