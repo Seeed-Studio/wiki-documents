@@ -39,7 +39,7 @@ This wiki has been tested and verified on a [reComputer J4012](https://www.seeed
 
 ## Flash JetPack to Jetson
 
-Now you need to make sure that the Jetson device is flashed with a [JetPack](https://developer.nvidia.com/embedded/jetpack) system including SDK components such as CUDA, TensorRT, cuDNN and more. You can either use NVIDIA SDK Manager or command-line to flash JetPack to the device.
+Now you need to make sure that the Jetson device is flashed with a [JetPack](https://developer.nvidia.com/embedded/jetpack) system. You can either use NVIDIA SDK Manager or command-line to flash JetPack to the device.
 
 For Seeed Jetson-powered devices flashing guides, please refer to the below links:
 - [reComputer J1010 | J101](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack)
@@ -57,115 +57,15 @@ Make sure to Flash JetPack version 5.1.1 because that is the version we have ver
 
 ## Deploy YOLOV8 to Jetson in One Line of Code!
 
-After you flash the Jetson device with JetPack and SDK components, you can simply run the below commands to run YOLOv8 models. This will first download and install the necessary packages, dependencies, setup the environment and download pretrained models from YOLOv8 to perform object detection, Image segmentation, pose estimation and image classifications tasks!
+After you flash the Jetson device with JetPack, you can simply run the below commands to run YOLOv8 models.  This will first download and install the necessary packages, dependencies, setup the environment and download pretrained models from YOLOv8 to perform object detection, Image segmentation, pose estimation and image classifications tasks!
 
 ```sh
-git clone https://github.com/yuyoujiang/Run-YOLOv8-in-One-Line-on-Jetson && python Run-YOLOv8-in-One-Line-on-Jetson/run.py <device_password>
+wget files.seeedstudio.com/YOLOv8-Jetson.py && python YOLOv8-Jetson.py
 ```
 
 :::note
-The below arguments can be passed with the above command:
-- <device_password> : This is a positional argument. A password may be required to install the necessary dependencies.
-- --task : The CV task what you want to test. Supports "detect", "classify", "segment" and "pose". Default to detect. Refer to [here](https://docs.ultralytics.com/tasks) for more information.
-- --model : The model name. You can find the name of the model you want to use [here](https://docs.ultralytics.com/models/yolov8/#supported-modes). Default to yolov8n.
-- --use_trt : Use tensorTR for inference. If can't find a tensorRT model, create one with FP32 quantization
-- --use_half : FP16 quantization when export a tensorRT model. You need to pass this together with the above "--use_trt" argument
-- --source : path to input video or camera id. Refer to [here](https://docs.ultralytics.com/modes)
+The source code for the above script can be found [here](https://github.com/yuyoujiang/Run-YOLOv8-in-One-Line-on-Jetson)
 :::
-
-After the above command is run, you can jump to [this section](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/#bring-your-own-ai-model) of the wiki to learn about training your own YOLOv8 model.
-
-## Manual Set Up of YOLOv8 for NVIDIA Jetson
-
-If the above script has some erros, you can go through the below steps one-by-one to prepare the Jetson device with YOLOv8.
-
-### Install Ultralytics Package
-
-- **Step 1.** Access the terminal of Jetson device, install pip and upgrade it
-
-```sh
-sudo apt update
-sudo apt install -y python3-pip -y
-pip3 install --upgrade pip
-```
-
-- **Step 2.**  Install Ultralytics package
-
-```sh
-pip3 install ultralytics
-```
-
-- **Step 3.**  Upgrade numpy version to latest
-
-```sh
-pip3 install numpy -U
-```
-
-- **Step 4.** Reboot the device
-
-```sh
-sudo reboot
-```
-
-### Uninstall Torch and Torchvision
-
-The above ultralytics installation will install Torch and Torchvision. However, these 2 packages installed via pip are not compatible to run on Jetson platform wwhich is based on **ARM aarch64 architecture**. Therefore we need to manually install pre-built PyTorch pip wheel and compile/ install Torchvision from source.
-
-```sh
-pip3 uninstall torch torchvision
-```
-
-### Install PyTorch and Torchvision
-
-Visit [this page](https://forums.developer.nvidia.com/t/pytorch-for-jetson) to access all the PyTorch and Torchvision links.
-
-Here are some of the versions supported by JetPack 5.0 and above.
-
-**PyTorch v2.0.0**
-
-Supported by JetPack 5.1 (L4T R35.2.1) / JetPack 5.1.1 (L4T R35.3.1) with Python 3.8
-
-**file_name:** torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
-**URL:** https://nvidia.box.com/shared/static/i8pukc49h3lhak4kkn67tg9j4goqm0m7.whl
-
-**PyTorch v1.13.0**
-
-Supported by JetPack 5.0 (L4T R34.1) / JetPack 5.0.2 (L4T R35.1) / JetPack 5.1 (L4T R35.2.1) / JetPack 5.1.1 (L4T R35.3.1) with Python 3.8
-
-**file_name:** torch-1.13.0a0+d0d6b1f2.nv22.10-cp38-cp38-linux_aarch64.whl
-**URL:** https://developer.download.nvidia.com/compute/redist/jp/v502/pytorch/torch-1.13.0a0+d0d6b1f2.nv22.10-cp38-cp38-linux_aarch64.whl
-
-- **Step 1.** Install torch according to your JetPack version in the following format
-pip3 
-```sh
-wget <URL> -O <file_name>
-pip3 install <file_name>
-```
-
-For example, here we are running **JP5.1.1** and therefore we choose **PyTorch v2.0.0**
-
-```sh
-sudo apt-get install -y libopenblas-base libopenmpi-dev
-wget https://nvidia.box.com/shared/static/i8pukc49h3lhak4kkn67tg9j4goqm0m7.whl -O torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
-pip3 install torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
-```
-
-- **Step 2.** Install torchvision depending on the version of PyTorch that you have installed. For example, we chose PyTorch v2.0.0, which means, we need to choose Torchvision v0.15.2
-
-```sh
-sudo apt install -y libjpeg-dev zlib1g-dev
-git clone https://github.com/pytorch/vision torchvision
-cd torchvision
-git checkout v0.15.2
-python3 setup.py install --user
-```
-
-Here is a list of the corresponding torchvision version that you need to install according to the PyTorch version:
-
-- PyTorch v2.0.0 - torchvision v0.15
-- PyTorch v1.13.0 - torchvision v0.14
-
-If you want a more detailed list, please check [this link](https://github.com/pytorch/vision).
 
 ## Use Pre-trained models
 
@@ -624,19 +524,7 @@ Follow the steps below to convert YOLOv8 PyTorch models to TensorRT models.
 This works for all four computer vision tasks that we have mentioned before
 :::
 
-- **Step 1.** Install ONNX which is a requirement
-
-```sh
-pip3 install onnx
-```
-
-- **Step 2.** Downgrade to lower version of Numpy to fix an error
-
-```sh
-pip3 install numpy==1.20.3
-```
-
-- **Step 3.** Execute the export command by specifying the model path
+- **Step 1.** Execute the export command by specifying the model path
 
 ```sh
 yolo export model=<path_to_pt_file> format=engine device=0
@@ -657,7 +545,7 @@ After the TensorRT model file (.engine) is created, you will see the output as f
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/1.jpg
 " style={{width:800, height:'auto'}}/></div>
 
-- **Step 4.** If you want to pass additional arguments, you can do so by following the below table
+- **Step 2.** If you want to pass additional arguments, you can do so by following the below table
 
 <table>
 <thead>
@@ -1018,6 +906,114 @@ We have built a pose estimation demo application for exercise detection and coun
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8-TRT/9.gif
 " style={{width:1000, height:'auto'}}/></div>
+
+## Manual Set Up of YOLOv8 for NVIDIA Jetson
+
+If the one-line script we mentioned before has some errors, you can go through the below steps one-by-one to prepare the Jetson device with YOLOv8.
+
+### Install Ultralytics Package
+
+- **Step 1.** Access the terminal of Jetson device, install pip and upgrade it
+
+```sh
+sudo apt update
+sudo apt install -y python3-pip -y
+pip3 install --upgrade pip
+```
+
+- **Step 2.**  Install Ultralytics package
+
+```sh
+pip3 install ultralytics
+```
+
+- **Step 3.**  Upgrade numpy version to latest
+
+```sh
+pip3 install numpy -U
+```
+
+- **Step 4.** Reboot the device
+
+```sh
+sudo reboot
+```
+
+### Uninstall Torch and Torchvision
+
+The above ultralytics installation will install Torch and Torchvision. However, these 2 packages installed via pip are not compatible to run on Jetson platform wwhich is based on **ARM aarch64 architecture**. Therefore we need to manually install pre-built PyTorch pip wheel and compile/ install Torchvision from source.
+
+```sh
+pip3 uninstall torch torchvision
+```
+
+### Install PyTorch and Torchvision
+
+Visit [this page](https://forums.developer.nvidia.com/t/pytorch-for-jetson) to access all the PyTorch and Torchvision links.
+
+Here are some of the versions supported by JetPack 5.0 and above.
+
+**PyTorch v2.0.0**
+
+Supported by JetPack 5.1 (L4T R35.2.1) / JetPack 5.1.1 (L4T R35.3.1) with Python 3.8
+
+**file_name:** torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
+**URL:** https://nvidia.box.com/shared/static/i8pukc49h3lhak4kkn67tg9j4goqm0m7.whl
+
+**PyTorch v1.13.0**
+
+Supported by JetPack 5.0 (L4T R34.1) / JetPack 5.0.2 (L4T R35.1) / JetPack 5.1 (L4T R35.2.1) / JetPack 5.1.1 (L4T R35.3.1) with Python 3.8
+
+**file_name:** torch-1.13.0a0+d0d6b1f2.nv22.10-cp38-cp38-linux_aarch64.whl
+**URL:** https://developer.download.nvidia.com/compute/redist/jp/v502/pytorch/torch-1.13.0a0+d0d6b1f2.nv22.10-cp38-cp38-linux_aarch64.whl
+
+- **Step 1.** Install torch according to your JetPack version in the following format
+pip3 
+```sh
+wget <URL> -O <file_name>
+pip3 install <file_name>
+```
+
+For example, here we are running **JP5.1.1** and therefore we choose **PyTorch v2.0.0**
+
+```sh
+sudo apt-get install -y libopenblas-base libopenmpi-dev
+wget https://nvidia.box.com/shared/static/i8pukc49h3lhak4kkn67tg9j4goqm0m7.whl -O torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
+pip3 install torch-2.0.0+nv23.05-cp38-cp38-linux_aarch64.whl
+```
+
+- **Step 2.** Install torchvision depending on the version of PyTorch that you have installed. For example, we chose PyTorch v2.0.0, which means, we need to choose Torchvision v0.15.2
+
+```sh
+sudo apt install -y libjpeg-dev zlib1g-dev
+git clone https://github.com/pytorch/vision torchvision
+cd torchvision
+git checkout v0.15.2
+python3 setup.py install --user
+```
+
+Here is a list of the corresponding torchvision version that you need to install according to the PyTorch version:
+
+- PyTorch v2.0.0 - torchvision v0.15
+- PyTorch v1.13.0 - torchvision v0.14
+
+If you want a more detailed list, please check [this link](https://github.com/pytorch/vision).
+
+### Install ONNX and Downgrade Numpy
+
+This is only needed if you want to convert the PyTorch models to TensorRT
+
+- **Step 1.** Install ONNX which is a requirement
+
+```sh
+pip3 install onnx
+```
+
+- **Step 2.** Downgrade to lower version of Numpy to fix an error
+
+```sh
+pip3 install numpy==1.20.3
+```
 
 ## Resources
 
