@@ -90,4 +90,4 @@ Thanks our contributor - Salman for organizing tinyML workshop page to make the 
 - [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
 - [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
 - [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
-- [weekly wiki on 8.14th](/Seeed_Elderly/weekly_wiki/wiki814)
+- [weekly wiki on 8.14th ✨](/Seeed_Elderly/weekly_wiki/wiki814)

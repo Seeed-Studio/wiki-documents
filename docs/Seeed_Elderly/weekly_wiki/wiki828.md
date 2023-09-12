@@ -82,4 +82,5 @@ Thanks our contributor - [thompcd](https://github.com/orgs/Seeed-Studio/projects
 - [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
 - [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
 - [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
-- [weekly wiki on 8.21st](/Seeed_Elderly/weekly_wiki/wiki821)
+- [weekly wiki on 8.14th ✨](/Seeed_Elderly/weekly_wiki/wiki814)
+- [weekly wiki on 8.21st ✨](/Seeed_Elderly/weekly_wiki/wiki821)
