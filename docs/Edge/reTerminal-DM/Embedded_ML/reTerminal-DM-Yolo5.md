@@ -15,6 +15,7 @@ last_update:
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/yolov5.gif" /></center>
 
+
 ## Introduction
 
 Object detection, a fundamental aspect of computer vision, involves identifying objects within images and finds application in numerous fields such as surveillance, healthcare, and self-driving cars. Single-Stage Object Detectors are a specific category of models that simplify this task by directly predicting object categories and bounding box coordinates without requiring an initial region proposal stage. This streamlined approach is especially valuable in real-time applications. Notably, the YOLO (You Only Look Once) family of models exemplifies this efficiency, offering fast object detection with compromising accuracy.

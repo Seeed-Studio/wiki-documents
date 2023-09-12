@@ -12,6 +12,7 @@ last_update:
   author: Kasun Thushara
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/ML/edgeimpulse.gif" alt="pir" width="800" height="auto"/></p>
+
 ## Introduction 
 
 In today's digital landscape, the integration of edge AI and IoT (Internet of Things) technologies has opened up exciting possibilities for developers and enthusiasts. One such powerful platform that simplifies the creation of machine learning models for edge devices is Edge Impulse. In this step-by-step guide, we will walk you through the process of installing Edge Impulse on your reTerminal device and creating a local object detection solution.
