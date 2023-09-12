@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 last_update:
-  date: 8/23/2023
+  date: 9/11/2023
   author: Jessie
 ---
 
@@ -20,10 +20,8 @@ last_update:
 
 
 
-**✨✨✨SenseCAP T1000 Tracker is LIVE on KICKSTARTER now!!!✨✨✨**
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-t1000-track-what-you-care-with-no-boundaries?ref=discovery">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> KICKSTARTER </font></span></strong>
     </a>
 </div>
