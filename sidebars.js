@@ -3003,6 +3003,7 @@ const sidebars = {
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
       ],
     },
+    'Contribution/Home_Assistant/Home_Assistant_Topic',
 
     {
       type: 'doc',
@@ -3011,7 +3012,7 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
-    'TinyML/TinyML_Workshop',
+    // 'TinyML/TinyML_Workshop',
 
     {
       type: 'category',
