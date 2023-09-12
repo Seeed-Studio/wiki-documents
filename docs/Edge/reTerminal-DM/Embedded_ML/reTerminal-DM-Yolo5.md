@@ -58,7 +58,7 @@ We recommend installing the latest version of Raspberry Pi 64 bit OS from their 
 
 ## Choose a data set from Roboflow
 
-- **Step 1** Please access the provided website and navigate to the dataset of your choice using the search function. [Ultralytics](https://ultralytics.com/) 
+- **Step 1** Please access the provided website and navigate to the dataset of your choice using the search function. [Roboflow](https://universe.roboflow.com/) 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/roboflow1.PNG" alt="pir" width="800" height="auto"/></p>
 
