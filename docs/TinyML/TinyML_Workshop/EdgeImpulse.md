@@ -16,7 +16,7 @@ Edge Impulse is the leading development platform for machine learning on edge de
 
 * With Edge Impulse, software developers, engineers, and domain experts can solve real problems using machine learning on edge devices without a Ph.D. or advanced embedded engineering skills. From getting started to MLOps in production, Edge Impulse provides maximum efficiency and speed on a wide range of hardware from MCUs to CPUs.  
 
-<div style={{textAlign:'center'}}><img src="https://workshop.makergram.com/assets/images/EI_homepage-012378fc3425daa13ba327cd01dda3bd.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/MakerGram/workshops/main/docs/tiny-ml-workshop/img/edgeimpulse/EI_homepage.png" style={{width:1000, height:'auto'}}/></div> 
 
 With EdgeImpulse we can 
 * Collect dataset from the device direclty 
