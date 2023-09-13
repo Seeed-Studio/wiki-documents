@@ -1241,7 +1241,7 @@
 
 "@docusaurus/core@2.4.1", "@docusaurus/core@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/core/-/core-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-2.4.1.tgz#4b8ff5766131ce3fbccaad0b1daf2ad4dc76f62d"
   integrity sha512-SNsY7PshK3Ri7vtsLXVeAJGS50nJN3RgF836zkyUfAD01Fq+sAk5EwWgLw+nnm5KVNGDu7PRR2kRGDsWvqpo0g==
   dependencies:
     "@babel/core" "^7.18.6"
@@ -1328,7 +1328,7 @@
 
 "@docusaurus/eslint-plugin@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/eslint-plugin/-/eslint-plugin-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/eslint-plugin/-/eslint-plugin-2.4.1.tgz#37e143eee599a865ac363c4f33291d35d3bf238b"
   integrity sha512-Sb+aLgf07v2xenPHlcBtvADFkE6xi1Nx9cKNb98Tq5MGoywHpxUfwT3RHar+eA8vCjR3fu0npSzuRt26AJa5lw==
   dependencies:
     "@typescript-eslint/utils" "^5.30.5"
@@ -1365,9 +1365,23 @@
     url-loader "^4.1.1"
     webpack "^5.73.0"
 
-"@docusaurus/module-type-aliases@2.4.1", "@docusaurus/module-type-aliases@^2.4.1":
+"@docusaurus/module-type-aliases@2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@docusaurus/module-type-aliases/-/module-type-aliases-2.4.1.tgz"
+  integrity sha512-gLBuIFM8Dp2XOCWffUDSjtxY7jQgKvYujt7Mx5s4FCTfoL5dN1EVbnrn+O2Wvh8b0a77D57qoIDY7ghgmatR1A==
+  dependencies:
+    "@docusaurus/react-loadable" "5.5.2"
+    "@docusaurus/types" "2.4.1"
+    "@types/history" "^4.7.11"
+    "@types/react" "*"
+    "@types/react-router-config" "*"
+    "@types/react-router-dom" "*"
+    react-helmet-async "*"
+    react-loadable "npm:@docusaurus/react-loadable@5.5.2"
+
+"@docusaurus/module-type-aliases@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.4.1.tgz#38b3c2d2ae44bea6d57506eccd84280216f0171c"
   integrity sha512-gLBuIFM8Dp2XOCWffUDSjtxY7jQgKvYujt7Mx5s4FCTfoL5dN1EVbnrn+O2Wvh8b0a77D57qoIDY7ghgmatR1A==
   dependencies:
     "@docusaurus/react-loadable" "5.5.2"
@@ -1403,7 +1417,7 @@
 
 "@docusaurus/plugin-content-docs@2.4.1", "@docusaurus/plugin-content-docs@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-content-docs/-/plugin-content-docs-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-docs/-/plugin-content-docs-2.4.1.tgz#ed94d9721b5ce7a956fb01cc06c40d8eee8dfca7"
   integrity sha512-Lo7lSIcpswa2Kv4HEeUcGYqaasMUQNpjTXpV0N8G6jXgZaQurqp7E8NGYeGbDXnb48czmHWbzDL4S3+BbK0VzA==
   dependencies:
     "@docusaurus/core" "2.4.1"
@@ -1439,7 +1453,7 @@
 
 "@docusaurus/plugin-debug@2.4.1", "@docusaurus/plugin-debug@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-debug/-/plugin-debug-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-debug/-/plugin-debug-2.4.1.tgz#461a2c77b0c5a91b2c05257c8f9585412aaa59dc"
   integrity sha512-7Yu9UPzRShlrH/G8btOpR0e6INFZr0EegWplMjOqelIwAcx3PKyR8mgPTxGTxcqiYj6hxSCRN0D8R7YrzImwNA==
   dependencies:
     "@docusaurus/core" "2.4.1"
@@ -1481,7 +1495,7 @@
 
 "@docusaurus/plugin-pwa@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-pwa/-/plugin-pwa-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/plugin-pwa/-/plugin-pwa-2.4.1.tgz#648a3dbe8e80927390cb7c8477bbb2b1e98ade3b"
   integrity sha512-kiD4qu5u3Nhwa6dPFrBDGInJYI/MWu01mbeLJFLk7oFqbkvLrHPKyB6KxrKQQfx/sAJKro79RYejigUDj0Ahig==
   dependencies:
     "@babel/core" "^7.18.6"
@@ -1520,7 +1534,7 @@
 
 "@docusaurus/preset-classic@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/preset-classic/-/preset-classic-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/preset-classic/-/preset-classic-2.4.1.tgz#072f22d0332588e9c5f512d4bded8d7c99f91497"
   integrity sha512-P4//+I4zDqQJ+UDgoFrjIFaQ1MeS9UD1cvxVQaI6O7iBmiHQm0MGROP1TbE7HlxlDPXFJjZUK3x3cAoK63smGQ==
   dependencies:
     "@docusaurus/core" "2.4.1"
@@ -1600,7 +1614,7 @@
 
 "@docusaurus/theme-live-codeblock@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/theme-live-codeblock/-/theme-live-codeblock-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-live-codeblock/-/theme-live-codeblock-2.4.1.tgz#214168e29041efc1eed1540f4989dd2efcfe6658"
   integrity sha512-KBKrm34kcdNbSeEm6RujN5GWWg4F2dmAYZyHMMQM8FXokx8mNShRx6uq17WXi23JNm7niyMhNOBRfZWay+5Hkg==
   dependencies:
     "@docusaurus/core" "2.4.1"
@@ -1615,7 +1629,7 @@
 
 "@docusaurus/theme-mermaid@^2.4.1":
   version "2.4.1"
-  resolved "https://registry.npmjs.org/@docusaurus/theme-mermaid/-/theme-mermaid-2.4.1.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-mermaid/-/theme-mermaid-2.4.1.tgz#6bf644f9f7ef3db0e938b484f510d6d80d601419"
   integrity sha512-cM0ImKIqZfjmlaC+uAjep39kNBvb1bjz429QBHGs32maob4+UnRzVPPpCUCltyPVb4xjG5h1Tyq4pHzhtIikqA==
   dependencies:
     "@docusaurus/core" "2.4.1"
@@ -1627,9 +1641,31 @@
     mermaid "^9.2.2"
     tslib "^2.4.0"
 
-"@docusaurus/theme-search-algolia@2.4.1", "@docusaurus/theme-search-algolia@^2.4.1":
+"@docusaurus/theme-search-algolia@2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@docusaurus/theme-search-algolia/-/theme-search-algolia-2.4.1.tgz"
+  integrity sha512-6BcqW2lnLhZCXuMAvPRezFs1DpmEKzXFKlYjruuas+Xy3AQeFzDJKTJFIm49N77WFCTyxff8d3E4Q9pi/+5McQ==
+  dependencies:
+    "@docsearch/react" "^3.1.1"
+    "@docusaurus/core" "2.4.1"
+    "@docusaurus/logger" "2.4.1"
+    "@docusaurus/plugin-content-docs" "2.4.1"
+    "@docusaurus/theme-common" "2.4.1"
+    "@docusaurus/theme-translations" "2.4.1"
+    "@docusaurus/utils" "2.4.1"
+    "@docusaurus/utils-validation" "2.4.1"
+    algoliasearch "^4.13.1"
+    algoliasearch-helper "^3.10.0"
+    clsx "^1.2.1"
+    eta "^2.0.0"
+    fs-extra "^10.1.0"
+    lodash "^4.17.21"
+    tslib "^2.4.0"
+    utility-types "^3.10.0"
+
+"@docusaurus/theme-search-algolia@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-search-algolia/-/theme-search-algolia-2.4.1.tgz#906bd2cca3fced0241985ef502c892f58ff380fc"
   integrity sha512-6BcqW2lnLhZCXuMAvPRezFs1DpmEKzXFKlYjruuas+Xy3AQeFzDJKTJFIm49N77WFCTyxff8d3E4Q9pi/+5McQ==
   dependencies:
     "@docsearch/react" "^3.1.1"
@@ -9021,7 +9057,7 @@ media-typer@0.3.0:
   resolved "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"
   integrity sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==
 
-medium-zoom@^1.0.4, medium-zoom@^1.0.6:
+medium-zoom@^1.0.6:
   version "1.0.8"
   resolved "https://registry.npmjs.org/medium-zoom/-/medium-zoom-1.0.8.tgz"
   integrity sha512-CjFVuFq/IfrdqesAXfg+hzlDKu6A2n80ZIq0Kl9kWjoHh9j1N9Uvk5X0/MmN0hOfm5F9YBswlClhcwnmtwz7gA==
@@ -10198,12 +10234,6 @@ pkg-up@3.1.0, pkg-up@^3.1.0:
   integrity sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
   dependencies:
     find-up "^3.0.0"
-
-plugin-image-zoom@flexanalytics/plugin-image-zoom:
-  version "1.1.0"
-  resolved "git+ssh://git@github.com/flexanalytics/plugin-image-zoom.git#3e64669f3c8fb998a556432ca3f56e0f617454f2"
-  dependencies:
-    medium-zoom "^1.0.4"
 
 portfinder@^1.0.28:
   version "1.0.32"
