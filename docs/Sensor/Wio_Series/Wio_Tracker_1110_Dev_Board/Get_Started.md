@@ -1,5 +1,5 @@
 ---
-description: Get_Started_with_Wio-Tracker 1110 
+description: Get_Started_with_Wio_Tracker_1110 
 title: Get Started
 keywords:
 - Tracker
@@ -11,7 +11,7 @@ last_update:
   author: Jessie
 ---
 
-In this tutorial, we will guide users to quickly set up the Wio-Tracker development board through the factory firmware, connect it to SenseCAP cloud and check the data.
+In this tutorial, we will guide users to quickly set up the Wio Tracker 1110 development board through the factory firmware, connect it to SenseCAP cloud and check the data.
 
 ### Setup your toolchian
 
@@ -65,7 +65,7 @@ The port should be like 'Serial Port(USB)'
 
 #### Wio Tracker 1110 examples
 
-SenseCAP provides `Wio-Tracker 1110 Examples` for users to get started quickly.
+SenseCAP provides `Wio Tracker 1110 Examples` for users to get started quickly.
 
 Navigate to the `File` tab, select `Example`-> `Wio Tracker 1110 Examples`, then choose the one you need.
 

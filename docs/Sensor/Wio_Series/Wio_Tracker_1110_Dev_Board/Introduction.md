@@ -1,6 +1,6 @@
 ---
-description: Wio-Tracker_Introduction
-title: Wio-Tracker 1110 Introduction
+description: Wio_Tracker_Introduction
+title: Wio Tracker 1110 Introduction
 keywords:
 - Tracker
 - Wio
@@ -12,7 +12,7 @@ last_update:
 ---
 
 
-The Wio Tracker 1110 Dev Board is based on Wio-WM1110 Wireless Module and integrates Semtech's LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform. 
+The Wio Tracker 1110 Dev Board is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html) and integrates [Semtech's LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform. 
 
 With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is conveniently equipped with an onboard antenna for easy deployment. It supports the Arduino development environment and LoRaWAN protocol stack, making it ideal for tracking-related IoT projects.
 
@@ -35,11 +35,11 @@ With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is con
 
 ### Low Power LoRa® Transceiver
 
-Benefiting from Semtech's LR1110, the Wio-Tracker 1110 Dev Board provides long-distance, low-power LoRa® communication. To learn about Long Range and its features such as network architecture and applications, you can check out An introduction of LoRa® and LoRaWAN® technology, It explains what Long Range is, how it works, and its pros and cons.
+Benefiting from Semtech's LR1110, the Wio Tracker 1110 Dev Board provides long-distance, low-power LoRa® communication. To learn about Long Range and its features such as network architecture and applications, you can check out An introduction of LoRa® and LoRaWAN® technology, It explains what Long Range is, how it works, and its pros and cons.
 
 ### Multiple positioning technologies
 
-The Wio-Tracker 1110 Dev Board integrates Multi-Purpose Radio Front-End Targeting Geolocation Purposes. It's equipped with GNSS dedicated to outdoor positioning, as well as Wi-Fi and Bluetooth scanning for indoor positioning. It's able to automatically transition between outdoor and indoor activities, replacing the need to build different trackers for indoor or outdoor use, this provides all-around location coverage while reducing complexity and cost.
+The Wio Tracker 1110 Dev Board integrates Multi-Purpose Radio Front-End Targeting Geolocation Purposes. It's equipped with GNSS dedicated to outdoor positioning, as well as Wi-Fi and Bluetooth scanning for indoor positioning. It's able to automatically transition between outdoor and indoor activities, replacing the need to build different trackers for indoor or outdoor use, this provides all-around location coverage while reducing complexity and cost.
 
 ### Rich peripherals
 
@@ -50,7 +50,7 @@ In addition to the onboard TH sensor and 3-axis Accelerometer, it features a ser
 
 ### Develop User Applications
 
-Wio-Tracker 1110 Dev Board is a fully open-source powerful IoT development platform, compatible with Arduino IDE,  It comes with a set of example applications and code samples to help you get started smoothly and quickly.
+Wio Tracker 1110 Dev Board is a fully open-source powerful IoT development platform, compatible with Arduino IDE,  It comes with a set of example applications and code samples to help you get started smoothly and quickly.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/arduino.png" alt="pir" width={800} height="auto" /></p>
 
