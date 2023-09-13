@@ -12,7 +12,7 @@ last_update:
 
 ## SenseCraft Model Assistant
 
-Seeed Studio [SenseCraft Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices. With SenseCraft Model Assistant we can easily get-started with tinyML project and work on it. Let's get started. 
+Seeed Studio [SenseCraft Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process) is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices. With SenseCraft Model Assistant we can easily get-started with tinyML project and work on it. Let's get started. 
 
 ### 1. Get started with Face Recognition.
 
@@ -34,29 +34,47 @@ Connect the XIAO to your PC using a data cable with data transfer function.
 Click the button below to go to the SenseCraft Model Assistant homepage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace">
-	<strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft Model Assistant</font></span></strong></a>
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process">
+	<strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft Model Assistant</font></span></strong></a>
 </div><br />
 
-Once we are on the homepage of SenseCraft Model Assistant, we first need to select the interface type for the connection as **Serial** and then click the **Connect** button.
+Once we are on the homepage of SenseCraft Model Assistant, we need to first need to connect the XIAO ESPS3 for that, click **Connect** button.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/5.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Home_Connect.png" style={{width:700, height:'auto'}}/></div>
 
 The browser will then pop up a window. We need to select the correct port for XIAO here. For **Windows**, this port usually starts with **COM**, and in case of **MacOS**, this port usually starts with **/dev/tty**. And it will have the words **USB JTAG**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/6.png" style={{width:700, height:'auto'}}/></div>
 
-Clicking the **Connect** button will only result in an automatic refresh of the **Refresh** in the Configuration section below, where the XIAO firmware is being loaded and configuration information is being read.
+Clicking the **Connect** button will only result in an automatically identify the board and configuration information is being read.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/7.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Select_model.png" style={{width:500, height:'auto'}}/></div>
 
-Once the **Refresh** button is back to blue, we can select the model and display the effect. The current model name for face recognition is **User-Defined 1**. After selecting it, click the **Save** button in the lower left corner.
+Once the **Connect** button is back to Red as **Disconnect**, we can select the model from the "Ready to use AI Models" list. Here I selected the face recognition for demo. After selecting it, click the **Send** button and wait few second.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/8.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Select_model_loading.png
+" style={{width:500, height:'auto'}}/></div>
 
-Finally, we come to the Monitor section, click once on **Stop** in the upper right corner, and then click **Invoke**, if everything runs smoothly, you can see the real-time screen effect.
+Finally, we come to the Preview section, click once on **Stop** in the upper right corner, and then click **Invoke**, if everything runs smoothly, you can see the real-time screen effect. 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/9.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Face_demo.png" style={{width:500, height:'auto'}}/></div>
+
+SenseCraft comes with various inbuilt models, you can try few other models and experiment. 
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Custom_models.png" style={{width:500, height:'auto'}}/></div>
+
+We can also make conditions statements using the SenseCraft, Like we can control XIAO-ESP32S3 onboard LED when a face is detected. For that, go to **Output** section and Select the "Trigger action" to setup a trigger. . 
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Select_model_action1.png" style={{width:500, height:'auto'}}/></div>
+
+Here, When the face detection have confidencet above 50% and enable a trigger.  
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Select_model_action2.png" style={{width:500, height:'auto'}}/></div>
+
+And here the **Trigger Action** is "Light up the LED".  Ater that, click "Send" and you can see, whenver the face detected, you can see the onboard LED is turned on. 
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeLab/src/img/Edgelab2.0/EL_Select_model_action3.png" style={{width:500, height:'auto'}}/></div>
+
 
 
 
