@@ -295,6 +295,8 @@ Currently for this issue, we recommend that users do not turn off the ADC functi
 
 - **[ZIP]** [Seeed Studio XIAO nRF52840 Sense Certification files](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-Certification.zip)
 
+- **[STEP]** [Seeed Studio XIAO nRF52840 Sense 3D Model](https://grabcad.com/library/seeed-studio-xiao-nrf52840-sense-1)
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
