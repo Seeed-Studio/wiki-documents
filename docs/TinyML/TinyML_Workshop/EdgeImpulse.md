@@ -79,6 +79,17 @@ We're also moving forward in parallel with making some Edge Impulse exported Ard
 It's like a generic arduino library, we need to install it on Arduino IDE first and use the example code to run the Demo. 
 
 ### Speech keyword recognition (Yes & No) Arduino Library
+
+#### Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+### How it's works!
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div> 
+
+
 #### Step 1. Downaload KWS Demo libray 
 Download [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)  library as .Zip. 
 
