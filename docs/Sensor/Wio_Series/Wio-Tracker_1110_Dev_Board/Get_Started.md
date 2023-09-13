@@ -67,29 +67,6 @@ The port should be like 'Serial Port(USB)'
 
 SenseCAP provides `Wio-Tracker 1110 Examples` for users to get started quickly.
 
-**LoRaWAN®** 
-
-* LoRaWAN\SenseCAP\sensecap_ble_uplink
-* LoRaWAN\SenseCAP\sensecap_gnss_uplink
-* LoRaWAN\SenseCAP\sensecap_wifi_uplink
-* LoRaWAN\TheThingsNetwork\ttn_geolocation_gnss
-* LoRaWAN\TheThingsNetwork\ttn_uplink
-
-**Grove**
-
-|**Example**|**Description**|
-| - | - |
-|Grove/adc_gain|Output Grove - Analog (P1) voltage to Grove - UART|
-|Grove/iic_scan|Scan I2C and output the I2C address that responded to Grove - UART|
-|Grove/mma7660_gain|Output the accelerometer(MMA7660) value to Grove - UART|
-|Grove/p25q32h_flash_speedtest||
-|Grove/temperature_gain	|Output the temperature and humidity sensor(SHT4x) value to Grove - UART|
-
-**BLE**
-
-* BLE/ble_scan_advanced
-
-
 Navigate to the `File` tab, select `Example`-> `Wio Tracker 1110 Examples`, then choose the one you need.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/example.png" alt="pir" width={800} height="auto" /></p>
@@ -138,8 +115,9 @@ Go back to the `Device` page, then you will see the dev board has been bound.
 In addition to the onboard sensors, the possibilities of the Wio-tracker 1110 dev board are endless. The Grove sensor in the following list is also allowed to access the dev board and is automatically recognised.
 
 
+
 <table align="center">
-  <caption> <h2>Grove Sensor</h2> </caption>
+  <caption> <h2>Grove Modules</h2> </caption>
   <tbody>
     <tr>
     <td><h4>Sensor</h4></td>
@@ -177,6 +155,9 @@ In addition to the onboard sensors, the possibilities of the Wio-tracker 1110 de
   </tbody></table>
 
 You can also use a [Grove-I2C Hub](https://www.seeedstudio.com/Grove-I2C-Hub.html) to connect multiply I2C sensors to the board.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/perphi.jpeg" alt="pir" width={1000} height="auto" /></p>
 
 ### Check the data
 

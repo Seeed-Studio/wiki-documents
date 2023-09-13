@@ -153,9 +153,8 @@ SenseCAP Portal is designed for customers to manage devices, data, and Access Ke
 * Set threshold values: focus on the data you need to take action for - coming soon
 * Send alarms if data is out of the safe range - coming soon
 
+
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-12.png" alt="pir" width={400} height="auto" /></p>
-
-
 
 ### SenseCAP API
 
@@ -165,6 +164,7 @@ With the use of the SenseCAP Application Programming Interface, you are able to 
 * With MQTT API, you can subscribe to the sensor’s real-time measurement data through the MQTT protocol.
 * With WebSocket API, you can get real-time measurement data of sensors through Websocket protocol.
 To learn more about the guide and references of SenseCAP API, kindly visit [SenseCAP Document Center – API](https://sensecap-docs.seeed.cc/introduction.html).
+
 
 ## SenseCAP Tech Support
 

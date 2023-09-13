@@ -24,10 +24,12 @@ With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is con
 ## Feature
 
 * **Powerd by Nordic nRF52840 and Semtech LR1110**<br/>
-* **Multi-protocols**: LoRa, GNSS, Bluetooth, Wi-Fi Scanning
-* **Rich GPIOs and Compatible with Grove**: Over 400 Grove-compatible GPIOs for flexible expansion options.
-* **Fully Open Source Platform**: Leverage the extensive LR1110 and nRF52840 open-source ecosystem for infinite application possibilities.
-* **Arduino IDE compatibility**: Start quickly and developer-friendly.
+* **Multi-protocols**: LoRa®, GNSS(GPS/BeiDou), Bluetooth, Wi-Fi Sniffer<br/>
+* **Supports over 300+ Seeed Grove Sensors**: Making it highly adaptable for different tracking and sensing requirements<br/>
+* **Onboard temperature sensor, humidity sensor, and 3-axis accelerometer**: Capturing a wide range of environmental and motion data<br/>
+* **Fully Open Source Platform**: Leverage the extensive LR1110 and nRF52840 open-source ecosystem for infinite application possibilities<br/>
+* **Arduino IDE compatibility**: Allowing ease of programming and a familiar environment for developers.
+
 
 ## Description
 
@@ -51,6 +53,11 @@ In addition to the onboard TH sensor and 3-axis Accelerometer, it features a ser
 Wio-Tracker 1110 Dev Board is a fully open-source powerful IoT development platform, compatible with Arduino IDE,  It comes with a set of example applications and code samples to help you get started smoothly and quickly.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/arduino.png" alt="pir" width={800} height="auto" /></p>
+
+### Quick Start Demo
+
+We provide a plug-and-play demo, where users can simply scan a QR code, connect the power, and within 5 minutes, they can view location and sensor data on the SenseCAP Mate APP.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/grove.png" alt="pir" width={800} height="auto" /></p>
 
 ### Hardware Overview
 
