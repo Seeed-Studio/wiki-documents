@@ -12,7 +12,7 @@ last_update:
 
 # Home Assistant
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/Home_Assistant_Seeed.jpg" style={{width:1000, height:'auto'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/Home_Assistant_Seeed.jpg" style={{width:1000, height:'auto'}}/></div> -->
 
 <br /> 
 
