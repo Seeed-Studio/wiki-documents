@@ -236,7 +236,7 @@ Now that we have our library installed and the firmware burned. we can now run s
 
 ### Demo 1 Human Detection with Seeed Studio XIAO nRF52840 / Seeeduino / Arduino
 
-In this demo, we will detect human face and count how many people the module detects on both <a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank"><span>Seeed Studio XIAO nRF52840 Sense</span></a> and Seeeduino V4.2 (Arduino UNO). Meanwhile, Seeed Studio provives a [website](https://files.seeedstudio.com/grove_ai_vision/index.html) to display what the module sees.
+In this demo, we will detect human face and count how many people the module detects on both <a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank"><span>Seeed Studio XIAO nRF52840 Sense</span></a> and Seeeduino V4.2 (Arduino UNO). Meanwhile, Seeed Studio provives a [website](https://vision-ai-demo.seeed.cn/) to display what the module sees.
 
 #### Materials Required
 
@@ -357,11 +357,11 @@ void loop()
 }
 ```
 
-Open the serial monitor and set baud rate as 115200 and the result of people detection should be showed continuously. Meanwhile, the image that is captured by the module also will display on the [website](https://files.seeedstudio.com/grove_ai_vision/index.html). The successful ongong output should be like:
+Open the serial monitor and set baud rate as 115200 and the result of people detection should be showed continuously. Meanwhile, the image that is captured by the module also will display on the [website](https://vision-ai-demo.seeed.cn/). The successful ongong output should be like:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI12.png" style={{width:400, height:'auto'}}/></div>
 
-On the display [website](https://files.seeedstudio.com/grove_ai_vision/index.html), you can see that two faces are framed with dual number. Number 0 means the human face that module detected, and the other number means the confidence.
+On the display [website](https://vision-ai-demo.seeed.cn/), you can see that two faces are framed with dual number. Number 0 means the human face that module detected, and the other number means the confidence.
 
 :::note
 Not all browsers support the display of Vision AI results. Please refer to the table below for the support of each major browser.
@@ -372,7 +372,7 @@ Not all browsers support the display of Vision AI results. Please refer to the t
 :::
 
 
-## Customize Trainning Model
+## About Models
 
 The Seeed Studio has provided pre-trained people detected model and will provide more models in the foreseeable future. You can directly use them to quickly get to know AI camera.
 
@@ -380,22 +380,38 @@ You can find our firmware and models for Grove Vision AI at the following locati
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Firware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Model</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
-</div>
+</div><br />
 
-- **People Detected Model**
+### Default Firmware: People Detected Model
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI20.png" style={{width:800, height:'auto'}}/></div>
 
-- If you want to customize your own firmware, you can refer to <a href="https://github.com/Seeed-Studio/yolov5-swift" target="_blank"><span>here</span></a> which is powered by YOLOV5.
+### More Models
 
-  Or refer to [the tutorial here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-Grove-Vision-AI/) and train your own model to suit your needs.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/2.png" style={{width:800, height:'auto'}}/></div>
+
+We are continuously maintaining and updating more useful models, so you can keep an eye on this repository.
+
+:::tip
+Typically, model files are in **UF2** format and have a suffix in the format **pre_num**.
+:::
+
+### Custom Models
+
+If you want to customize your own model, you can refer to <a href="https://github.com/Seeed-Studio/yolov5-swift" target="_blank"><span>here</span></a> which is powered by YOLOV5.
+
+Or refer to [the tutorial here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-Grove-Vision-AI/) and train your own model to suit your needs.
 
 
-## Burn Model file into the Module
+## Replacement of new models
 
 The training models are all represented as ".uf2" file, which is what we need.
+
+:::tip
+Typically, model files are in **UF2** format and have a suffix in the format **pre_num**.
+:::
 
 - **Step 1**. Connect module to the host PC with a Type-C cable and **double click** BOOT button on the module.
 
@@ -405,43 +421,110 @@ The training models are all represented as ".uf2" file, which is what we need.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/19.jpg" style={{width:300, height:'auto'}}/></div>
 
-- **Step 2**. Re-flash the factory firmware
+- **Step 2**. Please copy the Model `.uf2` file to the GROVEAI disk to complete the firmware flash.
 
-:::caution
-In general, we do not need to reflash the factory firmware unless your device is always not working properly. For more details, please read the **[Restore Factory Firmware](#restore-factory-firmware)**. If your device is working properly, skip this step.
-:::
-
-- **Step 3**. Please copy the Model `.uf2` file to the GROVEAI disk to complete the firmware flash.
-
-  If you need to flash the factory firmware, copy the factory firmware to the GROVEAI first, then reconnect the Vision AI and finally flash the model firmware.
-
-  If you only need to flash the model firmware, just copy the model firmware directly into GROVEAI.
-
-  We can see that Work LED on the module flash in speed, that means the process is ongoing. After the disk disapper, the process of burnning firmware is finished.
+We can see that Work LED on the module flash in speed, that means the process is ongoing. After the disk disapper, the process of burnning firmware is finished.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI10.png" style={{width:600, height:'auto'}}/></div>
 
-## Restore Factory Firmware
+- **Step 3**. Please modify the program according to the model you are using.
 
-:::tip
-If ever uploading firmware on the latest version of Windows 11 has rendered the device unusable, you may need to refer to the section on [Update BootLoader](#update-bootloader).
+In the demo we provided, inside the `setup()` function is initializing the model by calling `ai.begin()`.
+
+```cpp
+if (ai.begin(ALGO_OBJECT_DETECTION, (MODEL_INDEX_T)0x11))
+```
+
+`ai.begin()` has two arguments, the type of model and the model number. The numbering is generally different for different models. That is to say, the model number of the sample program only applies to the **People Detected Model**, if you use other models, then the number is no longer `0x11`.
+
+:::caution
+If you encounter the error message "Algo begin failed." when using the demo, you should first check if the model number is wrong.
 :::
 
-It is important to note that not all properly functioning Grove Vision AI's require flash factory firmware. If you are not experiencing the conditions described below, please do not flash the factory firmware lightly.
+So how do you determine the model number? Our R&D engineers have provided a detailed introductory document for developers to read.
 
-If you ever do it wrong and upload the wrong firmware to Grove Vision AI, it may cause Grove Vision AI not to work properly. The method to determine if Grove Vision AI is working properly is as follows.
+- [Protocol](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/blob/master/Protocol.md)
 
-Connect the Grove Vision AI to your computer via the USB-C port. Then use a serial port monitoring tool to select the port where the added Grove Vision AI is located. The baud rate is set to **921600**.
+But if you don't want to read such a long article, a simple way to determine this is to keep an eye out for the last number of the model in Release, which is the number we need.
 
-Then press Reset on the Grove Vison AI and if the device is working properly, then you should see the following message.
+For example, for the model **pfld_meter_pre_5.uf2**, the last digit is **5**, which means the model number is **5**. You can use 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI22.png" style={{width:800, height:'auto'}}/></div>
+```cpp
+ai.begin(ALGO_OBJECT_DETECTION, (MODEL_INDEX_T)5)
+```
 
-If you can see the above serial message, then it proves that your device is fine and there is no need to restore the factory firmware, you can try to re-upload your model firmware to continue the later tasks.
+directly, or rewrite it as hexadecimal 
 
-If you don't get any messages from your serial port, then it might be a case where we need to restore the factory firmware.
+```cpp
+ai.begin(ALGO_ OBJECT_DETECTION, (MODEL_INDEX_T)0x05)
+```
+
+
+## Exception Processing
+
+If you have encountered an unforeseen situation in actual use, or if you have used it incorrectly and have experienced an outcome other than medical treatment. Please refer to the following steps to troubleshoot and attempt to repair the module.
+
+### Part 1. Check BootLoader Version
+
+You may need to detect if the BootLoader version needs to be updated to decide if the update should be done. The method to check the version number is as follows.
+
+Connect the Grove Vision AI to your computer via the USB-C port. Then double-click the Boot button until the computer comes up with a USB flash drive named GROVEAI.
+
+Open this disk drive and open the **INFO_UF2.TXT** file.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/3.png" style={{width:1000, height:'auto'}}/></div>
+
+As shown in the figure, you can see the Bootloader version number on the first line. As of September 2023, the latest BootLoader version number should be **v2.0.1**. If you also check the same version number, then in principle you don't need to do the next second step.
+
+### Part 2. Update BootLoader
+
+If your Grove Vision AI is not recognized by your computer and behaves as no port number, then you may need to update the BootLoader.
+
+- **Step 1**. Download the BootLoader `.bin` file on the windows PC.
+
+Please download the latest version of the BootLoader file in the link below. The name of the BootLoader is usually `tinyuf2-grove_vision_ai_vx.x.x.bin`.
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/tinyuf2-grove_vision_ai_v2.0.1.bin">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download BootLoader</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+This is the firmware that controls the BL702 chip that builds the connection between the computer and the Himax chip. The latest version of the BootLoader has now fixed the problem of Vision AI not being able to be recognised by Mac and Linux.
+
+- **Step 2**. Download and open [**BLDevCube.exe**](https://files.seeedstudio.com/wiki/Grove_AI_Module/BouffaloLabDevCube-1.6.6-win32.rar) software, select **BL702/704/706**, and then click **Finish**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI01a.png" style={{width:300, height:'auto'}}/></div>
+
+- **Step 3**. Click **View**, choose **MCU** first. Move to **Image file**, click **Browse** and select the firmware you just downloaded.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/1.png" style={{width:800, height:'auto'}}/></div>
+
+- **Step 4**. Make sure there are no other devices connect to the PC. Then hold the Boot button on the module, connect it to the PC.
+
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI05.png" style={{width:600, height:'auto'}}/></div>
+
+  We can see 5V light and 3.3V LED light are lighting on the back of the module, then loose the Boot button.
+
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI06.png" style={{width:600, height:'auto'}}/></div>
+
+- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then click **Creat&Program**, wait for the process done.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png" style={{width:800, height:'auto'}}/></div>
+
+- **Step 6**. It is recommended to check the Vision AI version number again to ensure that the latest BootLoader is being used.
+
+### Part 3. Restore Factory Firmware
+
+:::tip
+If ever uploading firmware on the latest version of Windows 11 has rendered the device unusable, you may need to refer to the section on [Update BootLoader](#step-2-update-bootloader).
+:::
 
 - **Step 1**. Erase firmware
+
+:::caution
+You can try to skip this step and copy the firmware directly to the Vision AI, if it works, then you don't have to erase the original firmware. If it fails, you may need to erase the firmware.
+:::
 
 Please use the Arduino motherboard you have, the Seeed Studio XIAO series, Wio Terminal or Seeeduino are recommended. Connect the Grove Vision AI to the motherboard via the IIC interface.
 
@@ -483,7 +566,7 @@ void loop()
 }
 ```
 
-Open the serial monitor and if you see the following message, then it proves that the firmware erase was successful. We can go to the next step.
+Open the serial monitor, enter some random characters, such as "a", click send, then the erase operation will start to execute. If you see the following message, then it proves that the firmware erase was successful. We can go to the next step.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI23.png" style={{width:800, height:'auto'}}/></div>
 
@@ -491,72 +574,29 @@ Open the serial monitor and if you see the following message, then it proves tha
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI21.png" style={{width:800, height:'auto'}}/></div>
 
-  There will be a "GROVEAI" disk pop up.
+There will be a "GROVEAI" disk pop up.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/19.jpg" style={{width:300, height:'auto'}}/></div>
 
 - **Step 3**. Download the factory firmware.
 
-Please download the latest version of the factory firmware in the link below. The name of the factory firmware is usually `grove_ai_without_crc_vxx.uf2`.
+Please download the latest version of the factory firmware in the link below. The name of the factory firmware is usually `grove_ai_without_crc_vxx.uf2` or `grove_ai_vxx.uf2`.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Firware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
-</div>
+</div><br />
+
+:::tip
+As of September 2023, the latest firmware version is **grove_ai_v02-00.uf2**.
+:::
 
 - **Step 4**. Flash the factory firmware.
 
-  Copy the `grove_ai_without_crc_vxx.uf2` file to the GROVEAI disk to complete the firmware flash.
+Copy the `grove_ai_without_crc_vxx.uf2` or `grove_ai_vxx.uf2` file to the GROVEAI disk to complete the firmware flash.
 
-## Check BootLoader Version
-
-You may need to detect if the BootLoader version needs to be updated to decide if the update should be done. The method to check the version number is as follows.
-
-Connect the Grove Vision AI to your computer via the USB-C port. Then use a serial port monitoring tool to select the port where the added Grove Vision AI is located. The baud rate is set to **921600**.
-
-Then press Reset on the Grove Vison AI and if the device is working properly, then you should see the following message.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI22.png" style={{width:800, height:'auto'}}/></div>
-
-You can see that the third line of the picture is the version number of BootLoader. If it is the same as the version number we released, you don't need to update BootLoader.
-
-## Update BootLoader
-
-If your Grove Vision AI is not recognized by your computer and behaves as no port number, then you may need to update the BootLoader.
-
-- **Step 1**. Download the BootLoader `.bin` file on the windows PC.
-
-Please download the latest version of the BootLoader file in the link below. The name of the BootLoader is usually `tinyuf2-grove_vision_ai_vx.x.x.bin`.
-
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Firware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div>
-
-This is the firmware that controls the BL702 chip that builds the connection between the computer and the Himax chip. The latest version of the BootLoader has now fixed the problem of Vision AI not being able to be recognised by Mac and Linux.
-
-- **Step 2**. Download and open [**BLDevCube.exe**](https://files.seeedstudio.com/wiki/Grove_AI_Module/BouffaloLabDevCube-1.6.6-win32.rar) software, select **BL702/704/706**, and then click **Finish**.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI01a.png" style={{width:300, height:'auto'}}/></div>
-
-- **Step 3**. Click **View**, choose **MCU** first. Move to **Image file**, click **Browse** and select the firmware you just downloaded.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/1.png" style={{width:800, height:'auto'}}/></div>
-
-- **Step 4**. Make sure there are no other devices connect to the PC. Then hold the Boot button on the module, connect it to the PC.
-
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI05.png" style={{width:600, height:'auto'}}/></div>
-
-  We can see 5V light and 3.3V LED light are lighting on the back of the module, then loose the Boot button.
-
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI06.png" style={{width:600, height:'auto'}}/></div>
-
-- **Step 5**. Back to the BLDevCube software on the PC, click **Refresh** and choose a proper port. Then click **Open UART** and set **Chip Erase** to **True**, then click **Creat&Program**, wait for the process done.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_AI_Module/GroveAI07.png" style={{width:800, height:'auto'}}/></div>
-
+The above three parts need to be judged and executed in turn, when the above steps are executed, you can do your operation again, if there are still problems, please contact our technical support team.
 
 ## Trouble Shooting
 
@@ -573,7 +613,35 @@ This is the firmware that controls the BL702 chip that builds the connection bet
 
 ### Q3: Why does Grove Vision AI suddenly get an "Algo begin failed." error one day while in use?
 
-If this is the error, then it is likely that there is a problem with your model, please re-upload your model based on the [Burn Model file into the Module](#burn-model-file-into-the-module) section and retry again.
+In the demo we provided, inside the `setup()` function is initializing the model by calling `ai.begin()`.
+
+```cpp
+if (ai.begin(ALGO_OBJECT_DETECTION, (MODEL_INDEX_T)0x11))
+```
+
+`ai.begin()` has two arguments, the type of model and the model number. The numbering is generally different for different models. That is to say, the model number of the sample program only applies to the **People Detected Model**, if you use other models, then the number is no longer `0x11`.
+
+:::caution
+If you encounter the error message "Algo begin failed." when using the demo, you should first check if the model number is wrong.
+:::
+
+So how do you determine the model number? Our R&D engineers have provided a detailed introductory document for developers to read.
+
+- [Protocol](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/blob/master/Protocol.md)
+
+But if you don't want to read such a long article, a simple way to determine this is to keep an eye out for the last number of the model in Release, which is the number we need.
+
+For example, for the model **pfld_meter_pre_5.uf2**, the last digit is **5**, which means the model number is **5**. You can use 
+
+```cpp
+ai.begin(ALGO_OBJECT_DETECTION, (MODEL_INDEX_T)5)
+```
+
+directly, or rewrite it as hexadecimal 
+
+```cpp
+ai.begin(ALGO_ OBJECT_DETECTION, (MODEL_INDEX_T)0x05)
+```
 
 ## Tech Support & Product Discussion
 
