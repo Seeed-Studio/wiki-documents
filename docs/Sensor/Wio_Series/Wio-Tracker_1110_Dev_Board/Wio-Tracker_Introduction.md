@@ -11,20 +11,15 @@ last_update:
   author: Jessie
 ---
 
-## Introduction
 
 The Wio Tracker 1110 Dev Board is based on Wio-WM1110 Wireless Module and integrates Semtech's LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform. 
 
-With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is conveniently equipped with an onboard branded antenna for easy deployment. It supports the Arduino development environment and LoRaWAN protocol stack, making it ideal for tracking-related IoT projects.
+With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is conveniently equipped with an onboard antenna for easy deployment. It supports the Arduino development environment and LoRaWAN protocol stack, making it ideal for tracking-related IoT projects.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/1-114993136-Wio-Tracker-1110-Dev-Board-45font.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/1-114993136-Wio-Tracker-1110-Dev-Board-45font.jpg" alt="pir" width={600} height="auto" /></p>
 
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> KICKSTARTER </font></span></strong>
-    </a>
-</div>
+
 
 ## Feature
 
@@ -48,10 +43,56 @@ The Wio-Tracker 1110 Dev Board integrates Multi-Purpose Radio Front-End Targetin
 
 In addition to the onboard TH sensor and 3-axis Accelerometer, it features a series of peripheral interfaces, and supports ADC/UART and IIC transmission protocols, which can be connected to 400+ Grove modules, enabling easy upgrades to smarter solutions.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/perphi.jpeg" alt="pir" width={800} height="auto" /></p>
+
 
 ### Develop User Applications
 
 Wio-Tracker 1110 Dev Board is a fully open-source powerful IoT development platform, compatible with Arduino IDE,  It comes with a set of example applications and code samples to help you get started smoothly and quickly.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/arduino.png" alt="pir" width={800} height="auto" /></p>
+
 ### Hardware Overview
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hardware.png" alt="pir" width={800} height="auto" /></p>
+
+### Specification
+
+|LoRa® and Positioning (Semtech LR1110)||
+|----|----|
+|LoRaWAN® Protocol|V1.0.3|
+|Frequency Plan|863~928MHz|
+|Sensitivity|	-125dBm @125K/SF7<br/>-141dBm @125K/SF12|
+|Output Power|20dBm max @LoRa®|
+|Positioning Technology|GNSS(GPS/BeiDou), WiFi Sniffer|
+|Range|2~10km(Depends on antenna and environment)|
+
+
+|Bluetooth(Nordic nRF52840)||
+|----|----|
+|Bluetooth|Bluetooth 5.3|
+|Flash|1MB|
+|RAM|256KB|
+|Protocol|Bluetooth LE, Bluetooth mesh, Thread, Zigbee, <br/>802.15.4, ANT and 2.4 GHz proprietary stacks|
+|Output Power|6dBm max @Bluetooth|
+
+
+|General||
+|----|----|
+|Voltage - supply|5V (USB 2.0 Type-C)<br/>Battery Connector-4.5V|
+|RFIO	|GNSS Antenna Connector x 1<br/>LoRa Antenna Connector x 1|
+|USB type-C|	x 1|
+|Grove Interface|ADC x 1<br/>I2C x 1<br/>UART x 1<br/>Digital x 3|
+|Button|USER-Configurable button<br/>RESET-Reset|
+
+|Onboard Sensors||
+|----|----|
+|TH Sensor (SHT41)||
+|Range|Accuracy|
+|Temperature|-40~125°C<br/>0.2°C|
+|Humidity|0~100%RH<br/>±1.8%RH|
+|3-Axis Accelerometer(LIS3DHTR)||
+|Range|±2g, 4g, 8g, 16g|
+|Bandwidth|0.5Hz ~ 625Hz|
+|Sensitivity (LSB/g)|1000 (±2g) ~ 83 (±16g)|
 

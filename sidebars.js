@@ -1553,6 +1553,14 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Wio Tracker 1110 Dev Board',
+              items: [
+                'Sensor/Wio_Series/Wio-Tracker_1110_Dev_Board/Wio-Tracker_Introduction',
+                'Sensor/Wio_Series/Wio-Tracker_1110_Dev_Board/Get_Started',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Wio WM1110 Dev Kit',
               items: [
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',

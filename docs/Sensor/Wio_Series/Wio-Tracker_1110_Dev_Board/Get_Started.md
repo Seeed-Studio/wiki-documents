@@ -1,6 +1,6 @@
 ---
 description: Get_Started_with_Wio-Tracker 1110 
-title: Get Started with Wio-Tracker 1110 Dev Board
+title: Get Started
 keywords:
 - Tracker
 - Wio
@@ -34,6 +34,17 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 #### Add Seeed Board
 
+Navigate to `Arduino IDE` -> `Preferences`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-add.png" alt="pir" width={800} height="auto" /></p>
+
+Copy this URL to `Additional boards manager URLs`, then click `OK`.
+
+```cpp
+https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/copy-urls.png" alt="pir" width={800} height="auto" /></p>
 
 Click `Board Manager`.
 Search `Seeed nRF52 Boards` and install it.
