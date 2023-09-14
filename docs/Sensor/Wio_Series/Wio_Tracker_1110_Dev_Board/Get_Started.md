@@ -82,6 +82,14 @@ REGION = SMTC_MODEM_REGION_'Region'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/set-region.png" alt="pir" width={800} height="auto" /></p>
 
+Then click `Upload` to upload the program.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/program.png" alt="pir" width={800} height="auto" /></p>
+
+You can also use the `Serial Monitor` button in the upper right corner to check the logs.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/port-monitor.png" alt="pir" width={800} height="auto" /></p>
+
 ### Bind the dev board
 
 Download the SenseCAP Mate APP.
