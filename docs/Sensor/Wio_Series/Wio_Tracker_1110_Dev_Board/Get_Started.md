@@ -112,8 +112,17 @@ Go back to the `Device` page, then you will see the dev board has been bound.
 ### Add Grove Sensor(optional)
 
 
-In addition to the onboard sensors, the possibilities of the Wio-tracker 1110 dev board are endless. The Grove sensor in the following list is also allowed to access the dev board and is automatically recognised.
+In addition to the onboard sensors, the possibilities of the Wio-tracker 1110 dev board are endless. We also provide examples for connecting the following sensors
 
+|**Example**|**Description**|
+| - | - |
+|Grove/sht4x_gain|Air temperature and humidity sensor-Onboard|
+|Grove/lis3dhtr_gain|3-Axis Accelerometer-Onboard|
+|Grove/dsp310_gain|Grove High Precision barometer Sensor|
+|Grove/sgp41_index_gain|Grove Air Quality Sensor|
+|Grove/si1151_gain|Grove Sunlight Sensor|
+|Grove/sound_adc_gain|Grove Sound Sensor|
+|Grove/ultrasonic_distance_gain|Grove Ultrasonic Ranger Sensor|
 
 
 <table align="center">
