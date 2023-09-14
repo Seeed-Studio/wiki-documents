@@ -37,6 +37,13 @@
   font-weight: bold;
 }
 
+.navbar_dorp_items{
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 0.92rem;
+  font-weight: bold;
+}
+
 .navbar_doc_right_items{
   display: inline-block;
   color: var(--text-color);
