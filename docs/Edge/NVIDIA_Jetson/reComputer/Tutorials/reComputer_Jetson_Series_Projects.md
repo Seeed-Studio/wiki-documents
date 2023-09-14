@@ -1,7 +1,7 @@
 ---
 description: Jetson Community Projects
 title: Jetson Community Projects
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_Projects
 last_update:
   date: 01/04/2023

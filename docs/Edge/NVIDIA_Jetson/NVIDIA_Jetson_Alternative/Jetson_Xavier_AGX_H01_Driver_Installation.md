@@ -3,7 +3,7 @@ description: Flash Jetpack on Jetson Xavier AGX H01
 title: Jetson Xavier AGX H01
 tags:
    - NVIDIA Jetson H01
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_Xavier_AGX_H01_Driver_Installation
 last_update:
   date: 01/05/2023

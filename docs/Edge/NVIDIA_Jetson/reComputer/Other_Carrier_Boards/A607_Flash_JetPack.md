@@ -4,7 +4,7 @@ title: A607 Carrier Board
 keywords:
   - Edge
   - reComputer
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_A607_Flash_System
 last_update:
   date: 04/17/2023

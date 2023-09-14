@@ -2,7 +2,7 @@
 description: GPS-Modules-Selection-Guide
 title: GPS Modules Selection Guide
 
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /GPS-Modules-Selection-Guide
 last_update:
   date: 02/01/2023

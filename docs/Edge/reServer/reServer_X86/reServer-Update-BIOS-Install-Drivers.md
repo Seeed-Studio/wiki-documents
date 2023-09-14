@@ -1,7 +1,7 @@
 ---
 description: reServer X86
 title: Upgrading BIOS and Installing Drivers
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reServer-Update-BIOS-Install-Drivers
 last_update:
   date: 01/03/2023

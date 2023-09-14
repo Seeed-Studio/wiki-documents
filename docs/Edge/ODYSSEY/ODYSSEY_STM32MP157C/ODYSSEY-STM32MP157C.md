@@ -1,7 +1,7 @@
 ---
 description: ODYSSEY – STM32MP157C
 title: ODYSSEY – STM32MP157C
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-STM32MP157C
 last_update:
   date: 01/03/2023

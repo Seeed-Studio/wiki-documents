@@ -3,7 +3,7 @@ description: Flash Jetpack on A205E Mini PC
 title: A205E Mini PC
 tags:
   - Mini PC Jetpack Flash
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_A205E_Flash_System
 last_update:
   date: 01/05/2023
