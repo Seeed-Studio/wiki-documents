@@ -224,8 +224,24 @@ const config = {
             type: 'doc',
             docId: 'CloudnChain',
             position: 'left',
-            label: 'Cloud & Chain',
+            label: 'Cloud',
             className: 'navbar_doc_items',
+          },
+          {
+            type: 'dropdown',
+            label: 'Topics',
+            position: 'left',
+            className: 'navbar_dorp_items',
+            items: [
+              {
+                label: 'TinyML',
+                to: '/tinyml_topic',
+              },
+              {
+                label: 'Home Assistant',
+                to: '/home_assistant_topic',
+              },
+            ],
           },
 
           // {
@@ -233,6 +249,7 @@ const config = {
           //   className: 'navbar_doc_items',
           //   to: '/Contribution',
           // },
+
           {
             to: 'https://www.seeedstudio.com/',
             label: 'Bazaar 🛍️',
