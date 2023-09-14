@@ -3,7 +3,7 @@ description: How to Customize Home Assistant on ODYSSEY
 title: How to Customize Home Assistant
 tags:
   - Home Assistant
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-Home-Assistant-Customize
 last_update:
   date: 01/03/2023

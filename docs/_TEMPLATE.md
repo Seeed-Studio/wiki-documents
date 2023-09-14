@@ -4,7 +4,7 @@ title: A doc with tags
 keywords:
   - docs
   - docusaurus
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /template
 last_update:
   date: 11/21/2022

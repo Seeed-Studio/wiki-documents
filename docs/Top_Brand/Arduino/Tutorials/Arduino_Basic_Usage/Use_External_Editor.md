@@ -2,7 +2,7 @@
 description: Use External Editor
 title: Use External Editor
 
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Use_External_Editor
 last_update:
   date: 02/01/2023

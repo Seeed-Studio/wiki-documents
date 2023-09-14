@@ -3,7 +3,7 @@ description: Connect Grove Modules to Home Assistant using ESPHome on ODYSSEY an
 title: Connect Grove Modules to Home Assistant using ESPHome
 tags:
   - Home Assistant
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Connect-Grove-to-Home-Assistant-ESPHome
 last_update:
   date: 03/16/2023
