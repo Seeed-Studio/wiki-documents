@@ -1555,8 +1555,8 @@ const sidebars = {
               type: 'category',
               label: 'Wio Tracker 1110 Dev Board',
               items: [
-                'Sensor/Wio_Series/Wio-Tracker_1110_Dev_Board/Wio-Tracker_Introduction',
-                'Sensor/Wio_Series/Wio-Tracker_1110_Dev_Board/Get_Started',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
               ],
             },
             {
