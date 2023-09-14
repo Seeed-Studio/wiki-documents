@@ -12,46 +12,6 @@ last_update:
 ---
 
 
-## Factory Firmware
-
-SenseCAP provides a factory firmware for developer to 
-
-The factory firmware provides the following example<br/>
-* LoRaWAN® 
-
-|**Example**|**Description**|
-| - | - |
-|LoRaWAN\SenseCAP\sensecap_ble_uplink|1|
-|LoRaWAN\SenseCAP\sensecap_gnss_uplink|1|
-|LoRaWAN\SenseCAP\sensecap_wifi_uplink|.|
-|LoRaWAN\TheThingsNetwork\ttn_geolocation_gnss|*|
-|LoRaWAN\TheThingsNetwork\ttn_uplink|1|
-
-* Grove
-
-|**Example**|**Description**|
-| - | - |
-|Grove/adc_gain|Analog A4(pin28)voltage adc value (1s)|
-|Grove/dps310_gain||
-|Grove/iic_scan||
-|Grove/lis3dhtr_gain||
-|Grove/p25q32h_flash_speedtest||
-|Grove/relay_control||
-|GGrove/sgp41_index_gain||
-|Grove/sht4x_gain||
-|Grove/si1151_gain||
-|Grove/sound_adc_gain||
-|Grove/ultrasonic_distance_gain||
-
-
-* BLE
-
-|**Example**|**Description**|
-| - | - |
-|BLE/ble_scan_advanced||
-
-
-
 ## Preparation
 
 * Wio-Tracker 1110 Dev Board
@@ -84,7 +44,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 ### Firmware Overview
 
-<p style={{textAlign: 'center'}}><img src="https://github.com/SeeedWenzy/Wio_Tracker_1110_Examples/blob/60e815a9f4ae39b1be2dedd7621b418824df4e1d/media/1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/rm-overview.png" alt="pir" width={800} height="auto" /></p>
 
 
 #### Add Seeed Board
@@ -105,3 +65,6 @@ The port should be like 'Serial Port(USB)'
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/port.png" alt="pir" width={800} height="auto" /></p>
+
+
+### Install Library
