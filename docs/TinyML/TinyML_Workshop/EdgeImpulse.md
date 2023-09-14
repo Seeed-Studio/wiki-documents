@@ -16,7 +16,7 @@ Edge Impulse is the leading development platform for machine learning on edge de
 
 * With Edge Impulse, software developers, engineers, and domain experts can solve real problems using machine learning on edge devices without a Ph.D. or advanced embedded engineering skills. From getting started to MLOps in production, Edge Impulse provides maximum efficiency and speed on a wide range of hardware from MCUs to CPUs.  
 
-<div style={{textAlign:'center'}}><img src="https://workshop.makergram.com/assets/images/EI_homepage-012378fc3425daa13ba327cd01dda3bd.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/MakerGram/workshops/main/docs/tiny-ml-workshop/img/edgeimpulse/EI_homepage.png" style={{width:1000, height:'auto'}}/></div> 
 
 With EdgeImpulse we can 
 * Collect dataset from the device direclty 
@@ -79,6 +79,17 @@ We're also moving forward in parallel with making some Edge Impulse exported Ard
 It's like a generic arduino library, we need to install it on Arduino IDE first and use the example code to run the Demo. 
 
 ### Speech keyword recognition (Yes & No) Arduino Library
+
+#### Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+### How it's works!
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div> 
+
+
 #### Step 1. Downaload KWS Demo libray 
 Download [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)  library as .Zip. 
 
