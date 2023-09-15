@@ -2,8 +2,10 @@
 description: Tango with Home Assistant and SenseCAP Sensors
 title: Tango with Home Assistant and SenseCAP Sensors
 keywords:
-- Tracker
-- Wio
+- LoRaWAN
+- Sensor
+- Home Assistant
+- SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /home_assistant_with_sensecap_lorawan_sensors
 last_update:
