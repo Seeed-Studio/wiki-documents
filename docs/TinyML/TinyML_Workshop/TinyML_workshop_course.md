@@ -49,7 +49,7 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/edgelab" class="getting_started_label2">1.1 SenseCraft Model Assistant</a>
+          <a href= "/sscma" class="getting_started_label2">1.1 SenseCraft Model Assistant</a>
           <br/>Use pre-made tinyML models and experiment quickly.
       </div>
   </div>
