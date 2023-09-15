@@ -703,8 +703,13 @@ const sidebars = {
               label: 'SenseCAP LoRaWAN Sensor',
 
               items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
-
+                {
+                  type: 'category',
+                  label: 'Applications',
+                  items: [
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/Applications/Home_Assistant_X_SenseCAP_LoRaWAN_Sensors',
+                  ],
+                },  
                 {
                   type: 'category',
                   label: 'SenseCAP S210X Series',
