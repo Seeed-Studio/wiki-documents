@@ -21,7 +21,7 @@ We are honored to present our endeavors on Home Assistant Platform. Hence, in th
 ## Table of Contents
 
 - [**What is Home Assistant**](#jump1)
-- [**Boards** for Home Assistant](#jump2)
+- [**Devices** for Home Assistant](#jump2)
   <!-- - [**reTerminal - HMI facility**](#jump5)
   - [**reTerminal DM - Industrial grade HMI**](#jump6)
   - [**Home Assistant Yellow - Home Assistant Official**](#jump5)
@@ -45,7 +45,7 @@ Home Assistant is a free and open-source software that serves as a central contr
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Home-Assistant/1.png" style={{width:1000, height:'auto'}}/></div>
 
-## <span id="jump2"> Boards for Home Assistant </span>
+## <span id="jump2"> Devices for Home Assistant </span>
 
 ### reTerminal - HMI facility
 
@@ -107,7 +107,7 @@ Home Assistant is a free and open-source software that serves as a central contr
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102060185.jpg" style={{width:800, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_vertical">
-        <br /><font size={"3"}><strong>Ready-to-use Home Assistant Board</strong></font>
+        <br /><font size={"3"}><strong>Ready-to-use Home Assistant Device</strong></font>
         <font size={"2"}>One software controls the integration with over 1,000 different devices and services, enhancing home automation experience</font>
         <br /><font size={"3"}><strong>High Expandability</strong></font>
         <font size={"2"}> Up to 8 GB RAM and 32GB eMMC, also equip M.2 slot supporting NVMe SSD hard drive</font>
