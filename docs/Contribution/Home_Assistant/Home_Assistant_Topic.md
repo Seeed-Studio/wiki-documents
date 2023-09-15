@@ -16,7 +16,7 @@ last_update:
 
 <br /> 
 
-We are honored to present our endeavors on Home Assistant Platform. Hence, in this wiki, you will find the products related to the Home Assistant and tons of projects base on it to achieve high-privacy, versatilited, sustainable home automation.
+We are honored to present our endeavors on Home Assistant Platform. Hence, in this wiki, you will find the products related to the Home Assistant and tons of projects base on it to achieve high-privacy, versatile, sustainable home automation.
 
 ## Table of Contents
 
