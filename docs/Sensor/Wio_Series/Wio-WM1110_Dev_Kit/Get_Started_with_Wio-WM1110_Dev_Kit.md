@@ -231,6 +231,7 @@ Click "Register end device".
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device.png" alt="pir" width={800} height="auto" /></p>
 
 Set the following parameters:
+
 **Frequency Plan**: Select the appropriate Frequency plan for the target region
 
 **LoRaWAN version**:LoRaWAN Specification 1.0.3
