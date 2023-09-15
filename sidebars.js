@@ -3032,7 +3032,8 @@ const sidebars = {
         id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
       },
       items: [
-           'TinyML/TinyML_Workshop/Edgelab',
+          //  'TinyML/TinyML_Workshop/Edgelab',
+          'TinyML/TinyML_Workshop/sscma',
            'TinyML/TinyML_Workshop/EdgeImpulse',
           //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
           'TinyML/TinyML_Workshop/Key_Word_Spotting',
