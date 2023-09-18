@@ -702,9 +702,7 @@ const sidebars = {
               type: 'category',
               label: 'SenseCAP LoRaWAN Sensor',
 
-              items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
-
+              items: [  
                 {
                   type: 'category',
                   label: 'SenseCAP S210X Series',
@@ -805,6 +803,14 @@ const sidebars = {
           ],
         },
         "Sensor/SenseCAP/SenseCAP_Decoder",
+        {
+          type: 'category',
+          label: 'Applications',
+          items: [
+            'Sensor/SenseCAP/Applications/Home_Assistant_X_SenseCAP_LoRaWAN_Sensors',
+            'Sensor/SenseCAP/Applications/Develop_an_Industrial_LoRaWAN_Sensor',
+          ],
+        },
       ],
     },
 
@@ -1554,6 +1560,14 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Wio Tracker 1110 Dev Board',
+              items: [
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Wio WM1110 Dev Kit',
               items: [
                 'Sensor/Wio_Series/Wio-WM1110_Dev_Kit/Introduction',
@@ -2176,6 +2190,7 @@ const sidebars = {
               items: [
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_Edgeimpulse',
               ],
             },
           ],
@@ -3003,6 +3018,7 @@ const sidebars = {
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
       ],
     },
+    'Contribution/Home_Assistant/Home_Assistant_Topic',
 
     {
       type: 'doc',
@@ -3011,7 +3027,7 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
-    'TinyML/TinyML_Workshop',
+    // 'TinyML/TinyML_Workshop',
 
     {
       type: 'category',
@@ -3023,7 +3039,8 @@ const sidebars = {
         id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
       },
       items: [
-           'TinyML/TinyML_Workshop/Edgelab',
+          //  'TinyML/TinyML_Workshop/Edgelab',
+          'TinyML/TinyML_Workshop/sscma',
            'TinyML/TinyML_Workshop/EdgeImpulse',
           //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
           'TinyML/TinyML_Workshop/Key_Word_Spotting',

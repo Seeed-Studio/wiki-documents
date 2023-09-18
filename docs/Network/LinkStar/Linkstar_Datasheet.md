@@ -1,7 +1,7 @@
 ---
 description: ODYSSEY - X86J4105
 title: LinkStar Introduction
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Linkstar_Datasheet
 last_update:
   date: 01/03/2023

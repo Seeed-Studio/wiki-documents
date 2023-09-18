@@ -3,7 +3,7 @@ description: Getting Started with Home Assistant on ODYSSEY-X86
 title: Getting Started with Home Assistant
 tags:
   - Home Assistant
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-X86-Home-Assistant
 last_update:
   date: 03/16/2023

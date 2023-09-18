@@ -2,7 +2,7 @@
 description: How to install an Arduino library
 title: How to install an Arduino library
 
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How_to_install_Arduino_Library
 last_update:
   date: 02/02/2023

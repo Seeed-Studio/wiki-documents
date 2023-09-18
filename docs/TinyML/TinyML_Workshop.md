@@ -10,13 +10,15 @@ last_update:
   author: MengDu
 ---
 
+:::info
+This page has been updated. Please check [the new version](https://wiki.seeedstudio.com/tinyml_workshop_course_new/) for better experience.
+:::
 
 # TinyML Workshop Course
 
 Welcome to the course on using SenseCraft Model Assistant and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize SenseCraft Model Assistant and Edge Impulse platforms effectively. We will explore the functionalities of SenseCraft Model Assistant, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/3.jpg" style={{width:1000, height:'auto'}}/></div>
-
 
 Throughout this course, we will delve into the usage of SenseCraft Model Assistant(Beta) as a powerful online development environment. It will guide you through data management, preprocessing, feature engineering, model design, training, evaluation, and optimization. We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
 

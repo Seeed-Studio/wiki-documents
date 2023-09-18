@@ -15,6 +15,7 @@ last_update:
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/yolov5.gif" /></center>
 
+
 ## Introduction
 
 Object detection, a fundamental aspect of computer vision, involves identifying objects within images and finds application in numerous fields such as surveillance, healthcare, and self-driving cars. Single-Stage Object Detectors are a specific category of models that simplify this task by directly predicting object categories and bounding box coordinates without requiring an initial region proposal stage. This streamlined approach is especially valuable in real-time applications. Notably, the YOLO (You Only Look Once) family of models exemplifies this efficiency, offering fast object detection with compromising accuracy.
@@ -58,7 +59,7 @@ We recommend installing the latest version of Raspberry Pi 64 bit OS from their 
 
 ## Choose a data set from Roboflow
 
-- **Step 1** Please access the provided website and navigate to the dataset of your choice using the search function. [Ultralytics](https://ultralytics.com/) 
+- **Step 1** Please access the provided website and navigate to the dataset of your choice using the search function. [Roboflow](https://universe.roboflow.com/) 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/roboflow1.PNG" alt="pir" width="800" height="auto"/></p>
 

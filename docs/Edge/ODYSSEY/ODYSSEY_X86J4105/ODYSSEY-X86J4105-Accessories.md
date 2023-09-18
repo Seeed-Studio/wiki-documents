@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: Adding Accessories
 
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-X86J4105-Accessories
 last_update:
   date: 01/03/2023

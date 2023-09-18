@@ -29,7 +29,7 @@ In this wiki, we will teach you how to train your own meter model for your speci
 We will be using the following software technologies in this wiki
 
 - [Roboflow](https://roboflow.com) - for annotating
-- [SenseCraft Model Assistant](https://seeed-studio.github.io/EdgeLab/) - for training
+- [SenseCraft Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process) - for training
 - [TensorFlow Lite](https://www.tensorflow.org/lite) - for inferencing
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/11.png"/></div>

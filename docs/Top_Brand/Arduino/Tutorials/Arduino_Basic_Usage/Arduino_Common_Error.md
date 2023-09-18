@@ -2,7 +2,7 @@
 description: Arduino Common Error
 title: Arduino Common Error
 
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino_Common_Error
 last_update:
   date: 02/01/2023
