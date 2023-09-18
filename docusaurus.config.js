@@ -276,11 +276,17 @@ const config = {
             className: 'navbar_doc_right_items',
           },
           {
+            href: 'https://sensecraftma.seeed.cc/',
+            position: 'right',
+            className: 'header-SSCMA',
+          },
+          {
             href: 'https://github.com/Seeed-Studio/wiki-documents',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
+
           // {
           //   type: 'localeDropdown',
           //   position: 'right',
