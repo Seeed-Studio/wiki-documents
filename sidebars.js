@@ -945,6 +945,7 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO-BLE-sidewalk',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO_BLE_HA',
               ],
             },
           ],
