@@ -1,11 +1,11 @@
 ---
 description: Weekly Wiki
-title: Weekly Wiki
+title: Weekly Wiki ✨
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/11/2023
+  date: 09/18/2023
   author: Matthew
 ---
 
@@ -17,30 +17,61 @@ This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Eac
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 11st and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 18th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Train your own data set with Yolov5 and Deploy on reTerminal DM](https://wiki.seeedstudio.com/reTerminal-DM-Yolo5/)
+### [Home Assistant Topic Page](https://wiki.seeedstudio.com/home_assistant_topic/)
 
-This streamlined approach is especially valuable in real-time applications. Notably, the YOLO (You Only Look Once) family of models exemplifies this efficiency, offering fast object detection with compromising accuracy.
+We are honored to present our endeavors on Home Assistant Platform. Hence, in this wiki, you will find the products related to the Home Assistant and tons of projects base on it to achieve high-privacy, versatile, sustainable home automation.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/yolov5.gif" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/Home_Assistant_Seeed.jpg" /></div>
 
-### [SenseCAP M2 Multi-Platform Gateway LNS Configuration](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/)
+### [Object detection with Edge Impulse and reTerminal](https://wiki.seeedstudio.com/reTerminal_ML_Edgeimpulse/)
 
-We have added LNS Configuration for SenseCAP M2 Multi-Platform Gateway.
+In today's digital landscape, the integration of edge AI and IoT (Internet of Things) technologies has opened up exciting possibilities for developers and enthusiasts. One such powerful platform that simplifies the creation of machine learning models for edge devices is Edge Impulse. In this step-by-step guide, we will walk you through the process of installing Edge Impulse on your reTerminal device and creating a local object detection solution.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ReTerminal/ML/edgeimpulse.gif" /></div>
+
+### [Wio Tracker 1110 Introduction](https://wiki.seeedstudio.com/Wio-Tracker_Introduction/)
+
+The Wio Tracker 1110 Dev Board is based on Wio-WM1110 Wireless Module and integrates Semtech's LR1110 LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/1-114993136-Wio-Tracker-1110-Dev-Board-45font.jpg" /></div>
+
+### [Getting Started with Wio Tracker 1110](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/)
+
+In this tutorial, we will guide users to quickly set up the Wio Tracker 1110 development board through the factory firmware, connect it to SenseCAP cloud and check the data.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/por.png" /></div>
+
+### [5 Minutes to Develop an Industrial LoRaWAN Sensor](https://wiki.seeedstudio.com/develop_an_industrial_lorawan_sensor/)
+
+Let's quickly build an industrial-grade LoRaWAN wireless sensor for direct commercial use in 5 minutes.
+
+<div align="center"><img width={600} src="https://hackster.imgix.net/uploads/attachments/1520150/image_MoA2h9E8lq.png?auto=compress%2Cformat&w=740&h=555&fit=max" /></div>
+
+### [Tango with Home Assistant and SenseCAP Sensors](https://wiki.seeedstudio.com/home_assistant_with_sensecap_lorawan_sensors/)
+
+This is the wiki regarding SenseCAP sensors applying Home Assistant.
 
 ## Existed Wiki Updated
 
-### [Grove - LCD RGB Backlight Hardware Updated](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/)
-
-Grove-LCD RGB Backlight has been updated from V4.0 to V5.0, and the code has also been upgraded for compatibility. Now you can use the new compatible code to drive the more powerful Grove-LCD RGB Backlight V5.0.
-
 ## The Efforts of Contributor✨
 
-- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35179519) with us!
+### [Connect XIAO nRF52840 Sense to Home Assistant(CircuitPython)](https://wiki.seeedstudio.com/XIAO_BLE_HA/)
+
+Thanks our contributor Bruno to do this assisgnment! Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979237).
+
+In this wiki, we will show how to use the Bluetooth 5.0 BLE capabilities of the Seeed Studio XIAO nRF52840 with the Seeed Studio Grove Temperature & Humidity Sensor (DHT20) to broadcast measurements of temperature and humidity to Home Assistant using the BTHome protocol.
+
+We will be using **CircuitPython** for the code.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/17_HA.png" /></div>
+
+### [TinyML Workshop Course Updated](https://wiki.seeedstudio.com/tinyml_workshop_course_new/)
+
+Thanks for our Contributor Salman to change the contents since we updated the SenseCraft Model Assistant.
 
 ## Past Weekly wiki
 
@@ -67,3 +98,4 @@ Grove-LCD RGB Backlight has been updated from V4.0 to V5.0, and the code has als
 - [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
 - [weekly wiki on 8.21st](/Seeed_Elderly/weekly_wiki/wiki821)
 - [weekly wiki on 8.28th](/Seeed_Elderly/weekly_wiki/wiki828)
+- [weekly wiki on 9.11st](/Seeed_Elderly/weekly_wiki/wiki911)
