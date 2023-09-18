@@ -22,11 +22,9 @@ SenseCAP decoder is used for decoding the LoRaWAN messages sent from the SenseCA
 
 
 
-**✨✨✨SenseCAP T1000 Tracker is LIVE on KICKSTARTER now!!!✨✨✨**
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-t1000-track-what-you-care-with-no-boundaries?ref=discovery">
-            <strong><span><font color={'FFFFFF'} size={"4"}> KICKSTARTER </font></span></strong>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️ </font></span></strong>
     </a>
 </div>
 
@@ -7782,7 +7780,7 @@ We take The Things Stack as an example, please configure the decoder according t
 
 ##### Configure the Payload Decoder
 
-- Please navigate to the `Payload Formats` tab of your device.
+- Navigate to the `Payload Formats` tab of your device.
 - Select `Custom` for `Payload Format`
 - Copy and paste the whole contents of `decoder.js` to the `decoder` textarea.
 - Click `save payload functions`
