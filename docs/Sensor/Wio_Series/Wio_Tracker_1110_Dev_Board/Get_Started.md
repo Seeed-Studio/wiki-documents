@@ -42,7 +42,7 @@ Go back to the `Device` page, then you will see the dev board has been bound.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/bind-done.png" alt="pir" width={300} height="auto" /></p>
 
 :::info Note
-The default region of the factory firmware is EU868, to configure the region, please check [here](https://wiki.seeedstudio.com/configure_param_for_wio_tracker)
+The default region of the factory firmware is EU868, to configure the region, please check [here](https://wiki.seeedstudio.com/configure_param_for_wio_tracker/#Region-configuration)
 :::
 
 
