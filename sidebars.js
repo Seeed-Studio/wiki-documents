@@ -1564,6 +1564,13 @@ const sidebars = {
               items: [
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
+                {
+                  type: 'category',
+                  label: 'Development Tutorial',
+                  items: [
+                    'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Development_Tutorial/Setup_toolchain',
+                  ],
+                },
               ],
             },
             {
