@@ -10,11 +10,7 @@ last_update:
 ---
 
 
-Overview
-========
 
-**General Information**
-=======================
 
 **What Is SenseCAP M2 Data Only**
 
@@ -26,9 +22,14 @@ As a gateway supporting the Helium LongFi network, it could help you build the l
 
 SenseCAP M2 is now providing US915 and EU868 versions with FCC and CE certificates. And it will have more frequency band versions and corresponding certificates available for different countries and regions in the near future.
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/07/09.png)
+<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/09.png" alt="pir" width={600} height="auto" /></p>
 
-* * *
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5339.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 
 **Features**
 ============
