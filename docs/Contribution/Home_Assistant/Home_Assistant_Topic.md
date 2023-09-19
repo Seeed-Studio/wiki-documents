@@ -100,6 +100,34 @@ Home Assistant is a free and open-source software that serves as a central contr
 
 <br />
 
+### Home Assistant Green - Home Assistant Official
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113110024--home-assistant-green-45font.jpg" style={{width:800, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_vertical">
+        <br /><font size={"3"}><strong>Ready-to-use Home Assistant device</strong></font>
+        <font size={"2"}>Plug in power and network cables to play, the mobile apps ensure a seamless setup</font>
+        <br /><font size={"3"}><strong>One system to control everything</strong></font>
+        <font size={"2"}>Combine your Apple, Google, Samsung, and Amazon devices with support for hundreds of thousands of other smart devices, which are all in one APP</font>
+        <br /><font size={"3"}><strong>Data localization</strong></font>
+        <font size={"2"}>Safeguard data privacy through exclusive control and local storage by default</font>
+        <br /><font size={"3"}><strong>Extensive and sustainable Home Assistant ecosystem</strong></font>
+        <font size={"2"}>Support Home Assistant SkyConnect for Zigbee/Thread, Home Assistant Cloud for voice assistants, as well as third-party accessories to support other smart standards</font>
+        <br /><font size={"3"}><strong>Improved every month by open source</strong></font>
+    </div>
+</div>
+
+<br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://green.home-assistant.io/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Page</font></span></strong></a>
+</div>
+
+<br />
+
 ### Home Assistant Yellow - Home Assistant Official
 
 <div class="all_container">
@@ -376,6 +404,34 @@ Home Assistant is built by one of the largest communities of open-source develop
 </div>
 
 ### <span id="jump7"> Collaborate more Home Assistant Projects with us! </span>
+
+<br />
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">Connecting with XIAO nRF52840 Sense to Home Assistant using BTHome(CircuitPython)</th>
+      <th class="table-trnobg">Develop Matter on SenseCAP Indicator for Home Assistant application</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/17_HA.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-matter-7.jpg" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td class="table-trnobg"><font size={"1"}> Credit to </font><strong><font color={'8DC215'} size={"1"}>Bruno Santos</font></strong><br /><font size={"1"}> we will show how to use the Bluetooth 5.0 BLE capabilities of the Seeed Studio XIAO nRF52840 with the Seeed Studio Grove Temperature & Humidity Sensor (DHT20) to broadcast measurements of temperature and humidity to Home Assistant using the BTHome protocol.<br /> We will be using CircuitPython for the code. </font></td>
+      <td class="table-trnobg"><font size={"1"}> Credit to </font><strong><font color={'8DC215'} size={"1"}>Tim</font></strong><br /><font size={"1"}> This is a demo of how to use the Matter SDK to build enriched applications for your SenseCAP Indicator. The SenseCAP Indicator has a touchscreen which makes it capable of acting as a powerful home automation interface. Matter makes the process easier than ever as it takes away a lot of the complicated aspects of configuration. With the help of Matter's SDK one can quickly scan a QR code and configure their device onto their home network.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_BLE_HA/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_Matter"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+---
 
 
 - We are excited to announce the upcoming release of a series of assignments focused on the home assistant as part of our [Contributor Program](https://wiki.seeedstudio.com/Getting_Started/#-contributor-program).
