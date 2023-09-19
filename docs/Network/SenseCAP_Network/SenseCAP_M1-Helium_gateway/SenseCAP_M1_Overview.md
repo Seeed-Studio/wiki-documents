@@ -9,15 +9,19 @@ last_update:
   author: Matthew
 ---
 
-**General Information**
-=======================
+
 
 **SenseCAP M1** is a high-performing, ready-to-use **LoRaWAN indoor gateway** connected to the **Helium LongFi™ Network.**  
 It is based on Raspberry Pi 4 and embedded with a WM1302/WM1303 (Semtech SX1302/SX1303) LoRa concentrator. It provides built-in BLE, which helps you set up the device in a few simple steps and supports connecting to the internet via Wi-Fi or Ethernet.
 
-![SenseCAP M1 Gateway](https://www.sensecapmx.com/wp-content/uploads/2022/06/sensecapm1.webp)
+<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/06/sensecapm1.webp" alt="pir" width={600} height="auto" /></p>
 
-* * *
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-EU868-p-5022.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 
 **Features**
 ============
