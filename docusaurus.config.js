@@ -276,7 +276,7 @@ const config = {
             className: 'navbar_doc_right_items',
           },
           {
-            href: 'https://sensecraftma.seeed.cc/',
+            href: 'https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process',
             position: 'right',
             className: 'header-SSCMA',
           },
