@@ -951,6 +951,7 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO-BLE-sidewalk',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO_BLE_HA',
               ],
             },
           ],
@@ -1038,6 +1039,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
           ],
         },
         {
@@ -1563,6 +1565,13 @@ const sidebars = {
               items: [
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
+                {
+                  type: 'category',
+                  label: 'Development Tutorial',
+                  items: [
+                    'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Development_Tutorial/Setup_toolchain',
+                  ],
+                },
               ],
             },
             {
@@ -2655,16 +2664,17 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP Hotspot APP',
       items: [
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Introduction',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
       ],
     },
     {
