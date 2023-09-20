@@ -1,8 +1,6 @@
 ---
 description: Create a doc page with rich content.
-title: GPIO Expander for XIAO
-keywords:
-- gpio expand
+title: IO Expander for XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /io_expander_for_xiao
 last_update:
@@ -18,19 +16,19 @@ last_update:
     </a>
 </div><br />
 
-The GPIO Expander for XIAO is a state-of-the-art expansion board designed to enhance the capabilities of the Seeed Studio XIAO series. Powered by the MCP23017 chip, this board offers an additional 16 GPIO pins, allowing users to expand their projects without constraints. Whether you're a hobbyist looking to experiment with more components or a professional seeking a reliable GPIO expansion solution, this board is tailored to meet your needs. Its compatibility with the XIAO series ensures seamless integration, making your development process smoother and more efficient.
+The IO Expander for XIAO is a state-of-the-art expansion board designed to enhance the capabilities of the Seeed Studio XIAO series. Powered by the MCP23017 chip, this board offers an additional 16 IO pins, allowing users to expand their projects without constraints. Whether you're a hobbyist looking to experiment with more components or a professional seeking a reliable IO expansion solution, this board is tailored to meet your needs. Its compatibility with the XIAO series ensures seamless integration, making your development process smoother and more efficient.
 
 ## Features
 
 - Seamless Integration with XIAO: Designed to work perfectly with the Seeed Studio XIAO series.
-- 16 Additional GPIO Pins: Powered by the MCP23017, it provides 16 extra GPIO pins for your projects.
+- 16 Additional IO Pins: Powered by the MCP23017, it provides 16 extra IO pins for your projects.
 - I2C Interface with Configurable Address: Default I2C address is 0x21, but can be configured to 0x20.
 - Robust Design: Built with high-quality materials to ensure longevity and reliability.
 
 ## Specification
 
 - Chip: MCP23017
-- Number of GPIO Pins: 16
+- Number of IO Pins: 16
 - Communication Protocol: I2C
 - Default I2C Address: 0x21 (Configurable to 0x20)
 - Operating Voltage: 3.3V
@@ -38,13 +36,13 @@ The GPIO Expander for XIAO is a state-of-the-art expansion board designed to enh
 
 ## Applications
 
-The GPIO Expander for XIAO is versatile and can be used in a multitude of applications, including but not limited to:
+The IO Expander for XIAO is versatile and can be used in a multitude of applications, including but not limited to:
 
 - Home Automation Systems: Expand the number of devices you can control in your smart home setup.
-- Robotics: Add more sensors, motors, or other components to your robot without running out of GPIO pins.
+- Robotics: Add more sensors, motors, or other components to your robot without running out of IO pins.
 - Gaming Consoles: Design custom controllers or other peripherals with a plethora of buttons and switches.
 - Industrial Control Systems: Manage more devices and sensors in your industrial setup.
-- Educational Projects: Teach students about microcontrollers and electronics without being limited by the number of GPIO pins.
+- Educational Projects: Teach students about microcontrollers and electronics without being limited by the number of IO pins.
 
 ## Hardware Overview
 
@@ -64,7 +62,7 @@ By default, when you use the Expansion Board, the Additional Output Pads in area
 
 ### 2. MCP23017 Chip
 
-This is the main I/O expander chip, providing an additional 16 GPIOs.
+This is the main I/O expander chip, providing an additional 16 IOs.
 
 ### 3. J2 Pads
 
@@ -72,7 +70,7 @@ This pad is for selecting the I2C address. The default address is 0x21. If you s
 
 ### 4. MCP23017 Output Pins
 
-These are the output pins from the MCP23017 chip. Each pin's definition can be seen on the back of the board. They range from PA0 to PB7, providing a total of 16 GPIOs.
+These are the output pins from the MCP23017 chip. Each pin's definition can be seen on the back of the board. They range from PA0 to PB7, providing a total of 16 IOs.
 
 ### 5. Grove Pads
 
@@ -194,19 +192,19 @@ When using single pin operations such as _pinMode(pinId, dir)_ or _digitalRead(p
 
 ## FAQ
 
-### 1. Why isn't my GPIO Expander for XIAO responding?
+### 1. Why isn't my IO Expander for XIAO responding?
 
 **Answer**: Ensure that the XIAO module is correctly plugged into the expansion board. Also, check if the necessary libraries are installed and the correct board and port are selected in the Arduino IDE.
 
-### 2. Can I use the GPIO Expander for XIAO with other microcontrollers?
+### 2. Can I use the IO Expander for XIAO with other microcontrollers?
 
-**Answer**: Yes, the GPIO Expander is designed primarily for the XIAO module, but it can be used with other microcontrollers that support I2C communication. You might need to adjust the code and connections accordingly.
+**Answer**: Yes, the IO Expander is designed primarily for the XIAO module, but it can be used with other microcontrollers that support I2C communication. You might need to adjust the code and connections accordingly.
 
-### 3. How do I change the I2C address of the MCP23017 chip on the GPIO Expander for XIAO?
+### 3. How do I change the I2C address of the MCP23017 chip on the IO Expander for XIAO?
 
 **Answer**: The default I2C address is set to 0x21. If you want to change it to 0x20, there's a jumper labeled "J2" on the board. You'll need to solder the J2 jumper to change the address.
 
-### 4. I'm getting noise or erratic behavior on my GPIO pins. What could be the cause?
+### 4. I'm getting noise or erratic behavior on my IO pins. What could be the cause?
 
 **Answer**: Ensure that the connections are secure and there's no interference. Using pull-up or pull-down resistors can help stabilize the input pins. Also, ensure that the power supply is stable and can provide the necessary current for all connected devices.
 
@@ -231,19 +229,5 @@ Thank you for choosing our products! We are here to provide you with different s
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
