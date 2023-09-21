@@ -2259,6 +2259,7 @@ const sidebars = {
           label: 'Embedded_ML',
           items: [
             'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
+            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
           ],
         },
       ],
