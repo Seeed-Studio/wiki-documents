@@ -683,7 +683,7 @@ const sidebars = {
        'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
                ],
           }, 
-            
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
         
