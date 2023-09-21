@@ -119,7 +119,7 @@ To validate the effectiveness of your model, it's essential to reserve a portion
 
 ### Create a impulse 
 
-In this tutorial, we've been working with 96x96 images, but it's important to note that Edge Impulse can handle other resolutions as long as the images are square. To configure this, follow these steps: First, go to **Create Impulse,** then set the **image width** and **image height** to your desired dimensions (e.g., 96). Next, choose **Fit shortest axis** as the **resize mode,** and add the **Images** and **Object Detection (Images)** blocks. Finally, click **Save Impulse** to apply these settings.
+In this tutorial, we've been working with 96x96 images, but it's important to note that Edge Impulse can handle other resolutions as long as the images are square. To configure this, follow these steps: First, go to **Create Impulse,** then set the **image width** and **image height** to your desired dimensions (e.g., 96,160 or 320). Next, choose **Fit shortest axis** as the **resize mode,** and add the **Images** and **Object Detection (Images)** blocks. Finally, click **Save Impulse** to apply these settings.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/impulse.PNG" /></center>
 
