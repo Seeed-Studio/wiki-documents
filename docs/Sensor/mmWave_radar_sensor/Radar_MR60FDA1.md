@@ -172,6 +172,7 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 | UART_MR60FDA1-230821.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/UART_MR60FDA1-230821.bin) |
 | UART_MR60FDA1-230728.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/UART_MR60FDA1-230728.bin) |
 | UART_MR60FDA1-230227.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60FDA1-230227.bin) |
+| UART_MR60FDA1-230915.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60FDA1-230915.bin) |
 
 :::caution
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
