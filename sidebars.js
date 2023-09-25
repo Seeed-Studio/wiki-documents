@@ -2268,6 +2268,7 @@ const sidebars = {
           label: 'Embedded_ML',
           items: [
             'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
+            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
           ],
         },
       ],
@@ -2386,6 +2387,7 @@ const sidebars = {
         // },
 
         'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
+        'Edge/NVIDIA_Jetson/reServer_Industrial_Getting_Started',
 
         {
           type: 'category',
