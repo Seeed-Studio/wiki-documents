@@ -35,7 +35,7 @@ Here are the detailed uploading steps.
 Use the code below and update the downloaded files.
 
 ```
-git checkout main
+git checkout docusaurus-version
 git pull
 ```
 

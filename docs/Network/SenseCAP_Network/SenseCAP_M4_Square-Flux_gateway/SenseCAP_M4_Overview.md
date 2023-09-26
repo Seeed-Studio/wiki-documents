@@ -9,17 +9,21 @@ last_update:
   author: Matthew
 ---
 
-Overview
-========
 
-**General Information**
-=======================
 
 **SenseCAP M4 Square** is a device designed to run multiple web 3.0 applications and help you build decentralized networks. It has excellent hardware features to support the extension of multiple applications while providing easy and friendly methods to deploy **CUMULUS FluxNode** and other **web 3.0 Apps** with SenseCAP Hotspot App.
 
 SenseCAP M4 Square runs at a Quad-core Intel® Celeron® J4125 and RP2040 co-processor, equipping dual 2.5GbE interfaces and multiple wireless connectivities, supporting 4K output, carrying sufficient storage capability, and equipment expandability.
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png)
+
+<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png" alt="pir" width={600} height="auto" /></p>
+
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M4-Sqaure-Bundle.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 
 **Features**
 ============

@@ -4,7 +4,7 @@ title: Jetson Mate
 keywords:
   - Edge
   - reComputer Carrier_Board_for_Jetson_Moudule
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson-Mate
 last_update:
   date: 01/05/2023

@@ -15,15 +15,45 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/19.jpg" style={{width:1000, height:'auto'}}/></div>
 
+## Introduction
+
 Seeed Studio is proud to be a part of the Amazon Sidewalk ecosystem partners, providing Sidewalk-enabled products and solutions that enable diverse IoT use-cases on the Sidewalk network.
 
-Amazon Sidewalk is a secure community network that uses Amazon Sidewalk Gateways (also called Sidewalk Bridges), such as compatible Amazon Echo and Ring devices, to provide cloud connectivity for IoT endpoint devices.
+Amazon Sidewalk is a secure wireless community network that uses Amazon Sidewalk Gateways (also called Sidewalk Bridges), such as compatible Amazon Echo and Ring devices, to provide cloud connectivity for IoT endpoint devices.
 
 Amazon Sidewalk enables low-bandwidth and long-range connectivity at home and beyond using Bluetooth Low Energy for short-distance communication and LoRa and FSK radio protocols at 900MHz frequencies to cover longer distances.  The Sidewalk Gateways share a small portion of the user’s internet bandwidth, which is then used to connect endpoints to the network. The strength of Amazon Sidewalk network increases with an increase in the number of gateways. Learn more about [Amazon Sidewalk](https://www.aboutamazon.com/news/devices/everything-you-need-to-know-about-amazon-sidewalk).
 
 :::note
 Amazon Sidewalk is currently available in the US. Developers are allowed to utilize the Sidewalk gateway functionality outside the U.S. solely for their Sidewalk-enabled endpoint development and testing purposes only. In addition, we recommend that you consult with your local regulatory bodies and verify if the gateway is permitted to operate its radio in your locale, as U.S. license-free band devices are only intended for development purposes.
 :::
+
+### Amazon Sidewalk’s differentiation
+
+What makes Sidewalk different than other networks that are available today:
+
+- **Persistent connectivity**
+
+    Amazon Sidewalk network is powered by millions of participating Amazon Echo and Ring devices as Amazon Sidewalk Bridges, to give cloud connectivity to IoT devices. This ensures persistent connectivity for devices that are outside the range of a home Wi-Fi network or that depend on a mobile app or proprietary gateway for a cloud connection.
+
+- **Connection versatility**
+
+    Amazon Sidewalk allows smart devices to communicate via wireless protocols such as Bluetooth Low Energy (BLE) and 900MHz/sub-GHz wave.  This offers a secure, reliable, and versatile connection to support a wide range of IoT use cases.
+
+- **Automatic device onboarding**
+
+    Amazon Sidewalk touchless registration process starts automatically when the Sidewalk gateway and an unregistered endpoint are in close range of each other. Customers can connect their Sidewalk-enabled devices to the Amazon Sidewalk network without any complex configuration. This ease of setup enhances the overall user experience.
+ 
+- **Cost**
+
+    Amazon Sidewalk is a free-to-connect network that offers coverage to more than 90% of the U.S. population. You don’t need to build or manage a separate network infrastructure, which helps in lowering capital investment and operational costs."
+
+- **Simple development experience**
+
+    Sidewalk-enabled devices come pre-provisioned with security certificates required to establish an encrypted connection with AWS IoT Core. This empowers you to create IoT solutions that rapidly connect your edge devices to AWS, facilitating a seamless plug-and-play setup experience for customers."
+
+- **Privacy and Security**
+
+    Amazon Sidewalk is designed with multiple privacy and security features to protect data traveling on the network, ensuring customer data and privacy protection.
 
 ## Seeed Studio XIAO nRF52840 for Amazon Sidewalk
 
@@ -146,31 +176,33 @@ Toolchain Manager is available from nRF Connect for Desktop, a cross-platform to
 
 **Step 1**. Download [nRF Connect for Desktop](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Connect-for-desktop) for your operating system.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/1.png" style={{width:1000, height:'auto'}}/></div>
 
 **Step 2**. Install and run the tool on your machine.
 
 **Step 3**. In the **APPS** section, click **Install** next to **Toolchain Manager**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/2.png" style={{width:600, height:'auto'}}/></div>
 
 **Step 4**. The app is installed on your machine, and the **Install** button changes to **Open**.
 
 **Step 5**. Open Toolchain Manager in nRF Connect for Desktop.
 
-Click **SETTINGS** in the navigation bar to specify where you want to install the nRF Connect SDK.
+Click **SDK ENVIRONMENTS** in the navigation bar to specify where you want to install the nRF Connect SDK.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/3.png" style={{width:600, height:'auto'}}/></div>
 
 **Step 6**. In SDK ENVIRONMENTS, click the **Install** button next to the **nRF Connect SDK version** that you want to install.
 
 The nRF Connect SDK version of your choice is installed on your machine. The Install button changes to **Open VS Code**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/3.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/30.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-The installation time is related to the network in your environment and the installation is expected to take about one hour.
-:::
+The installation time is related to the network in your environment and the installation is expected to take about **one hour**. The software may not do anything during this time, so please don't assume that there is a jam, you can check the progress of the installation through the log.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/4.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/4.png" style={{width:600, height:'auto'}}/></div>
+:::
 
 ### Downloading Amazon Sidewalk repository
 
@@ -181,7 +213,7 @@ After installation, there are two ways you can build an application:
 
 **Step 7**. For our project, the use of the command line is sufficient. Click the down arrow next to the version you installed, and select **Open bash**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/23.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/23.png" style={{width:600, height:'auto'}}/></div>
 
 Your directory structure should look as follows:
 
@@ -238,6 +270,8 @@ Update all repositories:
 west update
 ```
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/32.png" style={{width:800, height:'auto'}}/></div>
+
 Depending on your connection, the update might take some time. 
 
 Verify the new manifest path:
@@ -252,6 +286,8 @@ The path returned should be similar to the following format.
 > /path-to-ncs-folder/sidewalk/west.yml
 ```
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/31.png" style={{width:600, height:'auto'}}/></div>
+
 Please keep the Bash window open, we'll be back in a few minutes.
 
 ## Configure your AWS cloud services
@@ -262,21 +298,27 @@ The original tutorial for the Setting up your Amazon Sidewalk product can be rea
 
 Next we need to configure AWS Cloud Services so that the device is connected to your AWS account via a key.
 
-**Step 1**. Download the Amazon Sidewalk Sample IoT App Repository to your local machine.
+**Step 1**. Download the Amazon Sidewalk Sample IoT App Repository to your local machine. Open a new terminal (if you are using Windows, then open a new Powershell) and enter the following command to clone the repository.
 
 ```
 git clone https://github.com/aws-samples/aws-iot-core-for-amazon-sidewalk-sample-app.git
 ```
 
-**Step 2**. Create an AWS account (https://aws.amazon.com/).
-
-**Step 3**. Create user in AWS IAM service ([Creating IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console))
+**Step 2**. If you are using Amazon IoT Core for the first time, then you may need to sign up for a root account, or if you already have a root or IAM account, log in to the [Amazon IoT Core console](https://console.aws.amazon.com/iam).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/6.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 4**. Configure user's authentication credentials ([Managing access keys -> To create an access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey))
+**Step 3**. Get the account key.
 
-**Step 5**. Configure *credentials* file on your local machine ([Boto3 -> QuickStart -> Configuration](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#configuration))
+Once logged in, in the upper right corner of the console, click on your username and select Security credentials.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/33.png" style={{width:400, height:'auto'}}/></div>
+
+Then please create a new credential and save your **Access Key ID** and **Secret Access Key**. we will use them in later steps.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/34.png" style={{width:1000, height:'auto'}}/></div>
+
+**Step 4**. Configure *credentials* file on your local machine.
 
 :::note
 If you haven't already installed the [AWS CLI](https://aws.amazon.com/cli/), then you may need to install it.
@@ -303,18 +345,24 @@ region=us-east-1
 
 For the rest, we simply enter and leave the default.
 
-**Step 6**. Add user permissions to create resources:
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/35.png" style={{width:800, height:'auto'}}/></div>
 
-- If your user has Admin permissions, prerequisite is already satisfied, you can skip this point.
-    - Otherwise you need to assign your user a policy with proper permissions:
-        - Run `python aws-iot-core-for-amazon-sidewalk-sample-app/ApplicationServerDeployment/policies/generate_policy.py` script, which will generate personalized policy documents in *ApplicationServerDeployment/policies/* directory 
-        - go to the IAM console, create the policy using *DeployStackPolicy.json* content
-        - assign created policy to your user
-        Refer to the [IAM tutorial: Create and attach your first customer managed policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_managed-policies.html) for further guidance.
+**Step 5**. Add user permissions to create resources.
+
+If your user has Admin permissions, prerequisite is already satisfied, you can skip this point.
+
+:::note
+This tutorial uses an administrator rights account by default, if you are using an IAM account, please contact your administrator to enable specific permissions for your account.
+
+- Run `python aws-iot-core-for-amazon-sidewalk-sample-app/ApplicationServerDeployment/policies/generate_policy.py` script, which will generate personalized policy documents in *ApplicationServerDeployment/policies/* directory 
+- go to the IAM console, create the policy using *DeployStackPolicy.json* content
+- assign created policy to your user
+Refer to the [IAM tutorial: Create and attach your first customer managed policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_managed-policies.html) for further guidance.
 
 Make sure *Simplicity Commander* (for SiLabs) are present in your system PATH environment variable.
 
 Try calling `commander --version` in the terminal to make sure the Simplicity Commander is available.
+:::
 
 ## Run Amazon Sidewalk's BLE example
 
@@ -324,18 +372,18 @@ The original tutorial for the Template Bluetooth LE can be read [here](https://n
 
 ### Provisioning generation
 
-**Step 1**. Go to AWS IoT Core for Amazon Sidewalk tools:
+**Step 1**. Go to AWS IoT Core for Amazon Sidewalk tools. 
 
-```
-cd aws-iot-core-for-amazon-sidewalk-sample-app
-```
+Open the folder **aws-iot-core-for-amazon-sidewalk-sample-app** that we cloned down earlier.
 
-**Step 2**. Populate the `config.yaml` configuration file. Set **NORDIC** hardware platform:
+**Step 2**. Populate the `config.yaml` configuration file. Set **NORDIC** hardware platform.
+
+Open the file named **config.yaml** in the folder (use a suitable editor, e.g. VS Code). Paste the following and keep it.
 
 ```
 Config:
 AWS_PROFILE: default  # Name of your AWS profile from .aws/credentials
-DESTINATION_NAME: TemplateAppDestination  # Sidewalk destination used for uplink traffic routing
+DESTINATION_NAME: SensorAppDestination  # Sidewalk destination used for uplink traffic routing
 HARDWARE_PLATFORM: NORDIC  # Available values: NORDIC, TI, SILABS or ALL
 USERNAME: null
 PASSWORD: null
@@ -348,34 +396,35 @@ _Paths:
     SILABS_COMMANDER_TOOLS_DIR: null  # Not needed if Silabs Commander is already in system Path. Only needed for SILABS.
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/7.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/36.png" style={{width:1000, height:'auto'}}/></div>
 
 
 **Step 3**. Set up Python virtual environment for the provisioning tools:
 
 ```
+cd aws-iot-core-for-amazon-sidewalk-sample-app
 python -m pip install --user virtualenv
 python -m venv sample-app-env
 sample-app-env\Scripts\activate.bat
-python -m pip install --upgrade pip --user
-python -m pip install -r requirements.txt --user
+pip install pip==22.3.1
+python -m pip install -r requirements.txt
 python -m pip install pyjwt -t .\ApplicationServerDeployment\lambda\authLibs
 ```
 
 **Step 4**. At this point you may want to run a `helper env_check.py` script to sanity check your environment against the most common errors.
 
 ```
-python3 env_check.py
+python env_check.py
 ```
 
 If the message appears as shown, then your environment installation has gone well.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/8.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/37.png" style={{width:900, height:'auto'}}/></div>
 
 **Step 5**. Run the device provisioning scripts:
 
 ```
-python3 EdgeDeviceProvisioning/provision_sidewalk_end_device.py
+python EdgeDeviceProvisioning/provision_sidewalk_end_device.py
 ```
 
 You should see the following output:
@@ -383,6 +432,10 @@ You should see the following output:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/9.png" style={{width:800, height:'auto'}}/></div>
 
 We need the `Nordic_MFG.hex` file that has been generated here, which will eventually be flashed into the XIAO nRF52840.
+
+:::note
+**Nordic_MFG.hex** is the only credential for a device to establish a communication link with your Amazon IoT Core, which is different for each device or account.
+:::
 
 Your provisioning file is located in the `EdgeDeviceProvisioning` directory. Devices are grouped in the device profile’s subdirectory as shown in the structure below:
 
@@ -396,7 +449,7 @@ EdgeDeviceProvisioning \
     --  WirelessDevice.json
 ```
 
-Please copy it and save it in a place where you can easily find it.
+Please copy **Nordic_MFG.hex** files and save it in a place where you can easily find it.
 
 **Step 6**. Exit the Python virtual environment:
 
@@ -406,7 +459,9 @@ deactivate
 
 ### Add MQTT to destination
 
+:::tip
 For this part of the tutorial you can read the [official tutorials](https://nrfconnect.github.io/sdk-sidewalk/setting_up_sidewalk_environment/setting_up_sidewalk_product.html#add-mqtt-to-destination) provided by Sidewalk.
+:::
 
 ### Samples overview
 
@@ -471,6 +526,16 @@ LEDs represent the current state of the application (Not yet achieved):
 
 ### Preparing sample firmware
 
+This example uses the BLE example program provided by Amazon Sidewalk, the firmware of the hardware driver is common to all XIAO nRF52840, if you don't want to go through the steps in this section, you can also directly download the **merged.hex** file provided by us.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/merged.hex">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Download file</font></span></strong>
+    </a>
+</div><br />
+
+Here are the exact steps to follow.
+
 **Step 1**. Download the program written for the XIAO nRF52840 from Github.
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -495,9 +560,10 @@ So all you need to do is to overwrite all the files in the original file **nrf52
 
 **Step 3**. Let's go back to the Bash window of the nRF Connect SDK. Enter the following command to perform the firmware generation.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/38.png" style={{width:600, height:'auto'}}/></div>
+
 ```
 cd sidewalk/samples/template_ble/
-
 west build -b nrf52840dk_nrf52840
 ```
 
@@ -511,26 +577,44 @@ At this point we've got the sample firmware, which is named: `merged.hex` and st
 C:\ncs\v2.3.0\sidewalk\samples\template_ble\build\zephyr
 ```
 
-You can start by putting this file together with the Nordic_MFG.hex file we prepared earlier and we will use them together later.
+You can start by putting this file together with the **Nordic_MFG.hex** file we prepared earlier and we will use them together later.
 
 ### Flash firmware for XIAO nRF52840
 
-**Step 1**. Open nRF Connect for Desktop, find **Programmer** in the APPS and install it.
+**Step 1**. Open **nRF Connect for Desktop**, find **Programmer** in the APPS and install it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/11.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/11.png" style={{width:600, height:'auto'}}/></div>
 
 **Step 2**. Connect the XIAO nRF52840 via JLink.
 
 Please connect the XIAO nRF52840 to the JLink via the SWD interface.
 
-| Seeed Studio XIAO nRF52840 | JLink |
-| -------------------------- | ----- |
-| 3V3                        | Vterf |
-| GND                        | GND   |
-| SWDIO                      | SWIO  |
-| SWCLK                      | SWCK  |
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>Seeed Studio XIAO nRF52840</th>
+			<th>JLink (Non-educational version)</th>
+		</tr>
+		<tr>
+			<td align="center">3V3</td>
+			<td align="center">Vterf</td>
+		</tr>
+		<tr>
+			<td align="center">GND</td>
+			<td align="center">GND</td>
+		</tr>
+        <tr>
+			<td align="center">SWDIO</td>
+			<td align="center">SWIO</td>
+		</tr>
+        <tr>
+			<td align="center">SWCLK</td>
+			<td align="center">SWCK</td>
+		</tr>
+	</table>
+</div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/24.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/24.jpg" style={{width:600, height:'auto'}}/></div><br />
 
 If you do not intend to use the XIAO expansion board, then you can refer to the [XIAO nRF52840 Wiki](https://wiki.seeedstudio.com/XIAO_BLE#access-the-swd-pins-for-debugging-and-reflashing-bootloader) on the use of the SWD interface to additionally solder duplex wire to the JLink.
 
@@ -562,18 +646,76 @@ When you have finished you can click on **Read** to see if the shape of the memo
 
 In the preview of the example we have marked the pin positions to which the LEDs and Button are connected. Next we will need to use the four Grove LED Buttons, which not only allow us to control the work of the XIAO, but also show the different working states by means of the LEDs on the buttons.
 
-| Seeed Studio XIAO nRF52840 | LED  | Button  | USB to UART |
-| :------------------------: | :--: | :-----: | :---------: |
-| D0                         | LED1 |         |             |
-| D1                         |      | Button1 |             |
-| D2                         | LED2 |         |             |
-| D3                         |      | Button2 |             |   
-| D4                         | LED3 |         |             |
-| D5                         |      | Button3 |             |
-| D8                         | LED4 |         |             |
-| D9                         |      | Button4 |             |
-| RX (D7)                    |      |         | TX          |
-| TX (D6)                    |      |         | RX          |
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>Seeed Studio XIAO nRF52840</th>
+			<th>LED</th>
+            <th>Button</th>
+            <th>USB to UART</th>
+		</tr>
+		<tr>
+			<td align="center">D0</td>
+			<td align="center">LED1</td>
+            <td align="center"></td>
+            <td align="center"></td>
+		</tr>
+		<tr>
+			<td align="center">D1</td>
+			<td align="center"></td>
+            <td align="center">Button1</td>
+            <td align="center"></td>
+		</tr>
+        <tr>
+			<td align="center">D2</td>
+			<td align="center">LED2</td>
+            <td align="center"></td>
+            <td align="center"></td>
+		</tr>
+        <tr>
+			<td align="center">D3</td>
+			<td align="center"></td>
+            <td align="center">Button2</td>
+            <td align="center"></td>
+		</tr>
+        <tr>
+            <td align="center">D4</td>
+            <td align="center">LED3</td>
+            <td align="center"></td>
+            <td align="center"></td>
+        </tr>
+        <tr>
+            <td align="center">D5</td>
+            <td align="center"></td>
+            <td align="center">Button3</td>
+            <td align="center"></td>
+        </tr>
+        <tr>
+            <td align="center">D8</td>
+            <td align="center">LED4</td>
+            <td align="center"></td>
+            <td align="center"></td>
+        </tr>
+        <tr>
+            <td align="center">D9</td>
+            <td align="center"></td>
+            <td align="center">Button4</td>
+            <td align="center"></td>
+        </tr>
+        <tr>
+            <td align="center">RX (D7)</td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center">TX</td>
+        </tr>
+        <tr>
+            <td align="center">TX (D6)</td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center">RX</td>
+        </tr>
+    </table>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/25.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -581,6 +723,10 @@ The XIAO is powered via USB and then the XIAO nRF52840 is controlled using pushb
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/18.png" style={{width:600, height:'auto'}}/></div>
 
+## Resources
+
+- [Amazon Sidewalk specification](https://docs.sidewalk.amazon/specifications/)
+- [Amazon Sidewalk Privacy and Security whitepaper](https://m.media-amazon.com/images/G/01/sidewalk/final_privacy_security_whitepaper.pdf)
 
 ## Tech Support & Product Discussion
 

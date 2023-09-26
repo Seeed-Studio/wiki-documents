@@ -4,7 +4,7 @@ title: A603 Carrier Board
 keywords:
   - Edge
   - reComputer
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_A603_Flash_System
 last_update:
   date: 04/19/2023
@@ -133,7 +133,9 @@ Here it will ask whether to replace the files. Type **A** and press **ENTER** to
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A603/7.jpg" /></div>
 
-**Step 5:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 5:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting.
+
+Using `cd Linux_for_Tegra` first to ensure you are in the right directory.
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
@@ -150,7 +152,6 @@ sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop -
 #### NVMe SSD
 
 ```sh
-cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
@@ -159,7 +160,6 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 #### USB Flash drive
 
 ```sh
-cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal

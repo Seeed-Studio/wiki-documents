@@ -2,7 +2,7 @@
 description: Guide to use demos downloaded from Seeed's Github
 title: Use Demos from Seeed Studio's Github
 
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:
   date: 02/01/2023

@@ -659,7 +659,7 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
-<!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model]() -->
+- **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-1)
 
 <!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Certification files]() -->
 
@@ -679,7 +679,7 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 Sense pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
-<!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model]() -->
+- **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-sense-1)
 
 <!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Certification files]() -->
 

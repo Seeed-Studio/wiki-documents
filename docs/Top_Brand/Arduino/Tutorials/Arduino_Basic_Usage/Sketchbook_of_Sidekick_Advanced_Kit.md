@@ -2,7 +2,7 @@
 description: Sketchbook of Sidekick Advanced Kit
 title: Sketchbook of Sidekick Advanced Kit
 
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sketchbook_of_Sidekick_Advanced_Kit
 last_update:
   date: 02/02/2023

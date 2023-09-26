@@ -4,7 +4,7 @@ title: Building a smart home control centre around Home Assistant
 keywords:
   - LinkStar
   - Getting started
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /h68k-ha-esphome
 last_update:
   date: 2/1/2023

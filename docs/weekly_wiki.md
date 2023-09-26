@@ -1,11 +1,11 @@
 ---
 description: Weekly Wiki
-title: Weekly Wiki ✨
+title: Weekly Wiki
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/14/2023
+  date: 09/25/2023
   author: Matthew
 ---
 
@@ -17,51 +17,54 @@ This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Eac
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 14th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 25th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Using XIAO ESP32C3 to connect to SenseCAP AI for planting advice](https://wiki.seeedstudio.com/xiao_esp32c3_sensecapai/)
+### [Object detection on reTerminal DM using Edge Impulse](https://wiki.seeedstudio.com/reTerminal-DM-edgeimpulse/)
 
-During this time, Seeed Studio's SenseCAP platform developed and released new AI features. Currently the main features of SenseCAP AI are focused on providing constructive planting advice to growers, and will be updated with richer AI features in the near future!
+In today's digital landscape, the integration of edge AI and IoT (Internet of Things) technologies has opened up exciting possibilities for developers and enthusiasts. One such powerful platform that simplifies the creation of machine learning models for edge devices is Edge Impulse. In this step-by-step guide, we will walk you through the process of installing Edge Impulse on your reTerminal DM device and creating a local object detection solution.
 
-This tutorial, then, will bridge the XIAO ESP32 series with the SenseCAP platform, detailing how to use the XIAO and Grove series sensors to upload data to SenseCAP and get constructive suggestions from the AI based on these sensor values.
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/edgeimpulse.gif" /></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP_AI/1.png" style={{width:600, height:'auto'}}/></div>
+### [SenseCAP Hotspot APP](https://wiki.seeedstudio.com/SenseCAP_Hotspot_APP/)
 
-### [TinyML Workshop Course](https://wiki.seeedstudio.com/tinyml_workshop_course/)
+SenseCAP Hotspot APP is a powerful APP mainly used for data visualization and remote device management for SenseCAP MX Hotspot.
 
-Welcome to the course on using EdgeLab and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize EdgeLab and Edge Impulse platforms effectively. We will explore the functionalities of EdgeLab, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
+<div align="center"><img width={600} src="https://www.sensecapmx.com/wp-content/uploads/2022/07/sensecap-hotspot-app-1.png" /></div>
+
+### [Setup Your Toolchain(Arduino on Wio Tracker)](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker/)
+
+The Wio Tracker 1110 Dev Board leverages Arduino to enhance your coding experience, before you start development, need to set up your toolchain first.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-wio.png" /></div>
+
+### [reServer Industrial](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started)
+
+reServer Industrial features 2x 2.5" SATA HDD/ SSD drive bays to easily store hundreds of local video footages in a video analytics application. Also it enables multiple connectivity options including 5 RJ-45 Ethernet ports, 1 RS232/422/485, 4x Isolated DI/DO, 1x CAN, 4* USB3.1. Fanless design with versatile mounting options allows deployment from -20 to 60 ℃, which is ideal for more harsh environments and heavier loads.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reServer-Industrial/1.png" /></div>
+
+### [IO Expander for XIAO](https://wiki.seeedstudio.com/io_expander_for_xiao/)
+
+The Wio Tracker 1110 Dev Board is based on Wio-WM1110 Wireless Module and integrates Semtech's LR1110 LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/1.jpg" /></div>
+
+### [FAQ for SenseCAP Tracker](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/)
+
+These are the general questions for SenseCAP Tracker.
 
 ## Existed Wiki Updated
 
-### [Collection Page for NVIDIA Jetson devices by Seeed Studio](https://wiki.seeedstudio.com/NVIDIA_Jetson/)
+### [Seeed Studio XIAO nRF52840 on Amazon Sidewalk](https://wiki.seeedstudio.com/xiao-ble-sidewalk/)
 
-We are almost done updating the collection page for NVIDIA Jetson devices. And welcome [discuss it on our workflow and share your opinions](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30495963)!
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/NVIDIA_Jetson_collection_front.jpg" style={{width:600, height:'auto'}}/></div>
-
-### [Add grove example to Wio WM1110 dev kit](https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Hardware_Overview/#grove)
-
-There are 3 Grove interfaces in the DK, which can be connected to 400+ Grove modules, and supports ADC/UART and IIC transmission protocols.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/grove_pins.png" style={{width:600, height:'auto'}}/></div>
-
-### [Deploy YOLOV8 to Jetson in One Line of Code!](https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/#deploy-yolov8-to-jetson-in-one-line-of-code)
-
-After you flash the Jetson device with JetPack and SDK components, you can simply run the below commands to run YOLOv8 models. This will first download and install the necessary packages, dependencies, setup the environment and download pretrained models from YOLOv8 to perform object detection, Image segmentation, pose estimation and image classifications tasks!
+We have updated the contents regarding Sidewalk on Seeed Studio XIAO nRF52840, certificated by AWS official.
 
 ## The Efforts of Contributor✨
 
-### [CircuitPython for ESP32S3](https://wiki.seeedstudio.com/XIAO_ESP32S3_CircuitPython/)
-
-Thanks our contributor - Isaac for adding a wiki page about connecting XIAO ESP32S3 and Grove - OLED screen and displaying text on the screen, programming with CircuitPython.
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" /></div>
-
-### [Added missing accelerometer raw data sketch and steps](https://github.com/Seeed-Studio/wiki-documents/pull/487/files)
-
-Thanks our contributor - Salman for updating missing accelerometer raw data sketch and steps to the [Edge Impulse on XIAO nRF52840](https://wiki.seeedstudio.com/XIAOEI/) wiki.
+- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
 
 ## Past Weekly wiki
 
@@ -86,3 +89,7 @@ Thanks our contributor - Salman for updating missing accelerometer raw data sket
 - [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
 - [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
 - [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
+- [weekly wiki on 8.21st](/Seeed_Elderly/weekly_wiki/wiki821)
+- [weekly wiki on 8.28th](/Seeed_Elderly/weekly_wiki/wiki828)
+- [weekly wiki on 9.11st](/Seeed_Elderly/weekly_wiki/wiki911)
+- [weekly wiki on 9.18th](/Seeed_Elderly/weekly_wiki/wiki918)

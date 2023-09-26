@@ -187,27 +187,27 @@ Machine learning is a field of computer systems that aims to develop self-improv
 
 Our devices is now supported by a very large number of co-operative platforms and cases.
 
-- **Seeed Studio EdgeLab** is an open-source project focused on embedded AI.
+- **Seeed Studio SenseCraft Model Assistant** is an open-source project focused on embedded AI.
 - **Edge Impulse** is optimized for sensor-based applications.
 - **TensorFlow Lite** is lightweight and optimized for deep learning. 
 
 By supporting these platforms, we enable developers to easily build and deploy machine learning models on edge devices, from microcontrollers to single-board computers.
 
-### EdgeLab
+### SenseCraft Model Assistant
 
-EdgeLab is an open-source project focused on embedded AI, developed by Seeed Studio. It offers a range of optimized algorithms for real-world scenarios, making implementation more user-friendly and achieving faster and more accurate inference on embedded devices.
+SenseCraft Model Assistant is an open-source project focused on embedded AI, developed by Seeed Studio. It offers a range of optimized algorithms for real-world scenarios, making implementation more user-friendly and achieving faster and more accurate inference on embedded devices.
 
-EdgeLab currently supports anomaly detection, computer vision, and scenario-specific algorithms, with more to be added in the future.
+SenseCraft Model Assistant currently supports anomaly detection, computer vision, and scenario-specific algorithms, with more to be added in the future.
 
 <div class="button_tech_support_container">
-<a href="https://seeed-studio.github.io/EdgeLab/introduction/what_is_edgelab" class="button_edgelab"></a> 
+<a href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process" class="button_edgelab"></a> 
 </div>
 
 It provides a user-friendly platform for training on collected data and visualizing algorithm performance, and its models are designed to run on low-cost hardware such as ESP32, Arduino development boards, and Raspberry Pi.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/pfld_meter.gif" style={{width:700, height:'auto'}}/></div>
 
-EdgeLab also supports multiple formats for model export, including TensorFlow Lite, ONNX, and special formats like TensorRT and OpenVINO. With EdgeLab, developers can easily build and deploy machine learning models on a wide range of embedded devices.
+SenseCraft Model Assistant also supports multiple formats for model export, including TensorFlow Lite, ONNX, and special formats like TensorRT and OpenVINO. With SenseCraft Model Assistant, developers can easily build and deploy machine learning models on a wide range of embedded devices.
 
 
 ### Codecraft

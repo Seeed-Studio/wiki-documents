@@ -28,7 +28,7 @@ In this wiki, we will teach you how to train your own meter model for your speci
 We will be using the following software technologies in this wiki
 
 - [Roboflow](https://roboflow.com) - for annotating
-- [EdgeLab](https://seeed-studio.github.io/EdgeLab/) - for training
+- [SenseCraft Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process) - for training
 - [TensorFlow Lite](https://www.tensorflow.org/lite) - for inferencing
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/11.png"/></div>
@@ -37,7 +37,7 @@ We will be using the following software technologies in this wiki
 Now let's setup the software. The software setup for Windows, Linux and Intel Mac will be same whereas for M1/M2 Mac will be different.
 
 :::tip
-**What is EdgeLab?**Seeed Studio EdgeLab is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices.
+**What is SenseCraft Model Assistant?**Seeed Studio SenseCraft Model Assistant is an open-source project focused on embedded AI. We have optimized excellent algorithms from OpenMMLab for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices.
 :::
 
 ### Windows, Linux, Intel Mac
@@ -208,7 +208,7 @@ This will generate a code snippet that we will use later inside Google Colab tra
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/55.png"/></div>
 
-### Train using EdgeLab on Google Colab
+### Train using SenseCraft Model Assistant on Google Colab
 
 
 After we have chosen a public dataset, we need to train the dataset. Here we use a Google Colaboratory environment to perform training on the cloud. Furthermore, we use Roboflow api within Colab to easily download our dataset.
@@ -283,7 +283,7 @@ In addition to perform inference on the browser, we can also use the SenseCAP Ma
   ***Note:*** water_meter and digital_meter both identify the model name as user-define6 on the desktop and display digital_meter on the APP side. The model name identified by pfld_meter is user-define5, and Point_meter is displayed on the APP side. Users need to upload models according to their actual usage requirements during the deployment process
 
 
-- **Step 2.**  [Click here](https://seeed-studio.github.io/edgelab-web-app/) to open a preview window of the camera stream
+- **Step 2.**  [Click here](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace) to open a preview window of the camera stream
 
 
 - **Step 3.**  Click **Connect** button. Then you will see a pop up on the browser. Select **SenseCAP A1101** - Paired and click Connect
@@ -319,7 +319,7 @@ After completing the above steps, we will try to add our own A1101 to the device
 
 ## Resources
 
-- **[Web Page]** [EdgeLab Documentation](https://seeed-studio.github.io/EdgeLab/)
+- **[Web Page]** [SenseCraft Model Assistant Documentation](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace)
 
 - **[Web Page]** [Ultralytics HUB](https://ultralytics.com/hub)
 

@@ -76,3 +76,8 @@ When the device tries to connect to the network, the breathing light will flash.
 Then you can check the data on the TTS console.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_check.png" alt="pir" width={800} height="auto" /></p>
+
+
+## Resource
+
+[SenseCAP T1000 Tracker Decoder for TTN](https://github.com/Seeed-Solution/SenseCAP-Decoder/tree/main/T1000/TTN)

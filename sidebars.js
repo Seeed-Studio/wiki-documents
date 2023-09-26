@@ -397,8 +397,17 @@ const sidebars = {
             {
               type: 'category',
               label: 'LoRa',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: "Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version"
+              },
               items: [
-                'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/Grove_LoRa_E5_New_Version',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_P2P',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
               ],
             },
             {
@@ -652,6 +661,7 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
           {
             type: 'category',
             label: 'TTN Cloud Services',
@@ -660,18 +670,20 @@ const sidebars = {
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Datacake_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Ubidots_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Qubitro_Integrated',
-         //  'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/TagoIO_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Akenza_Integrated',
+
                    ],
           },
           {
         type: 'category',
         label: 'Helium Cloud Services',
         items: [
-       //'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Connect_to_Helium_Network',
        'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
                ],
           }, 
-            
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
         
@@ -690,9 +702,7 @@ const sidebars = {
               type: 'category',
               label: 'SenseCAP LoRaWAN Sensor',
 
-              items: [
-                'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP-SOLO-CO2-Sensor',
-
+              items: [  
                 {
                   type: 'category',
                   label: 'SenseCAP S210X Series',
@@ -792,7 +802,15 @@ const sidebars = {
             },
           ],
         },
-
+        "Sensor/SenseCAP/SenseCAP_Decoder",
+        {
+          type: 'category',
+          label: 'Applications',
+          items: [
+            'Sensor/SenseCAP/Applications/Home_Assistant_X_SenseCAP_LoRaWAN_Sensors',
+            'Sensor/SenseCAP/Applications/Develop_an_Industrial_LoRaWAN_Sensor',
+          ],
+        },
       ],
     },
 
@@ -807,6 +825,7 @@ const sidebars = {
         id: 'Sensor/mmWave_radar_sensor/mmwave_radar_Intro',
       },
       items: [
+        'Sensor/mmWave_radar_sensor/mmwave_human_kit',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
         'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
@@ -932,6 +951,7 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO-BLE-sidewalk',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/XIAO_BLE_HA',
               ],
             },
           ],
@@ -972,6 +992,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-Zephyr-RTOS',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_CircuitPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Micropython',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -1018,6 +1039,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
           ],
         },
         {
@@ -1364,6 +1386,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/OpenAI',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/Home_Assistant',
             'Sensor/SenseCAP/SenseCAP_Indicator/Application/LoRa',
+            'Sensor/SenseCAP/SenseCAP_Indicator/Application/Matter',
           ],
         },
       ],
@@ -1534,6 +1557,21 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
                 'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
                 'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wio Tracker 1110 Dev Board',
+              items: [
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
+                {
+                  type: 'category',
+                  label: 'Development Tutorial',
+                  items: [
+                    'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Development_Tutorial/Setup_toolchain',
+                  ],
+                },
               ],
             },
             {
@@ -1895,6 +1933,7 @@ const sidebars = {
           label: 'SenseCAP M2 Multi-Platform Gateway',
           items: [
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             {
               type: 'category',
               label: 'Tutorial',
@@ -2021,6 +2060,13 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'SenseCAP LoRaWAN Starter Kit',
+      items: [
+        'Network/SenseCAP_LoRaWAN_Starter_Kit/M2_Kit_Getting_Started',
+      ],
+    },
 
     // {
     // 有问题
@@ -2141,6 +2187,7 @@ const sidebars = {
               type: 'category',
               label: 'Home Assistant',
               items: [
+                'Edge/reTerminal/Application/Home_Assistant/reterminal_frigate',
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
               ],
@@ -2151,6 +2198,7 @@ const sidebars = {
               items: [
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_Edgeimpulse',
               ],
             },
           ],
@@ -2205,6 +2253,22 @@ const sidebars = {
           label: 'SenseCraft_Edge',
           items: [
             'Edge/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'Home-Assistant',
+          items: [
+            'Edge/reTerminal-DM/Home-Assistant/reterminal-DM-Frigate',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Embedded_ML',
+          items: [
+            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
+            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
           ],
         },
       ],
@@ -2323,6 +2387,7 @@ const sidebars = {
         // },
 
         'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
+        'Edge/NVIDIA_Jetson/reServer_Industrial_Getting_Started',
 
         {
           type: 'category',
@@ -2601,16 +2666,17 @@ const sidebars = {
       type: 'category',
       label: 'SenseCAP Hotspot APP',
       items: [
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
-        'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Download_APP',
+        'Cloud_Chain/SenseCAP_Hotspot_APP/Introduction',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Deeplink_Helium_Wallet',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Onboarding',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna',
+       // 'Cloud_Chain/SenseCAP_Hotspot_APP/Remote Reboot',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/Hotspot_Management',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/FAQ',
+      //  'Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile',
       ],
     },
     {
@@ -2963,6 +3029,7 @@ const sidebars = {
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
       ],
     },
+    'Contribution/Home_Assistant/Home_Assistant_Topic',
 
     {
       type: 'doc',
@@ -2971,7 +3038,7 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
-    'TinyML/TinyML_Workshop',
+    // 'TinyML/TinyML_Workshop',
 
     {
       type: 'category',
@@ -2983,7 +3050,8 @@ const sidebars = {
         id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
       },
       items: [
-           'TinyML/TinyML_Workshop/Edgelab',
+          //  'TinyML/TinyML_Workshop/Edgelab',
+          'TinyML/TinyML_Workshop/sscma',
            'TinyML/TinyML_Workshop/EdgeImpulse',
           //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
           'TinyML/TinyML_Workshop/Key_Word_Spotting',

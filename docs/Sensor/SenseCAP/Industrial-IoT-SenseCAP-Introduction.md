@@ -4,132 +4,157 @@ title: SenseCAP Ecosystem Introduction
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /SenseCAP_introduction
 last_update:
-  date: 7/19/2023
-  author: Matthew
+  date: 9/11/2023
+  author: Jessie
 ---
 
-![SenseCAP Product & Service Category](https://files.seeedstudio.com/products/102991154/wiki%20images/structure%20new%20version.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/sensecap-intro.png" alt="pir" width={1000} height="auto" /></p>
 
-## What is the SenseCAP Ecosystem?
+With a range of products that cater to the needs of different users, from hobbyists to industrialists, SenseCAP product line offers a comprehensive suite of solutions for digitalizing the world around us.
 
-As [Seeed Industrial IoT product](https://solution.seeedstudio.com/) category now includes many new products catering to different IoT scenarios, we've noticed some customers don't know which products to choose for meeting their needs in particular IoT applications.
+From sensors to gateways, users can build and customize their own solutions for monitoring and controlling various aspects of their environment. The product line also includes industrial-grade devices that can be deployed on a large scale, offering advanced functionality and robust performance.
 
-<!-- ###### _(SenseCAP Product & Service Category)_ -->
 
-As a Seeed product series, SenseCAP consists of different hardware and software services, as you can see from the graph above. [SenseCAP](https://www.seeedstudio.com/SenseCAP-c-1339.html) is specifically designed for serving Industrial IoT needs of wireless sensing, with the main applications in smart agriculture, smart city, and other environmental sensing scenarios.
+In addition, SenseCAP product line also provides an array of software, cloud services, and APIs, allowing users to collect, store, and analyze data in real-time. The combination of hardware, software, and cloud services 
+enables users to quickly respond to changes in their environment and make data-driven decisions.
 
-![Industrial IoT Products Application Scenarios](https://files.seeedstudio.com/products/102991154/wiki%20images/application%20new%20version.png)
 
-###### _(Industrial IoT Products Application Scenarios)_
+## Hardware Products
 
-Since 2018, we have been putting the accumulated resources, experience, and expertise into creating IIoT products for various environmental monitoring occasions. And we’ve spent months on putting the products into field tests in different countries and regions before making them generally available.
 
-Currently, the SenseCAP IIoT collection consists of [SenseCAP LoRaWAN Series gateways & sensors](https://www.seeedstudio.com/SenseCAP-c-1339.html), [Sensor Hub 2G/4G Data Logger](https://solution.seeedstudio.com/product/sensor-hub-2g-data-logger/) & [RS-485 sensors](https://www.seeedstudio.com/Industrial-IoT-c-1556.html?cat=1581), and [Meteorological Sensors](https://solution.seeedstudio.com/new-release-sensecap-one-industrial-grade-compact-weather-stations-for-meteorological-monitoring/). Other than hardware, we also provide software & Cloud services including SenseCAP API, SenseCAP APP, SenseCAP Portal, and SenseCAP Dashboard for easily managing the devices and data. Please see more details below.
 
-## Two parts for SenseCAP Ecosystem
 
-As you can see on the **left side colomn**, we maintain the SenseCAP Ecosystem into two parts:
+### LoRaWAN® Devices
 
-- [SenseCAP Industrial Sensor](/SenseCAP_Sensor_Intro)
-- [SenseCAP Data Logger](/SenseCAP_Data_Logger_Intro)
+LoRaWAN® series comprise sensors and gateways which support LoRaWAN® protocol and are LoRaWAN® certified. The sensors collect environmental data and then transmit the data to the LoRaWAN® network servers through the gateway. 
+These products are suitable for applications that need the wireless transmission of data across ultra-wide distance – 9.6 km in line of sight scene and 2 km in urban scenes, according to our testing. As well, the low power consumption features support a battery lifespan of an average of 3 years, some sensor nodes can last more than 8 years depending on the sensors’ power consumption.
+
+
+
+
+<p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTIzNDU2Nzg5_993734_kw1N-KbhpVV3i5EZ_1693791639?w=1844&h=904
+" alt="pir" width={1000} height="auto" /></p>
+
+
+
+#### LoRaWAN® Gateway
+
+SenseCAP offers two types of gateways suitable for indoor and outdoor use, and users can choose cellular LTE or Ethernet to transmit data.
+
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/029cab35952193f5e1ea3c80fda40937-2.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
+
+
+
+
+
+#### LoRaWAN® Sensors
+
+
+SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/lorawan-sensors.png" alt="pir" width={1000} height="auto" /></p>
+
+
+|Air Temp & Humidity|Light|Air TH & CO2|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2101.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2102.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2103.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html)</p>|
+
+|Soil Moisture & Temp|Soil Moisture & Temp & EC|PH|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2104.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2105.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2106.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|
+
+### Data Logger/Sensor Hub
+
+
+Data Logger serves as the bridge to up to 200+ sensors covering industrial-level sensors, Grove sensors and Analog/RS485/GPIO sensors.
+
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/8939fbb3c723aea6c946d42bd464ee32-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
+
+
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hub.png" width="475"/>|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/log.png" width="475"/>|
+|------------------|--------------------------|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html)</p>|
+
+
+### Weather Sensor
+
+Today, data on localized weather, known as microclimates, is the new frontier for more precise and accurate weather forecasting. As a result, the collection of weather data is becoming increasingly smaller and gridded. In light of this, weather stations, which are the most convenient means of collecting weather data, are seeing a rise in demand. SenseCAP offers all-in-one weather sensors to help you collect and monitor environmental data for various scenarios.
+
+
+
+<p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
+
+SenseCAP ONE is a series of all-in-one compact weather sensors, that integrate multiple sensors into this compact device, monitoring up to 10 weather parameters: air temperature, air humidity, atmospheric pressure, light intensity, wind speed, wind direction, precipitation, PM 2.5, PM 10, and CO2.
+
+||Air Temperature|Air Humidity|Air Pressure|Light|Wind Speed|Wind Direction|Rainfall|PM2.5|PM10|CO2|Noise|
+|--|--|--|--|--|--|--|--|--|--|--|--|
+|<p style={{textAlign: 'center'}}>[S200](https://www.seeedstudio.com/SenseCAP-S200-Wind-Speed-and-Direction-Sensor-p-5693.html)</p>|||||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||||||
+|<p style={{textAlign: 'center'}}>[S500](https://www.seeedstudio.com/SenseCAP-S500-5-in-1-Compact-Weather-Station-p-5652.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||||||
+|<p style={{textAlign: 'center'}}>[S700](https://www.seeedstudio.com/SenseCAP-S700-7-in-1-Compact-Weather-Station-p-5651.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|||||
+|<p style={{textAlign: 'center'}}>[S800](https://www.seeedstudio.com/SenseCAP-S800-8-in-1-Compact-Weather-Station-p-5653.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|
+|<p style={{textAlign: 'center'}}>[S1000](https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||
+
+
+
+### Sensor Probes
+
+To bring more convenience for your applications, we also provide RS485 sensor probes detecting soil moisture, temperature, soil electrical conductivity, and pH level. There will also be more RS485 sensors coming out soon.
+
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/751082a4ebef3470bf20ee2e9523bbd4.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
+
+|Liquid Level|Soil Moisture & Temperature|Soil Moisture & Temperature & EC|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/Liquid_Level_Sensor/img/01_14_4.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_Sensor/101990668_2.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/101990667_2.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Liquid-Level-Sensor-p-4619.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02-p-4634.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02-p-4633.html)</p>|
+
+|RS485 500cm Ultrasonic Level|RS485 700cm Ultrasonic Level|PH|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%201.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/Image/101990666_2.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-500cm-Ultrasonic-Level-Sensor-p-5588.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-pH-Sensor-S-pH-01A-p-4632.html)</p>|
+
+|Optical Rain Gauge RG-9|Optical Rain Gauge RG-15|Water Leak Detector|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/Optical_Rain_Gauge_RG-9/0000_front-05.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/114992321-07.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Water_Leak_Detector/pic.PNG" alt="pir" width={270} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-9-p-4744.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</p>|
+
 
 ## ✨ Contributor Project
 
 - We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
 - [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33960915) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
 
-## Hardware Products
-
-All Seeed IIoT hardware products are designed with industry standards, IP66 rated, and encapsulated in UV-resistant materials to ensure great robustness. They are suitable to be deployed in outdoor scenarios with severe conditions.
-
-### LoRaWAN Series
-
-![SenseCAP LoRaWAN Gateway & Sensors deployed in the Autonomous Greenhouse Challenge](https://files.seeedstudio.com/products/102991154/wiki%20images/sensecap%20application%201.png)
-
-###### _(SenseCAP LoRaWAN Gateway & Sensors deployed in the Autonomous Greenhouse Challenge)_
-
-LoRaWAN series comprise sensors and gateways which support LoRaWAN protocol and are LoRaWAN certified. These products are suitable for applications that need the wireless transmission of data across ultra-wide distance – 9.6 km in line of sight scene and 2 km in urban scenes, [according to our testing](https://solution.seeedstudio.com/how-we-tested-the-long-range-communication-of-seeeds-industrial-iot-product-sensecap-lorawan-series/). As well, the low power consumption features support a battery lifespan of an average of 3 years, some sensor nodes can last more than 8 years depending on the sensors’ power consumption.
-
-![SenseCAP LoRaWAN system architecture](https://files.seeedstudio.com/products/102991154/wiki%20images/SenseCAP%20LoRaWAN%20Architecture.png)
-
-###### _(SenseCAP LoRaWAN system architecture)_
-
-SenseCAP LoRaWAN sensors include those measuring [CO2](https://solution.seeedstudio.com/product/sensecap-lorawan-co2-sensor/), [Light](https://solution.seeedstudio.com/product/sensecap-lorawan-light-intensity-sensor/), [soil TH](https://solution.seeedstudio.com/product/sensecap-wireless-soil-moisture-and-temperature-sensor-lorawan/), [air TH](https://solution.seeedstudio.com/product/sensecap-lorawan-air-temperature-and-humidity-sensor/), [air pressure](https://solution.seeedstudio.com/product/sensecap-lorawan-barometric-pressure-sensor/), and so on. [SenseCAP LoRaWAN gateway](https://solution.seeedstudio.com/product/sensecap-gateway-lorawan/) is carrier-grade and has the capacity of working with up to 1000 sensors simultaneously. It’s suitable for the needs of gathering data in multiple locations such as soil moisture and temperature at different locations of the farm. In this case, you only need one gateway, and easily deploy several sensors across the farm. The deployment instruction is easy to follow, and it would only take you [a few minutes to set up](https://blog.seeedstudio.com/blog/2020/07/23/4-steps-to-deploy-iot-devices-sensecap-lorawan/).
-
-![4 steps to set up SenseCAP](https://files.seeedstudio.com/products/102991154/wiki%20images/deployment%20process.png)
-
-###### _(4 steps to set up SenseCAP)_
-
-For the performance of SenseCAP LoRaWAN series products in smart farming, smart weather stations, and scientific researches, please see some use cases below:
-
-* [Smart High-Mountain Tea Plantation](https://solution.seeedstudio.com/portfolio-items/high-mountain-tea-plantation/)
-* [Sweet Melon Greenhouse](https://solution.seeedstudio.com/portfolio-items/sweet-melon-greenhouse/)
-* [Outdoor Triticale Farm](https://solution.seeedstudio.com/portfolio-items/outdoor-triticale-farm/)
-* [Growing Tropical Fruits in the North](https://solution.seeedstudio.com/portfolio-items/greenhouse-growing-tropical-fruits/)
-* [Data-driven Tourism in Hakka Villages](https://solution.seeedstudio.com/portfolio-items/tourism-in-hakka-village/)
-* [Environmental Monitoring Project in Stockholm](https://www.seeedstudio.com/blog/2019/12/11/sensecap-deployed-in-environmental-monitoring-projects-in-stockholm-sweden/)
-* [AiCU, Seeed Partner, Won the 2nd Place at the Autonomous Greenhouse Challenge 2019-2020](https://www.seeedstudio.com/blog/2020/07/15/aicu-seeed-partner-won-the-2nd-place-at-the-autonomous-greenhouse-challenge-2019-2020/)
-
-Get to know about LoRa and LoRaWAN and their comparative advantage as LPWAN technology: [LoRapedia, an Introduction of LoRa and LoRaWAN Technology can give you a better answer](https://www.seeedstudio.com/blog/2020/08/03/lorapedia-an-introduction-of-lora-and-lorawan-technology/).
-
-### Sensor Hub 2G/4G Data Logger
-
-![SenseCAP Sensor Hub with some collections of RS-485 Sensors](https://files.seeedstudio.com/products/102991154/wiki%20images/Sensor-Hub-2-1030x736.png)
-
-###### _(SenseCAP Sensor Hub with some collections of RS-485 Sensors)_
-
-[SenseCAP Sensor Hub](https://solution.seeedstudio.com/product/sensor-hub-2g-data-logger/) is an easy-to-use, low-cost yet powerful data logger. As the system architecture is shown above, it comes with multiple RS-485 connectors and can be connected to a maximum of 40 RS-485 sensors. It is able to transmit data obtained by sensors to the server via 2G/3G/4G. It’s suitable for the needs of gathering multiple data at one location. For example, the air temperature, air humidity, and barometric pressure, etc. data is the same across a large outdoor field, the user only needs to deploy a Sensor Hub Data Logger with all the Sensors at one location to monitor the info across the whole area.
-
-![SenseCAP Sensor Hub System Architecture](https://files.seeedstudio.com/products/102991154/wiki%20images/sensor%20hub%20architecture%20.png)
-
-###### _(SenseCAP Sensor Hub System Architecture)_
-
-SenseCAP Sensor Hub can be powered by solar power, wall power, or rechargeable batteries. With the multiple options for power source, Sensor Hub can work with sensors of higher power consumption such as ammonia. It can also meet the needs of more frequent data upload intervals. You can actually combine SenseCAP LoRaWAN with SenseCAP Sensor Hub + RS485 sensors into your projects to meet various needs of monitoring different environmental data.
-
-### Sensor Probes
-
-To bring more convenience for your applications, we also provide RS485 sensor probes detecting soil moisture, temperature, soil electrical conductivity, and pH level. There will also be more RS485 sensors coming out soon.
-
-* [Industrial Soil Moisture & Temperature Sensor MODBUS-RTU RS485](https://solution.seeedstudio.com/product/industrial-soil-moisture-temperature-sensor-modbus-rtu-rs485-s-soil-mt-02a/)
-* [Industrial Soil Moisture & Temperature & EC Sensor MODBUS-RTU RS485](https://solution.seeedstudio.com/product/industrial-soil-moisture-temperature-ec-sensor-modbus-rtu-rs485-s-soil-mtec-02a/)
-* [Industrial pH Meter/ Sensor MODBUS-RTU RS485](https://solution.seeedstudio.com/product/industrial-ph-meter-sensor-modbus-rtu-rs485-420ma-current-s-ph-01a/)
-
-![Sensor probe a](https://files.seeedstudio.com/products/102991154/wiki%20images/sensor%20probe%20a.png)
-
-To meet the demand of costumers wanting to connect to their own system, we also provide some other sensor probes for you to select:
-
-![Sensor Probe b](https://files.seeedstudio.com/products/102991154/wiki%20images/sensor%20probe%20b.png)
-
-For more information, click here:
-
-* [Industrial-Grade Optical Rain Gauge RG-15](https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html)
-* [NDIR CO2 Sensor with UART, I2C, & PTFE Filter](https://www.seeedstudio.com/UART-I2C-CO2-Sensor-with-PTFE-filter-S-CO2-01-p-4635.html)
-* [Liquid Level Sensor for Water Level, Oil Level and Mild-corrosive Liquid Level Monitoring](https://www.seeedstudio.com/Liquid-Level-Sensor-p-4619.html)
-
-### Meteorological Sensors
-
-![SenseCAP ONE](https://files.seeedstudio.com/products/102991154/wiki%20images/sensecap%20one.png)
-
-###### _(SenseCAP ONE Series of Prouducts and Features)_
-
-SenseCAP ONE Meteorological Sensor Series is our latest products, which will be available in Q4, 2020. The products have been exhibited in China (Nanjing) International Intelligent Agriculture Expo, 2020 Guangzhou World Agricultural Expo, and CMHE2020 and have received very positive comments from potential partners. The Meteorological sensors support RS485/RS422 (Modbus) and SDI-12 interface. It can be easily connected to use with the above-mentioned Sensor Hub Data Logger, also provides easy extension with other sensors of respective interfaces.
-
-The series consists of different combinations of meteorological sensors. With the modular design, sensors can be flexibly integrated into a compact weather station to suit the scenario you have. The compact weather stations feature high accuracy, maintenance-free, and extremely great robustness. Its application includes smart weather stations, smart agriculture, smart city, and airport where meteorological monitoring is necessary.
 
 ## Software Services
 
 ### SenseCAP Portal
 
-![SenseCAP Portal](https://files.seeedstudio.com/products/102991154/wiki%20images/portal.png)
 
-SenseCAP Portal is designed for customers to manage devices, data, and Access Key. After creating an account for your own, you are able to bind all devices you have on this portal. To learn about the quickstart and guide of the portal, check out the [SenseCAP document center – Portal](https://sensecap-docs.seeed.cc/quickstart.html).
+SenseCAP Portal is designed for customers to manage devices, data, and Access Key. After creating an account for your own, you are able to bind all devices you have on this portal. To learn about the quickstart and guide of the portal, check out the [SenseCAP document center – Portal](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Portal/QuickStart/).
 
-### SenseCAP APP in iOS and Android Version
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102991154/wiki%20images/portal.png" alt="pir" width={800} height="auto" /></p>
 
-![APP](https://files.seeedstudio.com/products/102991154/wiki%20images/phone%20app.png)
 
-We also provide SenseCAP Apps for users to easily bind the devices to your account. Both iOS and Android versions are available.
+
+### SenseCAP Mate APP
+
+[SenseCAP Mate APP](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP) is a powerful APP for data visualization and remote device management.
+
+* Save time - provides a scan-and-play experience to enable users to complete the whole configuration in 4 steps
+* Works for people with less or no technical background to get started with sensor data easily
+* Acquire and view data on clean user interfaces
+* Set time intervals: improve the battery efficiency
+* Set threshold values: focus on the data you need to take action for - coming soon
+* Send alarms if data is out of the safe range - coming soon
+
+
+<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-12.png" alt="pir" width={400} height="auto" /></p>
 
 ### SenseCAP API
 
@@ -140,11 +165,6 @@ With the use of the SenseCAP Application Programming Interface, you are able to 
 * With WebSocket API, you can get real-time measurement data of sensors through Websocket protocol.
 To learn more about the guide and references of SenseCAP API, kindly visit [SenseCAP Document Center – API](https://sensecap-docs.seeed.cc/introduction.html).
 
-### SenseCAP Dashboard
-
-![Dashboard](https://files.seeedstudio.com/products/102991154/wiki%20images/dashboard.png)
-
-If you want to visualize the data collected from SenseCAP for your application in a quick manner, [SenseCAP Dashboard](https://solution.seeedstudio.com/product/software-cloud-sensecap-dashboard/) is a decent choice. It is an open-source program developed based on Vue and can be embedded in rich web applications. We provide all the related libraries to our partners to make it customizable in many different ways, for instance, change the logo, language, configure data sources, and so on. Feel free to check out and contact us to call for your demand!
 
 ## SenseCAP Tech Support
 

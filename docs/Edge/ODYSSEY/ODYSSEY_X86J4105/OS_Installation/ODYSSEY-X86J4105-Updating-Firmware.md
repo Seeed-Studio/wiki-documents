@@ -1,7 +1,7 @@
 ---
 description: ODYSSEY - X86J41x5
 title: Firmware Upgrade
-image: https://avatars.githubusercontent.com/u/10758833
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-X86J4105-Updating-Firmware
 last_update:
   date: 03/16/2023

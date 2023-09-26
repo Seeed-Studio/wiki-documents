@@ -31,49 +31,127 @@ Log in to your Ubidots account and find the Devices tab in the upper part of you
 
 ### Ubidots Plugins
 
-Click on the '+' or on the 'Create Data Plugin' button to create a new plugin.
+Click on the **+** or on the **Create Data Plugin** button to create a new plugin.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/plugins.png" alt="pir" width={800} height="auto" /></p>
 
 
-When you are presented with available plugins, select The Things Stack plugin.
+When you are presented with available plugins, select **The Things Stack** plugin.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/addtts.png" alt="pir" width={800} height="auto" /></p>
 
 
-Next, you need to select a Ubidots token. You can use the Default token, also can create a new token.
+Next, you need to select a Ubidots token. You can use the **Default token**, also can create a new token.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/default_token.png" alt="pir" width={800} height="auto" /></p>
 
 
-To create a new token, first click on your avatar in the upper right corner and select 'API Credentials'. Then select 'More' below the Default token and add a new token within the API Credentials page.
+To create a new token, first click on your avatar in the upper right corner and select **API Credentials**. Then select **More** below the Default token and add a new token within the API Credentials page.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/new_toekn.png" alt="pir" width={800} height="auto" /></p>
 
 
 
-Select '>' to continue and then hit the checkmark to finish.
+Select **>** to continue and then hit the checkmark to finish.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/name-description.png" alt="pir" width={800} height="auto" /></p>
 
 
+### Configure the Decoder
 
 
+Once created the plugin, go to the decoder section, delete all the code and replace it for the following:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decoding_function.png" alt="pir" width={800} height="auto" /></p>
 
+
+```cpp
+const HOTSPOT_INFO = false;
+
+function handleErrorIfExists(data){
+	const error = 'error' in data;
+	if (error) {
+        const errorMsg = { "error": { "value": data.errorCode, "context" : { "reason": data.error } } };
+		return errorMsg;
+	}
+	return false;
+}
+
+function addLat(lat, ubidotsPayload){
+	ubidotsPayload.position.context.lat = lat;
+}
+
+function addLng(lng, ubidotsPayload){
+	ubidotsPayload.position.context.lng = lng;
+}
+
+const coordinateActions = {
+	"Longitude": addLng,
+	"Latitude": addLat,
+}
+
+const assignPayloadKeys = (data, ubidotsPayload) => {
+	const { type, measurementValue } = data;
+
+	if (type === "Longitude" || type === "Latitude") {
+		if (!ubidotsPayload.position) {
+			ubidotsPayload.position = { "value": 1, "context": { "lat": undefined, "lng": undefined } };
+		}
+		coordinateActions[type](measurementValue, ubidotsPayload);
+	}
+	else if (data.type === "Timestamp") {
+		ubidotsPayload.timestamp = data.measurementValue;
+	}
+	else {
+		ubidotsPayload[type] = measurementValue;
+	}
+};
+
+function buildUbidotsPayload(data){
+	const ubidotsPayload = {};
+	data.forEach(innerData => {
+		innerData.forEach(innerInnerData => {
+			assignPayloadKeys(innerInnerData, ubidotsPayload);
+		});
+	});
+	return ubidotsPayload;
+}
+
+async function formatPayload(args){
+
+	const data = args.uplink_message.decoded_payload.messages;
+	let ubidotsPayload = {};
+
+	const error = handleErrorIfExists(data[0][0]);
+	if (error) return error;
+
+	if (HOTSPOT_INFO) {
+		const { hotspots, port, fcnt } = args;
+		const { snr, rssi } = hotspots[0];
+		Object.assign(ubidotsPayload, { SNR: snr, RSSI: rssi, port, 'Frame Counter': fcnt });
+	}
+	ubidotsPayload = buildUbidotsPayload(data);
+	console.log(ubidotsPayload);
+	return ubidotsPayload;
+};
+
+module.exports = { formatPayload };
+```
 
 
 ## Configure The Things Stack
 
 When you have prepared the setup on Ubidots, then you need to create a Webhook integration on The Things Stack by using the Ubidots Webhook template.
 
+On The Things Stack, navigate to **Integrations** → **Webhooks**, and click **Add Webhook**.
 
-On The Things Stack, navigate to 'Integrations' → 'Webhooks' and choose the Ubidots Webhook template.
-Name your integration by filling in the Webhook ID.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add_webhook1.png" alt="pir" width={800} height="auto" /></p>
+
+Choose the Ubidots Webhook template. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tts-ubidots.png" alt="pir" width={800} height="auto" /></p>
 
 
 
-Paste the Plugin ID and Ubidots token values from Ubidots.
+Name your integration by filling in the Webhook ID, and paste the Plugin ID and Ubidots token values.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/ubi_web.png" alt="pir" width={800} height="auto" /></p>
 
@@ -87,6 +165,6 @@ To find the plugin ID, click on your newly created plugin and navigate to the De
 
 ## Monitor Your Data
 
-After you have completed the integration, navigate to 'Devices' menu. You will see your end device appearing in the end devices list as soon as it sends an uplink message.
+After you have completed the integration, navigate to **Devices** menu. You will see your end device appearing in the end devices list as soon as it sends an uplink message.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/check_data_ubi.png" alt="pir" width={800} height="auto" /></p>

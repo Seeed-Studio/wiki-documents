@@ -19,7 +19,7 @@ sku: 110060622
 --- -->
 <!-- ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/LoraWan%20Getway%20868MHz.jpg) -->
 
-LoRa is a perfect long-range wireless solution to create low-power, wide area networks.So far we have released several “LoRa” boards such as Seeeduino LoRaWan and Grove LoRa Radio etc. However if you want to build you own LoRa network, there are 3 things   that you should prepare to get started: a Gateway, at least one Node and a local server where you can monitor all your devices.
+LoRa is a perfect long-range wireless solution to create low-power, wide area networks.So far we have released several “LoRa” boards such as Seeeduino LoRaWan and Grove LoRa Radio ,etc. There is also ready-to-use [SenseCAP M2 Multi-Platform LoRaWAN Indooor Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html) available for users.However if you want to build you own LoRa network, there are 3 things   that you should prepare to get started: a Gateway, at least one Node and a local server where you can monitor all your devices.
 
 This kit provides all the basic elements you need: a Raspberry Pi 3, a Seeeduino LoRaWAN with GPS and a gateway & local server that allows you to collect and transfer data among all your LoRa nodes. By connecting the gateway with Seeeduino LoRaWAN and Grove modules, you can build your IOT prototype within minutes.
 
@@ -605,6 +605,20 @@ AT+CMSGHEX="0a 0b 0c 0d 0e"
 Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node Device EUI or DevAddr, you will find the data you've just sent here.
 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/final.png).
+
+## Summary
+  This article has intruoduced LoRa/LoRaWAN Gateway Kit and the process of creating your own LoRaWAN gateway. We covered key steps in hardware connection and software tools configuration, including connecting necessary components and communicating with the LoRaWAN server. This DIY gateway method offers flexibility and customization, allowing users to build a robust LoRaWAN network according to their needs.
+
+  However, for some users, creating their own LoRaWAN gateway can be challenging, and they prefer ready-to-use devices. We understand this demand and offer the option of the [SenseCAP M2 Multi-Platform LoRaWAN Indoor Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html). For just $99, you can purchase this gateway to build your own LoRaWAN network effortlessly.Going a step further, we also provide [SenseCAP LoRaWAN Starter kit](https://www.seeedstudio.com/SenseCAP-LoRaWAN-Starter-Kit-EU868-p-5789.html) tailored for beginners who are exploring LoRaWAN. This kit includes a SenseCAP M2 Multi-Platform LoRaWAN Indoor Gateway, [XIAO ESP32-S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html), [Grove-Wio-E5](https://www.seeedstudio.com/Grove-LoRa-E5-STM32WLE5JC-p-4867.html), and two Grove sensors. It is specifically designed to facilitate the learning process and experimentation with LoRaWAN.
+  
+ <div style={{ display: 'flex', justifyContent: 'center' }}>
+  <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html">
+    <img src="https://files.seeedstudio.com/wiki/LoRa/LoRaWAN%20Gateway%20Kit/114992981_45-M2_1.jpg" width={450} height="auto" style={{ marginRight: '20px' }} />
+  </a>
+  <a href="https://www.seeedstudio.com/SenseCAP-LoRaWAN-Starter-Kit-EU868-p-5789.html">
+    <img src="https://files.seeedstudio.com/wiki/LoRa/LoRaWAN%20Gateway%20Kit/1-114993166-sensecap-lorawan-starter-kit-eu-45font.jpg"  width={450} height="auto" />
+  </a>
+</div>
 
 ## FAQs
 
