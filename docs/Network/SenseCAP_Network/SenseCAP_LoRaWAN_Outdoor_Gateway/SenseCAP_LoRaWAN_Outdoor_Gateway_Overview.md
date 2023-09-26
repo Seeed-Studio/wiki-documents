@@ -1,23 +1,30 @@
 SenseCAP LoRaWAN Outdoor Gateway
 ================================
 
-![](https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-11.png)
 
-[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html?queryID=7e06f8bd7fb637d36c2752cb0a0214b9&objectID=4305&indexName=bazaar_retailer_products)
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/s/e/sensecap_lorawan_eu868_1.png" alt="pir" width={600} height="auto" /></p>
 
-PRODUCT DETAILS
----------------
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
+
+
+### PRODUCT DETAILS
+
 
 SenseCAP Gateway - LoRaWAN is an IP66 industrial-grade outdoor product, supports an extended operating temperature range, making it applicable for low-power consumption, long-range data collection IoT scenarios like smart farming.
 
-* * *
 
-Note
 
-*   Please be aware that this product does not support the Helium LongFi network. Kindly note that products that are free from any quality defect are not eligible for return and refund.
+:::tip
+Please be aware that this product does not support the Helium LongFi network. Kindly note that products that are free from any quality defect are not eligible for return and refund.
+:::
 
-Key Features
-------------
+### Key Features
+
 
 *   High-performance Cortex A8 1GHz processor, Linux system.
     
@@ -36,8 +43,8 @@ Key Features
 *   Easy deployment, and rapid provisioning (see the "how to install" video below)
     
 
-Description
------------
+### Description
+
 
 SenseCAP Gateway - LoRaWAN is based on LoRaWAN protocol, applicable for low-power consumption, long-range environmental data collection, and remote monitoring scenarios such as smart agriculture and smart city.
 
@@ -54,17 +61,18 @@ The Gateway can be set up easily out of the box. Users can bind and manage the d
 
 ![](https://files.seeedstudio.com/products/114991726/img/why%20SenseCAP.png)
 
-How to install LoRaWAN Gateway
-------------------------------
+### How to install LoRaWAN Gateway
 
-https://www.youtube.com/watch?v=QZRk8Qa6rrc
 
-Architecture
-------------
+
+[![Video Title](https://img.youtube.com/vi/QZRk8Qa6rrc/0.jpg)](https://www.youtube.com/watch?v=QZRk8Qa6rrc)
+
+### Architecture
+
 
 ![](https://files.seeedstudio.com/products/102991154/img/SenseCAP%20LoRaWAN%20Architecture.png)
 
-Application
------------
+### Application
+
 
 ![](https://files.seeedstudio.com/products/114991726/img/application%20seeed%20page%20for%20sensecap.png)
