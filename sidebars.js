@@ -708,6 +708,7 @@ const sidebars = {
                   label: 'SenseCAP S210X Series',
                   items: [
                     'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_S2107',
                     {
                       type: 'category',
                       label: 'Tutorials',
