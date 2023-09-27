@@ -662,6 +662,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Using Wi-Fi technology to enable geolocation for your tracker',
           {
             type: 'category',
             label: 'TTN Cloud Services',
