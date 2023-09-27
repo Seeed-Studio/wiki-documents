@@ -1,6 +1,6 @@
 ---
 description: Using WiFi technology to enable geolocate tracker
-title: Using Wi-Fi technology to enable geolocation for your tracker
+title: Use WiFi Geolocation For Tracker
 keywords:
 - SenseCAP_T1000_tracker
 # image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
