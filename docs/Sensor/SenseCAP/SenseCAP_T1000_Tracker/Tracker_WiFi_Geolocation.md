@@ -1,6 +1,6 @@
 ---
 description: Using WiFi technology to enable geolocate tracker
-title: Using Wi-Fi technology to enable geolocation for your tracker
+title: Use WiFi Geolocation For Tracker
 keywords:
 - SenseCAP_T1000_tracker
 # image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
@@ -49,7 +49,7 @@ Then we can receive the parsed data that is returned：
 ## 3. Displaying the location on a map
 
 The final step is to input the parsed coordinates into the map to display the location. Here, we are using the Google Maps link: https://www.google.com/maps/@36.5626,136.362305,5z?entry=ttu
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/wifi_tracker4.jpg"/></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/wifi_tracker4.png"/></div>
 You can enter the parsed coordinates in the map's search bar to view the specific location on the map.
 
 
