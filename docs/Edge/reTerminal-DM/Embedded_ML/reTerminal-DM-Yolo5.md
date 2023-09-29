@@ -24,17 +24,25 @@ Object detection, a fundamental aspect of computer vision, involves identifying 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
 
 ### Hardware preparation
+
 <div class="table-center">
   <table align="center">
     <tr>
         <th>reTerminal DM</th>
+        <th>Coral USB Accelerator</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/HA/reterminal-dm.png" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/reterminaldm.png" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/coral.png" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-With-Camera-p-5648.html">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Coral-USB-Accelerator-p-2899.html?queryID=852f9c8543fee2db0ee8b47f6d5dbda2&objectID=2899&indexName=bazaar_retailer_products">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -125,6 +133,19 @@ python detect.py --weight best-int8.tflite --img 224 --source <your source > --n
 You can explore the official Ultralytics GitHub site at [https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5) to learn how to use the `detect.py` script and discover the various sources you can utilize for feeding images or video streams into the YOLOv5 model.
 :::
 
+## Run on Edge TPU
+
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/ppeyolo.gif" /></center>
+
+
+The deployment of the YOLOv5n model on an Edge TPU represents a dynamic synergy between state-of-the-art object detection and high-performance edge computing. This amalgamation empowers applications in edge AI, such as real-time object recognition in resource-constrained environments, making it invaluable for tasks like security surveillance, retail analytics, and autonomous systems. YOLOv5n's efficient design harmonizes seamlessly with Edge TPU's hardware acceleration, delivering rapid and accurate object detection at the edge of the network, where low latency and real-time processing are paramount. 
+
+- Inference with detect.py
+
+```sh
+python detect.py --weight best-int8_edgetpu.tflite --img 224 --source <your source > --nosave --view-img --data data.yaml
+```
+
 ## Resources
 
 - **[Web Page]** [Yolov5 Official Documentation](https://github.com/ultralytics/yolov5)
@@ -132,7 +153,6 @@ You can explore the official Ultralytics GitHub site at [https://github.com/ultr
 - **[Web Page]** [Roboflow](https://universe.roboflow.com/)
 
 # Tech support
-
 
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

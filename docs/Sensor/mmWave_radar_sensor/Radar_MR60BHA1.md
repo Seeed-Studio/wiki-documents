@@ -100,6 +100,7 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 | Firmware Version | Download Address |
 |:----------------:|:----------------:|
 | Jlink_MR60BHA1-V230104.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR60BHA1-V230104.bin) |
+| Jlink_MR60BHA1-V230904.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR60BHA1-V230904.bin) |
 
 :::caution
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
@@ -176,6 +177,7 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 | Firmware Version | Download Address |
 |:----------------:|:----------------:|
 | UART_MR60BHA1-230104.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60BHA1-230104.bin) |
+| UART_MR60BHA1-230904.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60BHA1-230904.bin) |
 
 :::caution
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!

@@ -662,6 +662,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
           {
             type: 'category',
             label: 'TTN Cloud Services',
@@ -683,7 +684,7 @@ const sidebars = {
        'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
                ],
           }, 
-            
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
         
@@ -708,6 +709,7 @@ const sidebars = {
                   label: 'SenseCAP S210X Series',
                   items: [
                     'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor',
+                    'Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_S2107',
                     {
                       type: 'category',
                       label: 'Tutorials',
@@ -1039,6 +1041,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
           ],
         },
         {
@@ -1871,7 +1874,26 @@ const sidebars = {
         id: 'Network/SenseCAP_Network/SenseCAP_Gateway_Intro',
       },
       items: [
-        'Network/SenseCAP_Network/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide',
+
+        {
+          type: 'category',
+          label: 'SenseCAP M2 Multi-Platform Gateway',
+          items: [
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Quick_Start',
+            {
+              type: 'category',
+              label: 'Tutorial',
+              items: [
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network',
+                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack',
+              ],
+            },
+          ],
+        },
+        
         {
           type: 'category',
           label: 'Helium Gateway',
@@ -1924,24 +1946,6 @@ const sidebars = {
           label: 'Outdoor Gateway',
           items: [
             'Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'SenseCAP M2 Multi-Platform Gateway',
-          items: [
-            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
-            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
-            {
-              type: 'category',
-              label: 'Tutorial',
-              items: [
-                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT',
-                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network',
-                'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack',
-              ],
-            },
           ],
         },
       ],
@@ -2267,6 +2271,7 @@ const sidebars = {
           label: 'Embedded_ML',
           items: [
             'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
+            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
           ],
         },
       ],
@@ -2385,6 +2390,7 @@ const sidebars = {
         // },
 
         'Edge/NVIDIA_Jetson/reComputer_Industrial/reComputer_Industrial_Getting_Started',
+        'Edge/NVIDIA_Jetson/reServer_Industrial_Getting_Started',
 
         {
           type: 'category',

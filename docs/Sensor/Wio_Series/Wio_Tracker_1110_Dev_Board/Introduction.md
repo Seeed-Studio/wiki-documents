@@ -19,6 +19,11 @@ With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is con
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/1-114993136-Wio-Tracker-1110-Dev-Board-45font.jpg" alt="pir" width={600} height="auto" /></p>
 
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 
 
 ## Feature

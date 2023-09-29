@@ -131,7 +131,7 @@ Please supply power to the kit via a USB-C type cable. Be careful that the power
 After the kit is powered on, a hotspot named **mmwave-kit** will be opened automatically, please search and connect to the hotspot. You can use your cell phone to connect to this network so you don't have to switch networks on your computer as often.
 
 :::note
-The password for the `mmwave-kit` network is `seeedstudio`.
+If you are using an older version of firmware, then this may require you to enter your WiFi password in order to connect to **mmwave-kit**. we recommend **[updating your firmware](#restore-factory-firmware)**. If you want to continue, the network password is `seeedstudio`.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/3.png" style={{width:400, height:'auto'}}/></div>
@@ -154,17 +154,37 @@ Enter the correct WiFi password and click Save. The device will automatically re
 
 If the networking goes well, you'll be able to find your device on Home Assistant. Please follow the path below to add your device. 
 
+In the ESPHome options bar, you will directly see the device called **SeeedStudio mmWave Kit** at the beginning. Please click on **ADOPT**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/35.png" style={{width:1000, height:'auto'}}/></div>
+
+In the message box that pops up, you can change the name of your device or just click **ADOPT**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/36.png" style={{width:1000, height:'auto'}}/></div>
+
+You will then be asked to add an API Key to secure the device. Here, we'll start by clicking the **SKIP** button.
+
+:::tip
+Since your ESOHome has not yet imported the header files for Radar, the compilation process of the installation may go wrong, so we recommend you to skip the installation of the API Key first, and we will update the header files into ESPHome later.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/37.png" style={{width:1000, height:'auto'}}/></div>
+
 Select **Settings** in the left-hand toolbar, then select **Devices & Services** in the center.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/6.png" style={{width:1000, height:'auto'}}/></div>
 
 If all goes well, you should see the **mmwave-kit** card directly here, which means you can add it directly. If you don't see it directly here, you may need to look up its IP address and click the Add Integration button in the bottom right corner to add the ESPHome device.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/7.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/38.png" style={{width:1000, height:'auto'}}/></div>
 
 Click **SUBMIT** in the new pop-up window.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/8.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/39.png" style={{width:600, height:'auto'}}/></div>
+
+:::caution
+If you find that you need to enter an API Key during the add steps here, then your device may be flashing the wrong firmware version, and we apologize for that. We apologize for this, you just need to **[flash the latest version of our firmware](#restore-factory-firmware)**.
+:::
 
 The kit was then successfully added to Home Assistant.
 
@@ -177,6 +197,10 @@ Then, we click on the added **mmwave-kit** card, **1 device** here.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/10.png" style={{width:1000, height:'auto'}}/></div>
 
 This will show all the component content we have written for the kit. Let's scroll down the display area slightly to add all of these components to the dashboard.
+
+:::caution
+If you don't find the components shown under this page, check the kit's power supply and logs. If you are using the computer function, some computers may not have USB ports that provide enough power support. If you make sure there is no problem with the power supply, please open the logs and send the detailed logs back to Seeed Studio's technical support.
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/11.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -195,6 +219,10 @@ On the Edit page, click the three dots in the upper right corner again to select
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/13.png" style={{width:1000, height:'auto'}}/></div>
 
 Then please clear the code in the original editor, copy the code below and save it.
+
+:::tip
+The new firmware has been revised according to the documentation provided by ESPHome and each device has a unique MAC name. So the component names will not be the same. The following dashboard program is for reference only and you may not be able to use it directly unless you modify the names of these components to the correct names.
+:::
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/mmwave-kit/dashboard.yaml">
@@ -496,6 +524,38 @@ Finally, just select **Wireless** to upload the program.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/23.png" style={{width:500, height:'auto'}}/></div>
 
 ## Restore Factory Firmware
+
+### Method 1: Quick flash the latest firmware
+
+If you are using the kit and find inconsistencies with the steps and content above, please update the kit's firmware on the following page to restore the factory settings.
+
+**Step 1.** Click the button below to go to the Flash Firmware page. Then connect the kit to your computer via a USB-C type cable.
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://limengdu.github.io/MR24HPC1_HomeAssistant/">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Flash the Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+**Step 2.** Click the Connect button and select the port number device that has a **JTAG** name.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/30.png" style={{width:500, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/31.png" style={{width:550, height:'auto'}}/></div>
+
+**Step 3.** Flash Firmware. 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/32.png" style={{width:500, height:'auto'}}/></div>
+
+Simply click on **INSTALL SEEED STUDIO MMWAVE KIT**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/33.png" style={{width:500, height:'auto'}}/></div>
+
+If you see the display below, then the firmware flash is complete.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/34.png" style={{width:500, height:'auto'}}/></div>
+
+### Method 2: Flash firmware with the help of ESPHome Tool
 
 If you're experiencing issues with your device not working properly, try restoring the factory firmware and re-adding the device to Home Assistant.
 
