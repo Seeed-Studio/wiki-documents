@@ -71,8 +71,8 @@ Here are some compelling projects that you can undertake using the Linkstar rout
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/Slide1.PNG" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
         <tr>
-            <td><font size={"2"}>Experience secure remote access with the powerful combination of LinkStar router and Tailscale VPN.</font></td>
-            <td><font size={"2"}>In this project, you will be explored the step-by-step process of installing and configuring Adblock on the Linkstar router.</font></td>
+        <td><font size={"2"}> Credit to </font><strong><font color={'8DC215'} size={"2"}>Kasun Thushara</font></strong><br /><font size={"2"}> Experience secure remote access with the powerful combination of LinkStar router and Tailscale VPN. </font></td>
+        <td><font size={"2"}> Credit to </font><strong><font color={'8DC215'} size={"2"}>Kasun Thushara</font></strong><br /><font size={"2"}> In this project, you will be explored the step-by-step process of installing and configuring Adblock on the Linkstar router. </font></td>
         </tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/secure-remote-access-linkstar-tailscale-vpn-a0d1c9"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
