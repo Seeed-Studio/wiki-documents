@@ -26,7 +26,7 @@ Make sure you are inside the helium network coverage. You can find the network c
 Here is a demo showing you how to connect Helium IoT Network and Seeeduino XIAO module via Grove - Wio-E5 module. These modules are able to collect temperature and humidity parameters from the environment and send them back to TTN. The flashing LED lights on the Seeeduino Xiao indicate the status of the temperature and humidity sensor as connecting to TTN cloud.
 
 :::cautionattention
-Please ensure the consistent of the frequency band among the end nodes, gateway, and TTN configuration you are using by following this instruction.
+Please ensure the consistent of the frequency band among the end nodes, gateway, and Helium configuration you are using by following this instruction.
 The frequency plan this demo applied is for **IN865**.
 :::
 

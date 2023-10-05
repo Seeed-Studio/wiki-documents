@@ -420,7 +420,7 @@ In the above code, we can see where did make the decisions to **TURN ON** the **
 
 ### Fruit identification (apples, bananas, grapes) Arduino Library
 #### Step 1. Downaload Fruit identification libray 
-Download [Speech keyword recognition (Yes & No) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)  library as .Zip.
+Download [Fruit identification (apples, bananas, grapes) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)  library as .Zip.
 
 #### Step 2. Add ZIP Library to Arduino IDE. 
 
