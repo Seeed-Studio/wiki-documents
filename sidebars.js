@@ -657,7 +657,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: "doc",
-            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/intro',
           },
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
