@@ -1,6 +1,6 @@
 ---
 description: Weekly Wiki
-title: Weekly Wiki
+title: Weekly Wiki ✨
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
