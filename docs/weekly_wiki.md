@@ -17,54 +17,54 @@ This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Eac
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 25th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 9th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Object detection on reTerminal DM using Edge Impulse](https://wiki.seeedstudio.com/reTerminal-DM-edgeimpulse/)
+### [Using Wi-Fi technology to enable geolocation for your tracker](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation/)
 
-In today's digital landscape, the integration of edge AI and IoT (Internet of Things) technologies has opened up exciting possibilities for developers and enthusiasts. One such powerful platform that simplifies the creation of machine learning models for edge devices is Edge Impulse. In this step-by-step guide, we will walk you through the process of installing Edge Impulse on your reTerminal DM device and creating a local object detection solution.
+This is an application for the SenseCAP T1000 Tracker. The tutorial uses Wi-Fi technology to enable geolocation for your tracker.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/edgeimpulse.gif" /></div>
 
-### [SenseCAP Hotspot APP](https://wiki.seeedstudio.com/SenseCAP_Hotspot_APP/)
+<div align="center"><img width={600} src="https://ksr-ugc.imgix.net/assets/042/029/307/c878a08e817ce49be25a7a8222c908e0_original.jpg?ixlib=rb-4.1.0&w=680&fit=max&v=1692700586&gif-q=50&q=92&s=acabe534ac531e4ac7bd0b1ad849e2d4" /></div>
 
-SenseCAP Hotspot APP is a powerful APP mainly used for data visualization and remote device management for SenseCAP MX Hotspot.
+### [SenseCAP S2107](https://wiki.seeedstudio.com/SenseCAP_S2107/)
 
-<div align="center"><img width={600} src="https://www.sensecapmx.com/wp-content/uploads/2022/07/sensecap-hotspot-app-1.png" /></div>
+SenseCAP LoRaWAN® S2107 temperature Sensor measures temperature at the range of -50°C~300°C. Benefiting from LoRa and IP66 design, this sensor features stability and reliability and can cover a long transmission range while keeping lower power consumption. Direct contact temperature is an important indicator in many scenarios, especially in liquid detection, food monitoring, storage cold chain, industrial boilers, aquaculture solutions. 
 
-### [Setup Your Toolchain(Arduino on Wio Tracker)](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker/)
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/0.jpg" /></div>
 
-The Wio Tracker 1110 Dev Board leverages Arduino to enhance your coding experience, before you start development, need to set up your toolchain first.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-wio.png" /></div>
 
-### [reServer Industrial](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started)
+### [What makes SenseCAP T1000 stand out?](https://wiki.seeedstudio.com/sensecap_t1000_tracker/#what-makes-sensecap-t1000-stand-out)
 
-reServer Industrial features 2x 2.5" SATA HDD/ SSD drive bays to easily store hundreds of local video footages in a video analytics application. Also it enables multiple connectivity options including 5 RJ-45 Ethernet ports, 1 RS232/422/485, 4x Isolated DI/DO, 1x CAN, 4* USB3.1. Fanless design with versatile mounting options allows deployment from -20 to 60 ℃, which is ideal for more harsh environments and heavier loads.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reServer-Industrial/1.png" /></div>
+This article introduces seven features that make the SenseCAP T1000 stand out! As a LoRaWAN tracker, it has all the features you want, and more! It delivers precise positioning across vast areas, whether indoors or outdoors, even in remote places. It stands out as a truly reliable tracking solution.
 
-### [IO Expander for XIAO](https://wiki.seeedstudio.com/io_expander_for_xiao/)
+<div align="center"><img width={400} src="https://ksr-ugc.imgix.net/assets/042/020/798/e9c1da26071a4bd0750bae8e9be16222_original.jpg?ixlib=rb-4.1.0&w=680&fit=max&v=1692642032&gif-q=50&q=92&s=0c3ef0acf872f413b2a142306ae2bc57" /></div>
 
-The Wio Tracker 1110 Dev Board is based on Wio-WM1110 Wireless Module and integrates Semtech's LR1110 LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/1.jpg" /></div>
-
-### [FAQ for SenseCAP Tracker](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/)
-
-These are the general questions for SenseCAP Tracker.
 
 ## Existed Wiki Updated
 
-### [Seeed Studio XIAO nRF52840 on Amazon Sidewalk](https://wiki.seeedstudio.com/xiao-ble-sidewalk/)
+### [Getting Started with reComputer Industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/#download-system-image)
 
-We have updated the contents regarding Sidewalk on Seeed Studio XIAO nRF52840, certificated by AWS official.
+We have updated the image files for different versions of reComputer Industrial.
 
 ## The Efforts of Contributor✨
 
-- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
+### [Grove - Wio-E5 Helium and TinyML Application Demo](https://wiki.seeedstudio.com/Grove_Wio_E5_Helium_tinyML_Demo/)
+
+Thanks our contributor salmanfarisvp to do this assisgnment! Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=36100879).
+
+In this wiki, we are going to build a project that utilize tinyML and helium LoRa IoT network to prevent illegal wood logging.
+
+<div align="center"><img width={600} src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/lora%2Btinyml/illegalWoodlogging.png" /></div>
+
+
+
+<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! -->
 
 ## Past Weekly wiki
 
@@ -93,3 +93,4 @@ We have updated the contents regarding Sidewalk on Seeed Studio XIAO nRF52840, c
 - [weekly wiki on 8.28th](/Seeed_Elderly/weekly_wiki/wiki828)
 - [weekly wiki on 9.11st](/Seeed_Elderly/weekly_wiki/wiki911)
 - [weekly wiki on 9.18th](/Seeed_Elderly/weekly_wiki/wiki918)
+- [weekly wiki on 9.25th](/Seeed_Elderly/weekly_wiki/wiki925)
