@@ -273,26 +273,24 @@ You need to prepare the following hardware before getting started with reServer 
   <tbody>
     <tr>
       <td>reServer Industrial J4012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=100000000001695380000&Signature=0w5%2B%2FJVkrqMoy1Fl05IVKkG7BLw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346367&Signature=4176QCNbBCKBemfAmAJp3XS3yjk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={4}>5.1.1</td>
       <td rowSpan={4}>35.3.1</td>
     </tr>
     <tr>
       <td>reServer Industrial J4011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=1.0000000000016954e%2B21&Signature=D9eNQf3YqsC38PKBpzk%2BDFPUYsQ%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346497&Signature=uJCOUWHcOU%2B403%2FwrlCfntq%2FlYw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reServer Industrial J3011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=100000000001695380000&Signature=Tlhs8CLzPyyGbRr8InmCXDHmrs8%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346537&Signature=jwQ1bdd8f%2Bt9Lp1dpd%2FD0JZtQTM%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reServer Industrial J3010</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=1.0000000000016954e%2B21&Signature=9Kcpbj1MnaLD3hVriGYkBRvnDDk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346594&Signature=uV0a08irm7K81lGofbWexIBPNOw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
-
-
 
 - **Step 2:** Extract the generated file 
 
