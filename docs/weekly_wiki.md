@@ -51,6 +51,13 @@ This article introduces seven features that make the SenseCAP T1000 stand out! A
 
 We have updated the image files for different versions of reComputer Industrial.
 
+
+### [XIAO ESP32S3 Sense OV5640 Camera Datasheet](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#installation-of-expansion-boards-for-sense)
+
+We have added the XIAO ESP32S3 Sense OV5640 Camera Datasheet to both [Getting Started with Seeed Studio XIAO ESP32S3 (Sense)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#installation-of-expansion-boards-for-sense) and [Camera Usage in Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#installation-of-expansion-boards-for-sense) wikis.
+
+![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png)
+
 ## The Efforts of Contributor✨
 
 ### [Grove - Wio-E5 Helium and TinyML Application Demo](https://wiki.seeedstudio.com/Grove_Wio_E5_Helium_tinyML_Demo/)
@@ -61,7 +68,11 @@ In this wiki, we are going to build a project that utilize tinyML and helium LoR
 
 <div align="center"><img width={600} src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/lora%2Btinyml/illegalWoodlogging.png" /></div>
 
+### [Linkstar Guide](https://wiki.seeedstudio.com/Linkstar_Intro/)
 
+Thanks our contributor KasunThushara to do this assisgnment! Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=33962964).
+
+In this Wiki, We have listed Linkstar Applications presented by Seeed Studio and Community.
 
 <!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! -->
