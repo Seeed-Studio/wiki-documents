@@ -261,30 +261,51 @@ You need to prepare the following hardware before getting started with reCompute
 
 ### Download System Image
 
-- **Step 1:** Visit [this page](https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/) to download the system image to your Ubuntu PC corresponding to the board you are using. Here each will included around 3 **tar.gz** files and you need to download all of them at first. For example, for Orin NX 16GB version, you need to download the below 3 files
+- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
 
-<div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/95.png"/></div>
+<table>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Image Link</th>
+      <th>JetPack Version</th>
+      <th>L4T Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reComputer Industrial J4012</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_jetson-orin-nx-devkit-16g-5.1-35.3.1-recompter-industrial-v0.3.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=6547176909&Signature=Sg%2BKNmeBNE5kAOCaOGtIIH3Chj4%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td rowSpan={6}>5.1.1</td>
+      <td rowSpan={6}>35.3.1</td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_jetson-orin-nx-devkit-8g-5.1-35.3.1-recompter-industrial-v0.3.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=6547176954&Signature=MUVP8x71SuaBKolaV9hyqkdexqc%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_jetson-orin-nano-devkit-8g-5.1-35.3.1-recompter-industrial-v0.3.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=6547176993&Signature=sE66QsMtLJ39DLgwaMXJ4fanKiA%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3010</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_jetson-orin-nano-devkit-4g-5.1-35.3.1-recompter-industrial-v0.3.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=6547177022&Signature=ffL61bDQEdWWjCcjaLvn7Avr2dk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J2012</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_jetson-xavier-nx-devkit-emmc-16g-5.1-35.3.1-recompter-industrial-v0.5.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=6547177050&Signature=xjuFapQPKLliRHoX4%2FfgZOYB2dk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J2011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_jetson-xavier-nx-devkit-emmc-8g-5.1-35.3.1-recompter-industrial-v0.5.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=6547177068&Signature=ldsUQn8gR4v2trmzxfA1jAM0kc8%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+  </tbody>
+</table>
 
-- **Step 2:** After downloading all the files, make sure the 3 files are under the same folder, open a terminal window, navigate to the folder and execute the below command 
+- **Step 2:** Extract the generated file 
 
 ```sh
-cat <file_name>.tar.gza* | tar xzvf -
-```
-
-For example, for Orin NX 16GB version, execute the following
-
-```sh
-cat industrial-orin-nx-16-v0.3.tar.gza* | tar xzvf -
-```
-
-After that the 3 downloaded files will be merged into one file under a new directory named **full** as follows
-
-<div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/96.jpg"/></div>
-
-- **Step 3:** Extract the generated file 
-
-```sh
-tar -xvf industrial-orin-nx-16-v0.3.tar.gz
+tar -xvf <file_name>.tar.gz
 ```
 
 ### Enter Force Recovery Mode
