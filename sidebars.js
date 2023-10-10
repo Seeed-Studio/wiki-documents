@@ -1321,6 +1321,7 @@ const sidebars = {
           label: 'Getting Started',
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+
             {
               type: 'category',
               label: 'OpenAI X SenseCAP Indicator',
@@ -1348,7 +1349,6 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/BLE',
                 'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Button',
                 'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/LoRa',
-                'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/Develop_with_ESP32-S3/Arduino',
               ],
             },
             {
@@ -1369,6 +1369,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/SenseCAP_Indicator_Arduino',
           ],
         },
         'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
@@ -3005,7 +3006,7 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
-    'TinyML/TinyML_Workshop',
+    // 'TinyML/TinyML_Workshop',
 
     {
       type: 'category',

@@ -1,81 +1,130 @@
 ---
-description: Arduino
-title: Arduino
+description: Develop SenseCAP Indicator both chips with Arduino
+title: Develop both chips with Arduino
 keywords:
-- SenseCAP Indicator ESP32 Development Tutorial
+- SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_ESP32_Arduino
 last_update:
   date: 9/24/2023
   author: Hendra
 ---
-# **Arduino**
 
-[Arduino](https://www.arduino.cc/) still hold up as one of the top choice for maker to develop their project. The Sensecap Indicator use one of the most popular microcontroller that already supported by many Arduino Libraries which is the ESP32. Specifically Sensecap Indicator use the ESP32S3 variant which boost more performance than the classic ESP32.
+# Develop SenseCAP Indicator both chips with Arduino
+
+The SenseCAP Indicator is a 4-inch touch screen device that is powered by the ESP32 and RP2040 dual MCUs. ESP32 and RP2040 are both highly capable microcontrollers that offer a range of features and functions.
 
 This tutorial will guide you to develop your own custom project/firmware for the Sensecap Indicator using the simplicity and Flexibility of the Arduino Framework.
 
-## **Preparation**
+## Hardware Preparation
 
-**Specification & System Diagram**
+I am using SenseCAP Indicator as the hardware here and there are four types of sensors(CO2, Temp, Humi, TVOC) on it. The contents here should include:
 
-|Screen|3\.95 Inch, Capacitive RGB Touch Screen using FT6336 driver|
-| :- | :- |
-|**Screen Resolution**|480 x 480 pixels using the ST7701 driver|
-|**Power Supply**|5V-DC, 1A|
-|**Battery**|No battery,only powered by USB port|
-|**Processor**|<p>**ESP32-S3:** Xtensa® dual-core 32-bit up to 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ up to 133MHz</p>|
-|**Flash**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
-|**External Storage**|Support up to 32GB Micro SD Card (not included)|
-|**Wi-Fi**|802\.11b/g/n, 2.4GHz|
-|**Bluetooth**|Bluetooth 5.0 LE|
-|**LoRa(SX1262**)|<p>LoRa and FSK Modem</p><p>+21dBm Max Transmitted Power</p> <p>-136dBm@SF12 BW=125KHz RX Sensitivity</p><p>Up to 5km communication distance</p>|
-|**Sensors**(Optional)|<p>**CO2(Sensirion SCD41)**</p><p>Range: 0-40000ppm</p><p>Accuracy: 400ppm-5000ppm ±(50ppm+5% of reading)</p><p>**TVOC (SGP40)**</p><p>Range: 1-500 VOC Index Points</p>**Grove Temperature and Humidity Sensor(AHT20)**<p>Temperature Range: -40 ~ + 85 ℃/± 0.3 ℃; 0 ~ 100% RH/± 2% RH (25 ℃)</p>|
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>SenseCAP Indicator D1S</th>
+    </tr>
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png" style={{width:'auto', height:200}}/></div></td>
+    </tr>
+      <tr>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1S-p-5645.html">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
 
+### Hardware Overview and Develop Knowledge
+
+The Indicator is designed with two MCU where there are RP2040 and ESP32S3 working at the same time.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
 
-Based on the Specs and diagram above there are few things need to keep in mind for better understanding on using this tutorial
-1. There are two MCU used for the Sensecap Indicator which are RP2040 and ESP32S3
-2. All the sensors are connected to RP2040 Microcontroller using I2C protocol
-3. There is one I2C IO expander module using the PCA9535 IC
-4. The screen are connected to ESP32S3 microcontroller with 2 Pin (CS, RESET) connected to the PCA9535 I2C expander
-5. The RP2040 are connected to the ESP32S3 via pin 20 and pin 19 on the ESP32S3 using UART Interfaces
-6. If the Sensecap Indicator plugged into the Computer you will be presented with 2 Serial Port one for the RP2040 and one for the ESP32S3. The one with the information **USB-SERIAL CH340** is the one that's connected to the ESP32S3 and this is the one will be use for the rest of the tutorial.
-![image3](./1.jpg)
+Based on the diagram above we know that: 
+
+1. All the sensors are connected to RP2040 Microcontroller using I2C protocol
+2. There is one I2C IO expander module using the PCA9535 IC
+3. The screen are connected to ESP32S3 microcontroller with 2 Pin (CS, RESET) connected to the PCA9535 I2C expander
+4. The RP2040 are connected to the ESP32S3 via pin 20 and pin 19 on the ESP32S3 using UART Interfaces
+
+Thus, if the Sensecap Indicator plugged into the Computer you will be presented with 2 Serial Port one for the RP2040 and one for the ESP32S3. The one with the information **USB-SERIAL CH340** is the one that's connected to the ESP32S3 and this is the one will be use for the rest of the tutorial.
 
 
-**Arduino Setup**
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/1.jpg"/></div>
 
-Before continue with the tutorial there are a few things needed to do in the Arduino IDE.
+## Software Preparation
 
-1. Make sure the ESP32 board definition is already installed and at the newest version. Follow [this guide](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html) if the ESP32 board is not in the Arduino IDE yet.
-2. Choose the ESP32S3 Dev Module as the Board definition
-3. For the content of this tutorial, you need to turn on the PSRAM function of the Arduino IDE to ensure that the screen will working properly
-![image3](./2.jpg)
+We are using Artduino here. 
 
-
-
-## **Screen**
-
-Based on the Specification and sistem diagram above, the Sensecap Indicator is using the ST7701 module for the screen. It uses parallel interfaces and already connected to the pins on the ESP32S3 MCU.
-In order to be able to drive the screen a few arduino library is needed.
+<div class="download_arduino_container" style={{textAlign: 'center'}}>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+    </a>
+</div>
 
 :::note
-[Download the library screen for the screen here](https://drive.google.com/file/d/1Fzb9VEHyGaecVqauoIJi4HbFFEUC3Scz/view?usp=sharing)
+Before continue with the tutorial there are a few things needed to do in the Arduino IDE.
+
+1. Make sure the ESP32 board definition is already installed and at the newest version. You can follow [this guide](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html) if the ESP32 board is not in the Arduino IDE yet.
+2. Choose the ESP32S3 Dev Module as the Board definition
+3. For the content of this tutorial, you need to turn on the PSRAM function of the Arduino IDE to ensure that the screen will working properly
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/2.jpg"/></div>
+
 :::
+
+And the related and needed libraries in this tutorial are also presented here:
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Develop with Screen</th>
+        <th>Develop with Sensor</th>
+    </tr>
+      <tr>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.arduino.cc/en/software">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
+          </a>
+      </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/related-mpy.zip">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
+          </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+## Getting Started
+
+We can now develop with screen which connect ESP32S3 chip and read the sensors which link to the RP2040 chip. Finally combine them both.
+
+### Develop with Screen which connects ESP32S3 chip
+
+The Sensecap Indicator is using the ST7701 module for the screen and it uses parallel interfaces and already connected to the pins on the ESP32S3 MCU.
+In order to be able to drive the screen a few arduino library is needed. It is presented in the "Software Preparation" and you can also download [here](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/Arduino_GFX-master.zip)
 
 After the library is downloaded open the Arduino, on the sketch menu choose add zip library
 
-![image3](./3.jpg)
-![image3](./4.jpg)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/3.jpg"/></div>
 
-Next on the same sketch menu choose manage libraries then search for "PCA9535" and choose the one made by hidea kitai then install it
+Add the downloaded library into the Arduino IDE.
 
-![image3](./5.jpg)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/4.jpg"/></div>
 
+Meanwhile, you need to check the same sketch menu and choose "manage libraries" then search for "PCA9535" and choose the one made by hidea kitai then install it
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/5.jpg"/></div>
+
+:::note
 The PCA9535 library is needed because the CS pin of the ST7701 is connected the PCA9535 i2c expander module. Specifically the Pin 4 of the i2c module.
-After all the necessary libraries is installed upload the code below to test if the screen is working with the Arduino environment
+:::
+
+After all the necessary libraries is installed upload the code below to test if the screen is working with the Arduino environment. You can upload the code below:
 
 ```cpp
 #include <Arduino_GFX_Library.h>
@@ -152,20 +201,20 @@ void loop()
 }
 ```
 
-If everything goes well a "Sensecap Indicator" text will be printed randomly on the screen
+If everything goes well a "Sensecap Indicator" text will be printed randomly on the screen.
 
-![image3](./6.jpg)
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/6.jpg"/></div>
 
-:::tip
-For more understanding on using the Arduino GFX library you can visit the [Arduino_GFX github page](https://github.com/moononournation/Arduino_GFX)
-:::
+### Read the sensors which link to the RP2040 chip
 
-## **Sensors**
 As mentioned above on the preparation section, all the sensors are connected to the RP2040. Assuming that you still have the default firmware on the RP2040 the sensor data are sent to the ESP32S3 using the UART interface.
-In order for the ESP32S3 to be able to read the data a library need to be installed called **PacketSerial** 
-![image3](./7.jpg)
 
-After the library is installed upload the code below to get the sensor data on the ESP32S3
+In order for the ESP32S3 to be able to read the data a library need to be installed called **PacketSerial**.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/7.jpg"/></div>
+
+After the library is installed you can upload the code below to get the sensor data on the ESP32S3:
+
 ```cpp
 //
 // Copyright (c) 2012 Christopher Baker <https://christopherbaker.net>
@@ -287,30 +336,37 @@ void onPacketReceived(const uint8_t *buffer, size_t size) {
 }
 ```
 
-Open Serial monitor and set the Baud Rate to 115200 the you will be presented the sensors data from the RP2040
-![image3](./8.jpg)
+Click and open the Serial monitor and set the Baud Rate to 115200 the you will be presented the sensors data from the RP2040
 
-## Display The Sensor Data
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/8.jpg"/></div>
 
-Open the example menu on the Arduino IDE and guide yourself to **GFX library for Arduino** then choose the **SI_displaysensordata** example and upload it
-![image3](./9.jpg)
+### Combine two examples and display the sensors data on the screen
 
-If successfully uploaded you will be presented with sensors data displayed on the screen
-![image3](./10.jpg)
+Open the example menu on the Arduino IDE and guide yourself to **GFX library for Arduino** then choose the **SI_displaysensordata** example and upload it.
 
-Congratulation now you can develop the Sensecap Indicator using Arduino IDE
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/9.jpg"/></div>
 
-## Further Development
+If successfully uploaded you will be presented with sensors data displayed on the screen.
 
-There is still one part that is not configure in this tutorial which is the touchscreen part. I already try few arduino library for the FT6336 module but none have a successful result. This due to the INT Pin and RESET pin of the FT6366 module connected to the PCA9535 I2C expander and it need to configured manually in the library. I might get back to try this in the future.
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/10.jpg"/></div>
+
+Congratulation now you can develop the Sensecap Indicator using Arduino IDE!
+
+## What's More
+
+1. There is still Phase ONE for the development and what is not configured in this tutorial is the touchscreen part. I already try few arduino library for the FT6336 module but none have a successful result. 
+2. This due to the INT Pin and RESET pin of the FT6366 module connected to the PCA9535 I2C expander and it need to configured manually in the library. I might get back to try this in the future.
+
+- By the way, for more understanding on using the Arduino GFX library you can visit the [Arduino_GFX github page](https://github.com/moononournation/Arduino_GFX)
 
 ## Special Thanks
+
 thanks to github user [u4mzu4](https://github.com/u4mzu4) for the SWSPI config file that support the Sensecap indicator
 
 ## ✨ Contributor Project
 
 - This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
-
+- Thanks [Hendra](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925769) and u4mzu4's efforts and your work will be exhibited.
 
 ## Tech Support & Product Discussion
 
