@@ -408,6 +408,7 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_P2P',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_tinyML_Demo',
               ],
             },
             {
@@ -656,7 +657,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: "doc",
-            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_intro',
           },
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
@@ -1331,6 +1332,7 @@ const sidebars = {
           label: 'Getting Started',
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+
             {
               type: 'category',
               label: 'OpenAI X SenseCAP Indicator',
@@ -1378,6 +1380,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/SenseCAP_Indicator_Arduino',
           ],
         },
         'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',

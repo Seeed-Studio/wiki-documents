@@ -63,7 +63,7 @@ Just like the Seeed Studio XIAO series, Seeed Studio XIAO nRF52840 Sense is perf
 
 Since we already installed **Seeed_Arduino_Mic Library** before, we do not need to install again for this example. However, if you have not yet installed it, please follow the above example.
 
-- **Step 2**. [Download Seeed_Arduino_FS Library](https://github.com/Seeed-Studio/Seeed_Arduino_Mic) as a zip file
+- **Step 2**. [Download Seeed_Arduino_FS Library](https://github.com/Seeed-Studio/Seeed_Arduino_FS) as a zip file
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/arduino-fs-zip.png" alt="pir" width={1000} height="auto" /></p>
 
