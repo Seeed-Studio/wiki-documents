@@ -82,20 +82,15 @@ And the related and needed libraries in this tutorial are also presented here:
   <table align="center">
     <tr>
         <th>Develop with Screen</th>
-        <th>Develop with Sensor</th>
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.arduino.cc/en/software">
               <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
           </a>
-      </div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/related-mpy.zip">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
-          </a>
-      </div></td>
-    </tr>
+          </div>
+        </td>
+      </tr>
   </table>
 </div>
 
