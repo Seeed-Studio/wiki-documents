@@ -1332,6 +1332,7 @@ const sidebars = {
           label: 'Getting Started',
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+
             {
               type: 'category',
               label: 'OpenAI X SenseCAP Indicator',
@@ -1379,6 +1380,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/SenseCAP_Indicator_Arduino',
           ],
         },
         'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
