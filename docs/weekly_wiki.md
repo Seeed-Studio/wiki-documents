@@ -56,7 +56,7 @@ We have updated the image files for different versions of reComputer Industrial.
 
 We have added the XIAO ESP32S3 Sense OV5640 Camera Datasheet to both [Getting Started with Seeed Studio XIAO ESP32S3 (Sense)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#installation-of-expansion-boards-for-sense) and [Camera Usage in Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#installation-of-expansion-boards-for-sense) wikis.
 
-![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png)
+<!-- ![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png) -->
 
 ## The Efforts of Contributor✨
 
