@@ -211,8 +211,8 @@ When using single pin operations such as _pinMode(pinId, dir)_ or _digitalRead(p
 
 ## Resources
 
-- **[ZIP]** [Eagle file](https://files.seeedstudio.com/wiki/XIAO_IO.zip)
-- **[PDF]** [Datasheet - MCP23017](https://files.seeedstudio.com/wiki/MCP23017_Data_Sheet_DS20001952-2998473.pdf)
+- **[ZIP]** [Eagle file](https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/XIAO_IO.zip)
+- **[PDF]** [Datasheet - MCP23017](https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/MCP23017_Data_Sheet_DS20001952-2998473.pdf)
 
 ## Tech Support & Product Discussion
 
