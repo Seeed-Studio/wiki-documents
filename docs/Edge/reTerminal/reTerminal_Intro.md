@@ -142,7 +142,7 @@ last_update:
     <tr class="table-trnobg">
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this wiki, we delve into MediaPipe, an open-source framework by Google for constructing multimodal and cross-platform applied ML pipelines, optimized for on-device inference. </font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>This wiki provides insights into TFlite and various applications. TensorFlow Lite, a set of tools, facilitates on-device machine learning, enabling developers to run models on mobile, embedded, and IoT devices. </font></td>
-      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this wiki, we explore Object detection with Edge Impulse and reTerminal DM. Edge Impulse empowers developers to create and optimize embedded machine learning solutions using real-world data. Let's delve into the details. </font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this wiki, we explore Object detection with Edge Impulse and reTerminal. Edge Impulse empowers developers to create and optimize embedded machine learning solutions using real-world data. Let's delve into the details. </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
