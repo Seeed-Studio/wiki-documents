@@ -12,7 +12,7 @@ last_update:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/0.jpg" /></div>
 
-## Product Description
+# Product Description
 
 SenseCAP LoRaWAN® S2107 temperature Sensor measures temperature at the range of -50°C~300°C. A highly accurate temperature sensor PT1000 that can support temperature detection in wide temperature ranges and industrial scenarios. 
 Pt1000 sensors (1000 ohm temperature sensors) are the most common type of platinum resistance thermometer. The S2107 supports a three-wire circuit for PT1000 sensors and allows for the connection of up to three sensors simultaneously.
@@ -21,22 +21,22 @@ Direct contact temperature is an important indicator in many scenarios, especial
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html)
 
-## Features
+# Features
 
 - Compatible with Worldwide LoRaWAN® Networks: Compatible with different types of LoRaWAN® gateways to enable fast connection with LoRaWAN® networks (support the universal frequency plan from 863MHz ~928MHz).
 - Long Range & Battery powered: Ultra-wide-transmission range of 2km in urban scenes and 10km in line of sight scenes. Powered by easily replaceable standard Li-SOCl2 battery (type: ER34615) with Max.10 years of battery life.
 - Designed to Use in Harsh Environments: -40℃ ~ 85℃ operating temperature and IP66-rated enclosure, suitable for outdoor use, high UV exposure, heavy rain, dusty conditions, etc.
 - Simple Configuration and Calibration: SenseCAP provides a no-code experience that enables users to finish configuration and calibration through SenseCAP Mate APP.
+- **Local storage：When LoRaWAN network is disconnected, the device can locally store up to 2000 uplinking records**.
 
-
-## Applications
+# Applications
 
 - Liquid detection
 - Food monitoring
 - Storage cold chain
 - Aquaculture solutions
 
-## Specifications
+# Specifications
 
 |**Temperature**||
 | :- | :- |
@@ -63,6 +63,45 @@ Direct contact temperature is an important indicator in many scenarios, especial
 |Battery Capacity|19Ah (non-rechargeable)|
 |Battery Type|Standard D-size SOCl2 Battery|
 
-## How to add 3 PT1000 sensors to S2107
+# How to add 3 PT1000 sensors to S2107
 
-Coming soon
+## Hardware preparation
+
+Wire 3 PT1000 sensors as shown in the diagram
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/1.jpg" /></div>
+
+## Software Preparation
+
+Use SenseCAP Mate App to configure the PT1000 sensors.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/2.png" /></div>
+
+# Payload Decoder
+
+## Decoder Code
+
+Please direct you to SenseCAP [S210X Decoder](https://github.com/Seeed-Solution/SenseCAP-Decoder/tree/main/S210X)
+
+## Data Parsing Example
+
+Temperature Sensor measurement packet:
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/3.png" /></div>
+
+Packets sent when recovering from offline:
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/4.png" /></div>
+
+Battery Information for S2107:
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/5.png" /></div>
+
+# SenseCAP Tech Support
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
