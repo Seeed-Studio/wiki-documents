@@ -85,7 +85,7 @@ And the related and needed libraries in this tutorial are also presented here:
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.arduino.cc/en/software">
+          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/Arduino_GFX-master.zip">
               <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
           </a>
           </div>
