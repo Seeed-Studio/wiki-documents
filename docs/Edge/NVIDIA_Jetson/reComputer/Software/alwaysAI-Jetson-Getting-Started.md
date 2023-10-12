@@ -55,7 +55,7 @@ alwaysAI is supported by the following Jetson-related hardware:
 
 ## Prerequisites
 
-- Any of the above Jetson devices running JetPack 4.6 with all SDK components installed (check [this wiki](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards/) for a reference on installation)
+- Any of the above Jetson devices running JetPack 4.6 with all SDK components installed (check [this wiki](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/) for a reference on installation)
 - Host PC with Windows, Linux or Mac
 - USB webcam or MIPI CSI camera supported by your Jetson device
 

@@ -59,9 +59,9 @@ Here we will use **NVIDIA L4T 35.1** to install **Jetpack 5.0.2** on the Jetson 
 
 ```sh
 cd <directory_where_the_files_are_located>
-tar xf Jetson_Linux_R32.7.1_aarch64.tbz2
+tar xf Jetson_Linux_R35.1.0_aarch64.tbz2
 cd Linux_for_tegra/rootfs
-sudo tar xfp ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
+sudo tar xfp ../../Tegra_Linux_Sample-Root-Filesystem_R35.1.0_aarch64.tbz2
 cd ..
 sudo ./apply_binaries.sh
 ```

@@ -84,7 +84,7 @@ Here we will use [DashCamNet model](https://catalog.ngc.nvidia.com/orgs/nvidia/t
 
 > The below workflow is tested on a [reComputer J1010](https://www.seeedstudio.com/Jetson-10-1-H0-p-5335.html) running [JetPack 4.6.1](https://developer.nvidia.com/embedded/jetpack-sdk-461)
 
-**Step 1:** Make sure you have properly installed all the **SDK Components** and **DeepStream SDK** on the Jetson device. (check [this wiki](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards/) for a reference on installation)
+**Step 1:** Make sure you have properly installed all the **SDK Components** and **DeepStream SDK** on the Jetson device. (check [this wiki](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/) for a reference on installation)
 
 **Note:** It is recommended to use **NVIDIA SDK Manager** to install all the SDK components and DeepStream SDK
 
