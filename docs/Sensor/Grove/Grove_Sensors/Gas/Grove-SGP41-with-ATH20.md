@@ -32,7 +32,7 @@ Verify by using the defaults 25°C and 50% relative humidity:
 50 × 65535 / 100 = 32767.5 = 0x8000 (hexadecimal, rounded up)
 (25 + 45) × 65535 / 175 = 26214 = 0x6666 (hexadecimal) 
 ```
-The result matches the constants used in the program used by [Grove - Smart Air Quality Sensor (SGP41)](Grove-smart_air_quality_sensor.md) and defined in Table 11 of the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf). 
+The results match the constants used in the program used by [Grove - Smart Air Quality Sensor (SGP41)](Grove-smart_air_quality_sensor.md) and defined in Table 11 of the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf). 
 
 The same in c:
 ```cpp
@@ -121,11 +121,7 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-:::caution
-TODO - - - - - - Not ready, yet ! - - - - - -
-:::
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/3.jpg" alt="pir" width={600} height="auto" /></p>
+![Seeeduino_SGP41_AHT20](1.jpg)
 
 #### Software
 
@@ -295,9 +291,7 @@ void loop()
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**.
 
-:::caution
-TODO - - - - - - Not ready, yet ! - - - - - -
-:::
+![Serial Console output](2.jpg)
 
 ## Schematic Online Viewer
 
