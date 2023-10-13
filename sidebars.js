@@ -408,6 +408,7 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_P2P',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_tinyML_Demo',
               ],
             },
             {
@@ -656,7 +657,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: "doc",
-            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_intro',
           },
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
@@ -668,6 +669,7 @@ const sidebars = {
             label: 'TTN Cloud Services',
             items: [
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Connect_to_The_Things_Network',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/TTN_Mapper',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Datacake_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Ubidots_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Qubitro_Integrated',
@@ -766,6 +768,7 @@ const sidebars = {
               type: 'category',
               label: 'SenseCAP Sensor Probe',
               items: [
+                'Sensor/SenseCAP/SenseCAP_Probe/SenseCAP_Sensor_Probes_Product_Catalogue',
                 'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
                 'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
@@ -1331,6 +1334,7 @@ const sidebars = {
           label: 'Getting Started',
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+
             {
               type: 'category',
               label: 'OpenAI X SenseCAP Indicator',
@@ -1378,6 +1382,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/SenseCAP_Indicator_Arduino',
           ],
         },
         'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',

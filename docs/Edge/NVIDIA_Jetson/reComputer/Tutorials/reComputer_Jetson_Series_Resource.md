@@ -119,7 +119,7 @@ NVIDIA ® Jetson™ brings accelerated AI performance to edge devices in an ener
 Since reComputer Jetson series products have been equipped 16 GB eMMC, and the `ubuntu 18.04 LTS` and `NVIDIA JetPack 4.6` are both pre-installed, you can directly apply it to develop your projects. If you want to re-flash, please visit the appropriate documentation below:
 
 - [J1010 carrier version](https://wiki.seeedstudio.com/install_NVIDIA_software_to_Jetson-10-1-A0)
-- [Jetson A206 carrier board](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards/)
+- [Jetson A206 carrier board](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/)
 
 ## Support
 

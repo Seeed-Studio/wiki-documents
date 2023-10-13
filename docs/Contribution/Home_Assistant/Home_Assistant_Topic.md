@@ -299,7 +299,7 @@ Home Assistant is a free and open-source software that serves as a central contr
 
 Home Assistant is built by one of the largest communities of open-source developers. Let us revisit a glimpse of this extensive community, where includes all kinds of Home Assistant-related projects using Seeed Studio products.
 
-### <span id="jump5"> Home Assistant Appllication presented by Seeed Studio </span>
+### <span id="jump5"> Home Assistant Application presented by Seeed Studio </span>
 
 <br />
 
@@ -307,8 +307,8 @@ Home Assistant is built by one of the largest communities of open-source develop
 	<table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Automate your home with Home Assistant on reTerminal</th>
-      <th class="table-trnobg">Object detection - Using intergated Friate on Home Assistant with reTerminal</th>
-      <th class="table-trnobg">Object detection - Using intergated Friate on Home Assistant with reTerminal DM</th>
+      <th class="table-trnobg">Object detection - Using intergated Frigate on Home Assistant with reTerminal</th>
+      <th class="table-trnobg">Object detection - Using intergated Frigate on Home Assistant with reTerminal DM</th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
@@ -356,7 +356,7 @@ Home Assistant is built by one of the largest communities of open-source develop
 
 ---
 
-### <span id="jump6"> Home Assistant Appllication presented by our friends </span>
+### <span id="jump6"> Home Assistant Application presented by our friends </span>
 
 <br />
 
