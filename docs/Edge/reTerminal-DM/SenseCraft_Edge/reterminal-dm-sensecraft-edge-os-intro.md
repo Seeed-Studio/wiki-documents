@@ -24,7 +24,7 @@ SenseCraft Edge OS is a cutting-edge operating system meticulously designed for 
 </div>
 
 :::note
-reTerminal DM will be Shipped with SenseCraft Edge OS as default Operating System from next product release batch.
+reTerminal DM will be Shipped with Raspberry pi OS as default Operating System from next product release batch.
 :::
 
 :::note
