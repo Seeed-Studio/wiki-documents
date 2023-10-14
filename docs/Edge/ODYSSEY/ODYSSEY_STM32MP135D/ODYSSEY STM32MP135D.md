@@ -58,7 +58,12 @@ To get started with the hardware, you will need the following:
 one](https://ftdichip.com/products/ttl-232r-rpi/).
 
 First, carefully connect the usb to uart cable so you get access to the serial 
-console. Refer to the [hardware schematics](https://files.seeedstudio.com/wiki/Odyssey-STM32MP135D/ODYSSEY_STM32MP135D_SCH.pdf) to connect the pins in the correct order.
+console. Refer to the following image to help you connect the pins 
+properly.
+![Top down view of STM32MP135D ODYSSEY board with debug pins next to the boot
+jumper circled. Pins listed in order of closeness to boot jumpers: WAKE, GND,
+TX, RX](https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEyMg_558688_ff47Pijnl_CdTY5i_1689582643?w=1201&h=801&type=image/png "highlighted uart0 pins")
+
 We will use the usb-c for power in this guide. Connect one end of the usb-c 
 cable to the board, then connect the other end to your computer. Plug the 
 ethernet cable into eth1 port of the ODYSSEY, and the other end into your 
@@ -71,7 +76,7 @@ This guide will use the following software components:
 tree](https://github.com/xogium/buildroot-stm32mp135d-odyssey) to be used in 
 conjunction with upstream buildroot.
 * [snagboot](https://github.com/bootlin/snagboot), which is a set of utilities 
-that helps witheasier operation of DFU and usb mass storage. It consists of 
+that helps with easier operation of DFU and usb mass storage. It consists of 
 snagrecover which is intended to upload the fsbl and ssbl into the board's 
 DRAM, and of snagflash which is designed to actually flash data onto persistent 
 storage.
@@ -109,6 +114,11 @@ manual to learn more.
 #### Getting the softwares ####
 This example demonstrates getting buildroot and the required external tree, 
 then setting them up to be used:
+
+First install Buildroot's required dependencies. See:
+[The buildroot user manual, chapter 2: System 
+requirements](https://buildroot.org/downloads/manual/manual.html#requirement). 
+Then, set up the source code:
 ```
 wget https://buildroot.org/downloads/buildroot-2023.02.5.tar.gz
 tar -xf buildroot-2023.02.5.tar.gz
@@ -152,6 +162,12 @@ zImage
 Remove the middle boot jumper on the board to be sure DFU mode is active. Make 
 sure to open the serial console using minicom or another similar program, you 
 will need it.
+
+As an example, here is how to use gnu screen to access a serial console 
+named ttyUSB0. The baud rate is expected to be 115200n8.
+```
+sudo screen /dev/ttyUSB0 115200n8
+```
 
 Then, execute the following command from the snagboot package and be
 prepared to interrupt the boot sequence when reaching u-boot, by
@@ -212,6 +228,13 @@ the output of lsblk command to make sure you get the correct device
 node! Otherwise, data loss will occure, as this erases the entire content of 
 the target device.
 
+Please use minicom or similar program to attach to the serial console of 
+the board. As an example, here is how to use gnu screen to access a 
+serial console named ttyUSB0. The baud rate is expected to be 115200n8.
+```
+sudo screen /dev/ttyUSB0 115200n8
+```
+
 When the micro sd card has been successfully written to, insert it into 
 the micro sd socket of the STM32MP135D ODYSSEY board, and adjust the boot 
 jumpers to boot from micro sd (all jumpers removed). If required, reset the 
@@ -244,7 +267,13 @@ sudo bsdtar -xpf rootfs.tar -C /srv/nfs/stm32mp135d
 ```
 
 Remove the middle boot jumper to be sure DFU mode is active. Make sure to open 
-the serial console using minicom or another similar program, you will need it. 
+the serial console using minicom or another similar program, you will need it.
+As an example, here is how to use gnu screen to access a serial console
+named ttyUSB0. The baud rate is expected to be 115200n8.
+```
+sudo screen /dev/ttyUSB0 115200n8
+```
+
 Then, execute the following command from the snagboot package and be prepared 
 to interrupt the boot sequence when reaching u-boot, by pressing any key in the 
 serial console window:
@@ -276,6 +305,9 @@ The current implementation to read MAC addresses from the EEPROM is
 expecting the first one to start at offset 0 and have a length of 6 
 bytes. The second MAC must be stored at offset 0x10, and also have a 
 length of 6 bytes.
+
+* Tip: to generate random MAC, use a generator such as
+[this one](https://www.hellion.org.uk/cgi-bin/randmac.pl).
 
 For storing the u-boot environment into the EEPROM if you wish to do so, 
 please ensure that the environment begins on a new page boundary. Pages 
