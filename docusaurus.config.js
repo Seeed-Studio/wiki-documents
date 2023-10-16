@@ -96,7 +96,7 @@ const config = {
         },
 
         googleTagManager: {
-          containerId: 'GTM-W2VX3NP',
+          containerId: 'GTM-M4JG2HVB',
         },
 
         //         blog: {
