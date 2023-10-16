@@ -1,8 +1,8 @@
 ---
 description: This article focuses on the use of the Grove SGP41 sensor.
-title: Grove - SGP41 with ATH20
+title: Grove - SGP41 with AHT20
 keywords:
-- SGP41 ATH20
+- SGP41 AHT20
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-sgp41-with-ath20
 last_update:
@@ -10,14 +10,14 @@ last_update:
   author: Hans Bausewein
 ---
 
-# Grove - SGP41 with ATH20
+# Grove - SGP41 with AHT20
 
 
 <br />
 
 First read the [Grove - Smart Air Quality Sensor (SGP41)](Grove-smart_air_quality_sensor.md) and the [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor) documentation before reading this document.
 
-According to the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf) section 3.2 (Raw Signal Measurement), the SGP41 measurement is dependent on humidity and temperature, so we need to apply a correction to get consistent data: read the relative humidity and temperature from the ATH20 (or another sensor), calculate the ticks and pass them to the *sgp41_measure_raw_signals* function.
+According to the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf) section 3.2 (Raw Signal Measurement), the SGP41 measurement is dependent on humidity and temperature, so we need to apply a correction to get consistent data: read the relative humidity and temperature from the AHT20 (or another sensor), calculate the ticks and pass them to the *sgp41_measure_raw_signals* function.
 
 Table 11 (Description of the I2C measurement command) on page 15 describes the formulas to calculate the ticks:
 
@@ -44,12 +44,12 @@ Note that 'humi' in the program is a value between 0 and 1, so the division by 1
 ## Features
 
 - [SGP41](Grove-smart_air_quality_sensor.md#features)
-- [ATH20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#feature)
+- [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#feature)
 
 ## Specification
 
 - [SGP41](Grove-smart_air_quality_sensor.md#specification)
-- [ATH20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#specification)
+- [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#specification)
 
 ## Applications
 
@@ -153,7 +153,7 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3.** After downloading and installing the libraries correctly, you can upload the code below, which is a combination of the [SGP41](Grove-smart_air_quality_sensor.md#software) and the [ATH20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#software-code) software with the formulas described in the introduction added.
+- **Step 3.** After downloading and installing the libraries correctly, you can upload the code below, which is a combination of the [SGP41](Grove-smart_air_quality_sensor.md#software) and the [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#software-code) software with the formulas described in the introduction added.
 
 #### Software Code
 
@@ -300,7 +300,7 @@ Note that the first ten SRAW_NOx values are zero due to conditioning.
 ## Resources
 
 - [SGP41](Grove-smart_air_quality_sensor.md#resources)
-- [ATH20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#resources)
+- [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#resources)
 
 ## Tech Support & Product Discussion
 

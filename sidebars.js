@@ -230,7 +230,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-Alcohol_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-CO2_Sensor',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-smart_air_quality_sensor',
-                'Sensor/Grove/Grove_Sensors/Gas/Grove-SGP41-with-ATH20',
+                'Sensor/Grove/Grove_Sensors/Gas/Grove-SGP41-with-AHT20',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_and_eCO2_Gas_Sensor-SGP30',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-VOC_Gas_Sensor-SGP40',
                 'Sensor/Grove/Grove_Sensors/Gas/Grove-HCHO_Sensor',
