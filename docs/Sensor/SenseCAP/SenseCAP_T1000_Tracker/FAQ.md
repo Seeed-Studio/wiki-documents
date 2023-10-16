@@ -3,7 +3,7 @@ description: SenseCAP_Tracker_T1000-A/B_FAQ
 title: FAQ
 keywords:
 - Tracker
-- Wio
+- FAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /faq_for_SenseCAP_T1000
 last_update:
