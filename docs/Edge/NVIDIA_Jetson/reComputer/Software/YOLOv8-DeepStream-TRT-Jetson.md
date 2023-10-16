@@ -497,13 +497,13 @@ After running a couple of deepstream applications on reComputer J4012, J3011 and
 
 Here we have used a single YOLOv8s model and configured multiple streams to be used with the same model.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/one-model-2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/multi-models-3.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Multiple Model with Multiple Streams
 
 Here we have used multiple YOLOv8s models and configured multiple streams to be used with each model.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/multi-models-3.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/one-model-2.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Resources
 
