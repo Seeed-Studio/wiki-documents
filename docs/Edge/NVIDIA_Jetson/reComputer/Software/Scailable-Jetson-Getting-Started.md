@@ -12,17 +12,23 @@ last_update:
 
 # Getting Started with Scailable on NVIDIA® Jetson Devices
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Scailable/wiki-thumb.gif" /></div>
+<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Scailable/wiki-thumb-2.1.gif" /></div>
+
+## What is Scailable?
 
 [Scailable](https://scailable.net) provides a platform for creating and managing Edge AI solutions at scale. With Scailable, you can simply configure any supported edge device (such as a router, gateway, or IPC) to turn it into a "smart" device. Smart devices can run advanced Artificial Intelligence (AI) and Machine Learning (ML) models on input data, such as a video stream, to turn the input into something meaningful, such as a count of the number of cars in the video.
+
+## Why Scailable on NVIDIA Jetson?
+
+NVIDIA Jetson platform is a great candidate to run Scailable because, as an Edge AI device including NVIDIA SoMs, it is able to give a better inference performance after deploying various AI pipelines over-the-air at scale to these devices. 
 
 This wiki will walkthrough how you can easily install Scailable AI Manager on the NVIDIA Jetson platform and use Scailable Platform to remotely configure and manage your AI solution at scale.
 
 ## Prerequisites
 
-- NVIDIA Jetson device running NVIDIA JetPack and connected to the internet
+- NVIDIA Jetson device running NVIDIA JetPack 5.0+ and connected to the internet
 
-  - We have tested this wiki with [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) running [JetPack 5.1.1](https://developer.nvidia.com/embedded/jetpack-sdk-511)
+  - We have tested this wiki with [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) running [JetPack 5.1.1](https://developer.nvidia.com/embedded/jetpack-sdk-511). If you want to explore more NVIDIA Jetson devices offered by Seeed, please visit [this page](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf).
 - Host PC with Windows, Linux or Mac and connected to the internet
 
 ## Install Scailable AI Manager
@@ -52,22 +58,12 @@ During the installation, you need to enter "y" to the prompt which asks you to e
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/1.jpg
 " style={{width:1000, height:'auto'}}/></div>
 
-**Step 2:** Fill the required details to create an account, agree to the terms and click **Register**
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/5.jpg
-" style={{width:750, height:'auto'}}/></div>
-
-**Step 3:** Confirm the device name that you created before and click **Register**
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/6.jpg
-" style={{width:750, height:'auto'}}/></div>
-
-**Step 4:** Click **Return to device**
+**Step 3:** Confirm the device name that you created before, click **Register** and click **Return to device**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/7.jpg
 " style={{width:650, height:'auto'}}/></div>
 
-If everything went well, you will see all the status check are successful under the **Status** tab
+If everything went well, you will see all the status check are successful under the **Status** tab as follows
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/8.jpg
 " style={{width:850, height:'auto'}}/></div>
@@ -156,6 +152,37 @@ You will see the following output if it is running successfully
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/27.png
 " style={{width:800, height:'auto'}}/></div>
+
+## Deploy AI Models at Scale 
+
+Using Scailable, you can deploy a single model to multiple devices at scale with ease
+
+**Step 1:** Visit [this webpage](https://admin.sclbl.net/login), login to your Scailable account and you will see the dashboard as follows
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/32.png
+" style={{width:800, height:'auto'}}/></div>
+
+**Step 2:** Once you click **DEVICES**, you will see all your devices connected with your Scailable account
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/28.png
+" style={{width:750, height:'auto'}}/></div>
+
+**Step 3:** Select all the devices by clicking on the check box, enter a name for the device group and click **Save new groups**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/29.png
+" style={{width:750, height:'auto'}}/></div>
+
+**Step 4:** Click **Assign a model to all devices in group**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/30.png
+" style={{width:750, height:'auto'}}/></div>
+
+**Step 5:** Choose a model as we did before and the model will be deployed to all the devices in the group remotely
+
+Upon successfully deploying the model remotely, you will see the following output
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Scailable/31.jpg
+" style={{width:600, height:'auto'}}/></div>
 
 ## Learn more 
 
