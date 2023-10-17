@@ -2334,6 +2334,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv5-Object-Detection-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Scailable-Jetson-Getting-Started',
               ],
             },
 
