@@ -12,7 +12,7 @@ last_update:
 
 # Getting Started with Scailable on NVIDIA® Jetson Devices
 
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Scailable/wiki-thumb-2.1.gif" /></div>
+<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Scailable/wiki-thumb-4.gif" /></div>
 
 ## What is Scailable?
 
