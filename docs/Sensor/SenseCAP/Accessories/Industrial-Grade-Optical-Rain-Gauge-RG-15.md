@@ -5,8 +5,8 @@ keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 1/16/2023
-  author: jianjing Huang
+  date: 10/18/2023
+  author: Yvonne
 ---
 
 ![Rain Gauge RG-15](https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/114992321-07.png)
@@ -97,6 +97,6 @@ The RG-15 Optical Rain Gauge features an open-collector output that emulates a c
 
 ## Sources
 
-* [Optical Rain Gauge  Instructions](https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/RG-15_instructions_sw_1.000.pdf)
+* [Optical Rain Gauge  Instructions](https://files.seeedstudio.com/products/114992321/res/RG-15_instructions_sw_1.000.pdf)
 
-* [Optical Rain Gauge Datasheet](https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/RG-15_specification.pdf)
+* [Optical Rain Gauge Datasheet](https://files.seeedstudio.com/products/114992321/res/RG-15%C2%A0specification.pdf)
