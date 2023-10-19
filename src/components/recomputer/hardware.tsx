@@ -21,6 +21,7 @@ const HardwarePage = () => {
     { id: 14, name: 'A603 Carrier Board',link:'https://wiki.seeedstudio.com/reComputer_A603_Flash_System/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/Seeed_Product/10.png', scenes: [4] },
     { id: 15, name: 'A607 Carrier Board',link:'https://wiki.seeedstudio.com/reComputer_A607_Flash_System/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/Seeed_Product/11.png', scenes: [4] },
     { id: 16, name: 'reServer Jetson',link:'https://wiki.seeedstudio.com/reServer_J2032_Getting_Started', bg:'https://files.seeedstudio.com/wiki/NVIDIA/Seeed_Product/16.png', scenes: [5] },
+    { id: 17, name: 'reServer Industrial J30/ J40 Series',link:'https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started', bg:'https://files.seeedstudio.com/wiki/NVIDIA/Seeed_Product/17.png', scenes: [6] },
   ];
   const scenes = [
     { id: 1, name: 'reComputer',img:'17.png', brands: [1, 2, 3]},
@@ -28,6 +29,7 @@ const HardwarePage = () => {
     { id: 3, name: 'Mini AI PC',img:'20.png', brands: [5, 6, 7, 8, 9, 10] },
     { id: 4, name: 'Carrier Board',img:'21.png', brands: [ 11, 12, 13, 14, 15] },
     { id: 5, name: 'reServer Jetson', img:'22.png',brands: [16] },
+    { id: 6, name: 'reServer Industrial', img:'23.png',brands: [17] },
   ];
   const handleBrandMouseEnter = (brand) => {
     setSelectedBrand([brand]);

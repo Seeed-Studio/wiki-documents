@@ -5,8 +5,8 @@ keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 1/16/2023
-  author: jianjing Huang
+  date: 10/18/2023
+  author: Yvonne
 ---
 
 ![Rain Gauge RG-15](https://files.seeedstudio.com/wiki/Optical_Rain_Gauge_RG-9/0000_front-05.png)
@@ -173,4 +173,4 @@ RG-9 Solid State Rain Sensor features an open-collector output that emulates a c
 
 ## Sources
 
-* [Optical Rain Gauge Datasheet and Specification](https://files.seeedstudio.com/wiki/Optical_Rain_Gauge_RG-9/2020.11.23-rg-9_instructions.pdf)
+* [Optical Rain Gauge Datasheet and Specification](https://files.seeedstudio.com/products/317990687/res/2020.11.23-rg-9_instructions.pdf)
