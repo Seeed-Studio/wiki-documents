@@ -662,8 +662,8 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/E5_Bluetooth_Location_Beacon',
+            
           {
             type: 'category',
             label: 'TTN Cloud Services',
@@ -686,6 +686,8 @@ const sidebars = {
        'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
                ],
           }, 
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
