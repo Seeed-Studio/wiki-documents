@@ -1888,6 +1888,7 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Quick_Start',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Home_Assistant',
             {
               type: 'category',
               label: 'Tutorial',

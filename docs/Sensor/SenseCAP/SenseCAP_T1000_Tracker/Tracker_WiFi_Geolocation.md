@@ -185,11 +185,6 @@ If you don't have running conditions, you can easily run the [Colab notebook](ht
 
 
 
-
-
-
-
-
 ## 2.2 Baidu Map
 In this tutorial, we have chosen to use the intelligent hardware positioning service provided by the **Baidu Map** Open Platform to perform location analysis on the Wi-Fi information we have obtained. The access methods may vary for different location service providers, and here we are using IP whitelist authentication. The specific access process involves defining the data package we need to parse and then making a POST request to the API service address. Below is the JSON data package we have defined.
 
