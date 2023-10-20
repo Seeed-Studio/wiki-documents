@@ -451,7 +451,7 @@ After that, the board will reboot and you will see the following
 
 ```sh
 systemctl disable nvgetty.service
-depmod -a
+sudo depmod -a
 sudo reboot
 ```
 
