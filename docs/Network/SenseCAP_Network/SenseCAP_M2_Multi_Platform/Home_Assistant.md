@@ -48,26 +48,26 @@ At this point we have finished the server mode setup, and we wiil configure the 
 **Step 7.** Fill the application information and Click **Submit**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_application_3.png"/></div>
 
-**Step 8.** Click **Add device**
+**Step 8.** Use the **SenseCAP Mate APP** to configure Sensor, Set the **Platform** to **Other Platform**
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/SenseCAP_Mate.jpg"/></div>
+
+**Step 9.** Click **Add device**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_adddevice.png"/></div>
 
-**Step 9.** Fill your device information and Click **Submit**
+**Step 10.** Fill your device information and Click **Submit**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_adddevice_2.png"/></div>
 
-**Step 10.** Click the **DevEUI** of your devices to turn the page
+**Step 11.** Click the **DevEUI** of your devices to turn the page
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_adddevice_3.png"/></div>
 
-**Step 11.** Click **OTAA keys** and enter your **Application key** of the SenseCAP Sensor. Then Click **Submit**
+**Step 12.** Click **OTAA keys** and enter your **Application key** of the SenseCAP Sensor. Then Click **Submit**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_appkey.png"/></div>
 
-**Step 12.** Activate your SenseCAP Sensor and wait for it to automatically connect to LoRaWAN. Then you can see the data uploaded by the sensor in the **Events** and **LoRaWAN frames**
+**Step 13.** Activate your SenseCAP Sensor and wait for it to automatically connect to LoRaWAN. Then you can see the data uploaded by the sensor in the **Events** and **LoRaWAN frames**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_data.png"/></div>
 
-**Step 13.** At this point, we have completed all configurations of the M2 gateway.
+**Step 14.** At this point, we have completed all configurations of the M2 gateway.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_updata.png"/></div>
-
-
-
 
 
 
