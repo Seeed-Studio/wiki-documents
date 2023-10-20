@@ -18,14 +18,20 @@ last_update:
 	<table align="center">
     <tr>
 			<th>Develop SenseCAP Indicator both chips with Arduino</th>
+			<th>XIAO ESP32C3 connecting with Home Assistant via ESPHome(all ports supported)</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Indicator_ESP32_Arduino/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
 		    <br/>
             <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925769"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Hendra </font></span></strong></a></div>
+			</td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-ESP32C3-for-ESPHome-Support/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/Seeed-Studio/wiki-documents/issues/603"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Zachary </font></span></strong></a></div>
 			</td>
 		</tr>
 	</table>
