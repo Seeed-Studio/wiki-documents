@@ -51,7 +51,7 @@ I am using XIAO ESP32C3 as the control board, using [reRouter](https://www.seeed
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="http://localhost:3000/home_assistant_topic/#-devices-for-home-assistant-">
+            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-">
             <strong><span><font color={'FFFFFF'} size={"4"}> Check More 🖱️</font></span></strong>
             </a>
         </div></td>
