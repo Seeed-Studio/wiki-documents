@@ -95,7 +95,31 @@ Welcome to the quick start guide for the IO Expander for XIAO. This guide aims t
 
 ### Hardware Preparation
 
-Upon receiving your product, some soldering will be required. We've provided two pin headers with the package. You'll need to solder these headers onto the expansion board. 
+There are three main ways to use this expansion board, 
+
+**Mode 1: SMD**
+
+If your XIAO is unsoldered pins, then you can choose the direct SMD method to solder the XIAO and the expansion board to the PCB board to use the function of GPIO expansion.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/4.jpg" alt="pir" width={800} height="auto" /></p>
+
+:::note
+The PCBs pictured are for display only and were not on the shelves for sale as of the article.
+:::
+
+**Mode 2: XIAO connects directly with the expansion board through the row of pins**
+
+In this approach, you have the option of soldering connecting wires directly to the GPIO expansion board to connect your target device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/5.jpg" alt="pir" width={800} height="auto" /></p>
+
+
+**Mode 3: XIAO connects with the expansion board through the long row of pins, and the expansion board is expanded by soldering the row of pins**
+
+With this connection method, you are free to install DuPont cables to the GPIO expansion board. Convenient wiring for your application.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/6.jpg" alt="pir" width={800} height="auto" /></p>
+
 
 Once the soldering is complete, you can proceed to connect the expansion board to the XIAO RP2040 main controller.
 
@@ -103,7 +127,6 @@ Once the soldering is complete, you can proceed to connect the expansion board t
 For programming the XIAO RP2040, you'll need a TYPE-C USB data cable. Connect one end to the XIAO RP2040 and the other to your computer. For a detailed guide on programming the XIAO RP2040, please refer to this [Wiki](https://wiki.seeedstudio.com/XIAO-RP2040/).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/3.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 ### Software Preparation
 

@@ -662,8 +662,8 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/E5_Bluetooth_Location_Beacon',
+            
           {
             type: 'category',
             label: 'TTN Cloud Services',
@@ -686,6 +686,8 @@ const sidebars = {
        'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
                ],
           }, 
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
@@ -947,9 +949,10 @@ const sidebars = {
               type: 'category',
               label: 'Embedded ML',
               items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-PDM-EI',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Getting-Started',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Mic',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
               ],
             },
             {
@@ -986,6 +989,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
               ],
             },
           ],
@@ -1889,6 +1893,7 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Quick_Start',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Home_Assistant',
             {
               type: 'category',
               label: 'Tutorial',

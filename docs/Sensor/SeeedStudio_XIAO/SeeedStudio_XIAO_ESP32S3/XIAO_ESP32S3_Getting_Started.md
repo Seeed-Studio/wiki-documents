@@ -162,6 +162,38 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 - GND - Power/data/signal ground
 
+### Strapping Pins
+
+At each startup or reset, a chip requires some initial configuration parameters, such as in which boot mode to load the chip, voltage of flash memory, etc. These parameters are passed over via the strapping pins. After reset, the strapping pins operate as regular IO pins.
+
+The parameters controlled by the given strapping pins at chip reset are as follows:
+
+• **Chip boot mode** – GPIO0 and GPIO46
+
+• **VDD_SPI voltage** – GPIO45
+
+• **ROM messages printing** – GPIO46
+
+• **JTAG signal source** – GPIO3
+
+GPIO0, GPIO45, and GPIO46 are connected to the chip’s internal weak pull-up/pull-down resistors at chip reset.
+These resistors determine the default bit values of the strapping pins. Also, these resistors determine the bit
+values if the strapping pins are connected to an external high-impedance circuit.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/110.png" style={{width:400, height:'auto'}}/></div>
+
+To change the bit values, the strapping pins should be connected to external pull-down/pull-up resistances. If the ESP32-S3 is used as a device by a host MCU, the strapping pin voltage levels can also be controlled by the host
+MCU.
+
+All strapping pins have latches. At system reset, the latches sample the bit values of their respective strapping pins and store them until the chip is powered down or shut down. The states of latches cannot be changed in any other way. It makes the strapping pin values available during the entire chip operation, and the pins are freed up to be used as regular IO pins after reset.
+
+Regarding the timing requirements for the strapping pins, there are such parameters as setup time and hold time.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/111.png" style={{width:600, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/112.png" style={{width:600, height:'auto'}}/></div>
+
+
 ## Getting Started
 
 To enable you to get started with the XIAO ESP32S3 faster, please read the hardware and software preparation below to prepare the XIAO.
