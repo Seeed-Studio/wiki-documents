@@ -17,6 +17,23 @@ last_update:
 <div class="table-center">
 	<table align="center">
     <tr>
+			<th>Speech Recognition with Edge Impulse on XIAO nRF52840</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-BLE-PDM-EI/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Bruno </font></span></strong></a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
+    <tr>
 			<th>Develop SenseCAP Indicator both chips with Arduino</th>
 			<th>XIAO ESP32C3 connecting with Home Assistant via ESPHome(all ports supported)</th>
 		</tr>
