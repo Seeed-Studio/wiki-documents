@@ -1748,6 +1748,7 @@ const sidebars = {
               items: [
                 'Sensor/Seeeduino Series/Application/Driver_for_Seeeduino',
                 'Sensor/Seeeduino Series/Application/FM_Receiver',
+                'Sensor/Seeeduino Series/Application/Grove-SGP41-with-AHT20'
               ],
             },
             {
