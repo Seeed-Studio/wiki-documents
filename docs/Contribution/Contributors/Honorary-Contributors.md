@@ -29,7 +29,7 @@ last_update:
 		    <br/>
             <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Bruno </font></span></strong></a></div>
 			</td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/grove-sgp41-with-ath20/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/grove-sgp41-with-aht20/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
 		    <br/>
             <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35179519"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Hans </font></span></strong></a></div>
 			</td>
