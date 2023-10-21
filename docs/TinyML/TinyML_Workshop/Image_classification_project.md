@@ -94,7 +94,8 @@ Also, search for **xiao** in the development board on the left. select **XIAO_ES
 With this preparation, you can start writing programs for XIAO ESP32S3 to compile and upload.
 
 #### 1.2 Upload sketch that can take image and save to SD Card. 
-Download the sketch file from [here](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/lib/take_photos_command.ino.zip), and unzip in your computer and click on the "take_photos_command.ino" to open the sketch. Then select correct port and board for XIAO for upload. 
+
+Download the sketch file from [here](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/take_photos_command.ino.zip), and unzip in your computer and click on the "take_photos_command.ino" to open the sketch. Then select correct port and board for XIAO for upload.
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/img_CaptureSketch01.png?raw=true
 " style={{width:600, height:'auto'}}/></div>

@@ -491,19 +491,20 @@ To learn about more performance benchmarks we have done using YOLOv8 models, ple
 
 ## Multistream Model Benchmarks
 
-After running a couple of deepstream applications on reComputer J4012, J3011 and J3010, we have done several benchmarks with the YOLOv8s models.
+After running several deepstream applications on reComputer Jetson Orin series products, we have done benchmarks with the YOLOv8s models.
 
-### Single Model with Multiple Streams
+- First, we have used a single AI model and run multiple streams on the same AI model
+- Second, we have used multiple AI models and run multiple streams on multiple AI models
 
-Here we have used a single YOLOv8s model and configured multiple streams to be used with the same model.
+All these benchmarks are carried out under the following conditions:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/one-model.png" style={{width:1000, height:'auto'}}/></div>
+- YOLOv8s 640x640 image input
+- Disable UI
+- Turn on max power and max performance mode 
 
-### Multiple Model with Multiple Streams
+<iframe src="https://jetson-camera-selection-tool.seeedstudio.com/" width="100%" height="550px"></iframe>
 
-Here we have used multiple YOLOv8s models and configured multiple streams to be used with each model.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/multi-models-2.png" style={{width:1000, height:'auto'}}/></div>
+From these benchmarks, we can see that for the highest end Orin NX 16GB device with a single YOLOv8s model at INT8, you can use around 40 cameras at around 5fps and with multiple YOLOv8s models at INT8 for each stream, you can use around 11 cameras at around 15fps. For multi model applications, the number of cameras is less because of the RAM limitations on the device and each model takes up a substantial amount of RAM.
 
 ## Resources
 

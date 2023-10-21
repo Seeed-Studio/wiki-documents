@@ -75,7 +75,7 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB</td>
       <td>5.1</td>
       <td>35.2.1</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A603-Carrier-Board/Orin-NX/A603-Orin-NX-JP5.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A603-Carrier-Board/Orin-NX/A603-Orin-NX-JP5.1.zip/download">Download</a></td>
     </tr>
     <tr>
       <td>5.1.1</td>
@@ -86,11 +86,16 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td>Jetson Orin Nano 4GB/ 8GB</td>
       <td>5.1.1</td>
       <td>35.3.1</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A603-Carrier-Board/Orin-Nano/A603-Orin-Nano-JP5.1.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A603-Carrier-Board/Orin-Nano/A603-Orin-Nano-JP5.1.1.zip/download">Download</a></td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
+      <td>5.1.2</td>
+      <td>35.4.1</td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A603-Carrier-Board/A603-Orin-NX-Nano-JP5.1.2.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
-
 
 **Note:** Currently we provide the above drivers. We will keep updating the drivers in the future with the release of new JetPack versions.
 

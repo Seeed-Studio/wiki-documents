@@ -773,6 +773,7 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
                 'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor(S-THP-01A)',
                 'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
@@ -2280,6 +2281,14 @@ const sidebars = {
             'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
           ],
         },
+        {
+          type: 'category',
+          label: 'Ignition Edge',
+          items: [
+            'Edge/reTerminal-DM/Ignition_Edge/reTerminal-DM-Getting-Started-with-Ignition-Edge',
+            'Edge/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
+          ],
+        },
       ],
     },
 
@@ -2326,6 +2335,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv5-Object-Detection-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Scailable-Jetson-Getting-Started',
               ],
             },
 
