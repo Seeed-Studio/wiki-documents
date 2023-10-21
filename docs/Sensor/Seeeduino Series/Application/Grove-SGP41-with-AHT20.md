@@ -1,8 +1,6 @@
 ---
 description: This article focuses on the use of the Grove SGP41 sensor.
-title: Grove - SGP41 with AHT20
-keywords:
-- SGP41 AHT20
+title: Correction for SGP41(raw) measurement dependent on humidity and temperature
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-sgp41-with-ath20
 last_update:
@@ -10,14 +8,15 @@ last_update:
   author: Hans Bausewein
 ---
 
-# Grove - SGP41 with AHT20
+# Correction for SGP41(raw) measurement dependent on humidity and temperature
 
+## Overview (How I get started with this project)
 
-<br />
-
-First read the [Grove - Smart Air Quality Sensor (SGP41)](Grove-smart_air_quality_sensor.md) and the [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor) documentation before reading this document.
+First I have read the [Grove - Smart Air Quality Sensor (SGP41)](https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41) and the [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/) documentation.
 
 According to the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf) section 3.2 (Raw Signal Measurement), the SGP41 measurement is dependent on humidity and temperature, so we need to apply a correction to get consistent data: read the relative humidity and temperature from the AHT20 (or another sensor), calculate the ticks and pass them to the *sgp41_measure_raw_signals* function.
+
+### Theory Test
 
 Table 11 (Description of the I2C measurement command) on page 15 describes the formulas to calculate the ticks:
 
@@ -32,7 +31,7 @@ Verify by using the defaults 25°C and 50% relative humidity:
 50 × 65535 / 100 = 32767.5 = 0x8000 (hexadecimal, rounded up)
 (25 + 45) × 65535 / 175 = 26214 = 0x6666 (hexadecimal) 
 ```
-The results match the constants used in the program used by [Grove - Smart Air Quality Sensor (SGP41)](Grove-smart_air_quality_sensor.md) and defined in Table 11 of the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf). 
+The results match the constants used in the program used by [Grove - Smart Air Quality Sensor (SGP41)](https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41) and defined in Table 11 of the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf). 
 
 The same in c:
 ```cpp
@@ -41,33 +40,10 @@ The same in c:
 ```
 Note that 'humi' in the program is a value between 0 and 1, so the division by 100 and earlier multiplication were removed.
 
-## Features
+## Hardware Preparation
 
-- [SGP41](Grove-smart_air_quality_sensor.md#features)
-- [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#feature)
+I am using Seeeduino Nano as the control board and using Grove - Smart Air Quality Sensor (SGP41) and Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor to make it happened.
 
-## Specification
-
-- [SGP41](Grove-smart_air_quality_sensor.md#specification)
-- [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#specification)
-
-## Applications
-
-- [SGP41](Grove-smart_air_quality_sensor.md#applications)
-
-## Hardware Overview
-
-- [SGP41](Grove-smart_air_quality_sensor.md#hardware-overview)
-
-## Getting Started
-
-:::note
-If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
-:::
-
-### Play With Arduino Nano
-
-#### Materials required
 
 <div class="table-center">
 	<table align="center">
@@ -108,6 +84,33 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 	</table>
 </div>
 
+## Software Preparation
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Arduino IDE</th>
+    </tr>
+      <tr>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.arduino.cc/en/software">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
+          </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+There are multiple libraries that are required and are presented next setp.
+
+## Getting Started
+
+:::note
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+:::
+
+### 1. Connect With Arduino Nano
+
 :::note
 Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
 :::
@@ -121,9 +124,9 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
 
 - **Step 4.** Connect Seeeduino to a PC via a USB cable.
 
-![Seeeduino_SGP41_AHT20](1.jpg)
+![Seeeduino_SGP41_AHT20](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/seeeduino_nano-SGP41-correction/1.jpg)
 
-#### Software
+### 2. Downolad the required libraries and add them into Arduino
 
 - **Step 1.** Download the dependency libraries from Github.
 
@@ -153,9 +156,12 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3.** After downloading and installing the libraries correctly, you can upload the code below, which is a combination of the [SGP41](Grove-smart_air_quality_sensor.md#software) and the [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#software-code) software with the formulas described in the introduction added.
+- **Step 3.** After downloading and installing the libraries correctly, you can upload the code below, which is a combination of the [SGP41](https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41#software) and the [AHT20](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor//#software-code) software with the formulas described in the introduction added.
 
-#### Software Code
+### 3. Upload the Code and check the result
+
+- **Step 1.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
+
 
 ```cpp
 // ARDUINO DEMO FOR GROVE-AHT20+SGP41
@@ -287,20 +293,21 @@ void loop()
 // END FILE
 ```
 
-- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
+- **Step 2.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**.
 
-- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**.
-
-![Serial Console output](2.jpg)
+![Serial Console output](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/seeeduino_nano-SGP41-correction/2.jpg)
 
 Note that the first ten SRAW_NOx values are zero due to conditioning.
 
-## Schematic Online Viewer
-
 ## Resources
 
-- [SGP41](Grove-smart_air_quality_sensor.md#resources)
-- [AHT20](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#resources)
+- [SGP41](https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41#resources)
+- [AHT20](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor//#resources)
+
+## ✨ Contributor Project
+
+- This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
+- Thanks [Hans's efforts](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35179519) and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
 
 ## Tech Support & Product Discussion
 
