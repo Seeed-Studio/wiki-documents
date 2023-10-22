@@ -93,8 +93,9 @@ You can easily check if the service is running if you are able to load the Ignit
 
 To load the gateway's home page, launch a web browser either on the reTerminal itself at `localhost:8088` OR from another device on the network at `{reterminalhostname}:8088` OR from anywhere on the network with the IP address of the reTerminal itself at `{reterminalip}:8088`
 
-![ignition edge eula page](./ignition-edge-eula-screenshot.png)
-
+<p style={{textAlign: 'center'}}>
+  <img src ="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-eula-screenshot.png" />
+</p>
 ### Launch Ignition Edge Gateway On Boot
 :::note
 It is recommended to launch the gateway's service automatically on boot of the device. There are multiple ways this can be accomplished and it is ultimately up to the user to decide how to do this.
@@ -108,7 +109,9 @@ Append the launch command to the the file
 ```bash
 /opt/ignitionedge/ignition.sh start'
 ```
-![Launch On Boot Setup](./ignition-gateway-launch-setup.png)
+<p style={{textAlign: 'center'}}>
+  <img alt="Launch On Boot Setup" src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-gateway-launch-setup.png" />
+</p>
 And don't forget to save the file! 
 (`ctrl + x` in the example above using nano)
 
@@ -120,7 +123,9 @@ This method does not launch the gateway on save, so reboot the reTerminal to ens
 
 Configuring the gateway is a straight-forward process. Proceed by accepting the EULA and then create a default user / password for Ignition. Remember this information as it will be created with admin credentials and be used for system configuration throughout this series.
 
-![Create default user page](./ignition-edge-create-user.png)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-create-user.png" />
+</p>
 
 :::note
 Although Ignition Edge is configured by default to communicate to a master SCADA system, it is not required to use a SCADA server. Ignition Edge is a completely standalone product that is configured to easily tie into a SCADA network in the future if desired.
@@ -128,11 +133,15 @@ Although Ignition Edge is configured by default to communicate to a master SCADA
 
 After you have a user, you will be asked if you would like to change any of the default port configurations for the installation. I do not have a network with any conflicting ports, so I have chosen to accept the defaults. These ports will be used to communicate back to the primary SCADA installation, so if you are configuring to work with an existing installation Ignition, ensure that this page matches your expected values. Note that these are the core ports used for the application, but if you choose to install modules in the future you will likely have more ports to configure later.
 
-![Configure ports page](./ignition-edge-configure-ports.png)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-configure-ports.png" />
+</p>
 
 You are now ready to initialize and launch the service! This takes a couple minutes to setup and does not require any interaction so you are free to check back later. It will redirect to the designer home page when it is complete and you are free to begin work!
 
-![Start gateway page](./ignition-edge-launch-screen.png)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-launch-screen.png" />
+</p>
 
 ## Tech Support & Product Discussion
 
