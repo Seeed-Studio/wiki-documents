@@ -66,6 +66,10 @@ We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV564
 				</a>
 </div>
 
+If you need to know the detailed parameter information of ov5640, you can refer to the following chart.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
+
 :::tip
 All the programs about cameras in the Wiki are compatible with both OV5640 and OV2640 cameras.
 :::

@@ -36,6 +36,8 @@ Name your device and select the `Device Group`(optional), then click `Bind to ac
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/bind-dev.png" alt="pir" width={300} height="auto" /></p>
 
+### Configure the frequency and connect to the gateway
+
 Go back to the `Device` page, then you will see the dev board has been bound.
 
 
@@ -45,6 +47,119 @@ Go back to the `Device` page, then you will see the dev board has been bound.
 The default region of the factory firmware is EU868, to configure the region, please check [here](https://wiki.seeedstudio.com/configure_param_for_wio_tracker/#Region-configuration)
 :::
 
+Click `Configuration Now`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/1.jpeg" alt="pir" width={300} height="auto" /></p>
+
+Click `Ready, go to the next step`, which is entering the device search. 
+
+:::info Note
+The device needs to be powered on first.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/2.jpeg" alt="pir" width={300} height="auto" /></p>
+
+Search for the device by `Scan`, and when you find an item in the list with the same `S/N code` as your own device, click to enter.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/3.jpeg" alt="pir" width={300} height="auto" /></p>
+
+Go to `Setting` page, choose the platform either as `SenseCAP for the Things Network` or `SenseCAP for Helium`.
+
+:::info Note
+You can choose others as well, but in that case, you cannot use SenseCAP platform.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/4.jpeg" alt="pir" width={300} height="auto" /></p>
+
+<table align="center">
+  <caption> <h2>Platform</h2> </caption>
+  <tbody>
+    <tr>
+    <td><h4>Platform</h4></td>
+    <td><h4>Description</h4></td>
+    </tr>
+    <tr>
+      <td>SenseCAP for The Things Network</td>
+    <td>Default platform.
+It must be used with SenseCAP Gateway. SenseCAP builds a proprietary TTN server that enables sensors to be used out of the box when paired with an SenseCAP gateway. <br />
+    <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCA Outdoor Gateway</span></a><br />
+    <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCA Indoor Gateway</span></a></td>
+    </tr>
+        <tr>
+    <td>SenseCAP for Helium</td>
+    <td>When there is the Helium network coverage, data can upload via Helium. Devices run on a private Helium console of SenseCAP. Users do not need to create devices on Helium console, out of the box with SenseCAP Mate App and Portal. <br />
+
+<a href="https://explorer.helium.com/" target="_blank"><span>Helium Coverage</span></a></td>
+    </tr>
+        <tr>
+    <td>Helium</td>
+    <td>Connect device to your public Helium console</td>
+    </tr>
+            <tr>
+    <td>The Things Network</td>
+    <td>Connect device to your TTN(TTS) server</td>
+    </tr>
+            <tr>
+    <td>Other Platform</td>
+    <td>Other LoRaWAN Network Server</td>
+    </tr>
+  </tbody></table>
+
+Choose the `Frequency Plan`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/5.jpeg" alt="pir" width={300} height="auto" /></p>
+
+Enter the `Position Uplink Interval (in minutes)` and `Sensor Uplink Interval (in minutes)`.
+
+|Parameters|Description|
+| - | - |
+|Position Uplink Interval (minutes)|Scheduled upload of location information.<br/>Default 5 minutes.<br/>The higher the frequency, the higher the power consumption.|
+|Sensor Uplink Interval (minutes)|Scheduled upload of sensor data.<br/>Default 5 minutes.<br/>The higher the frequency, the higher the power consumption.|
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/6.jpeg" alt="pir" width={300} height="auto" /></p>
+
+Once all the information in Settings aligns with your requirements, you can click `Send` to transmit it to **Tracker Wio 1110**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/7.jpeg" alt="pir" width={300} height="auto" /></p>
+
+Go to `Measure` page, click the `Measure`, then you will get the sensor values.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/8.jpeg" alt="pir" width={500} height="auto" /></p>
+
+
+### Check the data
+
+Power on the dev board, and please make sure you have network coverage nearby，when the dev board is successfully connected to the network, it will show `online` on the `Device` page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/9.jpeg" alt="pir" width={300} height="auto" /></p>
+
+If your area suffers from poor signal, just simply install a LoRaWAN gateway - it's as simple as setting up a Wi-Fi router. The beauty of LoRa lies in its flexibility and ease of network expansion. This reliable solution is also cost-effective. For instance, the [SenseCAP M2 Indoor LoRaWAN Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html),it can extend your coverage up to 10km!
+
+<p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTI1MQ_873855_RPfBjpKfW2xWddri_1693817031?w=680&h=446&type=image/png" alt="pir" width={600} height="auto" /></p>
+
+
+:::tip
+Please put your dev board by the window or in an unobstructed place, so that there will be a better GPS signal, and then the board can successfully obtain the location data.
+:::
+
+You can check the location and sensor data on SenseCAP Mate APP or SenseCAP Portal.
+
+**SenseCAP Mate APP**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/app-data.png" alt="pir" width={500} height="auto" /></p>
+
+**SenseCAP Portal**
+
+If you have created an account through the APP, you can log in directly.
+Navigate to your device page, click `Data` to check.
+
+:::info
+[SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.html)
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/por.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/portal-da.png" alt="pir" width={800} height="auto" /></p>
 
 ### Add Grove Sensor(optional)
 
@@ -98,34 +213,13 @@ You can also use a [Grove-I2C Hub](https://www.seeedstudio.com/Grove-I2C-Hub.htm
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/perphi.jpeg" alt="pir" width={800} height="auto" /></p>
 
-### Check the data
+## SenseCAP API 
 
-Power on the dev board, and please make sure you have network coverage nearby，when the dev board is successfully connected to the network, it will show `online` on the `Device` page.
+SenseCAP API is for users to manage IoT devices and data. It includes 3 types of API methods: HTTP protocol, MQTT protocol, and Websocket protocol.
+* With HTTP API, users can manage LoRa devices, to get raw data or historical data.
+* With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
+* With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
 
-If your area suffers from poor signal, just simply install a LoRaWAN gateway - it's as simple as setting up a Wi-Fi router. The beauty of LoRa lies in its flexibility and ease of network expansion. This reliable solution is also cost-effective. For instance, the [SenseCAP M2 Indoor LoRaWAN Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html),it can extend your coverage up to 10km!
+Please check [API User Guide](https://sensecap-docs.seeed.cc/) for more details.
 
-<p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTI1MQ_873855_RPfBjpKfW2xWddri_1693817031?w=680&h=446&type=image/png" alt="pir" width={600} height="auto" /></p>
-
-
-:::tip
-Please put your dev board by the window or in an unobstructed place, so that there will be a better GPS signal, and then the board can successfully obtain the location data.
-:::
-
-You can check the location and sensor data on SenseCAP Mate APP or SenseCAP Portal.
-
-**SenseCAP Mate APP**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/app-data.png" alt="pir" width={500} height="auto" /></p>
-
-**SenseCAP Portal**
-
-If you have created an account through the APP, you can log in directly.
-Navigate to your device page, click `Data` to check.
-
-:::info
-[SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.html)
-:::
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/por.png" alt="pir" width={800} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/portal-da.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/api_page.png" alt="pir" width={800} height="auto" /></p>

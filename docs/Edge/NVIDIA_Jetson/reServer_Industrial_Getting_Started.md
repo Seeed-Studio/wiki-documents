@@ -239,7 +239,7 @@ reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for provi
 
 ## Flash JetPack
 
-reServer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This includes SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps.
+reServer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This includes SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps below. Currently we only provide guidance for JP5.1.1 and we will keep updating this in the future.
 
 :::note
 If you want to use SSDs with reServer Industrial, we only recommend you choose the [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), the [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html), and the [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) versions from Seeed.
@@ -256,49 +256,6 @@ You need to prepare the following hardware before getting started with reServer 
 - External monitor
 - HDMI cable
 - Keyboard and Mouse
-
-### Download System Image
-
-- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
-
-<table>
-  <thead>
-    <tr>
-      <th>Device</th>
-      <th>Image Link</th>
-      <th>JetPack Version</th>
-      <th>L4T Version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>reServer Industrial J4012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=100000000001695380000&Signature=0w5%2B%2FJVkrqMoy1Fl05IVKkG7BLw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td rowSpan={4}>5.1.1</td>
-      <td rowSpan={4}>35.3.1</td>
-    </tr>
-    <tr>
-      <td>reServer Industrial J4011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=1.0000000000016954e%2B21&Signature=D9eNQf3YqsC38PKBpzk%2BDFPUYsQ%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-    <tr>
-      <td>reServer Industrial J3011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=100000000001695380000&Signature=Tlhs8CLzPyyGbRr8InmCXDHmrs8%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-    <tr>
-      <td>reServer Industrial J3010</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=1.0000000000016954e%2B21&Signature=9Kcpbj1MnaLD3hVriGYkBRvnDDk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-- **Step 2:** Extract the generated file 
-
-```sh
-tar -xvf <file_name>.tar.gz
-```
 
 ### Enter Force Recovery Mode
 
@@ -317,9 +274,71 @@ On the Ubuntu host PC, open a Terminal window and enter the command **lsusb**. I
 - For Orin Nano 8GB: **0955:7523 NVidia Corp**
 - For Orin Nano 4GB: **0955:7623 NVidia Corp**
 
-### Flash to Jetson
+### Different Methods of Flashing
 
-Navigate to the extracted file from before and execute the flash command as follows 
+Here we offer 2 different methods of flashing.
+
+1. Download the entire system image we have prepared which includes NVIDIA JetPack, hardware periheral drivers and flash to device
+2. Download official NVIDIA L4T, use the included hardware periheral drivers and flash to device
+
+:::note
+The first method download is around 14GB and the second method download is about 3GB
+:::
+
+<!-- Code -->
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="method1" label="Method 1">
+
+#### Download System Image
+
+- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
+
+<table>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Image Link</th>
+      <th>JetPack Version</th>
+      <th>L4T Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reServer Industrial J4012</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346367&Signature=4176QCNbBCKBemfAmAJp3XS3yjk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td rowSpan={4}>5.1.1</td>
+      <td rowSpan={4}>35.3.1</td>
+    </tr>
+    <tr>
+      <td>reServer Industrial J4011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346497&Signature=uJCOUWHcOU%2B403%2FwrlCfntq%2FlYw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reServer Industrial J3011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346537&Signature=jwQ1bdd8f%2Bt9Lp1dpd%2FD0JZtQTM%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reServer Industrial J3010</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346594&Signature=uV0a08irm7K81lGofbWexIBPNOw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+  </tbody>
+</table>
+
+The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
+
+- **Step 2:** Extract the generated file 
+
+```sh
+tar -xvf <file_name>.tar.gz
+```
+
+#### Flash to Jetson
+
+- **Step 1:** Navigate to the extracted file from before and execute the flash command as follows 
 
 ```sh
 cd mfi_reserver-orin-industrial
@@ -330,7 +349,7 @@ Now it will start to flash the system image to the board. If the flashing is suc
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Step 7:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
+- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -339,6 +358,116 @@ Now it will start to flash the system image to the board. If the flashing is suc
 After that, the board will reboot and will be ready to use!
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
+
+---
+
+</TabItem>
+<TabItem value="method2" label="Method 2">
+
+#### Download and Prepare NVIDIA L4T and rootfs
+
+```sh
+wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/release/jetson_linux_r35.3.1_aarch64.tbz2
+wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/release/tegra_linux_sample-root-filesystem_r35.3.1_aarch64.tbz2
+tar xf jetson_linux_r35.3.1_aarch64.tbz2
+sudo tar xpf tegra_linux_sample-root-filesystem_r35.3.1_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+cd Linux_for_Tegra/
+sudo ./apply_binaries.sh
+sudo ./tools/l4t_flash_prerequisites.sh
+```
+
+#### Download and Prepare Drivers
+
+- **Step 1:** Download the driver files to your Ubuntu PC corresponding to the board you are using
+
+<table>
+  <thead>
+    <tr>
+      <th>Jetson Module</th>
+      <th>Download Link</th>
+      <th>JetPack Version</th>
+      <th>L4T Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB</td>
+      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nx-8-16-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td rowSpan={4}>5.1.1</td>
+      <td rowSpan={4}>35.3.1</td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td>Jetson Orin Nano 8GB</td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-8-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>Jetson Orin Nano 4GB</td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-4-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+  </tbody>
+</table>
+
+- **Step 2:** Move the downloaded peripheral drivers into the same folder with **Linux_For_Tegra** directory
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/29.jpg"/></div>
+
+- **Step 3:** Extract the downloaded driver .zip file. Here we additionally install the **unzip** package which is needed to decompress the .zip file
+
+```sh
+sudo apt install unzip
+sudo unzip xxxx.zip # Replace xxxx with the driver file name
+```
+
+Here it will ask whether to replace the files. Type A and press ENTER to replace the necessary files
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/30.png"/></div>
+
+#### Flash to Jetson
+
+- **Step 1:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows 
+
+```sh
+cd Linux_for_Tegra
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_nvme.xml -S 80GiB  -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml --no-systemimg" --network usb0  reserver-orin-industrial external
+```
+
+Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
+
+<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
+
+- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
+
+After that, the board will reboot and you will see the following
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
+
+- **Step 3:** Open a terminal window inside the device, execute the following, the device will reboot and ready to use!
+
+```sh
+systemctl disable nvgetty.service
+sudo depmod -a
+sudo reboot
+```
+
+Futhermore, if you want to install SDK components such as CUDA, cuDNN, TensorRT, please execute the following
+
+```sh
+sudo apt update
+sudo apt install nvidia-jetpack -y
+```
+
+---
+
+</TabItem>
+</Tabs>
+
+<!-- Code END -->
 
 ## Hardware and Interfaces Usage
 

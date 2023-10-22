@@ -65,13 +65,20 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/back-label-6.png" style={{width:500, height:'auto'}}/></div>
 
-## Power Pins
+### Power Pins
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
 
 - GND - Power/data/signal ground
+
+### Strapping Pins
+
+According to the chip manual of ESP32C3, **GPIO2**, **GPIO8** and **GPIO9** in the chip are Strapping Pins, the high and low level configurations of these pins may allow the chip to enter into different Boot modes, please pay attention to this point when you use these pins, otherwise it may prevent your XIAO from uploading or executing the program all the time.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/20.png" style={{width:800, height:'auto'}}/></div>
+
 
 ## Getting started
 

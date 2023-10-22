@@ -491,17 +491,20 @@ To learn about more performance benchmarks we have done using YOLOv8 models, ple
 
 ## Multistream Model Benchmarks
 
-After running a couple of deepstream applications on AGX Orin 32GB H01 Kit, we have done some benchmarks with the YOLOv8 models.
+After running several deepstream applications on reComputer Jetson Orin series products, we have done benchmarks with the YOLOv8s models.
 
-### YOLOv8s model with INT8 precision and 640x640 image size
+- First, we have used a single AI model and run multiple streams on the same AI model
+- Second, we have used multiple AI models and run multiple streams on multiple AI models
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/9.png" style={{width:1000, height:'auto'}}/></div>
+All these benchmarks are carried out under the following conditions:
 
-As you can see above, an FPS of 34 per stream is very impressive while running 9 streams simultaneously on a single device. When we tested this model performance with trtexec tool before, we got an FPS around 303. And now with 9 streams, the FPS is around 34 per stream. Which means the FPS per stream is nearly the calculation of **Total FPS/ number of streams**. This means by knowing the FPS per stream with model benchmarks, we can decide how many streams we want to have.
+- YOLOv8s 640x640 image input
+- Disable UI
+- Turn on max power and max performance mode 
 
-### YOLOv8n model with INT8 precision and 640x640 image size
+<iframe src="https://jetson-camera-selection-tool.seeedstudio.com/" width="100%" height="550px"></iframe>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/8.png" style={{width:1000, height:'auto'}}/></div>
+From these benchmarks, we can see that for the highest end Orin NX 16GB device with a single YOLOv8s model at INT8, you can use around 40 cameras at around 5fps and with multiple YOLOv8s models at INT8 for each stream, you can use around 11 cameras at around 15fps. For multi model applications, the number of cameras is less because of the RAM limitations on the device and each model takes up a substantial amount of RAM.
 
 ## Resources
 

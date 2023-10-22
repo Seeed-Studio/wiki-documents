@@ -408,6 +408,7 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_P2P',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_tinyML_Demo',
               ],
             },
             {
@@ -656,18 +657,19 @@ const sidebars = {
           collapsible: true,
           link: {
             type: "doc",
-            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
+            id: 'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_intro',
           },
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/E5_Bluetooth_Location_Beacon',
+            
           {
             type: 'category',
             label: 'TTN Cloud Services',
             items: [
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Connect_to_The_Things_Network',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/TTN_Mapper',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Datacake_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Ubidots_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Qubitro_Integrated',
@@ -684,6 +686,8 @@ const sidebars = {
        'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
                ],
           }, 
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
@@ -766,9 +770,11 @@ const sidebars = {
               type: 'category',
               label: 'SenseCAP Sensor Probe',
               items: [
+                'Sensor/SenseCAP/SenseCAP_Probe/SenseCAP_Sensor_Probes_Product_Catalogue',
                 'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector',
                 'Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor',
+                'Sensor/SenseCAP/SenseCAP_Probe/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor(S-THP-01A)',
                 'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor',
                 'Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor',
@@ -943,9 +949,10 @@ const sidebars = {
               type: 'category',
               label: 'Embedded ML',
               items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-PDM-EI',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Getting-Started',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAO-BLE-Sense-TFLite-Mic',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/XIAOEI',
               ],
             },
             {
@@ -982,6 +989,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
               ],
             },
           ],
@@ -1331,6 +1339,7 @@ const sidebars = {
           label: 'Getting Started',
           items: [
             'Sensor/SenseCAP/SenseCAP_Indicator/Get_Started_with_SenseCAP_Indicator/Native_Firmware',
+
             {
               type: 'category',
               label: 'OpenAI X SenseCAP Indicator',
@@ -1378,6 +1387,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/SenseCAP/SenseCAP_Indicator/Development_Tutorial/SenseCAP_Indicator_Arduino',
           ],
         },
         'Sensor/SenseCAP/SenseCAP_Indicator/How_To_Flash_The_Default_Firmware',
@@ -1738,6 +1748,7 @@ const sidebars = {
               items: [
                 'Sensor/Seeeduino Series/Application/Driver_for_Seeeduino',
                 'Sensor/Seeeduino Series/Application/FM_Receiver',
+                'Sensor/Seeeduino Series/Application/Grove-SGP41-with-AHT20'
               ],
             },
             {
@@ -1882,6 +1893,7 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Quick_Start',
+            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Home_Assistant',
             {
               type: 'category',
               label: 'Tutorial',
@@ -2328,6 +2340,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv5-Object-Detection-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Scailable-Jetson-Getting-Started',
               ],
             },
 

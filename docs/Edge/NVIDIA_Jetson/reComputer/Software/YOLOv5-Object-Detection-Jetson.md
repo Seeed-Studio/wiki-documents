@@ -59,7 +59,7 @@ YOLOv5 is supported by the following hardware:
 
 ## Prerequisites
 
-- Any of the above Jetson devices running latest JetPack v4.6.1 with all SDK components installed (check [this wiki](https://wiki.seeedstudio.com/Tutorial-of-A20X-Carrier-Boards/) for a reference on installation)
+- Any of the above Jetson devices running latest JetPack v4.6.1 with all SDK components installed (check [this wiki](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack/) for a reference on installation)
 
 - Host PC
 

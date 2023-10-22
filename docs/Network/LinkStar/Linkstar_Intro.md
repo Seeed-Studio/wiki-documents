@@ -17,20 +17,69 @@ last_update:
 - [Introduction with Hardware Overview](/Linkstar_Datasheet)
 - [Original OS Installation](/linkstar-install-system)
 
-## Application
+## Linkstar Applications presented by Seeed Studio
 
-<div class="independent_container">
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>LinkStar Application</font></div>
-            <a href="https://wiki.seeedstudio.com/h68k-ha-esphome/" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Building a smart home control centre around Home Assistant</font></span></a>
-            <br/>
-            <a href="https://wiki.seeedstudio.com/plex_media_server/" target="_blank"><span><font color={'FFFFFF'} size={"2"}>The Future of Home Entertainment: LinkStar-H68K Router and Plex Media Server</font></span></a>
-            <br/>
-            <a href="https://wiki.seeedstudio.com/wordpress_linkstar/" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Streamlining Web Development: The Perfect Duo - Linkstar and WordPress</font></span></a>
-            <br/>
-            <a href="https://wiki.seeedstudio.com/grocy-bookstack-linkstar/" target="_blank"><span><font color={'FFFFFF'} size={"2"}>A Guide to Integrating LinkStar, Grocy, and BookStack in Your Office</font></span></a>
-    </div>
+Here are some compelling projects that you can undertake using the Linkstar router.
+
+<div class="table-center">
+	<table align="center">
+        <tr>
+			<th>Creating a smart home hub centered on Home Assistant</th>
+      <th>Future Home Entertainment: LinkStar-H68K Router and Plex Server</th>    
+		    </tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESPHome/45.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/plex/plex interface.PNG" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+        <tr>
+            <td><font size={"2"}>This article guides you in setting up Home Assistant on Seeed Studio's LinkStar H68K, deploying the ESPHome environment as an example despite soft routing system limitations.</font></td>
+            <td><font size={"2"}>Explore the future of home entertainment with the LinkStar-H68K Router and Plex Media Server – this guide will walk you through the steps to create your own media server at home.</font></td>
+        </tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/h68k-ha-esphome/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/plex_media_server/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+        <tr>
+			<th>Streamlining Web Development The Perfect Duo - Linkstar and WordPress</th>
+      <th>Taking Control: Self-Hosted Solutions for Office Management with LinkStar, Grocy, and BookStack</th>
+		</tr>
+		<tr class="form_without_frame">
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/wordpress/portainer16.PNG" style={{width:300, height:'auto'}}/></div></td>
+            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/grocy_bookstack/linkstarbanner.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+        <tr class="form_without_frame">
+            <td><font size={"2"}>Step into this informative guide as we navigate through the installation process of WordPress using Docker and learn how to access the WordPress dashboard.</font></td>
+            <td><font size={"2"}>Delve into this wiki where we showcase the integration of Grocy and BookStack in a self-hosted office server, empowered by a LinkStar router, providing a compelling solution for streamlined and organized operations.</font></td>
+        </tr>
+        <tr class="form_without_frame">
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/wordpress_linkstar/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/grocy-bookstack-linkstar/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
 </div>
+
+## Linkstar Applications presented by Community
+
+<div class="table-center">
+	<table align="center">
+        <tr>
+			<th>Secure Remote Access: LinkStar + Tailscale VPN</th>
+      <th>Integrate Adblock with Linkstar Router for Ad-Free Browsing</th>    
+		    </tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/vpn.PNG" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/Slide1.PNG" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+        <tr>
+        <td><font size={"2"}> Credit to </font><strong><font color={'8DC215'} size={"2"}>Kasun Thushara</font></strong><br /><font size={"2"}> Experience secure remote access with the powerful combination of LinkStar router and Tailscale VPN. </font></td>
+        <td><font size={"2"}> Credit to </font><strong><font color={'8DC215'} size={"2"}>Kasun Thushara</font></strong><br /><font size={"2"}> In this project, you will be explored the step-by-step process of installing and configuring Adblock on the Linkstar router. </font></td>
+        </tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/secure-remote-access-linkstar-tailscale-vpn-a0d1c9"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/integrate-adblock-with-linkstar-router-for-ad-free-browsing-7db452"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+    </table>
+    </div>
 
 ## ✨ Contributor Project
 
