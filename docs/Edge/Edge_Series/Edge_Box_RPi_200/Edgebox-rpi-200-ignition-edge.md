@@ -24,9 +24,9 @@ Ignition Edge offers several products that can be mixed and matched on an edge d
 - **Ignition Edge Sync Services**: Synchronize data from the edge of the network.
 - **Ignition Edge EAM**: Combine with other Edge products for central management.
 
-By embedding Ignition Edge into field and OEM devices at the edge of the network, you can extend Ignition all the way to the edge of your network. The Edgebox RPI 200 is equipped with industrial reliability and hybrid connectivity, such as Digital I/O, RS485, RS232 and powerful wireless communication capabilities such as WiFi, BLE, \*4G, and \*LoRa® which makes it an excellent option to host combinations of the powerful apps from the Ignition Edge collection.
+By embedding Ignition Edge into field and OEM devices at the edge of the network, Ignition superpowers can function even on your most remote devices. The Edgebox RPI 200 is equipped with industrial reliability and hybrid connectivity, such as Digital I/O, RS485, RS232 and powerful wireless communication capabilities such as WiFi, BLE, \*4G, and \*LoRa® which makes it an excellent option to host combinations of the powerful apps from the Ignition Edge collection.
 
-> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
+> \*4G and LoRa® modules are not included by default, please purchase the relevant modules accordingly.
 
 ## Hardware Prerequisite
 - PC / Mac with SSH terminal capability
@@ -46,7 +46,7 @@ By embedding Ignition Edge into field and OEM devices at the edge of the network
 <br />
 
 :::note
-*This guide assumes your Edgebox is running the factory installation of Raspberry Pi OS(x64) with SSH terminal access from another client device.
+*This guide assumes your Edgebox is running the factory installation of SenseCraft OS with SSH terminal access from another client device.
 :::
 
 ## Installing Ignition Edge On reTerminal
@@ -61,7 +61,7 @@ To install Ignition Edge on your device is simple.
 6. Modify permissions to execute the Ignition start script
 7. Launch the Igntion start script
 
-A convenience script has been written that follows these steps and does not require you to create a user login for Inductive Automation's site. To use it, you simply need to get the ignition edge download/install script. Once you've downloaded the script, mark it as executable and run it. You may need superuser credentials in order to create the necessary directories. Go ahead and grab a coffee, this will take a few minutes to install.
+A convenience script has been written that automates these steps. To use it, you simply need to get the ignition edge download/install script. Once you've downloaded the script, mark it as executable and run it. You may need superuser credentials in order to create the necessary directories. Go ahead and grab a coffee, this will take a few minutes to install.
 
 ```bash
 curl -o download-ignition-edge.sh https://raw.githubusercontent.com/tulsasoftware/reterminal-ignition-edge-panel/main/download-ignition-edge.sh
