@@ -1,14 +1,11 @@
 ---
-description: Getting started with L76-L GNSS for XIAO
-title: L76-L GNSS for XIAO
-keywords:
-- gps
-- gnss
+description: 开始使用 XIAO GPS 扩展板
+title: XIAO GPS 扩展板
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /gnss_for_xiao
+slug: /cn/gnss_for_xiao
 last_update:
-  date: 10/09/2023
-  author: Stephen Lo
+  date: 10/23/2023
+  author: 迪迦奥特曼
 ---
 
 # L76-L GNSS for XIAO
