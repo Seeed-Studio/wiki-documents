@@ -1,17 +1,17 @@
 ---
-description: reTerminal DM Getting Started with Ignition Edge
-title: reTerminal DM Getting Started with Ignition Edge
+description: Getting Started with Ignition Edge
+title: Getting Started with Ignition Edge
 keywords:
   - Edge
-  - reTerminal-DM
+  - Edgebox RPI 200
   - Ignition Edge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reTerminal-DM-Getting-Started-with-Ignition-Edge
+slug: /Edgebox-rpi-200-ignition-edge
 last_update:
-  date: 09/29/2023
+  date: 10/13/2023
   author: Corey Thompson
 ---
-#  reTerminal DM Getting Started with Ignition Edge
+#  Edgebox RPI 200 Getting Started with Ignition Edge
 
 > Capturing, processing, and visualizing critical data at the remote edge of the network can be difficult and expensive. Ignition Edge by Inductive Automation® is a line of limited, lightweight Ignition® software solutions designed specifically for devices used in the field and OEM devices at the edge of the network. With Ignition Edge, edge computing is easier and more affordable than ever, so you can extend your data collection, visualization, and system management all the way to the edge of your network.
 >
@@ -24,21 +24,21 @@ Ignition Edge offers several products that can be mixed and matched on an edge d
 - **Ignition Edge Sync Services**: Synchronize data from the edge of the network.
 - **Ignition Edge EAM**: Combine with other Edge products for central management.
 
-By embedding Ignition Edge into field and OEM devices at the edge of the network, you can extend Ignition all the way to the edge of your network. The reTerminal DM is equipped with rich scalability and hybrid connectivity, such as Digital I/O, CAN bus, RS485, RS232, powerful wireless communication capabilities such as WiFi, BLE, \*4G, \*LoRa® and 10.1" 10-point multi-touch high-sensitivity capacitive panel which makes it an excellent option to host any combination of the powerful apps from the Ignition Edge collection.
+By embedding Ignition Edge into field and OEM devices at the edge of the network, Ignition superpowers can function even on your most remote devices. The Edgebox RPI 200 is equipped with industrial reliability and hybrid connectivity, such as Digital I/O, RS485, RS232 and powerful wireless communication capabilities such as WiFi, BLE, \*4G, and \*LoRa® which makes it an excellent option to host combinations of the powerful apps from the Ignition Edge collection.
 
-> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
+> \*4G and LoRa® modules are not included by default, please purchase the relevant modules accordingly.
 
 ## Hardware Prerequisite
 - PC / Mac with SSH terminal capability
 - PC / Mac with available hard drive capacity to install Ignition's Designer applciations.
 - 12-24V DC power supply
 - Ethernet cable
-- reTerminal DM x 1
+- Edgebox RPI 200 x 1
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3--114070201-reterminal-dm---font.jpg" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" alt="pir" width="600" height="auto"/></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -46,22 +46,26 @@ By embedding Ignition Edge into field and OEM devices at the edge of the network
 <br />
 
 :::note
-*This guide assumes your reTerminal DM is running a fresh install of Raspberry Pi OS(x64) with SSH terminal access from another client device. See [instructions to flash the reTerminal DM operating system](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/#steps-for-flashing-raspbian-os) if you require detailed instructions on this procedure.*
+*This guide assumes your Edgebox is running the factory installation of SenseCraft Edge OS with SSH terminal access from another client device.*
 :::
 
-## Installing Ignition Edge On reTerminal
+## Installing Ignition Edge
 
 To install Ignition Edge on your device is simple.
 
+:::tip
+The default SenseCraft Edge OS is a 32-bit installation, ensure you download the proper installer.
+:::
+
 1. Visit [Ignition's Download Page](https://inductiveautomation.com/downloads/)
-2. Download the version of the application you wish to use - you will be prompted to enter your information before you can download the package
+2. Download the version of the application you wish to use - you will be prompted to enter your information before you can download the package. 
 3. Copy the compressed package to your edge device, where you wish it to be installed (I have chosen a location under /opt/)
 4. Extract the package at the current location
 5. Delete the leftover original package
 6. Modify permissions to execute the Ignition start script
 7. Launch the Igntion start script
 
-A convenience script has been written that follows these steps and does not require you to create a user login for Inductive Automation's site. To use it, you simply need to get the ignition edge download/install script. Once you've downloaded the script, mark it as executable and run it. You may need superuser credentials in order to create the necessary directories. Go ahead and grab a coffee, this will take a few minutes to install.
+A convenience script has been written that automates these steps. To use it, you simply need to get the ignition edge download/install script. Once you've downloaded the script, mark it as executable and run it. You may need superuser credentials in order to create the necessary directories. Go ahead and grab a coffee, this will take a few minutes to install.
 
 ```bash
 curl -o download-ignition-edge.sh https://raw.githubusercontent.com/tulsasoftware/reterminal-ignition-edge-panel/main/download-ignition-edge.sh
@@ -81,7 +85,7 @@ chmod +x ./uninstall-ignition-edge.sh
 
 ## Launching Ignition Edge Gateway For The First Time
 
-When the installation is complete you will need to start the service. You can [setup the gateway to start on boot](#launch-ignition-edge-gateway-on-boot) and perform a reboot of the reTerminal or you can choose to start the service manually.
+When the installation is complete you will need to start the service. You can [setup the gateway to start on boot](#launch-ignition-edge-gateway-on-boot) and perform a reboot of the device or you can choose to start the service manually.
 
  ```bash
 /opt/ignitionedge/ignition.sh start
@@ -91,11 +95,12 @@ When the installation is complete you will need to start the service. You can [s
 You can easily check if the service is running if you are able to load the Ignition Edge Gateway's home page. 
 :::
 
-To load the gateway's home page, launch a web browser either on the reTerminal itself at `localhost:8088` OR from another device on the network at `{reterminalhostname}:8088` OR from anywhere on the network with the IP address of the reTerminal itself at `{reterminalip}:8088`
+To load the gateway's home page, launch a web browser either on the Edgebox itself at `localhost:8088` OR from another device on the network at `{edgeboxhostname}:8088` OR from anywhere on the network with the IP address of the Edgebox itself at `{edgeboxip}:8088`
 
 <p style={{textAlign: 'center'}}>
   <img src ="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-eula-screenshot.png" />
 </p>
+
 ### Launch Ignition Edge Gateway On Boot
 :::note
 It is recommended to launch the gateway's service automatically on boot of the device. There are multiple ways this can be accomplished and it is ultimately up to the user to decide how to do this.
@@ -107,16 +112,18 @@ nano ~/.bashrc
 ```
 Append the launch command to the the file
 ```bash
-/opt/ignitionedge/ignition.sh start'
+/opt/ignitionedge/ignition.sh start
 ```
+
 <p style={{textAlign: 'center'}}>
   <img alt="Launch On Boot Setup" src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-gateway-launch-setup.png" />
 </p>
+
 And don't forget to save the file! 
 (`ctrl + x` in the example above using nano)
 
 :::warning
-This method does not launch the gateway on save, so reboot the reTerminal to ensure the change works as expected.
+This method does not launch the gateway on save, so reboot the Edgebox to ensure the change works as expected.
 :::
 
 ## Configuring Ignition Edge

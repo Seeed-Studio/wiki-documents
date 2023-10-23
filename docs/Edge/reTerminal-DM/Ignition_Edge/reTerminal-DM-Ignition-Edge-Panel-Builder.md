@@ -48,7 +48,9 @@ To demonstrate how to create a basic page and display it at a fixed URL, we will
 
 To load the gateway's home page, launch a web browser either on the reTerminal itself at `localhost:8088` OR from another device on the network at `{reterminalhostname}:8088` OR from anywhere on the network with the IP address of the reTerminal itself at `{reterminalip}:8088`
 
-![Ignition gateway home screen](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-launch-screen.png)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-launch-screen.png" />
+</p>
 
 ### Install and Setup Ignition Edge Panel Builder
 
@@ -58,11 +60,15 @@ Begin by downloading and executing this installer. It will detect your operating
 
 Launch the newly installed Ignition Designer Launcher, it should show the connection to your device. Click on your device and and then click the 'open designer' button that is now enabled in the bottom corner.
 
-![Ignition Designer Launcher](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-designer-launcher.png)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-designer-launcher.png" />
+</p>
 
 You should now see a login prompt appear. Enter your Ignition admin credentials that were entered during the setup of your Edge Gateway.
 
-![Ignition Designer login](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-designer-login.png)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-designer-login.png" />
+</p>
 
 ### Create and Load a Panel
 
@@ -72,12 +78,16 @@ You should now see a login prompt appear. Enter your Ignition admin credentials 
 4. Double click on the label and change your text to 'hello world'
 5. Save the file and in the top menu bar navigate to File -> Update Project to publish the updated project (aka 'Perspective session') to the gateway.
 
-![Ignition Panel Designer Create Perspective](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-panel-create-helloworld.gif)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-panel-create-helloworld.gif" />
+</p>
 
 Now that you've updated your Perspective session, it is live and you can navigate to it with a web browser! 
 To get help finding the URL for the view we just created, you can return to the Edge Gateway Launcher and view the active Perspective sessions. This will launch a browser on your session's home page URL.
 
-![Ignition Panel View Hello World](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-panel-view-helloworld.gif)
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-panel-view-helloworld.gif" />
+</p>
 
 ## Expanding Your HMI
 You have now setup the basics of Ignition's Perspective module to power the visuals of your ReTerminal. To create more powerful visuals leveraging the full Ignition platform, you will likely need to setup Tag Servers, Historian Databases, etc which are outside the scope of this tutorial. To learn more about the Ignition platform, use their excellent documentation and instructions for free at [Inductive University.](https://inductiveuniversity.com/)
