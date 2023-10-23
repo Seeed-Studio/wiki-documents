@@ -99,15 +99,16 @@ Click “Scan Networks”, select the Wi-Fi, and enter the password; or click �
 **Step 3: Helium Hotspot Onboarding and Assert Location**
 =========================================================
 
-*   Add the Hotspot to Helium Network
+*   Add the Hotspot to the Helium Network
 
-Please follow the App instruction to add the hotspot to Helium Network.
+Please follow the App instructions to add the hotspot to Helium Network.
 
-**NOTE**: Please note that the onboarding fees are NOT included in the product. A $10 onboarding fee and a $5 location asserting fee will be deducted by users' wallets to onboard. Please make sure you have enough Helium Data Credit in the Wallet when you proceed with the onboarding process.
+**NOTE**: Please note that the onboarding and location assertion fees are NOT included in the product. You will need 1,000,000 Helium Data Credits ($10) for the onboarding fee and 500,000 Helium Data Credits ($5) for the location asserting fee in your wallet.
+You will need to swap Helium HNT for Credits within the Helium Wallet to obtain the Data Credits and these will be deducted automatically onboard. Please make sure you have enough Helium Data Credit in the Wallet before you proceed with the onboarding process.
 
 *   Assert Hotspot Location
 
-Please follow the App instruction, choose the actual placement location on the map, and assert the location.
+Please follow the App instructions, choose the actual placement location on the map, and assert the location.
 
 * * *
 
