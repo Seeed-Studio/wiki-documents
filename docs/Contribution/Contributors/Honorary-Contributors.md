@@ -17,6 +17,29 @@ last_update:
 <div class="table-center">
 	<table align="center">
     <tr>
+			<th>Edgebox RPI 200 Getting Started with Ignition Edge</th>
+			<th>reTerminal DM Getting Started with Ignition Edge</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/EdgeBox-200-Ignition/EdgeBox-200_Ignition_Edge.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/reTerminal_DM_Ignition_Edge.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Edgebox-rpi-200-ignition-edge/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35980029"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Corey </font></span></strong></a></div>
+			</td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979679"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Corey </font></span></strong></a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
+    <tr>
 			<th>Speech Recognition with Edge Impulse on XIAO nRF52840</th>
 			<th>Conditioning for SGP41 raw data with Seeeduino Nano</th>
 		</tr>

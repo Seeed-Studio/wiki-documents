@@ -8,7 +8,7 @@ last_update:
   author: 迪迦奥特曼
 ---
 
-# L76-L GNSS for XIAO
+# XIAO GPS 扩展板（L76-L）
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/XIAO_GPS/main/IMG/back.png" alt="pir" width={250} height="auto" /></p>
 
