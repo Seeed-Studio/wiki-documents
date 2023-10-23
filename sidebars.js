@@ -663,7 +663,7 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/E5_Bluetooth_Location_Beacon',
-            
+            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Indoor_Positioning_Guide',
           {
             type: 'category',
             label: 'TTN Cloud Services',
