@@ -4,6 +4,7 @@ title: How to get location via Wi-Fi
 keywords:
 - SenseCAP_T1000_tracker
 # image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+slug: /Tracker_WiFi_Geolocation
 last_update:
   date: 10/19/2023
   author: JoJang
