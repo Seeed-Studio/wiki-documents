@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/9/2023
+  date: 10/16/2023
   author: Matthew
 ---
 
@@ -17,62 +17,70 @@ This is Matthew in Seeed Studio and welcome to the Seeed Studio weekly wiki! Eac
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 9th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 16th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Using Wi-Fi technology to enable geolocation for your tracker](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation/)
-
-This is an application for the SenseCAP T1000 Tracker. The tutorial uses Wi-Fi technology to enable geolocation for your tracker.
+### [TTN Mapper Configuration](https://wiki.seeedstudio.com/ttn_mapper_for_SenseCAP_T1000/)
 
 
-<div align="center"><img width={600} src="https://ksr-ugc.imgix.net/assets/042/029/307/c878a08e817ce49be25a7a8222c908e0_original.jpg?ixlib=rb-4.1.0&w=680&fit=max&v=1692700586&gif-q=50&q=92&s=acabe534ac531e4ac7bd0b1ad849e2d4" /></div>
-
-### [SenseCAP S2107](https://wiki.seeedstudio.com/SenseCAP_S2107/)
-
-SenseCAP LoRaWAN® S2107 temperature Sensor measures temperature at the range of -50°C~300°C. Benefiting from LoRa and IP66 design, this sensor features stability and reliability and can cover a long transmission range while keeping lower power consumption. Direct contact temperature is an important indicator in many scenarios, especially in liquid detection, food monitoring, storage cold chain, industrial boilers, aquaculture solutions. 
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/0.jpg" /></div>
+TTN Mapper is a convenient tool used for mapping the network coverage of gateways connected to The Things Stack. This tutorial will guide users to add the SenseCAP T1000 Tracker to TTN Mapper.
 
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map2.png" /></div>
 
-### [What makes SenseCAP T1000 stand out?](https://wiki.seeedstudio.com/sensecap_t1000_tracker/#what-makes-sensecap-t1000-stand-out)
+### [SenseCAP Sensor Probes Product Catalogue](https://wiki.seeedstudio.com/SenseCAP_Sensor_Probes_Product_Catalogue/)
 
+This Wiki describes a variety of SenseCAP Sensor Probes products. Our range of SenseCAP industrial sensor probes are designed to withstand harsh environments such as vibration and exposure to chemicals and gases, which is common in industrial applications, and our industrial range of sensors is equipped with serious IP ratings from IP66 to IP68 to ensure the products perform soundly in respective harsh environments. 
 
-This article introduces seven features that make the SenseCAP T1000 stand out! As a LoRaWAN tracker, it has all the features you want, and more! It delivers precise positioning across vast areas, whether indoors or outdoors, even in remote places. It stands out as a truly reliable tracking solution.
-
-<div align="center"><img width={400} src="https://ksr-ugc.imgix.net/assets/042/020/798/e9c1da26071a4bd0750bae8e9be16222_original.jpg?ixlib=rb-4.1.0&w=680&fit=max&v=1692642032&gif-q=50&q=92&s=0c3ef0acf872f413b2a142306ae2bc57" /></div>
-
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Sensor_Probes_Product_Catalogue/Picture3.png" /></div>
 
 
 ## Existed Wiki Updated
 
-### [Getting Started with reComputer Industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/#download-system-image)
+### [IO Expander for XIAO Resources links](https://wiki.seeedstudio.com/io_expander_for_xiao/#resources)
 
-We have updated the image files for different versions of reComputer Industrial.
+We have updated the resources for IO Expander.
 
-
-### [XIAO ESP32S3 Sense OV5640 Camera Datasheet](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#installation-of-expansion-boards-for-sense)
-
-We have added the XIAO ESP32S3 Sense OV5640 Camera Datasheet to both [Getting Started with Seeed Studio XIAO ESP32S3 (Sense)](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#installation-of-expansion-boards-for-sense) and [Camera Usage in Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#installation-of-expansion-boards-for-sense) wikis.
 
 <!-- ![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png) -->
 
 ## The Efforts of Contributor✨
 
-### [Grove - Wio-E5 Helium and TinyML Application Demo](https://wiki.seeedstudio.com/Grove_Wio_E5_Helium_tinyML_Demo/)
+### [Develop SenseCAP Indicator both chips with Arduino](https://wiki.seeedstudio.com/SenseCAP_Indicator_ESP32_Arduino/)
 
-Thanks our contributor salmanfarisvp to do this assisgnment! Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=36100879).
+Thanks our contributor Hendra and u4mzu4's to do this assisgnment! Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925769).
 
-In this wiki, we are going to build a project that utilize tinyML and helium LoRa IoT network to prevent illegal wood logging.
+In this wiki, we will guide you to develop your own custom project/firmware for the Sensecap Indicator using the simplicity and Flexibility of the Arduino Framework.
 
-<div align="center"><img width={600} src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/lora%2Btinyml/illegalWoodlogging.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/10.jpg" /></div>
 
-### [Linkstar Guide](https://wiki.seeedstudio.com/Linkstar_Intro/)
 
-Thanks our contributor KasunThushara to do this assisgnment! Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=33962964).
+### Deploy industrial software Ignition into reTerminal DM
 
-In this Wiki, We have listed Linkstar Applications presented by Seeed Studio and Community.
+Thanks our contributor Corey Thompson to do this assisgnment! Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979679).
+
+In these two wikis, We'll show you how to install and use Ignition Edge on a reTerminal DM:
+
+[reTerminal DM Getting Started with Ignition Edge](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/)
+
+[reTerminal DM Ignition Edge Panel Builder Hello World](https://wiki.seeedstudio.com/reTerminal-DM-Ignition-Edge-Panel-Builder/)
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-launch-screen.png" /></div>
+
+
+### reTerminal and reTerminal DM Guide 
+
+Thanks our contributor Kasun Thushara to do this assisgnment! 
+<!-- Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979679). -->
+
+In these two wikis, We'll show you the introduction of reTerminal and reTerminal DM:
+
+[reTerminal Guide](https://wiki.seeedstudio.com/reTerminal_Intro/)
+
+[reTerminal DM Guide](https://wiki.seeedstudio.com/reTerminal-dm_Intro/)
+
+
 
 <!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! -->
@@ -105,3 +113,4 @@ In this Wiki, We have listed Linkstar Applications presented by Seeed Studio and
 - [weekly wiki on 9.11st](/Seeed_Elderly/weekly_wiki/wiki911)
 - [weekly wiki on 9.18th](/Seeed_Elderly/weekly_wiki/wiki918)
 - [weekly wiki on 9.25th](/Seeed_Elderly/weekly_wiki/wiki925)
+- [weekly wiki on 10.9th](/Seeed_Elderly/weekly_wiki/wiki1009)
