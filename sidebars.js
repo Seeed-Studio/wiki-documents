@@ -677,6 +677,7 @@ const sidebars = {
             items: [
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/AWS_Service',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/TTN_Mapper',
                    ],
           },
           {
@@ -693,7 +694,6 @@ const sidebars = {
 
                    ],
           },
-          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Mapper',
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
@@ -1584,6 +1584,8 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_to_TTN',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/LoRa_Locator',
+
                 {
                   type: 'category',
                   label: 'Development Tutorial',
