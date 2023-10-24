@@ -1,6 +1,6 @@
 ---
 description: Connect SenseCAP T1000 Tracker to AWS
-title: SenseCAP T1000 Tracker & AWS
+title: AWS Cloud Services
 keywords:
 - Tracker
 - AWS

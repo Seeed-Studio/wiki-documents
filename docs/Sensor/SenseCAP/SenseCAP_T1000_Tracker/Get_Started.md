@@ -1,6 +1,6 @@
 ---
 description: Get_Started_with_SenseCAP_T1000_tracker
-title: Get Started
+title: Quick Started
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

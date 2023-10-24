@@ -1,6 +1,6 @@
 ---
 description: SenseCAP_T1000_tracker_and_Datacake_Integrated
-title: Datacake Integrated(TTS)
+title: Datacake Integrated(via TTS)
 keywords:
 - SenseCAP
 - tracker
