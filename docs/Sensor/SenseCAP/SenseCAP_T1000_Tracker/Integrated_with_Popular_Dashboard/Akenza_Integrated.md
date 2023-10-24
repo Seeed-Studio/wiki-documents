@@ -1,6 +1,6 @@
 ---
 description: Connect SenseCAP T1000 Tracker to Akenza
-title: Akenza Integrated(TTS)
+title: Akenza Integrated(via TTS)
 keywords:
 - Tracker
 - Akenza
