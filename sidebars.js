@@ -662,32 +662,38 @@ const sidebars = {
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/E5_Bluetooth_Location_Beacon',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Indoor_Positioning_Guide',
-          {
+            {
             type: 'category',
-            label: 'TTN Cloud Services',
+            label: 'User Guide',
             items: [
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Connect_to_The_Things_Network',
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/TTN_Mapper',
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Datacake_Integrated',
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Ubidots_Integrated',
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Qubitro_Integrated',
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/TagoIO_Integrated',
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/InfluxDB_Integrated',
-           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/TTN_Cloud_Services/Akenza_Integrated',
-
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/Tracker_WiFi_Geolocation',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/E5_Bluetooth_Location_Beacon',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/Indoor_Positioning_Guide',
                    ],
           },
           {
-        type: 'category',
-        label: 'Helium Cloud Services',
-        items: [
-       'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Helium_Cloud_Services/Ubidots_Integrated',
-               ],
-          }, 
-          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/AWS_Service',
-          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation',
+            type: 'category',
+            label: 'Integrated with LoRaWAN Network Server',
+            items: [
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/AWS_Service',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/TTN_Mapper',
+                   ],
+          },
+          {
+            type: 'category',
+            label: 'Integrated with Popular Dashboard',
+            items: [
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Datacake_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Ubidots_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Ubidots_Integrated(Helium)',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Qubitro_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/TagoIO_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/InfluxDB_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Akenza_Integrated',
+
+                   ],
+          },
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
               ],
         },
@@ -1578,6 +1584,8 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_to_TTN',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/LoRa_Locator',
+
                 {
                   type: 'category',
                   label: 'Development Tutorial',

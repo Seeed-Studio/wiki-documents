@@ -132,6 +132,9 @@ Paste the Application key and click submit.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP16.png" alt="pir" width={800} height="auto" /></p>
 
+:::tip
+Please check the user guide to set up the device correctly, select the platform to `Other Platform`.
+:::
 
 ### Check the device status
 

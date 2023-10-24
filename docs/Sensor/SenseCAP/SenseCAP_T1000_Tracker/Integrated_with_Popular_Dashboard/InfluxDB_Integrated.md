@@ -1,6 +1,6 @@
 ---
 description: SenseCAP_T1000_tracker_and_InfluxDB_Integrated
-title: InfluxDB Integrated(TTS)
+title: InfluxDB Integrated(via TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
