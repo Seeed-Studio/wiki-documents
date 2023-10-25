@@ -94,38 +94,33 @@ NFC Shield Setup
 
 - **Step 2.**  Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
 
-- **Step 3.**  Download [PN532 Library](https://github.com/Seeed-Studio/PN532) and put it under **C:\Program Files (x86)\Arduino\libraries\Seeed_Arduino_NFC-master\src**.
+- **Step 3.**  Open “WriteTag” code via the path: **File --> Examples --> WriteTag**. 
 
-- **Step 4.**  Open “ReadTag” code via the path: **File --> Examples --> ReadTag**. 
+- **Step 4.**  Modify the code as below to enable SPI communication.
 
-- **Step 5.**  Modify the code as below to enable SPI communication.
+```cpp
+#if 0
+    #include <SPI.h>
+    #include <PN532/PN532_SPI/PN532_SPI.h>
 
-```CPP
-#if 1 // use SPI
-#include <SPI.h>
-#include <PN532/PN532_SPI/PN532_SPI.h>
-PN532_SPI pn532spi(SPI, 10);
-NfcAdapter nfc = NfcAdapter(pn532spi);
-#elif 0 // use hardware serial
 
-#include <PN532/PN532_HSU/PN532_HSU.h>
-PN532_HSU pn532hsu(Serial1);
-NfcAdapter nfc(pn532hsu);
-#elif 0  // use software serial
+    PN532_SPI pn532spi(SPI, 10);
+    NfcAdapter nfc = NfcAdapter(pn532spi);
+#else
 
-#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
-#include "SoftwareSerial.h"
-SoftwareSerial SWSerial(2, 3);
-PN532_SWHSU pn532swhsu(SWSerial);
-NfcAdapter nfc(pn532swhsu);
-#else //use I2C
+    #include <Wire.h>
+    #include <PN532/PN532_I2C/PN532_I2C.h>
 
-#include <Wire.h>
-#include <PN532/PN532_I2C/PN532_I2C.h>
 
-PN532_I2C pn532_i2c(Wire);
-NfcAdapter nfc = NfcAdapter(pn532_i2c);
+    PN532_I2C pn532_i2c(Wire);
+    NfcAdapter nfc = NfcAdapter(pn532_i2c);
 #endif
+
+void setup() {
+    SERIAL.begin(9600);
+    SERIAL.println("NDEF Writer");
+    nfc.begin();
+}
 ```
 
 **Arduino available libraries menu**
@@ -133,7 +128,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 NFC Shield Examples/Applications
 --------------------------------
 
-### Example #1: NFC Tag Scan
+### Example: NFC WriteTag
 
 This example will show you how to use the NFC shield to scan an NFC tag and display its information/data.
 
@@ -141,30 +136,46 @@ In the Arduino IDE copy, paste, then upload the code below to your board.
 
 #### Code
 
-```CPP
-	#include <SPI.h>
-#include <Seeed_Arduino_NFC.h>
-#include  <NfcAdapter.h>
+```cpp
+#include <NfcAdapter.h>
+#include <PN532/PN532/PN532.h>
+#if 0
+    #include <SPI.h>
+    #include <PN532/PN532_SPI/PN532_SPI.h>
 
-PN532_SPI pn532spi(SPI, 10);
-NfcAdapter nfc = NfcAdapter(pn532spi);
+
+    PN532_SPI pn532spi(SPI, 10);
+    NfcAdapter nfc = NfcAdapter(pn532spi);
+#else
+
+    #include <Wire.h>
+    #include <PN532/PN532_I2C/PN532_I2C.h>
 
 
-void setup(void) {
-    Serial.begin(115200); // begin serial communication
-    Serial.println("NDEF Reader");
-    nfc.begin(); // begin NFC communication
+    PN532_I2C pn532_i2c(Wire);
+    NfcAdapter nfc = NfcAdapter(pn532_i2c);
+#endif
+
+void setup() {
+    SERIAL.begin(9600);
+    SERIAL.println("NDEF Writer");
+    nfc.begin();
 }
 
-void loop(void) {
+void loop() {
+    SERIAL.println("\nPlace a formatted Mifare Classic or Ultralight NFC tag on the reader.");
+    if (nfc.tagPresent()) {
+        NdefMessage message = NdefMessage();
+        message.addUriRecord("http://arduino.cc");
 
-    Serial.println("\nScan an NFC tag\n");
-    if (nfc.tagPresent()) // Do an NFC scan to see if an NFC tag is present
-    {
-        NfcTag tag = nfc.read(); // read the NFC tag into an object, nfc.read() returns an NfcTag object.
-        tag.print(); // prints the NFC tags type, UID, and NDEF message (if available)
+        bool success = nfc.write(message);
+        if (success) {
+            SERIAL.println("Success. Try reading this tag with your phone.");
+        } else {
+            SERIAL.println("Write failed.");
+        }
     }
-    delay(500); // wait half a second (500ms) before scanning again (you may increment or decrement the wait time)
+    delay(5000);
 }
 ```
 
@@ -177,9 +188,9 @@ To test the code:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Nfc-pn532-output-example-1.png" alt="pir" width={600} height="auto" /></p>
 
-**Example #1 serial communication window output when scanning an NFC tag.**
+<!-- **Example #1 serial communication window output when scanning an NFC tag.** -->
 
-### Example #2: NFC(keyless) Door Lock
+<!--  ### Example #2: NFC(keyless) Door Lock
 
 This example will show you how to use an NFC tag as a key to unlock a door or a lock. The door/lock mechanism will be left to your imagination, we'll only cover the NFC part of the code.
 
@@ -292,8 +303,8 @@ To test the code/application:
 3.  The green LED should light up and the serial window should print "Correct Key"
 4.  Now hold a different NFC on the antenna area
 5.  The red LED should light up and the serial window should print "Incorrect Key"
-
-### Example #3: How to use the Interrupt Pin (Example #2: Revisited)
+ -->
+<!-- ### Example #3: How to use the Interrupt Pin (Example #2: Revisited)
 
 Although the code in Example #2 above does what we need there is a more elegant approach to handling NFC tag detections. In this example we'll show you how to make use of the interrupt pin in the NFC shield so that instead of polling the shield (asking "is there a tag present?") we wait for the shield to tell the Arduino that a tag is available to be read. Why would you want to do this? There are many reasons and interrupts are a whole different topic, but one reason that may convince you is that your project/circuit will save battery since we are not triggering the shield circuit continuously.
 
@@ -304,175 +315,6 @@ The NFC shield’s interrupt pin (IRQ) is disconnect from the Arduino's digital 
 #### Code
 
 Upload the following code to your Arduino board:
-```CPP
-	#if 1 // use SPI
-	#include <SPI.h>
-	#include <PN532/PN532_SPI/PN532_SPI.h>
-	PN532_SPI pn532spi(SPI, 10);
-	NfcAdapter nfc = NfcAdapter(pn532spi);
-	#elif 0 // use hardware serial
-
-	#include <PN532/PN532_HSU/PN532_HSU.h>
-	PN532_HSU pn532hsu(Serial1);
-	NfcAdapter nfc(pn532hsu);
-	#elif 0  // use software serial
-
-	#include <PN532/PN532_SWHSU/PN532_SWHSU.h>
-	#include "SoftwareSerial.h"
-	SoftwareSerial SWSerial(2, 3);
-	PN532_SWHSU pn532swhsu(SWSerial);
-	NfcAdapter nfc(pn532swhsu);
-	#else //use I2C
-
-	#include <Wire.h>
-	#include <PN532/PN532_I2C/PN532_I2C.h>
-
-	PN532_I2C pn532_i2c(Wire);
-	NfcAdapter nfc = NfcAdapter(pn532_i2c);
-	#endif
-
-    // FLAG_NONE used to signal nothing needs to be done
-    #define FLAG_NONE 0
-    // FLAG_IRQ_TRIGGERED used to signal an interrupt trigger
-    #define FLAG_IRQ_TRIGGERED 1
-    // FLAG_RESET_IRQ used to signal that the interrupt needs to be reset
-    #define FLAG_RESET_IRQ 2
-    // flags variable used to store the present flag
-    volatile int flags = FLAG_NONE;
-
-    String const myUID = "1B B3 C6 EF"; // replace this UID with your NFC tag's UID
-    // LED pins
-    int const greenLedPin = 3; // green led used for correct key notification
-    int const redLedPin = 4; // red led used for incorrect key notification
-
-    // the interrupt we'll be using (interrupt 0) is located at digital pin 2
-    int const irqPin = 2; // interrupt pin
-
-    String scannedUID = ""; // this is where we'll store the scanned tag's UID
-
-    void setup(void) {
-        // make LED pins outputs
-        pinMode(greenLedPin,OUTPUT);
-        pinMode(redLedPin,OUTPUT);
-
-        Serial.begin(115200); // start serial comm
-        Serial.println("NDEF Reader");
-        nfc.begin(); // begin NFC comm
-
-        // turn off the LEDs
-        digitalWrite(greenLedPin,LOW);
-        digitalWrite(redLedPin,LOW);
-       // attach the function "irq" to interrupt 0 on the falling edges
-       attachInterrupt(0,irq,FALLING);// digital pin 2 is interrupt 0, we'll call the irq function (below) on the falling edge of this pin
-    }
-
-    void loop(void) {
-        int flag = getFlag(); // get the present flag
-
-        switch(flag) // check which flag/signal we are on
-        {
-           case FLAG_NONE:
-             // nothing needs to be done
-           break;
-           case FLAG_IRQ_TRIGGERED: // the interrupt pin has been triggered
-               Serial.println("Interrupt Triggered");
-               if (nfc.tagPresent())
-               {
-                 // an NFC tag is present
-                  NfcTag tag = nfc.read(); // read the NFC tag
-                  scannedUID = tag.getUidString(); // get the NFC tag's UID
-                  if(myUID.compareTo(scannedUID) == 0) // compare the NFC tag's UID with the correct tag's UID (a match exists when compareTo returns 0)
-                  {
-                    // the scanned NFC tag matches the saved myUID value
-                    Serial.println("Correct tag/key");
-                    blinkLed(greenLedPin,200,4); // blink the green led
-                    // put your here to trigger the unlocking mechanism (e.g. motor, transducer)
-                  }else{
-                    // the scanned NFC tag's UDI does not match the myUID value
-                    Serial.println("Incorrect tag/key");
-                    blinkLed(redLedPin,200,4); // blink the red led
-                    // DO NOT UNLOCK! an incorrect NFC tag was used.
-                    // put your code here to trigger an alarm (e.g. buzzard, speaker) or do something else
-                  }
-                  // return to the original state
-                  setFlag(FLAG_NONE);
-                  reset_PN532_IRQ_pin();
-               }else{
-                 // a tag was not present (the IRQ was triggered by some other action)
-                 setFlag(FLAG_NONE);
-               }
-           break;
-           default:
-             // do any other stuff for flags not handled above
-           break;
-        }
-    }
-
-    /*
-    * Name: setFlat
-    * Description: used to set actions/flags to be executed in the loop(void) function
-    * Parameters:
-    *        int flag - the action/flag to store
-    * Returns: void
-    */
-    void setFlag(int flag)
-    {
-      flags = flag;
-    }
-
-    /*
-    * Name: getFlag
-    * Description: used to get the present flag/action
-    * Parameters: void
-    * Returns: int - the flags variable. The action/flag set by setFlag
-    */
-    int getFlag()
-    {
-      return flags;
-    }
-
-    /*
-    * Name: irq
-    * Description: Interrupt service routine (ISR). This function will be executed whenever there is a falling edge on digital pin 2 (the interrupt 0 pin)
-    * Parameters: void
-    * Returns: void
-    */
-    void irq()
-    {
-      if(getFlag()==FLAG_NONE){
-        setFlag(FLAG_IRQ_TRIGGERED);
-      }
-    }
-    /*
-    * Name: reset_PN532_IRQ_pin
-    * Description: used to reset the PN532 interrupt request (IRQ) pin
-    * Parameters: void
-    * Returns: void
-    */
-    void reset_PN532_IRQ_pin()
-    {
-      nfc.tagPresent();
-    }
-
-    /*
-    * Name: blinkLed
-    * Description: used to toggle a pin to blink an LED attached to the pin
-    * Parameters:
-    *      ledPin - the pin where the led is connected to
-    *      delayTime - the time in milliseconds between HIGH and LOW
-    *      times - the number of times to toggle the pin
-    * Returns: void
-    */
-    void blinkLed(int ledPin,int delayTime,int times)
-    {
-      for(int i=0;i<times;i++){
-        digitalWrite(ledPin,HIGH);
-        delay(delayTime);
-        digitalWrite(ledPin,LOW);
-        delay(delayTime);
-      }
-    }
-```
 
 To test the code/application:
 
@@ -489,7 +331,7 @@ The serial window from our test of this code is displayed below, yours should be
 
 **Serial comm window output from example 3.**
 
-### Example #4: Write an NDEF Message to a Tag
+<!-- ### Example #4: Write an NDEF Message to a Tag
 
 NFC tags are capable of storing data, the amount of data is dependent on each tag. In this example we will store two strings/messages on a tag, you will then be able to read this message with the code in *Example \#6: Read an NDEF Message From a Tag*.
 
@@ -568,7 +410,7 @@ To test the code above:
 
 **Serial comm window for NDEF message written to card example.**
 
-### Example #5: Format a Tag as NDEF
+<!-- ### Example #5: Format a Tag as NDEF
 
 Your brand new NFC tag might not be NDEF formatted initially. To format a tag as NDEF upload the following code to your Arduino development board:
 
@@ -639,8 +481,8 @@ If your tag failed to get formatted, try again. If it fails your tag is not capa
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-5-format-nfc-tag-as-ndef.png" alt="pir" width={600} height="auto" /></p>
 
 **Serial comm window output when formatting an NFC tag to NDEF.**
-
-### Example #6: Read an NDEF Message From a Tag
+ -->
+<!-- ### Example #6: Read an NDEF Message From a Tag
 
 As you have seen in the example's above, the NFC shield is capable of writing messages to NFC tags. The NFC is also capable of reading NDEF messages from tags, in this example we'll show you how.
 
@@ -714,8 +556,8 @@ To test code above:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Example-6-read-ndef-message.png" alt="pir" width={600} height="auto" /></p>
 
 **Serial comm window output for NDEF message read**
-
-### Example #7: How to Change the Chip Select Pin From D10 to D9
+ -->
+<!-- ### Example #7: How to Change the Chip Select Pin From D10 to D9
 
 #### Hardware Modification
 
@@ -727,8 +569,8 @@ You can then use the same code in the examples above but with pin 9 instead of 1
 #### Code
 
     PN532_SPI interface(SPI, 9); // create a SPI interface for the shield with the SPI CS terminal at digital pin 9
-
-### Example #8: Use Two NFC Shields With One Arduino Board
+ -->
+<!-- ### Example #8: Use Two NFC Shields With One Arduino Board
 
 #### Hardware Modification
 
@@ -768,7 +610,8 @@ You may now create two separate NFC objects, one for each shield, as follows:
 	NfcAdapter nfc = NfcAdapter(pn532_i2c);
 	#endif
 
-```
+``` 
+ -->
 
 ## FAQs
 
@@ -806,7 +649,7 @@ Resources
 - [PN532 Datasheet](https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/PN532.pdf)
 - [FAQ of NFC Shield](http://support.seeedstudio.com/knowledgebase/articles/462025-nfc-shield-sku-sld01097p)
 - [Seeed Arduino NFC Library](https://github.com/Seeed-Studio/Seeed_Arduino_NFC)
-- [PN532 Library](https://github.com/Seeed-Studio/PN532)
+- [PN532 Library](https://github.com/Seeed-Studio/PN532)aaa
 
 ## Project
 
