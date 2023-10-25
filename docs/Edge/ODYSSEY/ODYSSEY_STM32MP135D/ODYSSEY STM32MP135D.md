@@ -357,4 +357,4 @@ OP-TEE](https://git.xogium.me/xogium/st-optee_os/tree/3.19.0-stm32mp-odyssey-r2)
 * [Fork of 
 U-Boot](https://git.xogium.me/xogium/st-u-boot/tree/v2022.10-stm32mp-odyssey-r2)
 * [Fork of the Linux 
-kernel](https://github.com/xogium/st-linux/releases/tag/v6.1-stm32mp-odyssey-r2)
+kernel](https://github.com/xogium/st-linux/releases/tag/v6.1-stm32mp-odyssey-r3)
