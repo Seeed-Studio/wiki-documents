@@ -1,15 +1,16 @@
 ---
 description: ODYSSEY, STM32MP135D
-title: ODYSSEY – STM32MP135D
+title: Getting Started
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-STM32MP135D
 last_update:
-  date: 13/10/2023
+  date: 10/13/2023
   author: Xogium
-
 ---
 
-# ODYSSEY – STM32MP135D #
+# Getting Started with ODYSSEY – STM32MP135D 
+
+
 ODYSSEY STM32MP135D is a compact STM32 MPU based single-board computer that 
 offers powerful hardware in a small form factor designed for a variety of uses 
 ranging from smart home, to vending machines, to IP Camera, etc. It offers a 
