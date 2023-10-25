@@ -32,7 +32,7 @@ It's equipped with GPS, Bluetooth, and Wi-Fi for seamless indoor and outdoor pos
 ### Location User Guide
 
 <div class="all_container">
-          <a href= "https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation/" class="sensecap">Get Location via Wi-Fi</a>
+          <a href= "https://wiki.seeedstudio.com/Tracker_WiFi_Geolocation/" class="sensecap">Get Location via Wi-Fi</a>
           <a href= "https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/" class="sensecap2">Get Location via Bluetooth Beacon</a>
           <a href= "https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/" class="sensecap3">Indoor Positionning System Guide</a>
 
@@ -45,7 +45,8 @@ It's equipped with GPS, Bluetooth, and Wi-Fi for seamless indoor and outdoor pos
 
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/" class="sensecap">The Things Network</a>
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_AWS/" class="sensecap2">AWS IoT Core</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Helium/" class="sensecap2">Helium</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_AWS/" class="sensecap3">AWS IoT Core</a>
 </div>
 
 
