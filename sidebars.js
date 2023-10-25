@@ -2547,6 +2547,13 @@ const sidebars = {
       },
       items: [
         //  'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+        {
+          type: 'category',
+          label: 'ODYSSEY STM32MP135D',
+          items: [
+            'Edge/ODYSSEY/ODYSSEY_STM32MP135D/ODYSSEY STM32MP135D',
+          ],
+          },
 
         {
           type: 'category',
