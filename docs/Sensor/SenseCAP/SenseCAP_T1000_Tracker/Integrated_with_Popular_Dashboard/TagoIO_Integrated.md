@@ -1,6 +1,6 @@
 ---
 description: SenseCAP_T1000_tracker_and_TagoIO_Integrated
-title: TagoIO Integrated(TTS)
+title: TagoIO Integrated(via TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
