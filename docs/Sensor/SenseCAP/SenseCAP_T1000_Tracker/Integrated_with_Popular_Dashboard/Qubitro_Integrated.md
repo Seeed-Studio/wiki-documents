@@ -1,6 +1,6 @@
 ---
 description: SenseCAP_T1000_tracker_and_Qubitro_Integrated
-title: Qubitro Integrated(TTS)
+title: Qubitro Integrated(via TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
