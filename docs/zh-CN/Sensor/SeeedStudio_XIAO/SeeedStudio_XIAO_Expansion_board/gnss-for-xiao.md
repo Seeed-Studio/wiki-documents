@@ -16,7 +16,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/gnss_for_xiao">
-            <strong><span><font color={'FFFFFF'} size={"4"}>立即获取一个 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 点击购买 🖱️</font></span></strong>
     </a>
 </div>
 
