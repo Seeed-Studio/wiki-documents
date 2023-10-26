@@ -13,7 +13,7 @@ last_update:
 
 [Qubitro](https://www.qubitro.com/) is a Device Data Platform (DDP) for developers that provides the tools, workflows, and infrastructure you need to develop solutions faster, without the need of manual integration of multiple services. Qubitro supports popular data sources out-of-the-box and provides tools for real-time collaboration on your projects combined with scalable infrastructure.
 
-The content of this chapter will guide users how to connect the SenseCAP [T1000 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) to Qubitro through TTN.
+The content of this chapter will guide users how to connect the SenseCAP [T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to Qubitro through TTN.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/qubitro_in1.png" alt="pir" width={800} height="auto" /></p>
 

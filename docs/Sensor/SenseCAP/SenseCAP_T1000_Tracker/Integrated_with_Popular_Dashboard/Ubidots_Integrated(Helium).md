@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-This article will illustrate the process of connecting the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) to Ubidots through Helium LNS.
+This article will illustrate the process of connecting the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to Ubidots through Helium LNS.
 
 <div align="right">
 Written by Juan David Tangarife - From Ubidots Team
