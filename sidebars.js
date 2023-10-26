@@ -692,6 +692,7 @@ const sidebars = {
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/TagoIO_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/InfluxDB_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Akenza_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Trackpac_Integrated',
 
                    ],
           },
@@ -2351,6 +2352,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/Scailable-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Roboflow-Jetson-Getting-Started',
               ],
             },
 
