@@ -2352,6 +2352,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/Scailable-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Roboflow-Jetson-Getting-Started',
               ],
             },
 
