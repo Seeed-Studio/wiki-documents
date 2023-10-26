@@ -24,7 +24,7 @@ This wiki guide explains how to easily deploy AI models using [Roboflow](https:/
 
 and foundation models like CLIP and SAM.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/8.gif
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/9.gif
 " style={{width:1000, height:'auto'}}/></div>
 
 ## Prerequisites
@@ -33,7 +33,7 @@ and foundation models like CLIP and SAM.
 - [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) or any other NVIDIA Jetson device
 
 :::note
-This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) powered by NVIDIA Jetson orin NX 16GB module 
+This wiki has been tested and verified on a [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) powered by NVIDIA Jetson Orin NX 16GB module 
 :::
 
 ## Flash JetPack to Jetson
@@ -164,7 +164,7 @@ inference.Stream(
 
 Finally, you will see the result as follows
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/7.gif
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/11.gif
 " style={{width:1000, height:'auto'}}/></div>
 
 ---
