@@ -41,12 +41,14 @@ This wiki has been tested and verified on a [reComputer J4012](https://www.seeed
 Now you need to make sure that the Jetson device is flashed with a [JetPack](https://developer.nvidia.com/embedded/jetpack) system. You can either use NVIDIA SDK Manager or command-line to flash JetPack to the device.
 
 For Seeed Jetson-powered devices flashing guides, please refer to the below links:
-- [reComputer J1010 | J101](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack)
 - [reComputer J2021 | J202](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack)
 - [reComputer J1020 | A206](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
 - [reComputer J4012 | J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
 - [A203 Carrier Board](https://wiki.seeedstudio.com/reComputer_A203_Flash_System)
 - [A205 Carrier Board](https://wiki.seeedstudio.com/reComputer_A205_Flash_System)
+- [A206 Carrier Board](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
+- [A603 Carrier Board](https://wiki.seeedstudio.com/reComputer_A603_Flash_System)
+- [A607 Carrier Board](https://wiki.seeedstudio.com/reComputer_A607_Flash_System)
 - [Jetson Xavier AGX H01 Kit](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation)
 - [Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
 - [reComputer Indsutrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/#flash-jetpack)
@@ -56,7 +58,7 @@ For Seeed Jetson-powered devices flashing guides, please refer to the below link
 Make sure to Flash JetPack version 5.1.1 because that is the version we have verified for this wiki 
 :::
 
-## Obtain Open-source Roboflow model
+## Tap into 50,000+ Models at Roboflow Universe
 
 Roboflow offers 50,000+ ready-to-use AI models for everyone to get started with computer vision deployment in the fastest way. You can explore them all at [Roboflow Universe](https://universe.roboflow.com). Roboflow Universe also offers 200,000+ datasets where you can use these datasets to [train a model](https://docs.roboflow.com/train/train) on Roboflow cloud servers or else bring your own dataset, use [Roboflow online image annotation tool](https://docs.roboflow.com/annotate/use-roboflow-annotate) and start training.
 
