@@ -189,11 +189,14 @@ The values are based on the current environment.
 
 - **Step 1.** Plug RaspberryPi Pico into Grove Shield for Pi Pico.
 
-- **Step 2.**  Plug Grove - CO2 & Temperature & Humidity Sensor - SCD41 to **I2C1** port of Grove Shield for Pi Pico.
+- **Step 2.**  Plug Grove - CO2 & Temperature & Humidity Sensor - SCD41 to **I2C0** port of Grove Shield for Pi Pico.
 
 - **Step 3.** Connect RaspberryPi Pico to a PC through a USB cable.
+:::tip
+please pay attention to use I2C0, if use I2C1, it won't work.
+:::
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/pico-connect.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/pico-connect.jpeg" /></div>
 
 This is the basic hardware connecting.
 
@@ -201,9 +204,9 @@ This is the basic hardware connecting.
 
 - **Step 1.** We need to use third-party library to control **Grove - Temperature & Humidity Sensor V2.0**
 
-1. Download [dht20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht20.py) library and save it to the computer.
+1. Download [dht20_demo2.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/dht20_demo2.py) and [DHT20.py](https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/dht/DHT20.py) library save it to the computer.
 
-2. Use Thonny to open the files, click on the "file" option at the top left, and then select "save as".
+2. Use Thonny to open dht20_demo2.py and DHT20.py, click on the "file" option at the top left, and then select "save as".
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny1.png" /></div>
 
@@ -212,28 +215,20 @@ This is the basic hardware connecting.
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny2.png" /></div>
 
 :::note
-Once we saving, Thonny will ask to name the file. Here we type "lcd1602.py" as its name, and we also need to type the extension of the file, or it can not be used.
+Once we saving, Thonny will ask to name the file. Here we type "dht20_demo2.py" as its name, and we also need to type the extension of the file, or it can not be used.
 :::
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/zhanshitu5.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny3.png" /></div>
 
-- **Step 2.** Upload the code.
+- **Step 2.** Start the process.
 
-```c++
-from machine import I2C
-from dht20 import DHT20
-i2c = I2C(0)
-dht20 = DHT20(i2c)
-while True:
-    temper = dht20.dht20_temperature()
-    humidity = dht20.dht20_humidity()
-    print("temper : " + str(temper))
-    print("humidity : " + str(humidity))
-```
+1. Initialize DHT20.py first.
 
-- **Step 3.** The result should look like:
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny4.png" /></div>
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/zhanshitu6.png" /></div>
+2. Start the demo process and then you can see the results below.
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Thonny5.png" /></div>
 
 ## Schematic Online Viewer
 
