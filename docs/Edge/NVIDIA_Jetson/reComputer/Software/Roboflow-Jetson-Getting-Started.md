@@ -26,6 +26,7 @@ and foundation models like CLIP and SAM.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/8.gif
 " style={{width:1000, height:'auto'}}/></div>
+
 ## Prerequisites
 
 - Ubuntu Host PC (native or VM using VMware Workstation Player)
