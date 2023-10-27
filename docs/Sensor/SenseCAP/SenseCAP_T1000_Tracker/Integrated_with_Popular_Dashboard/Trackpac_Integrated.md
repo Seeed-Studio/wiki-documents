@@ -1,5 +1,5 @@
 ---
-description: SenseCAP_T1000_tracker_and_TagoIO_Integrated
+description: SenseCAP_T1000_tracker_and_Trackpac_Integrated
 title: Trackpac Integrated
 keywords:
 - SenseCAP_T1000_tracker
@@ -48,6 +48,11 @@ Navigate to `Devices`, click the `+` icon to add a new device.
 Choose `Enter Keys Manually`, name your device, and configure the `Device EUI`, `APP EUI`,`APP key`.
 
 **LoRaWAN Network**: Helium
+
+:::note
+Check the [Helium Network Coverage](https://explorer.helium.com/).
+:::
+
 **Device Type**: SenseCAP T1000
 
 Then click `Add Device`.
@@ -109,3 +114,6 @@ Choose which of your saved contacts should receive geofence alerts by entering i
 
 Click `Add Geofence` to save.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/geofence3.png" alt="pir" width={800} height="auto" /></p>
+
+
+Then you will get alerts when a tracker enters or exits the geofence.
