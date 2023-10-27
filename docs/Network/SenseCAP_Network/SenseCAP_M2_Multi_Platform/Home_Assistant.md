@@ -12,7 +12,7 @@ last_update:
 ---
 
 # Automatic intergrate  all your SenseCAP Sensors to Home Assistant
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/overview.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/overview.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## 1. SenseCAP M2 Multi-Platform Configuration
 ### 1.1 LoRa Network Configuration
@@ -69,6 +69,10 @@ At this point we have finished the server mode setup, and we wiil configure the 
 **Step 14.** At this point, we have completed all configurations of the M2 gateway.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/chirpstack_updata.png"/></div>
 
+:::tip
+When adding a device to the M2 gateway for the **first time**, wait at least **2-5** minutes until the data reported by **up** can be seen in **Events**. Then the device addition initialization is complete. Then we can configure the Home Assistant plug-in.
+:::
+
 
 
 
@@ -77,7 +81,20 @@ At this point we have finished the server mode setup, and we wiil configure the 
 
 **1.HACS**
 - First installation
-    > HACS > Integrations > ➕ EXPLORE & DOWNLOAD REPOSITORIES > [`Seeed Studio-SenseCAP`](https://my.home-assistant.io/redirect/hacs_repository/?owner=Seeed-Solution&repository=https%3A%2F%2Fgithub.com%2FSeeed-Solution%2Fhome-assistant-SenseCAP.git) > DOWNLOAD THIS REPOSITORY
+  - 1.HACS > Integrations >
+  - 2.Click on top right corner > Custom repositories ： 
+    ```
+      Repository: https://github.com/Seeed-Solution/home-assistant-SenseCAP.git
+      Category: Intergration
+    ```
+  <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/custom_repositories_2.png"/></div>  
+
+  - 3.Click ADD
+  - 4.HACS > Integrations > ➕ EXPLORE & DOWNLOAD REPOSITORIES > Seeed Studio-SenseCAP > DOWNLOAD THIS REPOSITORY
+
+  <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/custom_repositories_3.png"/></div>  
+
+
 - Update component
     > HACS > Integrations > [`Seeed Studio-SenseCAP`](https://my.home-assistant.io/redirect/hacs_repository/?owner=Seeed-Solution&repository=https%3A%2F%2Fgithub.com%2FSeeed-Solution%2Fhome-assistant-SenseCAP.git) > UPDATE / Redownload
 
@@ -140,6 +157,3 @@ cd ~/config/custom_components && git clone https://github.com/Seeed-Solution/hom
 12. Here are the visual representations of the effects on the "Overview" page after adding various models of SenseCAP sensors.
 
 The aforementioned constitutes the complete step-by-step tutorial for integrating SenseCAP into the Home Assistant platform. Home Assistant has the capability to seamlessly integrate different types of devices from various platforms into a single ecosystem, facilitating cross-platform interoperability. This holds profound significance for the comprehensiveness of the smart home ecosystem. Presently, Seeed has also become a part of the extensive Home Assistant community, enabling the integration of our SenseCAP devices into the platform. We believe that this endeavor will contribute to the further strengthening and growth of the Internet of Things ecosystem !
-
-
-
