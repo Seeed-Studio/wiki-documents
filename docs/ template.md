@@ -159,6 +159,19 @@ last_update:
 
 ```
 
+### Hide the code
+
+<details>
+
+<summary> title here</summary>
+
+```cpp
+#include
+Print "code here"
+```
+
+</details>
+
 ### Download Arduino IDEBbutton
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
