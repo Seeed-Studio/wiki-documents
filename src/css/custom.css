@@ -1364,3 +1364,7 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
   color: #000000;
   text-decoration: none;
 }
+
+.js-download-pdf{
+  cursor: pointer;
+}

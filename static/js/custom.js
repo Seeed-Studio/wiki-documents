@@ -1,4 +1,11 @@
 window.onload = function () {
+  document.querySelector('.js-download-pdf').addEventListener('click',function(){
+    let pathname=window.location.pathname
+    if (pathname.endsWith('/')) {
+      pathname = pathname.substring(0, pathname.length - 1);
+    } 
+    window.open(window.location.origin+'/pdf'+pathname+'.pdf','_blank')
+  })
   // sidebar location
   setTimeout(() => {
     const list = document.querySelectorAll('.menu__link--active')

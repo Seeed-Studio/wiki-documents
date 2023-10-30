@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "generate-pdf": "node bin/generatePdf.js",
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host 0.0.0.0",
     "build": "docusaurus build",
@@ -45,6 +46,7 @@
     "@docusaurus/eslint-plugin": "^2.4.3",
     "@docusaurus/module-type-aliases": "^2.4.3",
     "@tsconfig/docusaurus": "^1.0.5",
+    "md-to-pdf": "^5.2.4",
     "node-sass": "^9.0.0",
     "typescript": "^4.7.4"
   },

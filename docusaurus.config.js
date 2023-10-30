@@ -249,7 +249,11 @@ const config = {
           //   className: 'navbar_doc_items',
           //   to: '/Contribution',
           // },
-
+          {
+            type: 'html',
+            value: '<span class="js-download-pdf">Download</span>',
+            position: 'right',
+          },
           {
             to: 'https://www.seeedstudio.com/',
             label: 'Bazaar 🛍️',
