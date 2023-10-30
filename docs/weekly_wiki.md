@@ -21,6 +21,14 @@ Today is October 30th and a brand new week has begun! Check out what Seeed Studi
 
 ## Latest Wiki Launched
 
+### [Getting Started with Roboflow Inference on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/Roboflow-Jetson-Getting-Started/)
+
+This wiki guide explains how to easily deploy AI models using [Roboflow](https://roboflow.com) inference server running on NVIDIA Jetson devices. Here we will use [Roboflow Universe](https://universe.roboflow.com) to select an already trained model, deploy the model to the Jetson device and perform inference on a live webcam stream!
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/8.gif
+" style={{width:1000, height:'auto'}}/></div>
+
+
 ### [SenseCAP T1000 Indoor Positioning System Guide](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/)
 
 
@@ -37,12 +45,6 @@ The chapter will provide overall guidance on how to integrate [SenseCAP T1000 Tr
 This Wiki introduces how to connect the SenseCAP T1000 Tracker to Helium
 
 
-### [Getting Started with ODYSSEY – STM32MP135D](https://wiki.seeedstudio.com/ODYSSEY-STM32MP135D/)
-
-ODYSSEY STM32MP135D is a compact STM32 MPU based single-board computer that offers powerful hardware in a small form factor designed for a variety of uses ranging from smart home, to vending machines, to IP Camera, etc. It offers a wide range of connectivity options designed to make it easy to prototype with.
-
-
-<div align="center"><img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110859--odyssey-mp135d-emmc-version-45font.jpg"/></div>
 
 ### [SenseCAP T1000 Tracker - Trackpac Integrated](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_trackpac/)
 
@@ -54,12 +56,6 @@ The content of this chapter will guide users how to connect the [SenseCAP T1000 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/geofence3.png" alt="pir" width={800} height="auto" /></p> 
 
 
-### [Getting Started with Roboflow Inference on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/Roboflow-Jetson-Getting-Started/)
-
-This wiki guide explains how to easily deploy AI models using [Roboflow](https://roboflow.com) inference server running on NVIDIA Jetson devices. Here we will use [Roboflow Universe](https://universe.roboflow.com) to select an already trained model, deploy the model to the Jetson device and perform inference on a live webcam stream!
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/8.gif
-" style={{width:1000, height:'auto'}}/></div>
 
 ## Existed Wiki Updated
 
@@ -95,6 +91,13 @@ We have updated more flashing methods for reComputer Industrial. -->
 
 
 ## The Efforts of Contributor✨
+
+### [Getting Started with ODYSSEY – STM32MP135D](https://wiki.seeedstudio.com/ODYSSEY-STM32MP135D/)
+
+- Thanks our contributor [Casey](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=34112514) to make this wiki and the contents about how to get started with ODYSSEY - STM32MP135D.
+- ODYSSEY STM32MP135D is a compact STM32 MPU based single-board computer that offers powerful hardware in a small form factor designed for a variety of uses ranging from smart home, to vending machines, to IP Camera, etc. It offers a wide range of connectivity options designed to make it easy to prototype with.
+
+<div align="center"><img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110859--odyssey-mp135d-emmc-version-45font.jpg"/></div>
 
 ### [Edge Series Guide](https://wiki.seeedstudio.com/Edge_series_Intro/)
 
