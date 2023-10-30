@@ -157,3 +157,7 @@ cd ~/config/custom_components && git clone https://github.com/Seeed-Solution/hom
 12. Here are the visual representations of the effects on the "Overview" page after adding various models of SenseCAP sensors.
 
 The aforementioned constitutes the complete step-by-step tutorial for integrating SenseCAP into the Home Assistant platform. Home Assistant has the capability to seamlessly integrate different types of devices from various platforms into a single ecosystem, facilitating cross-platform interoperability. This holds profound significance for the comprehensiveness of the smart home ecosystem. Presently, Seeed has also become a part of the extensive Home Assistant community, enabling the integration of our SenseCAP devices into the platform. We believe that this endeavor will contribute to the further strengthening and growth of the Internet of Things ecosystem !
+
+:::tip
+**The SenseCAP for Home Assistant intergration is completely open source, and you can download the source code project here**: [https://github.com/Seeed-Solution/home-assistant-SenseCAP.git](https://github.com/Seeed-Solution/home-assistant-SenseCAP.git).
+:::
