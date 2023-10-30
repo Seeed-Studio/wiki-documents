@@ -12,7 +12,7 @@ last_update:
 ---
 
 
-The Wio Tracker 1110 Dev Board is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html) and integrates [Semtech's LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform. 
+The [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html) and integrates [Semtech's LR1110](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) LoRa® transceiver and a multi-purpose radio front-end for geolocation, it's a user-friendly, LoRa-based tracking development platform. 
 
 With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is conveniently equipped with an onboard antenna for easy deployment. It supports the Arduino development environment and LoRaWAN protocol stack, making it ideal for tracking-related IoT projects.
 

@@ -13,6 +13,10 @@ last_update:
 ---
 #  Edgebox RPI 200 Getting Started with Ignition Edge
 
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/EdgeBox-200-Ignition/EdgeBox-200_Ignition_Edge.png" />
+</p>
+
 > Capturing, processing, and visualizing critical data at the remote edge of the network can be difficult and expensive. Ignition Edge by Inductive Automation® is a line of limited, lightweight Ignition® software solutions designed specifically for devices used in the field and OEM devices at the edge of the network. With Ignition Edge, edge computing is easier and more affordable than ever, so you can extend your data collection, visualization, and system management all the way to the edge of your network.
 >
 > — [inductiveautomation.com](https://inductiveautomation.com/ignition/edge)

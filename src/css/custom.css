@@ -1368,3 +1368,76 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 .js-download-pdf{
   cursor: pointer;
 }
+
+.sensecap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #74B281, #8DC21F);
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  line-height: 1.7;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.6s ease-in-out;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  width: 50%; /* 最小按钮宽度 */
+  height: 5em; /* 最小按钮高度 */
+  text-align: center;
+}
+
+.sensecap:hover {
+  transform: scale(1.1);
+}
+
+
+.sensecap2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #74B281, #8DC21F);
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  line-height: 1.7;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.6s ease-in-out;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  width: 50%; /* 最小按钮宽度 */
+  height: 5em; /* 最小按钮高度 */
+  text-align: center;
+}
+
+.sensecap2:hover {
+  transform: scale(1.1);
+}
+
+.sensecap3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #74B281, #8DC21F);
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  line-height: 1.7;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: transform 0.6s ease-in-out;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  width: 50%; /* 最小按钮宽度 */
+  height: 5em; /* 最小按钮高度 */
+  text-align: center;
+}
+
+.sensecap3:hover {
+  transform: scale(1.1);
+}

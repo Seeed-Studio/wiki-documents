@@ -8,7 +8,6 @@ last_update:
   author: Bill
 ---
 
-
 # Getting Started with Seeed Studio XIAO ESP32C3
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:300, height:'auto'}}/></div>
@@ -27,7 +26,7 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 ## Features
 
 - Powerful CPU: ESP32-C3, 32­bit RISC­-V single­core processor that operates at up to 160 MHz
-- Complete Wi­Fi subsystem:  Complies with IEEE 802.11b/g/n protocol and supports Station mode, SoftAP mode, SoftAP + Station mode, and promiscuous mode
+-  Complete Wi­Fi subsystem:  Complies with IEEE 802.11b/g/n protocol and supports Station mode, SoftAP mode, SoftAP + Station mode, and promiscuous mode
 - Bluetooth LE subsystem: Supports features of Bluetooth 5 and Bluetooth mesh
 - Ultra-Low Power: Deep sleep power consumption is about 43μA
 - Better RF performance: External RF antenna included
