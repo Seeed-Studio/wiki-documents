@@ -5,7 +5,7 @@ keywords:
 - SenseCAP M2 Multi-Platform 
 - Home Assistant
 - LoRaWAN Sensors
-
+slug: /home_assistant_sensecap
 last_update:
   date: 10/19/2023
   author: JoJang
