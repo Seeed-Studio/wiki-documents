@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/23/2023
+  date: 10/30/2023
   author: Seraphina
 ---
 
@@ -17,49 +17,63 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 23th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 30th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Scailable on reComputer J4012 (NVIDIA Jetson Orin NX)](https://wiki.seeedstudio.com/Scailable-Jetson-Getting-Started/)
-
-Scailable provides a platform for creating and managing Edge AI solutions at scale. With Scailable, you can simply configure any supported edge device (such as a router, gateway, or IPC) to turn it into a "smart" device. This wiki will walkthrough how you can easily install Scailable AI Manager on the NVIDIA Jetson platform and use Scailable Platform to remotely configure and manage your AI solution at scale.
-
-<div align="center"><img width="{1000}" src="https://files.seeedstudio.com/wiki/Scailable/wiki-thumb.gif" /></div>
-
-### [RS485 Air Temperature, Humidity and Barometric Pressure Sensor(S-THP-01A)](https://wiki.seeedstudio.com/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor/)
-
-This Wiki describes IP56 RS485 Air Temp, Humi and Barometric pressure sensor. It has a wide operating range of 0-100% RH, -40 to 125°C, and 300-1100 hPa. It is ideal for applications such as smart agriculture, weather monitoring, calculating evapotranspiration, mold prevention and more. By integrating this sensor with the SenseCAP S2100 [data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products), users can achieve seamless data collection and management.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/products/101991101/image1.png"/></div>
-
-### [E5 Bluetooth Location Beacon for SenseCAP Tracker](https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/)
-
-A BLE (Bluetooth Low Energy) Location Beacon is a small wireless device that transmits Bluetooth signals at regular intervals. These signals can be detected by Bluetooth-enabled devices, such as SenseCAP T1000 Tracker, allowing them to determine their proximity to the beacon， building a location-based solution for indoor positioning, asset tracking and other applications.
+### [SenseCAP T1000 Indoor Positioning System Guide](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/)
 
 
-<div align="center"><img width={800} src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEwNA_169626_-1Pgt7bfhzJ786G5_1693376261?w=1400&h=1050&type=image/jpeg"/></div>
+[Traxmate](https://traxmate.io/) is an loT platform that enables you or your customers to easily and efficiently deploy a comprehensive loT tracking solution, complete with seamless indoor and outdoor positioning, tracking, and routing capabilities.
 
-### [Automatically integrate all your SenseCAP Sensors to Home Assistant](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Home_Assistant/)
+The chapter will provide overall guidance on how to integrate [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) into an indoor positioning solution using Traxmate.
 
 
-This wiki constitutes the complete step-by-step tutorial for integrating SenseCAP into the Home Assistant platform. Home Assistant has the capability to seamlessly integrate different types of devices from various platforms into a single ecosystem, facilitating cross-platform interoperability. This holds profound significance for the comprehensiveness of the smart home ecosystem. 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/system-archi.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/overview.png" alt="pir" width={800} height="auto" /></p>
+
+### [SenseCAP T1000 Tracker - Connect to Helium](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Helium/)
+
+This Wiki introduces how to connect the SenseCAP T1000 Tracker to Helium
+
+
+### [Getting Started with ODYSSEY – STM32MP135D](https://wiki.seeedstudio.com/ODYSSEY-STM32MP135D/)
+
+ODYSSEY STM32MP135D is a compact STM32 MPU based single-board computer that offers powerful hardware in a small form factor designed for a variety of uses ranging from smart home, to vending machines, to IP Camera, etc. It offers a wide range of connectivity options designed to make it easy to prototype with.
+
+
+<div align="center"><img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110859--odyssey-mp135d-emmc-version-45font.jpg"/></div>
+
+### [SenseCAP T1000 Tracker - Trackpac Integrated](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_trackpac/)
+
+[Trackpac](https://trackpac.io/) is an innovative IoT (Internet of Things) Dashboard management system designed to streamline the supervision, control, and notification processes for a wide range of IoT devices. These devices encompass a variety of functionalities, including trackers, temperature sensors, humidity sensors, level indicators, and other sensor-based data measurement tools.
+
+The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to Trackpac.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/geofence3.png" alt="pir" width={800} height="auto" /></p> 
+
+
+### [Getting Started with Roboflow Inference on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/Roboflow-Jetson-Getting-Started/)
+
+This wiki guide explains how to easily deploy AI models using [Roboflow](https://roboflow.com) inference server running on NVIDIA Jetson devices. Here we will use [Roboflow Universe](https://universe.roboflow.com) to select an already trained model, deploy the model to the Jetson device and perform inference on a live webcam stream!
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/8.gif
+" style={{width:1000, height:'auto'}}/></div>
 
 ## Existed Wiki Updated
 
-### [Drivers to support Jetpack 5.1.2 for A603](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/#download-the-peripheral-drivers)
+### [Configure The Things Stack](https://wiki.seeedstudio.com/connect_wio_tracker_to_TTN/#configure-the-things-stack)
 
-We have updated the drivers to support Jetpack 5.1.2 for the Jetson Orin NX 8GB/16GB and Jetson Orin Nano 4GB/8GB modules.
+We have updated the Configuration of things stack in the wiki of [Connect to TTN](https://wiki.seeedstudio.com/connect_wio_tracker_to_TTN/) for Wio Tracker 1110 Dev Board
 
 <!-- ![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png) -->
 
-### [Using Wi-Fi technology to enable geolocation for your tracker](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_T1000_Tracker/Tracker_WiFi_Geolocation/#21-google-geolocation)
+### [Added drivers for NVIDIA® Jetson AGX Orin 32GB H01 Kit with Jetpack 5.1.1](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#download-the-peripheral-drivers)
 
-We updated the use of Google Geolocation to get location over Wi-Fi.
+We updated drivers for NVIDIA® Jetson AGX Orin 32GB H01 Kit with Jetpack 5.1.1.
 
-### [Hardware Preparation for XIAO IO Expander](https://wiki.seeedstudio.com/io_expander_for_xiao/#hardware-preparation)
+<!-- ### [Hardware Preparation for XIAO IO Expander](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Helium/)
 
 This wiki recommand three main ways to use this expansion board
 
@@ -76,32 +90,18 @@ We have updated flashing methods for reServer Industrial.
 
 ### [More flashing methods for reComputer Industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/#different-methods-of-flashing)
 
-We have updated more flashing methods for reComputer Industrial.
+We have updated more flashing methods for reComputer Industrial. -->
 
 
 
 ## The Efforts of Contributor✨
 
-### [reRouter Collection Page](https://wiki.seeedstudio.com/reRouter_Intro/)
+### [Edge Series Guide](https://wiki.seeedstudio.com/Edge_series_Intro/)
 
-Thanks our contributor Kasun Thushara to update the collection page for reRouter under the [Contributor Program](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962991)
+Thanks our contributor Kasun Thushara to update the collection page for Edge Series under the [Contributor Program](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=edge&pane=issue&itemId=33963241)
 <!-- Checking more information [here](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979679). -->
 
-### [Correction for SGP41(raw) measurement dependent on humidity and temperature](https://wiki.seeedstudio.com/grove-sgp41-with-aht20/)
 
-Thanks our contributor Hans coming up with a correction concept for SGP41(raw) measurement dependent on humidity and temperature. We are so welcome anyone [sharing your thoughts with us](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519)!
-
-### [Speech Recognition based on Edge Impulse using XIAO nRF52840](https://wiki.seeedstudio.com/XIAO-BLE-PDM-EI/)
-
-Thanks our contributor Bruno to make this wiki, using Edge Impulse with the ML capabilities of the Seeed Studio XIAO nRF52840 for Speech Recognition. He will use the Microphone which is already on the XIAO nRF52840 Sense.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif" alt="pir" width={800} height="auto" /></p>
-
-### [EdgeBox 200 Ignition Edge Getting Started](https://wiki.seeedstudio.com/Edgebox-rpi-200-ignition-edge/)
-
-Thanks our contributor Corey to develop the Ignition Edge deploying on EdgeBox 200. This is under the [Contributor Program](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35980029)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-edge-launch-screen.png" alt="pir" width={800} height="auto" /></p>
 
 <!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! -->
@@ -137,3 +137,4 @@ Thanks our contributor Corey to develop the Ignition Edge deploying on EdgeBox 2
 - [weekly wiki on 9.25th](/Seeed_Elderly/weekly_wiki/wiki925)
 - [weekly wiki on 10.9th](/Seeed_Elderly/weekly_wiki/wiki1009)
 - [weekly wiki on 10.16th](/Seeed_Elderly/weekly_wiki/wiki1016)
+- [weekly wiki on 10.23th](/Seeed_Elderly/weekly_wiki/wiki1023)
