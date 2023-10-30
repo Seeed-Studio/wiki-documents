@@ -502,7 +502,7 @@ All these benchmarks are carried out under the following conditions:
 - Disable UI
 - Turn on max power and max performance mode 
 
-<iframe src="https://jetson-camera-selection-tool.seeedstudio.com/" width="100%" height="550px"></iframe>
+<iframe src="https://jetson-camera-selection-tool.seeedstudio.com/" width="100%" height="690px"></iframe>
 
 From these benchmarks, we can see that for the highest end Orin NX 16GB device with a single YOLOv8s model at INT8, you can use around 40 cameras at around 5fps and with multiple YOLOv8s models at INT8 for each stream, you can use around 11 cameras at around 15fps. For multi model applications, the number of cameras is less because of the RAM limitations on the device and each model takes up a substantial amount of RAM.
 

@@ -1,6 +1,6 @@
 ---
 description: SenseCAP_T1000_tracker_and_Ubidots_Integrated
-title: Ubidots Integrated(TTS)
+title: Ubidots Integrated(via TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,7 +13,7 @@ last_update:
 
 [Ubidots](https://ubidots.com/?_gl=1%2a89g1t2%2a_ga%2aMzUzMzM3MDY5LjE2NjE5MzcyMTI.%2a_ga_VEME7QQ5EZ%2aMTY2MzY0Mzc4NS44LjEuMTY2MzY0NTI3MC4wLjAuMA..) is a low-code IoT application development platform that enabled rapidly assembling and launching IoT applications without having to write code or hire a software development team. Nowadays, over 40,000+ applications already connect the dots with Ubidots. 
 
-To meet the growing need for building IoT applications, we’ve been cooperating with Ubidots and supporting the community to add [SenseCAP T1000 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) easily to Ubidots through The Things Network.  
+To meet the growing need for building IoT applications, we’ve been cooperating with Ubidots and supporting the community to add [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) easily to Ubidots through The Things Network.  
 
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/09/%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%9B%BE.jpg" alt="pir" width={800} height="auto" /></p>

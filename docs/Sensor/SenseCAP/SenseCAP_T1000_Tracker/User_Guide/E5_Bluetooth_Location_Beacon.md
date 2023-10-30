@@ -1,6 +1,6 @@
 ---
 description: SenseCAP_Tracker_T1000-A/B_Bluetooth_Beacon
-title: E5 Bluetooth Location Beacon
+title: How to get location via Bluetooth Beacon
 keywords:
 - BLE
 - Positioning
@@ -36,7 +36,11 @@ Deploy Bluetooth beacons in your target area, the tracker receives the signal se
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEwNA_594585_HptIoexn6zqh4-oS_1692694140?w=1424&h=328&type=image/png" alt="pir" width={800} height="auto" /></p>
 
-Check [Indoor Positioning System](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker)for more details.
+:::tip
+Check [Indoor Positioning System](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker) for more details.
+:::
+
+
 
 
 ### Features
@@ -53,54 +57,6 @@ Check [Indoor Positioning System](https://wiki.seeedstudio.com/IPS_For_SenseCAP_
 | :-: | :-: |
 |Open the back cover of the product, press and hold the button for 3 seconds, and the blue LED will light up for 5 seconds, then the boot is successful.|In the power-on state, open the back cover of the product, press and hold the button for 3 seconds, and the blue LED flashes 5 times to indicate a successful shutdown.|
 
-
-### Specification
-
-**General Specification**
-
-|UUID|PC|
-| :-: | :-: |
-|Color|White|
-|IP rate|None|
-|Dimension(L\*W\*H)|Φ50\*20.5mm|
-|Weight|39g(include battery)|
-|Battery|Lithium battery, 2400mAh|
-|Chip|nRF52 series|
-|Bluetooth Version|BLE 5.0|
-|Bluetooth Protocol|iBeacon|
-|Sensors|Support accelerometer|
-|LED|Included|
-|APP|BeaconSET|
-|Working temperature|-30~60°C|
-|Battery life|<p>More than 5 years</p><p>(0dBm/500ms in default configuration).</p><p></p>|
-
-
-**Default broadcast parameters**
-
-
-|**Parameters**|**Default Value**|
-| :-: | :-: |
-|UUID|FDA50693-A4E2-4FB1-AFCF-C6EB07647825|
-|Major|10001|
-|Minor|19641|
-|Measured power|-59dBm|
-|Tx Power|-30 - +4dBm, default 0dBm|
-|Adv Interval|100ms~10s,default 500ms|
-|Password|minew123 （Letters and numbers）|
-|Serial ID|None|
-|Device Name|E5 (1-7 characters)|
-|Connection Mode|Yes/No|
-|Soft Reboot|minew123 （same with the password）|
-|Battery Service|<p>Battery icon display, real-time detection</p><p>full grid is 100%</p>|
-
-
-**Compatibility information**
-
-|**System**|**Devices**|
-| :-: | :-: |
-|BLE|BLE 4.2+|
-|IOS 7.0+|<p>iPhone 4S,iPhone 5/5C/5S, </p><p>iPhone 6/6Plus/6S/6SPlus,iPhone 7/7Plus, </p><p>iPad mini/mini2/4/Air/Pro,etc.</p><p></p>|
-|Android 4.3+|<p>Samsung，XIAOMI，HUAWEI，ONEPLUS，ViVO，OPPO ,etc.</p><p></p>|
 
 
 ## Deployment guidelines 
@@ -159,3 +115,55 @@ Because the volume of magnetic products is heavier than that of general products
 :::tip
 If you need to install the product in a low temperature environment or in a harsh environment, it is recommended to use double-sided adhesive + strong nail-free adhesive to install the product for the best effect. Please contact our sales staff for more information on nail-free glue.
 :::
+
+
+
+
+### Specification
+
+**General Specification**
+
+|UUID|PC|
+| :-: | :-: |
+|Color|White|
+|IP rate|None|
+|Dimension(L\*W\*H)|Φ50\*20.5mm|
+|Weight|39g(include battery)|
+|Battery|Lithium battery, 2400mAh|
+|Chip|nRF52 series|
+|Bluetooth Version|BLE 5.0|
+|Bluetooth Protocol|iBeacon|
+|Sensors|Support accelerometer|
+|LED|Included|
+|APP|BeaconSET|
+|Working temperature|-30~60°C|
+|Battery life|<p>More than 5 years</p><p>(0dBm/500ms in default configuration).</p><p></p>|
+
+
+**Default broadcast parameters**
+
+
+|**Parameters**|**Default Value**|
+| :-: | :-: |
+|UUID|FDA50693-A4E2-4FB1-AFCF-C6EB07647825|
+|Major|10001|
+|Minor|19641|
+|Measured power|-59dBm|
+|Tx Power|-30 - +4dBm, default 0dBm|
+|Adv Interval|100ms~10s,default 500ms|
+|Password|minew123 （Letters and numbers）|
+|Serial ID|None|
+|Device Name|E5 (1-7 characters)|
+|Connection Mode|Yes/No|
+|Soft Reboot|minew123 （same with the password）|
+|Battery Service|<p>Battery icon display, real-time detection</p><p>full grid is 100%</p>|
+
+
+**Compatibility information**
+
+|**System**|**Devices**|
+| :-: | :-: |
+|BLE|BLE 4.2+|
+|IOS 7.0+|<p>iPhone 4S,iPhone 5/5C/5S, </p><p>iPhone 6/6Plus/6S/6SPlus,iPhone 7/7Plus, </p><p>iPad mini/mini2/4/Air/Pro,etc.</p><p></p>|
+|Android 4.3+|<p>Samsung，XIAOMI，HUAWEI，ONEPLUS，ViVO，OPPO ,etc.</p><p></p>|
+

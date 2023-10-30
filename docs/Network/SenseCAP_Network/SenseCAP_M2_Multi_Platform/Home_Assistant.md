@@ -107,7 +107,7 @@ cd ~/config/custom_components && git clone https://github.com/Seeed-Solution/hom
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/Install.jpg"/></div>
 
 2. Restart HA core
-3. Add Intergration
+3. Add Integration
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/add_intergration.png"/></div>
 
 
@@ -115,7 +115,7 @@ cd ~/config/custom_components && git clone https://github.com/Seeed-Solution/hom
 1. Enter your MQTT information and Click **SUBMIT**
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/config_1.png"/></div>
 
-2. Waiting for few minutes (**The Uplink time depends on your setting in M2 Chirpstack and SenseCAP Mate APP**), and Click **Notifications** in the left sidebar. Then we can see the SenseCAP Sensors have been automatically added to HA. Click **Check it out** and turn to the Intergration
+2. Waiting for few minutes (**The Uplink time depends on your setting in M2 Chirpstack and SenseCAP Mate APP**), and Click **Notifications** in the left sidebar. Then we can see the SenseCAP Sensors have been automatically added to HA. Click **Check it out** and turn to the Integration
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/config_2.png"/></div>
 
 3. Click on one of the devices and we can see that all of the entities have been automatically created and added to the device. Click **ADD TO DASHBOARD** so as to add all the entites of entire device directly to the dashboard through the form of cards

@@ -17,15 +17,67 @@ last_update:
 <div class="table-center">
 	<table align="center">
     <tr>
+			<th>Edgebox RPI 200 Getting Started with Ignition Edge</th>
+			<th>reTerminal DM Getting Started with Ignition Edge</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/EdgeBox-200-Ignition/EdgeBox-200_Ignition_Edge.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/reTerminal_DM_Ignition_Edge.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Edgebox-rpi-200-ignition-edge/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35980029"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Corey </font></span></strong></a></div>
+			</td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35979679"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Corey </font></span></strong></a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
+    <tr>
+			<th>Speech Recognition with Edge Impulse on XIAO nRF52840</th>
+			<th>Conditioning for SGP41 raw data with Seeeduino Nano</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/seeeduino_nano-SGP41-correction/2.jpg" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-BLE-PDM-EI/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Bruno </font></span></strong></a></div>
+			</td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/grove-sgp41-with-aht20/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35179519"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Hans </font></span></strong></a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table align="center">
+    <tr>
 			<th>Develop SenseCAP Indicator both chips with Arduino</th>
+			<th>XIAO ESP32C3 connecting with Home Assistant via ESPHome(all ports supported)</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Indicator_ESP32_Arduino/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
 		    <br/>
             <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925769"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Hendra </font></span></strong></a></div>
+			</td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-ESP32C3-for-ESPHome-Support/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a></div>
+		    <br/>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/Seeed-Studio/wiki-documents/issues/603"><strong><span><font color={'FFFFFF'} size={"4"}> 💡 Zachary </font></span></strong></a></div>
 			</td>
 		</tr>
 	</table>

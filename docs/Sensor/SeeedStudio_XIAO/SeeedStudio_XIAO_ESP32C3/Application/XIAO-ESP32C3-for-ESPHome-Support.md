@@ -10,26 +10,68 @@ last_update:
   author: Zachary
 ---
 
+# XIAO ESP32C3 connecting with Home Assistant via ESPHome(all ports supported)
 
 <!-- # ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3 -->
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png"style={{width:700, height:'auto'}}/></div>
 
-![](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/1.png)
+This wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32C3. I applied all kinds of ports here, including **digital, analog, IIC, SPI, and UART**. Now let's get started!
 
-This wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32C3. So, let's get started!
-
-## What is ESPHome?
-
+## What are ESPHome and Home Assistant?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/2.png" style={{width:700, height:'auto'}}/></div>
 
-[ESPHome](https://esphome.io/) is a tool which aims to make managing your ESP boards as simple as possible. It reads in a YAML configuration file and creates custom firmware which it installs on your ESP device. Devices or sensors added in ESPHome’s configuration will automatically show up in Home Assistant’s UI.
+[ESPHome](https://esphome.io/) is a tool which aims to make managing your ESP boards as simple as possible. It reads in a YAML configuration file and creates custom firmware which it installs on your ESP device. Devices or sensors added in ESPHome’s configuration will automatically show up in Home Assistant’s UI. ESPHome can help you connect and send the data to Home Assistant devices.
 
-## Install Home Assistant
+## Hardware Preparation
 
-Make sure you already have Home Assistant up and running. You can follow [this wiki](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant) for a step-by-step guide on installing Home Assistant on an ODYSSEY-X86 SBC or this [link](https://www.mbreviews.com/how-to-home-assistant-seeed-mini-router/) for a detailed instruction use Home Assistant with a Seeed Mini Router.
+I am using XIAO ESP32C3 as the control board, using [reRouter](https://www.seeedstudio.com/reRouter-CM4102032-p-5734.html) as the hardware here, along with multiple Grove Sensors.
 
-## Install ESPHome on Home Assistant
+<table align="center">
+  <tbody><tr>
+      <th>Seeed Studio XIAO ESP32C3</th>
+      <th>Seeed Studio Expansion Board</th>
+      <th>Home Assistant Devices</th>
+    </tr>
+    <tr>
+      <td><div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:100, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:210, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://files.seeedstudio.com/wiki/Home-Assistant/1.png" style={{width:210, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+        <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            </a>
+        </div></td>
+        <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+            </a>
+        </div></td>
+        <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Check More 🖱️</font></span></strong>
+            </a>
+        </div></td>
+    </tr>
+  </tbody></table>
+
+**Grove Sensors**
+
+- [Grove - Temperature and Humidity Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Grove -Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html)
+- [Grove - Analog Microphone](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)
+- [Grove - Digital PIR Sensor](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)
+
+## Software Preparation
+
+### Install Home Assistant
+
+Make sure you already have Home Assistant up and running. There are multiple wiki introducing how to flash Home Assistant into the [products](https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-) here. I'm using reRouter which is powered by Raspberry Pi CM4, so I can [directly use the official one to flash the OS into the reRouter](https://www.home-assistant.io/installation/raspberrypi).
+
+### Install ESPHome on Home Assistant
 
 ESPHome is available as a **Home Assistant Add-On** and can simply be installed via the add-on store.
 
@@ -68,7 +110,11 @@ You will see the following window if ESPHome is successfully loaded
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/9.png"style={{width:700, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/9.png" style={{width:700, height:'auto'}}/></div>
 
-## Add Seeed Studio XIAO ESP32C3 to ESPHome
+## Getting Started
+
+Once all the software and the hardware are really, we can now get started.
+
+### 1. Add Seeed Studio XIAO ESP32C3 to ESPHome
 
 - **Step 1.** Click **+ NEW DEVICE**
 
@@ -102,17 +148,6 @@ You will see the following window if ESPHome is successfully loaded
 
 - **Step 7.** This will open a **YAML** file and this file will be used to set all the board configurations. Edit the content under **esp32** as follows
 
-**Note:** Here we are using the latest version of [Arduino core](https://github.com/espressif/arduino-esp32/releases) for ESP32 and [ESP32 support for PlatformIO](https://github.com/platformio/platform-espressif32/releases)
-
-- **Step 8.** Click **SAVE** and then click **INSTALL**
-
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/16.png"style={{width:700, height:'auto'}}/></div> -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/16.png" style={{width:700, height:'auto'}}/></div>
-
-- **Step 9.** Connect one end of a USB Type-C cable to Seeed Studio XIAO ESP32C3 and the other end to one of the USB ports on the reRouter CM4 1432
-
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png"style={{width:700, height:'auto'}}/></div> -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png" style={{width:700, height:'auto'}}/></div>
 
 ``` 
 esphome:
@@ -145,6 +180,20 @@ wifi:
     ssid: "Xiao-Esp32C3 Fallback Hotspot"
     password: "Your Password"
 ```
+
+:::note Here we are using the latest version of [Arduino core](https://github.com/espressif/arduino-esp32/releases) for ESP32 and [ESP32 support for PlatformIO](https://github.com/platformio/platform-espressif32/releases)
+:::
+
+- **Step 8.** Click **SAVE** and then click **INSTALL**
+
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/16.png"style={{width:700, height:'auto'}}/></div> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/16.png" style={{width:700, height:'auto'}}/></div>
+
+- **Step 9.** Connect one end of a USB Type-C cable to Seeed Studio XIAO ESP32C3 and the other end to one of the USB ports on the reRouter CM4 1432
+
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png"style={{width:700, height:'auto'}}/></div> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png" style={{width:700, height:'auto'}}/></div>
+
 
 - **Step 10.** Click **Plug into the computer running ESPHome Dashboard**
 
@@ -200,19 +249,21 @@ Now you can disconnect the XIAO ESP32C3 from the reRouter CM4 1432 and just powe
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/28.png"style={{width:300, height:'auto'}}/></div>
 
-# Grove Modules with ESPHome and Home Assistant
+### 2. Connect Grove Modules and Send the Data
 
 Now we will connect Grove modules to Seeed Studio XIAO ESP32C3 so that we can display sensor data or control the devices using Home Assistant!
 
-## Connect Grove Modules to XIAO ESP32C3
+### Develop Knowledge
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
+#### XIAO Expansion Board
 
 In order to use Grove modules with Seeed Studio XIAO ESP32C3, we will use a [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) and connect XIAO ESP32C3 on it.
 
-After that, the Grove connectors on the board can be used to connect Grove modules
+After that, the Grove connectors on the board can be used to connect Grove modules. Here is the pin definitions.
 
-## Pin Definitions
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
+
+#### Pin Definitions
 
 You need to follow the table below to use the appropriate internal pin numbers when connecting the Grove modules to the Grove connectors on Grove Shield for Seeed Studio XIAO.
 
@@ -232,24 +283,25 @@ You need to follow the table below to use the appropriate internal pin numbers w
 | 6  |  SDA |
 | 7  |  SCL |
 
-
 For example, if you want to connect a Grove module to D0 port, you need to define the pin on ESPHome as 2
 
-## Grove Compatibility List with ESPHome
+#### Grove Compatibility List with ESPHome
 
 Currently the following Grove modules are supported by ESPHome
 
 Check [here](https://esphome.io/components/sensor/index.html#see-also)
 
+### 3. Each Grove Connection and Data Transmission
+
 Now we will select 6 Grove modules from the above table and explain how they can be connected with ESPHome and Home Assistant.
 
-## Grove - Temperature and Humidity Sensor (BME680)
+#### Grove - Temperature and Humidity Sensor (BME680)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/30.jpg"style={{width:700, height:'auto'}}/></div>
 
 The Grove-Temperature&Humidity&Pressure&Gas Sensor(BME680) is a multiple function sensor which can measure temperature, pressure, humidity and gas at the same time. It is based on the BME680 module and you can use this sensor in your GPS, IoT devices or other device which needs those four parameters. [Click here](https://www.seeedstudio.com/Grove-Temperature%2C-Humidity%2C-Pressure-and-Gas-Sensor-(BME680)-p-3109.html) for the purchase.
 
-### Setup Configuration
+##### Setup Configuration
 
 - **Step 1.** Connect Grove - [Temperature, Humidity, Pressure and Gas Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) to one of the I2C connectors on the Seeed Studio Expansion Base for XIAO
 
@@ -312,7 +364,7 @@ sensor:
 You can learn more about the [BME680 component](https://esphome.io/components/sensor/bme680) here. It allows you to use BME280, BME680, BMP085, BMP280, AHT10, AHT20 and AHT21 based sensors. Here we add the I²C Bus component because AHT20 communicates using I2C protocol.
 
 
-### Visualize on Dashboard
+##### Visualize on Dashboard
 
 - **Step 1.** On the Overview page of Home Assistant, click the 3 dots and click **Edit Dashboard**
 
@@ -352,11 +404,11 @@ Now your Home Assistant dashboard will look like below
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/37.png"style={{width:700, height:'auto'}}/></div>
 
-## Grove -Smart Air Quality Sensor (SGP41)
+#### Grove -Smart Air Quality Sensor (SGP41)
 
 The SGP41 digital gas sensor uses Sensirion's CMOSens® technology, which offers a complete and easy-to-use sensor system on a single chip. It can measure the concentration of volatile organic compounds (VOCs) and nitrogen oxides (NOx) in indoor air and provides digital output signals. Additionally, this sensor has outstanding long-term stability and lifetime. [Click here](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products) for the purchase.
 
-### Setup Configuration
+##### Setup Configuration
 
 - **Step 1.** Connect Grove - [Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products) to one of the I2C connectors on the Seeed Studio Expansion Base for XIAO
 
@@ -496,17 +548,17 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/38.png"style={{width:700, height:'auto'}}/></div>
 
-### Visualize on Dashboard
+##### Visualize on Dashboard
 
 See before.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/39.png"style={{width:700, height:'auto'}}/></div>
 
-## Grove - Analog Microphone
+#### Grove - Analog Microphone
 
 The Grove - Analog Microphone is a based on high-performance SiSonic MEMS technology, offering an extremely-low-noise, low-current, reliable, and small microphone to opensource hardware industry, and it has improved performance under severe conditions. [Click here](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html) for a purchase.
 
-### Setup Configuration
+##### Setup Configuration
 
 - **Step 1.** Connect Grove - [Analog Microphone](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html) to the A0 connector on the Seeed Studio Expansion Base for XIAO
 
@@ -567,17 +619,17 @@ binary_sensor:
 
 You can check more information about [Binary Sensor Component](https://esphome.io/components/binary_sensor/index.html#binary-sensor-component)
 
-### Visualize on Dashboard
+##### Visualize on Dashboard
 
 See before.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/41.png"style={{width:700, height:'auto'}}/></div>
 
-## Grove - Digital PIR Sensor
+#### Grove - Digital PIR Sensor
 
 PIR sensor is an IR sensor to detect human motions. This Grove Digital PIR Sensor is the cheapest PIR sensor in the PIR families, however, it is able to give a quick response and generate a high signal from the "sig" Pin. [Click here](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html) for a purchase.
 
-### Setup Configuration
+##### Setup Configuration
 
 - **Step 1.** Connect [Grove - Digital PIR Sensor](https://wiki.seeedstudio.com/Grove-Digital-PIR-Sensor/) to the D7 connector on the Seeed Studio Expansion Base for XIAO
 
@@ -637,15 +689,15 @@ binary_sensor:
     device_class: motion
 ```
 
-### Visualize on Dashboard
+##### Visualize on Dashboard
 
 See before.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png"style={{width:700, height:'auto'}}/></div>
 
-## Expansion Base for XIAO - SSD1306
+#### Display(SSD1306) on XIAO Expansion Board
 
-### Setup Configuration
+##### Setup Configuration
 
 - **Step 1.** Download fond files for display, [click here](https://esphome.io/components/display/index.html#fonts) for a reference
 
@@ -658,6 +710,7 @@ See before.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/45.png"style={{width:700, height:'auto'}}/></div>
 
 - **Step 4.** Inside the **xiao-esp32c3.yaml** file that we created before, change the file and push it OTA to XIAO ESP32C3
+
 ```
 esphome:
   name: xiao-esp32c3
@@ -751,8 +804,8 @@ binary_sensor:
 
 ## ✨ Contributor Project
 
-- This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/12/views/1?pane=issue&itemId=40774119).
-- Thanks [Zachary's efforts](https://github.com/orgs/Seeed-Studio/projects/12/views/1?pane=issue&itemId=40774119) and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
+- This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
+- Thanks [Zachary's efforts](https://github.com/Seeed-Studio/wiki-documents/issues/603) and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
 
 ## Tech Support & Product Discussion
 

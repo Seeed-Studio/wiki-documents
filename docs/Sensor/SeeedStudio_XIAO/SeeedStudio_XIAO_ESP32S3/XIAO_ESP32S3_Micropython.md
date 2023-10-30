@@ -55,13 +55,15 @@ In this guide I will be using **windows 10** alongside with Thonny IDE and espto
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://github.com/Seeed-Studio/wiki-documents/files/12375085/XIAO.ESP32S3.Micropython.zip">
+          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/XIAO_ESP32S3_Micropython.zip">
               <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
+
+ftp://34.216.148.10:21//wiki/wiki-ranger/Contributions/S3-MicroPy/XIAO_ESP32S3_Micropython.zip
 
 ### 👍 Greatly Thanks
 
@@ -169,7 +171,7 @@ By using this examples you can make a fast and simple CCTV project and since the
 
 ## Troubleshooting
 
-If the camera is not initialized successfully and can't reconnect to the wifi try to unplugged the board and relaunch Thonny IDE.
+If the camera is not initialized successfully(display a frame then freeze) or can't reconnect to the wifi try to unplugged the board and relaunch Thonny IDE.
 
 ## ✨ Contributor Project
 

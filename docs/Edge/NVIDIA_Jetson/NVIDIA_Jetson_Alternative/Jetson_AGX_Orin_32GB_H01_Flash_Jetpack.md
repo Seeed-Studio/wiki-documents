@@ -39,9 +39,30 @@ This wiki will guide you how to install JetPack to Jetson AGX Orin 32GB H01 Kit.
 
 ## Download the peripheral drivers
 
-First of all, you need to install the peripheral drivers for this board. These are needed for some hardware peripherals to function on the board. [Click here](https://sourceforge.net/projects/nvidia-jetson/files/Jetson-AGX-Orin-32GB-H01-Kit/Driver-for-JP-5.0.2) to download the drivers according to Jetpack 5.0.2.
+First of all, you need to install the peripheral drivers for this board. These are needed for some hardware peripherals to function on the board. Click the below links to download the drivers according to the JetPack version
 
-**Note:** Currently we only provide the drivers for JetPack 5.0.2. We will keep updating the drivers in the future with the release of new JetPack versions.
+
+<table>
+  <thead>
+    <tr>
+      <th>JetPack Version</th>
+      <th>L4T Version</th>
+      <th>Download Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5.0.2</td>
+      <td>35.1</td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/Jetson-AGX-Orin-32GB-H01-Kit/Driver-for-JP-5.0.2/AGX-Orin-32GB-H01-JP5.0.2.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>5.1.1</td>
+      <td>35.3.1</td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/Jetson-AGX-Orin-32GB-H01-Kit/Driver-for-JP-5.1.1/AGX-Orin-32GB-H01-JP5.1.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Flash to Jetson
 
