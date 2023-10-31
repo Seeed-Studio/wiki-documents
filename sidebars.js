@@ -526,6 +526,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-LED_Matrix_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3_v2.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3-v3',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-mp3-v4',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_Fan',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
