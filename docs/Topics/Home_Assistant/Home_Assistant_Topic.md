@@ -453,12 +453,12 @@ Home Assistant is built by one of the largest communities of open-source develop
 ---
 
 
-- We are excited to announce the upcoming release of a series of assignments focused on the home assistant as part of our [Contributor Program](https://wiki.seeedstudio.com/Getting_Started/#-contributor-program).
-- We would love to hear your [ideas and suggestions](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519)!
+- We are excited to announce the upcoming release of a series of assignments focused on the home assistant as part of our [Contributor Program](https://github.com/orgs/Seeed-Studio/projects/12/views/1).
+- We would love to hear your [ideas and suggestions](https://github.com/orgs/Seeed-Studio/projects/12/views/1?pane=issue&itemId=42852655)!
 
 <!-- <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/tinyml-workshops-for-fab-23-how-to-add-ai-to-almost-anything/projects"><strong><span><font color={'FFFFFF'} size={"4"}>Share Your Project</font></span></strong></a></div> -->
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item"><strong><span><font color={'FFFFFF'} size={"3"}>More Coming Soon</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/12/views/1"><strong><span><font color={'FFFFFF'} size={"3"}>More Coming Soon</font></span></strong></a></div>
 
 ## Tech Support & Product Discussion
 
