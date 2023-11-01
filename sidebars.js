@@ -1904,7 +1904,6 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Quick_Start',
-            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Home_Assistant',
             {
               type: 'category',
               label: 'Tutorial',
@@ -3078,7 +3077,17 @@ const sidebars = {
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
       ],
     },
-    'Contribution/Home_Assistant/Home_Assistant_Topic',
+    // 'Contribution/Home_Assistant/Home_Assistant_Topic',
+
+    {
+      type: 'doc',
+      id: 'Topics/Home_Assistant/Home_Assistant_Topic',
+      label: 'Home Assistant',
+      className: 'sideboard_calss',
+    },
+
+
+    'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
 
     {
       type: 'doc',
