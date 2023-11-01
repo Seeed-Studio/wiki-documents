@@ -100,7 +100,7 @@ We provide different versions of drivers for different versions of Jetpack syste
     </tr>
     <tr>
       <td>5.1.1</td>
-      <td><a href="https://wiki.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.1.1.zip" target="_blank" rel="noopener noreferrer">Click to Download</a></td>
+      <td><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.1.1.zip" target="_blank" rel="noopener noreferrer">Click to Download</a></td>
       <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3531" target="_blank" rel="noopener noreferrer">NVIDIA L4T 35.3.1</a></td>
     </tr>
     <tr>
