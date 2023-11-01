@@ -64,36 +64,52 @@ Connect Jetson Xavier AGX H01 with the Ubuntu host PC with a Type-C data transmi
 
 We provide different versions of drivers for different versions of Jetpack system, for your convenience to install.
 
-<table align="center">
-  <tbody><tr>
-      <th align="center">JetPack Version</th>
-      <th align="center">Driver Required</th>
-      <th align="center">Jetson Linux Archive</th>
+<table>
+  <thead>
+    <tr>
+      <th>JetPack Version</th>
+      <th>Driver Required</th>
+      <th>Jetson Linux Archive</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4.4</td>
+      <td><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_4.4.zip">Click to Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/linux-tegra-r32.4.3">NVIDIA L4T 32.4.3</a></td>
     </tr>
     <tr>
-      <th align="center">4.4</th>
-      <th align="center"><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_4.4.zip" target="_blank"><span>Click to Download</span></a></th>
-      <th align="center"><a href="https://developer.nvidia.com/embedded/linux-tegra-r32.4.3" target="_blank"><span>NVIDIA L4T 32.4.3</span></a></th>
+      <td>4.6.1</td>
+      <td><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver.zip">Click to Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/linux-tegra-r3271">NVIDIA L4T 32.7.1</a></td>
     </tr>
     <tr>
-      <th align="center">4.6.1</th>
-      <th align="center"><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver.zip" target="_blank"><span>Click to Download</span></a></th>
-      <th align="center"><a href="https://developer.nvidia.com/embedded/linux-tegra-r3271" target="_blank"><span>NVIDIA L4T 32.7.1</span></a></th>
+      <td>5.0.1</td>
+      <td><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.0.1.zip">Click to Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3411">NVIDIA L4T 34.1.1</a></td>
     </tr>
     <tr>
-      <th align="center">5.0.1</th>
-      <th align="center"><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.0.1.zip" target="_blank"><span>Click to Download</span></a></th>
-      <th align="center"><a href="https://developer.nvidia.com/embedded/jetson-linux-r3411" target="_blank"><span>NVIDIA L4T 34.1.1</span></a></th>
+      <td>5.0.2</td>
+      <td><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.0.2.zip">Click to Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r351">NVIDIA L4T 35.1</a></td>
     </tr>
     <tr>
-      <th align="center">5.0.2</th>
-      <th align="center"><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.0.2.zip" target="_blank"><span>Click to Download</span></a></th>
-      <th align="center"><a href="https://developer.nvidia.com/embedded/jetson-linux-r351" target="_blank"><span>NVIDIA L4T 35.1</span></a></th>
+      <td>5.1</td>
+      <td><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.1.rar" target="_blank" rel="noopener noreferrer">Click to Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3521" target="_blank" rel="noopener noreferrer">NVIDIA L4T 35.2.1</a></td>
+    </tr>
+    <tr>
+      <td>5.1.1</td>
+      <td><a href="https://wiki.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.1.1.zip" target="_blank" rel="noopener noreferrer">Click to Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3531" target="_blank" rel="noopener noreferrer">NVIDIA L4T 35.3.1</a></td>
+    </tr>
+    <tr>
+      <td>5.1.2</td>
+      <td><a href="https://files.seeedstudio.com/wiki/H01Driver/H01_Driver_for_5.1.2.zip" target="_blank" rel="noopener noreferrer">Click to Download</a></td>
+      <td><a href="https://developer.nvidia.com/embedded/jetson-linux-r3541" target="_blank" rel="noopener noreferrer">NVIDIA L4T 35.4.1</a></td>
     </tr>
   </tbody>
 </table>
-
-
 
 #### Getting Started
 
