@@ -20,15 +20,15 @@ last_update:
 
 ### Device Connection
 
-Power on the Wio-WM110 Dev Board and connect the J-Link Debug Programmer to the board as follows:
+Power on the Wio-WM1110 Dev Board and connect the J-Link Debug Programmer to the board as follows:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/hardware_connection.png" alt="pir" width={800} height="auto" /></p>
 
 
 :::info Connection:
 **3V3** (Wio-WM1110 Dev Board) -> **VTref** (J-Link Debug Programmer Pin 1)  
-**CLK** (Wio-WM1110 Dev Board) -> **SWCLK** (J-Link Debug Programmer Pin 7)  
-**DIO** (Wio-WM1110 Dev Board) -> **SWDIO** (J-Link Debug Programmer Pin 9)  
+**CLK** (Wio-WM1110 Dev Board) -> **SWCLK** (J-Link Debug Programmer Pin 9)  
+**DIO** (Wio-WM1110 Dev Board) -> **SWDIO** (J-Link Debug Programmer Pin 7)  
 **GND** (Wio-WM1110 Dev Board) -> **GND** (J-Link Debug Programmer)
 :::
 
