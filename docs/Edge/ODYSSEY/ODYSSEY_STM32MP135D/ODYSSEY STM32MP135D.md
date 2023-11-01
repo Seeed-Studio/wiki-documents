@@ -350,6 +350,11 @@ printf '\x2c\xf7\xf1\30\x2b\x63'|dd of=/sys/bus/nvmem/devices/0-00501/nvmem bs=1
 ## How to connect and use grove sensors ##
 TODO
 
+## ✨ Contributor Project
+
+- This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
+- Thanks [Casey's efforts](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=34112514) and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
+
 ## Resources ##
 * [Fork of ARM trusted firmware used in the external buildroot 
 tree](https://git.xogium.me/xogium/st-arm-trusted-firmware/tree/v2.8-stm32mp-odyssey-r2)
