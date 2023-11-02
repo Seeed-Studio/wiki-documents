@@ -103,7 +103,7 @@ git clone -b dunfell git://git.yoctoproject.org/poky
 
 ```sh
 git clone -b dunfell https://github.com/Seeed-Studio/meta-seeed-cm4.git
-git clone -b master git://git.yoctoproject.org/meta-raspberrypi
+git clone -b langdale git://git.yoctoproject.org/meta-raspberrypi
 git clone -b dunfell https://github.com/meta-qt5/meta-qt5.git
 git clone -b dunfell https://github.com/openembedded/meta-openembedded.git
 ```
