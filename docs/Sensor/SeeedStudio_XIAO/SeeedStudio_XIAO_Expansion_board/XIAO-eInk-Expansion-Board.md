@@ -4,7 +4,7 @@ title: XIAO eInk Expansion Board
 keywords:
 - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /xiao_eink
+slug: /XIAO-eInk-Expansion-Board
 last_update:
   date: 10/30/2023
   author: Peter
@@ -94,15 +94,30 @@ Here is an example of using 2.13-inch eInk and a XIAO ESP32S3, If you're want to
 
 **STEP 3:** Download the Demo Code: Navigate to the [demo code repository](https://github.com/peterpanstechland/e-ink) and open the code for your specific eInk Screen and use Arduino IDE to flash onto your XIAO ESP32S3. Follow the instructions in the repository to upload the code.
 
+**STEP 3-1:** Once you have downloaded and unziped the demo code, please navigate and open the "2.9 inch E-paper - Monocolor 128x296" folder.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/select_2.9inch_eink_folder.png" style={{width:400, height:'auto'}}/></div>
+
+**STEP 3-2:** Then open the "example" folder:
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/enter_example.png" style={{width:400, height:'auto'}}/></div>
+
+**STEP 3-3:** Then use Arduino to open the "example.ino" file:
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/open_example_sketch.png" style={{width:400, height:'auto'}}/></div>
+
+**STEP 3-4:** Please click the Board selection dropdown menu, and then click on "Select other board and port..."
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/select_other_board.png" style={{width:400, height:'auto'}}/></div>
+
+**STEP 3-5:** Please select the communication port for your XIAO, then search and select "XIAO_ESP32S3"
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/find_and_select_xiaoesp32s3.png" style={{width:400, height:'auto'}}/></div>
+
+**STEP 3-6:** Please click "upload" to flash the firmware on to XIAO
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/upload_code.png" style={{width:400, height:'auto'}}/></div>
 
-
 You should see the eInk display refreahing the demo image as shown below. You're now ready to start exploring the endless possibilities with your XIAO eInk Breakout Board and XIAO ESP32S3.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/screen_update.gif" style={{width:400, height:'auto'}}/></div>
 
 ## Resources
 
