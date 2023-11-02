@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /home_assistant_topic
 last_update:
-  date: 09/07/2023
+  date: 10/31/2023
   author: Matthew
 ---
 
@@ -304,6 +304,21 @@ Home Assistant is built by one of the largest communities of open-source develop
 <br />
 
 <div class="table-center">
+	<table align="center" class="table-nobg">
+    <tr class="table-trnobg">
+			<th class="table-trnobg"> Automatic intergrate all your SenseCAP Sensors to Home Assistant - SenseCAP Integration for Home Assistant</th>
+		</tr>
+		<tr>
+			<td class="table-trnobg" ><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IMAGES/SenseCAP/M2_homeassistant/overview.jpg" style={{width:800, height:'auto'}}/></div></td>
+		</tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_sensecap/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn Page</font></span></strong></a></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Automate your home with Home Assistant on reTerminal</th>
@@ -410,23 +425,27 @@ Home Assistant is built by one of the largest communities of open-source develop
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg">Connecting with XIAO nRF52840 Sense to Home Assistant using BTHome(CircuitPython)</th>
+      <th class="table-trnobg">XIAO nRF52840 Sense connecting with Home Assistant via BTHome(CircuitPython)</th>
       <th class="table-trnobg">Develop Matter on SenseCAP Indicator for Home Assistant application</th>
+      <th class="table-trnobg">XIAO ESP32C3 connecting with Home Assistant via ESPHome(all ports supported)</th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-HA/17_HA.png" style={{width:300, height:'auto'}}/></div></td>
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-matter-7.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td class="table-trnobg"><font size={"1"}> Credit to </font><strong><font color={'8DC215'} size={"1"}>Bruno Santos</font></strong><br /><font size={"1"}> we will show how to use the Bluetooth 5.0 BLE capabilities of the Seeed Studio XIAO nRF52840 with the Seeed Studio Grove Temperature & Humidity Sensor (DHT20) to broadcast measurements of temperature and humidity to Home Assistant using the BTHome protocol.<br /> We will be using CircuitPython for the code. </font></td>
       <td class="table-trnobg"><font size={"1"}> Credit to </font><strong><font color={'8DC215'} size={"1"}>Tim</font></strong><br /><font size={"1"}> This is a demo of how to use the Matter SDK to build enriched applications for your SenseCAP Indicator. The SenseCAP Indicator has a touchscreen which makes it capable of acting as a powerful home automation interface. Matter makes the process easier than ever as it takes away a lot of the complicated aspects of configuration. With the help of Matter's SDK one can quickly scan a QR code and configure their device onto their home network.</font></td>
+      <td class="table-trnobg"><font size={"1"}> Credit to </font><strong><font color={'8DC215'} size={"1"}>Zachary</font></strong><br /><font size={"1"}> This wiki will walkthrough step-by-step on how to connect Seeed Studio XIAO ESP32C3 with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32C3.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_BLE_HA/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_Matter"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-ESP32C3-for-ESPHome-Support/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -434,12 +453,12 @@ Home Assistant is built by one of the largest communities of open-source develop
 ---
 
 
-- We are excited to announce the upcoming release of a series of assignments focused on the home assistant as part of our [Contributor Program](https://wiki.seeedstudio.com/Getting_Started/#-contributor-program).
-- We would love to hear your [ideas and suggestions](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519)!
+- We are excited to announce the upcoming release of a series of assignments focused on the home assistant as part of our [Contributor Program](https://github.com/orgs/Seeed-Studio/projects/12/views/1).
+- We would love to hear your [ideas and suggestions](https://github.com/orgs/Seeed-Studio/projects/12/views/1?pane=issue&itemId=42852655)!
 
 <!-- <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/tinyml-workshops-for-fab-23-how-to-add-ai-to-almost-anything/projects"><strong><span><font color={'FFFFFF'} size={"4"}>Share Your Project</font></span></strong></a></div> -->
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item"><strong><span><font color={'FFFFFF'} size={"3"}>More Coming Soon</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/12/views/1"><strong><span><font color={'FFFFFF'} size={"3"}>More Coming Soon</font></span></strong></a></div>
 
 ## Tech Support & Product Discussion
 
