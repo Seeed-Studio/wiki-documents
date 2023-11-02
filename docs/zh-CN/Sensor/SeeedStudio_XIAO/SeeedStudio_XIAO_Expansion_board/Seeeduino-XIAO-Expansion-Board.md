@@ -4,7 +4,7 @@ title: Seeed Studio XIAO 拓展板
 keywords:
 - Seeed Studio XIAO Expansion Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeeduino-XIAO-Expansion-Board
+slug: /cn/Seeeduino-XIAO-Expansion-Board-1
 last_update:
   date: 2/27/2023
 #   author: fenglei
