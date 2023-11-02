@@ -79,8 +79,8 @@ You can choose others as well, but in that case, you cannot use SenseCAP platfor
       <td>SenseCAP for The Things Network</td>
     <td>Default platform.
 It must be used with SenseCAP Gateway. SenseCAP builds a proprietary TTN server that enables sensors to be used out of the box when paired with an SenseCAP gateway. <br />
-    <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCA Outdoor Gateway</span></a><br />
-    <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCA Indoor Gateway</span></a></td>
+    <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCAP Outdoor Gateway</span></a><br />
+    <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCAP Indoor Gateway</span></a></td>
     </tr>
         <tr>
     <td>SenseCAP for Helium</td>

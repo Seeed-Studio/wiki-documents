@@ -16,7 +16,7 @@ The [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-De
 
 With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is conveniently equipped with an onboard antenna for easy deployment. It supports the Arduino development environment and LoRaWAN protocol stack, making it ideal for tracking-related IoT projects.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/1-114993136-Wio-Tracker-1110-Dev-Board-45font.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png" alt="pir" width={700} height="auto" /></p>
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
