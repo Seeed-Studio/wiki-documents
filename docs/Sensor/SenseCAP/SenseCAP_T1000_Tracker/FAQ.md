@@ -96,6 +96,10 @@ Battery life depends on factors such as uplink interval, sensor usage, LoRa tran
 
 For detailed battery life calculations, refer to the [Battery Life Calculation Form](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/Trcaker_Battery_%20Life_Calculation_T1000_AB.xlsx).
 
+### Charging abnormality Alarm
+
+If the indicator `flashes quickly` while charging, it may be that the power voltage is insufficient or poor contact. Please check your power supply or try another power adaptor.
+
 
 ## Integration
 
