@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Tracker_Introduction
 last_update:
-  date: 9/11/2023
+  date: 11/3/2023
   author: Jessie
 ---
 
@@ -50,14 +50,14 @@ The Wio Tracker 1110 Dev Board integrates Multi-Purpose Radio Front-End Targetin
 
 In addition to the onboard TH sensor and 3-axis Accelerometer, it features a series of peripheral interfaces, and supports ADC/UART and IIC transmission protocols, which can be connected to 400+ Grove modules, enabling easy upgrades to smarter solutions.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/perphi.jpeg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WM1110-A-Grove.jpg" alt="pir" width={800} height="auto" /></p>
 
 
 ### Develop User Applications
 
 Wio Tracker 1110 Dev Board is a fully open-source powerful IoT development platform, compatible with Arduino IDE,  It comes with a set of example applications and code samples to help you get started smoothly and quickly.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/arduino.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-1.png" alt="pir" width={800} height="auto" /></p>
 
 ### Quick Start Demo
 
@@ -66,7 +66,7 @@ We provide a plug-and-play demo, where users can simply scan a QR code, connect 
 
 ### Hardware Overview
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hardware.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/hard-overview.png" alt="pir" width={800} height="auto" /></p>
 
 ### Specification
 

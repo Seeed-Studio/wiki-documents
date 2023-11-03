@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_Wio-Trakcer_1110
 last_update:
-  date: 9/11/2023
+  date: 11/3/2023
   author: Jessie
 ---
 
@@ -235,7 +235,7 @@ Connect the Grove sensor to the corresponding Grove port on the Wio Tracker dev 
 You can also use a [Grove-I2C Hub](https://www.seeedstudio.com/Grove-I2C-Hub.html) to connect multiply I2C sensors to the board.
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/perphi.jpeg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WM1110-A-Grove.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## SenseCAP API 
 
