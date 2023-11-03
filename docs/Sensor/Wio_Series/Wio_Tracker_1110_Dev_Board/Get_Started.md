@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_Wio-Trakcer_1110
 last_update:
-  date: 9/11/2023
+  date: 11/3/2023
   author: Jessie
 ---
 
@@ -79,8 +79,8 @@ You can choose others as well, but in that case, you cannot use SenseCAP platfor
       <td>SenseCAP for The Things Network</td>
     <td>Default platform.
 It must be used with SenseCAP Gateway. SenseCAP builds a proprietary TTN server that enables sensors to be used out of the box when paired with an SenseCAP gateway. <br />
-    <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCA Outdoor Gateway</span></a><br />
-    <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCA Indoor Gateway</span></a></td>
+    <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCAP Outdoor Gateway</span></a><br />
+    <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCAP Indoor Gateway</span></a></td>
     </tr>
         <tr>
     <td>SenseCAP for Helium</td>
@@ -235,7 +235,7 @@ Connect the Grove sensor to the corresponding Grove port on the Wio Tracker dev 
 You can also use a [Grove-I2C Hub](https://www.seeedstudio.com/Grove-I2C-Hub.html) to connect multiply I2C sensors to the board.
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/perphi.jpeg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WM1110-A-Grove.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## SenseCAP API 
 
