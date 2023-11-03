@@ -17,7 +17,7 @@ The content of this chapter will guide users how to connect the [SenseCAP T1000 
 
 ## Configure the Device
 
-Please check the [Quick Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/) to set up your device corrently.
+Please check the [Quick Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/) to set up your device correctly.
 
 Select the platform to `Other Platform`, configure the `APP EUI` to the recommended value: 
 ```cpp 

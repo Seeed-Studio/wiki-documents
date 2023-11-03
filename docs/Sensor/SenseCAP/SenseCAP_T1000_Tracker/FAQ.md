@@ -97,6 +97,21 @@ Battery life depends on factors such as uplink interval, sensor usage, LoRa tran
 For detailed battery life calculations, refer to the [Battery Life Calculation Form](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/Trcaker_Battery_%20Life_Calculation_T1000_AB.xlsx).
 
 
+## Integration
 
+Integrating an application can be done in a variety of ways, depending on your needs and goals. Here are some common integration options:
 
+* **SenseCAP API**:
+
+Using an Application Programming Interface (API) is a common way to allow your application to communicate with other applications or services, you can connect your device to SenseCAP Cloud and then use the SenseCAP API to get the data.
+
+SenseCAP API is for users to manage IoT devices and data. It combines three types of API methods: HTTP protocol, MQTT protocol, and WebSocket protocol.
+
+Check [SenseCAP API](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction/) for more details.
+
+* **LoRaWAN Network Server**：
+
+You can use the [SenseCAP M2 Multi-Platform gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html), then you can directly use the built-in LoRaWAN Network Server for integration. 
+
+Check the [LNS Configuration](https://wiki.seeedstudio.com/SenseCAP_m2_LNS_config) for more details.
 
