@@ -236,7 +236,7 @@ Home Assistant is a free and open-source software that serves as a central contr
     </table>
     </div>
 
-## <span id="jump6"> Collaborate more Home Assistant Projects with us! </span>
+## <span id="jump7"> Collaborate more Home Assistant Projects with us! </span>
 
   <div class="table-center">
 	<table class="table-nobg">
@@ -270,11 +270,11 @@ Home Assistant is a free and open-source software that serves as a central contr
 
 
 - We are excited to announce the upcoming release of a series of assignments focused on the home assistant as part of our [Contributor Program](https://wiki.seeedstudio.com/Getting_Started/#-contributor-program).
-- We would love to hear your [ideas and suggestions](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519)!
+- We would love to hear your [ideas and suggestions](https://github.com/orgs/Seeed-Studio/projects/12?pane=issue&itemId=42852655)!
 
 <!-- <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/tinyml-workshops-for-fab-23-how-to-add-ai-to-almost-anything/projects"><strong><span><font color={'FFFFFF'} size={"4"}>Share Your Project</font></span></strong></a></div> -->
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="hhttps://github.com/orgs/Seeed-Studio/projects/12"><strong><span><font color={'FFFFFF'} size={"4"}>📚More Coming Soon </font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/12/views/1"><strong><span><font color={'FFFFFF'} size={"4"}>👍 Come join us! </font></span></strong></a></div>
 
 ---
 ## <span id="jump3"> Devices for Home Assistant </span>
@@ -295,7 +295,7 @@ Home Assistant is a free and open-source software that serves as a central contr
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
         <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
-		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Wiki</font></span></strong></a></div></td>
+		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_Intro/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki Overview</font></span></strong></a></div></td>
     </tr>
 	</table>
 </div>
@@ -320,7 +320,7 @@ Home Assistant is a free and open-source software that serves as a central contr
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
         <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}> <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
-		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reterminal-dm/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Wiki</font></span></strong></a></div></td>
+		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-dm_Intro/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki Overview</font></span></strong></a></div></td>
     </tr>
 	</table>
 </div>
@@ -344,7 +344,7 @@ Home Assistant is a free and open-source software that serves as a central contr
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
         <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}> <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-selectable-CM4-p-5680.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
-		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://yellow.home-assistant.io/power-supply/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Page</font></span></strong></a></div></td>
+		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Linkstar_Intro/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki Overview</font></span></strong></a></div></td>
     </tr>
 	</table>
 </div>
@@ -368,7 +368,7 @@ Home Assistant is a free and open-source software that serves as a central contr
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
         <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}> <a class="get_one_now_item" href="https://www.seeedstudio.com/reRouter-CM4102032-p-5734.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
-		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Raspberry-OpenWrt-Getting-Started/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Page</font></span></strong></a></div></td>
+		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reRouter_Intro/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki Overview</font></span></strong></a></div></td>
     </tr>
 	</table>
 </div>
@@ -467,8 +467,8 @@ Home Assistant is a free and open-source software that serves as a central contr
 				</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-        <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}> <a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
-		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/mmwave_human_detection_kit/#getting-started"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Page</font></span></strong></a></div></td>
+        <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}> <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-SkyConnect-p-5479.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
+		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://skyconnect.home-assistant.io/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Page</font></span></strong></a></div></td>
     </tr>
 	</table>
 </div>
@@ -507,7 +507,7 @@ Home Assistant is a free and open-source software that serves as a central contr
         <br /><font size={"3"}><strong>Thumb-sized Design</strong></font>
         <font size={"2"}> 21 x 17.5mm, Seeed Studio XIAO series classic form factor, suitable for wearable devices</font>
         <br /><font size={"3"}><strong>Perfect for Production </strong></font><font size={"2"}> Breadboard-friendly & SMD design, no components on the back.</font></font></td>
-          <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:700, height:'auto'}}/></div></td>
+          <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:200, height:'auto'}}/></div></td>
 				</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
