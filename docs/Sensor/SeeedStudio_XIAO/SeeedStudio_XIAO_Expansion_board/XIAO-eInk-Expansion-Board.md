@@ -20,7 +20,7 @@ last_update:
     </a>
 </div><br />
 
-Meet the XIAO eInk Expansion Board, your go-to solution for driving eInk displays with XIAO family effortlessly. Designed with a 20-pin FPC connector, this board provides a seamless link to our eInk product series, if you're looking to expand your options, the 8-pin 2.54 Header allows you to easily integrate any microcontroller of your choice. Think of this board as your eInk's "Best Friend Forever," enhancing its capabilities and making your life easier.
+Meet the XIAO eInk Expansion Board, your go-to solution for driving eInk displays with XIAO family effortlessly. Designed with a 24-pin FPC connector, this board provides a seamless link to our eInk product series, if you're looking to expand your options, the 8-pin 2.54 Header allows you to easily integrate any microcontroller of your choice. Think of this board as your eInk's "Best Friend Forever," enhancing its capabilities and making your life easier.
 
 :::note
 This breakout board does not include an eInk display; the display must be purchased separately.
@@ -30,7 +30,7 @@ This breakout board does not include an eInk display; the display must be purcha
 
 ### Features
 
-- 20-pin FPC Connector: Provides a robust and reliable connection to eInk displays.
+- 24-pin FPC Connector: Provides a robust and reliable connection to eInk displays.
 - XIAO Socket: Allows you to use XIAO as the processor, offering a compact yet powerful control solution.
 - 8-pin 2.54 Header: Offers flexibility by letting you connect to any microcontroller, opening up a world of possibilities.
 - Plug-and-Play: Designed for ease of use, making it perfect for both beginners and experts.
@@ -49,7 +49,7 @@ This breakout board does not include an eInk display; the display must be purcha
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/xiao-expansion.png" style={{width:700, height:'auto'}}/></div>
 
 
-1. 20-pin FPC Conncctor: For the 2.13 inch ePaper.
+1. 24-pin FPC Conncctor: For the 2.13 inch ePaper.
 2. XIAO Socket: For connecting the Seeed Studio XIAO development board.
 3. IO Break out: For connecting the others controller, such Arduino UNO or Raspberry Pi.
 
