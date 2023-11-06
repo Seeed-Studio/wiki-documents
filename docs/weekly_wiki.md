@@ -29,6 +29,13 @@ Meet the XIAO eInk Expansion Board, your go-to solution for driving eInk display
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/xiao-expansion.png" style={{width:500, height:'auto'}}/></div>
 
+### [Azure IoT Edge Runtime on reTerminal DM](https://wiki.seeedstudio.com/reTerminal-DM_Azure_IoT)
+
+This document describes how to connect reTerminal DM device running Debian 11 (ARM32v7) with Azure IoT
+Edge Runtime pre-installed and Device Management. This multi-step process includes:
+
+<div style={{textAlign:'center'}}><iframe width={270} height={358} frameBorder={0} src="https://devicecatalog.azure.com/embed/c40637ad-a9bf-494e-8975-f4d37e43cf6f" title="reTerminal DM - Azure Certified Device" /></div>
+
 
 <!-- ### [SenseCAP T1000 Indoor Positioning System Guide](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/)
 
