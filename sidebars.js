@@ -2252,7 +2252,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'reTerminal-DM',
+      label: 'reTerminal DM',
       collapsed: true,
       collapsible: true,
       link: {
@@ -2303,6 +2303,13 @@ const sidebars = {
           items: [
             'Edge/reTerminal-DM/Ignition_Edge/reTerminal-DM-Getting-Started-with-Ignition-Edge',
             'Edge/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Azure IoT Edge',
+          items: [
+            'Edge/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
           ],
         },
       ],
