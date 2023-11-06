@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO Expansion board
-title: Expansion Board Base for XIAO
+description: Seeed Studio XIAO扩展板
+title: Seeed Studio XIAO扩展底板 
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -1298,15 +1298,15 @@ void setup() {
 
 **Arduino 指令**
 
-**Step 1**. Follow the connection picture connect all the sensor on the board.
+**第一步**. 根据连接图，将所有传感器连接到开发板上。
 
-**Step 2**. Download the [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
+**第二步**. 下载 [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
-**Step 3**. Install the [**u8g2**](https://github.com/olikraus/U8g2_Arduino),  [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) and [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) library, this is the guide [**how to install the library**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/).
+**第三步**. 安装 [**u8g2**](https://github.com/olikraus/U8g2_Arduino),  [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) 和 [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) 库, 这是 [**如何安装库**](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)指南。
 
-**Step 4**. Copy the code stick on the Aruino IDE then upload it.
+**第四步**. 将代码复制到Arduino IDE中，并上传它。
 
-**Code**
+**代码**
 
 ```C
 #include <Arduino.h>

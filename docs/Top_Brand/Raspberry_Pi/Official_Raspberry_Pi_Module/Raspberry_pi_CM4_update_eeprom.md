@@ -43,7 +43,7 @@ The power of Raspberry Pi 4 in a compact form factor for deeply embedded applica
 **Hardware Required:**
 
 * Linux Based Host Computer(could be one of following):
-  * Raspbeery Pi 4B with Raspberry Pi OS installed
+  * Raspberry Pi 4B with Raspberry Pi OS installed
   * PC with latest Ubuntu OS installed
 * USB Type-C cable
 
@@ -86,7 +86,7 @@ This process requires to put the CM4 eMMC stroage into 'USB mass storage' mode, 
 **On your PC or Raspberry Pi 4B (Flash Tool)**
 
 :::note
-To update the EEPROM for raspberry pi only support with Linux based operating system, The following steps only tested on **PC with Ubuntu 22.04** and **Raspbeery Pi 4B (Flash Tool) with Raspberry Pi OS (64-bit)**
+To update the EEPROM for raspberry pi only support with Linux based operating system, The following steps only tested on **PC with Ubuntu 22.04** and **Raspberry Pi 4B (Flash Tool) with Raspberry Pi OS (64-bit)**
 :::
 
 * **Step 1:** Install required system software package, please open **`Terminal`** app and type follow command:
