@@ -89,7 +89,7 @@ Here is an example of using 2.13-inch eInk and a XIAO ESP32S3, If you're want to
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_xiao.gif" style={{width:700, height:'auto'}}/></div>
 
-**STEP 2:** Insert the eInk into the FPC Connector: Carefully slide your 2.13-inch ePaper into the 20-pin FPC connector on the ePaper Breakout Board.
+**STEP 2:** Insert the eInk into the FPC Connector: Carefully slide your 2.13-inch ePaper into the 24-pin FPC connector on the ePaper Breakout Board.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_eink.gif" style={{width:700, height:'auto'}}/></div>
 
 **STEP 3:** Download the Demo Code: Navigate to the [demo code repository](https://github.com/peterpanstechland/e-ink) and open the code for your specific eInk Screen and use Arduino IDE to flash onto your XIAO ESP32S3. Follow the instructions in the repository to upload the code.
