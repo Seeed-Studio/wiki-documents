@@ -393,7 +393,7 @@ Before we get started developing a sketch, let's look at the available functions
 
 #define reset_frame_len 10      //Reset data frame length
 //Reset data frame
-const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F, 0xBF, 0x54, 0x43};
+const unsigned char fall_reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F, 0xBF, 0x54, 0x43};
 
 //Return status, Use in arduino
 #define NOONE 0x01
