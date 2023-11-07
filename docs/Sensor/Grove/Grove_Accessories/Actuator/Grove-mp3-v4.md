@@ -12,6 +12,9 @@ last_update:
 
 # Grove - MP3 v4.0
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/0.jpg" style={{width:600, height:'auto'}}/></div>
+
+
 ## Introduction
 
 
@@ -412,7 +415,7 @@ You can be more creative and add more MP4 features.
 
 - **[ZIP]** [Grove-MP3 V4 SCH&PCB](https://files.seeedstudio.com/wiki/grove-mp3-v4/Grove-MP3-V4_SCH&PCB.zip)
 - **[PDF]** [Grove-MP3 V4 SCH](https://files.seeedstudio.com/wiki/grove-mp3-v4/Grove-MP3-V4.pdf)
-<!-- - **[PDF]** [Grove-MP3 V4 datasheet](https://files.seeedstudio.com/wiki/grove-mp3-v4/) -->
+- **[PDF]** [Grove-MP3 V4 datasheet](https://files.seeedstudio.com/wiki/grove-mp3-v4/WT2605C-32N-A001-datasheet.pdf)
 
 ## Tech Support & Product Discussion
 

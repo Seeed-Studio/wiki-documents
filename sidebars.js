@@ -1060,6 +1060,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-xiao',
           ],
         },
         {
