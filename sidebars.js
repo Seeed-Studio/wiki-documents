@@ -2220,6 +2220,15 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Computer Vision',
+              items: [
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Embedded ML',
               items: [
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
