@@ -8,7 +8,7 @@ keywords:
   - OpenCV
   - Face-Detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Face-detection
+slug: /reTerminal_DM_Face_detection
 last_update:
   date: 11/7/2023
   author: Kasun Thushara

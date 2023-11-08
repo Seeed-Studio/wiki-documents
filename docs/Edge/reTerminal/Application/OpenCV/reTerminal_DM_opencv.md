@@ -7,11 +7,12 @@ keywords:
   - piCamera
   - OpenCV
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Getting-start-opencv
+slug: /reTerminal_DM_opencv
 last_update:
   date: 11/7/2023
   author: Kasun Thushara
 ---
+
 ## Introduction
 
 In this tutorial, we'll guide you through the process of setting up the reTerminal with a **freshly installed Raspberry Pi OS Bullseye**. Our goal is to interact with the **PiCam** and perform image processing and deep learning activities using the **OpenCV** library.
