@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Seeeduino-XIAO-CircuitPython
 last_update:
   date: 1/11/2023
-  author:赵桂莹
+  author: 赵桂莹
 ---
 
 #  Seeed Studio XIAO SAMD21上的CircuitPython 

@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-BLE-PDM-EI
 last_update:
   date: 10/12/2023
-  author:赵桂莹
+  author: 赵桂莹
 ---
 
 # 使用 XIAO nRF52840 基于边缘脉冲的语音识别
