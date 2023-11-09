@@ -1,12 +1,10 @@
 ---
-description: ESP32C3与Zephyr(RTOS)
-title:  ESP32C3与Zephyr(RTOS)
-keywords:
-- 软件
+description: ESP32C3与Zephyr - RTOS
+title:  ESP32C3与Zephyr - RTOS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-ESP32C3-Zephyr
 last_update:
-  date: 31/10/2023
+  date: 10/31/2023
   author: Xin Ping Li
 ---
 

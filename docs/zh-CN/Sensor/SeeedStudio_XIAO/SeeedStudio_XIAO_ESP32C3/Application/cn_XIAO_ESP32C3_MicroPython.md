@@ -4,7 +4,7 @@ title: ESP32C3的MicroPython
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO_ESP32C3_MicroPython
 last_update:
- date: 10/28/2023
+  date: 10/28/2023
   author: Xin Ping Li
 ---
 

@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/xiaoesp32c3-flash-storage
 last_update:
-  date:11/2/2023
+  date: 11/2/2023
   author: Xin Ping Li
 ---
 

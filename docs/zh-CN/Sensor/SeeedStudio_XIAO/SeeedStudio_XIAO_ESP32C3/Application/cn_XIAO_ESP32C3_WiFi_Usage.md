@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO_ESP32C3_WiFi_Usage
 last_update:
-  date: 29/10/2023
+  date: 10/29/2023
   author: Xin Ping Li
 ---
 

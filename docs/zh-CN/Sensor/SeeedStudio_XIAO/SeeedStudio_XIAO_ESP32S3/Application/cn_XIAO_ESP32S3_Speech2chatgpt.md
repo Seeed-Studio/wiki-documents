@@ -1,5 +1,5 @@
 ---
-description:本教程介绍了如何使用XIAO ESP32S3，录制声音，识别声音，然后向ChatGPT提问并获得显示在屏幕上的答案。
+description: 本教程介绍了如何使用XIAO ESP32S3，录制声音，识别声音，然后向ChatGPT提问并获得显示在屏幕上的答案。
 title: 基于XIAO ESP32S3 Sense的微型ChatGPT语音助手
 keywords:
 - xiao esp32s3 Sense
@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao_esp32s3_speech2chatgpt
 last_update:
-  date: 31/10/2023
+  date: 10/31/2023
   author: Xin Ping Li
 ---
 

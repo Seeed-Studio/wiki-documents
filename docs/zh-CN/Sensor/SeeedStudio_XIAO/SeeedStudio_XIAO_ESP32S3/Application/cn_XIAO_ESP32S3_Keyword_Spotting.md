@@ -1,13 +1,10 @@
 ---
 description: 我们继续在Seeed XIAO family的巨大的新微型设备ESP32S3 Sense上探索机器学习。
 title: XIAO ESP32S3 Sense Keywords 识别
-keywords:
-- 演讲
-- 关键字
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao_esp32s3_keyword_spotting
 last_update:
-  date: 31/10/2023
+  date: 10/31/2023
   author: Xin Ping Li
 ---
 

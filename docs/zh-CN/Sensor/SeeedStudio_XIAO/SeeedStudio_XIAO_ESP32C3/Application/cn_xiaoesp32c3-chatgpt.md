@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/xiaoesp32c3-chatgpt
 last_update:
- date: 1/11/2023
+  date: 1/11/2023
   author: Xin Ping Li
 ---
 # 学习在XIAO ESP32C3上使用WiFiClient和HTTPClient - XIAO ESP32C3和ChatGPT在行动中

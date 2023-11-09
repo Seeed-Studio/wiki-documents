@@ -1,13 +1,10 @@
 ---
 description: 用XIAO ESP32S3制作超紧凑型全球定位跟踪器。
 title: 带有XIAO ESP32S3 (Sense)的地理定位跟踪器
-keywords:
-- 位置
-- 跟踪器
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/geolocation_tracker_with_XIAO_ESP32S3
 last_update:
-  date: 31/10/2023
+  date: 10/31/2023
   author: Xin Ping Li
 ---
 
