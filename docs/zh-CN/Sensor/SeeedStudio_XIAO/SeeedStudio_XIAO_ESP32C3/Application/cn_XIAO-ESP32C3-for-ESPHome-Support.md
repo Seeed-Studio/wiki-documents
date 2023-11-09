@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: cn/XIAO-ESP32C3-for-ESPHome-Support
 last_update:
-  date: 10/23/2023
-  author: 李新平
+  date: 11/3/2023
+  author: Xin Ping Li
 ---
 
 # XIAO ESP32C3通过ESPHome连接家庭助手(支持所有端口)
@@ -549,8 +549,7 @@ sensor:
 
 #### Grove -模拟麦克风
 
-The Grove - Analog Microphone is a based on high-performance SiSonic MEMS technology, offering an extremely-low-noise, low-current, reliable, and small microphone to opensource hardware industry, and it has improved performance under severe conditions. [Click here](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html) for a purchase.
-
+Grove模拟麦克风是一种基于高性能SiSonic MEMS技术的麦克风，为开源硬件行业提供了极低噪声、低电流、可靠的小麦克风，在恶劣条件下提高了性能。[点击这里](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)购买。
 ##### 设置配置
 
 **步骤1**将Grove-[模拟麦克风](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)连接到seed Studio扩展底座上的A0连接器，用于XIAO
