@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/XIAO-eInk-Expansion-Board
 last_update:
-  date: 11/9/2023
+  date: 11/09/2023
   author: 金 菊
 ---
 
