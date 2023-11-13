@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/30/2023
+  date: 11/13/2023
   author: Seraphina
 ---
 
@@ -17,85 +17,47 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 6th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 13th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started XIAO eInk Expansion Board](https://wiki.seeedstudio.com/XIAO-eInk-Expansion-Board/)
+### [Getting start with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_opencv/)
 
-
-Meet the XIAO eInk Expansion Board, your go-to solution for driving eInk displays with XIAO family effortlessly. Designed with a 24-pin FPC connector, this board provides a seamless link to our eInk product series, if you're looking to expand your options, the 8-pin 2.54 Header allows you to easily integrate any microcontroller of your choice. Think of this board as your eInk's "Best Friend Forever," enhancing its capabilities and making your life easier.
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/xiao-expansion.png" style={{width:500, height:'auto'}}/></div>
-
-### [Azure IoT Edge Runtime on reTerminal DM](https://wiki.seeedstudio.com/reTerminal-DM_Azure_IoT)
-
-This document describes how to connect reTerminal DM device running Debian 11 (ARM32v7) with Azure IoT
-Edge Runtime pre-installed and Device Management. This multi-step process includes:
-
-<div style={{textAlign:'center'}}><iframe width={270} height={358} frameBorder={0} src="https://devicecatalog.azure.com/embed/c40637ad-a9bf-494e-8975-f4d37e43cf6f" title="reTerminal DM - Azure Certified Device" /></div>
-
-
-<!-- ### [SenseCAP T1000 Indoor Positioning System Guide](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/)
-
-
-[Traxmate](https://traxmate.io/) is an loT platform that enables you or your customers to easily and efficiently deploy a comprehensive loT tracking solution, complete with seamless indoor and outdoor positioning, tracking, and routing capabilities.
-
-The chapter will provide overall guidance on how to integrate [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) into an indoor positioning solution using Traxmate.
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/system-archi.png" alt="pir" width={800} height="auto" /></p>
-
-
-### [SenseCAP T1000 Tracker - Connect to Helium](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Helium/)
-
-This Wiki introduces how to connect the SenseCAP T1000 Tracker to Helium
+In this tutorial, we'll guide you through the process of setting up the reTerminal with a freshly installed Raspberry Pi OS Bullseye. Our goal is to interact with the PiCam and perform image processing and deep learning activities using the OpenCV library.
 
 
 
-### [SenseCAP T1000 Tracker - Trackpac Integrated](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_trackpac/)
+### [Face Detection with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_Face_detection/)
 
-[Trackpac](https://trackpac.io/) is an innovative IoT (Internet of Things) Dashboard management system designed to streamline the supervision, control, and notification processes for a wide range of IoT devices. These devices encompass a variety of functionalities, including trackers, temperature sensors, humidity sensors, level indicators, and other sensor-based data measurement tools.
+Face detection using the Haar Cascade method is a pivotal technique in computer vision, employing a machine learning model to recognize facial features. This method relies on a cascade of classifiers trained on Haar-like features, allowing for swift and accurate identification of faces in images and video streams. Its widespread application spans diverse fields, including facial recognition technology for security and authentication purposes, video surveillance systems, and even in photography software for automatic tagging and sorting based on detected faces. The Haar Cascade method is particularly valuable due to its computational efficiency, making it well-suited for real-time face detection in various contexts, contributing significantly to the advancement of facial analysis and identification technologies.
 
-The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to Trackpac.
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/geofence3.png" alt="pir" width={800} height="auto" /></p>  -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facedetection.gif" style={{width:800, height:'auto'}}/></div>
 
 
+### [Object Detection with reTerminal and Pi camera](https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/)
 
-## Existed Wiki Updated
+
+
+Object detection on edge computers has become a pivotal field in computer vision, enabling devices to autonomously perceive and respond to their surroundings. **EfficientDet**, a state-of-the-art object detection model, takes center stage in this domain. Designed to be **resource-efficient, it strikes a balance between accuracy and computational demands, making it particularly well-suited for deployment on edge devices with limited processing power**.  Its ability to identify and locate multiple objects in real-time makes it a key enabler for enhancing the autonomy and intelligence of edge computing systems.
+
+
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/objectdetection2.gif" /></center>
+
+
+
+<!--## Existed Wiki Updated
 
 ### [SenseCAP T1000 Tracker FAQ - Integration](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#integration)
 
 We have updated some common integration options in the wiki of SenseCAP T1000 Tracker [FAQ](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#integration).
 
-<!-- ![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png) -->
+ ![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png)
 
 ### [Added drivers for Jetson Xavier AGX H01](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation/#driver-required)
 
 
-We provide different versions of drivers for different versions of Jetpack system, for your convenience to install.
+We provide different versions of drivers for different versions of Jetpack system, for your convenience to install. -->
 
-### [Wio Tracker 1110 development board - How to upload data immediately](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#how-to-upload-data-immediately)
-
-We have updated how to upload data immediately in Wio Tracker 1110 development board.
-
-<!-- ### XIAO ESP32C3 and XIAO ESP32S3 Strapping Pins Clarification
-
-These two wikis recommand XIAO ESP32C3 and XIAO ESP32S3 Strapping pins clarification
-
-- [XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#strapping-pins)
-- [XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#strapping-pins)
-
-### [Flashing methods for reServer Industrial](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#flash-jetpack)
-
-We have updated flashing methods for reServer Industrial. 
-
-### [More flashing methods for reComputer Industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/#different-methods-of-flashing)
-
-We have updated more flashing methods for reComputer Industrial. -->
 
 
 
@@ -137,3 +99,4 @@ We have updated more flashing methods for reComputer Industrial. -->
 - [weekly wiki on 10.16th](/Seeed_Elderly/weekly_wiki/wiki1016)
 - [weekly wiki on 10.23th](/Seeed_Elderly/weekly_wiki/wiki1023)
 - [weekly wiki on 10.30th](/Seeed_Elderly/weekly_wiki/wiki1023)
+- [weekly wiki on 11.06th](/Seeed_Elderly/weekly_wiki/wiki1023)
