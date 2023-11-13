@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_speech2chatgpt
 last_update:
   date: 5/31/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Miniature ChatGPT Voice Assistant based on XIAO ESP32S3

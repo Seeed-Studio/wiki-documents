@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
   date: 03/03/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Pin Multiplexing

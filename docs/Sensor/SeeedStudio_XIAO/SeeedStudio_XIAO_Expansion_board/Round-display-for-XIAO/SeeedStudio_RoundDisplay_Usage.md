@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /seeedstudio_round_display_usage
 last_update:
   date: 04/27/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Use of the Seeed Studio Round Display extension
