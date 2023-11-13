@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR60FDA1
 last_update:
   date: 03/03/2023
-  author: MengDu
+  author: Citric
 ---
 # 60GHz mmWave Sensor - Fall Detection Module Pro (MR60FDA1)
 

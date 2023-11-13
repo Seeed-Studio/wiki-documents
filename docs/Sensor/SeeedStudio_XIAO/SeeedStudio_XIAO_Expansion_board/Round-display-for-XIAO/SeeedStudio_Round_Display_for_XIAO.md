@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /get_start_round_display
 last_update:
   date: 03/017/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Getting Started with Seeed Studio Round Display for XIAO

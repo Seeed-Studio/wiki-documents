@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Wio-Lite-AI-Getting-Started
 last_update:
   date: 04/26/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Getting Started with Wio Lite AI

@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /rgb_matrix_for_xiao
 last_update:
   date: 08/11/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Getting Started with 6x10 RGB MATRIX for XIAO

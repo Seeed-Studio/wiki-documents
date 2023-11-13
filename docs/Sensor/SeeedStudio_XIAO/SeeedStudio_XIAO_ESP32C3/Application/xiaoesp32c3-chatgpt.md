@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiaoesp32c3-chatgpt
 last_update:
   date: 03/03/2023
-  author: MengDu
+  author: Citric
 ---
 # Learn to use WiFiClient and HTTPClient on XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT in action
 

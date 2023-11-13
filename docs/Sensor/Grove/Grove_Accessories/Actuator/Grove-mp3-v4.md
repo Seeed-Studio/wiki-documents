@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_mp3_v4
 last_update:
   date: 10/26/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Grove - MP3 v4.0

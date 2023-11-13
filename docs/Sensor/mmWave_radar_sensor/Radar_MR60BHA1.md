@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR60BHA1
 last_update:
   date: 03/03/2023
-  author: MengDu
+  author: Citric
 ---
 
 # 60GHz mmWave Sensor - Human Static Sleep Breathing Monitoring (MR60BHA1)

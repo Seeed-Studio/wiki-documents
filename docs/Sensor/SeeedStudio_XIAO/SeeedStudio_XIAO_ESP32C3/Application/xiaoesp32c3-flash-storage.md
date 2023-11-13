@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiaoesp32c3-flash-storage
 last_update:
   date: 03/03/2023
-  author: MengDu
+  author: Citric
 ---
 
 # XIAO ESP32C3 Data Permanently in different ways
