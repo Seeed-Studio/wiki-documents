@@ -128,7 +128,7 @@ In the Details section of the Wireless devices details page, you'll see the date
 
 ## Gateway Configuration
 
-Log into Local Console Check out the device's Q[uick Start to](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf) login.
+Log into Local Console Check out the device's [Quick Start to](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf) login.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS22.PNG" alt="pir" width={800} height="auto" /></p>
 

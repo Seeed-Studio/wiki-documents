@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Tracker_Introduction
 last_update:
-  date: 9/11/2023
+  date: 11/3/2023
   author: Jessie
 ---
 
@@ -16,7 +16,7 @@ The [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-De
 
 With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is conveniently equipped with an onboard antenna for easy deployment. It supports the Arduino development environment and LoRaWAN protocol stack, making it ideal for tracking-related IoT projects.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/1-114993136-Wio-Tracker-1110-Dev-Board-45font.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png" alt="pir" width={700} height="auto" /></p>
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -50,14 +50,14 @@ The Wio Tracker 1110 Dev Board integrates Multi-Purpose Radio Front-End Targetin
 
 In addition to the onboard TH sensor and 3-axis Accelerometer, it features a series of peripheral interfaces, and supports ADC/UART and IIC transmission protocols, which can be connected to 400+ Grove modules, enabling easy upgrades to smarter solutions.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/perphi.jpeg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WM1110-A-Grove.jpg" alt="pir" width={800} height="auto" /></p>
 
 
 ### Develop User Applications
 
 Wio Tracker 1110 Dev Board is a fully open-source powerful IoT development platform, compatible with Arduino IDE,  It comes with a set of example applications and code samples to help you get started smoothly and quickly.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/arduino.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-1.png" alt="pir" width={800} height="auto" /></p>
 
 ### Quick Start Demo
 
@@ -66,7 +66,7 @@ We provide a plug-and-play demo, where users can simply scan a QR code, connect 
 
 ### Hardware Overview
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hardware.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/hard-overview.png" alt="pir" width={800} height="auto" /></p>
 
 ### Specification
 

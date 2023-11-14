@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR60BHA1
 last_update:
   date: 03/03/2023
-  author: MengDu
+  author: Citric
 ---
 
 # 60GHz mmWave Sensor - Human Static Sleep Breathing Monitoring (MR60BHA1)
@@ -510,7 +510,7 @@ Before we get started developing a sketch, let's look at the available functions
 
 #define reset_frame_len 10      //Reset data frame length
 //Reset data frame
-const unsigned char reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F, 0xBF, 0x54, 0x43};
+const unsigned char breath_reset_frame[10] = {0x53, 0x59, 0x01, 0x02, 0x00, 0x01, 0x0F, 0xBF, 0x54, 0x43};
 
 #define mode_frame_len 10       //Mode selection command frame length
 //Mode selection command frame

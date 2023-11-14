@@ -13,7 +13,7 @@ last_update:
 
 [Akenza](https://akenza.io/) is the IoT application enablement platform, allowing you to build great IoT products and services with value. It connects, controls, and manages IoT devices; all in one place.
 
-In this tutorial you will learn how to integrate the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) from Seeed with TTN on Akenza.
+In this tutorial you will learn how to integrate the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) from Seeed with TTN on Akenza.
 ​
 <div align="right">
 Written by Akenza Team

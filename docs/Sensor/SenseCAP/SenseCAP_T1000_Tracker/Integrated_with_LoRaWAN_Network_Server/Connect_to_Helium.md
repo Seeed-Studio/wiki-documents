@@ -907,6 +907,26 @@ When the device tries to connect to the network, the breathing light will flash.
 
 Then you can check the data on the Helium console.
 
+## Note
+
+:::caution note
+For users operating with the **EU868**/**RU864** region:
+
+It is **not recommended** to set the upload interval to less than 4 minutes.
+
+If you set an upload interval of less than 4 minutes, you may notice a timestamp misalignment between the device's uplink and the current time.
+:::
+
+**Here's the rationale**:
+
+Given the [1% duty cycle](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/#maximum-duty-cycle) constraint in EU868, the device must patiently wait approximately 4 minutes for each uplink transmission. Additionally, the Helium network initiates data-rate and power corrections only after accumulating 20 consecutive uplink packets marked with the [ADR](https://docs.helium.com/console/profiles/#adr-algorithm) bit set to 1.
+
+So if the upload interval you set is less than 4 minutes, real-time data will be temporarily stored in RAM and held until the Helium network triggers data rate and power corrections before uploading.
+
+
+
+
+
 
 ## Resource
 
