@@ -11,7 +11,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sense_filesystem
 last_update:
   date: 04/11/2023
-  author: MengDu
+  author: Citric
 ---
 
 # File System and XIAO ESP32S3 Sense

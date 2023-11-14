@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_gesture_paj7660
 last_update:
   date: 06/28/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Grove Smart IR Gesture Sensor (PAJ7660)

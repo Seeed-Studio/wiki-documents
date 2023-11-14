@@ -6,7 +6,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-Getting-Started
 last_update:
   date: 11/30/2022
-  author: MengDu
+  author: Citric
 ---
 
 

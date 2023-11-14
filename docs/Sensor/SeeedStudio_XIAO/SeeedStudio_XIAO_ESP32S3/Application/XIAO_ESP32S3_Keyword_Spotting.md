@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_keyword_spotting
 last_update:
   date: 07/20/2023
-  author: MengDu
+  author: Citric
 ---
 
 # XIAO ESP32S3 Sense & Edge Impulse Keywords Spotting

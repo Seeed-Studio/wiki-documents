@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /using_lvgl_and_tft_on_round_display
 last_update:
   date: 03/21/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Using LVGL and TFT on the Seeed Studio Round Display for all XIAO series

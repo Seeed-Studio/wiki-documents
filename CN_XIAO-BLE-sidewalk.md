@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-ble-sidewalk
 last_update:
   date: 05/17/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Amazon Sidewalk 上的 Seeed Studio XIAO nRF52840

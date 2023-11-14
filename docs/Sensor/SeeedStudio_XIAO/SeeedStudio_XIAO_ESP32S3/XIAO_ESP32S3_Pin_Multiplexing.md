@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_pin_multiplexing
 last_update:
   date: 03/30/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)

@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /1-47inch_lcd_spi_display
 last_update:
   date: 08/17/2023
-  author: MengDu
+  author: Citric
 ---
 
 # 1.47 inch LCD SPI Display
@@ -403,7 +403,7 @@ void loop() {
   Display.DrawLine(242, 110, 282, 110, GRAYBLUE, DOT_PIXEL_2X2, LINE_STYLE_SOLID);
   Display.DrawLine(267, 115, 282, 115, GRAYBLUE, DOT_PIXEL_2X2, LINE_STYLE_SOLID);
   
-  Display.DrawString_EN(100, 120, "By: MengDu", &Font20, WHITE, BLACK);
+  Display.DrawString_EN(100, 120, "By: Citric", &Font20, WHITE, BLACK);
 //  Display.DrawNum(100, 220, 123456, &Font24, RED, BRED);
   Display.DrawFloatNum(130, 140, 1.00, 2, &Font20, WHITE, BLACK);
 }

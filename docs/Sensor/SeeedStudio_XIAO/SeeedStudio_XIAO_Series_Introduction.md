@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /SeeedStudio_XIAO_Series_Introduction
 last_update:
   date: 07/04/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Seeed Studio XIAO INTRODUCION
