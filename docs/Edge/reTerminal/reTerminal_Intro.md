@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal_Intro
 last_update:
-  date: 10/10/2023
+  date: 11/16/2023
   author: Kasun Thushara
 ---
 
@@ -149,6 +149,36 @@ last_update:
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_ML_MediaPipe/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_ML_TFLite/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_ML_Edgeimpulse/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+        </tr>
+    </table>
+    </div>
+
+### Computer Vision
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">Getting start with reTerminal and Pi camera with OpenCV</th>
+      <th class="table-trnobg">Face Detection with reTerminal and Pi camera with OpenCV</th>
+      <th class="table-trnobg">Object Detection with reTerminal and Pi camera</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/videostream.gif" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facedetection.gif" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div sawakentyle={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/objectdetection2.gif" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this guide, we will integrate the Raspberry Pi camera, capturing a video stream using a Python snippet, and implementing a feature to save an image by pressing a key. </font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this guide, we'll explore Face Detection using the Haar Cascade method, a crucial technique in computer vision that utilizes a machine learning model to identify facial features. We'll specifically focus on implementing this on the reTerminal using the Raspberry Pi camera. </font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this documentation, we will delve into using the Raspberry Pi camera and ReTerminal to detect approximately 100 images using a pre-trained EfficientNet model. </font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_DM_opencv/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_DM_Face_detection/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
         </tr>
     </table>
     </div>
