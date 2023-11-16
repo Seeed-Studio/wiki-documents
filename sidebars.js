@@ -526,6 +526,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-LED_Matrix_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3_v2.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3-v3',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-mp3-v4',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_Fan',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
@@ -1052,6 +1053,14 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_Round_Display_for_XIAO',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/SeeedStudio_RoundDisplay_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'mmWave for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao_arduino',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
@@ -2218,6 +2227,15 @@ const sidebars = {
                 'Edge/reTerminal/Application/Home_Assistant/reterminal_frigate',
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
                 'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Computer Vision',
+              items: [
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
               ],
             },
             {

@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAOEI
 last_update:
   date: 04/11/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Seeed Studio XIAO nRF52840 Sense Edge Impulse Getting Started

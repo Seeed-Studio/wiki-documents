@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /1-69inch_lcd_spi_display
 last_update:
   date: 08/17/2023
-  author: MengDu
+  author: Citric
 ---
 
 # 1.69 inch LCD SPI Display
@@ -404,7 +404,7 @@ void loop() {
   Display.DrawLine(200, 160, 265, 160, GRAYBLUE, DOT_PIXEL_2X2, LINE_STYLE_SOLID);
   Display.DrawLine(215, 165, 265, 165, GRAYBLUE, DOT_PIXEL_2X2, LINE_STYLE_SOLID);
   
-  Display.DrawString_EN(20, 180, "By: MengDu", &Font20, WHITE, BLACK);
+  Display.DrawString_EN(20, 180, "By: Citric", &Font20, WHITE, BLACK);
 //  Display.DrawNum(100, 220, 123456, &Font24, RED, BRED);
   Display.DrawFloatNum(100, 210, 1.00, 2, &Font16, WHITE, BLACK);
 }

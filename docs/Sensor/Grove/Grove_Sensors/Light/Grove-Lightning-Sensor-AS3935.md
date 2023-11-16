@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-lightning-sensor-as3935
 last_update:
   date: 06/07/2023
-  author: MengDu
+  author: Citric
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/6.jpg" style={{width:400, height:'auto'}}/></div>

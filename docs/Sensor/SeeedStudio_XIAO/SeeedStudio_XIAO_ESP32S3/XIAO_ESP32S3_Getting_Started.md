@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_getting_started
 last_update:
   date: 03/23/2023
-  author: MengDu
+  author: Citric
 ---
 
 # Getting Started with Seeed Studio XIAO ESP32S3 (Sense)
