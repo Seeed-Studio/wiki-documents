@@ -5,6 +5,7 @@ keywords:
 - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Dive_into_the_Hardware
+sidebar_position: 1
 last_update:
   date: 5/31/2023
   author: Thomas

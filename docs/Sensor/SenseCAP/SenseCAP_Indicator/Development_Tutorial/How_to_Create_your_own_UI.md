@@ -5,6 +5,7 @@ keywords:
 - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
+sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas

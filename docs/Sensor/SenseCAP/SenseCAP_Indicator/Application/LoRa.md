@@ -8,9 +8,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_LoRa
 toc_max_heading_level: 4
+sidebar_position: 3
 last_update:
   date: 8/15/2023
-  author: Thomas
+  author: Spencer
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

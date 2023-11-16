@@ -7,6 +7,7 @@ keywords:
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Matter
+sidebar_position: 4
 last_update:
   date: 8/28/2023
   author: Tim

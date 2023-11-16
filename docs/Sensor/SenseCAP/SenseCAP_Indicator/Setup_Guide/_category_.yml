@@ -1,0 +1,10 @@
+position: 1.5 # float position is supported
+label: 'Setup Guide'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: indicator_application
+# link:
+#   type: generated-index
+#   title: Tutorial overview
+# customProps:
+#   description: This description can be used in the swizzled DocCard
