@@ -374,6 +374,10 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 
 - **Step 8.** Click **CHOOSE OS** and select your preferred OS
 
+:::note
+If you are attempting to install Raspbian OS, we have conducted tests and found that both the *32-bit and 64-bit* versions of **Bullseye** work well with reTerminal without encountering any [**black screen issue**](https://wiki.seeedstudio.com/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal). Additionally, we have also tested the new **Bookworm** *64-bit* version, and it functions smoothly on reTerminal.
+:::
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
 **NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
@@ -626,10 +630,10 @@ cd seeed-linux-dtoverlays
 ```
 
 :::note
-For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`
-
+For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`.After completing the installation, remember to **reboot** reTerminal for the changes to take effect.
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
+sudo reboot
 ```
 :::
 
