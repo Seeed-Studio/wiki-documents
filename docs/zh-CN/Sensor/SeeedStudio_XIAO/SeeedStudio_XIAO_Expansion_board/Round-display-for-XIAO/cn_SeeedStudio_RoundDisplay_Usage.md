@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/seeedstudio_round_display_usage
 last_update:
-date: 11/01/2023
-author: Chen Lei
+  date: 11/09/2023
+  author: Chen Lei
 ---
 
 #Seeed Studio圆形显示器扩展的使用

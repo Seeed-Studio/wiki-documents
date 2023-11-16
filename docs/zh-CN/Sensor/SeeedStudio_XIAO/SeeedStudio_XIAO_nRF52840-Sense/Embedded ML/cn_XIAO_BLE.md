@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO_BLE
 last_update:
-date: 10/30/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
 
 #   Seeed Studio XIAO nRF52840 (Sense)入门

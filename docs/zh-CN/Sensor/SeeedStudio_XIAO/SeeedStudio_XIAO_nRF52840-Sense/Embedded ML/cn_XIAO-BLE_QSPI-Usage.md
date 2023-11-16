@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao-ble-qspi-flash-usage
 last_update:
-date: 11/1/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
 
 #   Seeed Studio XIAO nRF52840 Sense上的 QSPI 闪存使用情况

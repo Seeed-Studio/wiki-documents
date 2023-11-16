@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-BLE-Sense-TFLite-Getting-Started
 last_update:
-date: 11/2/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
 
 # 在 Seeed Studio XIAO nRF52840 Sense 上的 TensorFlow Lite入门

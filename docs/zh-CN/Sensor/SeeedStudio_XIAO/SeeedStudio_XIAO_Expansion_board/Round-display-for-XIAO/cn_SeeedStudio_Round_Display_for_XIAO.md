@@ -6,9 +6,9 @@ keywords:
 - Round Dislay
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/get_start_round_display
-last_update: 11/10/2023
-date: 11/01/2023
-author: Chen Lei
+last_update:
+  date: 11/09/2023
+  author: Chen Lei
 ---
 
 #XIAO Seeed Studio圆形显示器入门

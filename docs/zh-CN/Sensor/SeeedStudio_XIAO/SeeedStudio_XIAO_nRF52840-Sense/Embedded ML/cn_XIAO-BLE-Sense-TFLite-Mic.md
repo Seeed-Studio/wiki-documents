@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-BLE-Sense-TFLite-Mic
 last_update:
-date: 11/2/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
 # Seeed Studio XIAO nRF52840 Sense 上的语音识别
 

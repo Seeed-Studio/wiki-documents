@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-BLE-Sense-NFC-Usage
 last_update:
-date: 11/1/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
 
 #  Seeed Studio XIAO nRF52840 (Sense)上的NFC 使用

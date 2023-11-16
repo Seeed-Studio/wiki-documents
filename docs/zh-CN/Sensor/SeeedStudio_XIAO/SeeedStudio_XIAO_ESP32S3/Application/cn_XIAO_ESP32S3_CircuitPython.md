@@ -3,9 +3,9 @@ description: CircuitPython for ESP32S3
 title: CircuitPython for ESP32S3
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/XIAO_ESP32S3_CircuitPython
-last_update: 11/10/2023
-date: 11/01/2023
-author: Chen Lei
+last_update:
+  date: 11/09/2023
+  author: Chen Lei
 ---
 
 #项目概况

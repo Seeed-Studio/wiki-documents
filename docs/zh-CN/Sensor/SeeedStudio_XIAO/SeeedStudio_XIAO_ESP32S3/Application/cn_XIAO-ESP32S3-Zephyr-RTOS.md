@@ -5,9 +5,9 @@ keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-ESP32S3-Zephyr-RTOS
-last_update: 11/10/2023
-date: 11/01/2023
-author: Chen Lei
+last_update:
+  date: 11/09/2023
+  author: Chen Lei
 ---
 
 # XIAO ESP32S3(sense)和Zephyr(RTOS)

@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-nRF52840-Zephyr-RTOS
 last_update:
-date: 11/3/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
 
 # XIAO nRF52840(sense) 搭配 Zephyr(RTOS)

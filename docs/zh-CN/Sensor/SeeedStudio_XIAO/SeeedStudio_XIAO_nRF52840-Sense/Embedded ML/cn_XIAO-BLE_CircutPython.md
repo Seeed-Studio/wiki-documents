@@ -6,9 +6,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-BLE_CircutPython
 last_update:
-date: 10/30/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
+
 # **Seeed Studio XIAO nRF52840 和 CircuitPython**
 
 CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上编程的实验和学习。它使入门比以往任何时候都更容易，无需预先进行桌面下载。设置好看板后，打开任何文本编辑器，然后开始编辑代码。就是这么简单。

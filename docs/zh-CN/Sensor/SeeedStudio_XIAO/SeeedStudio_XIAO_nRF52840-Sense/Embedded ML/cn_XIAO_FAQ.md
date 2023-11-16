@@ -4,8 +4,8 @@ title: FAQs for XIAO Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO_FAQ
 last_update:
-date: 10/30/2023
-author: 吴飞飞
+  date: 10/30/2023
+  author: 吴飞飞
 ---
 
 本文档包含与 XIAO 相关的所有常见问题。如果您在使用 XIAO 时遇到任何问题，这将非常有帮助。

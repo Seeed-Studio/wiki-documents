@@ -7,9 +7,9 @@ keywords:
 - pin multiple
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao_esp32s3_pin_multiplexing
-last_update: 11/10/2023
-date: 11/01/2023
-author: Chen Lei
+last_update:
+  date: 11/09/2023
+  author: Chen Lei
 ---
 
 # Seeed Studio XIAO ESP32S3引脚复用（Sense）

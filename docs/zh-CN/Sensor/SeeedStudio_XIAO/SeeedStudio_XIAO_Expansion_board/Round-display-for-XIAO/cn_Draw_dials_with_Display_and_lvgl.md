@@ -9,8 +9,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/using_lvgl_and_tft_on_round_display
 last_update:
-date: 11/01/2023
-author: Chen Lei
+  date: 11/09/2023
+  author: Chen Lei
 ---
 
 #在所有XIAO系列的Seeed Studio圆形显示器上使用LVGL和TFT
@@ -293,7 +293,7 @@ const unsigned char image_data[] PROGMEM = {
 tft.pushImage(x, y, image_width, image_height, image_data);
 ```
 
-#### 12、TFT\u eSprite类
+#### 12、 `TFTe Sprite` 类
 
 `TFT\u eSprite`和`TFT\u eSPI`都是用于TFT-LCD显示器的Arduino库，但它们具有不同的功能和设计目的。
 
@@ -320,7 +320,7 @@ void loop() {
 }
 ```
 
-使用TFT\u eSprite库的一般格式如下所示。
+使用`TFT\u eSprite`库的一般格式如下所示。
 
 ```c
 #include <TFT_eSPI.h>

@@ -3,9 +3,9 @@ description: MicroPython for XIAO ESP32S3 Sense
 title: MicroPython for XIAO ESP32S3 Sense
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/XIAO_ESP32S3_Micropython
-last_update: 11/10/2023
-date: 11/01/2023
-author: Chen Lei
+last_update:
+  date: 11/09/2023
+  author: Chen Lei
 ---
 
 # XIAO ESP32S3 Sense的麦克风（摄像头、Wi-Fi）
@@ -63,7 +63,7 @@ ftp://34.216.148.10:21//wiki/wiki-ranger/Contributions/S3-MicroPy/XIAO_ESP32S3_M
 
 ### 👍 非常感谢
 
-<strong><font color=｛'8DC215'｝size=｛“3”｝为XIAO ESP32S3 Sense板设计的固件由我们的朋友shariltumin制作，我们非常喜欢他</font></strong>
+<strong><font color={'FFFFFF'} size={"4"}> 为XIAO ESP32S3 Sense板设计的固件由我们的朋友shariltumin制作，我们非常喜欢他 </font></strong>
 
 
 ## 入门
