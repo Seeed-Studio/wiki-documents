@@ -615,6 +615,8 @@
   }
 }
 
+/********* Spencer custome CSS Needed *************/
+
 .youtube-video {
   aspect-ratio: 16 / 9;
   margin: 0 auto;
@@ -634,6 +636,97 @@
     width: 90%; /* Increase the width to 90% */
   }
 }
+
+/* 基础样式，用于所有屏幕尺寸 */
+.youtube-video-r {
+  width: 100%; /* 宽度占据父元素的全部 */
+  max-width: 800px; /* 最大宽度限制，避免在大屏幕上显得过大 */
+  margin: 20px auto; /* 上下边距和自动左右居中 */
+  display: block;
+  border-radius: 10px; /* 轻微的圆角效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 轻微的阴影效果 */
+  aspect-ratio: 16 / 9; /* 保持视频的宽高比 */
+}
+
+/* 中等屏幕（例如平板电脑）的响应式设计 */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .youtube-video-r {
+      width: 80%; /* 中等屏幕上稍微减小宽度 */
+  }
+}
+
+/* 小屏幕（例如手机）的响应式设计 */
+@media only screen and (max-width: 599px) {
+  .youtube-video-r {
+      width: 100%; /* 在小屏幕上占据全部宽度 */
+      margin: 10px 0; /* 在小屏幕上减少上下边距 */
+  }
+}
+
+.button-container {
+  display: flex; /* 使用flex布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 (如果需要) */
+  height: auto; /* 容器高度，根据需要调整 */
+  margin-top: 10px; /* 调整容器的上外边距 */
+}
+
+
+/* 按钮样式 */
+.button-style {
+  display: inline-block; /* 使元素可设置宽度，并流式布局 */
+  border-radius: 10px; /* 圆角 */
+  padding: 10px 20px; /* 文字与边缘的距离 */
+  background-color: #4EC354; /* 按钮背景颜色 */
+  color: #fff; /* 文字颜色 */
+  text-align: center; /* 文字居中 */
+  text-decoration: none; /* 去除下划线 */
+  font-weight: bold; /* 文字加粗 */
+  font-size: 1em; /* 字体大小 */
+  border: none; /* 无边框 */
+  cursor: pointer; /* 鼠标悬停时为指针 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+  transition: background-color 0.3s, box-shadow 0.2s; /* 过渡效果 */
+  margin-bottom: 15px; /* 调整上方元素的下外边距间距 */
+}
+
+.button-style:hover {
+  background-color: #369f41; /* 悬停时的背景色 */
+  text-decoration: none; /* 确保悬停时也不会出现下划线 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 悬停时的阴影 */
+}
+
+/* 用于并列显示图片的容器样式 */
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 创建一个弹性的网格布局 */
+  gap: 10px; /* 设置网格间距 */
+  margin: 20px 0; /* 容器的上下外边距 */
+}
+
+/* 适用于图片的基础样式 */
+.img-responsive {
+  max-width: 100%; /* 图片最大宽度为其父容器宽度 */
+  height: auto; /* 高度自动调整，保持图片比例 */
+  display: block; /* 防止图片下方有空白间隙 */
+  margin: 10px 0; /* 在图片上下添加一些空间 */
+  border-radius: 20px !important; /* 设置圆角效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选的阴影效果 */
+}
+.img-container .img-responsive {
+  border-radius: 8px !important;
+}
+/* 如果图片需要在文本中间显示，可以使用以下样式 */
+.inline-img-left {
+  float: left; 
+  margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
+}
+.inline-img-right {
+  float: right; 
+  margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
+}
+
+/********************* Spencer's CSS Ended******************************/
 
 .button2 {
   display: inline-flex;
