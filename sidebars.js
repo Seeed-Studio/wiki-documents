@@ -526,6 +526,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-LED_Matrix_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3_v2.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-MP3-v3',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-mp3-v4',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_Fan',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Mini_I2C_Motor_Driver_v1.0',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove_Recorder',
@@ -692,6 +693,7 @@ const sidebars = {
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/TagoIO_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/InfluxDB_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Akenza_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Trackpac_Integrated',
 
                    ],
           },
@@ -1052,11 +1054,20 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
               ],
             },
+            {
+              type: 'category',
+              label: 'mmWave for XIAO',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao_arduino',
+              ],
+            },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
           ],
         },
         {
@@ -1903,7 +1914,6 @@ const sidebars = {
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration',
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Quick_Start',
-            'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Home_Assistant',
             {
               type: 'category',
               label: 'Tutorial',
@@ -2219,6 +2229,15 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Computer Vision',
+              items: [
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Embedded ML',
               items: [
                 'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
@@ -2251,7 +2270,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'reTerminal-DM',
+      label: 'reTerminal DM',
       collapsed: true,
       collapsible: true,
       link: {
@@ -2304,6 +2323,13 @@ const sidebars = {
             'Edge/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
           ],
         },
+        {
+          type: 'category',
+          label: 'Azure IoT Edge',
+          items: [
+            'Edge/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
+          ],
+        },
       ],
     },
 
@@ -2351,6 +2377,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-DeepStream-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/YOLOv8-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Software/Scailable-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/reComputer/Software/Roboflow-Jetson-Getting-Started',
               ],
             },
 
@@ -2547,6 +2574,13 @@ const sidebars = {
       },
       items: [
         //  'Edge/ODYSSEY/ODYSSEY_Getting_Started',
+        {
+          type: 'category',
+          label: 'ODYSSEY STM32MP135D',
+          items: [
+            'Edge/ODYSSEY/ODYSSEY_STM32MP135D/ODYSSEY STM32MP135D',
+          ],
+          },
 
         {
           type: 'category',
@@ -3069,7 +3103,17 @@ const sidebars = {
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
       ],
     },
-    'Contribution/Home_Assistant/Home_Assistant_Topic',
+    // 'Contribution/Home_Assistant/Home_Assistant_Topic',
+
+    {
+      type: 'doc',
+      id: 'Topics/Home_Assistant/Home_Assistant_Topic',
+      label: 'Home Assistant',
+      className: 'sideboard_calss',
+    },
+
+
+    'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
 
     {
       type: 'doc',

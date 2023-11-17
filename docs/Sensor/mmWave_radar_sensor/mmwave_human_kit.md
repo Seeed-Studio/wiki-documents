@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_human_detection_kit
 last_update:
   date: 08/17/2023
-  author: MengDu
+  author: Citric
 ---
 
 # mmWave Human Detection Sensor Kit

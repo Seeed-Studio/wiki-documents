@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-esp32c3-esphome
 last_update:
   date: 03/03/2023
-  author: MengDu
+  author: Citric
 ---
 
 # XIAO ESP32C3 accesses Home Assistant via ESPHome service

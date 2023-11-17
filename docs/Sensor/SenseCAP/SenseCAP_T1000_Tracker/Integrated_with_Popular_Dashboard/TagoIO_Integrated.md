@@ -14,7 +14,7 @@ last_update:
 [TagoIO](https://tago.io/) is an IoT Cloud Platform for businesses to manage devices, data, users, analytics, and integration. Its intuitive interface makes it easy for businesses of all sizes to build and deploy innovative IoT solutions.
 
 
-The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) to TagoIO through TTN.
+The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to TagoIO through TTN.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tagoio.png" alt="pir" width={800} height="auto" /></p>
 

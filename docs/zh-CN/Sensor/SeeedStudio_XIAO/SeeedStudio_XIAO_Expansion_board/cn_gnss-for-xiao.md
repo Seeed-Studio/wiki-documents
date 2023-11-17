@@ -1,21 +1,24 @@
 ---
-description: 开始使用 XIAO GPS 扩展板
-title: XIAO GPS 扩展板
+description: XIAO L76-L GNSS模块入门指南
+title: L76-L GNSS for XIAO
+keywords:
+- gps
+- gnss
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/gnss_for_xiao
 last_update:
-  date: 10/23/2023
-  author: 迪迦奥特曼
+  date: 10/26/2023
+  author: 金 菊
 ---
 
-# XIAO GPS 扩展板（L76-L）
+# L76-L GNSS for XIAO
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/XIAO_GPS/main/IMG/back.png" alt="pir" width={250} height="auto" /></p>
 
 欢迎使用L76-L GNSS for XIAO - Seeed Studio XIAO产品系列的最新成员。这款GNSS模块不仅为您的项目提供精确定位能力，而且与XIAO主控制器的无缝集成使其成为一种强大的工具。无论您是设计移动应用程序、跟踪设备，还是希望为项目添加地理定位功能，这款模块都是您的首选。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/gnss_for_xiao">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> 点击购买 🖱️</font></span></strong>
     </a>
 </div>
@@ -196,7 +199,7 @@ void displayInfo()
 
 通过将这些焊接接点连接到所需微控制器上的相应引脚，可以将L76-L模块集成并在没有XIAO的情况下进行操作。请确保参考特定微控制器的文档以获取正确的引脚配置和连接方式。
 
-|L76-L module|Others MCU|
+|L76-L模块|其他MCU（微控制器单元）|
 |------------|----------|
 |3V|3.3V|
 |GND|GND|
@@ -206,8 +209,8 @@ void displayInfo()
 ## 资源
 
 
-- **[Zip]** [Eagle file](https://files.seeedstudio.com/wiki/gnss-xiao/XIAO_GPS_SCH&PCB.zip)
-- **[PDF]** [Datasheet - L76-L](https://files.seeedstudio.com/wiki/gnss-xiao/L76-L_doc.zip)
+- **[Zip]** [Eagle文件](https://files.seeedstudio.com/wiki/gnss-xiao/XIAO_GPS_SCH&PCB.zip)
+- **[PDF]** [数据手册 - L76-L](https://files.seeedstudio.com/wiki/gnss-xiao/L76-L_doc.zip)
 
 
 ## 技术支持和产品讨论

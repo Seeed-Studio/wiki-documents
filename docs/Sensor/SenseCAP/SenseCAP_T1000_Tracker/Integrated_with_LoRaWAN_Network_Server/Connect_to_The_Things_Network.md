@@ -12,7 +12,7 @@ last_update:
 
 
 
-The Things Stack(TTS) is a LoRaWAN® Network Server stack which is the critical component for any LoRaWAN solution. In this chapter we will guide users to connect the [SenseCAP T100 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) to the Things Network.
+The Things Stack(TTS) is a LoRaWAN® Network Server stack which is the critical component for any LoRaWAN solution. In this chapter we will guide users to connect the [SenseCAP T100 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to the Things Network.
 
 
 

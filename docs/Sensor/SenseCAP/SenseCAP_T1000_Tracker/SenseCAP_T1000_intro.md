@@ -54,23 +54,23 @@ It's equipped with GPS, Bluetooth, and Wi-Fi for seamless indoor and outdoor pos
 
 
 <div class="all_container">
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/" class="sensecap">Datacake</a>
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_AWS/" class="sensecap2">Qubitro</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Datacake_TTS/" class="sensecap">Datacake</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Qubitro_TTS/" class="sensecap2">Qubitro</a>
 </div>
 
 <div class="all_container">
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/" class="sensecap">Ubidots(TTN)</a>
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_AWS/" class="sensecap2">Ubidots(Helium)</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Ubidots_TTS/" class="sensecap">Ubidots(TTN)</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Ubidots_Helium/" class="sensecap2">Ubidots(Helium)</a>
 </div>
 
 <div class="all_container">
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/" class="sensecap">Akenza</a>
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_AWS/" class="sensecap2">TagoIO</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_Akenza/" class="sensecap">Akenza</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TagoIO_TTS/" class="sensecap2">TagoIO</a>
 </div>
 
 <div class="all_container">
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/" class="sensecap">Influx DB</a>
-          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_AWS/" class="sensecap2">Traxmate</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_InfluxDB_TTS/" class="sensecap">Influx DB</a>
+          <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_trackpac" class="sensecap2">Trackpac</a>
 </div>
 
 ### FAQ

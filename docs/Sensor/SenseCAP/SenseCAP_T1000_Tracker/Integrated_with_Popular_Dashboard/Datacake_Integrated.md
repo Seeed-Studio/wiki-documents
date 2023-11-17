@@ -13,7 +13,7 @@ last_update:
 
 [Datacake](https://datacake.co/) is a multi-purpose IoT platform, which provides the possibility of building custom IoT applications, without requiring programming skills.
 
-To meet the growing need for building IoT applications, we’ve been working with Datacake to create templates to enable the community to add [SenseCAP T1000 Tracker](https://www.seeedstudio.com/sensecap-t1000-tracker?utm_source=emailsig&utm_medium=emailsig&utm_campaign=emailsig) to Datacake through The Things Network conveniently and easily.
+To meet the growing need for building IoT applications, we’ve been working with Datacake to create templates to enable the community to add [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to Datacake through The Things Network conveniently and easily.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_sense.png" alt="pir" width={800} height="auto" /></p>
 
