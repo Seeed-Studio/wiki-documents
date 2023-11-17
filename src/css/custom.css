@@ -686,7 +686,7 @@
   border: none; /* 无边框 */
   cursor: pointer; /* 鼠标悬停时为指针 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
-  transition: background-color 0.3s, box-shadow 0.2s; /* 过渡效果 */
+  transition: background-color 0.3s, box-shadow 0.3s; /* 过渡效果 */
   margin-bottom: 15px; /* 调整上方元素的下外边距间距 */
 }
 
@@ -694,6 +694,7 @@
   background-color: #369f41; /* 悬停时的背景色 */
   text-decoration: none; /* 确保悬停时也不会出现下划线 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 悬停时的阴影 */
+  transition: background-color 0.8s, box-shadow 0.8s; /* 过渡效果 */
 }
 
 /* 用于并列显示图片的容器样式 */
@@ -710,7 +711,7 @@
   height: auto; /* 高度自动调整，保持图片比例 */
   display: block; /* 防止图片下方有空白间隙 */
   margin: 10px 0; /* 在图片上下添加一些空间 */
-  border-radius: 20px !important; /* 设置圆角效果 */
+  border-radius: 50%; /* 设置圆角效果 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选的阴影效果 */
 }
 .img-container .img-responsive {

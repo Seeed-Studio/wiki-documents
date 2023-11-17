@@ -1,5 +1,5 @@
 ---
-description: How to Create your own UI
+description: Make your own UI based on LVGL coding or with Squareline Studio
 title: How to Create your own UI
 keywords:
 - Indicator Development Tutorial

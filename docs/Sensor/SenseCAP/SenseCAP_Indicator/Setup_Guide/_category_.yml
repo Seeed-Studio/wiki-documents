@@ -1,10 +1,13 @@
-position: 1.5 # float position is supported
+position: 1.5
 label: 'Setup Guide'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
+collapsible: true
+collapsed: true
 className: indicator_application
-# link:
-#   type: generated-index
-#   title: Tutorial overview
-# customProps:
-#   description: This description can be used in the swizzled DocCard
+link:
+  type: generated-index
+  title: Initial Setup Guidance
+  keywords: 
+    guides
+  slug: SenseCAP_Indicator_Setup_Guide
+  description: |+
+    Get started with your SenseCAP Indicator on how to use both the Native Firmware and the OpenAI Firmware. 
