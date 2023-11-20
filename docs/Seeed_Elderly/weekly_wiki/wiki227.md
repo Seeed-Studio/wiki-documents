@@ -19,7 +19,7 @@ Today is February 27th and a brand new week has begun! Check out what Seeed did 
 
 ## Latest Wiki Launched
 
-### XIAO ESP32C3 Data Permanently in different ways
+### [XIAO ESP32C3 Data Permanently in different ways](https://wiki.seeedstudio.com/xiaoesp32c3-flash-storage/)
 
 A storage method that ensures that no data is lost even in the event of an abnormal development board.
 
