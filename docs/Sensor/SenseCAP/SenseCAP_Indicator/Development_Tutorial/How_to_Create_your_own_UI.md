@@ -1,10 +1,11 @@
 ---
-description: How to Create your own UI
+description: Make your own UI based on LVGL coding or with Squareline Studio
 title: How to Create your own UI
 keywords:
 - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
+sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas

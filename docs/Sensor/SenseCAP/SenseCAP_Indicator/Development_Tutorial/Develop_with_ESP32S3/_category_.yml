@@ -1,0 +1,8 @@
+position: 2 # float position is supported
+label: 'Develop with ESP32S3'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: indicator_dev
+# link:
+#   type: generated-index
+#   title: Tutorial overview

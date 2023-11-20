@@ -1,14 +1,15 @@
 ---
 description: Flash The Native Firmware
-title: How To Flash The Native Firmware
+title: Update and Flash Firmware  
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 toc_max_heading_level: 4
+sidebar_position: 3
 last_update:
-  date: 8/15/2023
-  author: Thomas
+  date: 11/17/2023
+  author: Spencer
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -59,13 +60,15 @@ The default shipping firmware of the SenseCAP Indicator is fully open source for
 
 ### **ESP-IDF** {#ESP-IDF}
 
-> ESP-IDF (Espressif IoT Development Framework) is a software development framework provided by Espressif Systems for designing firmware and applications specifically for their ESP32 and ESP8266 series of microcontrollers. For further information, you can refer to the [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32s3/index.html)
+> ESP-IDF (Espressif IoT Development Framework) is a software development framework provided by Espressif Systems for designing firmware and applications specifically for their ESP32 and ESP8266 series of microcontrollers. For further information, you can refer to the [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html)
 
 If you've opted to compile the source code into firmware, you'll require the ESP-IDF to perform the compilation process.
 
-#### **Download and install**
+:::note **Note**:
+The ESP-IDF version must be greater than v5.0. If you're using an older version, you'll need to update it to the latest version.
+:::
 
-<!-- 提前说明要用5.0的版本，对于 Windows 怎么处理？其他版本的可以进行调整 -->
+#### **Toolchain Installation**
 
 <Tabs
 groupId="operating-systems"
@@ -76,116 +79,44 @@ values={[
 ]}>
 <TabItem value="Win">
 
-  > Espressif Docs: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/windows-setup.html)
+  > Official Espressif Docs: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.htmll)
 
-  **Installation: Using offline installer**
+  **Option 1: Using the Offline Installer**
 
-  For Windows users, you have the option to download the ESP-IDF offline installer directly. Here's the link: [🖱️Donwload Offline Installer v5.0](https://github.com/espressif/idf-installer/releases/download/offline-5.0/esp-idf-tools-setup-offline-5.0.exe)
+  For Windows users, you have the option to download the ESP-IDF offline installer directly. Here's a direct download link: [🖱️Donwload Offline Installer v5.1.1](https://dl.espressif.com/dl/idf-installer/esp-idf-tools-setup-offline-5.1.1.exe)
 
-  **Installation: Using the Recommended Script**
+  **Option 2:  Using the Recommended Script**
 
-  If you have Python installed on your computer, using the [Git repository](https://github.com/espressif/esp-idf.git) to install ESP-IDF is the recommended method. Here's how:
-  1. Choose a folder to set up your ESP-IDF (IDF_PATH). Open a command prompt or terminal.
-
-  ```ps
-  mkdir -p ~/esp
-  cd ~/esp
-  git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git esp-idf-v5.0
-  cd ~/esp/esp-idf-v5.0
-  ./install.bat esp32s3
-  ```
-
-  2. The ESP-IDF tools will be installed by default in `C:\Users\username\.espressif`.
-
-  3. To activate the console, run the following command:
-
-  ```sh
-  C:\Users\username\esp\esp-idf-v5.0\export.bat # to activate console
-  ```
-
-  4. Try building a project [now](#BUILD).
+Navigate yourself to [Using the Command Promp](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html#using-the-command-prompt)
 
 </TabItem>
 
 <TabItem value="Unix">
 
-  > Espressif Docs: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.0/esp32/get-started/linux-macos-setup.html)
+  > Official Espressif Docs: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html)
 
   If in Linux or MacOS, you can follow this guide to change the version of git repo.
 
   ```
-  git clone -b v5.0 --recursive https://github.com/espressif/esp-idf.git
-  install.sh
-  export.sh
+  git clone --recursive https://github.com/espressif/esp-idf.git
   ```
+
+**Navigate to esp-idf directory**:
+1. Run `./install.sh esp32s3`, to add ESP32-S3 support (needed for SenseCAP indicator)
+2. type `./export.sh` to set up the PATH and IDF_PATH variables in the current terminal session.
+
+if you want to call in any shell session, you can add the following line to your shell configuration file (e.g. ~/.bash_profile):
+
+```
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+```
+
+Then you can use `get_idf` to activate the environment.[^refer](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html#step-4-set-up-the-environment-variables)
 
 </TabItem>
 </Tabs>
 
-:::tip **TIP**:
-- If you want to update a verion from previous. Please refer to the [Updating ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32/versions.html#updating-esp-idf).
-:::
-
 ---
-
-#### Patching ESP-IDF
-:::caution Important:
-Understanding the Need for Patching: [LVGL](https://lvgl.io/), operates within the SenseCAP ESP32 SDK at a clock frequency of 120 MHz. However, to prevent encountering the "FLASH and PSRAM Mode configuration are not supported" error, it's crucial to apply a specific patch.
-
-This patch is designed to optimize the RGB LCD's performance using the PSRAM Octal 120 MHz feature. It's specifically intended for use with the release/v5.0 branch of ESP-IDF. Please avoid using a version higher than `v5.0`.
-:::
-
-:::note **Note**:
-The default installation paths for the ESP-IDF tools differ between the offline installer and the installer script. If you encounter issues even after patching the IDF successfully , you can try **deleting** the `sdkconfig` file and the `build` folder.
-:::
-
-> For details: [IDF Patch · GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/tools/patch/README.md)
-
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/patch.png"/></div>
-
-**1. Using Git**
-
-If you're comfortable with Git, you can patch the ESP-IDF using this method.
-
-```sh
-cd <root directory of IDF>
-
-git apply --whitespace=fix <path of the patch>/release5.0_psram_octal_120m.patch # Nothing return if success
-```
-**2. Using Script**
-
-To apply the patch using the script, follow these steps:
-
-1. **Activate the ESP-IDF Environment:**
-
-   Before applying the patch, activate the ESP-IDF environment. This ensures that the necessary dependencies are available. You can activate the environment by navigating to the ESP-IDF directory and running the appropriate script. For example:
-
-   ```sh
-   source /path/to/esp-idf/export.sh
-   ```
-
-2. **Run the Patch Installation Command:**
-
-   Once the environment is activated, run the following command to install the patch:
-
-   ```sh
-   ./install_patch.sh
-   ```
-
-This script will handle the patch installation process for you. It's designed to streamline the patching process and ensure that the changes are applied correctly to your ESP-IDF setup.
-
-
-:::tip **Note**:
-If your current ESP-IDF version is not V5.x.x, you have the option to update it. Follow this link for guidance: [Updating ESP-IDF Versions](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/versions.html#updating-esp-idf). In Windows, open the console of the IDF and navigate to the specified directory.
-:::
-
-To verify the patch, you can proceed to any example and use the following command:
-
-```cmd
-idf.py build
-```
-
-This will help ensure that your ESP-IDF is properly patched and ready for use.
 
 #### Building Project and flashing {#BUILD}
 
@@ -199,6 +130,10 @@ To build, flash, and monitor your project, execute the following command:
 cd  <your_sdk_path>/examples/indicator_basis/
 idf.py -p PORT build flash monitor
 ```
+
+:::tip
+Without `PORT`, the IDF will automatically select the available port.
+:::
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/upgrade.png"/></div>
 
@@ -616,6 +551,17 @@ The command format consists of the packet type and packet parameters.
     </TabItem>
     </Tabs>
 </details>
+
+# **Recent Updates**
+
+- 2023-11-17 
+  - Removed patching section
+- 2023-08-25
+  - Make Patching section more clear
+- 2023-07-25
+  - Added content for flashing firmware using Esptool
+- 2023-05-29
+  - Added Patching section
 
 # **Tech Support**
 

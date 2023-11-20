@@ -5,6 +5,7 @@ keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_ChatGPT
+sidebar_position: 2
 last_update:
   date: 5/31/2023
   author: Thomas

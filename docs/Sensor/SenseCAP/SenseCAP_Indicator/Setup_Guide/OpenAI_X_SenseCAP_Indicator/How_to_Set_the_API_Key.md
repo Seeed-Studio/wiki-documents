@@ -5,6 +5,7 @@ keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key
+sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas
