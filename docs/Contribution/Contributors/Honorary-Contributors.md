@@ -17,21 +17,6 @@ last_update:
 <div class="table-center">
 	<table align="center">
     <tr>
-			<th>Creating XIAO Components on Flux.ai(3D Deisgn with AI)</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/PCB_Design_Flux_XIAO/PCB_Design_XIAO6.png" style={{width:600, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/PCB_Design_XIAO"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Wiki Page</font></span></strong></a> <a class="get_one_now_item" href="https://www.flux.ai/seeedstudio"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 More Boards</font></span></strong> </a></div>
-			</td>
-		</tr>
-	</table>
-</div>
-
-<div class="table-center">
-	<table align="center">
-    <tr>
 			<th>Edgebox RPI 200 Getting Started with Ignition Edge</th>
 			<th>reTerminal DM Getting Started with Ignition Edge</th>
 		</tr>

@@ -1041,7 +1041,6 @@ const sidebars = {
             },
           ],
         },
-
         {
           type: 'category',
           label: 'Expansion Boards for XIAO',
@@ -1071,7 +1070,6 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
           ],
         },
-        'Sensor/SeeedStudio_XIAO/PCB_Design_XIAO',
         {
           type: 'category',
           label: 'Kit with Courses',
