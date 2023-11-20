@@ -4,8 +4,8 @@ title: How to troubleshoot the black screen issue on reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reterminal_black_screen
 last_update:
-  date: 6/20/2023
-  author: Seraphina
+  date: 11/15/2023
+  author: Kasun Thushara
 ---
 
 reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers.<br/>
@@ -33,6 +33,8 @@ However, if your screen is not displaying properly and remains black, please fol
 
 - If you haven't flashed your own OS but the screen remains black, please proceed directly to [**Flash Raspberry Pi OS which is originally shipped with reTerminal**](/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal).
 
+- If you are attempting to install **Raspbian OS**, we have conducted tests and found that both the *32-bit and 64-bit* versions of **Bulleseye** work well with reTerminal without encountering any **black screen issue**. Additionally, we have also tested the new **Bookworm** *64-bit* version, and it functions smoothly on reTerminal.
+
 :::
 
 ### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
@@ -54,10 +56,11 @@ cd seeed-linux-dtoverlays
 ```
 
 :::note
-For **32bit OS** you will need to add following before execute `sudo ./scripts/reTerminal.sh`
+For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`.After completing the installation, remember to **reboot** reTerminal for the changes to take effect.
 
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
+sudo reboot
 ```
 
 :::
@@ -510,3 +513,43 @@ dtoverlay=reTerminal
 ```sh
 sudo reboot
 ```
+## Flash Raspberry Pi OS which is newest version - Bookworm
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/bookworm.jpeg" alt="pir" width={600} height="auto" /></p>
+
+We have prepared an image with the latest Bookworm OS, the newest release from Raspberry Pi officials. If you encounter any issues, especially those discussed above, we highly recommend following these steps for a smoother experience.
+
+:::note
+Before proceeding, ensure that you **flip down the boot mode switch**. Next, launch the **rpiboot setup installer**. Detailed instructions on how to perform these steps are provided [**here**](https://wiki.seeedstudio.com/flash_different_os_to_emmc/).
+
+:::
+
+- **1.** Download the Raspberry Pi OS by visiting the links below
+
+  - [64-bit Bookworm-Raspbian-reTerminal](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/2023_11_15_bookworm_64.img.gz)
+
+
+- **2.** Extract the **.zip file**
+
+- **3.** Open Raspberry Pi Imager software
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width={600} height="auto" /></p>
+
+- **4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width={600} height="auto" /></p>
+
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+
+- **5.** Click **CHOOSE OS** and select **Use custom**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/factory-os.png" alt="pir" width={600} height="auto" /></p>
+
+- **6.** Navigate to the previously extracted image, select it and click **open**
+
+- **7.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+
+- **8.** Finally, click **WRITE**
+
+Finally, **Flip the Boot Mode switch*** back to the original postion and assemble the reTerminal shell. Then **turn on the power**. you can use the LCD screen normally on the original system.
+
