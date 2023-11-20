@@ -1093,7 +1093,22 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
-        'Sensor/Wio_Terminal/ArduPy',
+,
+
+        {
+          type: 'category',
+          label: 'ArduPy with Wio Terminal',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/Wio_Terminal/ArduPy/ArduPy',
+          },
+          items: [
+            'Sensor/Wio_Terminal/ArduPy/ArduPy-LCD',
+            'Sensor/Wio_Terminal/ArduPy/ArduPy-Libraries',
+          ],
+        },
         {
           type: 'category',
           label: 'Hardware Overview',
@@ -1296,7 +1311,6 @@ const sidebars = {
           items: [
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
             'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
-            'Sensor/Wio_Terminal/Tutorial/ArduPy-LCD',
             {
               type: 'category',
               label: 'Blynk for Wio Terminal',
