@@ -1,18 +1,18 @@
 ---
-description: Dive into the Hardware
+description: Covers the device's construction and operation, detailing how each component contributes to the SenseCAP Indicator's overall functionality.
 title: Dive into the Hardware
 keywords:
 - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Dive_into_the_Hardware
+sidebar_position: 1
 last_update:
-  date: 5/31/2023
-  author: Thomas
+  date: 11/17/2023
+  author: Spencer
 ---
 # **Overview**
 
 The SenseCAP Indicator is a 4-inch touch screen device that is powered by the ESP32 and RP2040 dual MCUs. ESP32 and RP2040 are both highly capable microcontrollers that offer a range of features and functions.
-
 
 This chapter will provide detailed information about ESP32 and RP2040 of SenseCAP Indicator, including their functions and usage. It covers include programming, interfacing with sensors, and communicating with other devices，etc.
 

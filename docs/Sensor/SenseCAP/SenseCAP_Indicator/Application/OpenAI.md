@@ -5,16 +5,21 @@ keywords:
 - SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_ChatGPT
+sidebar_position: 2
 last_update:
-  date: 6/05/2023
-  author: Thomas
+  date: 11/16/2023
+  author: Spencer
 ---
 
 # SenseCAP Indicator X ChatGPT X DALL·E Application Development
 
-<iframe class="youtube-video" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<br />
+<div class="button-container">
+    <a class="button-style" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">
+            Get One Now 🖱️
+    </a>
+</div>
 
 This guide will provide you with information on how to organize the OpenAI Demo for quick addition, deletion, and modification of programs according to the provided BSP (Board Support Package).
 
@@ -30,9 +35,12 @@ If you haven't installed the IDF toolchain yet, you can follow the instructions 
 :::
 
 ## Get Started
+<div class="img-container">
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_BE_RICH.JPG"/>
 
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_BE_RICH.JPG"/></div>
-<div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_1_CAT.JPG"/></div>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL_1_CAT.JPG"/>
+
+</div>
 
 The main code related to the OpenAI startup flowchart is shown below:
 
