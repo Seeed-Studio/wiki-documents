@@ -7,26 +7,20 @@ keywords:
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Home_Assistant
+sidebar_position: 1
 last_update:
-  date: 7/03/2023
-  author: Thomas
+  date: 11/16/2023
+  author: Spencer
 ---
 
 # SenseCAP Indicator x Home Assistant Application Development
-<!-- SenseCAP Indicator x Home Assistant Application Development -->
 
-<iframe class="youtube-video" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+<div class="button-container">
+<a class="button-style" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">
+        Get One Now 🖱️</a>
 </div>
-
-<br />
-
 
 Welcome to the Seeed SenseCAP Indicator and Home Assistant development tutorial. This guide will walk you through the steps to integrate the SenseCAP Indicator with Home Assistant using the [Home Assistant Yellow](https://www.home-assistant.io/yellow).
 
@@ -83,14 +77,6 @@ Home Assistant Yellow comes with **Home Assistant Operating System** can be easi
   </table>
 </div>
 
-<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Setting.png"/></div> -->
-
-<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Add-ons.png"/></div>-->
-
-<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Press_Add.png"/></div>-->
-
-<!--<div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add-on_Store.png"/></div>-->
-
 :::tip
 <details>
 
@@ -117,10 +103,6 @@ After installing the MQTT Broker, you need to add MQTT integration and configura
     </tr>
   </table>
 </div>
-
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_Devices.png"/></div> -->
-
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Config_MQTT.png"/></div> -->
 
 :::tip
 If not discovered MQTT, restart Home Assistant to see the new one discovered.
@@ -339,10 +321,6 @@ Set a title and Icon you like, then create it.
   </table>
 </div>
 
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png"/></div> -->
-
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png"/></div> -->
-
 Press the  `TAKE CONTROL` button.
 
 <div class="table-center">
@@ -353,10 +331,6 @@ Press the  `TAKE CONTROL` button.
     </tr>
   </table>
 </div>
-
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard_config.png"/></div> -->
-
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Save.png"/></div> -->
 
 Replace the YAML contents as above:
 
@@ -374,10 +348,6 @@ Now you've already finish the Home Assistant configuration.
     </tr>
   </table>
 </div>
-
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_User.png"/></div> -->
-
-<!-- <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Create_User.png"/></div> -->
 
 ## Project Configuration {#Config_HA}
 

@@ -8,9 +8,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_LoRa
 toc_max_heading_level: 4
+sidebar_position: 3
 last_update:
-  date: 8/15/2023
-  author: Thomas
+  date: 11/17/2023
+  author: Spencer
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -22,12 +23,6 @@ import TabItem from '@theme/TabItem';
 LoRa® is a long-range wireless communication technology optimized for sending small amounts of data over far distances. It works by modulating radio signals in the sub-GHz spectrum using a method called Chirp Spread Spectrum (CSS).
 
 The SenseCAP Indicator(version D1L and D1Pro) by Seeed Studio includes a built-in LoRa transceiver module(Semtech SX1262 LoRa® chip), making it easy to add low-power wireless connectivity to your projects. In this post, we'll walk through how to set up LoRa communication between two SenseCAP Indicator boards.
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1L-p-5646.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 🖱️Get One Now</font></span></strong>
-    </a>
-</div>
 
 ### Overview
 
