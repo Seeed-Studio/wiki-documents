@@ -1041,7 +1041,6 @@ const sidebars = {
             },
           ],
         },
-
         {
           type: 'category',
           label: 'Expansion Boards for XIAO',
