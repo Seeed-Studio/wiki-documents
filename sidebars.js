@@ -797,6 +797,21 @@ const sidebars = {
 
         {
           type: 'category',
+          label: ' SenseCAP Sensor Builder',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_Sensor_Builder/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
+          },
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Sensor_Builder/SenseCAP_Builder_build_LoRaWAN_Sensors',
+            'Sensor/SenseCAP/SenseCAP_Sensor_Builder/list_of_seeed_grove_for_builder'
+          ],
+        },
+
+        {
+          type: 'category',
           label: ' SenseCAP Data Logger',
           collapsed: true,
           collapsible: true,
@@ -811,7 +826,6 @@ const sidebars = {
               type: 'category',
               label: 'Tutorial',
               items: [
-                'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger',
                 'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger',
                 'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger',
                 'Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger',
