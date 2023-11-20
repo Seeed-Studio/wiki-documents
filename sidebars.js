@@ -1296,6 +1296,7 @@ const sidebars = {
           items: [
             'Sensor/Wio_Terminal/Tutorial/Wio-Terminal-Firmware',
             'Sensor/Wio_Terminal/Tutorial/Azure_IoT_CC',
+            'Sensor/Wio_Terminal/Tutorial/ArduPy-LCD',
             {
               type: 'category',
               label: 'Blynk for Wio Terminal',

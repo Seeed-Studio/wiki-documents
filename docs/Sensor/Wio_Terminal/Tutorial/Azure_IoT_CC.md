@@ -3,7 +3,7 @@ title: Codecraft connecting Azure IoT with Wio Terminal
 nointro:
 keywords:
   - Wio_terminal Tutorial
-image: https://wiki.seeedstudio.com/Azure_IoT_CC/
+image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Azure_IoT_CC
 last_update:
   date: 01/11/2022
