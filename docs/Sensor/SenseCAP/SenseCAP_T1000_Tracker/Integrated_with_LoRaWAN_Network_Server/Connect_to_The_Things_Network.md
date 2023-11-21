@@ -67,6 +67,9 @@ Paste the Device EUI/APP EUI/APP Key of your device, and then click 'Register en
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add_new.png" alt="pir" width={800} height="auto" /></p>
 
+:::note
+The "JoinEUI" above is simliar to "AppEUI".
+:::
 
 
 ### Step 3: Check the data

@@ -13,6 +13,10 @@ last_update:
 
 # L76-L GNSS for XIAO
 
+:::danger
+This product is on hold.
+:::
+
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/XIAO_GPS/main/IMG/back.png" alt="pir" width={250} height="auto" /></p>
 
 欢迎使用L76-L GNSS for XIAO - Seeed Studio XIAO产品系列的最新成员。这款GNSS模块不仅为您的项目提供精确定位能力，而且与XIAO主控制器的无缝集成使其成为一种强大的工具。无论您是设计移动应用程序、跟踪设备，还是希望为项目添加地理定位功能，这款模块都是您的首选。
