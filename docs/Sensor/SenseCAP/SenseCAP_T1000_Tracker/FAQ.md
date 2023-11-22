@@ -14,6 +14,18 @@ last_update:
 
 ## Location Related
 
+### GPS Positioning Accuracy
+
+GPS satellites broadcast their signals in space with a certain accuracy, but what you receive depends on additional factors, including satellite geometry, signal blockage, atmospheric conditions, and receiver design features/quality.
+
+Many things can degrade GPS positioning accuracy. Common causes include:
+
+* Satellite signal blockage due to buildings, bridges, trees, etc.
+* Indoor or underground use
+* Signals reflected off buildings or walls ("multipath")
+
+Therefore, in a wide unobstructed area you will get a better GPS signal, thereby getting more accurate positioning results.
+
 ### Why there is no GPS location data?
 
 * GPS location may not be available when the tracker is indoors. GNSS positioning requires an open outdoor environment. If you're indoors, the GPS location may be time out due to the weak signal. Make sure the device is placed outdoors for GPS accuracy.
@@ -33,45 +45,6 @@ block the position of the antenna.
 
 
 
-### Bluetooth Positioning
-
-To use Bluetooth location, users need to install some [Bluetooth beacons](https://www.seeedstudio.com/E5-Location-Beacon-p-5791.html) beforehand, Bluetooth positioning algorithm, and a custom map.
-
-* Deploy Bluetooth beacons
-
-A Bluetooth beacon is a small and wireless battery-powered radio transmitter that uses BLE as its
-transmission protocol. This mini-radio transmission device can be “discovered” and seen by all BLE
-scanners within a certain radius. The Bluetooth beacon, however, cannot “see” anyone back.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BLE1.png" alt="pir" width={700} height="auto" /></p>
-
-
-Bluetooth beacons work by transmitting packets of data that are picked up by the tracker via radio
-waves. The tracker periodically scans around up to 8 Bluetooth beacons and sorts according
-to RSSI, uploading the UUID and RSSI of the 3 Bluetooth beacons with the best signal
-strength via LoRa.
-
-A Bluetooth beacon has a theoretical maximum radius distance of less than 100m. Most Bluetooth
-beacons can reliably transmit up to approximately 30 meters without any physical obstructions. A
-typical operating range is around 2 to 5 meters, depending on the transmit power. The higher the
-range, the higher the battery consumption.
-
-It is necessary to consider the density of the beacon deployment according to the indoor situation,
-such as whether there is shelter, which also determines the accuracy of the Bluetooth positioning.
-There are plenty of tutorials on YouTube or Google on how to install and use beacons.
-
-
-
-
-* Bluetooth positioning algorithm and map
-
-There are many experts have provided Bluetooth based positioning calculation methods, the most
-common is trilateral positioning method, refer to the article: [A Comparison Analysis of BLE-Based
-Algorithms for Localization in Industrial Environments](https://www.researchgate.net/publication/338241733_A_Comparison_Analysis_of_BLE-Based_Algorithms_for_Localization_in_Industrial_Environments). The SenseCAP tracker provides the UUID and RSSI required by the algorithm, and then calculates the final target location based on the actual deployment location of the user.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BLE2.png" alt="pir" width={600} height="auto" /></p>
-
-Check [Indoor Positioning System Guide](https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/) for more details.
 
 ## Network Related
 
@@ -90,6 +63,13 @@ If you set an upload interval of less than 4 minutes, you may notice a timestamp
 Given the [1% duty cycle](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/#maximum-duty-cycle) constraint in EU868, the device must patiently wait approximately 4 minutes for each uplink transmission. Additionally, the Helium network initiates data-rate and power corrections only after accumulating 20 consecutive uplink packets marked with the [ADR](https://docs.helium.com/console/profiles/#adr-algorithm) bit set to 1.
 
 So if the upload interval you set is less than 4 minutes, real-time data will be temporarily stored in RAM and held until the Helium network triggers data rate and power corrections before uploading.
+
+
+### How to get the keys
+
+On the settings page, select a platform other than SenseCAP to obtain the keys.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/keys.png" alt="pir" width={500} height="auto" /></p>
 
 
 ## Battery Related
@@ -133,9 +113,18 @@ If the indicator `flashes quickly` while charging, it may be that the power volt
 
 It typically takes about **2 hours** to fully charge.
 
-### Can it continue uploading data while charging?
+###  Can it continue uploading data while charging?
 
 Yes, it can continue uploading data while charging.
+
+
+## Sensor Related
+
+### No sensor data
+
+To save power, the sensor function is disable by default, so you need to enable it on the SenseCAP Mate APP first.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/enable-sensor.png" alt="pir" width={500} height="auto" /></p>
 
 
 
