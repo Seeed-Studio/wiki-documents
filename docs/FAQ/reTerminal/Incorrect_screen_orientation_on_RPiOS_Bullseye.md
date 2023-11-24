@@ -1,16 +1,17 @@
 ---
 description: reTerminal-FAQ
-title: The screen orientation is incorrect after installing Raspberry Pi OS Bullseye
+title: The screen orientation is incorrect after installing Raspberry Pi OS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Incorrect_screen_orientation_on_RPiOS_Bullseye
 last_update:
-  date: 6/21/2023
+  date: 11/24/2023
   author: Seraphina
 ---
 
 <!-- Q11: The screen orientation is incorrect after installing Raspberry Pi OS Bullseye -->
+### Raspberry Pi OS Bullseye
 
-If you notice an erroneous screen orientation after installing Raspberry Pi OS Bullseye, do as follows:
+If you notice an erroneous screen orientation after installing **Raspberry Pi OS Bullseye**, do as follows:
 
 - **Step 1.** After flashing **Raspberry Pi OS Bullseye** to reTerminal eMMC, follow [this guide](https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) to install the necessary drivers
 
@@ -68,4 +69,44 @@ dtoverlay=reTerminal,tp_rotate=1
 sudo reboot
 ```
 
-Now the screen will be displayed in the correct orientation!
+Now the screen will be displayed in the correct orientation on Raspberry Pi OS Bullseye!
+
+### Raspberry Pi OS Bookworm
+
+If you notice an erroneous screen orientation after installing **Raspberry Pi OS Bookworm**, do as follows:
+
+- **Step 1.** After flashing **Raspberry Pi OS Bookworm** to reTerminal eMMC, follow [this guide](https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) to install the necessary drivers
+
+- **Step 2.** Open .config/wayfire.ini
+
+```sh
+sudo vi ~/.config/wayfire.ini
+```
+
+- **Step 3.** Copy the following content into the above file to explicitly set the LCD display (DSI-1) and save the file by typing **:wq** after pressing **ESC**
+
+```sh
+[output:DSI-1]
+mode = 720x1280@60
+transform = 270
+```
+
+- **Step 4.** Open **/boot/config.txt**
+
+```sh
+sudo vi /boot/config.txt
+```
+
+- **Step 5.** Add the following into the file
+
+```sh
+dtoverlay=reTerminal
+```
+
+- **Step 6.** Reboot reTerminal
+
+```sh
+sudo reboot
+```
+
+Now the screen will be displayed in the correct orientation on Raspberry Pi OS Bookworm!
