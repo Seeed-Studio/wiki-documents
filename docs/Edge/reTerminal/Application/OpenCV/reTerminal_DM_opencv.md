@@ -90,7 +90,7 @@ cd Opencv_and_piCam
 In this tutorial, we'll kick off with a 'Hello World' program using the PiCam and OpenCV on our reTerminal. You can locate the **captureimage.py** file in our cloned repository. We'll be exploring a live video stream, and if you press 'q', the stream will gracefully stop.
 
 ```sh
-python captureimage.py
+python captureimages.py
 ```
 You will find a video stream like below.
 
