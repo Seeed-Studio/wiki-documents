@@ -63,7 +63,7 @@ We have updated some FAQ in the wiki of SenseCAP T1000 Tracker:
 
 
 
-### [Flash Raspberry Pi OS which is newest version - Bookworm](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation/#driver-required)
+### [Flash Raspberry Pi OS which is newest version - Bookworm](https://wiki.seeedstudio.com/reterminal_black_screen/#flash-raspberry-pi-os-which-is-newest-version---bookworm)
 
 
 We have prepared an image with the latest Bookworm OS, the newest release from Raspberry Pi officials. If you encounter any issues, especially those discussed above, we highly recommend following these steps for a smoother experience.

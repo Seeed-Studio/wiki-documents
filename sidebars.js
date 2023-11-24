@@ -2382,6 +2382,13 @@ const sidebars = {
             'Edge/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
           ],
         },
+        {
+          type: 'category',
+          label: 'AWS IoT Core',
+          items: [
+            'Edge/reTerminal-DM/AWS_IoT/reTerminal-DM_AWS_first',
+          ],
+        },
       ],
     },
 
