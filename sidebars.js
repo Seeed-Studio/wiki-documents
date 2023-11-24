@@ -3789,7 +3789,7 @@ const sidebars = {
            type: 'category',
            label: '硬件基础教学（Sense版本）',
            items: [
-            // 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/CN_XIAO_ESP32S3_Sense_camera',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/CN_XIAO_ESP32S3_Sense_camera',
              'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/CN_XIAO_ESP32S3_Sense_mic',
              'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/CN_XIAO_ESP32S3_Sense_tf_and_filesystem',
            ],
