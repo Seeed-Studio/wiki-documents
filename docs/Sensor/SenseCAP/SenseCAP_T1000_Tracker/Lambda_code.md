@@ -1,3 +1,15 @@
+---
+description: Lambda location code 
+keywords:
+- Tracker
+- Wio
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /location_lambda_code
+last_update:
+  date: 11/24/2023
+  author: Jessie
+---
+
 ```cpp
 const {IoTDataPlaneClient, PublishCommand} = require("@aws-sdk/client-iot-data-plane");
 const { IoTWirelessClient, UpdateResourcePositionCommand, GetPositionEstimateCommand } = require("@aws-sdk/client-iot-wireless");
