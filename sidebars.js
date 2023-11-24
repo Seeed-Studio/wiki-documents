@@ -3585,25 +3585,268 @@ const sidebars = {
   //   `,
   //   },
   // ],
-  // CNSidebar: [
-  //   {
+  CNSidebar: [
+    'zh-CN/CN_Getting_Started',
+    {
+      type: 'doc',
+      id: 'zh-CN/Sensor/SeeedStudio_XIAO/CN_SeeedStudio_XIAO_Series_Introduction',
+      label: 'XIAO 拇指开发板',
+      className: 'sideboard_calss',
+    },
+    {
 
-  //     type: 'category',
-  //     label: 'Seeed Studio XIAO 拓展板',
-  //     items: [
-  //       'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
-  //     ]
-  //   },
-  //   {
+      type: 'category',
+      label: 'XIAO SAMD21',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/CN_Seeeduino-XIAO"
+      },
+      items: [
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/CN_XIAO-SAMD21-Zephyr-RTOS',
+        {
+          type: 'category',
+          label: '编程语言',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/CN_Seeeduino-XIAO-by-Nanase',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/CN_Seeeduino-XIAO-CircuitPython',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/CN_XIAO-SAMD21-MicroPython',
+          ],
+        },
+        {
+          type: 'category',
+          label: '嵌入式机器学习',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Embedded ML/CN_Seeeduino-XIAO-TinyML',
+          ],
+        },
+        {
+          type: 'category',
+          label: '实用教程',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/CN_XIAO-SPI-Communication-Interface',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/CN_Seeeduino-XIAO-DAPLink',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/CN_Seeeduino-XIAO-TinyUSB',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/TuTorial/CN_How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI',
+          ],
+        },
+      ]
+    },
+    {
 
-  //     type: 'category',
-  //     label: 'Seeed Studio XIAO SAMD21',
-  //     items: [
-  //       'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO',
-  //     ]
-  //   },
+      type: 'category',
+      label: 'XIAO RP2040',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/CN_XIAO-RP2040',
+      },
+      items: [
 
-  // ]
+        {
+          type: 'category',
+          label: '编程语言',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/CN_XIAO-RP2040-with-Arduino',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/CN_XIAO-RP2040-with-MicroPython',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/CN_XIAO-RP2040-with-CircuitPython',
+          ],
+        },
+        {
+          type: 'category',
+          label: '嵌入式机器学习',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/Embedded ML/CN_XIAO-RP2040-EI',
+          ],
+        },
+      ]
+    },
+
+    {
+      type: 'category',
+      label: 'XIAO nRF52840 (Sense)',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO_BLE"
+      },
+      items: [
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO-nRF52840-Zephyr-RTOS',
+        {
+          type: 'category',
+          label: '编程语言',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO-BLE_CircutPython',
+          ],
+        },
+        {
+          type: 'category',
+          label: '硬件基础教学',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO-BLE-Sense-IMU-Usage',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO-BLE-Sense-PDM-Usage',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO-BLE_QSPI-Usage',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO-BLE-Sense-Pin-Multiplexing',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/CN_XIAO-BLE-Sense-NFC-Usage',
+          ],
+        },
+        {
+          type: 'category',
+          label: '蓝牙使用',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/CN_XIAO-BLE-Sense-Bluetooth_Usage',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Bluetooth Libraries/CN_XIAO-BLE-Sense-Bluetooth-Usage',
+          ],
+        },
+        {
+          type: 'category',
+          label: '嵌入式机器学习',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/CN_XIAOEI',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/CN_XIAO-BLE-PDM-EI',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/CN_XIAO-BLE-Sense-TFLite-Getting-Started',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Embedded ML/CN_XIAO-BLE-Sense-TFLite-Mic',
+          ],
+        },
+        {
+          type: 'category',
+          label: '实用教程',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/CN_XIAO-BLE-sidewalk',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/Application/CN_XIAO_BLE_HA',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'XIAO ESP32C3',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/CN_XIAO_ESP32C3_Getting_Started',
+      },
+      items: [
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/CN_XIAO-ESP32C3-Zephyr',
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/CN_XIAO_ESP32C3_MicroPython',
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/CN_XIAO_ESP32C3_Pin_Multiplexing',
+
+        {
+          type: 'category',
+          label: '无线通讯功能',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/CN_XIAO_ESP32C3_WiFi_Usage',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/CN_XIAO_ESP32C3_Bluetooth_Usage',
+          ],
+        },
+        {
+          type: 'category',
+          label: '实用教程',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/CN_XIAO-ESP32C3-for-ESPHome-Support',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/CN_xiao-esp32c3-esphome',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/CN_xiaoesp32c3-flash-storage',
+            // 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/CN_xiaoesp32c3-chatgpt',
+          ],
+        },
+      ],
+    },
+
+    {
+       type: 'category',
+       label: 'XIAO ESP32S3 (Sense)',
+       collapsed: true,
+       collapsible: true,
+       link: {
+         type: "doc",
+         id: 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_Getting_Started',
+       },
+       items: [
+         'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_Pin_Multiplexing',
+         'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO-ESP32S3-Zephyr-RTOS',
+         'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_CircuitPython',
+         'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_Micropython',
+         {
+           type: 'category',
+           label: '无线通讯功能',
+           items: [
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_WiFi_Usage',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_Bluetooth_Usage',
+           ],
+         },
+         {
+           type: 'category',
+           label: '硬件基础教学（Sense版本）',
+           items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/CN_XIAO_ESP32S3_Sense_camera',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/CN_XIAO_ESP32S3_Sense_mic',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3_Sense/CN_XIAO_ESP32S3_Sense_tf_and_filesystem',
+           ],
+         },
+         {
+           type: 'category',
+           label: '实用教程',
+           items: [
+            //  'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Speech2chatgpt',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_EdgeLab',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Geolocation',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Keyword_Spotting',
+           ],
+         },
+       ],
+     },
+ 
+     {
+      type: 'category',
+      label: 'XIAO 的兼容扩展板',
+      items: [
+        {
+          type: 'category',
+          label: '基于 XIAO 的圆形显示屏',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/CN_SeeedStudio_Round_Display_for_XIAO',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/CN_SeeedStudio_RoundDisplay_Usage',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/CN_Draw_dials_with_Display_and_lvgl',
+          ],
+        },
+        // {
+        //   type: 'category',
+        //   label: '基于 XIAO 的毫米波雷达',
+        //   items: [
+        //     'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/CN_mmwave-for-xiao',
+        //     'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/CN_mmwave-for-xiao_arduino',
+        //   ],
+        // },
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/CN_Seeeduino-XIAO-Expansion-Board',
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/CN_XIAO-CAN-Bus-Expansion-Board',
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/CN_Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/CN_xiao-rgb-matrix',
+        // 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/CN_gpio_expander_for_xiao',
+        'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/CN_XIAO-eInk-Expansion-Board',
+      ],
+    },
+    {
+      type: 'category',
+      label: '基于 XIAO 的初学者套件',
+      items: ['zh-CN/Sensor/SeeedStudio_XIAO/Kit_with_Courses/CN_XIAO-Kit-Courses'],
+    },
+    // 'zh-CN/Sensor/SeeedStudio_XIAO/CN_PCB_Design_XIAO',
+    'zh-CN/Sensor/SeeedStudio_XIAO/CN_SeeedStudio_XIAO_Series_Projects',
+    'zh-CN/Sensor/SeeedStudio_XIAO/CN_XIAO_FAQ',
+
+    {
+      type: 'doc',
+      id: 'zh-CN/Edge/Quantum_Development_Board/CN_Quantum-Mini-Linux-Development-Kit',
+      label: '夸克(Quark)迷你开发者套件',
+      className: 'sideboard_calss',
+    },
+
+
+  ],
 }
 
 module.exports = sidebars

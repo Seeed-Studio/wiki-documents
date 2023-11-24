@@ -1,6 +1,6 @@
 ---
 description: SPI Communication on Seeed Studio XIAO SAMD21
-title: SPI Communication on Seeed Studio XIAO SAMD21
+title: 使用 XIAO SAMD21 学习SPI 通讯
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

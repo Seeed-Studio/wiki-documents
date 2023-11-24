@@ -1,6 +1,6 @@
 ---
 description: 使用XIAO ESP32C3访问ESPHome
-title: XIAO ESP32C3通过ESPHome服务接入Home Assistant
+title: 应用 Home Assistant 实现屋内无摄像头监控
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,7 @@ last_update:
   author: Xin Ping Li
 ---
 
-# XIAO ESP32C3通过ESPHome服务接入Home Assistant
+# 将 XIAO ESP32C3 应用 Home Assistant 实现屋内无摄像头监控
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/78.jpg" style={{width:700, height:'auto'}}/></div>
 

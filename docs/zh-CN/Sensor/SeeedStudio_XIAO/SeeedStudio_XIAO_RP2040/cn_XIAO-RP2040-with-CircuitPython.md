@@ -9,7 +9,7 @@ last_update:
   date: 11/1/2023
   author: 金 菊
 ---
-# **Seeed Studio XIAO RP2040搭配CircuitPython使用**
+# 学习使用 CircuitPython 对 XIAO RP2040 进行编程
 
 CircuitPython是一种专为低成本微控制器板实验和学习编程而设计的编程语言。它使得入门变得比以往更加简单，无需预先下载桌面工具。一旦你设置好了开发板，打开任何文本编辑器，就可以开始编辑代码。就是这么简单。
 ## **入门指南**

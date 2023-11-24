@@ -1,6 +1,6 @@
 ---
 description: 使用XIAO的6x10 RGB MATRIX入门指南
-title: 使用XIAO的6x10 RGB MATRIX入门指南
+title: 基于 XIAO 的 6x10 阵列 RGB 灯扩展板
 keywords:
 - XIAO RGB
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,7 @@ last_update:
   author: 金 菊
 ---
 
-# 使用XIAO的6x10 RGB MATRIX入门指南
+# 基于 XIAO 的 6x10 阵列 RGB 灯扩展板
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-rgb-matrix/1.jpg" style={{width:700, height:'auto'}}/></div>
 

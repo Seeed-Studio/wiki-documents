@@ -10,7 +10,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# Seeed Studio XIAO SAMD21入门指南
+# Seeed Studio XIAO SAMD21 开发板
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -106,7 +106,7 @@ MCU的工作电压为3.3V。如果将高于 3.3V 的电压输入连接到普通�
 
 **请注意**：内置LED的行为方式与Arduino上的相反。在Seeed Studio XIAO SAMD21上，该引脚必须被拉低以点亮LED；而在其他微控制器上，它必须被拉高。
 
-### *中断**
+### **中断**
 
 Seeed Studio XIAO SAMD21上的所有引脚都支持中断，但是5号引脚和7号引脚不能同时使用。有关中断的更多详细信息，请在[这里](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp)查看。
 
@@ -172,7 +172,7 @@ void loop() {
 }
 ```
 
-#### 串口
+#### **串口**
 
 - 使用引脚 6 作为 UART 的 TX 引脚（UART 的 RX 引脚为引脚 7）：
 
@@ -400,7 +400,7 @@ void loop()
 闪存的最大大小为 8KB。 有关更多信息，请参阅资源中的 ATSAMD218A-MU 数据表
 :::
 
-## The sample application
+## 其他教程
 
 - [如何使用Seeed Studio XIAO SAMD21登录你的树莓派I](https://wiki.seeedstudio.com/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI)
 

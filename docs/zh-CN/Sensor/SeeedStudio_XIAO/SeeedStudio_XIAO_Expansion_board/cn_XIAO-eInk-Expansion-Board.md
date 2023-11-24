@@ -1,6 +1,6 @@
 ---
 description: Getting Started XIAO eInk Expansion Board
-title: XIAO eInk Expansion Board
+title: 基于 XIAO 的 墨水屏接口扩展板
 keywords:
 - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,7 @@ last_update:
   author: 金 菊
 ---
 
-# GXIAO eInk 扩展板入门指南
+# 基于 XIAO 的 墨水屏接口扩展板
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/xiao-expansion.png" style={{width:700, height:'auto'}}/></div>
 

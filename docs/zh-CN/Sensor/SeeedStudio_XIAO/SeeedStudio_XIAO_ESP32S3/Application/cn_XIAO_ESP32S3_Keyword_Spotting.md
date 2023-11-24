@@ -1,6 +1,6 @@
 ---
 description: 我们继续在Seeed XIAO family的巨大的新微型设备ESP32S3 Sense上探索机器学习。
-title: XIAO ESP32S3 Sense Keywords 识别
+title: 基于 Edge Impulse 的关键词识别
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao_esp32s3_keyword_spotting
 last_update:
@@ -8,7 +8,7 @@ last_update:
   author: Xin Ping Li
 ---
 
-# XIAO ESP32S3 Sense & Edge Impulse关键词识别
+# 基于 Edge Impulse 的关键词识别
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/1.png" style={{width:1000, height:'auto'}}/></div>
 

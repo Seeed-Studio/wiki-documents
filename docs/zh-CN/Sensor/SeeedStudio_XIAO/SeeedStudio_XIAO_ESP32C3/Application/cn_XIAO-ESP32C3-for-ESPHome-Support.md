@@ -1,6 +1,6 @@
 ---
 description: ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3
-title: ESPHome Support on Seeed Studio XIAO ESP32C3
+title: 应用 Home Assistant 实现屋内环境监测
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,8 @@ last_update:
   author: Xin Ping Li
 ---
 
-# XIAO ESP32C3通过ESPHome连接家庭助手(支持所有端口)
+# 将 XIAO ESP32C3 应用 Home Assistant 实现屋内环境监测
+
 <!-- # ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3 -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/43.png"style={{width:700, height:'auto'}}/></div>

@@ -1,6 +1,6 @@
 ---
 description: This tutorial introduces the use of the expansion board function of the circular screen.
-title: Hardware Usage
+title: 硬件使用教程
 keywords:
 - Round display
 - XIAO
@@ -11,7 +11,7 @@ last_update:
   author: Chen Lei
 ---
 
-#Seeed Studio圆形显示器扩展的使用
+# 基于 XIAO 的圆形显示器的硬件使用教程
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/79.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -25,7 +25,7 @@ last_update:
 
 本教程将详细解释如何使用圆形显示器上的扩展功能，包括RTC功能、SD卡功能和屏幕功能的使用。
 
-##入门
+## 入门
 本教程的内容支持所有XIAO系列产品。所以你可以使用任何晓来完成这个维基的内容。
 
 如果您是第一次使用Round Display，您可能需要阅读我们之前为其编写的准备内容，并根据这些内容配置库的环境，以确保您可以顺利使用Round Display。
@@ -48,7 +48,7 @@ Round Display支持使用**FAT32**格式不大于**32GB**的microSD卡。安装m
 上图只显示了电池的安装方向，而不是完全安装的电池。正确安装的蓄电池应完全插入蓄电池支架中。
 ：：：
 
-###安装电源电池
+### 安装电源电池
 
 圆形显示屏支持外置3.7V锂电池。内置电源管理芯片，电池可以通过XIAO的USB端口充电。
 
@@ -62,7 +62,7 @@ Round Display支持使用**FAT32**格式不大于**32GB**的microSD卡。安装m
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/78.jpg" style={{width:500, height:'auto'}}/></div>
 
 
-###圆形显示开关
+### 圆形显示开关
 
 圆形显示屏上还有一个开关。该开关用于控制显示器的开/关以及XIAO的电源。当您将开关拨到OFF时，电池将不会为XIAO供电，显示屏将关闭。当您将该开关拨到ON时，显示屏将亮起，电池将为XIAO提供电源（前提是安装了电源电池），以确保程序运行。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/66.jpg" style={{width:500, height:'auto'}}/></div>
@@ -73,16 +73,16 @@ Round Display支持使用**FAT32**格式不大于**32GB**的microSD卡。安装m
 还要注意的是，一些XIAO（如XIAO ESP32C3）可能需要按下XIAO上的Reset（重置）按钮才能在断电和再次通电时开始工作以运行程序。
 ：：：
 
-###圆形显示电路设计
+### 圆形显示电路设计
 在本节中，我们将截取Round Display硬件的电路原理图，并告知用户在Round Display的硬件中使用了XIAO上的哪些IO引脚，以避免IO的使用冲突。
 
-####测量蓄电池电压针脚
+#### 测量蓄电池电压针脚
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/70.png" style={{width:400, height:'auto'}}/></div>
 
 对于圆形显示器的设计，我们使用XIAO上的**A0/D0**引脚连接到板载电池的电路。通过读取该引脚的模拟值可以获得剩余的电池电量。
 
-####SD卡电路引脚
+#### SD卡电路引脚
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/67.png" style={{width:800, height:'auto'}}/></div>
 
@@ -113,13 +113,13 @@ SD卡部分使用XIAO上的四个IO端口，如下表所示。
     </table>
 </div>
 
-####RTC电路引脚
+#### RTC电路引脚
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/68.png" style={{width:500, height:'auto'}}/></div>
 
 RTC功能使用IIC协议，因此占用**D5（SCL）**和**D4（SDA）**引脚。
 
-####触摸屏电路引脚
+#### 触摸屏电路引脚
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/69.png" style={{width:400, height:'auto'}}/></div>
 
@@ -159,7 +159,7 @@ RTC功能使用IIC协议，因此占用**D5（SCL）**和**D4（SDA）**引脚�
 </div>
 
 
-##圆形显示库概述
+## 圆形显示库概述
 
 圆显的绝大多数软件开发都是基于萧自己的硬件支持。图形基于TFT库、LVGL库和Arduino GFX库。
 
@@ -173,7 +173,7 @@ RTC功能使用IIC协议，因此占用**D5（SCL）**和**D4（SDA）**引脚�
 
 <br></br>
 
-###lv_xiao_round_screen.h
+### lv_xiao_round_screen.h
 
 “lv_xiao_round_screen.h”文件是round Display库中的头文件，用于驱动屏幕的显示和触摸功能。
 
@@ -214,7 +214,7 @@ TFT_eSPI tft = TFT_eSPI(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 5.`void chc6x_read（lv_indev_drv_t*indev_driver，lv_indev_data_t*data）`：此函数用于获取触摸屏的坐标点。
 
-###lv_hardware_test.h
+### lv_hardware_test.h
 
 “lv_hardware_test.h”文件是Round Display库中的示例**硬件测试**中的头文件。此头文件为Round Display准备了大部分硬件使用功能。
 
@@ -224,7 +224,7 @@ TFT_eSPI tft = TFT_eSPI(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 2.`void lv_hardware_test（void）`：此功能用于测试所有硬件功能，包括屏幕显示、屏幕触摸、RTC时钟和电池电量。你可以参考这个函数编写方法来完成你想要的圆形显示函数的开发。
 
-##KE按钮和GPIO
+## KE按钮和GPIO
 
 在新版本的圆形显示器上，我们设计了一个KE开关，以选择性地释放某些GPIO供用户选择性使用。
 
@@ -240,7 +240,7 @@ KE开关设计在microSD卡插槽的中间，以及连接到XIAO的一排引脚�
 
 当开关断开**（切换到数字侧）**时，XIAO上的引脚A0和D6为可用状态。
 
-##测量蓄电池电压
+## 测量蓄电池电压
 
 由于XIAO上缺少IO引脚，大多数XIAO无法测量电池电压，尽管在一些XIAO上配置了电源管理芯片以允许外部电池。
 
@@ -310,7 +310,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/80.png" style={{width:700, height:'auto'}}/></div>
 
-###程序注释
+### 程序注释
 
 此代码使用ADC测量电池电压并计算电池电量百分比。实现方式因硬件平台而异：
 
@@ -388,7 +388,7 @@ RTC的功能部分，我们主要分为以下四个部分来介绍它的应用�
 3.对于具有网络功能的晓，您可以使用网络功能来更正时间。
 4.结合RTC功能绘制一个简单的时钟刻度盘。
 
-###RTC的离线手动校准
+### RTC的离线手动校准
 
 以下是手动校准RTC时间的示例程序。设置放在“Setup（）”函数中，以确保设置程序只执行一次。该程序是在没有网络能力的情况下为XIAO设置初始RTC时间的最有效方法。
 ```cpp
@@ -433,7 +433,7 @@ void loop() {
 
 上传程序并打开串行监视器后，RTC时间将开始校准。当**RTC时间校准完成！**显示，校准完成。
 
-###获取RTC时间
+### 获取RTC时间
 
 以下程序每秒获取RTC的时间，并将其打印在串行监视器中。
 
@@ -500,7 +500,7 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/71.png" style={{width:700, height:'auto'}}/></div>
 
 
-###网络校准RTC时间
+### 网络校准RTC时间
 
 对于拥有网络功能的晓来说，事情似乎变得容易多了。有了网络，你甚至不需要使用币形电池来保持RTC开箱即用，你只需要在每次通电时联网计时。
 
@@ -607,7 +607,7 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/72.png" style={{width:700, height:'auto'}}/></div>
 
 
-###基于RTC时间的简单拨号
+### 基于RTC时间的简单拨号
 
 以下程序是基于RTC时钟绘图的拨号程序。
 
@@ -852,11 +852,11 @@ void getCoord(int16_t x, int16_t y, float *xp, float *yp, int16_t r, float a)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/75.gif" style={{width:500, height:'auto'}}/></div>
 
-##SD卡功能
+## SD卡功能
 
 圆形显示屏支持使用microSD卡读取和写入数据。在使用microSD卡之前，请将microSD卡格式化为**FAT32**格式，以确保能够正确识别和使用。
 
-###所有XIAO系列（除XIAO nRF52840系列外）
+### 所有XIAO系列（除XIAO nRF52840系列外）
 
 本节适用于所有XIAO（除了XIAO nRF52840系列），这是一个用于读取和写入文件的简单程序。
 
@@ -934,7 +934,7 @@ void loop() {
 由于硬件设计的原因，一些引脚默认为低电平，这将导致microSD安装程序认为没有上拉电阻器导致安装失败。因此，当使用带有圆形显示的SD卡功能时，请确保在初始化SD卡之前先初始化屏幕显示。
 ：：：
 
-###XIAO nRF52840
+### XIAO nRF52840
 
 如果您使用的是XIAO nRF52840系列，那么您可能需要下载[SdFat库](https://github.com/greiman/SdFat) 以便使用SD卡功能。
 
@@ -1005,7 +1005,7 @@ void loop() {
 }
 ```
 
-###晓ESP32S3和晓ESP32S3Sense&晓ESP32C3
+### XIAO ESP32S3和 XIAO ESP32S3Sense& XIAO ESP32C3
 
 由于ESP32系列具有非常强大的文件系统支持，我们为XIAO ESP32编写了一系列关于如何使用文件系统和保存microSD卡的示例，您可以在下面的链接中学习使用。
 - **[文件系统和XIAO ESP32S3感知](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem)**
@@ -1024,11 +1024,11 @@ SD.begin(D2);
 不要忘记，您还需要首先初始化TFT屏幕才能使用SD卡功能。
 ：：：
 
-##屏幕功能
+## 屏幕功能
 
 在屏幕的使用部分，主要分为触摸和显示两个部分。
 
-###触摸功能
+### 触摸功能
 
 触摸功能是圆形显示屏的一项特殊功能。您可以使用触摸功能执行一些点击并保持显示操作。
 
@@ -1098,8 +1098,8 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/81.gif" style={{width:500, height:'auto'}}/></div>
 
-###显示功能
-
+### 显示功能
+ 
 关于显示部分，我们主要介绍LVGL库和TFT库的使用。由于空间问题，我们将详细介绍如何在新的Wiki中使用支持的图形库绘制复杂的表盘。
 
 [在XIAO的Seeed Studio圆形显示器上使用LVGL和TFT](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display)
@@ -1120,9 +1120,9 @@ void loop() {
 这里的示例仅供参考，并非每个示例都一定有效。您可能需要修改程序，使其与圆形显示器引脚和硬件定义兼容。
 ：：：
 
-##技术支持和产品讨论
+## 技术支持和产品讨论
 
-###Q1：为什么我在使用XIAO nRF52840（Sense）时会出现错误？
+### Q1：为什么我在使用XIAO nRF52840（Sense）时会出现错误？
 
 使用本教程的内容时，XIAO nRF52840可能会出现两种不同类型的问题。
 
@@ -1137,7 +1137,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/73.png" style={{width:700, height:'auto'}}/></div>
 
-###Q2：为XIAO RP2040上传程序时，出现错误：在可执行段中检测到未对齐的操作码？
+### Q2：为XIAO RP2040上传程序时，出现错误：在可执行段中检测到未对齐的操作码？
 
 请根据下图中的设置修改XIAO RP2040的上传选项。除了默认的**小型（-Os）（标准）**外，所有选项都可以正常工作。
 
@@ -1148,12 +1148,12 @@ void loop() {
 当您遇到此错误时，请将您的**Seed SAMD**开发板板板载软件包更新为最新版本。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/76.png" style={{width:700, height:'auto'}}/></div>
 
-###Q4：为什么我把节目上传到肖ESP32C3后屏幕不显示？
+### Q4：为什么我把节目上传到肖ESP32C3后屏幕不显示？
 
 如果程序没有问题，并且在上传后没有显示，则可能需要重置。只需按下XIAO ESP32C3上的重置按钮。
 
 
-##技术支持和产品讨论
+## 技术支持和产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 <div class="button_tech_support_container">

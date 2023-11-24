@@ -1,6 +1,6 @@
 ---
 description: 开始使用XIAO CAN总线扩展板
-title: XIAO CAN总线扩展板
+title: 基于 XIAO 的 CAN 总线扩展板
 keywords:
 - Grove
 - can bus
@@ -11,7 +11,7 @@ last_update:
   author: 金 菊
 ---
 
-# XIAO CAN总线扩展板
+# 基于 XIAO 的 CAN 总线扩展板
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/main.jpg" alt="pir" width={500} height="auto" /></p>
 

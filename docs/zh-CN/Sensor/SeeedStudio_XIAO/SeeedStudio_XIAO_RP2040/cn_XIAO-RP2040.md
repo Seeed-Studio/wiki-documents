@@ -10,7 +10,7 @@ last_update:
   author: 金 菊
 ---
 
-#  Seeed Studio XIAO RP2040入门指南
+#  Seeed Studio XIAO RP2040 开发板
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" alt="pir" width={600} height="auto" /></p>
@@ -26,7 +26,7 @@ Seeed Studio XIAO RP2040与Seeed Studio XIAO扩展板兼容。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 点击购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get one now 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -97,14 +97,14 @@ Seeed Studio XIAO RP2040与Seeed Studio XIAO扩展板兼容。
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" alt="pir" width={600} height="auto" /></p>
 
-## 示意图在线查看器
+<!-- ## 示意图在线查看器
 
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
+</div> -->
 
 
-## 资源
+## 资源文件
 
 
 - **[PDF]** [RP2040 数据手册](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf)

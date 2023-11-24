@@ -1,6 +1,6 @@
 ---
 description: Getting Started
-title: Getting Started
+title: 基于 TensorFlow Lite 的运动识别
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   author: 吴飞飞
 ---
 
-# 在 Seeed Studio XIAO nRF52840 Sense 上的 TensorFlow Lite入门
+# 基于 TensorFlow Lite 的运动识别
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite-thumb.jpg" alt="pir" width={1000} height="auto" /></p>
 

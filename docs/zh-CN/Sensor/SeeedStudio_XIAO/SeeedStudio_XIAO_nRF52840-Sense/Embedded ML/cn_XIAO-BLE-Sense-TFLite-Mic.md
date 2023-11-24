@@ -1,6 +1,6 @@
 ---
 description: Speech Recognition
-title: Speech Recognition
+title: 基于 TensorFlow Lite 的语音识别
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,7 @@ last_update:
   date: 10/30/2023
   author: 吴飞飞
 ---
-# Seeed Studio XIAO nRF52840 Sense 上的语音识别
+# 基于 TensorFlow Lite 的语音识别
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite/pics/TFLite-mic-thumb.png" alt="pir" width={1000} height="auto" /></p>
 

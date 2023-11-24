@@ -1,6 +1,6 @@
 ---
 description:  将Seeed Studio XIAO SAMD21连接到您的树莓派。
-title:  将Seeed Studio XIAO SAMD21连接到您的树莓派。
+title:  将 XIAO SAMD21 连接到您的树莓派
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

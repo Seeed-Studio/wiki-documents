@@ -1,6 +1,6 @@
 ---
 description: Using LVGL and TFT on the Seeed Studio Round Display for XIAO
-title: Using LVGL and TFT for all XIAO Series
+title: 显示软件应用（LVGL 和 TFT）教程
 keywords:
 - XIAO
 - Round Dislay
@@ -13,7 +13,8 @@ last_update:
   author: Chen Lei
 ---
 
-#在所有XIAO系列的Seeed Studio圆形显示器上使用LVGL和TFT
+# 在 基于 XIAO 的圆形显示器上使用 LVGL 和 TFT 软件显示库
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/000.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -26,9 +27,13 @@ last_update:
 
 
 感谢您购买Seeed Studio圆形显示产品。在本教程的这一部分中，我们将重点介绍如何使用“TFT\u eSPI”库和“LVGL”库在圆形显示器上绘制各种丰富有趣的拨号图案，并从简单到深入介绍这两个有用但复杂的库的一些常用函数的用法。通过本教程的内容，我希望您可以使用此产品绘制理想的拨号模式。有一个伟大的学习经验！
-##快速入门
+
+## 快速入门
+
 在您进入研究之前，我们希望您做好以下准备。
-###硬件准备
+
+### 硬件准备
+
 为了便于演示，本教程将使用**XIAO ESP32S3**作为主控件。
 <table align="center">
 	<tr>
@@ -95,24 +100,24 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/50.jpg" style={{width:500, height:'auto'}}/></div>
 
-###软件准备
+### 软件准备
 
 此部分在 [基础知识库](https://wiki.seeedstudio.com/get_start_round_display#software-preparation), 因此您可以直接跳转阅读。
 
-##使用TFT\u eSPI库绘制简单拨号盘
+## 使用TFT eSPI库绘制简单拨号盘
 
-TFT\u eSPI是一个功能丰富的Arduino IDE兼容图形和字体库，适用于32位处理器。XIAO-Round Display提供的TFT库基于XIAO与XIAO-Round Display兼容后的库，支持整个XIAO系列的使用。
+`TFT\ueSPI`是一个功能丰富的Arduino IDE兼容图形和字体库，适用于32位处理器。XIAO-Round Display提供的TFT库基于XIAO与XIAO-Round Display兼容后的库，支持整个XIAO系列的使用。
 
-###TFT库通用接口
+### TFT库通用接口
 
-####1.创建TFT对象
+#### 1.创建TFT对象
 
 ```c
 TFT_eSPI tft = TFT_eSPI()
 TFT_eSPI tft = TFT_eSPI(240,240)        // Set the screen size at the time of object creation
 ```
 
-####2.初始化
+#### 2.初始化
 
 ```c
 void init(uint8_t tc = TAB_COLOUR)
@@ -180,7 +185,7 @@ uint16_t getTextPadding(void)                            // Get text fill
 
 从上面的函数可以看出，如果要打印显示的文本，只需使用'tft.print（）'函数即可。
 
-####8. 简单形状的绘制
+#### 8. 简单形状的绘制
 
 您可以使用以下功能绘制一些简单的形状，包括像素点、直线段、矩形、圆等。
 
@@ -202,7 +207,7 @@ drawTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3
 fillTriangle(int32_t x1,int32_t y1, int32_t x2,int32_t y2, int32_t x3,int32_t y3, uint32_t color)  // Draw a triange with a fill color
 ```
 
-####9. 复杂形状的绘制
+#### 9. 复杂形状的绘制
 
 TFT库还为我们提供了绘制复杂形状的方法，例如圆形矩形、圆形圆弧、丝般光滑的形状等。
 
@@ -364,7 +369,7 @@ void loop() {
 
 当然，自定义字体的头文件应该保存在与ino文件相同的目录中，这是避免错误的必要步骤。
 
-###基于TFT的拨号采样程序
+### 基于TFT的拨号采样程序
 
 我们编写了一个圆形显示的拨号程序，可以直接使用。由于部分肖氏模型的内存空间有限，本程序只执行基本的手部运动功能，不适用于其他功能。用户可以使用本程序学习TFT库的使用和指针移动的功能，并根据实际情况完成更复杂的表盘的开发。
 
@@ -374,13 +379,13 @@ void loop() {
     </a>
 </div>
 
-##使用LVGL库绘制简单拨号盘
+## 使用LVGL库绘制简单拨号盘
 
 LVGL库是一个通用嵌入式图形库，它提供了一组丰富的图形用户界面控件，如按钮、标签、列表等，可用于构建各种用户界面。与TFT库不同，LVGL库提供了一个抽象的、面向对象的图形界面，该界面更易于使用和维护，但可能需要在性能和可靠性方面进行权衡。
 
 在构建复杂的用户界面时，LVGL库是非常有用的工具，可以减少编写和维护代码的工作量。另一方面，TFT库更适合于实时图像处理、视频渲染等需要高性能图形的应用。
 
-###LVGL库通用接口
+### LVGL库通用接口
 LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时间阅读正式的LVGL介绍文档。
 - [快速入门](https://docs.lvgl.io/latest/en/html/get-started/index.html)
 - [显示界面](https://docs.lvgl.io/latest/en/html/porting/display.html)
@@ -388,7 +393,7 @@ LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时
 - [勾选界面](https://docs.lvgl.io/latest/en/html/porting/tick.html)
 - [操作系统和中断](https://docs.lvgl.io/latest/en/html/porting/os.html)
 
-###使用SquareLine Studio绘制复杂UI界面
+### 使用SquareLine Studio绘制复杂UI界面
 
 除了阅读大量的LVGL官方文档和编写我们自己的LVGL图形程序之外，我们还可以使用官方的LVGL SquareLine Studio工具来提高开发效率。
 
@@ -402,7 +407,7 @@ LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时
 2.*[LVGL库](https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/libraries/lvgl)**作者：kisvegabor，embeddedt，pete pjb，版本：**8.2.0**
 ：：：
 
-####步骤1。下载SuqareLine Studio
+#### 步骤1。下载SuqareLine Studio
 
 点击【此处】可进入SquareLine Studio官网(https://squareline.io/)，然后单击**免费试用**将软件下载到您的计算机。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/3.png" style={{width:1000, height:'auto'}}/></div>
@@ -412,7 +417,7 @@ LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时
 ：：：注意
 如果您是第一次使用，请不要注册登录到您的帐户，没有余额，它可能会花费您整个30天的试用期！：：：
 
-####步骤2。配置屏幕界面信息
+#### 步骤2。配置屏幕界面信息
 接下来，我们可以打开软件，并通过创建一个空白的显示页面开始。
 
 因为我们使用的是Arduino编程，所以我们创建的也是Arduino文件。
@@ -429,7 +434,7 @@ LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时
 创建项目后，并非所有内容都可以修改，例如项目名称。请不要在项目名称中使用英语以外的任何语言或特殊字符，请不要使用***“-”**符号，请将***“-”**符号替换为***“\u”***。否则，导出的程序在编译过程中可能会出错！
 ：：：
 
-####步骤3.了解软件的功能布局
+#### 步骤3.了解软件的功能布局
 
 根据我的使用习惯，我将软件的主界面大致分为以下几个部分。
 
@@ -447,7 +452,7 @@ LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时
 
 我们将首先对软件界面有一个基本的了解，然后我们将带您通过实践了解每个部分的使用。
 
-####步骤4。使用软件实现您的想法
+#### 步骤4。使用软件实现您的想法
 
 假设我现在想画一个音乐界面。当然，我太喜欢听音乐了，所以我想画一个音乐显示界面作为例子。
 
@@ -616,7 +621,7 @@ LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时
 >	- **从滑块设置文本值**：使用此操作在标签小部件上显示滑块小部件值。
 >	- **选中时设置文本值**：根据目标对象的选中或未选中状态更改标签小部件的文本。
 
-#####面板使用情况
+##### 面板使用情况
 
 总之，如果我需要在表盘的上半部分显示相册图像，那么我需要调整面板的坐标和大小，并设置背景图像。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/8.png" style={{width:1000, height:'auto'}}/></div>
@@ -634,12 +639,12 @@ LVGL库API非常丰富和复杂，我们希望每个使用LVGL的人都能花时
 因此，**如果要删除任何颜色或线段，可以将透明度设置为0**。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/12.png" style={{width:600, height:'auto'}}/></div>
 
-#####标签使用
+##### 标签使用
 然后，我们在中间添加文本（使用**标签**小部件），显示艺术家和歌曲名称。在样式上，我们可以改变字体大小、颜色等内容。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/10.png" style={{width:1000, height:'auto'}}/></div>
 
-#####img按钮用法
+##### img按钮用法
 在文本下，我们添加了一些播放组件（使用**Imgbutton**小部件），如播放/暂停按钮和切换上/下音轨按钮。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/11.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -656,7 +661,7 @@ Imgbutton是一种特殊的按钮，它与普通按钮最大的区别在于，Im
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/15.png" style={{width:600, height:'auto'}}/></div>
 
-#####弧形使用
+##### 弧形使用
 
 然后我们添加最后一个组件，即音量栏和播放进度栏。我们将使用Arc来完成此操作。
 
@@ -683,7 +688,7 @@ Imgbutton是一种特殊的按钮，它与普通按钮最大的区别在于，Im
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/21.png" style={{width:1000, height:'auto'}}/></div>
 
-#####屏幕开关
+##### 屏幕开关
 音乐界面几乎已经设计好了，接下来我们不妨添加一个新的主界面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/22.png" style={{width:400, height:'auto'}}/></div>
@@ -695,7 +700,7 @@ Imgbutton是一种特殊的按钮，它与普通按钮最大的区别在于，Im
 
 如果希望动画效果在幻灯片后缓慢切换，则“速度”可以保持在500，如果希望立即切换，则应将“速度”设置为0。
 
-#####指针动画
+##### 指针动画
 
 回到主界面的设计，我们想添加表盘指针旋转的动画效果。
 首先要做的是，你需要画自己的秒针、分针和时针。然后以**图像**的样式将其添加到主表盘中。
@@ -789,7 +794,7 @@ Imgbutton是一种特殊的按钮，它与普通按钮最大的区别在于，Im
 </table>
 然后您可以选择使用哪个XIAO进行编译和上传。
 
-###关于LVGL库自定义选项
+### 关于LVGL库自定义选项
 
 如果您按照上面的步骤进行操作，但在编译过程中仍然收到一些“未定义”的错误消息，那么您可能没有为自定义配置“lvconf.h”。
 
@@ -809,7 +814,7 @@ Imgbutton是一种特殊的按钮，它与普通按钮最大的区别在于，Im
 
 如果遇到类似错误，可以仔细检查自定义功能是否已启用。
 
-###基于LVGL的拨号程序
+### 基于LVGL的拨号程序
 
 我们为圆形屏幕创建了两种表盘样式供用户参考。由于UI逻辑复杂，这将需要XIAO主板上一定的性能和内存。如果您的XIAO在编译以下拨号程序时出现内存不足错误，则您可能需要升级XIAO或减少拨号的功能。
 
@@ -829,7 +834,7 @@ Imgbutton是一种特殊的按钮，它与普通按钮最大的区别在于，Im
     </a>
 </div> -->
 
-##技术支持和产品讨论
+## 技术支持和产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

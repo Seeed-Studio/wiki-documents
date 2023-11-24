@@ -1,6 +1,6 @@
 ---
 description: XIAO ESP32C3-Chatgpt
-title: XIAO ESP32C3-Chatgpt
+title: 在 XIAO ESP32C3 上调用大语言模型接口
 keywords:
 - XIAO ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,7 @@ last_update:
   date: 1/11/2023
   author: Xin Ping Li
 ---
-# 学习在XIAO ESP32C3上使用WiFiClient和HTTPClient - XIAO ESP32C3和ChatGPT在行动中
+# 在 XIAO ESP32C3 上调用大语言模型接口
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/18.png"/></div>
 

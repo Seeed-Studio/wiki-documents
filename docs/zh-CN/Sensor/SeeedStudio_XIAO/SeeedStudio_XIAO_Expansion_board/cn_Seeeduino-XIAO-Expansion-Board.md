@@ -1,6 +1,6 @@
 ---
 description: Seeed Studio XIAO扩展板
-title: Seeed Studio XIAO扩展底板 
+title: 基于 XIAO 的多功能扩展板
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

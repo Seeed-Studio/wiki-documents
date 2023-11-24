@@ -1,6 +1,6 @@
 ---
 description: 带嵌入式电池管理芯片的Seeed Studio XIAO Grove扩展板
-title: 带有电池管理芯片的XIAO Grove扩展板
+title: 基于 XIAO 的电池管理芯片的 Grove 接口扩展板
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

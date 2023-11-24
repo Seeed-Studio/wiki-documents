@@ -10,7 +10,7 @@ last_update:
   author: 金 菊
 ---
 
-# **Seeed Studio XIAO RP2040搭配MicroPython使用**
+# 学习使用 MicroPython 对 XIAO RP2040 进行编程
 
 ## ** MicroPython介绍**
 

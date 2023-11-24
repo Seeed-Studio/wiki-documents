@@ -10,7 +10,8 @@ last_update:
   author: 金 菊
 ---
 
-# **Seeed Studio XIAO RP2040与Arduino**
+# 学习使用 Arduino 对 XIAO RP2040 进行编程
+
 
 这是我们将要连接Seeed Studio XIAO RP2040并使用Arduino进行编程的页面。这里将有几个关于引脚复用的项目。
 

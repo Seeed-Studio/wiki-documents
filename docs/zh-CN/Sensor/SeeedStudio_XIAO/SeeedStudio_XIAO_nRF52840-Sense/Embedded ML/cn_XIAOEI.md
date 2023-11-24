@@ -1,6 +1,6 @@
 ---
 description: Motion Recognition based on Edge Impulse
-title: Motion Recognition based on Edge Impulse
+title: 基于 Edge Impulse 的运动识别
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   author: 吴飞飞
 ---
 
-# Seeed Studio XIAO nRF52840 Sense Edge Impulse 入门
+# XIAO nRF52840 Sense 基于 Edge Impulse 的运动识别
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/50.jpg" style={{width:1000, height:'auto'}}/></div>
 

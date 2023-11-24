@@ -1,6 +1,6 @@
 ---
 description: 在Seeed Studio XIAO SAMD21上的TinyML
-title: 在Seeed Studio XIAO SAMD21上的TinyML
+title: 使用 XIAO SAMD21 学习嵌入式机器学习
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,6 @@ last_update:
   date: 10/29/2023
   author: 金 菊
 ---
-# 在Seeed Studio XIAO系列上的TinyML
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-1/Seeeduino-XIAO-pinout.jpg" /></div>
 

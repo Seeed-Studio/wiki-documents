@@ -1,6 +1,6 @@
 ---
 description: XIAO ESP32C3闪存
-title: XIAO ESP32C3闪存
+title: 在 XIAO ESP32C3 上的 EEPROM 永久数据存储
 keywords:
 - XIAO ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,6 @@ last_update:
   author: Xin Ping Li
 ---
 
-# XIAO ESP32C3数据永久不同的方式
 
 当我们使用开发板时，我们中的许多人都希望能够使用芯片上的闪存来存储一些重要的数据。这需要一种存储方法，确保即使在开发板异常的情况下也不会丢失数据。
 
