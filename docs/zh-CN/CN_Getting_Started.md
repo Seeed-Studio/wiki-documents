@@ -2,7 +2,7 @@
 description: 矽递科技 Wiki 文档平台介绍
 title: 矽递科技 Wiki 文档平台
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: cn/Getting_Started
+slug: /cn/Getting_Started
 last_update:
   date: 11/23/2023
   author: 于剑锋
