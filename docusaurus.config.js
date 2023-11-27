@@ -310,7 +310,7 @@ const config = {
           // },
           {
             to: 'https://wiki-gpt.seeedstudio.com/chat',
-            label: 'Chatbot 🤖️',
+            label: 'Chat 🤖️',
             position: 'right',
             className: 'navbar_doc_right_items',
           },
