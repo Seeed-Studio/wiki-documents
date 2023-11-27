@@ -139,6 +139,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
+                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Offline-Voice-Recognition',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
               ],
             },
