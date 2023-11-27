@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/20/2023
+  date: 11/27/2023
   author: Seraphina
 ---
 
@@ -17,80 +17,41 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 20th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 27th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Studio 24GHz mmWave for XIAO](https://wiki.seeedstudio.com/mmwave_for_xiao/)
+### [AWS IoT Core Intergate With reTerminal](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/)
 
-24GHz mmWave Sensor for XIAO - Human Static Presence is a expansion board for Seeed Studio XIAO series. It is an antenna-integrated, high-sensitivity mmwave radar sensor that is based on the FMCW principle. Combined with radar signal processing and accurate human body sensing algorithms, it can identify human bodies in motion and stationary states.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/1.png" style={{width:300, height:'auto'}}/></div>
-
-### [Development of 24GHz mmWave in XIAO and Arduino](https://wiki.seeedstudio.com/mmwave_for_xiao_arduino/)
-
-
-This section describes how to use the library and secondary development of mmWave for XIAO.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/5.png" style={{width:800, height:'auto'}}/></div>
-
-
-
-
-
-### [Object Detection with reTerminal and Pi camera](https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/)
-
-
-
-Object detection on edge computers has become a pivotal field in computer vision, enabling devices to autonomously perceive and respond to their surroundings. **EfficientDet**, a state-of-the-art object detection model, takes center stage in this domain. Designed to be **resource-efficient, it strikes a balance between accuracy and computational demands, making it particularly well-suited for deployment on edge devices with limited processing power**.  Its ability to identify and locate multiple objects in real-time makes it a key enabler for enhancing the autonomy and intelligence of edge computing systems.
-
-
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/objectdetection2.gif" /></center> -->
+AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. 
+In this guide, we will discuss how to connect our reTerminal DM to the AWS IoT cloud.
 
 
 
 ## Existed Wiki Updated
 
-### [SenseCAP T1000 Tracker FAQ - Network Related, Battery Related and Cache Data](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#network-related)
+### [The screen orientation is incorrect after installing Raspberry Pi OS - Bookworm](https://wiki.seeedstudio.com/Incorrect_screen_orientation_on_RPiOS_Bullseye/#raspberry-pi-os-bookworm)
 
-We have updated some FAQ in the wiki of SenseCAP T1000 Tracker:
-
-[Network Related](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#integration)
-
-[Battery Related](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#battery-related)
-
-[Cache Data](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#cache-data)
-
-
-
-### [Flash Raspberry Pi OS which is newest version - Bookworm](https://wiki.seeedstudio.com/reterminal_black_screen/#flash-raspberry-pi-os-which-is-newest-version---bookworm)
-
-
-We have prepared an image with the latest Bookworm OS, the newest release from Raspberry Pi officials. If you encounter any issues, especially those discussed above, we highly recommend following these steps for a smoother experience.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/bookworm.jpeg" alt="pir" width={600} height="auto" /></p>
-
-
-### [reTerminal - Application of Computer Vision](https://wiki.seeedstudio.com/reTerminal_Intro/#computer-vision)
-
-
-We'll show the Computer Vision application for reTerminal here.
+We have updated the method about how to solve the incorrect screen orientation after installing Raspberry Pi Bookworm OS.
 
 
 
 
 ## The Efforts of Contributor✨
 
-### [Creating XIAO Components on Flux.ai](https://wiki.seeedstudio.com/PCB_Design_XIAO/)
+### SenseCAP S2110 Sensor Builder
 
+Thanks our contributor Mohammed Adnan Khan to add more Grove modules into the Builder. 
 
-Thanks our contributor Gokul to create XIAO Components on Flux.ai. 
+SenseCAP S2110 Sensor Builder a groundbreaking solution that enables the fusion of industrial-grade modules and maker-level modules. It is an open-source tool which has the ability to build RS485 functional modules with 500+ Grove modules.
 
-Flux is a browser-based PCB design tool that enables seamless collaboration between electronics teams. The tool's intuitive interface allows users to create schematics and layouts quickly and easily, while its built-in simulation capabilities help to ensure that designs are accurate and error-free.
+[SenseCAP S2110 Sensor Builder](https://wiki.seeedstudio.com/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger/)
 
-In this section we are going to cover Creating Seeed Studio XIAO series Components on Flux.ai.
+In this wiki, we are introducing how to add more Grove modules in to SenseCAP S2110 Sensor Builder and list all the supported ones.
 
-<iframe width={560} height={315} src="https://www.youtube.com/embed/5cGg5n6sXJE?si=nSYvVSl-q3axb4Ss" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+[Adding more Grove modules into the Builder](https://wiki.seeedstudio.com/list_of_supported_grove_n_adding_more/)
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP_S2110_builder/SenseCAP-S2110-Sensor-Builder-105.jpg"/></div>
 
 
 <!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
@@ -131,3 +92,4 @@ In this section we are going to cover Creating Seeed Studio XIAO series Componen
 - [weekly wiki on 10.30th](/Seeed_Elderly/weekly_wiki/wiki1030)
 - [weekly wiki on 11.06th](/Seeed_Elderly/weekly_wiki/wiki1106)
 - [weekly wiki on 11.13th](/Seeed_Elderly/weekly_wiki/wiki1113)
+- [weekly wiki on 11.20th](/Seeed_Elderly/weekly_wiki/wiki1120)
