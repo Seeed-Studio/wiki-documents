@@ -10,7 +10,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# **使用MicroPython查看XIAO SAMD21工作室** 
+# 学习使用 MicroPython 对 XIAO SAMD21 进行编程
 
 ## MicroPython简介
 

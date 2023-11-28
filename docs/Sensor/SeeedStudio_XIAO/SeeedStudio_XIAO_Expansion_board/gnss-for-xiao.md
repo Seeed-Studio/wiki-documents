@@ -13,6 +13,10 @@ last_update:
 
 # L76-L GNSS for XIAO
 
+:::danger
+This product is on hold.
+:::
+
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/XIAO_GPS/main/IMG/back.png" alt="pir" width={250} height="auto" /></p>
 
 Welcome to the L76-L GNSS for XIAO - the latest addition to the XIAO product series by Seeed Studio. This GNSS module not only offers precise positioning capabilities for your projects but its seamless integration with the XIAO main controller makes it a powerful tool. Whether you're designing a mobile application, a tracking device, or simply wish to add geolocation capabilities to your project, this module is your go-to choice.

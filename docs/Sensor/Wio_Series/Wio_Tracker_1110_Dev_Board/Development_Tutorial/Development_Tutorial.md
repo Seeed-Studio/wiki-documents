@@ -11,60 +11,49 @@ last_update:
   author: Jessie
 ---
 
+Before start the development, please check [Setup your toolchain](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker/) to set up the tool first.
 
-## Preparation
+## Hardware overview
 
-* Wio-Tracker 1110 Dev Board
-* Computer x 1
-* USB Type-C Cable x 1
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/hard-overview.png" alt="pir" width={800} height="auto" /></p>
 
-### Device connection
-
-Connect th Wio-Tracker 1110 Dev Board to your PC by a USB Type-C cable.
-
-### Setup your toolchian
-
-#### Install Arduino IDE
-
-The Arduino IDE (Integrated Development Environment) is an open-source software, mainly used for writing, compiling & uploading code to almost all Arduino Modules.
-It is available for all operating systems i.e. MAC, Windows, Linux and runs on the Java Platform that comes with inbuilt functions and commands that play a vital role in debugging, editing and compiling the code.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-wio.png" alt="pir" width={800} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.arduino.cc/en/software">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Arduino IDE Download </font></span></strong>
-    </a>
-</div>
-
-:::info
-If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
-:::
+## Grove
 
 
-### Firmware Overview
+There are 6 Grove interfaces in the DK, which can be connected to 300+ Grove modules, and supports ADC/UART and I2C transmission protocols.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/rm-overview.png" alt="pir" width={800} height="auto" /></p>
-
-
-#### Add Seeed Board
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/grove_pins.png" alt="pir" width={600} height="auto" /></p>
 
 
-Click `Board Manager`.
-Search `Seeed nRF52 Boards` and install it.
+### Grove I2C
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/install-boa.png" alt="pir" width={800} height="auto" /></p>
+There is a Grove I2C port on the DK, with `SDA` on pin 27 and `SCL` on pin 26. 
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_iic.png" alt="pir" width={300} height="auto" /></p>
 
-Then need to select the Board and Port.<br/>
-Search `Seeed Wio Tracker 1110` and select it, choose the port and click `OK`.
-
-:::info
-The port should be like 'Serial Port(USB)'
-:::
+To connect to a Grove IIC module, the sensor power must be enabled：`I2C_PWR` (pin 7). This pin controls the pull-up voltage on the IIC signal line:
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/port.png" alt="pir" width={800} height="auto" /></p>
+
+### Grove UART
 
 
-### Install Library
+The Wio Tracker 1110 Dev Board has two UART peripherals, namely `uart0` and `uart1`.  `uart0` pins are connected to the CH340C for debugging purposes, while `uart1` serves as a Grove UART Port.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_uart.png" alt="pir" width={300} height="auto" /></p>
+
+
+Referring to the schematic, TXD is located on pin 8 and RXD is on pin 6. 
+
+
+```cpp
+#define     LED1                      13
+#define     LED2                      14
+#define     TXD                       8
+#define     RXD                       6
+#define     UART_TX_RX_BUF_SIZE       256
+```
+
+
+
+### Grove Digital

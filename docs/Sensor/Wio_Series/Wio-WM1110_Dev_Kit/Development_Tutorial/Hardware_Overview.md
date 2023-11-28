@@ -35,9 +35,9 @@ The Wio-WM1110 Dev Kit is based on [Wio-WM1110 Module](https://www.seeedstudio.c
 
 ## LoRaWAN® Communication
 
-### Setup the Triad Info
+### Setup the keys
 
-Before a device can communicate via the NS, we need to register it with the triad information.
+Before a device can communicate via the NS, we need to register it with the 3 keys.
 
 Wio-WM1110 DK allows users to set the DevEUI, AppEUI, and AppKey, so you can set up our own parameters in the 'lorawan_key_config.h' file, then flash it onto the DK.
 

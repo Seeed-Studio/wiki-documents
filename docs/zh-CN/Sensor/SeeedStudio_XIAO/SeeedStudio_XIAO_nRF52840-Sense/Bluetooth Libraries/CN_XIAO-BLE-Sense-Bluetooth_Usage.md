@@ -1,6 +1,6 @@
 ---
 description: For Seeed nRF52 Boards Library
-title: For Seeed nRF52 Boards Library
+title: Seeed nRF52 Boards 蓝牙库
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# 蓝牙使用(参见nRF52电路板库)
+# 基于 Seeed nRF52 Boards Library 的蓝牙使用
 
 Seeed Studio XIAO nRF52840**和**Seeed Studio XIAO nRF52840 Sense**都支持蓝牙连接。本wiki将介绍“Seeed nRF52板卡库”所使用的基本蓝牙功能。
 

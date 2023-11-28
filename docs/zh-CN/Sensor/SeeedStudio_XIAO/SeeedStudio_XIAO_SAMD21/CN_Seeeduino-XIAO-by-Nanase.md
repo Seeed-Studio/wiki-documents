@@ -11,7 +11,7 @@ last_update:
 ---
 
 
-# Seeed Studio XIAO SAMD21由Nanase开始入门
+# 学习使用 Nanase 对 XIAO SAMD21 进行编程
 
 这是一个由  [@nanase_coder](https://twitter.com/nanase_coder) 撰写的文档。(由Seeed翻译自日语原文:[コインサイズ Arduino互換機 Seeed Studio XIAO SAMD21 を使ってみた](https://qiita.com/nanase/items/0fed598975c49b1d707e#spi-microsd%E3%82%AB%E3%83%BC%E3%83%89))。感谢Nanase与我们分享!
 

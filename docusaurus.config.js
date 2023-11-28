@@ -206,30 +206,52 @@ const config = {
           //   label: 'Getting Started',
           //   className: 'navbar_doc_items',
           // },
+          // {
+          //   type: 'doc',
+          //   docId: 'Sensor_Network',
+          //   position: 'left',
+          //   label: 'Sensing & Network',
+          //   className: 'navbar_doc_items',
+          // },
+          // {
+          //   type: 'doc',
+          //   docId: 'Edge_Computing',
+          //   position: 'left',
+          //   label: 'Edge Computing',
+          //   className: 'navbar_doc_items',
+          // },
+          // {
+          //   type: 'doc',
+          //   docId: 'CloudnChain',
+          //   position: 'left',
+          //   label: 'Cloud',
+          //   className: 'navbar_doc_items',
+          // },
           {
-            type: 'doc',
-            docId: 'Sensor_Network',
+            type: 'dropdown',
+            label: 'Getting Started',
+            to: '/Getting_Started',
             position: 'left',
-            label: 'Sensing & Network',
-            className: 'navbar_doc_items',
-          },
-          {
-            type: 'doc',
-            docId: 'Edge_Computing',
-            position: 'left',
-            label: 'Edge Computing',
-            className: 'navbar_doc_items',
-          },
-          {
-            type: 'doc',
-            docId: 'CloudnChain',
-            position: 'left',
-            label: 'Cloud',
-            className: 'navbar_doc_items',
+            className: 'navbar_dorp_items',
+            items: [
+              {
+                label: 'Sensing and Connectivity',
+                to: 'Sensor_Network',
+              },
+              {
+                label: 'Edge Computing',
+                to: 'Edge_Computing',
+              },
+              {
+                label: 'Cloud and Chain',
+                to: 'CloudnChain',
+              },
+            ],
           },
           {
             type: 'dropdown',
             label: 'Topics',
+            to: '/Getting_Started',
             position: 'left',
             className: 'navbar_dorp_items',
             items: [
@@ -240,6 +262,23 @@ const config = {
               {
                 label: 'Home Assistant',
                 to: '/home_assistant_topic',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: '文/A',
+            to: '/Getting_Started',
+            position: 'left',
+            className: 'navbar_dorp_items',
+            items: [
+              {
+                label: 'Seeed Studio Wiki Platform',
+                to: '/Getting_Started',
+              },
+              {
+                label: '矽递科技 Wiki 文档平台（测试）',
+                to: '/cn/Getting_Started',
               },
             ],
           },
