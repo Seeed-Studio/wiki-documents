@@ -10,7 +10,7 @@ last_update:
   author: 赵桂莹
 ---
 
-#  Seeed Studio XIAO SAMD21上的CircuitPython 
+# 学习使用 CircuitPython 对 XIAO SAMD21 进行编程
 
 <!-- ![](https://files.seeedstudio.com/wiki/Circuitpython-XIAO/XIAO-CP.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Circuitpython-XIAO/XIAO-CP.png" alt="pir" width={600} height="auto" /></p>

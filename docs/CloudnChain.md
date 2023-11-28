@@ -1,6 +1,6 @@
 ---
-description: Cloud & Chain
-title: Cloud & Chain
+description: Cloud and Chain
+title: Cloud and Chain
 keywords:
 - Cloud
 - Chain

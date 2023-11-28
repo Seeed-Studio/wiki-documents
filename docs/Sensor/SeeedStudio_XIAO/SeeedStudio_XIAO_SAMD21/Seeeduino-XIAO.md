@@ -293,7 +293,7 @@ void setup()
   analogWriteResolution(10); // Set analog out resolution to max, 10-bits
   analogReadResolution(12); // Set analog input resolution to max, 12-bits
 
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 }
 
 void loop() 
@@ -311,7 +311,7 @@ void loop()
   // Now read A1 (connected to A0), and convert that
   // 12-bit ADC value to a voltage between 0 and 3.3.
   float voltage = analogRead(A1) * 3.3 / 4096.0;
-  SerialUSB.println(voltage); // Print the voltage.
+  Serial.println(voltage); // Print the voltage.
   delay(1); // Delay 1ms
 }
 ```

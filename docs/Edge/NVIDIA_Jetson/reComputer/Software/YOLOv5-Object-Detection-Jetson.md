@@ -5,6 +5,7 @@ tags:
   - Data Label
   - AI model train
   - AI model deploy
+  - Roboflow
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /YOLOv5-Object-Detection-Jetson
 last_update:

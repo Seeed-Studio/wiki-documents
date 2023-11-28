@@ -1,6 +1,6 @@
 ---
 description: BTHome Protocol for Home Assistant usage on Seeed Studio XIAO nRF52840 Sense
-title: BTHome Protocol with XIAO nRF52840 Sense(CircuitPython) 
+title: Home Assistant 应用（BTHome）
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/XIAO_BLE_HA
 last_update:
@@ -8,7 +8,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# 项目概述
+# 使用 XIAO nRF52840 连接 BTHome 给 Home Assistant 发送数据
 
 在这个wiki中，我们将展示如何使用Seeed Studio XIAO nRF52840的蓝牙5.0 BLE功能与Seeed Studio Grove温湿度传感器(DHT20)，使用bhome协议向Home Assistant广播温度和湿度的测量值。 
 
@@ -334,10 +334,6 @@ Home Assistant通过将不同的设备和服务组合在一个地方并将它们
 
 我不能让它工作。如果有人有解决方案，请留下评论。你可以在[GitHub](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)分享你的想法。
 
-## ✨ 项目贡献者
-
-- 这个项目由Seeed Studio支持 [项目贡献者](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
-- 感谢 [赵桂莹的努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237) 你的作品将被 [展出](https://wiki.seeedstudio.com/Honorary-Contributors/).
 
 ## 技术支持和产品讨论
 

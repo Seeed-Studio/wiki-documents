@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/13/2023
+  date: 11/27/2023
   author: Seraphina
 ---
 
@@ -17,54 +17,45 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 13th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 27th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting start with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_opencv/)
+### [AWS IoT Core Intergate With reTerminal](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/)
 
-In this tutorial, we'll guide you through the process of setting up the reTerminal with a freshly installed Raspberry Pi OS Bullseye. Our goal is to interact with the PiCam and perform image processing and deep learning activities using the OpenCV library.
-
-
-
-### [Face Detection with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_Face_detection/)
-
-Face detection using the Haar Cascade method is a pivotal technique in computer vision, employing a machine learning model to recognize facial features. This method relies on a cascade of classifiers trained on Haar-like features, allowing for swift and accurate identification of faces in images and video streams. Its widespread application spans diverse fields, including facial recognition technology for security and authentication purposes, video surveillance systems, and even in photography software for automatic tagging and sorting based on detected faces. The Haar Cascade method is particularly valuable due to its computational efficiency, making it well-suited for real-time face detection in various contexts, contributing significantly to the advancement of facial analysis and identification technologies.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facedetection.gif" style={{width:800, height:'auto'}}/></div>
-
-
-### [Object Detection with reTerminal and Pi camera](https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/)
+AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. 
+In this guide, we will discuss how to connect our reTerminal DM to the AWS IoT cloud.
 
 
 
-Object detection on edge computers has become a pivotal field in computer vision, enabling devices to autonomously perceive and respond to their surroundings. **EfficientDet**, a state-of-the-art object detection model, takes center stage in this domain. Designed to be **resource-efficient, it strikes a balance between accuracy and computational demands, making it particularly well-suited for deployment on edge devices with limited processing power**.  Its ability to identify and locate multiple objects in real-time makes it a key enabler for enhancing the autonomy and intelligence of edge computing systems.
+## Existed Wiki Updated
 
+### [The screen orientation is incorrect after installing Raspberry Pi OS - Bookworm](https://wiki.seeedstudio.com/Incorrect_screen_orientation_on_RPiOS_Bullseye/#raspberry-pi-os-bookworm)
 
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/objectdetection2.gif" /></center>
-
-
-
-<!--## Existed Wiki Updated
-
-### [SenseCAP T1000 Tracker FAQ - Integration](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#integration)
-
-We have updated some common integration options in the wiki of SenseCAP T1000 Tracker [FAQ](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#integration).
-
- ![](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png)
-
-### [Added drivers for Jetson Xavier AGX H01](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation/#driver-required)
-
-
-We provide different versions of drivers for different versions of Jetpack system, for your convenience to install. -->
+We have updated the method about how to solve the incorrect screen orientation after installing Raspberry Pi Bookworm OS.
 
 
 
 
 ## The Efforts of Contributor✨
 
-- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
+### SenseCAP S2110 Sensor Builder
+
+Thanks our contributor Mohammed Adnan Khan to add more Grove modules into the Builder. 
+
+SenseCAP S2110 Sensor Builder a groundbreaking solution that enables the fusion of industrial-grade modules and maker-level modules. It is an open-source tool which has the ability to build RS485 functional modules with 500+ Grove modules.
+
+[SenseCAP S2110 Sensor Builder](https://wiki.seeedstudio.com/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger/)
+
+In this wiki, we are introducing how to add more Grove modules in to SenseCAP S2110 Sensor Builder and list all the supported ones.
+
+[Adding more Grove modules into the Builder](https://wiki.seeedstudio.com/list_of_supported_grove_n_adding_more/)
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP_S2110_builder/SenseCAP-S2110-Sensor-Builder-105.jpg"/></div>
+
+
+<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
 
 
 ## Past Weekly wiki
@@ -98,5 +89,7 @@ We provide different versions of drivers for different versions of Jetpack syste
 - [weekly wiki on 10.9th](/Seeed_Elderly/weekly_wiki/wiki1009)
 - [weekly wiki on 10.16th](/Seeed_Elderly/weekly_wiki/wiki1016)
 - [weekly wiki on 10.23th](/Seeed_Elderly/weekly_wiki/wiki1023)
-- [weekly wiki on 10.30th](/Seeed_Elderly/weekly_wiki/wiki1023)
-- [weekly wiki on 11.06th](/Seeed_Elderly/weekly_wiki/wiki1023)
+- [weekly wiki on 10.30th](/Seeed_Elderly/weekly_wiki/wiki1030)
+- [weekly wiki on 11.06th](/Seeed_Elderly/weekly_wiki/wiki1106)
+- [weekly wiki on 11.13th](/Seeed_Elderly/weekly_wiki/wiki1113)
+- [weekly wiki on 11.20th](/Seeed_Elderly/weekly_wiki/wiki1120)
