@@ -10,7 +10,7 @@ const SoftwarePage = () => {
     { id: 3, name: 'alwaysAI', link:'https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/',bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index3.png', scenes: [1,2,4,5] },
     { id: 4, name: 'YOLOv8',link:'/tags/yolov-8/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index4.png', scenes: [2, 4] },
     { id: 5, name: 'YOLOv5',link:'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index5.png', scenes: [2, 4] },
-    { id: 6, name: 'roboflow',link:'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index6.png', scenes: [1, 2, 4] },
+    { id: 6, name: 'roboflow',link:'/tags/Roboflow/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index6.png', scenes: [1, 2, 4] },
     { id: 7, name: 'Allxon',link:'https://wiki.seeedstudio.com/Update-Jetson-Linux-OTA-Using-Allxon/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index7.png', scenes: [5] },
     { id: 8, name: 'Deci',link:'https://wiki.seeedstudio.com/DeciAI-Getting-Started/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index8.png', scenes: [3,2,4] },
     { id: 9, name: 'Edge Impulse',link:'https://wiki.seeedstudio.com/HardHat/', bg:'https://files.seeedstudio.com/wiki/NVIDIA/parnter_logo/NVIDIA_Jetson_index9.png', scenes: [1, 2, 4] },
