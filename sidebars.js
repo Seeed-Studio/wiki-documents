@@ -2285,7 +2285,9 @@ const sidebars = {
               items: [
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Color_detection',
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
+                
               ],
             },
             {
@@ -2474,6 +2476,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/Traffic-Management-DeepStream-SDK',
                 'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
+                'Edge/NVIDIA_Jetson/reComputer/Application/reComputer-Is-All-You-Need',
               ],
             },
 

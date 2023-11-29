@@ -1035,7 +1035,7 @@ void loop() {
 
 - **[PDF]** [Quick Setup Template](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)
 - **[PDF]** [Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
-- **[PDF]** [User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)
+- **[PDF]** [User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V2.0.pdf)
 - **[EXE]** [upper computer software](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/Human-Radar-Open-Protocol_2.0.exe)
 - **[ZIP]** [CE certification documents](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/101991030_CE.zip)
 
