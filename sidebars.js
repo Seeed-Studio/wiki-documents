@@ -550,6 +550,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Voltage_Divider',
               ],
             },
 
