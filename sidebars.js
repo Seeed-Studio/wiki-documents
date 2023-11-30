@@ -1516,6 +1516,14 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
           ],
         },
+
+        {
+          type: 'category',
+          label: 'EcoEye_Vision_Camera',
+          items: [
+            'Sensor/Beyond_Grove/EcoEye_Embedded_Vison_Camera/Get_Started_with_EcoEye',
+          ],
+        },
         {
           type: 'category',
           label: 'Accessories',
