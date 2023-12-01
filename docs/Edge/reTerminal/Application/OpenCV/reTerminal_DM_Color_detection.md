@@ -95,79 +95,18 @@ HSV (Hue, Saturation, Value) is crucial in color detection tasks due to its abil
 In the first code, you have the flexibility to interactively adjust trackbars, allowing you to visually identify the optimal color thresholds. By experimenting with these trackbars, you can pinpoint the specific color you're interested in and take note of the corresponding HSV minimum and maximum values. This hands-on approach provides an intuitive way for individuals to fine-tune color parameters, ensuring a more personalized and precise color identification experience
 
  ```sh
-cd Opencv_and_piCam
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
 
  ```
 Then 
-
  ```sh
 python hsvtest.py
  ```
+Even you can use Thonny IDE to run the python script.
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/colortrack.PNG" /></center>
 
 Here is the code for HSV Tuning
-
- ```sh
-import cv2
-import numpy as np
-from picamera2 import Picamera2
-
-Your_color = "Green"
-
-def detect_single_color(imageFrame, color_name, lower_range, upper_range, color_display):
-    hsvFrame = cv2.cvtColor(imageFrame, cv2.COLOR_BGR2HSV)
-    color_mask = cv2.inRange(hsvFrame, lower_range, upper_range)
-
-    kernel = np.ones((5, 5), "uint8")
-    color_mask = cv2.dilate(color_mask, kernel)
-    result = cv2.bitwise_and(imageFrame, imageFrame, mask=color_mask)
-
-    contours, hierarchy = cv2.findContours(color_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-
-    for pic, contour in enumerate(contours):
-        area = cv2.contourArea(contour)
-        if area > 800:
-            x, y, w, h = cv2.boundingRect(contour)
-            imageFrame = cv2.rectangle(imageFrame, (x, y), (x + w, y + h), color_display, 2)
-            cv2.putText(imageFrame, f"{color_name} Colour", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, color_display)
-
-    return imageFrame
-
-# Initialize PiCamera
-picam2 = Picamera2()
-picam2.preview_configuration.main.size = (1280, 720)
-picam2.preview_configuration.main.format = "RGB888"
-picam2.preview_configuration.align()
-picam2.configure("preview")
-picam2.start()
-
-# Define your color range
-my_color_lower = np.array([49, 105, 0], np.uint8)
-my_color_upper = np.array([94, 255, 255], np.uint8)
-
-# Start a while loop
-while True:
-    im = picam2.capture_array()
-
-    # Example: Detecting your specified color
-    result_frame = detect_single_color(im, Your_color, my_color_lower, my_color_upper, (0, 255, 0))  # Change the color display accordingly
-
-    # Program Termination
-    cv2.imshow("Single Color Detection in Real-Time", result_frame)
-    if cv2.waitKey(10) & 0xFF == ord('q'):
-        picam2.stop()
-        cv2.destroyAllWindows()
-        break
-
- ```
-
-Once you've determined the HSV minimum and maximum values using the trackbars in the first code snippet, you can seamlessly **replace these numeric values** with the corresponding **color name** and its identified range in the second snippet.
-
- ```sh
-python colordetector.py
- ```
-Here is the full code for Color Detection 
 
   ```sh
 import cv2
@@ -246,6 +185,70 @@ while True:
 
     cv2.waitKey(1)
  ```
+
+ 
+
+Once you've determined the HSV minimum and maximum values using the trackbars in the first code snippet, you can seamlessly **replace these numeric values** with the corresponding **color name** and its identified range in the second snippet.
+
+ ```sh
+python colordetector.py
+ ```
+Here is the full code for Color Detection 
+
+```sh
+import cv2
+import numpy as np
+from picamera2 import Picamera2
+
+Your_color = "Green"
+
+def detect_single_color(imageFrame, color_name, lower_range, upper_range, color_display):
+    hsvFrame = cv2.cvtColor(imageFrame, cv2.COLOR_BGR2HSV)
+    color_mask = cv2.inRange(hsvFrame, lower_range, upper_range)
+
+    kernel = np.ones((5, 5), "uint8")
+    color_mask = cv2.dilate(color_mask, kernel)
+    result = cv2.bitwise_and(imageFrame, imageFrame, mask=color_mask)
+
+    contours, hierarchy = cv2.findContours(color_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    for pic, contour in enumerate(contours):
+        area = cv2.contourArea(contour)
+        if area > 800:
+            x, y, w, h = cv2.boundingRect(contour)
+            imageFrame = cv2.rectangle(imageFrame, (x, y), (x + w, y + h), color_display, 2)
+            cv2.putText(imageFrame, f"{color_name} Colour", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, color_display)
+
+    return imageFrame
+
+# Initialize PiCamera
+picam2 = Picamera2()
+picam2.preview_configuration.main.size = (1280, 720)
+picam2.preview_configuration.main.format = "RGB888"
+picam2.preview_configuration.align()
+picam2.configure("preview")
+picam2.start()
+
+# Define your color range
+my_color_lower = np.array([49, 105, 0], np.uint8)
+my_color_upper = np.array([94, 255, 255], np.uint8)
+
+# Start a while loop
+while True:
+    im = picam2.capture_array()
+
+    # Example: Detecting your specified color
+    result_frame = detect_single_color(im, Your_color, my_color_lower, my_color_upper, (0, 255, 0))  # Change the color display accordingly
+
+    # Program Termination
+    cv2.imshow("Single Color Detection in Real-Time", result_frame)
+    if cv2.waitKey(10) & 0xFF == ord('q'):
+        picam2.stop()
+        cv2.destroyAllWindows()
+        break
+
+ ```
+
 ## Application
 
 Color detection plays a pivotal role in diverse applications, from computer vision and manufacturing to **medical imaging** and art. In computer vision, it enables object recognition and tracking, contributing to tasks like **robotic navigation and surveillance**. Industries utilize color detection for **sorting and quality control, ensuring products meet standards**. Medical imaging relies on color-based segmentation for precise analysis, while entertainment industries employ it in film color grading and art restoration. From **traffic sign recognition to biometric identification and environmental monitoring**, the ability to detect and interpret colors is fundamental, shaping advancements in technology, automation, and various fields

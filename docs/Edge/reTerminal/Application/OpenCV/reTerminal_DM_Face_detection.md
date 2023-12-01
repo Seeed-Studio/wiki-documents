@@ -68,10 +68,10 @@ Please go though with this [**documentation**](https://docs.opencv.org/4.x/db/d2
 Make sure that you are in correct folder. If not 
 
  ```sh
-cd Opencv_and_piCam
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
 
  ```
-Then 
+Then or Even you can use Thonny IDE to run the python script.
 
  ```sh
 python facedetection_pi.py
@@ -122,6 +122,7 @@ finally:
     picam2.close()
 ```
 If you want to find more haas cascades xml files to play around, please go through with this [**link**](https://github.com/opencv/opencv/tree/master/data/haarcascades). 
+
 
 
 ## Tech support
