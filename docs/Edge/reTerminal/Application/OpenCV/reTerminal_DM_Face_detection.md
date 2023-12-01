@@ -68,7 +68,7 @@ Please go though with this [**documentation**](https://docs.opencv.org/4.x/db/d2
 Make sure that you are in correct folder. If not 
 
  ```sh
-cd Opencv_and_piCam
+cd Seeed_Python_ReTerminal/Opencv_and_piCam
 
  ```
 Then 

@@ -95,7 +95,7 @@ HSV (Hue, Saturation, Value) is crucial in color detection tasks due to its abil
 In the first code, you have the flexibility to interactively adjust trackbars, allowing you to visually identify the optimal color thresholds. By experimenting with these trackbars, you can pinpoint the specific color you're interested in and take note of the corresponding HSV minimum and maximum values. This hands-on approach provides an intuitive way for individuals to fine-tune color parameters, ensuring a more personalized and precise color identification experience
 
  ```sh
-cd Opencv_and_piCam
+cd Seeed_Python_ReTerminal/Opencv_and_piCam
 
  ```
 Then 
