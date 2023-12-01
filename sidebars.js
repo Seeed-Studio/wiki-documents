@@ -550,6 +550,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Voltage_Divider',
               ],
             },
 
@@ -1513,6 +1514,14 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensor_Network/SDLogger-Open_Hardware_Data_Logger',
             'Sensor/Beyond_Grove/Sensor_Network/WiFi_Serial_Transceiver_Module',
             'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'EcoEye_Vision_Camera',
+          items: [
+            'Sensor/Beyond_Grove/EcoEye_Embedded_Vison_Camera/Get_Started_with_EcoEye',
           ],
         },
         {
