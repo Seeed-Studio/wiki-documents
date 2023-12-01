@@ -66,7 +66,7 @@ git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
 - **Step 2** Next, utilize our script to effortlessly install the required Python packages and download the EfficientDet-Lite model. Navigate to this folder.
 
 ```sh
-cd Seeed_Python_ReTerminal/Opencv_and_piCam/ObjectDetection
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection
 ```
 
 - **Step 3** The script install the required dependencies and download the TFLite models For this tutorial series.
@@ -91,10 +91,10 @@ git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
 
 In new terminal window  navigate to  **Opencv_and_piCam**
  ```sh
-cd Seeed_Python_ReTerminal/Opencv_and_piCam
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
  ```
 
-In this tutorial, we'll kick off with a 'Hello World' program using the PiCam and OpenCV on our reTerminal. You can locate the **captureimage.py** file in our cloned repository. We'll be exploring a live video stream, and if you press 'q', the stream will gracefully stop.
+In this tutorial, we'll kick off with a 'Hello World' program using the PiCam and OpenCV on our reTerminal. You can locate the **captureimage.py** file in our cloned repository. We'll be exploring a live video stream, and if you press 'q', the stream will gracefully stop. Even you can use Thonny IDE to run the python script.
 
 ```sh
 python captureimages.py
@@ -124,7 +124,7 @@ cv2.destroyAllWindows()
 ```
 ## Capture a photo and Save it.
 
-Here, we'll capture a still image using the PiCam and OpenCV on our ReTerminal. Find the **saveimage.py** file in our cloned repository. We'll be streaming live video, and if you press 's', a photo will be captured.
+Here, we'll capture a still image using the PiCam and OpenCV on our ReTerminal. Find the **saveimage.py** file in our cloned repository. We'll be streaming live video, and if you press 's', a photo will be captured.Even you can use Thonny IDE to run the python script.
 
 ```sh
 python saveimage.py

@@ -72,7 +72,7 @@ TinyML revolutionizes machine learning by enabling lightweight models to run on 
 Make sure that you are in correct folder. If not 
 
  ```sh
-cd Seeed_Python_ReTerminal/Opencv_and_piCam/ObjectDetection
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection
  ```
 Make sure to install the dependencies and the EfficientDet model. If you've already completed this step in our [**first tutorial**](https://wiki.seeedstudio.com/Getting-start-opencv/), there's no need to worry.
 
