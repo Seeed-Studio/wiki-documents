@@ -185,7 +185,7 @@ last_update:
 - <strong><a><span><font color={'8DC215'} size={"4"}> 吴飞飞 </font></span></a></strong> 同学
 - <strong><a><span><font color={'8DC215'} size={"4"}> Chen Lei </font></span></a></strong> 同学
 - <strong><a><span><font color={'8DC215'} size={"4"}> Xin Ping Li </font></span></a></strong> 同学
-- <strong><a><span><font color={'8DC215'} size={"4"}> 王乔 </font></span></a></strong> 老师
+- <strong><a><span><font color={'8DC215'} size={"4"}> 王桥 </font></span></a></strong> 老师
 
 ## 技术支持和产品讨论
 
