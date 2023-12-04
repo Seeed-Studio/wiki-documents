@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/27/2023
+  date: 12/04/2023
   author: Seraphina
 ---
 
@@ -17,45 +17,56 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 27th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 4th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [AWS IoT Core Intergate With reTerminal](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/)
+### [reComputer is All You Need](https://wiki.seeedstudio.com/reComputer-is-All-You-Need/#introduction)
 
-AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. 
-In this guide, we will discuss how to connect our reTerminal DM to the AWS IoT cloud.
+In this document, we train and deploy a object detection model for traffic scenes on the 
+[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=f6de8f6c8d814c021e13f4455d041d03&objectID=5586&indexName=bazaar_retailer_products). 
+This document uses the 
+[YOLOv8](https://www.ultralytics.com/) 
+object detection algorithm as an example and provides a detailed overview of the entire process. Please note that all the operations described below take place on the Jetson edge computing device, ensuring that the Jetson device has an operating system installed that is 
+[JetPack 5.0](https://wiki.seeedstudio.com/NVIDIA_Jetson/) 
+or above.
 
+<div align="center">
+    <img width={600} 
+     src="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_J4012.png" />
+</div>
 
+### [Color Detection with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_Color_detection/)
 
-## Existed Wiki Updated
+Color detection, a core component of computer vision, involves identifying and analyzing colors in digital images or videos. Widely applied across industries, it enables tasks like object recognition in **robotics, quality control in manufacturing, and even plays a role in restoring artworks**. The algorithms behind color detection contribute to advancements in technology, influencing areas such as **autonomous vehicles, medical imaging, and visual aesthetics in film and photography**. In essence, color detection is a versatile tool that enhances our ability to interpret and interact with the visual world in numerous meaningful ways.
+
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/colordetect.gif" /></center>
+
+### [EcoEye Embedded Vision Camera Introduction](https://wiki.seeedstudio.com/Get_Started_with_EcoEye_Embedded_Vision_Camera/)
+
+EcoEye is a camera with on-board machine vision capabilities encased in a portable and waterproof housing designed for remote deployments.  Based on the openMV H7 Plus Cam, it is easy to set up and flexible to numerous applications. The internal power management and control system enables long-term operation and allows the integration of solar panel, countless sensors, and other external devices. The camera is thoroughly field tested, and results published in a scientific article.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Embedded_Vision_Camera/1-101991121-EcoEye-%E2%80%93-Embedded-Vision-Camera-first.jpg"/></div>
+
+### [LPWAN Dev Kit for Sidewalk](https://wiki.seeedstudio.com/wio_tracker_for_sidewalk/)
+
+The LPWAN Asset Tracker Dev kit is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html), gathers location data via passive WiFi scanning or GNSS, and communicates with the Amazon Sidewalk network bridges using the BLE and/or LoRa radios.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/sidewalk-kit.png" alt="pir" width={800} height="auto" /></p>
+
+<!-- ## Existed Wiki Updated
 
 ### [The screen orientation is incorrect after installing Raspberry Pi OS - Bookworm](https://wiki.seeedstudio.com/Incorrect_screen_orientation_on_RPiOS_Bullseye/#raspberry-pi-os-bookworm)
 
 We have updated the method about how to solve the incorrect screen orientation after installing Raspberry Pi Bookworm OS.
-
+ -->
 
 
 
 ## The Efforts of Contributor✨
 
-### SenseCAP S2110 Sensor Builder
-
-Thanks our contributor Mohammed Adnan Khan to add more Grove modules into the Builder. 
-
-SenseCAP S2110 Sensor Builder a groundbreaking solution that enables the fusion of industrial-grade modules and maker-level modules. It is an open-source tool which has the ability to build RS485 functional modules with 500+ Grove modules.
-
-[SenseCAP S2110 Sensor Builder](https://wiki.seeedstudio.com/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger/)
-
-In this wiki, we are introducing how to add more Grove modules in to SenseCAP S2110 Sensor Builder and list all the supported ones.
-
-[Adding more Grove modules into the Builder](https://wiki.seeedstudio.com/list_of_supported_grove_n_adding_more/)
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP_S2110_builder/SenseCAP-S2110-Sensor-Builder-105.jpg"/></div>
-
-
-<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
+- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
 
 
 ## Past Weekly wiki
@@ -93,3 +104,4 @@ In this wiki, we are introducing how to add more Grove modules in to SenseCAP S2
 - [weekly wiki on 11.06th](/Seeed_Elderly/weekly_wiki/wiki1106)
 - [weekly wiki on 11.13th](/Seeed_Elderly/weekly_wiki/wiki1113)
 - [weekly wiki on 11.20th](/Seeed_Elderly/weekly_wiki/wiki1120)
+- [weekly wiki on 11.27th](/Seeed_Elderly/weekly_wiki/wiki1127)
