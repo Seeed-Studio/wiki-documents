@@ -48,6 +48,12 @@ EcoEye is a camera with on-board machine vision capabilities encased in a portab
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Embedded_Vision_Camera/1-101991121-EcoEye-%E2%80%93-Embedded-Vision-Camera-first.jpg"/></div>
 
+### [LPWAN Dev Kit for Sidewalk](https://wiki.seeedstudio.com/wio_tracker_for_sidewalk/)
+
+The LPWAN Asset Tracker Dev kit is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html), gathers location data via passive WiFi scanning or GNSS, and communicates with the Amazon Sidewalk network bridges using the BLE and/or LoRa radios.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/sidewalk-kit.png" alt="pir" width={800} height="auto" /></p>
+
 <!-- ## Existed Wiki Updated
 
 ### [The screen orientation is incorrect after installing Raspberry Pi OS - Bookworm](https://wiki.seeedstudio.com/Incorrect_screen_orientation_on_RPiOS_Bullseye/#raspberry-pi-os-bookworm)
