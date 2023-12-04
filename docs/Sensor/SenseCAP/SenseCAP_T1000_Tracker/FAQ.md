@@ -69,7 +69,7 @@ So if the upload interval you set is less than 4 minutes, real-time data will be
 
 On the settings page, select a platform other than SenseCAP to obtain the keys.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/keys.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/get-keys.png" alt="pir" width={700} height="auto" /></p>
 
 
 ## Battery Related
