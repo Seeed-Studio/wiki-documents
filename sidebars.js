@@ -1668,6 +1668,7 @@ const sidebars = {
                 },
               ],
             },
+
             {
               type: 'category',
               label: 'Wio WM1110 Dev Kit',
@@ -1683,7 +1684,7 @@ const sidebars = {
                 },
               ],
             },
-
+            'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk',
             {
               type: 'category',
               label: 'Wio WM1302',
