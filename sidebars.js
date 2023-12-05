@@ -2189,6 +2189,19 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'H28K',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/H28K/H28K-install-system',
+      },
+      items: [
+        'Network/H28K/H28K-install-system',
+      ],
+    },
 
     {
       type: 'category',
