@@ -1,6 +1,6 @@
 ---
 description: Seeed Studio XIAO SAMD21 with TinyUSB
-title: Seeed Studio XIAO SAMD21 with TinyUSB
+title: 将 XIAO SAMD21 变成 USB 设备（TinyUSB）
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,7 @@ last_update:
   date: 10/11/2023
   author: 赵桂莹
 ---
-# Seeed Studio XIAO SAMD21 作为 USB 设备 (TinyUSB)
+# 将 XIAO SAMD21 变成 USB 设备（TinyUSB）
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-TinyUSB/XIAO-USB.png" /></div>
 

@@ -1,6 +1,6 @@
 ---
 description: For Seeed nRF52 mbed-enabled Boards Boards
-title: For Seeed nRF52 mbed-enabled Boards Boards
+title: Seeed nRF52 mbed-enabled 蓝牙库
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# 蓝牙使用(参见Seeed nrf52 mbed-enabled板库)
+# 基于 Seeed nRF52 mbed-enabled 的蓝牙使用
 
 **Seeed Studio XIAO nRF52840**和**Seeed Studio XIAO nRF52840 Sense**都支持蓝牙连接。本wiki将介绍基本的蓝牙功能，并提供一个24GHz呼吸睡眠检测模块的演示，由“Seeed nrf52 mbed-enabled Boards Library”使用。
 

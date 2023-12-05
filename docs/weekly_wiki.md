@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/20/2023
+  date: 12/04/2023
   author: Seraphina
 ---
 
@@ -17,84 +17,56 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 20th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 4th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Seeed Studio 24GHz mmWave for XIAO](https://wiki.seeedstudio.com/mmwave_for_xiao/)
+### [reComputer is All You Need](https://wiki.seeedstudio.com/reComputer-is-All-You-Need/#introduction)
 
-24GHz mmWave Sensor for XIAO - Human Static Presence is a expansion board for Seeed Studio XIAO series. It is an antenna-integrated, high-sensitivity mmwave radar sensor that is based on the FMCW principle. Combined with radar signal processing and accurate human body sensing algorithms, it can identify human bodies in motion and stationary states.
+In this document, we train and deploy a object detection model for traffic scenes on the 
+[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=f6de8f6c8d814c021e13f4455d041d03&objectID=5586&indexName=bazaar_retailer_products). 
+This document uses the 
+[YOLOv8](https://www.ultralytics.com/) 
+object detection algorithm as an example and provides a detailed overview of the entire process. Please note that all the operations described below take place on the Jetson edge computing device, ensuring that the Jetson device has an operating system installed that is 
+[JetPack 5.0](https://wiki.seeedstudio.com/NVIDIA_Jetson/) 
+or above.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/1.png" style={{width:300, height:'auto'}}/></div>
+<div align="center">
+    <img width={600} 
+     src="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_J4012.png" />
+</div>
 
-### [Development of 24GHz mmWave in XIAO and Arduino](https://wiki.seeedstudio.com/mmwave_for_xiao_arduino/)
+### [Color Detection with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_Color_detection/)
 
+Color detection, a core component of computer vision, involves identifying and analyzing colors in digital images or videos. Widely applied across industries, it enables tasks like object recognition in **robotics, quality control in manufacturing, and even plays a role in restoring artworks**. The algorithms behind color detection contribute to advancements in technology, influencing areas such as **autonomous vehicles, medical imaging, and visual aesthetics in film and photography**. In essence, color detection is a versatile tool that enhances our ability to interpret and interact with the visual world in numerous meaningful ways.
 
-This section describes how to use the library and secondary development of mmWave for XIAO.
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/colordetect.gif" /></center>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/5.png" style={{width:800, height:'auto'}}/></div>
+### [EcoEye Embedded Vision Camera Introduction](https://wiki.seeedstudio.com/Get_Started_with_EcoEye_Embedded_Vision_Camera/)
 
+EcoEye is a camera with on-board machine vision capabilities encased in a portable and waterproof housing designed for remote deployments.  Based on the openMV H7 Plus Cam, it is easy to set up and flexible to numerous applications. The internal power management and control system enables long-term operation and allows the integration of solar panel, countless sensors, and other external devices. The camera is thoroughly field tested, and results published in a scientific article.
 
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Embedded_Vision_Camera/1-101991121-EcoEye-%E2%80%93-Embedded-Vision-Camera-first.jpg"/></div>
 
+### [LPWAN Dev Kit for Sidewalk](https://wiki.seeedstudio.com/wio_tracker_for_sidewalk/)
 
+The LPWAN Asset Tracker Dev kit is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html), gathers location data via passive WiFi scanning or GNSS, and communicates with the Amazon Sidewalk network bridges using the BLE and/or LoRa radios.
 
-### [Object Detection with reTerminal and Pi camera](https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/sidewalk-kit.png" alt="pir" width={800} height="auto" /></p>
 
+<!-- ## Existed Wiki Updated
 
+### [The screen orientation is incorrect after installing Raspberry Pi OS - Bookworm](https://wiki.seeedstudio.com/Incorrect_screen_orientation_on_RPiOS_Bullseye/#raspberry-pi-os-bookworm)
 
-Object detection on edge computers has become a pivotal field in computer vision, enabling devices to autonomously perceive and respond to their surroundings. **EfficientDet**, a state-of-the-art object detection model, takes center stage in this domain. Designed to be **resource-efficient, it strikes a balance between accuracy and computational demands, making it particularly well-suited for deployment on edge devices with limited processing power**.  Its ability to identify and locate multiple objects in real-time makes it a key enabler for enhancing the autonomy and intelligence of edge computing systems.
-
-
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/objectdetection2.gif" /></center> -->
-
-
-
-## Existed Wiki Updated
-
-### [SenseCAP T1000 Tracker FAQ - Network Related, Battery Related and Cache Data](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#network-related)
-
-We have updated some FAQ in the wiki of SenseCAP T1000 Tracker:
-
-[Network Related](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#integration)
-
-[Battery Related](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#battery-related)
-
-[Cache Data](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#cache-data)
-
-
-
-### [Flash Raspberry Pi OS which is newest version - Bookworm](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation/#driver-required)
-
-
-We have prepared an image with the latest Bookworm OS, the newest release from Raspberry Pi officials. If you encounter any issues, especially those discussed above, we highly recommend following these steps for a smoother experience.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/bookworm.jpeg" alt="pir" width={600} height="auto" /></p>
-
-
-### [reTerminal - Application of Computer Vision](https://wiki.seeedstudio.com/reTerminal_Intro/#computer-vision)
-
-
-We'll show the Computer Vision application for reTerminal here.
-
+We have updated the method about how to solve the incorrect screen orientation after installing Raspberry Pi Bookworm OS.
+ -->
 
 
 
 ## The Efforts of Contributor✨
 
-### [Creating XIAO Components on Flux.ai](https://wiki.seeedstudio.com/PCB_Design_XIAO/)
-
-
-Thanks our contributor Gokul to create XIAO Components on Flux.ai. 
-
-Flux is a browser-based PCB design tool that enables seamless collaboration between electronics teams. The tool's intuitive interface allows users to create schematics and layouts quickly and easily, while its built-in simulation capabilities help to ensure that designs are accurate and error-free.
-
-In this section we are going to cover Creating Seeed Studio XIAO series Components on Flux.ai.
-
-<iframe width={560} height={315} src="https://www.youtube.com/embed/5cGg5n6sXJE?si=nSYvVSl-q3axb4Ss" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
-
-
-<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
+- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
 
 
 ## Past Weekly wiki
@@ -131,3 +103,5 @@ In this section we are going to cover Creating Seeed Studio XIAO series Componen
 - [weekly wiki on 10.30th](/Seeed_Elderly/weekly_wiki/wiki1030)
 - [weekly wiki on 11.06th](/Seeed_Elderly/weekly_wiki/wiki1106)
 - [weekly wiki on 11.13th](/Seeed_Elderly/weekly_wiki/wiki1113)
+- [weekly wiki on 11.20th](/Seeed_Elderly/weekly_wiki/wiki1120)
+- [weekly wiki on 11.27th](/Seeed_Elderly/weekly_wiki/wiki1127)

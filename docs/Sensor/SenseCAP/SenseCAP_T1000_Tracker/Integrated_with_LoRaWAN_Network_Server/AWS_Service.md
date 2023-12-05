@@ -780,14 +780,12 @@ const AWS = require('aws-sdk');
 ```
 </details>
 
-In the third line of the script, you need to replace the address in single quotes with the `Endpoint` address you recorded in the previous step.
-
-```cpp
-endpoint: 'your Endpoint'
-```
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/settings2.png" alt="pir" width={800} height="auto" /></p>
+Replace the `region` and `device id` according to your device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod-per.png" alt="pir" width={800} height="auto" /></p>
+
 
 ### Configure the Permission
 

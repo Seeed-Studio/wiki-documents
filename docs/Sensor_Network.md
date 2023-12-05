@@ -1,6 +1,6 @@
 ---
-description: Sensing and Network
-title: Sensing and Network
+description: Sensing and Network Connectivity
+title: Sensing and Network Connectivity
 keywords:
 - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

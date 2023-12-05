@@ -1,6 +1,6 @@
 ---
 description: Introducing how to deploy Amazon Sidewalk's services on the XIAO nRF52840.
-title: Seeed Studio XIAO nRF52840 on Amazon Sidewalk
+title: Amazon Sidewalk 应用
 keywords:
 - sidewalk
 - XIAO BLE
@@ -11,7 +11,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# Amazon Sidewalk 上的 Seeed Studio XIAO nRF52840
+# 将 Amazon Sidewalk 部署在 XIAO nRF52840
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/19.jpg" style={{width:1000, height:'auto'}}/></div>
 

@@ -1,6 +1,6 @@
 ---
 description: Speech Recognition based on Edge Impulse
-title: Speech Recognition based on Edge Impulse
+title: 基于 Edge Impulse 的语音识别
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/XIAO-BLE-PDM-EI
 last_update:
@@ -8,8 +8,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# 使用 XIAO nRF52840 基于边缘脉冲的语音识别
-
+# 基于 Edge Impulse 的语音识别
 
 ## 项目前的知识
 

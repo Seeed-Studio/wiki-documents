@@ -52,26 +52,21 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)
 
-:::note
-
-If you are trying to use Bookworm OS, which is the latest OS as of the time of writing this wiki, you may need to use a virtual environment. Please follow this [**link**](https://www.raspberrypi.com/documentation/computers/os.html#python-on-raspberry-pi) for more updates.
-
-:::
 
 ## Install OpenCV
 
- Feel free to skip the detailed installation process; we've got a shortcut for you. Follow these simplified steps:
+ Feel free to skip the detailed installation process; we've got a shortcut for you. Follow these simplified steps if You are using **Bullseye OS**:
 
  - **Step 1** First, clone this Git repo onto your Raspberry Pi like this
 
- ```sh
-git clone https://github.com/KasunThushara/Opencv_and_piCam
+```sh
+git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
  ```
 
 - **Step 2** Next, utilize our script to effortlessly install the required Python packages and download the EfficientDet-Lite model. Navigate to this folder.
 
 ```sh
-cd Opencv_and_piCam/ObjectDetection
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection
 ```
 
 - **Step 3** The script install the required dependencies and download the TFLite models For this tutorial series.
@@ -79,18 +74,30 @@ cd Opencv_and_piCam/ObjectDetection
 ```sh
 sh setup.sh
 ```
+Follow these step if You are using **Bookworm OS**:
 
+- **Step 1** In your Terminal execute following command to install 
+
+```sh
+sudo apt-get install libopencv-dev python3-opencv
+```
+
+ - **Step 2** Next, clone this Git repo onto your Raspberry Pi like this
+
+```sh
+git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
+ ```
 ## Take a video stream 
 
 In new terminal window  navigate to  **Opencv_and_piCam**
  ```sh
-cd Opencv_and_piCam
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
  ```
 
-In this tutorial, we'll kick off with a 'Hello World' program using the PiCam and OpenCV on our reTerminal. You can locate the **captureimage.py** file in our cloned repository. We'll be exploring a live video stream, and if you press 'q', the stream will gracefully stop.
+In this tutorial, we'll kick off with a 'Hello World' program using the PiCam and OpenCV on our reTerminal. You can locate the **captureimage.py** file in our cloned repository. We'll be exploring a live video stream, and if you press 'q', the stream will gracefully stop. Even you can use Thonny IDE to run the python script.
 
 ```sh
-python captureimage.py
+python captureimages.py
 ```
 You will find a video stream like below.
 
@@ -117,7 +124,7 @@ cv2.destroyAllWindows()
 ```
 ## Capture a photo and Save it.
 
-Here, we'll capture a still image using the PiCam and OpenCV on our ReTerminal. Find the **saveimage.py** file in our cloned repository. We'll be streaming live video, and if you press 's', a photo will be captured.
+Here, we'll capture a still image using the PiCam and OpenCV on our ReTerminal. Find the **saveimage.py** file in our cloned repository. We'll be streaming live video, and if you press 's', a photo will be captured.Even you can use Thonny IDE to run the python script.
 
 ```sh
 python saveimage.py

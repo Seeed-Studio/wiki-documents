@@ -1,6 +1,6 @@
 ---
 description: XIAO SAMD21 With Zephyr(RTOS)
-title:  XIAO SAMD21 With Zephyr(RTOS)
+title: Zephyr(RTOS) 编程
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   author: 赵桂莹
 ---
 
-# XIAO SAMD21 With Zephyr(RTOS)
+# Zephyr(RTOS) 编程 XIAO SAMD21
 
 <div align="center"><img width ="{100}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-samd21.png"/></div>
 
@@ -74,7 +74,7 @@ Mesh组网支持:
 
 ## 开始
 
-- [XIAO SAMD21 Zephyr(RTOS) 开始进行](https://docs.zephyrproject.org/latest/boards/arm/seeeduino_xiao/doc/index.html)
+- [XIAO SAMD21 Zephyr(RTOS) 快速上手](https://docs.zephyrproject.org/latest/boards/arm/seeeduino_xiao/doc/index.html)
 
 ## 技术支持和产品讨论
 
