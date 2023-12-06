@@ -55,7 +55,7 @@ We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from 
 
 :::note
 
-We highly recommend checking out our previous tutorial on [**Getting started with OpenCV**](https://wiki.seeedstudio.com/reTerminal_DM_opencv/), as this tutorial serves as a continuation in our series.
+We highly recommend checking out our previous tutorial on [**Getting started with OpenCV**](https://wiki.seeedstudio.com/reTerminal_DM_opencv/), as this tutorial serves as a continuation in our series. This guide is only for **Bulleseye OS**
 
 :::
 
@@ -72,7 +72,7 @@ TinyML revolutionizes machine learning by enabling lightweight models to run on 
 Make sure that you are in correct folder. If not 
 
  ```sh
-cd Opencv_and_piCam/ObjectDetection
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection
  ```
 Make sure to install the dependencies and the EfficientDet model. If you've already completed this step in our [**first tutorial**](https://wiki.seeedstudio.com/Getting-start-opencv/), there's no need to worry.
 

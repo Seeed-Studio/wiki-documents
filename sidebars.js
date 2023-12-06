@@ -139,7 +139,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
-                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Offline-Voice-Recognition',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
               ],
             },
@@ -551,6 +550,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Voltage_Divider',
               ],
             },
 
@@ -1518,6 +1518,14 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
           ],
         },
+
+        {
+          type: 'category',
+          label: 'EcoEye_Vision_Camera',
+          items: [
+            'Sensor/Beyond_Grove/EcoEye_Embedded_Vison_Camera/Get_Started_with_EcoEye',
+          ],
+        },
         {
           type: 'category',
           label: 'Accessories',
@@ -1662,6 +1670,7 @@ const sidebars = {
                 },
               ],
             },
+
             {
               type: 'category',
               label: 'Wio WM1110 Dev Kit',
@@ -1677,7 +1686,7 @@ const sidebars = {
                 },
               ],
             },
-
+            'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk',
             {
               type: 'category',
               label: 'Wio WM1302',
@@ -2192,6 +2201,19 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'H28K',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/H28K/H28K-install-system',
+      },
+      items: [
+        'Network/H28K/H28K-install-system',
+      ],
+    },
 
     {
       type: 'category',
@@ -2288,7 +2310,9 @@ const sidebars = {
               items: [
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Color_detection',
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
+                
               ],
             },
             {
