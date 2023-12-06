@@ -1014,6 +1014,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
+                // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-MMWave-Grove',
               ],
             },
           ],
@@ -1075,6 +1076,7 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao_arduino',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
