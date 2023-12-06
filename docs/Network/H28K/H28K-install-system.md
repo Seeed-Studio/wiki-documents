@@ -237,6 +237,12 @@ Congratulations, you have now successfully installed OpenWRT into eMMC.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/16.png" /></div>
 
+## Resources
+
+H28K is open source hardware.The schematic diagram of H28K is provide in the following link:
+
+- [H28K-SCH](https://files.seeedstudio.com/wiki/H28K/Open_source/H28K-SCH.pdf)
+- [Download](https://files.seeedstudio.com/wiki/H28K/Open_source/H28K-SCH.zip)
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
