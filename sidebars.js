@@ -2206,9 +2206,10 @@ const sidebars = {
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Network/H28K/H28K-install-system',
+        id: 'Network/H28K/H28K_Datasheet',
       },
       items: [
+        'Network/H28K/H28K_Datasheet',
         'Network/H28K/H28K-install-system',
       ],
     },
