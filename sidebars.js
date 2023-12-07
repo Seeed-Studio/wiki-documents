@@ -2501,7 +2501,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/Traffic-Management-DeepStream-SDK',
                 'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
-                'Edge/NVIDIA_Jetson/reComputer/Application/reComputer-Is-All-You-Need',
+                'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
               ],
             },
 
