@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal_DM_Object_detection
 last_update:
-  date: 11/7/2023
+  date: 12/7/2023
   author: Kasun Thushara
 ---
 
@@ -55,7 +55,7 @@ We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from 
 
 :::note
 
-We highly recommend checking out our previous tutorial on [**Getting started with OpenCV**](https://wiki.seeedstudio.com/reTerminal_DM_opencv/), as this tutorial serves as a continuation in our series. This guide is only for **Bulleseye OS**
+We highly recommend checking out our previous tutorial on [**Getting started with OpenCV**](https://wiki.seeedstudio.com/reTerminal_DM_opencv/), as this tutorial serves as a continuation in our series. This guide is specifically for **Bulleseye OS** and **Bookworm OS**. Please take note of the installation dependencies, as there are two distinct methods outlined here.
 
 :::
 
@@ -67,7 +67,7 @@ TinyML revolutionizes machine learning by enabling lightweight models to run on 
 
 [**EfficientDet**](https://arxiv.org/abs/1911.09070) is a highly efficient and accurate object detection model that stands out for its performance on edge devices. Developed by Google, EfficientDet optimizes the balance between model accuracy and computational efficiency, making it well-suited for deployment on resource-constrained environments such as edge devices and mobile platforms. It leverages a compound scaling method to efficiently scale up model parameters and achieve better accuracy without compromising speed. EfficientDet's architecture includes a feature network for capturing image features effectively and a compound scaling method for balancing model accuracy and computational efficiency. Its success lies in achieving impressive performance on various object detection benchmarks while maintaining a lightweight structure, making it a go-to choice for applications requiring real-time object detection on edge devices.
 
-## Let's run the code.
+## Let's run the code in Bullseye OS.
 
 Make sure that you are in correct folder. If not 
 
@@ -82,6 +82,44 @@ sh setup.sh
 Run the code 
  ```sh
 python3 detect_mod.py
+ ```
+## Let's run the code in BookWorm OS.
+- **Step 1** For that you need to create a Virtual environmnet. 
+
+:::note
+
+In earlier OS versions, Python libraries could be directly installed system-wide using pip, the Python package installer. However, in Bookworm and subsequent releases, a shift has occurred. To mitigate potential issues during installation, it is now necessary to install packages via pip into a Python virtual environment using venv. 
+
+:::
+
+Execute these commands one by one, and you will end up with a virtual environment.
+
+ ```sh
+mkdir my_project
+cd my_project
+python -m venv --system-site-packages env
+source env/bin/activate
+ ```
+ - **Step 2** Next, clone this Git repo onto your Raspberry Pi virtual environmnet like this
+
+```sh
+git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
+ ```
+
+- **Step 3** Next, utilize our script to effortlessly install the required Python packages and download the EfficientDet-Lite model. Navigate to this folder.
+
+```sh
+cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection_bookworm
+```
+- **Step 3** The script install the required dependencies and download the TFLite models For this tutorial series.
+
+```sh
+sh setup.sh
+```
+
+Run the code 
+ ```sh
+python3 detect_picam.py
  ```
 
 ## Tech support
