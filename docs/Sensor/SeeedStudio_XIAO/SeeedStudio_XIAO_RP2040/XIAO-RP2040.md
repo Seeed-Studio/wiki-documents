@@ -61,15 +61,16 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg" alt="pir" width={600} height="auto" /></p>
 
-:::note
+:::caution
+For general I/O pins:
+Working voltage of MCU is 3.3V . Voltage input connected to general I/O pins may cause chip damage if it' higher than 3.3V .
 
-    For general I/O pins:
-    Working voltage of MCU is 3.3V . Voltage input connected to general I/O pins may cause chip damage if it' higher than 3.3V .
+For power supply pins:
+The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
 
-    For power supply pins:
-    The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
+XIAO RP2040 currently only supports battery power supply and cannot connect to Type-C while a battery is connected, as it may pose a safety risk.
 
-    Please pay attention to use, do not lift the shield cover.
+Please pay attention to use, do not lift the shield cover.
 :::    
     
 ### **Enter Bootloader Mode**
