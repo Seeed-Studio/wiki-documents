@@ -550,6 +550,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
+                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Voltage_Divider',
               ],
             },
 
@@ -1013,6 +1014,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
+                // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-MMWave-Grove',
               ],
             },
           ],
@@ -1074,6 +1076,7 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao_arduino',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
@@ -1515,6 +1518,14 @@ const sidebars = {
             'Sensor/Beyond_Grove/Sensor_Network/Wireless_Sensor_Node-Solar_Kit',
           ],
         },
+
+        {
+          type: 'category',
+          label: 'EcoEye_Vision_Camera',
+          items: [
+            'Sensor/Beyond_Grove/EcoEye_Embedded_Vison_Camera/Get_Started_with_EcoEye',
+          ],
+        },
         {
           type: 'category',
           label: 'Accessories',
@@ -1659,6 +1670,7 @@ const sidebars = {
                 },
               ],
             },
+
             {
               type: 'category',
               label: 'Wio WM1110 Dev Kit',
@@ -1674,7 +1686,7 @@ const sidebars = {
                 },
               ],
             },
-
+            'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk',
             {
               type: 'category',
               label: 'Wio WM1302',
@@ -2189,6 +2201,19 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'H28K',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/H28K/H28K-install-system',
+      },
+      items: [
+        'Network/H28K/H28K-install-system',
+      ],
+    },
 
     {
       type: 'category',
@@ -2476,7 +2501,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/Traffic-Management-DeepStream-SDK',
                 'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
-                'Edge/NVIDIA_Jetson/reComputer/Application/reComputer-Is-All-You-Need',
+                'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
               ],
             },
 
