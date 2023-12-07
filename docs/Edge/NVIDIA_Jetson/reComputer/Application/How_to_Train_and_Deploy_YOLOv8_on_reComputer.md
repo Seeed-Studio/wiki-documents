@@ -1,17 +1,18 @@
 ---
 description: Complete YOLOv8 Model Training on reComputer
-title: reComputer is All You Need
+title: How to train and deploy YOLOv8 on reComputer
 keywords:
 - reComputer
 - Train YOLOv8
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer-is-All-You-Need
+slug: /How_to_Train_and_Deploy_YOLOv8_on_reComputer
 last_update:
-  date: 11/27/2023
+  date: 12/6/2023
   author: Youjiang
 ---
 
-# reComputer is All You Need
+
+# How to Train and Deploy YOLOv8 on reComputer
 
 ## Introduction
 In the face of increasingly complex and dynamic challenges, the application of artificial intelligence provides new avenues for solving problems and has made significant contributions to the sustainable development of global society and the improvement of people's quality of life. Typically, before deploying artificial intelligence algorithms, the design and training of AI models take place on high-performance computing servers. Once the model training is complete, it is exported to edge computing devices for edge inference. In fact, all these processes can occur directly on edge computing devices. Specifically, tasks such as preparing datasets, training neural networks, validating neural networks, and deploying models can be performed on edge devices. This not only ensures data security but also saves costs associated with purchasing additional devices.
