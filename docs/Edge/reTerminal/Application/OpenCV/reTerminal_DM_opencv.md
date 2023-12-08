@@ -15,7 +15,7 @@ last_update:
 
 ## Introduction
 
-In this tutorial, we'll guide you through the process of setting up the reTerminal with a **freshly installed Raspberry Pi OS Bullseye**. Our goal is to interact with the **PiCam** and perform image processing and deep learning activities using the **OpenCV** library.
+In this tutorial, we'll guide you through the process of setting up the reTerminal with a **freshly installed Raspberry Pi OS Bullseye or BookWorm OS**. Our goal is to interact with the **PiCam** and perform image processing and deep learning activities using the **OpenCV** library.
 
 ## OpenCV
 
@@ -50,7 +50,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)
+We recommend installing the **Bullesye** version or **Bookworm** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)
 
 
 ## Install OpenCV
@@ -94,7 +94,7 @@ In new terminal window  navigate to  **Opencv_and_piCam**
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
  ```
 
-In this tutorial, we'll kick off with a 'Hello World' program using the PiCam and OpenCV on our reTerminal. You can locate the **captureimage.py** file in our cloned repository. We'll be exploring a live video stream, and if you press 'q', the stream will gracefully stop. Even you can use Thonny IDE to run the python script.
+In this tutorial, we'll kick off with a 'Hello World' program using the PiCam and OpenCV on our reTerminal. You can locate the **captureimages.py** file in our cloned repository. We'll be exploring a live video stream, and if you press 'q', the stream will gracefully stop. Even you can use Thonny IDE to run the python script.
 
 ```sh
 python captureimages.py

@@ -134,6 +134,29 @@ Since the device can only cache about 1,000 offline data, if you are in a place 
 
 
 
+## How to batch configure
+
+Please check the [Quick Start](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#connect-to-sensecap-mate-app) to setup the first device, and then click the `Template` module in the upper right corner.
+
+
+Click `Save as Template`, name your template and then click `Confirm`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/template-save.png" alt="pir" width={600} height="auto" /></p>
+
+When you configure other devices later, you can directly select the template you saved.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/choose-template.png" alt="pir" width={600} height="auto" /></p>
+
+
+If you want to share your template to others, you can choose `Copy Link to Share` or `Download Template`.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/share-temp.png" alt="pir" width={600} height="auto" /></p>
+
+
+Other users can choose to use your template by copying the shared URL or importing the template file.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/import-temp.png" alt="pir" width={600} height="auto" /></p>
 
 
 ## Integration

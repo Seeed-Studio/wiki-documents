@@ -4,7 +4,7 @@ title: Install Operating System
 keywords:
 - Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Hh28K-install-system
+slug: /H28K-install-system
 last_update:
   date: 11/24/2023
   author: Parker
@@ -109,19 +109,19 @@ Some computers may prompt whether the USB device is not recognised after flashin
 
 Remove the TF card from the card reader and insert it into the TF card slot of the H28K.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/23.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/23.png" /></div>
 
 Then power up the H28K, you can choose to power it via **USB-C-5V**.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/24.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/24.png" /></div>
 
 **Step 4.** Manage the OpenWRT backend
 
 Use a network cable to connect to the ETH1 network port of the H28K. Then enter the address: `192.168.1.1` into your browser to access the admin backend.
 
-CAUTION
-
+:::caution
 ETH0 is the WAN port and the ETH1 port is LAN ports. If you want to manage H28K's OpenWRT via a network cable, then connect the network cable to ETH1.
+:::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/25.png" /></div>
 
@@ -171,7 +171,7 @@ Press the **Update keyhole** button（Red box number one） continuously with th
 
 Then keep your hands on the H28K and connect it (Red box number two) to your computer using a USB-C type cable. Afterwards you can release the **Update keyhole** button.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/5.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/5.png" /></div>
 
 At this point watch the software and it will show "Found One MASKROM Device".
 
