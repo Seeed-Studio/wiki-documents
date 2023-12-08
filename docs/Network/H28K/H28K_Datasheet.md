@@ -11,7 +11,7 @@ last_update:
 ---
 
 <!-- ---
-name: H28K Router with 8GB eMMC, OpenWRT support
+name: H28K Router with 8GB eMMC, QWRT support
 category: 
 bzurl: 
 prodimagename:
@@ -36,7 +36,7 @@ The H28K router is equipped with a quad-core Cortex-A53 RK3528 chip with two gig
 
 This is the hardware overview of H28K, we here will present you the details about each component.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/26.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/27.png" /></div>
 
 ## Specification
 
@@ -45,8 +45,8 @@ This is the hardware overview of H28K, we here will present you the details abou
 | Processor      | Quad-core Cortex-A53 RK3528 1GHz                            |
 | Memory         | 2GB/4GB LPDDR4X                                             |
 | Storage        | Onboard 8GB eMMC                                            |
-|                | 1× TF card slot for storage expansion(Maximum Support 512G) |
-| Network        | 2× PCIE/RGMII Gigabit Port                                  |
+|                | 1× TF card slot for storage expansion(Maximum Support 128G) |
+| Network        | 1x PCIe + 1x RGMII Gigabit Ethernet Port                    |
 | USB            | 1x USB Type-C, for Power Supply1x USB 2.0 Type-A            |
 | Power Supply   | 5V-12V Type-C (PD)                                          |
 | Dimensions     | 55.2\*65.15\*22.6mm                                         |
