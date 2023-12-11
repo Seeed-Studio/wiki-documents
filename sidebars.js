@@ -857,13 +857,22 @@ const sidebars = {
         id: 'Sensor/mmWave_radar_sensor/mmwave_radar_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'mmWave for XIAO',
+          items: [
+            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao',
+            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao_arduino',
+            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
+          ],
+        },
         'Sensor/mmWave_radar_sensor/mmwave_human_kit',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
         'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
         'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
       ],
     },
 
@@ -1014,6 +1023,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
+                // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-MMWave-Grove',
               ],
             },
           ],
@@ -1070,14 +1080,6 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
               ],
             },
-            {
-              type: 'category',
-              label: 'mmWave for XIAO',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao_arduino',
-              ],
-            },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
@@ -1109,8 +1111,6 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
-,
-
         {
           type: 'category',
           label: 'ArduPy with Wio Terminal',
@@ -2200,6 +2200,20 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'H28K',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/H28K/H28K_Datasheet',
+      },
+      items: [
+        'Network/H28K/H28K_Datasheet',
+        'Network/H28K/H28K-install-system',
+      ],
+    },
 
     {
       type: 'category',
@@ -2487,7 +2501,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/Traffic-Management-DeepStream-SDK',
                 'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
-                'Edge/NVIDIA_Jetson/reComputer/Application/reComputer-Is-All-You-Need',
+                'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
               ],
             },
 

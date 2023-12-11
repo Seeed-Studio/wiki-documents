@@ -201,62 +201,7 @@ Connect the device to the computer through the main board. The wiring diagram is
   </tbody></table>
 </div>
 
-### Step 3. Download the sensor library to your Home Assistant
-
-- **Scenario 1: ESPHome installation under Home Assistant OS (with Add-on Store)**
-
-In order to download some files from Home Assistant, we need to use the Terminal & SSH service.
-
-Please ensure that you have enabled Advanced Mode.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/81.png" /></div>
-
-
-Then you can search for the add-on **Terminal & SSH** in the Add-on Store, please install it.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/82.png" /></div>
-
-
-Once the installation is complete, you will be able to see the Terminal tool in the left-hand toolbar, which you can access by clicking on it in the bash window.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/83.png" /></div>
-
-
-Enter the following command in the terminal.
-
-```
-cd /config/esphome/
-curl -o R24dvd_new.h https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/R24dvd_new.h
-```
-
-In this way, you have installed the dependencies needed for the sensors under the specified path in Home Assistant.
-
-- **Scenario 2: ESPHome installed under Home Assistant under OpenWRT Docker/Docker (without Add-on Store)**
-
-
-Click on the ESPHome Container.
-
-<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/48.png" /></div>
-
-
-
-We go to the terminal in ESPHome.
-
-<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/49.png" /></div>
-
-
-
-Enter the following command in the terminal.
-
-```
-curl -o R24dvd_new.h https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/R24dvd_new.h
-```
-
-Wait a few moments and the sensor library will be downloaded to the ESPHome Container root directory.
-
-<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/50.png" /></div>
-
-### Step 4. Keep the XIAO ESP32C3 and Home Assistant on the same LAN
+### Step 3. Keep the XIAO ESP32C3 and Home Assistant on the same LAN
 
 I am sure that your Home Assistant has already done the work of getting into the network, for example by connecting to your device via a network cable. All you need to do then is simply to turn on a local network (e.g. WiFi) so that the XIAO ESP32C3 can also connect to this network.
 
@@ -314,13 +259,13 @@ In the device type, please select **ESP32-C3**.
 
 Then click **Next**.
 
-<span id="jump1">Click on the **Encryption key** and save it in a secure location, we will use this key in a later step.</span>
+<span id="jump1">Click on the <strong>Encryption key</strong> and save it in a secure location, we will use this key in a later step.</span>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/27.png" /></div>
 
 Then click **SKIP**.
 
-### Step 5. Change the XIAO ESP32C3 configuration yaml file
+### Step 4. Change the XIAO ESP32C3 configuration yaml file
 
 Then, we click on the device tab we just created, with the **EDIT** button in the bottom left corner.
 
@@ -334,23 +279,26 @@ Please note that we need to make changes to this yaml file. We have divided the 
 
 - In the **①** of the content, please do not change the device name except the one you have configured, please refer to the code below for the rest of the content.
 
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/main/xiaoesp32c3-mr24hpc1_part1_new.yaml">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div>
-
-<br />
-
-```
+```css
 # part 1:
+substitutions:
+  name: "xiao-esp32c3"
+  friendly_name: "XIAO ESP32C3"
+
 esphome:
-  name: <your device name>    //Please note that your device name is retained here
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: true
+  project:
+    name: "seeedstudio.mmwave_kit"
+    version: "2.0"
   platformio_options:
     board_build.flash_mode: dio
     board_build.mcu: esp32c3
-  includes:
-  - R24dvd_new.h
+
+external_components:
+  - source: github://limengdu/mmwave-kit-external-components@main
+    refresh: 0s
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -364,444 +312,113 @@ logger:
   level: DEBUG
 ```
 
-
-- In the **②** of the content, delete the words "captive_portal:" and replace with the following.
-
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/main/xiaoesp32c3-mr24hpc1_part2_new.yaml">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div>
-
-<br />
+- In the **②** of the content, copy the following code after `captive_portal:`.
 
 <details>
 
 <summary>Click here to preview the full code</summary>
 
-```
+```css
+# Sets up Bluetooth LE (Only on ESP32) to allow the user
+# to provision wifi credentials to the device.
+esp32_improv:
+  authorizer: none
+
+# Sets up the improv via serial client for Wi-Fi provisioning.
+# Handy if your device has a usb port for the user to add credentials when they first get it.
+# improv_serial: # Commented until improv works with usb-jtag on idf
+
 uart:
   id: uart_bus
-  baud_rate:  115200
-  rx_pin: 5
-  tx_pin: 4
+  baud_rate: 115200
+  rx_pin: 4
+  tx_pin: 5
+  parity: NONE
+  stop_bits: 1
 
-select:
-  - platform: template
-    name: "Standard Scene mode"
-    id: scene_mode
-    icon: mdi:hoop-house
-    optimistic: true
-    options:
-      - "Living room"
-      - "Area detection"
-      - "Washroom"
-      - "Bedroom"
-    initial_option: "Living room"
-    set_action:
-      - logger.log:
-            format: "set action option: %s"
-            args: ["x.c_str()"]
-      - uart.write: !lambda
-                  auto index = id(scene_mode).index_of(x);
-                  uint8_t value = (uint8_t)index.value() + 1;
-                  uint8_t crc = value + 0xB9;
-                  return {0x53,0x59,0x05,0x07,0x00,0x01,value,crc,0x54,0x43};
+seeed_mr24hpc1:
+  id: my_seeed_mr24hpc1
 
-  - platform: template
-    name: "Standard unmanned time"
-    id: unmanned_time
-    icon: mdi:timeline-clock
-    optimistic: true
-    options:
-      - "None"
-      - "10s"
-      - "30s"
-      - "1min"
-      - "2min" 
-      - "5min" 
-      - "10min"
-      - "30min"
-      - "1hour"
-    initial_option: "None"
-    set_action:
-      - logger.log:
-            format: "Chosen option: %s"
-            args: ["x.c_str()"]
-      - uart.write: !lambda
-                  auto index = id(unmanned_time).index_of(x);
-                  uint8_t value = (uint8_t)index.value();
-                  uint8_t crc = value + 0x37;
-                  return {0x53,0x59,0x80,0x0a,0x00,0x01,value,crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Presence of perception boundary"
-    id: custom_presence_of_perception_boundary
-    optimistic: true
-    options:
-      - "0.5m"
-      - "1.0m"
-      - "1.5m"
-      - "2.0m" 
-      - "2.5m" 
-      - "3.0m"
-      - "3.5m"
-      - "4.0m"
-      - "4.5m"
-      - "5.0m"
-    set_action:
-      - logger.log:
-            format: "Chosen option: %s"
-            args: ["x.c_str()"]
-      - uart.write: !lambda
-                  auto index = id(unmanned_time).index_of(x);
-                  uint8_t value = (uint8_t)index.value() + 1;
-                  uint8_t crc = value + 0xBF;
-                  return {0x53,0x59,0x08,0x0a,0x00,0x01,value,crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Motion trigger boundary"
-    id: custom_motion_trigger_boundary
-    optimistic: true
-    options:
-      - "0.5m"
-      - "1.0m"
-      - "1.5m"
-      - "2.0m" 
-      - "2.5m" 
-      - "3.0m"
-      - "3.5m"
-      - "4.0m"
-      - "4.5m"
-      - "5.0m"
-    set_action:
-      - logger.log:
-            format: "Chosen option: %s"
-            args: ["x.c_str()"]
-      - uart.write: !lambda
-                  auto index = id(unmanned_time).index_of(x);
-                  uint8_t value = (uint8_t)index.value() + 1;
-                  uint8_t crc = value + 0xC0;
-                  return {0x53,0x59,0x08,0x0b,0x00,0x01,value,crc,0x54,0x43};
- 
-number:
-  - platform: template
-    id: sensitivity
-    name: "Standard sensitivity"
-    icon: mdi:archive-check-outline
-    min_value: 0
-    max_value: 3
-    optimistic: false
-    step: 1
-    update_interval: 2s
-    set_action:
-      - uart.write: !lambda
-                    uint8_t crc = x + 0xBA;
-                    return {0x53,0x59,0x05,0x08,0x00,0x01,(uint8_t)x,crc,0x54,0x43};
- 
-  - platform: template
-    name: "Standard Maximum detectable range of moving target"
-    id: moving_target_detection_max_distance
-    icon: mdi:map-marker-path
-    unit_of_measurement: "cm"
-    min_value: 0
-    max_value: 65536
-    step: 500
-    set_action:
-      - uart.write: !lambda
-                    int h_num = (int)x >> 8;
-                    int l_num = (int)x & 0xff;
-                    int crc = 0xB6 + h_num + l_num;
-                    return {0x53,0x59,0x07,0x01,0x00,0x02,(uint8_t)(h_num),(uint8_t)(l_num),(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Standard Maximum detectable range of stationary target"
-    id: static_target_detection_max_distance
-    icon: mdi:map-marker-path
-    unit_of_measurement: cm
-    min_value: 0
-    max_value: 65536
-    step: 500
-    set_action:
-      - uart.write: !lambda
-                    int h_num = (int)x >> 8;
-                    int l_num = (int)x & 0xff;
-                    int crc = 0xB9 + h_num + l_num;
-                    return {0x53,0x59,0x07,0x04,0x00,0x02,(uint8_t)(h_num),(uint8_t)(l_num),(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Judgment threshold exists"
-    id: custom_judgment_threshold_exists
-    min_value: 0
-    max_value: 250
-    step: 1
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0xBD + (int)x;
-                    return {0x53,0x59,0x08,0x08,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Motion amplitude trigger threshold"
-    id: custom_motion_amplitude_trigger_threshold
-    min_value: 0
-    max_value: 250
-    step: 1
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0xBE + (int)x;
-                    return {0x53,0x59,0x08,0x09,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Mode Settings"
-    id: custom_mode_settings
-    icon: mdi:cog
-    min_value: 0
-    max_value: 250
-    step: 1
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0xBB + (int)x;
-                    return {0x53,0x59,0x05,0x09,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Mode Settings End"
-    id: custom_mode_setting_completed
-    icon: mdi:cog
-    min_value: 0
-    max_value: 250
-    step: 1
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0xBC + (int)x;
-                    return {0x53,0x59,0x05,0x0a,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Custom Mode Query"
-    icon: mdi:cog
-    id: custom_mode_query
-    min_value: 0
-    max_value: 250
-    step: 1
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0x3B + (int)x;
-                    return {0x53,0x59,0x05,0x89,0x00,0x01,(uint8_t)x,(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Motion trigger time"
-    id: custom_motion_trigger_time
-    icon: mdi:camera-timer
-    unit_of_measurement: "ms"
-    min_value: 0
-    max_value: 4294967295
-    step: 5000
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0xC4 + (int)x;
-                    int h24_num = ((int)x >> 24) & 0xff;
-                    int h16_num = ((int)x >> 16) & 0xff;
-                    int h8_num = ((int)x >> 8) & 0xff;
-                    int l8_num = (int)x & 0xff;
-                    return {0x53,0x59,0x08,0x0c,0x00,0x04,(uint8_t)h24_num,(uint8_t)h16_num,(uint8_t)h8_num,(uint8_t)l8_num,(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Movement to rest time"
-    id: custom_movement_to_rest_time
-    icon: mdi:camera-timer
-    unit_of_measurement: "ms"
-    min_value: 0
-    max_value: 4294967295
-    step: 5000
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0xC5 + (int)x;
-                    int h24_num = ((int)x >> 24) & 0xff;
-                    int h16_num = ((int)x >> 16) & 0xff;
-                    int h8_num = ((int)x >> 8) & 0xff;
-                    int l8_num = (int)x & 0xff;
-                    return {0x53,0x59,0x08,0x0d,0x00,0x04,(uint8_t)h24_num,(uint8_t)h16_num,(uint8_t)h8_num,(uint8_t)l8_num,(uint8_t)crc,0x54,0x43};
- 
-  - platform: template
-    name: "Custom Time of entering unmanned state"
-    id: custom_time_of_enter_unmanned
-    icon: mdi:camera-timer
-    unit_of_measurement: "ms"
-    min_value: 0
-    max_value: 4294967295
-    step: 5000
-    set_action:
-      - uart.write: !lambda
-                    int crc = 0xC6 + (int)x;
-                    int h24_num = ((int)x >> 24) & 0xff;
-                    int h16_num = ((int)x >> 16) & 0xff;
-                    int h8_num = ((int)x >> 8) & 0xff;
-                    int l8_num = (int)x & 0xff;
-                    return {0x53,0x59,0x08,0x0e,0x00,0x04,(uint8_t)h24_num,(uint8_t)h16_num,(uint8_t)h8_num,(uint8_t)l8_num,(uint8_t)crc,0x54,0x43};
- 
 text_sensor:
-- platform: custom
-  lambda: |-
-    auto my_custom_sensor = new MyCustomTextSensor();
-    App.register_component(my_custom_sensor);
-    return {my_custom_sensor->Heartbeat};
- 
-  text_sensors:
-    - name: "Standard Heartbeat"
-      icon: mdi:connection
- 
-- platform: template
-  name: "Standard Product model"
-  id: product_mode
-  icon: mdi:information-outline
-  on_raw_value:
-    then:
-      - logger.log: text_sensor on_raw_value
- 
-- platform: template
-  name: "Standard Product ID"
-  id: product_id
-  icon: mdi:information-outline
- 
-- platform: template
-  name: "Standard Hardware model"
-  id: hardware_model
-  icon: mdi:information-outline
- 
-- platform: template
-  name: "Standard Firmware version"
-  id: firmware_version
-  icon: mdi:information-outline
- 
-- platform: template
-  name: "Standard protocol type"
-  id: protocol_type
-  icon: mdi:information-outline
- 
-- platform: template
-  name: "Standard moving direction"
-  id: keep_away
-  icon: mdi:walk
- 
-- platform: template
-  name: "Standard Sports information"
-  id: motion_status
-  icon: mdi:human-greeting
- 
-- platform: template
-  name: "Standard Presence information"
-  id: someoneExists
-  icon: "mdi:motion-sensor"
- 
-- platform: template
-  name: "Custom Presence of detection"
-  id: custom_presence_of_detection
-  icon: mdi:signal-distance-variant
- 
-# - platform: template
-#   name: "Custom Motion distance"
-#   id: custom_motion_distance
- 
-# - platform: template
-#   name: "Custom Static distance"
-#   id: custom_static_distance
- 
-# - platform: template
-#   name: "Custom Spatial static value"
-#   id: custom_spatial_static_value
- 
-# - platform: template
-#   name: "Custom Spatial motion value"
-#   id: custom_spatial_motion_value
- 
-# - platform: template
-#   name: "Custom Motion speed"
-#   id: custom_motion_speed
- 
- 
-button:
-  - platform: template
-    name: "Standard reset"
-    id: "reset"
-    icon: mdi:reload
-    on_press:
-      then:
-        - logger.log: Button Pressed
-        - uart.write: [0x53,0x59,0x01,0x02,0x00,0x01,0x0F,0xBF,0x54,0x43]
- 
-switch:
-  - platform: template
-    id: output_info_switch
-    name: "Custom Infor output switch"
-    icon: mdi:electric-switch
-    assumed_state: true
-    turn_on_action:
-      - uart.write: [0x53,0x59,0x08,0x00,0x00,0x01,0x01,0xB6,0x54,0x43]
-      - delay: 1s
-      - lambda: !lambda |-
-          id(product_mode).publish_state("");
-          id(product_id).publish_state("");
-          id(hardware_model).publish_state("");
-          id(firmware_version).publish_state("");
-          id(protocol_type).publish_state("");
-    turn_off_action:
-      - uart.write: [0x53,0x59,0x08,0x00,0x00,0x01,0x00,0xB5,0x54,0x43]
+  - platform: seeed_mr24hpc1
+    heart_beat:
+      name: "Heartbeat"
+    product_model:
+      name: "Product Model"
+    product_id:
+      name: "Product ID"
+    hardware_model:
+      name: "Hardware Model"
+    hardware_version:
+      name: "Hardware Version"
+    keep_away:
+      name: "Active Reporting Of Proximity"
+    motion_status:
+      name: "Motion Information"
+    custom_mode_end:
+      name: "Custom Mode Status"
+
+binary_sensor:
+  - platform: seeed_mr24hpc1
+    someone_exist:
+      name: "Presence Information"
 
 sensor:
-- platform: custom
-  lambda: |-
-    auto my_custom_sensor = new UartReadLineSensor(id(uart_bus));
-    App.register_component(my_custom_sensor);
-    return {
-      my_custom_sensor->movementSigns,
-      my_custom_sensor->inited,
-    };
-  sensors:
-    - name: "Standard body movement"
-      id: movementSigns
-      icon: "mdi:human-greeting-variant"
-      device_class: "temperature"
-      state_class: "measurement"
+  - platform: seeed_mr24hpc1
+    custom_presence_of_detection:
+      name: "Static Distance"
+    movement_signs:
+      name: "Body Movement Parameter"
+    custom_motion_distance:
+      name: "Motion Distance"
+    custom_spatial_static_value:
+      name: "Existence Energy"
+    custom_spatial_motion_value:
+      name: "Motion Energy"
+    custom_motion_speed:
+      name: "Motion Speed"
+    custom_mode_num:
+      name: "Current Custom Mode"
 
-    - name: "Standard inited"
-      id: inited
-      icon: mdi:all-inclusive
- 
-- platform: template
-  name: "Custom Motion distance"
-  id: custom_motion_distance
-  icon: mdi:signal-distance-variant
-  on_value:
-    then:
-      # - logger.log: Custom Motion distance on_value
-      - logger.log:
-            format: "Custom Motion distance on_value : %d"
-            args: ["x"]
-  on_raw_value:
-    then:
-      - logger.log:
-            format: "Custom Motion distance on_raw_value : %d"
-            args: ["x"]
- 
- 
-- platform: template
-  name: "Custom Static distance"
-  id: custom_static_distance
-  icon: mdi:signal-distance-variant
+switch:
+  - platform: seeed_mr24hpc1
+    underly_open_function:
+      name: Underlying Open Function Info Output Switch
 
-- platform: template
-  name: "Custom Spatial static value"
-  id: custom_spatial_static_value
-  icon: mdi:counter
+button:
+  - platform: seeed_mr24hpc1
+    reset:
+      name: "Module Reset"
+    custom_set_end:
+      name: "End Of Custom Mode Settings"
 
-- platform: template
-  name: "Custom Spatial motion value"
-  id: custom_spatial_motion_value
-  icon: mdi:counter
+select:
+  - platform: seeed_mr24hpc1
+    scene_mode:
+      name: "Scene"
+    unman_time:
+      name: "Time For Entering No Person State (Standard Function)"
+    existence_boundary:
+      name: "Existence Boundary"
+    motion_boundary:
+      name: "Motion Boundary"
 
-- platform: template
-  name: "Custom Motion speed"
-  id: custom_motion_speed
-  icon: mdi:run-fast
+number:
+  - platform: seeed_mr24hpc1
+    sensitivity:
+      name: "Sensitivity"
+    custom_mode:
+      name: "Custom Mode"
+    existence_threshold:
+      name: "Existence Energy Threshold"
+    motion_threshold:
+      name: "Motion Energy Threshold"
+    motion_trigger:
+      name: "Motion Trigger Time"
+    motion_to_rest:
+      name: "Motion To Rest Time"
+    custom_unman_time:
+      name: "Time For Entering No Person State (Underlying Open Function)"
 ```
 
 </details>
@@ -811,7 +428,7 @@ Then, please click on the **Save** button in the top right corner.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/63.png" /></div>
 
-### Step 6. Upload firmware to XIAO ESP32C3
+### Step 5. Upload firmware to XIAO ESP32C3
 
 - **Method 1: Compile and upload directly**
 
@@ -912,7 +529,7 @@ Normally, at this point in Home Assistant, the status of the device will also ch
 
 ## Configure Home Assistant Panel
 
-### Step 7. Connect to XIAO ESP32C3
+### Step 6. Connect to XIAO ESP32C3
 
 If you do not have many Home Assistant devices on your LAN, Home Assistant can automatically search for and add your ESP devices to the Devices tab. You can see this device inside the **Devices & Services** tab in **Settings**.
 
@@ -940,25 +557,21 @@ At this point, the steps to add the device have been successfully completed.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/51.png" /></div>
 
-### Step 8. 24GHz mmWave Module Lite functions overview
+### Step 7. 24GHz mmWave Module Lite functions overview
 
-We come to the Home Assistant's overview tab. We give a general overview of the basic functions of the operating panel.
+To help you quickly understand the full capabilities of the suite and the use of these features, you need to read this section carefully. If you want more detailed information, we recommend that you take the time to read the [product's user manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf).
 
-Firstly, there is the **Custom Infor output switch**. The icon on the left indicates that the information output is switched off, while the icon on the right indicates that the information output is switched on. If you want to see the sensor return information in real time, then you should have to click on the lightning bolt icon on the right.
+For details on the configuration and parameters of the dashboard, we've compiled a detailed write-up in the ESPHome Docs, so please move over to read the full write-up and details.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/69.png" /></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://deploy-preview-3383--esphome.netlify.app/components/sensor/seeed_mr24hpc1">
+            <strong><span><font color={'FFFFFF'} size={"4"}>ESPHome Docs 📕</font></span></strong>
+    </a>
+</div>
 
-At the bottom of the card is a real-time data display page. Here you can observe the millimetre wave changes within the monitored environment and adjust the parameters in the card according to your location.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/49.png" style={{width:700, height:'auto'}}/></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/70.png" /></div>
-
-Due to space limitations, you can refer to the following two documents for more information on the use of the sensor and a more detailed explanation of the parameters.
-
-- [24GHz mmWave Human Static Presence Module Lite Wiki](https://wiki.seeedstudio.com/Radar_MR24HPC1/)
-- [24GHz mmWave Human Static Presence Module Lite User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_User_Manual.pdf)
-- [24GHz mmWave Human Static Presence Module Lite sensor Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
-
-### Step 9. Configure Home Assistant panel
+### Step 8. Configure Home Assistant panel
 
 If you find the default cards very boring and unfriendly for presenting data, Home Assistant offers a wide range of ready-made dashboards to choose from.
 
@@ -1016,7 +629,7 @@ pip3 install esphomeflasher
 If you still do not see XIAO, you can use the [esphome flasher](https://github.com/esphome/esphome-flasher) software to check the XIAO log information and check the XIAO connection through the logs.
 You can re-plug the xiao to let it try to search for WiFi and connect again.
 
-### FAQ4: My XIAO ESP32C3 is connected to network, but why don't I see the sensor data refreshed?
+<!-- ### FAQ4: My XIAO ESP32C3 is connected to network, but why don't I see the sensor data refreshed?
 
 :::caution
 As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down.
@@ -1080,7 +693,7 @@ void loop() {
 
 > **Exclusion 4: The XIAO and radar work normally at the above check points, but after replacing the serial port pins, still can't get the radar real-time data.**
 
-> If you have replaced the RX and TX pins of the radar to D2/D3 and have also carefully troubleshoot according to the above and still cannot get real-time data messages, please contact our technical support team. Before that, **please let us know if the radar works properly in Arduino environment** so that we can analyze and deal with the problem.
+> If you have replaced the RX and TX pins of the radar to D2/D3 and have also carefully troubleshoot according to the above and still cannot get real-time data messages, please contact our technical support team. Before that, **please let us know if the radar works properly in Arduino environment** so that we can analyze and deal with the problem. -->
 
 <!-- > A: When we encounter this problem, we need to use the logs to understand the exact reason why the sensor is not returning data. The situation that has been found to be likely to be encountered so far is a situation where the sensor is not responding, then its logs will look like this.
 
@@ -1095,7 +708,7 @@ void loop() {
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/72.png" /></div> -->
 
-## FAQ5: I used the Jlink flash firmware, but I got the error "Programming of range @address 0x08000000 failed (block verification error) Program failed Failed to program and verify target" ?
+### FAQ4: I used the Jlink flash firmware, but I got the error "Programming of range @address 0x08000000 failed (block verification error) Program failed Failed to program and verify target" ?
 
 When you are using the Jlink flash firmware and this error occurs, then you may be in any one of the following situations.
 
@@ -1117,10 +730,6 @@ Because the abnormal operation of the radar has allowed the radar to trigger the
 Due to the high risk of unprotecting reads and writes, we do not disclose the method of unprotecting reads and writes separately to the public here, we will place the method in the [zip file here](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/ArteryICPProgrammer_V2.4.23.zip) for those who need it. Once the abnormal radar is unprotected, the firmware can be updated again to restore normal operation.
 
 </details>
-
-
-
-
 
 ## Tech Support & Product Discussion
 

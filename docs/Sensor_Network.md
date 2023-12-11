@@ -40,15 +40,15 @@ You can discover this page with two large portions.
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S210X Series Sensors</font></div>
             <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of SenseCAP S210X Sereis User Guide</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperature and Humidity</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperature and Humidity</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Wireless Light Intensity</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Wireless Light Intensity</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperature, Humidity and CO2</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperature, Humidity and CO2</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Soil Moisture and Temperature</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Soil Moisture and Temperature</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Soil Moisture, Temperature and EC</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Soil Moisture, Temperature and EC</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
@@ -74,13 +74,13 @@ You can discover this page with two large portions.
             <br/>
             <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of SenseCAP ONE Weather Sensor Sereis User Guide</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</font></span></a>
             <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</font></span></a>
     </div>
 </div>
 
