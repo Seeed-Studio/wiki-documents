@@ -857,13 +857,22 @@ const sidebars = {
         id: 'Sensor/mmWave_radar_sensor/mmwave_radar_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'mmWave for XIAO',
+          items: [
+            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao',
+            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao_arduino',
+            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
+          ],
+        },
         'Sensor/mmWave_radar_sensor/mmwave_human_kit',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
-        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
         'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
         'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24BSD1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24HPB1',
+        'Sensor/mmWave_radar_sensor/Radar_MR24FDB1',
       ],
     },
 
@@ -1070,15 +1079,6 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
               ],
             },
-            {
-              type: 'category',
-              label: 'mmWave for XIAO',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao_arduino',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
-              ],
-            },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
@@ -1110,8 +1110,6 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
-,
-
         {
           type: 'category',
           label: 'ArduPy with Wio Terminal',
