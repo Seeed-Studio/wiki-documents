@@ -112,7 +112,7 @@ In addition to this, the XIAO ESP32C3 relies on the open source project ESPHome 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/2.png" style={{width:1000, height:'auto'}}/></div>
 
-## Three minutes to get started ESPHome
+## Getting Started with ESPHome
 
 Out of the factory kit, the XIAO ESP32C3 has been flashed with firmware that is ready to power up, and we were able to get the kit working on Home Assistant in a very short time. The video below will show you the exact steps to get started quickly.
 
@@ -126,15 +126,15 @@ Below are the graphic step-by-step details, please refer to the following to com
 
 Please supply power to the kit via a USB-C type cable. Be careful that the power input does not exceed 5V/1A, otherwise the product may be damaged.
 
-### Step 2. Connect to the kit's hotspot "mmwave-kit"
+### Step 2. Connect to the kit's hotspot "seedstudio-mr24hpc1"
 
-After the kit is powered on, a hotspot named **mmwave-kit** will be opened automatically, please search and connect to the hotspot. You can use your cell phone to connect to this network so you don't have to switch networks on your computer as often.
+After the kit is powered on, a hotspot named **seedstudio-mr24hpc1** will be opened automatically, please search and connect to the hotspot. You can use your cell phone to connect to this network so you don't have to switch networks on your computer as often.
 
 :::note
 If you are using an older version of firmware, then this may require you to enter your WiFi password in order to connect to **mmwave-kit**. we recommend **[updating your firmware](#restore-factory-firmware)**. If you want to continue, the network password is `seeedstudio`.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/3.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/40.png" style={{width:400, height:'auto'}}/></div>
 
 Then use your browser to go to the backend administration address: `192.168.4.1`. This is where we will configure the network and password that the kit needs to connect to.
 
@@ -146,7 +146,7 @@ Then, select the name of the network you want the kit to connect to. Please note
 If you can't find the network you want to connect to on the page, it's likely that the XIAO ESP32C3 doesn't support your network. Please adjust your router yourself to enable maximum compatibility and make sure the network is on the 2.4GHz band.XIAO does not support networks on the 5GHz band.
 :::
 
-Enter the correct WiFi password and click Save. The device will automatically reboot and try to connect to the network you configured.
+Enter the correct WiFi password and click Save. The device will automatically reboot and try to connect to the network you configured. You don't need to stay on this page, you can close it now.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/5.png" style={{width:600, height:'auto'}}/></div>
 
@@ -154,47 +154,29 @@ Enter the correct WiFi password and click Save. The device will automatically re
 
 If the networking goes well, you'll be able to find your device on Home Assistant. Please follow the path below to add your device. 
 
-In the ESPHome options bar, you will directly see the device called **SeeedStudio mmWave Kit** at the beginning. Please click on **ADOPT**.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/41.png" style={{width:500, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/35.png" style={{width:1000, height:'auto'}}/></div>
+Click **Settings** in the menu bar and select **Devices & services**.
 
-In the message box that pops up, you can change the name of your device or just click **ADOPT**.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/42.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/36.png" style={{width:1000, height:'auto'}}/></div>
+You should see the device appear in the **Discovered** section, click the **CONFIGURE** button. Select **SUBMIT** in the window that pops up afterwards and configure the region to use the device normally.
 
-You will then be asked to add an API Key to secure the device. Here, we'll start by clicking the **SKIP** button.
-
-:::tip
-Since your ESOHome has not yet imported the header files for Radar, the compilation process of the installation may go wrong, so we recommend you to skip the installation of the API Key first, and we will update the header files into ESPHome later.
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/37.png" style={{width:1000, height:'auto'}}/></div>
-
-Select **Settings** in the left-hand toolbar, then select **Devices & Services** in the center.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/6.png" style={{width:1000, height:'auto'}}/></div>
-
-If all goes well, you should see the **mmwave-kit** card directly here, which means you can add it directly. If you don't see it directly here, you may need to look up its IP address and click the Add Integration button in the bottom right corner to add the ESPHome device.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/38.png" style={{width:1000, height:'auto'}}/></div>
-
-Click **SUBMIT** in the new pop-up window.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/39.png" style={{width:600, height:'auto'}}/></div>
-
-:::caution
-If you find that you need to enter an API Key during the add steps here, then your device may be flashing the wrong firmware version, and we apologize for that. We apologize for this, you just need to **[flash the latest version of our firmware](#restore-factory-firmware)**.
-:::
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/43.png" style={{width:1000, height:'auto'}}/></div>
 
 The kit was then successfully added to Home Assistant.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/9.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/44.png" style={{width:1000, height:'auto'}}/></div>
+
+:::note
+If you have too many devices in your home, there is a certain probability that your device will not be found in Discovered. Then, please get the IP address of the kit from your router's console, click the **Add Integration** button at the bottom right corner, and manually enter the IP address to add the device.
+:::
 
 ### Step 4. Adding components to the dashboard
 
-Then, we click on the added **mmwave-kit** card, **1 device** here.
+Then, we click on the added **ESPHome** card, **1 device** here.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/10.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/45.png" style={{width:1000, height:'auto'}}/></div>
 
 This will show all the component content we have written for the kit. Let's scroll down the display area slightly to add all of these components to the dashboard.
 
@@ -202,7 +184,7 @@ This will show all the component content we have written for the kit. Let's scro
 If you don't find the components shown under this page, check the kit's power supply and logs. If you are using the computer function, some computers may not have USB ports that provide enough power support. If you make sure there is no problem with the power supply, please open the logs and send the detailed logs back to Seeed Studio's technical support.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/11.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/46.png" style={{width:1000, height:'auto'}}/></div>
 
 We can then see all the information and content in **Overview**.
 
@@ -221,11 +203,13 @@ On the Edit page, click the three dots in the upper right corner again to select
 Then please clear the code in the original editor, copy the code below and save it.
 
 :::tip
-The new firmware has been revised according to the documentation provided by ESPHome and each device has a unique MAC name. So the component names will not be the same. The following dashboard program is for reference only and you may not be able to use it directly unless you modify the names of these components to the correct names.
+The new firmware has been revised according to the documentation provided by ESPHome and each device has a unique MAC name. So the component names will not be the same. If you want to use the code below, please replace all the `{$DEVICE}` in the code with the name of your device. Your device name can be seen in the device entity in ESPHome.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/47.png" style={{width:1000, height:'auto'}}/></div>
 :::
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/mmwave-kit/dashboard.yaml">
+    <a class="github_item" href="https://github.com/limengdu/mmwave-kit-external-components/blob/main/example/mr24hpc1-card.yaml">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -240,123 +224,86 @@ views:
   - path: default_view
     title: Home
     cards:
-      - type: entities
-        entities:
-          - entity: select.mmwave_kit_scene_settings
-            name: Scene Settings
-          - entity: number.mmwave_kit_sensitivity_settings
-            name: Sensitivity Settings
-          - entity: >-
-              select.mmwave_kit_time_for_entering_no_person_state_setting_standard_function
-            name: Time For Entering No Person State Setting (Standard Function)
-          - entity: button.mmwave_kit_module_reset
-            name: Module Reset
-          - entity: sensor.mmwave_kit_firmware_version
-            name: Firmware Version
-          - entity: sensor.mmwave_kit_hardware_model
-            name: Hardware Model
-          - entity: sensor.mmwave_kit_product_id
-            name: Product ID
-          - entity: sensor.mmwave_kit_product_model
-            name: Product Model
-          - entity: sensor.mmwave_kit_standard_heartbeat
-            name: Standard Heartbeat
-          - entity: sensor.mmwave_kit_initialization_status
-            name: Initialization Status
-          - entity: sensor.mmwave_kit_body_movement_parameter
-            name: Body Movement Parameter
-          - entity: sensor.mmwave_kit_motion_information
-            name: Motion Information
-          - entity: sensor.mmwave_kit_presence_information
-            name: Presence Information
-          - entity: sensor.mmwave_kit_active_reporting_of_proximity
-            name: Active Reporting Of Proximity
-        title: Unsolicited Information
-
-      - type: entities
-        entities:
-          - entity: switch.mmwave_kit_underlying_open_function_info_output_switch
-            name: Underlying Open Function Info Output Switch
-          - entity: sensor.mmwave_kit_existence_energy_value_proactive_reporting
-            name: Existence Energy Value (Proactive Reporting)
-          - entity: sensor.mmwave_kit_motion_energy_value_proactive_reporting
-            name: Motion Energy Value (Proactive Reporting)
-          - entity: sensor.mmwave_kit_static_distance_proactive_reporting
-            name: Static Distance (Proactive Reporting)
-          - entity: sensor.mmwave_kit_motion_distance_proactive_reporting
-            name: Motion Distance (Proactive Reporting)
-          - entity: sensor.mmwave_kit_motion_speed
-            name: Motion Speed
-        title: Underlying Open Function
-
-      - type: entities
-        entities:
-          - entity: button.mmwave_kit_existence_energy_value_inquiry
-            name: Existence Energy Value Inquiry
-          - entity: sensor.mmwave_kit_existence_energy_value
-            name: Existence Energy Value
-          - entity: button.mmwave_kit_motion_energy_value_inquiry
-            name: Motion Energy Value Inquiry
-          - entity: sensor.mmwave_kit_motion_energy_value
-            name: Motion Energy Value
-          - entity: button.mmwave_kit_static_distance_inquiry
-            name: Static Distance Inquiry
-          - entity: sensor.mmwave_kit_static_distance
-            name: Static Distance
-          - entity: button.mmwave_kit_motion_distance_inquiry
-            name: Motion Distance Inquiry
-          - entity: sensor.mmwave_kit_motion_distance
-            name: Motion Distance
-          - entity: button.mmwave_kit_existence_judgment_threshold_inquiry
-            name: Existence Judgment Threshold Inquiry
-          - entity: sensor.mmwave_kit_existence_judgment_threshold
-            name: Existence Judgment Threshold
-          - entity: button.mmwave_kit_motion_trigger_threshold_inquiry
-            name: Motion Trigger Threshold Inquiry
-          - entity: sensor.mmwave_kit_motion_trigger_threshold
-            name: Motion Trigger Threshold
-          - entity: button.mmwave_kit_motion_to_rest_time_setting_query
-            name: Motion To Rest Time Setting Query
-          - entity: sensor.mmwave_kit_motion_to_rest_time
-            name: Motion To Rest Time
-          - entity: button.mmwave_kit_time_for_entering_no_person_state_inquiry
-            name: Time For Entering No Person State Inquiry
-          - entity: sensor.mmwave_kit_time_for_entering_no_person_state
-            name: Time For Entering No Person State
-          - entity: button.mmwave_kit_custom_mode_query
-            name: Custom Mode Query
-          - entity: sensor.mmwave_kit_custom_mode
-            name: Custom Mode
-          - entity: button.mmwave_kit_proximity_inquiry
-            name: Proximity Inquiry
-          - entity: sensor.mmwave_kit_active_reporting_of_proximity
-            name: Active Reporting Of Proximity
-        title: Enquiry Function
-
-      - type: entities
-        entities:
-          - entity: number.mmwave_kit_custom_mode_settings
-            name: Custom Mode Settings
-          - entity: button.mmwave_kit_end_of_custom_mode_settings
-            name: End Of Custom Mode Settings
-          - entity: number.mmwave_kit_existence_judgment_threshold_settings
-            name: Existence Judgment Threshold Settings
-          - entity: select.mmwave_kit_existence_perception_boundary_settings
-            name: Existence Perception Boundary Settings
-          - entity: number.mmwave_kit_motion_trigger_threshold_settings
-            name: Motion Trigger Threshold Settings
-          - entity: select.mmwave_kit_motion_trigger_boundary_setting
-            name: Motion Trigger Boundary Setting
-          - entity: number.mmwave_kit_motion_to_rest_time_setting
-            name: Motion To Rest Time Setting
-          - entity: number.mmwave_kit_motion_trigger_time_setting
-            name: Motion Trigger Time Setting
-          - entity: >-
-              number.mmwave_kit_time_for_entering_no_person_state_setting_underlying_open_function
-            name: >-
-              Time For Entering No Person State Setting (Underlying Open
-              Function)
-        title: Custom Settings
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: button.{$DEVICE}_module_reset
+                name: Module Reset
+              - entity: sensor.{$DEVICE}_hardware_model
+                name: Hardware Model
+              - entity: sensor.{$DEVICE}_hardware_version
+                name: Hardware Version
+              - entity: sensor.{$DEVICE}_heartbeat
+                name: Heartbeat
+              - entity: sensor.{$DEVICE}_product_id
+                name: Product ID
+              - entity: sensor.{$DEVICE}_product_model
+                name: Product Model
+            title: DEVICE Information
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: select.{$DEVICE}_scene
+                name: Scene
+              - entity: number.{$DEVICE}_sensitivity
+                name: Sensitivity
+              - entity: select.{$DEVICE}_time_for_entering_no_person_state_standard_function
+                name: Time For Entering No Person State Setting (Standard Function)
+              - entity: binary_sensor.{$DEVICE}_presence_information
+                name: Presence Information
+              - entity: sensor.{$DEVICE}_motion_information
+                name: Motion Information
+              - entity: sensor.{$DEVICE}_body_movement_parameter
+                name: Body Movement Parameter
+              - entity: sensor.{$DEVICE}_active_reporting_of_proximity
+                name: Active Reporting Of Proximity
+            title: Unsolicited Information
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: switch.{$DEVICE}_underlying_open_function_info_output_switch
+                name: Underlying Open Function Info Output Switch
+              - entity: sensor.{$DEVICE}_existence_energy
+                name: Existence Energy
+              - entity: sensor.{$DEVICE}_motion_energy
+                name: Motion Energy
+              - entity: sensor.{$DEVICE}_static_distance
+                name: Static Distance
+              - entity: sensor.{$DEVICE}_motion_distance
+                name: Motion Distance
+              - entity: sensor.{$DEVICE}_motion_speed
+                name: Motion Speed
+            title: Underlying Open Function
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            entities: 
+              - entity: sensor.{$DEVICE}_custom_mode_status
+                name: Custom Mode Status
+              - entity: number.{$DEVICE}_custom_mode
+                name: Custom Mode
+              - entity: sensor.{$DEVICE}_current_custom_mode
+                name: Current Custom Mode
+              - entity: button.{$DEVICE}_end_of_custom_mode_settings
+                name: End Of Custom Mode Settings
+              - entity: select.{$DEVICE}_existence_boundary
+                name: Existence Boundary
+              - entity: select.{$DEVICE}_motion_boundary
+                name: Motion Boundary
+              - entity: number.{$DEVICE}_existence_energy_threshold
+                name: Existence Energy Threshold
+              - entity: number.{$DEVICE}_motion_energy_threshold
+                name: Motion Energy Threshold
+              - entity: number.{$DEVICE}_motion_trigger_time
+                name: Motion Trigger Time
+              - entity: number.{$DEVICE}_motion_to_rest_time
+                name: Motion To Rest Time
+              - entity: number.{$DEVICE}_time_for_entering_no_person_state_underlying_open_function
+                name: Time For Entering No Person State (Underlying Open Function)
+            title: Custom Settings
 ```
 
 </details>
@@ -370,7 +317,7 @@ Then click **DONE**.
 
 A brand new dashboard interface is configured.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/16.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/48.png" style={{width:1000, height:'auto'}}/></div>
 
 Congratulations, by this point you've completed all of the kit's access to Home Assistant!
 
@@ -378,77 +325,15 @@ Congratulations, by this point you've completed all of the kit's access to Home 
 
 To help you quickly understand the full capabilities of the suite and the use of these features, you need to read this section carefully. If you want more detailed information, we recommend that you take the time to read the [product's user manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf).
 
-In the contents of this chapter, we will follow the dashboard card configured above and go through the functions and contents inside it individually.
+For details on the configuration and parameters of the dashboard, we've compiled a detailed write-up in the ESPHome Docs, so please move over to read the full write-up and details.
 
-### Unsolicited Information
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://deploy-preview-3383--esphome.netlify.app/components/sensor/seeed_mr24hpc1">
+            <strong><span><font color={'FFFFFF'} size={"4"}>ESPHome Docs 📕</font></span></strong>
+    </a>
+</div>
 
-The main information displayed on this card is the messages that are actively reported by the kit. It is also the most commonly used message content, such as whether it is occupied, body movement, product model version, etc. For the average user, you only need to use the top of this card.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/17.png" style={{width:450, height:'auto'}}/></div>
-
-In the first three components of the card, we provide the basic setup. There are scene settings, sensitivity settings, and a waiting time setting for the radar to determine when it enters an unoccupied state. You can adjust these parameters according to the scenario of use and judgment. For detailed adjustment details, please read **8.1~8.3** in the [user manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf), and we will not elaborate too much here due to space limitation.
-
-- **Body Movement Parameter**: that are used to assist in determining the movement of the monitored subject. In general, a value of **0** indicates that no one is present, and a value of **1** indicates that someone is stationary. A value greater than 1 indicates that someone is moving, and the greater the value, the greater the movement of the monitored object.
-
-- **Motion Information**: Indicates the motion of the detected object. It is categorized into no motion, and in motion.
-
-- **Presence Information**: Indicates the presence of the detected object. Categorized as occupied and unoccupied.
-
-- **Active Reporting Of Proximity**: Indicates the motion orientation of the detected object, which is categorized as approaching and away.
-
-
-### Underlying Open Function
-
-The Underlying Open Function is the information display area close to the radar floor. It includes information such as static and dynamic energy values, distance and speed in space. This information mainly assists the user in determining the human presence and movement of the environment.
-
-By default, content reporting is turned off for the Underlying Open parameter. If you want to see the data for this card, you need to click on the black lightning bolt button on the right.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/18.png" style={{width:450, height:'auto'}}/></div>
-
-- **Existence energy value**: There are electromagnetic waves in the environment, and the electromagnetic wave frequency changes less when there is no one around. When there is a person in the space, the overall electromagnetic wave reflection will float weakly due to the slight movement caused by breathing (chest breathing).
-
-- **Motion energy value**: The amplitude value of motion causes different electromagnetic wave frequency changes. 
-
-- **Stationary distance**: The module detects the straight-line distance of human breathing, which is usually no more than 3 meters.
-
-- **Motion distance**: Detects the distance of the moving target.
-
-- **Motion speed**: Real-time judgment of the speed of the moving target; the speed is positive when approaching the radar and negative when moving away.
-
-### Custom Settings
-
-This card is a customized functional interface provided to some users who have special scenario needs. You will only need to use the customized function area here if your usage scenario has gone beyond the preset bedroom, bathroom, etc. Otherwise, please do not adjust the settings here.
-
-:::caution
-We strongly recommend that you read the [product's user manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf) carefully before using the custom ribbon!
-:::
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/19.png" style={{width:450, height:'auto'}}/></div>
-
-The logic for using this custom setup card is as follows:
-
-1. The suite supports saving up to 4 different customization modes. Before you start to enter the custom mode settings, you need to adjust the button of **Custom Mode Settings** to one of 1~4.
-
-2. Then adjust the content of the parameter you want to adjust below. Please allow a few seconds between each adjustment button to ensure that the device has received your setting request.
-
-3. After confirming the adjustment is correct, click the button of **End Of Custom Mode Settings**, the parameters you adjusted will be saved under the custom mode 1~4 you set.
-
-4. You can use the **Enquiry Function** card on the right to enquire whether the radar's current customization mode and parameter profile is consistent with what you have set up.
-
-:::caution
-We recommend that the three parameters in the figure below be adjusted in value by clicking on the up and down buttons, otherwise settings beyond the precision will not be accepted by the radar.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/21.png" style={{width:450, height:'auto'}}/></div>
-:::
-
-
-### Enquiry Function
-
-Enquiry Function is provided for users to enquire some required information by themselves. You can query the information you want to know by clicking the buttons on the right side. They can help you determine your settings, radar status, and monitor object status at a certain moment.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/20.png" style={{width:450, height:'auto'}}/></div>
-
-The display of this card is not updated automatically, only the button is clicked once to get the information. If you need to look up more than one message, then please make sure that the radar can have enough time to send and receive messages before clicking different buttons a few short seconds apart.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/49.png" style={{width:700, height:'auto'}}/></div>
 
 ## Customized secondary development
 
@@ -470,11 +355,20 @@ This kit is mainly oriented to the direction of the smart home, the secondary de
 
 - Built-in XIAO ESP32C3 development materials and hands-on Wiki: [Getting Started with Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
 
-- ESPHome Development Guide for XIAO ESP32C3 and MR24HPC1: [XIAO ESP32C3 accesses Home Assistant via ESPHome service](https://wiki.seeedstudio.com/xiao-esp32c3-esphome/)
+### Secondary development for ESPHome
 
-- ESPHome configuration files and libraries for XIAO ESP32C3 and MR24HPC1: [MR24HPC1_HomeAssistant](https://github.com/limengdu/MR24HPC1_HomeAssistant)
+All of the kit's code is currently open source. If you have a need to develop ESPHome, you can use the code of external components.
 
-- Original programs and libraries for the mmWave Human Detection Sensor Kit: [MR24HPC1_HomeAssistant](https://github.com/limengdu/MR24HPC1_HomeAssistant/tree/mmwave-kit)
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/limengdu/mmwave-kit-external-components/blob/main/">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+For the use of this code framework, you can refer to the [**mr24hpc1.yaml**](https://github.com/limengdu/mmwave-kit-external-components/blob/main/example/mr24hpc1.yaml) file under the examples folder in the project. This file is an example yaml file for ESPHome.
+
+
+If you don't have any experience with ESPHome before this, you can read [**this Wiki**](https://wiki.seeedstudio.com/xiao-esp32c3-esphome/) to learn to use it.
 
 
 ## Software Upgrades with ESPHome OTA
@@ -506,18 +400,10 @@ Then click **Next**. Then click **SKIP**.
 We will update our program in the Github project, once the program is updated, you can just copy everything inside and overwrite the generated yaml file. Changes can also be made to this.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/blob/mmwave-kit/example/mr24hpc1_mmwave_kit.yaml">
+    <a class="github_item" href="https://github.com/limengdu/mmwave-kit-external-components/blob/main/example/mr24hpc1.yaml">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
-
-:::caution
-The compilation of the program depends on [Radar's library files](https://github.com/limengdu/MR24HPC1_HomeAssistant/tree/mmwave-kit/headers), and you need to download the library to the Home Assistant's directory in advance:
-
-```
-config/esphome
-```
-:::
 
 Finally, just select **Wireless** to upload the program.
 
@@ -532,16 +418,14 @@ If you are using the kit and find inconsistencies with the steps and content abo
 **Step 1.** Click the button below to go to the Flash Firmware page. Then connect the kit to your computer via a USB-C type cable.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://limengdu.github.io/MR24HPC1_HomeAssistant/">
+    <a class="github_item" href="https://limengdu.github.io/mmwave-kit-external-components/">
     <strong><span><font color={'FFFFFF'} size={"4"}>Flash the Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **Step 2.** Click the Connect button and select the port number device that has a **JTAG** name.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/30.png" style={{width:500, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/31.png" style={{width:550, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/50.png" style={{width:1000, height:'auto'}}/></div>
 
 **Step 3.** Flash Firmware. 
 
@@ -551,7 +435,7 @@ Simply click on **INSTALL SEEED STUDIO MMWAVE KIT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/33.png" style={{width:500, height:'auto'}}/></div>
 
-If you see the display below, then the firmware flash is complete.
+If you see the display below, then the firmware flash is complete. At this point you may need to re-power up to get the programme up and running. After completing the firmware burn, you will need to configure the network from scratch.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/34.png" style={{width:500, height:'auto'}}/></div>
 
@@ -560,7 +444,7 @@ If you see the display below, then the firmware flash is complete.
 If you're experiencing issues with your device not working properly, try restoring the factory firmware and re-adding the device to Home Assistant.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/MR24HPC1_HomeAssistant/releases">
+    <a class="github_item" href="https://github.com/limengdu/mmwave-kit-external-components/suites/18921876404/artifacts/1105187100">
     <strong><span><font color={'FFFFFF'} size={"4"}>Download the Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -594,12 +478,12 @@ If you wish to observe the log messages of the XIAO ESP32C3, you can also view t
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/41.png" /></div>
 :::
 
-Once the firmware has been uploaded successfully, you will be able to see the network called **mmwave-kit**. Please refer to the [Three minutes to get started ESPHome](#three-minutes-to-get-started-esphome) content to reconfigure the device.
+Once the firmware has been uploaded successfully, you will be able to see the network called **seeedstudio-mr24hpc1**. Please refer to the [Three minutes to get started ESPHome](#three-minutes-to-get-started-esphome) content to reconfigure the device.
 
 
 ## Resources
 
-- **[GITHUB]** [Project open source](https://github.com/limengdu/MR24HPC1_HomeAssistant/tree/mmwave-kit)
+- **[GITHUB]** [Project open source](https://github.com/limengdu/mmwave-kit-external-components)
 - **[PDF]** [Quick Setup Template](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)
 - **[PDF]** [Datasheet](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
 - **[PDF]** [User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)
