@@ -491,6 +491,8 @@ To learn about more performance benchmarks we have done using YOLOv8 models, ple
 
 ## Multistream Model Benchmarks
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson/1.jpg" style={{width:1000, height:'auto'}}/></div>
+
 After running several deepstream applications on reComputer Jetson Orin series products, we have done benchmarks with the YOLOv8s models.
 
 - First, we have used a single AI model and run multiple streams on the same AI model

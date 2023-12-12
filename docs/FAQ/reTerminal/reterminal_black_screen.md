@@ -251,7 +251,7 @@ wget https://github.com/Seeed-Studio/seeed-linux-dtoverlays/releases/download/20
 - **6.** Unpack **stm32flash-0.7.tar.gz**
 
 ```sh
-tar -xvf stm32flash-0.7.tar.gz
+tar -xvf stm32flash-0.7.tar.gz
 ```
 
 - **7.** Go to the folder named **stm32flash-0.7** and make the flash tool executable
