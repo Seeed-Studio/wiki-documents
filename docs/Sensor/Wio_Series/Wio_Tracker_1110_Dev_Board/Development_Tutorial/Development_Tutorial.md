@@ -17,6 +17,10 @@ Before start the development, please check [Setup your toolchain](https://wiki.s
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/hard-overview.png" alt="pir" width={800} height="auto" /></p>
 
+## Firmware overview
+
+<p style={{textAlign: 'center'}}><img src="https://github.com/Seeed-Studio/Wio_Tracker_1110_Examples/raw/b2ebc5f1de0af24a9f72316418f9313de4264e0f/media/1.png
+" alt="pir" width={600} height="auto" /></p>
 
 
 
@@ -63,6 +67,42 @@ Referring to the schematic, TXD is located on pin 8 and RXD is on pin 6.
 ### Grove Digital
 
 
+```cpp
+#include <Adafruit_TinyUSB.h>  
+#include <Wire.h>              
+#include <Ultrasonic.h>        
+
+// Define the pin to which the ultrasonic sensor is connected
+constexpr int ULTRASONIC_PIN = D0;  
+
+Ultrasonic ultrasonic(ULTRASONIC_PIN);  
+
+void setup()
+{
+  delay(100);                 
+  Serial.begin(115200);        // Start Serial communication at a baud rate of 115200
+  while (!Serial) delay(100); 
+
+void loop()
+{
+  long RangeInInches;         // Variable to store distance in inches
+  long RangeInCentimeters;    // Variable to store distance in centimeters
+
+  Serial.println("The distance to obstacles in front is: ");  
+
+  RangeInInches = ultrasonic.MeasureInInches();  // Measure distance in inches using the Ultrasonic sensor
+  Serial.print(RangeInInches);  
+  Serial.println(" inch");       
+
+  delay(250); 
+
+  RangeInCentimeters = ultrasonic.MeasureInCentimeters();  
+  Serial.print(RangeInCentimeters);  
+  Serial.println(" cm");             
+
+  delay(2500);  
+}
+```
 
 ### Grove Analog
 
