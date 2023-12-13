@@ -114,7 +114,7 @@ Get the seeed voice card source code. and install all linux kernel drivers.
 
 ```
 sudo apt-get update
-git clone https://github.com/respeaker/seeed-voicecard.git
+git clone https://github.com/HinTak/seeed-voicecard.git
 cd seeed-voicecard
 sudo ./install.sh  
 sudo reboot
