@@ -79,6 +79,24 @@ sudo nano recovery/boot.conf
 BOOT_ORDER=0xf15
 ```
 
+Please note that the default of reTerminal is different from the cloned recovery/boot.conf.
+The defaults for reTerminal are as follows.
+Please rewrite recovery/boot.conf as necessary.
+
+```
+[all]
+BOOT_UART=0
+WAKE_ON_GPIO=0
+POWER_OFF_ON_HALT=1
+
+# Try  SD- > USB PCIe MSD -> USB 2.0 BCM XHCI -> Network ->  Loop
+BOOT_ORDER=0xf2541
+
+# Set to 0 to prevent bootloader updates from USB/Network boot
+# For remote units EEPROM hardware write protection should be used.
+ENABLE_SELF_UPDATE=1
+```
+
 **NOTE:** Here if USB Boot fails, it switches to eMMC boot
 
 - **Step 12.** Run the following to update the EEPROM image
