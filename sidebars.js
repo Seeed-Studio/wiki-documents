@@ -866,8 +866,14 @@ const sidebars = {
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao_arduino',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
           ],
+        },{
+          type: 'category',
+          label: 'mmWave kit',
+          items: [
+            'Sensor/mmWave_radar_sensor/mmwave_human_kit',
+            'Sensor/mmWave_radar_sensor/MMWave_Kit_And_Grove_Connect_To_ESPHome',
+          ],
         },
-        'Sensor/mmWave_radar_sensor/mmwave_human_kit',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
         'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
         'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
@@ -1024,7 +1030,6 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
-                // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-MMWave-Grove',
               ],
             },
           ],
