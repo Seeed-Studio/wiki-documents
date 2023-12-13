@@ -512,9 +512,9 @@ Hardware:
 |DBG2|PB13|PB10|
 |DBG3|PB14|PB3|
 |DBG4|PB10|PB4|
-|Usart|Usart2(PA2/PA3)|Usart1(PB6/PB7)|
+|USART|USART2(PA2/PA3)|USART1: PB6=TX , PB7=RX|
 
-### Applications
+### Applications 
 
 Now we will explore several applications for Wio-E5 mini/ Wio-E5 Development Kit with STM32Cube MCU Package for STM32WL series(SDK).
 
