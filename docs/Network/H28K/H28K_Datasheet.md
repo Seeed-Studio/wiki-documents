@@ -20,7 +20,7 @@ sku: *******
 tags:
 --- -->
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/Overview.jpg" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/Overview.jpg" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkStar-H28K-0208-p-5848.html">
@@ -30,42 +30,49 @@ tags:
 
 ## Introduction
 
-The H28K router is equipped with a quad-core Cortex-A53 RK3528 chip with two gigabit Ethernet ports, using PCIE/RGMII gigabit, and non-relay network ports for more stable speeds.It's a real pocket design, just 5.5x6.5cm.In this wiki, we will show you the hardware overview.
+The LinkStar-H28K has two Gigabit network ports that use PCIE/RGMII gigabit technology and a Quad-core chip.  It has LPDDR4X 4GB memory and 8GB eMMC storage that can be expanded up to 512 GB with a TF card. It also has a 5V-12V Type-C connection for PD (Power Delivery) capability. In this wiki, we will show you the hardware overview.
 
 ## Hardware Overview
 
 This is the hardware overview of H28K, we here will present you the details about each component.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/27.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/29.png" /></div>
+
+## Feature
+
+- High-speed and Stable Network Ports: Features dual gigabit Ethernet ports with PCIE/RGMII technology. Its non-adapter network ports make the speed more stable.
+- Advanced Quad-Core Processor: Equipped with a high-performance RK3528 Quad-Core ARM Cortex-A53 @1.5 GHz chip, providing efficient processing power for smooth and reliable operation.
+- PD Power Delivery Capability: Boasts a cutting-edge 5V-12V Type-C port with advanced PD (Power Delivery) support. 
+- Expandable Storage and Memory: Comes with LPDDR4 2GB memory and 8GB eMMC storage. Supports TF card expansion, with a maximum capacity of 512GB.
+- Compact and Pocket-sized Design: Measuring only 55.2 x 65.15 x 22.6 mm. Its compact size makes it simple to incorporate into any area.
+- Operating system: QWRT (Based on OpenWRT) 
+
 
 ## Specification
 
 | **Parameters** | **Details**                                                 |
 | -------------- | ----------------------------------------------------------- |
-| Processor      | Quad-core Cortex-A53 RK3528 1GHz                            |
+| Processor      | RK3528 Quad-Core ARM Cortex-A53 @1.5 GHz                     |
 | Memory         | 2GB/4GB LPDDR4X                                             |
 | Storage        | Onboard 8GB eMMC                                            |
-|                | 1× TF card slot for storage expansion(Maximum Support 128G) |
+|                | 1× TF card slot for storage expansion(Maximum Support 512G) |
 | Network        | 1x PCIe + 1x RGMII Gigabit Ethernet Port                    |
 | USB            | 1x USB Type-C, for Power Supply1x USB 2.0 Type-A            |
 | Power Supply   | 5V-12V Type-C (PD)                                          |
 | Dimensions     | 55.2\*65.15\*22.6mm                                         |
 
-:::caution
-Due to the difference in the test environment, interface data speed will be a deviation of ±10%
-:::
 
 ## Indicator Light
 
 | Power Indicator             | Work Indicator             | WAN Indicator                 | LAN Indicator                 |
 | --------------------------- | -------------------------- | ----------------------------- | ----------------------------- |
-| Normal power link indicator | System operating indicator | WAN port connection indicator | LAN port connection indicator |
+| Normal power connection indicator | System operating indicator | WAN port connection indicator | LAN port connection indicator |
 
 ## Quick Start
 
-The H28K router does not come with a pre-installed system. You need to follow the tutorial below to manually install the operating system.
+The H28K router does not come with a pre-installed system. You need to follow the tutorial below to manually install the operating system.[H28K-install-system](/H28K-install-system)
 
-[H28K-install-system](/H28K-install-system)
+
 
 
 <div class="button_tech_support_container">
