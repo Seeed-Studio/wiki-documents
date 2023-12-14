@@ -20,7 +20,7 @@ sku: *******
 tags:
 --- -->
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/Overview.jpg" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/H28K/Overview.jpg" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkStar-H28K-0208-p-5848.html">
@@ -30,7 +30,7 @@ tags:
 
 ## Introduction
 
-The H28K router is equipped with a quad-core Cortex-A53 RK3528 chip with two gigabit Ethernet ports, using PCIE/RGMII gigabit, and non-relay network ports for more stable speeds.  In this wiki we will show you how to install operating system with TF card or eMMC.
+The LinkStar-H28K has two Gigabit network ports that use PCIE/RGMII gigabit technology and a Quad-core chip.  It has LPDDR4X 4GB memory and 8GB eMMC storage that can be expanded up to 512 GB with a TF card. It also has a 5V-12V Type-C connection for PD (Power Delivery) capability.  In this wiki we will show you how to install operating system with TF card or eMMC.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/28.png" /></div>
 
@@ -95,6 +95,7 @@ Select the QWRT firmware you downloaded, it should end in **.img**.
 Select the drive you want to flash the system to.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/20.png" /></div>
+<br />
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/21.png" /></div>
 
 Click the **Flash** button and the software will flash the system into your TF.
@@ -123,7 +124,7 @@ Use a network cable to connect to the ETH1 network port of the H28K. Then enter 
 ETH0 is the WAN port and the ETH1 port is LAN ports. If you want to manage H28K's QWRT via a network cable, then connect the network cable to ETH1.
 :::
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/25.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/15.png" /></div>
 
 The initial account and password for the system are as follows.
 
@@ -182,6 +183,7 @@ At this point watch the software and it will show "Found One MASKROM Device".
 Click on "Upgrade Firmware", then click on "Firmware" and select the **rk3528_spl_loader_v1.05.104.bin** file in the file directory.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/7.png" /></div>
+<br />
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/8.png" /></div>
 
 After importing the file, click on "EraseFlash".

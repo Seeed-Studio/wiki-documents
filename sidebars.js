@@ -2317,6 +2317,7 @@ const sidebars = {
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Color_detection',
+                'Edge/reTerminal/Application/OpenCV/reTerminal_DM-tracking',
                 'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
                 
               ],
