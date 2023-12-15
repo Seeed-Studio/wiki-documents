@@ -167,3 +167,23 @@ If you need to install the product in a low temperature environment or in a hars
 |IOS 7.0+|<p>iPhone 4S,iPhone 5/5C/5S, </p><p>iPhone 6/6Plus/6S/6SPlus,iPhone 7/7Plus, </p><p>iPad mini/mini2/4/Air/Pro,etc.</p><p></p>|
 |Android 4.3+|<p>Samsung，XIAOMI，HUAWEI，ONEPLUS，ViVO，OPPO ,etc.</p><p></p>|
 
+
+
+## Configuration
+
+
+* **Step 1**: Download `Beaconset` APP
+
+
+* **Step 2**: Connect the beacon, you can distinguish them by the MAC address which is also attached to the beacon label.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/set-beacon2.png" alt="pir" width={600} height="auto" /></p>
+
+
+* **Step 3**: Settings
+
+Modify the param according to your need, and then click `Save`.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/setting-beacon.png" alt="pir" width={600} height="auto" /></p>
+
+
