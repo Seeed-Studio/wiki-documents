@@ -136,6 +136,7 @@ const sidebars = {
               type: 'category',
               label: 'AI-powered',
               items: [
+                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
