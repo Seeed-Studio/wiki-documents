@@ -2175,69 +2175,92 @@ const sidebars = {
     //     ],
 
     // },
+
     {
       type: 'category',
-      label: 'LinkStar',
+      label: 'Raspberry Pi Solutions',
       collapsed: true,
       collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Network/LinkStar/Linkstar_Intro',
-      },
       items: [
-        'Network/LinkStar/Linkstar_Datasheet',
-        'Network/LinkStar/linkstar-install-system',
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Network/LinkStar/Application/h68k-ha-esphome',
-            'Network/LinkStar/Application/plex_media_server',
-            'Network/LinkStar/Application/wordpress_linkstar',
-            'Network/LinkStar/Application/grocy-bookstack-linkstar',
-          ],
+      {
+        type: 'category',
+        label: 'reRouter',
+        collapsed: true,
+        collapsible: true,
+        link: {
+          type: "doc",
+          id: 'Network/RaspberryPi_Devices/reRouter/reRouter_Intro',
         },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'H28K',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Network/H28K/H28K_Datasheet',
-      },
-      items: [
-        'Network/H28K/H28K_Datasheet',
-        'Network/H28K/H28K-install-system',
+        items: [
+          'Network/RaspberryPi_Devices/reRouter/Raspberry-OpenWrt-Getting-Started',
+          'Network/RaspberryPi_Devices/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
+          'Network/RaspberryPi_Devices/reRouter/FAQs_For_openWrt',
+          {
+            type: 'category',
+            label: 'Application',
+            items: [
+              'Network/RaspberryPi_Devices/reRouter/Application/OpenWrt-Getting-Started',
+              'Network/RaspberryPi_Devices/reRouter/Application/OpenWrt-Plex-Media-Server-on-Docker',
+              'Network/RaspberryPi_Devices/reRouter/Application/Mender-Client-dual-GbE-CM4',
+            ],
+          },
+        ],
+       },
       ],
     },
 
     {
       type: 'category',
-      label: 'reRouter',
+      label: 'Rockchip Solutions',
       collapsed: true,
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Network/reRouter/reRouter_Intro',
+        id: 'Network/RK_Devices/RK_intro',
       },
       items: [
-        'Network/reRouter/Raspberry-OpenWrt-Getting-Started',
-        'Network/reRouter/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4',
-        'Network/reRouter/FAQs_For_openWrt',
-        {
-          type: 'category',
-          label: 'Application',
-          items: [
-            'Network/reRouter/Application/OpenWrt-Getting-Started',
-            'Network/reRouter/Application/OpenWrt-Plex-Media-Server-on-Docker',
-            'Network/reRouter/Application/Mender-Client-dual-GbE-CM4',
-          ],
+      {
+        type: 'category',
+        label: 'LinkStar-H68K',
+        collapsed: true,
+        collapsible: true,
+        link: {
+          type: "doc",
+          id: 'Network/RK_Devices/LinkStar/Linkstar_Intro',
         },
+        items: [
+          'Network/RK_Devices/LinkStar/Linkstar_Datasheet',
+          'Network/RK_Devices/LinkStar/linkstar-install-system',
+          {
+            type: 'category',
+            label: 'Application',
+            items: [
+              'Network/RK_Devices/LinkStar/Application/h68k-ha-esphome',
+              'Network/RK_Devices/LinkStar/Application/plex_media_server',
+              'Network/RK_Devices/LinkStar/Application/wordpress_linkstar',
+              'Network/RK_Devices/LinkStar/Application/grocy-bookstack-linkstar',
+            ],
+          },
+        ],
+      },
+      {
+        type: 'category',
+        label: 'LinkStar-H28K',
+        collapsed: true,
+        collapsible: true,
+        link: {
+          type: "doc",
+          id: 'Network/RK_Devices/H28K/H28K_Datasheet',
+        },
+        items: [
+          'Network/RK_Devices/H28K/H28K_Datasheet',
+          'Network/RK_Devices/H28K/H28K-install-system',
+        ],
+      },
+  
       ],
     },
+
     {
       type: 'category',
       label: 'Other Network Devices',
@@ -2271,47 +2294,64 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'reTerminal',
+      label: 'Raspberry Pi Devices',
       collapsed: true,
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Edge/reTerminal/reTerminal_Intro',
+        id: 'Edge/Raspberry_Pi_Devices/RpiDevices',
       },
+      items:[
+        {
+        type: 'category',
+        label: 'HMI',
+        collapsed: true,
+        collapsible: true,
+
       items: [
-        'Edge/reTerminal/reTerminal',
-        'Edge/reTerminal/reTerminal-hardware-interfaces-usage',
-        'Edge/reTerminal/reTerminal-piCam',
-        'Edge/reTerminal/reTerminal-FAQ',
+        {
+      type: 'category',
+      label: 'reTerminal',
+	    collapsed: true,
+      collapsible: true,
+	    link: {
+            type: "doc",
+            id: 'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal_Intro',
+          },
+       items: [
+        'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal',
+        'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal-hardware-interfaces-usage',
+        'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal-piCam',
+        'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal-FAQ',
         {
           type: 'category',
           label: 'Application',
           items: [
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-Flutter',
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-Electron',
-            'Edge/reTerminal/Application/reTerminal-build-UI-using-LVGL',
-            'Edge/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
-            'Edge/reTerminal/Application/Mender-Client-reTerminal',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Flutter',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Electron',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-LVGL',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Application/Mender-Client-reTerminal',
 
             {
               type: 'category',
               label: 'Home Assistant',
               items: [
-                'Edge/reTerminal/Application/Home_Assistant/reterminal_frigate',
-                'Edge/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
-                'Edge/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reterminal_frigate',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
               ],
             },
             {
               type: 'category',
               label: 'Computer Vision',
               items: [
-                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
-                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
-                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Color_detection',
-                'Edge/reTerminal/Application/OpenCV/reTerminal_DM-tracking',
-                'Edge/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Color_detection',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM-tracking',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
                 
               ],
             },
@@ -2319,9 +2359,9 @@ const sidebars = {
               type: 'category',
               label: 'Embedded ML',
               items: [
-                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
-                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
-                'Edge/reTerminal/Application/Embedded_ML/reTerminal_ML_Edgeimpulse',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/Embedded_ML/reTerminal_ML_MediaPipe',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/Embedded_ML/reTerminal_ML_TFLite',
+                'Edge/Raspberry_Pi_Devices/reTerminal/Application/Embedded_ML/reTerminal_ML_Edgeimpulse',
               ],
             },
           ],
@@ -2330,9 +2370,9 @@ const sidebars = {
           type: 'category',
           label: 'OS Installation',
           items: [
-            'Edge/reTerminal/OS_Installation/reTerminal-Buildroot-SDK',
-            'Edge/reTerminal/OS_Installation/reTerminal-Yocto',
-            'Edge/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal',
+            'Edge/Raspberry_Pi_Devices/reTerminal/OS_Installation/reTerminal-Buildroot-SDK',
+            'Edge/Raspberry_Pi_Devices/reTerminal/OS_Installation/reTerminal-Yocto',
+            'Edge/Raspberry_Pi_Devices/reTerminal/OS_Installation/Streampi_OBS_On_reTerminal',
             // 'Edge/reTerminal/OS_Installation/',
           ],
         },
@@ -2340,13 +2380,12 @@ const sidebars = {
           type: 'category',
           label: 'Extension Board',
           items: [
-            'Edge/reTerminal/Extension_Board/reTerminalBridge',
-            'Edge/reTerminal/Extension_Board/reTerminal_Mount_Options',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Extension_Board/reTerminalBridge',
+            'Edge/Raspberry_Pi_Devices/reTerminal/Extension_Board/reTerminal_Mount_Options',
           ],
         },
       ],
     },
-
     {
       type: 'category',
       label: 'reTerminal DM',
@@ -2354,28 +2393,28 @@ const sidebars = {
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Edge/reTerminal-DM/reTerminal-dm_Intro',
+        id: 'Edge/Raspberry_Pi_Devices/reTerminal-DM/reTerminal-dm_Intro',
       },
       items: [
-        'Edge/reTerminal-DM/reterminal-dm',
-        'Edge/reTerminal-DM/reterminal-dm-flash-OS',
-        'Edge/reTerminal-DM/reterminal-dm-warranty',
-        'Edge/reTerminal-DM/reterminal-dm-hardware-guide',
+        'Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm',
+        'Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm-flash-OS',
+        'Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm-warranty',
+        'Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm-hardware-guide',
         {
           type: 'category',
           label: 'Node-Red',
           items: [
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
-            'Edge/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
           ],
         },
         {
           type: 'category',
           label: 'SenseCraft_Edge',
           items: [
-            'Edge/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
           ],
         },
 
@@ -2383,42 +2422,79 @@ const sidebars = {
           type: 'category',
           label: 'Home-Assistant',
           items: [
-            'Edge/reTerminal-DM/Home-Assistant/reterminal-DM-Frigate',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Home-Assistant/reterminal-DM-Frigate',
           ],
         },
         {
           type: 'category',
           label: 'Embedded_ML',
           items: [
-            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
-            'Edge/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
           ],
         },
         {
           type: 'category',
           label: 'Ignition Edge',
           items: [
-            'Edge/reTerminal-DM/Ignition_Edge/reTerminal-DM-Getting-Started-with-Ignition-Edge',
-            'Edge/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Getting-Started-with-Ignition-Edge',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
           ],
         },
         {
           type: 'category',
           label: 'Azure IoT Edge',
           items: [
-            'Edge/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
           ],
         },
         {
           type: 'category',
           label: 'AWS IoT Core',
           items: [
-            'Edge/reTerminal-DM/AWS_IoT/reTerminal-DM_AWS_first',
+            'Edge/Raspberry_Pi_Devices/reTerminal-DM/AWS_IoT/reTerminal-DM_AWS_first',
           ],
         },
       ],
     },
+  
+  ],
+  },
+  {
+    type: 'category',
+    label: 'Edge Controller',
+    collapsed: true,
+    collapsible: true,
+    link: {
+      type: "doc",
+      id: 'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_intro',
+    },
+    items: [
+      {
+        type: 'category',
+        label: 'EdgeBox-RPI-200',
+        items: [
+          'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
+          'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
+          'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+          'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
+          'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
+          {
+            type: 'category',
+            label: 'Ignition Edge',
+            items: [
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Ignition_Edge/Edgebox-rpi-200-ignition-edge'
+            ],
+          },
+        ],
+      },
+    ],
+  },
 
+  ],
+  ////////////////
+},
+    
     {
       type: 'category',
       label: 'NVIDIA Jetson®',
@@ -2573,32 +2649,14 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'Edge Series',
+      label: 'ESP Devices',
       collapsed: true,
       collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Edge/Edge_Series/Edge_series_Intro',
-      },
+      //link: {
+        //type: "doc",
+        //id: 'Edge/Edge_Series/Edge_series_Intro',
+      //},
       items: [
-        {
-          type: 'category',
-          label: 'EdgeBox-RPI-200',
-          items: [
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
-            'Edge/Edge_Series/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
-            {
-              type: 'category',
-              label: 'Ignition Edge',
-              items: [
-                'Edge/Edge_Series/Edge_Box_RPi_200/Ignition_Edge/Edgebox-rpi-200-ignition-edge'
-              ],
-            },
-          ],
-        },
         {
           type: 'category',
           label: 'EdgeBox-ESP-100',
