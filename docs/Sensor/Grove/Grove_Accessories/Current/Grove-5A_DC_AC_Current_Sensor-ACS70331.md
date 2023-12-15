@@ -17,6 +17,10 @@ The Grove - ±5A DC/AC Current Sensor (ACS70331) is a high precision DC/AC curre
 
 The Grove - ±5A DC/AC Current Sensor (ACS70331) can measure both the DC current and the AC current up to 5A with a base sensitivity of 200mV/A.
 
+:::tip
+There is a measurement data table about current for your reference in **[Resources](#jump)** part below.
+:::
+
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-5A-DC-AC-Current-Sensor-ACS70331-p-2928.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Feature
@@ -409,10 +413,11 @@ So, in the figure 6, when we set the **Vref** to 595.70, the **Ip** turns to 0mA
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove--5A_DC-AC_Current_Sensor-ACS70331/res/5A%20DCAC%20Current%20Sensor(ACS70331)%20v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-## Resources
+## <span id="jump">Resources</span>
 
 - **[ZIP]** [Grove - ±5A DC/AC Current Sensor (ACS70331) Schematic file](https://files.seeedstudio.com/wiki/Grove--5A_DC-AC_Current_Sensor-ACS70331/res/5A%20DCAC%20Current%20Sensor(ACS70331)%20v1.0.zip)
 - **[PDF]** [ACS70331 Datasheet](https://files.seeedstudio.com/wiki/Grove-2.5A_DC_Current_Sensor-ACS70331/res/Current_Sensor_ACS70331.pdf)
+- **[PDF]** [Measurement Data](https://files.seeedstudio.com/wiki/Grove-2.5A_DC_Current_Sensor-ACS70331/res/Grove_±5A_DCAC_Current_Sensor_v1.1_measurement_data_20231214.xls)
 
 ## Tech Support & Product Discussion
 
