@@ -136,6 +136,7 @@ const sidebars = {
               type: 'category',
               label: 'AI-powered',
               items: [
+                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
@@ -679,6 +680,7 @@ const sidebars = {
             items: [
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_Helium',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_Loriot',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/AWS_Service',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_LoRaWAN_Network_Server/TTN_Mapper',
                    ],
@@ -865,8 +867,14 @@ const sidebars = {
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao_arduino',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
           ],
+        },{
+          type: 'category',
+          label: 'mmWave kit',
+          items: [
+            'Sensor/mmWave_radar_sensor/mmwave_human_kit',
+            'Sensor/mmWave_radar_sensor/MMWave_Kit_And_Grove_Connect_To_ESPHome',
+          ],
         },
-        'Sensor/mmWave_radar_sensor/mmwave_human_kit',
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
         'Sensor/mmWave_radar_sensor/Radar_MR60BHA1',
         'Sensor/mmWave_radar_sensor/Radar_MR60FDA1',
@@ -1023,7 +1031,6 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
-                // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-MMWave-Grove',
               ],
             },
           ],

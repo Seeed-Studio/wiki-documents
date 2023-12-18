@@ -169,11 +169,15 @@ After installing the above firmware, you can check whether the firmware is insta
 
 ```cpp
 #include "rpcWiFi.h"
+#include <erpc/erpc_port.h>
  
 void setup() {
     Serial.begin(115200);
     while(!Serial); // Wait to open Serial Monitor
-    Serial.printf("RTL8720 Firmware Version: %s", rpc_system_version());
+    char* version = rpc_system_version();
+    Serial.print("RTL8720 Firmware Version: ");
+    Serial.println(version);
+    erpc_free(version);
 }
  
 void loop() {
