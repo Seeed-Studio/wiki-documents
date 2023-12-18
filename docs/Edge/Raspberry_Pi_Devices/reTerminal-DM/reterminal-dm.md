@@ -36,7 +36,7 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 * Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
 * Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
 * Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
-* [Product warranty: Two-year warranty](/docs/Edge/reTerminal-DM/reterminal-dm-warranty.md)
+* [Product warranty: Two-year warranty](Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm-warranty.md)
 
 > \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
 
