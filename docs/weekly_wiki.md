@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/11/2023
+  date: 12/18/2023
   author: Seraphina
 ---
 
@@ -17,43 +17,60 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 11th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 18th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### LinkStar H28K
+### [Grove Vision AI Module V2](https://wiki.seeedstudio.com/grove_vision_ai_v2/)
 
-The LinkStar H28K is equipped with a quad-core Cortex-A53 RK3528 chip with two gigabit Ethernet ports, using PCIE/RGMII gigabit, and non-relay network ports for more stable speeds.It's a real pocket design, just 5.5x6.5cm.
+The Grove - Vision AI V2 is a thumb-sized AI vision sensor equipped with the WiseEye2 HX653 processor, which adopts the Arm Cortex-M55 dual-core architecture. It features a standard CSI interface and is compatible with Raspberry Pi cameras. It has an onboard digital microphone and an SD card slot. It is highly suitable for various embedded AI vision projects. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It is compatible with the XIAO series and Arduino ecosystems, making it an ideal choice for various object detection applications.
 
-In this wiki, we will show you the hardware overview.<br />
-[H28K Introduction](https://wiki.seeedstudio.com/H28K_Datasheet/)
-
-In this wiki we will show you how to install operating system with TF card or eMMC.<br />
-[Install Operating System - H28K](https://wiki.seeedstudio.com/H28K-install-system/)
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/H28K/Overview.jpg" /></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
 
 
-### [mmWave for XIAO to Home Assistant via Bluetooth](https://wiki.seeedstudio.com/mmwave_for_xiao_to_ha_bt)
+### [Connect SenseCAP T1000 Tracker to Loriot](https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_Loriot/)
 
-24GHz mmWave Sensor for XIAO - Human Static Presence is a expansion board for Seeed Studio XIAO series. It is an antenna-integrated, high-sensitivity mmwave sensor that is based on the FMCW principle. Combined with sensor signal processing and accurate human body sensing algorithms, it can identify human bodies in motion and stationary states. 
+LORIOT LoRAWAN Network Server (LNS) is hardware independent abd support every LoRaWAN® Gateways and sensors in the market.In this wiki, we will show you how to connect SenseCAP T1000 Tracker to Loriot
 
-This chapter primarily introduces how the 24GHz mmWave Sensor for XIAO connects to the HA via Bluetooth. For detailed functional features of the 24GHz mmWave Sensor for XIAO, you can refer to [here](https://wiki.seeedstudio.com/mmwave_for_xiao/).
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/DeviceDetails.png" alt="pir" width={800} height="auto" /></p>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/9.png" style={{width:1000, height:'auto'}}/></div>
+### [Object Tracking with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/mmwave_for_xiao_to_ha_bt)
 
+Object tracking is the process of consistently locating a specific object across consecutive frames in a video. In the realm of single object trackers, the initial frame serves as a reference, with the target object marked by a bounding rectangle. Subsequent frames then employ tracking algorithms to follow and trace the object's movement. Typically, these trackers are utilized alongside object detectors in real-world applications, combining the strengths of both technologies for enhanced accuracy and efficiency.
 
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facetrack.gif" /></center>
 
+### [mmWave Kit And Grove Connect To ESPHome](https://wiki.seeedstudio.com/MMWave_Kit_And_Grove_Connect_To_ESPHome/)
+
+MmWave Human Detection Sensor Kit powered by Seeed Studio XIAO ESP32C3, it supports Wi-Fi/BLE connectivity and offers precise human detection via mmWave sensors. Seamlessly connect grove modules for added features. Achieve easy setup for Home Assistant within 1-2 minutes, coupled with convenient wireless Over-The-Air (OTA) updates. Enable extensive versatility with replaceable mmWave sensors. Ideal for customize smart home automation, detect intrusions, and monitor the well-being of the elderly.
+
+This wiki will show you how to use Raspberry Pi 4B as server to run Home Assistant, and use mmWave Human Detection Sensor Kit as the hardware here, along with multiple Grove Sensors.
+
+<center><img width={800} src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/light.png" /></center>
+
+### [Edge Controller Powered By Raspberry Pi](https://wiki.seeedstudio.com/Edge_Box_intro/)
+
+Raspberry Pi serves as the foundation for our all-in-one industrial edge computing controllers. With a rugged design, high scalability, rich IO resources, and effortless compatibility with the Raspberry Pi industrial software ecosystem, these controllers emerge as the optimal solution for smart automation and Industrial Internet of Things (IIoT) applications.
+
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:800, height:'auto'}}/></div>
+
+### [Edge Devices Powered By Raspberry Pi](https://wiki.seeedstudio.com/RpiDevices/)
+
+Welcome to the cutting-edge realm of Raspberry Pi-powered devices at Edge Solution. Here, we delve into the innovative solutions crafted by Seeed Studios for edge computing, specifically tailored for Raspberry Pi CM4 customizable devices such as Human-Machine Interface (HMI) units and versatile edge controllers. Join us on a journey through the intricate landscape of these powerful devices, designed to empower your projects with seamless and efficient edge computing capabilities.
+
+### [Rockchip-Powered Network Solutions](https://wiki.seeedstudio.com/RK_intro/)
+
+Welcome to Seeed Studios' Rockchip-powered network solutions. Explore efficient connectivity with devices like the LinkStar-H68K-1432 Router, featuring Wi-Fi 6, 4GB RAM, 32GB eMMC, and versatile Ethernet options. Dive into user-friendly Android 11, Lubuntu 20.04, and OpenWRT support. The LinkStar-H28K offers dual Gigabit ports, a Quad-core chip, 4GB memory, and 8GB storage. Join us in discovering the simplicity and power of Rockchip-driven networks.
 
 ## Existed Wiki Updated
 
-### [How to batch configure - SenseCAP T1000 FAQ](https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/#how-to-batch-configure)
+### [Update FAQ - How to boot an OS from USB Flash Drive](https://wiki.seeedstudio.com/Boot_OS_from_USB_flash_drive/)
 
-We have updated the method about how to batch configure for SenseCAP T1000
+Please note that the default of reTerminal is different from the cloned recovery/boot.conf. You should rewrite recovery/boot.conf as necessary.
 
-### [Run the code of Object Detection with reTerminal and Pi camera in BookWorm OS](https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/#lets-run-the-code-in-bookworm-os)
+### [How to get location via Bluetooth Beacon in SenseCAP T1000 Tracker - Configuration](https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/#lets-run-the-code-in-bookworm-os)
 
-We have updated the method about how to run the code of the Object Detection with reTerminal and Pi camera in BookWorm OS.
+We have updated the method about how to get location via Bluetooth Beacon in SenseCAP T1000 Tracker.
 
 ## The Efforts of Contributor✨
 
@@ -98,3 +115,4 @@ We have updated the method about how to run the code of the Object Detection wit
 - [weekly wiki on 11.20th](/Seeed_Elderly/weekly_wiki/wiki1120)
 - [weekly wiki on 11.27th](/Seeed_Elderly/weekly_wiki/wiki1127)
 - [weekly wiki on 12.04th](/Seeed_Elderly/weekly_wiki/wiki1204)
+- [weekly wiki on 12.11th](/Seeed_Elderly/weekly_wiki/wiki1211)
