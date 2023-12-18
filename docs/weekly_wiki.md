@@ -48,6 +48,19 @@ This wiki will show you how to use Raspberry Pi 4B as server to run Home Assista
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/light.png" /></center>
 
+### [Edge Controller Powered By Raspberry Pi](https://wiki.seeedstudio.com/Edge_Box_intro/)
+
+Raspberry Pi serves as the foundation for our all-in-one industrial edge computing controllers. With a rugged design, high scalability, rich IO resources, and effortless compatibility with the Raspberry Pi industrial software ecosystem, these controllers emerge as the optimal solution for smart automation and Industrial Internet of Things (IIoT) applications.
+
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:800, height:'auto'}}/></div>
+
+### [Edge Devices Powered By Raspberry Pi](https://wiki.seeedstudio.com/RpiDevices/)
+
+Welcome to the cutting-edge realm of Raspberry Pi-powered devices at Edge Solution. Here, we delve into the innovative solutions crafted by Seeed Studios for edge computing, specifically tailored for Raspberry Pi CM4 customizable devices such as Human-Machine Interface (HMI) units and versatile edge controllers. Join us on a journey through the intricate landscape of these powerful devices, designed to empower your projects with seamless and efficient edge computing capabilities.
+
+### [Rockchip-Powered Network Solutions](https://wiki.seeedstudio.com/RK_intro/)
+
+Welcome to Seeed Studios' Rockchip-powered network solutions. Explore efficient connectivity with devices like the LinkStar-H68K-1432 Router, featuring Wi-Fi 6, 4GB RAM, 32GB eMMC, and versatile Ethernet options. Dive into user-friendly Android 11, Lubuntu 20.04, and OpenWRT support. The LinkStar-H28K offers dual Gigabit ports, a Quad-core chip, 4GB memory, and 8GB storage. Join us in discovering the simplicity and power of Rockchip-driven networks.
 
 ## Existed Wiki Updated
 
