@@ -263,6 +263,10 @@ const config = {
                 label: 'Home Assistant',
                 to: '/home_assistant_topic',
               },
+              {
+                label: 'Open Source',
+                to: '/open_source_topic',
+              },
             ],
           },
           {

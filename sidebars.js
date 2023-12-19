@@ -3279,12 +3279,10 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'TinyML/TinyML_Topic',
+      id: 'Topics/TinyML/TinyML_Topic',
       label: 'TinyML',
       className: 'sideboard_calss',
     },
-
-    // 'TinyML/TinyML_Workshop',
 
     {
       type: 'category',
@@ -3293,16 +3291,21 @@ const sidebars = {
       collapsible: true,
       link: {
         type: "doc",
-        id: 'TinyML/TinyML_Workshop/TinyML_workshop_course',
+        id: 'Topics/TinyML/TinyML_Workshop/TinyML_workshop_course',
       },
       items: [
-          //  'TinyML/TinyML_Workshop/Edgelab',
-          'TinyML/TinyML_Workshop/sscma',
-           'TinyML/TinyML_Workshop/EdgeImpulse',
-          //  'TinyML/TinyML_Workshop/XIAO_ESP32S3_Sense',
-          'TinyML/TinyML_Workshop/Key_Word_Spotting',
-           'TinyML/TinyML_Workshop/Image_classification_project',
+          'Topics/TinyML/TinyML_Workshop/sscma',
+           'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
+          'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
+           'Topics/TinyML/TinyML_Workshop/Image_classification_project',
       ],
+    },
+
+    {
+      type: 'doc',
+      id: 'Topics/Open_Source/Open_Source_Topic',
+      label: 'Open Source',
+      className: 'sideboard_calss',
     },
 
 
