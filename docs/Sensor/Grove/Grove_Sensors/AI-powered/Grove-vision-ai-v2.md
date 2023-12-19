@@ -22,7 +22,7 @@ last_update:
 
 ## Introduction
 
-The Grove - Vision AI V2 is a thumb-sized AI vision sensor equipped with the WiseEye2 HX653 processor, which adopts the Arm Cortex-M55 dual-core architecture. It features a standard CSI interface and is compatible with Raspberry Pi cameras. It has an onboard digital microphone and an SD card slot. It is highly suitable for various embedded AI vision projects. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It is compatible with the XIAO series and Arduino ecosystems, making it an ideal choice for various object detection applications.
+The Grove - Vision AI V2 is a thumb-sized AI vision module equipped with the WiseEye2 HX6538 processor, which adopts the Arm Cortex-M55 dual-core architecture. It features a standard CSI interface and is compatible with Raspberry Pi cameras. It has an onboard digital microphone and an SD card slot. It is highly suitable for various embedded AI vision projects. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It is compatible with the XIAO series and Arduino ecosystems, making it an ideal choice for various object detection applications.
 
 <div class="table-center">
 <iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -30,7 +30,7 @@ The Grove - Vision AI V2 is a thumb-sized AI vision sensor equipped with the Wis
 
 ### Features
 
-- The FIRST board based on the WiseEye2 HX653 processor with a dual-core Arm Cortex-M55 architecture.
+- The FIRST board based on the WiseEye2 HX6538 processor with a dual-core Arm Cortex-M55 architecture.
 - Equipped with an integrated Arm Ethos-U55 micro neural network acceleration unit, ideal for AI image vision applications.
 - Compatibility with a vast range of Raspberry Pi cameras.
 - Onboard PDM microphone, SD card slot, Type-C, Grove interface, and abundant peripheral devices facilitate prototype development.
@@ -96,7 +96,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
     </a>
 </div><br />
 
-Grove Vision AI uses Himax WE2 chip, image processing and model inference are processed locally in Grove Vision AI, and then the result is output to XIAO via IIC or UART, so the main purpose of this library is to process the data stream of Grove Vision AI, and it doesn't involve model inference or image processing. So the main purpose of this library is to process the data stream of Grove Vision AI, without involving model inference or image processing.
+Grove Vision AI uses WiseEye2 HX6538 chip, image processing and model inference are processed locally in Grove Vision AI, and then the result is output to XIAO via IIC or UART, so the main purpose of this library is to process the data stream of Grove Vision AI, and it doesn't involve model inference or image processing. So the main purpose of this library is to process the data stream of Grove Vision AI, without involving model inference or image processing.
 
 The Grove Vision AI communicates with the XIAO via the IIC, and the device's IIC address is `0x62`. Image information transfer is via the USB serial port.
 
