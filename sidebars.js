@@ -3312,6 +3312,13 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
+    {
+      type: 'doc',
+      id: 'Topics/Edge_AI/Edge_AI_Topic',
+      label: 'Edge AI',
+      className: 'sideboard_calss',
+    },
+
 
     {
       type: 'html',
