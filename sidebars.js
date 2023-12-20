@@ -871,8 +871,8 @@ const sidebars = {
           type: 'category',
           label: 'mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mmwave_human_kit',
-            'Sensor/mmWave_radar_sensor/MMWave_Kit_And_Grove_Connect_To_ESPHome',
+            'Sensor/mmWave_radar_sensor/mmwave-kit/mmwave_human_kit',
+            'Sensor/mmWave_radar_sensor/mmwave-kit/mmWave_Kit_And_Grove_Connect_To_ESPHome',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',

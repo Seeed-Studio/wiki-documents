@@ -1,10 +1,10 @@
 ---
-description: MMWave Kit And Grove Connect To ESPHome
-title: MMWave Kit And Grove Connect To ESPHome
+description: mmWave Kit And Grove Connect To ESPHome
+title: mmWave Kit And Grove Connect To ESPHome
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /MMWave_Kit_And_Grove_Connect_To_ESPHome
+slug: /mmWave_Kit_And_Grove_Connect_To_ESPHome
 last_update:
   date: 12/09/2023
   author: Allen
@@ -12,7 +12,7 @@ last_update:
 
 ## Introduction
 
-MmWave Human Detection Sensor Kit powered by Seeed Studio XIAO ESP32C3, it supports Wi-Fi/BLE connectivity and offers precise human detection via mmWave sensors. Seamlessly connect grove modules for added features. Achieve easy setup for Home Assistant within 1-2 minutes, coupled with convenient wireless Over-The-Air (OTA) updates. Enable extensive versatility with replaceable mmWave sensors. Ideal for customize smart home automation, detect intrusions, and monitor the well-being of the elderly.
+mmWave Human Detection Sensor Kit powered by Seeed Studio XIAO ESP32C3, it supports Wi-Fi/BLE connectivity and offers precise human detection via mmWave sensors. Seamlessly connect grove modules for added features. Achieve easy setup for Home Assistant within 1-2 minutes, coupled with convenient wireless Over-The-Air (OTA) updates. Enable extensive versatility with replaceable mmWave sensors. Ideal for customize smart home automation, detect intrusions, and monitor the well-being of the elderly.
 
 ## Hardware Preparation
 
@@ -45,6 +45,7 @@ I am using Raspberry Pi 4B as server to run HomeAssistant, using mmWave Human De
 
 - [Grove - Temperature and Humidity Sensor (DHT20)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html)
 - [Grove - Light Sensor (LS06-S)](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
+- [Grove - Flame Sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html)
 
 ## Software Preparation
 
@@ -323,7 +324,7 @@ If you found ESPHome not in the Configured zone, but in Discovered zone upper. Y
 
 ##### Step 1: Hardware connection
 
-Connect light sensor to mmwave kit via Grove cable, you can refer the picture below.
+Connect [light sensor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html) to mmwave kit via Grove cable, you can refer the picture below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/light.png" style={{width:800, height:'auto'}}/></div>
 
@@ -396,7 +397,7 @@ Connect light sensor to mmwave kit via Grove cable, you can refer the picture be
 
 ##### Step 1: Hardware connection
 
-Connect temperature and humidity sensor mmwave kit via Grove cable, you can refer the picture below.
+Connect [temperature and humidity sensor](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html) to mmwave kit via Grove cable, you can refer the picture below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/DHT20.png" style={{width:800, height:'auto'}}/></div>
 
@@ -452,11 +453,43 @@ If you meet error, you can jump to [here](#jump) for your reference.
 
 4. Click **ADD TO DASHBOARD**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/25.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/25.png" style={{width:500, height:'auto'}}/></div>
 
 5. Finally you will see the Temperature and Humidity data in your dashboard.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/26.png" style={{width:1000, height:'auto'}}/></div>
+
+#### Flame sensor
+
+##### Step 1: Hardware Connection
+
+Use Grove cable connect [flame sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html) to mmWave kit analog port. You can refer the video below.
+
+##### Step 2: Software Setup
+
+###### a. Setup flame sensor
+
+Add the code below to your configuration file and **INSTALL** to mmWave kit.
+
+```
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO3
+      inverted: true
+    name: "Flame Detecctor"
+    device_class: smoke
+```
+
+###### b. Add flame sensor to dashboard.
+
+You can refer light sensor or temperature and humidity sensor above.
+
+Finally, you can see the effect in the video below.
+
+<div class="table-center">
+<iframe width="280" height="500" src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/fire_sensor.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## Tech Support & Product Discussion
 
