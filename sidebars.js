@@ -2525,6 +2525,10 @@ const sidebars = {
         {
           type: 'category',
           label: 'reComputer',
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/reComputer/reComputer_Intro',
+          },
           items: [
             {
               type: 'category',
