@@ -1,6 +1,6 @@
 ---
-description: SenseCAP Indicator x Home Assistant Application Development
-title: Home Assistant X SenseCAP Indicator
+description: SenseCAP Indicator - Home Assistant Application Development
+title: Home Assistant - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
 - Home Assistant
@@ -13,7 +13,7 @@ last_update:
   author: Spencer
 ---
 
-# SenseCAP Indicator x Home Assistant Application Development
+# SenseCAP Indicator - Home Assistant Application Development
 
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

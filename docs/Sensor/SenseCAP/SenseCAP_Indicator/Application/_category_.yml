@@ -1,7 +1,7 @@
-position: 4 # float position is supported
+position: 4 
 label: 'Application'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
+collapsible: true 
+collapsed: true 
 className: indicator_application
 # link:
 #   type: generated-index

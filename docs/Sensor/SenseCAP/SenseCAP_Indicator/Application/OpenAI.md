@@ -1,6 +1,6 @@
 ---
-description: ChatGPT X DALL·E with Indicator
-title: ChatGPT X DALL·E X SenseCAP Indicator
+description: ChatGPT & DALL·E with Indicator
+title: ChatGPT - DALL·E - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,7 +11,7 @@ last_update:
   author: Spencer
 ---
 
-# SenseCAP Indicator X ChatGPT X DALL·E Application Development
+# SenseCAP Indicator - ChatGPT - DALL·E Application Development
 
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

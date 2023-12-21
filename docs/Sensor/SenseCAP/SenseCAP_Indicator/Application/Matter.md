@@ -1,6 +1,6 @@
 ---
-description: SenseCAP Indicator x Matter Application Development
-title: Matter X SenseCAP Indicator
+description: SenseCAP Indicator - Matter Application Development
+title: Matter - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
 - Matter
@@ -13,8 +13,7 @@ last_update:
   author: Tim
 ---
 
-# SenseCAP Indicator x Matter Application Development
-<!-- SenseCAP Indicator x Matter Application Development -->
+# SenseCAP Indicator - Matter Application Development
 
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

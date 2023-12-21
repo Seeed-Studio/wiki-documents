@@ -1,6 +1,6 @@
 ---
 description: LoRa Demonstration usage
-title: LoRa Communication X SenseCAP Indicator
+title: LoRa Communication - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
 - LoRa
@@ -16,7 +16,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# SenseCAP Indicator x LoRa Application Development
+# SenseCAP Indicator - LoRa Application Development
 
 ## Introduction
 
