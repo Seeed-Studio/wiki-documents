@@ -536,11 +536,10 @@ No can do. Considering the frame rate or the speed of image inference, we do not
 Currently we have written drivers for the OV5642 series of cameras, so Grove Vision AI V2 supports the full range of Raspberry Pi OV5647 cameras, e.g., the OV5647-62, OV5647-67, and OV5647-160.The other CSI cameras are theoretically supported, but due to the fact that some of the cameras don't have drivers written for them or the do not have a colour processing unit themselves, so there may be a problem that the colour is only green, and the loss of full colour will have a possible impact on the accuracy of the recognition.
 
 
-<!-- ## Resources
+## Resources
 
-- **[文件类型]** [文件名称](链接)
-- **[文件类型]** [文件名称](链接)
-- **[文件类型]** [文件名称](链接) -->
+- **[PDF]** [Datasheet](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/HX6538_datasheet.pdf)
+- **[GitHub]** [Seeed Grove Vision AI Module V2 SDK](https://github.com/HimaxWiseEyePlus/Seeed_Grove_Vision_AI_Module_V2)
 
 
 
