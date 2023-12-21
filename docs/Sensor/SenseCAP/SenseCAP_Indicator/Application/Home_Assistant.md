@@ -492,4 +492,4 @@ These functions work together to enable the communication between the SenseCAP I
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!

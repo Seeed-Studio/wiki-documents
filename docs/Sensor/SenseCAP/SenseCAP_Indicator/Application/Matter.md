@@ -7,7 +7,7 @@ keywords:
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Matter
-sidebar_position: 4
+sidebar_position: 8
 last_update:
   date: 8/28/2023
   author: Tim
@@ -150,4 +150,4 @@ In general the following considerations must be made when updating the UI and pe
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!

@@ -3,6 +3,3 @@ label: 'Application'
 collapsible: true 
 collapsed: true 
 className: indicator_application
-# link:
-#   type: generated-index
-#   title: Tutorial overview
