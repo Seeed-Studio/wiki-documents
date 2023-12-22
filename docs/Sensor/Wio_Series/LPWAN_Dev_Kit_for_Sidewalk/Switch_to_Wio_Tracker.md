@@ -18,15 +18,15 @@ This tutorial will guide users to flash the LPWAN Dev Board for Amazon Sidewalk 
 
 ### Preparation
 
-LPWAN Dev Kit for Amazon Sidewalk x 1
+* LPWAN Dev Kit for Amazon Sidewalk x 1
 
-Computer x 1
+* Computer x 1
 
-USB Type-C Cable x 1
+* USB Type-C Cable x 1
 
-J-Link Debug Programmer x 1
+* J-Link Debug Programmer x 1
 
-[Bootloader file](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/tree/master/bootloader/Seeed_Wio_Tracker_1110) x 1
+* [Bootloader file](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/tree/master/bootloader/Seeed_Wio_Tracker_1110) x 1
 
 
 

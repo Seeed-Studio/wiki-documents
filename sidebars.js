@@ -1692,7 +1692,17 @@ const sidebars = {
                 },
               ],
             },
-            'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk',
+            {
+              type: 'category',
+              label: 'LPWAN_Dev_Kit_for_Sidewalk',
+              items: [
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/LPWAN_Dev_Kit_for_Sidewalk',
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/Switch_to_Wio_Tracker',
+              ],
+            },
+
+
+
             {
               type: 'category',
               label: 'Wio WM1302',
