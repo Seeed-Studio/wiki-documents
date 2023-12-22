@@ -2337,12 +2337,7 @@ const sidebars = {
                 type: 'category',
                 label: 'Application',
                 items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Flutter',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Electron',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-LVGL',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/Mender-Client-reTerminal',
+                  
       
                   {
                     type: 'category',
@@ -2351,6 +2346,17 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reterminal_frigate',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
+                    ],
+                  },
+                  {
+                    type: 'category',
+                    label: 'Dashboard Design',
+                    items: [
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-Qt-for-Python',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-Flutter',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-Electron',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-LVGL',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/weather-dashboard-with-Grafana-reTerminal',
                     ],
                   },
                   {
@@ -2374,6 +2380,7 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Embedded_ML/reTerminal_ML_Edgeimpulse',
                     ],
                   },
+                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/Mender-Client-reTerminal',
                 ],
               },
               {
