@@ -1,20 +1,19 @@
 ---
-description: SenseCAP Indicator x Matter Application Development
-title: Matter X SenseCAP Indicator
+description: SenseCAP Indicator - Matter Application Development
+title: Matter - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
 - Matter
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Matter
-sidebar_position: 4
+sidebar_position: 8
 last_update:
   date: 8/28/2023
   author: Tim
 ---
 
-# SenseCAP Indicator x Matter Application Development
-<!-- SenseCAP Indicator x Matter Application Development -->
+# SenseCAP Indicator - Matter Application Development
 
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -151,4 +150,4 @@ In general the following considerations must be made when updating the UI and pe
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
