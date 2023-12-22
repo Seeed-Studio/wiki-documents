@@ -236,32 +236,32 @@ SenseCraft is a series of software services developed by Seeed Studio to provide
 
 <br />
 
-Combined with the empowerment of SenseCraft AI, you can easily upload a wide variety of co-created models and directly observe the results.
+Combined with the empowerment of SenseCraft AI Model Assistant, you can easily upload a wide variety of co-created models and directly observe the results.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
 
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/"><strong><span><font color={'FFFFFF'} size={"4"}>Learn More 📕</font></span></strong></a>
 </div>
 
 <br />
 
-In this section, we'll walk you through using SenseCraft Model Assistant (Hereafter referred to as SSCMA) to quickly deploy and observe results.
+In this section, we'll walk you through using SenseCraft AI Model Assistant to quickly deploy and observe results.
 
-### Step 1. Connect the Grove Vision AI V2 to the SSCMA
+### Step 1. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
 
-First, we need to open the main SSCMA page.
+First, we need to open the main SenseCraft AI Model Assistant page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SSCMA</font></span></strong></a>
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
 </div>
 <br />
 
 Please use a Type-C type cable to connect Grove Vision AI V2 to your computer.
 
-In the upper right corner of the SSCMA page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
+In the upper right corner of the SenseCraft AI Model Assistant page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/2.png" style={{width:1000, height:'auto'}}/></div>
 
