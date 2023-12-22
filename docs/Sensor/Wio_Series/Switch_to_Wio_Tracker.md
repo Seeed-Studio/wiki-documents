@@ -117,8 +117,21 @@ When programming is successful, it will show a prompt like this:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/flash-success.png" alt="pir" width={700} height="auto" /></p>
 
+* **Step 4**: Download the application
 
-* **Step 4**: Check the log
+Double click the `Reset` button, there should be a `BOOT` disk in your PC.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/boot-disk.png" alt="pir" width={700} height="auto" /></p>
+
+Copy the .uf2 file to the disk, the download will run automatically, then the disk will log out.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/uf2-file.png" alt="pir" width={700} height="auto" /></p>
+
+You can also upgrade your own applicaiton by Arduino.
+
+
+* **Step 5**: Check the log
 
 Then we can open the serial monitor to check the log.
 After the flashing, the DevEUI/AppEUI/Appkey will be 0.
@@ -129,7 +142,6 @@ After the flashing, the DevEUI/AppEUI/Appkey will be 0.
 You will need to use the SenseCAP Mate APP to choose the platform and define the DevEUI/AppEUI/Appkey, check the [Get Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway) for more details.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_appconfig.png" alt="pir" width={300} height="auto" /></p>
-
 
 
 :::info note
