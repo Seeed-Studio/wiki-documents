@@ -117,7 +117,7 @@ When programming is successful, it will show a prompt like this:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/flash-success.png" alt="pir" width={700} height="auto" /></p>
 
-* **Step 4**: Download the application
+### Download the application
 
 Double click the `Reset` button, there should be a `BOOT` disk in your PC.
 
@@ -131,7 +131,7 @@ Copy the .uf2 file to the disk, the download will run automatically, then the di
 You can also upgrade your own applicaiton by Arduino.
 
 
-* **Step 5**: Check the log
+### Check the log
 
 Then we can open the serial monitor to check the log.
 After the flashing, the DevEUI/AppEUI/Appkey will be 0.
@@ -139,13 +139,13 @@ After the flashing, the DevEUI/AppEUI/Appkey will be 0.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/join-fail.png" alt="pir" width={700} height="auto" /></p>
 
 
-You will need to use the SenseCAP Mate APP to choose the platform and define the DevEUI/AppEUI/Appkey, check the [Get Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway) for more details.
+You can use the SenseCAP Mate APP to choose the platform and define the DevEUI/AppEUI/Appkey, check the [Get Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway) for more details.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_appconfig.png" alt="pir" width={300} height="auto" /></p>
 
 
 :::info note
-Can not use SenseCAP Cloud anymore.
+If you want to use the SenseCAP Cloud, please contact sensecap@seeed.cc
 :::
 
 After the settings, the board will reset and rejoin the network.
