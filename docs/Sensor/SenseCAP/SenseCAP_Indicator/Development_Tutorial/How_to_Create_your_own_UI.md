@@ -142,7 +142,7 @@ Run the following command to build, flash and monitor the project:
 **Need help with your SenseCAP Indicator? We're here to assist you!**
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>
+<a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
 <a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
 </div>
 

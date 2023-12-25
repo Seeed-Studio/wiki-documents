@@ -1,6 +1,6 @@
 ---
-description: SenseCAP Indicator x Home Assistant Application Development
-title: Home Assistant X SenseCAP Indicator
+description: SenseCAP Indicator - Home Assistant Application Development
+title: Home Assistant - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
 - Home Assistant
@@ -13,7 +13,7 @@ last_update:
   author: Spencer
 ---
 
-# SenseCAP Indicator x Home Assistant Application Development
+# SenseCAP Indicator - Home Assistant Application Development
 
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -492,4 +492,4 @@ These functions work together to enable the communication between the SenseCAP I
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!

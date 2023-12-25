@@ -267,6 +267,10 @@ const config = {
                 label: 'Open Source',
                 to: '/open_source_topic',
               },
+              {
+                label: 'Edge AI',
+                to: '/edge_ai_topic',
+              },
             ],
           },
           {

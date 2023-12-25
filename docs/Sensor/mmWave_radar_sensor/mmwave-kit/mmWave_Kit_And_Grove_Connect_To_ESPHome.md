@@ -1,10 +1,10 @@
 ---
-description: MMWave Kit And Grove Connect To ESPHome
-title: MMWave Kit And Grove Connect To ESPHome
+description: mmWave Kit And Grove Connect To ESPHome
+title: mmWave Kit And Grove Connect To ESPHome
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /MMWave_Kit_And_Grove_Connect_To_ESPHome
+slug: /mmWave_Kit_And_Grove_Connect_To_ESPHome
 last_update:
   date: 12/09/2023
   author: Allen
@@ -12,7 +12,7 @@ last_update:
 
 ## Introduction
 
-MmWave Human Detection Sensor Kit powered by Seeed Studio XIAO ESP32C3, it supports Wi-Fi/BLE connectivity and offers precise human detection via mmWave sensors. Seamlessly connect grove modules for added features. Achieve easy setup for Home Assistant within 1-2 minutes, coupled with convenient wireless Over-The-Air (OTA) updates. Enable extensive versatility with replaceable mmWave sensors. Ideal for customize smart home automation, detect intrusions, and monitor the well-being of the elderly.
+mmWave Human Detection Sensor Kit powered by Seeed Studio XIAO ESP32C3, it supports Wi-Fi/BLE connectivity and offers precise human detection via mmWave sensors. Seamlessly connect grove modules for added features. Achieve easy setup for Home Assistant within 1-2 minutes, coupled with convenient wireless Over-The-Air (OTA) updates. Enable extensive versatility with replaceable mmWave sensors. Ideal for customize smart home automation, detect intrusions, and monitor the well-being of the elderly.
 
 ## Hardware Preparation
 
@@ -45,6 +45,7 @@ I am using Raspberry Pi 4B as server to run HomeAssistant, using mmWave Human De
 
 - [Grove - Temperature and Humidity Sensor (DHT20)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html)
 - [Grove - Light Sensor (LS06-S)](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
+- [Grove - Flame Sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html)
 
 ## Software Preparation
 
@@ -115,161 +116,8 @@ Connect the mmwave kit to the HomeAssistant via Type-C cable, you can refer the 
 :::tip
 1. api and ota part have default key or password you needn't to change it.
 2. wifi part you need to change your own ssid and password.
+3. [click here to see code](https://github.com/limengdu/mmwave-kit-external-components/blob/mmwave-kit-factory-bin/example/mr24hpc1.yaml)
 :::
-
-<details>
-
-<summary>click here to see code</summary>
-
-```
-substitutions:
-  name: "seeedstudio-mmwave-kit"
-  friendly_name: "SeeedStudio mmWave Kit"
-
-esphome:
-  name: "${name}"
-  friendly_name: "${friendly_name}"
-  name_add_mac_suffix: true
-  project:
-    name: "seeedstudio.mmwave_kit"
-    version: "2.0"
-  platformio_options:
-    board_build.flash_mode: dio
-    board_build.mcu: esp32c3
-
-external_components:
-  - source: github://limengdu/mmwave-kit-external-components@main
-    refresh: 0s
-
-esp32:
-  board: esp32-c3-devkitm-1
-  variant: esp32c3
-  framework:
-    type: esp-idf
-
-# Enable logging
-logger:
-  hardware_uart: USB_SERIAL_JTAG
-  level: DEBUG
-
-# Enable Home Assistant API
-api:
-
-ota:
-
-wifi:
-  ssid: Your own ssid
-  password: Your own password
-
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
-  ap:
-    ssid: "seeedstudio-mr24hpc1"
-
-captive_portal:
-
-# Sets up Bluetooth LE (Only on ESP32) to allow the user
-# to provision wifi credentials to the device.
-esp32_improv:
-  authorizer: none
-
-# Sets up the improv via serial client for Wi-Fi provisioning.
-# Handy if your device has a usb port for the user to add credentials when they first get it.
-# improv_serial: # Commented until improv works with usb-jtag on idf
-
-uart:
-  id: uart_bus
-  baud_rate: 115200
-  rx_pin: 4
-  tx_pin: 5
-  parity: NONE
-  stop_bits: 1
-
-seeed_mr24hpc1:
-  id: my_seeed_mr24hpc1
-
-text_sensor:
-  - platform: seeed_mr24hpc1
-    heart_beat:
-      name: "Heartbeat"
-    product_model:
-      name: "Product Model"
-    product_id:
-      name: "Product ID"
-    hardware_model:
-      name: "Hardware Model"
-    hardware_version:
-      name: "Hardware Version"
-    keep_away:
-      name: "Active Reporting Of Proximity"
-    motion_status:
-      name: "Motion Information"
-    custom_mode_end:
-      name: "Custom Mode Status"
-
-binary_sensor:
-  - platform: seeed_mr24hpc1
-    someone_exist:
-      name: "Presence Information"
-
-sensor:
-  - platform: seeed_mr24hpc1
-    custom_presence_of_detection:
-      name: "Static Distance"
-    movement_signs:
-      name: "Body Movement Parameter"
-    custom_motion_distance:
-      name: "Motion Distance"
-    custom_spatial_static_value:
-      name: "Existence Energy"
-    custom_spatial_motion_value:
-      name: "Motion Energy"
-    custom_motion_speed:
-      name: "Motion Speed"
-    custom_mode_num:
-      name: "Current Custom Mode"
-
-switch:
-  - platform: seeed_mr24hpc1
-    underly_open_function:
-      name: Underlying Open Function Info Output Switch
-
-button:
-  - platform: seeed_mr24hpc1
-    reset:
-      name: "Module Reset"
-    custom_set_end:
-      name: "End Of Custom Mode Settings"
-
-select:
-  - platform: seeed_mr24hpc1
-    scene_mode:
-      name: "Scene"
-    unman_time:
-      name: "Time For Entering No Person State (Standard Function)"
-    existence_boundary:
-      name: "Existence Boundary"
-    motion_boundary:
-      name: "Motion Boundary"
-
-number:
-  - platform: seeed_mr24hpc1
-    sensitivity:
-      name: "Sensitivity"
-    custom_mode:
-      name: "Custom Mode"
-    existence_threshold:
-      name: "Existence Energy Threshold"
-    motion_threshold:
-      name: "Motion Energy Threshold"
-    motion_trigger:
-      name: "Motion Trigger Time"
-    motion_to_rest:
-      name: "Motion To Rest Time"
-    custom_unman_time:
-      name: "Time For Entering No Person State (Underlying Open Function)"
-```
-
-</details>
 
 8. And then will be a pop-up window, click on the third entry.
 
@@ -323,7 +171,7 @@ If you found ESPHome not in the Configured zone, but in Discovered zone upper. Y
 
 ##### Step 1: Hardware connection
 
-Connect light sensor to mmwave kit via Grove cable, you can refer the picture below.
+Connect [light sensor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html) to mmwave kit via Grove cable, you can refer the picture below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/light.png" style={{width:800, height:'auto'}}/></div>
 
@@ -396,7 +244,7 @@ Connect light sensor to mmwave kit via Grove cable, you can refer the picture be
 
 ##### Step 1: Hardware connection
 
-Connect temperature and humidity sensor mmwave kit via Grove cable, you can refer the picture below.
+Connect [temperature and humidity sensor](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html) to mmwave kit via Grove cable, you can refer the picture below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/DHT20.png" style={{width:800, height:'auto'}}/></div>
 
@@ -452,11 +300,43 @@ If you meet error, you can jump to [here](#jump) for your reference.
 
 4. Click **ADD TO DASHBOARD**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/25.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/25.png" style={{width:500, height:'auto'}}/></div>
 
 5. Finally you will see the Temperature and Humidity data in your dashboard.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/26.png" style={{width:1000, height:'auto'}}/></div>
+
+#### Flame sensor
+
+##### Step 1: Hardware Connection
+
+Use Grove cable connect [flame sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html) to mmWave kit analog port. You can refer the video below.
+
+##### Step 2: Software Setup
+
+###### a. Setup flame sensor
+
+Add the code below to your configuration file and **INSTALL** to mmWave kit.
+
+```
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO3
+      inverted: true
+    name: "Flame Detecctor"
+    device_class: smoke
+```
+
+###### b. Add flame sensor to dashboard.
+
+You can refer light sensor or temperature and humidity sensor above.
+
+Finally, you can see the effect in the video below.
+
+<div class="table-center">
+<iframe width="280" height="500" src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/fire_sensor.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## Tech Support & Product Discussion
 

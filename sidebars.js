@@ -871,8 +871,8 @@ const sidebars = {
           type: 'category',
           label: 'mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mmwave_human_kit',
-            'Sensor/mmWave_radar_sensor/MMWave_Kit_And_Grove_Connect_To_ESPHome',
+            'Sensor/mmWave_radar_sensor/mmwave-kit/mmwave_human_kit',
+            'Sensor/mmWave_radar_sensor/mmwave-kit/mmWave_Kit_And_Grove_Connect_To_ESPHome',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -1692,7 +1692,17 @@ const sidebars = {
                 },
               ],
             },
-            'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk',
+            {
+              type: 'category',
+              label: 'LPWAN_Dev_Kit_for_Sidewalk',
+              items: [
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/LPWAN_Dev_Kit_for_Sidewalk',
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/Switch_to_Wio_Tracker',
+              ],
+            },
+
+
+
             {
               type: 'category',
               label: 'Wio WM1302',
@@ -3309,6 +3319,13 @@ const sidebars = {
       type: 'doc',
       id: 'Topics/Open_Source/Open_Source_Topic',
       label: 'Open Source',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'doc',
+      id: 'Topics/Edge_AI/Edge_AI_Topic',
+      label: 'Edge AI',
       className: 'sideboard_calss',
     },
 
