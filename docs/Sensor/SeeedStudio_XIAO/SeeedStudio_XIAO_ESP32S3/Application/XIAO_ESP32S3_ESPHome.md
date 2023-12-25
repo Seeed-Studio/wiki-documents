@@ -12,27 +12,70 @@ last_update:
 
 <!-- # ESPHome-Support-on-Seeed-Studio-XIAO-ESP32S3 -->
 This Wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32S3. So, let's get started!
-hhhh
+
 
 ## What are ESPHome and Home Assistant?
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/2.png" style={{width:900, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/2.png" style={{width:600, height:'auto'}}/></div>
+<br />
 
 [ESPHome](https://esphome.io/) is a tool which aims to make managing your ESP boards as simple as possible. It reads in a YAML configuration file and creates custom firmware which it installs on your ESP device. Devices or sensors added in ESPHome’s configuration will automatically show up in Home Assistant’s UI. ESPHome can help you connect and send the data to Home Assistant devices.
 
-## Introduction
+## Hardware Preparation
 
-## Install Home Assistant
+If you want to follow this tutorial through everything, you will need to prepare the following.
+
+<table align="center">
+  <tbody><tr>
+      <th>Seeed Studio XIAO ESP32S3 Sense</th>
+      <th>Seeed Studio Expansion Board</th>
+      <th>Home Assistant Devices</th>
+    </tr>
+    <tr>
+      <td><div align="center"><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:300, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:210, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://files.seeedstudio.com/wiki/Home-Assistant/1.png" style={{width:210, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+        <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            </a>
+        </div></td>
+        <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+            <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+            </a>
+        </div></td>
+        <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
+            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Check More 🖱️</font></span></strong>
+            </a>
+        </div></td>
+    </tr>
+  </tbody></table>
+
+
+#### Grove Sensors
+
+- [Grove - Temperature and Humidity Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)<br />
+- [Grove -Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html)<br />
+
+## Software Preparation
+
+### Install Home Assistant
 
 Make sure you already have Home Assistant up and running. You can follow [this wiki](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant) for a step-by-step guide on installing Home Assistant on an ODYSSEY-X86 SBC or this [link](https://www.mbreviews.com/how-to-home-assistant-seeed-mini-router/) for a detailed instruction use Home Assistant with a Seeed Mini Router.
-<!--
-## Install ESPHome on Home Assistant
+
+### Install ESPHome on Home Assistant
 
 ESPHome is available as a **Home Assistant Add-On** and can simply be installed via the add-on store.
 
-<img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/3.png" width="700">
+<!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/3.png" width="700"> -->
 
+<div style={{textAlign:'center'}}><img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/3.png" style={{width:1000, height:500}}/></div>
 
+<!--  
 - **Step 1.** To quickly setup ESPHome on Home Asssistant, click the below button
 
 <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/4.png" width="300">
