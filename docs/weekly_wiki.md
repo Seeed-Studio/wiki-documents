@@ -1,11 +1,11 @@
 ---
 description: Weekly Wiki
-title: Weekly Wiki 
+title: Weekly Wiki✨ 
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/18/2023
+  date: 12/25/2023
   author: Seraphina
 ---
 
@@ -17,65 +17,54 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 18th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 25th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Grove Vision AI Module V2](https://wiki.seeedstudio.com/grove_vision_ai_v2/)
+### [Open Source in Seeed Studio](https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_Loriot/)
 
-The Grove - Vision AI V2 is a thumb-sized AI vision sensor equipped with the WiseEye2 HX653 processor, which adopts the Arm Cortex-M55 dual-core architecture. It features a standard CSI interface and is compatible with Raspberry Pi cameras. It has an onboard digital microphone and an SD card slot. It is highly suitable for various embedded AI vision projects. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It is compatible with the XIAO series and Arduino ecosystems, making it an ideal choice for various object detection applications.
+<div>Open source is a powerful force driving innovation and collaboration in the technology world. It promotes the sharing of ideas, knowledge, and code, enabling developers and enthusiasts to work together and build upon existing solutions.</div> 
+<div>Being an innovative company, Seeed Studio embraces the principles of open source in hardware and software projects and we have developed and manufactured a wide range of electronic products, ranging from development boards and sensors to robotics and Internet of Things (IoT) devices.</div>
+<div>Presented in this page, and kept ongoing, Seeed Studio will introduce its open source hardware and open source software.</div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/open_source_topic/open_source_topic.png" style={{width:1000, height:'auto'}}/></div>
 
 
-### [Connect SenseCAP T1000 Tracker to Loriot](https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_Loriot/)
+### [Edge Artificial Intelligence](https://wiki.seeedstudio.com/edge_ai_topic/)
 
-LORIOT LoRAWAN Network Server (LNS) is hardware independent abd support every LoRaWAN® Gateways and sensors in the market.In this wiki, we will show you how to connect SenseCAP T1000 Tracker to Loriot
+<div>Faster, flexible, scalable AI deployment for everyone. We aim to cover all kinds of AI scenarios at our open-source platform to accelerate industries’ AI transformations.</div>
+We are looking forward to leveraging local and global resources to accelerate next-gen AI product together with you.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/DeviceDetails.png" alt="pir" width={800} height="auto" /></p>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_AI_Topic/Edge_AI_Topic.png" style={{width:1000, height:'auto'}}/></div>
 
-### [Object Tracking with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/mmwave_for_xiao_to_ha_bt)
+### [reComputer-Jetson® Guide](https://wiki.seeedstudio.com/reComputer_Intro/)
 
-Object tracking is the process of consistently locating a specific object across consecutive frames in a video. In the realm of single object trackers, the initial frame serves as a reference, with the target object marked by a bounding rectangle. Subsequent frames then employ tracking algorithms to follow and trace the object's movement. Typically, these trackers are utilized alongside object detectors in real-world applications, combining the strengths of both technologies for enhanced accuracy and efficiency.
+In this wiki, we will list for you all the current products of the reComputer-Jetson family, OS Installations and their applications.
 
-<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facetrack.gif" /></center>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png" style={{width:700, height:'auto'}}/></div>
 
-### [mmWave Kit And Grove Connect To ESPHome](https://wiki.seeedstudio.com/MMWave_Kit_And_Grove_Connect_To_ESPHome/)
+### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/flash_to_wio_tracker/)
 
-MmWave Human Detection Sensor Kit powered by Seeed Studio XIAO ESP32C3, it supports Wi-Fi/BLE connectivity and offers precise human detection via mmWave sensors. Seamlessly connect grove modules for added features. Achieve easy setup for Home Assistant within 1-2 minutes, coupled with convenient wireless Over-The-Air (OTA) updates. Enable extensive versatility with replaceable mmWave sensors. Ideal for customize smart home automation, detect intrusions, and monitor the well-being of the elderly.
+This tutorial will guide users to flash the LPWAN Dev Board for Amazon Sidewalk to the Wio Tracker 1110 Dev Board, for those who want to use the LoRaWAN network.
 
-This wiki will show you how to use Raspberry Pi 4B as server to run Home Assistant, and use mmWave Human Detection Sensor Kit as the hardware here, along with multiple Grove Sensors.
-
-<center><img width={800} src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/light.png" /></center>
-
-### [Edge Controller Powered By Raspberry Pi](https://wiki.seeedstudio.com/Edge_Box_intro/)
-
-Raspberry Pi serves as the foundation for our all-in-one industrial edge computing controllers. With a rugged design, high scalability, rich IO resources, and effortless compatibility with the Raspberry Pi industrial software ecosystem, these controllers emerge as the optimal solution for smart automation and Industrial Internet of Things (IIoT) applications.
-
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:800, height:'auto'}}/></div>
-
-### [Edge Devices Powered By Raspberry Pi](https://wiki.seeedstudio.com/RpiDevices/)
-
-Welcome to the cutting-edge realm of Raspberry Pi-powered devices at Edge Solution. Here, we delve into the innovative solutions crafted by Seeed Studios for edge computing, specifically tailored for Raspberry Pi CM4 customizable devices such as Human-Machine Interface (HMI) units and versatile edge controllers. Join us on a journey through the intricate landscape of these powerful devices, designed to empower your projects with seamless and efficient edge computing capabilities.
-
-### [Rockchip-Powered Network Solutions](https://wiki.seeedstudio.com/RK_intro/)
-
-Welcome to Seeed Studios' Rockchip-powered network solutions. Explore efficient connectivity with devices like the LinkStar-H68K-1432 Router, featuring Wi-Fi 6, 4GB RAM, 32GB eMMC, and versatile Ethernet options. Dive into user-friendly Android 11, Lubuntu 20.04, and OpenWRT support. The LinkStar-H28K offers dual Gigabit ports, a Quad-core chip, 4GB memory, and 8GB storage. Join us in discovering the simplicity and power of Rockchip-driven networks.
 
 ## Existed Wiki Updated
 
-### [Update FAQ - How to boot an OS from USB Flash Drive](https://wiki.seeedstudio.com/Boot_OS_from_USB_flash_drive/)
+### [Updated drivers for Grove Vision AI Module V2](https://wiki.seeedstudio.com/grove_vision_ai_v2/#driver)
 
-Please note that the default of reTerminal is different from the cloned recovery/boot.conf. You should rewrite recovery/boot.conf as necessary.
+We have updated the drivers for Grove Vision AI Module V2. If you find that the Grove Vision AI V2 is not recognised after connecting it to your computer. Then you may need to install the CH343 driver on your computer.
 
-### [How to get location via Bluetooth Beacon in SenseCAP T1000 Tracker - Configuration](https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/#lets-run-the-code-in-bookworm-os)
-
-We have updated the method about how to get location via Bluetooth Beacon in SenseCAP T1000 Tracker.
 
 ## The Efforts of Contributor✨
 
-- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
+### [XIAO ESP32S3 sense connecting with Home Assistant via ESPHome(all ports supported)](https://wiki.seeedstudio.com/XIAO_ESP32S3_esphome/)
+
+Thanks our contributor Zachay-NAU to create ESPHome Support on Seeed Studio XIAO ESP32S3. 
+
+This Wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32S3.
+
+<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information. -->
+<!-- - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
 
 
 ## Past Weekly wiki
@@ -116,3 +105,4 @@ We have updated the method about how to get location via Bluetooth Beacon in Sen
 - [weekly wiki on 11.27th](/Seeed_Elderly/weekly_wiki/wiki1127)
 - [weekly wiki on 12.04th](/Seeed_Elderly/weekly_wiki/wiki1204)
 - [weekly wiki on 12.11th](/Seeed_Elderly/weekly_wiki/wiki1211)
+- [weekly wiki on 12.18th](/Seeed_Elderly/weekly_wiki/wiki1218)
