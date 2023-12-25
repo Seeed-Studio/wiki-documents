@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-dm_Intro
 last_update:
-  date: 10/12/2023
+  date: 12/22/2023
   author: Kasun Thushara
 ---
 
@@ -154,7 +154,7 @@ last_update:
 
 
 
-## Home Assistant
+### Home Assistant
 
 <div class="table-center">
 	<table class="table-nobg">
@@ -175,6 +175,81 @@ last_update:
     </tr>
 	</table>
 </div>
+
+### AWS IoT Core
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>AWS IoT Core Intergate With reTerminal DM</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/awslogo.png" style={{width:300, height:'auto'}}/></div></td>
+				</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. In this wiki, we are going to guide you through setting up the reTerminal DM device for cloud communication.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
+	</table>
+</div>
+
+
+### Azure IoT Edge
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>AWS IoT Core Intergate With reTerminal DM</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/azure.jpg" style={{width:300, height:'auto'}}/></div></td>
+				</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This Wiki describes how to connect reTerminal DM device running Debian 11 (ARM32v7) with Azure IoT Edge Runtime pre-installed and Device Management. </font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/reTerminalDM/azure.jpg"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
+	</table>
+</div>
+
+### Ignition Edge
+
+
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM Getting Started with Ignition Edge</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM Ignition Edge Panel Builder Hello World</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/reTerminal_DM_Ignition_Edge.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-panel-view-helloworld.gif" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> By embedding Ignition Edge into field and OEM devices at the edge of the network, you can extend Ignition all the way to the edge of your network. Discover how to set up the reTerminal device with this guide.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, we will demonstrate how to create a basic page and display it at a fixed URL. We'll achieve this by creating a 'hello world' perspective project and viewing it on the gateway using a web browser.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Ignition-Edge-Panel-Builder/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+
 
 ## ✨ Contributor Project
 
