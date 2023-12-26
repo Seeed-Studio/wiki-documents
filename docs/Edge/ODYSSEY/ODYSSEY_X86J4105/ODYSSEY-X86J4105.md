@@ -295,6 +295,11 @@ Connect Keyboard and Mouse through USB ports
 
 There are two ways to power up the ODYSSEY - X86J41x5:
 
+:::note
+The 'PWR' pin serves as the power-on pin on the board, and the device can be powered on by shorting the 'PWR' pin to ground.
+
+:::
+
 ### Method 1
 
 The simplest way is to use the 12V/2A power adaptor included in the package, and connect to the DC jack of ODYSSEY - X86J41x5.

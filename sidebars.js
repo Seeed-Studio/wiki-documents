@@ -1069,7 +1069,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Keyword_Spotting',
-                // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_ESPHome',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_ESPHome',
               ],
             },
           ],
@@ -1692,7 +1692,17 @@ const sidebars = {
                 },
               ],
             },
-            'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk',
+            {
+              type: 'category',
+              label: 'LPWAN_Dev_Kit_for_Sidewalk',
+              items: [
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/LPWAN_Dev_Kit_for_Sidewalk',
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/Switch_to_Wio_Tracker',
+              ],
+            },
+
+
+
             {
               type: 'category',
               label: 'Wio WM1302',
@@ -2337,12 +2347,7 @@ const sidebars = {
                 type: 'category',
                 label: 'Application',
                 items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Qt-for-Python',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Flutter',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-Electron',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/reTerminal-build-UI-using-LVGL',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/weather-dashboard-with-Grafana-reTerminal',
-                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/Mender-Client-reTerminal',
+                  
       
                   {
                     type: 'category',
@@ -2351,6 +2356,17 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reterminal_frigate',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reTerminal_Home_Assistant',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Home_Assistant/reTerminal-Home-Assistant-Customize',
+                    ],
+                  },
+                  {
+                    type: 'category',
+                    label: 'Dashboard Design',
+                    items: [
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-Qt-for-Python',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-Flutter',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-Electron',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/reTerminal-build-UI-using-LVGL',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/UI_design/weather-dashboard-with-Grafana-reTerminal',
                     ],
                   },
                   {
@@ -2374,6 +2390,7 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Embedded_ML/reTerminal_ML_Edgeimpulse',
                     ],
                   },
+                  'Edge/Raspberry_Pi_Devices/reTerminal/Application/Mender-Client-reTerminal',
                 ],
               },
               {

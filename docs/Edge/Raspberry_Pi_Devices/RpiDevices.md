@@ -6,7 +6,7 @@ keywords:
 - reTerminal
 - reTerminal DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Raspberry_Pi_Devices
+slug: /raspberry-pi-devices
 last_update:
   date: 12/14/2023
   author: Kasun Thushara

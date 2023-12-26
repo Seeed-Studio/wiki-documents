@@ -1,17 +1,17 @@
 ---
-description: ChatGPT X DALL·E with Indicator
-title: ChatGPT X DALL·E X SenseCAP Indicator
+description: ChatGPT & DALL·E with Indicator
+title: ChatGPT - DALL·E - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_ChatGPT
-sidebar_position: 2
+sidebar_position: 9
 last_update:
   date: 11/16/2023
   author: Spencer
 ---
 
-# SenseCAP Indicator X ChatGPT X DALL·E Application Development
+# SenseCAP Indicator - ChatGPT - DALL·E Application Development
 
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/xUX47UnT7xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -901,4 +901,4 @@ int indicator_openai_init(void)
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
