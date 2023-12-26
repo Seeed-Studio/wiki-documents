@@ -57,6 +57,11 @@ If we install Home Assistant Supervised on reTerminal, we will be able to use al
 
 ## Let's build it
 
+:::note
+In some steps, if you are connected through Wi-Fi, you may lose connection. It is recommended to use a LAN connection instead.
+
+:::
+
 Now let's go through the process of installing Home Assistant Supervised on reTerminal.
 
 - **Step 1.** Prepare a reTerminal with Raspberry Pi OS already installed. reTerminal comes with RPi OS 32-bit pre-installed. However, if you want to install it again please follow [this wiki](https://wiki.seeedstudio.com/reTerminal-FAQ/#q2-how-can-i-flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal).
