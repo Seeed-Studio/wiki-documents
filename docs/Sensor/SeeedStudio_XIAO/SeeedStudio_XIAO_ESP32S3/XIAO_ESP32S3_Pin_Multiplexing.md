@@ -591,7 +591,7 @@ void setup()
     MySerial0.print("MySerial0");
 
     // And configure MySerial1 on pins RX=D9, TX=D10
-    MySerial1.begin(115200, SERIAL_8N1, 9, 10);
+    MySerial1.begin(115200, SERIAL_8N1, 8, 9);
     MySerial1.print("MySerial1");
 }
 
