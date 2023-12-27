@@ -105,6 +105,22 @@ Unzip **Pack_Segger_AT32F4xx_v1.3.3.zip** and open **Segger_AT32F4xx_AddOn.exe**
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/47.png"/></div>
 
+:::tip
+If you meet error like the picture below when adding something to JFlash, you can follow the instruction below to solve the problem.
+:::
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/arteryMcu.png"/></div>
+
+Solution:
+
+1. Download this file from https://www.arterychip.com/en/product/AT32F403A.jsp
+
+2. Unzip the file and open
+
+3. Copy JLinkDevices.xml from C:\Program Files\SEGGER\JLink_V794 to C:\Users[User]\AppData\Roaming\SEGGER
+
+This fixes the problem and we can flash with JFlash or JFlash Lite software.
+
 **Step5.** Create a new project.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/48.png"/></div>
