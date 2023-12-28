@@ -135,7 +135,7 @@ esp32:
 
 api:
   encryption:
-    key: "BNUNV2OHOlpurcLTmR6liwqzwCM2Kmydy8xK23ZuY1g="
+    key: "YOURKEYHERE"
 
 ota:
   password: "13371337"
@@ -168,8 +168,8 @@ output:
     id: buzzer
 
 wifi:
-  ssid: Spires
-  password: Spires54646
+  ssid: YOURWIFINAME
+  password: YOURWIFIPASS
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
