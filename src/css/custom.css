@@ -6,52 +6,52 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --text-top-color: white;
+	--ifm-color-primary: #2e8555;
+	--ifm-color-primary-dark: #29784c;
+	--ifm-color-primary-darker: #277148;
+	--ifm-color-primary-darkest: #205d3b;
+	--ifm-color-primary-light: #33925d;
+	--ifm-color-primary-lighter: #359962;
+	--ifm-color-primary-lightest: #3cad6e;
+	--ifm-code-font-size: 95%;
+	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+	--text-top-color: white;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #8dc215;
-  --ifm-color-primary-dark: #8dc215;
-  --ifm-color-primary-darker: #8dc215;
-  --ifm-color-primary-darkest: #8dc215;
-  --ifm-color-primary-light: #8dc215;
-  --ifm-color-primary-lighter: #8dc215;
-  --ifm-color-primary-lightest: #8dc215;
-  --docusaurus-highlighted-code-line-bg: rgb(80, 80, 100);
+	--ifm-color-primary: #8dc215;
+	--ifm-color-primary-dark: #8dc215;
+	--ifm-color-primary-darker: #8dc215;
+	--ifm-color-primary-darkest: #8dc215;
+	--ifm-color-primary-light: #8dc215;
+	--ifm-color-primary-lighter: #8dc215;
+	--ifm-color-primary-lightest: #8dc215;
+	--docusaurus-highlighted-code-line-bg: rgb(80, 80, 100);
 }
 
-.navbar_doc_items{
-  display: inline-block;
-  color: var(--text-color);
-  font-size: 0.85rem;
-  font-weight: bold;
+.navbar_doc_items {
+	display: inline-block;
+	color: var(--text-color);
+	font-size: 0.85rem;
+	font-weight: bold;
 }
 
-.navbar_dorp_items{
-  display: inline-block;
-  color: var(--text-color);
-  font-size: 0.92rem;
-  font-weight: bold;
+.navbar_dorp_items {
+	display: inline-block;
+	color: var(--text-color);
+	font-size: 0.92rem;
+	font-weight: bold;
 }
 
-.navbar_doc_right_items{
-  display: inline-block;
-  color: var(--text-color);
+.navbar_doc_right_items {
+	display: inline-block;
+	color: var(--text-color);
 }
 
-.navbar_logo_items{
-  display: flex;
-  justify-content: space-around;
+.navbar_logo_items {
+	display: flex;
+	justify-content: space-around;
 }
 
 /* .navbar_logo_items img {
@@ -72,1464 +72,1535 @@
 
 /* Left Column */
 .download_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
-
-
 
 /* Getting_Started.md*/
 .start_card_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .start_card_item {
-  border-radius: 30px/30px;
-  width:300px;
-  height:130px;
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin:0 20px;
-  margin-bottom: 30px;
-  box-sizing: content-box;
+	border-radius: 30px/30px;
+	width: 300px;
+	height: 130px;
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin: 0 20px;
+	margin-bottom: 30px;
+	box-sizing: content-box;
 }
 
 .start_card_item:hover {
-  border:2px solid #8DC21F;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #8dc21f;
+	color: #fff;
+	text-decoration: none;
 }
-.start_card_wrapper{
-
+.start_card_wrapper {
 }
-
 
 /* inroduced production */
 
 .intro_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .intro_item {
-  width:50%;
-  height:125px;
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
-  margin-right: 2px;
-  box-sizing: content-box;
+	width: 50%;
+	height: 125px;
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	box-sizing: content-box;
 }
 
 .intro_item:hover {
-  border:2px solid #8DC21F;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #8dc21f;
+	color: #fff;
+	text-decoration: none;
 }
-
 
 /* title */
 
 .title_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .title_item {
-  width: 100%;
-  height:100px;
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-top:50px;
-  margin-bottom: 5px;
-  margin-left: 2px;
-  margin-right: 2px;
-  box-sizing: content-box;
+	width: 100%;
+	height: 100px;
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin-top: 50px;
+	margin-bottom: 5px;
+	margin-left: 2px;
+	margin-right: 2px;
+	box-sizing: content-box;
 }
 
 .title_item:hover {
-  border:2px solid #8DC21F;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #8dc21f;
+	color: #fff;
+	text-decoration: none;
 }
 
 /* independent production */
 
 .independent_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .independent_item {
-  width: 100%;
-  height:200px;
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
-  margin-right: 2px;
-  box-sizing: content-box;
+	width: 100%;
+	height: 200px;
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	box-sizing: content-box;
 }
 
 .independent_item:hover {
-  border:2px solid #8DC21F;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #8dc21f;
+	color: #fff;
+	text-decoration: none;
 }
 
 /* get one now button */
 
 .get_one_now_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .get_one_now_item {
-  border-radius: 10px/10px;
-  width: 195px;
-  height:28px;
-  background: #4EC354;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
-  margin-right: 2px;
-  box-sizing: content-box;
+	border-radius: 10px/10px;
+	width: 195px;
+	height: 28px;
+	background: #4ec354;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	box-sizing: content-box;
 }
 
 .get_one_now_item:hover {
-  border:2px solid #8DC21F;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #8dc21f;
+	color: #fff;
+	text-decoration: none;
 }
 
 /* download Arduino button */
 
 .download_arduino_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .download_arduino_item {
-  border-radius: 10px/10px;
-  width: 300px;
-  height:28px;
-  background: #00979c;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
-  margin-right: 2px;
-  box-sizing: content-box;
+	border-radius: 10px/10px;
+	width: 300px;
+	height: 28px;
+	background: #00979c;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	box-sizing: content-box;
 }
 
 .download_arduino_item:hover {
-  border:2px solid #00979c;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #00979c;
+	color: #fff;
+	text-decoration: none;
 }
 
 /* github button */
 
 .github_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .github_item {
-  border-radius: 10px/10px;
-  width: 260px;
-  height:28px;
-  background: #000000;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
-  margin-right: 2px;
-  box-sizing: content-box;
+	border-radius: 10px/10px;
+	width: 260px;
+	height: 28px;
+	background: #000000;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	box-sizing: content-box;
 }
 
 .github_item:hover {
-  border:2px solid #7a7e73;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #7a7e73;
+	color: #fff;
+	text-decoration: none;
 }
 
 .table-center {
-  display: table;
-   margin: 0 auto;
-  }
-
+	display: table;
+	margin: 0 auto;
+}
 
 .header-github-link:hover {
-    opacity: 0.6;
+	opacity: 0.6;
 }
 
 .header-github-link::before {
-    content: '';
-    width: 24px;
-    height: 24px;
-    display: flex;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
+	content: '';
+	width: 24px;
+	height: 24px;
+	display: flex;
+	background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+		no-repeat;
 }
 
 [data-theme='dark'] .header-github-link::before {
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
+	background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+		no-repeat;
 }
 
-
 .header-SSCMA {
-  width: 29px;
-  height: 29px;
-  display: inline;
-  background-image: url('/static/img/SSCMA.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
+	width: 29px;
+	height: 29px;
+	display: inline;
+	background-image: url('/static/img/SSCMA.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 /* embedded world product list button */
 
 .embedded_world_container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .embedded_world_item {
-  border-radius: 12px/12px;
-  width: 100%;
-  height:100px;
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  border: 2px solid #fff;
-  margin-top:8px;
-  margin-bottom: 5px;
-  margin-left: 2px;
-  margin-right: 2px;
-  box-sizing: content-box;
+	border-radius: 12px/12px;
+	width: 100%;
+	height: 100px;
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	margin-left: 2px;
+	margin-right: 2px;
+	box-sizing: content-box;
 }
 
 .embedded_world_item:hover {
-  border:2px solid #8DC21F;
-  color:#fff;
-  text-decoration: none;
+	border: 2px solid #8dc21f;
+	color: #fff;
+	text-decoration: none;
 }
 
 .btn {
-  display: inline-block;
-  padding: 200px 50px;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/S.png");
-  background-size: auto;
-  background-position: center;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
+	display: inline-block;
+	padding: 200px 50px;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/S.png');
+	background-size: auto;
+	background-position: center;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
-  transform: scale(3);
+	transform: scale(3);
 }
 
 @media only screen and (max-width: 768px) {
-  .btn {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
+	.btn {
+		font-size: 14px;
+		padding: 8px 16px;
+	}
 }
 
 .custom-layout {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	transition: all 0.2s ease-in-out;
 }
 
 .custom-layout:hover {
-  border-color: #007bff;
+	border-color: #007bff;
 }
 
 .custom-image {
-  flex: 0 0 auto;
-  margin-right: 1rem;
+	flex: 0 0 auto;
+	margin-right: 1rem;
 }
 
 .custom-image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 .custom-text {
-  flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 .custom-text h2 {
-  font-size: 1.5rem;
-  margin: 0 0 1rem;
+	font-size: 1.5rem;
+	margin: 0 0 1rem;
 }
 
 .custom-text p {
-  font-size: 1rem;
-  margin: 0;
+	font-size: 1rem;
+	margin: 0;
 }
 
 .button_tech_support_container {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
 }
 
-.button_forum{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.button_forum {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .button_forum:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support2_change.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support2_change.png');
+	background-size: cover;
 }
 
-.button_email{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support2.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.button_email {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support2.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .button_email:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1_change.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1_change.png');
+	background-size: cover;
 }
 
-.button_discord{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support3.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.button_discord {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support3.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .button_discord:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support3_change.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support3_change.png');
+	background-size: cover;
 }
 
-.button_discussion{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.button_discussion {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .button_discussion:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support4_change.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support4_change.png');
+	background-size: cover;
 }
 
-.button_tech_support_sensecap{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.button_tech_support_sensecap {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .button_tech_support_sensecap:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap_change.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap_change.png');
+	background-size: cover;
 }
 
-.button_tech_support_sensecap2{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.button_tech_support_sensecap2 {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .button_tech_support_sensecap2:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1_change.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1_change.png');
+	background-size: cover;
 }
 
-.button_tech_support_sensecap3{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap3.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.button_tech_support_sensecap3 {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap3.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .button_tech_support_sensecap3:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2_change.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support_sensecap2_change.png');
+	background-size: cover;
 }
 
 /* Added media query for mobile */
-@media screen and (max-width: 767px)  {
-  .button_forum,
-  .button_email,
-  .button_discord,
-  .button_discussion,
-  .button_tech_support_sensecap,
-  .button_tech_support_sensecap2,
-  .button_tech_support_sensecap3 {
-    width: 90%; /* Adjust the width to fit the mobile screen */
-    margin-left: 5%; /* Center the buttons horizontally */
-    margin-right: 5%;
-  }
+@media screen and (max-width: 767px) {
+	.button_forum,
+	.button_email,
+	.button_discord,
+	.button_discussion,
+	.button_tech_support_sensecap,
+	.button_tech_support_sensecap2,
+	.button_tech_support_sensecap3 {
+		width: 90%; /* Adjust the width to fit the mobile screen */
+		margin-left: 5%; /* Center the buttons horizontally */
+		margin-right: 5%;
+	}
 }
 
 /********* Spencer custome CSS Needed *************/
 
 .youtube-video {
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-  display: block;
+	aspect-ratio: 16 / 9;
+	margin: 0 auto;
+	display: block;
 }
 
 @media only screen and (min-width: 600px) {
-  /* For screens bigger than 768px (e.g. mobile phones) */
-  .youtube-video {
-    width: 50%; /* Increase the width to 50% */
-  }
+	/* For screens bigger than 768px (e.g. mobile phones) */
+	.youtube-video {
+		width: 50%; /* Increase the width to 50% */
+	}
 }
 
 @media only screen and (max-width: 480px) {
-  /* For screens smaller than 480px (e.g. smaller mobile phones) */
-  .youtube-video {
-    width: 90%; /* Increase the width to 90% */
-  }
+	/* For screens smaller than 480px (e.g. smaller mobile phones) */
+	.youtube-video {
+		width: 90%; /* Increase the width to 90% */
+	}
 }
 
 /* 基础样式，用于所有屏幕尺寸 */
 .youtube-video-r {
-  width: 100%; /* 宽度占据父元素的全部 */
-  max-width: 800px; /* 最大宽度限制，避免在大屏幕上显得过大 */
-  margin: 20px auto; /* 上下边距和自动左右居中 */
-  display: block;
-  border-radius: 10px; /* 轻微的圆角效果 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 轻微的阴影效果 */
-  aspect-ratio: 16 / 9; /* 保持视频的宽高比 */
+	width: 100%; /* 宽度占据父元素的全部 */
+	max-width: 800px; /* 最大宽度限制，避免在大屏幕上显得过大 */
+	margin: 20px auto; /* 上下边距和自动左右居中 */
+	display: block;
+	border-radius: 10px; /* 轻微的圆角效果 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 轻微的阴影效果 */
+	aspect-ratio: 16 / 9; /* 保持视频的宽高比 */
 }
 
 /* 中等屏幕（例如平板电脑）的响应式设计 */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
-  .youtube-video-r {
-      width: 80%; /* 中等屏幕上稍微减小宽度 */
-  }
+	.youtube-video-r {
+		width: 80%; /* 中等屏幕上稍微减小宽度 */
+	}
 }
 
 /* 小屏幕（例如手机）的响应式设计 */
 @media only screen and (max-width: 599px) {
-  .youtube-video-r {
-      width: 100%; /* 在小屏幕上占据全部宽度 */
-      margin: 10px 0; /* 在小屏幕上减少上下边距 */
-  }
+	.youtube-video-r {
+		width: 100%; /* 在小屏幕上占据全部宽度 */
+		margin: 10px 0; /* 在小屏幕上减少上下边距 */
+	}
 }
 
 .button-container {
-  display: flex; /* 使用flex布局 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 (如果需要) */
-  height: auto; /* 容器高度，根据需要调整 */
-  margin-top: 10px; /* 调整容器的上外边距 */
+	display: flex; /* 使用flex布局 */
+	justify-content: center; /* 水平居中 */
+	align-items: center; /* 垂直居中 (如果需要) */
+	height: auto; /* 容器高度，根据需要调整 */
+	margin-top: 10px; /* 调整容器的上外边距 */
 }
-
 
 /* 按钮样式 */
 .button-style {
-  display: inline-block; /* 使元素可设置宽度，并流式布局 */
-  border-radius: 10px; /* 圆角 */
-  padding: 10px 20px; /* 文字与边缘的距离 */
-  background-color: #4EC354; /* 按钮背景颜色 */
-  color: #fff; /* 文字颜色 */
-  text-align: center; /* 文字居中 */
-  text-decoration: none; /* 去除下划线 */
-  font-weight: bold; /* 文字加粗 */
-  font-size: 1em; /* 字体大小 */
-  border: none; /* 无边框 */
-  cursor: pointer; /* 鼠标悬停时为指针 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
-  transition: background-color 0.3s, box-shadow 0.3s; /* 过渡效果 */
-  margin-bottom: 15px; /* 调整上方元素的下外边距间距 */
+	display: inline-block; /* 使元素可设置宽度，并流式布局 */
+	border-radius: 10px; /* 圆角 */
+	padding: 10px 20px; /* 文字与边缘的距离 */
+	background-color: #4ec354; /* 按钮背景颜色 */
+	color: #fff; /* 文字颜色 */
+	text-align: center; /* 文字居中 */
+	text-decoration: none; /* 去除下划线 */
+	font-weight: bold; /* 文字加粗 */
+	font-size: 1em; /* 字体大小 */
+	border: none; /* 无边框 */
+	cursor: pointer; /* 鼠标悬停时为指针 */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+	transition: background-color 0.3s, box-shadow 0.3s; /* 过渡效果 */
+	margin-bottom: 15px; /* 调整上方元素的下外边距间距 */
 }
 
 .button-style:hover {
-  background-color: #369f41; /* 悬停时的背景色 */
-  text-decoration: none; /* 确保悬停时也不会出现下划线 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 悬停时的阴影 */
-  transition: background-color 0.8s, box-shadow 0.8s; /* 过渡效果 */
+	background-color: #369f41; /* 悬停时的背景色 */
+	text-decoration: none; /* 确保悬停时也不会出现下划线 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 悬停时的阴影 */
+	transition: background-color 0.8s, box-shadow 0.8s; /* 过渡效果 */
 }
 
 /* 用于并列显示图片的容器样式 */
 .img-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 创建一个弹性的网格布局 */
-  gap: 10px; /* 设置网格间距 */
-  margin: 20px 0; /* 容器的上下外边距 */
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 创建一个弹性的网格布局 */
+	gap: 10px; /* 设置网格间距 */
+	margin: 20px 0; /* 容器的上下外边距 */
 }
 
 /* 适用于图片的基础样式 */
 .img-responsive {
-  max-width: 100%; /* 图片最大宽度为其父容器宽度 */
-  height: auto; /* 高度自动调整，保持图片比例 */
-  display: block; /* 防止图片下方有空白间隙 */
-  margin: 10px 0; /* 在图片上下添加一些空间 */
-  border-radius: 50%; /* 设置圆角效果 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选的阴影效果 */
+	max-width: 100%; /* 图片最大宽度为其父容器宽度 */
+	height: auto; /* 高度自动调整，保持图片比例 */
+	display: block; /* 防止图片下方有空白间隙 */
+	margin: 10px 0; /* 在图片上下添加一些空间 */
+	border-radius: 50%; /* 设置圆角效果 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选的阴影效果 */
 }
 .img-container .img-responsive {
-  border-radius: 8px !important;
+	border-radius: 8px !important;
 }
 /* 如果图片需要在文本中间显示，可以使用以下样式 */
 .inline-img-left {
-  float: left; 
-  margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
+	float: left;
+	margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
 }
 .inline-img-right {
-  float: right; 
-  margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
+	float: right;
+	margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
 }
 
 /********************* Spencer's CSS Ended******************************/
 
 .button2 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #74B281, #8DC21F);
-  color: #FFFFFF;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.6s ease-in-out;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 2em;
-  width: 100%; /* 最小按钮宽度 */
-  height: 11em; /* 最小按钮高度 */
-  text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #74b281, #8dc21f);
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: transform 0.6s ease-in-out;
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-bottom: 2em;
+	width: 100%; /* 最小按钮宽度 */
+	height: 11em; /* 最小按钮高度 */
+	text-align: center;
 }
 
 .button2:hover {
-  transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .button2 .label2 {
-  font-size: 1.55rem;
-  color: #FFFFFF;
-  line-height: 1.5;
-  font-weight: bold;
-  transition: font-size 0.3s ease-in-out;
+	font-size: 1.55rem;
+	color: #ffffff;
+	line-height: 1.5;
+	font-weight: bold;
+	transition: font-size 0.3s ease-in-out;
 }
 
 a.button2:hover .label2 {
-  color: #000000;
-  text-decoration: none;
+	color: #000000;
+	text-decoration: none;
 }
 
 .container2 {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
-
 
 /* version 2 */
 
 .all_container {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .getting_started {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #74B281, #8DC21F);
-  color: #FFFFFF;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.6s ease-in-out;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-  width: 48%; /* 最小按钮宽度 */
-  height: 12em; /* 最小按钮高度 */
-  text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #74b281, #8dc21f);
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: transform 0.6s ease-in-out;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	width: 48%; /* 最小按钮宽度 */
+	height: 12em; /* 最小按钮高度 */
+	text-align: center;
 }
 
 .getting_started:hover {
-  transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .getting_started .getting_started_label2 {
-  font-size: 1.55rem;
-  color: #FFFFFF;
-  line-height: 1.7;
-  font-weight: bold;
-  transition: font-size 0.3s ease-in-out;
+	font-size: 1.55rem;
+	color: #ffffff;
+	line-height: 1.7;
+	font-weight: bold;
+	transition: font-size 0.3s ease-in-out;
 }
 
 a.getting_started:hover .getting_started_label2 {
-  color: #000000;
-  text-decoration: none;
+	color: #000000;
+	text-decoration: none;
 }
 
 .getting_started .getting_started_label3 {
-  font-size: 1.2rem;
-  color: #FFFFFF;
-  line-height: 1.7;
-  font-weight: bold;
-  transition: font-size 0.3s ease-in-out;
+	font-size: 1.2rem;
+	color: #ffffff;
+	line-height: 1.7;
+	font-weight: bold;
+	transition: font-size 0.3s ease-in-out;
 }
 
 a.getting_started:hover .getting_started_label3 {
-  color: #000000;
-  text-decoration: none;
+	color: #000000;
+	text-decoration: none;
 }
 
-
 .all_custom-image {
-  background-color: #1B3654;
-  height: 10em; /* 最小按钮高度 */
-  font-size: 1.6rem;
-  line-height: 1.3;
+	background-color: #1b3654;
+	height: 10em; /* 最小按钮高度 */
+	font-size: 1.6rem;
+	line-height: 1.3;
 }
 
 .all_custom-image img {
-  display: flex;
-  height: 10em; /* 最小按钮高度 */
+	display: flex;
+	height: 10em; /* 最小按钮高度 */
 }
 
-.test_text{
-display: inline-flex;
-color: #8DC21F;
-font-size: 1vw;
-text-align: left;
-text-decoration: none;
+.test_text {
+	display: inline-flex;
+	color: #8dc21f;
+	font-size: 1vw;
+	text-align: left;
+	text-decoration: none;
 }
 
-.test_text2{
-  display: inline-flex;
-  color: #FFFFFF;
-  font-size: 0.4vw;
-  text-align: left;
-  text-decoration: none;
-  }
+.test_text2 {
+	display: inline-flex;
+	color: #ffffff;
+	font-size: 0.4vw;
+	text-align: left;
+	text-decoration: none;
+}
 
-.test_text3{
-    display: inline-flex;
-    color: #FFFFFF;
-    font-size: 0.4vw;
-    text-align: left;
-    text-decoration: none;
-    }
+.test_text3 {
+	display: inline-flex;
+	color: #ffffff;
+	font-size: 0.4vw;
+	text-align: left;
+	text-decoration: none;
+}
 
 .top_nev_title {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1B3654;
-  color: white;
-  font-size: 2em;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 0px;
-  margin-bottom: 0.4em;
-  width: 100%; /* 最小按钮宽度 */
-  height: 5em; /* 最小按钮高度 */
-  text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1b3654;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 0px;
+	margin-bottom: 0.4em;
+	width: 100%; /* 最小按钮宽度 */
+	height: 5em; /* 最小按钮高度 */
+	text-align: center;
 }
 
 .sensecap_sensing_network {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1B3654;
-  color: white;
-  font-size: 1.6rem;
-  line-height: 1.3;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 0px;
-  width: 100%; /* 最小按钮宽度 */
-  height: 10em; /* 最小按钮高度 */
-  text-align: left;
-  text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1b3654;
+	color: white;
+	font-size: 1.6rem;
+	line-height: 1.3;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 0px;
+	width: 100%; /* 最小按钮宽度 */
+	height: 10em; /* 最小按钮高度 */
+	text-align: left;
+	text-decoration: none;
 }
 
 .sideboard_calss > a {
-  font-weight: bold;
-  font-size: 1.2rem;
-  width: 100%;
-  display:inline-block;
-  text-decoration: none;
-  text-align:center;
-  font-size:20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 1.2rem;
+	width: 100%;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
-
 
 /* 以下是XIAO专题页的内容 */
 
 .xiao_topic_page_pic {
-  background-color: #ffffff;
-  justify-content: center;
-  /* margin-top: 20px; */
-  margin-bottom: 0.4em;
-  margin-bottom: 0.4em;
-  height: 10em; /* 最小按钮高度 */
-  font-size: 1.6rem;
-  line-height: 1.3;
+	background-color: #ffffff;
+	justify-content: center;
+	/* margin-top: 20px; */
+	margin-bottom: 0.4em;
+	margin-bottom: 0.4em;
+	height: 10em; /* 最小按钮高度 */
+	font-size: 1.6rem;
+	line-height: 1.3;
 }
 
 .xiao_topic_page_vertical {
-  display: flex;
-  /* font-family: "Arial"; */
-  align-items: left;
-  flex-direction: column;
-  justify-content: center;
-  /* margin-bottom: 0.3em; */
-  /* font-size: 1.6rem; */
-  line-height: 1.3;
-  vertical-align: middle;
-  /* margin-left: 20px; */
-  /* margin-top: 1px; */
-  /* font-weight: bold; */
-  text-decoration: none;
-  border-radius: 0px;
-  width: 100%; /* 最小按钮宽度 */
-  /* height: 27em; 最小按钮高度 */
-  text-align: left;
-  text-decoration: none;
+	display: flex;
+	/* font-family: "Arial"; */
+	align-items: left;
+	flex-direction: column;
+	justify-content: center;
+	/* margin-bottom: 0.3em; */
+	/* font-size: 1.6rem; */
+	line-height: 1.3;
+	vertical-align: middle;
+	/* margin-left: 20px; */
+	/* margin-top: 1px; */
+	/* font-weight: bold; */
+	text-decoration: none;
+	border-radius: 0px;
+	width: 100%; /* 最小按钮宽度 */
+	/* height: 27em; 最小按钮高度 */
+	text-align: left;
+	text-decoration: none;
 }
 
 .xiao_topic_page_font1 {
-  display: inline-flex;
-  font-family: "Verdana";
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* margin-bottom: 0.3em; */
-  /* font-size: 1.6rem; */
-  line-height: 2.0;
-  margin-left: 20px;
-  margin-top: 45px;
-  /* font-weight: bold; */
-  text-decoration: none;
-  border-radius: 0px;
-  width: 100%; /* 最小按钮宽度 */
-  height: 10em; /* 最小按钮高度 */
-  text-decoration: none;
+	display: inline-flex;
+	font-family: 'Verdana';
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* margin-bottom: 0.3em; */
+	/* font-size: 1.6rem; */
+	line-height: 2;
+	margin-left: 20px;
+	margin-top: 45px;
+	/* font-weight: bold; */
+	text-decoration: none;
+	border-radius: 0px;
+	width: 100%; /* 最小按钮宽度 */
+	height: 10em; /* 最小按钮高度 */
+	text-decoration: none;
 }
 
-.feature1{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature1.jpg");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.feature1 {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature1.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .feature1:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature1-1.jpg');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature1-1.jpg');
+	background-size: cover;
 }
 
-.feature2{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature2.jpg");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.feature2 {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature2.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .feature2:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature2-2.jpg');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature2-2.jpg');
+	background-size: cover;
 }
 
-.feature3{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature3.jpg");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.feature3 {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature3.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .feature3:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature3-3.jpg');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature3-3.jpg');
+	background-size: cover;
 }
 
-.feature4{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/xiao_topicpage/feature4.jpg");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.feature4 {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature4.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .feature4:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature4-4.jpg');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/feature4-4.jpg');
+	background-size: cover;
 }
 
 .form_without_frame {
-  border: none;
-  border-top: none;
+	border: none;
+	border-top: none;
 }
 
-.unorder_list{
-  list-style-type: disc;
+.unorder_list {
+	list-style-type: disc;
 }
 
-.xiao_expansion_board{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.xiao_expansion_board {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .xiao_expansion_board:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg');
+	background-size: cover;
 }
 
-.xiao_grove_shield{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.xiao_grove_shield {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .xiao_grove_shield:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/grove-shield-for-xiao.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/grove-shield-for-xiao.png');
+	background-size: cover;
 }
 
-.xiao_round_display{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/round_display_for_xiao/rounddisplay.jpg");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.xiao_round_display {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/round_display_for_xiao/rounddisplay.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .xiao_round_display:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/xiaorounddisplay.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/xiaorounddisplay.png');
+	background-size: cover;
 }
 
-.xiao_starter_kit{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/XIAO-Kit/XIAO-Kit.jpg");
-  background-size: cover;
-  background-position: center;
-  margin-top: 8px;
-  margin-bottom: 15px;
-  margin-left: 30px;
-  margin-right: 2px;
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  font-weight: 40%;
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 400px; /* 按钮宽度 */
-  height: 160px; /* 按钮高度 */
+.xiao_starter_kit {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/XIAO-Kit/XIAO-Kit.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	margin-right: 2px;
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	font-weight: 40%;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 400px; /* 按钮宽度 */
+	height: 160px; /* 按钮高度 */
 }
 
 .xiao_starter_kit:hover {
-  transform: scale(1.2);
-  background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/xiaokitpiv.png');
-  background-size: cover;
+	transform: scale(1.2);
+	background-image: url('https://files.seeedstudio.com/wiki/xiao_topicpage/xiaokitpiv.png');
+	background-size: cover;
 }
 
 /* 以下是TinyML专题页的内容 */
 
 .button_edgelab_container {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: auto;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin: auto;
 }
 
-.button_edgelab{
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png");
-  background-size: cover;
-  background-position: center;
-  margin: auto;
-  /* margin-top: 8px;
+.button_edgelab {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	/* margin-top: 8px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 2px; */
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  /* font-weight: 40%; */
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 1000px; /* 按钮宽度 */
-  height: 500px; /* 按钮高度 */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 1000px; /* 按钮宽度 */
+	height: 500px; /* 按钮高度 */
 }
 
 .button_edgelab:hover {
-  margin: auto;
-  transform: scale(1.1);
-  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
-  background-size: cover;
+	margin: auto;
+	transform: scale(1.1);
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
+	background-size: cover;
 }
 
-.button_edgeimpulse{
-  margin: auto;
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/edgeimpulse.png");
-  background-size: cover;
-  background-position: center;
-  /* margin-top: 8px;
+.button_edgeimpulse {
+	margin: auto;
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgeimpulse.png');
+	background-size: cover;
+	background-position: center;
+	/* margin-top: 8px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 2px; */
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  /* font-weight: 40%; */
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 700px; /* 按钮宽度 */
-  height: 500px; /* 按钮高度 */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 700px; /* 按钮宽度 */
+	height: 500px; /* 按钮高度 */
 }
 
 .button_edgeimpulse:hover {
-  margin: auto;
-  transform: scale(1.1);
-  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgeimpulse.png');
-  background-size: cover;
+	margin: auto;
+	transform: scale(1.1);
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgeimpulse.png');
+	background-size: cover;
 }
 
-.button_tensorflowlite{
-  margin: auto;
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/tensorflowlite.png");
-  background-size: cover;
-  background-position: center;
-  /* margin-top: 8px;
+.button_tensorflowlite {
+	margin: auto;
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/tensorflowlite.png');
+	background-size: cover;
+	background-position: center;
+	/* margin-top: 8px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 2px; */
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  /* font-weight: 40%; */
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 780px; /* 按钮宽度 */
-  height: 360px; /* 按钮高度 */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 780px; /* 按钮宽度 */
+	height: 360px; /* 按钮高度 */
 }
 
 .button_tensorflowlite:hover {
-  margin: auto;
-  transform: scale(1.1);
-  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/tensorflowlite.png');
-  background-size: cover;
+	margin: auto;
+	transform: scale(1.1);
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/tensorflowlite.png');
+	background-size: cover;
 }
 
-.button_codecraft{
-  margin: auto;
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/cc.jpg");
-  background-size: cover;
-  background-position: center;
-  /* margin-top: 8px;
+.button_codecraft {
+	margin: auto;
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/cc.jpg');
+	background-size: cover;
+	background-position: center;
+	/* margin-top: 8px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 2px; */
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  /* font-weight: 40%; */
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 1000px; /* 按钮宽度 */
-  height: 500px; /* 按钮高度 */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 1000px; /* 按钮宽度 */
+	height: 500px; /* 按钮高度 */
 }
 
 .button_codecraft:hover {
-  margin: auto;
-  transform: scale(1.1);
-  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/cc.jpg');
-  background-size: cover;
+	margin: auto;
+	transform: scale(1.1);
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/cc.jpg');
+	background-size: cover;
 }
 
-.button_xiao{
-  margin: auto;
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/xiao.jpg");
-  background-size: cover;
-  background-position: center;
-  /* margin-top: 8px;
+.button_xiao {
+	margin: auto;
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/xiao.jpg');
+	background-size: cover;
+	background-position: center;
+	/* margin-top: 8px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 2px; */
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  /* font-weight: 40%; */
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 900px; /* 按钮宽度 */
-  height: 400px; /* 按钮高度 */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 900px; /* 按钮宽度 */
+	height: 400px; /* 按钮高度 */
 }
 
-.button_xiao:hover{
-  margin: auto;
-  transform: scale(1.1);
-  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/xiao.jpg');
-  background-size: cover;
+.button_xiao:hover {
+	margin: auto;
+	transform: scale(1.1);
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/xiao.jpg');
+	background-size: cover;
 }
 
-.button_wiotinyml{
-  margin: auto;
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png");
-  background-size: cover;
-  background-position: center;
-  /* margin-top: 8px;
+.button_wiotinyml {
+	margin: auto;
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png');
+	background-size: cover;
+	background-position: center;
+	/* margin-top: 8px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 2px; */
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  /* font-weight: 40%; */
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 1000px; /* 按钮宽度 */
-  height: 500px; /* 按钮高度 */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 1000px; /* 按钮宽度 */
+	height: 500px; /* 按钮高度 */
 }
 
-.button_wiotinyml:hover{
-  margin: auto;
-  transform: scale(1.1);
-  background-image: url('https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png');
-  background-size: cover;
+.button_wiotinyml:hover {
+	margin: auto;
+	transform: scale(1.1);
+	background-image: url('https://files.seeedstudio.com/wiki/Wio-Terminal/img/WT-classroom.png');
+	background-size: cover;
 }
 
-.button_udemy{
-  margin: auto;
-  display: inline-block;
-  background-image: url("https://files.seeedstudio.com/wiki/tinyml-topic/udemy.png");
-  background-size: cover;
-  background-position: center;
-  /* margin-top: 8px;
+.button_udemy {
+	margin: auto;
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/udemy.png');
+	background-size: cover;
+	background-position: center;
+	/* margin-top: 8px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 2px; */
-  padding: 10px 20px;
-  /* color: rgb(0, 0, 0);text color */
-  font-size: 100px;
-  /* font-weight: 40%; */
-  text-decoration: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-  width: 800px; /* 按钮宽度 */
-  height: 500px; /* 按钮高度 */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 800px; /* 按钮宽度 */
+	height: 500px; /* 按钮高度 */
 }
 
-.button_udemy:hover{
-  margin: auto;
-  transform: scale(1.1);
-  background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/udemy.png');
-  background-size: cover;
+.button_udemy:hover {
+	margin: auto;
+	transform: scale(1.1);
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/udemy.png');
+	background-size: cover;
 }
 
 .table-nobg {
-  display: table;
-  margin: 0 auto;
-  background-color: transparent;
-  border-collapse: collapse;
+	display: table;
+	margin: 0 auto;
+	background-color: transparent;
+	border-collapse: collapse;
 }
 
-.table-trnobg{
-  border: none;
-  border-top: none;
-  background-color: rgba(255, 255, 255, 0);
-  text-align: center;
+.table-trnobg {
+	border: none;
+	border-top: none;
+	background-color: rgba(255, 255, 255, 0);
+	text-align: center;
 }
-
-
 
 .reComputer_compare {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #74B281, #8DC21F);
-  color: #FFFFFF;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.6s ease-in-out;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-  width: 100%; /* 最小按钮宽度 */
-  height: 5em; /* 最小按钮高度 */
-  text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #74b281, #8dc21f);
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: transform 0.6s ease-in-out;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	width: 100%; /* 最小按钮宽度 */
+	height: 5em; /* 最小按钮高度 */
+	text-align: center;
 }
 
 .reComputer_compare:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .reComputer_compare .reComputer_compare_label2 {
-  font-size: 1.3rem;
-  color: #FFFFFF;
-  line-height: 1.7;
-  font-weight: bold;
-  transition: font-size 0.3s ease-in-out;
+	font-size: 1.3rem;
+	color: #ffffff;
+	line-height: 1.7;
+	font-weight: bold;
+	transition: font-size 0.3s ease-in-out;
 }
 
 a.reComputer_compare:hover .reComputer_compare_label2 {
-  color: #000000;
-  text-decoration: none;
+	color: #000000;
+	text-decoration: none;
 }
 
 .reComputer_compare .reComputer_compare_label3 {
-  font-size: 1.2rem;
-  color: #FFFFFF;
-  line-height: 1.7;
-  font-weight: bold;
-  transition: font-size 0.3s ease-in-out;
+	font-size: 1.2rem;
+	color: #ffffff;
+	line-height: 1.7;
+	font-weight: bold;
+	transition: font-size 0.3s ease-in-out;
 }
 
 a.reComputer_compare:hover .reComputer_compare_label3 {
-  color: #000000;
-  text-decoration: none;
+	color: #000000;
+	text-decoration: none;
 }
 
-
-
 .sensecap {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #74B281, #8DC21F);
-  font-size: 1.3rem;
-  color: #FFFFFF;
-  line-height: 1.7;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.6s ease-in-out;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-  width: 50%; /* 最小按钮宽度 */
-  height: 5em; /* 最小按钮高度 */
-  text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #74b281, #8dc21f);
+	font-size: 1.3rem;
+	color: #ffffff;
+	line-height: 1.7;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: transform 0.6s ease-in-out;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	width: 50%; /* 最小按钮宽度 */
+	height: 5em; /* 最小按钮高度 */
+	text-align: center;
 }
 
 .sensecap:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
-
 .sensecap2 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #74B281, #8DC21F);
-  font-size: 1.3rem;
-  color: #FFFFFF;
-  line-height: 1.7;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.6s ease-in-out;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-  width: 50%; /* 最小按钮宽度 */
-  height: 5em; /* 最小按钮高度 */
-  text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #74b281, #8dc21f);
+	font-size: 1.3rem;
+	color: #ffffff;
+	line-height: 1.7;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: transform 0.6s ease-in-out;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	width: 50%; /* 最小按钮宽度 */
+	height: 5em; /* 最小按钮高度 */
+	text-align: center;
 }
 
 .sensecap2:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .sensecap3 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #74B281, #8DC21F);
-  font-size: 1.3rem;
-  color: #FFFFFF;
-  line-height: 1.7;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.6s ease-in-out;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
-  width: 50%; /* 最小按钮宽度 */
-  height: 5em; /* 最小按钮高度 */
-  text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right, #74b281, #8dc21f);
+	font-size: 1.3rem;
+	color: #ffffff;
+	line-height: 1.7;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: transform 0.6s ease-in-out;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	width: 50%; /* 最小按钮宽度 */
+	height: 5em; /* 最小按钮高度 */
+	text-align: center;
 }
 
 .sensecap3:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
+}
+.com_module {
+	padding: 0 6%;
+	/* max-width: 1440px;
+	margin: 0 auto; */
+}
+.swiper-scrollbar {
+	display: none;
+}
+.home_nav,
+.doc_nav {
+	display: none;
+}
+.home_nav {
+	position: relative;
+}
+.home_nav:hover::after,
+.home_nav.active::after {
+	position: absolute;
+	content: '';
+	width: calc(100% - 24px);
+	height: 2px;
+	background-color: #8fc31f;
+	bottom: -14px;
+	left: 12px;
+}
+.nav_container {
+	position: absolute;
+	top: 60px;
+	background-color: var(--ifm-navbar-background-color);
+	width: calc(100% + 16px);
+	display: flex;
+	flex-wrap: wrap;
+	left: -16px;
+	padding-top: 40px;
+	display: none;
+	font-size: 14px;
+}
+.home_nav_item {
+	display: flex;
+	width: 25%;
+	padding-right: 30px;
+	margin-bottom: 40px;
+}
+.explore .home_nav_item {
+	width: 33%;
+}
+.nav_item_box {
+	flex: 1;
+}
+.home_nav_item_a {
+	display: block;
+	color: var(--ifm-heading-color);
+	height: 28px;
+	line-height: 1;
+	padding-left: 8px;
+	text-decoration: none;
+	margin-bottom: 4px;
+	display: flex;
+	align-items: center;
+}
+.home_nav_item_a.sub {
+	font-size: 12px;
+	line-height: 1;
+	align-items: center;
+}
+.home_nav_item_a.sub.split {
+	width: 50%;
+	display: inline-flex;
+}
+.home_nav_item_a:hover {
+	background: #2f3031;
+	text-decoration: none;
+	border-radius: 3px 3px 3px 3px;
+}
+.home_nav_item_img {
+	min-width: 60px;
+}
+.home_nav_item_img img {
+	width: 60px;
+	height: 60px;
+	margin-right: 14px;
+}
+html[data-theme='light'] .home_nav_item_a:hover {
+	background: rgba(140, 192, 32, 0.05);
 }
