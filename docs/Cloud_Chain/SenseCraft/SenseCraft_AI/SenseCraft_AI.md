@@ -576,3 +576,17 @@ SenseCraft AI App updates are categorized into automatic and manual updates, whi
 
 <!-- ![image.png](https://cdn.nlark.com/yuque/0/2023/png/34705746/1703742350269-5e501555-4309-4f5a-8fcc-23378826ed05.png#averageHue=%23101113&clientId=ue490ccf8-ca1e-4&from=paste&id=u12941b2a&originHeight=636&originWidth=1144&originalType=url&ratio=0.800000011920929&rotation=0&showTitle=false&size=46254&status=done&style=none&taskId=u4a2e0977-d124-4a0f-813f-b42b75a52f8&title=) -->
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/59.png)
+
+## **Tech Support**
+
+**Need help with your SenseCAP Indicator? We're here to assist you!**
+
+<div class="button_tech_support_container">
+<a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
