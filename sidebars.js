@@ -2983,6 +2983,19 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'SenseCraft',
+      items: [
+        {
+          type: 'category',
+          label: 'SenseCraft AI',
+          items: [
+            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
+          ],
+        },
+      ]
+    },
 
     {
       type: 'html',
