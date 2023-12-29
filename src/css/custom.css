@@ -711,7 +711,7 @@
   height: auto; /* 高度自动调整，保持图片比例 */
   display: block; /* 防止图片下方有空白间隙 */
   margin: 10px 0; /* 在图片上下添加一些空间 */
-  border-radius: 50%; /* 设置圆角效果 */
+  border-radius: 10px; /* 设置圆角效果 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选的阴影效果 */
 }
 .img-container .img-responsive {
