@@ -3348,6 +3348,66 @@ const sidebars = {
     },
 
     {
+      type: 'category',
+      label: 'ModelAssistant',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/TinyML/ModelAssistant/introduction/overview',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Introduction',
+          collapsed: false,
+          items: [
+          'Topics/TinyML/ModelAssistant/introduction/overview',
+          'Topics/TinyML/ModelAssistant/introduction/quick_start',
+          'Topics/TinyML/ModelAssistant/introduction/installation',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorials',
+          collapsed: false,
+          items: [
+            'Topics/TinyML/ModelAssistant/tutorials/config',
+            'Topics/TinyML/ModelAssistant/tutorials/datasets',
+            {
+              type: 'category',
+              label: 'Trainning',
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: 'Topics/TinyML/ModelAssistant/tutorials/training/overview',
+              },
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/training/yolo',
+                'Topics/TinyML/ModelAssistant/tutorials/training/fomo',
+                'Topics/TinyML/ModelAssistant/tutorials/training/pfld',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Export',
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: 'Topics/TinyML/ModelAssistant/tutorials/export/overview',
+              },
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_onnx',
+                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_tflite',
+              ]
+            },
+          ]
+        },
+        'Topics/TinyML/ModelAssistant/deploy/overview',
+      ],
+    },
+
+    {
       type: 'doc',
       id: 'Topics/Open_Source/Open_Source_Topic',
       label: 'Open Source',
