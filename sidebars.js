@@ -3297,6 +3297,18 @@ const sidebars = {
       },
       items: [
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
+        'Top_Brand/Micro_bit/Microsoft_MakeCode',
+        {
+          type: 'category',
+          label: 'Expansion Board',
+          items: [
+            'Top_Brand/Micro_bit/expansion_board/BitWear',
+            'Top_Brand/Micro_bit/expansion_board/BitMaker',
+            'Top_Brand/Micro_bit/expansion_board/BitMaker_Lite',
+            'Top_Brand/Micro_bit/expansion_board/BitPlayer',
+            'Top_Brand/Micro_bit/expansion_board/BitCar',
+          ],
+        },
       ],
     },
     // 'Contribution/Home_Assistant/Home_Assistant_Topic',
