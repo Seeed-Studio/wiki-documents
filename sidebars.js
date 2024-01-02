@@ -2616,6 +2616,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
                 'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
+                'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
               ],
             },
 
