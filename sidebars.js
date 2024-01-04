@@ -701,6 +701,7 @@ const sidebars = {
                    ],
           },
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Firmware_release_note',          
               ],
         },
         
