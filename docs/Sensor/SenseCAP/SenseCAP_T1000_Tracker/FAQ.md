@@ -103,11 +103,11 @@ For detailed battery life calculations, refer to the [Battery Life Calculation F
 |Fully charged| The LED will stay always on.|
 |Charging anomaly|When the device is charged below 0 ° C or above 45 ° C, the device will enter the charge protection state and cannot be charged.<br/>The LED will flash rapidly.|
 
-:::caution note
-Charging abnormality Alarm
-:::
+:::caution Charging abnormality Alarm
+If the indicator `flashes quickly` while charging, it may be that the power voltage is insufficient or poor contact.
 
-If the indicator `flashes quickly` while charging, it may be that the power voltage is insufficient or poor contact. Please check your power supply or try another power adaptor.
+Please check your power supply or try another power adaptor.
+:::
 
 ### How long does it take to fully charge?
 
@@ -122,13 +122,27 @@ Yes, it can continue uploading data while charging.
 
 ### No sensor data
 
-To save power, the sensor function is disable by default, so you need to enable it on the SenseCAP Mate APP first.
+To save power, the temperature/light sensor function is disable by default, so you need to enable it on the SenseCAP Mate APP first.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/enable-sensor.png" alt="pir" width={500} height="auto" /></p>
 
+### Motion sensor
 
+The motion sensor(3-axis acceleration) is used to detect the shock and motion/motionless event, so if you want to enable the motion sensor, need to select the mode to event mode first, then we can get the 
 
 ## Cache Data
+
+### How does it work
+
+When the LoRaWAN signal is weak or there is no network coverage, the data will be saved in the device. When the device returns to an area with the LoRaWAN network coverage, it will send the real-time data first, and then upload the cache data.
+
+During each upload period, it will upload the latest location first, and then the cache data. 
+Only a few packets of historical data are uploaded per cycle, so this will not affect the duty cycle.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cache.png" alt="pir" width={700} height="auto" /></p>
+
+### Note
 
 Since the device can only cache about 1,000 offline data, if you are in a place without LoRaWAN network coverage for a long time, when the offline data reaches the limit, some old data will be overwritten by new data, so you may 'lose' some data.
 
