@@ -52,7 +52,7 @@ Seeed Studio's "Advanced Perception System" is an [IoT solution](/SenseCAP_intro
 <br/>
 </div>
 
-The SenseCAP Team focuses primarily on Sensor and Network components, committing to delivering top-notch quality and bespoke industry solutions. Their work has resulted in the creation of acclaimed offerings, such as the innovative [Smart Village Solution]((https://www.seeedstudio.com/smart-village)), which has garnered praise for its practicality and forward-thinking design.
+The SenseCAP Team focuses primarily on Sensor and Network components, committing to delivering top-notch quality and bespoke industry solutions. Their work has resulted in the creation of acclaimed offerings, such as the innovative [Smart Village Solution](https://www.seeedstudio.com/smart-village), which has garnered praise for its practicality and forward-thinking design.
 
 In the realm of the Helium network, the team's contributions are particularly noteworthy. Devices like the SenseCAP M1, M2, and M4 are not just high-performance Helium hotspots; they are pivotal in enabling users to earn HNT cryptocurrency while concurrently constructing a decentralized wireless LoRaWAN® network infrastructure. The SenseCAP M4 Square stands out for its ability to operate multiple Web 3.0 Apps, thereby streamlining the deployment of intricate multi-application systems.[^3]
 
