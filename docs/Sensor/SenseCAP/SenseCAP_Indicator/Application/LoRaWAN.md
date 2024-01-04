@@ -209,7 +209,7 @@ Creating a device profile is a crucial step in ensuring your device effectively 
 
 The MAC version you select is pivotal as it determines the set of credentials your device will require:
 
-<!-- import Tabs from '@theme/Tabs';
+import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
@@ -232,7 +232,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 </Tabs>
- -->
+
 
 **Choosing Regional Parameters Revision**
 
@@ -272,15 +272,6 @@ Indeed, to make the payload data transmitted by your device meaningful and inter
 The docoder is from [GitHub repository](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/examples/indicator_lorawan/docs/ChirpStackV4_Decoder.js)
 
 ```js
-// Decode uplink function.
-//
-// Input is an object with the following fields:
-// - bytes = Byte array containing the uplink payload, e.g. [255, 230, 255, 0]
-// - fPort = Uplink fPort.
-// - variables = Object containing the configured device variables.
-//
-// Output must be an object with the following fields:
-// - data = Object representing the decoded payload.
 function decodeUplink(input) {
     var decoded = {
         data:[]
@@ -339,14 +330,6 @@ function decodeUplink(input) {
     return { data: decoded }
 }
 
-// Encode downlink function.
-//
-// Input is an object with the following fields:
-// - data = Object representing the payload that must be encoded.
-// - variables = Object containing the configured device variables.
-//
-// Output must be an object with the following fields:
-// - bytes = Byte array containing the downlink payload.
 function encodeDownlink(input) {
   return {
     bytes: [225, 230, 255, 0]
@@ -527,5 +510,14 @@ In both cases, it's crucial to ensure that the OTAA (Over-the-Air Activation) de
 
 </details>
 
+## ODM Service
 
+Seeed Studio offers a comprehensive one-stop ODM service to accommodate rapid customizations and scaling requirements for diverse needs. If you're looking to tailor your project with specialized features or need assistance in scaling up your operations efficiently, please reach out to us. For inquiries and more detailed information, contact us at iot@seeed.cc. We're here to help turn your unique ideas into reality.
 
+## Tech Support
+
+**Need help with your SenseCAP Indicator? We're here to assist you!**
+
+If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
+
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
