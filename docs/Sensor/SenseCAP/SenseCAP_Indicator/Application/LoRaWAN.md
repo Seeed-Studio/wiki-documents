@@ -209,7 +209,7 @@ Creating a device profile is a crucial step in ensuring your device effectively 
 
 The MAC version you select is pivotal as it determines the set of credentials your device will require:
 
-<!-- import Tabs from '@theme/Tabs';
+import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
@@ -232,7 +232,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 </Tabs>
- -->
+
 
 **Choosing Regional Parameters Revision**
 
@@ -272,15 +272,6 @@ Indeed, to make the payload data transmitted by your device meaningful and inter
 The docoder is from [GitHub repository](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/examples/indicator_lorawan/docs/ChirpStackV4_Decoder.js)
 
 ```js
-// Decode uplink function.
-//
-// Input is an object with the following fields:
-// - bytes = Byte array containing the uplink payload, e.g. [255, 230, 255, 0]
-// - fPort = Uplink fPort.
-// - variables = Object containing the configured device variables.
-//
-// Output must be an object with the following fields:
-// - data = Object representing the decoded payload.
 function decodeUplink(input) {
     var decoded = {
         data:[]
@@ -339,14 +330,6 @@ function decodeUplink(input) {
     return { data: decoded }
 }
 
-// Encode downlink function.
-//
-// Input is an object with the following fields:
-// - data = Object representing the payload that must be encoded.
-// - variables = Object containing the configured device variables.
-//
-// Output must be an object with the following fields:
-// - bytes = Byte array containing the downlink payload.
 function encodeDownlink(input) {
   return {
     bytes: [225, 230, 255, 0]
@@ -359,8 +342,6 @@ function encodeDownlink(input) {
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_add_decoder.png"/>
 </div>
-
-
 
 Once device profile is created, the next step is to add an application.
 
@@ -408,7 +389,7 @@ Click the button to generate a random **Application Key (AppKey)** or opt to use
 - **DevEUI (Example):** `5d61e4648dc926e2`
 - **AppKey (Example):** `ec2b966c2c4bbe94a6ef79d0479db0e5`
 
-With these details, you can now execute the command:
+With these details, we have the command:
 
 ```sh
 lorawan --eui 5d61e4648dc926e2 --app_key ec2b966c2c4bbe94a6ef79d0479db0e5
@@ -418,7 +399,7 @@ For additional commands and assistance, refer to the [console command](#commands
 
 ## 3. Configure SenseCAP Indicator {#configure_credentials}
 
-To establish a connection with your SenseCAP Indicator, you can use any **serial tool**([Minicom](https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom), [Putty](https://www.putty.org/), etc.) or just use `idf monitor`(follow the detailed [instructions provided in the ESP-IDF documentation](https://docs.espressif.com/projects/esp-idf/en/v5.1.2/esp32/api-guides/tools/idf-monitor.html):
+To establish a connection with your SenseCAP Indicator, you can use any **serial tool**([Minicom](https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom), [Putty](https://www.putty.org/), etc.) or just use `idf monitor`(follow the detailed [instructions provided in the ESP-IDF documentation](https://docs.espressif.com/projects/esp-idf/en/v5.1.2/esp32/api-guides/tools/idf-monitor.html)):
 
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/esp_idf_monitor.png"/>
@@ -441,7 +422,7 @@ Now, you should be able to view the keys on your SenseCAP Indicator. If necessar
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bin_press_join.png"/>
 </div>
 
-When you press the *Join* button, you'll be able to observe the connection process directly through the *console*, allowing you to monitor and verify the successful establishment of the connection.
+When you pressed the *Join* button, you'll be able to observe the connection process directly through the *console*, allowing you to monitor and verify the successful establishment of the connection.
 
 <div align="center">
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bin_console.png"/>
@@ -496,17 +477,6 @@ lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_
 
 - `--nwks_key=`: Sets the NWKS KEY for ABP, which is used for encrypting network payloads and for device authentication. It requires 16 hexadecimal digits, with MSB first.
 
-### **help**
-This command provides a list of all available commands in the system.
-
-##### Usage:
-```sh
-help
-```
-
-##### Description:
-Prints a detailed list of all registered commands, providing a quick reference to the functions available for configuring and operating the device within the LoRaWAN network.
-
 ## FAQs
 
 <details>
@@ -527,5 +497,14 @@ In both cases, it's crucial to ensure that the OTAA (Over-the-Air Activation) de
 
 </details>
 
+## ODM Service
 
+Seeed Studio offers a comprehensive one-stop ODM service to accommodate rapid customizations and scaling requirements for diverse needs. If you're looking to tailor your project with specialized features or need assistance in scaling up your operations efficiently, please reach out to us. For inquiries and more detailed information, contact us at iot@seeed.cc. We're here to help turn your unique ideas into reality.
 
+## Tech Support
+
+**Need help with your SenseCAP Indicator? We're here to assist you!**
+
+If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
+
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
