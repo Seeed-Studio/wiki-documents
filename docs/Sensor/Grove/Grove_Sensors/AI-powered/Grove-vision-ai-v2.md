@@ -84,6 +84,18 @@ If you're experiencing problems with device data suddenly not uploading or image
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/8.gif" style={{width:600, height:'auto'}}/></div>
 
+### Driver
+
+If you find that the Grove Vision AI V2 is not recognised after connecting it to your computer. Then you may need to install the CH343 driver on your computer. Here are some links to download and install the CH343 driver.
+
+- Windows Vendor VCP Driver One-Click Installer: [CH343SER.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.EXE)
+- Windows Vendor VCP Driver: [CH343SER.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
+- Windows CDC driver one-click installer: [CH343CDC.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343CDC.EXE)
+- Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
+- macOS Vendor VCP Driver: [CH34xSER_MAC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH341SER_MAC.ZIP)
+
+
+
 ## Arduino Library Overview
 
 :::tip
@@ -224,32 +236,32 @@ SenseCraft is a series of software services developed by Seeed Studio to provide
 
 <br />
 
-Combined with the empowerment of SenseCraft AI, you can easily upload a wide variety of co-created models and directly observe the results.
+Combined with the empowerment of SenseCraft AI Model Assistant, you can easily upload a wide variety of co-created models and directly observe the results.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
 
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/"><strong><span><font color={'FFFFFF'} size={"4"}>Learn More 📕</font></span></strong></a>
 </div>
 
 <br />
 
-In this section, we'll walk you through using SenseCraft Model Assistant (Hereafter referred to as SSCMA) to quickly deploy and observe results.
+In this section, we'll walk you through using SenseCraft AI Model Assistant to quickly deploy and observe results.
 
-### Step 1. Connect the Grove Vision AI V2 to the SSCMA
+### Step 1. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
 
-First, we need to open the main SSCMA page.
+First, we need to open the main SenseCraft AI Model Assistant page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SSCMA</font></span></strong></a>
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
 </div>
 <br />
 
 Please use a Type-C type cable to connect Grove Vision AI V2 to your computer.
 
-In the upper right corner of the SSCMA page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
+In the upper right corner of the SenseCraft AI Model Assistant page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -536,11 +548,10 @@ No can do. Considering the frame rate or the speed of image inference, we do not
 Currently we have written drivers for the OV5642 series of cameras, so Grove Vision AI V2 supports the full range of Raspberry Pi OV5647 cameras, e.g., the OV5647-62, OV5647-67, and OV5647-160.The other CSI cameras are theoretically supported, but due to the fact that some of the cameras don't have drivers written for them or the do not have a colour processing unit themselves, so there may be a problem that the colour is only green, and the loss of full colour will have a possible impact on the accuracy of the recognition.
 
 
-<!-- ## Resources
+## Resources
 
-- **[文件类型]** [文件名称](链接)
-- **[文件类型]** [文件名称](链接)
-- **[文件类型]** [文件名称](链接) -->
+- **[PDF]** [Datasheet](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/HX6538_datasheet.pdf)
+- **[GitHub]** [Seeed Grove Vision AI Module V2 SDK](https://github.com/HimaxWiseEyePlus/Seeed_Grove_Vision_AI_Module_V2)
 
 
 

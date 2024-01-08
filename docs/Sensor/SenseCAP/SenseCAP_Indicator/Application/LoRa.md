@@ -1,6 +1,6 @@
 ---
 description: LoRa Demonstration usage
-title: LoRa Communication X SenseCAP Indicator
+title: LoRa Communication - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
 - LoRa
@@ -16,7 +16,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# SenseCAP Indicator x LoRa Application Development
+# SenseCAP Indicator - LoRa Application Development
 
 ## Introduction
 
@@ -784,4 +784,4 @@ For more details, see the [README](https://github.com/Seeed-Solution/SenseCAP_In
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.gg/sensecap) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!

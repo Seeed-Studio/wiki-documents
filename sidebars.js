@@ -701,6 +701,7 @@ const sidebars = {
                    ],
           },
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Firmware_release_note',          
               ],
         },
         
@@ -1069,7 +1070,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Keyword_Spotting',
-                // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_ESPHome',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_ESPHome',
               ],
             },
           ],
@@ -1692,7 +1693,17 @@ const sidebars = {
                 },
               ],
             },
-            'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk',
+            {
+              type: 'category',
+              label: 'LPWAN_Dev_Kit_for_Sidewalk',
+              items: [
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/LPWAN_Dev_Kit_for_Sidewalk',
+                'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/Switch_to_Wio_Tracker',
+              ],
+            },
+
+
+
             {
               type: 'category',
               label: 'Wio WM1302',
@@ -2606,6 +2617,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
                 'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
+                'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
               ],
             },
 
@@ -2973,6 +2985,19 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'SenseCraft',
+      items: [
+        {
+          type: 'category',
+          label: 'SenseCraft AI',
+          items: [
+            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
+          ],
+        },
+      ]
+    },
 
     {
       type: 'html',
@@ -3274,6 +3299,18 @@ const sidebars = {
       },
       items: [
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
+        'Top_Brand/Micro_bit/Microsoft_MakeCode',
+        {
+          type: 'category',
+          label: 'Expansion Board',
+          items: [
+            'Top_Brand/Micro_bit/expansion_board/BitWear',
+            'Top_Brand/Micro_bit/expansion_board/BitMaker',
+            'Top_Brand/Micro_bit/expansion_board/BitMaker_Lite',
+            'Top_Brand/Micro_bit/expansion_board/BitPlayer',
+            'Top_Brand/Micro_bit/expansion_board/BitCar',
+          ],
+        },
       ],
     },
     // 'Contribution/Home_Assistant/Home_Assistant_Topic',
@@ -3309,6 +3346,66 @@ const sidebars = {
            'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
           'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
            'Topics/TinyML/TinyML_Workshop/Image_classification_project',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'ModelAssistant',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/TinyML/ModelAssistant/introduction/overview',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Introduction',
+          collapsed: false,
+          items: [
+          'Topics/TinyML/ModelAssistant/introduction/overview',
+          'Topics/TinyML/ModelAssistant/introduction/quick_start',
+          'Topics/TinyML/ModelAssistant/introduction/installation',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorials',
+          collapsed: false,
+          items: [
+            'Topics/TinyML/ModelAssistant/tutorials/config',
+            'Topics/TinyML/ModelAssistant/tutorials/datasets',
+            {
+              type: 'category',
+              label: 'Trainning',
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: 'Topics/TinyML/ModelAssistant/tutorials/training/overview',
+              },
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/training/yolo',
+                'Topics/TinyML/ModelAssistant/tutorials/training/fomo',
+                'Topics/TinyML/ModelAssistant/tutorials/training/pfld',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Export',
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: 'Topics/TinyML/ModelAssistant/tutorials/export/overview',
+              },
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_onnx',
+                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_tflite',
+              ]
+            },
+          ]
+        },
+        'Topics/TinyML/ModelAssistant/deploy/overview',
       ],
     },
 

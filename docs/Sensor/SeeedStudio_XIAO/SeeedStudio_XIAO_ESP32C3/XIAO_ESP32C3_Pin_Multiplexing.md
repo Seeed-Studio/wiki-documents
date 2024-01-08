@@ -81,6 +81,10 @@ void loop() {
 
 Connect a potentiometer to Pin A0 and an LED to Pin D10. Then upload the following code to control the blinking interval of the LED by rotating the potentiometer knob.
 
+:::tip
+The ADC mapping range is 0-2500mV.
+:::
+
 ```c
 const int sensorPin = A0;
 const int ledPin =  D10; 
