@@ -286,6 +286,25 @@ You will see the OpenWrt Luci web-interface here. The OpenWrt image compiled by 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/OpenWrt-UI.png" alt="pir" width="1000" height="auto"/></p>
 
+## Run R24.7 OpenWrt
+
+We updated the latest version of OpenWrt for Rerouter, the R24.7 version. If you want to use the latest version of OpenWrt, you can choose the image below.
+
+[R24.7 OpenWrt Images](https://files.seeedstudio.com/wiki/OpenWrt/OP/openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.zip)
+
+Once the ethernet cables are connected as before and the OpenWrt image is flashed, proceed to the steps below
+
+- **Step 1.** Power on the board
+
+- **Step 2.** Open a web browser and type **192.168.1.1**
+
+```text
+account: root
+password: password
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/R24.7OP-UI.png" alt="pir" width="1000" height="auto"/></p>
+
 ## Network Speed Test
 
 Finally we will move on to testing the network speeds on the Dual Gigabit Ethernet Carrier Board for Raspberry Pi CM4 and ODYSSEY - X86J4125 with OpenWrt installed.
@@ -393,6 +412,9 @@ For details, please click [**here**](/FAQs_For_openWrt)
 - **[GitHub]** [Seeed OpenWrt](https://github.com/Seeed-Studio/seeed-linux-openwrt)
 
 - **[OneDrive]** [Seeed OpenWrt Images](https://1drv.ms/u/s!AqG2uRmVUhlSh0NHMLMmQKLyASvi?e=mup3cd)
+
+- **[Download]** [R24.7 OpenWrt Images](https://files.seeedstudio.com/wiki/OpenWrt/OP/openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.zip)
+
 
 ## Tech Support & Product Discussion
 
