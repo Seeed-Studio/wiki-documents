@@ -286,11 +286,11 @@ You will see the OpenWrt Luci web-interface here. The OpenWrt image compiled by 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/OpenWrt-UI.png" alt="pir" width="1000" height="auto"/></p>
 
-## Run R24.7 OpenWrt
+## Run R23.5 OpenWrt
 
 We updated the latest version of OpenWrt for Rerouter, the R23.5 version. If you want to use the latest version of OpenWrt, you can choose the image below.
 
-[R24.7 OpenWrt Images](https://firmware-selector.openwrt.org/?version=23.05.2&target=bcm27xx%2Fbcm2711&id=rpi-4)
+[R23.5 OpenWrt Images](https://firmware-selector.openwrt.org/?version=23.05.2&target=bcm27xx%2Fbcm2711&id=rpi-4)
 
 Once the ethernet cables are connected as before and the OpenWrt image is flashed, proceed to the steps below
 
