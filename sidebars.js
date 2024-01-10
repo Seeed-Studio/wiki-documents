@@ -837,7 +837,7 @@ const sidebars = {
             },
           ],
         },
-        "Sensor/SenseCAP/SenseCAP_Decoder",
+        'Sensor/SenseCAP/SenseCAP_Decoder',
         {
           type: 'category',
           label: 'Applications',
@@ -845,6 +845,13 @@ const sidebars = {
             'Sensor/SenseCAP/Applications/Home_Assistant_X_SenseCAP_LoRaWAN_Sensors',
             'Sensor/SenseCAP/Applications/Develop_an_Industrial_LoRaWAN_Sensor',
           ],
+        },
+        {
+          type: 'category',
+          label: 'Learn',
+          items: [
+            'Sensor/SenseCAP/Learn/How_to_Select_the_LoRaWAN_Network',
+         ],
         },
       ],
     },
