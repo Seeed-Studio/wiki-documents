@@ -19,6 +19,11 @@ For details, please click [here](/Troubleshooting_Installation)
 
 For details, please click [here](/solution_of_insufficient_space)
 
+#### Q3: How to solve the compatibility issue between reComputer and VEYE camera?
+
+For details, please click [here](/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)
+
+
 # Tech support
 
 Thank you for choosing our products! We are **here** to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
