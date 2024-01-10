@@ -151,7 +151,7 @@ We can directly execute `pip3 install opencv-python` to install OpenCV:
 
 In this project, we will deploy Triton Inference Server to the reComputer J1010. In order to enhance the interactivity and deployment convenience of the trained model, we will convert the model into **ONXX format**.
 
-**Step 1.** [Install](https://wiki.seeedstudio.com/install_NVIDIA_software_to_Jetson-10-1-A0/) Jetpack 4.6.1 into reComputer J1010.
+**Step 1.** [Install](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/) Jetpack 4.6.1 into reComputer J1010.
 
 **Step 2.** Create a new folder “opi/1” in “home/server/docs/examples/model_repository ”. and then download trained and converted [model.onnx](https://drive.google.com/file/d/1RcHK_gthCXHsJLeDOUQ6c3r0RlAUgRfV/view?usp=sharing) and put it into the “1” folder.
 

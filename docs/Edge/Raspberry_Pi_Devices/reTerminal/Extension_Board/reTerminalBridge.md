@@ -96,7 +96,7 @@ The PoE power input is RJ45 and supports a maximum of 25W power input.
 
 #### **UPS -18650 battery**
 
-2 x battery holder with fixed pin.During the charging process, the battery will automatically stop charging if it overheats, and LED 2 will flash the alarm.
+2 x battery holder with fixed pin.
 
 ### **Fan**
 

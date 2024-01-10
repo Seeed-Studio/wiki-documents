@@ -298,7 +298,7 @@ const config = {
           // },
 
           {
-            to: 'https://www.seeedstudio.com/',
+            href: 'https://www.seeedstudio.com/',
             label: 'Bazaar 🛍️',
             position: 'right',
             className: 'navbar_doc_right_items',
@@ -317,7 +317,7 @@ const config = {
           //   className: 'navbar_doc_items'
           // },
           {
-            to: 'https://wiki-gpt.seeedstudio.com/chat',
+            href: 'https://wiki-gpt.seeedstudio.com/chat',
             label: 'Chat 🤖️',
             position: 'right',
             className: 'navbar_doc_right_items',
