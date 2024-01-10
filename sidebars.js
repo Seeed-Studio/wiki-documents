@@ -135,9 +135,22 @@ const sidebars = {
             {
               type: 'category',
               label: 'AI-powered',
-              items: [
-                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2',
+              items: [        
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
+                {
+                  type: 'category',
+                  label: 'Grove Vision AI V2',
+                  collapsed: true,
+                  collapsible: true,
+                  link: {
+                    type: "doc",
+                    id: "Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2"
+                  },
+                  items: [
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-software-supported',
+                  ],
+                },    
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
