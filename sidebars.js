@@ -2580,6 +2580,8 @@ const sidebars = {
               'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
               'Edge/NVIDIA_Jetson/reComputer/Tutorials/J1010_Boot_From_SD_Card',
               'Edge/NVIDIA_Jetson/reComputer/Tutorials/J101_Enable_SD_Card',
+              'Edge/NVIDIA_Jetson/reComputer/Hardware/reComputer_Jetson_with_Infineon_Wi-Fi_Module',
+
               ],
             },
 

@@ -22,7 +22,7 @@ In modern families, the trend towards smart homes is becoming increasingly commo
 </div>
 
 
-In this wiki, you will learn how to use Langchain to format the output of large language models and deploy it on edge computing devices.
+In this wiki, you will learn how to use Langchain to format the output of large language models and deploy it on edge computing devices. Specifically, use the powerful understanding capability of large language models to build a local chatbot, and then utilize Langchain tools to fix the output format of the large model.
 
 ## What is LLM?
 Large Language Models (LLM) are a type of artificial intelligence model based on deep learning, such as GPT, which excel in natural language processing tasks. They are capable of understanding and generating text, and are therefore widely used in various applications such as text generation, translation, question-answer systems, and more.

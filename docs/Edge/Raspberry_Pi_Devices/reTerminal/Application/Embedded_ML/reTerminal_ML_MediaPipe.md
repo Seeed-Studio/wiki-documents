@@ -8,116 +8,166 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal_ML_MediaPipe
 last_update:
-  date: 1/31/2023
-  author: jianjing Huang
+  date: 1/10/2024
+  author: Kasun Thushara
 ---
 
 
 # Getting Started with MediaPipe on reTerminal
 
-<p align="center">
-  <img alt="Light" src="https://google.github.io/mediapipe/images/mediapipe_small.png" width="45%"/>
-&nbsp; &nbsp;
-<img alt="Dark" src="https://raw.githubusercontent.com/lakshanthad/Image/master/CM4_wiki/wiki_thumb.png" width="45%"/>
-</p>
-
  MediaPipe is a an open-source framework from Google for building multimodal (eg. video, audio, any time series data), cross platform (i.e Android, iOS, web, edge devices) applied ML pipelines. It is performance optimized with end-to-end ondevice inference in mind. Mediapipe is currently under active development and includes multiple demos, that can be run out-of-the box after installing Mediapipe on reTerminal.
+
+
+ ### Hardware preparation
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">reTerminal</th>
+      <th class="table-trnobg">PiCam</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+        </tr>
+    </table>
+    </div>
+
+### Software Preparation
+
+We recommend installing the **Bullesye** or **Bookworm** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc). 
+
+:::note
+
+In earlier OS versions, Python libraries could be directly installed system-wide using pip, the Python package installer. However, in Bookworm  release, a shift has occurred. To mitigate potential issues during installation, it is now necessary to install packages via pip into a Python virtual environment using venv. 
+
+:::
+
+Execute these commands one by one, and you will end up with a virtual environment.
+
+ ```sh
+mkdir my_project
+cd my_project
+python -m venv --system-site-packages env
+source env/bin/activate
+ ```
 
 ## ML solutions in MediaPipe
 
-The following is list of solutions currently tested on reTerminal:
+Begin by cloning the GitHub repository to your reTerminal device using the following command:
 
-<table style={{tableLayout: 'fixed', width: 743}}>
-  <colgroup>
-    <col style={{width: 146}} />
-    <col style={{width: 198}} />
-    <col style={{width: 399}} />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>Result</th>
-      <th>Comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Face Detection</td>
-      <td> <p style={{textAlign: 'center'}}><img src="https://google.github.io/mediapipe/images/mobile/face_detection_android_gpu_small.gif" alt="pir" width={600} height="auto" /></p></td>
-      <td>Model complexity: 0  &nbsp;  71.4 FPS 14 ms. per inference <br />
-        Model complexity: 1  &nbsp;  21.2 FPS 47 ms. per inference
-      </td>
-    </tr>
-    <tr>
-      <td>Face Mesh</td>
-      <td><p style={{textAlign: 'center'}}><img src="https://google.github.io/mediapipe/images/mobile/face_mesh_android_gpu_small.gif" alt="pir" width={600} height="auto" /></p> </td>
-      <td>20 FPS, 50 ms. per inference with tracking &nbsp; <br />  
-        16.1 FPS 60 ms. without tracking</td>
-    </tr>
-    <tr>
-      <td>Pose</td>
-      <td><p style={{textAlign: 'center'}}><img src="https://google.github.io/mediapipe/images/mobile/pose_tracking_android_gpu_small.gif" alt="pir" width={600} height="auto" /></p></td>
-      <td>Model complexity: 1  &nbsp;  11.8 FPS 85 ms. per inference <br />
-        Model complexity: 2  &nbsp;  6.1 FPS 163 ms. per inference <br />
-        Model complexity: 3  &nbsp;  -- FPS -- ms. per inference
-      </td>
-    </tr>
-    <tr>
-      <td>Hand landmarks</td>
-      <td><p style={{textAlign: 'center'}}><img src="https://google.github.io/mediapipe/images/mobile/hand_tracking_3d_android_gpu.gif" alt="pir" width={600} height="auto" /></p></td>
-      <td>Model complexity: 0  &nbsp;  8.9 FPS 112 ms. per inference <br />
-        Model complexity: 1  &nbsp;  4.4 FPS 226 ms. per inference <br />
-      </td>
-    </tr>
-  </tbody>
-</table>
+ ```sh
+ git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
+ ```
+Navigate to the folder that contains the required resources. In this directory, you will find four topics that we will be covering.
 
-## Installation
+### Face Detection
 
-Currently Python bindings are tested with both 32bit and 64bit Raspberry Pi OS images for reTerminal. For best performance it is recommended to use 64bit version.
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/meadiapipe-faccedetection.gif" /></center>
 
-#### Python bindings for 32bit version
+- **Step 1** For our first topic, we will be installing dependencies for face detection. Move to the face detection section using the following commands
 
-```
-sudo apt install ffmpeg python3-opencv
-pip3 install mediapipe-rpi4
-```
+ ```sh
+cd Seeed_Python_ReTerminal/samples/mediapipe_picam/face_detector/raspberry_pi
+ ```
+- **Step 2** Run the setup script to install the necessary dependencies
 
-#### Python bindings for 64bit version
+ ```sh
+sh setup.sh
+ ```
 
-Pre-built wheels for Python 3.7 64bit OS were not available at the moment of writing of this article, so we compiled and shared them ourselves.
+- **Step 3** Once the setup is complete, you can execute the source file to initiate face detection
 
-```
-sudo apt install ffmpeg python3-opencv
-wget https://files.seeedstudio.com/ml/mediapipe/mediapipe-0.8-cp37-cp37m-linux_aarch64.whl
-pip3 install mediapipe-0.8-cp37-cp37m-linux_aarch64.whl
-```
+ ```sh
+python3 detect.py
+ ```
 
-After installation is complete, try importing mediapipe package:
+### Face Landmarker
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/meadiapipe-facelandmarks.gif" /></center>
 
-```
-pi@raspberrypi:~/reterminal $ python3
-Python 3.7.3 (default, Jan 22 2021, 20:04:44) 
-[GCC 8.3.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import mediapipe
->>> mediapipe.__path__
-['/home/pi/.local/lib/python3.7/site-packages/mediapipe']
->>> 
-```
+- **Step 1** Install dependencies
 
-## Links to samples
+ ```sh
+cd Seeed_Python_ReTerminal/samples/mediapipe_picam/face_landmarker/raspberry_pi
+ ```
+- **Step 2** Run the setup script to install the necessary dependencies
 
-You can find Sample applications in Seeed Python Machine Learning repository, inside [examples/mediapipe folder.](https://github.com/Seeed-Studio/Seeed_Python_MachineLearning/tree/main/examples/mediapipe)
+ ```sh
+sh setup.sh
+ ```
 
-## F.A.Q
+- **Step 3** Once the setup is complete, you can execute the source file to initiate face landmaker.
 
-#### Q1: My company's policy doesn't allow us to use 3rd party binaries. How to compile MediaPipe from source?
+ ```sh
+python3 detect.py
+ ```
 
-You can compile MediaPipe for 32bit OS by following instructions [here](https://github.com/superuser789/MediaPipe-on-RaspberryPi#building-mediapipe-on-raspberry-pi-os-for-raspberry-pi-3--4) and for 64-bit version by following instruction [here](https://github.com/jiuqiant/mediapipe_python_aarch64).
+### Hand Landmarker
+
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/mediapipe_handlandmarks.gif" /></center>
+
+ - **Step 1** Install dependencies
+
+ ```sh
+cd Seeed_Python_ReTerminal/samples/mediapipe_picam/hand_landmarker/raspberry_pi
+ ```
+- **Step 2** Run the setup script to install the necessary dependencies
+
+ ```sh
+sh setup.sh
+ ```
+
+- **Step 3** Once the setup is complete, you can execute the source file to initiate hand landmaker.
+
+ ```sh
+python3 detect.py
+ ```
+
+### Pose Landmarker
+
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/mediapipe-pose.gif" /></center>
+
+ - **Step 1** Install dependencies
+
+ ```sh
+cd Seeed_Python_ReTerminal/samples/mediapipe_picam/pose_landmarker/raspberry_pi
+ ```
+- **Step 2** Run the setup script to install the necessary dependencies
+
+ ```sh
+sh setup.sh
+ ```
+
+- **Step 3** Once the setup is complete, you can execute the source file to initiate pose landmaker.
+
+ ```sh
+python3 detect.py
+ ```
 
 ## Resources
 
 - **[Web Page]** [MediaPipe Official Webpage](https://mediapipe.dev/)
 
 - **[Web Page]** [MediaPipe Official Documentation](https://google.github.io/mediapipe/)
+
+## Tech support
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
