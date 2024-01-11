@@ -113,6 +113,7 @@ python3 detect.py
 ### Hand Landmarker
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/mediapipe_handlandmarks.gif" /></center>
+
  - **Step 1** Install dependencies
 
  ```sh
@@ -133,6 +134,7 @@ python3 detect.py
 ### Pose Landmarker
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/mediapipe-pose.gif" /></center>
+
  - **Step 1** Install dependencies
 
  ```sh
