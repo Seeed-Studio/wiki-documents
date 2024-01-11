@@ -426,6 +426,14 @@ Following these steps should allow you to successfully add the "SenseCraft" devi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/37.png" style={{width:1000, height:'auto'}}/></div>
 
+## Troubleshooting
+
+### Q1: What should I do if I never see the data messages in HA again after the Grove Vision AI V2 drops?
+
+You may need to delete the device and re-add it in SenseCraft. After deleting it may not be able to be automatically searched again and you will need to manually add the device. Please refer to the **[steps here](#method-2-if-the-device-is-not-found)** to re-add the device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/44.png" style={{width:1000, height:'auto'}}/></div>
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
