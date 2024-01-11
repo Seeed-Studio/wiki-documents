@@ -1,3 +1,14 @@
+---
+description: Trainnig For Model Assistant
+title: Object Detecion - FOMO
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Object Detecion - FOMO
 
 This section describes how to train the FOMO mask detection model on the COCO MASK datasets. the implementations of FOMO mask detection model is based on the MobileNet V2 and MobileNet V3 (the actual neural network selected depends on the model profile you choose).

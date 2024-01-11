@@ -1,4 +1,15 @@
-# Model Training
+---
+description: Trainnig For Model Assistant
+title: Overview
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
+# Overview
 
 [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) currently supports the following models. You can refer to the corresponding tutorials to complete the training of the models and obtain the model weights.
 

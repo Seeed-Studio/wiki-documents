@@ -1,3 +1,15 @@
+---
+description: Config For Model Assistant
+title: Config
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
+
 # Config
 
 [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) uses the configuration processing system provided by [OpenMMLab - MMEngine](https://github.com/open-mmlab/mmengine) with a modular and inheritable design that provides users a unified configuration access interface for various tests and validations of different neural networks.

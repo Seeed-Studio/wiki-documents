@@ -1,3 +1,14 @@
+---
+description: Export For Model Assistant
+title: Export
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Model Export
 
 [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) currently supports the following methods to convert and export models.

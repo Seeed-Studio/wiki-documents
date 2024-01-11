@@ -1,3 +1,14 @@
+---
+description: Trainnig For Model Assistant
+title: Object Detecion - SWIFT-YOLO
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Object Detecion - SWIFT-YOLO
 
 This section describes how to train the digital meter model on the COCO digital meter datasets. The implementations of yolo digital meter detection model is based on the Swfit-YOLO and power by [mmyolo](https://github.com/open-mmlab/mmyolo)

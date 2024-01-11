@@ -1,3 +1,14 @@
+---
+description: Overview For Model Assistant
+title: Overview
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Overview
 
 <div align="center">

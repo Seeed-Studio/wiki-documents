@@ -1,3 +1,14 @@
+---
+description: Trainnig For Model Assistant
+title: Keypoint Detecion - PFLD
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Keypoint Detection - PFLD
 
 This section describes how to train the PFLD model on the PFLD meter dataset. The PFLD model is presented in the paper [PFLD: A Practical Facial Landmark Detector](https://arxiv.org/pdf/1902.10859.pdf).
