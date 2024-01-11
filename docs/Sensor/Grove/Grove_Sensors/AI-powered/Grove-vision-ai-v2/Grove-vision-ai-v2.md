@@ -4,7 +4,7 @@ title: Grove Vision AI Module V2
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /grove_vision_ai_v2a
+slug: /grove_vision_ai_v2
 last_update:
   date: 12/12/2023
   author: Citric

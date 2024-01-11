@@ -135,9 +135,22 @@ const sidebars = {
             {
               type: 'category',
               label: 'AI-powered',
-              items: [
-                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2',
+              items: [        
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
+                {
+                  type: 'category',
+                  label: 'Grove Vision AI V2',
+                  collapsed: true,
+                  collapsible: true,
+                  link: {
+                    type: "doc",
+                    id: "Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2"
+                  },
+                  items: [
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-software-supported',
+                  ],
+                },    
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
@@ -837,7 +850,7 @@ const sidebars = {
             },
           ],
         },
-        "Sensor/SenseCAP/SenseCAP_Decoder",
+        'Sensor/SenseCAP/SenseCAP_Decoder',
         {
           type: 'category',
           label: 'Applications',
@@ -845,6 +858,13 @@ const sidebars = {
             'Sensor/SenseCAP/Applications/Home_Assistant_X_SenseCAP_LoRaWAN_Sensors',
             'Sensor/SenseCAP/Applications/Develop_an_Industrial_LoRaWAN_Sensor',
           ],
+        },
+        {
+          type: 'category',
+          label: 'Learn',
+          items: [
+            'Sensor/SenseCAP/Learn/How_to_Select_the_LoRaWAN_Network',
+         ],
         },
       ],
     },
@@ -1030,6 +1050,7 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/ESP32C3_Smart_Thermostat',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
               ],
