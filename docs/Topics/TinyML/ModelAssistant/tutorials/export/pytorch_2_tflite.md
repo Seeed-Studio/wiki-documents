@@ -4,6 +4,7 @@ title: PyTorch to TFLite
 keywords:
 - sscma model assistant ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug:  /ModelAssistant_Tutorials_Export_PyTorch_2_TFLite
 last_update:
   date: 01/11/2024
   author: LynnL4
