@@ -40,7 +40,7 @@ First, you need to clone the [SSCMA Source Code](https://github.com/Seeed-Studio
 
 ```sh
 git clone https://github.com/Seeed-Studio/ModelAssistant.git --depth 1 && \
-cd SSCMA
+cd ModelAssistant
 ```
 
 </TabItem>
@@ -48,7 +48,7 @@ cd SSCMA
 
 ```sh
 git clone git@github.com:Seeed-Studio/ModelAssistant.git --depth 1 && \
-cd SSCMA
+cd ModelAssistant
 ```
 
 </TabItem>
