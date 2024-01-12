@@ -38,7 +38,7 @@ Before the tutorial content of this article begins, you may need to have the fol
 	<table align="center">
 		<tr>
 			<th>Grove Vision AI V2</th>
-			<th>XIAO ESP32S3</th>
+			<th>XIAO ESP32C3</th>
 			<th>Home Assistant Green</th>
 		</tr>
 		<tr>
