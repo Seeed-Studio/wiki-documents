@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Grove Vision AI V2 and software platform
-title: Getting Stared with Arduino or SenseCraft AI
+title: Software Support
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,22 +10,22 @@ last_update:
   author: Citric
 ---
 
-# Overview
+# Supported Software Overview
 
 There are two methods enabling the Grove Vision AI Module V2:
 
-- [Getting Started with SenseCraft AI using Grove Vision Module V2 only]
-   - [What is SenseCraft AI?]
-   - [Getting Started with SenseCraft AI Model Assistant]
-- [Getting Started with Arduino connecting Grove Vision Module V2 and Seeed Studio XIAO Board]
-   - [Arduino Library Introduction]
-   - [Getting Started with Seeed Studio XIAO]
+- [**No code getting started with SenseCraft AI**](#jump1)
+   - [What is SenseCraft AI?](#jump2)
+   - [Getting Started with SenseCraft AI Model Assistant](#jump3)
+- [**Program on Arduino connecting with Seeed Studio XIAO Board**](#jump4)
+   - [Arduino Library Introduction](#jump5)
+   - [Getting Started with Seeed Studio XIAO](#jump6)
 
-## Getting Started with SenseCraft AI
+## <span id="jump1"> No code getting started with SenseCraft AI </span>
 
 In this section, we'll walk you through using SenseCraft AI Model Assistant to quickly deploy and observe results, with no code and no other developemtn boards:
 
-### What is SenseCraft AI?
+### <span id="jump2"> What is SenseCraft AI?  </span>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -51,8 +51,7 @@ In this section, we will use "Model Assistant" here to enable the module. Combin
 
 
 
-### Getting Started with SenseCraft AI Model Assistant
-
+### <span id="jump3"> Getting Started with SenseCraft AI Model Assistant  </span>
 
 <!-- SenseCraft is a series of software services developed by Seeed Studio to provide users with faster and simpler software services and applications. With three product lines, Data line, Edge line and AI line, SenseCraft is able to fulfill users' needs in data services, device management and AI applications. No matter what solution you need, SenseCraft can provide you with efficient and reliable solutions and customized services. -->
 
@@ -108,10 +107,9 @@ We can see that in the Preview Settings on the right hand side, there are two se
 At this point, you have finished uploading the model and observing the results.
 
 
+## <span id="jump4"> Program on Arduino connecting with Seeed Studio XIAO Board </span>
 
-## Getting Started with Arduino
-
-### Library Introduction
+### <span id="jump5"> Arduino Library Introduction </span>
 
 :::tip
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
@@ -239,7 +237,8 @@ Since you have downloaded the zip Library, open your Arduino IDE, click on **Ske
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
-### Getting Started with Seeed Studio XIAO
+### <span id="jump6"> Getting Started with Seeed Studio XIAO </span>
+
 
 If you want to get a prototype of a sensor with machine vision capabilities, then you may want to consider adding an XIAO. Using XIAO and Grove Vision AI V2, you can use the model you want to use and quickly deploy it in your application area.
 
@@ -479,3 +478,19 @@ In the `loop()` function:
 - Finally, the received data from the Grove Vision AI V2 module is transmitted back to the serial console using `Serial.write()`, completing the two-way communication between the serial interface and the vision AI module.
 
 This setup allows for interactive communication with the Grove Vision AI V2 module, enabling users to send instructions to and receive data from the module over a serial connection.
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="table-center">
+  <div class="button_tech_support_container">
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+  </div>
+
+  <div class="button_tech_support_container">
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+  </div>
+</div>
