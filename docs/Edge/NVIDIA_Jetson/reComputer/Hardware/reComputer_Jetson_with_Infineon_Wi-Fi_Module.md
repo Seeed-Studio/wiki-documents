@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Use_Infineon_Wifi_Module_on_reComputer
 last_update:
-  date: 10/01/2024
+  date: 01/10/2024
   author: Youjiang
 ---
 
@@ -23,6 +23,8 @@ reComputer J4012 is built with Jetson Orin NX 16GB a powerful and compact intell
 
 
 ## Infineon Wi-Fi Module
+
+Infineon’s Wi-Fi  solution supports Wi-Fi 6/6E features, is tri-band capable (2.4G, 5G, 6G). Its features improve range, power efficiency, network robustness, and security, while reducing the total Bill of Materials cost and board space. The solution delivers an exceptional high-quality video/audio streaming and seamless connectivity experience in congested network environments and significantly reduces latency by operating in the 6G spectrum.
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/wifi_module.png"/></div>
 
