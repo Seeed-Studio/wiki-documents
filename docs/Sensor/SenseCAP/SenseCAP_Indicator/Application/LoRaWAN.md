@@ -1,15 +1,15 @@
 ---
 description: To preview LoRaWAN feature of SenseCAP Indicator
-title: LoRaWAN Network - SenseCAP Indicator
+title: LoRaWAN End Node - SenseCAP Indicator
 keywords:
-  - IoT
   - LoRaWAN
+  - Touch Screen
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/lorawan_landing_page.png
 slug: /SenseCAP_Indicator_Application_LoRaWAN
 toc_max_heading_level: 4
 sidebar_position: 4
 last_update:
-  date: 2024-01-04T01:21:24.006Z
+  date: 2024-01-11T06:29:20.793Z
   author: Spencer
 ---
 
@@ -36,8 +36,8 @@ LoRaWAN is described as a Low Power, Wide Area (LPWA) networking protocol that w
 
 <div style={{ textAlign: 'center' }}>
 
-<img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/3.png" alt="LoRaWAN Framwork" />
-<div style={{ marginTop: '-8px' }}><em>LoRaWAN Network Framwork</em></div>
+<img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/3.png" alt="LoRaWAN Framework " />
+<div style={{ marginTop: '-8px' }}><em>LoRaWAN Network Framework</em></div>
 
 </div>  
 
@@ -397,7 +397,7 @@ lorawan --eui 5d61e4648dc926e2 --app_key ec2b966c2c4bbe94a6ef79d0479db0e5
 
 For additional commands and assistance, refer to the [console command](#commands) section.
 
-## 3. Configure SenseCAP Indicator {#configure_credentials}
+## 3. Configure SenseCAP Indicator to Join Network{#configure_credentials}
 
 To establish a connection with your SenseCAP Indicator, you can use any **serial tool**([Minicom](https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom), [Putty](https://www.putty.org/), etc.) or just use `idf monitor`(follow the detailed [instructions provided in the ESP-IDF documentation](https://docs.espressif.com/projects/esp-idf/en/v5.1.2/esp32/api-guides/tools/idf-monitor.html)):
 
@@ -428,7 +428,47 @@ When you pressed the *Join* button, you'll be able to observe the connection pro
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bin_console.png"/>
 </div>
 
-Once the join process is successful, you can view the logs in the `LoRaWAN frames` section to monitor the data transmission and receive a detailed account of the device's communication with the network.
+## **Sending and Receiving Messages** {#uplink_and_downlink}
+
+In this section, we will walk you through the process of monitoring both uplink and downlink communications between your device and the LoRaWAN network.[^4]
+
+[^4]: [In-Depth: Sending and Receiving Messages with LoRaWAN®](https://lora-developers.semtech.com/documentation/tech-papers-and-guides/sending-and-receiving-messages-with-lorawan/sending-and-receiving-messages/)
+
+### Uplink Message
+
+Uplink messages are fundamental in a LoRaWAN network, enabling devices like the SenseCAP Indicator to transmit data to a network server. These messages are crucial for reporting *sensor data*, device status, and other telemetry information.
+
+<details>
+
+<summary>The Concept of Uplink Message</summary>
+
+**Uplink in LoRaWAN:**
+
+In a LoRaWAN network, an uplink message is any communication initiated by an end device (like the SenseCAP Indicator) and sent to the network server through a gateway. These messages are typically used for transmitting sensor readings or device status.
+
+1. **Data Collection**: The SenseCAP Indicator collects data from its sensors or internal processes. This could include environmental readings, device status, or other relevant metrics.
+
+2. **Data Packaging**: The collected data is then packaged into a *predefined format* suitable for transmission. This may involve encoding the data to optimize payload size and ensure efficient transmission.
+
+3. **Sending the Message**: The device transmits the uplink message through the LoRaWAN network. This transmission is usually scheduled based on specific intervals (e.g., every 5 minutes) or triggered by certain events (e.g., a threshold breach).
+
+**Receiving and Processing at the Network Server:**
+
+Once the uplink message is sent by the SenseCAP Indicator, it is received by the LoRaWAN network server via a gateway. The network server then processes the message as follows:
+
+1. **Message Reception**: The network server receives the uplink message from the gateway and decodes it.
+
+2. **Data Processing and Analysis**: After decoding, the server processes the data, which might involve logging it, triggering alerts, or performing further analysis. The data can include various types of information such as temperature readings, humidity levels, or other sensor data, depending on the capabilities of the device.
+
+3. **Response Actions**: Based on the received data, the network server may take action, such as sending a downlink message to the device with instructions or updates. This response can be automated based on predefined rules or triggered manually by a user monitoring the system.
+
+</details>
+
+#### Uplink Message: upload Sensor Data 
+
+In the context of the LoRaWAN demo using the SenseCAP Indicator, the uplink message might consist of simple sensor data, like temperature or humidity readings. 
+
+Once the *join process* is successful, you can view the logs in the `LoRaWAN frames` section to monitor the data transmission and receive a detailed account of the device's communication with the network.
 
 :::tip
 Navigate to the *LoRaWAN frames* section of a device within the application you've created, and locate your specific device. This is where you can monitor and manage the data packets being transmitted and received by your device, ensuring smooth communication and operation within the LoRaWAN network.
@@ -444,7 +484,108 @@ Now, with the decoder function activated, you should be able to see the parsed d
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_event_view.png"/>
 </div>
 
-The demonstration is now complete. If you have any further questions or require additional guidance, feel free to ask. I'm here to help!
+### Downlink Message
+
+The downlink process in the LoRaWAN network is critical for bi-directional communication, allowing the transmission of data and commands from the network server back to the SenseCAP Indicator device. This capability is particularly useful for various operational commands, configuration changes, or firmware updates.
+
+<details>
+
+<summary>The Concept of Downlink Message</summary>
+
+**Downlink in LoRaWAN:**
+
+In the LoRaWAN demo environment, downlink messages are used to control an animated bulb on the SenseCAP Indicator, allowing users to switch it on or off. However, this functionality can be extended to execute specific commands or configurations as needed.
+
+**Sending a Downlink Message**
+
+1. **Initiating a Downlink Message**: To send a downlink message, you will typically use the network server’s interface. Navigate to the section where you can schedule downlink messages for your device.
+
+2. **Message Format**: Ensure that the message is formatted according to the specifications required by the SenseCAP Indicator. This could include specific payload formats or encoding methods, depending on what the downlink message is intended to do.
+
+3. **Scheduling the Message**: After composing the message, schedule it to be sent at an appropriate time. The timing may depend on various factors, such as the device’s data transmission schedule or its expected time of activity.
+
+**Receiving and Processing the Downlink Message on the Device**
+
+Once a downlink message is transmitted by the LoRaWAN network server, the SenseCAP Indicator will receive it during its next receive window. The device processes the message as follows:
+
+1. **Message Reception**: The SenseCAP Indicator listens for downlink messages during predefined receive windows. It is crucial that the device is in a receptive state during these periods.
+
+2. **Processing the Message**: Upon receiving a downlink message, the device will process the contents. This could involve changing a setting, updating a parameter, or triggering an action like toggling a relay or adjusting a sensor threshold[^5].
+
+[^5]: [TxData Function - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L445)
+
+3. **Feedback and Confirmation**: If the downlink message requires confirmation (in case of a confirmed downlink), the device will send an acknowledgment in its next uplink message.
+
+</details>
+
+#### Demo Message: Controlling a Bulb
+
+In this demonstration, we'll illustrate how downlink messages can be used to control a simulated bulb on the Indicator within via the LoRaWAN network. This example showcases the practical application of downlink communication for remote device management.
+
+**1. Scenario Overview:**
+
+- In this demo, the SenseCAP Indicator is configured with a virtual bulb, which represents a simple, controllable device.
+- The bulb has two states: 'on' and 'off', which are controlled via downlink messages sent from the LoRaWAN network server.
+
+**2. Preparing the Downlink Message:**
+
+- To control the bulb, a specific payload structure is defined for the downlink message. For simplicity, let's assume:
+  - Sending the payload `0001` turns the bulb on.
+  - Sending the payload `0000` turns the bulb off.
+
+ - These payloads are encoded in a format that the SenseCAP Indicator is programmed to understand and act upon.[^6]
+
+[^6]: [lorawan_rx_data_handle function - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L591C33-L591C33)
+
+<div align="center">
+  <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bulb_payload.png"/>
+</div>
+
+**3. Sending the Downlink Message:**
+
+ - Through the network server's interface, you can schedule the downlink message with the corresponding payload.
+ - The message is then queued and sent to the SenseCAP Indicator during its next available receive window(so there is delay).
+
+<div align="center">
+  <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/queue_packet.png"/>
+</div>
+
+**4. Receiving the Downlink Message:**
+
+For turning the bulb on, you schedule a downlink with payload `0001`. To turn it off, you use payload `0000`. As I had enqueued a downlink message `0001`, now I want to send a downlink message `0000` to turn the bulb off.
+
+<div align="center">
+  <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/console_bulb.png"/>
+</div>
+
+And you can see that the bulb is **turned off**.
+
+
+## Funtionalities wait to be explored {#function}
+
+There's a wide array of functionalities in the SenseCAP Indicator waiting to be explored. In this demo, we illustrate uploading sensor data and using downlink messages to control the SenseCAP Indicator's virtual bulb.
+
+**Key Capabilities to Explore:**
+
+**1. Command Reception and Execution:**
+
+ - The SenseCAP Indicator efficiently receives downlink messages.
+ - It processes these messages, interpreting commands like turning the virtual bulb on or off.
+ - The bulb's state changes accordingly, offering a realistic simulation of device control.
+
+**2. Confirmation and Verification:**
+
+ - Following command execution, the SenseCAP Indicator sends back an uplink message as confirmation.
+ - This acknowledgment can be tracked via the
+
+network server's interface, ensuring the command was effectively received and acted upon.
+
+**3. Practical Applications:**
+
+ - This simple demo underscores the utility of LoRaWAN downlink messages in manipulating IoT devices.
+ - It showcases a key aspect of IoT ecosystems: the ability to remotely direct and manage devices, demonstrating its practical value.
+
+This demonstration is just the beginning. The SenseCAP Indicator offers a versatile platform for various IoT applications, from environmental monitoring to smart automation. By delving deeper into its capabilities, you can unlock the full potential of this powerful tool, paving the way for innovative solutions and enhanced control in your IoT projects. We encourage you to experiment and discover the many ways the SenseCAP Indicator can enhance your IoT endeavors.
 
 ## Console Manual Page {#commands}
 
@@ -480,8 +621,15 @@ lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_
 ## FAQs
 
 <details>
+<summary>Can the SenseCAP Indicator serve as my LoRaWAN Gateway?</summary>
 
-<summary>1. Why is the True Network Server not sending a joinAccept?</summary>
+No, the SenseCAP Indicator is not designed to function as a LoRaWAN Gateway according to the SX1262 lora transceiver. It is primarily an end device in the LoRaWAN network architecture. A LoRaWAN Gateway typically has different hardware and software capabilities, designed to connect multiple end devices like the SenseCAP Indicator to the network server. If you're looking for a LoRaWAN Gateway, you should consider devices specifically designed for this purpose.
+
+</details>
+
+<details>
+
+<summary>Why is the True Network Server not sending a joinAccept?</summary>
 
 **Note:** There are a few scenarios where a device may fail to receive a `joinAccept` from the network server:
 
@@ -496,6 +644,16 @@ In both cases, it's crucial to ensure that the OTAA (Over-the-Air Activation) de
 </div>
 
 </details>
+
+<details>
+<summary>Which FPort to send downlink message?</summary>
+
+In the current setup of our LoRaWAN demo, there isn't a pre-defined port designated for sending downlink messages. The demo code is designed to be flexible and can be adapted to your specific needs.
+
+If you require the processing of messages on a specific port in a particular manner, you have the option to modify the code accordingly. This customization allows for tailored handling of downlink messages based on different ports, giving you greater control over how your device interprets and responds to these communications.
+
+</details>
+
 
 ## ODM Service
 
