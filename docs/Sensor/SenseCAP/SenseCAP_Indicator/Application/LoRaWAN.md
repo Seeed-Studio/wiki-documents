@@ -652,6 +652,17 @@ In the current setup of our LoRaWAN demo, there isn't a pre-defined port designa
 
 If you require the processing of messages on a specific port in a particular manner, you have the option to modify the code accordingly. This customization allows for tailored handling of downlink messages based on different ports, giving you greater control over how your device interprets and responds to these communications.
 
+<details>
+<summary>How to Use MAC Version 1.1.0?</summary>
+
+To utilize the features of LoRaWAN MAC version 1.1.0, it's necessary to configure the cryptographic settings appropriately. You can do this by using the `idf.py menuconfig` command to enable the `USE LRWAN_1_1_X_CRYPTO` option.
+
+<div align="center">
+  <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/menuconfig_110.png"/>
+</div>
+
+The implementation of version `1.1.0` in LoRaWAN requires specific cryptographic algorithms for enhanced security. By setting this option, you ensure that your device is compatible with the enhanced security features and protocols introduced in this version.
+
 </details>
 
 
