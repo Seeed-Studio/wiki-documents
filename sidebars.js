@@ -141,6 +141,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
+                // 'Sensor/Grove/Grove_Sensors/AI-powered/Gesture_control_music_application',
               ],
             },
             {
@@ -328,6 +329,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Recorder',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Analog-Microphone',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Recorder_v2.0',
+                'Sensor/Grove/Grove_Sensors/Sound/Grove-Offline-Voice-Recognition',
               ],
             },
             {
