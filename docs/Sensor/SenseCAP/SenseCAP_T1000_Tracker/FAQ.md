@@ -147,7 +147,6 @@ Only a few packets of historical data are uploaded per cycle, so this will not a
 Since the device can only cache about 1,000 offline data, if you are in a place without LoRaWAN network coverage for a long time, when the offline data reaches the limit, some old data will be overwritten by new data, so you may 'lose' some data.
 
 
-
 ## How to batch configure
 
 Please check the [Quick Start](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#connect-to-sensecap-mate-app) to setup the first device, and then click the `Template` module in the upper right corner.
@@ -171,6 +170,15 @@ If you want to share your template to others, you can choose `Copy Link to Share
 Other users can choose to use your template by copying the shared URL or importing the template file.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/import-temp.png" alt="pir" width={600} height="auto" /></p>
+
+## Timestamp error
+
+If you found the timesatmp in the payload is wrong, please upgrade the firmware to the latest version. 
+
+Check [Firmware Upgrade and Release Note](https://wiki.seeedstudio.com/fm_release_for_SenseCAP_T1000/) for more details.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/time-error.png" alt="pir" width={400} height="auto" /></p>
+
 
 
 ## Integration

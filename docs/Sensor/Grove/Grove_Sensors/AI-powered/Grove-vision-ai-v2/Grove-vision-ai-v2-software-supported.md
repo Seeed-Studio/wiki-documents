@@ -1,102 +1,115 @@
 ---
-description: Getting Started with Grove Vision AI V2.
-title: Grove Vision AI Module V2
+description: Getting Started with Grove Vision AI V2 and software platform
+title: Software Support
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /grove_vision_ai_v2a
+slug: /grove_vision_ai_v2_software_support
 last_update:
   date: 12/12/2023
   author: Citric
 ---
 
-# Grove Vision AI Module V2
+# Supported Software Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
+There are two methods enabling the Grove Vision AI Module V2:
+
+- [**No code getting started with SenseCraft AI**](#jump1)
+   - [What is SenseCraft AI?](#jump2)
+   - [Getting Started with SenseCraft AI Model Assistant](#jump3)
+- [**Program on Arduino connecting with Seeed Studio XIAO Board**](#jump4)
+   - [Arduino Library Introduction](#jump5)
+   - [Getting Started with Seeed Studio XIAO](#jump6)
+
+## <span id="jump1"> No code getting started with SenseCraft AI </span>
+
+In this section, we'll walk you through using SenseCraft AI Model Assistant to quickly deploy and observe results, with no code and no other developemtn boards:
+
+### <span id="jump2"> What is SenseCraft AI?  </span>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
+
+SenseCraft AI empowers users to effortlessly deploy a vast library of publicly available AI models onto their edge devices:
+
+- reComputer (NVIDIA Jetson)
+- Seeed Studio XIAO S3 Board
+- Vision AI modules, and more
+
+It provides a seamless and user-friendly experience, allowing you to deploy public AI models directly onto your edge devices with just a few clicks. 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/grove_vision_ai_v2">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home"><strong><span><font color={'FFFFFF'} size={"4"}>Learn More 📕</font></span></strong></a>
 </div>
 
-## Introduction
+It includes:
 
-The Grove - Vision AI V2 is a thumb-sized AI vision module equipped with the WiseEye2 HX6538 processor, which adopts the Arm Cortex-M55 dual-core architecture. It features a standard CSI interface and is compatible with Raspberry Pi cameras. It has an onboard digital microphone and an SD card slot. It is highly suitable for various embedded AI vision projects. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It is compatible with the XIAO series and Arduino ecosystems, making it an ideal choice for various object detection applications.
+- Model Assistant software service
+- Device Workspace software service
 
-<div class="table-center">
-<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+In this section, we will use "Model Assistant" here to enable the module. Combined with the empowerment of SenseCraft AI Model Assistant, you can easily upload a wide variety of co-created models and directly observe the results.
+
+
+
+
+### <span id="jump3"> Getting Started with SenseCraft AI Model Assistant  </span>
+
+<!-- SenseCraft is a series of software services developed by Seeed Studio to provide users with faster and simpler software services and applications. With three product lines, Data line, Edge line and AI line, SenseCraft is able to fulfill users' needs in data services, device management and AI applications. No matter what solution you need, SenseCraft can provide you with efficient and reliable solutions and customized services. -->
+
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
+ -->
+Now we will quickly get started the modules with SenseCraft AI, and this will only require the mnodule only.
+
+#### Step 1. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
+
+First, we need to open the main SenseCraft AI Model Assistant page.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
 </div>
+<br />
 
-### Features
+Please use a Type-C type cable to connect Grove Vision AI V2 to your computer.
 
-- The FIRST board based on the WiseEye2 HX6538 processor with a dual-core Arm Cortex-M55 architecture.
-- Equipped with an integrated Arm Ethos-U55 micro neural network acceleration unit, ideal for AI image vision applications.
-- Compatibility with a vast range of Raspberry Pi cameras.
-- Onboard PDM microphone, SD card slot, Type-C, Grove interface, and abundant peripheral devices facilitate prototype development.
-- Expandability with the Seeed Studio XIAO boards.
-- Ready-to-use AI model from SenseCraft AI for nocode deployment.
-- Support for a variety of efficient AI models, including MobilenetV1, MobilenetV2, Efficientnet-lite, Yolov5, and Yolov8.
+In the upper right corner of the SenseCraft AI Model Assistant page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
 
-### Application
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/2.png" style={{width:1000, height:'auto'}}/></div>
 
-- Industrial Automation: Quality inspection, predictive maintenance, voice control, etc.
-- Smart Cities: Device monitoring, energy management, etc.
-- Transportation: Status monitoring, location tracking, etc.
-- Smart Agriculture: Environmental monitoring, etc.
-- Mobile IoT Devices: Wearable devices, handheld devices, etc.
+In the new window that pops up, select the correct COM port for the device and click the Connect button.
 
-## Hardware Overview
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/3.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/15.jpg" style={{width:1000, height:'auto'}}/></div>
+#### Step 2. Upload a suitable model
 
-To use the full functionality of the Grove Vision AI V2 you may need to purchase a CSI camera separately, we recommend the [**OV5647-62 FOV Camera Module for Raspberry Pi**](https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html).
+Then, just select a model you want to use and click the **Send** button below. Here is an example of Gesture Detection.
 
-:::caution
-Please note that the camera is not on the Part List for the Grove Vision AI V2.
-:::
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/4.png" style={{width:600, height:'auto'}}/></div>
 
-Once you have the Grove Vision AI V2 and camera ready to go, then you can connect them via the CSI connection cable. When connecting, please pay attention to the direction of the row of pins and don't plug them in backwards.
+Wait for 1~2 minutes for the model to be uploaded.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/9.gif" style={{width:600, height:'auto'}}/></div>
+#### Step 3. Observations
 
-## Getting Started
+Once the model is uploaded successfully, you will be able to see the live feed from the Grove Vision AI V2 camera in the Preview on the right.
 
-### Boot
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/5.gif" style={{width:1000, height:'auto'}}/></div>
 
-If you have used some unusual method that has caused the Grove Vision AI to not work properly at all (at the software level), then you may need to put the device into BootLoader mode to revive the device. Here is how to enter BootLoader mode.
+<br />
 
-**Method 1**
+We can see that in the Preview Settings on the right hand side, there are two setting options that can be changed to optimise the recognition accuracy of the model.
 
-Please disconnect the connection cable between the Grove Vision AI and your computer, then press and hold the Boot button on the device without releasing it. At this time, please connect Grove Vision AI to your computer with a Type-C type data cable, and then release it again. At this point the device will enter BootLoader mode.
+- **Confidence:** Confidence refers to the level of certainty or probability assigned by a model to its predictions.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/6.gif" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/confi.gif" style={{width:600, height:'auto'}}/></div>
 
-**Method 2**
+- **IoU:** IoU is used to assess the accuracy of predicted bounding boxes compared to truth bounding boxes.
 
-With the Grove Vision AI connected to your computer, you can enter BootLoader mode by pressing the Boot button and then quickly pressing the Reset button.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/iou.gif" style={{width:600, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/7.gif" style={{width:600, height:'auto'}}/></div>
-
-### Reset
-
-If you're experiencing problems with device data suddenly not uploading or images getting stuck, you can try restarting your device using the Reset button.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/8.gif" style={{width:600, height:'auto'}}/></div>
-
-### Driver
-
-If you find that the Grove Vision AI V2 is not recognised after connecting it to your computer. Then you may need to install the CH343 driver on your computer. Here are some links to download and install the CH343 driver.
-
-- Windows Vendor VCP Driver One-Click Installer: [CH343SER.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.EXE)
-- Windows Vendor VCP Driver: [CH343SER.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
-- Windows CDC driver one-click installer: [CH343CDC.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343CDC.EXE)
-- Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
-- macOS Vendor VCP Driver: [CH34xSER_MAC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH341SER_MAC.ZIP)
+At this point, you have finished uploading the model and observing the results.
 
 
+## <span id="jump4"> Program on Arduino connecting with Seeed Studio XIAO Board </span>
 
-## Arduino Library Overview
+### <span id="jump5"> Arduino Library Introduction </span>
 
 :::tip
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
@@ -112,7 +125,7 @@ Grove Vision AI uses WiseEye2 HX6538 chip, image processing and model inference 
 
 The Grove Vision AI communicates with the XIAO via the IIC, and the device's IIC address is `0x62`. Image information transfer is via the USB serial port.
 
-### Function
+#### Function
 
 Before we get started developing a sketch, let's look at the available functions of the library.
 
@@ -218,90 +231,20 @@ typedef struct
 The outputs do not always always output information that identifies boxes and points, depending on the model.
 :::
 
-### Installation
+#### Installation
 
 Since you have downloaded the zip Library, open your Arduino IDE, click on **Sketch > Include Library > Add .ZIP Library**. Choose the zip file you just downloaded，and if the library install correct, you will see **Library added to your libraries** in the notice window. Which means the library is installed successfully.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
-## SenseCraft AI
+### <span id="jump6"> Getting Started with Seeed Studio XIAO </span>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/sensecraftai.jpg" style={{width:1000, height:'auto'}}/></div>
-
-SenseCraft is a series of software services developed by Seeed Studio to provide users with faster and simpler software services and applications. With three product lines, Data line, Edge line and AI line, SenseCraft is able to fulfill users' needs in data services, device management and AI applications. No matter what solution you need, SenseCraft can provide you with efficient and reliable solutions and customized services.
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/"><strong><span><font color={'FFFFFF'} size={"4"}>Learn More 📕</font></span></strong></a>
-</div>
-
-<br />
-
-Combined with the empowerment of SenseCraft AI Model Assistant, you can easily upload a wide variety of co-created models and directly observe the results.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
-
-<br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/"><strong><span><font color={'FFFFFF'} size={"4"}>Learn More 📕</font></span></strong></a>
-</div>
-
-<br />
-
-In this section, we'll walk you through using SenseCraft AI Model Assistant to quickly deploy and observe results.
-
-### Step 1. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
-
-First, we need to open the main SenseCraft AI Model Assistant page.
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
-</div>
-<br />
-
-Please use a Type-C type cable to connect Grove Vision AI V2 to your computer.
-
-In the upper right corner of the SenseCraft AI Model Assistant page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/2.png" style={{width:1000, height:'auto'}}/></div>
-
-In the new window that pops up, select the correct COM port for the device and click the Connect button.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/3.png" style={{width:1000, height:'auto'}}/></div>
-
-### Step 2. Upload a suitable model
-
-Then, just select a model you want to use and click the **Send** button below. Here is an example of Gesture Detection.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/4.png" style={{width:600, height:'auto'}}/></div>
-
-Wait for 1~2 minutes for the model to be uploaded.
-
-### Step 3. Observations
-
-Once the model is uploaded successfully, you will be able to see the live feed from the Grove Vision AI V2 camera in the Preview on the right.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/5.gif" style={{width:1000, height:'auto'}}/></div>
-
-<br />
-
-We can see that in the Preview Settings on the right hand side, there are two setting options that can be changed to optimise the recognition accuracy of the model.
-
-- **Confidence:** Confidence refers to the level of certainty or probability assigned by a model to its predictions.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/confi.gif" style={{width:600, height:'auto'}}/></div>
-
-- **IoU:** IoU is used to assess the accuracy of predicted bounding boxes compared to truth bounding boxes.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/iou.gif" style={{width:600, height:'auto'}}/></div>
-
-At this point, you have finished uploading the model and observing the results.
-
-## XIAO Example
 
 If you want to get a prototype of a sensor with machine vision capabilities, then you may want to consider adding an XIAO. Using XIAO and Grove Vision AI V2, you can use the model you want to use and quickly deploy it in your application area.
 
-Before that, you still need to follow the [**SenseCraft AI**](#step-1-connect-the-grove-vision-ai-v2-to-the-sscma) steps and content to upload a model you want to use first.
+<!-- Before that, you still need to follow the [**SenseCraft AI**](#step-1-connect-the-grove-vision-ai-v2-to-the-sscma) steps and content to upload a model you want to use first. -->
+
+#### Preliminary
 
 **Step 1.** Materials Required
 
@@ -377,7 +320,7 @@ Below is a list of supported boards for the Grove Vision AI V2 example, you can 
 - If you want to use **Seeeduino V4.3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino_v4.2/)** to finish adding.
 
 
-### Demo 1. Using XIAO to get recognition results reported by Grove Vision AI V2
+#### Demo 1. Using XIAO to get recognition results reported by Grove Vision AI V2
 
 The following procedure is a simple example to help you obtain and parse the recognition information reported by Grove Vision AI V2.
 
@@ -447,7 +390,7 @@ void loop()
 }
 ```
 
-#### Explanation of procedure
+##### Explanation of procedure
 
 This Arduino sketch utilizes the Seeed_Arduino_SSCMA library to interface with the Grove Vision AI Module V2. In the `setup()` function, the AI module is initialized, and serial communication is started.
 
@@ -462,14 +405,14 @@ The sketch processes and prints out detailed information about the results of th
 These results provide insights into the objects detected by the AI module, their positions, sizes, and the confidence level of each detection or classification. The output is printed to the serial monitor for further analysis or debugging.
 
 
-#### Effect
+##### Effect
 
 We are still using the Gesture Detection model. After you have uploaded the application, please open the serial monitor and set the baud rate of the serial monitor to **9600**. Please prepare your "rock-paper-scissors" and point it at the recognition area of the camera, and the serial monitor will output the recognition result.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/12.png" style={{width:800, height:'auto'}}/></div>
 
 
-### Demo 2. Use the XIAO to communicate serially with the Grove Vision AI V2
+#### Demo 2. Use the XIAO to communicate serially with the Grove Vision AI V2
 
 The Grove Vision AI V2 supports communication via the [UART protocol](https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md), and by using the built-in protocol, it is possible to operate the Himax WE2 chip of the Grove Vision AI V2. The following sample program shows how to use the XIAO to communicate with the Grove Vision AI V2 over the serial port.
 
@@ -516,7 +459,7 @@ void loop()
 ```
 
 
-#### Explanation of procedure
+##### Explanation of procedure
 
 This Arduino sketch establishes a communication interface between the serial console and the Grove Vision AI V2 module, utilizing the Seeed Studio Machine Learning Framework SSCMA. The sketch is designed to pass data to and from the Grove Vision AI V2 module via serial commands.
 
@@ -536,25 +479,6 @@ In the `loop()` function:
 
 This setup allows for interactive communication with the Grove Vision AI V2 module, enabling users to send instructions to and receive data from the module over a serial connection.
 
-
-## Troubleshooting
-
-### Q1: Is it possible for Grove Vision AI to see XIAO result information while outputting a live screen?
-
-No can do. Considering the frame rate or the speed of image inference, we do not support simultaneous execution of both jobs at this stage. If XIAO is connected, then you can only receive the recognised information reported, but not the real-time frame.
-
-### Q2: Which cameras does Grove Vision AI V2 support? Does it only support the OV5647-62?
-
-Currently we have written drivers for the OV5642 series of cameras, so Grove Vision AI V2 supports the full range of Raspberry Pi OV5647 cameras, e.g., the OV5647-62, OV5647-67, and OV5647-160.The other CSI cameras are theoretically supported, but due to the fact that some of the cameras don't have drivers written for them or the do not have a colour processing unit themselves, so there may be a problem that the colour is only green, and the loss of full colour will have a possible impact on the accuracy of the recognition.
-
-
-## Resources
-
-- **[PDF]** [Datasheet](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/HX6538_datasheet.pdf)
-- **[GitHub]** [Seeed Grove Vision AI Module V2 SDK](https://github.com/HimaxWiseEyePlus/Seeed_Grove_Vision_AI_Module_V2)
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -570,4 +494,3 @@ Thank you for choosing our products! We are here to provide you with different s
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
