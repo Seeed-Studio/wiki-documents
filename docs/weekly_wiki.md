@@ -1,11 +1,11 @@
 ---
 description: Weekly Wiki
-title: Weekly Wiki✨ 
+title: Weekly Wiki 
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 01/08/2024
+  date: 01/15/2024
   author: Seraphina
 ---
 
@@ -17,58 +17,89 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is January 8th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is January 15th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [How to Format the Output of LLM Using Langchain on Jetson](https://wiki.seeedstudio.com/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson)
+### [Which LoRaWAN Network Should I Select](https://wiki.seeedstudio.com/select_lorawan_network)
 
-In this wiki, you will learn how to use Langchain to format the output of large language models and deploy it on edge computing devices.
+In the rapidly expanding realm of IoT (Internet of Things), LoRaWAN networks have surged in popularity, offering extended range and low-power communication capabilities for diverse IoT applications. Lately, we've been inundated with inquiries: "**Which LoRaWAN network should I choose for my specific project?**"
+
+In this article, we’ll take you through the components of a LoRaWAN network, explore the differences between public and private LoRaWAN networks, and offer references to help you make an informed decision. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/lorawan-server.png" alt="pir" width={800} height="auto" /></p>
+
+
+
+
+### [Use Infineon Wi-Fi Module on reComputer](https://wiki.seeedstudio.com/Use_Infineon_Wifi_Module_on_reComputer)
+
+In this document, you will learn how to use Infineon’s Wi-Fi 6/6E module on reComputer J4012.
+
+<div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png"/></div>
+
+
+### [Extend Home Assistant with LoRaWAN device (XIAO-ESP32-S3)](https://wiki.seeedstudio.com/ha_xiao_esp32/)
+
+Home Assistant is an open source smart home platform system, and user can easily connect their own Internet of Things devices to the system for unified management. However, the main special point of the Home Assistant is not just to realize the view of various sensing devices, but to realize the automatic linkage of cross-platform device, only such a smart home platform is enough to have vitality.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Home_Assistant/ha-xiao1.png" alt="pir" width={1000} height="auto" /></p>
+
+### [Connect Grove Vision AI V2 to Home Assistant](https://wiki.seeedstudio.com/connect_vision_ai_v2_to_ha/)
+
+Integrating Grove Vision AI V2 into Home Assistant can elevate your smart home setup by adding advanced visual sensing capabilities. This integration allows for real-time environmental analysis and customized automation, making your home environment more intelligent and responsive.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/37.png" style={{width:1000, height:'auto'}}/></div>
+
+### [External Camera supported Overview](https://wiki.seeedstudio.com/Grove-vision-ai-v2-camera-supported/)
+
+Grove Vision AI V2 features a standard CSI interface and is compatible with Raspberry Pi cameras. To explore the full potential of the Grove Vision AI V2 you may want a CSI camera separately, we recommend the [**OV5647-62 FOV Camera Module for Raspberry Pi**](https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html).
+
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114110127-ov5647-69.1-fov-camera-module-for-raspberry-pi-3b_4b-font.jpg" style={{width:300, height:'auto'}}/></div>
+
+### [Local Voice Chatbot](https://wiki.seeedstudio.com/Local_Voice_Chatbot/)
+
+As artificial intelligence technology rapidly evolves, voice interaction has become an increasingly important mode of human-computer interaction. Especially in fields like smart homes, personal assistants, and customer service support, the demand for voice chatbots is growing significantly. However, most existing voice chatbots rely on cloud computing services, which raises concerns about data privacy and network latency to some extent.
+
+This project aims to address these issues by building a locally-operated voice chatbot. Utilizing [Nvidia Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html) and [Meta Llama2](https://huggingface.co/meta-llama), we have developed a secure, private, and fast-responding voice interaction system.
 
 <div align="center">
-    <img width={500} src="https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/ai_assistant.png" />
+    <img width={800} 
+     src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/workflow.png" />
 </div>
 
+### [Grove Offline Voice Recognition sensor](https://wiki.seeedstudio.com/Grove-Offline-Voice-Recognition/)
 
+Grove - Offline Voice recognition Module is apt for low power pure-offline voice recognition, based on VC-02 module. It has up to 150 pre-programmed commands that can be used to control your smart appliances. It features an identification time less than 100ms, in a compact form factor of 18mm * 17mm. The module can communicate through the UART peripheral and provide unique Hex Code to each recognised command. 
 
-
-### [LoRaWAN Network - SenseCAP Indicator](https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_LoRaWAN)
-
-In this section, we'll delve into the SenseCAP Indicator's basic LoRaWAN(*Class C* & *OTAA*) functionality through a practical demonstration. 
-
-<div align="center">
-  <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/lorawan_landing_page.png"/>
-</div>
-
-
-### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/flash_to_wio_tracker/)
-
-This tutorial will guide users to flash the LPWAN Dev Board for Amazon Sidewalk to the Wio Tracker 1110 Dev Board, for those who want to use the LoRaWAN network.
-
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Offline_Voice_Recognition_Img/headPic.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## Existed Wiki Updated
 
-### [Seeed Studio XIAO Kit Courses](https://wiki.seeedstudio.com/XIAO-Kit-Courses)
+### [Run R23.5 OpenWrt](https://wiki.seeedstudio.com/OpenWrt-Getting-Started/#run-r235-openwrt)
 
-We have updated the information and link for Seeed Studio XIAO Kit Courses. 
-<img src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" style={{width:300, height:'auto'}}/>
+We updated the latest version of OpenWrt for Rerouter, the R23.5 version. If you want to use the latest version of OpenWrt, you can follow this wiki.
 
-### [Grove Ecosystem Introduction](https://wiki.seeedstudio.com/Grove_System)
+### [Getting Started with MediaPipe on reTerminal](https://wiki.seeedstudio.com/Grove_System)
 
-We've refined the Grove Ecosystem Introduction.
+We've updated the Grove MediaPipe usage on reTerminal.
 
-## The Efforts of Contributor✨
+### [Seeed Studio XIAO Series Compatible Accessories](https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)
 
-### [Xiao ESP32C3 ESPHome Smart ThermoStat](https://wiki.seeedstudio.com/esp32c3_smart_thermostat/)
+We've added the XIAO Series Compatible Accessories to our Seeed Studio XIAO INTRODUCION.
+
+## The Efforts of Contributor
+
+<!-- ### [Xiao ESP32C3 ESPHome Smart ThermoStat](https://wiki.seeedstudio.com/esp32c3_smart_thermostat/)
 
 Thanks our contributor Chris to create Xiao ESP32C3 ESPHome Smart ThermoStat. 
 
 This wiki will walkthrough step-by-step on how to make a XIAO ESP32C3 ESPHome Smart ThermoStat. 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p> -->
 
 
-<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
+- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
 
 
 ## Past Weekly wiki
@@ -111,3 +142,4 @@ This wiki will walkthrough step-by-step on how to make a XIAO ESP32C3 ESPHome Sm
 - [weekly wiki on 12.11th](/Seeed_Elderly/weekly_wiki/wiki1211)
 - [weekly wiki on 12.18th](/Seeed_Elderly/weekly_wiki/wiki1218)
 - [weekly wiki on 12.25th](/Seeed_Elderly/weekly_wiki/wiki1225)
+- [weekly wiki on 2024.1.08th](/Seeed_Elderly/weekly_wiki/wiki240108)
