@@ -123,6 +123,12 @@ finally:
 ```
 If you want to find more haas cascades xml files to play around, please go through with this [**link**](https://github.com/opencv/opencv/tree/master/data/haarcascades). 
 
+## Applications 
+
+
+Haarcascade, originally designed for real-time face detection, has undergone advancements to address contemporary challenges. Innovators have extended its capabilities to include **face mask detection**, crucial for public health measures. Furthermore, the technology has been optimized for **license plate detection**, particularly valuable in low-resource environments where sophisticated hardware is scarce. These adaptations demonstrate Haarcascade's versatility and efficiency in catering to diverse needs within computer vision applications.
+
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/FACEMASK.gif" /></center>
 
 
 ## Tech support

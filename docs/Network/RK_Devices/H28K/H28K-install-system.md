@@ -118,10 +118,10 @@ Then power up the H28K, you can choose to power it via **USB-C-5V**.
 
 **Step 4.** Manage the QWRT backend
 
-Use a network cable to connect to the ETH1 network port of the H28K. Then enter the address: `192.168.1.1` into your browser to access the admin backend.
+Use a network cable to connect to the ETH0 network port of the H28K. Then enter the address: `192.168.1.1` into your browser to access the admin backend.
 
 :::caution
-ETH0 is the WAN port and the ETH1 port is LAN ports. If you want to manage H28K's QWRT via a network cable, then connect the network cable to ETH1.
+ETH0 is the LAN port and the ETH1 port is WAN ports. If you want to manage H28K's QWRT via a network cable, then connect the network cable to ETH0.
 :::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/15.png" /></div>

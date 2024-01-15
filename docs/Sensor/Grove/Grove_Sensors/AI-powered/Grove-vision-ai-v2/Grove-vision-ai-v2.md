@@ -1,0 +1,161 @@
+---
+description: Getting Started with Grove Vision AI V2.
+title: Grove Vision AI Module V2
+keywords:
+- vision ai
+image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+slug: /grove_vision_ai_v2
+last_update:
+  date: 12/12/2023
+  author: Citric
+---
+
+# Grove Vision AI Module V2
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/grove_vision_ai_v2">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+## Introduction
+
+The Grove - Vision AI V2 is a thumb-sized AI vision module equipped with the WiseEye2 HX6538 processor, which adopts the Arm Cortex-M55 dual-core architecture. It features a standard CSI interface and is compatible with Raspberry Pi cameras. It has an onboard digital microphone and an SD card slot. It is highly suitable for various embedded AI vision projects. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It is compatible with the XIAO series and Arduino ecosystems, making it an ideal choice for various object detection applications.
+
+<div class="table-center">
+<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+### Features
+
+- The FIRST board based on the WiseEye2 HX6538 processor with a dual-core Arm Cortex-M55 architecture.
+- Equipped with an integrated Arm Ethos-U55 micro neural network acceleration unit, ideal for AI image vision applications.
+- Compatibility with a vast range of Raspberry Pi cameras.
+- Onboard PDM microphone, SD card slot, Type-C, Grove interface, and abundant peripheral devices facilitate prototype development.
+- Expandability with the Seeed Studio XIAO boards.
+- Ready-to-use AI model from SenseCraft AI for nocode deployment.
+- Support for a variety of efficient AI models, including MobilenetV1, MobilenetV2, Efficientnet-lite, Yolov5, and Yolov8.
+
+### Application
+
+- Industrial Automation: Quality inspection, predictive maintenance, voice control, etc.
+- Smart Cities: Device monitoring, energy management, etc.
+- Transportation: Status monitoring, location tracking, etc.
+- Smart Agriculture: Environmental monitoring, etc.
+- Mobile IoT Devices: Wearable devices, handheld devices, etc.
+
+## Hardware Overview
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/15.jpg" style={{width:1000, height:'auto'}}/></div>
+
+To use the full functionality of the Grove Vision AI V2 you may need to purchase a CSI camera separately, we recommend the [**OV5647-62 FOV Camera Module for Raspberry Pi**](https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html).
+
+
+#### Connecting to a CSI interface camera
+
+Once you have the Grove Vision AI V2 and camera ready to go, then you can connect them via the CSI connection cable. When connecting, please pay attention to the direction of the row of pins and don't plug them in backwards.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/9.gif" style={{width:600, height:'auto'}}/></div>
+
+:::caution
+Please note that the camera is not on the Part List for the Grove Vision AI V2.
+:::
+
+## Boot / Reset / Flashed Driver
+
+### Boot
+
+If you have used some unusual method that has caused the Grove Vision AI to not work properly at all (at the software level), then you may need to put the device into BootLoader mode to revive the device. Here is how to enter BootLoader mode.
+
+**Method 1**
+
+Please disconnect the connection cable between the Grove Vision AI and your computer, then press and hold the Boot button on the device without releasing it. At this time, please connect Grove Vision AI to your computer with a Type-C type data cable, and then release it again. At this point the device will enter BootLoader mode.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/6.gif" style={{width:600, height:'auto'}}/></div>
+
+**Method 2**
+
+With the Grove Vision AI connected to your computer, you can enter BootLoader mode by pressing the Boot button and then quickly pressing the Reset button.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/7.gif" style={{width:600, height:'auto'}}/></div>
+
+### Reset
+
+If you're experiencing problems with device data suddenly not uploading or images getting stuck, you can try restarting your device using the Reset button.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/8.gif" style={{width:600, height:'auto'}}/></div>
+
+### Driver
+
+If you find that the Grove Vision AI V2 is not recognised after connecting it to your computer. Then you may need to install the CH343 driver on your computer. Here are some links to download and install the CH343 driver.
+
+- Windows Vendor VCP Driver One-Click Installer: [CH343SER.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.EXE)
+- Windows Vendor VCP Driver: [CH343SER.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
+- Windows CDC driver one-click installer: [CH343CDC.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343CDC.EXE)
+- Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
+- macOS Vendor VCP Driver: [CH34xSER_MAC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH341SER_MAC.ZIP)
+
+## Getting Started
+
+### Getting Started with different software
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "/grove_vision_ai_v2_software_support/#-no-code-getting-started-with-sensecraft-ai-" class="getting_started_label2"> SenseCraft AI Model Assistant</a>
+          <br/>No code experience AI models deploy and observe
+      </div>
+  </div>
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino(Seeed Studio XIAO) </a>
+          <br/>Object recognition or serial communication
+      </div>
+  </div>
+</div>
+
+### Connect Grove Vision AI V2 to Home Assistant
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "/connect_vision_ai_v2_to_ha" class="getting_started_label2"> Connecting to Home Assistant</a>
+          <br/>Integrating Grove Vision AI V2 into Home Assistant
+      </div>
+  </div>
+</div>
+
+## Troubleshooting
+
+### Q1: Is it possible for Grove Vision AI to see XIAO result information while outputting a live screen?
+
+No can do. Considering the frame rate or the speed of image inference, we do not support simultaneous execution of both jobs at this stage. If XIAO is connected, then you can only receive the recognised information reported, but not the real-time frame.
+
+### Q2: Which cameras does Grove Vision AI V2 support? Does it only support the OV5647-62?
+
+You can check [here](/Grove-vision-ai-v2-camera-supported). Currently we have written drivers for the OV5642 series of cameras, so Grove Vision AI V2 supports the full range of Raspberry Pi OV5647 cameras, e.g., the OV5647-62, OV5647-67, and OV5647-160.The other CSI cameras are theoretically supported, but due to the fact that some of the cameras don't have drivers written for them or the do not have a colour processing unit themselves, so there may be a problem that the colour is only green, and the loss of full colour will have a possible impact on the accuracy of the recognition.
+
+
+## Resources
+
+- **[PDF]** [Datasheet](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/HX6538_datasheet.pdf)
+- **[GitHub]** [Seeed Grove Vision AI Module V2 SDK](https://github.com/HimaxWiseEyePlus/Seeed_Grove_Vision_AI_Module_V2)
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="table-center">
+  <div class="button_tech_support_container">
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+  </div>
+
+  <div class="button_tech_support_container">
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+  </div>
+</div>
+

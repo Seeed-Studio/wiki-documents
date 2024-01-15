@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/25/2023
+  date: 01/08/2024
   author: Seraphina
 ---
 
@@ -17,31 +17,29 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 25th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is January 8th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Open Source in Seeed Studio](https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_Loriot/)
+### [How to Format the Output of LLM Using Langchain on Jetson](https://wiki.seeedstudio.com/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson)
 
-<div>Open source is a powerful force driving innovation and collaboration in the technology world. It promotes the sharing of ideas, knowledge, and code, enabling developers and enthusiasts to work together and build upon existing solutions.</div> 
-<div>Being an innovative company, Seeed Studio embraces the principles of open source in hardware and software projects and we have developed and manufactured a wide range of electronic products, ranging from development boards and sensors to robotics and Internet of Things (IoT) devices.</div>
-<div>Presented in this page, and kept ongoing, Seeed Studio will introduce its open source hardware and open source software.</div>
+In this wiki, you will learn how to use Langchain to format the output of large language models and deploy it on edge computing devices.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/open_source_topic/open_source_topic.png" style={{width:1000, height:'auto'}}/></div>
+<div align="center">
+    <img width={500} src="https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/ai_assistant.png" />
+</div>
 
 
-### [Edge Artificial Intelligence](https://wiki.seeedstudio.com/edge_ai_topic/)
 
-<div>Faster, flexible, scalable AI deployment for everyone. We aim to cover all kinds of AI scenarios at our open-source platform to accelerate industries’ AI transformations.</div>
-We are looking forward to leveraging local and global resources to accelerate next-gen AI product together with you.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_AI_Topic/Edge_AI_Topic.png" style={{width:1000, height:'auto'}}/></div>
+### [LoRaWAN Network - SenseCAP Indicator](https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_LoRaWAN)
 
-### [reComputer-Jetson® Guide](https://wiki.seeedstudio.com/reComputer_Intro/)
+In this section, we'll delve into the SenseCAP Indicator's basic LoRaWAN(*Class C* & *OTAA*) functionality through a practical demonstration. 
 
-In this wiki, we will list for you all the current products of the reComputer-Jetson family, OS Installations and their applications.
+<div align="center">
+  <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/lorawan_landing_page.png"/>
+</div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png" style={{width:700, height:'auto'}}/></div>
 
 ### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/flash_to_wio_tracker/)
 
@@ -50,21 +48,27 @@ This tutorial will guide users to flash the LPWAN Dev Board for Amazon Sidewalk 
 
 ## Existed Wiki Updated
 
-### [Updated drivers for Grove Vision AI Module V2](https://wiki.seeedstudio.com/grove_vision_ai_v2/#driver)
+### [Seeed Studio XIAO Kit Courses](https://wiki.seeedstudio.com/XIAO-Kit-Courses)
 
-We have updated the drivers for Grove Vision AI Module V2. If you find that the Grove Vision AI V2 is not recognised after connecting it to your computer. Then you may need to install the CH343 driver on your computer.
+We have updated the information and link for Seeed Studio XIAO Kit Courses. 
+<img src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" style={{width:300, height:'auto'}}/>
 
+### [Grove Ecosystem Introduction](https://wiki.seeedstudio.com/Grove_System)
+
+We've refined the Grove Ecosystem Introduction.
 
 ## The Efforts of Contributor✨
 
-### [XIAO ESP32S3 sense connecting with Home Assistant via ESPHome(all ports supported)](https://wiki.seeedstudio.com/XIAO_ESP32S3_esphome/)
+### [Xiao ESP32C3 ESPHome Smart ThermoStat](https://wiki.seeedstudio.com/esp32c3_smart_thermostat/)
 
-Thanks our contributor Zachay-NAU to create ESPHome Support on Seeed Studio XIAO ESP32S3. 
+Thanks our contributor Chris to create Xiao ESP32C3 ESPHome Smart ThermoStat. 
 
-This Wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32S3.
+This wiki will walkthrough step-by-step on how to make a XIAO ESP32C3 ESPHome Smart ThermoStat. 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p>
 
-<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information. -->
-<!-- - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
+
+<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
 
 
 ## Past Weekly wiki
@@ -106,3 +110,4 @@ This Wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP
 - [weekly wiki on 12.04th](/Seeed_Elderly/weekly_wiki/wiki1204)
 - [weekly wiki on 12.11th](/Seeed_Elderly/weekly_wiki/wiki1211)
 - [weekly wiki on 12.18th](/Seeed_Elderly/weekly_wiki/wiki1218)
+- [weekly wiki on 12.25th](/Seeed_Elderly/weekly_wiki/wiki1225)

@@ -164,12 +164,12 @@ Home Assistant is a free and open-source software that serves as a central contr
 	</table>
 </div>
 
-### Seeed Studio XIAO SenseCAP Indicator Based Projects
+### Seeed Studio XIAO SenseCAP Indicator-based Projects
 
 <div class="table-center">
 	<table class="table-nobg">
      <tr class="table-trnobg">
-      <td class="table-trnobg" style={{ textAlign: 'left' }}><font size={"4"}> <br /><strong>Automatic intergrate all your SenseCAP Sensors</strong></font></td>
+      <td class="table-trnobg" style={{ textAlign: 'left' }}><font size={"4"}> <br /><strong>Integrating Grove Vision AI V2 into Home Assistant</strong></font></td>
 		</tr>
         <tr class="table-trnobg"></tr>
 	<tr class="table-trnobg">
@@ -180,6 +180,26 @@ Home Assistant is a free and open-source software that serves as a central contr
 		<tr class="table-trnobg">
 		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_sensecap/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Learn More</font></span></strong></a></div></td>
     <td class="table-trnobg"></td>
+    </tr>
+	</table>
+</div>
+
+### Grove Vision AI V2-based Projects
+
+<div class="table-center">
+	<table class="table-nobg">
+     <tr class="table-trnobg">
+      <td class="table-trnobg" style={{ textAlign: 'left' }}><font size={"4"}> <br /><strong>Integrating Grove Vision AI V2 into Home Assistant</strong></font></td>
+		</tr>
+        <tr class="table-trnobg"></tr>
+	<tr class="table-trnobg">
+    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/37.png" style={{width:2300, height:'auto'}}/></div></td>
+    <td class="table-trnobg" style={{ textAlign: 'left' }}><font size={"2"}> <br />Integrating Grove Vision AI V2 into Home Assistant can elevate your smart home setup by adding advanced visual sensing capabilities. This integration allows for real-time environmental analysis and customized automation, making your home environment more intelligent and responsive.</font></td>
+				</tr>
+                <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+        <td class="table-trnobg"></td>
+		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/connect_vision_ai_v2_to_ha/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Learn More</font></span></strong></a></div></td>
     </tr>
 	</table>
 </div>
@@ -497,6 +517,7 @@ Home Assistant is a free and open-source software that serves as a central contr
 <br/>
 
 ### Seeed Studio XIAO ESP32C3-Make your own Sensor Node
+
 <div class="table-center">
 	<table class="table-nobg">
 		<tr class="table-trnobg">
