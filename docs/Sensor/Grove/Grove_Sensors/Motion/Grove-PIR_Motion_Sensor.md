@@ -134,9 +134,12 @@ void loop()
 
 The result should be like:
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/result_arduino.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/result_arduino.png" alt="pir" width={600} height="auto" /></p>
+
+:::tip
+Use a jumper cap to short two pins to trigger a repeatable or non-repeatable trigger, if you use GND, pin1 combination is non-repeatable trigger (default); pin1 and vcc is repeatable trigger. Non-repeatable trigger means in a cycle (probably a few seconds) on the departure of a single time, the wiki's case is non-repeatable trigger.
+:::
 
 ### Play with Codecraft
 
