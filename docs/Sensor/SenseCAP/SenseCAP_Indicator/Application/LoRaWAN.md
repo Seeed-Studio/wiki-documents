@@ -624,11 +624,9 @@ lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_
 <summary>Can the SenseCAP Indicator serve as my LoRaWAN Gateway?</summary>
 
 No, the SenseCAP Indicator is not designed to function as a LoRaWAN Gateway according to the SX1262 lora transceiver. It is primarily an end device in the LoRaWAN network architecture. A LoRaWAN Gateway typically has different hardware and software capabilities, designed to connect multiple end devices like the SenseCAP Indicator to the network server. If you're looking for a LoRaWAN Gateway, you should consider devices specifically designed for this purpose.
-
 </details>
 
 <details>
-
 <summary>Why is the True Network Server not sending a joinAccept?</summary>
 
 **Note:** There are a few scenarios where a device may fail to receive a `joinAccept` from the network server:
@@ -642,7 +640,6 @@ In both cases, it's crucial to ensure that the OTAA (Over-the-Air Activation) de
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_flush_nonces.png"/>
 </div>
-
 </details>
 
 <details>
@@ -651,6 +648,7 @@ In both cases, it's crucial to ensure that the OTAA (Over-the-Air Activation) de
 In the current setup of our LoRaWAN demo, there isn't a pre-defined port designated for sending downlink messages. The demo code is designed to be flexible and can be adapted to your specific needs.
 
 If you require the processing of messages on a specific port in a particular manner, you have the option to modify the code accordingly. This customization allows for tailored handling of downlink messages based on different ports, giving you greater control over how your device interprets and responds to these communications.
+</details>
 
 <details>
 <summary>How to Use MAC Version 1.1.0?</summary>
@@ -662,7 +660,6 @@ To utilize the features of LoRaWAN MAC version 1.1.0, it's necessary to configur
 </div>
 
 The implementation of version `1.1.0` in LoRaWAN requires specific cryptographic algorithms for enhanced security. By setting this option, you ensure that your device is compatible with the enhanced security features and protocols introduced in this version.
-
 </details>
 
 
