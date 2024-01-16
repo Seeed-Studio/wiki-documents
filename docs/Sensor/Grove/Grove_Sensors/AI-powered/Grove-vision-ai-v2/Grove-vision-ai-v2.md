@@ -99,19 +99,24 @@ If you find that the Grove Vision AI V2 is not recognised after connecting it to
 
 ## Getting Started
 
-### Getting Started with different software
+### Getting Started with Arduino
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino(Seeed Studio XIAO) </a>
+          <br/>Object recognition or serial communication
+      </div>
+  </div>
+</div>
+
+### Getting Started with SenseCraft AI
 
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
           <a href= "/grove_vision_ai_v2_software_support/#-no-code-getting-started-with-sensecraft-ai-" class="getting_started_label2"> SenseCraft AI Model Assistant</a>
           <br/>No code experience AI models deploy and observe
-      </div>
-  </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino(Seeed Studio XIAO) </a>
-          <br/>Object recognition or serial communication
       </div>
   </div>
 </div>
