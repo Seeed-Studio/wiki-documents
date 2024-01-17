@@ -2,15 +2,20 @@
 description: To preview LoRaWAN feature of SenseCAP Indicator
 title: LoRaWAN End Node - SenseCAP Indicator
 keywords:
-  - LoRaWAN
-  - Touch Screen
+- indicator
+- Touch
+- Screen
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/lorawan_landing_page.png
 slug: /SenseCAP_Indicator_Application_LoRaWAN
 toc_max_heading_level: 4
 sidebar_position: 4
 last_update:
-  date: 2024-01-11T06:29:20.793Z
+  date: 2024-01-15T17:29:20.793Z
   author: Spencer
+tags:
+  - device
+categories:
+  - SenseCAP
 ---
 
 <div align="center">
