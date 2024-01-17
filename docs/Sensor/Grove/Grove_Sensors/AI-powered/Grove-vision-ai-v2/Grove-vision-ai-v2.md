@@ -22,7 +22,7 @@ last_update:
 
 ## Introduction
 
-The Grove - Vision AI V2 is a thumb-sized AI vision module equipped with the WiseEye2 HX6538 processor, which adopts the Arm Cortex-M55 dual-core architecture. It features a standard CSI interface and is compatible with Raspberry Pi cameras. It has an onboard digital microphone and an SD card slot. It is highly suitable for various embedded AI vision projects. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It is compatible with the XIAO series and Arduino ecosystems, making it an ideal choice for various object detection applications.
+It is an MCU-based vision AI module powered by Arm Cortex-M55 & Ethos-U55. It supports TensorFlow and PyTorch frameworks and is compatible with Arduino IDE. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It features a standard CSI interface, an onboard digital microphone and an SD card slot, making it highly suitable for various embedded AI vision projects.
 
 <div class="table-center">
 <iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -30,13 +30,11 @@ The Grove - Vision AI V2 is a thumb-sized AI vision module equipped with the Wis
 
 ### Features
 
-- The FIRST board based on the WiseEye2 HX6538 processor with a dual-core Arm Cortex-M55 architecture.
-- Equipped with an integrated Arm Ethos-U55 micro neural network acceleration unit, ideal for AI image vision applications.
-- Compatibility with a vast range of Raspberry Pi cameras.
-- Onboard PDM microphone, SD card slot, Type-C, Grove interface, and abundant peripheral devices facilitate prototype development.
-- Expandability with the Seeed Studio XIAO boards.
-- Ready-to-use AI model from SenseCraft AI for nocode deployment.
-- Support for a variety of efficient AI models, including MobilenetV1, MobilenetV2, Efficientnet-lite, Yolov5, and Yolov8.
+- **Powerful AI Processing Capabilities**: Utilizes WiseEye2 HX6538 processor with a dual-core Arm Cortex-M55 and integrated Arm Ethos-U55 neural network unit.
+- **Versatile AI Model Support**: Easily deploy off-the-shelf or your custom AI models from SenseCraft AI, including Mobilenet V1, V2, Efficientnet-lite, Yolo v5 & v8. TensorFlow and PyTorch frameworks are supported.
+- **Rich Peripheral Devices**: Includes PDM microphone, SD card slot, Type-C, Grove interface, and other peripherals.
+- **High Compatibility**: Compatible with XIAO series, Arduino, Raspberry Pi, ESP dev board, easy for further development.
+- **Fully Open Source**: All codes, design files, and schematics available for modification and use.
 
 ### Application
 
