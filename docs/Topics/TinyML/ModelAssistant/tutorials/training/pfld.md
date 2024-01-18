@@ -16,15 +16,15 @@ This section describes how to train the PFLD model on the PFLD meter dataset. Th
 
 ## Prepare Datasets
 
-SSCMA uses [Custom Meter Datasets](../../datasets#SSCMA) by default to train the PFLD model, please refer to the following steps to complete the preparation of datasets.
+SSCMA uses [Custom Meter Datasets](/ModelAssistant_Tutorials_Datasets#SSCMA) by default to train the PFLD model, please refer to the following steps to complete the preparation of datasets.
 
-1. Please refer to [Internet Datasets - SSCMA - Custom Meter Dataset](../../datasets#SSCMA) to download and unpack the dataset.
+1. Please refer to [Internet Datasets - SSCMA - Custom Meter Dataset](/ModelAssistant_Tutorials_Datasets#SSCMA) to download and unpack the dataset.
 
 2. Remember its **folder path** (e.g. `datasets\meter`) of the unpacked datasets, you may need to use this folder path later.
 
 ## Choose a Configuration
 
-We will choose a appropriate configuration file depending on the type of training task we need to perform, which we have already introduced in [Config](../../config), for a brief description of the functions, structure, and principles of the configuration file.
+We will choose a appropriate configuration file depending on the type of training task we need to perform, which we have already introduced in [Config](/ModelAssistant_Tutorials_Config), for a brief description of the functions, structure, and principles of the configuration file.
 
 For the meter PFLD model example, we use `pfld_mbv2n_112.py` as the configuration file, which is located in the folder under the SSCMA root directory `configs/pfld` and its additionally inherits the `default_runtime_pose.py` configuration file.
 
@@ -128,7 +128,7 @@ param_scheduler=[
 
 ## Training Model
 
-Training the model requires using our previously configured SSCMA working environment, if you follow our [Installation](../../../introduction/installation) guide using Conda to install SSCMA in a virtual environment named `sscma`, please first make sure that you are currently in the virtual environment.
+Training the model requires using our previously configured SSCMA working environment, if you follow our [Installation](ModelAssistant_Introduce_Installation) guide using Conda to install SSCMA in a virtual environment named `sscma`, please first make sure that you are currently in the virtual environment.
 
 Then, in the SSCMA project root directory, we execute the following command to train an end-to-end meter PFLD model.
 
@@ -180,8 +180,8 @@ If you want a real-time preview while testing, you can append a parameter `--sho
 
 ### Evaluation
 
-In order to further test and evaluate the model on a realistic edge computing device, you need to export the model. In the process of exporting the model, SSCMA will do some optimization on the model, such as model pruning, distillation, etc. You can refer to the [Export](../../export/overview) section to learn more about how to export models.
+In order to further test and evaluate the model on a realistic edge computing device, you need to export the model. In the process of exporting the model, SSCMA will do some optimization on the model, such as model pruning, distillation, etc. You can refer to the [Export](ModelAssistant_Tutorials_Export_Overview) section to learn more about how to export models.
 
 ### Deployment
 
-After exporting the model, you can deploy the model to the edge computing device for testing and evaluation. You can refer to the [Deploy](../../../deploy/overview) section to learn more about how to deploy models.
+After exporting the model, you can deploy the model to the edge computing device for testing and evaluation. You can refer to the [Deploy](/ModelAssistant_Deploy_Overview) section to learn more about how to deploy models.

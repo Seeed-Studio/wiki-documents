@@ -21,7 +21,7 @@ This chapter will describe how to convert and export PyTorch models to ONNX mode
 
 ### Environment Configuration
 
-As the [Training](../../training/overview) step, we recommend you to do it in a **virtual environment** during the model exporting phase. In the `sscma` virtual environment, make sure that the [Installation - Prerequisites - Install Extra Dependencies](../../../introduction/installation#step-4-install-extra-dependencies-optional) step has been completed.
+As the [Training](/ModelAssistant_Tutorials_Training_Overview) step, we recommend you to do it in a **virtual environment** during the model exporting phase. In the `sscma` virtual environment, make sure that the [Installation - Prerequisites - Install Extra Dependencies](/ModelAssistant_Introduce_Installation#step-4-install-extra-dependencies-optional) step has been completed.
 
 :::tip
 
@@ -35,9 +35,9 @@ conda activate sscma
 
 ### Models and Weights
 
-You also need to prepare the PyTorch model and its weights before exporting the model. For the model, you can find it in the [Config](../../config) section, we have already preconfigured. For the weights, you can refer to the following steps to get the model weights.
+You also need to prepare the PyTorch model and its weights before exporting the model. For the model, you can find it in the [Config](/ModelAssistant_Tutorials_Datasets) section, we have already preconfigured. For the weights, you can refer to the following steps to get the model weights.
 
-- Refer to [Training](../../training/overview) section and choose a model, and train to get the model weights.
+- Refer to [Training](/ModelAssistant_Tutorials_Training_Overview) section and choose a model, and train to get the model weights.
 
 - Or download the [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) official pre-trained weights from our [GitHub Releases - Model Zoo](https://github.com/Seeed-Studio/ModelAssistantreleases/tag/model_zoo).
 

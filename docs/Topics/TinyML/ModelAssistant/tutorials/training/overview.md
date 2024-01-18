@@ -14,16 +14,16 @@ last_update:
 
 [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) currently supports the following models. You can refer to the corresponding tutorials to complete the training of the models and obtain the model weights.
 
-- [Object Detection - SWIFT-YOLO](../yolo): digital meter reading
+- [Object Detection - SWIFT-YOLO](/ModelAssistant_Tutorials_Training_YOLO): digital meter reading
 
-- [Object Detection - FOMO](../fomo): Face mask detection
+- [Object Detection - FOMO](/ModelAssistant_Tutorials_Training_FOMO): Face mask detection
 
-- [Keypoint Detection PFLD](../pfld): Pointer meter reading
+- [Keypoint Detection PFLD](/ModelAssistant_Tutorials_Training_PFLD): Pointer meter reading
 
 
 :::tip
 
-Before start training, we recommend you to read [Config](../../config) and [Datasets](../../datasets) sections first.
+Before start training, we recommend you to read [Config](/ModelAssistant_Tutorials_Config) and [Datasets](/ModelAssistant_Tutorials_Datasets) sections first.
 
 :::
 
@@ -63,4 +63,4 @@ python3 tools/train.py --help
 
 ### Deployment
 
-After exporting the model, you can deploy the model to an edge computing device for testing and evaluation. You can refer to [Deploy](../../../deploy/overview) section to learn more about how to deploy the model.
+After exporting the model, you can deploy the model to an edge computing device for testing and evaluation. You can refer to [Deploy](/ModelAssistant_Deploy_Overview) section to learn more about how to deploy the model.
