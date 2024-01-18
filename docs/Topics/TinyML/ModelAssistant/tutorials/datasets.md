@@ -1,3 +1,15 @@
+---
+description: Datasets For Model Assistant
+title: Datasets
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug:  /ModelAssistant_Tutorials_Datasets
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Datasets
 
 [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) supports a variety of datasets. You can browse and download different datasets on the Internet, or annotate and create your own datasets.

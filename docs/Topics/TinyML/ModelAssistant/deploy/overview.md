@@ -1,3 +1,15 @@
+---
+description: Deployment For Model Assistant
+title: Deployment
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug:  /ModelAssistant_Deploy_Overview
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Deployment
 
 SSCMA is an open-source project that provides a No-Code visual model deployment tool and a CPP-based SDK. It allows users to easily deploy models to different platforms without writing complex code.

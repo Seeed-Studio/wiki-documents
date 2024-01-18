@@ -1,3 +1,15 @@
+---
+description: Trainnig For Model Assistant
+title: Object Detecion - FOMO
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug:  /ModelAssistant_Tutorials_Training_FOMO
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Object Detecion - FOMO
 
 This section describes how to train the FOMO mask detection model on the COCO MASK datasets. the implementations of FOMO mask detection model is based on the MobileNet V2 and MobileNet V3 (the actual neural network selected depends on the model profile you choose).
@@ -6,15 +18,15 @@ For more information about MobileNet, please refer to the paper [MobileNets: Eff
 
 ## Prepare Datasets
 
-[SSCMA](https://github.com/Seeed-Studio/ModelAssistant) uses [COCO_MASK Datasets](../../datasets#SSCMA) by default to train the FOMO model, please refer to the following steps to complete the preparation of datasets.
+[SSCMA](https://github.com/Seeed-Studio/ModelAssistant) uses [COCO_MASK Datasets](/ModelAssistant_Tutorials_Datasets#SSCMA) by default to train the FOMO model, please refer to the following steps to complete the preparation of datasets.
 
-1. Please refer to [Internet Datasets](../../datasets#SSCMA) to download and unpack the dataset.
+1. Please refer to [Internet Datasets](/ModelAssistant_Tutorials_Datasets#SSCMA) to download and unpack the dataset.
 
 2. Remember its **folder path** (e.g. `datasets\mask`) of the unpacked datasets, you may need to use this folder path later.
 
 ## Choose a Configuration
 
-We will choose a appropriate configuration file depending on the type of training task we need to perform, which we have already introduced in [Config](../../config), for a brief description of the functions, structure, and principles of the configuration file.
+We will choose a appropriate configuration file depending on the type of training task we need to perform, which we have already introduced in [Config](/ModelAssistant_Tutorials_Config), for a brief description of the functions, structure, and principles of the configuration file.
 
 For the FOMO model example, we use `fomo_mobnetv2_0.35_x8_abl_coco.py` as the configuration file, which is located in the folder under the [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) root directory `configs/fomo` and its additionally inherits the `default_runtime_det.py` configuration file.
 
@@ -121,7 +133,7 @@ param_scheduler=[
 
 ## Training Model
 
-Training the model requires using our previously configured [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) working environment, if you follow our [Installation](../../../introduction/installation) guide using Conda to install [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) in a virtual environment named `sscma`, please first make sure that you are currently in the virtual environment.
+Training the model requires using our previously configured [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) working environment, if you follow our [Installation](ModelAssistant_Introduce_Installation) guide using Conda to install [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) in a virtual environment named `sscma`, please first make sure that you are currently in the virtual environment.
 
 Then, in the [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) project root directory, we execute the following command to train a FOMO mask detection model.
 
@@ -173,8 +185,8 @@ If you want a real-time preview while testing, you can append a parameter `--sho
 
 ### Evaluation
 
-In order to further test and evaluate the model on a realistic edge computing device, you need to export the model. In the process of exporting the model, [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) will do some optimization on the model, such as model pruning, distillation, etc. You can refer to the [Export](../../export/overview) section to learn more about how to export models.
+In order to further test and evaluate the model on a realistic edge computing device, you need to export the model. In the process of exporting the model, [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) will do some optimization on the model, such as model pruning, distillation, etc. You can refer to the [Export](ModelAssistant_Tutorials_Export_Overview) section to learn more about how to export models.
 
 ### Deployment
 
-After exporting the model, you can deploy the model to the edge computing device for testing and evaluation. You can refer to the [Deploy](../../../deploy/overview) section to learn more about how to deploy models.
+After exporting the model, you can deploy the model to the edge computing device for testing and evaluation. You can refer to the [Deploy](/ModelAssistant_Deploy_Overview) section to learn more about how to deploy models.

@@ -1,3 +1,15 @@
+---
+description: Installation For Model Assistant
+title: Installation
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug:  /ModelAssistant_Introduce_Installation
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -28,7 +40,7 @@ First, you need to clone the [SSCMA Source Code](https://github.com/Seeed-Studio
 
 ```sh
 git clone https://github.com/Seeed-Studio/ModelAssistant.git --depth 1 && \
-cd SSCMA
+cd ModelAssistant
 ```
 
 </TabItem>
@@ -36,7 +48,7 @@ cd SSCMA
 
 ```sh
 git clone git@github.com:Seeed-Studio/ModelAssistant.git --depth 1 && \
-cd SSCMA
+cd ModelAssistant
 ```
 
 </TabItem>
