@@ -2626,6 +2626,7 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A203_Flash_System',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A608_Flash_JetPack',
                   ],
                 },
               ],
