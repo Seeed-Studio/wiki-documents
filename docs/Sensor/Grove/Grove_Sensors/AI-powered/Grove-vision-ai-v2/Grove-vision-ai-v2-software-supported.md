@@ -269,7 +269,7 @@ In this tutorial, we will use the XIAO ESP32S3 as an example to introduce the us
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="/grove_vision_ai_v2">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -319,6 +319,11 @@ Below is a list of supported boards for the Grove Vision AI V2 example, you can 
 
 - If you want to use **Seeeduino V4.3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino_v4.2/)** to finish adding.
 
+**Step 4.** Install the **ArduinoJSON** library.
+
+Go to the Sketch menu, then select **Include Library > Manage Libraries...**. This will open the Library Manager. In the search bar at the top of the Library Manager, type in **ArduinoJSON**. The search results will list the ArduinoJSON library. There will be an Install button next to the library. Click the Install button. The Arduino IDE will automatically download and install the library into your Arduino development environment.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/20.png" style={{width:1000, height:'auto'}}/></div>
 
 #### Demo 1. Using XIAO to get recognition results reported by Grove Vision AI V2
 
