@@ -1,3 +1,15 @@
+---
+description: Export For Model Assistant
+title: Export
+keywords:
+- sscma model assistant ai tinyml 
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug:  /ModelAssistant_Tutorials_Export_Overview
+last_update:
+  date: 01/11/2024
+  author: LynnL4
+---
+
 # Model Export
 
 [SSCMA](https://github.com/Seeed-Studio/ModelAssistant) currently supports the following methods to convert and export models.
@@ -10,15 +22,15 @@ export one of them, you can use the `--targets` parameter to specify the
 exported model type, e.g. `--targets onnx` or `--targets tflite`.
 :::
 
-- [PyTorch to ONNX](../pytorch_2_onnx): Converts PyTorch model and `.pth`
+- [PyTorch to ONNX](/ModelAssistant_Tutorials_Export_PyTorch_2_ONNX): Converts PyTorch model and `.pth`
   weights to ONNX model `.onnx`
 
-- [PyTorch to TFLite](../pytorch_2_tflite): Converts PyTorch model and `.pth`
+- [PyTorch to TFLite](/ModelAssistant_Tutorials_Export_PyTorch_2_TFlite): Converts PyTorch model and `.pth`
   weights to TFLite model `.tflite`
 
 :::tip
 Before you can start exporting models, you need to complete the
-[Training](../../training/overview) section and obtain model weights `.pth` file
+[Training](/ModelAssistant_Tutorials_Training_Overview) section and obtain model weights `.pth` file
 before start exporting.
 
 :::

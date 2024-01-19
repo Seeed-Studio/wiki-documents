@@ -246,127 +246,54 @@ If there is no screen displayed in Preview or there is no information in the mod
 
 ## Building MQTT Services at Home Assistant
 
-### Step 9. Install Mosquitto broker
+### Step 9. Install EMQX
 
 Click on **Settings** in the sidebar to access the settings menu. Click on **Add-ons** to access the add-on store.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/3.png" style={{width:1000, height:'auto'}}/></div>
 
-Use the search bar or browse through the available add-ons to find **mqtt**.
+Use the search bar or browse through the available add-ons to find **emqx**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/20.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/51.png" style={{width:1000, height:'auto'}}/></div>
 
-Once you've located **Mosquitto broker**, click on it to view the details. On the add-on's page, you'll see an overview, documentation, and configuration options. To install the add-on, click the **Install** button.
+Once you've located **EMQX**, click on it to view the details. On the add-on's page, you'll see an overview, documentation, and configuration options. To install the add-on, click the **Install** button.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/21.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/50.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 10. Configure the account and password for the mqtt service
+Once the EMQX Add-on is installed, turn on the **Start on boot**, **Watchdog** and **Show in sidebar** toggles. Click **Start** to start EMQX.
 
-Start by creating your unique username and password. For example:
 
-```
-- username: my_mqtt_user
-  password: my_mqtt_password
-```
 
-Make sure to replace `my_mqtt_user` and `my_mqtt_password` with your desired credentials.
-
-Once you have your credentials ready, open your Home Assistant interface and navigate to the MQTT broker's configuration page. Locate the **Options** section, then find the **Logins** subsection. Paste the credentials you've prepared directly into the "Logins" subsection. Confirm your changes by clicking the **Save** button found on the same page.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/24.png" style={{width:1000, height:'auto'}}/></div>
-
-:::note
-If the process completes without any error messages, your MQTT service account should now be active and ready to use. In the event that an error arises, consider uninstalling and reinstalling the MQTT broker addon. After reinstallation, repeat the configuration steps with your new credentials. This fresh start can often resolve any lingering issues and get your MQTT service up and running with the new account details.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/25.png" style={{width:900, height:'auto'}}/></div>
-:::
-
-### Step 11. Select the appropriate machine to install the MQTT broker.
-
-EMQ X (now EMQX) is a scalable, open-source, and fully featured MQTT broker that can be installed on various operating systems. 
-
-Go to EMQX's [download page](https://www.emqx.io/downloads) to find the Windows version. Make sure you choose the correct version for your system (32-bit or 64-bit).
 
 :::tip
-The tutorial will use Windows as an example, you can also use other systems supported in the page.
+Since we're using it on our own home network, we're leaving security out of the equation for now and doing our MQTT subscription and publishing in port 1883. Remember to secure your EMQX broker, especially if it's exposed to the internet. You should consider:
+
+- Setting up user authentication.
+- Enabling SSL/TLS encryption for MQTT communication.
+- Configuring appropriate firewall rules.
+
+By following these general steps, you should be able to configure EMQX within Home Assistant, enabling you to start building your IoT ecosystem with a reliable MQTT broker at its core. Keep in mind that specific steps might vary based on your version of Home Assistant and EMQX, as well as your network configuration. Always refer to the [official documentation](https://github.com/hassio-addons/addon-emqx/blob/main/emqx/DOCS.md) for the most accurate and up-to-date information.
 :::
 
-Click on the download link for the Windows version. This will download a `.zip` file containing the EMQX broker.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/26.png" style={{width:1000, height:'auto'}}/></div>
-
-Once the download is complete, locate the `.zip` file and extract it to a folder of your choice. After extraction, open the Command Prompt. You can do this by typing `cmd` in the Windows search bar and pressing Enter. In the Command Prompt, start EMQX with the following command:
-
-```
-.\bin\emqx start
-```
-
-You can run the following command to check the status of EMQX:
-
-```
-.\bin\emqx_ctl status
-```
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/27.png" style={{width:600, height:'auto'}}/></div>
-
-If EMQX starts successfully and you have enabled the Admin Plugin (it is enabled by default), you can log in to the EMQX Dashboard by accessing *[http://localhost:18083](http://localhost:18083)* from your browser. By default, the username is `admin` and the password is `public`.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/28.png" style={{width:1000, height:'auto'}}/></div>
-
-### Step 12. Verifying MQTT Services
-
-Now that you have successfully started EMQX, you can continue to test the connection and message services with MQTTX. [MQTTX](https://mqttx.app/) is an elegant cross-platform MQTT 5.0 desktop client, running on macOS, Linux, and Windows.
-
-By utilizing a chat style of user interface, MQTT X allows users to quickly create connections and save multiple clients, which facilitates users to quickly test the MQTT/MQTTS connection, as well as the subscription and publication of MQTT messages. This section introduces how to verify the connection with [MQTTX Web](https://mqttx.app/web), the browser-based MQTT 5.0 WebSocket client tool, with zero need to download or install any application.
-
-:::tip
-**Prerequisites**
-
-The broker address and the port information should be prepared before testing the connection:
-
-- **Broker address**: The IP address of your server, in general.
-- **Port**: Click Management -> Listeners on the left navigation menu to get the port number.
-:::
-
-Click [MQTTX Web](https://mqttx.app/web) to visit the browser-based MQTTX.
-
-Configure and establish the MQTT connection. Click the **+ New Connection** button to enter the configure page:
-
-- **Name**: Input a connection name, for example, **MQTTX_Test**;
-- **Host**
-	- Select the protocol type via the drop-down list, for example, select `ws://` if the WebSockets protocol is adopted; MQTTX Web only supports Websockets protocol, to test the SSL/TLS connection, download [MQTTX desktop client](https://mqttx.app/);
-	- Fill in the EMQX address;
-- **Port**: for example, **8083** is for the WebSockets protocol;
-
-	Keep the default setting for the other fields or set it as your business needs. For a detailed explanation of different fields, see [MQTT User Manual - Connect](https://mqttx.app/docs/get-started).
-
-Then click the **Connect** button at the top right corner of the page.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/29.png" style={{width:1000, height:'auto'}}/></div>
 
 
-Subscribe to topics. After the connection is successfully established, you can continue to subscribe to different topics. Click **+ New Subscription**. MQTTX Web has already filled in some fields, according to the setting, you will subscribe to topic `testtopic/#` with QoS level of 0. You can repeat this step to subscribe to different topics, and MQTTX Web will differentiate topics with colors.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/30.png" style={{width:1000, height:'auto'}}/></div>
 
 
-Test the publish/receive of messages: Click the send icon in the bottom right corner of the chat area, then the messages successfully sent will appear in the chat window above.
 
-If you want to continue the testing, such as one-way/two-way SSL authentication, and simulate test data with customized scripts, you can continue to explore with MQTTX.
 
-Then, on the Cluster Overview page in EMQX Dashboard, you can check metrics such as Connections, Topics, Subscriptions, Incoming Messages, Outgoing messages, and Dropped Messages.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/31.png" style={{width:1000, height:'auto'}}/></div>
+
+
 
 ## Integrate Grove Vision AI V2 into Home Assistant
 
-### Step 13. Configuring the network for Grove Vision AI V2 & XIAO
+### Step 10. Configuring the network for Grove Vision AI V2 & XIAO
 
 Connect the Grove Vision AI V2 to your computer and open the [Model Assistant's configuration page](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/config).
 
 After clicking on the top right corner to connect to Grove Vision AI V2, please turn on the MQTT button and enter the following information that you need to fill in the page.
 
-- **SSID & Password**: The device needs to be on the same LAN as the host where the EMQX is installed. So please configure the network under the same LAN.XIAO only supports 2.4G WiFi, 5G network is not available.
+- **SSID & Password**: The device needs to be on the same LAN as the host where the Home Asistant is installed. So please configure the network under the same LAN.XIAO only supports 2.4G WiFi, 5G network is not available.
 - **Encryption**: Select **AUTO**.
 - **Host**: IP address of the host where EMQX is installed.
 - **Port**: `1883`.
@@ -381,7 +308,7 @@ Then click the Save button below. After saving, it **does not mean that Grove Vi
 When IP Address is displayed, it means there is no problem with WIFI, and Service status must be the text in the figure to represent normal, note that if WIFI is not normal, MQTT is definitely not normal; when you just switch over, it may show unconnected, and you need to wait for about 10s or so, you don't need to refresh to see the status, and it will show the newest status after the change of the status automatically.
 :::
 
-### Step 14. Integration into Home Assistant
+### Step 11. Integration into Home Assistant
 
 #### Method 1: If the device has been found
 
