@@ -151,6 +151,7 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-ha',
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-camera-supported',
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-himax-sdk',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-sensecap-app',
                   ],
                 },    
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
