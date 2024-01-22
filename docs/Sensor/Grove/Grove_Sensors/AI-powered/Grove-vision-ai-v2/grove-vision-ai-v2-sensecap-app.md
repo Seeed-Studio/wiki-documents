@@ -74,54 +74,7 @@ You then need to connect the XIAO and Grove Vision AI V2 via the row of pins (or
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/10.gif" style={{width:600, height:'auto'}}/></div>
 
-## Register for a SenseCAP account and software preparation
-
-### Step 1. Register for a SenseCAP account
-
-If you are using SenseCAP for the first time, then you may need to register an account on the **[SenseCAP website](https://sensecap.seeed.cc)**.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/2.png" style={{width:1000, height:'auto'}}/></div>
-
-After registering, please log in to the SenseCAP website.
-
-### Step 2. Download the SenseCAP Mate APP to your mobile phone.
-
-If you want to check your device's messages anytime, anywhere, you may want to consider installing the SenseCAP Mate APP, a mobile device that uses SenseCAP. By clicking the button below, you can choose to install the SenseCAP Mate APP in a way that suits you.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/3.png" style={{width:500, height:'auto'}}/></div>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecap-mate-download.seeed.cn/">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Download APP 🖱️</font></span></strong>
-    </a>
-</div>
-
-
-
-
-## Device Configuration in SenseCAP
-
-### Step 3. Add Device
-
-Let's go back to the web side and start by adding a Grove Vision AI V2.
-
-In the catalogue bar on the left side of the page, select **Development Kit** and click the **Create Development Kit** button in the middle.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/5.png" style={{width:1000, height:'auto'}}/></div>
-
-Please name your device and select the device as **Grove - Vision AI V2** and click on the **Confirm** button.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/6.png" style={{width:600, height:'auto'}}/></div>
-
-After creating a new device, please click the **Connect** button on the right side of the device, and a series of pop-ups will be displayed to connect the required devices.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/7.png" style={{width:1000, height:'auto'}}/></div>
-
-Please keep these credentials information, we will use them later in the network configuration.
-
-## SenseCraft AI model preparation and MQTT configuration
-
-### Step 4. Flash Firmware for XIAO ESP32C3
+### Software Preparation
 
 Connect the XIAO ESP32C3 to your computer using a suitable USB-C cable. Ensure the device drivers are installed correctly.
 
@@ -146,56 +99,101 @@ Click the button below to download the firmware file and click the **Add File** 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/23.png" style={{width:1000, height:'auto'}}/></div>
 
-Finally, click the **Flash** button and wait for the programme to be uploaded successfully before disconnecting the XIAO ESP32C3 from the computer.
+Finally, click the **Flash** button and wait for the programme to be uploaded successfully before **disconnecting** the XIAO ESP32C3 from the computer.
 
-### Step 5. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
+## Register for a SenseCAP account and software preparation
 
-First, we need to open the main SenseCraft AI Model Assistant page.
+### Step 1. Register for a SenseCAP account
+
+If you are using SenseCAP for the first time, then you may need to register an account on the **[SenseCAP website](https://sensecap.seeed.cc)**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/2.png" style={{width:1000, height:'auto'}}/></div>
+
+After registering, please log in to the SenseCAP website.
+
+### Step 2. Download the SenseCAP Mate APP to your mobile phone.
+
+If you want to check your device's messages anytime, anywhere, you may want to consider installing the SenseCAP Mate APP, a mobile device that uses SenseCAP. By clicking the button below, you can choose to install the SenseCAP Mate APP in a way that suits you.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/3.png" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
+    <a class="get_one_now_item" href="https://sensecap-mate-download.seeed.cn/">
+            <strong><span><font color={'FFFFFF'} size={"4"}>Download APP 🖱️</font></span></strong>
+    </a>
 </div>
-<br />
 
-Please use a Type-C type cable to connect **Grove Vision AI V2** to your computer.
+## Device Configuration in SenseCAP
 
-In the upper right corner of the SenseCraft AI Model Assistant page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
+### Step 3. Add Device
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/2.png" style={{width:1000, height:'auto'}}/></div>
+Let's go back to the web side and start by adding a Grove Vision AI V2.
 
-In the new window that pops up, select the correct COM port for the device and click the Connect button.
+In the catalogue bar on the left side of the page, select **Development Kit** and click the **Create Development Kit** button in the middle.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/3.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/5.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 6. Upload a suitable model
+Please name your device and select the device as **Grove - Vision AI V2** and click on the **Confirm** button.
 
-Then, just select a model you want to use and click the **Send** button below. Here is an example of Gesture Detection.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/6.png" style={{width:600, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/18.png" style={{width:1000, height:'auto'}}/></div>
+After creating a new device, please click the **Connect** button on the right side of the device, and a series of pop-ups will be displayed to connect the required devices.
 
-Wait for 1~2 minutes for the model to be uploaded.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/7.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 7. Observations
+Please keep these credentials information, we will use them later in the network configuration.
 
-Once the model is uploaded successfully, you will be able to see the live feed from the Grove Vision AI V2 camera in the Preview on the right.
+## SenseCraft AI model preparation and MQTT configuration
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/19.png" style={{width:1000, height:'auto'}}/></div>
+### Step 4. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
 
-<br />
+Let's continue the steps above by clicking on the **Deploy** button in the middle of the page, at which point we will jump directly to the SenseCraft AI model deployment page.
 
-We can see that in the Preview Settings on the right hand side, there are two setting options that can be changed to optimise the recognition accuracy of the model.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/14.png" style={{width:600, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/15.png" style={{width:1000, height:'auto'}}/></div>
+
+### Step 5. Upload a suitable model
+
+First select **Grove - Vision AI V2** in the catalogue bar on the left, then select the model you want to use.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/16.png" style={{width:1000, height:'auto'}}/></div>
+
+Once you are on the model page, you can read a detailed description of this model or deploy the model on the page. Click the **Deploy Model** button on the top right corner of the page to enter the deployment page of the model.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/17.png" style={{width:1000, height:'auto'}}/></div>
+
+Connect the Grove Vision AI V2 with the XIAO ESP32C3 and camera installed to the computer via the USB-C cable.
+
+:::tip
+The cable should connect the Grove Vision AI V2 to the computer, not the XIAO.
+:::
+
+Then click the **Connect** button below.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/18.png" style={{width:1000, height:'auto'}}/></div>
+
+In the new window, click **Confirm** and select the port number where the device is located. Wait for 1~2 minutes for the model to be uploaded.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/19.png" style={{width:1000, height:'auto'}}/></div>
+
+If the model flash is successful, you can see the live screen in the Preview and should also be able to see information about the model.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/20.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
 If there is no screen displayed in Preview or there is no information in the model information, there may be a problem with the model and you need to reselect the model or upload it again.
 :::
 
-### Step 8. Configuring the network for Grove Vision AI V2 & XIAO
+### Step 6. Configuring the network for Grove Vision AI V2 & XIAO
 
-Connect the Grove Vision AI V2 to your computer and open the [Model Assistant's configuration page](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/config).
+Open the Model Assistant's configuration page.
 
-After clicking on the top right corner to connect to Grove Vision AI V2, please turn on the MQTT button and enter the following information that you need to fill in the page.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/21.png" style={{width:1000, height:'auto'}}/></div>
 
-- **SSID & Password**: The device needs to be on the same LAN as the host where the Home Asistant is installed. So please configure the network under the same LAN. XIAO only supports 2.4G WiFi, 5G network is not available.
+Please turn on the MQTT button and enter the following information that you need to fill in the page.
+
+- **SSID & Password**: The name and password of the network you want XIAO to connect to. XIAO only supports 2.4G WiFi, 5G network is not available.
 
 Please fill in the network configuration according to the device information of the Grove Vision AI V2 that we have added by SenseCAP in **[Step 3](#step-3-add-device)**.
 
@@ -216,7 +214,7 @@ When finished, click the **Stop** button to stop reasoning, and click **Disconne
 
 ## PaaS Side and SenseCAP Mate APP Observations
 
-### Step 9. View the results on the Mate APP.
+### Step 7. View the results on the Mate APP.
 
 Now we can open our mobile and enter our account number and password to log in. The mobile will sync the PaaS device information.
 
