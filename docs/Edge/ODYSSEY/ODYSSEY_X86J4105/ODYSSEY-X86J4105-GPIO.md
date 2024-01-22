@@ -21,7 +21,7 @@ This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY 
 ---
 <table style={{borderCollapse: 'collapse', borderSpacing: 0}} className="tg"><tbody><tr><th style={{fontFamily: 'Arial, sans-serif', fontSize: 14, fontWeight: 'bold', padding: '10px 5px', borderStyle: 'solid', borderWidth: 1, overflow: 'hidden', wordBreak: 'normal', borderColor: 'black', textAlign: 'center', verticalAlign: 'middle'}}>Pin Legend</th></tr><tr><td style={{fontFamily: 'Arial, sans-serif', fontSize: 14, padding: '10px 5px', borderStyle: 'solid', borderWidth: 1, overflow: 'hidden', wordBreak: 'normal', borderColor: 'black', fontWeight: 'bold', backgroundColor: '#34cdf9', color: '#ffffff', textAlign: 'center', verticalAlign: 'top'}}>GPIO</td></tr><tr><td style={{fontFamily: 'Arial, sans-serif', fontSize: 14, padding: '10px 5px', borderStyle: 'solid', borderWidth: 1, overflow: 'hidden', wordBreak: 'normal', borderColor: 'black', fontWeight: 'bold', backgroundColor: '#00d2cb', color: '#ffffff', textAlign: 'center', verticalAlign: 'top'}}>UART</td></tr><tr><td style={{fontFamily: 'Arial, sans-serif', fontSize: 14, padding: '10px 5px', borderStyle: 'solid', borderWidth: 1, overflow: 'hidden', wordBreak: 'normal', borderColor: 'black', fontWeight: 'bold', backgroundColor: '#ffc702', color: '#ffffff', textAlign: 'center', verticalAlign: 'top'}}>I2C</td></tr><tr><td style={{fontFamily: 'Arial, sans-serif', fontSize: 14, padding: '10px 5px', borderStyle: 'solid', borderWidth: 1, overflow: 'hidden', wordBreak: 'normal', borderColor: 'black', fontWeight: 'bold', backgroundColor: '#32cb00', color: '#ffffff', textAlign: 'center', verticalAlign: 'top'}}>SPI</td></tr></tbody></table>
 
-### Ubuntu 18.04
+### Ubuntu 20.04
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ubuntu2004.png" /></div>
 
@@ -30,7 +30,7 @@ This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY 
 **The default pins on the ODYSSEY - X86J41x5 are configured to function mode so for example the pin 3 is set to I2C at default instead of GPIO mode. If you preferde using GPIO at default please check below.**
 
 :::note
-The 40-Pin GPIO has been equipped with bidirectional level conversion, and the current must not exceed 1 mA when in use. This means that the IO current is quite low and cannot directly drive LEDs.
+The 40-Pin GPIO has been equipped with bidirectional level conversion, and the current must not exceed 1 mA when in use. This means that the IO current is quite low.
 :::
 
 You can use the GPIO or change the function mode pin to GPIO using the Linux sysfs GPIO interface. Let's take pin 7 for example, the following code will turn on a LED module connected to Pin 7:
