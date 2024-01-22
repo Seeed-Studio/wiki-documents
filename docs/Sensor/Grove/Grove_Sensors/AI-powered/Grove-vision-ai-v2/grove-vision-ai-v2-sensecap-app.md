@@ -195,9 +195,9 @@ Please turn on the MQTT button and enter the following information that you need
 
 - **SSID & Password**: The name and password of the network you want XIAO to connect to. XIAO only supports 2.4G WiFi, 5G network is not available.
 
-Please fill in the network configuration according to the device information of the Grove Vision AI V2 that we have added by SenseCAP in **[Step 3](#step-3-add-device)**.
+Please fill in the network configuration according to the device information of the Grove Vision AI V2 that we have added by SenseCAP in **[Step 3](#step-3-add-device)**. The difference is that the port number needs to be changed to **8883**. and the **SSL** button needs to be turned on.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/8.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/23.png" style={{width:1000, height:'auto'}}/></div>
 
 Then click the Save button below. After saving, it **does not mean that Grove Vision AI V2 has been written correctly**, please go back to **Process** in the left menu bar and check if the IP address of the device has appeared and if the status of the MQTT connection is correct.
 
@@ -214,7 +214,9 @@ When finished, click the **Stop** button to stop reasoning, and click **Disconne
 
 ## PaaS Side and SenseCAP Mate APP Observations
 
-### Step 7. View the results on the Mate APP.
+### Step 7. View the results on the Mate APP
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/22.png" style={{width:1000, height:'auto'}}/></div>
 
 Now we can open our mobile and enter our account number and password to log in. The mobile will sync the PaaS device information.
 
