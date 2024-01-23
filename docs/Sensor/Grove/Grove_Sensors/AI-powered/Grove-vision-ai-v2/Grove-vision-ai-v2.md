@@ -147,6 +147,7 @@ You can check [here](/Grove-vision-ai-v2-camera-supported). Currently we have wr
 - **[GitHub]** [Seeed Grove Vision AI Module V2 SDK](https://github.com/HimaxWiseEyePlus/Seeed_Grove_Vision_AI_Module_V2)
 - **[PDF]** [Circuit Diagram](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/Grove_Vision_AI_Module_V2_Circuit_Diagram.pdf)
 - **[Zip]** [Layout Diagram](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/Grove_Vision_AI_Module_V2_Layout.zip)
+- **[Zip]** [Bill Of Material](https://files.seeedstudio.com/wiki/202003828_PCBA_Grove_Vision_AI_Module_V2_A11_Design.zip)
 
 ## Tech Support & Product Discussion
 
