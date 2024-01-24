@@ -147,7 +147,7 @@ Please prepare the equipment required above, firmware update packages can be dow
 
 | Version                     | Description                                               | Download                                                     |
 | --------------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
-| QWRT R23.12.12           | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/openwrtOS.zip) |
+| QWRT R24.01.23              | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/QWRT-R24.01.23-v2-rockchip-rk35xx-linkstar_h28k-squashfs-sysupgrade.zip) |
 | Flash to eMMC tool & driver | V5.12                                                     | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/H28K_Flash_Tools.zip) |
 
 #### Procedure
@@ -247,6 +247,7 @@ H28K is open source hardware.Download links to relevant materials。
 | Version                     | Description      | Download                                                     |
 | --------------------------- | ---------------- | ------------------------------------------------------------ |
 | QWRT R23.12.12              | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/openwrtOS.zip) |
+| QWRT R24.01.23 (Only emmc is supported)             | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/QWRT-R24.01.23-v2-rockchip-rk35xx-linkstar_h28k-squashfs-sysupgrade.zip) |
 | Flash to eMMC tool & driver | V5.12            | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/H28K_Flash_Tools.zip) |
 | balenaEtcher                | ISO Burner Tool  | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/balenaEtcher-Portable-1.5.109.zip) |
 | H28K-SCH                    | H28K schemetics  | [Download](https://files.seeedstudio.com/wiki/H28K/Open_source/H28K-SCH.zip) |
