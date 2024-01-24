@@ -3,11 +3,11 @@ description: Seeed Studio XIAO RP2040 with Arduino
 title: Arduino
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg
 slug: /XIAO-RP2040-with-Arduino
 last_update:
-  date: 1/11/2023
-  author: shuxu hu
+  date: 1/24/2023
+  author: Spencer
 ---
 
 # **Seeed Studio XIAO RP2040 with Arduino**
@@ -57,12 +57,16 @@ Navigate to **File** > **Preferences**, and fill **Additional Boards Manager URL
 
 Navigate to **Tools-> Board-> Boards Manager...**, type the keyword "**RP2040**" in the searching blank. Select the lastest version of "Raspberry Pi Pico/RP2040" and install it.
 
-<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/2.png"/></div>
+:::note Attention
 
-:::cautionAttention
 The on-board package named **Seeed XIAO RP2040 is no longer available**, please do not download and use it!
+
+Install the "Raspberry Pi Pico/RP2040" package, which includes the "Seeed XIAO RP2040" board.
+
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/3.png"/></div>
 :::
+
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/2.png"/></div>
 
 - **Step 4.** Select your board and port.
 
