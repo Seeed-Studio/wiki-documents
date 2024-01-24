@@ -288,8 +288,6 @@ static const int RXPin = D7, TXPin = D6;
 static const uint32_t GPSBaud = 9600;
 SoftwareSerial SerialGNSS(RXPin, TXPin);
 void setup() {
-  // Start serial communication at a baud rate of 9600.
-  // This is necessary for sending data to the LED.
   SerialGNSS.begin(GPSBaud);
 
   // Define the byte array to turn the LED off
