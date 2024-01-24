@@ -138,6 +138,30 @@ Machine learning is a field of computer systems that aims to develop self-improv
 
 <br />
 
+### Grove Vision AI V2
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:600, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_vertical">
+        <br />
+        <font size={"2"}>It is an MCU-based vision AI module powered by Arm Cortex-M55 & Ethos-U55. It supports TensorFlow and PyTorch frameworks and is compatible with Arduino IDE. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding.</font>
+        <br /><font size={"3"}><strong>Versatile AI Model Support:</strong></font><font size={"2"}> Easily deploy off-the-shelf or your custom AI models from SenseCraft AI, including Mobilenet V1, V2, Efficientnet-lite, Yolo v5 & v8. TensorFlow and PyTorch frameworks are supported.</font>
+        <br /><font size={"3"}><strong>Fully Open Source:</strong></font><font size={"2"}>All codes, design files, and schematics available for modification and use.</font>
+        <br /><font size={"3"}><strong>Rich Peripheral Devices:</strong></font><font size={"2"}> Includes PDM microphone, SD card slot, Type-C, Grove interface, and other peripherals.</font><br />
+    </div>
+</div>
+
+<br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/grove_vision_ai_v2/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
+</div>
+
+<br />
+
 ### SenseCAP K1100
 
 <div class="all_container">
