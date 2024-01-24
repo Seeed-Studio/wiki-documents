@@ -1,9 +1,10 @@
 ---
-title: L76K GNSS Module
-description: Get Started with L76K GNSS Module for SeeedStudio XIAO
+title: Quectel L76K
+description: Get Started with L76K GNSS Module for XIAO
 keywords:
   - XIAO
-  - L76K GNSS Module
+  - Quectel L76K
+  - GNSS
 image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg
 slug: /get_start_l76k_gnss
 sidebar_position: 0
@@ -32,11 +33,11 @@ The module comes with a high-performance active GNSS antenna intended to cover G
 
 ### Features
 
-- **Support Multi-GNSS Systems**: Built around Quectel L76K, supporting GPS, BeiDou (BDS), GLONASS and QZSS
-- **High Compatibility**: Highly compatible with all XIAO series products, easily integrated into your current projects
-- **Support external active antenna**: Comes with a U.FL receptacle for high-performance active GNSS antenna
-- **Thumb-sized Design**: 18 x 21mm, Seeed Studio XIAO series classic form-factor, suitable for small devices
-- **Perfect for Production**: Breadboard-friendly & SMD design, no components on the back
+- **Enhanced Reception:** Built-in Low Noise Amplifier and Surface Acoustic Wave Filter for improved sensitivity and noise reduction
+- **High Precision:** 32/72 channels, -162dBm tracking, -160dBm re-acquisition sensitivity
+- **Energy Efficiency**: 41mA tracking/acquisition, 360µA standby
+- **Multi-GNSS Systems**: Powered by Quectel L76K, supporting GPS, BeiDou, GLONASS and QZSS
+- **Ceramic Antenna:** Enhanced signal reception, superior to traditional antennas.
 
 ### Specification
 <div class="table-center">
@@ -291,9 +292,16 @@ Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals ca
 
 ## Troubleshooting
 
-### Q1: Why doesn't the GNSS information display on the serial monitor?
+<details>
+<summary>Why doesn't the GNSS information display on the serial monitor?</summary>
 
-A: Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals can be received.
+Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals can be received.
+</details>
+
+<details>
+<summary>Can the rechargeable cell power XIAO?</summary>
+No, the rechargeable cell in this context is used solely for the Real-Time Clock (RTC) and maintaining a warm start state in the L76K GNSS Module. It cannot be used as a primary power source for the XIAO or for the GNSS module's general operations.
+</details>
 
 ## Tech Support & Product Discussion
 
