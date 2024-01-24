@@ -95,7 +95,7 @@ Before we start, we can refer to the following pictures to understand the pin de
 
 ### Hardware Preparation
 
-If you want to take advantage of the full capabilities of the L76K GNSS Module and have a great experience, we highly recommend that you purchase our XIAO series as the motherboard for the L76K GNSS Module.
+To fully experience the capabilities of the L76K GNSS Module, we recommend pairing it with a motherboard from our XIAO series. *Any of the following XIAO models* would be compatible for use with the L76K GNSS Module.
 
 <table align="center">
 	<tr>
@@ -293,14 +293,26 @@ Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals ca
 ## Troubleshooting
 
 <details>
+<summary>Can the rechargeable cell power XIAO?</summary>
+No, the rechargeable cell in this context is used solely for the Real-Time Clock (RTC) and maintaining a warm start state in the L76K GNSS Module. It cannot be used as a primary power source for the XIAO or for the GNSS module's general operations.
+</details>
+
+<details>
 <summary>Why doesn't the GNSS information display on the serial monitor?</summary>
 
 Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals can be received.
 </details>
 
 <details>
-<summary>Can the rechargeable cell power XIAO?</summary>
-No, the rechargeable cell in this context is used solely for the Real-Time Clock (RTC) and maintaining a warm start state in the L76K GNSS Module. It cannot be used as a primary power source for the XIAO or for the GNSS module's general operations.
+<summary>Why does the device's green light stay on constantly when plugged into the XIAO RP2040?</summary>
+To address this issue, you need to pull D0 and D10 high. The constant illumination of the fix green light indicates that the device has entered an abnormal working state.
+
+```cpp
+pinMode(D10,OUTPUT);
+digitalWrite(D10,1);
+pinMode(D0,OUTPUT);
+digitalWrite(D0,1);
+```
 </details>
 
 ## Tech Support & Product Discussion
