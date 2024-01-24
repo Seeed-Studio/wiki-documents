@@ -95,7 +95,7 @@ Before we start, we can refer to the following pictures to understand the pin de
 
 ### Hardware Preparation
 
-If you want to take advantage of the full capabilities of the L76K GNSS Module and have a great experience, we highly recommend that you purchase our XIAO series as the motherboard for the L76K GNSS Module.
+To fully experience the capabilities of the L76K GNSS Module, we recommend pairing it with a motherboard from our XIAO series. *Any of the following XIAO models* would be compatible for use with the L76K GNSS Module.
 
 <table align="center">
 	<tr>
