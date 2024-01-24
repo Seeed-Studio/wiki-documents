@@ -3,7 +3,7 @@ description: Overview
 title: Getting Started
 keywords:
 - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg
 slug: /XIAO-RP2040
 last_update:
   date: 1/11/2023
@@ -12,7 +12,6 @@ last_update:
 
 # Getting Started with Seeed Studio XIAO RP2040
 
-<!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" alt="pir" width={600} height="auto" /></p>
 
 
