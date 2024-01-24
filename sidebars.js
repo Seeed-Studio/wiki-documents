@@ -3308,6 +3308,13 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Cooler_Device',
+          items: [
+            'Top_Brand/Raspberry_Pi/Cooler_Device/Water_Cooling_Kit',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Kit with Courses',
           items: [
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
