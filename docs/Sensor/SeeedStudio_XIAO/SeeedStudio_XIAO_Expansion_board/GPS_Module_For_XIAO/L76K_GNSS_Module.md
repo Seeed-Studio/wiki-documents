@@ -206,63 +206,53 @@ TinyGPSPlus gps;
 // The serial connection to the GNSS module
 SoftwareSerial ss(RXPin, TXPin);
 
-void setup()
-{
+void setup() {
   Serial.begin(115200);
   ss.begin(GPSBaud);
 
   Serial.println(F("DeviceExample.ino"));
   Serial.println(F("A simple demonstration of TinyGPSPlus with L76K GNSS Module"));
-  Serial.print(F("Testing TinyGPSPlus library v. ")); Serial.println(TinyGPSPlus::libraryVersion());
+  Serial.print(F("Testing TinyGPSPlus library v. "));
+  Serial.println(TinyGPSPlus::libraryVersion());
   Serial.println(F("by Mikal Hart"));
   Serial.println();
 }
 
-void loop()
-{
+void loop() {
   // This sketch displays information every time a new sentence is correctly encoded.
   while (ss.available() > 0)
     if (gps.encode(ss.read()))
       displayInfo();
 
-  if (millis() > 5000 && gps.charsProcessed() < 10)
-  {
+  if (millis() > 5000 && gps.charsProcessed() < 10) {
     Serial.println(F("No GPS detected: check wiring."));
-    while(true);
+    while (true);
   }
 }
 
-void displayInfo()
-{
-  Serial.print(F("Location: ")); 
-  if (gps.location.isValid())
-  {
+void displayInfo() {
+  Serial.print(F("Location: "));
+  if (gps.location.isValid()) {
     Serial.print(gps.location.lat(), 6);
     Serial.print(F(","));
     Serial.print(gps.location.lng(), 6);
-  }
-  else
-  {
+  } else {
     Serial.print(F("INVALID"));
   }
 
   Serial.print(F("  Date/Time: "));
-  if (gps.date.isValid())
-  {
+  if (gps.date.isValid()) {
     Serial.print(gps.date.month());
     Serial.print(F("/"));
     Serial.print(gps.date.day());
     Serial.print(F("/"));
     Serial.print(gps.date.year());
-  }
-  else
-  {
+  } else {
     Serial.print(F("INVALID"));
   }
 
   Serial.print(F(" "));
-  if (gps.time.isValid())
-  {
+  if (gps.time.isValid()) {
     if (gps.time.hour() < 10) Serial.print(F("0"));
     Serial.print(gps.time.hour());
     Serial.print(F(":"));
@@ -274,9 +264,7 @@ void displayInfo()
     Serial.print(F("."));
     if (gps.time.centisecond() < 10) Serial.print(F("0"));
     Serial.print(gps.time.centisecond());
-  }
-  else
-  {
+  } else {
     Serial.print(F("INVALID"));
   }
 
@@ -289,6 +277,48 @@ Just select the XIAO you are using and the port number where the XIAO is located
 Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals can be received. Upload the code to your XIAO and wait a few minutes, you should see the information displayed on the serial monitor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-output.png" style={{width:800, height:'auto'}}/></div>
+
+
+##### Change the behaviour of LED
+
+This section demonstrates how to control a green LED using Arduino by sending specific hexadecimal commands through serial communication. The example provided below will show you how to turn off the LED and then return it to its normal blinking state.
+
+```cpp {12,14,20,22}
+static const int RXPin = D7, TXPin = D6;
+static const uint32_t GPSBaud = 9600;
+SoftwareSerial SerialGNSS(RXPin, TXPin);
+void setup() {
+  SerialGNSS.begin(GPSBaud);
+
+  // Define the byte array to turn the LED off
+  byte OffState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
+                     0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
+                     0x00, 
+                     0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, 
+                     0xF0, 
+                     0xC8, 0x17, 0x08};
+
+  // Define the byte array to recover the LED blinking state
+  byte RecoverState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
+                         0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
+                         0x03, 
+                         0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, 
+                         0xF3, 
+                         0xC8, 0x17, 0x08};
+
+  // Send the command to turn off the LED.
+  SerialGNSS.write(OffState, sizeof(OffState));
+  // Wait for 5 seconds.
+  delay(5000);
+  // Send the command to return the LED to blinking.
+  SerialGNSS.write(RecoverState, sizeof(RecoverState));
+}
+
+void loop() {
+  // Do nothing.
+}
+
+```
 
 ## Troubleshooting
 
