@@ -133,19 +133,19 @@ Next, you will encounter an interactive user interface to modify your circular g
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/bar.gif" /></center>
 
-## Add process engineering stuff
+## Add Process Engineering stuff
 
 In this section, you'll discover a wealth of process engineering components such as **pumps, motors, blowers, tanks, mixers**, and more. For our demonstration, we'll focus on setting on and off colors for a pump. Simply select the relevant tag and specify the colors for both on and off situations.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/processengineer.gif" /></center>
 
-## How to animate a pipe
+## How to Animate a Pipe
 
 First you design your pipe form and then you define the action by bind the Device-Tag (Variable) with the animation.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-pipe.gif" /></center>
 
-## How to Add a chart 
+## How to Add a Chart 
 
 To add a Chart Control to a View. going in editor and select the View.
 
