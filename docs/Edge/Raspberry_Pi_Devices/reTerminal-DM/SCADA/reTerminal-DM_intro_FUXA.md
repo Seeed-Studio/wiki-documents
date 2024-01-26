@@ -23,6 +23,35 @@ last_update:
 
 FUXA stands as a robust web-based software, enabling the swift creation and deployment of scalable SCADA, HMI, Dashboard, or IIoT systems. With FUXA, you have the capability to craft contemporary process visualizations tailored to your machines, showcasing real-time data and controlling instruments in automated industrial plants.
 
+## Getting Start
+
+Before you start this project, you may need to prepare your hardware and software in advance as described here.
+
+### Hardware preparation
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">reTerminal DM</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a></div></td>
+        </tr>
+    </table>
+    </div>
+
+### Software Preparation
+
+We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)
+
+
 ## Installation FUXA on reTerminal DM
 
 :::note
