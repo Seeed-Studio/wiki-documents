@@ -158,7 +158,7 @@ In this comprehensive demonstration, the setup includes three tanks, with two of
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/demo-fuxa.gif" /></center>
 
 
-We extend our sincere gratitude to the **frangoteam** for their invaluable support and guidance throughout the creation of this wiki. For more details on the FUXA project, please refer to the resources tab below.
+We extend our sincere gratitude to the **frangoteam** for their support and guidance throughout the creation of this wiki. For more details on the FUXA project, please refer to the resources tab below.
 
 ## Resources
 
