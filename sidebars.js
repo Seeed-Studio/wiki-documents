@@ -1707,6 +1707,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_to_TTN',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/LoRa_Locator',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_1110_to_HA',
 
                 {
                   type: 'category',
