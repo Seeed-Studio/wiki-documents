@@ -2511,6 +2511,13 @@ const sidebars = {
               },
               {
                 type: 'category',
+                label: 'SCADA',
+                items: [
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_FUXA',
+                ],
+              },
+              {
+                type: 'category',
                 label: 'Azure IoT Edge',
                 items: [
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
@@ -2523,6 +2530,7 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/AWS_IoT/reTerminal-DM_AWS_first',
                 ],
               },
+
             ],
           },
 
