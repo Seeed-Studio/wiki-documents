@@ -18,7 +18,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -283,7 +283,7 @@ Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals ca
 
 This section demonstrates how to control a green LED using Arduino by sending specific hexadecimal commands through serial communication. The example provided below will show you how to turn off the LED and then return it to its normal blinking state.
 
-```cpp {12,14,20,22}
+```cpp
 static const int RXPin = D7, TXPin = D6;
 static const uint32_t GPSBaud = 9600;
 SoftwareSerial SerialGNSS(RXPin, TXPin);
@@ -293,17 +293,25 @@ void setup() {
   // Define the byte array to turn the LED off
   byte OffState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
                      0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
+                     // highlight-start
                      0x00, 
+                     // highlight-end
                      0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, 
+                     // highlight-start
                      0xF0, 
+                    // highlight-end
                      0xC8, 0x17, 0x08};
 
   // Define the byte array to recover the LED blinking state
   byte RecoverState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
                          0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
+                         // highlight-start
                          0x03, 
-                         0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, 
+                         // highlight-end
+                         0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00,
+                         // highlight-start
                          0xF3, 
+                         // highlight-end
                          0xC8, 0x17, 0x08};
 
   // Send the command to turn off the LED.
