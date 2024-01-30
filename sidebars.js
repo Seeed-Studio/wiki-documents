@@ -1159,20 +1159,20 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
-        {
-          type: 'category',
-          label: 'ArduPy with Wio Terminal',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: "doc",
-            id: 'Sensor/Wio_Terminal/ArduPy/ArduPy',
-          },
-          items: [
-            'Sensor/Wio_Terminal/ArduPy/ArduPy-LCD',
-            'Sensor/Wio_Terminal/ArduPy/ArduPy-Libraries',
-          ],
-        },
+        // {
+        //   type: 'category',
+        //   label: 'ArduPy with Wio Terminal',
+        //   collapsed: true,
+        //   collapsible: true,
+        //   link: {
+        //     type: "doc",
+        //     id: 'Sensor/Wio_Terminal/ArduPy/ArduPy',
+        //   },
+        //   items: [
+        //     'Sensor/Wio_Terminal/ArduPy/ArduPy-LCD',
+        //     'Sensor/Wio_Terminal/ArduPy/ArduPy-Libraries',
+        //   ],
+        // },
         {
           type: 'category',
           label: 'Hardware Overview',
