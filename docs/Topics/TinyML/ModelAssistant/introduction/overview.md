@@ -1,6 +1,6 @@
 ---
 description: Overview For Model Assistant
-title: Overview
+title: SenseCraft AI Model Assistant Overview
 keywords:
 - sscma model assistant ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
