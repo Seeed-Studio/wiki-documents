@@ -644,11 +644,8 @@ ai.begin(ALGO_ OBJECT_DETECTION, (MODEL_INDEX_T)0x05)
 ```
 
 ## Resources
-
 - **[PDF]** [Circuit Diagram](https://files.seeedstudio.com/wiki/Grove_AI_Module/Grove_Vision_AI_NORF_v1.1.pdf)
 - **[Zip]** [Layout Diagram](https://files.seeedstudio.com/wiki/Grove_AI_Module/Grove_Vision_AI_NORF_v1.1.zip)
-
-
 
 ## Tech Support & Product Discussion
 
