@@ -1159,6 +1159,7 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
+        'Sensor/Wio_Terminal/wio_terminal_faq',
         // {
         //   type: 'category',
         //   label: 'ArduPy with Wio Terminal',
