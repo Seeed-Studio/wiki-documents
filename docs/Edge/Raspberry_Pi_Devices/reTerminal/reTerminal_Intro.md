@@ -134,7 +134,7 @@ last_update:
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/mediapipeadd.gif" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/ml/emotion/emotions.gif" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div sawakentyle={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/edgeimpulse.gif" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
@@ -172,7 +172,7 @@ last_update:
     <tr class="table-trnobg">
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this guide, we will integrate the Raspberry Pi camera, capturing a video stream using a Python snippet, and implementing a feature to save an image by pressing a key. </font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this guide, we'll explore Face Detection using the Haar Cascade method, a crucial technique in computer vision that utilizes a machine learning model to identify facial features. We'll specifically focus on implementing this on the reTerminal using the Raspberry Pi camera. </font></td>
-      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this documentation, we will delve into using the Raspberry Pi camera and ReTerminal to detect approximately 100 images using a pre-trained EfficientNet model. </font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>This guide explores the utilization of the Raspberry Pi camera and reTerminal for detecting around 90 objects using a pre-trained EfficientNet model based on the COCO dataset. </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
