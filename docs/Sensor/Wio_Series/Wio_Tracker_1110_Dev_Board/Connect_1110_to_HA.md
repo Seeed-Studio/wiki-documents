@@ -204,6 +204,7 @@ Choose the Map card.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/map-card.png" alt="pir" width={800} height="auto" /></p>
 
 
+
 Copy the code into the `CODE EDITOR` and click `SAVE`.
 
 ```cpp
@@ -224,5 +225,6 @@ You can check the live location on the map now.
 
 All data of the Dev Board can be viewed in the dashboard.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/dog-locate.png" alt="pir" width={800} height="auto" /></p>
+
+
