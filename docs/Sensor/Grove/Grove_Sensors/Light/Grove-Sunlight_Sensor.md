@@ -112,7 +112,7 @@ If you need a plug more modules on main control board, you may need a [Grove bas
 
 **Download**
 
-Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/tree/Si1151) to download the library and then [add](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to the Arduino.
+Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/tree/master) to download the library and then [add](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to the Arduino.
 
 Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1145DEMO** to open the test code.
 
@@ -193,7 +193,7 @@ If you need a plug more modules on main control board, you may need a [Grove bas
 
 **Download**
 
-Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/tree/Si1151) to download the library and then [add](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to the Arduino.
+Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/tree/master) to download the library and then [add](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to the Arduino.
 
 Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1151** to open the test code.
 
