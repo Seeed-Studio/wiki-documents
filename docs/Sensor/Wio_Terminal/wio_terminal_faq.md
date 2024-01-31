@@ -3,7 +3,6 @@ description: Wio terminal-FAQ PAGE
 title: FAQs for Wio Terminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /wio_terminal_faq
-last_update:
 date: 1/31/2024
 author: Seraphina
 ---

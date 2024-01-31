@@ -3,7 +3,6 @@ description: Wio Terminal - FAQ
 title: How to avoid the program loss after restarting Wio Terminal multiple times
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Program_loss_by_repeated_power
-last_update:
 date: 1/31/2024
 author: Seraphina
 ---
