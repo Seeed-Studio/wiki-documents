@@ -378,6 +378,24 @@ There are two different versions of reServer, Basic version and High performance
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102110559/09-%E9%AB%98%E9%85%8D.png" alt="pir" width={1000} height="auto" /></p>
 
+
+### Pin information
+
+#### 8-Pin Power Connector
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/8P_power_connector.png" alt="pir" width={800} height="auto" /></p>
+
+#### 28-Pin Arduino Pinout
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/28P_arduino.png" alt="pir" width={800} height="auto" /></p>
+
+#### 9-Pin COM Pinout
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/9P_COM_pinout.png" alt="pir" width={800} height="auto" /></p>
+
+#### 9-Pin USB2.0 Pinout
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/9P_USB2.0_pinout.png" alt="pir" width={800} height="auto" /></p>
+
+#### 9-Pin Front Panel Pinout
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/9P_front_panel_pinout.png" alt="pir" width={800} height="auto" /></p>
+
 ## Dimensions
 
 Both versions have the same dimensions.
@@ -404,18 +422,17 @@ You might follow the **Assembly Guide Manual** attached at the end of this page 
 
 #### DDR4 Installation
 
-**DDR4-3200MT/s has been pre-installed for all versions of reServer** but you can also add a new DDR4 to the other channel or replace the pre-installed one with your own to expand memory. The dual-channel SO-DIMM slots support DDR4-3200MT/s up to 64GB in total.
+You can add a new DDR4 to expand memory. The dual-channel SO-DIMM slots support DDR4-3200MT/s up to 64GB in total.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/ddr4.png" alt="pir" width={800} height="auto" /></p>
 
 #### SSD Installation
 
-**A NVMe SSD has been pre-installed for all versions of reServer**, while, still, the M.2 M-Key 2242/2280(PCIe 3.0 x4) allows you to replace it with the SSD you desire.
+The M.2 M-Key 2242/2280(PCIe 3.0 x4) allows you to add SSD.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/M.2%20M-Key.png" alt="pir" width={800} height="auto" /></p>
 
 #### WiFi Module Installation
 
-**All versions of reServer have installed 2230 Dual Band WiFi 6 AX201(CNVio) Module at M.2 E-Key 2242/2280(PCIe 3.0x4)**.
-If you want to replace the pre-installed WiFi Module, feel free to follow the steps below.
+You can follow the steps below to add WiFi Module.
 
 - **Step 1.** Remove the SSD from M.2 M-Key slot.
 
