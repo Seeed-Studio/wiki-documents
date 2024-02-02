@@ -2653,7 +2653,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
                 {
                   type: 'category',
-                  label: 'Other Carrier Boards for reComputer',
+                  label: 'Other Carrier Boards for Jetson',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A603_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A607_Flash_JetPack',

@@ -35,7 +35,7 @@ Here, we can utilize a very user-friendly tool—Langchain. It is a powerful fra
 
 ## How to deploy in edge devices?
 
-**Step 1.** You will need to prepare a Jetson device (reComputer J4012) equipped with the Jetpack 5.0+ operating system.
+**Step 1.** You will need to prepare a Jetson device ([reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products)) equipped with the Jetpack 5.0+ operating system.
 
 **Step 2.** Open the terminal and install the corresponding dependency software.
 
