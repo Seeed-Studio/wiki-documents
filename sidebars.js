@@ -428,7 +428,7 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_tinyML_Demo',
-                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/How to Use Arduino Uno R4 with LoRa Module'
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_SenseCAP_Cloud_Demo'
 
               ],
             },
