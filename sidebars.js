@@ -1159,6 +1159,7 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
+        'Sensor/Wio_Terminal/wio_terminal_faq',
         // {
         //   type: 'category',
         //   label: 'ArduPy with Wio Terminal',
@@ -2653,7 +2654,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
                 {
                   type: 'category',
-                  label: 'Other Carrier Boards for reComputer',
+                  label: 'Other Carrier Boards for Jetson',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A603_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A607_Flash_JetPack',

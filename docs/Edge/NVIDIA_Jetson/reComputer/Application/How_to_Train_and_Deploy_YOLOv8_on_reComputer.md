@@ -22,6 +22,11 @@ In the face of increasingly complex and dynamic challenges, the application of a
      src="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_J4012.png" />
 </div>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
 In this document, we train and deploy a object detection model for traffic scenes on the 
 [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=f6de8f6c8d814c021e13f4455d041d03&objectID=5586&indexName=bazaar_retailer_products). 
 This document uses the 
