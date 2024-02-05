@@ -2427,6 +2427,7 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Color_detection',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Shape_detection',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM-tracking',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
                       
