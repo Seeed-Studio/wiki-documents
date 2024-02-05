@@ -428,8 +428,8 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_tinyML_Demo',
-                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_SenseCAP_Cloud_Demo'
-
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_SenseCAP_Cloud_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_SenseCAP_XIAO_ESP32S3',
               ],
             },
             {
@@ -1700,7 +1700,6 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio-E5/LoRa_E5_mini',
                 'Sensor/Wio_Series/Wio-E5/LoRa_E5_Dev_Board',
                 'Sensor/Wio_Series/Wio-E5/LoRa-E5_STM32WLE5JC_Module',
-                'Sensor/Wio_Series/Wio-E5/E5_with_XIAOESP32S3_via_Arduino'
               ],
             },
             {
