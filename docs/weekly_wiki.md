@@ -1,11 +1,11 @@
 ---
-description: Weekly Wiki
+description: Weekly Wiki ✨
 title: Weekly Wiki 
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 01/29/2024
+  date: 02/19/2024
   author: Seraphina
 ---
 
@@ -17,91 +17,64 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is January 29th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is February 19th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Water Cooling Kit installation guide](https://wiki.seeedstudio.com/Cooler_Device)
+### [Wio Terminal - FAQ](https://wiki.seeedstudio.com/wio_terminal_faq/)
 
-This article will guide you through installing the Water Cooling Kit for Raspberry Pi 5.
+Currently, we have added a FAQ for Wio-Terminal, where we regularly update questions that come up more often.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Water_Cooling_Kit/images/1.png" /></div>
-
-
-### [Connect Wio Tracker 1110 to Home Assistant ](https://wiki.seeedstudio.com/wio_tracker_home_assistant)
-
-Integrate the [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) into Home Assistant for real-time tracking and live environmental analysis. [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) is a user-friendly, LoRa-based tracking development platform, you can use the dev board to develop more custom features, making your home environment more intelligent and responsive.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/dog-locate.png" alt="pir" width={800} height="auto" /></p>
+[Q1: How to avoid the program loss after restarting Wio Terminal multiple times](https://wiki.seeedstudio.com/Program_loss_by_repeated_power/)
 
 
-### [Getting Start with FUXA - Web Based SCADA Tool](https://wiki.seeedstudio.com/reTerminal-DM_intro_FUXA/)
+### [How to Use Arduino Uno R4 with LoRa Module](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/)
 
-**Supervisory Control and Data Acquisition (SCADA)** is a critical system in industrial settings designed to monitor and control processes. The integration of SCADA enhances the overall efficiency, safety, and reliability of industrial operations by providing a comprehensive overview and control of the entire system.
+This wiki will guide you on how to use the **Arduino UNO R4, Grove-Wio-E5, and Grove-Temperature & Humidity Sensor** for LoRa communication. This tutorial is designed to provide comprehensive instructions for beginners and intermediate enthusiasts on setting up and implementing wireless communication based on LoRa. It aims to help you master the skills of using Arduino UNO R4 for LoRa communication. Finally, through **ChirpStack**, we will display the data in **Home Assistant**.
 
-FUXA stands as a robust web-based software, enabling the swift creation and deployment of scalable SCADA, HMI, Dashboard, or IIoT systems. With FUXA, you have the capability to craft contemporary process visualizations tailored to your machines, showcasing real-time data and controlling instruments in automated industrial plants.
-
-
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-editor.png" /></center>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN/r4_1.jpeg" alt="pir" width={700} height="auto" /></p>
 
 
-### [LoRaWAN Using Wio-E5 on PlatformIO](https://wiki.seeedstudio.com/platformio_wio_e5/)
+### [Grove - Wio-E5 with XIAO-ESP32-S3 via Arduino](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_XIAO_ESP32S3/)
 
-If you want to learn about Long Range and its features such as network architecture and applications, you can check out this article [LoRapedia, which introduces Long Range and Long Range in detail](https://www.seeedstudio.com/blog/2020/08/03/lorapedia-an-introduction-of-lora-and-lorawan-technology/), It explains what Long Range is, how it works, and its pros and cons.
+The integration of Wio-E5 with XIAO-ESP32-S3 through Arduino presents a robust platform for IoT project development. This guide is designed to assist you in establishing a seamless connection between Wio-E5 and XIAO-ESP32-S3, enabling a wide range of applications and functionalities.
 
-<div style={{ textAlign: 'center' }}>
-
-<img width={680} src="https://wdcdn.qpic.cn/MTIzNDU2Nzg5_993734_kw1N-KbhpVV3i5EZ_1693791639?w=1844&h=904" alt="LoRaWAN Framework " />
-<div style={{ marginTop: '-8px' }}><em>LoRaWAN Network Framework</em></div>
-
-</div> 
-
-<!-- ### [External Camera supported Overview](https://wiki.seeedstudio.com/Grove-vision-ai-v2-camera-supported/)
-
-Grove Vision AI V2 features a standard CSI interface and is compatible with Raspberry Pi cameras. To explore the full potential of the Grove Vision AI V2 you may want a CSI camera separately, we recommend the [**OV5647-62 FOV Camera Module for Raspberry Pi**](https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html).
-
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114110127-ov5647-69.1-fov-camera-module-for-raspberry-pi-3b_4b-font.jpg" style={{width:300, height:'auto'}}/></div>
-
-### [Local Voice Chatbot](https://wiki.seeedstudio.com/Local_Voice_Chatbot/)
-
-As artificial intelligence technology rapidly evolves, voice interaction has become an increasingly important mode of human-computer interaction. Especially in fields like smart homes, personal assistants, and customer service support, the demand for voice chatbots is growing significantly. However, most existing voice chatbots rely on cloud computing services, which raises concerns about data privacy and network latency to some extent.
-
-This project aims to address these issues by building a locally-operated voice chatbot. Utilizing [Nvidia Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html) and [Meta Llama2](https://huggingface.co/meta-llama), we have developed a secure, private, and fast-responding voice interaction system.
-
-<div align="center">
-    <img width={800} 
-     src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/workflow.png" />
-</div>
-
-### [Grove Offline Voice Recognition sensor](https://wiki.seeedstudio.com/Grove-Offline-Voice-Recognition/)
-
-Grove - Offline Voice recognition Module is apt for low power pure-offline voice recognition, based on VC-02 module. It has up to 150 pre-programmed commands that can be used to control your smart appliances. It features an identification time less than 100ms, in a compact form factor of 18mm * 17mm. The module can communicate through the UART peripheral and provide unique Hex Code to each recognised command. 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Offline_Voice_Recognition_Img/headPic.jpg" style={{width:600, height:'auto'}}/></div> -->
-
-<!-- ## Existed Wiki Updated
-
-### [LoRaWAN End Node - SenseCAP Indicator](https://wiki.seeedstudio.com/OpenWrt-Getting-Started/#run-r235-openwrt)
-
-We have added LoRaWAN Downlink & Uplink parts in this wiki.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Grove-Wio-E5_with_XIAO-ESP32-S3_via_Arduino/image1.png"/></div>
 
 
-### [Accessing and Controlling ODYSSEY - X86J41x5 40-Pin GPIO](https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)
+### [Shape Detection with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_Shape_detection/)
 
-We've updated to add the Linux GPIO numbers for Ubuntu 20.04 -->
+Shape detection using OpenCV is a computer vision technique that involves identifying and analyzing geometric shapes within images. **OpenCV provides a comprehensive set of tools for this task, including contour detection, edge detection, and polygonal approximation**. The process typically begins with image preprocessing steps such as grayscale conversion, blurring, and thresholding to enhance shape visibility. The contours extracted from the processed image are then analyzed, and the number of vertices in each contour is used to classify shapes such as **circles, triangles, and rectangles**. OpenCV's versatility in shape detection makes it a powerful tool for applications ranging from object recognition in robotics to quality control in manufacturing.
 
-## The Efforts of Contributor
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/shapedetection.png" /></center> 
 
-<!-- ### [Xiao ESP32C3 ESPHome Smart ThermoStat](https://wiki.seeedstudio.com/esp32c3_smart_thermostat/)
+## Existed Wiki Updated
 
-Thanks our contributor Chris to create Xiao ESP32C3 ESPHome Smart ThermoStat. 
+### [Grove - Sunlight Sensor](https://wiki.seeedstudio.com/Grove-Sunlight_Sensor/#si1145---play-with-arduino)
 
-This wiki will walkthrough step-by-step on how to make a XIAO ESP32C3 ESPHome Smart ThermoStat. 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p> -->
+The Grove - Sunlight Sensor has two versions: one is SI1145, and the other is Si1151. We have currently developed Arduino and Raspberry Pi applications for both versions.
+
+### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
+
+We've updated to add the resources for Grove Vision AI
+
+### [reServer X86 - Pin information](https://wiki.seeedstudio.com/reServer-Getting-Started/#pin-information)
+
+Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference.
+
+## The Efforts of Contributor✨
+
+### [XIAO ESP32C3 Prism Display](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
+
+Thanks our contributor Tim to create XIAO ESP32C3 Prism Display.
+
+This project uses the ESP32C3 to create a three-dimensional display using a splitter prism. This guide works to explain the steps required to build the enclosure, attach associated electronics, and install the firmware. 
+
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p>
 
 
-- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
+<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
 
 
 ## Past Weekly wiki
@@ -146,4 +119,5 @@ This wiki will walkthrough step-by-step on how to make a XIAO ESP32C3 ESPHome Sm
 - [weekly wiki on 12.25th](/Seeed_Elderly/weekly_wiki/wiki1225)
 - [weekly wiki on 2024.1.08th](/Seeed_Elderly/weekly_wiki/wiki240108)
 - [weekly wiki on 2024.1.15th](/Seeed_Elderly/weekly_wiki/wiki240115)
-- [weekly wiki on 2024.1.22th](/Seeed_Elderly/weekly_wiki/wiki240122)
+- [weekly wiki on 2024.1.22nd](/Seeed_Elderly/weekly_wiki/wiki240122)
+- [weekly wiki on 2024.1.29th](/Seeed_Elderly/weekly_wiki/wiki240129)
