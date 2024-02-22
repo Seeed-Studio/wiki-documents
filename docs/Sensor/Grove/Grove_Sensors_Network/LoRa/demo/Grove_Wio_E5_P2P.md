@@ -1,5 +1,5 @@
 ---
-title: Grove - Wio-E5 P2P Example 
+title: Grove - Wio-E5 LoRa P2P Example 
 nointro:
 keywords:
   - docs
@@ -11,20 +11,18 @@ last_update:
   author: Matthew
 ---
 
-## Grove - Wio-E5 P2P Example
-
-This is the example of how to build a Point-to-Point Transmission Application with Grove - Wio-E5 and Seeeduino XIAO.
+This is an example of how to build a LoRa Point-to-Point Transmission Application with Grove - Wio-E5 and Seeed Studio XIAO SAMD21.
 
 ### Preparations
 
 - Grove - Wio E5 *2
-- Seeeduino XIAO* 2
-- Seeeduino XIAO Expansion board *2
-- USB typc cable* 2
+- Seeed Studio XIAO SAMD21* 2
+- XIAO Expansion board *2
+- USB type C cable* 2
 
-If this is your first time using Seeeduino XIAO, please refer to Seeeduino XIAO's [wiki](https://wiki.seeedstudio.com/Seeeduino-XIAO/).
+If this is your first time using Seeed Studio XIAO SAMD21, please refer to this [wiki](https://wiki.seeedstudio.com/Seeeduino-XIAO/).
 
-If this is your first time using Arduino, Please put hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) to start your Arduino journey.
+If this is your first time using Arduino, Please put your hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) to start your Arduino journey.
 
 ### Connecting hardware
 
