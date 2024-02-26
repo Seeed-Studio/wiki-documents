@@ -132,6 +132,15 @@ The settings by default is configured, if you don't know what you're configuring
 
 ## Wi-Fi
 
+### Scipt
+The latest image was shipped with a python script to connect the Wi-Fi much easier, replace the `SSID` and `PASSWORD` to yours:
+
+```sh
+cd ~/WorkSpace/System/net
+sudo python connect_wifi.py SSID PASSWORD
+```
+
+### Manual Connect
 Here we use NetworkManager to manager network, please follow though to connect to Wi-Fi:
 
 - Switch to root user:
