@@ -1,11 +1,11 @@
 ---
-description: Weekly Wiki ✨
+description: Weekly Wiki 
 title: Weekly Wiki 
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 02/19/2024
+  date: 02/26/2024
   author: Seraphina
 ---
 
@@ -17,38 +17,25 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is February 19th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is February 26th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Wio Terminal - FAQ](https://wiki.seeedstudio.com/wio_terminal_faq/)
+### [SenseCAP T1000 Tracker Payload Format](https://wiki.seeedstudio.com/Real_Time_Subtitle_Recoder_on_Jetson/)
 
-Currently, we have added a FAQ for Wio-Terminal, where we regularly update questions that come up more often.
-
-[Q1: How to avoid the program loss after restarting Wio Terminal multiple times](https://wiki.seeedstudio.com/Program_loss_by_repeated_power/)
+The Tracker data protocol provides different packets to correspond to different information, and the number of bytes of each packet may vary. The structure of the frame is shown in the wiki.
 
 
-### [How to Use Arduino Uno R4 with LoRa Module](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/)
 
-This wiki will guide you on how to use the **Arduino UNO R4, Grove-Wio-E5, and Grove-Temperature & Humidity Sensor** for LoRa communication. This tutorial is designed to provide comprehensive instructions for beginners and intermediate enthusiasts on setting up and implementing wireless communication based on LoRa. It aims to help you master the skills of using Arduino UNO R4 for LoRa communication. Finally, through **ChirpStack**, we will display the data in **Home Assistant**.
+### [Real Time Subtitle Recoder on Jetson](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN/r4_1.jpeg" alt="pir" width={700} height="auto" /></p>
+Here we introduce you Real Time Subtitle Recoder on Jetson, which can offer real-time speech-to-subtitle services while avoiding information leakage on the internet. Meeting content can be transcribed and displayed on screens using an AL model in subtitle form, which can protect meeting privacy and reduce meeting recorder workload.
 
-
-### [Grove - Wio-E5 with XIAO-ESP32-S3 via Arduino](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_XIAO_ESP32S3/)
-
-The integration of Wio-E5 with XIAO-ESP32-S3 through Arduino presents a robust platform for IoT project development. This guide is designed to assist you in establishing a seamless connection between Wio-E5 and XIAO-ESP32-S3, enabling a wide range of applications and functionalities.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Grove-Wio-E5_with_XIAO-ESP32-S3_via_Arduino/image1.png"/></div>
+<p style={{textAlign: 'center'}}><img src="https://github.com/Seeed-Projects/Real-time-Subtitle-Recorder-on-Jetson/raw/main/sources/recorder_hardware_connection.png" alt="pir" width={800} height="auto" /></p>
 
 
-### [Shape Detection with reTerminal and Pi camera with OpenCV](https://wiki.seeedstudio.com/reTerminal_DM_Shape_detection/)
 
-Shape detection using OpenCV is a computer vision technique that involves identifying and analyzing geometric shapes within images. **OpenCV provides a comprehensive set of tools for this task, including contour detection, edge detection, and polygonal approximation**. The process typically begins with image preprocessing steps such as grayscale conversion, blurring, and thresholding to enhance shape visibility. The contours extracted from the processed image are then analyzed, and the number of vertices in each contour is used to classify shapes such as **circles, triangles, and rectangles**. OpenCV's versatility in shape detection makes it a powerful tool for applications ranging from object recognition in robotics to quality control in manufacturing.
-
-<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/shapedetection.png" /></center> 
-
-## Existed Wiki Updated
+<!-- ## Existed Wiki Updated
 
 ### [Grove - Sunlight Sensor](https://wiki.seeedstudio.com/Grove-Sunlight_Sensor/#si1145---play-with-arduino)
 
@@ -60,21 +47,21 @@ We've updated to add the resources for Grove Vision AI
 
 ### [reServer X86 - Pin information](https://wiki.seeedstudio.com/reServer-Getting-Started/#pin-information)
 
-Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference.
+Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference. -->
 
-## The Efforts of Contributor✨
+## The Efforts of Contributor
 
-### [XIAO ESP32C3 Prism Display](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
+<!-- ### [XIAO ESP32C3 Prism Display](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
 
 Thanks our contributor Tim to create XIAO ESP32C3 Prism Display.
 
 This project uses the ESP32C3 to create a three-dimensional display using a splitter prism. This guide works to explain the steps required to build the enclosure, attach associated electronics, and install the firmware. 
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p> -->
 
 
-<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
+- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
 
 
 ## Past Weekly wiki
@@ -121,3 +108,4 @@ This project uses the ESP32C3 to create a three-dimensional display using a spli
 - [weekly wiki on 2024.1.15th](/Seeed_Elderly/weekly_wiki/wiki240115)
 - [weekly wiki on 2024.1.22nd](/Seeed_Elderly/weekly_wiki/wiki240122)
 - [weekly wiki on 2024.1.29th](/Seeed_Elderly/weekly_wiki/wiki240129)
+- [weekly wiki on 2024.2.16th](/Seeed_Elderly/weekly_wiki/wiki240219)
