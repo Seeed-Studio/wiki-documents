@@ -159,7 +159,7 @@ framework = arduino
 
 ### Importing Libraries Directly
 
-To import libraries directly to PlatformIO from Github, you can configure the `platform.ini` and add the `lib_deps` with the dependent library url as followed:
+To import libraries directly to PlatformIO from Github, you can configure the `platformio.ini` and add the `lib_deps` with the dependent library url as followed:
 
 ```ini
 lib_deps = https://github.com/Seeed-Studio/Seeed_Arduino_LIS3DHTR
@@ -201,7 +201,7 @@ void loop() {
 
 ### Importing from Arduino
 
-Other way to import libraries is that to point to the Arduino library path in the `platform.ini` config file, For Example:
+Other way to import libraries is that to point to the Arduino library path in the `platformio.ini` config file, For Example:
 
 ```ini
 lib_extra_dirs = /Users/{username}/Documents/Arduino/libraries
@@ -215,7 +215,7 @@ For more Library options, please see [**PlatformIO Library docs**](https://docs.
 
 ## Using the Latest ArduinoCore Library for Seeed
 
-The ArduinoCore in PlatformIO is maintained by PlatformIO itself and sometimes, it is not up to date with the latest released version from Seeed. In this case, you may use the following `platform.ini`, for Example:
+The ArduinoCore in PlatformIO is maintained by PlatformIO itself and sometimes, it is not up to date with the latest released version from Seeed. In this case, you may use the following `platformio.ini`, for Example:
 
 ```ini
 ; PlatformIO Project Configuration File
