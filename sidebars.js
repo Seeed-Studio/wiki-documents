@@ -2695,6 +2695,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
                 'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Deploy_Riva_and_Llama2_on_reComputer',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Real_Time_Subtitle_Recoder_on_Jetson'
               ],
             },
 

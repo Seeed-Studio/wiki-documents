@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: RTC Overview
 keywords:
 - Wio_terminal RTC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
-title: Getting Started
+title: Getting Started with Seeed Studio XIAO nRF52840 (Sense) 开发板
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
