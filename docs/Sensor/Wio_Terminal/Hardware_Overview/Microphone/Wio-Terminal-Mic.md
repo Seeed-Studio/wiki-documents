@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Getting Started with Microphone
 keywords:
 - Wio_terminal Microphone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
