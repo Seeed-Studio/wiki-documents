@@ -11,23 +11,26 @@ last_update:
   author: Matthew
 ---
 
-![](https://files.seeedstudio.com/products/113020091/%E5%AE%98%E7%BD%91/11302009_Preview-34.png)
+![](https://files.seeedstudio.com/wiki/Grove-Wio-E5/1.jpg)
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-LoRa-E5-STM32WLE5JC-p-4867.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
 
 > LoRaWAN® is a mark used under license from the LoRa Alliance®.
 The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
 
-Grove Wio-E5 embedded with Wio-E5 STM32WLE5JC, powered by ARM Cortex M4 ultra-low-power MCU core and Wio SX126x, is a wireless radio module supporting LoRa® and LoRaWAN® protocol on the EU868 & US915 frequency and (G)FSK, BPSK, (G)MSK, LoRa® modulations. Grove - Wio-E5 can endow your development boards' strong features of ultra-long transmitting range by easily plug and play with Grove connector on board.
+Before delving into the Grove Wio-E5, let's briefly understand the Wio-E5.
+
+The [Wio-E5](https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html) powered by the STM32WLE5JC, which integratis an ARM Cortex M4 ultra-low-power MCU and LoRa® RF radio SX126x into a single chip. It's a wireless RF module supporting LoRa® and LoRaWAN® protocols on EU868 and US915 frequencies, as well as (G)FSK, BPSK, (G)MSK, and LoRa® modulation. And it has obtained FCC, CE, IC and Telec certifications (For more information about Wio-E5, refer to the [Wio-E5 wiki](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/).)
+
+The [Grove Wio-E5](https://www.seeedstudio.com/Grove-LoRa-E5-STM32WLE5JC-p-4867.html) embeds this ultra-low-power Wio-E5. With onboard Grove connectors for easy plug-and-play integration, it provides your development board with powerful capabilities for ultra-long-range transmission.
+
 
 As an upgrade of our old version - [Grove - Long Range 868MHz](https://www.seeedstudio.com/Grove-LoRa-Radio-868MHz.html) - powered by [RFM95 ultra-long-range Transceiver Module](https://www.seeedstudio.com/RFM95-Ultra-long-Range-Transceiver-Module-LoRa-Module-support-868M-frequency-p-2807.html), Grove LoRa-E5 embedded with [Wio-E5 STM32WLE5JC Module](https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html) is a high-performance and easy-to-use wireless radio LoRa® module supporting LoRaWAN® protocol.
 
-Wio-E5 LoRaWAN® STM32WLE5JC module is the major functional part integrated into Grove - Wio-E5. It is a LoRaWAN® module that embedded with ARM Cortex M4 ultra-low-power MCU core and Wio SX126x, as the world-first combo of LoRa® RF and MCU chip into one single tiny module, it supports (G)FSK, BPSK, (G)MSK, and LoRa® modulations, and is FCC, CE certified. (Learn more about Wio-E5 from [Wio-E5 wiki](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/))
-
 More comparison between the Wio-E5 and RFM95 chip:
-![](https://files.seeedstudio.com/products/113990934/%E8%8A%AF%E7%89%87%E5%AF%B9%E6%AF%94_2021.3.4.png)
+![](https://files.seeedstudio.com/wiki/Grove-Wio-E5/2.png)
 
-By connecting Grove - Wio-E5 to your development boards, your devices are able to communicate with and control Wio-E5 conveniently by AT command through UART connection. Grove LoRa-E5 will be a superior choice for IoT device development, testing, and long-distance, ultra-low power consumption IoT scenarios like smart agriculture, smart office, and smart industry. It is designed with industrial standards with a wide working temperature at -40℃ ~ 85℃, high sensitivity between -116.5 dBm and -136 dBm, and power output between 10 dBm and 22 dBm.
+By connecting Grove - Wio-E5 to your development boards, your devices are able to communicate with and control Wio-E5 conveniently by AT command through UART connection. Grove Wio-E5 will be a superior choice for IoT device development, testing, and long-distance, ultra-low power consumption IoT scenarios like smart agriculture, smart office, and smart industry. It is designed with industrial standards with a wide working temperature at -40℃ ~ 85℃, high sensitivity between -116.5 dBm and -136 dBm, and power output between 10 dBm and 22 dBm.
 
 ## Features
 
@@ -174,6 +177,8 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 1. [Grove - Wio-E5 P2P Example](https://wiki.seeedstudio.com/Grove_Wio_E5_P2P/)
 2. [Grove - Wio-E5 TTN Demo](https://wiki.seeedstudio.com/Grove_Wio_E5_TTN_Demo/)
 3. [Grove - Wio-E5 Helium Demo](https://wiki.seeedstudio.com/Grove_Wio_E5_Helium_Demo/)
+4. [Grove - Wio-E5 Used with Arduino Uno R4 Demo](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/)
+5. [Grove - Wio-E5 Used with XIAO ESP32S3 Demo](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_XIAO_ESP32S3/)
 
 ## Resources
 
@@ -185,7 +190,7 @@ Datasheet:
 
 - <p><a href="http://files.seeedstudio.com/products/113020091/Grove%20-%20LoRa%20-E5%20v1.0.sch">Grove Wio-E5 v1.0.sch</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf">Wio-E5 datasheet and specifications</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.1.pdf">Wio-E5 datasheet and specifications</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Wio-E5 AT Command Specification</a></p>
 
@@ -198,6 +203,10 @@ Certifications:
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">Wio-E5-HF FCC Certification -DSS</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">Wio-E5-HF FCC Certification -DTS</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/Telec.zip">WWio-E5-HF TELEC Certification</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20IC%20ID.pdf">Wio-E5-HF IC Certification</a></p>
 
 Relevant SDK:
 
