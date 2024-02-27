@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Getting Started with Configurable Buttons
 keywords:
 - Wio_terminal Configurable_Buttons
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

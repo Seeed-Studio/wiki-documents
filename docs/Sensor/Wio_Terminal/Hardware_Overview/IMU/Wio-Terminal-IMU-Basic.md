@@ -1,6 +1,6 @@
 ---
 description: Getting Started
-title: Getting Started
+title: Getting Started with accelerometer
 keywords:
 - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

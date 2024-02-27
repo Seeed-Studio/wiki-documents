@@ -1,6 +1,6 @@
 ---
 description: Getting Started
-title: Getting Started
+title: Getting Started with TensorFlow Lite on Seeed Studio XIAO nRF52840 Sense
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

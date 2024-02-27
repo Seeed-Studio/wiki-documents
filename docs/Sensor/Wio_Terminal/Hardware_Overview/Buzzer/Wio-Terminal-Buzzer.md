@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Getting Started with Buzzer
 keywords:
 - Wio_terminal Buzzer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
