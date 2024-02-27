@@ -1,6 +1,6 @@
 ---
 description: Grove - Wio-E5 with XIAO-ESP32-S3 via Arduino
-title: Grove - Wio-E5 SenseCAP Cloud with XIAO ESP32S3
+title: Grove - Wio-E5 Used with XIAO ESP32S3 Demo
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,7 +10,7 @@ last_update:
   author: Yvonne
 ---
 
-# Grove - Wio-E5 and XIAO ESP32S3 on SenseCAP Cloud with Arduino
+# How to Use XIAO ESP32S3 with LoRa Module via Arduino
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Grove-Wio-E5_with_XIAO-ESP32-S3_via_Arduino/image1.png"/></div>
 
