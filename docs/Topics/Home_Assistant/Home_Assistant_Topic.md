@@ -316,7 +316,7 @@ The [**SenseCraft-HomeAssistant plugin**](https://github.com/Seeed-Solution/Sens
 </div>
 <br/>
 
-## Seeed Powered Home Assistant Applications 
+## Seeed powered Home Assistant Applications 
 <br/>
 
 Explore inspiring projects featuring Seeed Studios products, where the versatility of Home Assistant OS shines in creating innovative solutions for residences to urban landscapes alike.
