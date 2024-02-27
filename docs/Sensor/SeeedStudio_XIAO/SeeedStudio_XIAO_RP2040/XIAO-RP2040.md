@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Getting Started
+title: Getting Started with Seeed Studio XIAO RP2040
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg
