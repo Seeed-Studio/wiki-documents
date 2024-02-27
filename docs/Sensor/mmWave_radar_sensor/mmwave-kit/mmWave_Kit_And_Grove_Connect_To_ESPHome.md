@@ -332,11 +332,14 @@ binary_sensor:
 
 You can refer light sensor or temperature and humidity sensor above.
 
-Finally, you can see the effect in the video below.
+#### Other sensors with Yaml files
 
-<div class="table-center">
-<iframe width="280" height="500" src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/fire_sensor.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
+Supported by [Seeed Studio Contributor Program](https://github.com/orgs/Seeed-Studio/projects/12/views/1), thanks Mohammed and there are more supported sensors below:
+
+[ATH20 sensor](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/mmWave-kit-sensor-add-grove/AHT20.yaml)
+[SHT35 sensor](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/mmWave-kit-sensor-add-grove/SHT35.yaml)
+[SHT40 sensor](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/mmWave-kit-sensor-add-grove/SHT40.yaml)
+[Vibration Sensor](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/mmWave-kit-sensor-add-grove/Vibration%20Sensor.yaml)
 
 ## Tech Support & Product Discussion
 
