@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /home_assistant_topic
 last_update:
   date: 2/26/2024
-  author: Matthew and Kasun Thushara 
+  author: Matthew, Jenna and Kasun Thushara
 ---
 
 
