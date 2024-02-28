@@ -122,6 +122,8 @@ sudo rm -r /opt/n3uron
 To access the N3uron WebUI, follow these steps:
 
 **Step 1:** Open a web browser on your local machine.
+
+
 **Step 2:** Enter one of the following addresses into the browser's address bar:
 - For local access: http://localhost:8003. 
 - For remote access within the local area network (LAN): http://reTerminal_IpAddress:8003.
@@ -129,6 +131,7 @@ To access the N3uron WebUI, follow these steps:
 - For secured remote access within the local area network (LAN): https://reTerminal_IpAddress:8443.
 
 **Step 3:** Press Enter to navigate to the N3uron WebUI login page.
+
 **Step 4:** Enter the default username **admin** and password **n3uron** when prompted.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_4.gif" /></center>
@@ -184,9 +187,11 @@ Additionally, establish a Tag filter path for each role. Tag filter path access 
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_7.gif" /></center>
 
-- Useful links:
-[Users and Roles Configuration](https://docs.n3uron.com/docs/platform-security-users-and-roles)
-[Access Configuration](https://docs.n3uron.com/docs/web-vision-configuration#access-configuration)
+- Useful Links 
+
+  - [Users and Roles Configuration](https://docs.n3uron.com/docs/platform-security-users-and-roles)
+
+  - [Access Configuration](https://docs.n3uron.com/docs/web-vision-configuration#access-configuration)
 
 **Step 5:** To test our initial WebVision screen, let's create a tag. Go to the WebUI, select **Config**, and then click on **Tag**. In the **Model** section, click on the menu and choose **New Tag**. Name it **TestTag**, for instance, select the type as **Number**, grant it **Read-Write permission**, initialize it to 0 (optional) and then save the settings.
 
