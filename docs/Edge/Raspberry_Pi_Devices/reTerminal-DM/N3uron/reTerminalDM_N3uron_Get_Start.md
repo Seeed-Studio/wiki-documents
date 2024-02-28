@@ -30,7 +30,6 @@ With N3uron, you can easily create bidirectional data pipelines between OT and I
 - **Extremely efficient**: A single node can easily manage several hundred thousand tags, while maintaining low hardware requirements.
 - **Scalable and versatile architecture**: From its inception, N3uron was conceived to seamlessly deploy distributed architectures with several hundred or thousand nodes. Users can connect multiple nodes quickly using N3uron Links, effortlessly scaling their architecture to suit their needs.
 
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_2.png" /></center>
 
 ## Prerequisites
 
