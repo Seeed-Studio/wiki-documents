@@ -81,7 +81,7 @@ Let's take a closer look at the [SenseCAP Indicator](https://www.seeedstudio.com
 
 <!-- |Regional parameters|RP002-1.0.3| -->
 
-## 1. Obtain Firmware {#flash_firmware}
+## Step 1. Obtain Firmware {#flash_firmware}
 
 ### 1.1 Download Firmware:
 
@@ -152,7 +152,7 @@ If you encounter issues during flashing, consider reducing the **baud speed** or
 
 Once the firmware is successfully flashed, retrieve essential parameters like the Device EUI and APPkey from the LoRaWAN Network Server from the subsequent steps.
 
-## 2. Register the Device on LoRaWAN Network Server {#HEAD_register_device}
+## Step 2. Register the Device on LoRaWAN Network Server {#HEAD_register_device}
 
 > Before starting, ensure your device is within a LoRaWAN network's coverage area.
 
@@ -402,7 +402,7 @@ lorawan --eui 5d61e4648dc926e2 --app_key ec2b966c2c4bbe94a6ef79d0479db0e5
 
 For additional commands and assistance, refer to the [console command](#commands) section.
 
-## 3. Configure SenseCAP Indicator to Join Network{#configure_credentials}
+## Step 3. Configure SenseCAP Indicator to Join Network{#configure_credentials}
 
 To establish a connection with your SenseCAP Indicator, you can use any **serial tool**([Minicom](https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom), [Putty](https://www.putty.org/), etc.) or just use `idf monitor`(follow the detailed [instructions provided in the ESP-IDF documentation](https://docs.espressif.com/projects/esp-idf/en/v5.1.2/esp32/api-guides/tools/idf-monitor.html)):
 
@@ -433,7 +433,7 @@ When you pressed the *Join* button, you'll be able to observe the connection pro
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bin_console.png"/>
 </div>
 
-## **Sending and Receiving Messages** {#uplink_and_downlink}
+## Step 4 **Sending and Receiving Messages** {#uplink_and_downlink}
 
 In this section, we will walk you through the process of monitoring both uplink and downlink communications between your device and the LoRaWAN network.[^4]
 
