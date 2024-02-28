@@ -87,6 +87,69 @@ Machine learning is a field of computer systems that aims to develop self-improv
 
 <br />
 
+
+### Seeed Studio XIAO RP2040
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <br />
+        <img src="https://files.seeedstudio.com/wiki/xiao_topicpage/rp2040.jpg" style={{width:800, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_vertical">
+        <font size={"2"}>XIAO RP2040 is an ultra small, high performance universal development board. Features onboard 2MB flash, micropython support</font>
+        <br /><font size={"3"}><strong>GETTING STARTED FAST</strong></font>
+        <font size={"2"}>Support Arduino/Micropython/CircuitPython</font>
+        <br /><font size={"3"}><strong>COST-EFFECTIVE</strong></font>
+        <font size={"2"}>Lower the barrier to entry</font>
+        <br /><font size={"3"}><strong>MORE POWERFUL MCU (RP2040)</strong></font>
+        <font size={"2"}>Dual-core ARM Cortex M0+ Raspberry PI RP2040 chip, running up to 133 MHz</font>
+        <br /><font size={"3"}><strong>RICH ON-CHIP MEMORY</strong></font>
+        <font size={"2"}>264KB of SRAM, 2MB of onboard Flash</font>
+        <br /><font size={"3"}><strong>INTERFACE RICH</strong></font>
+        <font size={"2"}>11 digital pins, 4 analog pins, 11 PWM Pins, 1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface</font>
+    </div>
+</div>
+
+<br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
+</div>
+
+<br />
+
+### Seeed Studio XIAO SAMD21
+
+<div class="all_container">
+    <div class="xiao_topic_page_vertical">
+        <font size={"2"}>XIAO SAMD21 is an ultra small, high performance universal development board</font>
+        <br /><font size={"3"}><strong>USERS’ FAVOURITE</strong></font>
+        <font size={"2"}>First pioneering product of XIAO series!</font>
+        <br /><font size={"3"}><strong>THUMB-SIZED</strong></font>
+        <font size={"2"}>The smallest Arduino-compatible board in Seeed Studio board Family</font>
+        <br /><font size={"3"}><strong>POWERFUL MCU (SAMD21)</strong></font>
+        <font size={"2"}>ARM® Cortex®-M0+ 32bit 48MHz microcontroller(SAMD21G18) with 256KB Flash,32KB SRAM</font>
+        <br /><font size={"3"}><strong>FLEXIBLE COMPATIBILITY</strong></font>
+        <font size={"2"}>Compatible with Arduino IDE, Breadboard-friendly</font>
+        <br /><font size={"3"}><strong>INTERFACE RICH</strong></font>
+        <font size={"2"}>11 digital/analog pins, 10 PWM Pins, 1 DAC output, 1 SWD Bonding pad interface, 1 I2C interface, 1 UART interface, 1 SPI interface</font>
+    </div>
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/xiao_topicpage/samd21.jpg" style={{width:800, height:'auto'}}/>
+    </div>
+</div>
+
+<br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Seeeduino-XIAO/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
+</div>
+
+<br />
+
+
 ### Wio Terminal
 
 <div class="all_container">
