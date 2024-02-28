@@ -2517,6 +2517,15 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
                 ],
               },
+
+              {
+                type: 'category',
+                label: 'N3uron',
+                items: [
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminalDM_N3uron_Get_Start',
+                ],
+              },
+
               {
                 type: 'category',
                 label: 'Ignition Edge',

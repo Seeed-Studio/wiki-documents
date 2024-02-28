@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /home_assistant_topic
 last_update:
   date: 2/26/2024
-  author: Matthew and Kasun Thushara 
+  author: Matthew, Jenna and Kasun Thushara
 ---
 
 
@@ -316,7 +316,7 @@ The [**SenseCraft-HomeAssistant plugin**](https://github.com/Seeed-Solution/Sens
 </div>
 <br/>
 
-## Seeed Studio Hacks: Seeed and Home Assistant Applications
+## Seeed powered Home Assistant Applications 
 <br/>
 
 Explore inspiring projects featuring Seeed Studios products, where the versatility of Home Assistant OS shines in creating innovative solutions for residences to urban landscapes alike.
@@ -327,7 +327,7 @@ Explore inspiring projects featuring Seeed Studios products, where the versatili
 	<table class="table-nobg">
     <tr class="table-trnobg">
     <th class="table-trnobg">Smart ThermoStat</th>
-    <th class="table-trnobg">Comovis (Co2 ,Temperature and Humidity Sensor for EspHome)</th>
+    <th class="table-trnobg">Comovis (Co2 ,Temperature and Humidity Sensor for ESPHome)</th>
       <th class="table-trnobg">Home Assistant Grove All-in-one Environmental Sensor Guide</th>
       </tr>
     <tr class="table-trnobg"></tr>
@@ -354,9 +354,9 @@ Explore inspiring projects featuring Seeed Studios products, where the versatili
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-    <th class="table-trnobg">Human presence detection using the 24GHz mmWave</th>
+    <th class="table-trnobg">Human Presence Detection Using the 24GHz mmWave</th>
     <th class="table-trnobg">4 Node Home-Automation System Using Smallest ESP32</th>
-      <th class="table-trnobg">Connect Grove Modules to Home Assistant using ESPHome</th>
+      <th class="table-trnobg">Connect Grove Modules to Home Assistant Using ESPHome</th>
       </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
@@ -385,7 +385,7 @@ Explore inspiring projects featuring Seeed Studios products, where the versatili
     <tr class="table-trnobg">
     <th class="table-trnobg">Building a Smart Outdoor Environment</th>
     <th class="table-trnobg">SenseCAP Indicator - Matter Application Development</th>
-      <th class="table-trnobg">Create own sensor node with Home Assistant via ESPHome</th>
+      <th class="table-trnobg">Create Own Sensor Node with Home Assistant via ESPHome</th>
       </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
@@ -447,7 +447,7 @@ Explore inspiring projects featuring Seeed Studios products, where the versatili
     <tr class="table-trnobg">
     <th class="table-trnobg">Configuring Essential Add-Ons, Intergations in Home Assistant</th>
     <th class="table-trnobg">Intergating Weather Station to Home Assistant</th>
-      <th class="table-trnobg">Customize your smart home experience with different add-ons and integrations</th>
+      <th class="table-trnobg">Customize Your Smart Home Experience with Different Add-ons and Integrations</th>
       </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">

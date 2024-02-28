@@ -1445,6 +1445,8 @@ The standard version of the reTerminal DM does not support SSD and requires the 
 
 *  [reTerminal DM Datasheet](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminalDM_datasheet.pdf)
 *  [reTerminal DM User Manual](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-User-Manual.pdf)
+*  [reTerminal DM Schematic Design & PCB Design & Gerber Files](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal_DM_schematic_design_files.zip)
+*  [reTerminal DM Structural Design File.stp](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-Structural-Design-File.stp)
 
 ## Tech Support & Product Discussion
 
