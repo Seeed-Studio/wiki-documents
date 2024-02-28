@@ -6,104 +6,93 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Sensor_Intro
 last_update:
-  date: 07/19/2023
-  author: Matthew
+  date: 02/27/2024
+  author: Jessie
 ---
 
-## Different types of SenseCAP sensors
-
-- We have different kinds of SenseCAP sensors as you can see on the left side. 
-- Here is a small part of entire SenseCAP sensor ecosystem:
-
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP LoRaWAN Sensor</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP LoRaWAN sensors offer multiple ambient data sensing, using LoRa data communication method with industrial hardware design.</font></div>
-    </div>
-</div>
-
-<div class="independent_container">
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S210X Series Sensors</font></div>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}> PDF Download of SenseCAP S210X Sereis User Guide</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperature and Humidity</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Wireless Light Intensity</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperature, Humidity and CO2</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Soil Moisture and Temperature</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Soil Moisture, Temperature and EC</font></span></a>
-            <br/>
-    </div>
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S2120 8-in-1 Sensor</font></div>
-            <a href="https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction of SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor </font></span></a>
-            <br/>
-            <a href="https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Getting Started</font></span></a>
-            <br/>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> - Air Temperature, Air Humidity, Barometric Pressure, Wind Speed, Wind Direction, Light Intensity, UV Index,  Rainfall Intensity</font></span></a>
-            <br/>
-    </div>
-</div>
-
-<div class="intro_container">
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP A1101 - Vision AI Sensor</font></div>
-            <a href="https://wiki.seeedstudio.com/SenseCAP-Vision-AI-Get-Started/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Getting Started with SenseCAP Vision AI</font></span></a>
-            <br/>
-            <a href="https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Train and Deploy Your Own AI Model Into SenseCAP A1101</font></span></a>
-            <br/>
-            <a href="https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> One Stop Model Training with Edge Impulse</font></span></a>
-            <br/>
-            <a href="https://wiki.seeedstudio.com/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101/" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Train Water Meter Digits Recognition Model with SenseCAP A1101</font></span></a>
-    </div>
-</div>
-
-<br/>
-<br/>
 
 
-<div class="independent_container">
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Sensor Probes</font></div>
-            <a href="/Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Liquid Level Detecting</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water Leak Warning</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> pH Meter for Soil Conditions and Water Quality</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature Probe</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Soil Moisture & Temperature & EC Probe</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RS485 500cm Ultrasonic Level Sensor</font></span></a>
-    </div>
-</div>
 
-<br/>
-<br/>
+## LoRaWAN Sensor
 
 
-<div class="intro_container">
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP ONE Weather Sensors</font></div>
-            <a href="/Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperature, Humidity, Atmospheric Pressure, and Light</font></span></a>
-            <br/>
-            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of SenseCAP ONE Weather Sensor Sereis User Guide</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperature, Humidity, Barometric Pressure, Wind Speed, and Wind Direction</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperature, Humidity, Wind Speed/Direction, Barometric Pressure, Light Intensity, Precipitation Intensity</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - 9-in-1 sensor, capable of sensing PM2.5 and PM10</font></span></a>
-            <br/>
-            <a><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - 10-in-1 sensor, capable of sensing CO2, PM2.5 and PM10</font></span></a>
-    </div>
-</div>
+### SenseCAP S210x Series Sensors
+
+SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/lorawan-sensors.png" alt="pir" width={1000} height="auto" /></p>
+
+
+|Air Temp & Humidity|Light|Air TH & CO2|Soil Moisture & Temp|
+|------------------|--------------------------|-----------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2101.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2102.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2103.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2104.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html)</p>|
+
+|Soil Moisture & Temp & EC|PH|PT100 Temperature|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2105.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2106.png" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993078-sensecap-s2107-temperature-sensor-45font.jpg" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2107-Temperature-Sensor-p-5807.html)</p>
+
+
+### SenseCAP S2120 8-in-1 Weather Sensor
+
+[SenseCAP LoRaWAN S2120 Weather Station](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.htm) collects and uploads air temperature, humidity, wind speed/direction, Rainfall Intensity, light intensity, UV index, and barometric pressure data supported by worldwide LoRaWAN networks. The S2120 weather station is suitable for applications in gardens, agriculture, meteorology, urban environmental monitoring, and other scenarios. It also enables low maintenance cost for its ultra-low power consumption, reliable performance, built-in Bluetooth for OTA configuration and remote device management.
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={600} height="auto" /></p>
+
+### SenseCAP A1101 Vision AI Sensor
+
+
+[The SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) - LoRaWAN Vision AI Sensor combines TinyML AI technology and LoRaWAN long-range transmission to create a low-power, high-performance AI device solution for both indoor and outdoor use. This sensor features Himax's high-performance, low-power AI vision solution, which supports training with Google TensorFlow Lite, Edge Impulse, and multiple TinyML AI platforms.
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg" alt="pir" width={600} height="auto" /></p>
+
+
+
+## SenseCAP Weather Sensors
+
+Today, data on localized weather, known as microclimates, is the new frontier for more precise and accurate weather forecasting. As a result, the collection of weather data is becoming increasingly smaller and gridded. In light of this, weather stations, which are the most convenient means of collecting weather data, are seeing a rise in demand. SenseCAP offers all-in-one weather sensors to help you collect and monitor environmental data for various scenarios.
+
+
+
+<p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
+
+SenseCAP ONE is a series of all-in-one compact weather sensors, that integrate multiple sensors into this compact device, monitoring up to 10 weather parameters: air temperature, air humidity, atmospheric pressure, light intensity, wind speed, wind direction, precipitation, PM 2.5, PM 10, and CO2.
+
+||Air Temperature|Air Humidity|Air Pressure|Light|Wind Speed|Wind Direction|Rainfall|PM2.5|PM10|CO2|Noise|
+|--|--|--|--|--|--|--|--|--|--|--|--|
+|<p style={{textAlign: 'center'}}>[S200](https://www.seeedstudio.com/SenseCAP-S200-Wind-Speed-and-Direction-Sensor-p-5693.html)</p>|||||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||||||
+|<p style={{textAlign: 'center'}}>[S500](https://www.seeedstudio.com/SenseCAP-S500-5-in-1-Compact-Weather-Station-p-5652.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||||||
+|<p style={{textAlign: 'center'}}>[S700](https://www.seeedstudio.com/SenseCAP-S700-7-in-1-Compact-Weather-Station-p-5651.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|||||
+|<p style={{textAlign: 'center'}}>[S800](https://www.seeedstudio.com/SenseCAP-S800-8-in-1-Compact-Weather-Station-p-5653.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|
+|<p style={{textAlign: 'center'}}>[S1000](https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||
+
+
+
+## Sensor Probes
+
+To bring more convenience for your applications, we also provide RS485 sensor probes detecting soil moisture, temperature, soil electrical conductivity, and pH level. There will also be more RS485 sensors coming out soon.
+
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/751082a4ebef3470bf20ee2e9523bbd4.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
+
+|Liquid Level|Soil Moisture & Temperature|Soil Moisture & Temperature & EC|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/Liquid_Level_Sensor/img/01_14_4.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_Sensor/101990668_2.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/101990667_2.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Liquid-Level-Sensor-p-4619.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02-p-4634.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02-p-4633.html)</p>|
+
+|RS485 500cm Ultrasonic Level|RS485 700cm Ultrasonic Level|PH|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%201.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/Image/101990666_2.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-500cm-Ultrasonic-Level-Sensor-p-5588.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/RS485-pH-Sensor-S-pH-01A-p-4632.html)</p>|
+
+|Optical Rain Gauge RG-9|Optical Rain Gauge RG-15|Water Leak Detector|
+|------------------|--------------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/Optical_Rain_Gauge_RG-9/0000_front-05.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/114992321-07.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Water_Leak_Detector/pic.PNG" alt="pir" width={270} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-9-p-4744.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Water-Leak-Detector-p-4620.html)</p>|
+
+
+
 
 ## ✨ Contributor Project
 
