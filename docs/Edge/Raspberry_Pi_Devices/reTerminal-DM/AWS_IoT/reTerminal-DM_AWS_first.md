@@ -47,8 +47,7 @@ We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from 
 In your terminal type :
 
 ```sh
-sudo pip3 install paho-mqtt
-
+sudo pip3 install "paho-mqtt<2.0.0"
 ```
 
 :::note
@@ -173,6 +172,7 @@ To do that :
 - **Step 03** : Replace those file names with yours and run the file
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/cosw1.PNG" style={{width:800, height:'auto'}}/></div>
+
 
 ## Test the Connection 
 

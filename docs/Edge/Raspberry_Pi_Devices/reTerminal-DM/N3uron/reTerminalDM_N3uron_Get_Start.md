@@ -16,7 +16,7 @@ last_update:
 
 ## What is N3uron?
 
-N3uron is a complete **Industrial Edge Platform for IIoT & DataOps** that enables seamless integration between the industrial plant floor and third-party applications, whether on-premises or in the cloud.
+[N3uron](https://n3uron.com/) is a complete **Industrial Edge Platform for IIoT & DataOps** that enables seamless integration between the industrial plant floor and third-party applications, whether on-premises or in the cloud.
 
 With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing, and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
 
@@ -161,7 +161,7 @@ For more information, please visit our dedicated website for WebVision in our [K
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_5.gif" /></center>
 
-**Step 3:**Navigate to the main configuration of WebVision and choose the appropriate server settings. The default settings should suffice for most use cases. For further details, please refer to the following link: [WebVision Initial Configuration](https://docs.n3uron.com/docs/web-vision-configuration).
+**Step 3:** Navigate to the main configuration of WebVision and choose the appropriate server settings. The default settings should suffice for most use cases. For further details, please refer to the following link: [WebVision Initial Configuration](https://docs.n3uron.com/docs/web-vision-configuration).
 
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_6.png" /></center>
@@ -238,8 +238,6 @@ N3uron's WebVision module paired with Seeed Studio's reTerminal DM delivers powe
 What you've seen is just the beginning. Embrace the limitless possibilities offered by its impressive array of nearly 50 modules. Dare to dream big, innovate, and take your projects to new heights with N3uron's cutting-edge features. For a deeper dive into this powerful platform, visit [https://n3uron.com/](https://n3uron.com/) and embark on an exciting journey of discovery!
 
 ## Tech support
-
-
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
