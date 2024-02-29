@@ -1,51 +1,26 @@
 ---
-description: SenseCAP Data Logger Guide
-title: SenseCAP Data Logger Guide
+description: SenseCAP Data Logger Introduction
+title: SenseCAP Data Logger 
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Data_Logger_Intro
 last_update:
-  date: 07/19/2023
-  author: Matthew
+  date: 02/28/204
+  author: Jessie
 ---
 
-## Different types of SenseCAP Data Logger Guide
+Data Logger serves as the bridge to up to 200+ sensors covering industrial-level sensors, Grove sensors and Analog/RS485/GPIO sensors.
 
-- We have different kinds of SenseCAP Data Logger as you can see on the left side. 
-- Here is a small part of entire SenseCAP Data Logger ecosystem:
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/8939fbb3c723aea6c946d42bd464ee32-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
 
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Data Logger</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Data Logger can connect to MODBUS-RTU RS485/Analog/GPIO sensors and transmit data from sensors to the LoRaWAN® / 4G network </font></div>
-    </div>
-</div>
+SenseCAP offers two types of Data logger:
 
-<div class="independent_container">
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S2100 Data Logger</font></div>
-            <a href="/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP S2100 LoRaWAN® Data Logger</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the 12V RS485 Sensor for S2100 Data Logger</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Analog Sensor for S2100 Data Logger</font></span></a>
-            <br/>
-            <a href="/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configure the Counter & GPIO Sensor for S2100 Data Logger</font></span></a>
-            <br/>
-            <a href="/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Build LoRaWAN® Sensors with SenseCAP S2110 Sensor Builder and SenseCAP Data Logger</font></span></a>
-            <br/>
-    </div>
-    <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Sensor Hub 4G</font></div>
-            <a href="/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introduction of SenseCAP Sensor Hub 4G Data Logger</font></span></a>
-            <br/>
-            <a href="https://files.seeedstudio.com/products/114992170/Sensor%20Hub%204G%20Data%20Logger%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}>PDF Download of SenseCAP Sensor Hub 4G User Guide</font></span></a>
-            <br/>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/114992170/Developer%20Guide%20for%20Private%20MQTT%20Messaging%20of%20SenseCAP%20SensorHub%20v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PDF Download of Private MQTT Messaging of SenseCAP SensorHub Developer Guide</font></span></a>
-            <br/>
-    </div>
-</div>
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hub.png" width="475"/>|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/log.png" width="475"/>|
+|------------------|--------------------------|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html)</p>|
+
+
 
 ## ✨ Contributor Project
 
