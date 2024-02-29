@@ -2576,6 +2576,7 @@ const sidebars = {
             type: 'category',
             label: 'EdgeBox-RPI-200',
             items: [
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox_rpi_200_Introduction',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
