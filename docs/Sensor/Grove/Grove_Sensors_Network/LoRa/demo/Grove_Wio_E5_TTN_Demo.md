@@ -14,11 +14,11 @@ last_update:
 
 ## Getting Started
 
-The Things Network provides a global, open LoRaWAN network with a set of open tools and to build your next IoT application at low cost, featuring maximum security and ready to scale. Through robust end-to-end encryption, a secure and collaborative Internet of Things network is built that spans across many countries around the globe. Now operating thousands of gateways providing coverage to millions of people. 
+[The Things Network](https://www.thethingsnetwork.org/) provides a global, open LoRaWAN network with a set of open tools and to build your next IoT application at low cost, featuring maximum security and ready to scale. Through robust end-to-end encryption, a secure and collaborative Internet of Things network is built that spans across many countries around the globe. Now operating thousands of gateways providing coverage to millions of people. 
 
 ### Preparations
 
-Here is a demo showing you how to connect TTN (The Things Network) and Seeeduino XIAO module via Grove - Wio-E5 module. These modules are able to collect temperature and humidity parameters from the environment and send them back to TTN. The flashing LED lights on the Seeeduino Xiao indicate the status of the temperature and humidity sensor as connecting to TTN cloud.
+Here is a demo showing you how to connect [TTN (The Things Network)](https://www.thethingsnetwork.org/) and Seeeduino XIAO module via Grove - Wio-E5 module. These modules are able to collect temperature and humidity parameters from the environment and send them back to TTN. The flashing LED lights on the Seeeduino Xiao indicate the status of the temperature and humidity sensor as connecting to TTN cloud.
 
 :::cautionattention
 Please ensure the consistent of the frequency band among the end nodes, gateway, and TTN configuration you are using by following this instruction.
