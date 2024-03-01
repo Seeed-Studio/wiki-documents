@@ -25,6 +25,10 @@ This tutorial demonstrates how to access and control the 40-pin GPIO of ODYSSEY 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ubuntu2004.png" /></div>
 
+### Ubuntu 22.04
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ubuntu2204.png" /></div>
+
 ## GPIO
 
 **The default pins on the ODYSSEY - X86J41x5 are configured to function mode so for example the pin 3 is set to I2C at default instead of GPIO mode. If you preferde using GPIO at default please check below.**
