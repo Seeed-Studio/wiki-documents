@@ -32,11 +32,10 @@ SenseCAP offers two types of gateways suitable for indoor and outdoor use, and u
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
 
-### Hotspots(Helium)
+### Hotspots
 
 
-SenseCAP M1 & M2 & M4 are Helium hotspots with high-performance and rich features that help users to earn the cryptocurrency HNT. These hotspots are designed and born to build the decentralized wireless LoRaWAN® network infrastructure.
-
+SenseCAP M1 & M2 & M4 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/helium-sensecap6.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -47,24 +46,33 @@ SenseCAP M1 & M2 & M4 are Helium hotspots with high-performance and rich feature
 
 
 
-### Hotspots(Flux)
-
-SenseCAP M4 Square – FluxNode is a CUMULUS FluxNode powered by FluxOS. With powerful hardware design, it supports potential extensions for other web 3.0 dAPPs. Featured with no code seamless set up, it enables you to deploy the FluxNode in scale and build your own decentralized computational network. Stable rewards will be provided by Flux.
-
-More web3 applications will be released gradually in the SenseCAP dApp Center, so users can download apps to build their own web3 network.
-
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-M4-p-5556.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/flux-sensecap.png" alt="pir" width={1000} height="auto" /></a></p>
 
 ## SenseCAP Cloud Services
 
-### SenseCAP Hotspot App
+### For LoRaWAN Gateway
+
+#### SenseCAP Mate APP
+
+SenseCAP Mate APP is a powerful APP for data visualization and remote LoRaWAN device management.
+
+<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-12.png" alt="pir" width={200} height="auto" /></p>
+
+
+### SenseCAP Portal
+
+SenseCAP Portal
+
+
+### For Hotspots
+
+#### SenseCAP Hotspot App
 
 SenseCAP Hotspot App is an all-in-one App that helps users purchase, deploy, and manage their Web 3.0 devices (Helium, Flux, and more).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hotspot-app.png" alt="pir" width={1000} height="auto" /></p>
 
 
-### SenseCAP Dashbaord
+#### SenseCAP Dashbaord
 
 An efficient way to manage your SenseCAP devices and rewards, SenseCAP Dashbaord provides the most up-to-date info on your hotspots from devices, blockchain. .
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/dashboard.png" alt="pir" width={1000} height="auto" /></p>

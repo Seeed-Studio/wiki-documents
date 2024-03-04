@@ -786,6 +786,12 @@ const sidebars = {
             {
               type: 'category',
               label: ' SenseCAP ONE Weather Sensor',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: "Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ONE_intro",
+              },
               items: [
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
@@ -803,6 +809,12 @@ const sidebars = {
             {
               type: 'category',
               label: 'SenseCAP Sensor Probe',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: "Sensor/SenseCAP/SenseCAP_Probe/Probe_intro",
+              },
               items: [
                 'Sensor/SenseCAP/SenseCAP_Probe/SenseCAP_Sensor_Probes_Product_Catalogue',
                 'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
@@ -2517,6 +2529,15 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
                 ],
               },
+
+              {
+                type: 'category',
+                label: 'N3uron',
+                items: [
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminalDM_N3uron_Get_Start',
+                ],
+              },
+
               {
                 type: 'category',
                 label: 'Ignition Edge',
@@ -2567,6 +2588,7 @@ const sidebars = {
             type: 'category',
             label: 'EdgeBox-RPI-200',
             items: [
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox_rpi_200_Introduction',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',

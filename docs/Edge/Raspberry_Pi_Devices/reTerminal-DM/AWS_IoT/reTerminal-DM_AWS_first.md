@@ -47,8 +47,7 @@ We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from 
 In your terminal type :
 
 ```sh
-sudo pip3 install paho-mqtt
-
+sudo pip3 install "paho-mqtt<2.0.0"
 ```
 
 :::note
@@ -142,7 +141,7 @@ The policy includes:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/certicates.PNG" style={{width:600, height:450}}/></div>
 
 - **Step 12** : Attach to the thing (reTerminal DM ) 
-For that go to **Security** >> **Policies**
+For that go to **Security** >> **Certificates**
 
 :::note
 
@@ -150,11 +149,11 @@ When you create and enroll a certificate independently from an AWS IoT thing, it
 
 :::
 
-After selecting the thing that you made from drop down menu then press **Attach to thing**.
+After selecting the thing that you made from **Actions** drop down menu then press **Attach to thing**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachtothing.PNG" style={{width:800, height:'auto'}}/></div>
 
-**Step 13**: Attach the policy 
+**Step 13**: Attach the policy also. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachpolicy.PNG" style={{width:800, height:'auto'}}/></div>
 
@@ -173,6 +172,7 @@ To do that :
 - **Step 03** : Replace those file names with yours and run the file
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/cosw1.PNG" style={{width:800, height:'auto'}}/></div>
+
 
 ## Test the Connection 
 

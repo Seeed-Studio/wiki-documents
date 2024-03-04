@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Audio Library For Wio Terminal Overview
 keywords:
 - Wio_terminal Audio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

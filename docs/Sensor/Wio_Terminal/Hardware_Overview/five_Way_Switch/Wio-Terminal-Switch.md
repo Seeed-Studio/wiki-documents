@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Getting Started with 5 Way Switch
 keywords:
 - Wio_terminal five_Way_Switch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

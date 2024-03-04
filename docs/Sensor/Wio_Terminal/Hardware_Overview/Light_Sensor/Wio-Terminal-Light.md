@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Getting Started with Light Sensor
 keywords:
 - Wio_terminal Light_Sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

@@ -133,101 +133,16 @@ int t=1500;
 
 void setup()
 {
-    //pinMode(sd,OUTPUT);
-    //pinMode(pwm1,OUTPUT);
-    //pinMode(pwm2,OUTPUT);
     pinMode(ctr_a,OUTPUT);
     pinMode(ctr_b,OUTPUT);
     pinMode(ctr_c,OUTPUT);
     pinMode(ctr_d,OUTPUT); 
-    delay(1);
-    //digitalWrite(sd,HIGH);
-    //digitalWrite(pwm1,HIGH);
-    //digitalWrite(pwm2,HIGH);
-//    digitalWrite(ctr_a,LOW);
-//    digitalWrite(ctr_b,LOW);
-//    digitalWrite(ctr_c,LOW);
-//    digitalWrite(ctr_d,LOW);
-        
+    delay(1);     
 }
 
 
 void loop ()
 {
-//   for(i=1500;i>=1;i--)
-//   {
-//       digitalWrite(ctr_a,HIGH);//A
-//       digitalWrite(ctr_b,LOW);
-//       digitalWrite(ctr_c,LOW);
-//       digitalWrite(ctr_d,LOW);
-//       delay(t);
-//       digitalWrite(ctr_a,HIGH);
-//       digitalWrite(ctr_b,HIGH);//AB
-//       digitalWrite(ctr_c,LOW);
-//       digitalWrite(ctr_d,LOW);
-//       delay(t);
-//       digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_b,HIGH);//B
-//       digitalWrite(ctr_c,LOW);
-//       digitalWrite(ctr_d,LOW);
-//       delay(t);
-//       digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_b,HIGH);
-//       digitalWrite(ctr_c,HIGH);//BC
-//        digitalWrite(ctr_d,LOW);
-//       delay(t);
-//       digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_b,LOW);
-//       digitalWrite(ctr_c,HIGH);//C
-//       digitalWrite(ctr_d,LOW);
-//       delay(t);
-//       digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_b,LOW);
-//       digitalWrite(ctr_c,HIGH);//CD
-//       digitalWrite(ctr_d,HIGH);
-//       delay(t);
-//        digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_b,LOW);
-//       digitalWrite(ctr_c,LOW);//D
-//       digitalWrite(ctr_d,HIGH);
-//       delay(t);
-//        digitalWrite(ctr_a,HIGH);
-//       digitalWrite(ctr_b,LOW);
-//       digitalWrite(ctr_c,LOW);//DA
-//       digitalWrite(ctr_d,HIGH);
-//       delay(t);
-//       
-//   }
-//       digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_b,LOW);
-//       digitalWrite(ctr_c,LOW);
-//       digitalWrite(ctr_d,LOW);
-//   
-//   
-//   
-//     for(i=1500;i>=1;i--)
-//   {
-//     
-//       digitalWrite(ctr_d,HIGH);//D
-//       delay(t);
-//       digitalWrite(ctr_c,HIGH);//DC
-//       delay(t);
-//       digitalWrite(ctr_d,LOW);//C
-//       delay(t);
-//       digitalWrite(ctr_b,HIGH);//CB
-//       delay(t);
-//       digitalWrite(ctr_c,LOW);//B
-//       delay(t);
-//       digitalWrite(ctr_a,HIGH);//BA
-//       delay(t);
-//       digitalWrite(ctr_b,LOW);//A
-//       delay(t);
-//       digitalWrite(ctr_d,HIGH);//AD
-//       delay(t);
-//       digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_d,LOW);
-//   }
-   
    for(i=1500;i>=1;i--)
    {
        digitalWrite(ctr_a,LOW);//A
@@ -272,37 +187,6 @@ void loop ()
        delayMicroseconds(t);
        
    }
-//       digitalWrite(ctr_a,HIGH);
-//       digitalWrite(ctr_b,HIGH);
-//       digitalWrite(ctr_c,HIGH);
-//       digitalWrite(ctr_d,HIGH);
-//   
-   
-   
-//     for(i=1500;i>=1;i--)
-//   {
-//     
-//       digitalWrite(ctr_d,HIGH);//D
-//       delay(t);
-//       digitalWrite(ctr_c,HIGH);//DC
-//       delay(t);
-//       digitalWrite(ctr_d,LOW);//C
-//       delay(t);
-//       digitalWrite(ctr_b,HIGH);//CB
-//       delay(t);
-//       digitalWrite(ctr_c,LOW);//B
-//       delay(t);
-//       digitalWrite(ctr_a,HIGH);//BA
-//       delay(t);
-//       digitalWrite(ctr_b,LOW);//A
-//       delay(t);
-//       digitalWrite(ctr_d,HIGH);//AD
-//       delay(t);
-//       digitalWrite(ctr_a,LOW);
-//       digitalWrite(ctr_d,LOW);
-//   }
-   
-
 }
 ```
 
@@ -313,6 +197,138 @@ void loop ()
 :::
 
 ![](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/_DAS7726.MOV_20181115_134717.gif)
+
+### Raspberry Pi + Python
+
+#### Materials required
+
+| Pi Pico | Gear Stepper Motor Driver Pack | Female-Female jumpers|
+|--------------|-------------|-----------------|
+|![A Raspberry Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![Gear Stepper Motor Driver Pack](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/thumbnail.jpg)|![Female-Female jumpers](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/jumper.jpg)|
+|<a href="https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Gear-Stepper-Motor-Driver-Pack-p-3200.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html" target="_blank">Get One Now</a>|
+
+#### Background
+
+The stepper motor has 4 separate electromagnets inside which you must power one by one in sequence in order to turn one notch on the gear. The gear has 64 notches, so you need to do this 64 times for one complete revolution of the axle.
+
+You can do this yourself by powering the pins one by one, or using a library such as [RpiMotorLib](https://github.com/gavinlyonsrepo/RpiMotorLib).
+
+#### Method
+
+1. If you didn't already, [follow this guide](https://projects.raspberrypi.org/en/pathways/pico-intro) to get set up with your Raspberry Pi Pico running Python through Thonny + picozero on your computer.
+
+1. Connect the Gear Stepper Motor Driver Board to your Pi Pico using jumpers.
+
+    |Pi Pico|Gear Stepper Motor Driver Board
+    |---|---|
+    |VBUS|VCC|
+    |GND|GND|
+    |GP2|IN1|
+    |GP3|IN2|
+    |GP4|IN3|
+    |GP5|IN4|
+
+1. Look closely at your Gear Stepper Motor Driver Board and you'll see a teeny tiny switch which says VCC at one end and VM on the other. This lets you choose whether to power the motor from the same pin as the driver (VCC), or a separate voltage source (VM). For now we'll just use VCC. Make sure the switch is on VCC.
+
+1. Plug your Pi Pico into your computer over USB (or connect to it wirelessly) and load up Thonny.
+
+1. Upload the following code to Thonny and run it.
+
+```Python
+from gpiozero import Button, LED
+from time import sleep
+
+wait = 0.001 # seconds
+
+ctrA = LED(2) # IN1
+ctrB = LED(3) # IN2
+ctrC = LED(4) # IN3
+ctrD = LED(5) # IN4
+
+while True:
+  # A
+  ctrA.on()
+  ctrB.off()
+  ctrC.off()
+  ctrD.off()
+  sleep(wait)
+
+  # AB
+  ctrA.on()
+  ctrB.on()
+  ctrC.off()
+  ctrD.off()
+  sleep(wait)
+
+  # B
+  ctrA.off()
+  ctrB.on()
+  ctrC.off()
+  ctrD.off()
+  sleep(wait)
+
+  # BC
+  ctrA.off()
+  ctrB.on()
+  ctrC.on()
+  ctrD.off()
+  sleep(wait)
+
+  # C
+  ctrA.off()
+  ctrB.off()
+  ctrC.on()
+  ctrD.off()
+  sleep(wait)
+
+  # CD
+  ctrA.off()
+  ctrB.off()
+  ctrC.on()
+  ctrD.on()
+  sleep(wait)
+
+  # D
+  ctrA.off()
+  ctrB.off()
+  ctrC.off()
+  ctrD.on()
+  sleep(wait)
+
+  # DA
+  ctrA.on()
+  ctrB.off()
+  ctrC.off()
+  ctrD.on()
+  sleep(wait)
+```
+
+:::tip
+_What's going on here?_
+The stepper motor has 4 separate electromagnets inside. You are powering them one by one in a loop, which turns the gear by one notch. Do this 64 times very fast and the axle turns one full rotation!
+:::
+
+#### Using a library
+
+You can also use libraries like [RpiMotorLib](https://github.com/gavinlyonsrepo/RpiMotorLib) to cut out the hard part:
+
+1. Thonny -> Tools -> Manage packages -> search for `RpiMotorLib` -> install
+
+1. Follow the same wiring steps from the previous section
+
+1. Replace your code with this:
+
+```
+from RpiMotorLib import RpiMotorLib
+
+GpioPins = [2, 3, 4, 5]
+mymotortest = RpiMotorLib.BYJMotor("MyMotorName", "28BYJ")
+mymotortest.motor_run(GpioPins, 0.001, 512, False, False, "half", 0.05)
+```
+
+:::tip
+The "28BYJ" bit above refers to the model of stepper motor you're using. You can find explanations for the other arguments [in the RpiMotorLib documentation.](https://github.com/gavinlyonsrepo/RpiMotorLib/blob/master/Documentation/28BYJ.md) (this uses a different driver board but most stuff is the same).
+:::
 
 ## Resources
 

@@ -1,6 +1,6 @@
 ---
 description: Pin multiplexing with Seeed Studio XIAO ESP32S3.
-title: Pin Multiplexing
+title: Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)
 keywords:
 - esp32s3
 - xiao
