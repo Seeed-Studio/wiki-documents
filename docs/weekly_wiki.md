@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 02/26/2024
+  date: 03/4/2024
   author: Seraphina
 ---
 
@@ -17,31 +17,45 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is February 26th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is March 4th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [SenseCAP T1000 Tracker Payload Format](https://wiki.seeedstudio.com/Real_Time_Subtitle_Recoder_on_Jetson/)
+### [Getting Started with N3uron](https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/)
 
-The Tracker data protocol provides different packets to correspond to different information, and the number of bytes of each packet may vary. The structure of the frame is shown in the wiki.
+N3uron is a complete **Industrial Edge Platform for IIoT & DataOps** that enables seamless integration between the industrial plant floor and third-party applications, whether on-premises or in the cloud.
 
+With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing, and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
 
-
-### [Real Time Subtitle Recoder on Jetson](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/)
-
-Here we introduce you Real Time Subtitle Recoder on Jetson, which can offer real-time speech-to-subtitle services while avoiding information leakage on the internet. Meeting content can be transcribed and displayed on screens using an AL model in subtitle form, which can protect meeting privacy and reduce meeting recorder workload.
-
-<p style={{textAlign: 'center'}}><img src="https://github.com/Seeed-Projects/Real-time-Subtitle-Recorder-on-Jetson/raw/main/sources/recorder_hardware_connection.png" alt="pir" width={800} height="auto" /></p>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_1.png" /></center>
 
 
+### [SenseCAP ONE Weather Sensoe](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/)
 
-<!-- ## Existed Wiki Updated
+SenseCAP ONE is a series of all-in-one compact weather sensors, that integrate multiple sensors into this compact device, monitoring up to 10 weather parameters: air temperature, air humidity, atmospheric pressure, light intensity, wind speed, wind direction, precipitation, PM 2.5, PM 10, and CO2.
 
-### [Grove - Sunlight Sensor](https://wiki.seeedstudio.com/Grove-Sunlight_Sensor/#si1145---play-with-arduino)
+<p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
 
-The Grove - Sunlight Sensor has two versions: one is SI1145, and the other is Si1151. We have currently developed Arduino and Raspberry Pi applications for both versions.
+### [SenseCAP Probes Introduction](https://wiki.seeedstudio.com/SenseCAP_probes_intro/)
 
-### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
+To bring more convenience for your applications, we also provide RS485 sensor probes detecting soil moisture, temperature, soil electrical conductivity, and pH level. There will also be more RS485 sensors coming out soon.
+
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/751082a4ebef3470bf20ee2e9523bbd4.png?x-oss-process=image%2Fformat,webp" alt="pir" width={500} height="auto" /></p>
+
+
+### [Getting Started Edge Box RPI-200](https://wiki.seeedstudio.com/Edge_Box_introduction)
+
+The EdgeBox-RPI-200 series serves as an all-in-one Raspberry Pi-based industrial edge computing controller, tailored for diverse industrial applications. Boasting high scalability and rugged hardware, it integrates seamlessly with the extensive Raspberry Pi industrial software ecosystem. This makes it an optimal choice for smart automation and Industrial Internet of Things (IIoT) solutions.
+
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:400, height:'auto'}}/></div><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:400, height:'auto'}}/></div>
+
+## Existed Wiki Updated
+
+### [Accessing and Controlling ODYSSEY - X86J41x5 40-Pin GPIO](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-GPIO/#ubuntu-2204)
+
+We've provided you with Linux GPIO for Ubuntu 22.04 here!
+
+<!-- ### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
 
 We've updated to add the resources for Grove Vision AI
 
@@ -109,3 +123,4 @@ This project uses the ESP32C3 to create a three-dimensional display using a spli
 - [weekly wiki on 2024.1.22nd](/Seeed_Elderly/weekly_wiki/wiki240122)
 - [weekly wiki on 2024.1.29th](/Seeed_Elderly/weekly_wiki/wiki240129)
 - [weekly wiki on 2024.2.16th](/Seeed_Elderly/weekly_wiki/wiki240219)
+- [weekly wiki on 2024.2.16th](/Seeed_Elderly/weekly_wiki/wiki240226)
