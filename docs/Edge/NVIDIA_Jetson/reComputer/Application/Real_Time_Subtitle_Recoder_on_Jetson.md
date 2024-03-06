@@ -1,12 +1,12 @@
 ---
-description: Real Time Subtitle Recoder on Jetson
-title: Real Time Subtitle Recoder on Jetson
+description: Real Time Subtitle Recoder on Nvidia Jetson
+title: Real Time Subtitle Recoder on Nvidia Jetson
 keywords:
   - Edge
   - reComputer
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Real Time Subtitle Recoder on Jetson
+slug: /Real Time Subtitle Recoder on Nvidia Jetson
 last_update:
   date: 02/23/2024
   author: Jiahao
@@ -15,15 +15,16 @@ no_comments: false # for Disqus
 
 ---
 
-# Speech Subtitle Generation on Jetson
+# Speech Subtitle Generation on Nvidia Jetson
 
 ## Introduction
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recoder.gif" /></div>
 
 Nowadays, we have many meetings every day, but some of the meeting content is not intended to be published. Sending meeting content to the cloud for recording and returning subtitles can pose a significant threat to meeting privacy. And the most important thing is you will lose your meeting content if the internet is delayed. 
 
-And here we introduce you [Speech Subtitle Generation on Jetson](https://github.com/yuyoujiang/Real-time-Subtitle-Recorder-on-Jetson), which can offer real-time speech-to-subtitle services while avoiding information leakage on the internet. Meeting content can be transcribed and displayed on screens using an AL model in subtitle form, which can protect meeting privacy and reduce meeting recorder workload.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recoder.gif" /></div>
+
+And here we introduce you [Speech Subtitle Generation on Jetson](https://github.com/yuyoujiang/Real-time-Subtitle-Recorder-on-Jetson), which can offer real-time speech-to-subtitle services while avoiding information leakage on the internet. Meeting content can be transcribed and displayed on screens using an AI model in subtitle form, which can protect meeting privacy and reduce meeting recorder workload.
 
 
 
@@ -56,11 +57,29 @@ alt="auto" width={800} height="auto"/></p>
 
 ## Prepare the runtime environment
 
-1. Please refer to [this wiki](https://wiki.seeedstudio.com/Local_Voice_Chatbot/#install-riva-server) for installing Riva ASR Server.
-2. Use the following command to install the runtime environment:
+#### Step1. Install Riva ASR Server:
+
+Please refer to [this wiki](https://wiki.seeedstudio.com/Local_Voice_Chatbot/#install-riva-server) for installing Riva ASR Server. 
+
+In your terminal(Ctrl+Alt+T), input ```sudo docker ps``` and you will see something like following, that means you have finished the first step.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/riva.png" alt="pir" width={1000} height="auto"/></p>
+
+#### Step2. Install flask:
+
+Open the terminal (`Ctrl+Alt+T`) and using the following command to install flask:
+
 ```shell
-# flask
 pip3 install flask
+python3 -c 'import flask; print(flask.__version__)
+```
+If you get something like following that means you have finished this step.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/flask.png" alt="pir" width={1000} height="auto"/></p>
+
+#### Step3. upgrade pip setuptools wheel:
+
+```shell
 # riva client
 git clone --depth=1 --recursive https://github.com/nvidia-riva/python-clients
 cd python-clients
@@ -69,9 +88,30 @@ pip3 install --no-cache-dir --verbose -r requirements.txt
 python3 setup.py --verbose bdist_wheel
 pip3 install --no-cache-dir --verbose dist/nvidia_riva_client*.whl
 python3 -c 'import riva.client; print(riva.client.__version__)'
+```
+In your terminal(Ctrl+Alt+T), input ```pip --version``` you will see somthing like following, it means you finished upgrade pip.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/pip.png" alt="pir" width={1000} height="auto"/></p>
+
+In your terminal(Ctrl+Alt+T), input ```python3 -c 'import setuptools; print(setuptools.__version__)``` if you get something like following that means you have upgrade setuptools.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/setuptools.png" alt="pir" width={1000} height="auto"/></p>
+
+In your terminal(Ctrl+Alt+T), input ```wheel version``` you will see somthing like following, it means you finished upgrade wheel.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/wheel.png" alt="pir" width={1000} height="auto"/></p>
+
+#### Step4. install pyaudio:
+
+```shell
 # pyaudio
 sudo apt-get install -y --no-install-recommends python3-pyaudio
+python3 -c 'import pyaudio; print(pyaudio.__version__)'
 ```
+If your terminal get something like following, you finished the last step,congratulations!
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/pyaudio.png" alt="pir" width={1000} height="auto"/></p>
+
 ## Let's run it
 
 ```shell
