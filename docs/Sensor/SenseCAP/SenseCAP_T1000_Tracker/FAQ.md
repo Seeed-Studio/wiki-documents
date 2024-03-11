@@ -71,6 +71,16 @@ On the settings page, select a platform other than SenseCAP to obtain the keys.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/get-keys.png" alt="pir" width={700} height="auto" /></p>
 
+## Button Related
+
+### Join Network
+
+
+Press and hold the button for 3 seconds, the green light will flash slowly, then press the button once, the green light will breathe, and then the device will try to join the loRaWAN network.
+
+### Force reboot
+
+Press and hold the button, then connect the charging cable, release the button after connecting, the green light will breathe, and then the device will be forced to restart.
 
 ## Battery Related
 
