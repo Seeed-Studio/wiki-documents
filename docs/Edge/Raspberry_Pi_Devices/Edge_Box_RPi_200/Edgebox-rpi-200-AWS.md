@@ -8,7 +8,7 @@ keywords:
 - Cloud
 slug: /Edgebox-rpi-200-AWS.md
 last_update:
-  date: 3/8/2024
+  date: 3/11/2024
   author: Kasun Thushara
 ---
 
@@ -156,7 +156,7 @@ After selecting the thing that you made from **Actions** drop down menu then pre
 
 ## Test MQTT
 
-To accomplish this, download our [test Python file](https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/AWStest.py). Ensure that your device certificates, key files (public and private keys), root access file, and this Python file are in the same folder on your reTerminal Device. Additionally, you need to modify the connection URL.
+To accomplish this, download our [test Python file](https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/AWStest.py). Ensure that your device certificates, key files (public and private keys), root access file, and this Python file are in the same folder on your Device. Additionally, you need to modify the connection URL.
 
 To do that :
 
@@ -177,7 +177,7 @@ Go to MQTT test Client under the **Test** tab and type the topic name to subscri
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/mqtttest.PNG" style={{width:800, height:'auto'}}/></div>
 
-The output is some thing like this. The massage from reterminal DM is pop up in the console.
+The output is some thing like this. The massage from Edge Box is pop up in the console.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/AWS/seeedop.PNG" style={{width:800, height:'auto'}}/></div>
 
