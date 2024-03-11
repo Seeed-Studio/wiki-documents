@@ -1,5 +1,5 @@
 ---
-title: Grove - Wio-E5 P2P Example 
+title: Grove - Wio-E5 LoRa P2P Example 
 nointro:
 keywords:
   - docs
@@ -11,20 +11,24 @@ last_update:
   author: Matthew
 ---
 
-## Grove - Wio-E5 P2P Example
+Are you looking for a simple, flexible, and cost-effective solution for your IoT project? Consider trying LoRa P2P.
 
-This is the example of how to build a Point-to-Point Transmission Application with Grove - Wio-E5 and Seeeduino XIAO.
+LoRa is a low-power wireless modulation technology that enables devices to communicate over long distances with minimal energy consumption. "P2P" stands for "point-to-point," meaning devices can communicate directly with each other without the need for intermediate network infrastructure such as base stations or routers.
+
+By leveraging LoRa P2P, IoT devices can communicate directly with each other in environments requiring long-distance communication and low power consumption.
+
+Here's an example of how to build a LoRa point-to-point transmission application using Grove Wio-E5 and Seeed Studio XIAO SAMD21.
 
 ### Preparations
 
-- Grove - Wio E5 *2
-- Seeeduino XIAO* 2
-- Seeeduino XIAO Expansion board *2
-- USB typc cable* 2
+- [Grove - Wio E5](https://www.seeedstudio.com/Grove-LoRa-E5-STM32WLE5JC-p-4867.html) *2
+- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) * 2
+- [XIAO Expansion board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) *2
+- USB type C cable* 2
 
-If this is your first time using Seeeduino XIAO, please refer to Seeeduino XIAO's [wiki](https://wiki.seeedstudio.com/Seeeduino-XIAO/).
+If this is your first time using Seeed Studio XIAO SAMD21, please refer to this [wiki](https://wiki.seeedstudio.com/Seeeduino-XIAO/).
 
-If this is your first time using Arduino, Please put hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) to start your Arduino journey.
+If this is your first time using Arduino, Please put your hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) to start your Arduino journey.
 
 ### Connecting hardware
 
@@ -34,7 +38,7 @@ We can connect the Wio-E5 module to the UART socket directly as the below pictur
 
 ### Download Library
 
-The [u8g2](https://github.com/olikraus/u8g2) library must be installed for this demo. Click to download the library and install it ([How to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)).
+The [u8g2](https://github.com/olikraus/U8g2_Arduino) library must be installed for this demo. Click to download the library and install it ([How to install an Arduino Library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)).
 
 ### Download the example
 

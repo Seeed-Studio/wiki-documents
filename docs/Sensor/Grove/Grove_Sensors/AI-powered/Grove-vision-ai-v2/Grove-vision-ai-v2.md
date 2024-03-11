@@ -15,7 +15,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/grove_vision_ai_v2">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -57,9 +57,11 @@ Once you have the Grove Vision AI V2 and camera ready to go, then you can connec
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/9.gif" style={{width:600, height:'auto'}}/></div>
 
-:::caution
-Please note that the camera is not on the Part List for the Grove Vision AI V2.
-:::
+<!-- :::caution
+Users who purchased Grove Vision AI V2 before February 21, 2024, do not have support for Raspberry Pi cameras. However, users who purchase after this date will have added support for those specific models that support images.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/cameraList.png" style={{width:1000, height:'auto'}}/></div>
+::: -->
 
 ## Boot / Reset / Flashed Driver
 
@@ -147,7 +149,7 @@ You can check [here](/Grove-vision-ai-v2-camera-supported). Currently we have wr
 - **[GitHub]** [Seeed Grove Vision AI Module V2 SDK](https://github.com/HimaxWiseEyePlus/Seeed_Grove_Vision_AI_Module_V2)
 - **[PDF]** [Circuit Diagram](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/Grove_Vision_AI_Module_V2_Circuit_Diagram.pdf)
 - **[Zip]** [Layout Diagram](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/Grove_Vision_AI_Module_V2_Layout.zip)
-- **[Zip]** [Bill Of Material](https://files.seeedstudio.com/wiki/202003828_PCBA_Grove_Vision_AI_Module_V2_A11_Design.zip)
+- **[Zip]** [Bill Of Material](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/202003828_PCBA_Grove_Vision_AI_Module_V2_A11_Design.zip)
 
 ## Tech Support & Product Discussion
 

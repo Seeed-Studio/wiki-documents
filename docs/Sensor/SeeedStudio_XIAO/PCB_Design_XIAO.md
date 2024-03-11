@@ -24,14 +24,12 @@ In this section we are going to cover Creating Seeed Studio XIAO series Componen
 
 ### Seeed Studio XIAO RP2040
 
-<iframe height={450} width={800} allowFullScreen src="https://www.flux.ai/gokux/seeed-studio-xiao-rp2040?editor=schematic&embed=1">
-</iframe>
+<iframe height="450" width="800" allowfullscreen src="https://www.flux.ai/seeedstudio/seeed-studio-xiao-rp2040?editor=pcb_3d&embed=1" />
 
 
 ### Seeed Studio XIAO nRF52840
 
-<iframe height={450} width={800} allowFullScreen src="https://www.flux.ai/gokux/seeed-studio-xiao-nrf52840?editor=schematic&embed=1">
-</iframe>
+<iframe height="450" width="800" allowfullscreen src="https://www.flux.ai/seeedstudio/seeed-studio-xiao-nrf52840?editor=pcb_3d&embed=1" />
 
 
 ### Seeed Studio XIAO nRF52840 Sense
@@ -42,8 +40,7 @@ In this section we are going to cover Creating Seeed Studio XIAO series Componen
 
 ### Seeed Studio XIAO ESP32C3
 
-<iframe height={450} width={800} allowFullScreen src="https://www.flux.ai/gokux/seeed-studio-xiao-esp32c3?editor=schematic&embed=1">
-</iframe>
+<iframe height="450" width="800" allowfullscreen src="https://www.flux.ai/seeedstudio/seeed-studio-xiao-esp32c3?editor=pcb_3d&embed=1" />
 
 
 ### Seeed Studio XIAO ESP32S3
@@ -54,8 +51,7 @@ In this section we are going to cover Creating Seeed Studio XIAO series Componen
 
 ### Seeed Studio XIAO ESP32S3 Sense
 
-<iframe height={450} width={800} allowFullScreen src="https://www.flux.ai/gokux/seeed-studio-xiao-esp32s3-sense?editor=schematic&embed=1">
-</iframe>
+<iframe height="450" width="800" allowfullscreen src="https://www.flux.ai/seeedstudio/seeed-studio-xiao-esp32s3-sense?editor=pcb_3d&embed=1" />
 
 
 ## Knowledge about Flux.ai - Creating parts

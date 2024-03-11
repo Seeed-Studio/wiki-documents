@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Accelerator Overview
 keywords:
 - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

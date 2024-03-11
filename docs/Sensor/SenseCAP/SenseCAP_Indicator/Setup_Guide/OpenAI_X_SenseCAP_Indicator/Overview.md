@@ -1,6 +1,6 @@
 ---
 description: OpenAI X SenseCAP Indicator Overview
-title: Overview
+title: SenseCAP Indicator X OpenAI Overview
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

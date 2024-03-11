@@ -36,7 +36,7 @@ Features
 -   Suli-compatible Library
 
 :::tip
-    More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
+More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
 
 ## Specification
@@ -64,15 +64,16 @@ Platforms Supported
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
-    The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 Getting Started
 -------------
 
 :::note
-    If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 ### Play With Arduino
 
@@ -93,7 +94,7 @@ Getting Started
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Bar/img/seeeduino_ledbar.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove-LED Bar to Seeeduino as below.
+If we don't have Grove Base Shield, We also can directly connect Grove-LED Bar to Seeeduino as below.
 :::
 | Seeeduino       | Grove-LED Bar |
 |---------------|-------------------------|
@@ -148,14 +149,14 @@ The result should be like:
 
 
 :::tip
-    In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
+In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
 :::
 
 :::note
-    We firmly suggest you to update the firmware, or for some sensors you may get errors.
+We firmly suggest you to update the firmware, or for some sensors you may get errors.
 :::
 :::note
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
 - **Step 3.** Git clone the Github repository.

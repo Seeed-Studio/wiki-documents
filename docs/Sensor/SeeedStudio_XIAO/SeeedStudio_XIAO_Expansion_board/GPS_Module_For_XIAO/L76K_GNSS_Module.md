@@ -1,9 +1,10 @@
 ---
-title: L76K GNSS Module
-description: Get Started with L76K GNSS Module for SeeedStudio XIAO
+title: Quectel L76K
+description: Get Started with L76K GNSS Module for XIAO
 keywords:
   - XIAO
-  - L76K GNSS Module
+  - Quectel L76K
+  - GNSS
 image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg
 slug: /get_start_l76k_gnss
 sidebar_position: 0
@@ -17,7 +18,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -32,11 +33,11 @@ The module comes with a high-performance active GNSS antenna intended to cover G
 
 ### Features
 
-- **Support Multi-GNSS Systems**: Built around Quectel L76K, supporting GPS, BeiDou (BDS), GLONASS and QZSS
-- **High Compatibility**: Highly compatible with all XIAO series products, easily integrated into your current projects
-- **Support external active antenna**: Comes with a U.FL receptacle for high-performance active GNSS antenna
-- **Thumb-sized Design**: 18 x 21mm, Seeed Studio XIAO series classic form-factor, suitable for small devices
-- **Perfect for Production**: Breadboard-friendly & SMD design, no components on the back
+- **Enhanced Reception:** Built-in Low Noise Amplifier and Surface Acoustic Wave Filter for improved sensitivity and noise reduction
+- **High Precision:** 32/72 channels, -162dBm tracking, -160dBm re-acquisition sensitivity
+- **Energy Efficiency**: 41mA tracking/acquisition, 360µA standby
+- **Multi-GNSS Systems**: Powered by Quectel L76K, supporting GPS, BeiDou, GLONASS and QZSS
+- **Ceramic Antenna:** Enhanced signal reception, superior to traditional antennas.
 
 ### Specification
 <div class="table-center">
@@ -94,7 +95,7 @@ Before we start, we can refer to the following pictures to understand the pin de
 
 ### Hardware Preparation
 
-If you want to take advantage of the full capabilities of the L76K GNSS Module and have a great experience, we highly recommend that you purchase our XIAO series as the motherboard for the L76K GNSS Module.
+To fully experience the capabilities of the L76K GNSS Module, we recommend pairing it with a motherboard from our XIAO series. *Any of the following XIAO models* would be compatible for use with the L76K GNSS Module.
 
 <table align="center">
 	<tr>
@@ -205,63 +206,53 @@ TinyGPSPlus gps;
 // The serial connection to the GNSS module
 SoftwareSerial ss(RXPin, TXPin);
 
-void setup()
-{
+void setup() {
   Serial.begin(115200);
   ss.begin(GPSBaud);
 
   Serial.println(F("DeviceExample.ino"));
   Serial.println(F("A simple demonstration of TinyGPSPlus with L76K GNSS Module"));
-  Serial.print(F("Testing TinyGPSPlus library v. ")); Serial.println(TinyGPSPlus::libraryVersion());
+  Serial.print(F("Testing TinyGPSPlus library v. "));
+  Serial.println(TinyGPSPlus::libraryVersion());
   Serial.println(F("by Mikal Hart"));
   Serial.println();
 }
 
-void loop()
-{
+void loop() {
   // This sketch displays information every time a new sentence is correctly encoded.
   while (ss.available() > 0)
     if (gps.encode(ss.read()))
       displayInfo();
 
-  if (millis() > 5000 && gps.charsProcessed() < 10)
-  {
+  if (millis() > 5000 && gps.charsProcessed() < 10) {
     Serial.println(F("No GPS detected: check wiring."));
-    while(true);
+    while (true);
   }
 }
 
-void displayInfo()
-{
-  Serial.print(F("Location: ")); 
-  if (gps.location.isValid())
-  {
+void displayInfo() {
+  Serial.print(F("Location: "));
+  if (gps.location.isValid()) {
     Serial.print(gps.location.lat(), 6);
     Serial.print(F(","));
     Serial.print(gps.location.lng(), 6);
-  }
-  else
-  {
+  } else {
     Serial.print(F("INVALID"));
   }
 
   Serial.print(F("  Date/Time: "));
-  if (gps.date.isValid())
-  {
+  if (gps.date.isValid()) {
     Serial.print(gps.date.month());
     Serial.print(F("/"));
     Serial.print(gps.date.day());
     Serial.print(F("/"));
     Serial.print(gps.date.year());
-  }
-  else
-  {
+  } else {
     Serial.print(F("INVALID"));
   }
 
   Serial.print(F(" "));
-  if (gps.time.isValid())
-  {
+  if (gps.time.isValid()) {
     if (gps.time.hour() < 10) Serial.print(F("0"));
     Serial.print(gps.time.hour());
     Serial.print(F(":"));
@@ -273,9 +264,7 @@ void displayInfo()
     Serial.print(F("."));
     if (gps.time.centisecond() < 10) Serial.print(F("0"));
     Serial.print(gps.time.centisecond());
-  }
-  else
-  {
+  } else {
     Serial.print(F("INVALID"));
   }
 
@@ -289,11 +278,80 @@ Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals ca
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-output.png" style={{width:800, height:'auto'}}/></div>
 
+
+##### Change the behaviour of LED
+
+This section demonstrates how to control a green LED using Arduino by sending specific hexadecimal commands through serial communication. The example provided below will show you how to turn off the LED and then return it to its normal blinking state.
+
+```cpp
+static const int RXPin = D7, TXPin = D6;
+static const uint32_t GPSBaud = 9600;
+SoftwareSerial SerialGNSS(RXPin, TXPin);
+void setup() {
+  SerialGNSS.begin(GPSBaud);
+
+  // Define the byte array to turn the LED off
+  byte OffState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
+                     0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
+                     // highlight-start
+                     0x00, 
+                     // highlight-end
+                     0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, 
+                     // highlight-start
+                     0xF0, 
+                    // highlight-end
+                     0xC8, 0x17, 0x08};
+
+  // Define the byte array to recover the LED blinking state
+  byte RecoverState[] = {0xBA, 0xCE, 0x10, 0x00, 0x06, 0x03, 0x40, 
+                         0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, 
+                         // highlight-start
+                         0x03, 
+                         // highlight-end
+                         0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00,
+                         // highlight-start
+                         0xF3, 
+                         // highlight-end
+                         0xC8, 0x17, 0x08};
+
+  // Send the command to turn off the LED.
+  SerialGNSS.write(OffState, sizeof(OffState));
+  // Wait for 5 seconds.
+  delay(5000);
+  // Send the command to return the LED to blinking.
+  SerialGNSS.write(RecoverState, sizeof(RecoverState));
+}
+
+void loop() {
+  // Do nothing.
+}
+
+```
+
 ## Troubleshooting
 
-### Q1: Why doesn't the GNSS information display on the serial monitor?
+<details>
+<summary>Can the rechargeable cell power XIAO?</summary>
+No, the rechargeable cell in this context is used solely for the Real-Time Clock (RTC) and maintaining a warm start state in the L76K GNSS Module. It cannot be used as a primary power source for the XIAO or for the GNSS module's general operations.
+</details>
 
-A: Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals can be received.
+<details>
+<summary>Why doesn't the GNSS information display on the serial monitor?</summary>
+
+Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals can be received.
+</details>
+
+<details>
+<summary>Why does the device's green light stay on constantly when plugged into the XIAO RP2040?</summary>
+To address this issue, you need to pull D0 and D10 high. The constant illumination of the fix green light indicates that the device has entered an abnormal working state.
+
+```cpp
+pinMode(D10,OUTPUT);
+digitalWrite(D10,1);
+pinMode(D0,OUTPUT);
+digitalWrite(D0,1);
+```
+</details>
 
 ## Tech Support & Product Discussion
 

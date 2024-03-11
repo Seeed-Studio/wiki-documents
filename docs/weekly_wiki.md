@@ -1,11 +1,11 @@
 ---
-description: Weekly Wiki
+description: Weekly Wiki 
 title: Weekly Wiki 
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 01/22/2024
+  date: 03/4/2024
   author: Seraphina
 ---
 
@@ -17,82 +17,61 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is January 22nd and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is March 4th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Developing Grove Vision AI V2 using Himax SDK](https://wiki.seeedstudio.com/grove_vision_ai_v2_himax_sdk)
+### [Getting Started with N3uron](https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/)
 
-This tutorial is designed to guide you through using the Himax SDK for the Grove Vision AI platform, with a focus on how to effectively utilize microSD cards for data management and PDM microphones for audio capture. By the end of this guide, you'll learn to implement these components in your AI projects, enabling you to store large datasets and capture high-quality sound with ease, directly on your Grove Vision AI device.
+N3uron is a complete **Industrial Edge Platform for IIoT & DataOps** that enables seamless integration between the industrial plant floor and third-party applications, whether on-premises or in the cloud.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:500, height:'auto'}}/></div>
+With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing, and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
 
-
-
-### [A608 Carrier Board](https://wiki.seeedstudio.com/reComputer_A608_Flash_System)
-
-In this wiki, we will show you how to flash Jetpack to an NVMe SSD and a USB Flash drive connected to the A608 Carrier Board which supports both NVIDIA Jetson Orin NX module and NVIDIA Jetson Orin Nano module.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.jpg" /></div>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_1.png" /></center>
 
 
-<!-- ### [Get Started with L76K GNSS Module for SeeedStudio XIAO](https://wiki.seeedstudio.com/get_start_l76k_gnss/)
+### [SenseCAP ONE Weather Sensoe](https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/)
 
-L76K GNSS Module for SeeedStudio XIAO is a Multi-GNSS (Global Navigation Satellite System) module compatible with all XIAO development boards, supports GPS, BeiDou (BDS), GLONASS and QZSS systems, allows multi-system combined or single-system independent positioning. It also supports AGNSS function, built-in low-noise amplifier and sound surface filter, and provides a good positioning experience of fast, accurate, high-performance.
+SenseCAP ONE is a series of all-in-one compact weather sensors, that integrate multiple sensors into this compact device, monitoring up to 10 weather parameters: air temperature, air humidity, atmospheric pressure, light intensity, wind speed, wind direction, precipitation, PM 2.5, PM 10, and CO2.
 
-The module comes with a high-performance active GNSS antenna intended to cover GPS L1 C/A, BeiDou B1 and GLONASS L1 bands. The design also has a tiny bright green LED for indicating the 1PPS output on fix.
+<p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg" style={{width:600, height:'auto'}}/></div> -->
+### [SenseCAP Probes Introduction](https://wiki.seeedstudio.com/SenseCAP_probes_intro/)
 
-### [Connect Grove Vision AI V2 to the SenseCAP Mate APP](https://wiki.seeedstudio.com/connect_vision_ai_v2_to_sensecap_mate/)
+To bring more convenience for your applications, we also provide RS485 sensor probes detecting soil moisture, temperature, soil electrical conductivity, and pH level. There will also be more RS485 sensors coming out soon.
 
-This tutorial will guide you on how to access Grove Vision AI V2 and XIAO ESP32C3 to SenseCAP Mate APP.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/1.png" style={{width:1000, height:'auto'}}/></div>
+<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/751082a4ebef3470bf20ee2e9523bbd4.png?x-oss-process=image%2Fformat,webp" alt="pir" width={500} height="auto" /></p>
 
 
-<!-- ### [External Camera supported Overview](https://wiki.seeedstudio.com/Grove-vision-ai-v2-camera-supported/)
+### [Getting Started Edge Box RPI-200](https://wiki.seeedstudio.com/Edge_Box_introduction)
 
-Grove Vision AI V2 features a standard CSI interface and is compatible with Raspberry Pi cameras. To explore the full potential of the Grove Vision AI V2 you may want a CSI camera separately, we recommend the [**OV5647-62 FOV Camera Module for Raspberry Pi**](https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html).
+The EdgeBox-RPI-200 series serves as an all-in-one Raspberry Pi-based industrial edge computing controller, tailored for diverse industrial applications. Boasting high scalability and rugged hardware, it integrates seamlessly with the extensive Raspberry Pi industrial software ecosystem. This makes it an optimal choice for smart automation and Industrial Internet of Things (IIoT) solutions.
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114110127-ov5647-69.1-fov-camera-module-for-raspberry-pi-3b_4b-font.jpg" style={{width:300, height:'auto'}}/></div>
-
-### [Local Voice Chatbot](https://wiki.seeedstudio.com/Local_Voice_Chatbot/)
-
-As artificial intelligence technology rapidly evolves, voice interaction has become an increasingly important mode of human-computer interaction. Especially in fields like smart homes, personal assistants, and customer service support, the demand for voice chatbots is growing significantly. However, most existing voice chatbots rely on cloud computing services, which raises concerns about data privacy and network latency to some extent.
-
-This project aims to address these issues by building a locally-operated voice chatbot. Utilizing [Nvidia Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html) and [Meta Llama2](https://huggingface.co/meta-llama), we have developed a secure, private, and fast-responding voice interaction system.
-
-<div align="center">
-    <img width={800} 
-     src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/workflow.png" />
-</div>
-
-### [Grove Offline Voice Recognition sensor](https://wiki.seeedstudio.com/Grove-Offline-Voice-Recognition/)
-
-Grove - Offline Voice recognition Module is apt for low power pure-offline voice recognition, based on VC-02 module. It has up to 150 pre-programmed commands that can be used to control your smart appliances. It features an identification time less than 100ms, in a compact form factor of 18mm * 17mm. The module can communicate through the UART peripheral and provide unique Hex Code to each recognised command. 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Offline_Voice_Recognition_Img/headPic.jpg" style={{width:600, height:'auto'}}/></div> -->
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:400, height:'auto'}}/></div><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:400, height:'auto'}}/></div>
 
 ## Existed Wiki Updated
 
-### [LoRaWAN End Node - SenseCAP Indicator](https://wiki.seeedstudio.com/OpenWrt-Getting-Started/#run-r235-openwrt)
+### [Accessing and Controlling ODYSSEY - X86J41x5 40-Pin GPIO](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-GPIO/#ubuntu-2204)
 
-We have added LoRaWAN Downlink & Uplink parts in this wiki.
+We've provided you with Linux GPIO for Ubuntu 22.04 here!
 
+<!-- ### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
 
-### [Accessing and Controlling ODYSSEY - X86J41x5 40-Pin GPIO](https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)
+We've updated to add the resources for Grove Vision AI
 
-We've updated to add the Linux GPIO numbers for Ubuntu 20.04
+### [reServer X86 - Pin information](https://wiki.seeedstudio.com/reServer-Getting-Started/#pin-information)
+
+Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference. -->
 
 ## The Efforts of Contributor
 
-<!-- ### [Xiao ESP32C3 ESPHome Smart ThermoStat](https://wiki.seeedstudio.com/esp32c3_smart_thermostat/)
+<!-- ### [XIAO ESP32C3 Prism Display](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
 
-Thanks our contributor Chris to create Xiao ESP32C3 ESPHome Smart ThermoStat. 
+Thanks our contributor Tim to create XIAO ESP32C3 Prism Display.
 
-This wiki will walkthrough step-by-step on how to make a XIAO ESP32C3 ESPHome Smart ThermoStat. 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p> -->
+This project uses the ESP32C3 to create a three-dimensional display using a splitter prism. This guide works to explain the steps required to build the enclosure, attach associated electronics, and install the firmware. 
+
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p> -->
 
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
@@ -141,3 +120,7 @@ This wiki will walkthrough step-by-step on how to make a XIAO ESP32C3 ESPHome Sm
 - [weekly wiki on 12.25th](/Seeed_Elderly/weekly_wiki/wiki1225)
 - [weekly wiki on 2024.1.08th](/Seeed_Elderly/weekly_wiki/wiki240108)
 - [weekly wiki on 2024.1.15th](/Seeed_Elderly/weekly_wiki/wiki240115)
+- [weekly wiki on 2024.1.22nd](/Seeed_Elderly/weekly_wiki/wiki240122)
+- [weekly wiki on 2024.1.29th](/Seeed_Elderly/weekly_wiki/wiki240129)
+- [weekly wiki on 2024.2.16th](/Seeed_Elderly/weekly_wiki/wiki240219)
+- [weekly wiki on 2024.2.16th](/Seeed_Elderly/weekly_wiki/wiki240226)
