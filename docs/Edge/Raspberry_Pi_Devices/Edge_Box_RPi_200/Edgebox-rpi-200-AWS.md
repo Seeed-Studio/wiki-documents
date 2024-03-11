@@ -1,6 +1,6 @@
 ---
-description: AWS IoT Core Intergate With EdgeBox Rpi 200 
-title: AWS IoT Core Intergate With EdgeBox Rpi 200 
+description: AWS IoT Core Intergate With EdgeBox RPi 200 
+title: AWS IoT Core Intergate With EdgeBox RPi 200 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 keywords:
 - AWS
