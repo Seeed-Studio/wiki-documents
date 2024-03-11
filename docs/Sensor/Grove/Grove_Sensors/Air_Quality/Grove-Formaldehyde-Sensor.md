@@ -3,11 +3,11 @@ description: Grove - Formaldehyde sensor
 title: Grove - Formaldehyde sensor
 keywords:
 - Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg
 slug: /Grove-Formaldehyde-Sensor
 last_update:
-  date: 2/22/2023
-  author: jianjing Huang
+  date: 3/7/2024
+  author: Spencer Yan
 ---
 <!-- ---
 name: Grove - Formaldehyde sensor
@@ -20,11 +20,18 @@ sku: 101020972
 tags: io_3v3, io_5v, plat_duino, plat_pi
 --- -->
 
-![](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/101020972_Front-05.jpg)
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/101020972_Front-05.jpg"/>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+<br />
 
 Grove Formaldehyde Sensor can detect formaldehyde around 0~1000 ppb with low cross-sensitivity to alcohol and high stability of 6 years lifetime. Built-in RHT sensor ensures it maintains fine performance under different temperatures and humidity and it transmits data through UART and I2C ports.
-
-[![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/Grove-Formaldehyde-Sensor-SFA30-p-5204.html)
 
 ## Features
 
@@ -48,8 +55,8 @@ Grove Formaldehyde Sensor can detect formaldehyde around 0~1000 ppb with low cro
 
 ## Platforms Supported
 
-| Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Arduino| Raspberry |   |   |   |
+|:------:|:---------:|---|---|---|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
 
 :::caution
@@ -64,7 +71,7 @@ If this is the first time you work with Arduino, we highly recommend you to see 
 
 ### Play With Arduino
 
-**Hardware**
+#### **Hardware**
 
 - **Step 1.** Prepare the below stuffs:
 
@@ -93,13 +100,17 @@ If you don't have Grove Base Shield, it still can be directly connected Grove-Fo
 | SDA       | White           |
 | SCL       | Yellow          |
 
-**Software**
+#### **Software**
 
-- **Step 1.** Download the [Grove-Formaldehyde Sensor Library](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/Grove-Formaldehyde-Sensor-SFA30.zip) for the usage of Grove Formaldehyde Sensor and [install](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it.
+- **Step 1.** Download the [Grove-Formaldehyde Sensor Library](https://github.com/Sensirion/arduino-i2c-sfa3x) for the usage of Grove Formaldehyde Sensor and [install](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it.
 
 - **Step 2.** Open the Arduino IDE. Copy below codes to Arduio IDE and upload it. If you do not know how to upload the codes, here we have some guides about [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```c++
+:::tip
+Also you can download the lib directly by searching **Sensirion I2C SFA3X** in the library manager.
+:::
+
+```cpp
 #include <Arduino.h>
 #include <SensirionI2CSfa3x.h>
 #include <Wire.h>
@@ -161,7 +172,7 @@ void loop() {
 
 ### Play With Raspberry Pi
 
-**Hardware**
+#### **Hardware**
 
 - **Step 1.** Prepare the below stuffs:
 
@@ -176,7 +187,7 @@ void loop() {
 
 ![](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/raspberry-link.jpg)
 
-**Software**
+#### **Software**
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment of Resberry Pi.
 - **Step 2.** Download the [Grove-Formaldehyde Sensor Library](https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/embedded-sfa3x-main.zip) and unzip it to the Raspberry Pi.
@@ -195,7 +206,7 @@ In this wiki we use the path **~/embedded-sfa3x-main/i2c** instead of **/home/pi
 
 Here is the **sfa3x_i2c_example_usage.c** code.
 
-```C
+```cpp
 #include <stdio.h>  // printf
 
 #include "sensirion_common.h"
@@ -268,7 +279,7 @@ int main(void) {
 If everything goes well, the following results can be displayed like:
 :::
 
-```python
+```shell
 pi@raspberrypi:~/Downloads/embedded-sfa3x-main/i2c $ ./sfa3x_i2c_example_usage
 Device marking: 211117825F073B80
 Measurement:
