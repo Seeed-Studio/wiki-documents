@@ -80,7 +80,7 @@ If you are unfamiliar with LoRa® and LoRaWAN® technology, please check out thi
 <tbody>
 <tr>
 <td class="tg-g9rn">Size</td>
-<td class="tg-g9rn">LoRa-E5 Dev Board: 85.6*54mm  Package: 200*130*50mm</td>
+<td class="tg-g9rn">Wio-E5 Dev Board: 85.6*54mm  Package: 200*130*50mm</td>
 </tr>
 <tr>
 <td class="tg-g9rn">Voltage - supply</td>
@@ -358,7 +358,7 @@ Rx: +MSGHEX: Start
 +MSGHEX: Done
 ```
 
-For more information about AT Commands, please refer to [LoRa-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
+For more information about AT Commands, please refer to [Wio-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
 
 ### Develop with STM32Cube MCU Package
 
@@ -622,7 +622,7 @@ Wio-E5 Development Board Datasheet:
 
 Wio-E5 Datasheet:
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf">Wio-E5 datasheet and specifications</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.1.pdf">Wio-E5 datasheet and specifications</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Wio-E5 AT Command Specification</a></p>
 
@@ -635,6 +635,10 @@ Wio-E5 Certifications:
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">Wio-E5-HF FCC Certification -DSS</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">Wio-E5-HF FCC Certification -DTS</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/Telec.zip">WWio-E5-HF TELEC Certification</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20IC%20ID.pdf">Wio-E5-HF IC Certification</a></p>
 
 Relevant SDK:
 
