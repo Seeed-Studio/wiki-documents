@@ -27,7 +27,7 @@ Introducing the "6x10 RGB-MATRIX for XIAO" - a dazzling addition to the XIAO pro
 ### Features
 
 - 60 WS2812 LEDs: Arranged in a 6x10 grid, these LEDs are perfect for creating vibrant displays.
-- Compact Design: Each LED is just 10mm x 10mm, offering a high-density display without taking up much space.
+- Compact Design: Each LED is just 1mm x 1mm, offering a high-density display without taking up much space.
 - Versatile Connection: While it's designed for the XIAO main controller, we've also included VCC, GND, and DIN solder pads for broader applications.
 - RGB Capabilities: Each LED can display a wide range of colors, giving you the freedom to create dynamic and colorful displays.
 
@@ -36,7 +36,7 @@ Introducing the "6x10 RGB-MATRIX for XIAO" - a dazzling addition to the XIAO pro
 - LED Type: WS2812
 - Number of LEDs: 60
 - Arrangement: 6 rows x 10 columns
-- LED Size: 10mm x 10mm
+- LED Size: 1mm x 1mm
 - Connection Port for XIAO: D0
 - Additional Pads: VCC, GND, DIN, DOUT
 
