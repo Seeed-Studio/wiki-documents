@@ -119,7 +119,7 @@ The PE signal is optional. If there is no EMI present, the PE connection can lea
 The User Name is pi and Password is raspberry
 :::
 
-Edge Box-200 comes to your hand pre installed raspberry pi OS.  You can use HDMI cable ro connect your monitor and use graphical user interface too. for simplicity we can use VNC server. 
+Edge Box-200 comes to your hand pre installed raspberry pi OS.  You can use HDMI cable or connect your monitor and use graphical user interface too. for simplicity we can use VNC server. 
 
 For that in command line type :
 
