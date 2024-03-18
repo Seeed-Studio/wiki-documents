@@ -4,7 +4,7 @@ title: Grove Vision AI Module V2
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /grove_vision_ai_v2
+slug: /grove_vision_ai_v2a
 last_update:
   date: 12/12/2023
   author: Citric
@@ -91,7 +91,7 @@ If you find that the Grove Vision AI V2 is not recognised after connecting it to
 - Windows Vendor VCP Driver One-Click Installer: [CH343SER.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.EXE)
 - Windows Vendor VCP Driver: [CH343SER.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
 - Windows CDC driver one-click installer: [CH343CDC.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343CDC.EXE)
-- Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
+- Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343CDC.ZIP)
 - macOS Vendor VCP Driver: [CH34xSER_MAC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH341SER_MAC.ZIP)
 
 

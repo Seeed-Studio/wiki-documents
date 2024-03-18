@@ -69,9 +69,16 @@ Considering the power requirements of the USB Coral accelerator, we strongly rec
 
 We recommend installing the latest version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [guide](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/).
 
+
+
 ## Install Home Assistant Supervised OS to Raspberry pi.
 
-Installing Home Assistant Supervised on your Raspberry Pi CM4 based reTerminal DM is a comprehensive process that amalgamates several critical steps to ensure a successful setup. To begin, please note that performing these actions via a LAN connection is essential, as the Wi-Fi connectivity may be disrupted during the procedure.
+Installing Home Assistant Supervised on your Raspberry Pi CM4 based reTerminal DM is a comprehensive process that amalgamates several critical steps to ensure a successful setup. 
+
+:::note
+In some steps, if you are connected through Wi-Fi, you may lose connection. It is recommended to use a LAN connection instead.
+
+:::
 
 ### Step 1: Enhance Your System
 

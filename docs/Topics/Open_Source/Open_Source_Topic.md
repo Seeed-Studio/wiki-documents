@@ -85,7 +85,7 @@ Codecraft is a graphical programming software, using a drag-and-drop interface, 
      <img width="100" src="https://files.seeedstudio.com/wiki/open_source_topic/open_source_logo.png" alt="your-image-description" />
     </div>
     <div className="custom-text">
-      <h2>[GitHub] CodeCraft - Open Source Hardware</h2>
+      <h2>[GitHub] CodeCraft - Open Source Software</h2>
       <p>More information about fully open-sourced software CodeCraft on GitHub.</p>
     </div>
   </div>

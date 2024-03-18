@@ -2178,7 +2178,7 @@ gpiochip0: GPIOs 348-511, parent: platform/2200000.gpio, tegra234-gpio:
 
 (change the links)
 - [reServer Industrial Datasheet](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
-- [reServer Industrial Reference Guide](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-Reference-Guide.pdf)
+- [reServer Industrial Reference Guide](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
 - [NVIDIA Jetson Devices and Carrier Boards Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [reServer Industrial 3D File](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
 

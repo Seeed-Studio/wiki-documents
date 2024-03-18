@@ -1,6 +1,6 @@
 ---
 description: ODYSSEY, STM32MP135D
-title: Getting Started
+title: Getting Started with ODYSSEY – STM32MP135D 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-STM32MP135D
 last_update:

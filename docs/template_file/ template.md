@@ -141,7 +141,9 @@ last_update:
 ### Video code
 
 ```cpp
-<iframe width="100%" height="315" src="vider_link" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<div class="table-center">
+<iframe width="100%" height="315" src="URL" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 ```
 
 ### Hyperlink

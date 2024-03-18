@@ -8,14 +8,19 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /raspberry-pi-devices
 last_update:
-  date: 2022/12/31
+  date: 1/13/2023
   author: Kasun Thushara
 ---
 
 
 Welcome to the cutting-edge realm of Raspberry Pi-powered devices at Edge Solution. Here, we delve into the innovative solutions crafted by Seeed Studios for edge computing, specifically tailored for Raspberry Pi CM4 customizable devices such as Human-Machine Interface (HMI) units and versatile edge controllers. Join us on a journey through the intricate landscape of these powerful devices, designed to empower your projects with seamless and efficient edge computing capabilities.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/banner.png" style={{width:1000, height:'auto'}}/></div> 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/raspberry-pi"><strong><span><font color={'FFFFFF'} size={"4"}>🔍 Explore More</font></span></strong></a></div>
+
 ## HMI 
+
 
 ### reTerminal
 

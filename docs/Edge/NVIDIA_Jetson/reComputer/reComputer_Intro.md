@@ -233,6 +233,7 @@ last_update:
 ## FAQ
 - [Troubleshooting Installation](https://wiki.seeedstudio.com/Troubleshooting_Installation/)
 - [The remaining space in the eMMC in the received reComputer is only about 2GB, how to solve the problem of insufficient space?](https://wiki.seeedstudio.com/solution_of_insufficient_space/)
+- [How to solve the compatibility issue between reComputer and VEYE camera?](https://wiki.seeedstudio.com/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera/)
 
 ## Tech Support & Product Discussion
 

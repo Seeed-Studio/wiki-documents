@@ -17,13 +17,34 @@ last_update:
 
 ## Introduction
 
+This MP3 module with an Arduino can be turned into your multi-format music player! It's a Music module based on WT2605CX high-quality audio chip, which has better performance then MP3 V3 and supports Grove interface, Speaker JST interface, 3.5mm audio jack and SD card, supporting SPI-Flash, TF card, and USB flash disk. 
 
+<p style={{}}><a href="https://www.seeedstudio.com/Grove-MP3-V4-p-5862.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+
+## Feature
+- Multiple Music Formats Supports: Support voice high-quality audio format, (8kbps~320kbps) with a beautiful sound, MP3, WAV format;
+- Multiple Storage Format Support: Supports SPI-Flash, TF card, USB flash disk and support FAT, FAT32 file system;
+- Control mode: Rich AT communication interface to meet your requirements;
+- Rich Operation: supports randomized playback of commands, seamless loop playback function, and so on;
+- Audio Output Mode: default DAC output for samples.
+
+## Specification
+
+| Specification                           | Details                                     |
+| ---------------------------------------- | ------------------------------------------- |
+| Input                                  | 5V(DC)                                     |
+| Operating current (without signal output state) | less than 15 mA                            |
+| Operating current (with signal output state)    | less than 40 mA                            |
+| Chip                                   | KT403A                                      |
+| Chip LDO output voltage                | 3.3 V                                      |
+| Chip output current                   | 100 mA(at Max.)                            |
+| File formats supported                 | MP3, WAV, WMA                               |
+| Maximum memory supported for SD card    | 32 GB                                      |
+| Sampled rate                           | 8/11.025/12/16/22.05/24/32/44.1/48 (KHz)   |
 
 ## Hardware Overview
 
-
-
-
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/mp3V4.png" style={{width:300, height:'auto'}}/></div>
 
 ## Getting Started
 

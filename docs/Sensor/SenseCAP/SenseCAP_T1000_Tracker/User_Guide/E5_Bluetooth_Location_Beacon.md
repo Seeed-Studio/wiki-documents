@@ -1,6 +1,6 @@
 ---
 description: SenseCAP_Tracker_T1000-A/B_Bluetooth_Beacon
-title: How to get location via Bluetooth Beacon
+title: E5 Bluetooth Beacon
 keywords:
 - BLE
 - Positioning

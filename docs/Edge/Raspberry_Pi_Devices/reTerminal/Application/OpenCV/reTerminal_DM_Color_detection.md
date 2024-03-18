@@ -251,7 +251,10 @@ while True:
 
 ## Application
 
-Color detection plays a pivotal role in diverse applications, from computer vision and manufacturing to **medical imaging** and art. In computer vision, it enables object recognition and tracking, contributing to tasks like **robotic navigation and surveillance**. Industries utilize color detection for **sorting and quality control, ensuring products meet standards**. Medical imaging relies on color-based segmentation for precise analysis, while entertainment industries employ it in film color grading and art restoration. From **traffic sign recognition to biometric identification and environmental monitoring**, the ability to detect and interpret colors is fundamental, shaping advancements in technology, automation, and various fields
+Color detection plays a pivotal role in diverse applications, from computer vision and manufacturing to **medical imaging** and art. In computer vision, it enables object recognition and tracking, contributing to tasks like **robotic navigation and surveillance**. Industries utilize color detection for **sorting and quality control, ensuring products meet standards**. Medical imaging relies on color-based segmentation for precise analysis, while entertainment industries employ it in film color grading and art restoration. From **traffic sign recognition to biometric identification and environmental monitoring**, the ability to detect and interpret colors is fundamental, shaping advancements in technology, automation, and various fields.Using simple techniques like color detection and shape detection of the OpenCV Computer Vision Library, we can effortlessly count parking slots and detect abnormal car parking scenarios.
+
+<center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/carpark.gif" /></center>
+
 
 ## Tech support
 

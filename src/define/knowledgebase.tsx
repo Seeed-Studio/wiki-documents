@@ -147,6 +147,16 @@ export const ContributionList=[
         source: 'https://wiki.seeedstudio.com/FAQs_For_openWrt',
         tags: ['Network'],
       },
+      {
+        //Wio terminal
+        title1: '- How to avoid the program loss after restarting Wio Terminal multiple times"?',
+        website1: 'https://wiki.seeedstudio.com/Program_loss_by_repeated_power',
+        title2: '-',
+        website2: '',
+        preview: 'knowledge_base6.png',
+        source: 'https://wiki.seeedstudio.com/FAQs_For_openWrt',
+        tags: ['Sensing', 'MCU'],
+      },
     ]
   },
  

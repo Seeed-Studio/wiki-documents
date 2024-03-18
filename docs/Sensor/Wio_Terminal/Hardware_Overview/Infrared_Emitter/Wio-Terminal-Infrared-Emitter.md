@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Getting Started with Infrared Emitter
 keywords:
 - Wio_terminal Infrared_Emitter
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

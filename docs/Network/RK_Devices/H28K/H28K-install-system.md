@@ -32,7 +32,7 @@ tags:
 
 The LinkStar-H28K has two Gigabit network ports that use PCIE/RGMII gigabit technology and a Quad-core chip.  It has LPDDR4X 4GB memory and 8GB eMMC storage that can be expanded up to 512 GB with a TF card. It also has a 5V-12V Type-C connection for PD (Power Delivery) capability.  In this wiki we will show you how to install operating system with TF card or eMMC.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/28.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/30.png" /></div>
 
 ## Select the system you need for H28K
 
@@ -68,7 +68,7 @@ Please prepare the equipment required above, firmware update packages can be dow
 | Version           | Description                                               | Download                                                     |
 | ----------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
 | balenaEtcher      | ISO Burner Tool                                           | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/balenaEtcher-Portable-1.5.109.zip) |
-| QWRT R23.12.12 | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/openwrtOS.zip) |
+| QWRT R24.01.23              | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/QWRT-R24.01.23-v2-rockchip-rk35xx-linkstar_h28k-squashfs-sysupgrade.zip) |
 
 :::caution
 When using a TF card with H28K, it is important to note that it may be incompatible with some **high-speed cards**. If you are using a high speed card, you may experience data loading errors, boot-up errors or malfunctions during power-up and loading of the system due to the speed of the card.
@@ -118,10 +118,10 @@ Then power up the H28K, you can choose to power it via **USB-C-5V**.
 
 **Step 4.** Manage the QWRT backend
 
-Use a network cable to connect to the ETH1 network port of the H28K. Then enter the address: `192.168.1.1` into your browser to access the admin backend.
+Use a network cable to connect to the ETH0 network port of the H28K. Then enter the address: `192.168.1.1` into your browser to access the admin backend.
 
 :::caution
-ETH0 is the WAN port and the ETH1 port is LAN ports. If you want to manage H28K's QWRT via a network cable, then connect the network cable to ETH1.
+ETH0 is the LAN port and the ETH1 port is WAN ports. If you want to manage H28K's QWRT via a network cable, then connect the network cable to ETH0.
 :::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H28K/15.png" /></div>
@@ -147,7 +147,7 @@ Please prepare the equipment required above, firmware update packages can be dow
 
 | Version                     | Description                                               | Download                                                     |
 | --------------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
-| QWRT R23.12.12           | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/openwrtOS.zip) |
+| QWRT R24.01.23              | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/QWRT-R24.01.23-v2-rockchip-rk35xx-linkstar_h28k-squashfs-sysupgrade.zip) |
 | Flash to eMMC tool & driver | V5.12                                                     | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/H28K_Flash_Tools.zip) |
 
 #### Procedure
@@ -237,7 +237,7 @@ password: password
 
 Congratulations, you have now successfully installed QqWRT into eMMC.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/28.png" /></div>
+<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/H28K/30.png" /></div>
 
 ## Resources
 
@@ -246,7 +246,7 @@ H28K is open source hardware.Download links to relevant materials。
 
 | Version                     | Description      | Download                                                     |
 | --------------------------- | ---------------- | ------------------------------------------------------------ |
-| QWRT R23.12.12              | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/openwrtOS.zip) |
+| QWRT R24.01.23              | Based on OpenWRT | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/QWRT-R24.01.23-v2-rockchip-rk35xx-linkstar_h28k-squashfs-sysupgrade.zip) |
 | Flash to eMMC tool & driver | V5.12            | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/H28K_Flash_Tools.zip) |
 | balenaEtcher                | ISO Burner Tool  | [Download](https://files.seeedstudio.com/wiki/H28K/H28K_Tools/balenaEtcher-Portable-1.5.109.zip) |
 | H28K-SCH                    | H28K schemetics  | [Download](https://files.seeedstudio.com/wiki/H28K/Open_source/H28K-SCH.zip) |

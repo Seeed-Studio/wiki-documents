@@ -1,6 +1,6 @@
 ---
 description: Get Started with Wio-WM1110 Dev Kit
-title: Get Started
+title: Get Started with Wio-WM1110 Dev Kit
 keywords:
 - Wio-WM1110 Dev Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

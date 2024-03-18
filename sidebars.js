@@ -135,12 +135,29 @@ const sidebars = {
             {
               type: 'category',
               label: 'AI-powered',
-              items: [
-                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2',
+              items: [        
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
+                {
+                  type: 'category',
+                  label: 'Grove Vision AI V2',
+                  collapsed: true,
+                  collapsible: true,
+                  link: {
+                    type: "doc",
+                    id: "Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2"
+                  },
+                  items: [
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-software-supported',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-ha',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-camera-supported',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-himax-sdk',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-sensecap-app',
+                  ],
+                },    
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
+                // 'Sensor/Grove/Grove_Sensors/AI-powered/Gesture_control_music_application',
               ],
             },
             {
@@ -328,6 +345,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Sound_Recorder',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Analog-Microphone',
                 'Sensor/Grove/Grove_Sensors/Sound/Grove-Recorder_v2.0',
+                'Sensor/Grove/Grove_Sensors/Sound/Grove-Offline-Voice-Recognition',
               ],
             },
             {
@@ -410,6 +428,8 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_TTN_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_Demo',
                     'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_Helium_tinyML_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_SenseCAP_Cloud_Demo',
+                    'Sensor/Grove/Grove_Sensors_Network/LoRa/demo/Grove_Wio_E5_SenseCAP_XIAO_ESP32S3',
               ],
             },
             {
@@ -664,11 +684,12 @@ const sidebars = {
           },
           items: [
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/SenseCAP_T1000_Tracker_Introduction',
-            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Get_Started',
             {
             type: 'category',
             label: 'User Guide',
             items: [
+              'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/Get_Started',
+              'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/Payload',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/Tracker_WiFi_Geolocation',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/E5_Bluetooth_Location_Beacon',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/Indoor_Positioning_Guide',
@@ -701,6 +722,7 @@ const sidebars = {
                    ],
           },
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Firmware_release_note',          
               ],
         },
         
@@ -764,6 +786,12 @@ const sidebars = {
             {
               type: 'category',
               label: ' SenseCAP ONE Weather Sensor',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: "Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ONE_intro",
+              },
               items: [
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
@@ -781,6 +809,12 @@ const sidebars = {
             {
               type: 'category',
               label: 'SenseCAP Sensor Probe',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: "Sensor/SenseCAP/SenseCAP_Probe/Probe_intro",
+              },
               items: [
                 'Sensor/SenseCAP/SenseCAP_Probe/SenseCAP_Sensor_Probes_Product_Catalogue',
                 'Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor',
@@ -836,7 +870,7 @@ const sidebars = {
             },
           ],
         },
-        "Sensor/SenseCAP/SenseCAP_Decoder",
+        'Sensor/SenseCAP/SenseCAP_Decoder',
         {
           type: 'category',
           label: 'Applications',
@@ -844,6 +878,13 @@ const sidebars = {
             'Sensor/SenseCAP/Applications/Home_Assistant_X_SenseCAP_LoRaWAN_Sensors',
             'Sensor/SenseCAP/Applications/Develop_an_Industrial_LoRaWAN_Sensor',
           ],
+        },
+        {
+          type: 'category',
+          label: 'Learn',
+          items: [
+            'Sensor/SenseCAP/Learn/How_to_Select_the_LoRaWAN_Network',
+         ],
         },
       ],
     },
@@ -1028,7 +1069,9 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-esphome',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiao-esp32c3-prism-display',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-chatgpt',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/ESP32C3_Smart_Thermostat',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
               ],
@@ -1087,6 +1130,20 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Draw_dials_with_Display_and_lvgl',
               ],
             },
+            {
+              type: 'category',
+              label: 'GPS Module for XIAO',
+              // link: {
+              //   type: "doc",
+              //   id: 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Introduction',
+              // },
+              items: [
+                {
+                  type: 'autogenerated',
+                  dirName: 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/GPS_Module_For_XIAO',
+                },
+              ]
+            },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Seeeduino-XIAO-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-CAN-Bus-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip',
@@ -1118,20 +1175,21 @@ const sidebars = {
         'Sensor/Wio_Terminal/Wio-Terminal-Getting-Started',
         'Sensor/Wio_Terminal/Wio-Terminal-CircuitPython',
         'Sensor/Wio_Terminal/Software-FreeRTOS',
-        {
-          type: 'category',
-          label: 'ArduPy with Wio Terminal',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: "doc",
-            id: 'Sensor/Wio_Terminal/ArduPy/ArduPy',
-          },
-          items: [
-            'Sensor/Wio_Terminal/ArduPy/ArduPy-LCD',
-            'Sensor/Wio_Terminal/ArduPy/ArduPy-Libraries',
-          ],
-        },
+        'Sensor/Wio_Terminal/wio_terminal_faq',
+        // {
+        //   type: 'category',
+        //   label: 'ArduPy with Wio Terminal',
+        //   collapsed: true,
+        //   collapsible: true,
+        //   link: {
+        //     type: "doc",
+        //     id: 'Sensor/Wio_Terminal/ArduPy/ArduPy',
+        //   },
+        //   items: [
+        //     'Sensor/Wio_Terminal/ArduPy/ArduPy-LCD',
+        //     'Sensor/Wio_Terminal/ArduPy/ArduPy-Libraries',
+        //   ],
+        // },
         {
           type: 'category',
           label: 'Hardware Overview',
@@ -1666,6 +1724,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Get_Started',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_to_TTN',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/LoRa_Locator',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_1110_to_HA',
 
                 {
                   type: 'category',
@@ -2175,14 +2234,23 @@ const sidebars = {
         },
       ],
     },
+    // {
+    //   type: 'category',
+    //   label: 'SenseCAP LoRaWAN Starter Kit',
+    //   items: [
+    //     'Network/SenseCAP_LoRaWAN_Starter_Kit/M2_Kit_Getting_Started',
+    //   ],
+    // },
     {
       type: 'category',
       label: 'SenseCAP LoRaWAN Starter Kit',
       items: [
-        'Network/SenseCAP_LoRaWAN_Starter_Kit/M2_Kit_Getting_Started',
-      ],
+        {
+          type: 'autogenerated',
+          dirName: 'Network/SenseCAP_LoRaWAN_Starter_Kit',
+        },
+      ]
     },
-
     // {
     // 有问题
     //   type: 'category',
@@ -2376,6 +2444,7 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_opencv',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Face_detection',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Color_detection',
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Shape_detection',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM-tracking',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
                       
@@ -2460,12 +2529,28 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
                 ],
               },
+
+              {
+                type: 'category',
+                label: 'N3uron',
+                items: [
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminalDM_N3uron_Get_Start',
+                ],
+              },
+
               {
                 type: 'category',
                 label: 'Ignition Edge',
                 items: [
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Getting-Started-with-Ignition-Edge',
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
+                ],
+              },
+              {
+                type: 'category',
+                label: 'SCADA',
+                items: [
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_FUXA',
                 ],
               },
               {
@@ -2482,6 +2567,7 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/AWS_IoT/reTerminal-DM_AWS_first',
                 ],
               },
+
             ],
           },
 
@@ -2502,11 +2588,13 @@ const sidebars = {
             type: 'category',
             label: 'EdgeBox-RPI-200',
             items: [
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox_rpi_200_Introduction',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-AWS',
               {
                 type: 'category',
                 label: 'Ignition Edge',
@@ -2558,6 +2646,8 @@ const sidebars = {
               'Edge/NVIDIA_Jetson/reComputer/Tutorials/reComputer_Jetson_Memory_Expansion',
               'Edge/NVIDIA_Jetson/reComputer/Tutorials/J1010_Boot_From_SD_Card',
               'Edge/NVIDIA_Jetson/reComputer/Tutorials/J101_Enable_SD_Card',
+              'Edge/NVIDIA_Jetson/reComputer/Hardware/reComputer_Jetson_with_Infineon_Wi-Fi_Module',
+
               ],
             },
 
@@ -2591,13 +2681,14 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/JetPack™_OS_Installation/reComputer_J4012_Flash_Jetpack',
                 {
                   type: 'category',
-                  label: 'Other Carrier Boards for reComputer',
+                  label: 'Other Carrier Boards for Jetson',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A603_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A607_Flash_JetPack',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A203_Flash_System',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/reComputer_A205_Flash_System',
                     'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/Jetson-Mate',
+                    'Edge/NVIDIA_Jetson/reComputer/Other_Carrier_Boards/A608_Flash_JetPack',
                   ],
                 },
               ],
@@ -2616,6 +2707,9 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Update-Jetson-Linux-OTA-Using-Allxon',
                 'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
+                'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Deploy_Riva_and_Llama2_on_reComputer',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Real_Time_Subtitle_Recoder_on_Jetson'
               ],
             },
 
@@ -2983,6 +3077,19 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'SenseCraft',
+      items: [
+        {
+          type: 'category',
+          label: 'SenseCraft AI',
+          items: [
+            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
+          ],
+        },
+      ]
+    },
 
     {
       type: 'html',
@@ -3263,6 +3370,13 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Cooler_Device',
+          items: [
+            'Top_Brand/Raspberry_Pi/Cooler_Device/Water_Cooling_Kit',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Kit with Courses',
           items: [
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
@@ -3284,6 +3398,18 @@ const sidebars = {
       },
       items: [
         'Top_Brand/Micro_bit/Grove_Inventor_Kit_for_microbit',
+        'Top_Brand/Micro_bit/Microsoft_MakeCode',
+        {
+          type: 'category',
+          label: 'Expansion Board',
+          items: [
+            'Top_Brand/Micro_bit/expansion_board/BitWear',
+            'Top_Brand/Micro_bit/expansion_board/BitMaker',
+            'Top_Brand/Micro_bit/expansion_board/BitMaker_Lite',
+            'Top_Brand/Micro_bit/expansion_board/BitPlayer',
+            'Top_Brand/Micro_bit/expansion_board/BitCar',
+          ],
+        },
       ],
     },
     // 'Contribution/Home_Assistant/Home_Assistant_Topic',
@@ -3297,7 +3423,7 @@ const sidebars = {
 
 
     'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
-
+    'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
     {
       type: 'doc',
       id: 'Topics/TinyML/TinyML_Topic',
@@ -3319,6 +3445,66 @@ const sidebars = {
            'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
           'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
            'Topics/TinyML/TinyML_Workshop/Image_classification_project',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'ModelAssistant',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/TinyML/ModelAssistant/introduction/overview',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Introduction',
+          collapsed: false,
+          items: [
+          'Topics/TinyML/ModelAssistant/introduction/overview',
+          'Topics/TinyML/ModelAssistant/introduction/quick_start',
+          'Topics/TinyML/ModelAssistant/introduction/installation',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Tutorials',
+          collapsed: false,
+          items: [
+            'Topics/TinyML/ModelAssistant/tutorials/config',
+            'Topics/TinyML/ModelAssistant/tutorials/datasets',
+            {
+              type: 'category',
+              label: 'Trainning',
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: 'Topics/TinyML/ModelAssistant/tutorials/training/overview',
+              },
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/training/yolo',
+                'Topics/TinyML/ModelAssistant/tutorials/training/fomo',
+                'Topics/TinyML/ModelAssistant/tutorials/training/pfld',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Export',
+              collapsed: true,
+              link: {
+                type: "doc",
+                id: 'Topics/TinyML/ModelAssistant/tutorials/export/overview',
+              },
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_onnx',
+                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_tflite',
+              ]
+            },
+          ]
+        },
+        'Topics/TinyML/ModelAssistant/deploy/overview',
       ],
     },
 

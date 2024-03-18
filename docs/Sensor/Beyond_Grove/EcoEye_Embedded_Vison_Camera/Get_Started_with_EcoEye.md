@@ -1,6 +1,6 @@
 ---
 description: Get_Started_with_EcoEye–Embedded_Vision_Camera
-title: Get Started
+title: Get Started with EcoEye–Embedded Vision Camera
 keywords:
 - EcoEye–Embedded_Vision_Camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

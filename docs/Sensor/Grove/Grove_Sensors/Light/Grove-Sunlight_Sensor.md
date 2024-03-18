@@ -77,7 +77,7 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 
 ---
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Hardware_overview.jpg" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Hardware_overview.jpg" /></div>
 
 - Grove Connector - a 4pin interface, contain VCC, GND, SDA and SCL
 - LED - LED Driver pin
@@ -89,13 +89,13 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 ---
 After this section, you can make Grove - Sunlight Sensor run with only few steps.
 
-### Play with Arduino
+### SI1145 - Play with Arduino
 
 **Materials required**
 
 | Seeeduino V4.2 |Grove - Sunlight Sensor|
 |--------------|-------------|
-|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
+|<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 :::caution
@@ -112,11 +112,92 @@ If you need a plug more modules on main control board, you may need a [Grove bas
 
 **Download**
 
-Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/tree/Si1151) to download the library and then [add](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to the Arduino.
+Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/tree/master) to download the library and then [add](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to the Arduino.
+
+Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1145DEMO** to open the test code.
+
+```cpp
+/*
+    This is a demo to test Grove - Sunlight Sensor library
+
+*/
+
+#include <Wire.h>
+
+#include "Arduino.h"
+#include "SI114X.h"
+
+SI114X SI1145 = SI114X();
+
+void setup() {
+
+    Serial.begin(115200);
+    Serial.println("Beginning Si1145!");
+
+    while (!SI1145.Begin()) {
+        Serial.println("Si1145 is not ready!");
+        delay(1000);
+    }
+    Serial.println("Si1145 is ready!");
+}
+
+void loop() {
+    Serial.print("//--------------------------------------//\r\n");
+    Serial.print("Vis: "); Serial.println(SI1145.ReadVisible());
+    Serial.print("IR: "); Serial.println(SI1145.ReadIR());
+    //the real UV value must be div 100 from the reg value , datasheet for more information.
+    Serial.print("UV: ");  Serial.println((float)SI1145.ReadUV() / 100);
+    delay(1000);
+}
+
+```
+
+Click Tools>Board to choose Arduino UNO and select respective serial port.
+
+Now click Upload(CTRL+U) to burn testing code. Please refer to [**here**](https://wiki.seeedstudio.com/Arduino_Common_Error) for any error prompt .
+
+**Review Results**
+
+After upload completed, Open Serial Monitor of your Arduino IDE, you can get the data:
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/output.png" /></div>
+
+:::note
+    Vis - visible light, unit in lm
+    IR - infrared light, unit in lm
+    UV - UN index
+:::
+
+Now, put Grove - Sunlight Sensor under the sun to see if it's a nice day.
+
+### SI1151 - Play with Arduino
+
+**Materials required**
+
+| Seeeduino V4.2 |Grove - Sunlight Sensor|
+|--------------|-------------|
+|<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
+
+:::caution
+If this is your first time using Arduino, Please put hand on [here](https://wiki.seeedstudio.com/Getting_Started_with_Seeeduino) to start your Arduino journey.
+:::
+
+**Connecting hardware**
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_hardware_connect.jpg" /></div>
+
+:::note
+If you need a plug more modules on main control board, you may need a [Grove base shield](https://wiki.seeedstudio.com/Base_Shield_V2/) which will make your work easy.
+:::
+
+**Download**
+
+Click [here](https://github.com/Seeed-Studio/Grove_Sunlight_Sensor/tree/master) to download the library and then [add](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) it to the Arduino.
 
 Launch Arduino IDE and click **File>Examples>Grove_Sunlight_Sensor>SI1151** to open the test code.
 
-```c++
+```cpp
 #include "Si115X.h"
 
 Si115X si1151;
@@ -126,15 +207,18 @@ Si115X si1151;
  */
 void setup()
 {
-    uint8_t conf[4];
-
     Wire.begin();
     Serial.begin(115200);
-    if (!si1151.Begin())
+    if (!si1151.Begin()) {
         Serial.println("Si1151 is not ready!");
-    else
+        while (1) {
+            delay(1000);
+            Serial.print(".");
+        };
+    }
+    else {
         Serial.println("Si1151 is ready!");
-
+    }
 }
 
 /**
@@ -143,12 +227,11 @@ void setup()
 void loop()
 {
     Serial.print("IR: ");
-    Serial.println(si1151.ReadHalfWord());
-    Serial.print("VISIBLE: ");
-    Serial.println(si1151.ReadHalfWord_VISIBLE());
-    Serial.print("UV: ");
-    Serial.println(si1151.ReadHalfWord_UV());
-    delay(100);
+    Serial.println(si1151.ReadIR());
+    Serial.print("Visible: ");
+    Serial.println(si1151.ReadVisible());
+
+    delay(500);
 }
 ```
 
@@ -169,6 +252,7 @@ After upload completed, Open Serial Monitor of your Arduino IDE, you can get the
 :::
 
 Now, put Grove - Sunlight Sensor under the sun to see if it's a nice day.
+
 
 ### SI1145 - Play with Raspberry Pi
 

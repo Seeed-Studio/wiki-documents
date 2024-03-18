@@ -87,6 +87,8 @@ Below the digital ports are four I2C Grove ports. I2C is a low-speed bus protoco
 
 The Grove - LCD RGB Backlight supports text display, using user-defined characters. It enables you to set the backlight color, using the simple and concise Grove interface. It uses I2C as the communication method with your Arduino. So, the number of pins required for data exchange and backlight control shrinks from ~10 to 2, leaving more I/O capability for other challenging tasks.
 
+Grove_LCD_RGB_Backlight now supports MBED as well. Many thanks to the enthusiastic contributions from the community. For more details, you can take a look [here](https://github.com/DavidElmoRoss/Grove_LCD_RGB_Backlight_V5).
+
 **Example**
 
 The example shows you how to print text on the screen and change the color of backlight. Find it via the path:

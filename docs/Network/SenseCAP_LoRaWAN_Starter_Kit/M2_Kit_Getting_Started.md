@@ -1,14 +1,17 @@
 ---
-description: SenseCAP LoRaWAN Starter Kit Getting Started
-title: SenseCAP LoRaWAN Starter Kit Getting Started
+description: Get Started with the SenseCAP LoRaWAN Starter Kit
+title: Get Started with the SenseCAP LoRaWAN Starter Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /M2_Kit_Getting_Started
+sidebar_position: 0
 last_update:
-  date: 9/12/2023
-  author: KeweiLee
+  date: 1/26/2023
+  author: Specner
 ---
 # **Overview**
+
 ## **LoRaWAN Basics**
+
 LoRaWAN (Long Range Wide Area Network) is a low-power, long-range wireless communication protocol specifically designed for Internet of Things (IoT) applications. It provides long-distance and low-power communication capabilities for IoT devices.The key feature of LoRaWAN includes:
 
 - Long-range communication
@@ -17,11 +20,14 @@ LoRaWAN (Long Range Wide Area Network) is a low-power, long-range wireless commu
 - large-scale device connectivity
 
 Due to these characteristics, it is widely applied in smart agriculture,smart city,environmental monitoring and other wireless sensing applications.
+
 <div align="center"><img width ={500} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/1.png
 "/></div>
 
 To learn more about LoRaWAN, click here. 
+
 ## **SenseCAP LoRaWAN Starter Kit**
+
 SenseCAP LoRaWAN Starter Kit is aim to facilitate users in rapidly acquiring and applying practical knowledge of LoRaWAN.The kit includesNM2 Multiple platform gateway,XIAOS3，Grove Wio-E5，Temperature & Humidity Sensor,Moisture Sensor, other expandable Grovesenables users to engage in hands-on learning of LoRaWAN architecture and empowers them to further develop their own projects.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/2.jpg" /></div>
 
@@ -40,8 +46,11 @@ Relevant Products:
 
 
 # **Get Started**
+
 ## **Preparation**
+
 ### **hardware**
+
 **Electronic Components**
 
 The kit should include the following electronic components. Please check if they are complete.**    
@@ -81,10 +90,15 @@ Scan to down load SenseCAP Mate APP
 
 
 ## **Step 1 Power on and Connect to Internect**
+
 The kit includes [SenseCAP Multi-Platform LoRaWAN Indoor Gateway(SX1302) - EU868 - Seeed Studio](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html) which is a standard LoRaWAN® gateway that supports connecting to different network servers. It can be used not only for personal LoRa development but also in conjunction with industrial sensors. In this wiki, the datastream will go through SenseCAP Cloud. The default model running on this gateway is SenseCAP so you don't need to do extra setting, just power on the gateway and connect to Internet by ETH or WIFI.
+
 ### **Connect to ETH Cable**
+
 The fast way - Connect the Ethernet cable to the Ethernet port, and the indicator onthetop will show solid green if the gateway is successfully connected to the Internet.
+
 ### **Connected to WIFI via Luci**
+
 There are two ways for users to login Luci configuration page.:
 
 **Access via router**
@@ -139,6 +153,7 @@ Submit the Wi-Fi password, and then click Submit and Save.
 Then click Save and Apply to apply your settings. 
 
 The indicator on the top will show solid green if the gateway is successfully connected to the WIFI.
+
 ## **Step2 Connect Nodes**
 Insert the Grove-Capacitive Soil Moisture Sensor, Temperature & Humidity Sensor & Grove-Wio-E5 Wireless module to XIAO Expansion Board.
 
@@ -146,6 +161,7 @@ Insert the Grove-Capacitive Soil Moisture Sensor, Temperature & Humidity Sensor 
 
 
 ## **Step 3 Scan QR Code of Grove-Wio-E5**
+
 Open the SenseCAP Mate APP after downloading the corresponding version of the APP according to all the mobile systems you use. if it is your first time to use the SenseCAP platform, please register an account first.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/18.png" /></div>
@@ -172,4 +188,7 @@ After successful binding using the SenseCAP Mate App, you will see the sensor da
 The SenseCAP Mate App will not automatically refresh the data information, you will need to manually scroll down on the sensor page to refresh the data. If you do not see new data for more than 10 minutes, you can try restarting the Wio Terminal by toggling down the side button once.
 :::
 
+## Appendix
+
+- [Native Firmware Code](https://github.com/Seeed-Solution/lorawan-kit)
 

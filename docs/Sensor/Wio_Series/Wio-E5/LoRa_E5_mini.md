@@ -31,8 +31,8 @@ Learn more about [Wio-E5](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Modul
 
 More comparison between the Wio-E5 and LoRa® RFM95 chip:
 
-<!-- ![](https://files.seeedstudio.com/products/113990934/%E8%8A%AF%E7%89%87%E5%AF%B9%E6%AF%94_2021.3.4.png) -->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/113990934/%E8%8A%AF%E7%89%87%E5%AF%B9%E6%AF%94_2021.3.4.png" alt="pir" width={600} height="auto" /></p>
+<!-- ![](https://files.seeedstudio.com/wiki/Grove-Wio-E5/2.png) -->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Wio-E5/2.png" alt="pir" width={600} height="auto" /></p>
 
 Wio-E5 mini leads out all GPIOs of Wio-E5, including UART, ADC, SPI, IIC, and etc. It contains RESET and BOOT buttons and is use-friendly. Supporting LoRaWAN® protocol, Wio-E5 mini features ultra-long-range transmission and ultra-low power consumption: it is able to achieve a transmission range of up to 10 km, and the sleep current of Wio-E5 modules on board is as low as 2.1 uA(WOR mode). It is designed with industrial standards with a wide working temperature at -40 ℃ ~ 85℃, high sensitivity between -116.5dBm ~ -136 dBm, and RF output power up to +20.8 dBm at 3.3V.
 
@@ -363,7 +363,7 @@ Rx: +MSGHEX: Start
 +MSGHEX: Done
 ```
 
-For more information about AT Commands, please refer to [LoRa-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
+For more information about AT Commands, please refer to [Wio-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
 
 ### Develop with STM32Cube MCU Package
 
@@ -629,7 +629,7 @@ Wio-E5 mini Datasheet:
 
 Wio-E5 Datasheet:
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf">Wio-E5 datasheet and specifications</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.1.pdf">Wio-E5 datasheet and specifications</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Wio-E5 AT Command Specification</a></p>
 
@@ -642,6 +642,10 @@ Wio-E5 Certifications:
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">Wio-E5-HF FCC Certification -DSS</a></p>
 
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">Wio-E5-HF FCC Certification -DTS</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/Telec.zip">WWio-E5-HF TELEC Certification</a></p>
+
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20IC%20ID.pdf">Wio-E5-HF IC Certification</a></p>
 
 Relevant SDK:
 
