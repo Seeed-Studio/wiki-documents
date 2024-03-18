@@ -3,21 +3,18 @@
   "start_urls": [
     {
       "url": "https://wiki.seeedstudio.com/",
-      "selectors_key": "homepage"
+      "selectors_key": ""
     }
   ],
   "selectors": {
-    "docs": {
-      "lvl0": {
-        "selector": ".docTitle_node_modules-@docusaurus-theme-classic-lib-theme-DocItem-",
-        "default_value": "Documentation"
-      },
-      "lvl1": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h1",
-      "lvl2": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h2",
-      "lvl3": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h3",
-      "lvl4": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h4",
-      "lvl5": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h5",
-      "text": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- p, .docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- li"
+    "homepage": {
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
     }
   },
   "stop_urls": [
