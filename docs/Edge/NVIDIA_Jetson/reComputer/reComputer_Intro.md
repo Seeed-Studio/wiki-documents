@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Intro
 last_update:
-  date: 12/19/2023
+  date: 2022/12/31
   author: Youjiang
 ---
 

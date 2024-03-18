@@ -5,7 +5,7 @@ title: Fan Pinout
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Fan_Pinout
 last_update:
-  date: 2025/6/25
+  date: 2022/12/31
   author: cheng.tang
 ---
 
