@@ -2594,6 +2594,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-AWS',
               {
                 type: 'category',
                 label: 'Ignition Edge',

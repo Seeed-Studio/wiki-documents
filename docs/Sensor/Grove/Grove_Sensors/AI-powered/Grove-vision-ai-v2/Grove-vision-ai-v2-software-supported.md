@@ -325,7 +325,7 @@ Go to the Sketch menu, then select **Include Library > Manage Libraries...**. Th
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/20.png" style={{width:1000, height:'auto'}}/></div>
 
-#### Demo 1. Using XIAO to get recognition results reported by Grove Vision AI V2
+#### Demo 1. Use XIAO to get recognition results
 
 The following procedure is a simple example to help you obtain and parse the recognition information reported by Grove Vision AI V2.
 
@@ -417,7 +417,7 @@ We are still using the Gesture Detection model. After you have uploaded the appl
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/12.png" style={{width:800, height:'auto'}}/></div>
 
 
-#### Demo 2. Use the XIAO to communicate serially with the Grove Vision AI V2
+#### Demo 2. Send control commands via XIAO
 
 The Grove Vision AI V2 supports communication via the [UART protocol](https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md), and by using the built-in protocol, it is possible to operate the Himax WE2 chip of the Grove Vision AI V2. The following sample program shows how to use the XIAO to communicate with the Grove Vision AI V2 over the serial port.
 
@@ -483,6 +483,12 @@ In the `loop()` function:
 - Finally, the received data from the Grove Vision AI V2 module is transmitted back to the serial console using `Serial.write()`, completing the two-way communication between the serial interface and the vision AI module.
 
 This setup allows for interactive communication with the Grove Vision AI V2 module, enabling users to send instructions to and receive data from the module over a serial connection.
+
+## Troubleshooting
+
+### Q1: Why can't I see the recognised result on the port after I successfully upload the code of Demo1 using XIAO ESP32C3?
+
+If you are using Arduino IDE version 1.xx, please re-open the serial monitor after pressing Reset on C3 to see the result. If you are using Arduino version 2.xx, the message will be refreshed in the serial monitor after pressing the Reset button.
 
 ## Tech Support & Product Discussion
 

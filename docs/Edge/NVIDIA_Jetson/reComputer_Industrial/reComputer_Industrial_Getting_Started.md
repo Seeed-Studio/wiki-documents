@@ -253,7 +253,7 @@ You need to prepare the following hardware before getting started with reCompute
 
 - reComputer Industrial
 - Provided Power Adapter with power cord ([US version](https://www.seeedstudio.com/AC-US-p-5122.html) or [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html))
-- Ubuntu Host PC (native or VM using VMware Workstation Player)
+- Ubuntu 20.04 Host PC
 - USB Type-C data transmission cable
 - External monitor
 - HDMI cable
@@ -261,7 +261,11 @@ You need to prepare the following hardware before getting started with reCompute
 
 ### Enter Force Recovery Mode
 
-Now you need to enter recovery mode on the reComputer Industrial board in order flash the device. Connect a USB Type-C cable between **USB2.0 DEVICE** port and your PC. Use a pin and insert into the **RECOVERY** hole to press the recovery button and while holding this, connect the included **2-Pin Terminal block power connector** to the power connector on the board (make sure to use the 2 screws to screw the terminal in place) and connect the included power adapter with a power cord to turn on the board
+Now you need to enter recovery mode on the reComputer Industrial board in order flash the device. 
+1. Connect a USB Type-C cable between **USB2.0 DEVICE** port and your PC.
+2. Use a pin and insert into the **RECOVERY** hole to press recovery button and while holding this.
+3. Connect the included **2-Pin Terminal block power connector** to the power connector on the board and connect the included power adapter with a power cord to turn on the board.
+4. Release the recovery button.
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/97.png"/></div>
 
