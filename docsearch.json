@@ -3,50 +3,38 @@
   "start_urls": [
     {
       "url": "https://wiki.seeedstudio.com/",
-      "selectors_key": "homepage"
+      "selectors_key": "homepage",
+      "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml/"]
     }
   ],
   "selectors": {
-    "homepage": {
-      "lvl1": "header h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
+    "docs": {
+      "lvl0": {
+        "selector": ".docTitle_node_modules-@docusaurus-theme-classic-lib-theme-DocItem-",
+        "default_value": "Documentation"
+      },
+      "lvl1": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h1",
+      "lvl2": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h2",
+      "lvl3": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h3",
+      "lvl4": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h4",
+      "lvl5": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- h5",
+      "text": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- p, .docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- li"
     }
   },
-  "stop_urls": [
-    "https://wiki.seeedstudio.com/search",
-    "https://wiki.seeedstudio.com/v3me",
-    "https://wiki.seeedstudio.com/playground",
-    "https://wiki.seeedstudio.com/inspector",
-    "https://wiki.seeedstudio.com/zh-CN",
-    "https://wiki.seeedstudio.com/cn"
-  ],
-  "sitemap_urls": [
-    "https://wiki.seeedstudio.com/sitemap.xml"
-  ],
-  "sitemap_alternate_links": true,
-  "strip_chars": " .,;:#",
+  "min_indexed_level": 1,
+  "only_content_level": true,
   "custom_settings": {
-    "separatorsToIndex": "_",
-    "attributesForFaceting": [
-      "language",
-      "version",
-      "type",
-      "docusaurus_tag"
-    ],
-    "attributesToRetrieve": [
-      "hierarchy",
-      "content",
-      "anchor",
-      "url",
-      "url_without_anchor",
-      "type"
-    ]
+    "attributesForFaceting": ["language", "version"]
   },
-  "js_render": true,
-  "nb_hits": 856
+  "stop_urls": [
+    "/search",
+    "/v3me",
+    "/playground",
+    "/inspector",
+    "/zh-CN",
+    "/cn"],
+  "strip_chars": " .,;:#",
+  "conversation_id": null,
+  "nb_hits": 0
 }
+
