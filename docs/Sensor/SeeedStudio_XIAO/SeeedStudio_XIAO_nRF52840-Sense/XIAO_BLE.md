@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
-title: Getting Started
+title: Getting Started with XIAO nRF52840
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -76,6 +76,11 @@ Seeed Studio XIAO nRF52840 assembles many functions in one tiny board and someti
 
 The Pin definition supported by these two libraries might be a little different and Seeed will keep update the wiki until it is clear.
 
+:::tip
+1. If you use the onboard package of Seeed nRF52 Boards, the Serial function may not compile. The solution is to add the line "#include <Adafruit_TinyUSB.h>" in your code. You can download this package from: https://github.com/adafruit/Adafruit_TinyUSB_Arduino
+
+2. If you prefer a simpler approach, you can choose Seeed nRF52 mbed-enabled Boards from the beginning. It supports the compilation of the Serial function without the need for additional modifications.
+:::
 ## Getting started
 
 First, we are going to connect the Seeed Studio XIAO nRF52840 (Sense) to the computer and upload a simple code from Arduino IDE to check whether the board is functioning well.

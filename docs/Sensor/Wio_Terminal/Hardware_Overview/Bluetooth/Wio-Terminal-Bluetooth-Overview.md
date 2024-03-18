@@ -1,6 +1,6 @@
 ---
 description: Overview
-title: Overview
+title: Bluetooth Overview
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

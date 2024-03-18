@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Seeed Studio XIAO ESP32S3.
-title: Getting Started
+title: Getting Started with Seeed Studio XIAO ESP32S3 (Sense)
 keywords:
 - esp32s3
 - xiao

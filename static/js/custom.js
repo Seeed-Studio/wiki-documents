@@ -9,6 +9,12 @@ window.onload = function () {
     }
   }, 1000)
 
+  // 遍历每个 <a> 标签并移除 rel 属性
+  const links = document.querySelectorAll('a[rel="noopener noreferrer"]')
+  links.forEach((link) => {
+    link.removeAttribute('rel')
+  })
+
   // page not found
   if (document.body.textContent.includes('Page Not Found')) {
     let element = document.querySelector('.hero__title') // 使用元素的ID选择元素

@@ -43,9 +43,10 @@ These products are suitable for applications that need the wireless transmission
 
 SenseCAP offers two types of gateways suitable for indoor and outdoor use, and users can choose cellular LTE or Ethernet to transmit data.
 
-<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/029cab35952193f5e1ea3c80fda40937-2.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/029cab35952193f5e1ea3c80fda40937-2.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
 
-<p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
 
 
 
@@ -60,15 +61,24 @@ SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmi
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/lorawan-sensors.png" alt="pir" width={1000} height="auto" /></p>
 
 
-|Air Temp & Humidity|Light|Air TH & CO2|
-|------------------|--------------------------|-----------------------|
-|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2101.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2102.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2103.png" alt="pir" width={300} height="auto" />|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html)</p>|
+|Air Temp & Humidity|Light|Air TH & CO2|Soil Moisture & Temp|
+|------------------|--------------------------|-----------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2101.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2102.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2103.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2104.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html)</p>|
 
-|Soil Moisture & Temp|Soil Moisture & Temp & EC|PH|
-|------------------|--------------------------|-----------------------|
-|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2104.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2105.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2106.png" alt="pir" width={300} height="auto" />|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|
+|Soil Moisture & Temp & EC|PH|PT100 Temperature|8-in-1 Weather Sensor|
+|------------------|--------------------------|-----------------------|-----------------------|
+|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2105.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2106.png" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993078-sensecap-s2107-temperature-sensor-45font.jpg" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={300} height="auto" />|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2107-Temperature-Sensor-p-5807.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)</p>|
+
+
+
+[SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) - LoRaWAN Vision AI Sensor is a TinyML Edge AI enabled smart image sensor. It supports a variety of AI models such as image recognition, people counting, target detection, meter recoignition etc. It also supports training models with TensorFlow Lite.
+
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg" alt="pir" width={600} height="auto" /></p>
+
+
 
 ### Data Logger/Sensor Hub
 
@@ -83,7 +93,7 @@ Data Logger serves as the bridge to up to 200+ sensors covering industrial-level
 |<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html)</p>|
 
 
-### Weather Sensor
+### SenseCAP ONE Weather Sensor
 
 Today, data on localized weather, known as microclimates, is the new frontier for more precise and accurate weather forecasting. As a result, the collection of weather data is becoming increasingly smaller and gridded. In light of this, weather stations, which are the most convenient means of collecting weather data, are seeing a rise in demand. SenseCAP offers all-in-one weather sensors to help you collect and monitor environmental data for various scenarios.
 
@@ -122,7 +132,7 @@ To bring more convenience for your applications, we also provide RS485 sensor pr
 |Optical Rain Gauge RG-9|Optical Rain Gauge RG-15|Water Leak Detector|
 |------------------|--------------------------|-----------------------|
 |<img src="https://files.seeedstudio.com/wiki/Optical_Rain_Gauge_RG-9/0000_front-05.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/114992321-07.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Water_Leak_Detector/pic.PNG" alt="pir" width={270} height="auto" />|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-9-p-4744.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</p>|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-9-p-4744.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Water-Leak-Detector-p-4620.html)</p>|
 
 
 ## ✨ Contributor Project

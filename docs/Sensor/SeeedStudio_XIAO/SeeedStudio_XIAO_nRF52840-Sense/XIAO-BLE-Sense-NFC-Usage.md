@@ -12,8 +12,12 @@ last_update:
 
 # NFC Usage on Seeed Studio XIAO nRF52840 (Sense)
 
-:::note
+<!-- :::note
 The NFC function for Seeed Studio XIAO nRF52840 board is temportorily not functioning. The new wiki will be updated as soon as possible, once the new NFC library comes out.
+::: -->
+
+:::note
+The Seeed nRF52 Boards version 1.1.3 and Seeed nRF52 mbed-enabled Boards version 2.9.2 have been tested and approved.
 :::
 
 Both the **Seeed Studio XIAO nRF52840** and **Seeed Studio XIAO nRF52840 Sense** are equipped with an **NFC (Near Field Communication) module**. This wiki will help you get started with using NFC on these boards. Here we will demonstrate a basic example where we send a text string from the board to the phone after placing the phone on the NFC antenna.

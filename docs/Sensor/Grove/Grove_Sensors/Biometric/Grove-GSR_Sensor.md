@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-GSR_Sensor
 last_update:
   date: 1/6/2023
-  author: jianjing Huang
+  author: Seraphina
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/GSR.jpg" /></div>
@@ -110,13 +110,20 @@ void loop(){
 
 - Step 2. Do not Wear the GSR sensor.
 - Step 3. Click the Tools-> Serial Plotter from Arduino IDE
-- Step 4. Use the screw driver to adjust resistor until the serial output as 512.
+- Step 4. Use the screw driver to adjust resistor until the serial output is minimized. The serial port data at this point is noted as Serial_calibration.
 - Step 5. Wear the GSR sensor.
 - Step 6. We will see the below graph. Please deep breath and see the trends.  
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_Result.png" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/Grove-GSR_Result.png" /></div><br />
 
-**Human Resistance** = ((1024+2*Serial_Port_Reading)*10000)/(512-Serial_Port_Reading), unit is ohm, Serial_Port_Reading is the value display on Serial Port(between 0~1023)
+
+
+**Human Resistance** = ((1024 + 2 x Serial_Port_Reading) x 10000)/(Serial_calibration - Serial_Port_Reading)
+
+- Unit is ohm; 
+- Serial_Port_Reading is the value display on Serial Port(between 0~1023); 
+- Serial_calibration is from Step 4 (Use the screw driver to adjust resistor until the serial output is minimized. The serial port data at this point is noted as the Serial_calibration).
+
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 

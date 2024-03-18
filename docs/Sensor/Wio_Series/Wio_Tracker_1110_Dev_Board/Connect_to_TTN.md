@@ -54,7 +54,9 @@ Paste the `Device EUI`/`APP EUI`/`APP Key`, and select the `frequency plan` acco
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/register-wio.png" alt="pir" width={800} height="auto" /></p>
 
-
+:::tip
+The `JoinEUI` formerly called `AppEUI`, they are the same.
+:::
 
 ### Step 3: Configure the decoder
 

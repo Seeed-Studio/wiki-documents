@@ -54,7 +54,7 @@ Being a groundbreaking solution that enables the fusion of industrial-grade modu
 
 You can build a custom, cost-effective, industrial-grade LoRaWAN sensor using Grove sensors, to connect to SenseCAP Cloud with SenseCAP Data Logger, enabling long range wireless data transmission.
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Getting Started </font></span></strong></a> </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Get One Now </font></span></strong></a> </div>
 
 ### Add more industrial-level LoRaWAN Grove Sensor
 

@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Seeed Studio XIAO SAMD21
-title: Getting Started
+title: Getting Started with Seeed Studio XIAO SAMD21
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -379,13 +379,13 @@ Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO
 
 - **Step 4. Select your board and port**
 
-After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO SAMD21 M0**" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
+After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO **" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/board.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/1.jpg" alt="pir" width={600} height="auto" /></p>
 
 Select the serial device of the Arduino board from the Tools | Serial Port menu. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports). To find out, you can disconnect your Arduino board and re-open the menu; the entry that disappears should be the Arduino board. Reconnect the board and select that serial port.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/port.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/2.jpg" alt="pir" width={600} height="auto" /></p>
 
 - **Step 5.Upload the program**  
 

@@ -47,8 +47,7 @@ We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from 
 In your terminal type :
 
 ```sh
-sudo pip3 install paho-mqtt
-
+sudo pip3 install "paho-mqtt<2.0.0"
 ```
 
 :::note
@@ -71,17 +70,15 @@ If you don't have an AWS account, you can easily create one. Please follow [**th
 
 - **Step 2**: Next in the side bar navigate to **Manage** topic and under **All Devices** go to **Things**.
 
-:::note
+:::info
 **What is a Thing?**
 
 AWS IoT refers to Internet of Things (IoT) devices as "things" on the AWS platform. Each IoT device, such as the reTerminal Device in this context, is represented as a "thing" in AWS. Importantly, once created, the name of a "thing" cannot be changed.
-
-
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/thingsslidebar.PNG" style={{width:200, height:300}}/></div>
 
-- **Step3**: Next press on Create things 
+- **Step 3**: Next press on Create things 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createthings.PNG" style={{width:800, height:'auto'}}/></div>
 
@@ -95,12 +92,10 @@ AWS IoT refers to Internet of Things (IoT) devices as "things" on the AWS platfo
 
 - **Step 6**: Also A thing type for your reference in the future
 
-:::note
+:::info
 **What is a Thing Type?**
 
 Thing types enable you to store descriptions and configuration information that are common to all things associated with the same thing type. This simplifies the management of things in the registry. For instance, you can define a 'Factory_HMI' thing type. For this demonstration we used pi as a thing type.
-
-
 :::
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/thingtype.PNG" style={{width:800, height:'auto'}}/></div>
 
@@ -110,22 +105,24 @@ Thing types enable you to store descriptions and configuration information that 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/configurecertificate.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **Step 8**:  To Attach policies you need to create. click on **create policy**
+- **Step 8**:  To Attach policies you need to create. click on **Create policy**
 
-:::note
+:::info
 AWS IoT Core policies are JSON documents following IAM policy conventions. They support named policies, enabling multiple identities to reference the same policy document. Named policies are versioned for easy rollback.
 These policies provide control over access to the AWS IoT Core data plane, encompassing operations such as connecting to the AWS IoT Core message broker, sending/receiving MQTT messages, and accessing or updating a thing's Device Shadow.
-
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createpolicy.PNG" style={{width:800, height:'auto'}}/></div>
 
 - **Step 9**:  Give an appropriate name to the policy and set policy effect Policy action and Policy resources as following.
 
-:::note
+:::info
 The policy includes:
+
 **Effect**: Specifies whether the action is allowed or denied.
+
 **Action**: Specifies the specific action that the policy permits or denies.
+
 **Resource**: Specifies the resource or resources on which the action is allowed or denied.
 
 
@@ -142,21 +139,23 @@ The policy includes:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/certicates.PNG" style={{width:600, height:450}}/></div>
 
 - **Step 12** : Attach to the thing (reTerminal DM ) 
-For that go to **Security** >> **Policies**
+For that go to **Security** >> **Certificates**
 
-:::note
+:::info
 
-When you create and enroll a certificate independently from an AWS IoT thing, it lacks policies for AWS IoT operations and isn't associated with any thing object. This section explains how to establish these connections for a registered certificate. The certificate authenticates the device with AWS IoT for connection. Linking the certificate to a thing resource creates the relationship between the device (via the certificate) and the thing resource. To grant the device permission for AWS IoT actions, such as connecting and publishing messages, it's essential to attach a suitable policy to the device's certificate.
+When you create and enroll a certificate independently from an AWS IoT thing, it lacks policies for AWS IoT operations and isn't associated with any thing object. This explains how to establish these connections for a registered certificate. The certificate authenticates the device with AWS IoT for connection. Linking the certificate to a thing resource creates the relationship between the device (via the certificate) and the thing resource. To grant the device permission for AWS IoT actions, such as connecting and publishing messages, it's essential to attach a suitable policy to the device's certificate.
 
 :::
 
-After selecting the thing that you made from drop down menu then press **Attach to thing**.
+After selecting the thing that you made from **Actions** drop down menu then press **Attach to thing**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachtothing.PNG" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attach_policy.PNG" style={{width:800, height:'auto'}}/></div>
 
-**Step 13**: Attach the policy 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachtothing.PNG" style={{width:600, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachpolicy.PNG" style={{width:800, height:'auto'}}/></div>
+**Step 13**: Attach the policy also. 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachpolicy.PNG" style={{width:600, height:'auto'}}/></div>
 
 ## Test MQTT
 
@@ -173,6 +172,7 @@ To do that :
 - **Step 03** : Replace those file names with yours and run the file
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/cosw1.PNG" style={{width:800, height:'auto'}}/></div>
+
 
 ## Test the Connection 
 

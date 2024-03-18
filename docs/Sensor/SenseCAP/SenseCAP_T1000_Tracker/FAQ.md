@@ -71,6 +71,16 @@ On the settings page, select a platform other than SenseCAP to obtain the keys.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/get-keys.png" alt="pir" width={700} height="auto" /></p>
 
+## Button Related
+
+### Join Network
+
+
+Press and hold the button for 3 seconds, the green light will flash slowly, then press the button once, the green light will breathe, and then the device will try to join the loRaWAN network.
+
+### Force reboot
+
+Press and hold the button, then connect the charging cable, release the button after connecting, the green light will breathe, and then the device will be forced to restart.
 
 ## Battery Related
 
@@ -103,11 +113,11 @@ For detailed battery life calculations, refer to the [Battery Life Calculation F
 |Fully charged| The LED will stay always on.|
 |Charging anomaly|When the device is charged below 0 ° C or above 45 ° C, the device will enter the charge protection state and cannot be charged.<br/>The LED will flash rapidly.|
 
-:::caution note
-Charging abnormality Alarm
-:::
+:::caution Charging abnormality Alarm
+If the indicator `flashes quickly` while charging, it may be that the power voltage is insufficient or poor contact.
 
-If the indicator `flashes quickly` while charging, it may be that the power voltage is insufficient or poor contact. Please check your power supply or try another power adaptor.
+Please check your power supply or try another power adaptor.
+:::
 
 ### How long does it take to fully charge?
 
@@ -122,16 +132,29 @@ Yes, it can continue uploading data while charging.
 
 ### No sensor data
 
-To save power, the sensor function is disable by default, so you need to enable it on the SenseCAP Mate APP first.
+To save power, the temperature/light sensor function is disable by default, so you need to enable it on the SenseCAP Mate APP first.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/enable-sensor.png" alt="pir" width={500} height="auto" /></p>
 
+### Motion sensor
 
+The motion sensor(3-axis acceleration) is used to detect the shock and motion/motionless event, so if you want to enable the motion sensor, need to select the mode to event mode first, then we can get the 
 
 ## Cache Data
 
-Since the device can only cache about 1,000 offline data, if you are in a place without LoRaWAN network coverage for a long time, when the offline data reaches the limit, some old data will be overwritten by new data, so you may 'lose' some data.
+### How does it work
 
+When the LoRaWAN signal is weak or there is no network coverage, the data will be saved in the device. When the device returns to an area with the LoRaWAN network coverage, it will send the real-time data first, and then upload the cache data.
+
+During each upload period, it will upload the latest location first, and then the cache data. 
+Only a few packets of historical data are uploaded per cycle, so this will not affect the duty cycle.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cache.png" alt="pir" width={700} height="auto" /></p>
+
+### Note
+
+Since the device can only cache about 1,000 offline data, if you are in a place without LoRaWAN network coverage for a long time, when the offline data reaches the limit, some old data will be overwritten by new data, so you may 'lose' some data.
 
 
 ## How to batch configure
@@ -157,6 +180,15 @@ If you want to share your template to others, you can choose `Copy Link to Share
 Other users can choose to use your template by copying the shared URL or importing the template file.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/import-temp.png" alt="pir" width={600} height="auto" /></p>
+
+## Timestamp error
+
+If you found the timesatmp in the payload is wrong, please upgrade the firmware to the latest version. 
+
+Check [Firmware Upgrade and Release Note](https://wiki.seeedstudio.com/fm_release_for_SenseCAP_T1000/) for more details.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/time-error.png" alt="pir" width={400} height="auto" /></p>
+
 
 
 ## Integration

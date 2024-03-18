@@ -1,11 +1,11 @@
 ---
-description: Weekly Wiki
-title: Weekly Wiki✨ 
+description: Weekly Wiki 
+title: Weekly Wiki 
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/25/2023
+  date: 03/11/2024
   author: Seraphina
 ---
 
@@ -17,54 +17,54 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 25th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is March 11th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Open Source in Seeed Studio](https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_Loriot/)
+### [L76K Path Tracking on Ubidots](https://wiki.seeedstudio.com/L76K_Path_Tracking_on_Ubidots/)
 
-<div>Open source is a powerful force driving innovation and collaboration in the technology world. It promotes the sharing of ideas, knowledge, and code, enabling developers and enthusiasts to work together and build upon existing solutions.</div> 
-<div>Being an innovative company, Seeed Studio embraces the principles of open source in hardware and software projects and we have developed and manufactured a wide range of electronic products, ranging from development boards and sensors to robotics and Internet of Things (IoT) devices.</div>
-<div>Presented in this page, and kept ongoing, Seeed Studio will introduce its open source hardware and open source software.</div>
+After [Getting Started with L76K GNSS Module for SeeedStudio XIAO](https://wiki.seeedstudio.com/get_start_l76k_gnss/), you might want to use the L76K GNSS module to locate an object and display the track on a map. For this purpose, we can achieve it by combining the  SeeedStudio XIAO development board and the Ubidots IoT data platform.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/open_source_topic/open_source_topic.png" style={{width:1000, height:'auto'}}/></div>
+[Ubidots](https://ubidots.com/) is a low-code IoT development platform for engineers and developers without the time or energy to build an entire, production-ready IoT application themselves. From device-friendly APIs to a clean UI for end-users, Ubidots provides the essential building blocks to bring you faster to market, without having to hire an expensive team of engineers to develop and maintain a customized solution.
 
-
-### [Edge Artificial Intelligence](https://wiki.seeedstudio.com/edge_ai_topic/)
-
-<div>Faster, flexible, scalable AI deployment for everyone. We aim to cover all kinds of AI scenarios at our open-source platform to accelerate industries’ AI transformations.</div>
-We are looking forward to leveraging local and global resources to accelerate next-gen AI product together with you.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_AI_Topic/Edge_AI_Topic.png" style={{width:1000, height:'auto'}}/></div>
-
-### [reComputer-Jetson® Guide](https://wiki.seeedstudio.com/reComputer_Intro/)
-
-In this wiki, we will list for you all the current products of the reComputer-Jetson family, OS Installations and their applications.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png" style={{width:700, height:'auto'}}/></div>
-
-### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/flash_to_wio_tracker/)
-
-This tutorial will guide users to flash the LPWAN Dev Board for Amazon Sidewalk to the Wio Tracker 1110 Dev Board, for those who want to use the LoRaWAN network.
+<p style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic00_Track.png" alt="pir" width={800} height="auto"/>
+</p>
 
 
-## Existed Wiki Updated
+### [AWS IoT Core Intergate With EdgeBox Rpi 200](https://wiki.seeedstudio.com/Edgebox-rpi-200-AWS.md)
 
-### [Updated drivers for Grove Vision AI Module V2](https://wiki.seeedstudio.com/grove_vision_ai_v2/#driver)
+AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. In this guide, we will discuss how to connect our Edge Box RPi 200 to the AWS IoT cloud.
 
-We have updated the drivers for Grove Vision AI Module V2. If you find that the Grove Vision AI V2 is not recognised after connecting it to your computer. Then you may need to install the CH343 driver on your computer.
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div>
+
+<!-- ## Existed Wiki Updated -->
+
+<!-- ### [Accessing and Controlling ODYSSEY - X86J41x5 40-Pin GPIO](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-GPIO/#ubuntu-2204)
+
+We've provided you with Linux GPIO for Ubuntu 22.04 here! -->
+
+<!-- ### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
+
+We've updated to add the resources for Grove Vision AI
+
+### [reServer X86 - Pin information](https://wiki.seeedstudio.com/reServer-Getting-Started/#pin-information)
+
+Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference. -->
+
+## The Efforts of Contributor
+
+<!-- ### [XIAO ESP32C3 Prism Display](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
+
+Thanks our contributor Tim to create XIAO ESP32C3 Prism Display.
+
+This project uses the ESP32C3 to create a three-dimensional display using a splitter prism. This guide works to explain the steps required to build the enclosure, attach associated electronics, and install the firmware. 
+
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p> -->
 
 
-## The Efforts of Contributor✨
-
-### [XIAO ESP32S3 sense connecting with Home Assistant via ESPHome(all ports supported)](https://wiki.seeedstudio.com/XIAO_ESP32S3_esphome/)
-
-Thanks our contributor Zachay-NAU to create ESPHome Support on Seeed Studio XIAO ESP32S3. 
-
-This Wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32S3.
-
-<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information. -->
-<!-- - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
+- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
 
 
 ## Past Weekly wiki
@@ -106,3 +106,11 @@ This Wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP
 - [weekly wiki on 12.04th](/Seeed_Elderly/weekly_wiki/wiki1204)
 - [weekly wiki on 12.11th](/Seeed_Elderly/weekly_wiki/wiki1211)
 - [weekly wiki on 12.18th](/Seeed_Elderly/weekly_wiki/wiki1218)
+- [weekly wiki on 12.25th](/Seeed_Elderly/weekly_wiki/wiki1225)
+- [weekly wiki on 2024.1.08th](/Seeed_Elderly/weekly_wiki/wiki240108)
+- [weekly wiki on 2024.1.15th](/Seeed_Elderly/weekly_wiki/wiki240115)
+- [weekly wiki on 2024.1.22nd](/Seeed_Elderly/weekly_wiki/wiki240122)
+- [weekly wiki on 2024.1.29th](/Seeed_Elderly/weekly_wiki/wiki240129)
+- [weekly wiki on 2024.2.19th](/Seeed_Elderly/weekly_wiki/wiki240219)
+- [weekly wiki on 2024.2.26th](/Seeed_Elderly/weekly_wiki/wiki240226)
+- [weekly wiki on 2024.3.04th](/Seeed_Elderly/weekly_wiki/wiki240304)
