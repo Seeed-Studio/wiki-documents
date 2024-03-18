@@ -27,12 +27,13 @@
     "attributesForFaceting": ["language", "version"]
   },
   "stop_urls": [
-    "/search",
-    "/v3me",
-    "/playground",
-    "/inspector",
-    "/zh-CN",
-    "/cn"],
+    "https://wiki.seeedstudio.com/search",
+    "https://wiki.seeedstudio.com/v3me",
+    "https://wiki.seeedstudio.com/playground",
+    "https://wiki.seeedstudio.com/inspector",
+    "https://wiki.seeedstudio.com/zh-CN",
+    "https://wiki.seeedstudio.com/cn"
+  ],
   "strip_chars": " .,;:#",
   "conversation_id": null,
   "nb_hits": 0
