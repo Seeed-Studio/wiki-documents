@@ -5,13 +5,13 @@
   ],
   "selectors": {
     "default": {
-        "lvl0": "#content header h1",
-        "lvl1": "#content article h1",
-        "lvl2": "#content section h3",
-        "lvl3": "#content section h4",
-        "lvl4": "#content section h5",
-        "lvl5": "#content section h6",
-        "text": "#content header p,#content section p,#content section ol"
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
     }
   },
   "stop_urls": [
