@@ -1,29 +1,34 @@
 {
   "index_name": "wiki_paltform",
   "start_urls": [
-    "https://wiki.seeedstudio.com/"
+    {
+      "url": "https://wiki.seeedstudio.com/",
+      "selectors_key": "homepage"
+    }
+  ],
+  "selectors": {
+    "homepage": {
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    }
+  },
+  "stop_urls": [
+    "https://wiki.seeedstudio.com/search",
+    "https://wiki.seeedstudio.com/v3me",
+    "https://wiki.seeedstudio.com/playground",
+    "https://wiki.seeedstudio.com/inspector",
+    "https://wiki.seeedstudio.com/zh-CN",
+    "https://wiki.seeedstudio.com/cn"
   ],
   "sitemap_urls": [
     "https://wiki.seeedstudio.com/sitemap.xml"
   ],
-  "stop_urls": [
-    "/search",
-    "/v3me",
-    "/playground",
-    "/inspector",
-    "/zh-CN",
-    "/cn"
-  ],
   "sitemap_alternate_links": true,
-  "selectors": {
-    "lvl1": "header h1",
-    "lvl2": "article h2",
-    "lvl3": "article h3",
-    "lvl4": "article h4",
-    "lvl5": "article h5, article td:first-child",
-    "lvl6": "article h6",
-    "text": "article p, article li, article td:last-child"
-  },
   "strip_chars": " .,;:#",
   "custom_settings": {
     "separatorsToIndex": "_",
