@@ -21,7 +21,7 @@ no_comments: false # for Disqus
 
 ## Introduction
 
-Real-time speech-to-text (STT) systems play a vital role in modern applications, from voice assistants to transcription services. The NVIDIA Jetson Orin, known for its high-performance and energy efficiency, offers a promising platform for deploying such demanding applications at the edge.
+Real-time speech-to-text (STT) systems play a vital role in modern applications, from voice assistants to transcription services. Here are some popular STT model: Whisper, Riva, DeepSpeech, Google Cloud Speech-to-Text API, Microsoft Azure Speech Service, IBM Watson Speech to Text, Kaldi, Wit.ai and so on. The NVIDIA Jetson Orin, known for its high-performance and energy efficiency, offers a promising platform for deploying such demanding applications at the edge.
 
 [Whisper](https://github.com/openai/whisper), an advanced STT system leveraging deep learning, excels in accuracy and efficiency. [Riva](https://github.com/nvidia-riva) is a comprehensive, multimodal conversational AI framework developed by NVIDIA.By deploying Whisper or Riva on the Jetson Orin, developers can harness its powerful GPU and CPU cores, along with hardware acceleration technologies like Tensor Cores, to achieve real-time STT with low latency.
 
