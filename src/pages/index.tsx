@@ -29,34 +29,48 @@ const getIndexImage = (src) => {
 
 const renderBanner = () => {
   const bannerList = [
-    {
-      title1: 'SSCMA',
-      title: 'Open-source project focused on embedded AI',
-      description: 'We have optimized excellent algorithms for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices.',
-      link: '',
-      bannerImg: 'sscma.png',
-      btnList: [
-        {
-          text: 'Get Started',
-          link: 'https://sensecraftma.seeed.cc/introduction/quick_start',
-          class: 'green'
-        },
-        {
-          text: 'Install SSCMA',
-          link: 'https://sensecraftma.seeed.cc/introduction/installation'
-        },
-        {
-          text: 'View on GitHub',
-          link: 'https://github.com/Seeed-Studio/ModelAssistant'
-        }
-      ]
-    },
+    // {
+    //   title1: 'SSCMA',
+    //   title: 'Open-source project focused on embedded AI',
+    //   description: 'We have optimized excellent algorithms for real-world scenarios and made implementation more user-friendly, achieving faster and more accurate inference on embedded devices.',
+    //   link: '',
+    //   bannerImg: 'sscma.png',
+    //   btnList: [
+    //     {
+    //       text: 'Get Started',
+    //       link: 'https://sensecraftma.seeed.cc/introduction/quick_start',
+    //       class: 'green'
+    //     },
+    //     {
+    //       text: 'Install SSCMA',
+    //       link: 'https://sensecraftma.seeed.cc/introduction/installation'
+    //     },
+    //     {
+    //       text: 'View on GitHub',
+    //       link: 'https://github.com/Seeed-Studio/ModelAssistant'
+    //     }
+    //   ]
+    // },
     {
       title: 'Seeed Studio Wiki Platform',
       description: 'Seeed Studio has dedicated to realizing interactive digital replica of our physical world, as being an IoT hardware partner since 2008. This is an open platform collecting all the wikis published by Seeed Studio, to show you the full picture of our efforts, natural environments digitization and outcome production.',
       link: '',
       bannerImg: 'platform.png',
-      btnList: []
+      btnList: [
+        {
+          text: 'Getting Started',
+          link: '/Getting_Started',
+          class: 'green'
+        },
+        {
+          text: 'Topics',
+          link: 'https://sensecraftma.seeed.cc/introduction/installation'
+        },
+        {
+          text: 'GitHub',
+          link: 'https://sensecraftma.seeed.cc/introduction/installation'
+        },
+      ]
     },
   ]
   return (
@@ -64,7 +78,7 @@ const renderBanner = () => {
       <Swiper
       modules={[Autoplay]}
       loop
-        autoplay={{ delay: 3000, disableOnInteraction: true }}
+        autoplay={{ delay: 5000, disableOnInteraction: true }}
         slidesPerView={1} // 每次显示的幻灯片数量
         pagination={{ clickable: true }} // 显示分页器
         scrollbar={{ draggable: true }} // 显示滚动条

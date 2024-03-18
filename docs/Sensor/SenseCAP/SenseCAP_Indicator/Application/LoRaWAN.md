@@ -12,7 +12,7 @@ slug: /SenseCAP_Indicator_Application_LoRaWAN
 toc_max_heading_level: 4
 sidebar_position: 4
 last_update:
-  date: 12/21/2023
+  date: 2022/12/31
   author: Spencer
 ---
 

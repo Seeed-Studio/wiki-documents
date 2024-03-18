@@ -17,41 +17,41 @@ function IndexLatestedViki(props) {
       docList: [
         {
           "path": "/Fan_Pinout",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan Pinout",
         },
         {
           "path": "/Turn_on_the_Fan",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan is not turning on",
         },
         {
           "path": "/Fan_Pinout",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan Pinout",
         },
         {
           "path": "/Turn_on_the_Fan",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan is not turning on",
         }
         , {
           "path": "/Fan_Pinout",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan Pinout",
         },
         {
           "path": "/Turn_on_the_Fan",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan is not turning on",
         }, {
           "path": "/Fan_Pinout",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan Pinout",
         },
         {
           "path": "/Turn_on_the_Fan",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif",
           "title": "Fan is not turning on",
         }
       ]
@@ -110,7 +110,7 @@ function IndexLatestedViki(props) {
       docList: [
         {
           "path": "/Fan_Pinout",
-          "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
+          "image": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif",
           "title": "Fan Pinout",
         },
         {

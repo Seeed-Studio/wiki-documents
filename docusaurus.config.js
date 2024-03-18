@@ -230,13 +230,13 @@ const config = {
 
           // home navigation
           {
-            label: 'Getting Started Wiki',
+            label: 'Quick Links',
             to: '/Getting_Started',
             position: 'left',
             className: 'navbar_dorp_items home_nav js_getting_started',
           },
           {
-            label: 'Explore & Learn',
+            label: 'Explore with Topics',
             to: '/Getting_Started',
             position: 'left',
             className: 'navbar_dorp_items home_nav js_explore_learn',
@@ -318,12 +318,12 @@ const config = {
             position: 'right',
             className: 'navbar_doc_right_items',
           },
-          {
-            label: 'Help 🙋',
-            position: 'right',
-            className: 'navbar_doc_right_items',
-            to: '/knowledgebase',
-          },
+          // {
+          //   label: 'Help 🙋',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          //   to: '/knowledgebase',
+          // },
           // {
           //   type: 'doc',
           //   docId: 'Solutions',
@@ -331,11 +331,39 @@ const config = {
           //   label: 'Solutions',
           //   className: 'navbar_doc_items'
           // },
+          // {
+          //   to: 'https://wiki-gpt.seeedstudio.com/chat',
+          //   label: 'Chat 🤖️',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          // },
+          // {
+          //   to: 'https://wiki-gpt.seeedstudio.com/chat',
+          //   label: 'Rangers ✨',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          // },
+          // {
+          //   to: 'https://wiki-gpt.seeedstudio.com/chat',
+          //   label: 'Collaborations ✨',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          // },
           {
-            to: 'https://wiki-gpt.seeedstudio.com/chat',
-            label: 'Chat 🤖️',
+            type: 'dropdown',
+            label: 'Collaborations ✨',
+            to: '/Getting_Started',
             position: 'right',
-            className: 'navbar_doc_right_items',
+            items: [
+              {
+                label: 'Rangers',
+                to: '/knowledgebase/',
+              },
+              {
+                label: 'Contributors',
+                to: '/cn/Getting_Started',
+              },
+            ],
           },
           {
             href:

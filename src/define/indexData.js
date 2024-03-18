@@ -2,7 +2,7 @@
 export const startedList = [
   {
     title: 'SenseCAP',
-    img: 'grove',
+    img: 'sensecap',
     link: 'https://wiki.seeedstudio.com/SenseCAP_introduction/',
     children: [
       {
@@ -113,7 +113,7 @@ export const startedList = [
   },
   {
     title: 'MCU Board',
-    img: 'recomputer',
+    img: 'mcu_board',
     link: 'https://wiki.seeedstudio.com/Edge_Computing/#microcontrollers',
     children: [
       {
@@ -142,7 +142,7 @@ export const startedList = [
   },
   {
     title: 'Single Board Computer',
-    img: 'recomputer',
+    img: 'sbc_board',
     link: 'https://wiki.seeedstudio.com/Edge_Computing/#single-board-computers',
     children: [
       {

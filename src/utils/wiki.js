@@ -3,7 +3,7 @@ const docList = [
     {
       "path": "/Fan_Pinout",
       "image": "https://files.seeedstudio.com/wiki/wiki-platform/S.png",
-      "title": "Fan Pinout",
+      "title": "Getting started",
       "date": "2025/6/25"
     },
     {
