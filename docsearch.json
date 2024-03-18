@@ -5,12 +5,13 @@
   ],
   "selectors": {
     "default": {
-      "lvl0": ".docs h1",
-      "lvl1": ".docs h2",
-      "lvl2": ".docs h3",
-      "lvl3": ".docs h4",
-      "lvl4": ".docs h5",
-      "text": ".docs p, .docs li"
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
     }
   },
   "stop_urls": [
