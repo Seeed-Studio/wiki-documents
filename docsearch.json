@@ -1,12 +1,9 @@
 {
-  "index_name": "wiki_paltform",
+  "index_name": "wiki_platform",
   "start_urls": [
-    {
-      "url": "https://wiki.seeedstudio.com/"
-    }
+    "https://wiki.seeedstudio.com/"
   ],
   "selectors": {
-
     "default": {
       "lvl0": ".docs h1",
       "lvl1": ".docs h2",
@@ -14,7 +11,7 @@
       "lvl3": ".docs h4",
       "lvl4": ".docs h5",
       "text": ".docs p, .docs li"
-    },
+    }
   },
   "stop_urls": [
     "https://wiki.seeedstudio.com/search",
