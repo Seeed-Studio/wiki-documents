@@ -3,8 +3,7 @@
   "start_urls": [
     {
       "url": "https://wiki.seeedstudio.com/",
-      "selectors_key": "homepage",
-      "sitemap_urls": ["https://wiki.seeedstudio.com/sitemap.xml/"]
+      "selectors_key": "homepage"
     }
   ],
   "selectors": {
@@ -21,11 +20,6 @@
       "text": ".docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- p, .docItemContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocItem- li"
     }
   },
-  "min_indexed_level": 1,
-  "only_content_level": true,
-  "custom_settings": {
-    "attributesForFaceting": ["language", "version"]
-  },
   "stop_urls": [
     "https://wiki.seeedstudio.com/search",
     "https://wiki.seeedstudio.com/v3me",
@@ -34,8 +28,28 @@
     "https://wiki.seeedstudio.com/zh-CN",
     "https://wiki.seeedstudio.com/cn"
   ],
+  "sitemap_urls": [
+    "https://wiki.seeedstudio.com/sitemap.xml"
+  ],
+  "sitemap_alternate_links": true,
   "strip_chars": " .,;:#",
-  "conversation_id": null,
-  "nb_hits": 0
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "attributesForFaceting": [
+      "language",
+      "version",
+      "type",
+      "docusaurus_tag"
+    ],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ]
+  },
+  "js_render": true,
+  "nb_hits": 856
 }
-
