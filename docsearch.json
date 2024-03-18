@@ -2,7 +2,7 @@
   "index_name": "wiki_paltform",
   "start_urls": [
     {
-      "url": "https://wiki.seeedstudio.com/",
+      "url": "https://wiki.seeedstudio.com/"
     }
   ],
   "selectors": {
