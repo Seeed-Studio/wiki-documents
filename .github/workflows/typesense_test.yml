@@ -1,12 +1,8 @@
 name: Typesense Docsearch Action
 
-on:
-  push:
-    branches:
-      - docusaurus-version  # 每个分支的推送都会触发
-  pull_request:
-    branches:
-      - docusaurus-version  # 每个分支的 PR 都会触发
+on: 
+  schedule:
+    - cron: "0 2 15 * *"
 
 jobs:
   scrape:
