@@ -50,8 +50,9 @@ SenseCraft AI可以帮助用户轻松地将大量公开可用的AI模型部署�
 
 <!-- SenseCraft is a series of software services developed by Seeed Studio to provide users with faster and simpler software services and applications. With three product lines, Data line, Edge line and AI line, SenseCraft is able to fulfill users' needs in data services, device management and AI applications. No matter what solution you need, SenseCraft can provide you with efficient and reliable solutions and customized services. -->
 
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
- -->现在，我们将使用SenseCraft AI快速启动模块，这只需要模块本身。
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>-->
+
+现在，我们将使用SenseCraft AI快速启动模块，这只需要模块本身。
 
 #### 步骤 1. 将Grove Vision AI V2连接到SenseCraft AI模型助手
 

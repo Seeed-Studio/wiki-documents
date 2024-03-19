@@ -13,8 +13,8 @@ last_update:
   date: 3/1/2024
   author: guiying zhao
 ---
-import Tabs from '@theme/Tabs'（从@theme/Tabs导入Tab）;
-import TabItem from '@theme/TabItem'（从@theme/TabItem导入Tabltem）;
+
+
 
 # SenseCAP Indicator - LoRa应用开发
 

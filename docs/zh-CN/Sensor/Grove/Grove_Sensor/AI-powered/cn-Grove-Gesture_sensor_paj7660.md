@@ -101,7 +101,7 @@ Grove智能红外手势传感器是一款智能手势识别模块，配备红外
         <tr>
             <td>抓取</td>
             <td>从5个手指到0个手指 <br /> <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/9.png" style={{width:200, height:'auto'}}/></div></td>
-            <td>操作距离15到30厘米<br /> 可以使用手掌中心坐标作为光标<br />报告抓取结果/td>
+            <td>操作距离15到30厘米<br /> 可以使用手掌中心坐标作为光标<br />报告抓取结果</td>
         </tr>
         <tr>
             <td>竖起大拇指</td>
@@ -125,7 +125,7 @@ Grove智能红外手势传感器是一款智能手势识别模块，配备红外
 	<table align="center">
 		<tr>
 			<th>模式</th>
-			<th>默认连接/th>
+			<th>默认连接</th>
             <th>手势类型</th>
 		</tr>
 		<tr>

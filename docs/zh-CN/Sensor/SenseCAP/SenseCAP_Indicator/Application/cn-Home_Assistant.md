@@ -343,6 +343,7 @@ views:
     </tr>
   </table>
 </div>
+
 ## 项目配置 {#Config_HA}
 
 本节的目的是建立Home Assistant（HA）和指示器之间的默认通信。

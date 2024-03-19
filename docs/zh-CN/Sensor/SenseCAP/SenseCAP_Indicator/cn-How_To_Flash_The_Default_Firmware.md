@@ -538,7 +538,7 @@ ESP32和RP2040使用串口通信，使用[cobs](http://www.stuartcheshire.org/pa
 
 <details>
     <summary>如何区分串口?</summary>
-    <Tabs
+    <Tabs>
     groupId="operating-systems"
     defaultValue='Win'
     values={[
@@ -560,6 +560,7 @@ ESP32和RP2040使用串口通信，使用[cobs](http://www.stuartcheshire.org/pa
     </TabItem>
     </Tabs>
 </details>
+
 
 # **最近的更新：**
 
