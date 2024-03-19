@@ -17,7 +17,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/S.png',
-
+  themes: ['docusaurus-theme-search-typesense'],
   scripts: [
     // String format.
     // 'https://viewer.altium.com/client/static/js/embed.js',
@@ -468,29 +468,51 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'AKPIWVFYW0',
+      // algolia: {
+      //   // The application ID provided by Algolia
+      //   appId: 'AKPIWVFYW0',
 
-        // Public API key: it is safe to commit it
-        apiKey: 'dd2e490797af4d0ef1afdd73f66e3174',
+      //   // Public API key: it is safe to commit it
+      //   apiKey: 'dd2e490797af4d0ef1afdd73f66e3174',
 
-        indexName: 'wiki_update',
+      //   indexName: 'wiki_update',
 
-        // Optional: see doc section below
-        contextualSearch: false,
+      //   // Optional: see doc section below
+      //   contextualSearch: false,
 
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        // externalUrlRegex: 'external\\.com|domain\\.com',
+      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      //   // externalUrlRegex: 'external\\.com|domain\\.com',
 
-        // Optional: Algolia search parameters
-        searchParameters: {},
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
 
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
+      //   // Optional: path for search page that enabled by default (`false` to disable it)
+      //   searchPagePath: 'search',
 
-        //... other Algolia params
-      },
+      //   //... other Algolia params
+      // },
+      typesense: {
+        // Replace this with the name of your index/collection.
+        // It should match the "index_name" entry in the scraper's "config.json" file.
+        typesenseCollectionName: 'wiki_platform_1710784049',
+  
+        typesenseServerConfig: {
+          nodes: [
+            {
+              host: 'sc4dhrl167jef08yp-1.a1.typesense.net',
+              port: 443,
+              protocol: 'https',
+            },
+          ],
+          apiKey: 'tZeviMFB90nx6Pr73crt8b2UfNcGQFp5',
+        },
+              // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
+      typesenseSearchParameters: {},
+
+      // Optional
+      contextualSearch: true,
+    },
+
       mermaid: {
         options: {
           maxTextSize: 50,
