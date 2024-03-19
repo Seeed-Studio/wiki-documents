@@ -534,11 +534,11 @@ ESP32和RP2040使用串口通信，使用[cobs](http://www.stuartcheshire.org/pa
 
 [SenseCAP Indicator RP2040 Demo](https://github.com/Seeed-Solution/sensecap_indicator_rp2040/tree/main)
 
-## FAQ
+<!-- ## FAQ
 
 <details>
     <summary>如何区分串口?</summary>
-    <Tabs>
+    <Tabs
     groupId="operating-systems"
     defaultValue='Win'
     values={[
@@ -559,7 +559,7 @@ ESP32和RP2040使用串口通信，使用[cobs](http://www.stuartcheshire.org/pa
       <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_40.png"/></div>
     </TabItem>
     </Tabs>
-</details>
+</details> -->
 
 
 # **最近的更新：**
