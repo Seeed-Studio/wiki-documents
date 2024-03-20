@@ -31,7 +31,7 @@ SenseCAP Mate APP is a powerful APP for data visualization and remote device man
 ## Download
 
 <p class="p1">The App is available in both iOS and Android versions.</p>
-<img class="alignnone wp-image-7993 size-full" src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-12.png" />
+<img class="alignnone wp-image-7993 size-full" src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_1.png" />
 
 </div>
 
