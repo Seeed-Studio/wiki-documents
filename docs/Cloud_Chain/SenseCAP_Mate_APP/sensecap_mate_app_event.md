@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Mate APP Event Version 2.9.0 User Manual
-title: SenseCAP Mate APP Event Version 2.9.0
+title: Event Management
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_mate_app_event  
 last_update:
@@ -8,15 +8,11 @@ last_update:
   author: Matthew
 ---
 
-# SenseCAP Mate APP Event Version 2.9.0 User Manual
+# Event Management in SenseCAP Mate APP
 
 ## Event Functions
 
 SenseCap Mate APP version 2.9.0, new Event alarm function, allowing users to create Event to set the device trigger conditions, when the device triggers the conditions will be pushed to the alarm message. device page, the new message center function, you can view the device triggered alarm messages, the system pushes the message notification, to realize the real-time alarms, remote monitoring, remote management purposes. Device page.
-
-## Installed version
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_1.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Install SenseCAP Mate APP V2.9.0 
 
