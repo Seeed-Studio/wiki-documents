@@ -2536,6 +2536,7 @@ const sidebars = {
                 label: 'N3uron',
                 items: [
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminalDM_N3uron_Get_Start',
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminal_DM_N3uron_AWS',
                 ],
               },
 
