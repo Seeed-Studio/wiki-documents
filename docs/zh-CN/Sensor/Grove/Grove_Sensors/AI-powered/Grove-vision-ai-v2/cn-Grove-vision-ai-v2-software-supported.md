@@ -1,10 +1,10 @@
 ---
 description: Getting Started with Grove Vision AI V2 and software platform
-title: Software Support
+title: 开始使用 Grove - Vision AI V2模块人工智能
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: cn//grove_vision_ai_v2_software_support
+slug: /cn/grove_vision_ai_v2_software_support
 last_update:
   date: 3/12/2023
   author: guiyingzhao

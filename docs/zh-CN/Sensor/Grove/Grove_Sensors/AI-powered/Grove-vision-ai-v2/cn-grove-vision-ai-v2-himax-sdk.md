@@ -1,6 +1,6 @@
 ---
 description: Introduces how to use Himax's SDK to develop Grove Vision AI V2.
-title: Developing Grove Vision AI V2 using Himax SDK
+title: 使用 Himax SDK 编译模块
 keywords:
 - himax
 - vision AI

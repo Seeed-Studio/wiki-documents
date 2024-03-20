@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Grove Vision AI V2.
-title: Grove Vision AI Module V2
+title: Grove - Vision AI V2模块人工智能
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,12 +10,12 @@ last_update:
   author: guiyingzhao
 ---
 
-# Grove Vision AI Module V2
+# Grove - Vision AI V2模块人工智能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html">
+    <a class="get_one_now_item" href="https://item.taobao.com/item.htm?id=765112504951&spm=a1z10.5-c-s.w4002-17798475675.24.46a01825Fhf39I">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -99,15 +99,15 @@ last_update:
 
 ### 使用Arduino入门
 
-<div class="all_container">   <div class="getting_started">       <div class="start_card_wrapper">           <a href= "/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino（Seeed Studio XIAO）</a>           <br/>对象识别或串行通信       </div>   </div> </div>
+<div class="all_container">   <div class="getting_started">       <div class="start_card_wrapper">           <a href= "/cn/grove_vision_ai_v2_software_support/#使用arduino编程连接seeed-studio-xiao开发板" class="getting_started_label2"> Arduino（Seeed Studio XIAO）</a>           <br/>对象识别或串行通信       </div>   </div> </div>
 
 ### 使用SenseCraft AI入门
 
-<div class="all_container">   <div class="getting_started">       <div class="start_card_wrapper">           <a href= "/grove_vision_ai_v2_software_support/#-no-code-getting-started-with-sensecraft-ai-" class="getting_started_label2"> SenseCraft AI模型助手</a>           <br/>无代码体验AI模型部署和观察       </div>   </div> </div>
+<div class="all_container">   <div class="getting_started">       <div class="start_card_wrapper">           <a href= "/cn/grove_vision_ai_v2_software_support/#-使用sensecraft-ai进行无代码入门-" class="getting_started_label2"> SenseCraft AI模型助手</a>           <br/>无代码体验AI模型部署和观察       </div>   </div> </div>
 
 ### 将Grove Vision AI V2连接到Home Assistant
 
-<div class="all_container">   <div class="getting_started">       <div class="start_card_wrapper">           <a href= "/connect_vision_ai_v2_to_ha" class="getting_started_label2"> 连接到Home Assistant</a>           <br/>将Grove Vision AI V2整合到Home Assistant中       </div>   </div> </div>
+<div class="all_container">   <div class="getting_started">       <div class="start_card_wrapper">           <a href= "/cn/connect_vision_ai_v2_to_ha/" class="getting_started_label2"> 连接到Home Assistant</a>           <br/>将Grove Vision AI V2整合到Home Assistant中       </div>   </div> </div>
 
 ## 故障排除
 

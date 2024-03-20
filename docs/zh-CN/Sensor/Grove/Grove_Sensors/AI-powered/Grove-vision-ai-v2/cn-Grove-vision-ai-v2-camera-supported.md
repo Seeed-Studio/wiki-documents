@@ -1,6 +1,6 @@
 ---
 description: Getting Started with Grove Vision AI V2.
-title: External Camera supported
+title: 可支持的摄像头 
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png

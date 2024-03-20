@@ -1,6 +1,6 @@
 ---
 description: Introduces how to connect Grove Vision AI V2 to the SenseCAP Mate APP.
-title: Connect Grove Vision AI V2 to the SenseCAP Mate APP
+title: 连接 Grove - Vision AI V2模块人工智能到 SenseCAP Mate APP
 keywords:
 - sensecap mate
 - grove vision ai v2
