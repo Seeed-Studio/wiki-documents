@@ -3035,7 +3035,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'SenseCAP Mate APP',
-      items: ['Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP'],
+      items: [
+        'Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP',
+        'Cloud_Chain/SenseCAP_Mate_APP/sensecap_mate_app_event',
+      ],
     },
     {
       type: 'category',

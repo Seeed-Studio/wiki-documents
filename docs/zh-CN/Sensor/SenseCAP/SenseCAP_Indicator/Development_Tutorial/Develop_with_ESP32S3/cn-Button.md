@@ -4,7 +4,7 @@ title: Button
 keywords:
 - SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /SenseCAP_Indicator_ESP32_Button
+slug: /cn/SenseCAP_Indicator_ESP32_Button
 last_update:
   date: 5/23/2023
   author: Thomas
