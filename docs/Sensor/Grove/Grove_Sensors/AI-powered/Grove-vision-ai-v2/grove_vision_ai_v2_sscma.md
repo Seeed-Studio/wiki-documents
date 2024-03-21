@@ -124,6 +124,10 @@ Once you have a shortlist, evaluate each dataset individually. Look for:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/5.png" style={{width:1000, height:'auto'}}/></div>
 
+:::tip
+You can find out the condition of the model through **[Roboflow Health Check](https://docs.roboflow.com/datasets/dataset-health-check)**.
+:::
+
 **Step 4. Download the Sample**
 
 If you find the dataset of your choice, then you have the option to download and use it. Roboflow usually allows you to download a sample of the dataset. Test the sample to see if it integrates well with your workflow and if it's suitable for your model.
@@ -148,6 +152,10 @@ If the dataset meets your requirements and performs well in the initial tests, t
 <TabItem value="Use your own images as a dataset" label="Use your own images as a dataset">
 
 Here, I will use the rock-paper-scissors gesture image as a demo to guide you through the tasks of image uploading, labelling and exporting a dataset at Roboflow.
+
+:::note
+We highly recommend that you use Grove Vision AI V2 to take pictures of your dataset, which is best for Grove Vision AI V2. Grove Vision AI V2 is currently developing the functionality part of taking pictures, and once that is done, you can use Grove Vision AI V2 to capture pictures for your dataset. Until then, you can use photos taken by other devices as datasets.
+:::
 
 **Step 2. Creating a New Project and Uploading images**
 
