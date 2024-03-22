@@ -18,6 +18,9 @@ Welcome to this comprehensive tutorial where we'll embark on a journey to turn y
 
 We'll then move on to deploying our trained model using the SenseCraft Model Assistant, a process that bridges the gap between training and real-world application. By the end of this tutorial, not only will you have a custom model running on Grove Vision AI V2, but you'll also be equipped with the knowledge to interpret and utilize the results of your model's predictions.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/0.png" style={{width:1000, height:'auto'}}/></div>
+
+
 From dataset to model landing, we will have the following main steps.
 
 1. [Labelled Datasets](#labelled-datasets) —— This chapter focuses on how to obtain datasets that can be trained into models. There are two main ways to do this. The first is to use the labelled datasets provided by the Roboflow community, and the other is to use your own scenario-specific images as datasets, but you need to manually go through the labelling yourself.
