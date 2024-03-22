@@ -6408,10 +6408,10 @@ docusaurus-plugin-sass@^0.2.2:
   dependencies:
     sass-loader "^10.1.1"
 
-docusaurus-theme-search-typesense@^0.16.0-0:
-  version "0.16.0-0"
-  resolved "https://registry.yarnpkg.com/docusaurus-theme-search-typesense/-/docusaurus-theme-search-typesense-0.16.0-0.tgz#40730355d5247e916ea1ee89ec3d625d91e94cc3"
-  integrity sha512-hpo9zesuniHgz113hDovdVTbJBCcT8VqVftdr2LRY3J3KZNM+l3DGfJc5fAVMXbBEUKnuM2STXF/acN4oM25DA==
+docusaurus-theme-search-typesense@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-theme-search-typesense/-/docusaurus-theme-search-typesense-0.16.0.tgz#48012673e56140151fd8eaf7f7a5f9660505b922"
+  integrity sha512-XbBoXnzx0hzc9uipF07w7CYyu/YPn2tjm4NprO+izA9B9jxMi6vtzNgTYzR0keOWeALGrcoswpDNvYgjHjMfCQ==
   dependencies:
     "@docusaurus/logger" "3.1.1"
     "@docusaurus/plugin-content-docs" "3.1.1"
