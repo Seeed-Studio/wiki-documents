@@ -72,7 +72,7 @@ Mesh Support:
 *Reference: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 ## Getting Started
 
-- [Official Zephyr For XIAO ESP32C3 Getting Started](https://docs.zephyrproject.org/latest/boards/riscv/xiao_esp32c3/doc/index.html)
+- [Official Zephyr For XIAO ESP32C3 Getting Started](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32c3/doc/index.html)
 
 ## Tech Support & Product Discussion
 

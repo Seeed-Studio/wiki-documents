@@ -385,7 +385,7 @@ This section will list the major platforms supported by XIAO, including Platform
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/arm/seeeduino_xiao/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/arm/xiao_ble/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/riscv/xiao_esp32c3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32c3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
         <tr>
 			<th>XIAO ESP32S3 (Sense)</th>
