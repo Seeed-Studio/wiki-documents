@@ -99,7 +99,7 @@ Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours
 
 In the upcoming comparative video, we'll compare ability of [Riva](https://wiki.seeedstudio.com/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/) and Whisper in Speech to Text developed on Nvidia Jetson.
 
-<iframe width="1000" height="400" src="https://www.youtube.com/embed/eq5zsAYwnpg?si=qUCg5_mSiRB5Xt_d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1000" height="400" src="https://www.youtube.com/embed/2l7yus611DI?si=XdEjwzpZdJkLC8aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Project Outlook
 

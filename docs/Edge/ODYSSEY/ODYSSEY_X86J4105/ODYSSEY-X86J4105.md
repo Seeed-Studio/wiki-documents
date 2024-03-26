@@ -17,6 +17,7 @@ wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105/
 sku: 102110399
 --- -->
 
+
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ODYSSEY-X86J4105-side.png)
 
 ODYSSEY - X86J41x5 SBC series consists of ODYSSEY - X86J4105, ODYSSEY - X86J4125 and ODYSSEY - X86J4125 V2. They are based on Intel Celeron J4105/ J4125 and has all the great features that a standard computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(eMMC version only), onboard Wi-Fi/BLE, Dual 1GbE/ 2.5GbE Ports, Audio Input and Output, USB Ports, HDMI, SATA connectors, PCIe and more.
@@ -181,9 +182,13 @@ You can power the ODYSSEY – X86J41x5 using a power bank, but you need to make 
 
 ## Pinout Diagram
 
-### ODYSSEY - X86J4105/ X86J4125/ X86J4125 V2
+### ODYSSEY - X86J4105/ X86J4125
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4125/pinout.png)
+
+### ODYSSEY - X86J4125 V2
+
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/x86J4125v2.jpg)
 
 ### Hardware Required
 
@@ -335,7 +340,7 @@ You can also power the ODYSSEY - X86J41x5 through the USB-C port with 12V input.
  ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/T-Rex%20Run!%20-%20Chrome%20Dinosaur%20Game%20-%20Google%20Chrome%202019-12-04%2017-01-42.2019-12-05%2009_38_40.gif)
 
 ## Using the Arduino Core (ATSAMD21G18) on ODYSSEY - X86J4105/ X86J4125 in Windows
-
+### Odyssey J4105/J4125 v1
 The ODYSSEY - X86J4105/ X86J4125  is built with Arduino Core(ATSAMD21G18) which provides more functionality to the board, and to use it, simply download the [Arduino IDE](https://www.arduino.cc/en/main/software), and Install the Windows version.
 
 1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
@@ -353,6 +358,27 @@ The ODYSSEY - X86J4105/ X86J4125  is built with Arduino Core(ATSAMD21G18) which 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ArduinoPort.png)
 
 Feel free to explore your creativity with ODYSSEY - X86J4105/ X86J4125!
+
+### Odyssey J4125 v2
+The ODYSSEY - X86J4125 v2 is built with Arduino Core(RP2040) which provides more functionality to the board, and to use it, simply download the [Arduino IDE](https://www.arduino.cc/en/main/software), and Install the Windows version.
+1. Install Arduino in the same way as described in the Wiki.
+`Getting Started with ODYSSEY - X86J41x5 | Seeed Studio Wiki`
+
+2. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`.
+
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Preferences.png)
+
+3. Go to `Tools` > `Board` > `Boards Manager…`, and enter `RP2040` in the search box. Select the latest version of `Raspberry Pi Pico/RP2040` and install it.
+
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Boardsmanager.png)
+
+4. Select your `Raspberry Pi Pico` and the corresponding port. 
+
+5. You have now finished setting up the Odyssey J4125V2 RP2040 for Arduino IDE on Ubuntu 20.04.I wrote a simple program and the serial monitor shows as expected
+
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Finish.png)
+
+Feel free to explore your creativity with ODYSSEY - X86J4125 v2!
 
 ## Using the Arduino Core (ATSAMD21G18) on ODYSSEY - X86J4105/ X86J4125 in Linux OS
 
