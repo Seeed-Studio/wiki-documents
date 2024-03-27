@@ -74,7 +74,7 @@ Mesh Support:
 
 ## Getting Started
 
-- [Official Zephyr for XIAO BLE (Sense) Getting Started](https://docs.zephyrproject.org/latest/boards/arm/xiao_ble/doc/index.html)
+- [Official Zephyr for XIAO BLE (Sense) Getting Started](https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html)
 
 ## Tech Support & Product Discussion
 
