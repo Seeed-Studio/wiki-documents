@@ -75,7 +75,7 @@ Zephyr 提供了许多熟悉的开发服务：
 
 ## 开始
 
-- [官方 FreeRTOS 入口](https://docs.zephyrproject.org/latest/boards/arm/xiao_ble/doc/index.html)
+- [官方 FreeRTOS 入口](https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html)
 
 ## 技术支持和产品讨论
 
