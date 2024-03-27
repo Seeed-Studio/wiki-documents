@@ -391,6 +391,7 @@ If you have installed Linux OS, Download the Linux version of [Arduino IDE](http
 ```sh
 cd ~/Downloads
 ```
+2. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`.
 
 2. Use tar command to unzip the downloaded file
 
@@ -417,7 +418,7 @@ cd /opt/arduino-1.8.10 && ./arduino-linux-setup.sh
 ```
 
 ### Installing Board Libraries
-
+#### Odyssey J4105/J4125 v1
 1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
 
 2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino Zero`** board library.
@@ -429,6 +430,16 @@ cd /opt/arduino-1.8.10 && ./arduino-linux-setup.sh
 - `Port` -> `ttyACM0(Seeeduno Zero)`
 
 - `Board` -> `Seeeduino Zero`
+#### Odyssey J4125 v2
+1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`.
+
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Preferences.png)
+
+2.  Go to `Tools` > `Board` > `Boards Manager…`, and enter `RP2040` in the search box. Select the latest version of `Raspberry Pi Pico/RP2040` and install it.
+
+![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Boardsmanager.png)
+
+3. Select your `Raspberry Pi Pico` and the corresponding port. 
 
 ## FAQs
 
