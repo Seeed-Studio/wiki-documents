@@ -86,7 +86,7 @@ Mesh 支持:
 
 ## 开始
 
-- [OXIAO ESP32C3 官方 Zephyr 入门指南](https://docs.zephyrproject.org/latest/boards/riscv/xiao_esp32c3/doc/index.html)
+- [OXIAO ESP32C3 官方 Zephyr 入门指南](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32c3/doc/index.html)
 
 ## 技术支持和产品讨论
 
