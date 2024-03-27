@@ -148,6 +148,7 @@ const sidebars = {
                   },
                   items: [
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-software-supported',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove_vision_ai_v2_sscma',
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-ha',
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-camera-supported',
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-himax-sdk',
@@ -2535,6 +2536,7 @@ const sidebars = {
                 label: 'N3uron',
                 items: [
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminalDM_N3uron_Get_Start',
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminal_DM_N3uron_AWS',
                 ],
               },
 
@@ -3034,7 +3036,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'SenseCAP Mate APP',
-      items: ['Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP'],
+      items: [
+        'Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP',
+        'Cloud_Chain/SenseCAP_Mate_APP/sensecap_mate_app_event',
+      ],
     },
     {
       type: 'category',
@@ -3915,6 +3920,25 @@ const sidebars = {
   // ],
   CNSidebar: [
     'zh-CN/CN_Getting_Started',
+
+    {
+      type: 'category',
+      label: 'Grove Vision AI V2',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-Grove-vision-ai-v2"
+      },
+      items: [
+        'zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-Grove-vision-ai-v2-software-supported',
+        'zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-grove-vision-ai-v2-ha',
+        'zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-Grove-vision-ai-v2-camera-supported',
+        'zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-grove-vision-ai-v2-himax-sdk',
+        'zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-grove-vision-ai-v2-sensecap-app',
+      ],
+    },    
+
     {
       type: 'doc',
       id: 'zh-CN/Sensor/SeeedStudio_XIAO/CN_SeeedStudio_XIAO_Series_Introduction',
@@ -4166,12 +4190,17 @@ const sidebars = {
     'zh-CN/Sensor/SeeedStudio_XIAO/CN_SeeedStudio_XIAO_Series_Projects',
     'zh-CN/Sensor/SeeedStudio_XIAO/CN_XIAO_FAQ',
 
+
+
     {
       type: 'doc',
       id: 'zh-CN/Edge/Quantum_Development_Board/CN_Quantum-Mini-Linux-Development-Kit',
       label: '夸克(Quark)迷你开发者套件',
       className: 'sideboard_calss',
     },
+
+
+
 
 
   ],

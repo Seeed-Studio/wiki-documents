@@ -470,6 +470,8 @@ If you see the following log, that means the STM32 firmware is successfully flas
 
 Now you have successfully flashed the firmware to STM32!
 
+
+
 ### Check the installed STM32G030 firmware version
 
 Now let's check the installed STM32 firmware version
@@ -513,6 +515,9 @@ dtoverlay=reTerminal
 ```sh
 sudo reboot
 ```
+
+
+
 ## Flash Raspberry Pi OS which is newest version - Bookworm
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/bookworm.jpeg" alt="pir" width={600} height="auto" /></p>
@@ -526,7 +531,14 @@ Before proceeding, ensure that you **flip down the boot mode switch**. Next, lau
 
 - **1.** Download the Raspberry Pi OS by visiting the links below
 
-  - [64-bit Bookworm-Raspbian-reTerminal](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/2023_11_15_bookworm_64.img.gz)
+  <!-- - [64-bit Bookworm-Raspbian-reTerminal](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/2023_11_15_bookworm_64.img.gz) -->
+
+| Version                     | Description      | TAG                                                     |
+| --------------------------- | ---------------- | ------------------------------------------------------------ |
+| [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux version 6.6.20 | lastest |
+| [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux version 6.6.20           | lastest |
+| [2023_11_15_bookworm_64.img.gz](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2023_11_15_bookworm_64_reTerminal/2023_11_15_bookworm_64.img.gz)               | 64bit Debian12(bookworm) Linux version 6.1  | release |
+
 
 
 - **2.** Extract the **.zip file**

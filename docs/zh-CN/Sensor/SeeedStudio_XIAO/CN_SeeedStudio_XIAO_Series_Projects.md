@@ -384,7 +384,7 @@ XIAO系列开发板，其中“XIAO”代表小，是Seeed Studio推出的指甲
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/arm/seeeduino_xiao/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/arm/xiao_ble/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/riscv/xiao_esp32c3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32c3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
 		</tr>
         <tr>
 			<th>XIAO ESP32S3 (Sense)</th>
