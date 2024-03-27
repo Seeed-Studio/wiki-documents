@@ -134,7 +134,7 @@ function doesRender() {
 					})}
 				</div>
 				<div className={styles.btn_container}>
-					<Link className={clsx(styles.btn, 'button button--primary')} href=''>Apply Now</Link>
+					<Link className={clsx(styles.btn, 'button button--primary')} href='https://docs.google.com/forms/d/1g-dr4rfk7S6urL4r-YmewRv2Fni0V4LgL1eksTBvEic/viewform?edit_requested=true'>Apply Now</Link>
 				</div>
 			</div>
 		</div>
