@@ -74,7 +74,7 @@ Mesh组网支持:
 
 ## 开始
 
-- [XIAO SAMD21 Zephyr(RTOS) 快速上手](https://docs.zephyrproject.org/latest/boards/arm/seeeduino_xiao/doc/index.html)
+- [XIAO SAMD21 Zephyr(RTOS) 快速上手](https://docs.zephyrproject.org/latest/boards/seeed/seeeduino_xiao/doc/index.html)
 
 ## 技术支持和产品讨论
 

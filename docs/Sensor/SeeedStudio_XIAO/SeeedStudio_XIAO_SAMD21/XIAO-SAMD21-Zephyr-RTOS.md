@@ -73,7 +73,7 @@ Mesh Support:
  
 ## Getting Started
 
-- [XIAO SAMD21 Zephyr(RTOS) Getting Started](https://docs.zephyrproject.org/latest/boards/arm/seeeduino_xiao/doc/index.html)
+- [XIAO SAMD21 Zephyr(RTOS) Getting Started](https://docs.zephyrproject.org/latest/boards/seeed/seeeduino_xiao/doc/index.html)
 
 ## Tech Support & Product Discussion
 

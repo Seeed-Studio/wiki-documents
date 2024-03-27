@@ -76,7 +76,7 @@ Zephyr提供了许多常见的开发服务：
 
 ## 入门
 
-- [官方FreeRTOS入门](https://docs.zephyrproject.org/latest/boards/xtensa/xiao_esp32s3/doc/index.html)
+- [官方FreeRTOS入门](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html)
 
 ## 技术支持和产品讨论
 
