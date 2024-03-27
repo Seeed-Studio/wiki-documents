@@ -3,11 +3,11 @@ import clsx from 'clsx'
 import Layout from '@theme/Layout'
 import Translate, { translate } from '@docusaurus/Translate'
 import styles from './styles.module.scss'
-import { joinList, doList, centerJoinList, howDoesList, iconlist } from './config'
+import { joinList, doList, centerJoinList, howDoesList, iconlist } from '../../define/rangerConfig'
 import { Circle } from 'rc-progress';
 import Link from '@docusaurus/Link'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Navigation,Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import { useState, useRef, useEffect } from 'react'
 
@@ -222,6 +222,7 @@ const rangerPersonRender = () => {
 				<div className={styles.title}>Why join in Seeed Ranger?</div>
 				<div className={styles.person_container}>
 					<Swiper
+					modules={[Navigation,Pagination]}
 						autoplay={true}
 						slidesPerView={2} // 每次显示的幻灯片数量
 						spaceBetween={24}
@@ -265,7 +266,8 @@ const blogPersonRender = () => {
 				<div className={styles.title}>Where are the Events happened?</div>
 				<div className={styles.blog_container}>
 					<Swiper
-						autoplay={true}
+											modules={[Navigation,Pagination]}
+
 						slidesPerView={3} // 每次显示的幻灯片数量
 						spaceBetween={24}
 						pagination={{ clickable: false }} // 显示分页器
@@ -273,7 +275,9 @@ const blogPersonRender = () => {
 						{list.map((item, index) => {
 							return (
 								<SwiperSlide >
-									<div key={index} className={styles.blog_item_container}>
+									<div key={index} className={styles.blog_item_container} onClick={()=>{
+										window.open(item.link,'_blank')
+									}}>
 										<div className={styles.blog_item}>
 											<img src={item.img} alt="" />
 											<div className={styles.info}>

@@ -130,10 +130,12 @@
 
                 .sec_desc {
                     position: relative;
-display: flex;
-span{
-    flex:1;
-}
+                    display: flex;
+
+                    span {
+                        flex: 1;
+                    }
+
                     &::before {
                         content: '';
                         width: 4px;
@@ -268,6 +270,7 @@ span{
                 background-color: #fff;
                 border-radius: 20px;
                 padding: 50px;
+                margin-bottom: 20px;
 
                 img {
                     width: 260px;
@@ -286,6 +289,7 @@ span{
             .blog_item_container {
                 padding: 10px;
                 height: 100%;
+                cursor: pointer;
             }
 
             .blog_item {
