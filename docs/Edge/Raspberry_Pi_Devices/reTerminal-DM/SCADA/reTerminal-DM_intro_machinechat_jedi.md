@@ -20,6 +20,8 @@ last_update:
 
 [Machinechat JEDI](https://www.machinechat.io/jedi) is a powerful and versatile IoT (Internet of Things) data management software. It's designed to streamline the process of collecting, visualizing, monitoring, and responding to real-time data from a wide range of devices, sensors, and machines. Seeed's reTerminal DM and Machinechat JEDI software let you build custom dashboards in under 30 minutes. Track operations, analyze trends, improve efficiency, and receive timely alerts to prevent costly disruptions
 
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/screenshot1.PNG" /></center>
+
 ## Getting Started
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
@@ -342,8 +344,6 @@ And that is it!! You will be able to get stacked line chart.
 
 In conclusion, Machinechat JEDI with reTerminal DM stands as a transformative solution, revolutionizing the landscape of industrial operations and smart infrastructure management. By seamlessly integrating IIoT capabilities, this will empower users to leverage real-time data from connected devices, offering unparalleled insights into manufacturing processes, supply chain logistics, and operational efficiency.
 
-
-<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/screenshot1.PNG" /></center>
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/screenshot2.PNG" /></center>
 
 ## Resources
