@@ -116,4 +116,4 @@ For each supported device Zephyr has a [devicetree](https://docs.zephyrproject.o
 - [weekly wiki on 2024.2.26th](/Seeed_Elderly/weekly_wiki/wiki240226)
 - [weekly wiki on 2024.3.04th](/Seeed_Elderly/weekly_wiki/wiki240304)
 - [weekly wiki on 2024.3.11th](/Seeed_Elderly/weekly_wiki/wiki240311)
-- [weekly wiki on 2024.3.25th](/Seeed_Elderly/weekly_wiki/wiki240325)
+- [weekly wiki on 2024.3.18th](/Seeed_Elderly/weekly_wiki/wiki240318)
