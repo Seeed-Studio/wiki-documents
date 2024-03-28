@@ -2553,6 +2553,7 @@ const sidebars = {
                 label: 'SCADA',
                 items: [
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_FUXA',
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_machinechat_jedi',
                 ],
               },
               {
