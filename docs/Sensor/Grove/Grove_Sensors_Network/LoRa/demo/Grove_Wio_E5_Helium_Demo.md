@@ -52,7 +52,7 @@ If this is your first time to use Arduino, [Arduino’s website](https://www.ard
 
 ### Helium IoT Console Prepration 
 
-- **Step 1.** Visit [Helium Console](https://console.helium.com/welcome ) website and sign up for a new account
+- **Step 1.** Visit [Helium Console](https://console.helium.com/welcome ) website and login if you have an existing account. If you do not have an existing account then you will have to use one of the other Public Console LNS providers like [Metroscientific](https://console.meteoscientific.com/).
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Helium-login.png" alt="pir" width={500} height="auto" /></p> 
 
