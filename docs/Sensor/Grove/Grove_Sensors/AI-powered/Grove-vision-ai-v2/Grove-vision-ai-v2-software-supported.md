@@ -84,7 +84,7 @@ Then, just select a model you want to use and click the **Send** button below. H
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/4.png" style={{width:600, height:'auto'}}/></div>
 
-Wait for 1~2 minutes for the model to be uploaded.
+Please remain on this page for 1-2 minutes until the model is successfully uploaded. Kindly note that switching to another page tab during this process may result in an unsuccessful upload (our team is actively working on resolving this issue, and it will be fixed soon).
 
 #### Step 3. Observations
 
