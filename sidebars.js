@@ -2553,6 +2553,7 @@ const sidebars = {
                 label: 'SCADA',
                 items: [
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_FUXA',
+                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_machinechat_jedi',
                 ],
               },
               {
@@ -2658,6 +2659,7 @@ const sidebars = {
               type: 'category',
               label: 'Software with AI methods',
               items: [
+                'Edge/NVIDIA_Jetson/reComputer/Software/neqto_engine_for_linux_recomputer',
                 'Edge/NVIDIA_Jetson/reComputer/Software/CVEDIA-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/reComputer/Software/Lumeo-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/reComputer/Software/DeciAI-Getting-Started',
@@ -2712,7 +2714,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Deploy_Riva_and_Llama2_on_reComputer',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Real_Time_Subtitle_Recoder_on_Jetson',
-                'Edge/NVIDIA_Jetson/reComputer/Application/Whisper_on_Jetson_for_Real_Time_Speech_to_Text'
+                'Edge/NVIDIA_Jetson/reComputer/Application/Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
               ],
             },
 

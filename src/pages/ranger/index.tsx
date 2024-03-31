@@ -226,7 +226,7 @@ const rangerPersonRender = () => {
 						autoplay={true}
 						slidesPerView={2} // 每次显示的幻灯片数量
 						spaceBetween={24}
-						pagination={{ clickable: false }} // 显示分页器
+						pagination={{ clickable: true }} // 显示分页器
 					>
 						{/* scrollbar={{ draggable: true }} // 显示滚动条 */}
 
