@@ -9,14 +9,14 @@ slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 0
 last_update:
-  date: 03/29/2024
+  date: 04/01/2024
   author: Spencer
 ---
 
 # Getting Started with Seeed Studio XIAO ESP32C6
 
 <div class="table-center">
-	<table align="center">
+	<table>
 		<tr>
 			<th>Seeed Studio XIAO ESP32C6</th>
 		</tr>
@@ -43,19 +43,18 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
 
 
 ## Specifications comparison
-
-<table>
+<table class="sp-table-c6">
     <thead>
         <tr>
-            <th>Products</th>
-            <th>XIAO ESP32C6</th>
+            <th colspan="2">Products</th>
+            <th class="highlight-cell">XIAO ESP32C6</th>
             <th>XIAO ESP32C3</th>
             <th>XIAO ESP32S3</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th rowspan="2">Processor</th>
+            <th colspan="2" rowspan="2">Processor</th>
             <td>Espressif ESP32-C6 SoC</td>
             <td>Espressif ESP32-C3 SoC</td>
             <td>Espressif ESP32-S3R8</td>
@@ -66,58 +65,71 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
             <td>Xtensa LX7 dual-core, 32-bit processor running up to 240 MHz</td>
         </tr>
         <tr>
-            <th rowspan="2">Wireless</th>
-            <td>Complete 2.4GHz Wi-Fi 6 subsystem</td>
-            <td>Complete 2.4GHz Wi-Fi subsystem</td>
-            <td>Complete 2.4GHz Wi-Fi subsystem</td>
+            <th colspan="2" rowspan="2">Wireless</th>
+            <td>Complete 2.4GHz <strong>Wi-Fi 6</strong> subsystem</td>
+            <td colspan="2">Complete 2.4GHz Wi-Fi subsystem</td>
         </tr>
         <tr>
-            <td>Bluetooth 5.0/ Bluetooth mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth mesh</td>
+            <td>Bluetooth 5.0/ Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
         </tr>
         <tr>
-            <th>On-chip Memory</th>
+            <th colspan="2" rowspan="1" >On-chip Memory</th>
             <td>512KB SRAM &amp; 4MB Flash</td>
             <td>400KB SRAM &amp; 4MB Flash</td>
             <td>8M PSRAM &amp; 8MB Flash</td>
         </tr>
         <tr>
-            <th rowspan="2">Interface</th>
+            <th colspan="2" rowspan="2" >Interface</th>
             <td>1x UART,1x LP_UART, 1x IIC, 1x LP_IIC, 1x SPI,11x GPIO(PWM), 7x ADC, 1xSDIO</td>
             <td>1x UART, 1x IIC, 1x SPI,11x GPIO(PWM), 4x ADC</td>
             <td>1x UART, 1x IIC, 1x IIS, 1x SPI,11x GPIO(PWM), 9x ADC, 1x User LED, 1x Charge LED</td>
         </tr>
         <tr>
-            <td colspan="3" align="center">1x Reset button, 1x Boot button</td>
+            <td colspan="3">1x Reset button, 1x Boot button</td>
         </tr>
         <tr>
-            <th>Dimensions</th>
-            <td colspan="3" align="center">21 x 17.5 mm</td>
+            <th colspan="2" rowspan="1">Dimensions</th>
+            <td colspan="3">21 x 17.5 mm</td>
         </tr>
         <tr>
-            <th align="center">Power</th>
-            <td colspan="3" align="center">Input voltage (Type-C): 5V<br></br>Input voltage (BAT): 4.2V</td>
+            <th colspan="1" rowspan="3">Power</th>
+            <th colspan="1">Input voltage</th>
+            <td colspan="3">Type-C: 5V<br></br>BAT: 4.2V</td>
         </tr>
         <tr>
             <th>Circuit operating Voltage (ready to operate)</th>
-            <td colspan="2" align="center">USB:5V@9mA<br></br>BAT:3.8V@9mA</td>
+            <td colspan="2">USB:5V@9mA<br></br>BAT:3.8V@9mA</td>
             <td>Type-C: 5V@19mA<br></br>BAT: 3.8V@22mA</td>
         </tr>
         <tr>
             <th>Charging battery current</th>
-            <td colspan="2" align="center" >350mA</td>
+            <td colspan="2" >350mA</td>
             <td>100mA</td>
         </tr>
         <tr>
-            <th>Power Consumption Model(Supply Power: 3.8V)</th>
-            <td>Modem-sleep Model: <b>~ 30 mA</b><br></br>Light-sleep Model: <b>~ 2.5 mA</b><br></br>Deep Sleep Model: <b>~ 15 μA</b></td>
-            <td>Modem-sleep Model: <b>~ 24 mA</b><br></br>Light-sleep Model: <b>~ 3 mA</b><br></br>Deep Sleep Model: <b>~ 44 μA</b></td>
-            <td>Modem-sleep Model: <b>~ 25 mA</b><br></br>Light-sleep Model: <b>~ 2mA</b><br></br>Deep Sleep Model: <b>~ 14 μA</b></td>
+            <th colspan="1" rowspan="3">Power Consumption Model(Supply Power: 3.8V)</th>
+            <th>Modem-sleep Model</th>
+            <td>~ 30 mA</td>
+            <td>~ 24 mA</td>
+            <td>~ 25 mA</td>
         </tr>
         <tr>
-            <th>Working Temperature</th>
-            <td colspan="2" align="center">-40°C ~ 85°C</td>
+            <th> Light-sleep Model</th>
+            <td>~ 2.5 mA</td>
+            <td>~ 3 mA</td>
+            <td>~ 2 mA</td>
+        </tr>
+        <tr>
+            <th> Deep Sleep Model</th>
+            <td>~ 15 μA</td>
+            <td>~ 44 μA</td>
+            <td>~ 14 μA</td>
+        </tr>
+        <tr>
+            <th colspan="2">Working Temperature</th>
+            <td colspan="2">-40°C ~ 85°C</td>
             <td>-40°C ~ 65°C</td>
         </tr>
     </tbody>
@@ -135,7 +147,7 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
 
 ## Hardware overview
 
-<table align="center">
+<table>
 	<tr>
 	    <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
 	</tr>
@@ -271,7 +283,7 @@ Then go to the **variants folder** and copy the **XIAO_ESP32C6 folder** to it.
 
 Once the program is successfully uploaded, you will see the following output message and you can observe that the orange LED on the right side of the XIAO ESP32C6 is blinking.
 
-<table align="center">
+<table>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6_flash_firmware.png" style={{width:680, height:'auto'}}/></div></td>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6-blink.gif" style={{width:400, height:'auto'}}/></div></td>
