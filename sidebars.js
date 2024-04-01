@@ -2731,6 +2731,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/reComputer/Application/Deploy_Riva_and_Llama2_on_reComputer',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Real_Time_Subtitle_Recoder_on_Jetson',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
+                'Edge/NVIDIA_Jetson/reComputer/Application/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson'
               ],
             },
 
