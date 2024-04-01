@@ -8,6 +8,7 @@ slug: /xiao_esp32c6_aws_iot
 last_update:
   date: 03/13/2024
   author: Citric
+draft: true
 ---
 
 # Empowering AI with AWS IoT Core for the XIAO ESP32C6
