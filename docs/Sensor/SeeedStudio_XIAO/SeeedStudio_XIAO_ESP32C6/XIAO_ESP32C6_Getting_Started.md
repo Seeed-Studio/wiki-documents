@@ -65,7 +65,7 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
             <td>Xtensa LX7 dual-core, 32-bit processor running up to 240 MHz</td>
         </tr>
         <tr>
-            <th colspan="2" rowspan="2">Wireless</th>
+            <th colspan="2" rowspan="3">Wireless</th>
             <td>Complete 2.4GHz <strong>Wi-Fi 6</strong> subsystem</td>
             <td colspan="2">Complete 2.4GHz Wi-Fi subsystem</td>
         </tr>
@@ -73,6 +73,11 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
             <td>Bluetooth 5.0/ Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
+        </tr>
+        <tr>
+            <td><strong>Zigbee,Thread,IEEE 802.15.4</strong></td>
+            <td>/</td>
+            <td>/</td>
         </tr>
         <tr>
             <th colspan="2" rowspan="1" >On-chip Memory</th>
