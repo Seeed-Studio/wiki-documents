@@ -270,7 +270,7 @@ const blogPersonRender = () => {
 
 						slidesPerView={3} // 每次显示的幻灯片数量
 						spaceBetween={24}
-						pagination={{ clickable: false }} // 显示分页器
+						pagination={{ clickable: true }} // 显示分页器
 					>
 						{list.map((item, index) => {
 							return (
