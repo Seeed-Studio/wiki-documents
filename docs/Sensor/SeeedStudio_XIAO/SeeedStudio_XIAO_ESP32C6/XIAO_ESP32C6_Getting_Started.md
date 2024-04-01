@@ -44,33 +44,94 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
 
 ## Specifications comparison
 
-| **Product**                                            | XIAO ESP32C6                                                 | [XIAO ESP32C3 ](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) | [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) |
-| :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------------: |
-| Processor                                                    | Espressif ESP32-C6 SoC                                       | Espressif ESP32-C3 SoC                                       | Espressif ESP32-S3R8                                         |
-| two 32-bit RISC-V processors, with the high-performance one running up to 160 MHz, and the low-power one clocking up to 20 MHz | RISC-V single-core 32-bit chip processor with a four-stage pipeline that operates at up to 160 MHz | Xtensa LX7 dual-core, 32-bit processor running up to 240 MHz |                                                              |
-| Wireless                                                     | Complete 2.4GHz **Wi-Fi 6** subsystem                  | Complete 2.4GHz Wi-Fi subsystem                              | Complete 2.4GHz Wi-Fi subsystem                              |
-| Bluetooth 5.0/ Bluetooth mesh                                | BLE: Bluetooth 5.0, Bluetooth mesh                           | BLE: Bluetooth 5.0, Bluetooth mesh                           |                                                              |
-| On-chip Memory                                               | **512KB SRAM & 4MB Flash**                             | **400KB SRAM & 4MB Flash**                             | **8M PSRAM & 8MB Flash**                               |
-| Interface                                                    | 1x UART,1x LP_UART, 1x IIC, 1x LP_IIC, 1x SPI,11x GPIO(PWM), 7x ADC, 1xSDIO | 1x UART, 1x IIC, 1x SPI,11x GPIO(PWM), 4x ADC                | 1x UART, 1x IIC, 1x IIS, 1x SPI,11x GPIO(PWM), **9x ADC, 1x User LED, 1x Charge LED** |
-| 1x Reset button, 1x Boot button                              | 1x Reset button, 1x Boot button                              | 1x Reset button, 1x Boot button                              |                                                              |
-| Dimensions                                                   | 21 x 17.5mm                                                  | 21 x 17.5mm                                                  | 21 x 17.5mm                                                  |
-| Power                                                        | Input voltage (Type-C): 5VInput voltage (BAT): 4.2V          | Input voltage (Type-C): 5VInput voltage (BAT): 4.2V          | Input voltage (Type-C): 5VInput voltage (BAT): 4.2V          |
-| Circuit operating Voltage (ready to operate):- USB:5V@**9mA**- BAT:3.8V@**9mA** | Circuit operating Voltage (ready to operate):- USB:5V@**9mA**- BAT:3.8V@**9mA** | Circuit operating Voltage (ready to operate):- Type-C: 5V@**19mA**- BAT: 3.8V@**22mA** |                                                              |
-| Charging battery current: **350mA**                    | Charging battery current: **350mA**                    | Charging battery current: **100mA**                    |                                                              |
-| Power Consumption Model(Supply Power: 3.8V)                  | Modem-sleep Model: **~ 30 mA**Light-sleep Model: **~ 2.5 mA**Deep Sleep Model: **~** **15** **μA** | Modem-sleep Model: **~ 24 mA**Light-sleep Model: **~ 3 mA**Deep Sleep Model: **~** **44 μA** | Modem-sleep Model: **~ 25 mA**Light-sleep Model: **~ 2mA**Deep Sleep Model: **~** **14 μA** |
-| Working Temperature                                          | -40°C ~ 85°C                                                 | -40°C ~ 85°C                                                 | -40°C ~ 65°C                                                 |
-
+<table>
+    <thead>
+        <tr>
+            <th>Products</th>
+            <th>XIAO ESP32C6</th>
+            <th>XIAO ESP32C3</th>
+            <th>XIAO ESP32S3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th rowspan="2">Processor</th>
+            <td>Espressif ESP32-C6 SoC</td>
+            <td>Espressif ESP32-C3 SoC</td>
+            <td>Espressif ESP32-S3R8</td>
+        </tr>
+        <tr>
+            <td>Two 32-bit RISC-V processors, with the high-performance one running up to 160 MHz, and the low-power one clocking up to 20 MHz</td>
+            <td>RISC-V single-core 32-bit chip processor with a four-stage pipeline that operates at up to 160 MHz</td>
+            <td>Xtensa LX7 dual-core, 32-bit processor running up to 240 MHz</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Wireless</th>
+            <td>Complete 2.4GHz Wi-Fi 6 subsystem</td>
+            <td>Complete 2.4GHz Wi-Fi subsystem</td>
+            <td>Complete 2.4GHz Wi-Fi subsystem</td>
+        </tr>
+        <tr>
+            <td>Bluetooth 5.0/ Bluetooth mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth mesh</td>
+        </tr>
+        <tr>
+            <th>On-chip Memory</th>
+            <td>512KB SRAM &amp; 4MB Flash</td>
+            <td>400KB SRAM &amp; 4MB Flash</td>
+            <td>8M PSRAM &amp; 8MB Flash</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Interface</th>
+            <td>1x UART,1x LP_UART, 1x IIC, 1x LP_IIC, 1x SPI,11x GPIO(PWM), 7x ADC, 1xSDIO</td>
+            <td>1x UART, 1x IIC, 1x SPI,11x GPIO(PWM), 4x ADC</td>
+            <td>1x UART, 1x IIC, 1x IIS, 1x SPI,11x GPIO(PWM), 9x ADC, 1x User LED, 1x Charge LED</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">1x Reset button, 1x Boot button</td>
+        </tr>
+        <tr>
+            <th>Dimensions</th>
+            <td colspan="3" align="center">21 x 17.5 mm</td>
+        </tr>
+        <tr>
+            <th align="center">Power</th>
+            <td colspan="3" align="center">Input voltage (Type-C): 5V<br></br>Input voltage (BAT): 4.2V</td>
+        </tr>
+        <tr>
+            <th>Circuit operating Voltage (ready to operate)</th>
+            <td colspan="2" align="center">USB:5V@9mA<br></br>BAT:3.8V@9mA</td>
+            <td>Type-C: 5V@19mA<br></br>BAT: 3.8V@22mA</td>
+        </tr>
+        <tr>
+            <th>Charging battery current</th>
+            <td colspan="2" align="center" >350mA</td>
+            <td>100mA</td>
+        </tr>
+        <tr>
+            <th>Power Consumption Model(Supply Power: 3.8V)</th>
+            <td>Modem-sleep Model: <b>~ 30 mA</b><br></br>Light-sleep Model: <b>~ 2.5 mA</b><br></br>Deep Sleep Model: <b>~ 15 μA</b></td>
+            <td>Modem-sleep Model: <b>~ 24 mA</b><br></br>Light-sleep Model: <b>~ 3 mA</b><br></br>Deep Sleep Model: <b>~ 44 μA</b></td>
+            <td>Modem-sleep Model: <b>~ 25 mA</b><br></br>Light-sleep Model: <b>~ 2mA</b><br></br>Deep Sleep Model: <b>~ 14 μA</b></td>
+        </tr>
+        <tr>
+            <th>Working Temperature</th>
+            <td colspan="2" align="center">-40°C ~ 85°C</td>
+            <td>-40°C ~ 65°C</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Features
 
-- **Enhanced Connectivity:** Combines4 GHz Wi-Fi 6 (802.11ax), Bluetooth 5(LE), and IEEE 802.15.4 radio connectivity, ending you to apply the Thread and Zigbee protocols.
-- **Matter Native**: Supports building Matter-compliant smart home projects thanks to its enhanced connectivity, achieving interoperability 
-- **Security Encrypted on Chip**: Powered by ESP32-C6, it brings enhanced encrypted on chip security to your smart home projects via secure boot, encryption, and Trusted Execution Environment (TEE)
-- **Outstanding RF performance:** Has an on-board antenna with up to 80m BLE/Wi-Fi range, while reserving an interface for external UFL antenna
-- **Leveraging Power Consumption:** Comes with4 working modes as low as 15 μA in the deep sleep mode, while supporting lithium battery charge management
-- **Dual RISC-V Processors:** Incorporates two 32-bit RISC-V processors, with the high performance processor running up to 160 MHz, and the low-power processor clocking up to 20
-- **Classic XIAO Designs:** Remains the classic XIAO designs of the thumb-size form factor of 21 x 17.5mm, and single-sided mount, making it perfect for space-limited projects such as wearables
-
+- **Enhanced Connectivity**: Integrates ***2.4*** GHz Wi-Fi 6 (802.11ax), Bluetooth 5(LE), and IEEE 802.15.4 radio connectivity, allowing for the application of Thread and Zigbee protocols.
+- **Matter Native**: Supports the building of Matter-compliant smart home projects, ensuring interoperability among different smart devices.
+- **Security Encrypted on Chip**: Utilizes the ESP32-C6 to provide secure boot, encryption, and Trusted Execution Environment (TEE) features, enhancing the security of smart home projects.
+- **Outstanding RF Performance**: Features an on-board antenna with up to 80m BLE/Wi-Fi range and offers an interface for connecting an external UFL antenna, ensuring reliable connectivity.
+- **Leveraging Power Consumption**: Offers four working modes, including a deep sleep mode with consumption as low as 15 μA, along with support for lithium battery charge management.
+- **Dual RISC-V Processors**: Incorporates two 32-bit RISC-V processors, with the high-performance processor capable of running up to 160 MHz and the low-power processor up to *20 MHz*.
+- **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.5mm and single-sided mount design, ideal for space-limited projects like wearable devices.
 
 ## Hardware overview
 
