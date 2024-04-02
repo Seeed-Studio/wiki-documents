@@ -727,6 +727,23 @@
   margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
 }
 
+.sp-table-c6{
+  table,
+  td,
+  th {
+      /* border: 1px solid ; */
+      border-collapse: collapse;
+      text-align: center;
+  }
+
+  table {
+      text-align: center;
+  }
+}
+
+.highlight-cell {
+  background-color: rgb(146, 197, 42);
+}
 /********************* Spencer's CSS Ended******************************/
 
 .button2 {
