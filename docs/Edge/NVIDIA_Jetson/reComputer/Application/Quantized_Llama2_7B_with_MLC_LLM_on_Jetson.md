@@ -1,14 +1,14 @@
 ---
-description:  Quantized Llama2-7B with MLC on Jetson
-title:  Quantized Llama2-7B with MLC on Jetson
+description:  Quantized Llama2-7B with MLC LLM on Jetson
+title:  Quantized Llama2-7B with MLC LLM on Jetson
 keywords:
   - Edge
   - reComputer
   - Jetson
   - Llama2
-  - MLC
+  - MLC LLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: Quantized Llama2-7B with MLC on Jetson
+slug: Quantized Llama2-7B with MLC LLM on Jetson
 last_update:
   date: 04/1/2024
   author: Jiahao
@@ -35,7 +35,7 @@ In this project, we introduce a quantized version of [Llama2-7B](https://hugging
 			<th>reComputer(Or other devices based on Jetson)</th>
 		</tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputer_industrial_j3011_orin_nano_8gb.jpg" style={{width:800, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" style={{width:800, height:'auto'}}/></div></td>
     </tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
