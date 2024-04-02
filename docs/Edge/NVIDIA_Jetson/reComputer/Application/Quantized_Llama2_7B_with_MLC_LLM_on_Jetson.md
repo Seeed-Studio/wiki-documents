@@ -59,7 +59,7 @@ git clone --depth=1 https://github.com/dusty-nv/jetson-containers
 cd jetson-containers pip3 install -r requirements.txt
 ```
 ```shell 
-cd ./data git clone https://github.com/LJ-Hao/MLC-LLM-on-Jetson-Nano.git cd ..
+cd ./data && git clone https://github.com/LJ-Hao/MLC-LLM-on-Jetson-Nano.git && cd ..
 ```
 ## Install and run contiainer
 
@@ -97,7 +97,7 @@ python3 -m mlc_llm.build \
 ### run Llama without quanifing without MLC LLM quantified 
 
 ```shell
-cd /data/MLC-LLM-on-Jetson python3 Llama-2-7b-chat-hf.py 
+cd /data/MLC-LLM-on-Jetson && python3 Llama-2-7b-chat-hf.py 
 ```
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Llama-2-7b-chat-hf.png" alt="pir" width={1000} height="auto"/></p>
 
@@ -106,7 +106,7 @@ you can see without quanifing with MLC, Jetson Nano 16GB can load the model but 
 ### run Llama with quanifing with MLC LLM quantified 
 
 ```shell
-cd /data/MLC-LLM-on-Jetson python3 Llama-2-7b-chat-hf-q4f16_ft.py 
+cd /data/MLC-LLM-on-Jetson && python3 Llama-2-7b-chat-hf-q4f16_ft.py 
 ```
 here is the result:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Llama-2-7b-chat-hf-q4f16_ft.png" alt="pir" width={1000} height="auto"/></p>
