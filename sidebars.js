@@ -2719,6 +2719,7 @@ const sidebars = {
               type: 'category',
               label: 'Application',
               items: [
+                'Edge/NVIDIA_Jetson/reComputer/Application/How_to_run_local_llm_text_to_image_on_reComputer',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Jetson-Nano-MaskCam',
                 'Edge/NVIDIA_Jetson/reComputer/Application/Security_Scan',
                 'Edge/NVIDIA_Jetson/reComputer/Application/No-code-Edge-AI-Tool',
