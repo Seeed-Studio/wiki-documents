@@ -199,7 +199,7 @@ Head to Hugging Face and choose to see the models.
 
 On the left side, you have filters that allow us to choose what type of models we want to see.
 <div align="center">
-    <img width={800} src="/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/5_huggingface.png" />
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/5_huggingface.png" />
 </div>
 There are a lot of models available, but we're going to concentrate on the text-to-image models.
 
