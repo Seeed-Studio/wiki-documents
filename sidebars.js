@@ -1136,6 +1136,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO ESP32C6',
+          items: [
+            {
+              type: 'category',
+              label: 'Applications',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'Expansion Boards for XIAO',
           items: [
             {
