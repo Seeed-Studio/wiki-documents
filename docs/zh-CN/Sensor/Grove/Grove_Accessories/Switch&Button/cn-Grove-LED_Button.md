@@ -1,6 +1,6 @@
 ---
-description: Grove-LED Button
-title: Grove-LED Button
+description: Grove-LED 按钮
+title: Grove-LED 按钮
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
