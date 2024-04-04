@@ -1,6 +1,6 @@
 ---
-description: Grove - 5-Way Switch
-title: Grove - 5-Way Switch
+description: Grove - 五向开关
+title: Grove - 五向开关
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
