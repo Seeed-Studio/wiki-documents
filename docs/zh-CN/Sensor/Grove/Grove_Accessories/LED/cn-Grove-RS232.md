@@ -1,6 +1,6 @@
 ---
-description: Grove - RS232
-title: Grove - RS232
+description: Grove - RS232接口
+title: Grove - RS232接口
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
