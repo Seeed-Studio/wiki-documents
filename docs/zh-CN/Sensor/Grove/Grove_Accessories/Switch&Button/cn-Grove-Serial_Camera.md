@@ -1,6 +1,6 @@
 ---
-title: Grove - Serial Camera
-nointro:
+title: Grove - 串行摄像头
+description: Grove - 串行摄像头
 keywords:
   - docs
   - docusaurus
