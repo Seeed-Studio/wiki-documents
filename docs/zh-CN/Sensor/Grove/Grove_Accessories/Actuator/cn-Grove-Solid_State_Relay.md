@@ -1,6 +1,6 @@
 ---
-title: Grove - Solid State Relay
-nointro:
+title: Grove - 固态继电器
+description: Grove - 固态继电器
 keywords:
   - docs
   - docusaurus
