@@ -1,6 +1,6 @@
 ---
-title: Grove - Buzzer
-nointro:
+title: Grove - 蜂鸣器
+description: Grove - 蜂鸣器
 keywords:
   - docs
   - docusaurus
