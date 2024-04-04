@@ -1,5 +1,5 @@
 ---
-title: Basic of LCD
+title: LCD屏幕的基础知识
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio_RP2040_Module_Build-in_Wireless_2.4G/
 slug: /cn/Wio-Terminal-LCD-Basic
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # TFT LCD屏幕的基础知识
