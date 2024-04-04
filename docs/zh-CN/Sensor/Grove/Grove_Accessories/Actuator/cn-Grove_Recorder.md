@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove_Recorder/
-slug:/cn/Grove_Recorder
+slug: /cn/Grove_Recorder
 last_update:
   date: 03/18/2024
   author: WuFeifei
