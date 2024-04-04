@@ -1,13 +1,13 @@
 ---
-description: Client and Server introduction
-title: Client and Server introduction
+description: 客户端和服务器介绍
+title: 客户端和服务器介绍
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-terminal-BLE-introduction
 last_update:
   date: 3/08/2024
-  author: jessie
+  author: 金菊
 ---
 
 # **客户端和服务器介绍**
