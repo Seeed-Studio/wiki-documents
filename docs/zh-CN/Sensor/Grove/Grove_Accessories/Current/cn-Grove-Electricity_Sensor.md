@@ -1,6 +1,6 @@
 ---
-description: Grove - Electricity Sensor
-title: Grove - Electricity Sensor
+description: Grove - 电能传感器
+title: Grove - 电能传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
