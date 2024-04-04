@@ -1,6 +1,6 @@
 ---
-description: Grove - Electromagnet
-title: Grove - Electromagnet
+description: Grove - 电磁铁
+title: Grove - 电磁铁
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
