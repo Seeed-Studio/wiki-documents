@@ -1,13 +1,13 @@
 ---
-description: Overview
-title: Getting Started with Light Sensor
+description: 概述
+title: 光传感器入门指南
 keywords:
 - Wio_terminal Light_Sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Light
 last_update:
   date: 3/09/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 光传感器入门指南
