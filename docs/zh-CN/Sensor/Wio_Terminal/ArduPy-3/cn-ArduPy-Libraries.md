@@ -1,6 +1,6 @@
 ---
-description: How to Write an ArduPy Library
-title: How to Write an ArduPy Library
+description: 如何编写 ArduPy 库
+title: 如何编写 ArduPy 库
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/ArduPy-Libraries
 last_update:
