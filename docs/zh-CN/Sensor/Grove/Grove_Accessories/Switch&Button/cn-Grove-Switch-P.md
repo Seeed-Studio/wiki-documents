@@ -1,6 +1,6 @@
 ---
-description: Grove - Switch(P)
-title: Grove - Switch(P)
+description: Grove - 开关（P型）
+title: Grove - 开关（P型）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
