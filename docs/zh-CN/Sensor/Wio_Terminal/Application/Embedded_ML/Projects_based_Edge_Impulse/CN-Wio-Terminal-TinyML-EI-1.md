@@ -1,6 +1,6 @@
 ---
-description:  Edge Impulse Getting Started
-title:  Edge Impulse Getting Started
+description:  Wio Terminal Edge Impulse 入门指南
+title:  Wio Terminal Edge Impulse 入门指南
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-EI-1
 last_update:
   date: 3/05/2024
-  author: jessie
+  author: 金菊
 ---
 
 # Wio Terminal Edge Impulse 入门指南
