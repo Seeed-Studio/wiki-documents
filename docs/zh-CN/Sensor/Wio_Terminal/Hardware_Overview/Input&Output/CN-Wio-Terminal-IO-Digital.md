@@ -1,5 +1,5 @@
 ---
-title: Digital
+title: 数字端口
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-IO-Digital/
 slug: /cn/Wio-Terminal-IO-Digital
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 在Wio Terminal上使用Grove数字端口
