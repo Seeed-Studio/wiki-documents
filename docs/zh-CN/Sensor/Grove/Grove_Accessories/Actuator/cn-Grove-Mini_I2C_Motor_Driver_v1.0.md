@@ -1,6 +1,6 @@
 ---
-title: Grove - Mini I2C Motor Driver v1.0
-nointro:
+title: Grove - 迷你I2C电机驱动器v1.0
+description: Grove - 迷你I2C电机驱动器v1.0
 keywords:
   - docs
   - docusaurus
