@@ -1,6 +1,6 @@
 ---
-description: Grove - 6-Position DIP Switch
-title: Grove - 6-Position DIP Switch
+description: Grove - 6位拨码开关
+title: Grove - 6位拨码开关
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
