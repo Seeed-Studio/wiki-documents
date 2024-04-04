@@ -1,6 +1,6 @@
 ---
-title: Grove - Variable Color LED
-nointro:
+title: Grove - 可变色LED灯
+description: Grove - 可变色LED灯
 keywords:
   - docs
   - docusaurus
