@@ -1,16 +1,16 @@
 ---
-description: Overview
-title: Getting Started with Microphone
+description: 概述
+title: 麦克风入门指南
 keywords:
 - Wio_terminal Microphone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Mic
 last_update:
   date: 3/08/2024
-  author: jessie
+  author: 金菊
 ---
 
-#  Microphone入门指南
+#  麦克风入门指南
 
 本 wiki 介绍如何在Wio Terminal中使用内置麦克风进行音频输入。麦克风可以用于检测周围的声音并做出相应的反应。
 
