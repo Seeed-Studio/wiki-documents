@@ -1,6 +1,6 @@
 ---
-description:  Distinguishing Beverage
-title:  Distinguishing Beverage
+description:  识别饮料
+title:  识别饮料
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-EI-5
 last_update:
   date: 3/06/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 使用Wio Terminal和Edge Impulse识别多通道气体传感器中的饮料
