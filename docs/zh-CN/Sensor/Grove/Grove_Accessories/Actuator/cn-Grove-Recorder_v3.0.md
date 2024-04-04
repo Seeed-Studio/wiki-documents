@@ -1,6 +1,6 @@
 ---
-title: Grove - Recorder V3
-nointro:
+title: Grove - 录音机V3
+description: Grove - 录音机V3
 keywords:
   - docs
   - docusaurus
