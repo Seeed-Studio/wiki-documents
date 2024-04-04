@@ -1,6 +1,6 @@
 ---
-title: Grove - 2-Channel Solid State Relay
-nointro:
+title: Grove - 2通道固态继电器
+description: Grove - 2通道固态继电器
 keywords:
   - docs
   - docusaurus
