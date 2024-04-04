@@ -1,6 +1,6 @@
 ---
-description: Grove - MOSFET
-title: Grove - MOSFET
+description: Grove - 金属氧化物半导体场效应晶体管
+title: Grove - 金属氧化物半导体场效应晶体管
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
