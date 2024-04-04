@@ -1,6 +1,6 @@
 ---
-title: Grove - PS/2 Adapter
-nointro:
+title: Grove - PS/2适配器
+description: Grove - PS/2适配器
 keywords:
   - docs
   - docusaurus
