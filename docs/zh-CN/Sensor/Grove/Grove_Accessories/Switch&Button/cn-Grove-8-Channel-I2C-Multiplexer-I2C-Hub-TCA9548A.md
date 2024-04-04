@@ -1,6 +1,6 @@
 ---
-title: Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A)
-nointro:
+title: Grove - 8通道I2C多路复用器/I2C集线器（TCA9548A）
+description:  Grove - 8通道I2C多路复用器/I2C集线器（TCA9548A）
 keywords:
   - docs
   - docusaurus
