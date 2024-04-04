@@ -1,6 +1,6 @@
 ---
-title:  Grove - NunChuck
-nointro:
+title:  Grove - 摇杆控制器
+nointro: Grove - 摇杆控制器
 keywords:
   - docs
   - docusaurus
