@@ -1,13 +1,13 @@
 ---
-description: Wio Terminal Battery Chassis
-title: Wio Terminal Battery Chassis
+description: Wio Terminal电池底座
+title: Wio Terminal电池底座
 keywords:
 - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Battery-Chassis
 last_update:
   date: 3/05/2024
-  author: Jessie
+  author: 金菊
 ---
 
 
@@ -21,7 +21,7 @@ last_update:
 *请勿在电源打开时让引脚接触其他物体。
 :::
 
-Wio Terminal电池底座是 [Wio-Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) [Wio-Terminal]开发板的必备扩展板，它为Wio Terminal提供外部电源，增强了其便携性和紧凑性。它具有 **650mAh的可充电锂聚合物电池, 4个Grove模拟/数字端口, 1个Grove I2C端口和1个Grove UART端口, 以及用于美观和保护的ABS外壳** ，Wio Terminal电池底座的背面还有与树莓派40引脚兼容的GPIO接口，可用于添加更多扩展！
+Wio Terminal电池底座是 [Wio-Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) 开发板的必备扩展板，它为Wio Terminal提供外部电源，增强了其便携性和紧凑性。它具有 **650mAh的可充电锂聚合物电池, 4个Grove模拟/数字端口, 1个Grove I2C端口和1个Grove UART端口, 以及用于美观和保护的ABS外壳** ，Wio Terminal电池底座的背面还有与树莓派40引脚兼容的GPIO接口，可用于添加更多扩展！
 
 通过 [Wio-Terminal 开发板](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) + Wio Terminal电池底座, 您可以轻松构建最强大、最紧凑的物联网项目。借助扩展的Grove端口，您可以享受 [Grove 生态系统](https://www.seeedstudio.com/category/Grove-c-1003.html)的即插即用功能!
 
