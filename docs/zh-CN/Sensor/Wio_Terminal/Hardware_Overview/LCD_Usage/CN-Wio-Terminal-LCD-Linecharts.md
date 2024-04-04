@@ -1,5 +1,5 @@
 ---
-title: Line Charts
+title: 折线图
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Linecharts/
 slug: /cn/Wio-Terminal-LCD-Linecharts
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 折线图
