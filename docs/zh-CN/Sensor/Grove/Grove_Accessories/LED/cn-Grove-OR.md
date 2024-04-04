@@ -1,6 +1,6 @@
 ---
-title: Grove - OR
-nointro:
+title: Grove - 或门
+description: Grove - 或门
 keywords:
   - docs
   - docusaurus
