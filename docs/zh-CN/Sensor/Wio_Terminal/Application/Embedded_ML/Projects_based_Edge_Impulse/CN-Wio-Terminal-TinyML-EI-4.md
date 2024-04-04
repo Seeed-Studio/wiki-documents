@@ -1,6 +1,6 @@
 ---
-description:   People counting with Ultrasonic sensor
-title:   People counting with Ultrasonic sensor
+description:   人数统计与超声波传感器
+title:   人数统计与超声波传感器
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-EI-4
 last_update:
   date: 3/05/2024
-  author: jessie
+  author: 金菊
 ---
 
-# Wio Terminal边缘推理人数统计与超声波传感器
+# Wio Terminal Edge Impulse人数统计与超声波传感器
 
 在这个项目中，我们将使用Wio Terminal、一个普通的超声波测距仪和特殊的深度学习技术来创建一个人数统计系统
 
