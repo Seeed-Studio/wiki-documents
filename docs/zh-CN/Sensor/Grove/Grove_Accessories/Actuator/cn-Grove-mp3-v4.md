@@ -1,6 +1,6 @@
 ---
-description: Getting started with grove mp3 v4.
-title: Grove - MP3 v4.0
+description: Grove MP3播放器v4.0入门指南
+title: Grove - MP3播放器v4.0
 keywords:
 - mp3
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
