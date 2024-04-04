@@ -1,6 +1,6 @@
 ---
-title: Grove - Mini Fan
-nointro:
+title: Grove - 迷你风扇
+description: Grove - 迷你风扇
 keywords:
   - docs
   - docusaurus
