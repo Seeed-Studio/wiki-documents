@@ -1,6 +1,6 @@
 ---
-title: Grove - I2C Motor Driver (TB6612FNG)
-nointro:
+title: Grove - I2C电机驱动器（TB6612FNG）
+description: Grove - I2C电机驱动器（TB6612FNG）
 keywords:
   - docs
   - docusaurus
