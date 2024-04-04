@@ -1,13 +1,13 @@
 ---
-description: Getting Started
-title: Getting Started with accelerometer
+description: 入门指南
+title: 加速度计入门指南
 keywords:
 - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-IMU-Basic
 last_update:
   date: 3/09/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 加速度计入门指南
