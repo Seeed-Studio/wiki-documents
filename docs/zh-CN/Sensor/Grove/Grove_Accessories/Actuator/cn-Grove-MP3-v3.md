@@ -1,6 +1,6 @@
 ---
-title: Grove - MP3 v3.0
-nointro:
+title: Grove - MP3播放器v3.0
+description: Grove - MP3播放器v3.0
 keywords:
   - docs
   - docusaurus
