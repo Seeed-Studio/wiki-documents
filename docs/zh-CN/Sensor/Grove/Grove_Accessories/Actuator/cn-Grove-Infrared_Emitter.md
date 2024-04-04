@@ -1,6 +1,6 @@
 ---
-title: Grove - Infrared Emitter
-nointro:
+title: Grove - 红外发射器
+description: Grove - 红外发射器
 keywords:
   - docs
   - docusaurus
