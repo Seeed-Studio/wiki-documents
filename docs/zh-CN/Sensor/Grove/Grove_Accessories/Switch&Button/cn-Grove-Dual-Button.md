@@ -1,6 +1,6 @@
 ---
-description: Grove Dual Button
-title: Grove Dual Button
+description: Grove 双按钮
+title: Grove 双按钮
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
