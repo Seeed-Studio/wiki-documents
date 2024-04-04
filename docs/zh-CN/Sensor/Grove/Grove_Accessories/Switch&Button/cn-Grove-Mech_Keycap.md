@@ -1,6 +1,6 @@
 ---
-description: Grove-Mech keycap
-title: Grove-Mech keycap
+description: Grove-机械键盘键帽
+title: Grove-机械键盘键帽
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
