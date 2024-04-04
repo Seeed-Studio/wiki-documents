@@ -1,5 +1,6 @@
 ---
-title: Grove - Voltage Divider
+title: Grove - 分压器
+description: Grove - 分压器
 keywords:
   - docs
   - docusaurus
