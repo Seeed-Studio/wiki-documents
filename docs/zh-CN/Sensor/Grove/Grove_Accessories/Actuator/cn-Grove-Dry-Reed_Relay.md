@@ -1,6 +1,6 @@
 ---
-title: Grove - Dry-Reed Relay
-nointro:
+title: Grove - 干簧继电器
+description: Grove - 干簧继电器
 keywords:
   - docs
   - docusaurus
