@@ -1,6 +1,6 @@
 ---
-description: Grove Port
-title: Grove Port
+description: Grove端口
+title: Grove端口
 keywords:
 - Wio_terminal Hardware_Overview
 - Input&Output
@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Grove
 last_update:
   date: 3/07/2024
-  author: jessie
+  author: 金菊
 ---
 
 # Grove 端口
