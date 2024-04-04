@@ -1,6 +1,6 @@
 ---
-title: Grove - Speaker
-nointro:
+title: Grove - 扬声器
+description: Grove - 扬声器
 keywords:
   - docs
   - docusaurus
