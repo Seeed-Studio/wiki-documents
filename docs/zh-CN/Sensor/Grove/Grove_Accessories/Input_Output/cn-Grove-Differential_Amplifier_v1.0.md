@@ -1,6 +1,6 @@
 ---
-description: Grove - Differential Amplifier v1.0
-title: Grove - Differential Amplifier v1.0
+description: Grove - 差分放大器 v1.0
+title: Grove - 差分放大器 v1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
