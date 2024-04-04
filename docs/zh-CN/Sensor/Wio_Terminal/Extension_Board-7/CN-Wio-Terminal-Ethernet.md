@@ -1,6 +1,6 @@
 ---
-description: Ethernet Extension board
-title: Ethernet Extension board
+description: 以太网拓展版
+title: 以太网拓展版
 keywords:
 - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
