@@ -1,6 +1,6 @@
 ---
-title:  Grove - NunChuck
-nointro:
+title:  Grove - NunChuck模块
+description: Grove - NunChuck模块
 keywords:
   - docs
   - docusaurus
