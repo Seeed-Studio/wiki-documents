@@ -1,13 +1,13 @@
 ---
-description: Overview
-title: Accelerator Overview
+description: 概述
+title: 加速度计概述
 keywords:
 - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-IMU-Overview
 last_update:
   date: 3/09/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 加速度计概述
