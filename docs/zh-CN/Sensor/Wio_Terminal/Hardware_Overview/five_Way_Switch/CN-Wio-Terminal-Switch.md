@@ -1,13 +1,13 @@
 ---
-description: Overview
-title: Getting Started with 5 Way Switch
+description: 概述
+title: 五向开关入门指南
 keywords:
 - Wio_terminal five_Way_Switch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Switch
 last_update:
   date: 3/09/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 五向开关入门指南
