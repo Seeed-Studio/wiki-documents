@@ -1,6 +1,6 @@
 ---
-description:  Grove - Joint v2.0
-title: Grove - Joint v2.0
+description:  Grove - 关节 v2.0
+title: Grove - 关节 v2.0
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
