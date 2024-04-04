@@ -1,6 +1,6 @@
 ---
-title: Grove - Passive Buzzer
-nointro:
+title: Grove - 无源蜂鸣器
+description: Grove - 无源蜂鸣器
 keywords:
   - docs
   - docusaurus
