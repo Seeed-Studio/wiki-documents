@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Grove-Differential_Amplifier_v1.2/
 slug: /cn/Grove-Differential_Amplifier_v1.2
 last_update:
   date: 03/22/2024
-  author: gunengyu
+  author: WuFeifei
 ---
 
 
