@@ -1,6 +1,6 @@
 ---
-description:  Continuous Motion Recognition
-title:  Continuous Motion Recognition
+description:  连续运动识别
+title:  连续运动识别
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-EI-2
 last_update:
   date: 3/05/2024
-  author: jessie
+  author: 金菊
 ---
 
 
