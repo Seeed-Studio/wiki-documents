@@ -1,6 +1,6 @@
 ---
-description:  Weather Prediction with BME280
-title:  Weather Prediction with BME280
+description:  BME280智能气象站
+title:  BME280智能气象站
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-TFLM-2
 last_update:
   date: 3/06/2024
-  author: jessie
+  author: 金菊
 ---
 
 # Wio Terminal Tensorflow Lite Micro智能气象站与BME280
