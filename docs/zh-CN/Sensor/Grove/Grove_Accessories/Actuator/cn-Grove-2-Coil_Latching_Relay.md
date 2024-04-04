@@ -1,6 +1,6 @@
 ---
-title: Grove - 2-Coil Latching Relay
-nointro:
+title: Grove - 双线圈自锁继电器
+description: Grove - 双线圈自锁继电器
 keywords:
   - docs
   - docusaurus
