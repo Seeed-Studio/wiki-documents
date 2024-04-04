@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-IMU-Tapping
 last_update:
   date: 3/09/2024
-  author: jessie
+  author: 金菊
 ---
 
 # Wio Terminal 感知敲击运动演示
