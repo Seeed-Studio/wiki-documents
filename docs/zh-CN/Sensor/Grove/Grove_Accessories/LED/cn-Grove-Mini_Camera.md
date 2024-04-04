@@ -1,6 +1,6 @@
 ---
-title: Grove - Mini Camera
-nointro:
+title: Grove - 微型相机
+description: Grove - 微型相机
 keywords:
   - docs
   - docusaurus
