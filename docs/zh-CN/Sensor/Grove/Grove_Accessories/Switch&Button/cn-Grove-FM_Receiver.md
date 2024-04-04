@@ -1,6 +1,6 @@
 ---
-description: Grove - FM Receiver
-title: Grove - FM Receiver
+description: Grove - FM接收器
+title: Grove - FM接收器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
