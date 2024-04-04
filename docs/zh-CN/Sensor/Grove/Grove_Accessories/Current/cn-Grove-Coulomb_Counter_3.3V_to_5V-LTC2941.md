@@ -1,6 +1,6 @@
 ---
-description: Grove - Coulomb Counter 3.3V to 5V (LTC2941)
-title: Grove - Coulomb Counter 3.3V to 5V (LTC2941)
+description: Grove - 库仑计数器（3.3V至5V）（LTC2941）
+title: Grove - 库仑计数器（3.3V至5V）（LTC2941）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
