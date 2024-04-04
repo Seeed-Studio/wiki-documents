@@ -1,6 +1,6 @@
 ---
-title: Grove - 8-Channel Solid State Relay
-nointro:
+title: Grove - 8通道固态继电器
+description: Grove - 8通道固态继电器
 keywords:
   - docs
   - docusaurus
