@@ -1,6 +1,6 @@
 ---
-description: Grove - RS485
-title: Grove - RS485
+description: Grove - RS-485接口
+title: Grove - RS-485接口
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
