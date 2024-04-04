@@ -1,6 +1,6 @@
 ---
-title: Grove - Screw Terminal
-nointro:
+title: Grove - 螺丝接线端子
+description: Grove - 螺丝接线端子
 keywords:
   - docs
   - docusaurus
