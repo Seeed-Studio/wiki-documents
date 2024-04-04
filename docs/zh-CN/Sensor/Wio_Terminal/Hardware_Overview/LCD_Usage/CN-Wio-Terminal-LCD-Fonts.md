@@ -1,5 +1,5 @@
 ---
-title: Fonts
+title: 不同字体
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Fonts/
 slug: /cn/Wio-Terminal-LCD-Fonts
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 使用不同的字体
