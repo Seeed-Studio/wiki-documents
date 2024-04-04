@@ -1,5 +1,5 @@
 ---
-title: Advanced Wi-Fi Usage
+title: 高级 Wi-Fi 使用方法
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-Advanced-Wi-Fi/
 slug: /cn/Wio-Terminal-Advanced-Wi-Fi
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 高级 Wi-Fi 使用方法
