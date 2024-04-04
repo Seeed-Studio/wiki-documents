@@ -1,6 +1,6 @@
 ---
-description: Grove - Hall Sensor
-title: Grove - Hall Sensor
+description: Grove - 霍尔传感器
+title: Grove - 霍尔传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
