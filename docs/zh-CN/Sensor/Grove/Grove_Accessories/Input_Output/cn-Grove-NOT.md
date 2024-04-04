@@ -1,6 +1,6 @@
 ---
-description:  Grove - NOT
-title: Grove - NOT
+description:  Grove - 逻辑非门
+title: Grove - 逻辑非门
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
