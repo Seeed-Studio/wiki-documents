@@ -1,6 +1,6 @@
 ---
-title: Grove - Recorder
-nointro:
+title: Grove - 录音机
+description: Grove - 录音机
 keywords:
   - docs
   - docusaurus
