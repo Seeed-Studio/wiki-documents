@@ -1,6 +1,6 @@
 ---
-description: Grove - Thumb Joystick
-title: Grove - Thumb Joystick
+description: Grove - 拇指摇杆
+title: Grove - 拇指摇杆
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
