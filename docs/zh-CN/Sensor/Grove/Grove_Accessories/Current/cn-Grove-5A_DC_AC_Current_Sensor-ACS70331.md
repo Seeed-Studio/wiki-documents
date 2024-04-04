@@ -1,6 +1,6 @@
 ---
-description: Grove - ±5A DC/AC Current Sensor (ACS70331)
-title: Grove - ±5A DC/AC Current Sensor (ACS70331)
+description: Grove - ±5A 直流/交流电流传感器（ACS70331）
+title: Grove - ±5A 直流/交流电流传感器（ACS70331）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
