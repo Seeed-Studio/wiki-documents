@@ -1,6 +1,6 @@
 ---
-title: Grove - 4-Channel Solid State Relay
-nointro:
+title: Grove - 4通道固态继电器
+description: Grove - 4通道固态继电器
 keywords:
   - docs
   - docusaurus
