@@ -1,5 +1,5 @@
 ---
-title: Graphics 
+title: 绘图函数 
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Graphics/
 slug: /cn/Wio-Terminal-LCD-Graphics
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 基本绘图函数
