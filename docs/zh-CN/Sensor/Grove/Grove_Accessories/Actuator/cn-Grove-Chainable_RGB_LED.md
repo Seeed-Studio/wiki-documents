@@ -1,6 +1,6 @@
 ---
-title: Grove - Chainable RGB LED
-nointro:
+title: Grove - 可串联RGB LED
+description: Grove - 可串联RGB LED
 keywords:
   - docs
   - docusaurus
