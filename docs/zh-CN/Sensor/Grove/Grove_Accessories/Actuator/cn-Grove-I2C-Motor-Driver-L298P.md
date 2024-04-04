@@ -1,6 +1,6 @@
 ---
-title: Grove - I2C Motor Driver (L298P)
-nointro:
+title: Grove - I2C电机驱动器（L298P）
+description: Grove - I2C电机驱动器（L298P）
 keywords:
   - docs
   - docusaurus
