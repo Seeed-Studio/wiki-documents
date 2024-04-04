@@ -1,6 +1,6 @@
 ---
-description: Grove - Button
-title: Grove - Button
+description: Grove - 按钮
+title: Grove - 按钮
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
