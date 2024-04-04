@@ -1,5 +1,5 @@
 ---
-title: How to use LvGL Graphics Library
+title: 如何使用 LvGL 图形库
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LVGL/
 slug: /cn/Wio-Terminal-LVGL
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 如何在 Wio Terminal 上使用 LvGL 图形库
