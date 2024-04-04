@@ -1,6 +1,6 @@
 ---
-description: Grove - SPDT Relay(30A)
-title: Grove - SPDT Relay(30A)
+description: Grove - 单刀双掷继电器（30A）
+title: Grove - 单刀双掷继电器（30A）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
