@@ -1,5 +1,5 @@
 ---
-title: Wi-Fi
+title: Wi-Fi连接
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-Wi-Fi/
 slug: /cn/Wio-Terminal-Wi-Fi
 last_update:
   date: 3/11/2024
-  author: jessie
+  author: 金菊
 ---
 
 # Wi-Fi连接
