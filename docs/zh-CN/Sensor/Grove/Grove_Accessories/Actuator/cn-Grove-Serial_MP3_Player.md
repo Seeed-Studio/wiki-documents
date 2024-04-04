@@ -1,6 +1,6 @@
 ---
-title: Grove - Serial MP3 Player
-nointro:
+title: Grove - 串口MP3播放器
+description: Grove - 串口MP3播放器
 keywords:
   - docs
   - docusaurus
