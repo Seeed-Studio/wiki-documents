@@ -1,6 +1,6 @@
 ---
-description: Grove - DS1307 RTC (Real Time Clock) for Arduino
-title: Grove - DS1307 RTC (Real Time Clock) for Arduino
+description: Grove - 适用于Arduino的DS1307实时时钟模块
+title: Grove - 适用于Arduino的DS1307实时时钟模块
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
