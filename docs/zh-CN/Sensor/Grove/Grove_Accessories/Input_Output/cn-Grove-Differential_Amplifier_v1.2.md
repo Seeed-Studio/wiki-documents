@@ -1,6 +1,6 @@
 ---
-title: Grove - Differential Amplifier v1.2
-nointro:
+title: Grove - 差分放大器 v1.2
+description: Grove - 差分放大器 v1.2
 keywords:
   - docs
   - docusaurus
