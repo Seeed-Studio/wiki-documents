@@ -1,6 +1,6 @@
 ---
-description: Grove - Triple Color E-Ink Display 2.13"
-title: Grove - Triple Color E-Ink Display 2.13"
+description: Grove - 2.13英寸三色电子墨水显示屏
+title: Grove - 2.13英寸三色电子墨水显示屏
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
