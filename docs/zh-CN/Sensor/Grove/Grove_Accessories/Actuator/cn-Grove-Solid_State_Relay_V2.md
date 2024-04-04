@@ -1,6 +1,6 @@
 ---
-title: Grove - Solid State Relay V2
-nointro:
+title: Grove - 固态继电器V2
+description: Grove - 固态继电器V2
 keywords:
   - docs
   - docusaurus
