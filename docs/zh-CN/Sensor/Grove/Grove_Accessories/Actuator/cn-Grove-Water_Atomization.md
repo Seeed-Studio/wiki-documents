@@ -1,6 +1,6 @@
 ---
-title: Grove - Water Atomization
-nointro:
+title: Grove - 水雾化器
+description: Grove - 水雾化器
 keywords:
   - docs
   - docusaurus
