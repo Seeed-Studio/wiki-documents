@@ -1,5 +1,5 @@
 ---
-title: Loading Image
+title: 图片加载
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Loading-Image/
 slug: /cn/Wio-Terminal-LCD-Loading-Image
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 图片加载
