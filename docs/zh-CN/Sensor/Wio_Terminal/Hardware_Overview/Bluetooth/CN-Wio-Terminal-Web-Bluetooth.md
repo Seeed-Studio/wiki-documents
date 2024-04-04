@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Web-Bluetooth
 last_update:
   date: 3/08/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 在Wio Terminal上使用Web Bluetooth API
