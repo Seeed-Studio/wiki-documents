@@ -1,6 +1,6 @@
 ---
-title: Grove - High Precision RTC (Real Time Clock)
-nointro:
+title: Grove - 高精度实时时钟
+description:  Grove - 高精度实时时钟
 keywords:
   - docs
   - docusaurus
