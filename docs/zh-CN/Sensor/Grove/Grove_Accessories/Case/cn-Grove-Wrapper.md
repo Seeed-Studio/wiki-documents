@@ -1,6 +1,6 @@
 ---
-description: Grove - Wrapper
-title: Grove - Wrapper
+description: Grove - 外包装
+title: Grove - 外包装
 keywords:
 - Grove Grove_Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
