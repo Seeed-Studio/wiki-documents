@@ -1,13 +1,13 @@
 ---
-description: Overview
-title: Overview
+description: 概述
+title: 概述
 keywords:
 - Wio_terminal File_System
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-FS-Overview
 last_update:
   date: 3/09/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 概述
