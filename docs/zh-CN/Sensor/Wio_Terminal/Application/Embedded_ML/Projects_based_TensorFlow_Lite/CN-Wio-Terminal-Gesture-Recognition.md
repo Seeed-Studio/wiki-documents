@@ -1,6 +1,6 @@
 ---
-description:  Gesture Recognition with Wio Terminal
-title:  Gesture Recognition with Wio Terminal
+description:  使用Wio Terminal手势识别
+title:  使用Wio Terminal手势识别
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Gesture-Recognition
 last_update:
   date: 3/06/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 使用 Wio Terminal 进行机器学习 - 手势识别
