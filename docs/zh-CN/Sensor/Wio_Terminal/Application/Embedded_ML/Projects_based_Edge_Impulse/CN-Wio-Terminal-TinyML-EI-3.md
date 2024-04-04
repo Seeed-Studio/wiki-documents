@@ -1,6 +1,6 @@
 ---
-description:  Audio scene recognition
-title: Audio scene recognition
+description:  音频场景识别
+title: 音频场景识别
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-EI-3
 last_update:
   date: 3/05/2024
-  author: jessie 
+  author: 金菊
 ---
 
 # Wio Terminal Edge Impulse音频场景识别与内置麦克风
