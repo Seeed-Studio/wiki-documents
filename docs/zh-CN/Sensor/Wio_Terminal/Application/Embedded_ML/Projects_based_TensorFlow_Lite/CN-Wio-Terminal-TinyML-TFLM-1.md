@@ -1,6 +1,6 @@
 ---
-description: TensorFlow Lite Micro Getting Started
-title: TensorFlow Lite Micro Getting Started
+description: TensorFlow Lite Micro入门指南
+title: TensorFlow Lite Micro入门指南
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-TFLM-1
 last_update:
   date: 3/06/2024
-  author: jessie
+  author: 金菊
 ---
 
-# Wio Terminal TensorFlow Lite Micro入门
+# Wio Terminal TensorFlow Lite Micro入门指南
 
 本文介绍如何将官方的 [Arduino Tensorflow Lite 库](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/hello_world) 安装到您的 Wio Terminal ，使您能够使用 Wio Terminal 测试一些机器学习模型。
 
