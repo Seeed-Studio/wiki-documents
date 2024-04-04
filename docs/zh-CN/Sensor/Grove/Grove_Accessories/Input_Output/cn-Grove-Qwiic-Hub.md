@@ -1,6 +1,6 @@
 ---
-title:  Grove - Qwiic Hub
-nointro:
+title:  Grove - Qwiic转接器
+description: Grove - Qwiic转接器
 keywords:
   - docs
   - docusaurus
