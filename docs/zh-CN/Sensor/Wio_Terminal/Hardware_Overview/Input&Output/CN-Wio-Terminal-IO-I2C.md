@@ -1,5 +1,5 @@
 ---
-title: I2C
+title: I2C端口
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-IO-I2C/
 slug: /cn/Wio-Terminal-IO-I2C
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 在Wio Terminal上使用Grove I2C端口
