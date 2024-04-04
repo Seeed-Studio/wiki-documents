@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: 概述
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Overview/
 slug: /cn/Wio-Terminal-LCD-Overview
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 概述
