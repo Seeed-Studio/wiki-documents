@@ -1,13 +1,13 @@
 ---
-description: Read and Write
-title: Read and Write
+description: 读取写入数据
+title: 读取写入数据
 keywords:
 - Wio_terminal File_System
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-FS-ReadWrite
 last_update:
   date: 3/09/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 从SD卡读取/写入数据
