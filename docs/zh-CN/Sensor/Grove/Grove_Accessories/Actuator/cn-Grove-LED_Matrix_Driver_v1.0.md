@@ -1,6 +1,6 @@
 ---
-title: Grove - LED Matrix Driver v1.0
-nointro:
+title: Grove - LED矩阵驱动器v1.0
+description: Grove - LED矩阵驱动器v1.0
 keywords:
   - docs
   - docusaurus
