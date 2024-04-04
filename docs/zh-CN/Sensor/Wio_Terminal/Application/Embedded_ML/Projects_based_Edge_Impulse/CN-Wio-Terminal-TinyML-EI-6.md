@@ -1,6 +1,6 @@
 ---
-description:  Anomaly detection for Predictive Maintenance
-title:  Anomaly detection for Predictive Maintenance
+description:  用于预测性维护的异常检测
+title:  用于预测性维护的异常检测
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-EI-6
 last_update:
   date: 3/06/2024
-  author: jessie
+  author: 金菊
 ---
 
-# Wio Terminal Edge Impulse 异常检测用于预测性维护
+# Wio Terminal Edge Impulse 用于预测性维护的异常检测
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-TinyML-EI-6/full-Time-0_19_2725-1536x864.png"/></div>
 
