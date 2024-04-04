@@ -1,6 +1,6 @@
 ---
-title: Grove - Haptic Motor
-nointro:
+title: Grove - 触觉马达
+description: Grove - 触觉马达
 keywords:
   - docs
   - docusaurus
