@@ -1,6 +1,6 @@
 ---
-description:  Speech Recognition and Speech-to-Intent
-title:  Speech Recognition and Speech-to-Intent
+description:  语音识别和语音-意图
+title:  语音识别和语音-意图
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -9,10 +9,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-TinyML-TFLM-3
 last_update:
   date: 3/06/2024
-  author: jessie
+  author: 金菊
 ---
 
-# Wio Terminal上的TensorFlow Lite Micro语音识别-语音到意图
+# Wio Terminal上的TensorFlow Lite Micro语音识别-语音-意图
 
 A传统的使用语音进行设备控制/用户请求满足的方法是先将语音转录为文本，然后解析文本以得到适当格式的命令/查询。虽然这种方法在词汇量和/或应用场景方面提供了很大的灵活性，但是将语音识别模型和专用解析器结合在一起并不适合于资源受限的微控制器
 
