@@ -1,13 +1,13 @@
 ---
-description: Bluetooth Ibeacon
-title: Bluetooth Ibeacon
+description: 蓝牙iBeacon
+title: 蓝牙iBeacon
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/BLE-ibeacon-using-Wio-terminal
 last_update:
   date: 3/08/2024
-  author: jessie
+  author: 金菊
 ---
 
 ##  基于 BLE ibeacon 的 Wio terminal
