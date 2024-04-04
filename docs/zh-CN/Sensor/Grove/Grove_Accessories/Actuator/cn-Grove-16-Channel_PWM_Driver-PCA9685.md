@@ -1,6 +1,6 @@
 ---
-title: Grove - 16 Channel PWM Driver (PCA9685)
-nointro:
+title: Grove - 16通道PWM驱动器 (PCA9685)
+description: Grove - 16通道PWM驱动器 (PCA9685)
 keywords:
   - docs
   - docusaurus
