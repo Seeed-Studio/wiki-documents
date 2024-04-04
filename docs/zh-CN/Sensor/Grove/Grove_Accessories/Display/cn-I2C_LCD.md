@@ -1,6 +1,6 @@
 ---
-description: I2C LCD
-title: I2C LCD
+description: I²C液晶显示屏
+title: I²C液晶显示屏
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
