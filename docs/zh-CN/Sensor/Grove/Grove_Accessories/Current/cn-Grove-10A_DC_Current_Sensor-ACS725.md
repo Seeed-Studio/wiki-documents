@@ -1,6 +1,6 @@
 ---
-description: Grove - 10A DC Current Sensor (ACS725)
-title: Grove - 10A DC Current Sensor (ACS725)
+description: Grove - 10A 直流电流传感器（ACS725）
+title: Grove - 10A 直流电流传感器（ACS725）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
