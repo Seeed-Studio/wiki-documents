@@ -1,6 +1,6 @@
 ---
-title: Grove - DC Jack Power
-nointro:
+title: Grove - 直流电源插座
+description: Grove - 直流电源插座
 keywords:
   - docs
   - docusaurus
