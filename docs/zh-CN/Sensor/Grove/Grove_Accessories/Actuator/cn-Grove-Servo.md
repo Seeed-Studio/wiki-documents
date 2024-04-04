@@ -1,6 +1,6 @@
 ---
-title: Grove - Servo
-nointro:
+title: Grove - 伺服电机
+description: Grove - 伺服电机
 keywords:
   - docs
   - docusaurus
