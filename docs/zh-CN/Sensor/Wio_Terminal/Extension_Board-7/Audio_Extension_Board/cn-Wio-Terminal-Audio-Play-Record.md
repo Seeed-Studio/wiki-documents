@@ -1,6 +1,6 @@
 ---
-description:  Play and Record
-title:  Play and Record
+description:  演示和音频
+title:  演示和音频
 keywords:
 - Wio_terminal Audio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
