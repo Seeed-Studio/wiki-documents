@@ -1,6 +1,6 @@
 ---
-title: Grove - 2-Channel SPDT Relay
-nointro:
+title: Grove - 双通道单刀双掷继电器
+nointro: Grove - 双通道单刀双掷继电器
 keywords:
   - docs
   - docusaurus
