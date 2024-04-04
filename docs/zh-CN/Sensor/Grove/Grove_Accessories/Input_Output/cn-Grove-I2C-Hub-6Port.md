@@ -1,6 +1,6 @@
 ---
-title: Grove - I2C Hub(6 Port)
-nointro:
+title: Grove - I²C集线器（6端口）
+description: Grove - I²C集线器（6端口）
 keywords:
   - docs
   - docusaurus
