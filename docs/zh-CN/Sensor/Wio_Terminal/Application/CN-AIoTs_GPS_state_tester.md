@@ -1,6 +1,6 @@
 ---
-description:  LoRa Node with AIoTs GPS
-title:  LoRa Node with AIoTs GPS
+description:  具备AIoTs GPS的LoRa节点
+title:  具备AIoTs GPS的LoRa节点
 keywords:
 - Wio_terminal 
 - Embedded_ML 
@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/AIoTs_GPS_state_tester
 last_update:
   date: 3/06/2024
-  author: Jessie
+  author: 金菊
 ---
 
 # 基于Wio Terminal具备AIoTs GPS的LoRa节点
