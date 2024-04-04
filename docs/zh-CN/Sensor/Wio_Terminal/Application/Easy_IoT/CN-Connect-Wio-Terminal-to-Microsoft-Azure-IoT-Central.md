@@ -1,5 +1,5 @@
 ---
-title: Connect Wio Terminal to Microsoft Azure IoT Central
+title: 将Wio Terminal连接到Microsoft Azure IoT Central
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-
 slug: /cn/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central
 last_update:
   date: 3/11/2024
-  author: Jessie
+  author: 金菊
 ---
 
 # 将Wio Terminal连接到Microsoft Azure IoT Central
