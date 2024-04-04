@@ -1,6 +1,6 @@
 ---
-title: Grove - EL Driver
-nointro:
+title: Grove - 电致发光驱动器
+description: Grove - 电致发光驱动器
 keywords:
   - docs
   - docusaurus
