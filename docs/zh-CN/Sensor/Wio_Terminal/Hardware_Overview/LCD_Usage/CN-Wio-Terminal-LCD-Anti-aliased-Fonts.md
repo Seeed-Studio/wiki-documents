@@ -1,5 +1,5 @@
 ---
-title:  Smooth Fonts
+title:  抗锯齿字体
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Anti-aliased-Fonts./
 slug: /cn/Wio-Terminal-LCD-Anti-aliased-Fonts
 last_update:
   date: 3/07/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 显示抗锯齿字体
