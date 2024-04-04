@@ -1,6 +1,6 @@
 ---
-description: Grove - Magnetic Switch
-title: Grove - Magnetic Switch
+description: Grove - 磁控开关
+title: Grove - 磁控开关
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
