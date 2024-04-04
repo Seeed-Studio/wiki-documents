@@ -1,6 +1,6 @@
 ---
-description: Grove Accessories Guide
-title: Grove Accessories Guide
+description: Grove 配件指南
+title: Grove 配件指南
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
