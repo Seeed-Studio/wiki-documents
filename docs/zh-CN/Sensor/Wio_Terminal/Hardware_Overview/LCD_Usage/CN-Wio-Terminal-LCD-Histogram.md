@@ -1,5 +1,5 @@
 ---
-title: Histogram
+title: 直方图
 nointro:
 keywords:
   - docs
@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Wio-Terminal-LCD-Histogram/
 slug: /cn/Wio-Terminal-LCD-Histogram
 last_update:
   date: 3/10/2024
-  author: jessie
+  author: 金菊
 ---
 
 # 直方图
