@@ -1,13 +1,13 @@
 ---
-description: Overview
-title: Bluetooth Overview
+description: 概述
+title: Bluetooth概述
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Bluetooth-Overview
 last_update:
   date: 3/08/2024
-  author: jessie
+  author: 金菊
 ---
 
 # Bluetooth 概述
