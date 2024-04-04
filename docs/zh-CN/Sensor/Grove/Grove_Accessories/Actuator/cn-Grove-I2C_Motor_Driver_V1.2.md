@@ -1,6 +1,6 @@
 ---
-title: Grove - I2C Motor Driver V1.2
-nointro:
+title: Grove - I2C电机驱动器V1.2
+description: Grove - I2C电机驱动器V1.2
 keywords:
   - docs
   - docusaurus
