@@ -1,5 +1,5 @@
 ---
-title: Connect Wio Terminal to Google Cloud IoT Core
+title: 将Wio Terminal连接到Google Cloud IoT Core
 nointro:
 keywords:
   - docs
@@ -10,7 +10,7 @@ last_update:
   date: 3/01/2024
   author: 金菊
 ---
-# 连接Wio Terminal到Google Cloud IoT Core
+# 将Wio Terminal连接到Google Cloud IoT Core
 
 ![](https://files.seeedstudio.com/wiki/Google_Cloud_IoT/thumb.png)
 
