@@ -1,6 +1,6 @@
 ---
-description: Grove - 4-Channel 16-bit ADC(ADS1115)
-title: Grove - 4-Channel 16-bit ADC(ADS1115)
+description: Grove - 4通道16位模数转换器（ADS1115）
+title: Grove - 4通道16位模数转换器（ADS1115）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
