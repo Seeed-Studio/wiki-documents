@@ -1,6 +1,6 @@
 ---
-title: Grove - I2C Hub
-nointro:
+title: Grove - I2C集线器
+description:  Grove - I2C集线器
 keywords:
   - docs
   - docusaurus
