@@ -1,6 +1,6 @@
 ---
-description: The description of ArduPy
-title:  ArduPy with Wio Terminal
+description: ArduPy简介
+title:  ArduPy与Wio Terminal
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
