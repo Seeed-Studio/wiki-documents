@@ -1,6 +1,6 @@
 ---
-title: Grove - Vibration Motor
-nointro:
+title: Grove - 震动电机
+description: Grove - 震动电机
 keywords:
   - docs
   - docusaurus
