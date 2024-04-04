@@ -1,6 +1,6 @@
 ---
-title: Grove - Speaker Plus
-nointro:
+title: Grove - 增强扬声器
+description: Grove - 增强扬声器
 keywords:
   - docs
   - docusaurus
