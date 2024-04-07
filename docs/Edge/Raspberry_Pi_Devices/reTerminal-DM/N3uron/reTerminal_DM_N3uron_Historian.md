@@ -1,6 +1,6 @@
 ---
-description: Intergating Historian Module for Visualizing on reTerminal DM
-title: Intergating Historian Module for Visualizing on reTerminal DM
+description: Integrating Historian Module for Visualizing on reTerminal DM
+title: Integrating Historian Module for Visualizing on reTerminal DM
 keywords:
   - reTerminal DM
   - Getting started
