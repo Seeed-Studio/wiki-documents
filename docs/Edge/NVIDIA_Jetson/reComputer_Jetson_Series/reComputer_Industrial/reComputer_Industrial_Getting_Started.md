@@ -1,6 +1,6 @@
 ---
 description: reComputer Industrial Getting Started
-title: reComputer Industrial
+title: Getting Started with reComputer Industrial
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
