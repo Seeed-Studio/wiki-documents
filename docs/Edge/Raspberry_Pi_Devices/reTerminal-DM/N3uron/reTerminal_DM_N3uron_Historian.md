@@ -96,7 +96,7 @@ use mongo
 ```
 Now, MongoDB is installed on your reTerminal DM, and you have created a database named "mongo".
 
-- **Step 6**: Place  libcryto.so.1.1, and libssl.so1.1 on  respective folders /usr/lib and /lib.
+- **Step 6**: If your distribution doesn't provide this libraries, place them in this libcryto.so.1.1, and libssl.so1.1 on  respective folders /usr/lib and /lib.
 Use this commands  for this 
 
 ```sh
@@ -147,6 +147,10 @@ Click on the Historian module you just created. Change the Database type to Exte
 - **Step 3:** Enable Simulation and History
 
 Change the **Simulation** to **Enabled**, ensure history is enabled, and set the module name as **Historian**. **Save** the settings.
+
+:::note
+if you don't have a source for your tag and want to simulate it, you can enable simulation(optional), or give it Read/write permissions and manually give values to the tag. But if your setup the source of this tag as MQTT coming from AWS. the source is Aws. So you must disable Simulation. Otherwise you are only reading data coming from the simulation and not from AWS.So in this case simulation doesn't apply. since you are setting the sorce of the tag coming from  MQTT.
+:::
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/tagconfig.PNG" /></center>
 
