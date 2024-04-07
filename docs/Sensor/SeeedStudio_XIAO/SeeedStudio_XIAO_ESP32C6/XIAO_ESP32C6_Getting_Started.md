@@ -9,14 +9,14 @@ slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 0
 last_update:
-  date: 03/29/2024
+  date: 04/02/2024
   author: Spencer
 ---
 
 # Getting Started with Seeed Studio XIAO ESP32C6
 
 <div class="table-center">
-	<table align="center">
+	<table>
 		<tr>
 			<th>Seeed Studio XIAO ESP32C6</th>
 		</tr>
@@ -43,19 +43,18 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
 
 
 ## Specifications comparison
-
-<table>
+<table class="sp-table-c6">
     <thead>
         <tr>
-            <th>Products</th>
-            <th>XIAO ESP32C6</th>
+            <th colspan="2">Products</th>
+            <th class="highlight-cell">XIAO ESP32C6</th>
             <th>XIAO ESP32C3</th>
             <th>XIAO ESP32S3</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th rowspan="2">Processor</th>
+            <th colspan="2" rowspan="2">Processor</th>
             <td>Espressif ESP32-C6 SoC</td>
             <td>Espressif ESP32-C3 SoC</td>
             <td>Espressif ESP32-S3R8</td>
@@ -66,58 +65,76 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
             <td>Xtensa LX7 dual-core, 32-bit processor running up to 240 MHz</td>
         </tr>
         <tr>
-            <th rowspan="2">Wireless</th>
-            <td>Complete 2.4GHz Wi-Fi 6 subsystem</td>
-            <td>Complete 2.4GHz Wi-Fi subsystem</td>
-            <td>Complete 2.4GHz Wi-Fi subsystem</td>
+            <th colspan="2" rowspan="3">Wireless</th>
+            <td>Complete 2.4GHz <strong>Wi-Fi 6</strong> subsystem</td>
+            <td colspan="2">Complete 2.4GHz Wi-Fi subsystem</td>
         </tr>
         <tr>
-            <td>Bluetooth 5.0/ Bluetooth mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth mesh</td>
+            <td>Bluetooth 5.0/ Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
         </tr>
         <tr>
-            <th>On-chip Memory</th>
+            <td><strong>Zigbee,Thread,IEEE 802.15.4</strong></td>
+            <td>/</td>
+            <td>/</td>
+        </tr>
+        <tr>
+            <th colspan="2" rowspan="1" >On-chip Memory</th>
             <td>512KB SRAM &amp; 4MB Flash</td>
             <td>400KB SRAM &amp; 4MB Flash</td>
             <td>8M PSRAM &amp; 8MB Flash</td>
         </tr>
         <tr>
-            <th rowspan="2">Interface</th>
+            <th colspan="2" rowspan="2" >Interface</th>
             <td>1x UART,1x LP_UART, 1x IIC, 1x LP_IIC, 1x SPI,11x GPIO(PWM), 7x ADC, 1xSDIO</td>
             <td>1x UART, 1x IIC, 1x SPI,11x GPIO(PWM), 4x ADC</td>
             <td>1x UART, 1x IIC, 1x IIS, 1x SPI,11x GPIO(PWM), 9x ADC, 1x User LED, 1x Charge LED</td>
         </tr>
         <tr>
-            <td colspan="3" align="center">1x Reset button, 1x Boot button</td>
+            <td colspan="3">1x Reset button, 1x Boot button</td>
         </tr>
         <tr>
-            <th>Dimensions</th>
-            <td colspan="3" align="center">21 x 17.5 mm</td>
+            <th colspan="2" rowspan="1">Dimensions</th>
+            <td colspan="3">21 x 17.5 mm</td>
         </tr>
         <tr>
-            <th align="center">Power</th>
-            <td colspan="3" align="center">Input voltage (Type-C): 5V<br></br>Input voltage (BAT): 4.2V</td>
+            <th colspan="1" rowspan="3">Power</th>
+            <th colspan="1">Input voltage</th>
+            <td colspan="3">Type-C: 5V<br></br>BAT: 4.2V</td>
         </tr>
         <tr>
             <th>Circuit operating Voltage (ready to operate)</th>
-            <td colspan="2" align="center">USB:5V@9mA<br></br>BAT:3.8V@9mA</td>
+            <td colspan="2">USB:5V@9mA<br></br>BAT:3.8V@9mA</td>
             <td>Type-C: 5V@19mA<br></br>BAT: 3.8V@22mA</td>
         </tr>
         <tr>
             <th>Charging battery current</th>
-            <td colspan="2" align="center" >350mA</td>
+            <td colspan="2" >350mA</td>
             <td>100mA</td>
         </tr>
         <tr>
-            <th>Power Consumption Model(Supply Power: 3.8V)</th>
-            <td>Modem-sleep Model: <b>~ 30 mA</b><br></br>Light-sleep Model: <b>~ 2.5 mA</b><br></br>Deep Sleep Model: <b>~ 15 μA</b></td>
-            <td>Modem-sleep Model: <b>~ 24 mA</b><br></br>Light-sleep Model: <b>~ 3 mA</b><br></br>Deep Sleep Model: <b>~ 44 μA</b></td>
-            <td>Modem-sleep Model: <b>~ 25 mA</b><br></br>Light-sleep Model: <b>~ 2mA</b><br></br>Deep Sleep Model: <b>~ 14 μA</b></td>
+            <th colspan="1" rowspan="3">Power Consumption Model(Supply Power: 3.8V)</th>
+            <th>Modem-sleep Model</th>
+            <td>~ 30 mA</td>
+            <td>~ 24 mA</td>
+            <td>~ 25 mA</td>
         </tr>
         <tr>
-            <th>Working Temperature</th>
-            <td colspan="2" align="center">-40°C ~ 85°C</td>
+            <th> Light-sleep Model</th>
+            <td>~ 2.5 mA</td>
+            <td>~ 3 mA</td>
+            <td>~ 2 mA</td>
+        </tr>
+        <tr>
+            <th> Deep Sleep Model</th>
+            <td>~ 15 μA</td>
+            <td>~ 44 μA</td>
+            <td>~ 14 μA</td>
+        </tr>
+        <tr>
+            <th colspan="2">Working Temperature</th>
+            <td colspan="2">-40°C ~ 85°C</td>
             <td>-40°C ~ 65°C</td>
         </tr>
     </tbody>
@@ -125,17 +142,17 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
 
 ## Features
 
-- **Enhanced Connectivity**: Integrates ***2.4*** GHz Wi-Fi 6 (802.11ax), Bluetooth 5(LE), and IEEE 802.15.4 radio connectivity, allowing for the application of Thread and Zigbee protocols.
+- **Enhanced Connectivity**: Integrates ***2.4*** GHz Wi-Fi 6 (802.11ax), Bluetooth 5(LE), and IEEE 802.15.4 radio connectivity, allowing for the application of **Thread** and **Zigbee** protocols.
 - **Matter Native**: Supports the building of Matter-compliant smart home projects, ensuring interoperability among different smart devices.
 - **Security Encrypted on Chip**: Utilizes the ESP32-C6 to provide secure boot, encryption, and Trusted Execution Environment (TEE) features, enhancing the security of smart home projects.
-- **Outstanding RF Performance**: Features an on-board antenna with up to 80m BLE/Wi-Fi range and offers an interface for connecting an external UFL antenna, ensuring reliable connectivity.
-- **Leveraging Power Consumption**: Offers four working modes, including a deep sleep mode with consumption as low as 15 μA, along with support for lithium battery charge management.
+- **Outstanding RF Performance**: Features an on-board antenna with up to *80m* BLE/Wi-Fi range and offers an interface for connecting an external UFL antenna, ensuring reliable connectivity.
+- **Leveraging Power Consumption**: Offers four working modes, including a deep sleep mode with consumption as low as *15* μA, along with support for lithium battery charge management.
 - **Dual RISC-V Processors**: Incorporates two 32-bit RISC-V processors, with the high-performance processor capable of running up to 160 MHz and the low-power processor up to *20 MHz*.
 - **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.5mm and single-sided mount design, ideal for space-limited projects like wearable devices.
 
 ## Hardware overview
 
-<table align="center">
+<table>
 	<tr>
 	    <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
 	</tr>
@@ -168,21 +185,18 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 :::
 
-
 ### Software Preparation
 
 The recommended programming tool for the XIAO ESP32C6 is the Arduino IDE, so you need to complete the Arduino installation as part of the software preparation.
 
 :::tip
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
-:::
 
+And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to be available.
+
+:::
 
 - **Step 1.** Download and Install the stable version of Arduino IDE according to your operating system.
-
-:::caution Attention
-The on-board package for XIAO ESP32C6 requires at least version **2.0.8** to be available.
-:::
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
@@ -192,70 +206,79 @@ The on-board package for XIAO ESP32C6 requires at least version **2.0.8** to be 
 <br></br>
 
 - **Step 2.** Launch the Arduino application.
+- **[Step 3](#add-board).**  Add the XIAO ESP32C6 on-board package to the Arduino IDE and click `OK.
+- **Step 4.** Close the Arduino IDE and reopen it.
 
-:::info
-We have now submitted a merge request to ESP32 and will be able to search and use XIAO ESP32C6 in the Arduino IDE when ESP32 releases the next version of the on-board package update.
+#### Add the XIAO-C6 Board {#add-board}
 
-Until then, you can manually add the XIAO ESP32C6 on-board package to the Arduino directory to use it.
+As of April 2, 2024, the most current stable release of Arduino-ESP32 is version `2.0.14`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
 
-if you've install the ESP32 board package before, you''ll need to remove it first. You can find the ESP32 package in the following directory:
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width:600, height:'auto'}}/></div>
-:::
+```
+https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json
+```
 
-- **Step 3.**  Add the XIAO ESP32C6 on-board package to the Arduino IDE and click `OK`.
+<Tabs>
+<TabItem value="remove" label="Remove Existing Boards">
 
-Firstly, Add the boards url to the Arduino IDE preferences:
+if you've install the ESP32 board package before, you''ll need to remove it first.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width:480, height:'auto'}}/></div>
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width: 640, height: 'auto'}}/></div>
 
-Secondly, Ddownload the XIAO ESP32C6 on-board package:
+</TabItem>
+<TabItem value="install" label="Install New Boards" default>
 
-- [Download-> boards.txt](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/boards.txt) : **boards.txt**
-- [Download-> XIAO ESP32C6 on-board package](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32C6.zip) : the **`XIAO_ESP32C6` folder**
+To install the XIAO ESP32C6 board, follow these steps:
 
-Replace the `boards.txt` file and `package_esp32_index.json` to the following path:
+1. Add the above board manager URL to your Arduino IDE preferences.
+
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
+
+2. Download the XIAO ESP32C6 board package.
+
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
+
+Additionally, the latest development release version (3.0.0-Alpha 3) was released on December 5, 2023. However, it does not contain our [committed PR](https://github.com/espressif/arduino-esp32/pull/9330). You will need to manually set it up using the following resources:
+
+- [⬇️Download boards.txt](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/boards.txt) for XIAO-C6 board information.
+- [⬇️Download the XIAO ESP32C6 board package](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32C6.zip) for the board variant information.
+
+Replace the `boards.txt` and `XIAO_ESP32C6` folder in the following paths based on your operating system:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="Windows" label="Windows PC" default>
+<TabItem value="Windows" label="Windows" default>
     
-The default onboard package storage path for ESP32 in Windows is:
+For Windows, the default storage path for the ESP32 onboard package is:
 
-`C:\Users\username\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.0-alpha3`.
+`C:\Users\$USERNAME$\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.0-alpha3`
 
-We need to copy the download **boards.txt** file to the above path, overwriting the original **boards.txt** file in this path.
+Copy the downloaded **boards.txt** file to the above path, replacing the existing one. Then, navigate to the **variants folder** and copy the **XIAO_ESP32C6 folder** into it.
 
-<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/arduino_boards.png" style={{width:600, height:'auto'}}/></div> -->
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants_board.png" style={{width: 480, height: 'auto'}}/></div>
 
-`C:\Users\username\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.0-alpha3\variants`
-
-Then go to the **variants folder** and copy the **XIAO_ESP32C6 folder** to it.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants_board.png" style={{width:480, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants.png" style={{width:480, height:'auto'}}/></div>
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants.png" style={{width: 480, height: 'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value="MacOS" label="MacOS PC">
-The default onboard package storage path for ESP32 in MacOS is:
+<TabItem value="MacOS" label="MacOS">
+For MacOS, the default storage path for the ESP32 onboard package is:
 
 `~/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3`
 
-We need to copy the download **boards.txt** file to the above path, overwriting the original **boards.txt** file in this path.
-
-`~/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3/variants`
-
-Then go to the **variants folder** and copy the **XIAO_ESP32C6 folder** to it.
+Follow the same steps as for Windows: replace the existing **boards.txt** file with the one you downloaded and add the **XIAO_ESP32C6 folder** to the **variants folder**.
 
 </TabItem>
 
 </Tabs>
 
-- **Step 4.** Close the Arduino IDE and reopen it.
+</TabItem>
+
+</Tabs>
+
+
 
 ## Run your first Blink program
 
@@ -271,7 +294,7 @@ Then go to the **variants folder** and copy the **XIAO_ESP32C6 folder** to it.
 
 Once the program is successfully uploaded, you will see the following output message and you can observe that the orange LED on the right side of the XIAO ESP32C6 is blinking.
 
-<table align="center">
+<table>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6_flash_firmware.png" style={{width:680, height:'auto'}}/></div></td>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6-blink.gif" style={{width:400, height:'auto'}}/></div></td>

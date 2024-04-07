@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/25/2024
+  date: 04/01/2024
   author: Seraphina
 ---
 
@@ -17,31 +17,46 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 25th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 1st and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Deploying Models from Datasets to Grove Vision AI V2](https://wiki.seeedstudio.com/grove_vision_ai_v2_sscma/)
+### [Getting Started with Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
 
-Welcome to this comprehensive tutorial where we'll embark on a journey to turn your dataset into a fully functional model for deployment on the Grove Vision AI V2. In this guide, we'll navigate through the initial steps of labeling our dataset with Roboflow's intuitive tools, progressing to model training within the collaborative environment of Google Colab.
+Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6), built on **two 32-bit RISC-V processors**, with a high-performance (HP) processor with **running up to 160 MHz**, and a low-power (LP) 32-bit RISC-V processor, which can be clocked up to 20 MHz. There are **512KB SRAM and 4 MB Flash on the chip**, allowing for more programming space, and binging more possibilities to the IoT control scenarios. 
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/0.png" /></div>
+XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. The wireless stack supports **2.4 GHz WiFi 6, Bluetooth® 5.3, Zigbee, and Thread (802.15.4)**. As the first XIAO member compatible with Thread, it's a perfect fit for building Matter-compliant projects, thus achieving interoperability in smart-home.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:500, height:'auto'}}/></div>
+
+### [Getting Started with Machinechat JEDI](https://wiki.seeedstudio.com/reTerminalDM_Introduction_Jedi_MachineChat/)
+
+[Machinechat JEDI](https://www.machinechat.io/jedi) is a powerful and versatile IoT (Internet of Things) data management software. It's designed to streamline the process of collecting, visualizing, monitoring, and responding to real-time data from a wide range of devices, sensors, and machines. Seeed's reTerminal DM and Machinechat JEDI software let you build custom dashboards in under 30 minutes. Track operations, analyze trends, improve efficiency, and receive timely alerts to prevent costly disruptions
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/screenshot1.PNG" /></div>
 
 
-### [reTerminal DM - Connect AWS IoT Core with N3uron](https://wiki.seeedstudio.com/reTerminalDM_N3uron_AWS/)
+### [Getting started of NEQTO Engine for Linux on reComputer J30](https://wiki.seeedstudio.com/neqto_engine_for_linux_recomputer/)
 
-We have outlined the process of transmitting data from your [reTerminal DM device to AWS IoT Core using the MQTT protocol](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/). This tutorial will seamlessly integrate with the aforementioned process. In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.
+NEQTO is a lightweight and secure software package allowing companies to remotely install and configure their software on edge devices. NEQTO enables companies to provide improved software services to end users through turnkey platform connectors and built-in software lifecycle management.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" /></div>
+Devices installed with NEQTO can be managed through API or the ready-to-use NEQTO Console, which includes optional services for data storage, alerts, and watchdog monitoring. Businesses can enable AIoT with near-instant installation on any Linux device and seamless data integration with any on-premise or cloud servers.
 
-### [Seamless Asset Tracking with Amazon Sidewalk and LoRaWAN Networks](https://wiki.seeedstudio.com/wio_tracker_dual_stack/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_recomputer/header-img_2x.png" alt="pir" width={600} height="auto" /></p>
 
 
-## Existed Wiki Updated
+### [Quantized Llama2-7B with MLC on Jetson](https://wiki.seeedstudio.com/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson)
+
+In this project, we introduce a quantized version of [Llama2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf), a large language model trained on 1.5TB of data, and deploy it on the Jetson Orin. We also leverage the [Machine Learning Compiler Large Language Modle](https://llm.mlc.ai)(MLC LLM) to accelerate the inference speed of the model. By deploying the quantized Llama2-7B with MLC LLM on the Jetson Orin, developers can build powerful natural language processing applications that deliver high accuracy and low latency on edge devices.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/MLC_LLM.gif" /></div>
+
+
+<!-- ## Existed Wiki Updated
 
 ### [reTerminal - add adaptation for Bookworm kernel 6.6](https://wiki.seeedstudio.com/reterminal_black_screen/#flash-raspberry-pi-os-which-is-newest-version---bookworm)
 
-we have officially packaged the latest kernel version 6.6.20 into an image package, which includes both 64-bit and 32-bit versions. After conducting thorough testing, by flashing this image, you can resolve the issue of the LCD screen not turning on.
+we have officially packaged the latest kernel version 6.6.20 into an image package, which includes both 64-bit and 32-bit versions. After conducting thorough testing, by flashing this image, you can resolve the issue of the LCD screen not turning on. -->
 
 <!-- ### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
 
@@ -53,15 +68,17 @@ Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin A
 
 ## The Efforts of Contributor✨
 
-### [XIAO ESP32S3(sense) With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
+### [ow to Run a Local LLM Text-to-Image on reComputer](https://wiki.seeedstudio.com/How_to_run_local_llm_text_to_image_on_reComputer/)
 
-Thanks our contributor Tim to create XIAO ESP32S3(sense) With Zephyr(RTOS).
+Thanks our contributor Bruno to create the tutorial for how to Run a Local LLM Text-to-Image on reComputer.
 
-The [**Zephyr**](https://www.zephyrproject.org/) OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
+A Text-to-image model is a type of artificial intelligence (AI) model that generates images from a textual description. These models take textual input, like sentences or paragraphs describing a scene and produce an image based on that description. hese models are trained on large datasets containing pairs of text descriptions and corresponding images, learning to understand the relationships between textual and visual information. Text-to-image models have made significant progress in recent years, but generating high-quality and diverse images that accurately match textual descriptions remains a challenging task in AI research.
 
-For each supported device Zephyr has a [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) file that describes the board and its features. The [Xiao ESP32S3 Zephyr board page](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html#supported-features) describes the supported features currently available which is defined by the [board's dts file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_esp32s3/xiao_esp32s3_esp32s3_procpu.yaml#L7). 
+On this tutorial, we're going to explore several ways to deploy and run a local LLM text-to-image
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p>
+<div align="center">
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/4_keras_generate_image.png" />
+</div>
 
 
 <!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
@@ -117,3 +134,4 @@ For each supported device Zephyr has a [devicetree](https://docs.zephyrproject.o
 - [weekly wiki on 2024.3.04th](/Seeed_Elderly/weekly_wiki/wiki240304)
 - [weekly wiki on 2024.3.11th](/Seeed_Elderly/weekly_wiki/wiki240311)
 - [weekly wiki on 2024.3.18th](/Seeed_Elderly/weekly_wiki/wiki240318)
+- [weekly wiki on 2024.3.25th](/Seeed_Elderly/weekly_wiki/wiki240325)
