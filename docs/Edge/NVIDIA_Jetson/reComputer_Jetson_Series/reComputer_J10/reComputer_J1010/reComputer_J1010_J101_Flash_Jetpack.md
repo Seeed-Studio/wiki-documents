@@ -1,6 +1,6 @@
 ---
 description: reComputer J1010 | J101
-title: reComputer J1010 | J101
+title: Getting Started with reComputer J1010
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J1010_J101_Flash_Jetpack
 last_update:
