@@ -1,13 +1,13 @@
 ---
 title: Getting Started with Seeed Studio XIAO ESP32C6
 description: Getting Started with Seeed Studio XIAO ESP32C6.
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991254-seeedxiao-esp32c6-font.jpg
 keywords:
 - XIAO
 - ESP32C6
 slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
-sidebar_position: 0
+sidebar_position: 1
 last_update:
   date: 04/02/2024
   author: Spencer
@@ -152,7 +152,7 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
 
 ## Hardware overview
 
-<table>
+<table align="center">
 	<tr>
 	    <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
 	</tr>
@@ -206,7 +206,7 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 <br></br>
 
 - **Step 2.** Launch the Arduino application.
-- **[Step 3](#add-board).**  Add the XIAO ESP32C6 on-board package to the Arduino IDE and click `OK.
+- **[Step 3](#add-board).**  Add the XIAO ESP32C6 on-board package to the Arduino IDE and click `OK`.
 - **Step 4.** Close the Arduino IDE and reopen it.
 
 #### Add the XIAO-C6 Board {#add-board}
@@ -237,7 +237,7 @@ To install the XIAO ESP32C6 board, follow these steps:
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
 
-Additionally, the latest development release version (3.0.0-Alpha 3) was released on December 5, 2023. However, it does not contain our [committed PR](https://github.com/espressif/arduino-esp32/pull/9330). You will need to manually set it up using the following resources:
+Additionally, the latest development release version (`3.0.0-Alpha 3`) was released on December 5, 2023. However, it does not contain our [committed PR](https://github.com/espressif/arduino-esp32/pull/9330). You will need to manually set it up using the following resources:
 
 - [⬇️Download boards.txt](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/boards.txt) for XIAO-C6 board information.
 - [⬇️Download the XIAO ESP32C6 board package](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32C6.zip) for the board variant information.
