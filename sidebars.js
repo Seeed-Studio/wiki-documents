@@ -2641,10 +2641,10 @@ const sidebars = {
       label: 'NVIDIA Jetson®',
       collapsed: true,
       collapsible: true,
-      // link: {
-      //   type: "doc",
-      //   id: 'Edge/NVIDIA_Jetson/RecomputerPage',
-      // },
+      link: {
+        type: "doc",
+        id: 'Edge/NVIDIA_Jetson/RecomputerPage',
+      },
       items: [
         {
           type: 'category',
@@ -2654,13 +2654,14 @@ const sidebars = {
           //   id: 'Edge/NVIDIA_Jetson/Carrier_Boards',
           // },
           items: [
-            
+            'Edge/NVIDIA_Jetson/Carrier_Boards/J101/reComputer_J1010_J101_Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/Carrier_Boards/J202/reComputer_J2021_J202_Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A205/reComputer_A205_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A607/A607_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A608/A608_Flash_JetPack',
-            'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
 
 
             // {
@@ -2711,13 +2712,13 @@ const sidebars = {
             //   ],
             // },
 
-            {
-              type: 'category',
-              label: 'J101',
-              items: [
-                'Edge/NVIDIA_Jetson/Carrier_Boards/J101/reComputer_Jetson_Series_GPIO_Grove',
-              ],
-            },
+            // {
+            //   type: 'category',
+            //   label: 'J101',
+            //   items: [
+            //     'Edge/NVIDIA_Jetson/Carrier_Boards/J101/reComputer_Jetson_Series_GPIO_Grove',
+            //   ],
+            // },
 
             // {
             //   type: 'category',
@@ -2768,7 +2769,7 @@ const sidebars = {
                   type: 'category',
                   label: 'reComputer J1010',
                   items: [ 
-                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_J1010_J101_Flash_Jetpack',
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J1010_getting_start',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J101_Enable_SD_Card',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J1010_Boot_From_SD_Card',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_Jetson_GPIO',
@@ -2778,12 +2779,13 @@ const sidebars = {
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_Jetson_Series_Introduction'
                   ],
                 },
+
                 {
                   type: 'category',
                   label: 'reComputer J1020',
                   items: [
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/J1020v2_getting_start',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/reComputer_J1020_A206_Flash_JetPack',
-                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/reComputer_J2021_J202_Flash_Jetpack',
                   ],
                 },
               ],
@@ -2796,6 +2798,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40/J30_40_getting_start',
                 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40/reComputer_Jetson_with_Infineon_Wi-Fi_Module'
               ]}
         ]},
@@ -2805,17 +2808,17 @@ const sidebars = {
           label: 'reServer Jetson Series',
           // link: {
           //   type: "doc",
-          //   id: 'Edge/NVIDIA_Jetson/reServer_Jetson_Series',
+          //   id: 'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_Getting_Started',
           // },
           items: [
-            {
-              type: 'category',
-              label: 'reServer Industrial J30/40',
-              items: [
-
-              'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Getting_Started',
-              ],
-            },
+            'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Getting_Started',
+            // {
+            //   type: 'category',
+            //   label: 'reServer Industrial J30/40',
+            //   items: [
+            //   'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Getting_Started',
+            //   ],
+            // },
 
             {
               type: 'category',
@@ -2842,7 +2845,8 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/Other_Devices/Jetson-Mate',
             'Edge/NVIDIA_Jetson/Other_Devices/Mini_AI_Computer_T906',
             'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A203E_Flash_System',
-            'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A205E_Flash_System'
+            'Edge/NVIDIA_Jetson/Other_Devices/reComputer_A205E_Flash_System',
+            'Edge/NVIDIA_Jetson/Other_Devices/reComputer_Jetson_Series_GPIO_Grove'
           ]},
 
         {
@@ -2865,10 +2869,12 @@ const sidebars = {
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/How_to_Train_and_Deploy_YOLOv8_on_reComputer',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/Jetson-Nano-MaskCam',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/Security_Scan',
+                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Projects',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/Traffic-Management-DeepStream-SDK',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv5-Object-Detection-Jetson',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-DeepStream-TRT-Jetson',
-                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson'
+                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson',
+                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise'
                 ]},
 
                 {
@@ -2895,24 +2901,31 @@ const sidebars = {
                     // },
                     items: [
                       'Edge/NVIDIA_Jetson/Application/Managed_Services/Allxon-Jetson-Getting-Started',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/alwaysAI-Jetson-Getting-Started',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/Cochl.Sense-Jetson-Getting-Started',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/CVEDIA-Jetson-Getting-Started',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/DeciAI-Getting-Started',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/HardHat',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/Jetson-AI-developer-tools',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/jetson-docker-getting-started',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/Lumeo-Jetson-Getting-Started',
                       'Edge/NVIDIA_Jetson/Application/Managed_Services/neqto_engine_for_linux_recomputer',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/No-code-Edge-AI-Tool',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/reComputer_Jetson_Series_Projects',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/reComputer_Jetson_Series_Resource',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/reComputer_Jetson_Series_Tutorials_Exercise',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/Roboflow-Jetson-Getting-Started',
                       'Edge/NVIDIA_Jetson/Application/Managed_Services/Scailable-Jetson-Getting-Started',
-                      'Edge/NVIDIA_Jetson/Application/Managed_Services/Update-Jetson-Linux-OTA-Using-Allxon',
+                      'Edge/NVIDIA_Jetson/Application/Managed_Services/Update-Jetson-Linux-OTA-Using-Allxon'
                     ]},
 
+                    {
+                      type: 'category',
+                      label: 'Developer Tools',
+                      // link: {
+                      //   type: "doc",
+                      //   id: 'Edge/NVIDIA_Jetson/Application/Managed_Services',
+                      // },
+                      items: [
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/alwaysAI-Jetson-Getting-Started',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/Cochl.Sense-Jetson-Getting-Started',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/CVEDIA-Jetson-Getting-Started',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/DeciAI-Getting-Started',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/HardHat',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/Jetson-AI-developer-tools',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/jetson-docker-getting-started',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/Lumeo-Jetson-Getting-Started',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/No-code-Edge-AI-Tool',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/reComputer_Jetson_Series_Resource',
+                        'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
+                      ]},
 
         ]},
 
