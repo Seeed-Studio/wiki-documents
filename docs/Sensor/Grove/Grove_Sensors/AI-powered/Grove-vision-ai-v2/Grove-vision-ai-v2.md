@@ -12,7 +12,7 @@ last_update:
 
 # Grove Vision AI Module V2
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/0.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/00.jpg" style={{width:700, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html">
@@ -27,6 +27,10 @@ It is an MCU-based vision AI module powered by Arm Cortex-M55 & Ethos-U55. It su
 <div class="table-center">
 <iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
+
+:::tip
+Please use Chrome or Edge browser based on the Chrome engine.
+:::
 
 ### Features
 
