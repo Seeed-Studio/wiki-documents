@@ -1,6 +1,6 @@
 ---
 description: Flash JetPack to reComputer J4012 (J401 carrier board)
-title: Getting Started with J401 carrier board
+title: Flash JetPack to J401 carrier board
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,26 +10,24 @@ last_update:
   author: Lakshantha
 ---
 
-# Getting Started with reComputer J40/ J30 Series (J401 carrier board)
+# Flash JetPack to J401 carrier board
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png"/></div>
-
-reComputer series for Jetson are compact edge computers built with NVIDIA advanced AI embedded systems: J10 (Nano 4GB), J20 (Jetson Xavier NX 8GB and Jetson Xavier 16GB), J40 (Jetson Orin NX 16GB and Jetson Orin NX 8GB) and J30 (Jetson Orin Nano 8GB and Jetson Orin Nano 4GB)  module and reComputer J401 carrier board.
-
-With rich extension modules, industrial peripherals, and thermal management, reComputer for Jetson is ready to help you accelerate and scale the next-gen AI product by deploying popular DNN models and ML frameworks to the edge and inferencing with high performance, for tasks like real-time classification and object detection, pose estimation, semantic segmentation, and natural language processing (NLP).
+<div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_10_1.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-without-Power-Adapter-p-5637.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
+The J401 carrier board is a powerful extension board that supports NVIDIA Jetson Orin NX/Nano modules. It features 1xGbE port, 1x CAN for data transfer, M.2 Key M for SSD, M.2 Key E for WiFi/BlueTooth, 2 CSI, and 1 HDMI for high-quality video capture and display. It also contains 4x USB 3.2 ports, a fan, RTC, and a flexible 9-19V power supply. All of these make it reliable for a variety of industrial automation systems, building powerful AI applications.
+
 ## Features 
 
-- **Brilliant AI Performance for production:** on-device processing with up to 100 TOPS AI performance with low power and low latency
-- **Hand-size edge AI device:** compact size at 130mm x120mm x 58.5mm, includes NVIDIA Jetson Orin NX/ Orin Nano production module, a cooling fan with a heatsink, enclosure, and a power adapter. Support desktop, wall mount, fit in anywhere
-- **Expandable with rich I/Os:** 4x USB 3.2, HDMI 2.1, 2xCSI, 1xRJ45 for GbE, M.2 Key E, M.2 Key M, CAN, and GPIO
-- **Accelerate solution to market:** pre-installed Jetpack with NVIDIA JetPack™ 5.1.1 on the included 128GB NVMe SSD, Linux OS BSP, 128GB SSD, support Jetson software and leading AI frameworks and software platforms
-- **Certifications:** FCC, CE, RoHS, UKCA
+- **Exceptional Performance Carrier Board:** Support the NVIDIA Jetson Orin NX/Nano module, leveraging powerful computing power to take on tough tasks with ease
+- **Versatile Connectivity:** Offer 1x Gigabit Ethernet port for networking, 4x USB 3.2 Type-A (10Gbps) ports,1x USB2.0 Type-C port, 1x CAN connector for fast data transfer
+- **Flexible Storage and Wireless Expansion:** Mount with 1x M.2 Key M 2280 and 1x M.2 Key E slots, offering ample space for flexible storage and wireless connectivity expansion
+- **Advanced Peripherals Supported:** Assemble 2x 15 pins CSI camera connector, 1x HDMI 2.1, 1x fan, 1x RTC for multiple peripherals
+- **Wide Range of Input Voltages:** From 9-19V DC, providing flexibility in power supply options
 
 ## Specifications
 
