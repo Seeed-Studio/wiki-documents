@@ -4,7 +4,7 @@ title: Getting start with reComputer J1020v2
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer-J1020v2-with-Jetson-getting-start
+slug: /reComputer_J1020v2_with_Jetson_getting_start
 last_update:
   date: 6/29/2023
   author: Lakshantha

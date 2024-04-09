@@ -11,7 +11,7 @@ no_comments: false # for Disqus
 
 ---
 
-# Flash JetPack to J101 carrier board
+# J101 carrier board
 
 In this wiki, we will show you how to flash Jetpack OS to reComputer J1010. Since the carrier board of it is designed like the offical NVIDIA Nano Developer Carrier Board, we can flash the JetPack in two ways.
 
