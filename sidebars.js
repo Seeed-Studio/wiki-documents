@@ -2760,23 +2760,22 @@ const sidebars = {
             {
               type: 'category',
               label: 'reComputer J10',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10',
-              // },
+              link: {
+                type: "doc",
+                id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_Jetson_Series_Introduction',
+              },
               items: [
                 {
                   type: 'category',
                   label: 'reComputer J1010',
                   items: [ 
-                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J1010_getting_start',
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_J1010_with_Jetson_getting_start',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J101_Enable_SD_Card',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J1010_Boot_From_SD_Card',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_Jetson_GPIO',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_Jetson_Memory_Expansion',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_Jetson_Series_Hardware_Layout',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_Jetson_Series_Initiation',
-                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_Jetson_Series_Introduction'
                   ],
                 },
 
@@ -2784,7 +2783,7 @@ const sidebars = {
                   type: 'category',
                   label: 'reComputer J1020',
                   items: [
-                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/J1020v2_getting_start',
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/reComputer_J1020v2_with_Jetson_getting_start',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1020v2/reComputer_J1020_A206_Flash_JetPack',
                   ],
                 },
@@ -2798,7 +2797,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40',
               // },
               items: [
-                'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40/J30_40_getting_start',
+                'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40/reComputer_J30_40_with_Jetson_getting_start',
                 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J30_40/reComputer_Jetson_with_Infineon_Wi-Fi_Module'
               ]}
         ]},

@@ -4,7 +4,7 @@ title: Getting start with reComputer J30/40
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer-J30/40-with-Jetson-getting-start
+slug: /reComputer_J30_40_with_Jetson_getting_start
 last_update:
   date: 6/29/2023
   author: Lakshantha

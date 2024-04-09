@@ -10,7 +10,7 @@ last_update:
   author: Lakshantha
 ---
 
-# Flash JetPack to J401 carrier board
+# J401 carrier board
 
 <div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_10_1.png"/></div>
 
