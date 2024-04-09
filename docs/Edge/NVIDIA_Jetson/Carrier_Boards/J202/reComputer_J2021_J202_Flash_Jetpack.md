@@ -14,7 +14,7 @@ no_comments: false # for Disqus
 
 ---
 
-# Flash JetPack to J202 carrier board
+# J202 carrier board
 
 In this wiki, we will show you how to flash Jetpack OS to reComputer J2021. Since the carrier board of it is designed like the offical NVIDIA Xavier Developer Carrier Board, we can flash the JetPack in two ways.
 
