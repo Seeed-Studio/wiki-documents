@@ -1,6 +1,6 @@
 ---
-title: Getting Started
 description: Getting Started with Seeed Studio XIAO ESP32C6.
+title: Getting Started with Seeed Studio XIAO ESP32C6
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991254-seeedxiao-esp32c6-font.jpg
 keywords:
 - XIAO
