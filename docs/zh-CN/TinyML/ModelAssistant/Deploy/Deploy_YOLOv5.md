@@ -1,6 +1,6 @@
 ---
 description: YOLOv5 from training to deployment
-title: deploy YOLOv5
+title: 训练部署YOLOv5目标检测模型
 keywords:
 - YOLOv5 
 - we2 

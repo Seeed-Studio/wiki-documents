@@ -1,6 +1,6 @@
 ---
 description: YOLOv5 from training to deployment
-title: deploy YOLOv5
+title: Train and deploy the YOLOv5 object detection model
 keywords:
 - YOLOv5 
 - we2 

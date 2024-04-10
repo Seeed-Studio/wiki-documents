@@ -1,6 +1,6 @@
 ---
 description: YOLOv8 from training to deployment
-title: deploy YOLOv8
+title: 训练部署YOLOv8目标检测模型
 keywords:
 - YOLOv8
 - we2 

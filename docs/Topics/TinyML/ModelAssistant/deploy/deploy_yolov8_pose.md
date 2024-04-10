@@ -1,6 +1,6 @@
 ---
 description: YOLOv8 from training to deployment
-title: deploy YOLOv8
+title: Training and deployment of YOLOv8 pose estimation model
 keywords:
 - YOLOv8
 - we2 
