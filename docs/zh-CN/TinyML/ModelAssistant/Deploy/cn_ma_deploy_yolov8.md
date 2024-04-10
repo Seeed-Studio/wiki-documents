@@ -5,8 +5,8 @@ keywords:
 - YOLOv8
 - we2 
 - object detection
-image: <https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png>
-slug: /CN/TinyML/ModelAssistant/Deploy/Deploy_YOLOv8
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /cn/ma_deploy_yolov8
 last_update:
   date: 04/02/2024
   author: 大庆

@@ -5,7 +5,7 @@ keywords:
 - YOLOv8
 - we2 
 - pose detection
-image: <https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png>
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CN/TinyML/ModelAssistant/Deploy/Deploy_YOLOv8_Pose
 last_update:
   date: 04/02/2024
