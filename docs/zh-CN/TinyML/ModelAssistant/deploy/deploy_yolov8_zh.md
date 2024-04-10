@@ -1,14 +1,16 @@
-<!-- 
-description: Template wiki
-title: deploy yolov8
+---
+description: YOLOv8 from training to deployment
+title: deploy YOLOv8
 keywords:
-- yolov8 we2 pose detection 
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /Name_your_website
+- YOLOv8
+- we2 
+- object detection
+image: <https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png>
+slug: /CN/TinyML/ModelAssistant/Deploy/Deploy_YOLOv8
 last_update:
   date: 04/02/2024
-  author: 大庆 
--->
+  author: 大庆
+---
 
 # 部署YOLOv8目标检测与姿态估计模型
 
