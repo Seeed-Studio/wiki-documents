@@ -508,6 +508,8 @@ All these benchmarks are carried out under the following conditions:
 
 From these benchmarks, we can see that for the highest end Orin NX 16GB device with a single YOLOv8s model at INT8, you can use around 40 cameras at around 5fps and with multiple YOLOv8s models at INT8 for each stream, you can use around 11 cameras at around 15fps. For multi model applications, the number of cameras is less because of the RAM limitations on the device and each model takes up a substantial amount of RAM.
 
+In summary, when operating an edge device with YOLOv8 model only without applications running, <strong> the Jetson Orin Nano 8GB can support 4-6 streams, whereas the Jetson Orin NX 16GB can manage 16-18 streams at maximum capacity.</strong> However, these numbers may decrease as RAM resources are utilized in real-world applications. Therefore, it's advisable to use these figures as guidelines and conduct your own tests under your specific conditions.
+
 ## Resources
 
 - [YOLOv8 documentation](https://docs.ultralytics.com)

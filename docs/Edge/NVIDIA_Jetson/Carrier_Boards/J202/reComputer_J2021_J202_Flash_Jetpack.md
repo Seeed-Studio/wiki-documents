@@ -1,6 +1,6 @@
 ---
 description: reComputerJ2021 | J202
-title: J202 carrier board
+title: J202 carrier Board
 keywords:
   - Edge
   - reComputer JetPack™_OS_Installation
