@@ -1,6 +1,6 @@
 ---
 description: Flash JetPack to reComputer J4012 (J401 carrier board)
-title: Flash JetPack to J401 carrier board
+title: J401 carrier board
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
