@@ -27,188 +27,151 @@ I will lead you through the process of utilizing **XIAO-ESP32-S3, Grove-Wio-E5, 
 
 Make certain modifications to the following code, such as modifying the AppKEY and other essential information of LoRa communication module, so as to be able to access LoRaWAN, and then modify the data we want to send by command: AT+CMSGHEX. For example, I send data by simulating temp and humi here.
 
-```
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+#include <DHT.h>
 
-# include <Arduino.h>
-#include "Wire.h"
-#include "DHT.h"
-
+// Buffer to receive data
 static char recv_buf[512];
 static bool is_exist = false;
 static bool is_join = false;
 static int led = 0;
 
-int sensorPin = A1;
-#define DHTTYPE DHT20   // DHT 20
-DHT dht(DHTTYPE);         //   DHT10 DHT20 don't need to define Pin
+int sensorPin = A1;          // Define the sensor pin
+#define DHTTYPE DHT20        // Use DHT 20 type
+DHT dht(DHTTYPE);            // Initialize DHT sensor for temperature and humidity
 
-
-static int at_send_check_response(char *p_ack, int timeout_ms, char*p_cmd, ...)
-{
-    int ch;
+// Function to send AT commands and check for expected response within a timeout
+static int at_send_check_response(char *expected_ack, int timeout_ms, char *command_format, ...) {
+    int character;
     int num = 0;
     int index = 0;
     int startMillis = 0;
     va_list args;
     memset(recv_buf, 0, sizeof(recv_buf));
-    va_start(args, p_cmd);
-    Serial1.printf(p_cmd, args);
-    Serial.printf(p_cmd, args);
+    va_start(args, command_format);
+    Serial1.printf(command_format, args);
+    Serial.printf(command_format, args);
     va_end(args);
     delay(200);
     startMillis = millis();
 
-    if (p_ack == NULL)
-    {
+    if (expected_ack == NULL) {
         return 0;
     }
 
-    do
-    {
-        while (Serial1.available() > 0)
-        {
-            ch = Serial1.read();
-            recv_buf[index++] = ch;
-            Serial.print((char)ch);
+    do {
+        while (Serial1.available() > 0) {
+            character = Serial1.read();
+            recv_buf[index++] = character;
+            Serial.print((char)character);
             delay(2);
         }
 
-        if (strstr(recv_buf, p_ack) != NULL)
-        {
+        if (strstr(recv_buf, expected_ack) != NULL) {
             return 1;
         }
-
     } while (millis() - startMillis < timeout_ms);
     return 0;
 }
 
-static void recv_prase(char *p_msg)
-{
-    if (p_msg == NULL)
-    {
+// Function to parse received messages
+static void recv_parse(char *message) {
+    if (message == NULL) {
         return;
     }
-char*p_start = NULL;
+    char *start = NULL;
     int data = 0;
     int rssi = 0;
     int snr = 0;
 
-    p_start = strstr(p_msg, "RX");
-    if (p_start && (1 == sscanf(p_start, "RX: \"%d\"\r\n", &data)))
-    {
+    start = strstr(message, "RX");
+    if (start && (1 == sscanf(start, "RX: \"%d\"\r\n", &data))) {
         Serial.println(data);
         Serial.print("led :");
         led = !!data;
-        Serial.print(led);
-        if (led)
-        {
-            digitalWrite(LED_BUILTIN, LOW);
-        }
-        else
-        {
-            digitalWrite(LED_BUILTIN, HIGH);
-        }
+        Serial.println(led);
+        digitalWrite(LED_BUILTIN, led ? LOW : HIGH);
     }
 
-    p_start = strstr(p_msg, "RSSI");
-    if (p_start && (1 == sscanf(p_start, "RSSI %d,", &rssi)))
-    {
-        Serial.print("rssi:");
-        Serial.print(rssi);
+    start = strstr(message, "RSSI");
+    if (start && (1 == sscanf(start, "RSSI %d,", &rssi))) {
+        Serial.print("RSSI:");
+        Serial.println(rssi);
     }
-    p_start = strstr(p_msg, "SNR");
-    if (p_start && (1 == sscanf(p_start, "SNR %d", &snr)))
-    {
-        Serial.print("snr :");
-        Serial.print(snr);
+    
+    start = strstr(message, "SNR");
+    if (start && (1 == sscanf(start, "SNR %d", &snr))) {
+        Serial.print("SNR :");
+        Serial.println(snr);
     }
 }
 
 void setup() {
-  Serial.begin(115200); // 初始化串口通信
-  Serial1.begin(9600, SERIAL_8N1, 44, 43);
-  Wire.begin();
-  dht.begin();
+    Serial.begin(115200); // Initialize serial communication
+    Serial1.begin(9600, SERIAL_8N1, 44, 43);
+    Wire.begin();
+    dht.begin();
 
-  if (at_send_check_response("+AT: OK", 100, "AT\r\n"))
-{
-    is_exist = true;
-    
-    // 发送 AT+ID 命令
-    if (at_send_check_response("+ID:", 1000, "AT+ID\r\n")) {
-        // 命令成功发送并且收到响应
-        // 可以在 recv_buf 中找到返回的数据
-        Serial.print("Received ID data: ");
-        Serial.println(recv_buf);
+    // Basic AT command to check module presence
+    if (at_send_check_response("+AT: OK", 100, "AT\r\n")) {
+        is_exist = true;
+
+        // Send AT+ID command to get the device ID
+        if (at_send_check_response("+ID:", 1000, "AT+ID\r\n")) {
+            Serial.print("Received ID data: ");
+            Serial.println(recv_buf);
+        } else {
+            Serial.println("Failed to get ID data.");
+        }
+
+        // Other configuration commands
+        at_send_check_response("+MODE: LWOTAA", 1000, "AT+MODE=LWOTAA\r\n");
+        at_send_check_response("+DR: EU868", 1000, "AT+DR=EU868\r\n");
+        at_send_check_response("+CH: NUM", 1000, "AT+CH=NUM,0-2\r\n");
+        at_send_check_response("+KEY: APPKEY", 1000, "AT+KEY=APPKEY,\"2B7E151628AED2A6ABF7158809CF4F3D\"\r\n");
+        at_send_check_response("+CLASS: C", 1000, "AT+CLASS=A\r\n");
+        at_send_check_response("+PORT: 8", 1000, "AT+PORT=8\r\n");
+        
+        delay(200);
+        is_join = true;
     } else {
-        // 命令发送失败或者没有收到响应
-        Serial.println("Failed to get ID data.");
+        is_exist = false;
+        Serial.println("No E5 module found.");
     }
-
-    // 其他设置命令
-    at_send_check_response("+MODE: LWOTAA", 1000, "AT+MODE=LWOTAA\r\n");
-    at_send_check_response("+DR: EU868", 1000, "AT+DR=EU868\r\n");
-    at_send_check_response("+CH: NUM", 1000, "AT+CH=NUM,0-2\r\n");
-    at_send_check_response("+KEY: APPKEY", 1000, "AT+KEY=APPKEY,\"2B7E151628AED2A6ABF7158809CF4F3D\"\r\n");
-    at_send_check_response("+CLASS: C", 1000, "AT+CLASS=A\r\n");
-    at_send_check_response("+PORT: 8", 1000, "AT+PORT=8\r\n");
-    
-    delay(200);
-    is_join = true;
-}
-else
-{
-    is_exist = false;
-    Serial.print("No E5 module found.\r\n");
-}
 }
 
 void loop() {
     float temp_hum_val[2] = {0};
-    if (is_exist)
-        {
-            int ret = 0;
-            if (is_join)
-            {
-
-                ret = at_send_check_response("+JOIN: Network joined", 12000, "AT+JOIN\r\n");
-                if (ret)
-                {
-                    is_join = false;
-                }
-                else
-                {
-                    at_send_check_response("+ID: AppEui", 1000, "AT+ID\r\n");
-                    Serial.print("JOIN failed!\r\n\r\n");
-                    delay(5000);
-                }
+    if (is_exist) {
+        int ret = 0;
+        if (is_join) {
+            ret = at_send_check_response("+JOIN: Network joined", 12000, "AT+JOIN\r\n");
+            if (ret) {
+                is_join = false;
+            } else {
+                at_send_check_response("+ID: AppEui", 1000, "AT+ID\r\n");
+                Serial.println("JOIN failed!");
+                delay(5000);
             }
-            else
-            {
-                if (!dht.readTempAndHumidity(temp_hum_val)) {
+        } else {
+            if (!dht.readTempAndHumidity(temp_hum_val)) {
                 char cmd[128];
-                sprintf(cmd, "AT+CMSGHEX=\"%04X%04X%04X\"\r\n", int(temp_hum_val[1]*100), int(temp_hum_val[0]*100),analogRead(sensorPin));
+                sprintf(cmd, "AT+CMSGHEX=\"%04X%04X%04X\"\r\n", int(temp_hum_val[1] * 100), int(temp_hum_val[0] * 100), analogRead(sensorPin));
                 ret = at_send_check_response("Done", 5000, cmd);
-                if (ret)
-                {
-                    recv_prase(recv_buf);
+                if (ret) {
+                    recv_parse(recv_buf);
+                } else {
+                    Serial.println("Send failed!");
                 }
-                else
-                {
-                    Serial.print("Send failed!\r\n\r\n");
-                }
-                }
-                delay(30000);
             }
+            delay(30000);
         }
-        else
-        {
-            delay(1000);
-        }
+    } else {
+        delay(1000);
+    }
 }
-
-
-
 ```
 
 
@@ -218,88 +181,81 @@ ChirpStack  is an open-source Internet of Things (IoT) solution designed for bui
 
 After creating a new device profile in ChirpStack, fill in the payload codec with the following code:
 
-```
+```js
 function decodeUplink(input) {
-    var decoded = {
-        temp: 0,
-        humi: 0,
-      	moisture: 0
-    };
-    var bytes = input['bytes'];
-    bytes = bytes2HexString(bytes);
+  var decoded = {
+    temp: 0,
+    humi: 0,
+    moisture: 0,
+  };
+  var bytes = input["bytes"];
+  bytes = bytes2HexString(bytes);
 
-    // 假设数据以100倍的比例进行了编码
-    decoded.temp = parseInt(bytes.slice(0, 4), 16) / 100;
-    decoded.humi = parseInt(bytes.slice(4,8), 16) / 100;
-    decoded.moisture = parseInt(bytes.slice(-4), 16);
+  // Assuming the data is encoded at a ratio of 100 times
+  decoded.temp = parseInt(bytes.slice(0, 4), 16) / 100;
+  decoded.humi = parseInt(bytes.slice(4, 8), 16) / 100;
+  decoded.moisture = parseInt(bytes.slice(-4), 16);
 
-    let messages = [
-        {
-            type: 'temp',
-            measurementId: 4097,
-            measurementValue: decoded.temp
-        },
-        {
-            type: 'humi',
-            measurementId: 4098,
-            measurementValue: decoded.humi
-        },
-      	{
-            type: 'moisture',
-            measurementId: 4103,
-            measurementValue: decoded.moisture
-        }
-    ];
+  let messages = [
+    {
+      type: "temp",
+      measurementId: 4097,
+      measurementValue: decoded.temp,
+    },
+    {
+      type: "humi",
+      measurementId: 4098,
+      measurementValue: decoded.humi,
+    },
+    {
+      type: "moisture",
+      measurementId: 4103,
+      measurementValue: decoded.moisture,
+    },
+  ];
 
-    var result = {};
-    result.messages = messages;
-    return { data: result };
+  var result = {};
+  result.messages = messages;
+  return { data: result };
 }
 
-  
-  
-  /**
-   * Convert to an 8-digit binary number with 0s in front of the number
-   * @param arr
-   * @returns {string}
-   */
-  function toBinary (arr) {
-    let binaryData = arr.map((item) => {
-      let data = parseInt(item, 16)
-        .toString(2)
-      let dataLength = data.length
-      if (data.length !== 8) {
-        for (let i = 0; i < 8 - dataLength; i++) {
-          data = `0` + data
-        }
+/**
+ * Convert to an 8-digit binary number with 0s in front of the number
+ * @param arr
+ * @returns {string}
+ */
+function toBinary(arr) {
+  let binaryData = arr.map((item) => {
+    let data = parseInt(item, 16).toString(2);
+    let dataLength = data.length;
+    if (data.length !== 8) {
+      for (let i = 0; i < 8 - dataLength; i++) {
+        data = `0` + data;
       }
-      return data
-    })
-    let ret = binaryData.toString()
-      .replace(/,/g, '')
-    return ret
-  }
-  
-  
-  function bytes2HexString (arrBytes) {
-    var str = ''
-    for (var i = 0; i < arrBytes.length; i++) {
-      var tmp
-      var num = arrBytes[i]
-      if (num < 0) {
-        tmp = (255 + num + 1).toString(16)
-      } else {
-        tmp = num.toString(16)
-      }
-      if (tmp.length === 1) {
-        tmp = '0' + tmp
-      }
-      str += tmp
     }
-    return str
+    return data;
+  });
+  let ret = binaryData.toString().replace(/,/g, "");
+  return ret;
+}
+
+function bytes2HexString(arrBytes) {
+  var str = "";
+  for (var i = 0; i < arrBytes.length; i++) {
+    var tmp;
+    var num = arrBytes[i];
+    if (num < 0) {
+      tmp = (255 + num + 1).toString(16);
+    } else {
+      tmp = num.toString(16);
+    }
+    if (tmp.length === 1) {
+      tmp = "0" + tmp;
+    }
+    str += tmp;
   }
-
-
+  return str;
+}
 ```
 
 

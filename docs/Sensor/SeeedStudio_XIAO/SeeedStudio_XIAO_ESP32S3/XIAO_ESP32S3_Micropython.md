@@ -63,8 +63,6 @@ In this guide I will be using **windows 10** alongside with Thonny IDE and espto
   </table>
 </div>
 
-ftp://34.216.148.10:21//wiki/wiki-ranger/Contributions/S3-MicroPy/XIAO_ESP32S3_Micropython.zip
-
 ### 👍 Greatly Thanks
 
 <strong><font color={'8DC215'} size={"3"}>The firmware designed for XIAO ESP32S3 Sense board, using in this wiki is made by our friend: shariltumin, whom we are really greatful for.</font></strong>

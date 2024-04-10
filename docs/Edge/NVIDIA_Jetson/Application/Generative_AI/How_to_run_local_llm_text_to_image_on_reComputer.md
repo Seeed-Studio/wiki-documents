@@ -80,9 +80,7 @@ After creating it, activate the virtual environment
 source kerasStableEnvironment/bin/activate
 ```
 When active, you'll see the name of it before the prompt
-<div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/1_prompt_bash.png" />
-</div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/1_prompt_bash.png" /></div>
 
 Enter the virtual enviroment
 ```bash
@@ -101,7 +99,7 @@ dpkg -l | grep -i jetpack
 ```
 and the result should show the jetpack version:
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/2_jetpack_version.png" />
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/2_jetpack_version.png" />
 </div>
 
 ```bash
@@ -183,12 +181,12 @@ Image.fromarray(image[0]).save("keras_generate_image.png")
 ```
 While running the script, here are some statistics
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/3_statistics.png" />
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/3_statistics.png" />
 </div>
 
 And after a while, here's the result
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/4_keras_generate_image.png" />
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/4_keras_generate_image.png" />
 </div>
 
 ### Step 1.2 - Hugging Face
@@ -201,7 +199,7 @@ Head to Hugging Face and choose to see the models.
 
 On the left side, you have filters that allow us to choose what type of models we want to see.
 <div align="center">
-    <img width={800} src="5_huggingface.png" />
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/5_huggingface.png" />
 </div>
 There are a lot of models available, but we're going to concentrate on the text-to-image models.
 
@@ -227,7 +225,7 @@ I'm going to test the [stable-diffusion-v1-5 from Runaway](https://huggingface.c
 
 On the model card, they have all the information necessary to work with the model . 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/6_stable_diffusion_v1_5.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/6_stable_diffusion_v1_5.png"/>
 </div>
 
 We're going to use Hugging Face diffusers library. 
@@ -258,11 +256,11 @@ python stableDiffusion.py
 **Remember:** This takes a lot of space. The model's checkpoints are being downloaded. This will be done just one time. 
 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/7_model_download.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/7_model_download.png"/>
 </div>
 After a while, here's the result
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/8_result_stablediffusion.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/8_result_stablediffusion.png"/>
 </div>
 
 **SDXL-Turbo**
@@ -286,7 +284,7 @@ image.save("sdxl-turbo.png")
 This one is really fast generating an image. Takes almost 30s, from running the script until it exits. 
 Here's the result
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/9_sdxl-turbo.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/9_sdxl-turbo.png"/>
 </div>
 
 We can also try other models, like models trained specifically for anime or cyberpunk. 
@@ -351,13 +349,13 @@ python app.py
 ```
 You should see the following:
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/10_run_flask.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/10_run_flask.png"/>
 </div>
 
 Now, open a browser and try to access your Jetson device with the 8080 port.
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/1_browser_access.png"/>
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/12_accessed_flask.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/11_browser_access.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/12_accessed_flask.png"/>
 </div>
 
 What we did was importing the Flask class
@@ -382,7 +380,7 @@ We can also use curl to access our API
 curl http://192.168.2.230:8080/generate_image
 ```
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/13_curl.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/13_curl.png"/>
 </div>
 Now that we know how to create a API, let's dive into it and write it.
 
@@ -460,22 +458,22 @@ If we don't give it a prompt, it will use the default one we've set.
 
 In the CLI, you can see the image being generated
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/14_generating_image_api.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/14_generating_image_api.png"/>
 </div>
 
 And in the browser, after a while, we can see the image
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/15_image_API_generated.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/15_image_API_generated.png"/>
 </div>
 
 We can also see the image has been sent
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/16_cli_generated.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/16_cli_generated.png"/>
 </div>
 
 We can also use curl to get the image and save it.
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/17_cli_generating.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/17_cli_generating.png"/>
 </div>
 
 If we want to give it a prompt (as we should), the URL will look like
@@ -513,7 +511,7 @@ Found compatible container dustynv/stable-diffusion-webui:r35.3.1 (2024-02-02, 7
 ```
 It will start downloading the container. 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/18_container_downloading.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/18_container_downloading.png"/>
 </div>
 
 After finishing, it will download the model and run the server on port 7860.
@@ -521,7 +519,7 @@ After finishing, it will download the model and run the server on port 7860.
 Here for me it didn't work at first. No checkpoint would appear to choose from, no matter how many times I would press the refresh 
 button. 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/20_no_checkpoint.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/20_no_checkpoint.png"/>
 </div>
 
 I found out that I had 100% space occupied. 
@@ -554,27 +552,27 @@ Now you should have space available. Or just get a new drive, with more space. :
 
 Now the model is being downloaded.
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/21_mode_downloading.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/21_mode_downloading.png"/>
 </div>
 And we have a checkpoint
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/22_checkpoint.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/22_checkpoint.png"/>
 </div>
 
 Open your browser and head to your Jetson IP address and port to run the AUTOMATIC1111's Stable Diffusion webgui
 
 *http://JetsonIPAddress:7860*
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/19_jetson_webgui.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/19_jetson_webgui.png"/>
 </div>
 
 Now we can play with it. 
 Here's some images created with the default model. 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/23_creating_image1.gif"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/23_creating_image1.gif"/>
 </div>
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/24_creating_image2.gif"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/24_creating_image2.gif"/>
 </div>
 
 #### Stable Diffusion XL
@@ -597,7 +595,7 @@ With the models downloaded, let's refresh the checkpoints drop-down if you have 
 
 Now we have two more models available to us. 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/25_models.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/25_models.png"/>
 </div>
 
 This is an example generated with the XL model, with the following prompt:
@@ -605,7 +603,7 @@ This is an example generated with the XL model, with the following prompt:
 
 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/26_neon_xl.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/26_neon_xl.png"/>
 </div>
 Try it. Remember that, it may not work with some options selected.
 
@@ -618,7 +616,7 @@ Select the one you want, download the checkpoints and place them in the models d
 ```
 I'm going to download and try a model named [DreamShaper XL](https://civitai.com/models/112902/dreamshaper-xl). 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/27_dreamshaperxl.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/27_dreamshaperxl.png"/>
 </div>
 
 Remember that some models may not work. 
@@ -641,19 +639,19 @@ Using the following prompt
 without the negative prompt, I got the following result
 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/28_dreamshaperxl_image_result.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/28_dreamshaperxl_image_result.png"/>
 </div>
 
 with these settings:
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/29_dreamshaperXL_settings.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/29_dreamshaperXL_settings.png"/>
 </div>
 
 Remeber the prompt above for the cyberpunk girl using the *Stable Diffusion XL* model? 
 
 Here's a new image, with the same prompt, generated with *DreamShaper XL* with the same settings above
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/reComputer/Application/Nvidia_Jetson_recomputer_LLM_texto-to-image/30_cyberpunkGirl.png"/>
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/30_cyberpunkGirl.png"/>
 </div>
 
 As you can see, wonderful images can be created, granting that you know the parameters to tune. :)
