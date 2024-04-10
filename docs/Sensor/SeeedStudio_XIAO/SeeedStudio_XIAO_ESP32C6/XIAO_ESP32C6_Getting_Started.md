@@ -1,10 +1,11 @@
 ---
-title: Getting Started with Seeed Studio XIAO ESP32C6
+title: Getting Started
 description: Getting Started with Seeed Studio XIAO ESP32C6.
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991254-seeedxiao-esp32c6-font.jpg
 keywords:
 - XIAO
 - ESP32C6
+- Seeeduino
 slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 1
@@ -41,13 +42,24 @@ Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC](htt
 
 XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. The wireless stack supports **2.4 GHz WiFi 6, Bluetooth® 5.3, Zigbee, and Thread (802.15.4)**. As the first XIAO member compatible with Thread, it's a perfect fit for building Matter-compliant projects, thus achieving interoperability in smart-home.
 
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
 
 ## Specifications comparison
 <table class="sp-table-c6">
     <thead>
         <tr>
             <th colspan="2">Products</th>
-            <th class="highlight-cell">XIAO ESP32C6</th>
+            <th><Highlight color="#92c52a">XIAO ESP32C6</Highlight></th>
             <th>XIAO ESP32C3</th>
             <th>XIAO ESP32S3</th>
         </tr>
