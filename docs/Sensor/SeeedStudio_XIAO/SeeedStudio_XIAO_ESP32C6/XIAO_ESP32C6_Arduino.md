@@ -1,6 +1,6 @@
 ---
 description: Pin multiplexing and Arduino Programming tutorial
-title: Arduino Usage
+title: Arduino Cheat Sheet
 keywords:
   - esp32sc6
   - xiao
