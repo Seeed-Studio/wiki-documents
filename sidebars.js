@@ -3687,7 +3687,23 @@ const sidebars = {
             },
           ]
         },
-        'Topics/TinyML/ModelAssistant/deploy/overview',
+        {
+          type: 'category',
+          label: 'Development',
+          collapsed: true,
+          collapsible: true,
+          link: {
+           type: "doc",
+           id: 'Topics/TinyML/ModelAssistant/deploy/overview',
+          },
+          items: [
+          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
+          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
+          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
+          ]
+        },
+
+        
       ],
     },
 
