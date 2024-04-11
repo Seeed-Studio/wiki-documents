@@ -1,11 +1,11 @@
 ---
 description: Weekly Wiki 
-title: Weekly Wiki 
+title: Weekly Wiki✨
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/18/2024
+  date: 04/08/2024
   author: Seraphina
 ---
 
@@ -17,24 +17,34 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 18th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 8th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Whisper on Jetson for Real time Speech to Text](https://wiki.seeedstudio.com/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/)
+### [Intergating Historian Module for Visualizing on reTerminal DM](https://wiki.seeedstudio.com/reTerminalDM_N3uron_Historian/)
 
-In this wiki we introduce you [Real Time Whisper on Jetson](https://github.com/LJ-Hao/Deploy-Whisper-on-NVIDIA-Jetson-Orin-for-Real-time-Speech-to-Text.git), this integration enables speech processing directly on the device, eliminating the need for constant network connectivity and enhancing privacy and security. Additionally, we will compare the inference speed of Whisper and Riva when deployed on the same Jetson Orin device. Ultimately, deploying Whisper on the Jetson Orin empowers developers to build robust, efficient STT applications that deliver high accuracy and low latency in various domains, from smart homes to industrial automation.
+Introducing [N3uron](https://n3uron.com/) Historian: a powerful time-series storage system built on MongoDB. Easily configure it to store data from MongoDB in x64 bit, x32 bit and ARM architectures. With Neuron Historian, you can store tag values collected locally or remotely via N3uron Links. Plus, it offers a handy Store & Forward feature for data retention during communication loss. Thanks to efficient compression and partitioning, it handles massive data volumes without performance loss. For reference, 1GB of storage can hold around 100 million events.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Real-Time-Whisper.gif" /></div>
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/graph.gif" /></center>
 
+### Getting start with reComputer series
 
+We have added the Getting start Pages for reComputer series. Here are the links:
 
+[Getting start with reComputer J1010](https://wiki.seeedstudio.com/reComputer_J1010_with_Jetson_getting_start)
+
+[Getting start with reComputer J1020V2](https://wiki.seeedstudio.com/reComputer_J1020v2_with_Jetson_getting_start)
+
+[Getting start with reComputer J30/40](https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start)
 
 ## Existed Wiki Updated
 
-### [2.13-inch E-Paper - Monochrome 122x250 Driver code](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
+### [Grove - EMG Detector](https://wiki.seeedstudio.com/Grove-EMG_Detector/)
 
-We've provided you with 2.13-inch E-Paper - Monochrome 122x250 Driver code here!
+We have added a Tips for the part list of Grove - EMG Detector
+
+The part list of this product has been updated recently. You may receive connecting wires of two specifications, their functions are completely identical, only the colors are different,the corresponding relationship is shown in the diagram below.
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/newline.png" /></div>
 
 <!-- ### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
 
@@ -42,21 +52,25 @@ We've updated to add the resources for Grove Vision AI
 
 ### [reServer X86 - Pin information](https://wiki.seeedstudio.com/reServer-Getting-Started/#pin-information)
 
-Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference. -->
+Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference.
 
-## The Efforts of Contributor
+## The Efforts of Contributor✨
 
-<!-- ### [XIAO ESP32C3 Prism Display](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
+### [ow to Run a Local LLM Text-to-Image on reComputer](https://wiki.seeedstudio.com/How_to_run_local_llm_text_to_image_on_reComputer/)
 
-Thanks our contributor Tim to create XIAO ESP32C3 Prism Display.
+Thanks our contributor Bruno to create the tutorial for how to Run a Local LLM Text-to-Image on reComputer.
 
-This project uses the ESP32C3 to create a three-dimensional display using a splitter prism. This guide works to explain the steps required to build the enclosure, attach associated electronics, and install the firmware. 
+A Text-to-image model is a type of artificial intelligence (AI) model that generates images from a textual description. These models take textual input, like sentences or paragraphs describing a scene and produce an image based on that description. hese models are trained on large datasets containing pairs of text descriptions and corresponding images, learning to understand the relationships between textual and visual information. Text-to-image models have made significant progress in recent years, but generating high-quality and diverse images that accurately match textual descriptions remains a challenging task in AI research.
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p> -->
+On this tutorial, we're going to explore several ways to deploy and run a local LLM text-to-image
+
+<div align="center">
+    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/4_keras_generate_image.png" />
+</div>
 
 
-- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
+<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
 
 
 ## Past Weekly wiki
@@ -107,3 +121,6 @@ This project uses the ESP32C3 to create a three-dimensional display using a spli
 - [weekly wiki on 2024.2.26th](/Seeed_Elderly/weekly_wiki/wiki240226)
 - [weekly wiki on 2024.3.04th](/Seeed_Elderly/weekly_wiki/wiki240304)
 - [weekly wiki on 2024.3.11th](/Seeed_Elderly/weekly_wiki/wiki240311)
+- [weekly wiki on 2024.3.18th](/Seeed_Elderly/weekly_wiki/wiki240318)
+- [weekly wiki on 2024.3.25th](/Seeed_Elderly/weekly_wiki/wiki240325)
+- [weekly wiki on 2024.4.01st](/Seeed_Elderly/weekly_wiki/wiki240401)

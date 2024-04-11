@@ -15,7 +15,7 @@ last_update:
 
 **Seeed Studio XIAO ESP32C3**是一款基于express的物联网迷你开发板 **ESP32-C3** WiFi/蓝牙双模芯片ESP32-C3是一款**32位RISC-V CPU**，包含一个**FPU**(浮点单元)，用于**32位单精度运算**，具有强大的计算能力。 它具有出色的射频性能，支持**IEEE 802.11 b/g/n WiFi**和**蓝牙5 (LE)**协议。该电路板附带一个外部天线，以增加无线应用程序的信号强度。 它还具有小巧精致的外形，并结合了单面表面贴装设计。 它配备了丰富的接口，具有**11个数字I/O**，可作为**PWM引脚**和**4个模拟I/O**，可作为**ADC引脚**。支持**UART、I2C、SPI等4种串行接口。在电路板上还有一个小的复位按钮和一个引导加载模式按钮。XIAO ESP32C3与[Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)和[Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board)完全兼容。除Seeeduino XIAO Expansion board外，该板上的SWD弹簧触点不兼容。
 
-基于以上特点，骁骁ESP32C3定位为**高性能、低功耗、高性价比的物联网微型开发板**，适用于**低功耗物联网应用和无线可穿戴应用**。
+基于以上特点，XIAO ESP32C3定位为**高性能、低功耗、高性价比的物联网微型开发板**，适用于**低功耗物联网应用和无线可穿戴应用**。
 
 这个wiki将向您展示如何快速开始使用XIAO ESP32C3!
 

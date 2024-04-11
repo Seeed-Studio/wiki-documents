@@ -1,6 +1,6 @@
 ---
 description: reComputer J1010 | J101
-title: reComputer J1010 | J101
+title: J101 carrier Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J1010_J101_Flash_Jetpack
 last_update:
@@ -11,7 +11,7 @@ no_comments: false # for Disqus
 
 ---
 
-# Flash JetPack to reComputer J1010 (J101 carrier board)
+# J101 carrier board
 
 In this wiki, we will show you how to flash Jetpack OS to reComputer J1010. Since the carrier board of it is designed like the offical NVIDIA Nano Developer Carrier Board, we can flash the JetPack in two ways.
 

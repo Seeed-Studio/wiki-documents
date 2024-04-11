@@ -70,6 +70,11 @@ Finally, tack the three electrodes to your muscle, and keep a distance between e
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_connect.jpg" /></div>
 
+:::tip
+The part list of this product has been updated recently. You may receive connecting wires of two specifications, their functions are completely identical, only the colors are different,the corresponding relationship is shown in the diagram below.
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/newline.png" /></div>
+:::
+
 ### Download Code and Upload
 
 You can download the demo code in github, click [here](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code/), then extract it to anywhere.
