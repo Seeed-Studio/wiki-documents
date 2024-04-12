@@ -1,6 +1,6 @@
 ---
 description: WiFi usage with Seeed Studio XIAO ESP32C6.
-title: WiFi Usage with Seeed Studio XIAO ESP32C6
+title: WiFi Usage
 keywords:
   - esp32c6
   - xiao
@@ -13,25 +13,27 @@ last_update:
   author: Spencer
 ---
 
-# WiFi Usage with Seeed Studio XIAO ESP32-C6
+# WiFi Usage with Seeed Studio XIAO ESP32C6
 
-## Getting Started
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Seeed Studio XIAO ESP32C6</th>
+    </tr>
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+    </tr>
+      <tr>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
 
-### Installation of antenna
-
-On the bottom left of the front of XIAO ESP32C6, there is a separate "WiFi/BT Antenna Connector". In order to get better WiFi/Bluetooth signal, you need to take out the antenna inside the package and install it on the connector.
-
-There is a little trick to the installation of the antenna, if you press down hard on it directly, you will find it very difficult to press and your fingers will hurt! The correct way to install the antenna is to put one side of the antenna connector into the connector block first, then press down a little on the other side, and the antenna will be installed.
-
-Remove the antenna is also the case, do not use brute force to pull the antenna directly, one side of the force to lift, the antenna is easy to take off.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
-
-:::info
-If the antenna is *not installed*, it may ***not be able to connect*** to the WiFi network.
-
-If you have the conditions, I suggest you use the big stick antenna, which will get a better experience.
-:::
+The Seeed Studio XIAO ESP32C6 is an embedded development board that boasts outstanding RF performance, thanks to its support for both 2.4GHz Wifi - 802.11b/g/n and Bluetooth Low Energy (BLE) 5.0 dual wireless communication. This capability enables the XIAO ESP32C6 to provide reliable and high-speed wireless connectivity for a wide range of Internet of Things (IoT) applications. The board features an onboard ceramic antenna, which eliminates the need for an external antenna and simplifies the design process. The ESP32C6 chip also offers low power consumption, making it suitable for battery-powered IoT devices. In this tutorial, we will explore how to leverage the XIAO ESP32C6's Wi-Fi capabilities to connect to a Wi-Fi network and perform basic networking tasks.
 
 ## The commonly interfaces of WiFi library
 
@@ -677,11 +679,11 @@ Accordingly to the [Espressif documentation](https://docs.espressif.com/projects
 
 In a traditional Wi-Fi network architecture, a single node (access point – usually the router) is connected to all other nodes (stations). Each node can communicate with each other using the access point. However, this is limited to the access point wi-fi coverage. Every station must be in the range to connect directly to the access point.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/42.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/42.png" style={{width:800, height:'auto'}}/></div>
 
 With ESP-MESH, the nodes don’t need to connect to a central node. Nodes are responsible for relaying each others transmissions. This allows multiple devices to spread over a large physical area. The Nodes can self-organize and dynamically talk to each other to ensure that the packet reaches its final node destination. If any node is removed from the network, it is able to self-organize to make sure that the packets reach their destination.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/43.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/43.png" style={{width:800, height:'auto'}}/></div>
 
 The [painlessMesh library](https://gitlab.com/painlessMesh/painlessMesh) allows us to create a mesh network with the ESP32 boards in an easy way.
 
@@ -839,16 +841,6 @@ void loop() {
   mesh.update();
 }
 ```
-
-## Troubleshooting
-
-### Q1: Why can't I connect to the XIAO ESP32C6 hotspot when I am using the softAP example?
-
-This may be caused by insufficient antenna strength of XIAO ESP32C6 or overheating of XIAO ESP32C6. After testing, the XIAO ESP32C6's chip can reach a maximum temperature of 50 degrees Celsius when using this example. This may lead to network abnormalities if run for a long time. At this time, you can cool down and retry again.
-
-If the cause of overheating is ruled out, then it is possible that the antenna signal is the cause of the problem. The strength of the included antenna cannot support high-intensity network work in general, so you can purchase a suitable stick antenna to use if needed.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## Citations & References
 
