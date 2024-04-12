@@ -1,15 +1,15 @@
 ---
-description: Pin multiplexing and Arduino Programming tutorial
-title: Arduino Cheat Sheet
+description: Pin multiplexing with Seeed Studio XIAO ESP32C6.
+title: Pin Multiplexing With Seeed Studio XIAO ESP32C6
 keywords:
-  - esp32sc6
+  - esp32c6
   - xiao
   - pin multiple
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg
-slug: /xiao_arduino_esp33c6
+slug: /xiao_pin_multiplexing_esp33c6
 sidebar_position: 2
 last_update:
-  date: 04/09/2024
+  date: 04/10/2024
   author: Spencer
 ---
 
@@ -59,9 +59,7 @@ Before we begin, let's review all the pins that the XIAO ESP32C6 has and its fun
 
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
-
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
-
 - GND - Power/data/signal ground <!-- Need to be confirmed -->
 
 ## Serial
@@ -472,7 +470,7 @@ CS -> D3 (as an example)
 
 ### Software Implementation
 
-Below is a simplified Arduino sketch that demonstrates basic SPI communication with an SPI device using the XIAO ESP32C6. This sketch sends a command to the SPI device and reads back the response.
+Below is a simplified Arduino sketch that demonstrates basic SPI communication with an SPI device using the XIAO ESP32C6. This sketch sends a command to the SPI device and reads back the response(reads back data from an SPI device).
 
 ```cpp
 #include <SPI.h>
@@ -500,171 +498,9 @@ void loop() {
   delay(100);  // Wait for a short period
 }
 ```
-
-Note: Ensure the pin assignments in your sketch match the physical connections in your hardware setup. The above example uses predefined pin numbers based on the `pin_arduino.h` file for the XIAO ESP32-C6, with an additional definition for the CS pin.
-
-This code sends a command and reads back data from an SPI device.
-
-Here's the completed section of the Arduino code example:
-
-## Wi-Fi 
-
-Refer to the [Wi-Fi API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html) documentation for more details.
-
-### Wi-Fi Scanning
-
-You can scan for available Wi-Fi networks using the `WiFi.scanNetworks()` function. Here's an example:
-
-```cpp
-#include <WiFi.h>
-
-void setup() {
-  Serial.begin(115200);
-  
-  // Set WiFi to station mode and disconnect from an AP if it was previously connected
-  WiFi.mode(WIFI_STA);
-  WiFi.disconnect();
-  delay(100);
-
-  Serial.println("Setup done");
-}
-
-void loop() {
-  Serial.println("Starting Wi-Fi scan...");
-
-  // WiFi.scanNetworks will return the number of networks found
-  int numNetworks = WiFi.scanNetworks();
-  Serial.println("Scan done");
-
-  if (numNetworks == 0) {
-    Serial.println("No networks found");
-  } else {
-    Serial.print(numNetworks);
-    Serial.println(" networks found");
-    for (int i = 0; i < numNetworks; i++) {
-      // Print SSID and RSSI for each network found
-      Serial.print(i + 1);
-      Serial.print(": ");
-      Serial.print(WiFi.SSID(i));
-      Serial.print(" (");
-      Serial.print(WiFi.RSSI(i));
-      Serial.print(")");
-      Serial.println((WiFi.encryptionType(i) == WIFI_AUTH_OPEN) ? " " : "*");
-      delay(10);
-    }
-  }
-  Serial.println("");
-
-  // Wait a bit before scanning again
-  delay(5000);
-}
-```
-
-This code scans for available networks, prints the number of networks found, and then lists the SSID, signal strength (RSSI), and encryption type (open or secured) for each network.
-
-### Connecting to a Wi-Fi Network
-
-To connect to a Wi-Fi network, you can use the `WiFi.begin()` function. Here's an example:
-
-```cpp
-#include <WiFi.h>
-
-const char* ssid = "your_SSID";
-const char* password = "your_PASSWORD";
-
-void setup() {
-  Serial.begin(115200);
-  
-  // Set WiFi to station mode
-  WiFi.mode(WIFI_STA);
-  
-  // Connect to the Wi-Fi network
-  WiFi.begin(ssid, password);
-  
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
-  
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  
-  Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
-}
-
-void loop() {
-  // Your code here
-}
-```
-
-Replace `your_SSID` and `your_PASSWORD` with the actual SSID and password of the Wi-Fi network you want to connect to. The code will attempt to connect to the network and wait until the connection is established. Once connected, it will print the assigned IP address.
-
-### State machine | Wi-Fi Events
-
-You can use the `WiFi.onEvent()` function to register callbacks for various Wi-Fi events. Here's an example:
-
-```cpp
-#include <WiFi.h>
-
-const char* ssid = "your_SSID";
-const char* password = "your_PASSWORD";
-
-void WiFiEvent(WiFiEvent_t event) {
-  switch (event) {
-    case ARDUINO_EVENT_WIFI_STA_START:
-      Serial.println("Station Mode Started");
-      break;
-    case ARDUINO_EVENT_WIFI_STA_CONNECTED:
-      Serial.println("Connected to AP");
-      break;
-    case ARDUINO_EVENT_WIFI_STA_GOT_IP:
-      Serial.print("Got IP: ");
-      Serial.println(WiFi.localIP());
-      break;
-    case ARDUINO_EVENT_WIFI_STA_DISCONNECTED:
-      Serial.println("Disconnected from AP");
-      // Reconnect to Wi-Fi
-      WiFi.reconnect();
-      break;
-    default:
-      break;
-  }
-}
-
-void setup() {
-  Serial.begin(115200);
-  
-  // Register the Wi-Fi event handler
-  WiFi.onEvent(WiFiEvent);
-  
-  // Set WiFi to station mode
-  WiFi.mode(WIFI_STA);
-  
-  // Connect to the Wi-Fi network
-  WiFi.begin(ssid, password);
-  
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
-}
-
-void loop() {
-  // Your code here
-}
-```
-
-> Remember to replace `your_SSID` and `your_PASSWORD` with the actual SSID and password of your Wi-Fi network.
-
-This code registers a callback function `WiFiEvent` that will be called whenever a Wi-Fi event occurs. The callback function uses a switch statement to handle different event types, such as station mode started, connected to AP, got IP address, and disconnected from AP. You can add your own logic inside each case to perform specific actions based on the event.
-
-
-
-## Use ULP LP-Core Coprocessor
-
-Stay tuned:  <!-- https://github.com/espressif/esp-idf/blob/master/examples/system/ulp/lp_core/gpio/main/lp_core_gpio_example_main.c#L50 -->
-
+:::note
+Ensure the pin assignments in your sketch match the physical connections in your hardware setup. The above example uses predefined pin numbers based on the `pin_arduino.h` file for the XIAO ESP32-C6, with an additional definition for the CS pin.
+:::
 
 ## Resources
 
