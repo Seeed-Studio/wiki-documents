@@ -23,7 +23,7 @@ no_comments: false # for Disqus
 
 In recent years, large language models such as GPT-3 have revolutionized natural language processing tasks. However, most of these models are trained on large-scale datasets, which require powerful computing resources and are not suitable for deployment on edge devices. To address this issue, researchers have developed quantization techniques to compress large models into smaller ones without sacrificing performance. 
 
-In this project, we introduce a quantized version of [Llama2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf), a large language model trained on 1.5TB of data, and deploy it on the Jetson Orin. We also leverage the [Machine Learning Compiler Large Language Modle](https://llm.mlc.ai)(MLC LLM) to accelerate the inference speed of the model. By deploying the quantized Llama2-7B with MLC LLM on the Jetson Orin, developers can build powerful natural language processing applications that deliver high accuracy and low latency on edge devices.
+In this project, we introduce a quantized version of [Llama2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf), a large language model trained on 1.5TB of data, and deploy it on the Jetson Orin. We also leverage the [Machine Learning Compiler Large Language Modle](https://llm.mlc.ai)(MLC LLM) to accelerate the inference speed of the model. By deploying the quantized Llama2-7B with MLC LLM on the [Jetson Orin NX](https://www.seeedstudio.com/reComputer-J4012-p-5586.html), developers can build powerful natural language processing applications that deliver high accuracy and low latency on edge devices.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/MLC_LLM.gif" /></div>
 
