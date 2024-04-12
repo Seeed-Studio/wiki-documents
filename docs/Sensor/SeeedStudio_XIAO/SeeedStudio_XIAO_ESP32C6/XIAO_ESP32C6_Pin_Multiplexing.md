@@ -109,13 +109,13 @@ In this example, software serial communication is set up on pins 2 (RX) and 3 (T
 
 #### Hardware Serial
 
-In the Arduino framework, the UART0 peripheral, which corresponds to pins D6/D7 at the hardware level, is referred to as Serial1.
+In the Arduino framework, the UART0 peripheral, which corresponds to pins D6/D7 at the hardware level, is referred to as Serial0.
 
 ```cpp
-#define mySerial Serial1 // Alias for UART0 (Serial1)
+#define mySerial Serial0 // Alias for UART0 (Serial0)
 void setup() {
   Serial.begin(9600); // Initialize hardware serial (USB)
-  mySerial.begin(9600); // Initialize UART0 (Serial1)
+  mySerial.begin(9600); // Initialize UART0 (Serial0)
 }
 
 void loop() {
@@ -125,7 +125,7 @@ void loop() {
     Serial.println(data);
   }
   
-  if (mySerial.available()) { // Check if data is available on UART0 (Serial1)
+  if (mySerial.available()) { // Check if data is available on UART0 (Serial0)
     char data = mySerial.read();
     Serial.print("Received on UART0: ");
     Serial.println(data);
@@ -133,7 +133,7 @@ void loop() {
 }
 ```
 
-This code demonstrates using the hardware serial port UART0 (referred to as Serial1 in the Arduino framework) for serial communication. It initializes both the USB serial port (`Serial`) and the UART0 serial port (`mySerial`) in the setup() function.
+This code demonstrates using the hardware serial port UART0 (referred to as Serial0 in the Arduino framework) for serial communication. It initializes both the USB serial port (`Serial`) and the UART0 serial port (`mySerial`) in the setup() function.
 
 In the loop() function, it checks for incoming data on both serial ports. If data is available on the USB serial port (Serial), it reads the data and prints a message indicating it was received on USB. If data is available on the UART0 serial port (`mySerial`), it reads the data and prints a message indicating it was received on UART0.
 
