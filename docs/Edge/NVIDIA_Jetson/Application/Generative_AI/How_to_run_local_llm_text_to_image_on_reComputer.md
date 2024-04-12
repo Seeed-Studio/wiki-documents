@@ -40,7 +40,7 @@ You can find those tips in the [Nvidia Jetson AI Lab](https://www.jetson-ai-lab.
 
 ## Requirements
 
-For this tutorial, we're going to need a Nvidia Jetson Orin NX 16GB.
+For this tutorial, we're going to need a Nvidia [Jetson Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
 <div align="center">
     <img width={800} 
