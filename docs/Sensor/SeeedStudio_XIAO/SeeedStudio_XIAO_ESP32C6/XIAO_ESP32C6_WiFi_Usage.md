@@ -302,6 +302,10 @@ ESP32-C6 provides a wide range of WiFi network functions. Generally, we can see 
 
 The following is a sample program that uses the XIAO ESP32C6 to scan for nearby WiFi networks.
 
+:::info
+XIAO C6 Only supports the `2.4GHz` band.
+:::
+
 In your Arduino IDE, go to **File > Examples > WiFi > WiFiScan**. This will load a sketch that scans WiFi networks within the range of your XIAO ESP32C6.
 
 This can be useful to check if the WiFi network you’re trying to connect is within the range of your board or other applications. Your WiFi project may not often work because it may not be able to connect to your router due to insufficient WiFi strength.

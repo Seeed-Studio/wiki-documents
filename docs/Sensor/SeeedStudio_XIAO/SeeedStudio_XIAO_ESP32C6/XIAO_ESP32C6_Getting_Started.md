@@ -82,7 +82,7 @@ export const Highlight = ({children, color}) => (
             <td colspan="2">Complete 2.4GHz Wi-Fi subsystem</td>
         </tr>
         <tr>
-            <td>Bluetooth 5.0/ Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
         </tr>
@@ -122,7 +122,8 @@ export const Highlight = ({children, color}) => (
         </tr>
         <tr>
             <th>Charging battery current</th>
-            <td colspan="2" >350mA</td>
+            <td>100mA</td>
+            <td>350mA</td>
             <td>100mA</td>
         </tr>
         <tr>
@@ -166,13 +167,13 @@ export const Highlight = ({children, color}) => (
 
 <table align="center">
 	<tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
+	    <th>XIAO ESP32C6 indication diagram</th>
 	</tr>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 Sense Pin List</th>
+	    <th>XIAO ESP32C6 Pin List</th>
 	</tr>
     <tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
