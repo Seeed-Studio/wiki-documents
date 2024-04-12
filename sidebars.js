@@ -3608,6 +3608,8 @@ const sidebars = {
 
     'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
     'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
+    'Topics/Home_Assistant/Home_Assistant_Tutorials/sensecraft_homeassistant_userguide',
+
     {
       type: 'doc',
       id: 'Topics/TinyML/TinyML_Topic',
