@@ -58,6 +58,12 @@ The below image is for Orin NX 8GB
 
 **Step 6.** Remove the short-circuit wire
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="JP5.1.1" label="JP5.1.1">
+
 ## Download the system image package to the PC host
 
 Here we will use NVIDIA L4T 35.3.1 to install Jetpack 5.1.1 on the A608 Carrier Board with Jetson Orin NX module.
@@ -112,7 +118,66 @@ You will see the following output if the flashing process is successful.
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/flash.png" /></div>
 
 After flashing, power on Jetson Device again and log into the system.
+</TabItem>
+<TabItem value="JP5.1.2" label="JP5.1.2">
 
+## Download the system image package to the PC host
+
+Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the A608 Carrier Board with Jetson Orin NX module.
+
+**Step 1.** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3541) the NVIDIA drivers on the host PC. The required drivers are shown below:
+<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/5.1.2_P1.png" /></div>
+
+**Step 2.** [Download](https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A608/608_jp512.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4866749054&Signature=GavBxI%2Fe6tSG%2BTKECy4NNQ%2BtI7g%3D) peripheral drivers and put all the drivers in same folder.
+
+Now you will see three compressed files in the same folder:
+
+<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/5.1.2_P2.png" /></div>
+
+
+**Step 3.** Prepare system image.
+
+Open a terminal window on the host PC and run the following command：
+
+```sh
+cd <path to drivers>
+sudo apt install unzip 
+tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+cd Linux_for_Tegra/
+sudo ./apply_binaries.sh
+sudo ./tools/l4t_flash_prerequisites.sh
+cd ..
+unzip a608_jp512.zip
+cp -r ./608_jp512/Linux_for_Tegra/* ./Linux_for_Tegra/
+```
+
+**Step 4.** Flash the system to A608.
+
+- Flash to NVMe
+  ```sh
+  cd Linux_for_Tegra
+  sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit internal
+  ```
+- Flash to USB
+  ```sh
+  cd Linux_for_Tegra
+  sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit internal
+  ```
+- Flash to SD
+  ```sh
+  cd Linux_for_Tegra
+  sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device mmcblk1p1 -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit internal
+  ```
+
+You will see the following output if the flashing process is successful.
+
+<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/5.1.2_P3.png" /></div>
+
+After flashing, power on Jetson Device again and log into the system.
+
+</TabItem>
+</Tabs>
 
 ## Tech Support & Product Discussion
 
