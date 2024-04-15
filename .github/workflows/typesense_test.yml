@@ -1,11 +1,14 @@
 name: Typesense Docsearch Action
 
 on: 
-  schedule:
-    - cron: "0 2 15 * *"
-  push:
+  # schedule:
+  #   - cron: "0 2 15 * *"
+  # push:
+  #   branches:
+  #     - docusaurus-version
+   push:
     branches:
-      - docusaurus-version
+      - main
 
 jobs:
   scrape:
