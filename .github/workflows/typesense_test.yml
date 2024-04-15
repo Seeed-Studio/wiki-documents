@@ -3,6 +3,9 @@ name: Typesense Docsearch Action
 on: 
   schedule:
     - cron: "0 2 15 * *"
+  push:
+    branches:
+      - docusaurus-version
 
 jobs:
   scrape:
