@@ -101,6 +101,15 @@ If you find that the Grove Vision AI V2 is not recognised after connecting it to
 - Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
 - macOS Vendor VCP Driver: [CH34xSER_MAC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH341SER_MAC.ZIP)
 
+:::tip
+Usage on Linux, you need to add the following, the following is UBUNTU, other systems are similar, but will not list them
+```cpp
+sudo echo 'USBSYTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", MODE:="0666"' > /etc/udev/rules.d/99-grove-vision-ai.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger 
+```
+:::
+
 ### Bootloader Recovery Tool Manual
 
 This part describes how to recover the bootloader of the Grove Vision AI (WE2) module. The recovery tool is a software tool that can be used to recover the bootloader of the Grove Vision AI (WE2) module in case the bootloader is corrupted, or flash a new firmware to the Grove Vision AI (WE2) module.
