@@ -224,21 +224,17 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 
 #### Add the XIAO-C6 Board {#add-board}
 
-As of April 2, 2024, the most current stable release of Arduino-ESP32 is version `2.0.14`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
+As of April 16, 2024, the most current stable release of Arduino-ESP32 is version `2.0.15`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
 
 ```
 https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json
 ```
 
-<Tabs>
-<TabItem value="remove" label="Remove Existing Boards">
 
 if you've install the ESP32 board package before, you''ll need to remove it first.
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width: 640, height: 'auto'}}/></div>
 
-</TabItem>
-<TabItem value="install" label="Install New Boards" default>
 
 To install the XIAO ESP32C6 board, follow these steps:
 
@@ -250,48 +246,7 @@ To install the XIAO ESP32C6 board, follow these steps:
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
 
-Additionally, the latest development release version (`3.0.0-Alpha 3`) was released on December 5, 2023. However, it does not contain our [committed PR](https://github.com/espressif/arduino-esp32/pull/9330). You will need to manually set it up using the following resources:
-
-- [⬇️Download boards.txt](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/boards.txt) for XIAO-C6 board information.
-- [⬇️Download the XIAO ESP32C6 board package](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32C6.zip) for the board variant information.
-
-Replace the `boards.txt` and `XIAO_ESP32C6` folder in the following paths based on your operating system:
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-
-<TabItem value="Windows" label="Windows" default>
-    
-For Windows, the default storage path for the ESP32 onboard package is:
-
-`C:\Users\$USERNAME$\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.0-alpha3`
-
-Copy the downloaded **boards.txt** file to the above path, replacing the existing one. Then, navigate to the **variants folder** and copy the **XIAO_ESP32C6 folder** into it.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants_board.png" style={{width: 480, height: 'auto'}}/></div>
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants.png" style={{width: 480, height: 'auto'}}/></div>
-
-</TabItem>
-
-<TabItem value="MacOS" label="MacOS">
-For MacOS, the default storage path for the ESP32 onboard package is:
-
-`~/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3`
-
-Follow the same steps as for Windows: replace the existing **boards.txt** file with the one you downloaded and add the **XIAO_ESP32C6 folder** to the **variants folder**.
-
-</TabItem>
-
-</Tabs>
-
-</TabItem>
-
-</Tabs>
-
-
+Additionally, the latest development release version (`3.0.0-rc1`) was released on April, 2024. And has supported XIAO ESP32C6.
 
 ## Run your first Blink program
 
@@ -313,6 +268,12 @@ Once the program is successfully uploaded, you will see the following output mes
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6-blink.gif" style={{width:400, height:'auto'}}/></div></td>
 	</tr>
 </table>
+
+## Resources
+
+- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
+
+- **[PDF]** [Seeed Studio XIAO ESP32C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
 
 ## Tech Support & Product Discussion
