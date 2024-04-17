@@ -135,7 +135,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'AI-powered',
-              items: [        
+              items: [
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
                 {
                   type: 'category',
@@ -154,7 +154,7 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-himax-sdk',
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-sensecap-app',
                   ],
-                },    
+                },
                 'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
                 'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
@@ -723,10 +723,10 @@ const sidebars = {
                    ],
           },
           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/FAQ',
-          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Firmware_release_note',          
+          'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Firmware_release_note',
               ],
         },
-        
+
         {
           type: 'category',
           label: 'SenseCAP Sensor',
@@ -742,7 +742,7 @@ const sidebars = {
               type: 'category',
               label: 'SenseCAP LoRaWAN Sensor',
 
-              items: [  
+              items: [
                 {
                   type: 'category',
                   label: 'SenseCAP S210X Series',
@@ -987,6 +987,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
               ],
             },
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-Zephyr-RTOS',
             {
               type: 'category',
               label: 'Embedded ML',
@@ -2088,7 +2089,7 @@ const sidebars = {
             },
           ],
         },
-        
+
         {
           type: 'category',
           label: 'Helium Gateway',
@@ -2367,7 +2368,7 @@ const sidebars = {
           'Network/RK_Devices/H28K/H28K-install-system',
         ],
       },
-  
+
       ],
     },
 
@@ -2434,13 +2435,13 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal-hardware-interfaces-usage',
               'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal-piCam',
               'Edge/Raspberry_Pi_Devices/reTerminal/reTerminal-FAQ',
-              
+
               {
                 type: 'category',
                 label: 'Application',
                 items: [
-                  
-      
+
+
                   {
                     type: 'category',
                     label: 'Home Assistant',
@@ -2471,7 +2472,7 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Shape_detection',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM-tracking',
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/OpenCV/reTerminal_DM_Object_detection',
-                      
+
                     ],
                   },
                   {
@@ -2537,7 +2538,7 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
                 ],
               },
-      
+
               {
                 type: 'category',
                 label: 'Home-Assistant',
@@ -2599,7 +2600,7 @@ const sidebars = {
           },
 
         ],
-      
+
       },
       {
         type: 'category',
@@ -2633,9 +2634,9 @@ const sidebars = {
           },
         ],
       },
-        
+
       ],
-        
+
 
 
 
@@ -2731,7 +2732,7 @@ const sidebars = {
             //   type: 'category',
             //   label: 'J202',
             //   items: [
-                
+
             //   ],
             // },
 
@@ -2739,7 +2740,7 @@ const sidebars = {
             //   type: 'category',
             //   label: 'J401',
             //   items: [
-              
+
             //   ],
             // },
 
@@ -2775,7 +2776,7 @@ const sidebars = {
                 {
                   type: 'category',
                   label: 'reComputer J1010',
-                  items: [ 
+                  items: [
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/reComputer_J1010_with_Jetson_getting_start',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J101_Enable_SD_Card',
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J10/reComputer_J1010/J1010_Boot_From_SD_Card',
@@ -2837,7 +2838,7 @@ const sidebars = {
 
 
         ]},
-        
+
         {
           type: 'category',
           label: 'Other Devices',
@@ -2948,7 +2949,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
           ]}
 
-          
+
         // {
         //   type: 'category',
         //   label: 'reComputer Industrial',
@@ -3713,7 +3714,7 @@ const sidebars = {
           ]
         },
 
-        
+
       ],
     },
 
@@ -4140,7 +4141,7 @@ const sidebars = {
         'zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-grove-vision-ai-v2-himax-sdk',
         'zh-CN/Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/cn-grove-vision-ai-v2-sensecap-app',
       ],
-    },    
+    },
 
     {
       type: 'doc',
@@ -4354,7 +4355,7 @@ const sidebars = {
          },
        ],
      },
- 
+
      {
       type: 'category',
       label: 'XIAO 的兼容扩展板',
