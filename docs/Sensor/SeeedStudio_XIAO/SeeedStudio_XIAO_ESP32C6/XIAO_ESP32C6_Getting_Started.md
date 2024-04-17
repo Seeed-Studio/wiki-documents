@@ -1,13 +1,14 @@
 ---
-title: Getting Started with Seeed Studio XIAO ESP32C6
 description: Getting Started with Seeed Studio XIAO ESP32C6.
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+title: Getting Started with Seeed Studio XIAO ESP32C6
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991254-seeedxiao-esp32c6-font.jpg
 keywords:
 - XIAO
 - ESP32C6
+- Seeeduino
 slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
-sidebar_position: 0
+sidebar_position: 1
 last_update:
   date: 04/02/2024
   author: Spencer
@@ -41,13 +42,24 @@ Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC](htt
 
 XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. The wireless stack supports **2.4 GHz WiFi 6, Bluetooth® 5.3, Zigbee, and Thread (802.15.4)**. As the first XIAO member compatible with Thread, it's a perfect fit for building Matter-compliant projects, thus achieving interoperability in smart-home.
 
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
 
 ## Specifications comparison
 <table class="sp-table-c6">
     <thead>
         <tr>
             <th colspan="2">Products</th>
-            <th class="highlight-cell">XIAO ESP32C6</th>
+            <th><Highlight color="#92c52a">XIAO ESP32C6</Highlight></th>
             <th>XIAO ESP32C3</th>
             <th>XIAO ESP32S3</th>
         </tr>
@@ -70,7 +82,7 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
             <td colspan="2">Complete 2.4GHz Wi-Fi subsystem</td>
         </tr>
         <tr>
-            <td>Bluetooth 5.0/ Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
         </tr>
@@ -110,7 +122,8 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
         </tr>
         <tr>
             <th>Charging battery current</th>
-            <td colspan="2" >350mA</td>
+            <td>100mA</td>
+            <td>350mA</td>
             <td>100mA</td>
         </tr>
         <tr>
@@ -152,15 +165,15 @@ XIAO ESP32C6 is **Matter native thanks to its enhanced wireless connectivity**. 
 
 ## Hardware overview
 
-<table>
+<table align="center">
 	<tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
+	    <th>XIAO ESP32C6 indication diagram</th>
 	</tr>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 Sense Pin List</th>
+	    <th>XIAO ESP32C6 Pin List</th>
 	</tr>
     <tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
@@ -206,7 +219,7 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 <br></br>
 
 - **Step 2.** Launch the Arduino application.
-- **[Step 3](#add-board).**  Add the XIAO ESP32C6 on-board package to the Arduino IDE and click `OK.
+- **[Step 3](#add-board).**  Add the XIAO ESP32C6 on-board package to the Arduino IDE and click `OK`.
 - **Step 4.** Close the Arduino IDE and reopen it.
 
 #### Add the XIAO-C6 Board {#add-board}
@@ -237,7 +250,7 @@ To install the XIAO ESP32C6 board, follow these steps:
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
 
-Additionally, the latest development release version (3.0.0-Alpha 3) was released on December 5, 2023. However, it does not contain our [committed PR](https://github.com/espressif/arduino-esp32/pull/9330). You will need to manually set it up using the following resources:
+Additionally, the latest development release version (`3.0.0-Alpha 3`) was released on December 5, 2023. However, it does not contain our [committed PR](https://github.com/espressif/arduino-esp32/pull/9330). You will need to manually set it up using the following resources:
 
 - [⬇️Download boards.txt](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/boards.txt) for XIAO-C6 board information.
 - [⬇️Download the XIAO ESP32C6 board package](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32C6.zip) for the board variant information.

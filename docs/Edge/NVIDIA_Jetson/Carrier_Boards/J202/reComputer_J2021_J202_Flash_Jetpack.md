@@ -1,6 +1,6 @@
 ---
 description: reComputerJ2021 | J202
-title: reComputerJ1020v2, J20 Series| J202
+title: J202 carrier Board
 keywords:
   - Edge
   - reComputer JetPack™_OS_Installation
@@ -14,7 +14,7 @@ no_comments: false # for Disqus
 
 ---
 
-# Flash JetPack to reComputer J1020v2, J20 Series (J202 carrier board)
+# J202 carrier board
 
 In this wiki, we will show you how to flash Jetpack OS to reComputer J2021. Since the carrier board of it is designed like the offical NVIDIA Xavier Developer Carrier Board, we can flash the JetPack in two ways.
 

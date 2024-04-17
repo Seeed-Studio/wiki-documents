@@ -494,17 +494,17 @@ const config = {
       typesense: {
         // Replace this with the name of your index/collection.
         // It should match the "index_name" entry in the scraper's "config.json" file.
-        typesenseCollectionName: 'wiki_platform_1710811891',
+        typesenseCollectionName: 'wiki_platform_1713169217',
   
         typesenseServerConfig: {
           nodes: [
             {
-              host: 'sc4dhrl167jef08yp-1.a1.typesense.net',
-              port: 443,
+              host: 'search.seeedstudio.com',
+              // port: 443,
               protocol: 'https',
             },
           ],
-          apiKey: 'tZeviMFB90nx6Pr73crt8b2UfNcGQFp5',
+          apiKey: '8PLswS2rm57hWDBD56OlqDznBrx74SZJ',
         },
               // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
       typesenseSearchParameters: {},

@@ -355,21 +355,24 @@ You will see the following output when flashing is successful
 
 - **[PDF]** [Seeed Studio XIAO ESP32C3 Schematic](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
 
+- **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf)
+
 - **[ZIP]** [Seeed Studio XIAO ESP32C3 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-KiCAD-Library.zip)
 
 - **[ZIP]** [Seeed Studio XIAO ESP32C3 Eagle Libraries](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-v1.2_SCH-PCB.zip)
+
+- **[ZIP]** [Seeed Studio XIAO ESP32C3 Factory firmware](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin)
+
+- **[ZIP]** [Seeed Studio XIAO ESP32C3 Certification files](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-Certification.zip)
 
 - **[DXF]** [Seeed Studio XIAO ESP32C3 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip)
 
 - **[LBR]** [Seeed Studio XIAO ESP32C3 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeed-Studio-XIAO-ESP32C3-footprint-eagle.lbr)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C3 Factory firmware](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin)
-
 - **[XLSX]** [Seeed Studio XIAO ESP32C3 pinout sheet](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx)
 
 - **[STEP]** [Seeed Studio XIAO ESP32C3 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C3 Certification files](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-Certification.zip)
 - **[GitHub]** [Seeed Studio XIAO ESP32C3 MicroPython Library](https://github.com/IcingTomato/micropython_xiao_esp32c3)
 
 - <a href="https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html" target="_blank"><span>Platform IO for Seeed Studio XIAO ESP32</span></a>
