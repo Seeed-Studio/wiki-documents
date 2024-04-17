@@ -2476,6 +2476,14 @@ const sidebars = {
                       'Edge/Raspberry_Pi_Devices/reTerminal/Application/Embedded_ML/reTerminal_ML_Edgeimpulse',
                     ],
                   },
+                  {
+                    type: 'category',
+                    label: 'Managed Services',
+                    items: [
+                      'Edge/Raspberry_Pi_Devices/reTerminal/Application/Managed_Services/neqto_engine_for_linux_reTerminal',
+          
+                    ],
+                  },
                   'Edge/Raspberry_Pi_Devices/reTerminal/Application/Mender-Client-reTerminal',
                 ],
               },
