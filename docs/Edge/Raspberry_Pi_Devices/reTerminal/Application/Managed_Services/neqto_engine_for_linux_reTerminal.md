@@ -1,6 +1,6 @@
 ---
 description: Getting started of NEQTO Engine for Linux on reTerminal
-title: Getting started of NEQTO Engine for Linux on reTermianl
+title: Getting started of NEQTO Engine for Linux on reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /neqto_engine_for_linux_reTerminal
 last_update:
