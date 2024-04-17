@@ -61,11 +61,15 @@ Once you have the Grove Vision AI V2 and camera ready to go, then you can connec
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/9.gif" style={{width:600, height:'auto'}}/></div>
 
-<!-- :::caution
+:::caution
+
+<!-- 'Before', it's d type Device, but will make it work in the future -->
 Users who purchased Grove Vision AI V2 before February 21, 2024, do not have support for Raspberry Pi cameras. However, users who purchase after this date will have added support for those specific models that support images.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/cameraList.png" style={{width:1000, height:'auto'}}/></div>
-::: -->
+:::
+
+
 
 ## Boot / Reset / Flashed Driver
 
@@ -100,6 +104,15 @@ If you find that the Grove Vision AI V2 is not recognised after connecting it to
 - Windows CDC driver one-click installer: [CH343CDC.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343CDC.EXE)
 - Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
 - macOS Vendor VCP Driver: [CH34xSER_MAC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH341SER_MAC.ZIP)
+
+:::tip
+Usage on Linux, you need to add the following, the following is UBUNTU, other systems are similar, but will not list them
+```cpp
+sudo echo 'USBSYTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", MODE:="0666"' > /etc/udev/rules.d/99-grove-vision-ai.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger 
+```
+:::
 
 ### Bootloader Recovery Tool Manual
 
