@@ -61,11 +61,15 @@ Once you have the Grove Vision AI V2 and camera ready to go, then you can connec
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/9.gif" style={{width:600, height:'auto'}}/></div>
 
-<!-- :::caution
+:::caution
+
+<!-- 'Before', it's d type Device, but will make it work in the future -->
 Users who purchased Grove Vision AI V2 before February 21, 2024, do not have support for Raspberry Pi cameras. However, users who purchase after this date will have added support for those specific models that support images.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/cameraList.png" style={{width:1000, height:'auto'}}/></div>
-::: -->
+:::
+
+
 
 ## Boot / Reset / Flashed Driver
 
