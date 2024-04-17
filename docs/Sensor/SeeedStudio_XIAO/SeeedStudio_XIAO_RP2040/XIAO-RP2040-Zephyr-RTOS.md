@@ -71,8 +71,6 @@ To assist with the process of using Zephyr with Xiao and its expansion board a r
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 ```
 
-Additional sample projects will be placed in this same applications folder and further modified as we will need to alter them to allow for USB console support to connect for serial output.
-
 ## Hardware Preparation
 
 If you want to follow this tutorial through everything, you will need to prepare the following.
@@ -115,56 +113,6 @@ If you want to follow this tutorial through everything, you will need to prepare
   You need to follow the graphic below to use the appropriate internal pin numbers when connecting the Grove modules to the Grove connectors on Grove Shield for Seeed Studio XIAO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg"style={{width:900, height:'auto'}}/></div>
-
-### Enabling Xiao RP2040 as a USB serial device
-
-In order to make the Xiao RP2040 available for serial connectivity you will need to modify examples to enable the USB features. The following steps can be followed to perform these modifications to get an example ready for console use. You will be referenced back to this section several times throughout this documentation as you progress through the examples.
-
-To do this we'll need to make two modifications:
-1. Adjust the prj.conf to include additional ENV variables
-2. Enable USB from your application
-
-#### Adjust the prj.conf by adding the following variables:
-```
-CONFIG_USB_DEVICE_STACK=y
-CONFIG_USB_DEVICE_PRODUCT="Xiao RP2040"
-CONFIG_USB_DEVICE_PID=0x0004
-CONFIG_USB_DEVICE_INITIALIZE_AT_BOOT=n
-CONFIG_UART_LINE_CTRL=y
-```
-
-#### Enable USB for your application by editing `main.c`:
-
-Add the following include:
-```
-#include <zephyr/usb/usb_device.h>
-```
-
-In your main method add the following line:
-```
-	if (usb_enable(NULL)) {
-		return 0;
-	}
-```
-
-#### app.overlay changes to support USB console
-
-For the examples used in this article we'll be relying on an overlay we have prepared as part of the example additional files we had you previously download. This overlay enables the USB console.
-
-If you want to make the changes yourself to support Xiao RP2040 with USB console enabled you will need the follow in your app.overlay:
-```
- / {
-	chosen {
-		zephyr,console = &cdc_acm_uart0;
-	};
-};
-
-&zephyr_udc0 {
-	cdc_acm_uart0: cdc_acm_uart0 {
-		compatible = "zephyr,cdc-acm-uart";
-	};
-};
-```
 
 ### Primary Functionality
 
@@ -279,18 +227,10 @@ In this case the PWM is using the configured devicetree pwm LED which is associa
 
 #### Clock
 
-For this example we're going to copy the clock sample and adjust it such that the console will display the output.
-
+For this we'll use an existing sample and our console overlay:
 ```
-cp -r ~/zephyrproject/zephyr/samples/drivers/counter/alarm ~/zephyrproject/applications/counter_alarm
-cd ~/zephyrproject/applications/counter_alarm
-```
-
-To start we'll enable the USB console. Please refer to the modifications to support USB console output listed above in the "Enabling Xiao RP2040 as a USB serial device" section.
-
-Now build the project:
-```
-west build -p always -b xiao_rp2040 . -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/xiao-zephyr-examples/xiao-rp2040/console.overlay
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
 ```
 
 You can find the uf2 file at `~/zephyrproject/applications/counter_alarm/build/zephyr/zephyr.uf2`
@@ -329,18 +269,11 @@ west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
-For this example we're going to copy the tflite "Hello World" sample and adjust it such that the console will display the output.
+For this example we're going to use the sample tflite "Hello World" along with our console overlay and conf to read the response over USB serial.
 
 ```
-cp -r ~/zephyrproject/zephyr/samples/modules/tflite-micro/hello_world ~/zephyrproject/applications/tflite_hello_world
-cd ~/zephyrproject/applications/tflite_hello_world
-```
-
-To start we'll enable the USB console. Please refer to the modifications to support USB console output listed above in the "Enabling Xiao RP2040 as a USB serial device" section.
-
-Now build the project:
-```
-west build -p always -b xiao_rp2040 . -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/xiao-zephyr-examples/xiao-rp2040/console.overlay
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
 ```
 
 You can find the uf2 file at `~/zephyrproject/applications/tflite_hello_world/build/zephyr/zephyr.uf2`
@@ -436,17 +369,11 @@ The associated configuration file enables the OLED screen to properly render by 
 
 #### Grove - Expansion Board - Button
 
-To test this setup we can use an existing sample with Zephyr which we will modify to enable USB console support.
+To test this setup we can use an existing sample with Zephyr which we will use along with the USB console overlay and conf.
 
 ```
-cp -r ~/zephyrproject/zephyr/samples/basic/button ~/zephyrproject/applications/basic_button
-cd ~/zephyrproject/applications/basic_button
-```
-
-To start we'll enable the USB console. Please refer to the modifications to support USB console output listed above in the "Enabling Xiao RP2040 as a USB serial device" section.
-
-```
-west build -p always -b xiao_rp2040 . -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/xiao-zephyr-examples/xiao-rp2040/xiao-expansion.overlay $(dirname $(pwd))/xiao-zephyr-examples/xiao-rp2040/console.overlay"
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_rp2040 samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/xiao-expansion.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
 ```
 
 After uploading the uf2 file connect to monitor:
@@ -497,17 +424,11 @@ First solder on pins and connect your Xiao RP2040 to the expansion board. Then c
 
 <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div>
 
-To test this setup we can use an existing sample with Zephyr which we will modify to enable USB console support.
+To test this setup we can use an existing sample with Zephyr which we will enable USB console support with our overlay and conf.
 
 ```
-cp -r ~/zephyrproject/zephyr/samples/sensor/sht3xd ~/zephyrproject/applications/sht3xd
-cd ~/zephyrproject/applications/sht3xd
-```
-
-To start we'll enable the USB console. Please refer to the modifications to support USB console output listed above in the "Enabling Xiao RP2040 as a USB serial device" section.
-
-```
-west build -p always -b xiao_rp2040 . -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/xiao-zephyr-examples/xiao-rp2040/sht31.overlay $(dirname $(pwd))/xiao-zephyr-examples/xiao-rp2040/console.overlay"
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_rp2040 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
 ```
 
 After uploading the uf2 file connect to monitor:
