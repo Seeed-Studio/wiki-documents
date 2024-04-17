@@ -36,13 +36,10 @@ The other CSI cameras are theoretically supported, but due to the fact that some
 - [IMX390 2.12MP 118°(H) FOV 4-lane MIPI CSI Camera](https://www.seeedstudio.com/IMX390-2-12MP-118-H-FOV-4-lane-MIPI-CSI-Camera-p-5708.html)
 - [IMX219 M12/CS mount CMOS Camera Module](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
 
-:::caution
-
 <!-- 'Before', it's d type Device, but will make it work in the future -->
 Grove Vision AI V2 now supports Raspberry Pi cameras for users who purchase after February 21, 2024. However, users who purchased before this date currently do not have support for these specific camera models that work with image input. The team is actively working on a solution to extend this functionality to early purchasers as well.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/cameraList.png" style={{width:1000, height:'auto'}}/></div>
-:::
 
 ## Resources
 
