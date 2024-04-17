@@ -104,8 +104,12 @@ We can see that in the Preview Settings on the right hand side, there are two se
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/iou.gif" style={{width:600, height:'auto'}}/></div>
 
-At this point, you have finished uploading the model and observing the results.
+:::tip
+- **Confidence:** This tells you how sure the computer vision model is about its guess. Think of it like a percentage: higher confidence means the model is more certain.
+- **IoU (Intersection over Union):** This measures how much overlap there is between two boxes. Imagine you drew a box around an object in a picture, and the model also drew a box. IoU tells you how well your boxes match up. Higher IoU means the boxes are closer together.
+:::
 
+At this point, you have finished uploading the model and observing the results.
 
 ## <span id="jump4"> Program on Arduino connecting with Seeed Studio XIAO Board </span>
 
