@@ -233,7 +233,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
 ```
 
-You can find the uf2 file at `~/zephyrproject/applications/counter_alarm/build/zephyr/zephyr.uf2`
+You can find the uf2 file at `~/zephyrproject/zephyr/build/zephyr/zephyr.uf2`
 
 After uploading the uf2 file connect to monitor (after quickly resetting your board to ensure it restarts):
 ```
@@ -276,7 +276,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
 ```
 
-You can find the uf2 file at `~/zephyrproject/applications/tflite_hello_world/build/zephyr/zephyr.uf2`
+You can find the uf2 file at `~/zephyrproject/zephyr/build/zephyr/zephyr.uf2`
 
 After uploading the uf2 file connect to monitor:
 ```
