@@ -488,6 +488,12 @@ In the `loop()` function:
 
 This setup allows for interactive communication with the Grove Vision AI V2 module, enabling users to send instructions to and receive data from the module over a serial connection.
 
+
+## Resources
+- [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/home)
+- [SenseCraft AI Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process)
+- [Arduino Library for XIAO](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA)
+
 ## Troubleshooting
 
 ### Q1: Why can't I see the recognised result on the port after I successfully upload the code of Demo1 using XIAO ESP32C3?
