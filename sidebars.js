@@ -135,8 +135,21 @@ const sidebars = {
             {
               type: 'category',
               label: 'AI-powered',
-              items: [
-                'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module',
+              items: [        
+                {
+                  type: 'category',
+                  label: 'Grove Vision AI',
+                  collapsed: true,
+                  collapsible: true,
+                  link: {
+                    type: "doc",
+                    id: "Sensor/Grove/Grove_Sensors/AI-powered/Grove-Vision-AI-Module"
+                  },
+                  items: [
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
+                  ],
+                },
                 {
                   type: 'category',
                   label: 'Grove Vision AI V2',
@@ -148,15 +161,20 @@ const sidebars = {
                   },
                   items: [
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-software-supported',
-                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove_vision_ai_v2_sscma',
-                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-ha',
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Grove-vision-ai-v2-camera-supported',
-                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-himax-sdk',
-                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove-vision-ai-v2-sensecap-app',
+                    'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove_vision_ai_v2_sscma',
+                    {
+                      type: 'category',
+                      label: 'Application',
+                      items: [
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-himax-sdk',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-sensecap-app',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-ha',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
+                      ],
+                    },
                   ],
                 },
-                'Sensor/Grove/Grove_Sensors/AI-powered/Train-Deploy-AI-Model-Grove-Vision-AI',
-                'Sensor/Grove/Grove_Sensors/AI-powered/edge-impulse-vision-ai',
                 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-Gesture_sensor_paj7660',
                 // 'Sensor/Grove/Grove_Sensors/AI-powered/Gesture_control_music_application',
               ],
