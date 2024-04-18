@@ -195,7 +195,7 @@ Please turn on the MQTT button and enter the following information that you need
 
 - **SSID & Password**: The name and password of the network you want XIAO to connect to. XIAO only supports 2.4G WiFi, 5G network is not available.
 
-Please fill in the network configuration according to the device information of the Grove Vision AI V2 that we have added by SenseCAP in **[Step 3](#step-3-add-device)**. The difference is that the port number needs to be changed to **8883**. and the **SSL** button needs to be turned on.
+Please fill in the network configuration according to the device information of the Grove Vision AI V2 that we have added by SenseCAP in **[Step 3](#step-3-add-device)**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/23.png" style={{width:1000, height:'auto'}}/></div>
 
