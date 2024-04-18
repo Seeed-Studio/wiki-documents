@@ -318,3 +318,16 @@ After adding the device to the overview, we have completed all the process of ad
 
 Home Assistant is a very powerful smart home open source system, we can connect a variety of devices to this platform, the smart home ecology becomes larger and larger, you can imagine using XIAO can control Apple HomePod? Through this tutorial, we have connected XIAO to the Home Assistant, and this is just the beginning. Similarly, we can connect the key sensor to the Home Assistant to achieve more interesting functions, and the whole smart home ecology will become bigger and bigger.
 
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
