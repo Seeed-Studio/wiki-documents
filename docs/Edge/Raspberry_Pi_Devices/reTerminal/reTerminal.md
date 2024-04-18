@@ -652,9 +652,19 @@ sudo reboot
 sudo ./scripts/reTerminal.sh
 ```
 
+:::note
+
+Type the following if you don't want to upgrade the kernel at the same time:
+
+```sh
+sudo ./scripts/reTerminal.sh --keep-kernel
+```
+:::
+
 You will see the following output if you have successfully installed the drivers
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"/></p>
+
 
 - **Step 4.** Reboot the reTerminal
 
