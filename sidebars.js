@@ -2348,6 +2348,20 @@ const sidebars = {
       },
       {
         type: 'category',
+        label: 'LinkStar-H68K-V2',
+        collapsed: true,
+        collapsible: true,
+        link: {
+          type: "doc",
+          id: 'Network/RK_Devices/LinkStar/Linkstar_Intro',
+        },
+        items: [
+          'Network/RK_Devices/H68K_V2/H68KV2_Datasheet',
+          'Network/RK_Devices/H68K_V2/H68KV2_install_system',
+        ],
+      },
+      {
+        type: 'category',
         label: 'LinkStar-H28K',
         collapsed: true,
         collapsible: true,
