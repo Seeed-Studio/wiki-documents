@@ -483,7 +483,7 @@ First connect your board to the LCD screen using the following image as a guide 
 Next with the hardware prepared we can build the uf2 file for flashing:
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/240x280_st7789v2.conf
+west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
 When this completes, move the build file from `build/zephyr/zephyr.uf2` to the mounted Xiao RP2040 (remember you can hold the boot button down while plugging in to enter this state) which will reset the device with the new firmware.
