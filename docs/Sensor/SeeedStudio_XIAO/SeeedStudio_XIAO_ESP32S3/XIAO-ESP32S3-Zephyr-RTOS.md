@@ -183,7 +183,6 @@ Num  | SSID                             (len) | Chan (Band)   | RSSI | Security 
 ```
 
 Let's dive into this example a bit to see why it works:
-(Note: the Xiao ESP32S3 is supported specifically by this example so we don't need a custom overlay or conf to load up the file.)
 ```
 &wifi {
 	status = "okay";
@@ -265,7 +264,7 @@ Additional information about TFLite is outside of the scope of this guide but th
 To test this setup we can use an existing sample with Zephyr:
 
 ```
-west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-expansion.overlay DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/samples.conf
+west build -p always -b xiao_esp32s3 samples/drivers/display --  -DSHIELD=seeed_xiao_expansion_board
 west flash
 ```
 
@@ -279,7 +278,7 @@ Let's dive into this example a bit to see why it works:
     };
 };
 
-&i2c0 {
+&xiao_i2c {
   status = "okay";
 
   ssd1306: ssd1306@3c {
@@ -299,22 +298,15 @@ Let's dive into this example a bit to see why it works:
 
 ```
 
-The app overlay file in this example sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
+The shield sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
 
-```
-CONFIG_LV_Z_VDB_SIZE=64
-CONFIG_LV_COLOR_DEPTH_1=y
-CONFIG_I2C=y
-```
-
-The associated configuration file enables the OLED screen to properly render by setting its depth to 1 and enabling I2C for the project.
 
 #### Grove - Expansion Board - Button
 
 To test this setup we can use an existing sample with Zephyr:
 
 ```
-west build -p always -b xiao_esp32s3 samples/basic/button -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-expansion.overlay
+west build -p always -b xiao_esp32s3 samples/basic/button -- -DSHIELD=seeed_xiao_expansion_board
 west flash
 west espressif monitor
 ```
@@ -341,22 +333,23 @@ Let's dive into this example a bit to see why it works:
 ```
 / {
     aliases {
-		sw0 = &button0;
+      sw0 = &xiao_button0;
     };
 
     buttons {
-            compatible = "gpio-keys";
-            button0: button_0 {
-                gpios = <&gpio0 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-                label = "Expansion Board Button";
-            };
+      compatible = "gpio-keys";
+      xiao_button0: button_0 {
+        gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        label = "SW0";
+        zephyr,code = <INPUT_KEY_0>;
+      };
     };
 };
 ```
 
-The app overlay file is used to setup various board components. Using this file the button example can be utilized as the overlay allows the Zephyr to configure the button and make it available for the associated code.
+The shield / overlay file is used to setup various board components. Using this file the button example can be utilized as the overlay allows the Zephyr to configure the button and make it available for the associated code.
 
-In this case GPIO 2 corresponds with Pin A1/D1 on the Xiao ESP32S3. It is setup in this overlay to act as a button and is aliased to the sw0 name to allow it to be used for the sample which has code expecting this.
+In this case D1 on the Xiao ESP32S3. It is setup in this overlay to act as a button and is aliased to the sw0 name to allow it to be used for the sample which has code expecting this.
 
 
 #### Grove - Temperature and Humidity Sensor (SHT31)
@@ -390,7 +383,7 @@ SHT3XD: 25.84 Cel ; 53.16 %RH
 
 Let's dive into this example a bit to see why it works:
 ```
- &i2c0 {
+ &xiao_i2c {
 	sht3xd@44 {
 			compatible = "sensirion,sht3xd";
 			reg = <0x44>;
