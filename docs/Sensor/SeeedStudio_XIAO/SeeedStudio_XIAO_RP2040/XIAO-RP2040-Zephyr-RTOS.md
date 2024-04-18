@@ -73,11 +73,9 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 
 ## Hardware Preparation
 
-If you want to follow this tutorial through everything, you will need to prepare the following.
-
 <table align="center">
   <tbody><tr>
-      <th>Seeed Studio XIAO RP2040 Sense</th>
+      <th>Seeed Studio XIAO RP2040</th>
       <th>Seeed Studio Expansion Board</th>
     </tr>
     <tr>
@@ -116,12 +114,10 @@ If you want to follow this tutorial through everything, you will need to prepare
 
 ### Primary Functionality
 
-<ul>
-  <li>WS2812 LED</li>
-  <li>LED PWM</li>
-  <li>Clock</li>
-  <li>TFLite</li>
-</ul>
+- WS2812 LED
+- LED PWM
+- Clock
+- TFLite
 
 #### WS2812 LED
 
@@ -309,12 +305,10 @@ x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 
 ### Additional Components
 
-<ul>
-  <li>[Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C Display</li>
-  <li>[Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Button</li>
-  <li>[Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)</li>
-  <li>[1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)</li>
-</ul>
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C Display
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Button
+- [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
+- [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
 
 #### Grove - Expansion Board - I2C Display
 
