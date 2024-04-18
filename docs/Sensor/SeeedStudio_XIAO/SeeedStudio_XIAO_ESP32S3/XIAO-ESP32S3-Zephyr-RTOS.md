@@ -422,7 +422,7 @@ First connect your board to the LCD screen using the following image as a guide 
 We can now build and flash the firmware:
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-esp32s3/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-esp32s3/240x280_st7789v2.conf
+west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 west flash
 ```
 
