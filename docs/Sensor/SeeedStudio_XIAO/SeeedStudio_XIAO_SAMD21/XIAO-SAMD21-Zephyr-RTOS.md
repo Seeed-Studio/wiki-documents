@@ -254,7 +254,7 @@ Double press RESET or short the RST pin to the GND.
 west flash
 ```
 
-After your Xiao resets you should not be able to control the left mouse button via the button on your expansion board. Try hovering over some text and double clicking the button quickly. You'll see the text get highlighted in a similar manner as if you were to use your normal mouse to left click. You'll also notice the onboard LED lights up when you click the button as the sample also relies on an LED being set in the devicetree.
+After your Xiao resets you should now be able to control the left mouse button via the button on your expansion board. Try hovering over some text and double clicking the button quickly. You'll see the text get highlighted in a similar manner as if you were to use your normal mouse to left click. You'll also notice the onboard LED lights up when you click the button as the sample also relies on an LED being set in the devicetree.
 
 Additional buttons can be configured for use with the sample as it allows for up to 4 buttons to be configured to trigger both buttons and direction for the mouse for sample purposes.
 
