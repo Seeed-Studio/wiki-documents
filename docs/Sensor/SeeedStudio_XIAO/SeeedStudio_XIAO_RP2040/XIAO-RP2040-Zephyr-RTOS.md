@@ -230,7 +230,7 @@ In this case the PWM is using the configured devicetree pwm LED which is associa
 For this we'll use an existing sample and our console overlay:
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
+west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
 You can find the uf2 file at `~/zephyrproject/applications/counter_alarm/build/zephyr/zephyr.uf2`
@@ -273,7 +273,7 @@ For this example we're going to use the sample tflite "Hello World" along with o
 
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
+west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
 You can find the uf2 file at `~/zephyrproject/applications/tflite_hello_world/build/zephyr/zephyr.uf2`
@@ -324,7 +324,7 @@ To test this setup we can use an existing sample with Zephyr:
 
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/xiao-expansion.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/samples.conf
+west build -p always -b xiao_rp2040 samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
 You'll see a display showing multiple black boxes and a blinking box in the corner given this display only supports two colors.
@@ -337,7 +337,7 @@ Let's dive into this example a bit to see why it works:
     };
 };
 
-&i2c1 {
+&xiao_i2c {
   status = "okay";
 
   ssd1306: ssd1306@3c {
@@ -357,15 +357,7 @@ Let's dive into this example a bit to see why it works:
 
 ```
 
-The app overlay file in this example sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
-
-```
-CONFIG_LV_Z_VDB_SIZE=64
-CONFIG_LV_COLOR_DEPTH_1=y
-CONFIG_I2C=y
-```
-
-The associated configuration file enables the OLED screen to properly render by setting its depth to 1 and enabling I2C for the project.
+The shield overlay file in this example sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
 
 #### Grove - Expansion Board - Button
 
@@ -373,7 +365,7 @@ To test this setup we can use an existing sample with Zephyr which we will use a
 
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_rp2040 samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/xiao-expansion.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
+west build -p always -b xiao_rp2040 samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf -DSHIELD=seeed_xiao_expansion_board
 ```
 
 After uploading the uf2 file connect to monitor:
@@ -400,15 +392,16 @@ Let's dive into this example a bit to see why it works:
 ```
 / {
     aliases {
-		sw0 = &button0;
+      sw0 = &xiao_button0;
     };
 
     buttons {
-            compatible = "gpio-keys";
-            button0: button_0 {
-                gpios = <&gpio0 27 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-                label = "Expansion Board Button";
-            };
+      compatible = "gpio-keys";
+      xiao_button0: button_0 {
+        gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        label = "SW0";
+        zephyr,code = <INPUT_KEY_0>;
+      };
     };
 };
 ```
@@ -428,7 +421,7 @@ To test this setup we can use an existing sample with Zephyr which we will enabl
 
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_rp2040 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/console.conf
+west build -p always -b xiao_rp2040 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
 After uploading the uf2 file connect to monitor:
@@ -451,7 +444,7 @@ SHT3XD: 26.24 Cel ; 52.30 %RH
 
 Let's dive into this example a bit to see why it works:
 ```
- &i2c1 {
+ &xiao_i2c {
 	sht3xd@44 {
 			compatible = "sensirion,sht3xd";
 			reg = <0x44>;
@@ -483,7 +476,7 @@ First connect your board to the LCD screen using the following image as a guide 
 Next with the hardware prepared we can build the uf2 file for flashing:
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/240x280_st7789v2.conf
+west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
 When this completes, move the build file from `build/zephyr/zephyr.uf2` to the mounted Xiao RP2040 (remember you can hold the boot button down while plugging in to enter this state) which will reset the device with the new firmware.

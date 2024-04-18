@@ -22,7 +22,7 @@ This wiki covers [Zephyr](https://www.zephyrproject.org/) support for the [Seeed
 
 The [**Zephyr**](https://www.zephyrproject.org/) OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
 
-For each supported device Zephyr has a [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) file that describes the board and its features. The [Xiao ESP32S3 Zephyr board page](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html#supported-features) describes the supported features currently available which is defined by the [board's dts file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_esp32s3/xiao_esp32s3_esp32s3_procpu.yaml#L7). 
+For each supported device Zephyr has a [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) file that describes the board and its features. The [Xiao ESP32S3 Zephyr board page](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html#supported-features) describes the supported features currently available which is defined by the [board's dts file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_esp32s3/xiao_esp32s3_esp32s3_procpu.yaml#L7).
 
 *Reference: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
@@ -57,7 +57,7 @@ With the final command you should see the response showing the "Hello World!" gr
 Hello World! xiao_esp32s3
 ```
 
-To assist with the process of using Zephyr with Xiao and its expansion board a repository has been constructed with several overlays and configurations used here. The commands included in this wiki article assume it is located `../applications/xiao-zephyr-examples` relative to the zephyr root. An alternative path can be provided to the commands below by updating it. 
+To assist with the process of using Zephyr with Xiao and its expansion board a repository has been constructed with several overlays and configurations used here. The commands included in this wiki article assume it is located `../applications/xiao-zephyr-examples` relative to the zephyr root. An alternative path can be provided to the commands below by updating it.
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
@@ -95,7 +95,7 @@ If you want to follow this tutorial through everything, you will need to prepare
 #### XIAO Expansion Board
 
   In order to use Grove modules with Seeed Studio XIAO ESP32S3, we will use a [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) and connect XIAO ESP32S3 on it.
-  
+
   After that, the Grove connectors on the board can be used to connect Grove modules
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
@@ -168,7 +168,7 @@ west espressif monitor
 You will see a console available for sending commands to the board:
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
-uart:~$ 
+uart:~$
 ```
 
 Several commands exist allowing you to see and connect to local networks, see the [sample readme](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst) for more information.
@@ -176,14 +176,13 @@ Several commands exist allowing you to see and connect to local networks, see th
 uart:~$ wifi scan
 Scan requested
 
-Num  | SSID                             (len) | Chan (Band)   | RSSI | Security        | BSSID             | MFP     
-1    | Zephytopia                       10    | 6    (2.4GHz) | -42  | WPA2-PSK        |                   | Disable 
-2    | Maceronia                        9     | 6    (2.4GHz) | -43  | WPA2-PSK        |                   | Disable 
+Num  | SSID                             (len) | Chan (Band)   | RSSI | Security        | BSSID             | MFP
+1    | Zephytopia                       10    | 6    (2.4GHz) | -42  | WPA2-PSK        |                   | Disable
+2    | Maceronia                        9     | 6    (2.4GHz) | -43  | WPA2-PSK        |                   | Disable
 
 ```
 
 Let's dive into this example a bit to see why it works:
-(Note: the Xiao ESP32S3 is supported specifically by this example so we don't need a custom overlay or conf to load up the file.)
 ```
 &wifi {
 	status = "okay";
@@ -264,7 +263,7 @@ Additional information about TFLite is outside of the scope of this guide but th
 To test this setup we can use an existing sample with Zephyr:
 
 ```
-west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-expansion.overlay DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/samples.conf
+west build -p always -b xiao_esp32s3 samples/drivers/display --  -DSHIELD=seeed_xiao_expansion_board
 west flash
 ```
 
@@ -278,7 +277,7 @@ Let's dive into this example a bit to see why it works:
     };
 };
 
-&i2c0 {
+&xiao_i2c {
   status = "okay";
 
   ssd1306: ssd1306@3c {
@@ -298,22 +297,15 @@ Let's dive into this example a bit to see why it works:
 
 ```
 
-The app overlay file in this example sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
+The shield sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
 
-```
-CONFIG_LV_Z_VDB_SIZE=64
-CONFIG_LV_COLOR_DEPTH_1=y
-CONFIG_I2C=y
-```
-
-The associated configuration file enables the OLED screen to properly render by setting its depth to 1 and enabling I2C for the project.
 
 #### Grove - Expansion Board - Button
 
 To test this setup we can use an existing sample with Zephyr:
 
 ```
-west build -p always -b xiao_esp32s3 samples/basic/button -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-expansion.overlay
+west build -p always -b xiao_esp32s3 samples/basic/button -- -DSHIELD=seeed_xiao_expansion_board
 west flash
 west espressif monitor
 ```
@@ -340,22 +332,23 @@ Let's dive into this example a bit to see why it works:
 ```
 / {
     aliases {
-		sw0 = &button0;
+      sw0 = &xiao_button0;
     };
 
     buttons {
-            compatible = "gpio-keys";
-            button0: button_0 {
-                gpios = <&gpio0 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-                label = "Expansion Board Button";
-            };
+      compatible = "gpio-keys";
+      xiao_button0: button_0 {
+        gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        label = "SW0";
+        zephyr,code = <INPUT_KEY_0>;
+      };
     };
 };
 ```
 
-The app overlay file is used to setup various board components. Using this file the button example can be utilized as the overlay allows the Zephyr to configure the button and make it available for the associated code.
+The shield / overlay file is used to setup various board components. Using this file the button example can be utilized as the overlay allows the Zephyr to configure the button and make it available for the associated code.
 
-In this case GPIO 2 corresponds with Pin A1/D1 on the Xiao ESP32S3. It is setup in this overlay to act as a button and is aliased to the sw0 name to allow it to be used for the sample which has code expecting this.
+In this case D1 on the Xiao ESP32S3. It is setup in this overlay to act as a button and is aliased to the sw0 name to allow it to be used for the sample which has code expecting this.
 
 
 #### Grove - Temperature and Humidity Sensor (SHT31)
@@ -389,7 +382,7 @@ SHT3XD: 25.84 Cel ; 53.16 %RH
 
 Let's dive into this example a bit to see why it works:
 ```
- &i2c0 {
+ &xiao_i2c {
 	sht3xd@44 {
 			compatible = "sensirion,sht3xd";
 			reg = <0x44>;
@@ -410,11 +403,11 @@ The app overlay file is used to setup various board components. Using this file 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
