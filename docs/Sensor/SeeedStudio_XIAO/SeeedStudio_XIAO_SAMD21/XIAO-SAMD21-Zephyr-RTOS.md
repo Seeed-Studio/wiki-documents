@@ -165,6 +165,7 @@ git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 ### Primary Functionality
 
 - Onboard LED
+- USB HID
 - LittleFS
 - TFLite
 
@@ -237,6 +238,46 @@ For example if I were to reference D0 I'd reference it either as `&porta 2` or `
 	};
 };
 ```
+
+#### USB HID
+
+For this sample application we'll use the USB HID Mouse sample to allow the Xiao SAMD21 to trigger mouse clicks for the host computer.
+
+```
+cd ~/zephyrproject/zephyr
+west build -p always -b seeeduino_xiao samples/subsys/usb/hid-mouse --  -DDTC_OVERLAY_FILE=/home/nineso/zephyrproject/zephyr/boards/shields/seeed_xiao_expansion_board/seeed_xiao_expansion_board.overlay
+```
+
+Double press RESET or short the RST pin to the GND.
+
+```
+west flash
+```
+
+After your Xiao resets you should not be able to control the left mouse button via the button on your expansion board. Try hovering over some text and double clicking the button quickly. You'll see the text get highlighted in a similar manner as if you were to use your normal mouse to left click. You'll also notice the onboard LED lights up when you click the button as the sample also relies on an LED being set in the devicetree.
+
+Additional buttons can be configured for use with the sample as it allows for up to 4 buttons to be configured to trigger both buttons and direction for the mouse for sample purposes.
+
+```
+	buttons {
+		compatible = "gpio-keys";
+		xiao_button0: button_0 {
+			gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+			label = "SW0";
+			zephyr,code = <INPUT_KEY_0>;
+		};
+	};
+
+	aliases {
+		sw0 = &xiao_button0;
+	};
+```
+
+You can see here from the example `&xiao_d` 1 is used here to indicate the D1 pin. This mapping is provided by the Xiao SAMD21 board files and makes it conveinent for connecting to a given pin as you do not need to know the underlying MCU mapping but can rely on the Xiao pinout.
+
+For the HID Mouse sample the buttons are determined by if they are `compatible = "gpio-keys";` and if they have have a mapping to associated keys (0-3 for the mouse). In this case we're using `zephyr,code = <INPUT_KEY_0>;` which corresponds to the left mouse button.
+
+The `led0` alias is set by the board's devicetree file as mentioned in the previous section.
 
 #### LittleFS
 
@@ -382,7 +423,7 @@ To test this setup we can use an existing sample with Zephyr:
 
 ```
 cd ~/zephyrproject/zephyr
-west build -p always -b seeeduino_xiao samples/drivers/display -- -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/samples.conf -DSHIELD=seeed_xiao_expansion_board
+west build -p always -b seeeduino_xiao samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
 Double press RESET or short the RST pin to the GND.
