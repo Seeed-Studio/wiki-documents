@@ -165,9 +165,16 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove_vision_ai_v2_sscma',
                     {
                       type: 'category',
+                      label: 'Development',
+                      items: [
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove-vision-ai-v2-himax-sdk',
+                        // 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove_vision_ai_v2_hardware',
+                      ],
+                    },
+                    {
+                      type: 'category',
                       label: 'Application',
                       items: [
-                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-himax-sdk',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-sensecap-app',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-ha',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
