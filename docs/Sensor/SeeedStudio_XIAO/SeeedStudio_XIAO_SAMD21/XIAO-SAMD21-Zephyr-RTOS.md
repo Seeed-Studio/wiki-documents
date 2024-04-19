@@ -184,7 +184,7 @@ Double press RESET or short the RST pin to the GND.
 west flash
 ```
 
-You will see the onboard yellow LED turn toggle creating a blinking effect.
+You will see the onboard yellow LED toggle on and off creating a blinking effect.
 
 Let's dive into this example a bit to see why it works.
 
