@@ -15,6 +15,8 @@ last_update:
 
 ## What is SCADA?
 
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-demo.gif" /></center>
+
 **Supervisory Control and Data Acquisition (SCADA)** is a critical system in industrial settings designed to monitor and control processes. It serves as a **centralized platform that gathers real-time data from various sensors and devices across the industrial network**. SCADA enables operators to **visualize, analyze, and respond to this data, facilitating efficient decision-making**. Additionally, it provides **remote access and control capabilities, allowing operators to manage processes from a central location**. The integration of SCADA enhances the overall efficiency, safety, and reliability of industrial operations by providing a comprehensive overview and control of the entire system.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-editor.png" /></center>

@@ -57,10 +57,11 @@ If you want to follow this tutorial through everything, you will need to prepare
   </tbody></table>
 
 
-#### Grove Sensors
+#### Utilized Sensors
 
 - [Grove - Temperature and Humidity Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)<br />
 - [Grove -Smart Air Quality Sensor (SGP41)](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html)<br />
+- [6x10 RGB MATRIX for XIAO](https://www.seeedstudio.com/6x10-RGB-MATRIX-for-XIAO-p-5771.html#)
 
 ## Software Preparation
 
@@ -610,6 +611,7 @@ The Same as before.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/24.png" style={{width:900, height:'auto'}}/></div>
 <br />
 
+
 #### OV2640 camera (XIAO ESP32S3 Sense)
 
 ##### Setup Configuration
@@ -709,6 +711,7 @@ esp32_camera_web_server:
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32S3/blob/main/Figures/camera.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/27.png" style={{width:400, height:'auto'}}/></div>
+
 
 #### PDM microphone for Voice Assistant
   
@@ -829,10 +832,97 @@ binary_sensor:
 
 **Note:** For more information, please [read it.](https://esphome.io/components/voice_assistant.html)
 
+
+#### 6x10 RGB MATRIX for XIAO
+
+##### Setup Configuration
+
+- **Step 1.** First you need to connect the 6x10 RGB MATRIX to the XIAO, see [this Wiki for details](https://wiki.seeedstudio.com/rgb_matrix_for_xiao/#hardware-preparation).
+
+- **Step 2.** Copy the .yaml information below and push it OTA to XIAO ESP32S3.
+
+```
+esphome:
+  name: sixtyled
+  friendly_name: sixtyled
+
+esp32:
+  board: seeed_xiao_esp32s3
+  variant: esp32s3
+  framework:
+    type: arduino
+    version: latest
+    platform_version: 6.4.0
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Sixtyled Fallback Hotspot"
+    password: "MoLTqZUvHwWI"
+
+captive_portal:
+    
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: GPIO1
+    num_leds: 60
+    rmt_channel: 0
+    chipset: ws2812
+    name: "XIAO LEDS"
+
+```
+
+##### Visualize on Dashboard
+
+- **Step 1.** Open the path `Setting - Devices&services - ESPHome - sixtyled(the name you set)` to add the card into dashboard.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/sixty_dashboard_add.png" style={{width:900, height:'auto'}}/></div>
+
+- **Step 2.** On the Overview page of Home Assistant, click the 3 dots and click **Edit Dashboard**
+
+<!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/31.png" width="700"> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/15.png" style={{width:900, height:'auto'}}/></div>
+
+
+
+- **Step 3.** Click **+ ADD CARD**
+
+<!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/32.png" width="700"> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/16.png" style={{width:900, height:'auto'}}/></div>
+
+
+
+- **Step 4.** Select **By ENTITY**, type **xiao** and select the **check box** next to **sixtyled XIAO LEDS**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/add_card.png" style={{width:900, height:'auto'}}/></div>
+
+
+- **Step 5.** Click **CONTINUE** and **Add to Dashboard**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/sixty_dashboard_add2.png" style={{width:900, height:'auto'}}/></div>
+
+- **Step 6.** Subsequently, you can find a card in the "Overview" section where you can control the 6x10 RGB MATRIX for XIAO. Here, you can toggle its on/off state and customize its color and brightness.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/LEDdemo.gif" style={{width:600, height:'auto'}}/></div>
+
+
 ## ✨ Contributor Project
 
 - This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
 - Thanks **Zachary's efforts** and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
+- Thanks **python's efforts** and the source of the project is sharing in [here](https://community.home-assistant.io/t/seeed-studio-6x10-rgb-matrix-on-xiao-esp32s3/629867).
 
 ## Tech Support & Product Discussion
 
