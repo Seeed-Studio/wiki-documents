@@ -168,7 +168,7 @@ const sidebars = {
                       label: 'Development',
                       items: [
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove-vision-ai-v2-himax-sdk',
-                        // 'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove_vision_ai_v2_hardware',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove_vision_ai_v2_at_library',
                       ],
                     },
                     {
