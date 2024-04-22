@@ -4,7 +4,7 @@ title: LinkStar-V2 Introduction
 keywords:
 - Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /H68KV2_Datasheet
+slug: /h68kv2_datasheet
 last_update:
   date: 04/18/2024
   author: Parker
