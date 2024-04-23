@@ -127,7 +127,7 @@ This part describes how to recover the bootloader of the Grove Vision AI (WE2) m
 #### Software Installation
 
 1. Install the Arduino IDE from the [official website](https://www.arduino.cc/en/software).
-2. Download the latest version of the Seeed_Arduino_SSCMA library from the [GitHub repository](https://github.com/your_repository_link).
+2. Download the latest version of the Seeed_Arduino_SSCMA library from the [GitHub repository](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA).
 3. Add the library to your Arduino IDE by selecting **Sketch > Include Library > Add .ZIP Library** and choosing the downloaded file.
 4. Open the `we2_iic_bootloader_recover` example from the Arduino IDE: **File > Examples > Seeed_Arduino_SSCMA > we2_iic_bootloader_recover**.
 5. Upload the example to your Arduino board.
