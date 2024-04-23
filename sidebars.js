@@ -165,9 +165,16 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove_vision_ai_v2_sscma',
                     {
                       type: 'category',
+                      label: 'Development',
+                      items: [
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove-vision-ai-v2-himax-sdk',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove_vision_ai_v2_at_library',
+                      ],
+                    },
+                    {
+                      type: 'category',
                       label: 'Application',
                       items: [
-                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-himax-sdk',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-sensecap-app',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-ha',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
@@ -2371,6 +2378,20 @@ const sidebars = {
               'Network/RK_Devices/LinkStar/Application/grocy-bookstack-linkstar',
             ],
           },
+        ],
+      },
+      {
+        type: 'category',
+        label: 'LinkStar-H68K-V2',
+        collapsed: true,
+        collapsible: true,
+        link: {
+          type: "doc",
+          id: 'Network/RK_Devices/LinkStar/Linkstar_Intro',
+        },
+        items: [
+          'Network/RK_Devices/H68K_V2/H68KV2_Datasheet',
+          'Network/RK_Devices/H68K_V2/H68KV2_install_system',
         ],
       },
       {
