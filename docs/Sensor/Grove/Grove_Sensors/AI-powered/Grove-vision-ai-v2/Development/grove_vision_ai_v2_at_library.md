@@ -42,22 +42,15 @@ The Grove Vision AI V2 is a powerful AI camera module that allows users to deplo
 
 In this page, we will focus on guiding users on **how to effectively utilize the Arduino library** specifically designed for the Grove Vision AI V2. We will cover the installation process, key features, and provide practical examples demonstrating how to use the library functions to control and configure the module, enabling users to create innovative vision-based applications with ease.
 
-<!-- ## Device Overview  -->
-
-<!-- The Grove Vision AI V2 supports the following hardware features beyond its AI capabilities: -->
-
-<!-- - **CSI Camera Interface**: The module includes a standard MIPI CSI interface, allowing you to connect compatible camera modules. This enables you to customize the image sensor based on your specific application requirements.
-- **PDM Microphone**: An onboard digital PDM microphone is available on the Grove Vision AI V2. This microphone can be used for audio sensing, voice commands, or sound-based trigger functionality in conjunction with the AI vision capabilities.
-- **SD Card Slot**: The module incorporates an SD card slot, providing expandable storage options. You can use the SD card to store captured images, recorded videos, or additional data related to your AI vision application.
-- **Grove Connector**: The Grove Vision AI V2 features a Grove connector, which is a standardized interface for connecting various Grove sensors and actuators. This allows you to easily integrate additional sensing capabilities or control external devices based on the AI vision results.
-- **USB Type-C Port**: The module includes a USB Type-C port for power supply and data communication. You can use this port to power the device, transfer data, or communicate with a host system using serial protocols. -->
-
-
 ## Firmware and AT Command Set
 
 The Grove Vision AI V2 comes with pre-installed firmware that supports an AT command set. This command set allows users to control and configure the module's functionality without the need for complex programming environments.
 
 The AT command set specification can be found at [SSCMA-Micro](https://github.com/Seeed-Studio/SSCMA-Micro). It's important to note that the AT command set may evolve over time, and newer firmware versions may include additional commands. It is recommended to keep the firmware updated to access the latest features.
+
+:::note
+If you need to flash a new firmware or update the firmware, you can navigate to the [SenseCraft AI](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process) website.
+:::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/at-diagram.png" alt="at diagram" width={420} height="auto" /></p>
 
@@ -187,8 +180,6 @@ void loop()
         }
     }
 }
-<p style={{textAlign: 'center'}}><img src="" width={420} height="auto" /></p>
-
 ```
 </TabItem>
 </Tabs>
@@ -202,7 +193,7 @@ void loop()
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_code.png" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
 	</tr>
 </table>
 
@@ -403,12 +394,12 @@ void loop() {
 	<tr>
 	    <th>Connect devices</th>
 	    <th>Upload firmware</th>
-        <th>Monitor</th>
+      <th>Monitor</th>
 	</tr>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_code.png" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_monitor.png" style={{width:500, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/reference_monitor.png" style={{width:500, height:'auto'}}/></div></td>
 	</tr>
 </table>
 
@@ -501,6 +492,10 @@ When you call `save_jpeg()`, it means you send a AT command `AT+ACTION="save_jpe
 And you should call it only once.
 
 If you don't want to store the JPEG image anymore, you will have to clean the Action Sets, even if you restart your Grove Vision AI V2 module.
+
+<div class="table-center">
+<iframe width="380" height="300" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/insert_sd_visionv2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ```cpp
 void setup()
@@ -624,12 +619,12 @@ if not working, plz check if the SD card is formatted and inserted correctly.
 	<tr>
 	    <th>Connect devices</th>
 	    <th>Upload firmware</th>
-        <th>Monitor</th>
+      <th>Monitor</th>
 	</tr>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/capture_image_connect.jpg" style={{width:500, height:'auto'}}/></div></td>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_code.png" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/save_image_monitor.png" style={{width:500, height:'auto'}}/></div></td>
 	</tr>
 </table>
 
@@ -737,7 +732,6 @@ void loop() {
   }
 }
 ```
-
 </TabItem>
 </Tabs>
 
