@@ -518,14 +518,18 @@ SSCMA AI;
 
 void setup()
 {
-   Serial.begin(9600); // Initialize serial port
-   AI.begin(); 
-   AI.save_jpeg();
+  Serial.begin(9600); // Initialize serial port
+  AI.begin(); 
+  AI.save_jpeg();
 }
 
 void loop()
 {
-   if (!AI.invoke(1, false, false)){} // every invoke it will save jpeg
+  static int cnt = 0;
+  // every invoke it will save jpeg
+  if (!AI.invoke(1, false, false)){
+    Serial.printf("Record image %d\n", ++cnt);
+  } 
 }
 
 ```
@@ -552,14 +556,18 @@ SSCMA AI;
 
 void setup()
 {
-   Serial.begin(9600); // Initialize serial port
-   AI.begin(&atSerial);
-   AI.save_jpeg();
+  Serial.begin(9600); // Initialize serial port
+  AI.begin(&atSerial);
+  AI.save_jpeg();
 }
 
 void loop()
 {
-   if (!AI.invoke(1, false, true)){} // every invoke it will save jpeg
+  static int cnt = 0;
+  // every invoke it will save jpeg
+  if (!AI.invoke(1, false, true)){
+    Serial.printf("Record image %d\n", ++cnt);
+  } 
 }
 ```
 
