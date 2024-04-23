@@ -52,7 +52,7 @@ The AT command set specification can be found at [SSCMA-Micro](https://github.co
 If you need to flash a new firmware or update the firmware, you can navigate to the [SenseCraft AI](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process) website.
 :::
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/at-diagram.png" alt="at diagram" width={420} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/dev/at-diagram.png" alt="at diagram" width={320} height="auto" /></p>
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md">
@@ -518,14 +518,18 @@ SSCMA AI;
 
 void setup()
 {
-   Serial.begin(9600); // Initialize serial port
-   AI.begin(); 
-   AI.save_jpeg();
+  Serial.begin(9600); // Initialize serial port
+  AI.begin(); 
+  AI.save_jpeg();
 }
 
 void loop()
 {
-   if (!AI.invoke(1, false, false)){} // every invoke it will save jpeg
+  static int cnt = 0;
+  // every invoke it will save jpeg
+  if (!AI.invoke(1, false, false)){
+    Serial.printf("Record image %d\n", ++cnt);
+  } 
 }
 
 ```
@@ -552,14 +556,18 @@ SSCMA AI;
 
 void setup()
 {
-   Serial.begin(9600); // Initialize serial port
-   AI.begin(&atSerial);
-   AI.save_jpeg();
+  Serial.begin(9600); // Initialize serial port
+  AI.begin(&atSerial);
+  AI.save_jpeg();
 }
 
 void loop()
 {
-   if (!AI.invoke(1, false, true)){} // every invoke it will save jpeg
+  static int cnt = 0;
+  // every invoke it will save jpeg
+  if (!AI.invoke(1, false, true)){
+    Serial.printf("Record image %d\n", ++cnt);
+  } 
 }
 ```
 
