@@ -180,6 +180,16 @@ export const Highlight = ({children, color}) => (
 	</tr>
 </table>
 
+:::tip
+There's an IO port 14 used to select between using the built-in antenna or an external antenna. If port 14 is at a low level, it uses the built-in antenna; if it's at a high level, it uses the external antenna. The default is low level. If you want to set it high, you can refer the code below.
+```cpp
+void setup() {
+  pinMode(14, OUTPUT); 
+  digitalWrite(14, HIGH);
+}
+```
+:::
+
 ## Getting started
 
 To enable you to get started with the XIAO ESP32C6 faster, please read the hardware and software preparation below to prepare the XIAO.
