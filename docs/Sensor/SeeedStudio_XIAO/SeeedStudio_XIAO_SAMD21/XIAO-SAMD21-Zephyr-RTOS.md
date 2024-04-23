@@ -184,7 +184,7 @@ Double press RESET or short the RST pin to the GND.
 west flash
 ```
 
-You will see the onboard yellow LED turn toggle creating a blinking effect.
+You will see the onboard yellow LED toggle on and off creating a blinking effect.
 
 Let's dive into this example a bit to see why it works.
 
@@ -412,6 +412,8 @@ x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C Display
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Button
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Buzzer
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD Card
 - [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
 - [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
 
@@ -521,6 +523,122 @@ Let's dive into this example a bit to see why it works:
 The app overlay file is used to setup various board components. Using this file the button example can be utilized as the overlay allows the Zephyr to configure the button and make it available for the associated code.
 
 In this case it is using the &xiao_d connector interface to associate D1 as a button. Alternatively we could have used the `&porta` interface here as `&porta 4` which is the corresponding pin on the MCU associated with D1.
+
+#### Grove - Expansion Board - Buzzer
+
+We'll activate our buzzer using the blinky PWM example to control its activation via a PWM signal. For this we'll use a custom overlay which enables the PWM for the A3 pin.
+
+```
+cd ~/zephyrproject/zephyr
+west build -p always -b seeeduino_xiao samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-samd21/xiao_expansion_buzzer.overlay"
+```
+
+After uploading the uf2 file you should begin hearing a series of buzzes which change in sound as the sample runs its course.
+
+Let's look at why this works:
+```
+/delete-node/ &pwm_led0;
+
+/ {
+	aliases {
+		pwm-led = &pwm_led0;
+	};
+
+    pwm_leds {
+        status = "okay";
+        compatible = "pwm-leds";
+
+        pwm_led0: pwm_led_0 {
+            pwms = <&tcc1 1 PWM_HZ(880) >;
+        };
+    };
+};
+
+&pinctrl {
+	pwm_default: pwm_default {
+		group1 {
+			pinmux = <PA11E_TCC1_WO1>;
+		};
+	};
+};
+
+&tcc1 {
+	status = "okay";
+	compatible = "atmel,sam0-tcc-pwm";
+	/* Gives a maximum period of 1.4 s */
+	prescaler = <1024>;
+	#pwm-cells = <2>;
+
+	pinctrl-0 = <&pwm_default>;
+	pinctrl-names = "default";
+};
+```
+
+The overlay in use first removes the existing `pwm_led0` node as this board is configured with this alias already. It then configures the A3 pin for use as a PWM.
+
+We're using pin A3 which corresponds with the GPIO PA11 on the SAMD21. Given its associated PWM pinmux is PA11E_TCC1_WO1 we use the tcc1 timer for the PWM.
+
+#### Grove - Expansion Board - SD Card
+
+We'll use the filesystem sample here along with the Xiao Expansion Board shield to try interfacing with the SD card reader over SPI. The expansion board shield has the CS pin configured for the associated `&xiao_d 2` pin so no work is needed on your part for associating this capability with the board aside from adding the shield. To further prepare it we are using a custom config that enables the SD card functionality.
+
+```
+cd ~/zephyrproject/zephyr
+west build -p always -b seeeduino_xiao samples/subsys/fs/fs_sample -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.overlay" -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
+```
+
+After uploading the uf2 file connect to monitor:
+```
+screen /dev/ttyACM0 115200
+```
+
+```
+*** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
+[00:00:00.197,000] <inf> sd: Maximum SD clock is under 25MHz, using clock of 10000000Hz
+[00:00:00.198,000] <inf> main: Block count 15519744
+Sector size 512
+Memory Size(MB) 7578
+Disk mounted.
+
+Listing dir /SD: ...
+[FILE] IMAGE1.JPG (size = 58422)
+[FILE] IMAGE2.JPG (size = 97963)
+```
+
+In this case my SD card had two files. Their names and their sizes were outputted to my console.
+
+Let's look over the relevant elements at play here:
+```
+CONFIG_SPI=y
+CONFIG_DISK_DRIVER_SDMMC=y
+CONFIG_GPIO=y
+```
+
+In the associated config we're enabling SPI, the SDMMC disk driver, and the GPIO. Without this config the overlay will lead to an error as the sample is unable to find the SD card.
+
+The relevant part of the Xiao Expansion Board shield is actually overridden in this example via the `xiao_expansion_sd.overlay` used for the Xiao SAMD21 shown below:
+
+```
+&xiao_spi {
+	status = "okay";
+	cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+
+	sdhc0: sdhc@0 {
+		compatible = "zephyr,sdhc-spi-slot";
+		reg = <0>;
+		status = "okay";
+		mmc {
+			compatible = "zephyr,sdmmc-disk";
+			status = "okay";
+		};
+		spi-max-frequency = <10000000>;
+	};
+};
+```
+
+As mentioned previously the `&xiao_d 2` pin mapping is used to allow the D2 pin to be selected for this regardless of the board used so long as it supports the `&xiao_d` pin setup.
+
+The reason we're not using the shield's overlay here but overriding it is that the `spi-max-frequency` of `24000000` set by the shield is too high which causes the SAMD21 to fail.
 
 #### Grove - Temperature and Humidity Sensor (SHT31)
 
