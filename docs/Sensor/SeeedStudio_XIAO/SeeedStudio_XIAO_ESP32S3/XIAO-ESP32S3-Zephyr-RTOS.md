@@ -4,7 +4,7 @@ title:  XIAO ESP32S3(sense) With Zephyr(RTOS)
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /XIAO-ESP32S3-Zephyr-RTOS
+slug: /xiao_esp32s3_zephyr-_rtos
 last_update:
   date: 3/20/2024
   author: timo614

@@ -4,7 +4,7 @@ title:  XIAO SAMD21 With Zephyr(RTOS)
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: XIAO-SAMD21-Zephyr-RTOS
+slug: /xiao_samd21_zephyr_rtos
 last_update:
   date: 04/16/2023
   author: timo614
