@@ -61,7 +61,7 @@ export const Highlight = ({children, color}) => (
             <th colspan="2">Products</th>
             <th><Highlight color="#92c52a">XIAO ESP32C6</Highlight></th>
             <th>XIAO ESP32C3</th>
-            <th>XIAO ESP32C6</th>
+            <th>XIAO ESP32S3</th>
         </tr>
     </thead>
     <tbody>
