@@ -112,7 +112,9 @@ In this example, software serial communication is set up on pins 2 (RX) and 3 (T
 In the Arduino framework, the UART0 peripheral, which corresponds to pins D6/D7 at the hardware level, is referred to as Serial0.
 
 ```cpp
-#define mySerial Serial0 // Alias for UART0 (Serial0)
+#include <HardwareSerial.h>
+HardwareSerial mySerial(0); // Alias for UART0 (Serial0)
+
 void setup() {
   Serial.begin(9600); // Initialize hardware serial (USB)
   mySerial.begin(9600); // Initialize UART0 (Serial0)
