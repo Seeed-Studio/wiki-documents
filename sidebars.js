@@ -2706,6 +2706,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-AWS',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_rpi_200_NEQTO_Engine_for_Linux',
               {
                 type: 'category',
                 label: 'Ignition Edge',
