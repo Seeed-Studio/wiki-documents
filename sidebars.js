@@ -2387,7 +2387,7 @@ const sidebars = {
         collapsible: true,
         link: {
           type: "doc",
-          id: 'Network/RK_Devices/LinkStar/Linkstar_Intro',
+          id: 'Network/RK_Devices/H68K_V2/H68KV2_Datasheet',
         },
         items: [
           'Network/RK_Devices/H68K_V2/H68KV2_Datasheet',
