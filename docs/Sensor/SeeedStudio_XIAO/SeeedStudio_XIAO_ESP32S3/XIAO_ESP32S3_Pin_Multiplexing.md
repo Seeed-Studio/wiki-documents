@@ -222,10 +222,10 @@ For the actual circuit schematic, please refer to the following diagram:
 
 #### Step 3. Software implementation
 
-The following program toggles the relay every 500 milliseconds. Connect the SIG pin of the relay to the GPIO12 interface of the expansion board.
+The following program toggles the relay every 500 milliseconds. Connect the SIG pin of the relay to the GPIO42 interface of the expansion board.
 
 ```c
-const int relayPin = 12;
+const int relayPin = 42;
 
 void setup() {
   // initialize the Relay pin as an output:
@@ -245,7 +245,7 @@ void loop() {
 The above method is also applicable to the [Digital as PWM](#digital-as-pwm) and [Analog](#analog) sections. You just need to modify the pin numbers of the expansion board that you want to use. This will not be repeated later.
 
 :::caution
-For the two additional pins D11 and D12 on the XIAO ESP32S3 Sense, we have not macro-defined the pins. That is, you can't use D11/A11 or D12/A12 to control these two pins yet, but you can control these two pins by using the GPIO numbers, GPIO12 and GPIO13, respectively. we will submit the macro definitions for these two pins as soon as possible, and once the submission is done, then you can D/A the pin definitions.
+For the two additional pins D11 and D12 on the XIAO ESP32S3 Sense, we have not macro-defined the pins. That is, you can't use D11/A11 or D12/A12 to control these two pins yet, but you can control these two pins by using the GPIO numbers, GPIO42 and GPIO41, respectively. we will submit the macro definitions for these two pins as soon as possible, and once the submission is done, then you can D/A the pin definitions.
 :::
 
 ## Digital as PWM

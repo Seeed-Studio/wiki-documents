@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-dm_Intro
 last_update:
-  date: 12/22/2023
+  date: 4/23/2023
   author: Kasun Thushara
 ---
 
@@ -74,59 +74,36 @@ last_update:
 
 ## Applications
 
-### Node-Red
+### Data Visualization
+
+**In this exciting section, get ready to discover how to whip up industrial-grade, interactive dashboards in few minutes!**
+
 
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg"><font size={"4"}>reTerminal DM Getting Started with Node Red</font></th>
-      <th class="table-trnobg"><font size={"4"}>reTerminal DM RS485 Port with Node-RED</font></th>
+      <th class="table-trnobg"><font size={"4"}>Getting Start with FUXA - Web Based SCADA Tool</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM & Machinechat JEDI:Your Industrial IoT Powerhouse</font></th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered.svg" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/demo-fuxa.gif" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/screenshot1.PNG" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, we install Node-RED on reTerminal DM—an intuitive programming tool for connecting hardware devices, APIs, and online services through a browser-based editor, allowing easy flow creation and deployment with a single click.</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, explore integrating Modbus devices into Node-RED workflows with the built-in Modbus node. Learn about the RS485 protocol, understand Modbus, and discover how to seamlessly integrate them with reTerminal DM.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this section, we'll explore FUXA, a powerful web-based tool for quickly creating and deploying SCADA, HMI, Dashboard, or IIoT systems. With FUXA, you can easily design custom process visualizations, display real-time data, and control instruments in industrial settings.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Machinechat JEDI simplifies IoT data management, enabling easy collection, visualization, monitoring, and response to real-time data. Paired with Seeed's reTerminal DM, crafting custom dashboards takes under 30 minutes.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-RS485/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM_intro_FUXA/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_Introduction_Jedi_MachineChat/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
 
-<div class="table-center">
-	<table class="table-nobg">
-    <tr class="table-trnobg">
-      <th class="table-trnobg"><font size={"4"}>reTerminal DM MQTT with Node-RED</font></th>
-      <th class="table-trnobg"><font size={"4"}>reTerminal DM CAN BUS with Node-RED</font></th>
-		</tr>
-    <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-    		<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/MQTT.png" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
-    <tr class="table-trnobg"></tr>
-    <tr class="table-trnobg">
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, explore integrating MQTT into Node-RED, leveraging its support for this protocol to build powerful IoT applications.</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, integrate a CAN bus module with Node-RED for efficient high-speed data exchange between ECUs, widely used in automotive, industrial automation, medical equipment, and aerospace applications</font></td>
-    </tr>
-    <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-mqtt/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-canbus/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
-	</table>
-</div>
-
-
-
-### Edge ML
+### Edge AI
 
 <div class="table-center">
 	<table class="table-nobg">
@@ -176,54 +153,86 @@ last_update:
 	</table>
 </div>
 
-### AWS IoT Core
+### Cloud Solutions
 
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg"><font size={"4"}>AWS IoT Core Intergate With reTerminal DM</font></th>
+      <th class="table-trnobg"><font size={"4"}>Azure IoT Edge Intergate With reTerminal DM</font></th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
     <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/awslogo.png" style={{width:300, height:'auto'}}/></div></td>
+     <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/azure.jpg" style={{width:300, height:'auto'}}/></div></td>
 				</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. In this wiki, we are going to guide you through setting up the reTerminal DM device for cloud communication.</font></td>
-    </tr>
-    <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-    </tr>
-	</table>
-</div>
-
-
-### Azure IoT Edge
-
-<div class="table-center">
-	<table class="table-nobg">
-    <tr class="table-trnobg">
-      <th class="table-trnobg"><font size={"4"}>AWS IoT Core Intergate With reTerminal DM</font></th>
-		</tr>
-    <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/azure.jpg" style={{width:300, height:'auto'}}/></div></td>
-				</tr>
-    <tr class="table-trnobg"></tr>
-    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> AWS IoT Core securely connects and manages IoT devices, enabling communication with the cloud for smart applications. Our wiki will guide you through setting up the reTerminal DM device for seamless cloud communication.</font></td>
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This Wiki describes how to connect reTerminal DM device running Debian 11 (ARM32v7) with Azure IoT Edge Runtime pre-installed and Device Management. </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/reTerminalDM/azure.jpg"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/reTerminalDM/azure.jpg"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
     </tr>
 	</table>
 </div>
 
-### Ignition Edge
+### Industrial Edge 
 
+<strong><span><font color={'4ec354'} size={"5"}> Node-red</font></span></strong>
 
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM Getting Started with Node-Red</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM RS485 Port with Node-RED</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered.svg" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, we install Node-RED on reTerminal DM—an intuitive programming tool for connecting hardware devices, APIs, and online services through a browser-based editor, allowing easy flow creation and deployment with a single click.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, explore integrating Modbus devices into Node-RED workflows with the built-in Modbus node. Learn about the RS485 protocol, understand Modbus, and discover how to seamlessly integrate them with reTerminal DM.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-RS485/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM MQTT with Node-RED</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM CAN BUS with Node-RED</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/MQTT.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, explore integrating MQTT into Node-RED, leveraging its support for this protocol to build powerful IoT applications.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, integrate a CAN bus module with Node-RED for efficient high-speed data exchange between ECUs, widely used in automotive, industrial automation, medical equipment, and aerospace applications</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-mqtt/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-canbus/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+<br/>
+<strong><span><font color={'4ec354'} size={"5"}> Ignition Edge</font></span></strong>
 
 <div class="table-center">
 	<table class="table-nobg">
@@ -249,7 +258,40 @@ last_update:
 	</table>
 </div>
 
+<br/>
+<strong><span><font color={'4ec354'} size={"5"}> N3uron</font></span></strong>
 
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM Getting Started with N3uron</font></th>
+      <th class="table-trnobg"><font size={"4"}>Connect AWS IoT Core with N3uron</font></th>
+        <th class="table-trnobg"><font size={"4"}>Integrating Historian Module for Visualizing on reTerminal DM</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_1.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://n3uron.com/wp-content/uploads/2021/09/How-to-Connect-Industrial-Assets-to-AWS-IoT.jpg" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/graph.gif" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> N3uron is your go-to Industrial Edge Platform for IIoT & DataOps, ensuring seamless integration between your plant floor and third-party applications, be it on-premises or in the cloud. In this tutorial, we'll kickstart your journey into the N3uron world.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> With Neuron Historian, effortlessly store tag values collected locally or remotely via N3uron Links. It also provides a convenient Store & Forward feature for retaining data during communication loss. In this tutorial, you'll learn to create graphs and save your data as CSV files with ease.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_N3uron_AWS/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_N3uron_Historian/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/banner.png" style={{width:1000, height:'auto'}}/></div> 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/raspberry-pi"><strong><span><font color={'FFFFFF'} size={"4"}>🔍 Explore More</font></span></strong></a></div>
 
 ## ✨ Contributor Project
 

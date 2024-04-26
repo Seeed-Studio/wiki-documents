@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 04/15/2024
+  date: 04/22/2024
   author: Seraphina
 ---
 
@@ -17,82 +17,60 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is April 15th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 22nd and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Arduino Programming with Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/)
+### [Deploying Models from Datasets to XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_sscma/)
 
-This Wiki describes how to use the XIAO ESP32C6 pins on an Arduino.
+Welcome to this comprehensive tutorial where we'll embark on a journey to turn your dataset into a fully functional model for deployment on the XIAO ESP32S3. In this guide, we'll navigate through the initial steps of labeling our dataset with Roboflow's intuitive tools, progressing to model training within the collaborative environment of Google Colab.
 
-<div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div>
+We'll then move on to deploying our trained model using the SenseCraft Model Assistant, a process that bridges the gap between training and real-world application. By the end of this tutorial, not only will you have a custom model running on XIAO ESP32S3, but you'll also be equipped with the knowledge to interpret and utilize the results of your model's predictions.
 
-### [WiFi Usage with Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_wifi_usage_esp32c6/)
-
-In this tutorial, we will explore how to leverage the XIAO ESP32C6's Wi-Fi capabilities to connect to a Wi-Fi network and perform basic networking tasks.
-
-### [Empowering AI with AWS IoT Core for the XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_aws_iot/)
-
-This Wiki serves as a comprehensive guide to deploying an advanced IoT system that harnesses the power of AWS services and the XIAO ESP32C6 microcontroller to monitor and analyze environmental data. Beginning with the seamless collection of sensor data, this documentation navigates through the intricacies of transmitting and storing this information on AWS IoT Core and AWS Analytics, respectively. It delves into the utilization of AWS Sagemaker to train machine learning models on normal environmental patterns, emphasizing the system's capability to learn and adapt to its operational context for enhanced efficiency.
-
-Furthermore, the Wiki outlines the implementation of real-time anomaly detection using the XIAO ESP32C6, a critical component that actively scans for deviations from the norm and swiftly triggers alerts. It encapsulates the end-to-end process of setting up an alerting mechanism that notifies stakeholders of abnormal conditions, ensuring prompt attention and action. 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/0.jpg" style={{width:1000, height:'auto'}}/></div>
-
-### [Bluetooth usage with Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_bluetooth/)
-
-In this tutorial, we will focus on the basic features of the XIAO ESP32C6's Bluetooth capabilities, such as how to scan for nearby Bluetooth devices, how to establish a Bluetooth connection, and how to transmit and receive data over a Bluetooth connection.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/ble.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/0.png" style={{width:1000, height:'auto'}}/></div>
 
 
-### [SenseCraft-HomeAssistant User Manual](https://wiki.seeedstudio.com/sensecraft_homeassistant_userguide/)
+### [Getting started of NEQTO Engine for Linux on reTermianl](https://wiki.seeedstudio.com/neqto_engine_for_linux_reTerminal/)
 
-SenseCraft-HomeAssistant is a plugin for HomeAssistant. By using this plugin, users can log in with the SenseCraft Data Platform (originally SenseCAP Cloud Platform) account to access cloud devices and sensor data on the HomeAssistant platform, generating custom device reporting dashboards.
+NEQTO is a lightweight and secure software package allowing companies to remotely install and configure their software on edge devices. NEQTO enables companies to provide improved software services to end users through turnkey platform connectors and built-in software lifecycle management.
 
-### [Create a Project(ESP-IDF) - SenseCAP Indicator](https://wiki.seeedstudio.com/sensecap_indicator_project/)
+Devices installed with NEQTO can be managed through API or the ready-to-use NEQTO Console, which includes optional services for data storage, alerts, and watchdog monitoring. Businesses can enable AIoT with near-instant installation on any Linux device and seamless data integration with any on-premise or cloud servers.
 
-This tutorial focuses on creating projects using the ESP32-S3 with ESP-IDF.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_reTerminal/header-img_2x.png" alt="pir" width={600} height="auto" /></p>
+
+
+### [Examples for Grove Vision AI V2 and XIAO ESP32](https://wiki.seeedstudio.com/grove_vision_ai_v2_demo/)
+
+Unlock the potential of edge computing and explore the fascinating world of AI vision with the powerful combination of the Grove Vision AI V2 and XIAO ESP32 series MCU. In this tutorial, we will guide you through 2~3 captivating demos that showcase the seamless integration of these cutting-edge technologies.
 
 
 
 ## Existed Wiki Updated
 
-### [Grove - I2C Motor Driver (L298P)](https://wiki.seeedstudio.com/Grove-I2C-Motor-Driver-L298P/)
+### [6x10 RGB MATRIX for XIAO with XIAO ESP32S3 Sense in HA](https://wiki.seeedstudio.com/XIAO_ESP32S3_esphome/#6x10-rgb-matrix-for-xiao)
 
-If you encounter a situation where the PWM frequency cannot be changed and remains fixed at 24Hz, you can focus on this wiki to solve your problem.
+We have added information about the 6x10 RGB MATRIX for XIAO with XIAO ESP32S3 Sense in the "XIAO ESP32S3 Sense connecting with Home Assistant via ESPHome (all ports supported)" Wiki page.
 
-For detailed flashing instructions, you can refer to [this post](https://forum.seeedstudio.com/t/dc-motor-on-i2c-motor-driver-1-3-pwm-is-25hz-and-cant-be-changed/273244/18?u=seeed_seraphina)
-
-<div align="center"><img width={500} src="https://files.seeedstudio.com/products/105020093/img/105020093_wiki.png" /></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/LEDdemo.gif" style={{width:600, height:'auto'}}/></div>
 
 
 
-### [Grove Vision AI Module V2 - Bootloader Recovery Tool Manual](https://wiki.seeedstudio.com/grove_vision_ai_v2/#bootloader-recovery-tool-manual)
-
-This part describes how to recover the bootloader of the Grove Vision AI (WE2) module. The recovery tool is a software tool that can be used to recover the bootloader of the Grove Vision AI (WE2) module in case the bootloader is corrupted, or flash a new firmware to the Grove Vision AI (WE2) module.
-
-### [Add tutorial for flashing JP5.1.2 on A608](https://wiki.seeedstudio.com/reComputer_A608_Flash_System/#download-the-system-image-package-to-the-pc-host-1)
-
-Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the A608 Carrier Board with Jetson Orin NX module.
 
 ## The Efforts of Contributor✨
 
-<!-- ### [ow to Run a Local LLM Text-to-Image on reComputer](https://wiki.seeedstudio.com/How_to_run_local_llm_text_to_image_on_reComputer/)
+### XIAO's Zephyr Application
 
-Thanks our contributor Bruno to create the tutorial for how to Run a Local LLM Text-to-Image on reComputer.
+Thanks our contributor Tim to create the tutorial for XIAO SAMD21/XIAO RP2040/XIAO ESP3232C3/XIAO ESP32S3 With Zephyr(RTOS)
 
-A Text-to-image model is a type of artificial intelligence (AI) model that generates images from a textual description. These models take textual input, like sentences or paragraphs describing a scene and produce an image based on that description. hese models are trained on large datasets containing pairs of text descriptions and corresponding images, learning to understand the relationships between textual and visual information. Text-to-image models have made significant progress in recent years, but generating high-quality and diverse images that accurately match textual descriptions remains a challenging task in AI research.
+This wiki covers Zephyr support for the Seeed Studio XIAOs. With the assistance of this guide you will be able to utilize the feature set available to the board.
 
-On this tutorial, we're going to explore several ways to deploy and run a local LLM text-to-image
+[XIAO SAMD21 With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_samd21_zephyr_rtos/)
+[XIAO RP2040 With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_rp2040_zephyr_rtos/)
+[XIAO ESP32C3 with Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c3-zephyr/)
+[XIAO ESP32S3(sense) With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_esp32s3_zephyr-_rtos/)
 
-<div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/4_keras_generate_image.png" />
-</div> -->
-
-
-- Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
-- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
+<!-- - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
+- We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!  -->
 
 
 ## Past Weekly wiki
@@ -147,3 +125,4 @@ On this tutorial, we're going to explore several ways to deploy and run a local 
 - [weekly wiki on 2024.3.25th](/Seeed_Elderly/weekly_wiki/wiki240325)
 - [weekly wiki on 2024.4.01st](/Seeed_Elderly/weekly_wiki/wiki240401)
 - [weekly wiki on 2024.4.08th](/Seeed_Elderly/weekly_wiki/wiki240408)
+- [weekly wiki on 2024.4.15th](/Seeed_Elderly/weekly_wiki/wiki240415)
