@@ -23,7 +23,7 @@ jobs:
 # Issue
       - name: Auto Comment on Issues Opened
         uses: wow-actions/auto-comment@v1
-        if: github.event.pull_request.author_association != 'OWNER' && github.event.pull_request.author_association != 'MEMBER'
+        if: github.event.pull_request.author_association != 'COLLABORATOR'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           issuesOpened: |
@@ -33,7 +33,7 @@ jobs:
             Please make sure you have given us as much context as possible.
       - name: Auto Comment on Issues Closed
         uses: wow-actions/auto-comment@v1
-        if: github.event.pull_request.author_association != 'OWNER' && github.event.pull_request.author_association != 'MEMBER'
+        if: github.event.pull_request.author_association != 'COLLABORATOR'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           issuesClosed: |
@@ -43,7 +43,7 @@ jobs:
 # PR
       - name: Auto Comment on Pull Request Opened
         uses: wow-actions/auto-comment@v1
-        if: github.event.pull_request.author_association != 'OWNER' && github.event.pull_request.author_association != 'MEMBER'
+        if: github.event.pull_request.author_association != 'COLLABORATOR'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           pullRequestOpened: |
