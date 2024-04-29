@@ -16,7 +16,11 @@ last_update:
 Grove - I2C Motor Driver(L298P) is a common-use motor driver for stepping motor and servo motor. It embeds an STM32 chip for burning the code to control the
 motor driver. This is a 2-channel motor driver, each channel can support up to 1A current. You can also use the I2C interface to transmit data from the peripheral microcontroller. The default I2C address is 0x0f and you are able to change the address of Motor driver by connecting the I2C wire hat. The I2C address is selectable from 0x00 to 0X0f.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width={200} height={38} border={0} /></a></p>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html">
+<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a>
+</div>
 
 ## Features
 
@@ -57,7 +61,7 @@ motor driver. This is a 2-channel motor driver, each channel can support up to 1
 
 #### Hardware connection
 
-![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2CMotorDriver-4.jpg)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2CMotorDriver-4.jpg" style={{width:'auto', height:400}}/></div>
 
 - **Step 1** Connect Grove - I2C Motor Driver (L298P) to port I2C of Grove-Base Shield.
 
@@ -67,11 +71,10 @@ motor driver. This is a 2-channel motor driver, each channel can support up to 1
 
 #### Software Code 1 - DC Motor
 
-```C++
+```cpp
 #include "Grove_I2C_Motor_Driver.h"
 
-// default I2C address is 0x0f
-#define I2C_ADDRESS 0x0f
+#define I2C_ADDRESS 0x0f // default I2C address is 0x0f
 
 void setup() {
     Serial.begin(9600);
@@ -114,12 +117,10 @@ With stop() function, you are able to stop a running DC motor.
 
 #### Software Code 2 - Stepper Motor
 
-```C++
+```cpp
 #include <Grove_I2C_Motor_Driver.h>
 
-// default I2C address is 0x0f
-#define I2C_ADDRESS 0x0f
-
+#define I2C_ADDRESS 0x0f // default I2C address is 0x0f
 
 void setup() {
     Serial.begin(9600);
@@ -133,19 +134,29 @@ void setup() {
 }
 
 void loop() {
-
+    // your code here
 }
 ```
 
-Take [24BYJ48 Stepper Motor](https://www.seeedstudio.com/depot/high-quality-stepper-motor-12v-p-335.html?cPath=170_171) as an example, The hardware installation as shown below:
+Take [24BYJ48 Stepper Motor](https://www.seeedstudio.com/Small-Size-and-High-Torque-Stepper-Motor-24BYJ48-p-1922.html) as an example, The hardware installation as shown below:
 
-![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_control_a_Stepper_Motor.jpg)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_control_a_Stepper_Motor.jpg" style={{width:600, height:'auto'}}/></div>
 
-The connection between [24BYJ48](https://www.seeedstudio.com/depot/high-quality-stepper-motor-12v-p-335.html?cPath=170_171) Stepper Motor and I2C Motor Driver is as shown below:
+The connection between **24BYJ48 Stepper Motor** and I2C Motor Driver is as shown below:
 
-![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_Connector.jpg)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.3/img/I2C_Motor_Driver_Connector.jpg" style={{width:'auto', height:'auto'}}/></div>
+
 
 - **_step** represents the steps you set to the stepper motor to run. You can fill -1024~1024. When _step>0, stepper motor runs clockwise, while_step<0, stepper motor runs anticlockwise. When _step is 512/-512, the stepper motor will run a complete turn and if_step is 1024/-1024, the stepper motor will run 2 turns. The stepper motor will stop automatically after it finishes its steps.
+
+:::note
+
+If you encounter a situation where the PWM frequency cannot be changed and remains fixed at 24Hz, it is necessary to update the firmware using a Jlink or ST-link. You can find the new firmware here:
+[https://github.com/Seeed-Studio/grove_stm32f030/blob/master/firmware/grove_i2c_motor_driver_stm32f030.ino.bin](https://github.com/Seeed-Studio/grove_stm32f030/blob/master/firmware/grove_i2c_motor_driver_stm32f030.ino.bin)
+
+To change the PWM frequency, use `Motor.frequency(50)` where the value is the frequency, up to a maximum of 255Hz.
+
+:::
 
 ## Schematic Online Viewer
 

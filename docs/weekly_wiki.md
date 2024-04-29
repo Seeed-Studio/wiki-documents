@@ -1,11 +1,11 @@
 ---
 description: Weekly Wiki 
-title: Weekly Wiki 
+title: Weekly Wiki
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/18/2024
+  date: 04/29/2024
   author: Seraphina
 ---
 
@@ -17,43 +17,51 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 18th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 29th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Whisper on Jetson for Real time Speech to Text](https://wiki.seeedstudio.com/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/)
+### [Using Grove Vision AI V2 with AT Commands](https://wiki.seeedstudio.com/grove_vision_ai_v2_at/)
 
-In this wiki we introduce you [Real Time Whisper on Jetson](https://github.com/LJ-Hao/Deploy-Whisper-on-NVIDIA-Jetson-Orin-for-Real-time-Speech-to-Text.git), this integration enables speech processing directly on the device, eliminating the need for constant network connectivity and enhancing privacy and security. Additionally, we will compare the inference speed of Whisper and Riva when deployed on the same Jetson Orin device. Ultimately, deploying Whisper on the Jetson Orin empowers developers to build robust, efficient STT applications that deliver high accuracy and low latency in various domains, from smart homes to industrial automation.
+The Grove Vision AI V2 is a powerful AI camera module that allows users to deploy off-the-shelf models for vision applications. In addition to its AI capabilities, the Grove Vision AI V2 offers several hardware features and usage options to enhance its functionality and ease of use.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Real-Time-Whisper.gif" /></div>
+![](https://mermaid.ink/svg/pako:eNp1kk9vozAQxb_KyCciRSi4aRe4RemfXWmrVpuqh4qL155St-CJjMk2G-W7r02AZKXmNr_3xuN5mB2TpJDlrNZG1WJdGABL5KLoztIG4Vk3mgw888kkWABLqsheo0PpvBF1CCP3TQA_tcFbqir6o00ZBYIRxyZFroniOO6Fh9_vfsovlFQa3U0_KHAijWe_U42L1lEtus6AcOSxbVUL6xZSYtMsyThLVdRJcNCgF8-tBHCzQeOerC5LtKjCJlaFSJ0OowGj05-8FRJPowT-Msgj2oaMqH4oP1C_atkFWKFsrXbbaLDhfx-GhgkMg_r0qJZt4yu0K7QbLTEaDRgc6K1zse8p3HF85QN_8cxPb_jqFpWwddSV0NXHnR7R3ZMPTDZ8M09wxHOXnyCbMr9tLbTyf-gu2AVzb1hjwXJfKmE_ClaYve8TPuRqayTLnW1xytq18pGvtSitqAdxLcwL0SmyfMc-Wc7jS55m6cXFFU-yNJ0lU7ZlecKTePYtm3vmPMtmfD9lf7vzszg0Z_wyu-LzeZrw_T852RLp)
+
+In this page, we will focus on guiding users on **how to effectively utilize the Arduino library** specifically designed for the Grove Vision AI V2. We will cover the installation process, key features, and provide practical examples demonstrating how to use the library functions to control and configure the module, enabling users to create innovative vision-based applications with ease.
+
+
+### [Getting started with NEQTO Engine for Linux on EdgeBox-RPI-200](https://wiki.seeedstudio.com/NEQTO_Engine_for_Linux_EdgeBox-RPI-200/)
+
+NEQTO is a lightweight and secure software package allowing companies to remotely install and configure their software on edge devices. NEQTO enables companies to provide improved software services to end users through turnkey platform connectors and built-in software lifecycle management.
+
+Devices installed with NEQTO can be managed through API or the ready-to-use NEQTO Console, which includes optional services for data storage, alerts, and watchdog monitoring. Businesses can enable AIoT with near-instant installation on any Linux device and seamless data integration with any on-premise or cloud servers.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_EdgeBox-RPI-200/header-img_2x.png" alt="pir" width={600} height="auto" /></p>
 
 
 
 
 ## Existed Wiki Updated
 
-### [2.13-inch E-Paper - Monochrome 122x250 Driver code](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)
+### [XIAO ESP32C6 Antenna Format Selection](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#hardware-overview)
 
-We've provided you with 2.13-inch E-Paper - Monochrome 122x250 Driver code here!
+There's an IO port 14 used to select between using the built-in antenna or an external antenna. If port 14 is at a low level, it uses the built-in antenna; if it's at a high level, it uses the external antenna. The default is low level. If you want to set it high, you can refer the code from the link.
 
-<!-- ### [Grove Vision AI Module - Resources](https://wiki.seeedstudio.com/Grove-Vision-AI-Module/#resources)
 
-We've updated to add the resources for Grove Vision AI
 
-### [reServer X86 - Pin information](https://wiki.seeedstudio.com/reServer-Getting-Started/#pin-information)
-
-Here, we have listed the pin information for the 8-Pin Power Connector, 28-Pin Arduino Pinout, 9-Pin COM Pinout, 9-Pin USB2.0 Pinout, and 9-Pin Front Panel Pinout in reServer X86 for everyone's reference. -->
 
 ## The Efforts of Contributor
 
-<!-- ### [XIAO ESP32C3 Prism Display](https://wiki.seeedstudio.com/xiao-esp32c3-prism-display/)
+<!-- ### XIAO's Zephyr Application
 
-Thanks our contributor Tim to create XIAO ESP32C3 Prism Display.
+Thanks our contributor Tim to create the tutorial for XIAO SAMD21/XIAO RP2040/XIAO ESP3232C3/XIAO ESP32S3 With Zephyr(RTOS)
 
-This project uses the ESP32C3 to create a three-dimensional display using a splitter prism. This guide works to explain the steps required to build the enclosure, attach associated electronics, and install the firmware. 
+This wiki covers Zephyr support for the Seeed Studio XIAOs. With the assistance of this guide you will be able to utilize the feature set available to the board.
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Timo614/xiao-prism-buddy/main/docs/photos/enclosure/assembled.jpg" alt="pir" width={500} height="auto" /></p> -->
-
+[XIAO SAMD21 With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_samd21_zephyr_rtos/)
+[XIAO RP2040 With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_rp2040_zephyr_rtos/)
+[XIAO ESP32C3 with Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c3-zephyr/)
+[XIAO ESP32S3(sense) With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_esp32s3_zephyr-_rtos/) -->
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
@@ -107,3 +115,9 @@ This project uses the ESP32C3 to create a three-dimensional display using a spli
 - [weekly wiki on 2024.2.26th](/Seeed_Elderly/weekly_wiki/wiki240226)
 - [weekly wiki on 2024.3.04th](/Seeed_Elderly/weekly_wiki/wiki240304)
 - [weekly wiki on 2024.3.11th](/Seeed_Elderly/weekly_wiki/wiki240311)
+- [weekly wiki on 2024.3.18th](/Seeed_Elderly/weekly_wiki/wiki240318)
+- [weekly wiki on 2024.3.25th](/Seeed_Elderly/weekly_wiki/wiki240325)
+- [weekly wiki on 2024.4.01st](/Seeed_Elderly/weekly_wiki/wiki240401)
+- [weekly wiki on 2024.4.08th](/Seeed_Elderly/weekly_wiki/wiki240408)
+- [weekly wiki on 2024.4.15th](/Seeed_Elderly/weekly_wiki/wiki240415)
+- [weekly wiki on 2024.4.22nd](/Seeed_Elderly/weekly_wiki/wiki240422)

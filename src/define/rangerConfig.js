@@ -102,7 +102,7 @@ export const howDoesList=[
                 desc:`Application Submission: Community members submit applications to join the Ranger program.`
             },{
                 title:'Evaluation',
-                desc:`Application Submission: Community members submit applications to join the Ranger program.`
+                desc:`Applications undergo a thorough review by Seeed to ensure candidates meet program criteria.`
             }
         ]
     },

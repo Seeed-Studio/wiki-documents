@@ -15,7 +15,7 @@ last_update:
 
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Seeed-XIAO-Starter-Kit-p-5378.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p> -->
-[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Seeed-XIAO-Starter-Kit-p-5378.html)
+[<p style={{ margin: '0 auto', width: '50%' }}><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto"/></p>](https://www.seeedstudio.com/Seeed-XIAO-Starter-Kit-p-5378.html)
 ## 产品介绍
 
 早期的Arduino开发板，如8位16 MHz的Arduino Uno，非常大，在容量和性能方面受到限制。现在Seeed Studio XIAO系列产品，拇指盖大小，更强大的性能和更小的尺寸，为Arduino创作提供了更多的可能性。通过动手实践和基于项目的方法，本课程将带您一步一步地学习如何使用Seeed Studio肖系列产品从头开始学习Arduino，从简单的LED灯照明到构建复杂的Arduino可穿戴和小型化项目。此外，您将学习如何从课程中快速创建可用的电子产品原型。本课程不需要Arduino编程或电子知识。本课程将带您一步一步地了解和学习这些必要的知识，并在每个项目中快速实践

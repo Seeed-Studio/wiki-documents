@@ -134,7 +134,7 @@ function doesRender() {
 					})}
 				</div>
 				<div className={styles.btn_container}>
-					<Link className={clsx(styles.btn, 'button button--primary')} href=''>Apply Now</Link>
+					<Link className={clsx(styles.btn, 'button button--primary')} href='https://docs.google.com/forms/d/1g-dr4rfk7S6urL4r-YmewRv2Fni0V4LgL1eksTBvEic/viewform?edit_requested=true'>Apply Now</Link>
 				</div>
 			</div>
 		</div>
@@ -226,7 +226,7 @@ const rangerPersonRender = () => {
 						autoplay={true}
 						slidesPerView={2} // 每次显示的幻灯片数量
 						spaceBetween={24}
-						pagination={{ clickable: false }} // 显示分页器
+						pagination={{ clickable: true }} // 显示分页器
 					>
 						{/* scrollbar={{ draggable: true }} // 显示滚动条 */}
 
@@ -270,7 +270,7 @@ const blogPersonRender = () => {
 
 						slidesPerView={3} // 每次显示的幻灯片数量
 						spaceBetween={24}
-						pagination={{ clickable: false }} // 显示分页器
+						pagination={{ clickable: true }} // 显示分页器
 					>
 						{list.map((item, index) => {
 							return (

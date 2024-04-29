@@ -241,7 +241,7 @@ Congratulations, you have now successfully installed QqWRT into eMMC.
 
 ## Resources
 
-H28K is open source hardware.Download links to relevant materials。
+H28K is open source hardware.Download links to relevant materials.
 
 
 | Version                     | Description      | Download                                                     |
