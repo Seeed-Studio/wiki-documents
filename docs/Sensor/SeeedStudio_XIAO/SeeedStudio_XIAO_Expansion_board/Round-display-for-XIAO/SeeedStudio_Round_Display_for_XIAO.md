@@ -281,6 +281,23 @@ If the program runs smoothly, you will see the following effect.
 This sample program will test all the functional items of the expansion board, including the RTC function. If you do not have the I2C BM8563 RTC library installed, then an error may be reported, you can comment out the function `lv_hardware_test()`, then the functional detection of the SD card will also be turned off.
 :::
 
+## Calibration Firmware Update
+:::tip
+If you find that the touch is sometimes unresponsive, you can follow the steps below to update the calibration firmware for the screen.
+:::
+
+1. Download codes from this [link](https://github.com/Seeed-Studio/Seeed_Arduino_RoundDisplay/tree/main/examples/TP_firmware_update)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/c1.png" style={{width:1000, height:'auto'}}/></div>
+
+2. Put them in the same directory and run this firmware.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/c3.png" style={{width:600, height:'auto'}}/></div>
+
+3. Open serial monitor and you will see successful message like this image below, which means update successfully and you can upload your program to try it!
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/c2.png" style={{width:600, height:'auto'}}/></div>
+
 ## Troubleshooting
 
 ### Q1: Why doesn't the display show anything after I upload the program?

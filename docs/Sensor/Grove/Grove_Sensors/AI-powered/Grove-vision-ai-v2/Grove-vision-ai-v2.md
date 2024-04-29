@@ -25,7 +25,7 @@ last_update:
 It is an MCU-based vision AI module powered by Arm Cortex-M55 & Ethos-U55. It supports TensorFlow and PyTorch frameworks and is compatible with Arduino IDE. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It features a standard CSI interface, an onboard digital microphone and an SD card slot, making it highly suitable for various embedded AI vision projects.
 
 <div class="table-center">
-<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 :::tip
@@ -127,7 +127,7 @@ This part describes how to recover the bootloader of the Grove Vision AI (WE2) m
 #### Software Installation
 
 1. Install the Arduino IDE from the [official website](https://www.arduino.cc/en/software).
-2. Download the latest version of the Seeed_Arduino_SSCMA library from the [GitHub repository](https://github.com/your_repository_link).
+2. Download the latest version of the Seeed_Arduino_SSCMA library from the [GitHub repository](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA).
 3. Add the library to your Arduino IDE by selecting **Sketch > Include Library > Add .ZIP Library** and choosing the downloaded file.
 4. Open the `we2_iic_bootloader_recover` example from the Arduino IDE: **File > Examples > Seeed_Arduino_SSCMA > we2_iic_bootloader_recover**.
 5. Upload the example to your Arduino board.

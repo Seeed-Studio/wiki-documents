@@ -165,9 +165,16 @@ const sidebars = {
                     'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/grove_vision_ai_v2_sscma',
                     {
                       type: 'category',
+                      label: 'Development',
+                      items: [
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove-vision-ai-v2-himax-sdk',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Development/grove_vision_ai_v2_at_library',
+                      ],
+                    },
+                    {
+                      type: 'category',
                       label: 'Application',
                       items: [
-                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-himax-sdk',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-sensecap-app',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-ha',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
@@ -2380,7 +2387,7 @@ const sidebars = {
         collapsible: true,
         link: {
           type: "doc",
-          id: 'Network/RK_Devices/LinkStar/Linkstar_Intro',
+          id: 'Network/RK_Devices/H68K_V2/H68KV2_Datasheet',
         },
         items: [
           'Network/RK_Devices/H68K_V2/H68KV2_Datasheet',
@@ -2562,16 +2569,109 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm-flash-OS',
               'Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm-warranty',
               'Edge/Raspberry_Pi_Devices/reTerminal-DM/reterminal-dm-hardware-guide',
-              {
-                type: 'category',
-                label: 'Node-Red',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
-                ],
-              },
+//////////////////////////////
+{
+  type: 'category',
+  label: 'Application',
+  items: [
+    
+
+    {
+      type: 'category',
+      label: 'Home Assistant',
+      items: [
+         'Edge/Raspberry_Pi_Devices/reTerminal-DM/Home-Assistant/reterminal-DM-Frigate',,
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Edge AI',
+      items: [
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
+'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Cloud Solutions',
+      items: [
+
+
+      {
+      type: 'category',
+      label: 'Azure IoT Edge',
+      items: [
+        'Edge/Raspberry_Pi_Devices/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
+        ],
+      },
+      {
+      type: 'category',
+      label: 'AWS IoT Core',
+      items: [
+        'Edge/Raspberry_Pi_Devices/reTerminal-DM/AWS_IoT/reTerminal-DM_AWS_first',
+      ],
+      },
+  
+      ],
+    },
+    {
+      type: 'category',
+      label: 'IIoT',
+      items: [
+        
+
+        {
+      type: 'category',
+      label: 'SCADA',
+      items: [
+      'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_FUXA',
+      'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_machinechat_jedi',
+      ],
+      },
+      {
+      type: 'category',
+      label: 'Industrial Edge',
+      items: [
+
+            {
+          type: 'category',
+          label: 'N3uron',
+          items: [
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminalDM_N3uron_Get_Start',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminal_DM_N3uron_AWS',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminal_DM_N3uron_Historian',
+          ],
+          },	  					
+          {
+          type: 'category',
+          label: 'Ignition Edge',
+          items: [
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Getting-Started-with-Ignition-Edge',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
+          ],
+          },	  				
+          {
+          type: 'category',
+          label: 'Node Red',
+          items: [
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Getting-Started-with-Node-Red',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
+            ],
+            },
+        ],
+      },
+
+      ],
+    },
+  
+  ],
+},
+
+
+////////////////////////////
+            
               {
                 type: 'category',
                 label: 'SenseCraft_Edge',
@@ -2579,65 +2679,7 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/reTerminal-DM/SenseCraft_Edge/reterminal-dm-sensecraft-edge-os-intro',
                 ],
               },
-
-              {
-                type: 'category',
-                label: 'Home-Assistant',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Home-Assistant/reterminal-DM-Frigate',
-                ],
-              },
-              {
-                type: 'category',
-                label: 'Embedded_ML',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-Yolo5',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Embedded_ML/reTerminal-DM-edgeimpulse',
-                ],
-              },
-
-              {
-                type: 'category',
-                label: 'N3uron',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminalDM_N3uron_Get_Start',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminal_DM_N3uron_AWS',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/N3uron/reTerminal_DM_N3uron_Historian',
-                ],
-              },
-
-              {
-                type: 'category',
-                label: 'Ignition Edge',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Ignition_Edge/reTerminal-DM-Ignition-Edge-Panel-Builder',
-                ],
-              },
-              {
-                type: 'category',
-                label: 'SCADA',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_FUXA',
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/SCADA/reTerminal-DM_intro_machinechat_jedi',
-                ],
-              },
-              {
-                type: 'category',
-                label: 'Azure IoT Edge',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/Azure_IoT/reTerminal-DM_Azure_IoT',
-                ],
-              },
-              {
-                type: 'category',
-                label: 'AWS IoT Core',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/reTerminal-DM/AWS_IoT/reTerminal-DM_AWS_first',
-                ],
-              },
-
-            ],
+                        ],
           },
 
         ],
@@ -2664,6 +2706,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-AWS',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_rpi_200_NEQTO_Engine_for_Linux',
               {
                 type: 'category',
                 label: 'Ignition Edge',

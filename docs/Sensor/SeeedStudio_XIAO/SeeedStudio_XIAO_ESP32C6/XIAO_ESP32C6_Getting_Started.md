@@ -61,7 +61,7 @@ export const Highlight = ({children, color}) => (
             <th colspan="2">Products</th>
             <th><Highlight color="#92c52a">XIAO ESP32C6</Highlight></th>
             <th>XIAO ESP32C3</th>
-            <th>XIAO ESP32C6</th>
+            <th>XIAO ESP32S3</th>
         </tr>
     </thead>
     <tbody>
@@ -179,6 +179,16 @@ export const Highlight = ({children, color}) => (
 	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
 	</tr>
 </table>
+
+:::tip
+There's an IO port 14 used to select between using the built-in antenna or an external antenna. If port 14 is at a low level, it uses the built-in antenna; if it's at a high level, it uses the external antenna. The default is low level. If you want to set it high, you can refer the code below.
+```cpp
+void setup() {
+  pinMode(14, OUTPUT); 
+  digitalWrite(14, HIGH);
+}
+```
+:::
 
 ## Getting started
 
