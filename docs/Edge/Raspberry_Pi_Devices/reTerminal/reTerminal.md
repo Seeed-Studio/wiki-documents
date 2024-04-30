@@ -330,18 +330,9 @@ You need to prepare the following hardware
 - Power adapter (5V/3A)
 - USB Type-C cable
 
-### Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC
+### <span id="jump2">Flash Raspberry Pi OS/ 64-bit Ubuntu OS or Other OS to eMMC</span>
 
 We can flash **Raspberry Pi OS/ 64-bit Ubuntu OS or other OS** on to the **eMMC storage** of the CM4 on the reTerminal. Once the necessary drivers are installed, you just have to connect the USB Type-C port of the reTerminal to your PC, and it will show as an external drive. Start by removing the reTerminal back shell.
-
-- **Download the Raspberry Pi OS by visiting the links below**
-
-| Version                     | Description      | TAG                                                     |
-| --------------------------- | ---------------- | ------------------------------------------------------------ |
-| [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux version 6.6.20 | lastest |
-| [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux version 6.6.20           | lastest |
-| [2022-07-21-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/64bit-20220721T012743Z-001.zip)               | 64bit Debian11(Bullseye) Linux version 5.15.32-v7+  | release |
-| [2022-07-21-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/32bit-20220721T012743Z-001.zip)                    | 32bit Debian11(Bullseye) Linux version 5.15.32-v7+  | release |
 
 - **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath
 
@@ -621,7 +612,7 @@ raspberry
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
-### Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS
+### <span id="jump1">Install reTerminal drivers after flashing new Raspberry Pi OS/ Ubuntu OS or Other OS</span>
 
 reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, touch panel, accelerometer, light sensor, user LEDs, user buttons, RTC, buzzer, cryptographic co-processor**.
 
@@ -671,6 +662,46 @@ You will see the following output if you have successfully installed the drivers
 ```sh
 sudo reboot
 ```
+
+### Flash Raspberry Pi OS with drivers from seeed to eMMC
+
+- **Step 1.** As with normal mirror burning steps, you need to select the device model first:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/01.png" alt="pir" width="700" height="auto"/></p>
+
+- **Step 2.** When choosing an operating system, you need to download the system you need, unzip it in the local folder, and then select it.
+
+- **Download the Raspberry Pi OS by visiting the links below**
+
+| Version                     | Description      | TAG                                                     |
+| --------------------------- | ---------------- | ------------------------------------------------------------ |
+| [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux version 6.6.20 | lastest |
+| [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux version 6.6.20           | lastest |
+| [2022-07-21-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/64bit-20220721T012743Z-001.zip)               | 64bit Debian11(Bullseye) Linux version 5.15.32-v7+  | release |
+| [2022-07-21-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/32bit-20220721T012743Z-001.zip)                    | 32bit Debian11(Bullseye) Linux version 5.15.32-v7+  | release |
+
+<br />
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/02.png" alt="pir" width="700" height="auto"/></p>
+
+Select the OS you downloaded, it should end in **.img**.
+<br />
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/03.png" alt="pir" width="700" height="auto"/></p>
+
+:::caution
+
+If you install the latest bookworm version of the image. Do not going to configure by clicking the advance option button. Do not enter this interface for any initial configuration.
+Otherwise, unexpected driver error situations may occur!!!
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/notice.png" alt="pir" width="450" height="auto"/></p>
+
+If you accidentally make an advanced configuration and get a screen flip error, you'll need to [reinstall the driver](#jump1) to fix the problem.
+
+:::
+
+- **Step 3.** For other operations, refer to the [preceding steps](#jump2).
+After the image is installed, you do not need to install the driver to use it. (The image we provide includes the driver file)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/04.png" alt="pir" width="700" height="auto"/></p>
 
 ### reTerminal Disassemble Guide
 
