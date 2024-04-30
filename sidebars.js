@@ -2572,7 +2572,7 @@ const sidebars = {
 //////////////////////////////
 {
   type: 'category',
-  label: 'Application',
+  label: 'Applications',
   items: [
     
 
@@ -2700,29 +2700,81 @@ const sidebars = {
             label: 'EdgeBox-RPI-200',
             items: [
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox_rpi_200_Introduction',
-              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-with-LoRaWAN-modules',
-              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-boot-from-external-media',
-              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
-              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
-              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-n3uron',
-              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-AWS',
-              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_rpi_200_NEQTO_Engine_for_Linux',
               {
                 type: 'category',
-                label: 'Ignition Edge',
-                items: [
-                  'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Ignition_Edge/Edgebox-rpi-200-ignition-edge'
+                label: 'Applications',
+                items: [      
+					 
+				  {
+					type: 'category',
+					label: 'Industrial Edge',
+					items: [
+
+					  	  					{
+					type: 'category',
+					label: 'N3uron',
+					items: [
+						'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron',
+					],
+				  },	  					{
+					type: 'category',
+					label: 'Ignition Edge',
+					items: [
+					   'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Ignition_Edge/Edgebox-rpi-200-ignition-edge',
+					],
+				  },	  					
+				  {
+					type: 'category',
+					label: 'Codesys',
+					items: [
+					    'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-codesys',
+					],
+				  },
+					  				 
+					],
+				  },
+				  
+				     {
+                    type: 'category',
+                    label: 'Cloud Solutions',
+                    items: [
+
+				  {
+					type: 'category',
+					label: 'AWS IoT Core',
+					items: [
+					  'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-AWS',
+					],
+				  },
+                      
+                    ],
+                  },
+                  {
+                    type: 'category',
+                    label: 'Hardware Guide',
+                    items: [
+                       'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Hardware/Edgebox-rpi-200-with-LoRaWAN-modules',
+					            'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Hardware/Edgebox-rpi-200-boot-from-external-media'
+                    ],
+                  },
+				  
+				   {
+                    type: 'category',
+                    label: 'Fleet Management',
+                    items: [
+                        'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox-rpi-200-balena-OS-setup',
+						          'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_rpi_200_NEQTO_Engine_for_Linux',
+                    ],
+                  },
                 ],
               },
+            
             ],
           },
         ],
       },
 
       ],
-
-
-
 
 
     },
