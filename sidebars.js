@@ -2715,6 +2715,7 @@ const sidebars = {
 					label: 'N3uron',
 					items: [
 						'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron',
+            'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron-aws',
 					],
 				  },	  					{
 					type: 'category',
