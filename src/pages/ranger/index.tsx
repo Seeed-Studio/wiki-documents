@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation,Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import { useState, useRef, useEffect } from 'react'
+import ThirdPartyComponent from './_components/map';
 
 function getImgUrl(str) {
 	return `https://files.seeedstudio.com/wiki/ranger/${str}.png`
@@ -31,6 +32,7 @@ function bannerRender() {
 function topJoinRender() {
 	return (
 		<div className={clsx(styles.top_join, styles.section)}>
+
 			<div className={styles.wrapper}>
 				<div className={styles.title}>Why join in Seeed Ranger?</div>
 				<div className={styles.top_join_container}>
@@ -218,6 +220,8 @@ const rangerPersonRender = () => {
 	}, [])
 	return (
 		<div className={clsx(styles.person, styles.section)}>
+						{/* <iframe src="https://lottie.host/embed/1d94a44a-9bcc-47b5-b738-5792c00d4563/zLPxvIpMVk.json"></iframe> */}
+			<ThirdPartyComponent/>
 			<div className={styles.wrapper}>
 				<div className={styles.title}>Why join in Seeed Ranger?</div>
 				<div className={styles.person_container}>
@@ -302,6 +306,7 @@ const blogPersonRender = () => {
 	)
 }
 export default function Ranger(): JSX.Element {
+
 	return (
 		<Layout>
 			<div className={clsx(styles.ranger_page, 'ranger_page')}>
