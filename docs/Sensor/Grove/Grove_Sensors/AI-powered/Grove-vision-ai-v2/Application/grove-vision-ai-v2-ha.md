@@ -13,7 +13,7 @@ last_update:
 
 # Connect Grove Vision AI V2 to Home Assistant
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/37.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a4.png" style={{width:1000, height:'auto'}}/></div>
 
 Integrating Grove Vision AI V2 into Home Assistant can elevate your smart home setup by adding advanced visual sensing capabilities. This integration allows for real-time environmental analysis and customized automation, making your home environment more intelligent and responsive.
 
@@ -226,7 +226,7 @@ In the new window that pops up, select the correct COM port for the device and c
 
 Then, just select a model you want to use and click the **Send** button below. Here is an example of Gesture Detection.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/18.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a2.png" style={{width:1000, height:'auto'}}/></div>
 
 Wait for 1~2 minutes for the model to be uploaded.
 
@@ -234,7 +234,7 @@ Wait for 1~2 minutes for the model to be uploaded.
 
 Once the model is uploaded successfully, you will be able to see the live feed from the Grove Vision AI V2 camera in the Preview on the right.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/19.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a3.png" style={{width:1000, height:'auto'}}/></div>
 
 <br />
 
@@ -362,7 +362,7 @@ Once the configuration is complete, you can view your device and its status on t
 
 Following these steps should allow you to successfully add the "SenseCraft" device to your Home Assistant instance and configure it to use the MQTT service.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/37.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a4.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Troubleshooting
 
