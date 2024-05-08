@@ -16,7 +16,9 @@ last_update:
 ---
 ## Introduction 
 
-In industrial automation, Modbus stands out as one of the most common protocols, while MQTT dominates the wireless protocol domain. The potent pairing of ReTerminal DM and [N3uron](https://n3uron.com/) Duo facilitates efficient plant management by providing robust connectivity and data manipulation capabilities. This Wiki emphasizes the significance of Modbus TCP in industrial settings, highlighting the seamless integration of MQTT devices to further enhance connectivity.
+In industrial automation, Modbus stands out as one of the most common protocols. MQTT has emerged as the leading protocol for IoT in industrial automation, surpassing Modbus due to its lightweight design, efficiency, scalability, and support for asynchronous messaging. In MQTT, devices communicate only when there's a reportable event, contrasting with constant update checks. This event-driven approach, coupled with reporting by exception - sending data only when it deviates from norms or on specific triggers - conserves bandwidth and resources, optimizing data transmission for critical IoT applications.
+
+ The potent pairing of reTerminal DM and [N3uron](https://n3uron.com/) Duo facilitates efficient plant management by providing robust connectivity and data manipulation capabilities. This Wiki emphasizes the significance of Modbus TCP in industrial settings, highlighting the seamless integration of MQTT devices to further enhance connectivity.
 
 ## Prerequisites
 
@@ -133,7 +135,7 @@ Once connected to the system, you can view the real-time status of output coils 
 
 - Step 01: In the Explorer panel, select the MQTT instance you have just created.
 - Step 02: Click on the Model menu button and select New Connection.
-- Step 03: Give the New connection a name. In this example, it has been named **MqqtClient**:
+- Step 03: Give the New connection a name. In this example, it has been named **MqttClient**:
 
     - Destination broker : Custom 
     - Authentication mode: Password
@@ -187,7 +189,7 @@ And **Save** it.
     - Source/Enabled: Yes
     - Module Type: MqttClient
     - Module name: MQTT
-    - Config/Subscriber: MqqtClient/Subscriber
+    - Config/Subscriber: MqttClient/Subscriber
 Click on **Save**.
 
 <center><img width={500} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/mqtttagconfig.PNG" /></center>
