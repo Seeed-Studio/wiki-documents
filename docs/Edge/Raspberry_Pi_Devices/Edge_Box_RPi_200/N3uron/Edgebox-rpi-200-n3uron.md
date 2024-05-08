@@ -187,7 +187,7 @@ Port: 1883
  <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron20.png" alt="pir" width="600" height="auto" /></div>
 
 
- ### Instantiate a WebVision module
+### Instantiate a WebVision module
 
 **Step 1:** Open N3uron and navigate to the Config menu.
 
