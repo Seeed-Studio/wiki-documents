@@ -18,6 +18,7 @@ last_update:
 
 
 In industrial automation, Modbus stands out as one of the most common protocols. MQTT has emerged as the leading protocol for IoT in industrial automation due to many characteristics. Its lightweight design, efficiency, scalability, and support for asynchronous messaging are notable. In MQTT, devices communicate only when there's a reportable event, contrasting with constant update checks. This event-driven approach, coupled with reporting by exception—sending data only when it deviates from norms or on specific triggers—conserves bandwidth and resources, optimizing data transmission for critical IoT applications.
+
 The potent pairing of reTerminal DM and [N3uron](https://n3uron.com/) Duo facilitates efficient plant management by providing robust connectivity and data manipulation capabilities. This Wiki emphasizes the significance of Modbus TCP in industrial settings, highlighting the seamless integration of MQTT devices to further enhance connectivity.
 
 ## Prerequisites
