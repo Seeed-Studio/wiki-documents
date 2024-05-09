@@ -16,9 +16,9 @@ last_update:
 ---
 ## Introduction 
 
-In industrial automation, Modbus stands out as one of the most common protocols. MQTT has emerged as the leading protocol for IoT in industrial automation, surpassing Modbus due to its lightweight design, efficiency, scalability, and support for asynchronous messaging. In MQTT, devices communicate only when there's a reportable event, contrasting with constant update checks. This event-driven approach, coupled with reporting by exception - sending data only when it deviates from norms or on specific triggers - conserves bandwidth and resources, optimizing data transmission for critical IoT applications.
 
- The potent pairing of reTerminal DM and [N3uron](https://n3uron.com/) Duo facilitates efficient plant management by providing robust connectivity and data manipulation capabilities. This Wiki emphasizes the significance of Modbus TCP in industrial settings, highlighting the seamless integration of MQTT devices to further enhance connectivity.
+In industrial automation, Modbus stands out as one of the most common protocols. MQTT has emerged as the leading protocol for IoT in industrial automation due to many characteristics. Its lightweight design, efficiency, scalability, and support for asynchronous messaging are notable. In MQTT, devices communicate only when there's a reportable event, contrasting with constant update checks. This event-driven approach, coupled with reporting by exception—sending data only when it deviates from norms or on specific triggers—conserves bandwidth and resources, optimizing data transmission for critical IoT applications.
+The potent pairing of reTerminal DM and [N3uron](https://n3uron.com/) Duo facilitates efficient plant management by providing robust connectivity and data manipulation capabilities. This Wiki emphasizes the significance of Modbus TCP in industrial settings, highlighting the seamless integration of MQTT devices to further enhance connectivity.
 
 ## Prerequisites
 
@@ -46,6 +46,19 @@ In industrial automation, Modbus stands out as one of the most common protocols.
 ### Software
 
 We highly recommend studying the [Getting Started with N3uron](https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/) guide. It provides essential insights into navigating the N3uron web interface, understanding concepts such as the Web UI and Web Vision module, grasping the concept of tags, and creating basic dashboards. If you haven't explored these fundamentals yet, it's advisable to do so before proceeding further. You can access the guide through the provided link.
+
+### Configure Ethernet settings 
+
+Since your PLC IP domain is different from your wireless settings, you may have to change the IP configuration manually. For that,
+- Step 01: Run the following command:
+
+```sh
+sudo nano /etc/dhcpcd.conf
+```
+
+- Step 02: Then configure the Ethernet port settings according to your PLC network domain and set priorities using the 'metric' command. The lowest metric has the highest priority.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/ipconfig.PNG" /></center>
 
 ## Modbus Module Create and Configuration
 
@@ -199,6 +212,41 @@ Click on **Save**.
 Once connected to the system, you can view the real-time status of output from the MQTT Broker.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/realtimeview2.PNG" /></center>
+
+## Bonus : Lets Publish Status of Factory with AWS 
+
+:::note
+ We have provided step-by-step instructions on how to connect an [AWS cloud to your reTerminal DM device](https://wiki.seeedstudio.com/reTerminal-DM_AWS_first/). If you are new to this wiki, please refer to this link.
+:::
+
+- Step 01: In the Explorer panel, select the **MQTT** instance you have just created.
+- Step 02: Click on the Model menu button and select **New Connection**.
+- Step 03: Give the New connection a name. In this example, it has been named **MqttPublisher**.
+
+<center><img width={400} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/newpublisher.PNG" /></center>
+
+- Step 04: Configure the connection properties:
+
+    - A: Select **Amazon Web Services** from the **Destination Broker** drop down menu. **Authentication mode** will be **Certificate**. Also **Client Id** is **N3uron** in this example.
+    - B: Load the **Certificate, Private key and CA certificate** you downloaded and saved when you created the Thing in the AWS IoT Console.
+    - C: In the AWS IoT console, in the left-hand menu, go to **Settings** and copy your **Device Data Endpoint**. Go back to N3uron and paste it in the **Broker URL** field.
+    - D: Leave the rest of the properties as their default values and click on **Save**.
+
+<center><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/publisherconfig.PNG" /></center>
+
+- Step 05: Within the Model panel, right-click on the **MqttPublisher** Connection you have just configured, select **New Publisher**, and give it a name. In this example, we will simply use **AWS**.
+
+<center><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/newpublisheraws.PNG" /></center>
+
+- Step 06: Click on it and add a name in the **Topic** field. In this example, we have used **N3uron**.
+
+- Step 07: Click on the **Tag Filter** button, select **New Tag Filter**, and change the default name. In this example we have used **TagFilter**. Leave Mode, Path, and Regex pattern as their default values. With this configuration, every tag configured in N3uron will be published to our AWS Broker.
+
+<center><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/awssettings.PNG" /></center>
+
+- Step 08: Go to the AWS IoT console and in the left-hand menu, select **MQTT test client**.Click on the **Subscribe to a topic** tab, enter **N3uron** in the Topic filter to subscribe to everything, and click on **Subscribe**. 
+
+<center><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/awsend.PNG" /></center>
 
 ## Tech Support & Product Discussion
 
