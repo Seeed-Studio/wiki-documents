@@ -24,16 +24,17 @@ tags:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="600" height="auto"/></p>
 
-
-The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. 
-With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
-
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
+
+<br />
+
+The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. 
+With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
+
 
 ## Feature
 
@@ -604,10 +605,14 @@ Then send some data in the serial debugging tool of your computer, you can obser
 
 The Boot Switch of the reComputer R1000 is connected to the nRPI_BOOT pin of CM4. This switch provides users with the option to select the boot source between eMMC and USB. In normal mode, the switch should be set away from the side with the "BOOT" label, enabling the system to boot from eMMC. Conversely, when users need to flash the system image, they should set the switch towards the "BOOT" label, allowing the system to boot from the Type-C USB interface.
 
+<div class="table-center">
+
 | Switch Position                                              | Mode        | Description    | nRPI-BOOT |
 | ------------------------------------------------------------ | ----------- | -------------- | --------- |
 | <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/10.png" alt="image"/> | Normal mode | Boot from eMMC | Low       |
 | <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/11.png" alt="image"/> | Flash mode  | Boot from USB  | High      |
+
+</div>
 
 ### USB
 
@@ -960,7 +965,7 @@ Can not plug in 2 LoRa® modules on board.
 The reComputer R1000-10 is powered by the CM4 with an onboard Wi-Fi/BLE version, providing the same Wi-Fi/BLE parameters as the CM4. For detailed parameter information, please refer to the Raspberry Pi official website.
 
 :::note
-It is important to note that due to the reComputer R1000's metal casing, Wi-Fi/BLE signals may have difficulty penetrating the metal exterior. If you require Wi-Fi/BLE functionality, it is recommended to purchase an external antenna and click here for assemble instruction.
+It is important to note that due to the reComputer R1000's metal casing, Wi-Fi/BLE signals may have difficulty penetrating the metal exterior. If you require Wi-Fi/BLE functionality, it is recommended to purchase an external antenna and [click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-wi-fible-antenna).
 :::
 
 #### Connect wifi
@@ -1062,7 +1067,7 @@ exit
 The reComputer R1000 mainboard features two Mini-PCIe slots, with Mini-PCIe slot 1 supporting a 4G module using the USB protocol. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer R1000.
 
 :::note
-Please note that if you require 4G functionality, it is necessary to purchase the corresponding 4G module and external antenna. Please click here for assemble instruction.
+Please note that if you require 4G functionality, it is necessary to purchase the corresponding 4G module and external antenna. [Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
 
 To interact with a 4G module using AT commands via minicom, follow these steps:
@@ -1150,7 +1155,7 @@ import TabItem from '@theme/TabItem';
 
 <br />
 
-**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/recomputer_r1000_hardware_guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
+**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
 
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
@@ -1168,7 +1173,7 @@ After this, please reboot Raspberry Pi to make sure these settings work.
 cd ~/
 git clone https://github.com/Lora-net/sx1302_hal
 cd sx1302_hal
-sudo vim ./libLoRagw/inc/LoRagw_i2c.h
+sudo vim ./libloragw/inc/loragw_i2c.h
 ```
 
 Change `#define I2C_DEVICE "/dev/i2c-1"` to `#define I2C_DEVICE "/dev/i2c-3"`.
@@ -1179,28 +1184,40 @@ sudo make
 
 **Step 4.** Copy the reset_lgw.sh script
 
-```
-cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
+```bash
+vim ./tools/reset_lgw.sh
 ```
 
-**Step 5.** replace the default `SPI` port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915` config file: 
+Modify the code:
+
+```bash
+SX1302_RESET_PIN=580     # SX1302 reset
+SX1302_POWER_EN_PIN=578  # SX1302 power enable
+SX1261_RESET_PIN=579     # SX1261 reset (LBT / Spectral Scan)
+// AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
+```
+
+```
+cp ./tools/reset_lgw.sh ./packet_forwarder/
+```
+
+**Step 5.** Modify the content of the `global_conf.json.sx1250.EU868` configuration file:
 
 ```sh
-sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
+cd packet_forwarder
+vim global_conf.json.sx1250.EU868
 ```
+
+Change `"com_path": "/dev/spidev0.0"` to `"com_path": "/dev/spidev0.1"`
 
 **Step 6.** Start LoraWAN® Module
 
 Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
 
 ```sh
-$ cd ~/sx1302_hal/packet_forwarder
-$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915
+cd ~/sx1302_hal/packet_forwarder
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 ```
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
-
-Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
 
 </TabItem>
 <TabItem value="WM1302 USB Module" label="WM1302 USB Module">
@@ -1213,7 +1230,7 @@ Plese choose your prefered Lora® Network server and use the `EUI ID` as shown i
     </a>
 </div>
 
-**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
+**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
 
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
@@ -1230,64 +1247,54 @@ After this, please reboot Raspberry Pi to make sure these settings work.
 cd ~/
 git clone https://github.com/Lora-net/sx1302_hal
 cd sx1302_hal
+sudo vim ./libloragw/inc/loragw_i2c.h
+```
+
+Change `#define I2C_DEVICE "/dev/i2c-1"` to `#define I2C_DEVICE "/dev/i2c-3"`.
+
+```bash
 sudo make
 ```
 
 **Step 4.** Copy the reset_lgw.sh script
 
-```
-cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
+```bash
+vim ./tools/reset_lgw.sh
 ```
 
-**Step 5.** replace the USB port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915.USB` config file:
+Modify the code:
 
-**Step 5-1.**
-First to get the specific USB port please follow the steps below:
+```bash
+SX1302_RESET_PIN=580     # SX1302 reset
+SX1302_POWER_EN_PIN=578  # SX1302 power enable
+SX1261_RESET_PIN=579     # SX1261 reset (LBT / Spectral Scan)
+// AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
+```
+
+```
+cp ./tools/reset_lgw.sh ./packet_forwarder/
+```
+
+**Step 5.** Modify the content of the `global_conf.json.sx1250.EU868.usb` configuration file:
 
 ```sh
-lsusb
-```
-In my case our WM1302 is using the `STMicroelectronics Virtual COM Port` so we can get the product id `5740`
-
-**Step 5-2.**
-Then get the usb device with the Product ID number `5740`, In this case we get the USB port number `1-1.4.1`:
-
-```sh
-sudo dmesg | grep 5740
+cd packet_forwarder
+vim global_conf.json.sx1250.EU868.usb
 ```
 
-Then we could get the device port as follow:
-
-```sh
-sudo dmesg | grep 1-1.4.1
-```
-
-so in my case the USB device is `ttyACM2`
-
-So lets modify the USB device in the  `global_conf.json.sx1250.US915.USB` config with the sed command `sed -i 's/search_string/replacement_string/g' filename`, so please follow the pattern as `sed -i 's/ttyACM0/the_result_from_above' global_conf.json.sx1250.frequency_of_your_module.USB`, to be note that please replace `the_result_from_above` and `frequency_of_your_module` for your own application:
-
-for example in my case:
-
-```sh
-sed -i 's/ttyACM0/ttyACM2/g'  global_conf.json.sx1250.US915.USB
-```
-
-Please refer to the steps shown in the image below:
-
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/find-lora-usb.png"/></div>
+Change `"com_path": "/dev/spidev0.0"` to `"com_path": "/dev/spidev0.1"`
 
 **Step 6.** Start LoraWAN® Module
 
 Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
 
 ```sh
-USB version
-$ cd ~/sx1302_hal/packet_forwarder
-$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
+cd ~/sx1302_hal/packet_forwarder
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.usb
 ```
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
 
-Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
+This command specifies the configuration file to be used for LoRa® USB.
+
 
 </TabItem>
 </Tabs>
@@ -1301,19 +1308,72 @@ The Mini-PCIe slots offer support for Zigbee modules utilizing the USB protocol,
 
 :::note
 Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna.
+[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
+
+#### To test Zigbee communication with two Zigbee modules, follow these steps:
+
+**Step 1.** Check Serial Ports:
+Use the following command to check available serial ports:
+
+```bash
+cat /dev/ttyUSB*
+```
+
+**Step 2.** Install Serial Communication Tool:
+
+```bash
+sudo apt install minicom
+```
+
+**Step 3.** Open Serial Port for Coordinator (First Zigbee Module):
+
+```bash
+sudo minicom -D /dev/ttyUSB2 -b 1152008n1 -w -H
+```
+
+Follow these steps to configure the first Zigbee module:
+
+- Set as coordinator: Send command `55 04 00 05 00 05`, expect response `55 04 00 05 00 05`.<br />
+- Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
+- Network formation: Send command `55 03 00 02 02`.<br />
+
+**Step 4.** Open Serial Port for Router (Second Zigbee Module):
+
+Open another instance of minicom and configure it for the second serial port with the same settings as before.
+
+Follow these steps to configure the second Zigbee module:
+
+- Set as router: Send command `55 04 00 05 01 04`, expect response `55 04 00 05 00 05`.<br />
+- Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
+- Network formation: Send command `55 03 00 02 02`.<br />
+
+**Step 5.** Check Device Status:
+Send command `5 03 00 00 00` to check the device status. Expect a response similar to `55 2a 00 00 00 01 XX XX XX XX`, where `XX` represents device information.
+
+**Step 6.** Enter Transparent Mode:
+If network formation is successful, enter transparent mode by sending command `55 07 00 11 00 03 00 01 13`. Both modules should be in transparent mode for direct communication. To exit transparent mode, send `+++`.
+
+**Step 7.** Additional Notes:
+- If router configuration fails, the device may already be a coordinator. Leave the network using command `55 07 00 04 02 xx xx xx`.
+- Test transmission power using commands `55 04 0D 00 00 0D` (query) and `55 04 0D 01 XX XX` (set).
+
+Ensure you replace /dev/ttyUSB* with the correct serial port for each Zigbee module. Follow these steps carefully to test Zigbee communication between the two modules successfully.
+
 
 ### PoE
 
 The reComputer R1000 worked as powered devices can support the IEEE 802.3af standard by adding a PoE power supply module. The seat for PoE is pre-soldered on board; however, users need to disassemble the device to install the PoE module for Ethernet PoE function.
 
 :::note
-The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to solder and assemble the PoE module themselves.
+The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to [solder and assemble the PoE module themselves](/recomputer_r1000_hardware_guide/#assemble-ups-and-poe-module).
 :::
 
 ### SSD
 
 The reComputer R1000 supports 2280 NVMe SSD through the use of a PCIe slot(J62) below two Mini-PCIe slots on board. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
+
+[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-ssd).
 
 <div class="table-center">
 
@@ -1357,8 +1417,17 @@ It's important to note that not all SSD cards available in the market support th
 The TPM features Infineon’s OPTIGA™ TPM SLB9670 which is compliant to the Trusted Computing Group (TCG) TPM 2.0 specification is recommened as encryption chip to the reComputer R1000. The chip features an SPI interface applied for port J13 on board, to enable a root of trust for platform integrity, remote attestation, and cryptographic services.
 
 :::note
-Please click here for assemble instruction.
+[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-tpm-20-module).
 :::
+
+If you connect TPM 2.0 module to device, the following code can help check TPM connection.
+
+```bash
+ls /dev | grep tpm
+```
+
+If you see **tpm0** and **tpmrm0** in the output, it means that TPM (Trusted Platform Module) devices are detected and available on your system. This indicates that the TPM hardware is recognized and accessible, which is a good sign. You can proceed with using TPM-related functionalities or applications knowing that the devices are present and accessible.
+
 
 ### UPS
 
@@ -1367,6 +1436,7 @@ Please click here for assemble instruction.
 The UPS is 7F, which operates in series. The UPS module is positioned between the DC5V and CM4 components, with a GPIO signal utilized to alert the CPU in the event of a power loss from the 5V supply. Upon receiving this signal, the CPU executes an urgent script before the super capacitor's energy is depleted, initiating a "$ shutdown" command.
 <br />
 The backup duration provided by the UPS heavily relies on the system load. Below are some typical scenarios tested with a CM4 module featuring 4GB RAM, 32GB eMMC storage, and a Wi-Fi module.
+<br />
 
 | Mode of Operation | Time(s) | Remark                                                       |
 | ----------------- | ------- | ------------------------------------------------------------ |
@@ -1375,7 +1445,57 @@ The backup duration provided by the UPS heavily relies on the system load. Below
 
 :::note
 For UPS function please contact us for more information, and the alarm signal is active LOW.
+[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-ups-and-poe-module).
 :::
+
+A GPIO25 between CPU and DC/AC power in is used to alarm CPU when the 5V power supply is down. Then the CPU should do something urgent in a script before energy exhaustion of super capacitor and run a `$ shutdown`
+<br />
+Another way to use this function is Initiate a shutdown when GPIO pin changes. The given GPIO pin is configured as an input key that generates KEY_POWER events. This event is handled by systemd-logind by initiating a shutdown. 
+Use `/boot/overlays/README` as reference, then modify `/boot/config.txt`. 
+
+```bash
+dtoverlay=gpio-shutdown, gpio_pin=GPIO25,active_low=1
+```
+
+:::note
+1.  For UPS function please contact us for more information.
+2.  The alarm signal is active LOW.
+:::
+
+The python code below is a demo for detecting the working mode of supercapacitor UPS through GPIO25, and automatically saving data and shut down when the system is powered off.
+
+```python
+import RPi.GPIO as GPIO
+import time,os
+
+num = 0
+
+GPIO.setmode(GPIO,BCM)
+#set GPIO25 as input mode
+#add 500ms jitter time for software stabilization
+GPIO.setup(25,GPIO.IN,pull_up_down = GPIO.PUD_DOWN)
+GPIO.add_event_detect(25,GPIO.FALLING, bouncetime = 500) 
+while True:
+  if GPIO.event_detected(25):
+    print('...External power off...')
+    print('')
+    os.system('sync')
+    print('...Data saving...')
+    print('')
+    time.sleep(3)
+    os.system('sync')
+    #saving two times
+    while num<5:
+      print('-----------')
+      s = 5-num
+      print('---' + str(s) + '---')
+      num = num + 1
+      time.sleep(1)
+    print('---------')
+    os.system('sudo shutdown -h now')
+```
+
+
 
 ###  DSI & Speaker
 
