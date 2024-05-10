@@ -76,6 +76,8 @@
         background: #33495B;
         color: #fff;
 
+
+
         .top_join_container {
             display: flex;
             flex-wrap: wrap;
@@ -258,9 +260,15 @@
     }
 
     .person {
-        background: #F3F5F8;
-        color:#000;
+        background: #33495B;
+        color: #fff;
+
+        .wrapper {
+            margin-top: 60px;
+        }
+
         .person_container {
+            color: #000;
             margin-top: 40px;
 
             .person_item {
@@ -282,7 +290,7 @@
 
     .blog {
         background: #fff;
-        color:#000;
+
         .blog_container {
             margin-top: 40px;
 
