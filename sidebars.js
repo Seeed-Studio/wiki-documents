@@ -1122,6 +1122,14 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Matter',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Matter/xiao_esp32c6_idf_env',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Matter/xiao_esp32c6_matter_env',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
