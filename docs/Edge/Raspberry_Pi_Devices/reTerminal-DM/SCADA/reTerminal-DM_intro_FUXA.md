@@ -6,6 +6,7 @@ keywords:
   - Getting started
   - SCADA
   - Industrial 
+  - FUXA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-DM_intro_FUXA
 last_update:
