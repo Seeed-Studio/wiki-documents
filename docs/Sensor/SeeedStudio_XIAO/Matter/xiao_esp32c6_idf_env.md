@@ -5,13 +5,19 @@ keywords:
 - ESP-IDF
 - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /xiao_esp32c6_idf
+slug: /xiao_idf
 last_update:
   date: 05/09/2024
   author: Citric
 ---
 
 # Developed on XIAO using Espressif ESP-IDF
+
+:::tip
+This article is the first tutorial in the Seeed Studio XIAO ESP32 Development Matter series. If you want to start your Matter device development journey with the XIAO ESP32 Series, start here.
+
+This tutorial applies to the XIAO ESP32C3, XIAO ESP32S3 and XIAO ESP32C6.
+:::
 
 In the world of IoT development, the ESP-IDF (Espressif IoT Development Framework) has gained significant popularity due to its powerful features and extensive support for ESP32 series microcontrollers. With the emergence of the Matter protocol, which aims to provide a unified standard for smart home devices, developers are eager to explore this new frontier. However, Matter development currently does not support the Arduino framework, leaving ESP-IDF as the primary choice for development. In this tutorial, we will guide you through the process of installing ESP-IDF on an Ubuntu system, enabling you to kickstart your Matter development journey on XIAO ESP32 Series.
 
@@ -86,8 +92,9 @@ The XIAO ESP32C3 does not have an on-board LED, so if you are using the XIAO ESP
 
 Since the ESP-IDF development framework is aimed at more professional software developers, the threshold for using it is higher than that of Arduino. The related documents and information will be less than Arduino. In order to let XIAO users start using ESP-IDF as soon as possible, and reduce the possibility of encountering problems in the configuration of the development environment, we will present the configuration of the environment in the form of video and graphics. This section is the video part, if you want to follow along with the video, you can refer to this video to install and configure the ESP-IDF environment and finally light up the on-board LEDs of the XIAO ESP32C6.
 
-
-
+<div class="table-center">
+<iframe width="900" height="450" src="https://www.youtube.com/embed/grt5VWcZtSw?si=bKY5JooG2pJ4EAAe?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## Installation ESP-IDF Step by Step
 

@@ -1122,14 +1122,6 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Matter',
-              items: [
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Matter/xiao_esp32c6_idf_env',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Matter/xiao_esp32c6_matter_env',
-              ],
-            },
-            {
-              type: 'category',
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
@@ -1210,6 +1202,15 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/xiao-rgb-matrix',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/gpio_expander_for_xiao',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'XIAO + ESP-IDF + ESP-Matter',
+          items: [
+            'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32c6_idf_env',
+            'Sensor/SeeedStudio_XIAO/Matter/getting_started_with_matter',
+            'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32c6_matter_env',
           ],
         },
         'Sensor/SeeedStudio_XIAO/PCB_Design_XIAO',
