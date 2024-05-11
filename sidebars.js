@@ -2718,6 +2718,7 @@ const sidebars = {
 					items: [
 						'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron',
             'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron-aws',
+            'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron-modbus-mqtt',
 					],
 				  },	  					{
 					type: 'category',
