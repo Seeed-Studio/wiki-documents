@@ -727,23 +727,6 @@
   margin: 10px 20px 10px 0; /* 为图片添加外边距，使其与文本有间隔 */
 }
 
-.sp-table-c6{
-  table,
-  td,
-  th {
-      /* border: 1px solid ; */
-      border-collapse: collapse;
-      text-align: center;
-  }
-
-  table {
-      text-align: center;
-  }
-}
-
-.highlight-cell {
-  background-color: rgb(146, 197, 42);
-}
 /********************* Spencer's CSS Ended******************************/
 
 .button2 {
@@ -1267,6 +1250,66 @@ text-decoration: none;
   background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgeimpulse.png');
   background-size: cover;
 }
+
+
+.button_picase{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/raspberry-pi/rapberrypibanner_1.png");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 100px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 700px; /* 按钮宽度 */
+  height: 500px; /* 按钮高度 */
+}
+
+.button_picase:hover {
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/raspberry-pi/rapberrypibanner_1.png');
+  background-size: cover;
+}
+
+.button_pimail{
+  margin: auto;
+  display: inline-block;
+  background-image: url("https://files.seeedstudio.com/wiki/raspberry-pi/rapberrypibanner_2.png");
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+  padding: 10px 20px;
+  /* color: rgb(0, 0, 0);text color */
+  font-size: 50px;
+  /* font-weight: 40%; */
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  width: 800px; /* 按钮宽度 */
+  height: 200px; /* 按钮高度 */
+}
+
+.button_pimail:hover {
+  margin: auto;
+  transform: scale(1.1);
+  background-image: url('https://files.seeedstudio.com/wiki/raspberry-pi/rapberrypibanner_2.png');
+  background-size: cover;
+}
+
 
 .button_tensorflowlite{
   margin: auto;

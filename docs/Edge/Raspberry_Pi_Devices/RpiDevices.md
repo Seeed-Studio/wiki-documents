@@ -8,12 +8,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /raspberry-pi-devices
 last_update:
-  date: 1/13/2023
+  date: 5/8/2023
   author: Kasun Thushara
 ---
 
 
-Welcome to the cutting-edge realm of Raspberry Pi-powered devices at Edge Solution. Here, we delve into the innovative solutions crafted by Seeed Studios for edge computing, specifically tailored for Raspberry Pi CM4 customizable devices such as Human-Machine Interface (HMI) units and versatile edge controllers. Join us on a journey through the intricate landscape of these powerful devices, designed to empower your projects with seamless and efficient edge computing capabilities.
+Welcome to the cutting-edge realm of Raspberry Pi-powered devices at Edge Solution. Here, we delve into the innovative solutions crafted by Seeed Studio for edge computing, specifically tailored for Raspberry Pi CM4 customizable devices such as Human-Machine Interface (HMI) units and versatile edge controllers. Join us on a journey through the intricate landscape of these powerful devices, designed to empower your projects with seamless and efficient edge computing capabilities.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/banner.png" style={{width:1000, height:'auto'}}/></div> 
 
@@ -48,6 +48,25 @@ All-in-one industrial edge computing controllers based on Raspberry Pi. High-sca
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/Edge_Box/EdgeBox-RPi-200_Edge_Computing_Controller_User_Manual.pdf"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
+
+
+<br />
+Seeed Studio has been serving the Pi® Community since 2013 and took the lead to join the approved reseller and design partner. Our range of Raspberry Pi® powered edge devices, including HMI, edge controllers, and routers, has been successfully deployed in various industries such as energy management, automation, Industrial 4.0, smart buildings, and manufacturing. We are proud of the widespread adoption and positive feedback we have received, which has instilled us with great confidence in our products. Check our Seeed Studio Raspberry Pi® Success Stories. 
+
+<br />
+
+<div class="button_tech_support_container">
+<a href="https://files.seeedstudio.com/wiki/Raspberry_Pi/raspberry-pi-success-cases.pdf" class="button_picase"></a> 
+</div>
+
+<br />
+To stay informed of the latest updates, special offerings, real-world success stories, expert interviews, and webinars about edge IoT devices and be connected with the system integrators and solution providers from vertical industries like smart building, energy management, automation, we welcome you to subscribe to our dedicated Newsletter.
+
+<br /><br />
+
+<div class="button_tech_support_container">
+<a href="https://mailchi.mp/seeed.cc/edge-subscriber" class="button_pimail"></a> 
+</div>
 
 ## Tech Support & Product Discussion
 

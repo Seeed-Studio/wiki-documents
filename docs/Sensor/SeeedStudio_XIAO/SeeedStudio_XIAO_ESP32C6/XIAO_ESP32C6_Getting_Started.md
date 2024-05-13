@@ -82,7 +82,7 @@ export const Highlight = ({children, color}) => (
             <td colspan="2">Complete 2.4GHz Wi-Fi subsystem</td>
         </tr>
         <tr>
-            <td>Bluetooth 5.0/ Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
             <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
         </tr>
@@ -122,7 +122,8 @@ export const Highlight = ({children, color}) => (
         </tr>
         <tr>
             <th>Charging battery current</th>
-            <td colspan="2" >350mA</td>
+            <td>100mA</td>
+            <td>350mA</td>
             <td>100mA</td>
         </tr>
         <tr>
@@ -166,24 +167,34 @@ export const Highlight = ({children, color}) => (
 
 <table align="center">
 	<tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
+	    <th>XIAO ESP32C6 indication diagram</th>
 	</tr>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 Sense Pin List</th>
+	    <th>XIAO ESP32C6 Pin List</th>
 	</tr>
     <tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
 	</tr>
 </table>
 
+:::tip
+There's an IO port 14 used to select between using the built-in antenna or an external antenna. If port 14 is at a low level, it uses the built-in antenna; if it's at a high level, it uses the external antenna. The default is low level. If you want to set it high, you can refer the code below.
+```cpp
+void setup() {
+  pinMode(14, OUTPUT); 
+  digitalWrite(14, HIGH);
+}
+```
+:::
+
 ## Getting started
 
 To enable you to get started with the XIAO ESP32C6 faster, please read the hardware and software preparation below to prepare the XIAO.
 
-### Hardware setup
+### Hardware Preparation
 
 You need to prepare the following:
 
@@ -192,10 +203,37 @@ You need to prepare the following:
 - 1 x USB Type-C cable
 
 :::tip
-
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
-
 :::
+
+#### Solder header
+
+XIAO ESP32C6 is shipped without pin headers by default, you need to prepare your own pin headers and solder it to the corresponding pins of XIAO so that you can connect to the expansion board or sensor.
+
+Due to the miniature size of XIAO ESP32C6, please be careful when soldering headers, do not stick different pins together, and do not stick solder to the shield or other components. Otherwise, it may cause XIAO to short circuit or not work properly, and the consequences caused by this will be borne by the user.
+
+### BootLoader Mode
+
+There are times when we use the wrong program to make XIAO appear to lose ports or not work properly. The specific performance is:
+
+- Connected to computer, but no port number found for XIAO.
+
+- The computer is connected and the port number appears, but the upload program fails.
+
+When you encounter the above two situations, you can try to put XIAO into BootLoader mode, which can solve most of the problems of unrecognized devices and failed uploads. The specific method is:
+
+- **Step 1**. Press and hold the BOOT button on the XIAO ESP32C6 without releasing it.
+
+- **Step 2**. Keep the BOOT button pressed and then connect to the computer via the data cable. Release the BOOT button after connecting to the computer.
+
+- **Step 3**. Upload the **Blink** program to check the operation of the XIAO ESP32C6.
+
+### Reset
+
+When the program runs abnormally, you can press Reset once during power-up to let XIAO re-execute the uploaded program.
+
+When you press and hold the BOOT key while powering up and then press the Reset key once, you can also enter BootLoader mode.
+
 
 ### Software Preparation
 
@@ -223,21 +261,17 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 
 #### Add the XIAO-C6 Board {#add-board}
 
-As of April 2, 2024, the most current stable release of Arduino-ESP32 is version `2.0.14`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
+As of April 16, 2024, the most current stable release of Arduino-ESP32 is version `2.0.15`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
 
 ```
 https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json
 ```
 
-<Tabs>
-<TabItem value="remove" label="Remove Existing Boards">
 
 if you've install the ESP32 board package before, you''ll need to remove it first.
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width: 640, height: 'auto'}}/></div>
 
-</TabItem>
-<TabItem value="install" label="Install New Boards" default>
 
 To install the XIAO ESP32C6 board, follow these steps:
 
@@ -249,48 +283,7 @@ To install the XIAO ESP32C6 board, follow these steps:
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
 
-Additionally, the latest development release version (`3.0.0-Alpha 3`) was released on December 5, 2023. However, it does not contain our [committed PR](https://github.com/espressif/arduino-esp32/pull/9330). You will need to manually set it up using the following resources:
-
-- [⬇️Download boards.txt](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/boards.txt) for XIAO-C6 board information.
-- [⬇️Download the XIAO ESP32C6 board package](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32C6.zip) for the board variant information.
-
-Replace the `boards.txt` and `XIAO_ESP32C6` folder in the following paths based on your operating system:
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-
-<TabItem value="Windows" label="Windows" default>
-    
-For Windows, the default storage path for the ESP32 onboard package is:
-
-`C:\Users\$USERNAME$\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.0-alpha3`
-
-Copy the downloaded **boards.txt** file to the above path, replacing the existing one. Then, navigate to the **variants folder** and copy the **XIAO_ESP32C6 folder** into it.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants_board.png" style={{width: 480, height: 'auto'}}/></div>
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6_variants.png" style={{width: 480, height: 'auto'}}/></div>
-
-</TabItem>
-
-<TabItem value="MacOS" label="MacOS">
-For MacOS, the default storage path for the ESP32 onboard package is:
-
-`~/Library/Arduino15/packages/esp32/hardware/esp32/3.0.0-alpha3`
-
-Follow the same steps as for Windows: replace the existing **boards.txt** file with the one you downloaded and add the **XIAO_ESP32C6 folder** to the **variants folder**.
-
-</TabItem>
-
-</Tabs>
-
-</TabItem>
-
-</Tabs>
-
-
+Additionally, the latest development release version (`3.0.0-rc1`) was released on April, 2024. And has supported XIAO ESP32C6.
 
 ## Run your first Blink program
 
@@ -298,7 +291,7 @@ Follow the same steps as for Windows: replace the existing **boards.txt** file w
 
 - **Step 2.** Navigate to **File > Examples > 01.Basics > Blink**, open the program.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/11.png" style={{width:700, height:'auto'}}/></div>
 
 - **Step 3.** Select the board model to **XIAO ESP32C6**, and select the correct port number to upload the program.
 
@@ -312,6 +305,209 @@ Once the program is successfully uploaded, you will see the following output mes
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6-blink.gif" style={{width:400, height:'auto'}}/></div></td>
 	</tr>
 </table>
+
+## Battery Usage
+
+The XIAO ESP32C6 series has a built-in power management chip that allows the XIAO ESP32C6 to be powered independently by using a battery or to charge the battery through the XIAO ESP32C6's USB port.
+
+If you want to connect the battery for XIAO, we recommend you to purchase qualified rechargeable 3.7V lithium battery. When soldering the battery, please be careful to distinguish between the positive and negative terminals. The negative terminal of the power supply should be the side closest to the USB port, and the positive terminal of the power supply is the side away from the USB port.
+
+:::caution
+When you use battery power, there will be no voltage on the 5V pin.
+:::
+
+## Deep sleep mode and wake-up
+
+The XIAO ESP32C6 has a complete deep sleep mode and wake-up function. Here we will show two of the more common examples offered by the ESP.
+
+### Demo1: Deep Sleep with External Wake Up
+
+This code displays how to use deep sleep with an external trigger as a wake up source and how to store data in RTC memory to use it over reboots.
+
+```cpp
+/*
+=====================================
+This code is under Public Domain License.
+
+Hardware Connections
+======================
+Push Button to GPIO 33 pulled down with a 10K Ohm
+resistor
+
+NOTE:
+======
+Only RTC IO can be used as a source for external wake
+source. They are pins: 0,2,4,12-15,25-27,32-39.
+
+Author:
+Pranav Cherukupalli <cherukupallip@gmail.com>
+*/
+
+#define BUTTON_PIN_BITMASK 0x200000000 // 2^33 in hex
+
+RTC_DATA_ATTR int bootCount = 0;
+
+/*
+Method to print the reason by which ESP32
+has been awaken from sleep
+*/
+void print_wakeup_reason(){
+  esp_sleep_wakeup_cause_t wakeup_reason;
+
+  wakeup_reason = esp_sleep_get_wakeup_cause();
+
+  switch(wakeup_reason)
+  {
+    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
+  }
+}
+
+void setup(){
+  Serial.begin(115200);
+  delay(1000); //Take some time to open up the Serial Monitor
+
+  //Increment boot number and print it every reboot
+  ++bootCount;
+  Serial.println("Boot number: " + String(bootCount));
+
+  //Print the wakeup reason for ESP32
+  print_wakeup_reason();
+
+  /*
+  First we configure the wake up source
+  We set our ESP32 to wake up for an external trigger.
+  There are two types for ESP32, ext0 and ext1 .
+  ext0 uses RTC_IO to wakeup thus requires RTC peripherals
+  to be on while ext1 uses RTC Controller so doesnt need
+  peripherals to be powered on.
+  Note that using internal pullups/pulldowns also requires
+  RTC peripherals to be turned on.
+  */
+  esp_sleep_enable_ext0_wakeup(GPIO_NUM_33,1); //1 = High, 0 = Low
+
+  //If you were to use ext1, you would use it like
+  //esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
+
+  //Go to sleep now
+  Serial.println("Going to sleep now");
+  esp_deep_sleep_start();
+  Serial.println("This will never be printed");
+}
+
+void loop(){
+  //This is not going to be called
+}
+```
+
+
+
+### Demo2: Deep Sleep with Timer Wake Up
+
+ESP32 offers a deep sleep mode for effective power saving as power is an important factor for IoT applications. In this mode CPUs, most of the RAM, and all the digital peripherals which are clocked from APB_CLK are powered off. The only parts of the chip which can still be powered on are: RTC controller, RTC peripherals ,and RTC memories.
+
+This code displays the most basic deep sleep with a timer to wake it up and how to store data in RTC memory to use it over reboots.
+
+```cpp
+/*
+Simple Deep Sleep with Timer Wake Up
+=====================================
+This code is under Public Domain License.
+
+Author:
+Pranav Cherukupalli <cherukupallip@gmail.com>
+*/
+
+#define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP  5        /* Time ESP32 will go to sleep (in seconds) */
+
+RTC_DATA_ATTR int bootCount = 0;
+
+/*
+Method to print the reason by which ESP32
+has been awaken from sleep
+*/
+void print_wakeup_reason(){
+  esp_sleep_wakeup_cause_t wakeup_reason;
+
+  wakeup_reason = esp_sleep_get_wakeup_cause();
+
+  switch(wakeup_reason)
+  {
+    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
+  }
+}
+
+void setup(){
+  Serial.begin(115200);
+  delay(1000); //Take some time to open up the Serial Monitor
+
+  //Increment boot number and print it every reboot
+  ++bootCount;
+  Serial.println("Boot number: " + String(bootCount));
+
+  //Print the wakeup reason for ESP32
+  print_wakeup_reason();
+
+  /*
+  First we configure the wake up source
+  We set our ESP32 to wake up every 5 seconds
+  */
+  esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
+  Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
+  " Seconds");
+
+  /*
+  Next we decide what all peripherals to shut down/keep on
+  By default, ESP32 will automatically power down the peripherals
+  not needed by the wakeup source, but if you want to be a poweruser
+  this is for you. Read in detail at the API docs
+  http://esp-idf.readthedocs.io/en/latest/api-reference/system/deep_sleep.html
+  Left the line commented as an example of how to configure peripherals.
+  The line below turns off all RTC peripherals in deep sleep.
+  */
+  //esp_deep_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_OFF);
+  //Serial.println("Configured all RTC Peripherals to be powered down in sleep");
+
+  /*
+  Now that we have setup a wake cause and if needed setup the
+  peripherals state in deep sleep, we can now start going to
+  deep sleep.
+  In the case that no wake up sources were provided but deep
+  sleep was started, it will sleep forever unless hardware
+  reset occurs.
+  */
+  Serial.println("Going to sleep now");
+  Serial.flush(); 
+  esp_deep_sleep_start();
+  Serial.println("This will never be printed");
+}
+
+void loop(){
+  //This is not going to be called
+}
+```
+
+:::tip
+If you want to learn to use more of the deep sleep mode and wake-up functions, you can find more sample programs officially written for the chip by ESP in the Arduino IDE.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/16.png" style={{width:600, height:'auto'}}/></div>
+:::
+
+## Resources
+
+- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
+
+- **[PDF]** [Seeed Studio XIAO ESP32C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
 
 ## Tech Support & Product Discussion

@@ -104,8 +104,12 @@ We can see that in the Preview Settings on the right hand side, there are two se
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/iou.gif" style={{width:600, height:'auto'}}/></div>
 
-At this point, you have finished uploading the model and observing the results.
+:::tip
+- **Confidence:** This tells you how sure the computer vision model is about its guess. Think of it like a percentage: higher confidence means the model is more certain.
+- **IoU (Intersection over Union):** This measures how much overlap there is between two boxes. Imagine you drew a box around an object in a picture, and the model also drew a box. IoU tells you how well your boxes match up. Higher IoU means the boxes are closer together.
+:::
 
+At this point, you have finished uploading the model and observing the results.
 
 ## <span id="jump4"> Program on Arduino connecting with Seeed Studio XIAO Board </span>
 
@@ -483,6 +487,12 @@ In the `loop()` function:
 - Finally, the received data from the Grove Vision AI V2 module is transmitted back to the serial console using `Serial.write()`, completing the two-way communication between the serial interface and the vision AI module.
 
 This setup allows for interactive communication with the Grove Vision AI V2 module, enabling users to send instructions to and receive data from the module over a serial connection.
+
+
+## Resources
+- [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/home)
+- [SenseCraft AI Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process)
+- [Arduino Library for XIAO](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA)
 
 ## Troubleshooting
 

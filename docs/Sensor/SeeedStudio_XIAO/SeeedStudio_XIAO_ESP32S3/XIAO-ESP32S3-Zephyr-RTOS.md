@@ -4,7 +4,7 @@ title:  XIAO ESP32S3(sense) With Zephyr(RTOS)
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /XIAO-ESP32S3-Zephyr-RTOS
+slug: /xiao_esp32s3_zephyr-_rtos
 last_update:
   date: 3/20/2024
   author: timo614
@@ -22,7 +22,7 @@ This wiki covers [Zephyr](https://www.zephyrproject.org/) support for the [Seeed
 
 The [**Zephyr**](https://www.zephyrproject.org/) OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
 
-For each supported device Zephyr has a [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) file that describes the board and its features. The [Xiao ESP32S3 Zephyr board page](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html#supported-features) describes the supported features currently available which is defined by the [board's dts file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_esp32s3/xiao_esp32s3_esp32s3_procpu.yaml#L7). 
+For each supported device Zephyr has a [devicetree](https://docs.zephyrproject.org/latest/build/dts/index.html) file that describes the board and its features. The [Xiao ESP32S3 Zephyr board page](https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html#supported-features) describes the supported features currently available which is defined by the [board's dts file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/seeed/xiao_esp32s3/xiao_esp32s3_esp32s3_procpu.yaml#L7).
 
 *Reference: [**Zephyr Project**](https://docs.zephyrproject.org/latest/introduction/index.html#)*
 
@@ -57,15 +57,13 @@ With the final command you should see the response showing the "Hello World!" gr
 Hello World! xiao_esp32s3
 ```
 
-To assist with the process of using Zephyr with Xiao and its expansion board a repository has been constructed with several overlays and configurations used here. The commands included in this wiki article assume it is located `../applications/xiao-zephyr-examples` relative to the zephyr root. An alternative path can be provided to the commands below by updating it. 
+To assist with the process of using Zephyr with Xiao and its expansion board a repository has been constructed with several overlays and configurations used here. The commands included in this wiki article assume it is located `../applications/xiao-zephyr-examples` relative to the zephyr root. An alternative path can be provided to the commands below by updating it.
 
 ```
 git clone https://github.com/Cosmic-Bee/xiao-zephyr-examples
 ```
 
 ## Hardware Preparation
-
-If you want to follow this tutorial through everything, you will need to prepare the following.
 
 <table align="center">
   <tbody><tr>
@@ -95,7 +93,7 @@ If you want to follow this tutorial through everything, you will need to prepare
 #### XIAO Expansion Board
 
   In order to use Grove modules with Seeed Studio XIAO ESP32S3, we will use a [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) and connect XIAO ESP32S3 on it.
-  
+
   After that, the Grove connectors on the board can be used to connect Grove modules
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/29.png"style={{width:700, height:'auto'}}/></div>
@@ -108,11 +106,9 @@ If you want to follow this tutorial through everything, you will need to prepare
 
 ### Primary Functionality
 
-<ul>
-  <li>Bluetooth</li>
-  <li>Wi-Fi</li>
-  <li>TFLite</li>
-</ul>
+- Bluetooth
+- Wi-Fi
+- TFLite
 
 #### Bluetooth
 
@@ -168,7 +164,7 @@ west espressif monitor
 You will see a console available for sending commands to the board:
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
-uart:~$ 
+uart:~$
 ```
 
 Several commands exist allowing you to see and connect to local networks, see the [sample readme](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst) for more information.
@@ -176,14 +172,13 @@ Several commands exist allowing you to see and connect to local networks, see th
 uart:~$ wifi scan
 Scan requested
 
-Num  | SSID                             (len) | Chan (Band)   | RSSI | Security        | BSSID             | MFP     
-1    | Zephytopia                       10    | 6    (2.4GHz) | -42  | WPA2-PSK        |                   | Disable 
-2    | Maceronia                        9     | 6    (2.4GHz) | -43  | WPA2-PSK        |                   | Disable 
+Num  | SSID                             (len) | Chan (Band)   | RSSI | Security        | BSSID             | MFP
+1    | Zephytopia                       10    | 6    (2.4GHz) | -42  | WPA2-PSK        |                   | Disable
+2    | Maceronia                        9     | 6    (2.4GHz) | -43  | WPA2-PSK        |                   | Disable
 
 ```
 
 Let's dive into this example a bit to see why it works:
-(Note: the Xiao ESP32S3 is supported specifically by this example so we don't need a custom overlay or conf to load up the file.)
 ```
 &wifi {
 	status = "okay";
@@ -249,22 +244,26 @@ x_value: 1.4137159*2^1, y_value: 1.8977352*2^-3
 
 Additional information about TFLite is outside of the scope of this guide but the example serves as a guide to the capabilities of the device and the components required for running the TFLite setup.
 
-### Grove Components
+### Additional Components
 
-<ul>
-  <li>[Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C Display</li>
-  <li>[Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Button</li>
-  <li>[Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)</li>
-</ul>
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C Display
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Button
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Buzzer
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD Card
+- [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
+- [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
+
 
 #### Grove - Expansion Board - I2C Display
 
-<div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/xiao_expansion_oled.jpg" style={{width:600, height:'auto'}}/></div>
+
 
 To test this setup we can use an existing sample with Zephyr:
 
 ```
-west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-expansion.overlay DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/samples.conf
+west build -p always -b xiao_esp32s3 samples/drivers/display --  -DSHIELD=seeed_xiao_expansion_board
 west flash
 ```
 
@@ -278,7 +277,7 @@ Let's dive into this example a bit to see why it works:
     };
 };
 
-&i2c0 {
+&xiao_i2c {
   status = "okay";
 
   ssd1306: ssd1306@3c {
@@ -298,22 +297,15 @@ Let's dive into this example a bit to see why it works:
 
 ```
 
-The app overlay file in this example sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
+The shield sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
 
-```
-CONFIG_LV_Z_VDB_SIZE=64
-CONFIG_LV_COLOR_DEPTH_1=y
-CONFIG_I2C=y
-```
-
-The associated configuration file enables the OLED screen to properly render by setting its depth to 1 and enabling I2C for the project.
 
 #### Grove - Expansion Board - Button
 
 To test this setup we can use an existing sample with Zephyr:
 
 ```
-west build -p always -b xiao_esp32s3 samples/basic/button -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-expansion.overlay
+west build -p always -b xiao_esp32s3 samples/basic/button -- -DSHIELD=seeed_xiao_expansion_board
 west flash
 west espressif monitor
 ```
@@ -340,29 +332,145 @@ Let's dive into this example a bit to see why it works:
 ```
 / {
     aliases {
-		sw0 = &button0;
+      sw0 = &xiao_button0;
     };
 
     buttons {
-            compatible = "gpio-keys";
-            button0: button_0 {
-                gpios = <&gpio0 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-                label = "Expansion Board Button";
-            };
+      compatible = "gpio-keys";
+      xiao_button0: button_0 {
+        gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        label = "SW0";
+        zephyr,code = <INPUT_KEY_0>;
+      };
     };
 };
 ```
 
-The app overlay file is used to setup various board components. Using this file the button example can be utilized as the overlay allows the Zephyr to configure the button and make it available for the associated code.
+The shield / overlay file is used to setup various board components. Using this file the button example can be utilized as the overlay allows the Zephyr to configure the button and make it available for the associated code.
 
-In this case GPIO 2 corresponds with Pin A1/D1 on the Xiao ESP32S3. It is setup in this overlay to act as a button and is aliased to the sw0 name to allow it to be used for the sample which has code expecting this.
+In this case D1 on the Xiao ESP32S3. It is setup in this overlay to act as a button and is aliased to the sw0 name to allow it to be used for the sample which has code expecting this.
 
+#### Grove - Expansion Board - Buzzer
+
+We'll activate our buzzer using the blinky PWM example to control its activation via a PWM signal. For this we'll use a custom overlay which enables the PWM for the A3 pin.
+
+```
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_esp32s3 samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-esp32s3/xiao_expansion_buzzer.overlay"
+```
+
+After flashing you should begin hearing a series of buzzes which change in sound as the sample runs its course.
+
+Let's look at why this works:
+```
+#include <zephyr/dt-bindings/pwm/pwm.h>
+
+/ {
+    aliases {
+        pwm-0 = &ledc0;
+        pwm-led0 = &pwm_buzzer;
+    };
+
+    pwmleds {
+        compatible = "pwm-leds";
+        pwm_buzzer: pwm_led_gpio0_4 {
+            label = "PWM Buzzer";
+            pwms = <&ledc0 0 1000 PWM_POLARITY_NORMAL>;
+        };
+    };
+};
+
+&pinctrl {
+    ledc0_default: ledc0_default {
+        group1 {
+            pinmux = <LEDC_CH0_GPIO4>;
+            output-enable;
+        };
+    };
+};
+
+&ledc0 {
+    pinctrl-0 = <&ledc0_default>;
+    pinctrl-names = "default";
+    status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    channel0@0 {
+        reg = <0x0>;
+        timer = <0>;
+    };
+};
+```
+
+The overlay configures the PWM logic for the pin 4 which corresponds with the A3 pin from the ESP32S3 pinout.
+
+#### Grove - Expansion Board - SD Card
+
+We'll use the filesystem sample here along with the Xiao Expansion Board shield to try interfacing with the SD card reader over SPI. The expansion board shield has the CS pin configured for the associated `&xiao_d 2` pin so no work is needed on your part for associating this capability with the board aside from adding the shield. To further prepare it we are using a custom config that enables the SD card functionality.
+
+```
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_esp32s3 samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
+```
+
+Now flash and monitor:
+```
+west flash
+west espressif monitor
+```
+
+You should see a response similar to this:
+```
+*** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
+[00:00:00.208,000] <inf> sd: Maximum SD clock is under 25MHz, using clock of 24000000Hz
+[00:00:00.208,000] <inf> main: Block count 15519744
+Sector size 512
+Memory Size(MB) 7578
+Disk mounted.
+Listing dir /SD: ...
+[FILE] IMAGE1.JPG (size = 58422)
+[FILE] IMAGE2.JPG (size = 97963)
+```
+
+In this case my SD card had two files. Their names and their sizes were outputted to my console.
+
+Let's look over the relevant elements at play here:
+```
+CONFIG_SPI=y
+CONFIG_DISK_DRIVER_SDMMC=y
+CONFIG_GPIO=y
+```
+
+In the associated config we're enabling SPI, the SDMMC disk driver, and the GPIO. Without this config the overlay will lead to an error as the sample is unable to find the SD card.
+
+The relevant part of the Xiao Expansion Board shield is shown below:
+
+```
+&xiao_spi {
+	status = "okay";
+	cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+
+	sdhc0: sdhc@0 {
+		compatible = "zephyr,sdhc-spi-slot";
+		reg = <0>;
+		status = "okay";
+		mmc {
+			compatible = "zephyr,sdmmc-disk";
+			status = "okay";
+		};
+		spi-max-frequency = <24000000>;
+	};
+};
+```
+
+As mentioned previously the `&xiao_d 2` pin mapping is used to allow the D2 pin to be selected for this regardless of the board used so long as it supports the `&xiao_d` pin setup.
 
 #### Grove - Temperature and Humidity Sensor (SHT31)
 
 First solder on pins and connect your Xiao ESP32S3 to the expansion board. Then connect a grove connector cable between the Grove SHT31 and one of the I2C ports on the expansion board.
 
-<div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/xiao_sht31.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/xiao_sht31.jpg" style={{width:600, height:'auto'}}/></div>
 
 To test this setup we can use an existing sample with Zephyr:
 
@@ -389,7 +497,7 @@ SHT3XD: 25.84 Cel ; 53.16 %RH
 
 Let's dive into this example a bit to see why it works:
 ```
- &i2c0 {
+ &xiao_i2c {
 	sht3xd@44 {
 			compatible = "sensirion,sht3xd";
 			reg = <0x44>;
@@ -398,6 +506,38 @@ Let's dive into this example a bit to see why it works:
 ```
 
 The app overlay file is used to setup various board components. Using this file the SHT31 example can be utilized as the overlay informs the [sample logic](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) how to configure the sensor for our board.
+
+#### 1.69inch LCD Display Module, 240×280 Resolution, SPI Interface
+
+For this example we'll use SPI to connect to a 1.69 inch LCD with a 240x280 resolution.
+
+First connect your board to the LCD screen using the following image as a guide (in this case we're using the Xiao ESP32S3 but the same pin layout is used for connecting here).
+
+| 1.69-inch LCD SPI Display| XIAO ESP32S3 |
+| ------------- | ------------------------- |
+| VCC | 3V3 |
+| GND | GND |
+| DIN | D10 |
+| CLK | D8 |
+| CS | D1 |
+| DC | D3 |
+| RST | D0 |
+| BL | D6 |
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
+
+We can now build and flash the firmware:
+```
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
+west flash
+```
+
+With the new firmware in place the device now shows the same demo screen we saw previously on the expansion board just now updated for the color LCD over SPI.
+
+<!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
+
 
 ## ✨ Contributor Project
 
@@ -410,11 +550,11 @@ The app overlay file is used to setup various board components. Using this file 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

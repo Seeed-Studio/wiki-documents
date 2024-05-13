@@ -25,7 +25,7 @@ last_update:
 It is an MCU-based vision AI module powered by Arm Cortex-M55 & Ethos-U55. It supports TensorFlow and PyTorch frameworks and is compatible with Arduino IDE. With the SenseCraft AI algorithm platform, trained ML models can be deployed to the sensor without the need for coding. It features a standard CSI interface, an onboard digital microphone and an SD card slot, making it highly suitable for various embedded AI vision projects.
 
 <div class="table-center">
-<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 :::tip
@@ -61,11 +61,15 @@ Once you have the Grove Vision AI V2 and camera ready to go, then you can connec
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/9.gif" style={{width:600, height:'auto'}}/></div>
 
-<!-- :::caution
+:::caution
+
+<!-- 'Before', it's d type Device, but will make it work in the future -->
 Users who purchased Grove Vision AI V2 before February 21, 2024, do not have support for Raspberry Pi cameras. However, users who purchase after this date will have added support for those specific models that support images.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/cameraList.png" style={{width:1000, height:'auto'}}/></div>
-::: -->
+:::
+
+
 
 ## Boot / Reset / Flashed Driver
 
@@ -100,6 +104,53 @@ If you find that the Grove Vision AI V2 is not recognised after connecting it to
 - Windows CDC driver one-click installer: [CH343CDC.EXE](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343CDC.EXE)
 - Windows CDC driver: [CH343CDC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH343SER.ZIP)
 - macOS Vendor VCP Driver: [CH34xSER_MAC.ZIP](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/CH341SER_MAC.ZIP)
+
+:::tip
+Usage on Linux, you need to add the following, the following is UBUNTU, other systems are similar, but will not list them
+```cpp
+sudo echo 'USBSYTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", MODE:="0666"' > /etc/udev/rules.d/99-grove-vision-ai.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger 
+```
+:::
+
+### Bootloader Recovery Tool Manual
+
+This part describes how to recover the bootloader of the Grove Vision AI (WE2) module. The recovery tool is a software tool that can be used to recover the bootloader of the Grove Vision AI (WE2) module in case the bootloader is corrupted, or flash a new firmware to the Grove Vision AI (WE2) module.
+
+#### Prerequisites
+
+- Any board which has I2C interface and supported by Arduino IDE.
+- Grove Vision AI V2
+- 4-Pin Cable
+
+#### Software Installation
+
+1. Install the Arduino IDE from the [official website](https://www.arduino.cc/en/software).
+2. Download the latest version of the Seeed_Arduino_SSCMA library from the [GitHub repository](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA).
+3. Add the library to your Arduino IDE by selecting **Sketch > Include Library > Add .ZIP Library** and choosing the downloaded file.
+4. Open the `we2_iic_bootloader_recover` example from the Arduino IDE: **File > Examples > Seeed_Arduino_SSCMA > we2_iic_bootloader_recover**.
+5. Upload the example to your Arduino board.
+
+#### Hardware Connection
+
+Connect the Grove Vision AI (WE2) module to the default I2C interface of your Arduino board using the 4-Pin Cable. Make sure each wire is connected to the correct pin.
+
+- SCL -> SCL (Grove Vision AI WE2)
+- SDA -> SDA (Grove Vision AI WE2)
+- VCC -> VCC (Grove Vision AI WE2, 3.3V)
+- GND -> GND (Grove Vision AI WE2)
+
+#### Usage
+
+1. Make sure your Arduino board is connected to your computer, and the Grove Vision AI (WE2) module is connected to the Arduino board.
+2. Open the Serial Monitor in the Arduino IDE. (or any other serial monitor software, e.g., minicom, PuTTY)
+3. Wait for the Grove Vision AI (WE2) device to be detected
+4. Press 'enter' to start the bootloader recovery process, wait for the process to complete
+
+:::note
+You may need to press the 'reset' button on the Arduino board to restart the bootloader recovery process. If the bootloader recovery process fails, please check the hardware connection and reset the power supply of the Grove Vision AI (WE2) module and try again. In some cases, you may have to try 3-10 times to recover the bootloader successfully.
+:::
 
 ## Getting Started
 

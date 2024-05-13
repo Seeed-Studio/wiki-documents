@@ -6,6 +6,7 @@ keywords:
   - Getting started
   - SCADA
   - Industrial 
+  - FUXA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-DM_intro_FUXA
 last_update:
@@ -14,6 +15,8 @@ last_update:
 ---
 
 ## What is SCADA?
+
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-demo.gif" /></center>
 
 **Supervisory Control and Data Acquisition (SCADA)** is a critical system in industrial settings designed to monitor and control processes. It serves as a **centralized platform that gathers real-time data from various sensors and devices across the industrial network**. SCADA enables operators to **visualize, analyze, and respond to this data, facilitating efficient decision-making**. Additionally, it provides **remote access and control capabilities, allowing operators to manage processes from a central location**. The integration of SCADA enhances the overall efficiency, safety, and reliability of industrial operations by providing a comprehensive overview and control of the entire system.
 
@@ -179,6 +182,27 @@ First you design your pipe form and then you define the action by bind the Devic
 To add a Chart Control to a View. going in editor and select the View.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-chart.gif" /></center>
+
+## How to Add an Alarm 
+
+To add an alarm, you need to navigate to the settings in the editor window and select **Alarms**.
+
+<center><img width={400} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/setup-alarms.png" /></center>
+
+Next, there are a few options for setting alarms: High-High, High, Low, and Messages. In **High-High**,we can set the threshold value and configure alarms. In **High,** when a value exceeds a certain range, we can set alarms between two critical points. **Message** is a notification that pops up and vanishes when a value reaches a certain threshold. **Low** is triggered when sensor data falls below a certain level, for example, when the tank liquid level is low. We can also set alarms for two critical set points in this scenario. In this example, we will demonstrate the functionality of **High-High** and **Message** alarms working phenomenally.
+
+<center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-alarms.gif" /></center>
+
+To view the alarms, you may need to adjust the layout slightly because it's hidden by default. To do that, go to the **Layout** and navigate to the **Header Navigation Bar**. 
+
+<center><img width={400} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/Layout1.PNG" /></center>
+
+Then, ensure that **Alarms notification mode** is set to **fixed** and **Info notification mode** is also set to **fixed.** This configuration allows you to view the alarm notifications when operating the SCADA system.
+
+<center><img width={650} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/layoutalarms.PNG" /></center>
+
+<center><img width={750} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/alrmnotification.PNG" /></center>
+
 
 ## Demo
 
