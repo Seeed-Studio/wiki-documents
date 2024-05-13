@@ -271,22 +271,45 @@ const config = {
                 label: 'Edge AI',
                 to: '/edge_ai_topic',
               },
+              {
+                label: '矽递科技 Wiki 文档平台（测试）',
+                to: '/cn/Getting_Started',
+              },
             ],
           },
+
+          // {
+          //   type: 'dropdown',
+          //   label: '文/A',
+          //   to: '/Getting_Started',
+          //   position: 'left',
+          //   className: 'navbar_dorp_items',
+          //   items: [
+          //     {
+          //       label: 'Seeed Studio Wiki Platform',
+          //       to: '/Getting_Started',
+          //     },
+          //     {
+          //       label: '矽递科技 Wiki 文档平台（测试）',
+          //       to: '/cn/Getting_Started',
+          //     },
+          //   ],
+          // },
+
           {
             type: 'dropdown',
-            label: '文/A',
-            to: '/Getting_Started',
+            label: 'Rangers',
+            to: '/ranger',
             position: 'left',
             className: 'navbar_dorp_items',
             items: [
               {
-                label: 'Seeed Studio Wiki Platform',
-                to: '/Getting_Started',
+                label: 'Rangers',
+                to: '/ranger',
               },
               {
-                label: '矽递科技 Wiki 文档平台（测试）',
-                to: '/cn/Getting_Started',
+                label: 'Contributors(GitHub)',
+                href: 'https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479',
               },
             ],
           },
@@ -523,7 +546,8 @@ const config = {
         id: 'support_us',
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
-          'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
+          // 'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
+          'Building Sustainable Growth, Strengthening Local Partnerships, Joining the <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Seeed Studio Ranger Program</a>! ',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
         isCloseable: false,
