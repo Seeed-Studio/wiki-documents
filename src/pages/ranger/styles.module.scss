@@ -265,11 +265,15 @@
 
         .wrapper {
             margin-top: 60px;
+            max-width: 1328px;
         }
 
         .person_container {
             color: #000;
             margin-top: 40px;
+            overflow: hidden;
+            padding: 0 40px;
+            box-sizing: border-box;
 
             .person_item {
                 display: inline-block;
@@ -291,8 +295,15 @@
     .blog {
         background: #fff;
 
+        .wrapper {
+            max-width: 1328px;
+        }
+
         .blog_container {
             margin-top: 40px;
+            overflow: hidden;
+            padding: 0 28px;
+            box-sizing: border-box;
 
             .blog_item_container {
                 padding: 10px;
