@@ -2804,7 +2804,6 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/Carrier_Boards/J101/reComputer_J1010_J101_Flash_Jetpack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/J202/reComputer_J2021_J202_Flash_Jetpack',
-            'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A205/reComputer_A205_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
@@ -2876,13 +2875,14 @@ const sidebars = {
             //   ],
             // },
 
-            // {
-            //   type: 'category',
-            //   label: 'J401',
-            //   items: [
-
-            //   ],
-            // },
+            {
+              type: 'category',
+              label: 'J401 Carrier Board',
+              items: [
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J401/J401_carrierboard_Hardware_Interfaces_Usage',
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
+              ],
+            },
 
           ],
         },
