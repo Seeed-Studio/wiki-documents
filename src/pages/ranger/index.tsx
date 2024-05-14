@@ -11,7 +11,7 @@ import { Navigation,Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import { useState, useRef, useEffect } from 'react'
 import ThirdPartyComponent from './_components/map';
-
+import './style.css'
 function getImgUrl(str) {
 	return `https://files.seeedstudio.com/wiki/ranger/${str}.png`
 }
@@ -219,8 +219,7 @@ const rangerPersonRender = () => {
 
 	}, [])
 	return (
-		<div className={clsx(styles.person, styles.section)}>
-						{/* <iframe src="https://lottie.host/embed/1d94a44a-9bcc-47b5-b738-5792c00d4563/zLPxvIpMVk.json"></iframe> */}
+		<div className={clsx(styles.person, styles.section,'person')}>
 			<ThirdPartyComponent/>
 			<div className={styles.wrapper}>
 				<div className={styles.title}>Why join in Seeed Ranger?</div>
@@ -228,8 +227,9 @@ const rangerPersonRender = () => {
 					<Swiper
 					modules={[Navigation,Pagination]}
 						autoplay={true}
+						navigation
 						slidesPerView={2} // 每次显示的幻灯片数量
-						spaceBetween={24}
+						spaceBetween={40}
 						pagination={{ clickable: true }} // 显示分页器
 					>
 						{/* scrollbar={{ draggable: true }} // 显示滚动条 */}
@@ -271,7 +271,7 @@ const blogPersonRender = () => {
 				<div className={styles.blog_container}>
 					<Swiper
 											modules={[Navigation,Pagination]}
-
+											navigation
 						slidesPerView={3} // 每次显示的幻灯片数量
 						spaceBetween={24}
 						pagination={{ clickable: true }} // 显示分页器

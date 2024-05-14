@@ -2720,7 +2720,16 @@ const sidebars = {
             'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron-aws',
             'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/N3uron/Edgebox-rpi-200-n3uron-modbus-mqtt',
 					],
-				  },	  					{
+				  },	  				
+          {
+            type: 'category',
+            label: 'Node Red',
+            items: [
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_getting_started',
+            ],
+            },	 
+          
+          {
 					type: 'category',
 					label: 'Ignition Edge',
 					items: [
@@ -2773,6 +2782,22 @@ const sidebars = {
                 ],
               },
             
+            ],
+          },
+          {
+            type: 'category',
+            label: 'reComputer-R1000',
+            collapsed: true,
+            collapsible: true,
+            link: {
+              type: "doc",
+              id: 'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
+            },
+            items: [
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_hardware_guide',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
             ],
           },
         ],

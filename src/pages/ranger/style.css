@@ -1,0 +1,32 @@
+.ranger_page .swiper-pagination-bullet-active {
+	background-color: #8fc31f;
+}
+.ranger_page .swiper-slide {
+	height: auto;
+}
+.ranger_page .swiper-wrapper {
+	margin-bottom: 40px;
+}
+.ranger_page .swiper-button-prev,
+.ranger_page .swiper-button-next {
+	color: #8fc31f;
+}
+.ranger_page .swiper-button-next {
+	right: -30px;
+}
+.ranger_page .swiper-button-prev {
+	left: -30px;
+}
+.ranger_page .swiper {
+	overflow: visible;
+}
+.ranger_page .person .swiper-button-next {
+	right: -40px;
+}
+.ranger_page .person .swiper-button-prev {
+	left: -40px;
+}
+.ranger_page .swiper-horizontal > .swiper-pagination-bullets,
+.ranger_page .swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: -30px;
+}
