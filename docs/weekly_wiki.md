@@ -60,10 +60,10 @@ Thanks our contributor Tim to create the tutorial for XIAO SAMD21/XIAO RP2040/XI
 
 This wiki covers Zephyr support for the Seeed Studio XIAOs. With the assistance of this guide you will be able to utilize the feature set available to the board.
 
-[XIAO SAMD21 With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_samd21_zephyr_rtos/)
-[XIAO RP2040 With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_rp2040_zephyr_rtos/)
-[XIAO ESP32C3 with Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c3-zephyr/)
-[XIAO ESP32S3(sense) With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_esp32s3_zephyr-_rtos/) -->
+[XIAO SAMD21 With Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-SAMD21-Zephyr-RTOS/)
+[XIAO RP2040 With Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-RP2040-Zephyr-RTOS/)
+[XIAO ESP32C3 with Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-ESP32C3-Zephyr/)
+[XIAO ESP32S3(sense) With Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-ESP3253-Zephyr-RTOS/) -->
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
