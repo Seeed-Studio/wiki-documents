@@ -2784,6 +2784,31 @@ const sidebars = {
             
             ],
           },
+          {
+            type: 'category',
+            label: 'reComputer-R1000',
+            collapsed: true,
+            collapsible: true,
+            link: {
+              type: "doc",
+              id: 'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
+            },
+            items: [
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_hardware_guide',
+              {
+                type: 'category',
+                label: 'Application',
+                items: [
+                  'Network/RK_Devices/LinkStar/Application/h68k-ha-esphome',
+                  'Network/RK_Devices/LinkStar/Application/plex_media_server',
+                  'Network/RK_Devices/LinkStar/Application/wordpress_linkstar',
+                  'Network/RK_Devices/LinkStar/Application/grocy-bookstack-linkstar',
+                ],
+              },
+            ],
+          },
         ],
       },
 
@@ -2813,7 +2838,6 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/Carrier_Boards/J101/reComputer_J1010_J101_Flash_Jetpack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/J202/reComputer_J2021_J202_Flash_Jetpack',
-            'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A205/reComputer_A205_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
@@ -2885,13 +2909,14 @@ const sidebars = {
             //   ],
             // },
 
-            // {
-            //   type: 'category',
-            //   label: 'J401',
-            //   items: [
-
-            //   ],
-            // },
+            {
+              type: 'category',
+              label: 'J401 Carrier Board',
+              items: [
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J401/J401_carrierboard_Hardware_Interfaces_Usage',
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
+              ],
+            },
 
           ],
         },
