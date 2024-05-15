@@ -2797,16 +2797,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_hardware_guide',
-              {
-                type: 'category',
-                label: 'Application',
-                items: [
-                  'Network/RK_Devices/LinkStar/Application/h68k-ha-esphome',
-                  'Network/RK_Devices/LinkStar/Application/plex_media_server',
-                  'Network/RK_Devices/LinkStar/Application/wordpress_linkstar',
-                  'Network/RK_Devices/LinkStar/Application/grocy-bookstack-linkstar',
-                ],
-              },
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
             ],
           },
         ],
