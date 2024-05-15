@@ -1204,6 +1204,15 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
           ],
         },
+        {
+          type: 'category',
+          label: 'XIAO + ESP-IDF + ESP-Matter',
+          items: [
+            'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32_idf_env',
+            'Sensor/SeeedStudio_XIAO/Matter/getting_started_with_matter',
+            'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32_matter_env',
+          ],
+        },
         'Sensor/SeeedStudio_XIAO/PCB_Design_XIAO',
         {
           type: 'category',
