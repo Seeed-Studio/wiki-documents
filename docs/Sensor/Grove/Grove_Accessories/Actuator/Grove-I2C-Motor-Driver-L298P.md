@@ -152,9 +152,10 @@ The connection between **24BYJ48 Stepper Motor** and I2C Motor Driver is as show
 :::note
 
 If you encounter a situation where the PWM frequency cannot be changed and remains fixed at 24Hz, it is necessary to update the firmware using a Jlink or ST-link. You can find the new firmware here:
+
 [https://github.com/Seeed-Studio/grove_stm32f030/blob/master/firmware/grove_i2c_motor_driver_stm32f030.ino.bin](https://github.com/Seeed-Studio/grove_stm32f030/blob/master/firmware/grove_i2c_motor_driver_stm32f030.ino.bin)
 
-To change the PWM frequency, use `Motor.frequency(50)` where the value is the frequency, up to a maximum of 255Hz.
+To change the PWM frequency, use `Motor.frequence(50)` where the value is the frequency, up to a maximum of 255Hz.
 
 :::
 
