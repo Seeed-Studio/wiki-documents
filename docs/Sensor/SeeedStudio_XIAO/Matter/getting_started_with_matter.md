@@ -84,7 +84,7 @@ In addition to the XIAO, we also need the WS281x model light bar or light bead. 
 	<table align="center">
 		<tr>
 			<th>Grove Base for XIAO</th>
-			<th>XIAO ESP32S3</th>
+			<th>Grove - RGB LED Ring (20 - WS2813 Mini)</th>
 		</tr>
 		<tr>
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:250, height:'auto'}}/></div></td>
@@ -113,6 +113,12 @@ If you are using the XIAO ESP32S3, connect the LED strip to pin **D9**.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/17.png" style={{width:400, height:'auto'}}/></div>
 
 This tutorial will use the **XIAO ESP32C3** as an example to give you an overview of how to flash the firmware, add devices and the rest.
+
+## Video Tutorials
+
+<div class="table-center">
+<iframe width="750" height="450" src="https://www.youtube.com/embed/bhHVbRe_Gtw?si=iH-oouOl_ItkG7vF?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## Step 1. Flash Matter Firmware for XIAO ESP32
 

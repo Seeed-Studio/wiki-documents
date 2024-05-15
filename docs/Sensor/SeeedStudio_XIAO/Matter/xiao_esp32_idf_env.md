@@ -93,7 +93,7 @@ The XIAO ESP32C3 does not have an on-board LED, so if you are using the XIAO ESP
 Since the ESP-IDF development framework is aimed at more professional software developers, the threshold for using it is higher than that of Arduino. The related documents and information will be less than Arduino. In order to let XIAO users start using ESP-IDF as soon as possible, and reduce the possibility of encountering problems in the configuration of the development environment, we will present the configuration of the environment in the form of video and graphics. This section is the video part, if you want to follow along with the video, you can refer to this video to install and configure the ESP-IDF environment and finally light up the on-board LEDs of the XIAO ESP32C6.
 
 <div class="table-center">
-<iframe width="900" height="450" src="https://www.youtube.com/embed/grt5VWcZtSw?si=bKY5JooG2pJ4EAAe?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="900" height="450" src="https://www.youtube.com/embed/QdPmsGDd7zs?si=5r_OO2EwZMX8D_HM?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 ## Installation ESP-IDF Step by Step
@@ -338,6 +338,16 @@ Seeed Studio is committed to providing comprehensive resources and support to fa
 As you delve deeper into Matter development, make sure to refer to the official ESP-IDF documentation for in-depth information on the framework's capabilities and best practices. Engage with the vibrant community of developers and enthusiasts to exchange knowledge, seek guidance, and collaborate on innovative projects.
 
 With the power of ESP-IDF and the upcoming Matter development resources from Seeed Studio, you are well-equipped to create remarkable smart home solutions that push the boundaries of interoperability and user experience. Embrace the exciting possibilities that lie ahead and embark on your Matter development journey with confidence. Happy coding!
+
+## Troubleshooting
+
+### Why do I get all kinds of errors during the installation of the environment?
+
+ESP-IDF's environment is a bit more demanding, and if you are using an Ubuntu host that is often used for development, it is likely that errors will occur due to different versions of some Python dependencies. Since the Matter framework is not developed by Seeed, there is probably nothing we can do about this part of the problem, so we recommend that you submit an issue to the official **[ESP-IDF repository](https://github.com/espressif/esp-idf)** for help if you encounter problems with the installation.
+
+## Resources
+
+- **[ESPRESSIF IDF - Get Started](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html)**
 
 
 ## Tech Support & Product Discussion
