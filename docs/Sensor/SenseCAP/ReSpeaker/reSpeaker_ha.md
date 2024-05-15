@@ -1,6 +1,6 @@
 ---
-description: Voice Assistant System with ReSpeaker V3 and XIAO ESP32S3
-title: Voice Assistant System with ReSpeaker V3 and XIAO ESP32S3
+description: Voice Assistant System with ReSpeaker Lite and XIAO ESP32S3
+title: Voice Assistant System with ReSpeaker Lite and XIAO ESP32S3
 keywords:
 - ESP32S3
 - XIAO
@@ -14,7 +14,7 @@ last_update:
 ---
 
 Say 'hello' to effortless control and 'goodbye' to tapping on screens with our voice assistant system.<br/>
-Picture this: you're cozied up on your couch, and with just a simple shout-out to the [ReSpeaker V3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html), you can switch up the lights, crank up the tunes, or even ask about the weather – all without lifting a finger. Thanks to a nifty little [Seeed XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) chip, you've got a mini-but-mighty brain that hooks up your voice to Home Assistant, making your smart home smarter and your life a whole lot easier. So, if you're ready to make your home listen and respond to your voice as if it's just another member of the family, let's get started on this voice-activated adventure!
+Picture this: you're cozied up on your couch, and with just a simple shout-out to the [ReSpeaker Lite](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html), you can switch up the lights, crank up the tunes, or even ask about the weather – all without lifting a finger. Thanks to a nifty little [Seeed XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) chip, you've got a mini-but-mighty brain that hooks up your voice to Home Assistant, making your smart home smarter and your life a whole lot easier. So, if you're ready to make your home listen and respond to your voice as if it's just another member of the family, let's get started on this voice-activated adventure!
 
 
 ## Getting Started
@@ -46,6 +46,8 @@ Enable `Start on boot` and `Watchdog`, and click `Start`.
 
 :::tip
 After the installation script has finished, restart Home Assistant to apply the changes. 
+
+After this add-on is installed and running, it will be automatically discovered by the Wyoming integration.
 
 Go to `Settings` > `System` > `Restart`.
 
