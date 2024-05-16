@@ -11,6 +11,18 @@ last_update:
   author: Jessie
 ---
 
+
+## POE connection
+
+SenseCAP M2 supports PoE (Power on Ethernet) and is compatible with IEEE 802.3 af standard.
+
+:::tip
+You will need to have an extra PoE switch that provides 40V-57V DC power as a PSE (Power Sourcing Equipment) if your modem/router does not support PoE.
+:::
+
+
+<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-poe.png" alt="pir" width={800} height="auto" /></p>
+
 ## Gateway Network Configuration
 
 Connect the antenna and power adaptor to the gateway.
@@ -21,13 +33,13 @@ The power LED will show in red, and in about 15s, the indicator on the top will 
 There are two ways to connect to the Internet. Choose the one that works for you.
 
 
-### Connect to Ethernet Cable
+### Ethernet Connection
 
 Connect the Ethernet cable to the Ethernet port, and the indicator on the top will show solid green if the gateway is successfully connected to the internet.
 
 
 
-### Connect to WIFI via Luci
+### WIFI Connection
 
 There are two ways for users to login Luci configuration page.
 
@@ -120,7 +132,7 @@ Then click Save and Apply to apply your settings.
 
 The indicator on the top will show solid green if the gateway is successfully connected to the WIFI.
 
-### Connect with Cellular(for 4G version)
+### Cellular Connection (for 4G version)
 
 * Step 1: Plug your SIM card into the Nano-SIM card slot
 
@@ -134,17 +146,20 @@ The indicator on the top will show solid green if the gateway is successfully co
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g3.png" alt="pir" width={800} height="auto" /></p>
 
-### POE connection
-
-SenseCAP M2 supports PoE (Power on Ethernet) and is compatible with IEEE 802.3 af standard.
-
-:::tip
-You will need to have an extra PoE switch that provides 40V-57V DC power as a PSE (Power Sourcing Equipment) if your modem/router does not support PoE.
-:::
 
 
-<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-poe.png" alt="pir" width={800} height="auto" /></p>
+### Channel Plan Settings
 
+Navigate to `LoRa` > `Channel Plan` 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP3.png" alt="pir" width={800} height="auto" /></p>
+
+Select the Region and Frequency plan.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP4.png" alt="pir" width={800} height="auto" /></p>
+
+
+After setting, click `Save&Apply`.
 
 ### Checking the Gateway Connection Status
 
