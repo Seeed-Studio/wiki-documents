@@ -25,6 +25,40 @@ We are looking forward to leveraging local and global resources to accelerate ne
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/nvidia-jetson.html"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Products Purchase</font></span></strong></a>  <a class="get_one_now_item" href="https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Comparison</font></span></strong></a></div>
 
+
+----
+### Generative AI
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+        <th class="table-trnobg"><font size={"4"}>Speech Subtitle Generation on Nvidia Jetson</font></th>
+        <th class="table-trnobg"><font size={"4"}>Deploy Whisper on NVIDIA Jetson Orin for Real time Speech to Text</font></th>
+        <th class="table-trnobg"><font size={"4"}>How to Run a Local LLM Text-to-Image on reComputer</font></th>
+	</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+        <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recoder.gif" style={{width:300, height:'auto'}}/></div></td>
+        <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Real-Time-Whisper.gif" style={{width:300, height:'auto'}}/></div></td>
+        <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/23_creating_image1.gif" style={{width:2000, height:'auto'}}/></div></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+        <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this wiki, we introduce you Speech Subtitle Generation on Jetson, which can offer real-time speech-to-subtitle services while avoiding information leakage on the internet.</font></td>
+        <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>In this wiki we introduce you Real Time Whisper on Jetson, this integration enables speech processing directly on the device, eliminating the need for constant network connectivity and enhancing privacy and security. </font></td>
+        <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>This wiki encompasses setting up and deploying local LLM-based text-to-image generation models on the Nvidia Jetson Orin NX 16GB</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+        <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+        <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+        <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/How_to_run_local_llm_text_to_image_on_reComputer/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
+	</table>
+</div>
+
+
+
 ----
 
 ### Object Recognition
@@ -306,6 +340,8 @@ We are looking forward to leveraging local and global resources to accelerate ne
     </div>
 
 <br/>
+
+
 
 ## ✨ Contributor Program
 
