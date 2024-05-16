@@ -25,7 +25,7 @@ Nowadays, more and more people are starting to use large language models to solv
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/RAG-MLC-Jetson.gif" alt="pir" width={800} height="auto"/></p>
 
-And here we introduce you [RAG based on Jetson](https://github.com/Seeed-Projects/RAG_based_on_Jetson), which using [llamaindex](https://www.llamaindex.ai) as the RAG framework, [ChromaDB](https://github.com/chroma-core/chroma) as the vector database, and the quantized Llama2-7b model [LLM MLC](https://llm.mlc.ai/) as the question-answering model. With this local RAG project, it can protect your data privacy and provide you with low-latency communication experience. 
+And here we introduce you [RAG based on Jetson](https://github.com/Seeed-Projects/RAG_based_on_Jetson), which using [LlamaIndex](https://www.llamaindex.ai) as the RAG framework, [ChromaDB](https://github.com/chroma-core/chroma) as the vector database, and the quantized Llama2-7b model [LLM MLC](https://llm.mlc.ai/) as the question-answering model. With this local RAG project, it can protect your data privacy and provide you with low-latency communication experience. 
 
 
 ## Hardware components
@@ -96,7 +96,7 @@ It is fine to ignore the error.
 ## Let's run it
 ```shell
 # Run in the docker
-python3 main.py
+python3 RAG.py
 ```
 <div align="center">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/v1SDRko5cNM" title="Jetson Orin NX RAG with MLC, Llama2-7b and ChromaDB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
