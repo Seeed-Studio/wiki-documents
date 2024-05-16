@@ -57,44 +57,46 @@ In this section, we will use "Model Assistant" here to enable the module. Combin
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/1.png" style={{width:1000, height:'auto'}}/></div>
  -->
-Now we will quickly get started the modules with SenseCraft AI, and this will only require the mnodule only.
+Now we will quickly get started the modules with SenseCraft AI, and this will only require the module only.
 
-#### Step 1. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
+#### Step 1. Choose model
 
 First, we need to open the main SenseCraft AI Model Assistant page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
 </div>
 <br />
 
-Please use a Type-C type cable to connect Grove Vision AI V2 to your computer.
+Choose the model you want to deploy and click into it.
 
-In the upper right corner of the SenseCraft AI Model Assistant page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/a1.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/2.png" style={{width:1000, height:'auto'}}/></div>
+You can see the description of this model here and if it suit to you, click the **Deploy Model** button at the right side.
 
-In the new window that pops up, select the correct COM port for the device and click the Connect button.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/a2.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/3.png" style={{width:1000, height:'auto'}}/></div>
+#### Step 2. Connect the module and upload a suitable model
 
-#### Step 2. Upload a suitable model
+Please use a Type-C type cable to connect Grove Vision AI V2 to your computer and then click **Connect** button.
 
-Then, just select a model you want to use and click the **Send** button below. Here is an example of Gesture Detection.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/a3.png" style={{width:600, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/4.png" style={{width:600, height:'auto'}}/></div>
+Click **Confirm** button. In the upper left corner of the this page, you can select **USB Single Serial**. Then click the **Connect** button.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/a4.png" style={{width:600, height:'auto'}}/></div>
 
 Please remain on this page for 1-2 minutes until the model is successfully uploaded. Kindly note that switching to another page tab during this process may result in an unsuccessful upload (our team is actively working on resolving this issue, and it will be fixed soon).
 
 #### Step 3. Observations
 
-Once the model is uploaded successfully, you will be able to see the live feed from the Grove Vision AI V2 camera in the Preview on the right.
+Once the model is uploaded successfully, you will be able to see the live feed from the Grove Vision AI V2 camera in the Preview on the left.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/5.gif" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/a5.png" style={{width:1000, height:'auto'}}/></div>
 
 <br />
 
-We can see that in the Preview Settings on the right hand side, there are two setting options that can be changed to optimise the recognition accuracy of the model.
+We can see that in the Preview Settings on the left hand side, there are two setting options that can be changed to optimise the recognition accuracy of the model.
 
 - **Confidence:** Confidence refers to the level of certainty or probability assigned by a model to its predictions.
 
