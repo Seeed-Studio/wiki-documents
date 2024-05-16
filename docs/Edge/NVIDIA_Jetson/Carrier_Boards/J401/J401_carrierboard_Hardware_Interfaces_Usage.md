@@ -383,9 +383,9 @@ cat /sys/class/hwmon/hwmon0/rpm
 </TabItem>
 </Tabs>
 
-## DI/DO
+## GPIO
 
-### The detial of 40-pin header is shown below:
+### The detail of 40-pin header is shown below:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -396,7 +396,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <th>Module Pin</th>
       <th>SoC Pin name</th>
       <th>Default Usage</th>
-      <th>Alternate Funcationality</th>
+      <th>Alternate Functionality</th>
     </tr>
   </thead>
   <tbody>
