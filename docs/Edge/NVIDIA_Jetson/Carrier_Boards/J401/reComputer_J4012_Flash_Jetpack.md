@@ -271,6 +271,12 @@ The below image is for Orin NX 16GB
 Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
 :::
 
+First of all, install the below required dependencies on the Ubuntu Host PC before moving onto flashing JetPack.
+
+```sh
+sudo apt install qemu-user-static sshpass abootimg nfs-kernel-server libxml2-utils binutils -y
+```
+
 <!-- Code -->
 
 import Tabs from '@theme/Tabs';
