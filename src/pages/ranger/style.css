@@ -30,3 +30,15 @@
 .ranger_page .swiper-pagination-bullets.swiper-pagination-horizontal {
 	bottom: -30px;
 }
+@media (max-width: 768px) {
+	.ranger_page .swiper-button-prev:after,
+	.ranger_page .swiper-button-next:after {
+		font-size: 30px;
+	}
+	.ranger_page .person .swiper-button-next {
+		right: -24px;
+	}
+	.ranger_page .person .swiper-button-prev {
+		left: -24px;
+	}
+}
