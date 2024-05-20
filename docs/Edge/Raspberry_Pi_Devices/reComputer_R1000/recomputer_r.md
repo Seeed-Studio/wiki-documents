@@ -25,7 +25,7 @@ tags:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="600" height="auto"/></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -1506,7 +1506,12 @@ One DSI (J24)and one 4-pin Spearker (J7)interfaces are reserved on board, for sp
 
 ## Additional Resources
 
-*  [User manual-reComputer R1000-revising](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminalDM_datasheet.pdf)
+*  [User manual-reComputer R1000](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_version01.pdf)
+*  [User manual-reComputer R1000 in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputerR_UserManual_CN_version01.pdf )
+*  [reComputer R1000 3D File](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000.stp)
+*  [reComputer R1000 Schematic Desing, PCB Desing](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
+*  [reComputer R1000 Flyer](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer.pdf)
+*  [reComputer R1000 Flyer in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
 
 ## Tech Support & Product Discussion
 
