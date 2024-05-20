@@ -10,8 +10,6 @@ last_update:
   author: shuxu hu
 ---
 
-I'm writing this for test!
-
 # Getting Started with Seeed Studio XIAO SAMD21
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
