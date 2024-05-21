@@ -41,6 +41,14 @@ Introducing reTerminal DM, a 10.1" open-source industrial Human-Machine Interfac
 
 ## Edge Controller 
 
+### reComputer R1000
+
+The reComputer R1000 is a high-performance, cost-effective edge IoT controller based on Raspberry Pi. It has dual Ethernet interfaces, three isolated RS485 interfaces, and supports Modbus UDP/TCP and BACnet protocols, making it ideal for smart building and energy management, including HVAC, lighting, sensors, and access control. It also offers extensive wireless capabilities, including 4G, LoRa®, Zigbee, Wi-Fi, and BLE.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:800, height:600}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
+
 ### EdgeBox-RPI-200
 
 All-in-one industrial edge computing controllers based on Raspberry Pi. High-scalability, rugged design, rich IO resources, and compatibility with the Raspberry Pi industrial software ecosystem make it an ideal choice for smart automation and IIoT solutions.
