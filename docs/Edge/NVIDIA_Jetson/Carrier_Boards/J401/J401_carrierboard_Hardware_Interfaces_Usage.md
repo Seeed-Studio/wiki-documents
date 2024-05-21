@@ -42,6 +42,8 @@ If the connection is correct, when you connect your power adapter, you will see 
 
 CSI stands for Camera Serial Interface. It is a specification that describes a serial communication interface for transferring video data from image sensors to a host processor. CSI is commonly used in mobile devices, cameras, and embedded systems to enable high-speed and efficient transfer of image and video data for processing and analysis.
 
+### Supported cameras are as follows:
+
 - IMX219 cameras
 
   - [Raspberry Pi Camera V2](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-V2.html)
@@ -381,9 +383,9 @@ cat /sys/class/hwmon/hwmon0/rpm
 </TabItem>
 </Tabs>
 
-## DI/DO
+## GPIO
 
-### The detial of 40-pin header is shown below:
+### The detail of 40-pin header is shown below:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -394,7 +396,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <th>Module Pin</th>
       <th>SoC Pin name</th>
       <th>Default Usage</th>
-      <th>Alternate Funcationality</th>
+      <th>Alternate Functionality</th>
     </tr>
   </thead>
   <tbody>

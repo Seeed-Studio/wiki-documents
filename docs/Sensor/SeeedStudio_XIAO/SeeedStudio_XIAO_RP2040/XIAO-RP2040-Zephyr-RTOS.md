@@ -4,7 +4,7 @@ title:  XIAO RP2040 With Zephyr(RTOS)
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /xiao_rp2040_zephyr_rtos
+slug: /XIAO-RP2040-Zephyr-RTOS
 last_update:
   date: 3/20/2024
   author: timo614
@@ -12,7 +12,7 @@ last_update:
 
 # XIAO RP2040 With Zephyr(RTOS)
 
-<!-- <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-rp2040.png"/></div> -->
+<div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-rp2040.png"/></div>
 
 This wiki covers [Zephyr](https://www.zephyrproject.org/) support for the [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/xiao_rp2040_getting_started/). With the assistance of this guide you will be able to utilize the feature set available to the board.
 

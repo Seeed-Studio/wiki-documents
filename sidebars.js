@@ -1204,6 +1204,15 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-eInk-Expansion-Board',
           ],
         },
+        {
+          type: 'category',
+          label: 'XIAO + ESP-IDF + ESP-Matter',
+          items: [
+            'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32_idf_env',
+            'Sensor/SeeedStudio_XIAO/Matter/getting_started_with_matter',
+            'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32_matter_env',
+          ],
+        },
         'Sensor/SeeedStudio_XIAO/PCB_Design_XIAO',
         {
           type: 'category',
@@ -2798,16 +2807,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_hardware_guide',
-              {
-                type: 'category',
-                label: 'Application',
-                items: [
-                  'Network/RK_Devices/LinkStar/Application/h68k-ha-esphome',
-                  'Network/RK_Devices/LinkStar/Application/plex_media_server',
-                  'Network/RK_Devices/LinkStar/Application/wordpress_linkstar',
-                  'Network/RK_Devices/LinkStar/Application/grocy-bookstack-linkstar',
-                ],
-              },
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
             ],
           },
         ],
@@ -3073,6 +3073,7 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/Application/Generative_AI/Real_Time_Subtitle_Recoder_on_Jetson',
                     'Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
                     'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_local_llm_text_to_image_on_reComputer',
+                    'Edge/NVIDIA_Jetson/Application/Generative_AI/Local_RAG_based_on_Jetson_with_LlamaIndex'
                   ]},
 
                   {

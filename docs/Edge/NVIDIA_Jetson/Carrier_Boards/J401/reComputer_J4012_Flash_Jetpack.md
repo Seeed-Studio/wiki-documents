@@ -271,6 +271,12 @@ The below image is for Orin NX 16GB
 Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
 :::
 
+First of all, install the below required dependencies on the Ubuntu Host PC before moving onto flashing JetPack.
+
+```sh
+sudo apt install qemu-user-static sshpass abootimg nfs-kernel-server libxml2-utils binutils -y
+```
+
 <!-- Code -->
 
 import Tabs from '@theme/Tabs';
@@ -375,6 +381,51 @@ sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop -
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
+```
+
+You will see the following output if the flashing process is successful
+
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+</TabItem>
+
+<TabItem value="JP6.0" label="JP6.0">
+
+Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
+
+**Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r363) the NVIDIA drivers on the host PC. The required drivers are shown below:
+
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/P1.png"/></div>
+
+**Step 2:** Extract **Jetson_Linux_R36.3.0_aarch64.tbz2** and **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
+
+```sh
+tar xf Jetson_Linux_R36.3.0_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs
+cd Linux_for_Tegra/
+sudo ./apply_binaries.sh
+sudo ./tools/l4t_flash_prerequisites.sh
+```
+
+**Step 4:** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+
+```sh
+cd Linux_for_Tegra
+sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
+```
+
+For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
+
+```sh
+sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
+```
+
+**Step 5:** Flash the system to the NVMe SSD
+
+```sh
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
+  -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" \
+  --showlogs --network usb0 jetson-orin-nano-devkit internal
 ```
 
 You will see the following output if the flashing process is successful

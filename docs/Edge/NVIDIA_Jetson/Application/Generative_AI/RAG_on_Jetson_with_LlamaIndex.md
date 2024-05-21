@@ -1,23 +1,24 @@
 ---
-description:  Quantized Llama2-7B with MLC LLM on Jetson
-title:  Quantized Llama2-7B with MLC LLM on Jetson
+description:  RAG on Jetson with MLCLLM and LlamaIndex
+title:  RAG on Jetson with MLCLLM and LlamaIndex
 keywords:
   - Edge
   - reComputer
   - Jetson
   - Llama2
   - MLC LLM
+  - LlamaIndex
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Quantized_Llama2_7B_with_MLC_LLM_on_Jetson
+slug: /RAG_on_Jetson_with_MLCLLM_and_LlamaIndex
 last_update:
-  date: 04/1/2024
+  date: 05/13/2024
   author: Jiahao
 
 no_comments: false # for Disqus
 
 ---
 
-# Quantized Llama2-7B with MLC LLM on Jetson
+# RAG on Jetson with LlamaIndex
 
 ## Introduction
 
@@ -26,7 +27,6 @@ In recent years, large language models such as GPT-3 have revolutionized natural
 In this project, we introduce a quantized version of [Llama2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf), a large language model trained on 1.5TB of data, and deploy it on the Jetson Orin. We also leverage the [Machine Learning Compiler Large Language Modle](https://llm.mlc.ai)(MLC LLM) to accelerate the inference speed of the model. By deploying the quantized Llama2-7B with MLC LLM on the [Jetson Orin NX](https://www.seeedstudio.com/reComputer-J4012-p-5586.html), developers can build powerful natural language processing applications that deliver high accuracy and low latency on edge devices.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/MLC_LLM.gif" /></div>
-
 
 ## Hardware components
 <div class="table-center">
@@ -39,7 +39,7 @@ In this project, we introduce a quantized version of [Llama2-7B](https://hugging
     </tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J3011-p-5682.html?queryID=c1e6f0b0bd38a98233ce64bce8083a22&objectID=5682&indexName=bazaar_retailer_products">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 				</a>
 			</div></td>
