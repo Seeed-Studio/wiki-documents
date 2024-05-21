@@ -80,7 +80,7 @@ Following these steps should help you disassemble the device without any issues.
 
 ### Assemble Wi-Fi/BLE Antenna
 
-**STEP 1:** Disassemble the entire device following section 4.1 "Disassembly Guide".
+**STEP 1:** Disassemble the entire device following section [Assembly & Disassembly Guide](/recomputer_r1000_hardware_guide/#assembly--disassembly-guide).
 
 **STEP 2:** Connect the feeder line from the CM4 module to antenna hole following the illustrastions below.
 
@@ -103,7 +103,7 @@ Following these steps should help you disassemble the device without any issues.
 
 **STEP 2:** Load the TPM 2.0 module into the J13 socket.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/41.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/41.png" /></div>
 
 ### Assemble UPS and PoE module
 
@@ -117,7 +117,7 @@ Following these steps should help you disassemble the device without any issues.
 - Align the PoE module with the designated aperture on the board.
 - Carefully solder the PoE module onto the board. Due to the compact nature of the board, exercise caution while soldering to avoid damaging nearby components.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/42.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/42.png" /></div>
 
 ## Mounting Guide
 
