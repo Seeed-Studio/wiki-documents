@@ -3,6 +3,7 @@ description: Getting started with grove mp3 v4.
 title: Grove - MP3 v4.0
 keywords:
 - mp3
+- grove
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_mp3_v4
 last_update:
