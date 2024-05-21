@@ -11,7 +11,9 @@ import { Navigation,Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import { useState, useRef, useEffect } from 'react'
 import ThirdPartyComponent from './_components/map';
+import { judgeIsMobile } from '../../utils/jsUtils';
 import './style.css'
+
 function getImgUrl(str) {
 	return `https://files.seeedstudio.com/wiki/ranger/${str}.png`
 }
@@ -206,7 +208,7 @@ function getData(key) {
 			return res.data
 		})
 }
-const rangerPersonRender = () => {
+const rangerPersonRender = (isMobile) => {
 	const [list, setList] = useState([]);
 	function queryData() {
 		getData('wiki-ranger-person').then((rangerList) => {
@@ -228,7 +230,7 @@ const rangerPersonRender = () => {
 					modules={[Navigation,Pagination]}
 						autoplay={true}
 						navigation
-						slidesPerView={2} // 每次显示的幻灯片数量
+						slidesPerView={isMobile?1:2} // 每次显示的幻灯片数量
 						spaceBetween={40}
 						pagination={{ clickable: true }} // 显示分页器
 					>
@@ -253,7 +255,7 @@ const rangerPersonRender = () => {
 		</div>
 	)
 }
-const blogPersonRender = () => {
+const blogPersonRender = (isMobile) => {
 	const [list, setList] = useState([]);
 	function queryData() {
 		getData('wiki-ranger-blog').then((rangerList) => {
@@ -272,7 +274,7 @@ const blogPersonRender = () => {
 					<Swiper
 											modules={[Navigation,Pagination]}
 											navigation
-						slidesPerView={3} // 每次显示的幻灯片数量
+						slidesPerView={isMobile?1:3} // 每次显示的幻灯片数量
 						spaceBetween={24}
 						pagination={{ clickable: true }} // 显示分页器
 					>
@@ -306,7 +308,10 @@ const blogPersonRender = () => {
 	)
 }
 export default function Ranger(): JSX.Element {
-
+	const [isMobile,setIsMobile]=useState(false)
+	useEffect(()=>{
+		setIsMobile(judgeIsMobile())	
+	},[])
 	return (
 		<Layout>
 			<div className={clsx(styles.ranger_page, 'ranger_page')}>
@@ -314,8 +319,8 @@ export default function Ranger(): JSX.Element {
 				{topJoinRender()}
 				{whatDoRender()}
 				{centerJoinRender()}
-				{rangerPersonRender()}
-				{blogPersonRender()}
+				{rangerPersonRender(isMobile)}
+				{blogPersonRender(isMobile)}
 				{doesRender()}
 				{emailRender()}
 			</div>
