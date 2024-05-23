@@ -180,7 +180,7 @@ By this point, we have successfully completed the installation of the SenseCraft
 
 Connect the XIAO ESP32C3 to your computer using a suitable USB-C cable. Ensure the device drivers are installed correctly.
 
-Open the [SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool) in your web browser. This might be a service provided by the manufacturer or a third-party tool designed for flashing ESP devices.
+Open the [SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool) in your web browser.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/22.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -262,28 +262,29 @@ Once you've located **EMQX**, click on it to view the details. On the add-on's p
 
 Once the EMQX Add-on is installed, turn on the **Start on boot**, **Watchdog** and **Show in sidebar** toggles. Click **Start** to start EMQX.
 
+In the EMQX Dashboard login page, enter the default username and password.
 
+- Default username: **admin**
+- Default password: **public**
 
+Click on the "Login" button to access the EMQX Dashboard.
 
-:::tip
-Since we're using it on our own home network, we're leaving security out of the equation for now and doing our MQTT subscription and publishing in port 1883. Remember to secure your EMQX broker, especially if it's exposed to the internet. You should consider:
+In the EMQX Dashboard, navigate to the **Authentication** section from the left sidebar menu. Click on the **Databases** tab.
 
-- Setting up user authentication.
-- Enabling SSL/TLS encryption for MQTT communication.
-- Configuring appropriate firewall rules.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/11.png" style={{width:900, height:'auto'}}/></div>
 
-By following these general steps, you should be able to configure EMQX within Home Assistant, enabling you to start building your IoT ecosystem with a reliable MQTT broker at its core. Keep in mind that specific steps might vary based on your version of Home Assistant and EMQX, as well as your network configuration. Always refer to the [official documentation](https://github.com/hassio-addons/addon-emqx/blob/main/emqx/DOCS.md) for the most accurate and up-to-date information.
-:::
+Click on the **Create** button. In the **Mechanism** dropdown, select **Password-Based**, In the **Backend** dropdown, select **Built-in Database**. Click on the "Create" button to create the Built-in Database.
 
+After creating the Built-in Database, click on the **Users** tab in the "Authentication" section. Click on the "Add User" button.
 
+- In the "Username" field, enter "seeed".
+- In the "Password" field, enter "seeed".
 
+Go back to the "Databases" tab in the "Authentication" section. Locate the previously created database in the list of databases.
 
+Click on the toggle switch next to the database to enable it. The database status should change to "Enabled".
 
-
-
-
-
-
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/12.png" style={{width:900, height:'auto'}}/></div>
 
 ## Integrate Grove Vision AI V2 into Home Assistant
 
@@ -293,12 +294,15 @@ Connect the Grove Vision AI V2 to your computer and open the [Model Assistant's 
 
 After clicking on the top right corner to connect to Grove Vision AI V2, please turn on the MQTT button and enter the following information that you need to fill in the page.
 
-- **SSID & Password**: The device needs to be on the same LAN as the host where the Home Asistant is installed. So please configure the network under the same LAN.XIAO only supports 2.4G WiFi, 5G network is not available.
+- **SSID & Password**: The device needs to be on the same LAN as the host where the Home Asistant is installed. So please configure the network under the same LAN. XIAO only supports 2.4G WiFi, 5G network is not available.
 - **Encryption**: Select **AUTO**.
-- **Host**: IP address of the host where EMQX is installed.
+- **Host**: IP address of the host where Home Assistant is installed.
 - **Port**: `1883`.
+- **clientId**: For the device identification number, please prefix it with `grove_vision_ai_v2_` followed by the custom ID number.
+- **username**: The name of the EMQX database you just create.
+- **password**: The password of the EMQX database you just create.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/32.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/13.png" style={{width:900, height:'auto'}}/></div>
 
 Then click the Save button below. After saving, it **does not mean that Grove Vision AI V2 has been written correctly**, please go back to **Process** in the left menu bar and check if the IP address of the device has appeared and if the status of the MQTT connection is correct.
 

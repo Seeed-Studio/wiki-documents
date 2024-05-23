@@ -179,6 +179,7 @@ const sidebars = {
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-ha',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove_vision_ai_v2_webcamera',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/vision_ai_v2_crowd_heat_map',
                       ],
                     },
                   ],
@@ -3124,6 +3125,7 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
           ]}
 
 

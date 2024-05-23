@@ -23,6 +23,9 @@ For details, please click [here](/solution_of_insufficient_space)
 
 For details, please click [here](/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera)
 
+#### Q4: How to solve the compatibility issue between IMX477 Camera and A603 carrier board?
+
+For details, please click [here](/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board)
 
 # Tech support
 
