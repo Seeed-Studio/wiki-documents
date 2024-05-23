@@ -3855,7 +3855,7 @@ const sidebars = {
             'Topics/TinyML/ModelAssistant/tutorials/datasets',
             {
               type: 'category',
-              label: 'Trainning',
+              label: 'Training',
               collapsed: true,
               link: {
                 type: "doc",
@@ -3902,21 +3902,7 @@ const sidebars = {
       ],
     },
 
-    {
-      type: 'doc',
-      id: 'Topics/Open_Source/Open_Source_Topic',
-      label: 'Open Source',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'doc',
-      id: 'Topics/Edge_AI/Edge_AI_Topic',
-      label: 'Edge AI',
-      className: 'sideboard_calss',
-    },
-
-
+/*
     {
       type: 'html',
       value: `
@@ -3934,6 +3920,13 @@ const sidebars = {
     </div>
     `,
     },
+*/
+    {
+      type: 'doc',
+      id: 'Contributor',
+      label: 'Contributions',
+      className: 'sideboard_calss',
+    },
 
     // {
     //       type: 'category',
@@ -3948,10 +3941,41 @@ const sidebars = {
 
     // 'Contribution/Contributors/How_To_Edit_A_Document',
     // 'Contribution/Contributors/Things_We_Make',
-    'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
-    'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
-    'Contribution/Contributors/Honorary-Contributors',
-    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+
+    {
+      type: 'category',
+      label: 'Github Contributions Guide',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
+      },
+      items: [
+        'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
+    
+        
+        'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+      ],
+    },
+
+    
+
+    {
+      type: 'category',
+      label: 'Honorary Contributors',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Contribution/Contributors/Honorary-Contributors',
+      },
+      items: [
+        'Contribution/Contributors/Projects',
+        'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+      ],
+    },
+
 
     {
       type: 'html',
@@ -4212,6 +4236,22 @@ const sidebars = {
           ],
         },
       ],
+    },
+
+
+    
+    {
+      type: 'doc',
+      id: 'Topics/Open_Source/Open_Source_Topic',
+      label: 'Open Source',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'doc',
+      id: 'Topics/Edge_AI/Edge_AI_Topic',
+      label: 'Edge AI',
+      className: 'sideboard_calss',
     },
 
     'About',
