@@ -54,14 +54,40 @@ If you are using the Grove MP3 module for the first time, then you may first nee
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/1.jpg" style={{width:600, height:'auto'}}/></div>
 
+### Software Preparation
 
-## Arduino Library Overview
+**Step 1.** Launch the Arduino application.
 
-:::tip
-If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
-:::
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
-### 1. Seeed Serial MP3 Player Library
+<div class="download_arduino_container" style={{textAlign: 'center'}}>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+    </a>
+</div>
+
+**Step 2.** Select your development board model and add it to the Arduino IDE.
+
+- If you want to use **Seeed Studio XIAO SAMD21** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO RP2040** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO nRF52840** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO ESP32C3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO ESP32S3** for the later routines, please refer to **[this tutorial](http://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** to finish adding.
+
+- If you want to use **Seeeduino V4.3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino_v4.2/)** to finish adding.
+
+- If you want to use **Arduino UNO R4 WiFi** for the later routines, please click **Tools-> Board-> Boards Manager...**, print keyword "UNO R4 WiFi" in the searching blank and install the latest version (or the version you want to use). 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/4.png" style={{width:800, height:'auto'}}/></div>
+
+
+### Arduino Library Overview
+
+
+#### 1. Seeed Serial MP3 Player Library
 
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -71,7 +97,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 </div><br />
 
 
-#### Function
+##### Function
 
 Before we get started developing a sketch, let's look at the available functions of the library.
 
@@ -165,7 +191,7 @@ Before we get started developing a sketch, let's look at the available functions
     - **Output Parameters**: Returns 0 for successful execution and -1 for unsuccessful execution.
 
 
-#### Default Variables
+##### Default Variables
 
 ```cpp
 #define AT_HEADER          "AT+"
@@ -216,7 +242,7 @@ typedef enum {
 } STORAGE;
 ```
 
-#### Installation
+##### Installation
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Serial_MP3_Player">
@@ -228,7 +254,7 @@ Since you have downloaded the zip Library, open your Arduino IDE, click on **Ske
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
-### 2. Grove Gesture Library
+#### 2. Grove Gesture Library
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Grove_Gesture/tree/dev">
@@ -241,7 +267,7 @@ viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign
     </a>
 </div>
 
-#### Function
+##### Function
 
 Before we get started developing a sketch, let's look at the available functions of the library.
 
@@ -249,7 +275,7 @@ Before we get started developing a sketch, let's look at the available functions
 
 2. `bool getResult(paj7620_gesture_t& res)` —— The function serves to obtain the result of the sensor's recognition of the gesture.
 
-#### Installation
+##### Installation
 
 Since you have downloaded the zip Library, open your Arduino IDE, click on **Sketch > Include Library > Add .ZIP Library**. Choose the zip file you just downloaded，and 
 if the library install correct, you will see **Library added to your libraries** in the notice window. Which means the library is installed successfully.
@@ -263,30 +289,7 @@ if the library install correct, you will see **Library added to your libraries**
 
 Now that we have our library installed and we understand the basic functions, let's run some examples for our Seeeduino V4.3 to see how it behaves.
 
-**Step 1.** Launch the Arduino application.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
-
-<div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
-    </a>
-</div>
-
-**Step 2.** Select your development board model and add it to the Arduino IDE.
-
-- If you want to use **Seeed Studio XIAO SAMD21** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)** to finish adding.
-
-- If you want to use **Seeed Studio XIAO RP2040** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)** to finish adding.
-
-- If you want to use **Seeed Studio XIAO nRF52840** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)** to finish adding.
-
-- If you want to use **Seeed Studio XIAO ESP32C3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)** to finish adding.
-
-- If you want to use **Seeed Studio XIAO ESP32S3** for the later routines, please refer to **[this tutorial](http://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** to finish adding.
-
-- If you want to use **Seeeduino V4.3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino_v4.2/)** to finish adding.
-
-**Step 3.** Materials required
+**Step 1.** Materials required
 
 This tutorial will take Seeeduino V4.3 as an example to explain the use of Grove MP3 module. Then you may need to prepare the following materials.
 
@@ -316,14 +319,14 @@ This tutorial will take Seeeduino V4.3 as an example to explain the use of Grove
 </div>
 
 
-**Step 4.** Hardware Connection
+**Step 2.** Hardware Connection
 
 Connect the Grove - MP3 V4.0 to the **UART** port of the Seeeduino V4.3. Then, Connect the Seeeduino to PC via a USB cable.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/2.jpg" style={{width:600, height:'auto'}}/></div><br />
 
 
-- **Step 5.** Open **WT2605C_Terminal_player** example via the path: **File** → **Examples** → **Seeed_Serial_MP3_Player** → **WT2605C_Terminal_player**. You can play `.mp3` format music file using this moudle, and use 3.5mm Audio Jack, Speaker via JST2.0 speaker port or even output both in the same time.
+**Step 3.** Open **WT2605C_Terminal_player** example via the path: **File** → **Examples** → **Seeed_Serial_MP3_Player** → **WT2605C_Terminal_player**. You can play `.mp3` format music file using this moudle, and use 3.5mm Audio Jack, Speaker via JST2.0 speaker port or even output both in the same time.
 
 The `WT2605C_Terminal_player` Example code is as follow:
 
@@ -441,7 +444,7 @@ void loop() {
 }
 ```
 
-- **Step 6.** Upload the Demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/). Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Set the baud rate to **115200**. The result should look like below.
+**Step 4.** Upload the Demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/). Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Set the baud rate to **115200**. The result should look like below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/3.png" style={{width:700, height:'auto'}}/></div><br />
 
@@ -518,32 +521,7 @@ Connect the Grove - MP3 V4.0 to the **UART** port of the Arduino UNO R4 WiFi, co
 {{width:500, height:'auto'}}/></div>
 
 
-**Step 4.** Launch the Arduino application.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
-
-<div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
-    </a>
-</div>
-
-**Step 5.** Select your development board model and add it to the Arduino IDE.
-
-Click **Tools-> Board-> Boards Manager...**, print keyword "UNO R4 WiFi" in the searching blank and install the latest version (or the version you want to use). 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/4.png" style={{width:800, height:'auto'}}/></div>
-
-
-**Step 6.**  Download the **Gesture_Control_Music.zip** and unzip it. Open Gesture_Control_Music example by Arduibo IDE via the path: **File → Gesture-Control-Music-main → examples → Gesture_Control_Music → Gesture_Control_Music.ino**.
-
-
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Allen-Kuang/Gesture-Control-Music">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-The `Gesture_Control_Music` example code is as follow:
+**Step 4.**  Open Arduibo IDE, The `Gesture_Control_Music` example code is as follow:
 
 ```cpp
 #include "WT2605C_Player.h"
@@ -659,7 +637,7 @@ int printResultCombinedMode(const pag7660_gesture_t& result) {
 }
 ```
 
-**Step 7.** Upload the Demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/). Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Effective gestures you can refer to [here](https://wiki.seeedstudio.com/grove_gesture_paj7660/#hardware-overview), the result should look like below.
+**Step 5.** Upload the Demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/). Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Effective gestures you can refer to [here](https://wiki.seeedstudio.com/grove_gesture_paj7660/#hardware-overview), the result should look like below.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/5.png" style={{width:800, height:'auto'}}/></div>
 
 
