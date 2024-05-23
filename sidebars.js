@@ -3799,10 +3799,23 @@ const sidebars = {
       className: 'sideboard_calss',
     },
 
+    {
+      type: 'category',
+      label: 'Integration',
+      collapsed: false,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/Home_Assistant/Integration',
+      },
+      items: [
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/sensecraft_homeassistant_userguide',
+      ],
+    },
 
-    'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
-    'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
-    'Topics/Home_Assistant/Home_Assistant_Tutorials/sensecraft_homeassistant_userguide',
+
 
     {
       type: 'doc',
