@@ -3459,7 +3459,7 @@ const sidebars = {
         },
       ]
     },
-
+    /*
     {
       type: 'html',
       value: `
@@ -3476,6 +3476,13 @@ const sidebars = {
       <div class="sub_item"><strong> Popular Platform </strong></div>
     </div>
     `,
+    },
+    */
+    {
+      type: 'doc',
+      id: 'PopularPlatforms',
+      label: 'Popular Platforms',
+      className: 'sideboard_calss',
     },
 
     {
