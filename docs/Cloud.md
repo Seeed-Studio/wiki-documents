@@ -1,25 +1,25 @@
 ---
-description: Cloud and Chain
-title: Cloud and Chain
+description: Cloud
+title: Cloud
 keywords:
 - Cloud
-- Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 07/05/2023
+  date: 05/24/2024
   author: Matthew
 ---
 
-This topic here introduces the Seeed Studio product documentation regarding the cloud service, which supports processed data management from computing boards and offers real-time operations to the users. There includes the industrial SenseCAP Cloud services and other cloud service applications on this page.
 
-## SenseCAP Cloud Production
+Cloud service is a vital component that facilitates processed data management from computing boards and offers real-time operations to users. This page encompasses Seeed's industrial-grade SenseCAP cloud services, as well as other cloud service applications tailored to diverse needs. Through robust cloud infrastructure, Seeed provides users with the ability to securely store, analyze, and leverage processed data, enabling data driven decision-making and enhancing operational efficiency across various domains.
 
-<strong><font color={'8DC215'} size={"4"}>This portion here includes the cloud service offered by Seeed Studio, published for industrial IoT applications. Here you can find:</font></strong>
+## SenseCAP Cloud Service
 
-- List of SenseCAP Cloud production
-- Instruction of data management and devices management of each production
-- Different API for different connecting purposes
-- Cloud & Chain Introduction
+<strong><font color={'8DC215'} size={"4"}>This section here showcases different cloud services being offered by Seeed Studio, tailed for varying industrial IoT applications. You can explore more on the following areas:</font></strong>
+
+- Catalogue of SenseCAP Cloud services and ecosystem
+- Instructions for data management and devices management of each cloud product
+- APIs for varying connection purposes
+- Introduction to cloud
 
 ### SenseCAP Dashboard / Portal
 

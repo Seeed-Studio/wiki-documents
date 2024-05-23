@@ -235,16 +235,20 @@ const config = {
             className: 'navbar_dorp_items',
             items: [
               {
-                label: 'Sensing and Connectivity',
-                to: 'Sensor_Network',
+                label: 'Sensor and Sensing',
+                to: 'Sensor',
+              },
+              {
+                label: 'Networking',
+                to: 'Network',
               },
               {
                 label: 'Edge Computing',
                 to: 'Edge_Computing',
               },
               {
-                label: 'Cloud and Chain',
-                to: 'CloudnChain',
+                label: 'Cloud',
+                to: 'Cloud',
               },
             ],
           },

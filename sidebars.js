@@ -3348,8 +3348,8 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'CloudnChain',
-      label: 'Cloud and Chain',
+      id: 'Cloud',
+      label: 'Cloud',
       className: 'sideboard_calss',
     },
 
