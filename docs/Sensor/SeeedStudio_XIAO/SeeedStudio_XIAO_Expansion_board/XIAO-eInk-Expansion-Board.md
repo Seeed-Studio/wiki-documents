@@ -141,6 +141,32 @@ Thank you for choosing our products! We are here to provide you with different s
   </div>
 </div>
 
+**Step 1.** Download the [image2lcd.zip](https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg), extract it, and open the **image2lcd.exe**;
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
+
+**Step 2.** Use the build-in software Paint in Windows to creat a canves with the **same size**, and input the content you want to dispaly, save as `.jpg` file when you design over;
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+ It must be same size canves, for example, the 4.2-inch E-ink is 400 * 300 pxs, then you can't use the size on 300 * 400, it will cause the extra 200 byte date when iamge2lcd output `.h` file.
+:::
+
+**Step 3.** Launch the  image2lcd application, open your `.jpg` file, set width and height of display, click the small arrow next to the setting box, then choose "Invert colors" and "Flip horizontal", noe click the Save and name the output file "XXX.h".
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
+
+**Step 4.** Comment out the first six hexadecimal characters in the exported h header file.
+
+**Step 5.** Launch the Arduino application.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
+
+<div class="download_arduino_container" style={{textAlign: 'center'}}>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+    </a>
+</div>
+
 
 
 
