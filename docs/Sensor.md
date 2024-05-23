@@ -1,29 +1,31 @@
 ---
-description: Sensing and Network Connectivity
-title: Sensing and Network Connectivity
+description: Sensors and Sensing
+title: Sensors and Sensing
 keywords:
 - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 07/05/2023
+  date: 05/23/2024
   author: Matthew
 ---
 
-This topic here introduces the Seeed Studio product documentation regarding the very first step of digitized data from physical world, that is, delopying information infrastructures in a dynamic sensing framework, to lay the groundwork for society monitoring and understanding the physical and natural environments.
+Sensing is the initial and perhaps the most crucial step in obtaining digitized data from the physical world. By utilizing sensors and information infrastructures within a dynamic sensing framework, we lay the groundwork for monitoring societal activities and comprehending our physical and natural environments. This sensing process enables us to gather and understand data from the world around us.
 
-You can discover this page with two large portions.
+On this page, there are two main categories of products
 
-- Industrial Sensors with Network Devices
-- Entry-level Sensors and Network Modules
+ - **Industrial Sensors**
+
+
+ - **Entry-level Sensors**
 
 ## Industrial Sensors and Network Devices
 
-<strong><font color={'8DC215'} size={"4"}>We launched industrial grade sensors with long range connectivity and intelligence, generating digitized data from physical world in instrumental-level precision. You can find in this portion with:</font></strong>
+<strong><font color={'8DC215'} size={"4"}>Seeed has launched highly intelligent industrial grade sensors with long range connectivity, equipped with the capability to generate digitized data from the physical world in <em>instrumental-level precision.</em> In this section, you can find:</font></strong>
 
 - Sensors & Probes for various industrial-grade environmental data sensing
-- AI-based Sensors for reday-to-deploy intelligent scenarios
-- Data Logger for remote environmental data monitoring
-- Gateway for long-range, high-security, indoor and outdoor data transmission
+- AI-based Sensors for ready-to-deploy intelligent scenarios
+- Data Loggers for remote environmental data monitoring
+- Gateways for long-range, high-security, indoor and outdoor data transmissions
 - Other network infrastructures for data transmission, such as routers.
 
 ### Industrial Sensors and Probes
@@ -142,6 +144,10 @@ You can discover this page with two large portions.
     </div>
 </div>
 
+
+
+## Network Devices for industrial sensors
+
 ### Gateway for Multiple Platform 
 
 <div class="title_container">
@@ -204,14 +210,14 @@ You can discover this page with two large portions.
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Routers</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>The routers can connect a local network to the Internet, enabling devices communicate with each other.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>The routers can enable device communications by connecting a local network to the internet.</font></div>
     </div>
 </div>
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reRouter</font></div>
-            <a href="/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction with Hardware Overview</font></span></a>
+            <a href="/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction to Hardware Overview</font></span></a>
             <br/>
             <a href="/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Original OS Installation </font></span></a>
             <br/>
@@ -223,7 +229,7 @@ You can discover this page with two large portions.
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LinkStar</font></div>
-            <a href="/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction with Hardware Overview</font></span></a>
+            <a href="/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introduction to Hardware Overview</font></span></a>
             <br/>
             <a href="/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Original OS Installation</font></span></a>
             <br/>
@@ -231,9 +237,11 @@ You can discover this page with two large portions.
     </div>
 </div>
 
-## Entry-level Sensors and Network Modules
+## Entry-level Sensors
 
-<strong><font color={'8DC215'} size={"4"}>Without complicated instruments, we can sense and monitor the physical world just using microcontrollers and simple functional elecrtricals. That is, in this portion you can find:</font></strong>
+<strong><font color={'8DC215'} size={"4"}>Without the need for complex instruments, it is possible to sense and monitor the physical world by utilizing microcontrollers and simple functional electronics. Within this domain, you can discover the following:</font></strong>
+
+
 
 - Grove ecosystem sensors 
 - Grove communication modules
@@ -246,7 +254,7 @@ You can discover this page with two large portions.
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Sensors</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Grove Sensors.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Introduction to the different types  of Grove Sensors.</font></div>
     </div>
 </div>
 
@@ -418,6 +426,9 @@ You can discover this page with two large portions.
     </div>
 </div>
 
+
+## Network Modules for entry-level sensors   
+
 ### Grove Communication Modules
 
 <!-- Grove Sensor Network -->
@@ -425,7 +436,7 @@ You can discover this page with two large portions.
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Sensor Network</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of Grove Sensor Network, the transmittion methods offered to sensors.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Introduction to the Grove Sensor Network and the transmission methods available to sensors.</font></div>
     </div>
 </div>
 
@@ -494,7 +505,7 @@ You can discover this page with two large portions.
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Sensing Nodes</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> This is the introduction of Sensing Nodes, other sensors besides Grove ecosystem.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> Introduction to Sensing Nodes and sensors outside of the Grove ecosystem.</font></div>
     </div>
 </div>
 
@@ -522,8 +533,8 @@ You can discover this page with two large portions.
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Beyond Grove / Retired Product</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> This is the introduction of Seeed Studio ageful sensors and communication modules.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Obselete / Retired Product</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Seeed Studio legacy sensors and communication modules.</font></div>
             <a href="/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click HERE </font></span></a> to see the full picture.
     </div>
 </div>
@@ -552,7 +563,7 @@ You can discover this page with two large portions.
 
 ## From entry-level to industrial-grade Sensors
 
-- Imagining how quickly you can build industrial-graded IoT sensors and applications in minutes, as well as develop custom open source LoRaWAN devices at low cost.
+Envision the rapid pace at which you can construct industrial-grade Internet of Things (IoT) sensors and applications within minutes, as well as develop custom open-source LoRaWAN devices at a low cost.
 
 ### SenseCAP S2110 Sensor Builder
 
@@ -565,7 +576,7 @@ You can discover this page with two large portions.
     </div>
 </div>
 
-## From Simple to Sophisticated
+## Transition from Simple to Sophisticated 
 
 - Developing industrial solutions with entry-level sensor hardware.
 

@@ -23,9 +23,13 @@ Being an Internet of Things (IOT) hardware partner since 2008, Seeed Studio is d
 
 ## What does this Wiki Platform Cover?
 
-- This platform will focus on three main topics as shown in the sidebar, with up-to-date information on all of our products.
+- This platform will focus on four main topics as shown in the sidebar, with up-to-date information on all of our products.
 
-<strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}> Sensors and Networking Products</font></span></a></strong>
+<strong><a href="/Sensor"><span><font color={'8DC215'} size={"4"}> Sensors and Sensing</font></span></a></strong>
+
+<p></p>
+
+<strong><a href="/Network"><span><font color={'8DC215'} size={"4"}> Networking</font></span></a></strong>
 
 <p></p>
 <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong>
@@ -198,7 +202,7 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
-## What's More
+## Socials
 
 If you have any questions or comments, please do not hesitate to hop on to our forum and discuss with us directly and contact us! We value all feedbacks and opinions and believe that the way to grow and prosper is together with our users and the community!
 

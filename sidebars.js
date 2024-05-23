@@ -40,7 +40,7 @@ const sidebars = {
     // 'Getting_Started_test',
     {
       type: 'doc',
-      id: 'Sensor_Network',
+      id: 'Sensor',
       label: 'Sensing',
       className: 'sideboard_calss',
     },
@@ -2092,7 +2092,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Sensor_Network',
+      id: 'Network',
       label: 'Network',
       className: 'sideboard_calss',
     },
