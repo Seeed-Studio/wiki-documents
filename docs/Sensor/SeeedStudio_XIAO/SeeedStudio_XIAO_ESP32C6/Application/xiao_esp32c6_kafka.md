@@ -104,7 +104,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 Before we start, I want to introduce every service's function in this project.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/structure.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/structure.png" style={{width:700, height:'auto'}}/></div>
 
 Here is this project directory structure for your reference. I will create those files one by one in the following steps. The position of each files is very important. I strongly recommand you refer this directory structure. Create a **kafka_xiao_project** directory and include those files.
 
@@ -278,11 +278,11 @@ It is possible that the port is occupied, you can change the port from 5001 to 5
 
 4. Now the server is running on http://127.0.0.1:5001. Click this link to open it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/12.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/12.png" style={{width:800, height:'auto'}}/></div>
 
 5. And then input two parameter like this format to test if docker cluster is working well.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/13.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/13.png" style={{width:700, height:'auto'}}/></div>
 
 6. We go inside Kafka to take a look if the data were send Kafka.
 ```
@@ -319,7 +319,7 @@ This step is mainly about how to use Python manipulate Kafka. You also can skip 
 
 4. Click the right mouse button and create **New Notebook**, using Python3(ipykernel).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/19.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/19.png" style={{width:800, height:'auto'}}/></div>
 
 5. Install kafka-python library by running ```pip install kafka-python```.
 
@@ -432,11 +432,11 @@ void loop() {
 
 If you don't know what is your computer IP address. You can run ```ipconfig```(Windows) or ```ifconfig | grep net```(Mac or Linux) to check it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/26.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/26.png" style={{width:600, height:'auto'}}/></div>
 
 2. Use Type-C cable connect your computer to C6 and use Grove cable connect XIAO extension board **I2C port** to DHT20 sensor.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/hardware.jpeg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/hardware.jpeg" style={{width:600, height:'auto'}}/></div>
 
 3. Choose your development board.
 
