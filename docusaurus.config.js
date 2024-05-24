@@ -156,6 +156,11 @@ const config = {
           dark: 'rgb(50, 50, 50)',
           light: 'rgb(255, 255, 255)',
         },
+
+        zoom: {
+          selector: '.markdown :not(a) > img', // Exclude images inside links
+          
+        },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
         config: {},

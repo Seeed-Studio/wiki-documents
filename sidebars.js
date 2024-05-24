@@ -3482,7 +3482,7 @@ const sidebars = {
     */
     {
       type: 'doc',
-      id: 'PopularPlatforms',
+      id: 'Top_Brand/PopularPlatforms',
       label: 'Popular Platforms',
       className: 'sideboard_calss',
     },
@@ -3806,7 +3806,7 @@ const sidebars = {
       collapsible: true,
       link: {
         type: "doc",
-        id: 'Topics/Home_Assistant/Integration',
+        id: 'Topics/Home_Assistant/Home_Assistant_Topic',
       },
       items: [
         'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
@@ -3991,7 +3991,7 @@ const sidebars = {
       ],
     },
 
-
+/*
     {
       type: 'html',
       value: `
@@ -4009,7 +4009,14 @@ const sidebars = {
     </div>
     `,
     },
+    */
 
+    {
+      type: 'doc',
+      id: 'Seeed_Elderly/DiscontinuedProducts',
+      label: 'Discontinued Products',
+      className: 'sideboard_calss',
+    },
     {
       type: 'category',
       label: 'Product List',
