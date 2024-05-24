@@ -282,6 +282,41 @@ const config = {
             ],
           },
 
+          {
+            type: 'dropdown',
+            label: 'Products Help',
+            to: '/knowledgebase',
+            position: 'left',
+            className: 'navbar_dorp_items',
+            items: [
+              {
+                label: 'ReTerminal',
+                
+                to: '/reTerminal-new_FAQ',
+              },
+              {
+                label: 'Seeed Studio XIAO Series',
+                to: '/XIAO_FAQ',
+              },
+              {
+                label: 'Odyssey',
+                to: '/ODYSSEY_FAQ',
+              },
+              {
+                label: 'Jetson Series',
+                to: '/Jetson_FAQ',
+              },
+              {
+                label: 'reRouter',
+                to: '/FAQs_For_openWrt',
+              },
+              {
+                label: 'Wio Terminal',
+                to: '/wio_terminal_faq',
+              },
+            ],
+          },
+
           // {
           //   type: 'dropdown',
           //   label: '文/A',
