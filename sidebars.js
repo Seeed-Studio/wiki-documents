@@ -22,9 +22,23 @@ const sidebars = {
 
   ProductSidebar: [
     // 'Sensing_test',
-    'Getting_Started',
-    'weekly_wiki',
+  //  'Getting_Started',
+  //  'weekly_wiki',
     // {
+
+    {
+      type: 'doc',
+      id: 'Getting_Started',
+      label: 'Getting Started',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'doc',
+      id: 'weekly_wiki',
+      label: 'Weekly Wiki',
+      className: 'sideboard_calss',
+    },
     //   type: 'category',
     //   label: 'TinyML',
     //   collapsed: true,
@@ -3992,7 +4006,7 @@ const sidebars = {
       ],
     },
 
-
+/*
     {
       type: 'html',
       value: `
@@ -4009,6 +4023,13 @@ const sidebars = {
       <div class="sub_item"><strong> Discontinued Product </strong></div>
     </div>
     `,
+    },
+*/
+    {
+      type: 'doc',
+      id: 'Discontinuedproduct',
+      label: 'Discontinued Product',
+      className: 'sideboard_calss',
     },
 
     {
