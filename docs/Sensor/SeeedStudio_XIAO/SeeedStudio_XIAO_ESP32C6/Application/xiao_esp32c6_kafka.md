@@ -450,6 +450,10 @@ If you don't know what is your computer IP address. You can run ```ipconfig```(W
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/29.png" style={{width:1000, height:'auto'}}/></div>
 
+## Resources
+
+- **[Link]** [Apache Kafka Introduction](https://kafka.apache.org/)
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
