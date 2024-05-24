@@ -22,23 +22,9 @@ const sidebars = {
 
   ProductSidebar: [
     // 'Sensing_test',
-  //  'Getting_Started',
-  //  'weekly_wiki',
+    'Getting_Started',
+    'weekly_wiki',
     // {
-
-    {
-      type: 'doc',
-      id: 'Getting_Started',
-      label: 'Getting Started',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'doc',
-      id: 'weekly_wiki',
-      label: 'Weekly Wiki',
-      className: 'sideboard_calss',
-    },
     //   type: 'category',
     //   label: 'TinyML',
     //   collapsed: true,
@@ -54,7 +40,7 @@ const sidebars = {
     // 'Getting_Started_test',
     {
       type: 'doc',
-      id: 'Sensor/Sensor',
+      id: 'Sensor',
       label: 'Sensing',
       className: 'sideboard_calss',
     },
@@ -1140,7 +1126,6 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
-                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_kafka',
               ],
             },
           ],
@@ -2108,7 +2093,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Network/Network',
+      id: 'Network',
       label: 'Network',
       className: 'sideboard_calss',
     },
@@ -2466,7 +2451,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Edge/Edge_Computing',
+      id: 'Edge_Computing',
       label: 'Edge Computing',
       className: 'sideboard_calss',
     },
@@ -3365,7 +3350,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Cloud_Chain/Cloud',
+      id: 'Cloud',
       label: 'Cloud',
       className: 'sideboard_calss',
     },
@@ -3497,7 +3482,7 @@ const sidebars = {
     */
     {
       type: 'doc',
-      id: 'Top_Brand/PopularPlatforms',
+      id: 'PopularPlatforms',
       label: 'Popular Platforms',
       className: 'sideboard_calss',
     },
@@ -3953,7 +3938,7 @@ const sidebars = {
 */
     {
       type: 'doc',
-      id: 'Contribution/Contributor',
+      id: 'Contributor',
       label: 'Contributions',
       className: 'sideboard_calss',
     },
@@ -4006,7 +3991,7 @@ const sidebars = {
       ],
     },
 
-/*
+
     {
       type: 'html',
       value: `
@@ -4023,13 +4008,6 @@ const sidebars = {
       <div class="sub_item"><strong> Discontinued Product </strong></div>
     </div>
     `,
-    },
-*/
-    {
-      type: 'doc',
-      id: 'Seeed_Elderly/Discontinuedproduct',
-      label: 'Discontinued Product',
-      className: 'sideboard_calss',
     },
 
     {
