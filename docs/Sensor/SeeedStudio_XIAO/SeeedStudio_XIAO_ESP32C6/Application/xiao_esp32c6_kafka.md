@@ -365,7 +365,7 @@ for message in consumer:
 
 ## XIAO ESP32C6 and Apache Kafka
 
-Kafka is a distributed streaming platform that enables the real-time processing of data streams at scale. It allows for the publish-subscribe messaging of data between systems, providing fault tolerance, persistence, and high throughput. Kafka is widely used for building real-time data pipelines and streaming applications across various domains.
+[Kafka](https://kafka.apache.org/) is a distributed streaming platform that enables the real-time processing of data streams at scale. It allows for the publish-subscribe messaging of data between systems, providing fault tolerance, persistence, and high throughput. Kafka is widely used for building real-time data pipelines and streaming applications across various domains.
 
 Now, we are going to use XIAO ESP32C6 and DHT20 temperature and humidity sensor to collect data and send to Kafka in real time.
 
