@@ -54,7 +54,7 @@ const sidebars = {
     // 'Getting_Started_test',
     {
       type: 'doc',
-      id: 'Sensor',
+      id: 'Sensor/Sensor',
       label: 'Sensing',
       className: 'sideboard_calss',
     },
@@ -2108,7 +2108,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Network',
+      id: 'Network/Network',
       label: 'Network',
       className: 'sideboard_calss',
     },
@@ -2466,7 +2466,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Edge_Computing',
+      id: 'Edge/Edge_Computing',
       label: 'Edge Computing',
       className: 'sideboard_calss',
     },
@@ -3365,7 +3365,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Cloud',
+      id: 'Cloud_Chain/Cloud',
       label: 'Cloud',
       className: 'sideboard_calss',
     },
@@ -3497,7 +3497,7 @@ const sidebars = {
     */
     {
       type: 'doc',
-      id: 'PopularPlatforms',
+      id: 'Top_Brand/PopularPlatforms',
       label: 'Popular Platforms',
       className: 'sideboard_calss',
     },
@@ -3953,7 +3953,7 @@ const sidebars = {
 */
     {
       type: 'doc',
-      id: 'Contributor',
+      id: 'Contribution/Contributor',
       label: 'Contributions',
       className: 'sideboard_calss',
     },
@@ -4027,7 +4027,7 @@ const sidebars = {
 */
     {
       type: 'doc',
-      id: 'Discontinuedproduct',
+      id: 'Seeed_Elderly/Discontinuedproduct',
       label: 'Discontinued Product',
       className: 'sideboard_calss',
     },
