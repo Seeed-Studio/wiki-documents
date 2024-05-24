@@ -255,7 +255,7 @@ const config = {
           {
             type: 'dropdown',
             label: 'Topics',
-            to: '/Getting_Started',
+            to: '/Topics/Topic_introduction',
             position: 'left',
             className: 'navbar_dorp_items',
             items: [
