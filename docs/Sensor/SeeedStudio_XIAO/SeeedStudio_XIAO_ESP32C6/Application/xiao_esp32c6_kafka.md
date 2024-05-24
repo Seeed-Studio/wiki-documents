@@ -10,7 +10,9 @@ last_update:
   author: Allen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/head.png" style={{width:1000, height:'auto'}}/></div>
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/kafka_xiao.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 Our cutting-edge processing node, Kafka-ESP32, combines the power of Apache Kafka and ESP32C6 microcontrollers to deliver an efficient solution for handling IoT data streams. By using the XIAO ESP32C6 with the DHT20 environmental sensor, data is collected and seamlessly sent to Apache Kafka via the ESP32C6. Kafka's high-throughput, low-latency messaging capabilities enable real-time data processing and analysis, while its distributed architecture allows for effortless scalability. Kafka-ESP32 empowers you to develop custom applications and integrations, revolutionizing the way you manage and utilize your IoT assets in today's data-driven landscape.
 
@@ -102,7 +104,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 Before we start, I want to introduce every service's function in this project.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/structure.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/structure.png" style={{width:700, height:'auto'}}/></div>
 
 Here is this project directory structure for your reference. I will create those files one by one in the following steps. The position of each files is very important. I strongly recommand you refer this directory structure. Create a **kafka_xiao_project** directory and include those files.
 
@@ -276,11 +278,11 @@ It is possible that the port is occupied, you can change the port from 5001 to 5
 
 4. Now the server is running on http://127.0.0.1:5001. Click this link to open it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/12.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/12.png" style={{width:800, height:'auto'}}/></div>
 
 5. And then input two parameter like this format to test if docker cluster is working well.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/13.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/13.png" style={{width:700, height:'auto'}}/></div>
 
 6. We go inside Kafka to take a look if the data were send Kafka.
 ```
@@ -317,7 +319,7 @@ This step is mainly about how to use Python manipulate Kafka. You also can skip 
 
 4. Click the right mouse button and create **New Notebook**, using Python3(ipykernel).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/19.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/19.png" style={{width:800, height:'auto'}}/></div>
 
 5. Install kafka-python library by running ```pip install kafka-python```.
 
@@ -362,6 +364,8 @@ for message in consumer:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/25.png" style={{width:1000, height:'auto'}}/></div>
 
 ## XIAO ESP32C6 and Apache Kafka
+
+Kafka is a distributed streaming platform that enables the real-time processing of data streams at scale. It allows for the publish-subscribe messaging of data between systems, providing fault tolerance, persistence, and high throughput. Kafka is widely used for building real-time data pipelines and streaming applications across various domains.
 
 Now, we are going to use XIAO ESP32C6 and DHT20 temperature and humidity sensor to collect data and send to Kafka in real time.
 
@@ -428,11 +432,11 @@ void loop() {
 
 If you don't know what is your computer IP address. You can run ```ipconfig```(Windows) or ```ifconfig | grep net```(Mac or Linux) to check it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/26.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/26.png" style={{width:600, height:'auto'}}/></div>
 
 2. Use Type-C cable connect your computer to C6 and use Grove cable connect XIAO extension board **I2C port** to DHT20 sensor.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/hardware.jpeg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/hardware.jpeg" style={{width:600, height:'auto'}}/></div>
 
 3. Choose your development board.
 
