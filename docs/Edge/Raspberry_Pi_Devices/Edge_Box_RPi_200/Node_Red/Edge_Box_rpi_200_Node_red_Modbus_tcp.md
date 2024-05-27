@@ -114,6 +114,7 @@ Based on this information, you can adjust the Modbus address in the tag configur
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/networkip1.PNG" style={{width:600, height:'auto'}}/></div>
 
+**Step 6**. Using the inject node, we can inject boolean values. Here, we will use a couple of inject nodes for that purpose.
 
 The overall steps can be demonstrated as follows
 
