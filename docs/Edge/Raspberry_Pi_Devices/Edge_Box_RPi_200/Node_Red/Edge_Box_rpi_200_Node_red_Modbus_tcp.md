@@ -144,9 +144,11 @@ The **Modbus-Response node** is used to display the response of a Modbus Read/Wr
 
 **Step 1**. **Drag and drop** the Modbus-Response node onto the flow.
 
-**Step 2**. The response will display an array of numbers under your Modbus-Response node. These numbers represent the count of each digital output.
+**Step 2**. Connect with **Modbus Read** Node. The response will display an array of numbers under your Modbus-Response node. These numbers represent the count of each digital output.
 
-By following these steps, you can read and display the values of registers/coils from your Modbus TCP device effectively with **Debug node** as well.
+**Step 3**. **Drag and Drop Debug Node** for inspection purpose. Then connect with **Modbus Read Node**. 
+
+By following these steps, you can read and display the values of registers/coils from your Modbus TCP device effectively 
 
 The overall steps can be demonstrated as follows.
 
