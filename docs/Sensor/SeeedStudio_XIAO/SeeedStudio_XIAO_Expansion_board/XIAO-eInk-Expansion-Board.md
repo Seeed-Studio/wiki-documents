@@ -114,7 +114,7 @@ The colors of the picture should be consistent with the standard colors of the d
 ### Bitmap Conversion
 
 **Step 1.** Open [Image2lcd.7z](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image2Lcd.7z), extract it and open the application.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/1 .png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/1.png" style={{width:700, height:'auto'}}/></div>
 
 **Step 2.** Open the picture, select the "Output file type" as the "C array (*.c)", select the "Scan mode" as the "Horizon Scan", the other parameters setting is show in follows:
 
