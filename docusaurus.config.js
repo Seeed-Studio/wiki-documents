@@ -295,30 +295,52 @@ const config = {
             className: 'navbar_dorp_items',
             items: [
               {
-                label: 'ReTerminal',
-                
-                to: '/reTerminal-new_FAQ',
+                label: 'NVIDIA Jetson Series',
+                to: '/Jetson_FAQ',
               },
               {
                 label: 'Seeed Studio XIAO Series',
                 to: '/XIAO_FAQ',
               },
               {
-                label: 'Odyssey',
-                to: '/ODYSSEY_FAQ',
-              },
-              {
-                label: 'Jetson Series',
-                to: '/Jetson_FAQ',
+                label: 'reTerminal',
+                to: '/reTerminal-new_FAQ',
               },
               {
                 label: 'reRouter',
                 to: '/FAQs_For_openWrt',
               },
               {
+                label: 'Odyssey',
+                to: '/ODYSSEY_FAQ',
+              },
+              {
                 label: 'Wio Terminal',
                 to: '/wio_terminal_faq',
               },
+              // 添加分割线
+              {
+                type: 'html',
+                value: '<hr style="margin: 8px 0;">', // 调整样式根据你的需求
+              },
+              // 添加新的菜单项
+              {
+                label: 'Discord Chat',
+                href: 'https://discord.com/invite/eWkprNDMU7',
+              },
+              {
+                label: 'Email Support',
+                href: 'https://www.seeedstudio.com/contacts',
+              },
+              {
+                label: 'Forum Discussion',
+                href: 'https://forum.seeedstudio.com/',
+              },
+              {
+                label: 'GitHub Suggestion',
+                href: 'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
+              },
+
             ],
           },
 
@@ -370,12 +392,12 @@ const config = {
             position: 'right',
             className: 'navbar_doc_right_items',
           },
-          {
-            label: 'Help 🙋',
-            position: 'right',
-            className: 'navbar_doc_right_items',
-            to: '/knowledgebase',
-          },
+          // {
+          //   label: 'Help 🙋',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          //   to: '/knowledgebase',
+          // },
           // {
           //   type: 'doc',
           //   docId: 'Solutions',
@@ -385,12 +407,18 @@ const config = {
           // },
           {
             to: 'https://wiki-gpt.seeedstudio.com/chat',
-            label: 'Chat 🤖️',
+            label: 'AI Bot 🤖️',
             position: 'right',
             className: 'navbar_doc_right_items',
           },
           {
-            href: 'https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process',
+            to: 'https://sensecraft.seeed.cc/ai/#/home',
+            label: 'SenseCraft AI',
+            position: 'right',
+            className: 'navbar_doc_right_items',
+          },
+          {
+            href: 'https://sensecraft.seeed.cc/ai/#/home',
             position: 'right',
             className: 'header-SSCMA',
           },

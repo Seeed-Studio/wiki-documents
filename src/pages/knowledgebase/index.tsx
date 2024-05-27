@@ -25,9 +25,9 @@ const SearchNameQueryKey = 'name';
 function ShowcaseHeader() {
 	return (
 		<section className={styles.header}>
-			<h1> Help Center</h1>
+			<h1>Products Help</h1>
 			<p>Welcome! You can find frequently asked questions and troubled articales about product created by Seeed Studio here. <br/>And we provide our tech support platforms here.</p>
-			{/* <Link className='button button--primary'> Seeed Studio</Link> */}
+			{/* <Link className='button button--primary'> Need our experts help?</Link> */}
 		</section>
 	)
 }
