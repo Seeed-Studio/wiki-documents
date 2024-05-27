@@ -60,7 +60,7 @@ Since your PLC/Device IP domain is different from your wireless settings, you ma
 sudo nano /etc/dhcpcd.conf
 ```
 
-- **Step 02**: Then configure the Ethernet port settings according to your PLC network domain and set priorities using the **metric** command. The lowest metric has the highest priority.
+- **Step 02**: Then configure the Ethernet port settings according to your PLC/Device network domain and set priorities using the **metric** command. The lowest metric has the highest priority.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/ipconfig.PNG" /></center>
 
@@ -72,7 +72,7 @@ To install the Modbus node, follow these steps:
 
 **Step 2.** In the palette tab, navigate to the **Install tab**.
 
-**Step 3.** Use the node search bar to find the desired **Modbus node**.
+**Step 3.** Use the node search bar to find the desired (**Modbus node**)[https://flows.nodered.org/node/node-red-contrib-modbus].
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/pallet.PNG" /></center>
 
