@@ -444,15 +444,19 @@ const config = {
               },
               {
                 label: 'Sensor Network',
-                to: '/Sensor_Network',
+                to: '/Sensor',
+              },
+              {
+                label: 'Network',
+                to: '/Network',
               },
               {
                 label: 'Edge Computing',
                 to: '/Edge_Computing',
               },
               {
-                label: 'Cloud & Chain',
-                to: '/CloudnChain',
+                label: 'Cloud',
+                to: '/Cloud',
               },
               {
                 label: 'Solutions',

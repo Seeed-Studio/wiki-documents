@@ -36,7 +36,7 @@ Being an Internet of Things (IOT) hardware partner since 2008, Seeed Studio is d
 
 <p></p>
 
-<strong><a href="/CloudnChain"><span><font color={'8DC215'} size={"4"}>  Cloud and Chain </font></span></a></strong>
+<strong><a href="/Cloud"><span><font color={'8DC215'} size={"4"}>  Cloud and Chain </font></span></a></strong>
 
 <p></p>
 
@@ -137,12 +137,12 @@ Being an Internet of Things (IOT) hardware partner since 2008, Seeed Studio is d
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-cloud-production" class="getting_started_label2">SenseCAP Cloud</a>
+          <a href= "https://wiki.seeedstudio.com/Cloud/#sensecap-cloud-production" class="getting_started_label2">SenseCAP Cloud</a>
           <br/>
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-ai" class="getting_started_label2">SenseCAP AI</a>
-          <br/><a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-hotspot-app" class="getting_started_label3">HotSpot APP</a>,
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-mate-app" class="getting_started_label3">Mate APP</a>,
-          <a href= "https://wiki.seeedstudio.com/CloudnChain/#sensecap-api" class="getting_started_label3">SenseCAP API</a>
+          <a href= "https://wiki.seeedstudio.com/Cloud/#sensecap-ai" class="getting_started_label2">SenseCAP AI</a>
+          <br/><a href= "https://wiki.seeedstudio.com/Cloud/#sensecap-hotspot-app" class="getting_started_label3">HotSpot APP</a>,
+          <a href= "https://wiki.seeedstudio.com/Cloud/#sensecap-mate-app" class="getting_started_label3">Mate APP</a>,
+          <a href= "https://wiki.seeedstudio.com/Cloud/#sensecap-api" class="getting_started_label3">SenseCAP API</a>
       </div>
   </div>
 </div>
