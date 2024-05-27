@@ -72,7 +72,7 @@ To install the Modbus node, follow these steps:
 
 **Step 2.** In the palette tab, navigate to the **Install tab**.
 
-**Step 3.** Use the node search bar to find the desired (**Modbus node**)[https://flows.nodered.org/node/node-red-contrib-modbus].
+**Step 3.** Use the node search bar to find the desired [Modbus node](https://flows.nodered.org/node/node-red-contrib-modbus).
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/pallet.PNG" /></center>
 
