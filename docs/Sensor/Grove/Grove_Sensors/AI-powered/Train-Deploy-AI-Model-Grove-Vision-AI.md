@@ -260,7 +260,7 @@ This will generate a code snippet that we will use later inside Google Colab tra
 
 ### Train using YOLOv5 on Google Colab
 
-After we are done with annotating the dataset, we need to train the dataset. Jump to [this part](https://wiki.seeedstudio.com/Train-Deploy-AI-Model/#train-using-yolov5-on-google-colab) which explains how to train an AI model using YOLOv5 running on Google Colab.
+After we are done with annotating the dataset, we need to train the dataset. Jump to [this part](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-Grove-Vision-AI/#train-using-yolov5-on-google-colab) which explains how to train an AI model using YOLOv5 running on Google Colab.
 
 ## <span id="jump3">3. Deploy the trained model and perform inference</span>
 

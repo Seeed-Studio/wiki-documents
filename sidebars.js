@@ -179,6 +179,7 @@ const sidebars = {
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-ha',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove_vision_ai_v2_webcamera',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/vision_ai_v2_crowd_heat_map',
                       ],
                     },
                   ],
@@ -1125,6 +1126,7 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_kafka',
               ],
             },
           ],
@@ -1211,6 +1213,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32_idf_env',
             'Sensor/SeeedStudio_XIAO/Matter/getting_started_with_matter',
             'Sensor/SeeedStudio_XIAO/Matter/xiao_esp32_matter_env',
+            'Sensor/SeeedStudio_XIAO/Matter/matter_development_framework_overview',
           ],
         },
         'Sensor/SeeedStudio_XIAO/PCB_Design_XIAO',
@@ -3124,6 +3127,7 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
           ]}
 
 

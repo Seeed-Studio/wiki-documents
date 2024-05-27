@@ -16,7 +16,7 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="600" height="auto"/></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -80,7 +80,7 @@ Following these steps should help you disassemble the device without any issues.
 
 ### Assemble Wi-Fi/BLE Antenna
 
-**STEP 1:** Disassemble the entire device following section 4.1 "Disassembly Guide".
+**STEP 1:** Disassemble the entire device following section [Assembly & Disassembly Guide](/recomputer_r1000_hardware_guide/#assembly--disassembly-guide).
 
 **STEP 2:** Connect the feeder line from the CM4 module to antenna hole following the illustrastions below.
 
@@ -103,7 +103,7 @@ Following these steps should help you disassemble the device without any issues.
 
 **STEP 2:** Load the TPM 2.0 module into the J13 socket.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/41.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/41.png" /></div>
 
 ### Assemble UPS and PoE module
 
@@ -117,7 +117,7 @@ Following these steps should help you disassemble the device without any issues.
 - Align the PoE module with the designated aperture on the board.
 - Carefully solder the PoE module onto the board. Due to the compact nature of the board, exercise caution while soldering to avoid damaging nearby components.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/42.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/42.png" /></div>
 
 ## Mounting Guide
 

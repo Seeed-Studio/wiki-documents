@@ -1,9 +1,9 @@
 .ranger_page {
     width: 100%;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
 
     .bold {
-        font-family: "Montserrat-bold";
+        font-family: 'Montserrat-bold';
         font-weight: 700;
     }
 
@@ -15,12 +15,10 @@
         width: 100%;
         margin: 0 auto;
         max-width: 1288px;
-
     }
 
-
     .title {
-        font-family: "Montserrat-bold";
+        font-family: 'Montserrat-bold';
         font-weight: 700;
         font-size: 38px;
         text-align: center;
@@ -28,7 +26,7 @@
     }
 
     .sec_title {
-        font-family: "Montserrat-bold";
+        font-family: 'Montserrat-bold';
         font-weight: 700;
         font-size: 22px;
         line-height: 1.1;
@@ -36,7 +34,7 @@
     }
 
     .sec_desc {
-        font-family: "Montserrat";
+        font-family: 'Montserrat';
         font-size: 14px;
         line-height: 1.5;
         margin-top: 10px;
@@ -72,10 +70,8 @@
     }
 
     .top_join {
-        background: #33495B;
+        background: #33495b;
         color: #fff;
-
-
 
         .top_join_container {
             display: flex;
@@ -95,7 +91,7 @@
     }
 
     .what_do {
-        background: #F3F5F8;
+        background: #f3f5f8;
         color: #000000;
 
         .what_do_container {
@@ -103,7 +99,7 @@
                 font-family: 'Montserrat-bold';
                 font-weight: bold;
                 font-size: 24px;
-                color: #8FC31F;
+                color: #8fc31f;
                 line-height: 1;
                 margin-top: 40px;
             }
@@ -165,7 +161,6 @@
             .center_join_item {
                 width: 33%;
                 padding-right: 40px;
-                ;
                 margin-top: 50px;
 
                 .sec_title {
@@ -180,7 +175,7 @@
     }
 
     .does {
-        background: #33495B;
+        background: #33495b;
         color: #fff;
 
         .btn_container {
@@ -189,7 +184,7 @@
         }
 
         .btn {
-            background: #8FC31F;
+            background: #8fc31f;
             box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.043);
             border-radius: 406px;
             border: 0;
@@ -205,7 +200,6 @@
             .does_item {
                 background-color: #fff;
                 border-radius: 20px;
-                ;
                 margin-right: 24px;
                 padding: 24px;
 
@@ -237,7 +231,7 @@
                             font-family: 'Montserrat-bold';
                             font-weight: 700;
                             font-size: 18px;
-                            color: #3D3D3D;
+                            color: #3d3d3d;
                             left: 50%;
                             top: 50%;
                             transform: translate(-50%, -50%);
@@ -249,17 +243,13 @@
                             align-self: center;
                         }
                     }
-
                 }
-
-
             }
         }
-
     }
 
     .person {
-        background: #33495B;
+        background: #33495b;
         color: #fff;
 
         .wrapper {
@@ -293,10 +283,11 @@
 
     .blog {
         background: #fff;
+
         .title {
             color: #000 !important;
         }
-        
+
         .wrapper {
             max-width: 1328px;
         }
@@ -307,7 +298,6 @@
             padding: 0 28px;
             box-sizing: border-box;
 
-            
             .blog_item_container {
                 padding: 10px;
                 height: 100%;
@@ -342,20 +332,17 @@
                         text-transform: uppercase;
                     }
 
-.blog .title {
-    color: #000;
-}
-
+                    .blog .title {
+                        color: #000;
+                    }
 
                     .sec_desc {
                         font-size: 14px;
-
                     }
 
                     .time_box {
                         display: flex;
                         text-transform: uppercase;
-
                     }
 
                     .time {
@@ -384,10 +371,10 @@
 
         .green {
             line-height: 1;
-            font-family: "Montserrat-Semibold";
+            font-family: 'Montserrat-Semibold';
             font-weight: 500;
             font-size: 18px;
-            color: #8CC020;
+            color: #8cc020;
             margin: 16px 0;
         }
 
@@ -398,7 +385,6 @@
 
             .newsletter_form_wrap {
                 display: flex;
-
             }
 
             input {
@@ -413,16 +399,12 @@
 
             input::placeholder {
                 color: rgba(255, 255, 255, 0.6);
-
             }
 
             button {
                 width: 40px;
                 color: rgba(255, 255, 255, 0.6);
-
             }
-
-
         }
 
         .icon_container {
@@ -433,6 +415,102 @@
 
         img {
             width: 30px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .banner {
+            img {
+                position: absolute;
+                height: 100%;
+            }
+
+            .banner_container {
+                min-width: 100%;
+                padding: 20px;
+                position: relative;
+                transform: none;
+                left: 0;
+                top: 0;
+
+                .title {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .title {
+            font-size: 24px;
+            line-height: 1.1;
+        }
+
+        .sec_title {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .section {
+            padding: 5% 4%;
+        }
+
+
+
+        .top_join {
+            .top_join_container {
+                .top_join_item {
+                    width: 100%;
+                    margin: 0;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .what_do {
+            .what_do_container {
+                .name {
+                    font-size: 20px;
+                }
+
+                .what_do_item {
+                    flex-direction: column;
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .center_join {
+            .center_join_container {
+                .center_join_item {
+                    width: 50%;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .person {
+            .person_container {
+                .person_item {
+                    padding: 20px;
+                }
+            }
+        }
+
+        .does {
+            .does_container {
+                display: block;
+
+                .does_item {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
 }

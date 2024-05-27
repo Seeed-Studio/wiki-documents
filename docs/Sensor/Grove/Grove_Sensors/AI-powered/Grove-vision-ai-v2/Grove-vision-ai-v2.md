@@ -149,7 +149,7 @@ Connect the Grove Vision AI (WE2) module to the default I2C interface of your Ar
 4. Press 'enter' to start the bootloader recovery process, wait for the process to complete
 
 :::note
-You may need to press the 'reset' button on the Arduino board to restart the bootloader recovery process. If the bootloader recovery process fails, please check the hardware connection and reset the power supply of the Grove Vision AI (WE2) module and try again. In some cases, you may have to try 3-10 times to recover the bootloader successfully.
+Before connecting the Grove Vision AI V2 to your computer, keep the BOOT button pressed while connecting to your computer via the data cable, and then release the BOOT button. In some cases, you may have to try 3-10 times to recover the bootloader successfully.
 :::
 
 ## Getting Started
