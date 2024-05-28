@@ -1,13 +1,13 @@
 ---
-description: Grove - ADC for Load Cell (HX711)
-title: Grove - ADC for Load Cell (HX711)
+description: The Grove - ADC for Load Cell (HX711) is a 24-bit A/D converter designed specifically for the load cell.
+title: Getting started Grove - ADC for Load Cell (HX711)
 keywords:
 - Grove
 - weight sensor 
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_adc_for_load_cell_hx711 
 last_update:
-  date: 05/24/2024
+  date: 05/28/2024
   author: Carla
 ---
 
@@ -29,14 +29,40 @@ With the Grove connector and 4-pin screw terminal, it becomes quite easy to conn
 :::
 
 ## Specifications
-| Item | Value |
-| --- | --- |
-| Battry| Exclude |
-| Working voltage | 2.6V--5.5V |
-| Working current | <1.5A |
-| Detection accuracy | 24 bits |
-| Output date rate | 10SPS or 80SPS |
-| Optional gain | 32 for Channel B/ 64 and 128 for Channel A |
+
+<div class="table-center">
+ <table align="center">
+	<tr>
+		<th>Item</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>Battry</td>
+		<td>Exclude</td>
+	</tr>
+	<tr>
+		<td>Working voltage</td>
+		<td>2.6V--5.5V</td>
+	</tr>
+	<tr>
+		<td>Working current</td>
+		<td>Less than 1.5A</td>
+	</tr>
+	<tr>
+		<td>Detection accuracy</td>
+		<td>24 bits</td>
+	</tr>
+	<tr>
+		<td>Output date rate </td>
+		<td>10SPS or 80SPS</td>
+	</tr>
+	<tr>
+		<td>Optional gain</td>
+		<td>32 for Channel B/ 64 and 128 for Channel A</td>
+	</tr>
+ </table>
+</div>
+
 
 ## Application
 
@@ -52,9 +78,26 @@ With the Grove connector and 4-pin screw terminal, it becomes quite easy to conn
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-pin.jpg" style={{width:700, height:'auto'}}/></div>
 
 ## Platforms Supported
-| Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>Arduino</th>
+			<th>Raspberry Pi</th>
+			<th> </th>
+			<th> </th>
+			<th> </th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+		</tr>
+	</table>
+</div>
+
 
 :::caution
 The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -68,35 +111,35 @@ In this part, we will use a **Arduino UNO R4 WiFi** as a controller,show how to 
 **Step 1.** Material preparation
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Arduino UNO R4 WIFi</th>
-			<th>Grove - ADC for Load Cell (HX711)</th>
-			<th>Weight Sensor (Load Cell) 0-500g</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/1.png" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/2.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Arduino-Uno-Rev4-WiFi-p-5717.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Weight-Sensor-Load-Cell-0-500g-p-525.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+	<tr>
+		<th>Arduino UNO R4 WIFi</th>
+		<th>Grove - ADC for Load Cell (HX711)</th>
+		<th>Weight Sensor (Load Cell) 0-500g</th>
+	</tr>
+	<tr>
+		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/1.png" style={{width:250, height:'auto'}}/></div></td>
+		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:250, height:'auto'}}/></div></td>
+		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/2.jpg" style={{width:250, height:'auto'}}/></div></td>
+	</tr>
+	<tr>
+		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+			<a class="get_one_now_item" href="https://www.seeedstudio.com/Arduino-Uno-Rev4-WiFi-p-5717.html">
+			<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+			</a>
+		</div></td>
+		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+			<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html">
+			<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+			</a>
+		</div></td>
+		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+			<a class="get_one_now_item" href="https://www.seeedstudio.com/Weight-Sensor-Load-Cell-0-500g-p-525.html">
+			<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+			</a>
+		</div></td>
+	</tr>
+ </table>
 </div>
 
 :::note
@@ -157,12 +200,30 @@ And the **Grove - ADC for Load Cell (HX711)** is also suitable for our XIAO deve
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/9.png" style={{width:700, height:'auto'}}/></div>
 
 
-| Grove - ADC for Load Cell (HX711) | Weight Sensor (Load Cell) 0-500g |
-| ---  | --- |
-| E+ | Red |
-| E- | Black |
-| INA- | White |
-| INA+ | Green/Blue |
+<div class="table-center">
+ <table align="center">
+	<tr>
+	    <th>Grove - ADC for Load Cell (HX711)</th>
+		<th>Weight Sensor (Load Cell) 0-500</th>
+	</tr>
+    <tr>
+	    <td>E+</td>
+		<td>Red</td>
+    </tr>
+	<tr>
+		<td>E-</td>
+		<td>Black</td>
+	</tr>
+	<tr>
+		<td>INA-</td>
+		<td>White</td>
+	</tr>
+	<tr>
+		<td>INA+</td>
+		<td>Green/Blue</td>
+	</tr>
+ </table>
+</div>
 
 :::tip
 Using Grove Base Shield, you can directly connect HX711 module to Arduino UNO R4 WiFi as below.
