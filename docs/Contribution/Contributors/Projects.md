@@ -15,6 +15,8 @@ last_update:
 
 
 ### This page showcases some of the projects done by our community of Seeeders. 
+
+#### In Seeed, we deeply value our community of Seeeders and eagerly look forward to co-building innovative solutions together. We sincerely appreciate your efforts and are delighted to showcase your work, sharing it with the rest of our vibrant community.
 <div class="table-center">
 	<table align="center">
     <tr>
