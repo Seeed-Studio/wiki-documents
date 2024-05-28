@@ -131,14 +131,14 @@ The colors of the picture should be consistent with the standard colors of the d
         <th>1.54-inch E-paper - Dotmatix 200x200</th>
         <td align="center">Monochrome</td>
         <td align="center">200x200</td>
-        <td align="center">Y</td>
-        <td align="center">Reverse left and right</td>
+        <td align="center">✅</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
         <th>2.13-inch E-Paper -Flexible Monochrome 212x104</th>
         <td align="center">Monochrome</td>
         <td align="center">104x212</td>
-        <td align="center">Y</td>
+        <td align="center">✅</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
@@ -152,7 +152,7 @@ The colors of the picture should be consistent with the standard colors of the d
         <th>2.9 inch E-paper - Monocolor 128x296</th>
          <td align="center">Monochrome</td>
         <td align="center">128x296</td>
-        <td align="center">Y</td>
+        <td align="center">✅</td>
         <td align="center">Normal</td>   
     </tr>
     <tr>
@@ -166,8 +166,8 @@ The colors of the picture should be consistent with the standard colors of the d
         <th>4.2-inch E-Paper - Monocolor 400x300</th>
         <td align="center">Monochrome</td>
         <td align="center">400x300</td>
-        <td align="center">Y</td>
-        <td align="center">Reverse left and right</td>        
+        <td align="center">✅</td>
+        <td align="center">Mirror left-right</td>        
     </tr>
       <tr>
         <th>5.65-inch E-paper -  Sevencolor 600x480</th>
@@ -180,25 +180,26 @@ The colors of the picture should be consistent with the standard colors of the d
         <th>5.83-inch E-paper - Monocolor 648x480</th>
         <td align="center">Monochrome</td>
         <td align="center">600x480</td>
-        <td align="center">Y</td>
-        <td align="center">Reverse left and right</td>        
+        <td align="center">✅</td>
+        <td align="center">Mirror left-right</td>        
     </tr>
         <tr>
         <th>7.5-inch E-paper - Monocolor 800x480</th>
         <td align="center">Monochrome</td>
         <td align="center">800x480</td>
-        <td align="center">Y</td>
-        <td align="center">Reverse left and right</td>     
+        <td align="center">✅</td>
+        <td align="center">Mirror left-right</td>     
     </tr>
   </table>
 </div>
 
 :::tip
-After set the Max Width and Height, it need to click the arrow to confirm.
+- After set the Max Width and Height, it need to click the arrow to confirm. 
+- Don't include head data.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
 :::
 
-**Step 3.** Click "Save" to save the Name of the lcd output array as a file of `.h`.
+**Step 3.** Click "Save" to save the the lcd output array as a file of `.h`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/7.png" style={{width:500, height:'auto'}}/></div>
 
@@ -211,15 +212,15 @@ After set the Max Width and Height, it need to click the arrow to confirm.
 
 |      E-paper / XIAO     | XIAO SAMD21 | XIAO RP2040|  XIAO nRF52840 | XIAO ESP32-C3 | XIAO ESP32-S3 |
 |       ---      |  ---  | --- | --- | --- | --- |
-|1.54-inch E-paper - Dotmatix 200x200           | Y | Y | Y | Y | Y |
-|2.13-inch E-Paper -Flexible Monochrome 212x104 | Y | Y | Y | Y | Y |
-|2.13-inch E-Paper - Quadruple 212x104          | Y | Y | Y | Y | Y |
-|2.9 inch E-paper - Monocolor 128x296           | Y | Y | Y | Y | Y |
-|2.9-inch e-paper - Quadruple color 128x296     | Y | Y | Y | Y | Y |
-|4.2-inch E-Paper - Monocolor 400x300           | Y | Y | Y | Y | Y |
-|5.65-inch E-paper -  Sevencolor 600x480        | FLASH overflowd | Y | Y | Y | Y |
-|5.83-inch E-paper - Monocolor 648x480          | Y | Y | Y | Y | Y |
-|7.5-inch E-paper - Monocolor 800x480           | RAM overflowed | Y | Y | Y | Y |
+|1.54-inch E-paper - Dotmatix 200x200           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.13-inch E-Paper -Flexible Monochrome 212x104 | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.13-inch E-Paper - Quadruple 212x104          | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.9 inch E-paper - Monocolor 128x296           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.9-inch e-paper - Quadruple color 128x296     | ✅ | ✅ | ✅ | ✅ | ✅ |
+|4.2-inch E-Paper - Monocolor 400x300           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|5.65-inch E-paper -  Sevencolor 600x480        | FLASH overflowd | ✅ | ✅ | ✅ | ✅ |
+|5.83-inch E-paper - Monocolor 648x480          | ✅ | ✅ | ✅ | ✅ | ✅ |
+|7.5-inch E-paper - Monocolor 800x480           | RAM overflowed | ✅ | ✅ | ✅ | ✅ |
 
 </div>
 
