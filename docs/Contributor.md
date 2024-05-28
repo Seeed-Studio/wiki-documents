@@ -12,7 +12,6 @@ last_update:
 # ✨ Contributor Program ✨ 
 
 In Seeed, we greatly value our community of Seeeders. The Seeed Studio Contributor Program is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
-
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/08/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230817161402.png" alt="pir" width={800} height="auto" /></p>
 
 

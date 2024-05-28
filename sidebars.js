@@ -22,8 +22,21 @@ const sidebars = {
 
   ProductSidebar: [
     // 'Sensing_test',
-    'Getting_Started',
-    'weekly_wiki',
+
+    {
+      type: 'doc',
+      id: 'Getting_Started',
+      label: 'Getting Started',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'doc',
+      id: 'weekly_wiki',
+      label: 'Weekly Wiki',
+      className: 'sideboard_calss',
+    },
+ 
     // {
     //   type: 'category',
     //   label: 'TinyML',
@@ -3802,7 +3815,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Integration',
-      collapsed: false,
+      collapsed: true,
       collapsible: true,
       link: {
         type: "doc",
@@ -3936,6 +3949,23 @@ const sidebars = {
     `,
     },
 */
+
+      {
+      type: 'doc',
+      id: 'Topics/Open_Source/Open_Source_Topic',
+      label: 'Open Source',
+      className: 'sideboard_calss',
+      },
+
+      {
+      type: 'doc',
+      id: 'Topics/Edge_AI/Edge_AI_Topic',
+      label: 'Edge AI',
+      className: 'sideboard_calss',
+      },
+
+
+
     {
       type: 'doc',
       id: 'Contributor',
@@ -3969,27 +3999,16 @@ const sidebars = {
       items: [
         'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
     
-        
-        'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
       ],
     },
 
     
 
-    {
-      type: 'category',
-      label: 'Honorary Contributors',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Contribution/Contributors/Honorary-Contributors',
-      },
-      items: [
-        'Contribution/Contributors/Projects',
-        'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
-      ],
-    },
+ 
+    'Contribution/Contributors/Projects',
+    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+
+
 
 /*
     {
@@ -4262,19 +4281,6 @@ const sidebars = {
 
 
     
-    {
-      type: 'doc',
-      id: 'Topics/Open_Source/Open_Source_Topic',
-      label: 'Open Source',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'doc',
-      id: 'Topics/Edge_AI/Edge_AI_Topic',
-      label: 'Edge AI',
-      className: 'sideboard_calss',
-    },
 
     'About',
     'License',
