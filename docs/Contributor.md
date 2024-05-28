@@ -45,9 +45,6 @@ We’ve already listed some tasks on GitHub. Currently, the task types include:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/contributor_program.png" alt="pir" width={900} height="auto" /></p>
 
 
-## Weekly Wiki
-
-[Seeed Studio Weekly Wiki](/weekly_wiki) will be published each Monday and it will introduce you to our latest content, such as our new products, interesting projects done by our team of Seeeders, tutorials, guides, introductions and anything interesting and relevant!
 
 ## Tech Support & Product Discussion
 
