@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - Modbus
 image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /Edge-Box-Node-Red-Modbus-TCP
+slug: /edge_box_rpi_200_node_red_odbus_tcp
 last_update:
   date: 05/27/2024
   author: Kasun Thushara
