@@ -1,13 +1,13 @@
 ---
-description: Edge Box RPi 200 with Node Red and Modbus TCP
+description: Learn how to integrate Modbus TCP with Node-RED on the EdgeBox RPi 200. This guide covers setting up the hardware, configuring Modbus devices, and creating Node-RED flows for efficient industrial automation and monitoring.
 title: Edge Box RPi 200 with Node Red and Modbus TCP
 keywords:
   - Edge Controller
   - Edge-Box
   - Node-Red
   - Modbus
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Edge-Box-Node-Red-Modbus
+image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
+slug: /Edge-Box-Node-Red-Modbus-TCP
 last_update:
   date: 05/27/2024
   author: Kasun Thushara
