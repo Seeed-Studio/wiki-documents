@@ -933,7 +933,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'mmWave radar sensor',
+      label: 'mmWave Radar Sensor',
       collapsed: true,
       collapsible: true,
       link: {
