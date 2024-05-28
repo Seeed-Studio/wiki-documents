@@ -5,20 +5,12 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 last_update:
-  date: 05/25/2024
-  author: Matthew
+  date: 05/29/2024
+  author: Yaohao
 ---
 
 
 
-<p style={{textAlign: 'center'}}>
-  <img
-    src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg"
-    alt="pir"
-    width={1000}
-    height="auto"
-  />
-</p>
 
 
 The convergence of TinyML, open source home assistants, open source philosophies, and edge AI unlocks exciting possibilities for decentralized, user-controlled computing. 
@@ -30,7 +22,30 @@ Collectively, these technologies hand control back to individuals and communitie
 
 
 
+## Click on any of the below categories to find out more! 
 
-  
+  <div style={{display: 'flex'}}>
+
+  <a href="/tinyml_topic" rel="noopener noreferrer">
+    <img src="https://files.seeedstudio.com/wiki/tinyml-topic/main.jpg" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
+  </a>
+
+  <a href="/home_assistant_topic" rel="noopener noreferrer">
+    <img src="https://files.seeedstudio.com/wiki/HomeAsssitant_collection/HAbanner1.jpg" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
+  </a>
+</div>
+
+
+<div style={{display: 'flex'}}>
+
+  <a href="/open_source_topic" rel="noopener noreferrer">
+    <img src="https://files.seeedstudio.com/wiki/open_source_topic/open_source_topic.png" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
+  </a>
+
+  <a href="/edge_ai_topic" rel="noopener noreferrer">
+    <img src="https://files.seeedstudio.com/wiki/Edge_AI_Topic/Edge_AI_Topic.png" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
+  </a>
+</div>
+
 
 
