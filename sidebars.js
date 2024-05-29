@@ -428,6 +428,13 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Step_Counter-BMA456',
               ],
             },
+             {
+              type: 'category',
+              label: 'Weight',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Weight/Grove-ADC_for_Load_Cell-HX711',
+              ],
+            },
           ],
         },
 
@@ -2739,6 +2746,7 @@ const sidebars = {
             items: [
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_getting_started',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_mqtt',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_Modbus_tcp',
             ],
             },	 
           
