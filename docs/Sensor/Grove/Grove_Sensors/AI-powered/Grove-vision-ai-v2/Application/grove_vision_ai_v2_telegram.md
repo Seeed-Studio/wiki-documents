@@ -1,10 +1,7 @@
 ---
-description: Introducing how to use Grove Vision AI V2 to build an intelligent web camera.
-title: Grove Vision AI V2 Notifies You Via Telegram
-keywords:
-- vision AI
-- intelligent web camera
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+description: This project combines the XIAO ESP32S3 and Grove Vision AI V2 to create a compact person detection device. The V2 module, equipped with a person detection model, identifies human presence and sends the results to the ESP32S3. The microcontroller then processes the information and forwards the detection alerts to a designated Telegram account, providing real-time notifications whenever a person is detected in the monitored area.
+title: Deploy Grove Vision AI V2 To Notifies You Via Telegram
+image: https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/headimage2.png
 slug: /grove_vision_ai_v2_telegram
 last_update:
   date: 05/27/2024
