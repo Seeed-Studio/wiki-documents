@@ -428,6 +428,13 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Step_Counter-BMA456',
               ],
             },
+             {
+              type: 'category',
+              label: 'Weight',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Weight/Grove-ADC_for_Load_Cell-HX711',
+              ],
+            },
           ],
         },
 
