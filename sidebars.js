@@ -193,6 +193,7 @@ const sidebars = {
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove_vision_ai_v2_webcamera',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/vision_ai_v2_crowd_heat_map',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove_vision_ai_v2_telegram',
                       ],
                     },
                   ],
@@ -439,6 +440,13 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Vibration_Sensor_SW-420',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Encoder',
                 'Sensor/Grove/Grove_Sensors/Motion/Grove-Step_Counter-BMA456',
+              ],
+            },
+             {
+              type: 'category',
+              label: 'Weight',
+              items: [
+                'Sensor/Grove/Grove_Sensors/Weight/Grove-ADC_for_Load_Cell-HX711',
               ],
             },
           ],
@@ -2751,6 +2759,7 @@ const sidebars = {
             items: [
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_getting_started',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_mqtt',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_Modbus_tcp',
             ],
             },	 
           

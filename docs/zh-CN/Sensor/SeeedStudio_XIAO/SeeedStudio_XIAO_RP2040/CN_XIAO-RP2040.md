@@ -125,7 +125,11 @@ Seeed Studio XIAO RP2040与Seeed Studio XIAO扩展板兼容。
 
 - **[ZIP]** [Seeed Studio XIAO RP2040认证文件](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-Certification.zip)
 
+## 课程资料
 
+<div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
+
+- **[Ebook]** [Arduino小型化与TinyML应用 从入门到精通](https://tinkergen.cn/book_xiao)
 
 ## 技术支持和产品讨论
 

@@ -430,13 +430,19 @@ void loop()
 
 - **[ZIP]** [Seeed Studio XIAO SAMD21 Certification files](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-Certification.zip)
 
-## 课程资料
+<!-- ## 课程资料
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO.jpg" /></div>
 
 - **[PDF]** [Seeed Studio XIAO SAMD21 in Action——Minitype ＆ Wearable Projects Step by Step](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype＆Wearable-Projects-Step-by-Step.pdf)
 - **[ZIP]** [Codes](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Codes.rar)
-- **[ZIP]** [Document](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Document.rar)
+- **[ZIP]** [Document](https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-Document.rar) -->
+
+## 课程资料
+
+<div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
+
+- **[Ebook]** [Arduino小型化与TinyML应用 从入门到精通](https://tinkergen.cn/book_xiao)
 
 ## 技术支持和产品讨论
 
