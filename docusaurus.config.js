@@ -624,7 +624,7 @@ const config = {
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
           // 'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
-          'Building Sustainable Growth, Strengthening Local Partnerships, Joining the <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Seeed Studio Ranger Program</a>! ',
+          'Building Sustainable Growth, Strengthening Local Partnerships. Join   the <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Seeed Studio Ranger Program</a> now! ',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
         isCloseable: false,
