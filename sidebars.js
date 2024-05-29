@@ -180,6 +180,7 @@ const sidebars = {
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove-vision-ai-v2-demo',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove_vision_ai_v2_webcamera',
                         'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/vision_ai_v2_crowd_heat_map',
+                        'Sensor/Grove/Grove_Sensors/AI-powered/Grove-vision-ai-v2/Application/grove_vision_ai_v2_telegram',
                       ],
                     },
                   ],
