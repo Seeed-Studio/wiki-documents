@@ -712,7 +712,13 @@ XIAO ESP32S3是所有XIAO中最复杂的一个，因为它的集成度很高，�
 
 <!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Certification files]() -->
 
-### Other
+### 课程资料
+
+<div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
+
+- **[Ebook]** [Arduino小型化与TinyML应用 从入门到精通](https://tinkergen.cn/book_xiao)
+
+### 其他资料
 
 - **[STP]** [XIAO ESP32S3 Sense housing design (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp)
 
