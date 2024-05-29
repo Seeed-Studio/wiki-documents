@@ -471,7 +471,7 @@ const config = {
                 to: '/Getting_Started',
               },
               {
-                label: 'Sensor Network',
+                label: 'Sensor and Sensing',
                 to: '/Sensor',
               },
               {

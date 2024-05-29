@@ -18,6 +18,7 @@ The convergence of TinyML, open source home assistants, open source philosophies
 TinyML empowers even low-power microcontrollers to run machine learning locally, and projects like the open source Home Assistant provide a way to orchestrate smart home devices securely without depending on the cloud.  
 
 The open source movement fuels grassroots innovation across hardware and software, and Edge AI takes things further by pushing intelligence to the edge, closer to where data originates, enabling real-time automated decisions.   
+
 Collectively, these technologies hand control back to individuals and communities - enabling automated, intelligent systems tailored to local needs while safeguarding privacy and autonomy.
 
 
@@ -49,3 +50,17 @@ Collectively, these technologies hand control back to individuals and communitie
 
 
 
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We provide many forms of support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
