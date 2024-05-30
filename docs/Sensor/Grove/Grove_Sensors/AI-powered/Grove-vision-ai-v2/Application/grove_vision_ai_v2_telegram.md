@@ -9,7 +9,7 @@ last_update:
 ---
 
 <div class="table-center">
-<iframe width="400" height="700" src="https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/telegram_xiao.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="400" height="700" src="https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/xiao_telegram.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 This project combines the XIAO ESP32S3 and Grove Vision AI V2 to create a compact person detection device. The V2 module, equipped with a person detection model, identifies human presence and sends the results to the ESP32S3. The microcontroller then processes the information and forwards the detection alerts to a designated Telegram account, providing real-time notifications whenever a person is detected in the monitored area.
