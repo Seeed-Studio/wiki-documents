@@ -10,7 +10,7 @@ last_update:
   author: Citric
 ---
 
-# Seeed Studio XIAO INTRODUCION
+# Seeed Studio XIAO INTRODUCTION
 
 <br />
 <br />
@@ -41,14 +41,20 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 <a class="feature3"></a> 
 <a class="feature4"></a> 
 </div>
+<br />
+<br />
 
 ## Seeed Studio XIAO Series
+
+<br />
+<br />
+<br />
 
 ### Seeed Studio XIAO ESP32S3 Sense
 
 <div class="all_container">
     <div class="xiao_topic_page_vertical">
-        <font size={"2"}>Ultra-small ESP32-S3 development board with OV2640 camera, a risging star in the fields of TinyML and Smart Home</font>
+        <font size={"2"}>Ultra-small ESP32-S3 development board with OV2640 camera, a rising star in the fields of TinyML and Smart Home</font>
         <br /><font size={"3"}><strong>HIGH-PERFORMANCE</strong></font>
         <font size={"2"}>240MHz Xtensa 32-bit LX7 dual-core processor</font>
         <br /><font size={"3"}><strong>MEMORY</strong></font>
@@ -78,9 +84,9 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
-        <img src="https://files.seeedstudio.com/wiki/xiao_topicpage/esp32s3.jpg" style={{width:800, height:'auto'}}/>
+        <img src="https://files.seeedstudio.com/wiki/xiao_topicpage/esp32s3.jpg" style={{width:750, height:'auto'}}/>
     </div>
-    <div class="xiao_topic_page_vertical">
+     <div class="xiao_topic_page_vertical">
         <font size={"2"}>Small yet extraordinary, a new Benchmark in IoT Application</font>
         <br /><font size={"3"}><strong>HIGH-PERFORMANCE</strong></font>
         <font size={"2"}>240MHz Xtensa 32-bit LX7 dual-core processor</font>
