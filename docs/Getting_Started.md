@@ -23,7 +23,7 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
 
 - This platform will focus on four main topics as shown in the sidebar, with up-to-date information on all of our products.
 
-  - <strong><a href="/Sensor"><span><font color={'8DC215'} size={"4"}> Sensors and Sensing</font></span></a></strong>
+  - <strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}> Sensors and Sensing</font></span></a></strong>
   - <strong><a href="/Network"><span><font color={'8DC215'} size={"4"}> Networking</font></span></a></strong>
   - <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong>
   - <strong><a href="/Cloud"><span><font color={'8DC215'} size={"4"}>  Cloud Services</font></span></a></strong>
