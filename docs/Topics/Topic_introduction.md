@@ -13,14 +13,13 @@ last_update:
 
 
 
-
-The convergence of TinyML, open source home assistants, open source philosophies, and edge AI unlocks exciting possibilities for decentralized, user-controlled computing. 
+Distributed Intelligence captures the essence of Open Source, Home Assistant, Edge AI, and TinyML. By leveraging open collaboration, intelligent automation can be decentralized and brought closer to the user through embedded devices and edge computing, enabling a more distributed and localized approach to artificial intelligence thus enhancing security and protecting your privacy.
 
 TinyML empowers even low-power microcontrollers to run machine learning locally, and projects like the open source Home Assistant provide a way to orchestrate smart home devices securely without depending on the cloud.  
 
 The open source movement fuels grassroots innovation across hardware and software, and Edge AI takes things further by pushing intelligence to the edge, closer to where data originates, enabling real-time automated decisions.   
 
-Collectively, these technologies hand control back to individuals and communities - enabling automated, intelligent systems tailored to local needs while safeguarding privacy and autonomy.
+Collectively, these technologies hand control back to individuals, enabling automated and intelligent systems tailored to local needs while safeguarding privacy and autonomy.
 
 
 

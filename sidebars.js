@@ -3507,7 +3507,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'Topics/Topic_introduction',
-      label: 'Distributed Intelligence',
+      label: 'Topics',
       className: 'sideboard_calss',
     },
 
