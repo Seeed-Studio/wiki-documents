@@ -259,8 +259,8 @@ const config = {
           },
           {
             type: 'dropdown',
-            label: 'Topics',
-            to: '/Topics/Topic_introduction',
+            label: 'Distributed Intelligence',
+            to: '/topicintroduction',
             position: 'left',
             className: 'navbar_dorp_items',
             items: [

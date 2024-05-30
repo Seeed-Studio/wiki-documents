@@ -4,6 +4,7 @@ title: The New Frontier of Technology
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /topicintroduction
 last_update:
   date: 05/29/2024
   author: Yaohao

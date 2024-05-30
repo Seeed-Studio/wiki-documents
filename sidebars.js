@@ -3502,6 +3502,148 @@ const sidebars = {
     `,
     },
     */
+
+
+    {
+      type: 'doc',
+      id: 'Topics/Topic_introduction',
+      label: 'Distributed Intelligence',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'category',
+      label: 'Home Assistant',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/Home_Assistant/Home_Assistant_Topic',
+      },
+      items: [
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/sensecraft_homeassistant_userguide',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'TinyML',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/TinyML/TinyML_Topic',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'TinyML Workshop',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Topics/TinyML/TinyML_Workshop/TinyML_workshop_course',
+          },
+          items: [
+              'Topics/TinyML/TinyML_Workshop/sscma',
+               'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
+              'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
+               'Topics/TinyML/TinyML_Workshop/Image_classification_project',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'ModelAssistant',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Topics/TinyML/ModelAssistant/introduction/overview',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Introduction',
+              collapsed: false,
+              items: [
+              'Topics/TinyML/ModelAssistant/introduction/overview',
+              'Topics/TinyML/ModelAssistant/introduction/quick_start',
+              'Topics/TinyML/ModelAssistant/introduction/installation',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Tutorials',
+              collapsed: false,
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/config',
+                'Topics/TinyML/ModelAssistant/tutorials/datasets',
+                {
+                  type: 'category',
+                  label: 'Training',
+                  collapsed: true,
+                  link: {
+                    type: "doc",
+                    id: 'Topics/TinyML/ModelAssistant/tutorials/training/overview',
+                  },
+                  items: [
+                    'Topics/TinyML/ModelAssistant/tutorials/training/yolo',
+                    'Topics/TinyML/ModelAssistant/tutorials/training/fomo',
+                    'Topics/TinyML/ModelAssistant/tutorials/training/pfld',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Export',
+                  collapsed: true,
+                  link: {
+                    type: "doc",
+                    id: 'Topics/TinyML/ModelAssistant/tutorials/export/overview',
+                  },
+                  items: [
+                    'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_onnx',
+                    'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_tflite',
+                  ]
+                },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Development',
+              collapsed: true,
+              collapsible: true,
+              link: {
+               type: "doc",
+               id: 'Topics/TinyML/ModelAssistant/deploy/overview',
+              },
+              items: [
+              'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
+              'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
+              'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
+              ]
+            },
+          ],
+        },
+      ],
+    },
+
+  
+
+    'Topics/Open_Source/Open_Source_Topic',
+    'Topics/Edge_AI/Edge_AI_Topic',
+
+    /*
+      {
+      type: 'doc',
+      id: 'Topics/Edge_AI/Edge_AI_Topic',
+      label: 'Edge AI',
+      className: 'sideboard_calss',
+      },
+*/
+
     {
       type: 'doc',
       id: 'Top_Brand/PopularPlatforms',
@@ -3814,130 +3956,11 @@ const sidebars = {
     },
     // 'Contribution/Home_Assistant/Home_Assistant_Topic',
 
-    {
-      type: 'doc',
-      id: 'Topics/Home_Assistant/Home_Assistant_Topic',
-      label: 'Home Assistant',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'category',
-      label: 'Integration',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Topics/Home_Assistant/Home_Assistant_Topic',
-      },
-      items: [
-        'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
-        'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
-        'Topics/Home_Assistant/Home_Assistant_Tutorials/sensecraft_homeassistant_userguide',
-      ],
-    },
 
 
 
-    {
-      type: 'doc',
-      id: 'Topics/TinyML/TinyML_Topic',
-      label: 'TinyML',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'category',
-      label: 'TinyML Workshop',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Topics/TinyML/TinyML_Workshop/TinyML_workshop_course',
-      },
-      items: [
-          'Topics/TinyML/TinyML_Workshop/sscma',
-           'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
-          'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
-           'Topics/TinyML/TinyML_Workshop/Image_classification_project',
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'ModelAssistant',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Topics/TinyML/ModelAssistant/introduction/overview',
-      },
-      items: [
-        {
-          type: 'category',
-          label: 'Introduction',
-          collapsed: false,
-          items: [
-          'Topics/TinyML/ModelAssistant/introduction/overview',
-          'Topics/TinyML/ModelAssistant/introduction/quick_start',
-          'Topics/TinyML/ModelAssistant/introduction/installation',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Tutorials',
-          collapsed: false,
-          items: [
-            'Topics/TinyML/ModelAssistant/tutorials/config',
-            'Topics/TinyML/ModelAssistant/tutorials/datasets',
-            {
-              type: 'category',
-              label: 'Training',
-              collapsed: true,
-              link: {
-                type: "doc",
-                id: 'Topics/TinyML/ModelAssistant/tutorials/training/overview',
-              },
-              items: [
-                'Topics/TinyML/ModelAssistant/tutorials/training/yolo',
-                'Topics/TinyML/ModelAssistant/tutorials/training/fomo',
-                'Topics/TinyML/ModelAssistant/tutorials/training/pfld',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Export',
-              collapsed: true,
-              link: {
-                type: "doc",
-                id: 'Topics/TinyML/ModelAssistant/tutorials/export/overview',
-              },
-              items: [
-                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_onnx',
-                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_tflite',
-              ]
-            },
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Development',
-          collapsed: true,
-          collapsible: true,
-          link: {
-           type: "doc",
-           id: 'Topics/TinyML/ModelAssistant/deploy/overview',
-          },
-          items: [
-          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
-          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
-          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
-          ]
-        },
 
 
-      ],
-    },
 
 /*
     {
@@ -3959,19 +3982,6 @@ const sidebars = {
     },
 */
 
-      {
-      type: 'doc',
-      id: 'Topics/Open_Source/Open_Source_Topic',
-      label: 'Open Source',
-      className: 'sideboard_calss',
-      },
-
-      {
-      type: 'doc',
-      id: 'Topics/Edge_AI/Edge_AI_Topic',
-      label: 'Edge AI',
-      className: 'sideboard_calss',
-      },
 
 
 
