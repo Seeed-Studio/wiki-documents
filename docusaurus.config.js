@@ -329,19 +329,19 @@ const config = {
               },
               // 添加新的菜单项
               {
-                label: 'Discord Chat',
+                label: 'Discord',
                 href: 'https://discord.com/invite/eWkprNDMU7',
               },
               {
-                label: 'Email Support',
+                label: 'Email',
                 href: 'https://www.seeedstudio.com/contacts',
               },
               {
-                label: 'Forum Discussion',
+                label: 'Forum',
                 href: 'https://forum.seeedstudio.com/',
               },
               {
-                label: 'GitHub Suggestion',
+                label: 'Have Suggestions?',
                 href: 'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
               },
 
