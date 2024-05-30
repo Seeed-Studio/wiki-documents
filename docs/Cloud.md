@@ -1,5 +1,5 @@
 ---
-description: Cloud
+description: Cloud service is a vital component that facilitates processed data management from computing boards and offers real-time operations to users. This page encompasses Seeed's industrial-grade SenseCAP cloud services, as well as other cloud service applications tailored to diverse needs.
 title: Cloud
 keywords:
 - Cloud

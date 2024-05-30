@@ -241,7 +241,7 @@ const config = {
             items: [
               {
                 label: 'Sensor and Sensing',
-                to: 'Sensor',
+                to: 'Sensor_Network',
               },
               {
                 label: 'Networking',
@@ -476,7 +476,7 @@ const config = {
               },
               {
                 label: 'Sensor and Sensing',
-                to: '/Sensor',
+                to: '/Sensor_Network',
               },
               {
                 label: 'Network',

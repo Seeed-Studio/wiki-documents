@@ -1,5 +1,5 @@
 ---
-description: Network Connectivity
+description: Robust networking capabilities seamlessly integrate Seeed's diverse range of sensors and devices, enabling a cohesive flow of data and communication across the entire product ecosystem, unlocking new possibilities for monitoring, automation, and intelligent decision-making.
 title: Network Connectivity
 keywords:
 - Sensor Network
@@ -11,7 +11,7 @@ last_update:
 
 Robust networking capabilities seamlessly integrate Seeed's diverse range of sensors and devices, enabling a cohesive flow of data and communication across the entire product ecosystem, unlocking new possibilities for monitoring, automation, and intelligent decision-making.
 
-Seeed offers a large variety of networking products that integrates perfectly with our range of products
+Seeed offers a large variety of networking products that integrates perfectly with our range of products, you can find them on Sensor as well:
 
 - ### Network Devices for industrial sensors
 - ### Network Modules for entry level sensors

@@ -5,7 +5,7 @@ keywords:
 - Community
 - Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Projects
+slug: /community_sourced_projects
 last_update:
   date: 03/01/2023
   author: Matthew

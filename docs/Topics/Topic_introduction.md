@@ -1,5 +1,5 @@
 ---
-description: Quick Guide for Seeed Studio Wiki Platform
+description: Hello and thank you for visiting the Knowledge Base of Technology Topics at Seeed Studio. This resource is crafted to support you in mastering our range of smart hardware and computing devices.
 title: Technology Topics
 keywords:
 - weeely wiki
@@ -9,8 +9,6 @@ last_update:
   date: 05/29/2024
   author: Yaohao
 ---
-
-
 
 
 Hello and thank you for visiting the Knowledge Base of Technology Topics at Seeed Studio. This resource is crafted to support you in mastering our range of smart hardware and computing devices.

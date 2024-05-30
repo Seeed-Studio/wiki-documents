@@ -3644,6 +3644,50 @@ const sidebars = {
       },
 */
 
+
+{
+  type: 'doc',
+  id: 'Contributor',
+  label: 'Contributions',
+  className: 'sideboard_calss',
+},
+
+// {
+//       type: 'category',
+//       label: 'Fusion Service',
+//       items: [
+//         'Contribution/Fusion/Service_for_Fusion_PCB',
+//         'Contribution/Fusion/Galileo_Case',
+//         'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
+//         'Contribution/Fusion/Starter_bundle_harness_V1',
+//       ]
+// },
+
+// 'Contribution/Contributors/How_To_Edit_A_Document',
+// 'Contribution/Contributors/Things_We_Make',
+
+{
+  type: 'category',
+  label: 'Github Contributions Guide',
+  collapsed: true,
+  collapsible: true,
+  link: {
+    type: "doc",
+    id: 'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
+  },
+  items: [
+    'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
+
+  ],
+},
+
+
+
+
+'Contribution/Contributors/community_sourced_projects',
+'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+
+
     {
       type: 'doc',
       id: 'Top_Brand/PopularPlatforms',
@@ -3984,48 +4028,6 @@ const sidebars = {
 
 
 
-
-    {
-      type: 'doc',
-      id: 'Contributor',
-      label: 'Contributions',
-      className: 'sideboard_calss',
-    },
-
-    // {
-    //       type: 'category',
-    //       label: 'Fusion Service',
-    //       items: [
-    //         'Contribution/Fusion/Service_for_Fusion_PCB',
-    //         'Contribution/Fusion/Galileo_Case',
-    //         'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
-    //         'Contribution/Fusion/Starter_bundle_harness_V1',
-    //       ]
-    // },
-
-    // 'Contribution/Contributors/How_To_Edit_A_Document',
-    // 'Contribution/Contributors/Things_We_Make',
-
-    {
-      type: 'category',
-      label: 'Github Contributions Guide',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
-      },
-      items: [
-        'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
-    
-      ],
-    },
-
-    
-
- 
-    'Contribution/Contributors/Projects',
-    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
 
 
 
