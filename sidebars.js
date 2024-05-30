@@ -1134,7 +1134,11 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
+<<<<<<< HEAD
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_kafka',
+=======
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee',
+>>>>>>> 37ce327d (Add: new wiki)
               ],
             },
           ],
