@@ -13,10 +13,10 @@ Sensing is the initial and perhaps the most crucial step in obtaining digitized 
 
 On this page, there are two main categories of products
 
- - **Industrial Sensors**
+ - **Industrial Sensors and Networking Devices**
 
 
- - **Entry-level Sensors**
+ - **Entry-level Sensors and Networking Modules**
 
 ## Industrial Sensors and Network Devices
 

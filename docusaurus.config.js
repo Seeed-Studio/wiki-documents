@@ -259,7 +259,7 @@ const config = {
           },
           {
             type: 'dropdown',
-            label: 'Topics',
+            label: 'Technology',
             to: '/topicintroduction',
             position: 'left',
             className: 'navbar_dorp_items',
@@ -267,6 +267,10 @@ const config = {
               {
                 label: 'TinyML',
                 to: '/tinyml_topic',
+              },
+              {
+                label: 'SenseCraft Model Assistant',
+                to: '/ModelAssistant_Introduce_Overview',
               },
               {
                 label: 'Home Assistant',
@@ -289,7 +293,7 @@ const config = {
 
           {
             type: 'dropdown',
-            label: 'Products Help',
+            label: 'FAQs',
             to: '/knowledgebase',
             position: 'left',
             className: 'navbar_dorp_items',

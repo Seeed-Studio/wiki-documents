@@ -1,6 +1,6 @@
 ---
 description: Quick Guide for Seeed Studio Wiki Platform
-title: The New Frontier of Technology 
+title: Technology Topics
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,11 +13,15 @@ last_update:
 
 
 
-Distributed Intelligence captures the essence of Open Source, Home Assistant, Edge AI, and TinyML. By leveraging open collaboration, intelligent automation can be decentralized and brought closer to the user through embedded devices and edge computing, enabling a more distributed and localized approach to artificial intelligence thus enhancing security and protecting your privacy.
+Hello and thank you for visiting the Knowledge Base of Technology Topics at Seeed Studio. This resource is crafted to support you in mastering our range of smart hardware and computing devices.
 
-TinyML empowers even low-power microcontrollers to run machine learning locally, and projects like the open source Home Assistant provide a way to orchestrate smart home devices securely without depending on the cloud.  
-
-The open source movement fuels grassroots innovation across hardware and software, and Edge AI takes things further by pushing intelligence to the edge, closer to where data originates, enabling real-time automated decisions.   
+- **[TinyML](/tinyml_topic)** empowers even low-power microcontrollers to run machine learning locally. 
+  - We lauch [**TinyML WorkShop**](/tinyml_workshop_course_new) (free course) to enable you a comprehensive understanding of embedded ML, just requiring one XIAO ESP32S3 Sense([wiki page](/xiao_esp32s3_getting_started)), the powerful MCU board.
+  - We honorably provide an embedded AI tool - [**SenseCraft Model Assistant**](/ModelAssistant_Introduce_Overview) for achieving faster and more accurate inference on embedded devices.
+- [**Home Assistant**](/home_assistant_topic) is designed to attain advanced levels of privacy, versatility, and sustainability in home automation.
+  - We have developed multiple ready-to-use integration slike [**SenseCAP**](/home_assistant_sensecap), [**LoRaWAN**](/ha_xiao_esp32), [**SenseCraft**](/sensecraft_homeassistant_userguide) for Home Assistant
+- The [**Open Source**](/open_source_topic) movement fuels grassroots innovation across hardware and software.
+- And the [**Edge AI**](/edge_ai_topic) takes things further by pushing intelligence to the edge, closer to where data originates, enabling real-time automated decisions.
 
 Collectively, these technologies hand control back to individuals, enabling automated and intelligent systems tailored to local needs while safeguarding privacy and autonomy.
 
@@ -48,7 +52,12 @@ Collectively, these technologies hand control back to individuals, enabling auto
   </a>
 </div>
 
+## Contributors Calling for i18n! ✨
 
+We understand that there is a plugin(docusaurus) for wiki platform internationalization, but we want to offer personalized international language updates for our customers. Hence, we are calling [Wiki Translation Team](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35980459) for our better viewer experience.
+:::info
+- If there is more advanced plugin we are also welcome!
+:::
 
 
 ## Tech Support & Product Discussion
