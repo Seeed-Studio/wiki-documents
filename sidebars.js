@@ -22,8 +22,21 @@ const sidebars = {
 
   ProductSidebar: [
     // 'Sensing_test',
-    'Getting_Started',
-    'weekly_wiki',
+
+    {
+      type: 'doc',
+      id: 'Getting_Started',
+      label: 'Getting Started',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'doc',
+      id: 'weekly_wiki',
+      label: 'Weekly Wiki',
+      className: 'sideboard_calss',
+    },
+ 
     // {
     //   type: 'category',
     //   label: 'TinyML',
@@ -40,7 +53,7 @@ const sidebars = {
     // 'Getting_Started_test',
     {
       type: 'doc',
-      id: 'Sensor_Network',
+      id: 'Sensor',
       label: 'Sensing',
       className: 'sideboard_calss',
     },
@@ -928,7 +941,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'mmWave radar sensor',
+      label: 'mmWave Radar Sensor',
       collapsed: true,
       collapsible: true,
       link: {
@@ -2103,7 +2116,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Sensor_Network',
+      id: 'Network',
       label: 'Network',
       className: 'sideboard_calss',
     },
@@ -3361,8 +3374,8 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'CloudnChain',
-      label: 'Cloud and Chain',
+      id: 'Cloud',
+      label: 'Cloud',
       className: 'sideboard_calss',
     },
 
@@ -3472,7 +3485,7 @@ const sidebars = {
         },
       ]
     },
-
+    /*
     {
       type: 'html',
       value: `
@@ -3489,6 +3502,199 @@ const sidebars = {
       <div class="sub_item"><strong> Popular Platform </strong></div>
     </div>
     `,
+    },
+    */
+
+
+    {
+      type: 'doc',
+      id: 'Topics/Topic_introduction',
+      label: 'Technology Topics',
+      className: 'sideboard_calss',
+    },
+
+    {
+      type: 'category',
+      label: 'Home Assistant',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/Home_Assistant/Home_Assistant_Topic',
+      },
+      items: [
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
+        'Topics/Home_Assistant/Home_Assistant_Tutorials/sensecraft_homeassistant_userguide',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'TinyML',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Topics/TinyML/TinyML_Topic',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'TinyML Workshop',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Topics/TinyML/TinyML_Workshop/TinyML_workshop_course',
+          },
+          items: [
+              'Topics/TinyML/TinyML_Workshop/sscma',
+               'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
+              'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
+               'Topics/TinyML/TinyML_Workshop/Image_classification_project',
+          ],
+        },
+
+        {
+          type: 'category',
+          label: 'ModelAssistant',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Topics/TinyML/ModelAssistant/introduction/overview',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Introduction',
+              collapsed: false,
+              items: [
+              'Topics/TinyML/ModelAssistant/introduction/overview',
+              'Topics/TinyML/ModelAssistant/introduction/quick_start',
+              'Topics/TinyML/ModelAssistant/introduction/installation',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Tutorials',
+              collapsed: false,
+              items: [
+                'Topics/TinyML/ModelAssistant/tutorials/config',
+                'Topics/TinyML/ModelAssistant/tutorials/datasets',
+                {
+                  type: 'category',
+                  label: 'Training',
+                  collapsed: true,
+                  link: {
+                    type: "doc",
+                    id: 'Topics/TinyML/ModelAssistant/tutorials/training/overview',
+                  },
+                  items: [
+                    'Topics/TinyML/ModelAssistant/tutorials/training/yolo',
+                    'Topics/TinyML/ModelAssistant/tutorials/training/fomo',
+                    'Topics/TinyML/ModelAssistant/tutorials/training/pfld',
+                  ]
+                },
+                {
+                  type: 'category',
+                  label: 'Export',
+                  collapsed: true,
+                  link: {
+                    type: "doc",
+                    id: 'Topics/TinyML/ModelAssistant/tutorials/export/overview',
+                  },
+                  items: [
+                    'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_onnx',
+                    'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_tflite',
+                  ]
+                },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Development',
+              collapsed: true,
+              collapsible: true,
+              link: {
+               type: "doc",
+               id: 'Topics/TinyML/ModelAssistant/deploy/overview',
+              },
+              items: [
+              'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
+              'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
+              'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
+              ]
+            },
+          ],
+        },
+      ],
+    },
+
+  
+
+    'Topics/Open_Source/Open_Source_Topic',
+    'Topics/Edge_AI/Edge_AI_Topic',
+
+    /*
+      {
+      type: 'doc',
+      id: 'Topics/Edge_AI/Edge_AI_Topic',
+      label: 'Edge AI',
+      className: 'sideboard_calss',
+      },
+*/
+
+
+{
+  type: 'doc',
+  id: 'Contributor',
+  label: 'Contributions',
+  className: 'sideboard_calss',
+},
+
+// {
+//       type: 'category',
+//       label: 'Fusion Service',
+//       items: [
+//         'Contribution/Fusion/Service_for_Fusion_PCB',
+//         'Contribution/Fusion/Galileo_Case',
+//         'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
+//         'Contribution/Fusion/Starter_bundle_harness_V1',
+//       ]
+// },
+
+// 'Contribution/Contributors/How_To_Edit_A_Document',
+// 'Contribution/Contributors/Things_We_Make',
+
+{
+  type: 'category',
+  label: 'Github Contributions Guide',
+  collapsed: true,
+  collapsible: true,
+  link: {
+    type: "doc",
+    id: 'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
+  },
+  items: [
+    'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
+
+  ],
+},
+
+
+
+
+'Contribution/Contributors/community_sourced_projects',
+'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
+
+
+    {
+      type: 'doc',
+      id: 'Top_Brand/PopularPlatforms',
+      label: 'Popular Platforms',
+      className: 'sideboard_calss',
     },
 
     {
@@ -3796,133 +4002,13 @@ const sidebars = {
     },
     // 'Contribution/Home_Assistant/Home_Assistant_Topic',
 
-    {
-      type: 'doc',
-      id: 'Topics/Home_Assistant/Home_Assistant_Topic',
-      label: 'Home Assistant',
-      className: 'sideboard_calss',
-    },
 
 
-    'Topics/Home_Assistant/Home_Assistant_Tutorials/home_assistant_sensecap',
-    'Topics/Home_Assistant/Home_Assistant_Tutorials/Extend_Home_Assistant_with_LoRaWAN_device',
-    'Topics/Home_Assistant/Home_Assistant_Tutorials/sensecraft_homeassistant_userguide',
-
-    {
-      type: 'doc',
-      id: 'Topics/TinyML/TinyML_Topic',
-      label: 'TinyML',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'category',
-      label: 'TinyML Workshop',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Topics/TinyML/TinyML_Workshop/TinyML_workshop_course',
-      },
-      items: [
-          'Topics/TinyML/TinyML_Workshop/sscma',
-           'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
-          'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
-           'Topics/TinyML/TinyML_Workshop/Image_classification_project',
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'ModelAssistant',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Topics/TinyML/ModelAssistant/introduction/overview',
-      },
-      items: [
-        {
-          type: 'category',
-          label: 'Introduction',
-          collapsed: false,
-          items: [
-          'Topics/TinyML/ModelAssistant/introduction/overview',
-          'Topics/TinyML/ModelAssistant/introduction/quick_start',
-          'Topics/TinyML/ModelAssistant/introduction/installation',
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Tutorials',
-          collapsed: false,
-          items: [
-            'Topics/TinyML/ModelAssistant/tutorials/config',
-            'Topics/TinyML/ModelAssistant/tutorials/datasets',
-            {
-              type: 'category',
-              label: 'Trainning',
-              collapsed: true,
-              link: {
-                type: "doc",
-                id: 'Topics/TinyML/ModelAssistant/tutorials/training/overview',
-              },
-              items: [
-                'Topics/TinyML/ModelAssistant/tutorials/training/yolo',
-                'Topics/TinyML/ModelAssistant/tutorials/training/fomo',
-                'Topics/TinyML/ModelAssistant/tutorials/training/pfld',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Export',
-              collapsed: true,
-              link: {
-                type: "doc",
-                id: 'Topics/TinyML/ModelAssistant/tutorials/export/overview',
-              },
-              items: [
-                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_onnx',
-                'Topics/TinyML/ModelAssistant/tutorials/export/pytorch_2_tflite',
-              ]
-            },
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Development',
-          collapsed: true,
-          collapsible: true,
-          link: {
-           type: "doc",
-           id: 'Topics/TinyML/ModelAssistant/deploy/overview',
-          },
-          items: [
-          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov5',
-          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8',
-          'Topics/TinyML/ModelAssistant/deploy/ma_deploy_yolov8_pose',
-          ]
-        },
 
 
-      ],
-    },
-
-    {
-      type: 'doc',
-      id: 'Topics/Open_Source/Open_Source_Topic',
-      label: 'Open Source',
-      className: 'sideboard_calss',
-    },
-
-    {
-      type: 'doc',
-      id: 'Topics/Edge_AI/Edge_AI_Topic',
-      label: 'Edge AI',
-      className: 'sideboard_calss',
-    },
 
 
+/*
     {
       type: 'html',
       value: `
@@ -3940,25 +4026,14 @@ const sidebars = {
     </div>
     `,
     },
+*/
 
-    // {
-    //       type: 'category',
-    //       label: 'Fusion Service',
-    //       items: [
-    //         'Contribution/Fusion/Service_for_Fusion_PCB',
-    //         'Contribution/Fusion/Galileo_Case',
-    //         'Contribution/Fusion/Unibody_box_for_Galileo_Gen2',
-    //         'Contribution/Fusion/Starter_bundle_harness_V1',
-    //       ]
-    // },
 
-    // 'Contribution/Contributors/How_To_Edit_A_Document',
-    // 'Contribution/Contributors/Things_We_Make',
-    'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
-    'Contribution/Contributors/Contribution-Guide/Contribution-Guide',
-    'Contribution/Contributors/Honorary-Contributors',
-    'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
 
+
+
+
+/*
     {
       type: 'html',
       value: `
@@ -3976,7 +4051,14 @@ const sidebars = {
     </div>
     `,
     },
+    */
 
+    {
+      type: 'doc',
+      id: 'Seeed_Elderly/DiscontinuedProducts',
+      label: 'Discontinued Products',
+      className: 'sideboard_calss',
+    },
     {
       type: 'category',
       label: 'Product List',
@@ -4219,6 +4301,9 @@ const sidebars = {
         },
       ],
     },
+
+
+    
 
     'About',
     'License',
