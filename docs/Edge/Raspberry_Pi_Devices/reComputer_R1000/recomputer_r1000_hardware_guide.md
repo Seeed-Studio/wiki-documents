@@ -33,7 +33,7 @@ This Wiki will show you how to Assemble and Disassemble the unit to install peri
 ## Hardware prerequisite 
 You need to prepare the following hardware
 
-- reTerminal DM x 1
+- reComputer R1000 x 1
 - Screw Driver set
   * Phillips + 3.5 bit
   * Phillips + 3.0 bit
