@@ -48,7 +48,7 @@ The following lists the systems and versions supported for use in this tutorial.
 
 - **Host**: [Ubuntu 22.04 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/jammy/) or macOS 10.15 or later.
 
-Matter's ESPLaunchPad is **not supported on Windows**.
+<!-- Matter's ESPLaunchPad is **not supported on Windows**. -->
 
 ## Prepare the Hardware
 
@@ -124,9 +124,9 @@ This tutorial will use the **XIAO ESP32C3** as an example to give you an overvie
 
 Connect the XIAO ESP32C3 board to your computer using a USB cable. Ensure that the board is properly recognized by your computer.
 
-:::caution
+<!-- :::caution
 Please do not use a Windows computer, you will notice that the Flash button is always greyed out on Windows computers.
-:::
+::: -->
 
 Open the ESPLaunchPad Website on your computer.
 
