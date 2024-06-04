@@ -40,7 +40,7 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 
 ### Designed for Building Automation System
 * Multiple isolated RS485 channels supports high and low speeds communication.
-* Supports BACnet, Modbus RTU, Modbus TCP/IP and KNX protocol
+* Supports BACnet, Modbus RTU, and Modbus TCP/IP protocol
 * Up to 8GB RAM supports the processing of thousands of data points, ensuring efficient performance
 * Clear dual-sided LED indicators help check operational status quickly
 * High-quality metal case, compatible with DIN-rail and Wall installation 
@@ -55,7 +55,7 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 * Mini-PCIe1: LTE, USB LoRa®, USB Zigbee
 * Mini-PCIe2: SPI LoRa®, USB LoRa®, USB Zigbee
 ### Rich Interfaces
-* 3x RS485 (isolated）
+* 3x RS485 (isolated)
 * 1x 10M/100M/1000M Ethernet (Support PoE)
 * 1x 10M/100M Ethernet
 * 1x HDMI 2.0
@@ -363,6 +363,10 @@ The reComputer R1000 supports three power supply options: AC, DC terminal and Po
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/powerplug.png" /></div>
 
 The reComputer R1000 is supplied with a nominal AC voltage of 12~24 V or DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
+
+:::note
+The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that **regardless of how the power supply's positive and negative terminals are connected**, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
+:::
 
 ### POE (optional)
 
