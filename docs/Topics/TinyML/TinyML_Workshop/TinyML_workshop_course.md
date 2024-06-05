@@ -21,7 +21,7 @@ Welcome to the course on using SenseCraft Model Assistant and Edge Impulse for T
 Throughout this course, we will delve into the usage of SenseCraft Model Assistant(Beta) as a powerful online development environment. It will guide you through data management, preprocessing, feature engineering, model design, training, evaluation, and optimization. We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
 
 <div class="button_tech_support_container">
-<a href="https://sensecraftma.seeed.cc/" class="button_edgelab"></a> 
+<a href="/ModelAssistant_Introduce_Overview" class="button_edgelab"></a> 
 </div>
 
 Next, we will shift our focus to the Edge Impulse platform. Designed specifically for embedded devices, Edge Impulse offers an end-to-end solution for developing and deploying TinyML models. We will learn how to export models trained in SenseCraft Model Assistant to Edge Impulse and deploy them on the XIAO ESP32S3. Additionally, we will explore Edge Impulse's features, including real-time data collection, model quantization and optimization, and the ability to perform real-time inference on the device.

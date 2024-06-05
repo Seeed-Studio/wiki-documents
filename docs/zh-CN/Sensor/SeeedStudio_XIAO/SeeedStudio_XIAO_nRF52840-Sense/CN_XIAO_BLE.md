@@ -293,6 +293,12 @@ digitalWrite(P0_13, LOW);
 
 - **[STEP]** [Seeed Studio XIAO nRF52840 Sense 3D 模型](https://grabcad.com/library/seeed-studio-xiao-nrf52840-sense-1)
 
+### 课程资料
+
+<div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
+
+- **[Ebook]** [Arduino小型化与TinyML应用 从入门到精通](https://tinkergen.cn/book_xiao)
+
 ## 技术支持和产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。

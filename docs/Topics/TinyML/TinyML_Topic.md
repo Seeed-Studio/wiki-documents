@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /tinyml_topic
 last_update:
-  date: 07/21/2023
-  author: Citric
+  date: 05/28/2024
+  author: Yaohao
 ---
 
 # Tiny Machine Learning(TinyML)
@@ -55,7 +55,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 <br /> <br /> <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Know More </font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
@@ -81,7 +81,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Know More </font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_BLE/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
@@ -171,7 +171,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Know More </font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
@@ -195,7 +195,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-p-5457.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-p-5457.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Know More </font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Grove-Vision-AI-Module/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
@@ -219,7 +219,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Know More </font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/grove_vision_ai_v2/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
@@ -241,7 +241,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Know More </font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/K1100-quickstart/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
@@ -264,7 +264,7 @@ Machine learning is a field of computer systems that aims to develop self-improv
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Kown More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Know More </font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP-Vision-AI-Get-Started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Getting Started</font></span></strong></a>
 </div>
 
