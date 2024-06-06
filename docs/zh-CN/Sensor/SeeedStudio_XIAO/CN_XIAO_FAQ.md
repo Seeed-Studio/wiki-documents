@@ -177,7 +177,15 @@ last_update:
 
 </details>
 
+### Q2: XIAO 连接电池电源时， 5V 引脚无输出
 
+<!-- 详情请按 [**这里**](/bat_5vNo_OUTPUT) -->
+
+<details><summary>展开查看解决方案</summary>
+
+硬件设计确定了Xiao系列，当仅连接到电池时，无法输出5V电压。
+
+</details>
 
 ## 适用于 XIAO nRF52840 (Sense)
 
@@ -195,15 +203,6 @@ last_update:
 
 </details>
 
-### Q2: XIAO BLE 连接电池电源时， 5V 引脚无输出
-
-<!-- 详情请按 [**这里**](/bat_5vNo_OUTPUT) -->
-
-<details><summary>展开查看解决方案</summary>
-
-硬件设计确定了Xiao系列，当仅连接到电池时，无法输出5V电压。
-
-</details>
 
 
 ## 对于 XIAO ESP32C3
