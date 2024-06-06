@@ -62,7 +62,7 @@ There are two documentations on the usage of **Seeed Studio XIAO SAMD21** which 
 |UART interface|1|
 |Power supply and downloading interface| Type-C|
 |Power|3.3V/5V DC|
-|Dimensions|20×17.5×3.5mm|
+|Dimensions|21×17.5×3.5mm|
 
 ## **Hardware Overview**
 
