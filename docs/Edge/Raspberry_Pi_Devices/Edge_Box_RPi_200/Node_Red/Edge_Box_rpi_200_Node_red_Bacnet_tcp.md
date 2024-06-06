@@ -203,12 +203,12 @@ This setup will read all the parameters from BACnet devices on your network and 
    - You will need four nodes: Inject, Function, Read-All-Devices, and Debug.
 
 2. **Add Nodes to Workbench:**
-   - Drag and drop the Inject, Function, Read-All-Devices, and Debug nodes onto your workbench.
+   - Drag and drop the Inject, Function, Read-Single-Device, and Debug nodes onto your workbench.
 
 3. **Connect Nodes:**
    - Connect the nodes in the following order:
      ```
-     Inject >>>> Function >>>> Read-All-Devices >>>> Debug
+     Inject >>>> Function >>>> Read-Single-Device >>>> Debug
      ```
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/read-single-device.PNG" /></center>
@@ -243,16 +243,16 @@ This setup will read all the parameters from BACnet devices on your network and 
 ## Read Single device particular object data
 
 1. **Prepare Nodes:**
-   - You will need four nodes: Inject, Two function node, Read-All-Devices, and Debug.
+   - You will need four nodes: Inject, Two function node, Read-Single-Device, and Debug.
 
 2. **Add Nodes to Workbench:**
-   - Drag and drop the Inject, Two function node, Read-All-Devices, and Debug nodes onto your workbench.
+   - Drag and drop the Inject, Two function node, Read-Single-Device, and Debug nodes onto your workbench.
 
 
 3. **Connect Nodes:**
    - Connect the nodes in the following order:
      ```
-     Inject >>>> Function >>>> Read-All-Devices >>>> Function >>>> Debug
+     Inject >>>> Function >>>> Read-Single-Devices >>>> Function >>>> Debug
      ```
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/single-object.PNG" /></center>
