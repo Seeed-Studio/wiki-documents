@@ -14,9 +14,9 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 
-The Seeed Studio XIAO SAMD21 is the smallest member of the Seeeduino family. It carries the powerful ATSAMD21G18A-MU which is a low-power microcontrollers. On the other hand, this little board has good performance in processing but needs less power. As a matter of fact, it is designed in a tiny size and can be used for wearable devices and small projects.
+The Seeed Studio XIAO SAMD21, which used to be named Seeeduino XIAO, is the first debut of the [Seeed Studio XIAO family, a series of powerful thumb-size dev boards compatible with Arduino](https://www.seeedstudio.com/xiao-series-page). It carries the powerful ATSAMD21G18A-MU which is a low-power microcontroller. On the other hand, this little board has good performance in processing but needs less power. It is designed in a tiny size and can be used for wearable devices and small projects.
 
-Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 mock interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power,L,RX,TX) are green, yellow, blue and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface which can supply power and download code. There are two reset button, you can short connect them to reset the board.
+Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interfaces, 11 mock interfaces, 10 PWM interfaces (d1-d10), 1 DAC output pin D0, 1 SWD pad interface, 1 I2C interface, 1 SPI interface, 1 UART interface, Serial communication indicator (T/R), Blink light (L) through pin multiplexing. The colors of LEDs(Power, L,RX,TX) are green, yellow, blue, and blue. Moreover, Seeed Studio XIAO SAMD21 has a Type-C interface that can supply power and download code. There are two reset buttons, you can short-connect them to reset the board.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html">
@@ -26,7 +26,7 @@ Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interface
 
 ## **Documentations**
 
-There are two documentations on the usage of **Seeed Studio XIAO SAMD21** which focus on different areas, check the table below for reference:
+There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus on different areas, check the table below for reference:
 
 |[**Documentation by Seeed**](https://wiki.seeedstudio.com/Seeeduino-XIAO/)|[**Documentation by Nanase**](https://wiki.seeedstudio.com/Seeeduino-XIAO-by-Nanase/)|
 |---|---|
