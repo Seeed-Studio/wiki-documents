@@ -32,7 +32,7 @@ tags:
 
 <br />
 
-The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP ,and KNX protocols. 
+The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC. Equipped with dual Ethernet interfaces that can be flexibly configured, it also includes 3 isolated RS485 channels supporting BACnet, Modbus RTU, Modbus TCP/IP protocols. 
 With robust IoT network communication capabilities, the R1000 series supports multiple wireless communication options including 4G, LoRa®, Wi-Fi/BLE, allowing for flexible configurations to serve as corresponding wireless gateways. This controller is well-suited for remote device management, energy management, and various other scenarios in the field of smart buildings.
 
 
@@ -63,7 +63,7 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 * 1x Type-C USB2.0 (USB console for OS update)
 * 1x SIM card slot
 ### Safety and Reliability
-* Hardware Watchdog(optional)
+* Hardware Watchdog
 * UPS Supercapacitor(optional)
 * Metal casing with PC side panels
 * ESD: EN61000-4-2,level 3
@@ -72,6 +72,9 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 * Production Lifetime: reComputer R1000 will remain in production until at least December 2030
 
 > \*4G and LoRa® modules does not come with reComputer R1000 by default, please purchase the relevant modules accordingly.
+
+## Naming Conventions
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
 
 ## Specifications
@@ -345,22 +348,31 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 
 ## Hardware Overview
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/02.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig03.png" /></div>
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig031.png" /></div>
 
 ## Mainboard Overview
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/03.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig02.png" /></div>
+
 
 ## Power Diagram
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/04.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig13.png" /></div>
 
 The reComputer R1000 supports three power supply options: AC, DC terminal and PoE port. By default, the reComputer R1000 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506), while **the PoE power supply(PoE module, SKU:110991925) is optional**. This provides flexibility in power supply selection and allows for easy integration with various power sources.
 
 
 ### 2-Pin Power terminal
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/powerplug.png" /></div>
+<div style={{ textAlign: 'left', marginLeft: '40px' }}>
+    <img 
+        width="100" 
+        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" 
+        style={{ transform: 'rotate(90deg)' }} 
+    />
+</div>
 
 The reComputer R1000 is supplied with a nominal AC voltage of 12~24 V or DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
@@ -399,11 +411,11 @@ Please note that after shutting down, please wait for at least 10 seconds before
 
 ## Block Diagram
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/05.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig12.png" /></div>
 
 ###  IIC Diagram
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/06.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig10.png" /></div>
 
 ## Interface 
 
@@ -548,7 +560,7 @@ raspi-gpio get 20
 
 ### Buzzer
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/07.png" /></div>
+<div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig07.png" /></div>
 
 The reComputer R1000 features an active buzzer, which can be used for various purposes such as alarm and event notifications. The buzzer is controlled through GPIO21 to CM4.
 
@@ -563,7 +575,7 @@ raspi-gpio set 21 op dh
 
 ### RS485
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/08.png" /></div>
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/08.png" /></div>
 
 The reComputer R1000 is equipped with 3 sets of RS485 interface using 3-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in industrial and automation applications. The RS485A and RS485B signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
 By default, 120Ω terminal resistors is not installed. However, the packaging box includes five surface-mount resistors. If needed, users should solder the resistor onto the device themselves.
@@ -605,7 +617,7 @@ Then send some data in the serial debugging tool of your computer, you can obser
 
 ### Boot Switch
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/09.png" /></div>
+<div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" /></div>
 
 The Boot Switch of the reComputer R1000 is connected to the nRPI_BOOT pin of CM4. This switch provides users with the option to select the boot source between eMMC and USB. In normal mode, the switch should be set away from the side with the "BOOT" label, enabling the system to boot from eMMC. Conversely, when users need to flash the system image, they should set the switch towards the "BOOT" label, allowing the system to boot from the Type-C USB interface.
 
@@ -613,14 +625,15 @@ The Boot Switch of the reComputer R1000 is connected to the nRPI_BOOT pin of CM4
 
 | Switch Position                                              | Mode        | Description    | nRPI-BOOT |
 | ------------------------------------------------------------ | ----------- | -------------- | --------- |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/10.png" alt="image"/> | Normal mode | Boot from eMMC | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/11.png" alt="image"/> | Flash mode  | Boot from USB  | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Normal mode | Boot from eMMC | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Flash mode  | Boot from USB  | High      |
 
 </div>
 
+
 ### USB
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/12.png" /></div>
+<div align="left"><img width={150} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig20.png" /></div>
 
 The reComputer R1000 is equipped with one USB Type-C port and two USB Type-A ports. Please refer to the table below for their functions and descriptions.
 
@@ -644,8 +657,15 @@ If the USB hub is functioning properly, you should see its details listed in the
 
 ### SIM Slot
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/13.png" /></div>
-
+<div style={{ position: 'relative', left: '200px' }}>
+    <img 
+        width="40" 
+        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig19.png" 
+        style={{ transform: 'rotate(90deg)', position: 'absolute', top: '0', left: '0', transformOrigin: 'left top' }} 
+    />
+</div>
+<br />
+<br />
 The reComputer R1000 uses a standard-size SIM card slot commonly found in industrial applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
 :::note
 Please note that the standard version of reComputer R1000 does not come with a 4G module. If you require 4G functionality, an additional 4G module must be purchased separately.
@@ -653,12 +673,12 @@ Please note that the standard version of reComputer R1000 does not come with a 4
 
 ### SSD Slot
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/24.png" /></div>
+<div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig08.png" /></div>
 <br />
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/25.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig04.png" /></div>
 The SSD slot on the reComputer R1000 is designed to accommodate NVMe M.2 2280 SSDs for 128GB, 256GB, 512GB and 1TB in capacity. This slot allows for high-speed storage expansion, enabling users to enhance the performance and capacity of their system.
 
-To list the disks, including the SSD, you can use the fdisk -l command. Here's how:
+To list the disks, including the SSD, you can use the *fdisk -l* command. Here's how:
  
 ```bash
 sudo fdisk -l
@@ -676,9 +696,9 @@ It's important to note that not all SSD cards available in the market support th
 
 ### Mini-PCle Slot
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/26.png" /></div>
+<div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig06.png" /></div>
 <br />
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/27.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig05.png" /></div>
 <br />
 <div class="table-center">
 
@@ -697,13 +717,13 @@ This device features two Mini-PCIe interfaces, namely Mini-PCIe Slot 1 and Mini-
 
 ### Reset Hole
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/31.png" /></div>
+<div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig16.png" /></div>
 
 There is a Mini Push Button Switch located in the reset hole of reComputer R1000. By pressing this button with a thin object, the CM4 can be reset. This pin when high signals that the CM4 has started. Driving this pin low resets the module.
 
 ### Ethernet RJ45
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/28.png" /></div>
+<div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig15.png" /></div>
 <br />
 <div class="table-center">
 
@@ -718,7 +738,7 @@ The reComputer R1000 comes with two Ethernet RJ45 ports. ETH0 is a CM4 native Gi
 
 ### HDMI
 
-<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/29.png" /></div>
+<div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig17.png" /></div>
 
 The reComputer R1000 features a native HDMI interface from CM4, supporting up to 4K @ 60 fps video output. It is ideal for applications that require multiple displays, allowing users to output their content to external large screens.
 
@@ -1059,7 +1079,7 @@ exit
 ### 4G Module
 
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991135--lte-cat-4-ec25-eux-mini-pcie-font_1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991135--lte-cat-4-ec25-eux-mini-pcie-font_1.jpg" alt="pir" width={300} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">
@@ -1149,7 +1169,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="WM1302 SPI Module" label="WM1302 SPI Module">
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114992967-spi-us915.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114992967-spi-us915.jpg" alt="pir" width={300} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html">
@@ -1226,7 +1246,7 @@ cd ~/sx1302_hal/packet_forwarder
 </TabItem>
 <TabItem value="WM1302 USB Module" label="WM1302 USB Module">
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={300} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html">
