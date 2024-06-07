@@ -14,14 +14,15 @@ last_update:
 
 ## **Model Zoo**
 
-SenseCraft AI -Model Zoo empowers users to effortlessly deploy a vast library of publicly available AI models onto their edge devices such as Recomputer (Jetson), XIAO S3, and more and  provides a seamless and user-friendly experience, allowing you to deploy public AI models directly onto your edge devices with just a few clicks. Say goodbye to complex configurations and coding – with SenseCraft AI Studio, you can effortlessly unlock the power of AI on your devices.
+[SenseCraft AI -Model Zoo](https://sensecraft.seeed.cc/ai/#/home) empowers users to effortlessly deploy a vast library of publicly available AI models onto their edge devices such as Recomputer (Jetson), XIAO S3, and more and  provides a seamless and user-friendly experience, allowing you to deploy public AI models directly onto your edge devices with just a few clicks. Say goodbye to complex configurations and coding – with SenseCraft AI Studio, you can effortlessly unlock the power of AI on your devices.
 
 Model Sharing and Collaboration: SenseCraft AI Studio allows you to upload and share your own trained AI models with the community. By publishing your models, you contribute to a growing library of shared knowledge, fostering collaboration and innovation among AI enthusiasts.
 
 ### **User Account**
-SenseCraft AI -Model Zoo is an open platform that allows users to browse all public AI models and Home pages without logging in. You need to sign up and sign in only when you need to deploy a model, or share your own model.
 
-SenseCraft AI-Model Zoo and [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/#/login) ( original SenseCAP Cloud Platform) are both software services provided by seeed studio for users, users only need to sign up for an account on any one of the platforms, and then they can use the same account to sign in on both platforms.
+[SenseCraft AI -Model Zoo](https://sensecraft.seeed.cc/ai/#/home) is an open platform that allows users to browse all public AI models and Home pages without logging in. You need to sign up and sign in only when you need to deploy a model, or share your own model.
+
+[SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home) and [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/#/login) ( original SenseCAP Cloud Platform) are both software services provided by seeed studio for users, users only need to sign up for an account on any one of the platforms, and then they can use the same account to sign in on both platforms.
 
 #### **Sign up**
 1 Enter your name and valid email,and then click "get capcha"<br />
@@ -252,7 +253,7 @@ SenseCraft AI platform not only provides an AI model zoo for users to share and 
 
 4 Back to device‘s SenseCraft AI application. Click "Bind to SenseCraft AI platform",and then application will display bind code and temporary name.<br />
 
-- Bind Code: enter the correct and valid bind code on SenseCraft AI-Model Zoo to finish binding the device.<br />
+- Bind Code: enter the correct and valid bind code on [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home) to finish binding the device.<br />
 - Temporary Name: if the bind code is duplicated then you need to enter the correct temporay name.
 
 <!-- ![image.png](https://cdn.nlark.com/yuque/0/2023/png/34705746/1703663978024-dfee9f6d-fece-4fb2-86b6-ebc10dd2ee25.png#averageHue=%23759825&clientId=u1b4eaca0-c34a-4&from=paste&id=uad42fbc6&originHeight=704&originWidth=3280&originalType=url&ratio=1&rotation=0&showTitle=false&size=91074&status=done&style=none&taskId=u72e7d9e5-b0d3-49d4-ac92-fd699f2e928&title=)<br /> -->
@@ -514,9 +515,9 @@ The device info, more info please check the follow table <br />
 | **Jetpack version** | The version of jetpack installed on the device |
 
 #### **Bind to SenseCraft AI platform**
-SenseCraft AI -Jetson is designed for edge AI. AI inference and video stream processing is done locally on the device, only if you need to download more AI models you need to bind the device to the SenseCraft AI-Model Zoo, and you can remove the device from the platform once downloaded.
+SenseCraft AI -Jetson is designed for edge AI. AI inference and video stream processing is done locally on the device, only if you need to download more AI models you need to bind the device to the [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home), and you can remove the device from the platform once downloaded.
 
-1 Visist SenseCraft AI-Model Zoo<br />
+1 Visist [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home)<br />
 2 Register with a valid email address. The SenseCraft-AI Model Zoo account is the same as the SenseCAP cloud account, if you already have a SenseCAP Cloud account, you can log in directly.
 
 <!-- ![image.png](https://cdn.nlark.com/yuque/0/2023/png/34705746/1703742315481-b843df8c-dcf2-4afc-96ed-8411e8e66867.png#averageHue=%239da985&clientId=ue490ccf8-ca1e-4&from=paste&id=u9eb1c17a&originHeight=1534&originWidth=2850&originalType=url&ratio=0.800000011920929&rotation=0&showTitle=false&size=902585&status=done&style=none&taskId=u6a0b09be-5323-49a3-b65a-263c44399d1&title=)<br /> -->
@@ -530,7 +531,7 @@ SenseCraft AI -Jetson is designed for edge AI. AI inference and video stream pro
 
 5  Back to device‘s SenseCraft AI application. Click "Bind to SenseCraft AI platform",and then application will display bind code and temporary name.
 
-- Bind Code: enter the correct and valid bind code on SenseCraft AI-Model Zoo to finish binding the device.<br />
+- Bind Code: enter the correct and valid bind code on [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home) to finish binding the device.<br />
 - Temporary Name: if the bind code is duplicated then you need to enter the correct temporay name.
 
 <!-- ![image.png](https://cdn.nlark.com/yuque/0/2023/png/34705746/1703742326852-6f6735b9-59ce-42ab-a105-86f72dc4e9ae.png#averageHue=%23759825&clientId=ue490ccf8-ca1e-4&from=paste&id=udc115a95&originHeight=704&originWidth=3280&originalType=url&ratio=0.800000011920929&rotation=0&showTitle=false&size=91074&status=done&style=none&taskId=ua732d260-fb18-46b1-800b-1f236f1c2f8&title=) -->
