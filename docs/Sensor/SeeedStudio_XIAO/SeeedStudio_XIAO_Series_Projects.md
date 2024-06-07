@@ -383,9 +383,9 @@ This section will list the major platforms supported by XIAO, including Platform
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32c3.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
 		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/seeed/seeeduino_xiao/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/seeed/xiao_ble/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32c3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="/XIAO-SAMD21-Zephyr-RTOS"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="/XIAO-nRF52840-Zephyr-RTOS"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="/XIAO-ESP32C3-Zephyr"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
         <tr>
 			<th>XIAO ESP32S3 (Sense)</th>
@@ -396,8 +396,8 @@ This section will list the major platforms supported by XIAO, including Platform
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-rp2040.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
         <tr class="form_without_frame">
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://docs.zephyrproject.org/latest/boards/seeed/xiao_esp32s3/doc/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-Zephyr-RTOS/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="/XIAO-ESP3253-Zephyr-RTOS"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="/XIAO-RP2040-Zephyr-RTOS"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
