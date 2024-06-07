@@ -989,7 +989,7 @@ Can not plug in 2 LoRa® modules on board.
 The reComputer R1000-10 is powered by the CM4 with an onboard Wi-Fi/BLE version, providing the same Wi-Fi/BLE parameters as the CM4. For detailed parameter information, please refer to the Raspberry Pi official website.
 
 :::note
-It is important to note that due to the reComputer R1000's metal casing, Wi-Fi/BLE signals may have difficulty penetrating the metal exterior. If you require Wi-Fi/BLE functionality, it is recommended to purchase an external antenna and [click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-wi-fible-antenna).
+It is important to note that due to the reComputer R1000's metal casing, Wi-Fi/BLE signals may have difficulty penetrating the metal exterior. If you require Wi-Fi/BLE functionality, it is recommended to purchase an external antenna and [click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-wi-fible-antenna).
 :::
 
 #### Connect wifi
@@ -1091,7 +1091,7 @@ exit
 The reComputer R1000 mainboard features two Mini-PCIe slots, with Mini-PCIe slot 1 supporting a 4G module using the USB protocol. The EC25 4G module from Quectel has been fully tested to be compatible with the reComputer R1000.
 
 :::note
-Please note that if you require 4G functionality, it is necessary to purchase the corresponding 4G module and external antenna. [Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna).
+Please note that if you require 4G functionality, it is necessary to purchase the corresponding 4G module and external antenna. [Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
 
 To interact with a 4G module using AT commands via minicom, follow these steps:
@@ -1179,7 +1179,7 @@ import TabItem from '@theme/TabItem';
 
 <br />
 
-**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
+**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
 
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
@@ -1254,7 +1254,7 @@ cd ~/sx1302_hal/packet_forwarder
     </a>
 </div>
 
-**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
+**Step 1.** Please refer to the [LoraWAN® Module Hardware assembly](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) guide to install `WM1302 USB LoraWAN®  Module` into the `4G Mini PCIe slot` which you should see the *`4G`* slikscreen.
 
 
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
@@ -1332,7 +1332,7 @@ The Mini-PCIe slots offer support for Zigbee modules utilizing the USB protocol,
 
 :::note
 Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna.
-[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-4glorazigbee-module-and-antenna).
+[Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
 
 #### To test Zigbee communication with two Zigbee modules, follow these steps:
@@ -1390,14 +1390,14 @@ Ensure you replace /dev/ttyUSB* with the correct serial port for each Zigbee mod
 The reComputer R1000 worked as powered devices can support the IEEE 802.3af standard by adding a PoE power supply module. The seat for PoE is pre-soldered on board; however, users need to disassemble the device to install the PoE module for Ethernet PoE function.
 
 :::note
-The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to [solder and assemble the PoE module themselves](/recomputer_r1000_hardware_guide/#assemble-ups-and-poe-module).
+The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to [solder and assemble the PoE module themselves](/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module).
 :::
 
 ### SSD
 
 The reComputer R1000 supports 2280 NVMe SSD through the use of a PCIe slot(J62) below two Mini-PCIe slots on board. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
 
-[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-ssd).
+[Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-ssd).
 
 <div class="table-center">
 
@@ -1441,7 +1441,7 @@ It's important to note that not all SSD cards available in the market support th
 The TPM features Infineon’s OPTIGA™ TPM SLB9670 which is compliant to the Trusted Computing Group (TCG) TPM 2.0 specification is recommened as encryption chip to the reComputer R1000. The chip features an SPI interface applied for port J13 on board, to enable a root of trust for platform integrity, remote attestation, and cryptographic services.
 
 :::note
-[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-tpm-20-module).
+[Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
 :::
 
 If you connect TPM 2.0 module to device, the following code can help check TPM connection.
@@ -1469,7 +1469,7 @@ The backup duration provided by the UPS heavily relies on the system load. Below
 
 :::note
 For UPS function please contact us for more information, and the alarm signal is active LOW.
-[Please click here for assemble instruction](/recomputer_r1000_hardware_guide/#assemble-ups-and-poe-module).
+[Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module).
 :::
 
 A GPIO25 between CPU and DC/AC power in is used to alarm CPU when the 5V power supply is down. Then the CPU should do something urgent in a script before energy exhaustion of super capacitor and run a `$ shutdown`

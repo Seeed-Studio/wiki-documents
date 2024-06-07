@@ -6,7 +6,7 @@ keywords:
   - reComputer R1000
   - Assembly Guide
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /recomputer_r1000_Assembly_guide
+slug: /recomputer_r1000_assembly_guide
 last_update:
   date: 06/06/2024
   author: Evelyn Chen
@@ -81,7 +81,7 @@ Following these steps should help you disassemble the device without any issues.
 
 ### Assemble Wi-Fi/BLE Antenna
 
-**STEP 1:** Disassemble the entire device following section [Disassembly Guide](/recomputer_r1000_hardware_guide/#assembly--disassembly-guide).
+**STEP 1:** Disassemble the entire device following section [Disassembly Guide](/recomputer_r1000_assembly_guide/#assembly--disassembly-guide).
 
 **STEP 2:** Connect the feeder line from the CM4 module to antenna hole following the illustrastions below.
 
