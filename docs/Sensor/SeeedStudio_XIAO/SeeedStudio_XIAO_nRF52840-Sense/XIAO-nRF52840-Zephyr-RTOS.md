@@ -530,7 +530,8 @@ Additional information about TFLite is outside of the scope of this guide but th
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD Card
 - [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
 - [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
-
+- [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
+- [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html) - SD Card
 
 #### Grove - Expansion Board - I2C Display
 
@@ -796,6 +797,147 @@ With the new firmware in place the device now shows the same demo screen we saw 
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/nrf52840/spi_lcd-nrf.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoble_zigbee/spi_lcd-nrf.jpg" style={{width:500, height:'auto'}}/></div>
+
+#### Round Display for Xiao
+
+To test this setup we can use an existing sample with Zephyr:
+
+```
+west build -p always -b xiao_ble samples/drivers/display --  -DSHIELD=seeed_xiao_round_display
+```
+
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
+You'll see a display showing multiple colored corners with a black corner blinking.
+
+Another example demonstrates the use of the touchscreen:
+
+```
+west build -p always -b xiao_ble samples/modules/lvgl/demos --  -DSHIELD=seeed_xiao_round_display -DCONFIG_LV_Z_DEMO_MUSIC=y
+```
+
+The music demo shown here is only a portion of the actual screen but still demonstrates the touch screen in action. As you can see touching the play button turns on the music animation.
+
+You can see from the [shield file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) that this works by intefacing with the GC9A01 round display driver over SPI and the CHSC6X touch module over i2c.
+
+Let's dive into this example a bit to see how it works:
+```
+/ {
+    chosen {
+      zephyr,display = &gc9a01_xiao_round_display;
+    };
+
+	lvgl_pointer {
+		compatible = "zephyr,lvgl-pointer-input";
+		input = <&chsc6x_xiao_round_display>;
+	};
+};
+
+/*
+ * xiao_serial uses pins D6 and D7 of the Xiao, which are used respectively to
+ * control the screen backlight and as touch controller interrupt.
+ */
+&xiao_serial {
+	status = "disabled";
+};
+
+&xiao_i2c {
+	clock-frequency = < I2C_BITRATE_FAST >;
+
+	chsc6x_xiao_round_display: chsc6x@2e {
+		status = "okay";
+		compatible = "chipsemi,chsc6x";
+		reg = <0x2e>;
+		irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
+	};
+};
+
+&xiao_spi {
+	status = "okay";
+	cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>, <&xiao_d 2 GPIO_ACTIVE_LOW>;
+
+	gc9a01_xiao_round_display: gc9a01@0 {
+		status = "okay";
+		compatible = "galaxycore,gc9x01x";
+		reg = <0>;
+		spi-max-frequency = <DT_FREQ_M(100)>;
+		cmd-data-gpios = <&xiao_d 3 GPIO_ACTIVE_HIGH>;
+		pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
+		width = <240>;
+		height = <240>;
+		display-inversion;
+	};
+};
+```
+
+This shield does the following:
+- Selects the GC9A01 display as the chosen Zephyr display
+- Sets the LVGL pointer logic to use the CHSC6X module
+- Disable serial as the pins are used for backlight and touch interrupt (as seen above via: `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`)
+- Configures the round display for SPI using the D1, D2, and D3 pins
+
+The [sample logic](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) relies on the [LVGL demo example code](https://github.com/lvgl/lvgl/tree/master/demos/music) which can be further examined.
+
+
+#### Round Display for Xiao - SD Card
+
+We'll use the filesystem sample here along with the Xiao Expansion Board shield to try interfacing with the SD card reader over SPI. The expansion board shield has the CS pin configured for the associated `&xiao_d 2` pin so no work is needed on your part for associating this capability with the board aside from adding the shield. To further prepare it we are using a custom config that enables the SD card functionality.
+
+```
+cd ~/zephyrproject/zephyr
+west build -p always -b xiao_ble samples/subsys/fs/fs_sample -- -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_round_display
+```
+
+Now flash and monitor (first pressing RESET twice to enter uf2 bootloader mode):
+```
+west flash -r uf2
+```
+
+Wait a moment for the MCU to reset after flashing and connect to monitor:
+```
+screen /dev/ttyACM0 115200
+```
+
+You should see a response similar to this:
+```
+*** Booting Zephyr OS build v3.6.0-5403-gd9e2b0c70763 ***
+[00:00:00.491,485] <inf> sd: Maximum SD clock is under 25MHz, using clock of 24000000Hz
+[00:00:00.491,973] <inf> main: Block count 15519744
+Sector size 512
+Memory Size(MB) 7578
+Disk mounted.
+
+Listing dir /SD: ...
+[FILE] IMAGE1.JPG (size = 58422)
+[FILE] IMAGE2.JPG (size = 97963)
+```
+
+As expected the file contents are displayed in a similar manner to the output from the Xiao Expansion board SD card example.
+
+The relevant part of the round display shield is shown below:
+
+```
+&xiao_spi {
+	status = "okay";
+	cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>, <&xiao_d 2 GPIO_ACTIVE_LOW>;
+
+	sdhc_xiao_round_display: sdhc@1 {
+		compatible = "zephyr,sdhc-spi-slot";
+		reg = <1>;
+		status = "okay";
+		mmc {
+			compatible = "zephyr,sdmmc-disk";
+			status = "okay";
+		};
+		spi-max-frequency = <DT_FREQ_M(24)>;
+	};
+};
+```
+
+D2 is used for the SD CS pin.
 
 
 ## ✨ Contributor Project
