@@ -1,31 +1,36 @@
 ---
-description: Quick Guide for Seeed Studio Wiki Platform
+description: Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Studio is dedicated to realizing interactive digital replica of our physical world. This website is an open source platform with a collection of all wikis currently published by Seeed Studio and updated weekly to showcase our product range and research, which includes digitalisation of the natural environment.
 title: Getting Started
 keywords:
 - weeely wiki
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg
 last_update:
-  date: 07/05/2023
+  date: 05/23/2024
   author: Matthew
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
-<strong><font color={'8DC215'} size={"5"}>Quick Guide for Seeed Studio Wiki Platform</font></strong>
+## Seeed Studio 
 
-Seeed Studio has dedicated to realizing interactive digital replica of our physical world, as being an IoT hardware partner since 2008. This is an open platform collecting all the wikis published by Seeed Studio, to show you the full picture of our efforts, natural environments digitization and outcome production.
-
-You can constantly receive updated data from sensors and <strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}>  Sensor Network </font></span></a></strong>, access computational resources with different <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong> power, display and manage information on <strong><a href="/CloudnChain"><span><font color={'8DC215'} size={"4"}>  Cloud and Chain </font></span></a></strong> in ways.
+Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Studio is dedicated to realizing interactive digital replica of our physical world. This website is an open source platform with a collection of all wikis currently published by Seeed Studio and updated weekly to showcase our product range and research, which includes digitalisation of the natural environment.
 
 <!-- We here also present you our current accomplishments and <strong><a href="/Solutions"><span><font color={'8DC215'} size={"4"}>  Solution </font></span></a></strong> and we are looking for your contributions. -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
-## What does Wiki Platform Cover?
+## What does this Wiki Platform Cover?
 
-- The wiki contents have been divided into **three topics** as shown on the top navigation. Each topic contains **two or three large portions**, facing different situations. 
+- This platform will focus on four main topics as shown in the sidebar, with up-to-date information on all of our products.
 
-- You will find documentation about concentrated, computational equipment for **practical purpose**, and industrial IoT scenarios, meanwhile, we offer documents about open development tools to help you **build your own**.
+  - <strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}> Sensors and Sensing</font></span></a></strong>
+  - <strong><a href="/Network"><span><font color={'8DC215'} size={"4"}> Networking</font></span></a></strong>
+  - <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong>
+  - <strong><a href="/Cloud"><span><font color={'8DC215'} size={"4"}>  Cloud Services</font></span></a></strong>
+
+- You will be able to find detailed documentation of our products for **practical usage** and **troubleshooting**, industrial IoT scenarios, as well as guides on open development tools to help you get started on your own projects.
+
+
 
 ## Sensing and Data Communicating
 
@@ -115,7 +120,7 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
   </div>
 </div>
 
-## Cloud and Chain
+## Cloud Services
 
 <div class="all_container">
   <div class="getting_started">
@@ -130,49 +135,23 @@ You can constantly receive updated data from sensors and <strong><a href="/Senso
   </div>
 </div>
 
-## ✨ Contributor Program
+## ✨ Contributor Program ✨ 
 
-The Seeed Studio Contributor Program is a collaborative program designed to unite our friends from the community and co-build innovative solutions with us.
+In Seeed, we greatly value our community of Seeeders. The Seeed Studio Contributor Program is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
 
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/08/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230817161402.png" alt="pir" width={800} height="auto" /></p>
 
 
-### How do we work with contributors?
-
-We welcome contributions from all individuals who wish to help us improve our wiki platform.
-
-1. We have [a bunch of assignments available(keep update)](https://github.com/orgs/Seeed-Studio/projects/6/views/1) on GitHub to enhance the wiki contents for contributors to select, each with detailed description.
-2. The contributors can submit their content via "Pull Request" when the assignments have been finished.
-3. The maintainers will merge the submission and record the contributions.
-
-### What do we offer?
-
-We want to express our gratitude to our contributors by offering a range of rewards.  Depending on the difficulties(Tier 0/1/2/3), the time we expect(Days 1/3/7/15),  the actual  submission time and the actual submission contents, we will offer different levels of rewards.
-
-1. We will provide our products or cash bonus to our contributors as a token of appreciation.
-2. For those contributors who join our "Ranger Program"(announced soon), we offer even more exciting rewards, including access to our prototype products.
-3. In addition, all contributors and their contributions will be acknowledged and showcased on our wiki platform.
-
-### What exactly kinds of tasks are there?
-
-We’ve already dropped some tasks on GitHub. As of now, the task types span:
-
-1. Various applications and software deployments for Seeed Studio based products, from MCU board applications to industrial-grade device software deployments.
-
-2. Iteration of webpage structure and content, from simple grammar corrections to entire page content updates.
-
-3. Any thoughts about “solution-based” prototype, a deployable resolution, or just an interesting project idea. (Examples of relevant aspects: Digital automation; Decentralized digital transformation; Infrastructures deployable in the wild; Carbon neutrality; Sustainable Development Goals(SDGs); Problem solved in daily life; TinyML; etc.)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/contributor_program.png" alt="pir" width={900} height="auto" /></p>
+<strong><a href="/Contributor"><span><font color={'8DC215'} size={"4"}>Discover how you can contribute and explore the opportunities we offer by clicking here!</font></span></a></strong>
 
 
 ## Weekly Wiki
 
-[Seeed Studio Weekly Wiki](/weekly_wiki) will be published each Monday and it will introduce you to our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+[Seeed Studio Weekly Wiki](/weekly_wiki) will be published each Monday and it will introduce you to our latest content, such as our new products, interesting projects done by our team of Seeeders, tutorials, guides, introductions and anything interesting and relevant!
 
 ## Tech Support & Product Discussion
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+Thank you for choosing our products! We provide many forms of support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -184,23 +163,23 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
-## What's More
+## Socials
 
-If you have any questions or comments, please don't hesitate to hop on to our forum and discuss with us directly! We greatly value your feedback and opinions because we always grow and prosper together with our users and the community!
+If you have any questions or comments, please do not hesitate to hop on to our forum and discuss with us directly and contact us! We value all feedbacks and opinions and believe that the way to grow and prosper is together with our users and the community!
 
 <table align="center">
   <tbody>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/Twitter1.png" alt="pir" width={60} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on Twitter</strong><br />Follow us to Get the 1st Hand Product Updates &amp; Campaigns<p><a href="https://twitter.com/seeedstudio" target="_blank">Click here</a></p></td>
+      <td align="left"><strong>Seeed on Twitter</strong><br />Follow us to get 1st Hand Product Updates &amp; Campaigns<p><a href="https://twitter.com/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/hackster1.png" alt="pir" width={200} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on Hackster</strong><br />It’s a community place where You Can Find and Share seeed studio Products Powered Projects. Explore to get more inspirations.<p><a href="https://www.hackster.io/seeed" target="_blank">Click here</a></p></td>
+      <td align="left"><strong>Seeed on Hackster</strong><br />A community where you can find and share projects powered by Seeed products. Explore now!<p><a href="https://www.hackster.io/seeed" target="_blank">Click here</a></p></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/YouTube.png" alt="pir" width={300} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on Youtube</strong><br />Video updates on what’s happening at seeed studio. Subscribe to our channel to learn more.<p><a href="http://www.youtube.com/c/SeeedStudioSZ" target="_blank">Click here</a></p></td>
+      <td align="left"><strong>Seeed on Youtube</strong><br />Video updates on the latest happenings in Seeed. Subscribe to our channel to learn more.<p><a href="http://www.youtube.com/c/SeeedStudioSZ" target="_blank">Click here</a></p></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/LinkedIn_Logo.png" alt="pir" width={300} height="auto" /></p></td>

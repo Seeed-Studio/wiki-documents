@@ -357,7 +357,7 @@ According to the documentation of ChatGPT, the format we need to send the reques
 curl https://api.openai.com/v1/completions \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer YOUR_API_KEY" \
--d '{"model": "text-davinci-003", "prompt": "Say this is a test", "temperature": 0, "max_tokens": 7}'
+-d '{"model": "gpt3.5-turbo-instruct", "prompt": "Say this is a test", "temperature": 0, "max_tokens": 7}'
 ```
 
 The Hypertext Transfer Protocol (HTTP) works as a request-response protocol between a client and server.
@@ -387,7 +387,7 @@ if (https.begin(chatgpt_server)) {  // HTTPS
     https.addHeader("Content-Type", "application/json"); 
     String token_key = String("Bearer ") + chatgpt_token;
     https.addHeader("Authorization", token_key);
-    String payload = String("{\"model\": \"text-davinci-003\", \"prompt\": \"") + chatgpt_Q + String("\", \"temperature\": 0, \"max_tokens\": 100}"); //Instead of TEXT as Payload, can be JSON as Paylaod
+    String payload = String("{\"model\": \"gpt-3.5-turbo-instruct\", \"prompt\": \"") + chatgpt_Q + String("\", \"temperature\": 0, \"max_tokens\": 100}"); //Instead of TEXT as Payload, can be JSON as Paylaod
     httpCode = https.POST(payload);   // start connection and send HTTP header
     payload = "";
 }
@@ -409,23 +409,24 @@ Let's continue from reading the [API documentation](https://platform.openai.com/
 
 ```shell
 {
-    "id": "cmpl-GERzeJQ4lvqPk8SkZu4XMIuR",
-    "object": "text_completion",
-    "created": 1586839808,
-    "model": "text-davinci:003",
-    "choices": [
-        {
-            "text": "\n\nThis is indeed a test",
-            "index": 0,
-            "logprobs": null,
-            "finish_reason": "length"
-        }
-    ],
-    "usage": {
-        "prompt_tokens": 5,
-        "completion_tokens": 7,
-        "total_tokens": 12
+  "id": "cmpl-uqkvlQyYK7bGYrRHQ0eXlWi7",
+  "object": "text_completion",
+  "created": 1589478378,
+  "model": "gpt-3.5-turbo-instruct",
+  "system_fingerprint": "fp_44709d6fcb",
+  "choices": [
+    {
+      "text": "\n\nThis is indeed a test",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "length"
     }
+  ],
+  "usage": {
+    "prompt_tokens": 5,
+    "completion_tokens": 7,
+    "total_tokens": 12
+  }
 }
 ```
 
@@ -435,7 +436,7 @@ So now we can be sure that the "Answer" we need should start with **\n\n** and e
 
 ```c
 dataStart = payload.indexOf("\\n\\n") + strlen("\\n\\n");
-dataEnd = payload.indexOf("\",\"", dataStart); 
+dataEnd = payload.indexOf("\",", dataStart); 
 chatgpt_A = payload.substring(dataStart, dataEnd);
 ```
 

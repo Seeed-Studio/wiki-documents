@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 05/20/2024
+  date: 06/03/2024
   author: Seraphina
 ---
 
@@ -17,60 +17,41 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is May 20th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 3rd and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
 
-### Seeed Studio XIAO ESP32 Development Matter series Wikis
+### [Grove - ADC for Load Cell (HX711)](https://wiki.seeedstudio.com/grove_adc_for_load_cell_hx711 /)
 
-These articles are the tutorial in the Seeed Studio XIAO ESP32 Development Matter series:
+The Grove - ADC for Load Cell (HX711) is a 24-bit A/D converter designed specifically for the load cell. It contains an on-chip low noise programmable amplifier with an optional gain of 32, 64 and 128. The HX711 chip integrates a regulated power supply, an on-chip clock oscillator, and other peripheral circuits, which have the advantages of high integration, fast response, and strong anti-interference.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:700, height:'auto'}}/></div>
 
-#### [Developed on XIAO using Espressif ESP-IDF](https://wiki.seeedstudio.com/xiao_esp32c6_idf/)
+#### [Grove Vision AI V2 Notifies You Via Telegram](https://wiki.seeedstudio.com/grove_vision_ai_v2_telegram/)
 
-In the world of IoT development, the ESP-IDF (Espressif IoT Development Framework) has gained significant popularity due to its powerful features and extensive support for ESP32 series microcontrollers. With the emergence of the Matter protocol, which aims to provide a unified standard for smart home devices, developers are eager to explore this new frontier. However, Matter development currently does not support the Arduino framework, leaving ESP-IDF as the primary choice for development. In this tutorial, we will guide you through the process of installing ESP-IDF on an Ubuntu system, enabling you to kickstart your Matter development journey on XIAO ESP32 Series.
+<div class="table-center">
+<iframe width="400" height="700" src="https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/telegram_xiao.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/matter-sdk.png" style={{width:800, height:'auto'}}/></div>
-
-
-#### [Getting Started with Matter Quickly with XIAO ESP32](https://wiki.seeedstudio.com/getting_started_with_matter/)
-In this tutorial, we will guide you through the process of using ESPLaunchPad to swiftly flash firmware onto your XIAO ESP32 board and pair it with your iPhone using a QR code. By following these steps, you'll be able to establish a connection between your phone and the XIAO ESP32 device, enabling you to control and interact with it seamlessly. This hands-on experience will provide you with a foundational understanding of Matter and its potential in the smart home ecosystem.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/15.png" style={{width:800, height:'auto'}}/></div>
+This project combines the XIAO ESP32S3 and Grove Vision AI V2 to create a compact person detection device. The V2 module, equipped with a person detection model, identifies human presence and sends the results to the ESP32S3. The microcontroller then processes the information and forwards the detection alerts to a designated Telegram account, providing real-time notifications whenever a person is detected in the monitored area.
 
 
-#### [Matter Development with XIAO ESP32 Series](https://wiki.seeedstudio.com/xiao_esp32_matter_env/)
+### [Quick start with Zigbee on XIAO ESP32C6](https://wiki.seeedstudio.com/vision_ai_v2_crowd_heat_map/)
 
-In the following sections, we'll walk you through the steps to configure your Matter development environment, including installing the necessary software, setting up the Seeed Studio XIAO ESP32C6 board, and running your first Matter example program. By the end of this tutorial, you'll have a solid foundation to start building your own Matter devices and contribute to the growing ecosystem of interoperable smart home solutions.
+In this tutorial, we will embark on a journey to explore Zigbee application development using the XIAO ESP32C6 development board. The XIAO ESP32C6 is a compact yet powerful board that features the ESP32-C6 chip, which offers integrated Wi-Fi and Bluetooth Low Energy (BLE) connectivity. By leveraging the ESP Zigbee SDK, we can harness the full potential of the XIAO ESP32C6 and extend its capabilities to include Zigbee functionality.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/Thread-matter-smart-homes.png" style={{width:800, height:'auto'}}/></div>
-
-
-### [Local RAG based on Jetson with LlamaIndex](https://wiki.seeedstudio.com/Local_RAG_based_on_Jetson_with_LlamaIndex/)
-
-In industrial automation, Modbus stands out as one of the most common protocols. MQTT has emerged as the leading protocol for IoT in industrial automation due to many characteristics. Its lightweight design, efficiency, scalability, and support for asynchronous messaging are notable. In MQTT, devices communicate only when there's a reportable event, contrasting with constant update checks. This event-driven approach, coupled with reporting by exception—sending data only when it deviates from norms or on specific triggers—conserves bandwidth and resources, optimizing data transmission for critical IoT applications.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/RAG-MLC-Jetson.gif" alt="pir" width={800} height="auto"/></p>
-
-### [RAG on Jetson with MLCLLM and LlamaIndex](https://wiki.seeedstudio.com/RAG_on_Jetson_with_MLCLLM_and_LlamaIndex)
-
-In this project, we introduce a quantized version of [Llama2-7B](https://huggingface.co/meta-llama/Llama-2-7b-hf), a large language model trained on 1.5TB of data, and deploy it on the Jetson Orin. We also leverage the [Machine Learning Compiler Large Language Modle](https://llm.mlc.ai)(MLC LLM) to accelerate the inference speed of the model. By deploying the quantized Llama2-7B with MLC LLM on the [Jetson Orin NX](https://www.seeedstudio.com/reComputer-J4012-p-5586.html), developers can build powerful natural language processing applications that deliver high accuracy and low latency on edge devices.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/MLC_LLM.gif" /></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee/0.png" style={{width:800, height:'auto'}}/></div>
 
 
-### [Edge Box RPi 200 with Node Red and MQTT](https://wiki.seeedstudio.com/Edge-Box-Node-Red-MQTT)
 
-**MQTT (Message Queuing Telemetry Transport)** is a lightweight messaging protocol ideal for IoT (Internet of Things) applications due to its efficiency and low bandwidth requirements. It facilitates communication between devices in a publish-subscribe model, allowing for real-time data exchange over unreliable networks. With Node-RED, integrating MQTT enables seamless connectivity between edge devices and central servers or other devices, fostering efficient data transmission and processing. EdgeBox Edge Controller, by supporting MQTT natively, eliminates the need for additional hardware gateways by allowing the installation of an MQTT broker directly on the EdgeBox itself. This reduces complexity, minimizes latency, and enhances reliability, as data can be processed and acted upon at the edge without relying on external intermediaries, thus optimizing IoT system architecture.
+<!-- ## Existed Wiki Updated
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/noderedmqtt.png" style={{width:800, height:'auto'}}/></div>
-
-## Existed Wiki Updated
-
-### [Flash JetPack6 to J401 carrier board](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#flash-to-jetson)
+### [Flash JetPack OS to A603 Carrier Board](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/#flash-to-jetson)
  
-We have updated the method for flashing Jetpack 6 on the J401 carrier board.
+We have updated the method for flashing Jetpack 6 on the A603 carrier board.
+
+At the same time, we have added a driver package for the A603 based on JP5.1.2, adapted to the IMX477 camera: [Use IMX477 Camera with A603 Jetson Carrier Board](https://wiki.seeedstudio.com/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board/) -->
 
 
 <!-- ### [Seeed Ranger Map Shown](https://wiki.seeedstudio.com/ranger/)
@@ -154,3 +135,5 @@ This wiki covers Zephyr support for the Seeed Studio XIAOs. With the assistance 
 - [weekly wiki on 2024.4.29th](/Seeed_Elderly/weekly_wiki/wiki240429)
 - [weekly wiki on 2024.5.06th](/Seeed_Elderly/weekly_wiki/wiki240506)
 - [weekly wiki on 2024.5.13th](/Seeed_Elderly/weekly_wiki/wiki240513)
+- [weekly wiki on 2024.5.20th](/Seeed_Elderly/weekly_wiki/wiki240520)
+- [weekly wiki on 2024.5.27th](/Seeed_Elderly/weekly_wiki/wiki240527)

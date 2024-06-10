@@ -54,22 +54,11 @@ Please use Chrome or Edge browser based on the Chrome engine.
 
 To use the full functionality of the Grove Vision AI V2 you may need to purchase a CSI camera separately, we recommend the [**OV5647-62 FOV Camera Module for Raspberry Pi**](https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html).
 
-
 #### Connecting to a CSI interface camera
 
 Once you have the Grove Vision AI V2 and camera ready to go, then you can connect them via the CSI connection cable. When connecting, please pay attention to the direction of the row of pins and don't plug them in backwards.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/9.gif" style={{width:600, height:'auto'}}/></div>
-
-:::caution
-
-<!-- 'Before', it's d type Device, but will make it work in the future -->
-Users who purchased Grove Vision AI V2 before February 21, 2024, do not have support for Raspberry Pi cameras. However, users who purchase after this date will have added support for those specific models that support images.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/cameraList.png" style={{width:1000, height:'auto'}}/></div>
-:::
-
-
 
 ## Boot / Reset / Flashed Driver
 
@@ -149,7 +138,7 @@ Connect the Grove Vision AI (WE2) module to the default I2C interface of your Ar
 4. Press 'enter' to start the bootloader recovery process, wait for the process to complete
 
 :::note
-You may need to press the 'reset' button on the Arduino board to restart the bootloader recovery process. If the bootloader recovery process fails, please check the hardware connection and reset the power supply of the Grove Vision AI (WE2) module and try again. In some cases, you may have to try 3-10 times to recover the bootloader successfully.
+Before connecting the Grove Vision AI V2 to your computer, keep the BOOT button pressed while connecting to your computer via the data cable, and then release the BOOT button. In some cases, you may have to try 3-10 times to recover the bootloader successfully.
 :::
 
 ## Getting Started

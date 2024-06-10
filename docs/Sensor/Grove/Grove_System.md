@@ -17,33 +17,33 @@ last_update:
 ## Table of Contents
 
 - [**What is the Grove Ecosystem?**](#jump1)
-- [**What are in the Grove Ecosystem?**](#jump2)
+- [**What is in the Grove Ecosystem?**](#jump2)
   - [**Grove Sensors**](#jump3)
   - [**Grove Network Modules**](#jump4)
   - [**Grove Accessories**](#jump5)
-  - [**The Boards supported by the Grove interface**](#jump6)
-  - [**The Kits come with the Grove Modules and Courses**](#jump7)
+  - [**Boards supported by the Grove interface**](#jump6)
+  - [**Kits with Grove Modules and Courses**](#jump7)
   - [**Co-Create Program - Grove Modules**](#jump8)
   - [**Grove Cables**](#jump9)
 - [**Grove Projects**](#jump10)
 - [**More Knowledge about Grove Ecosystm**](#jump11)
-- [**Resource for Grove**](#jump12)
+- [**Resourcesfor Grove**](#jump12)
 - [**Tech Support & Product Discussion**](#jump13)
 
 ## <span id="jump1"> What is the Grove Ecosystem? </span>
 
 Grove is a modular, standardized connector prototyping system. Compared to systems using jumpers or solder, Grove's modular building-block approach makes assembling real electronics easy. The Grove system consists of a base unit and various modules with standardized connectors.  These were originally called "stems" and "twigs", but the names have been phased out.
 
-The Base unit, generally a microprocessor, allows for easy connection of any input or output from the Grove modules. Every Grove module typically addresses a single function, such as a simple button or a more complex heart rate sensor. You don't need a Base unit to connect up to Grove modules. You can use a cable (Grove to Pin Header Converter) to run from the pins on the Raspberry Pi or Arduino to the Grove connectors.
+The Base unit, generally a microprocessor, allows for easy connection of any input or output from the Grove modules. Each Grove module typically addresses a single function, such as a simple button or a more complex heart rate sensor. You don't need a Base unit to connect to others Grove modules. You can use a cable (Grove to Pin Header Converter) to run from the pins on the Raspberry Pi or Arduino to the Grove connectors.
 
 <!-- <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/grove.html"><strong><span><font color={'FFFFFF'} size={"4"}> Grow Your Idea</font></span></strong>
     </a>
 </div> -->
 
-## <span id="jump2"> What are in the Grove Ecosystem? </span>
+## <span id="jump2"> What is in the Grove Ecosystem? </span>
 
-The Grove ecosystem provides a convenient and user-friendly approach to prototyping and building electronic systems. Its modular nature, standardized connectors, and wide range of modules make it easier for both beginners and experienced makers to assemble and experiment with real electronics quickly.
+The Grove ecosystem provides a convenient and user-friendly approach to prototyping and building electronic systems. Its modular nature, standardized connectors, and wide range of modules make it easy for both beginners and experienced makers to assemble and experiment with real electronics quickly.
 
 ### <span id="jump3"> Grove Sensors </span>
 
@@ -62,7 +62,7 @@ The Grove ecosystem offers a wide range of sensors that can be easily integrated
 
 The Grove system also includes network modules that enable communication and connectivity in your projects. These modules allow you to connect your electronics to different networks, such as Wi-Fi, Bluetooth, LoRa, NFC, or other Standard Protocol.
 
-With Grove network modules, you can easily add wireless capabilities to your projects, enabling data transmission, remote control, or interaction with other devices or the internet.
+With Grove network modules, you can easily add wireless capabilities to your projects, enabling data transmission, remote control, or interaction with other devices and the internet.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/Grove_network_module_intro"><strong><span><font color={'FFFFFF'} size={"4"}> 📖 Wiki Platform</font></span></strong>
@@ -198,7 +198,7 @@ For more acknowledged boards supporting Grove interfaces, like Raspberry Pi, Pi 
 
 #### Arduino Board-based
 
-Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for beginners. It includes one Arduino compatible Board and 10 additional Arduino sensors and all in one-piece of PCB design. All the modules have been connected to the Seeeduino through the PCB stamp holes so no Grove cables are needed to connect. Of course, you can also take the modules out and use Grove cables to connect the modules. You can build any Arduino project you like with this Grove Beginner Kit For Arduino.
+Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for beginners. It includes one Arduino compatible Board with 10 additional Arduino sensors and an all-in-one-piece PCB design. All the modules have been connected to the Seeeduino through the PCB stamp holes so Grove cables are not needed for connection. However, you can also take the modules out and use Grove cables to connect the modules. You can build any Arduino project you like with this Grove Beginner Kit For Arduino!
 
 <div class="table-center">
 	<table class="table-nobg">
@@ -218,12 +218,12 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 
 
 :::tip
-For more kits about Ardunio, please check [here](https://www.seeedstudio.com/shopby/grove.html).
+For more kits about Ardunio, please click [here](https://www.seeedstudio.com/shopby/grove.html).
 :::
 
 #### Raspberry Pi Board-based
 
-We have designed 8 tutorials for you to start with some basic Grove modules and the Raspberry Pi 4 board. This section introduces you how modules can be combined and applied in real-life applications.
+In Seeed, we designed 8 tutorials for you to start tinkering with some basic Grove modules and the Raspberry Pi 4 board. This section provides guides on how modules can be combined and applied in real-life applications.
 
 <div class="table-center">
 	<table class="table-nobg">
@@ -247,7 +247,7 @@ For more kits about Raspberry Pi, please check [here](https://www.seeedstudio.co
 
 #### SeeedStudio XIAO Board-based
 
-The primary audience for “XIAO: Big Power, Small Board” encompasses hobbyists, students, educators, and professionals in electronics and machine learning who want to explore and maximize the potential of compact hardware platforms. Typically, these readers might hold positions as electronics enthusiasts, DIY project creators, electronics educators, or even junior embedded system developers. As they advance in their careers, they might be eyeing roles such as electronics design engineers, IoT developers, or machine learning hardware integrators.
+The primary audience for “XIAO: Big Power, Small Board” encompasses hobbyists, students, educators, and professionals in electronics and machine learning who wish to explore and maximize the potential of compact hardware platforms. Typically, these readers may hold positions as electronics enthusiasts, DIY project creators, electronics educators, or even junior embedded system developers. As they advance in their careers, they might be preparing for roles such as electronics design engineers, IoT developers, or machine learning hardware integrators.
 
 <div class="table-center">
 	<table class="table-nobg">
@@ -296,7 +296,7 @@ For more kits about Wio Terminal, please check [here](https://www.seeedstudio.co
 
 ### <span id="jump8"> Co-Create Program - Grove Modules  </span>
 
-Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engineers turn their Grove designs into real products. Participants have their designs manufactured and sold on Seeed Studio Bazaar(Product puuchase page).
+Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engineers turn their Grove designs into real products. Participants can have their designs manufactured and sold on Seeed Studio Bazaar (Product purchase page).
 
 <div style={{textAlign:'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/03/project_2.png" style={{width:500, height:'auto'}}/></div>
 
@@ -314,7 +314,7 @@ Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engine
 
 #### Normal Grove Cable
 
-There're 5 types of Grove cables supporting your projects, the length is consist of 5cm, 20cm, 30cm, 40cm as well as 50 cm. As shown below:
+There are 5 types of Grove cables available for your projects and the lengths are 5cm, 20cm, 30cm, 40cm and 50 cm, shown below.
 
 | 5cm | 20 cm | 30 cm | 40 cm | 50 cm |
 |-----|-------|-------|-------|-------|
@@ -330,7 +330,7 @@ Use this cable to connect two I2C Grove modules to one I2C Stem connector. This 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/GroveSystem/images/cable_branch.jpg" style={{width:300, height:'auto'}}/></div>
 
 :::tip
-You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Branch-Cable-5PCs-pack.html). We have luanched [Grove - I2C Hub (6 Port)](https://www.seeedstudio.com/Grove-I2C-Hub-6-Port-p-4349.html) for this function.
+You can check it out on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Branch-Cable-5PCs-pack.html). We have launched [Grove - I2C Hub (6 Port)](https://www.seeedstudio.com/Grove-I2C-Hub-6-Port-p-4349.html) for this function.
 :::
 
 
@@ -348,7 +348,7 @@ Grove Branch Cable for Servos is used to connect one or two servos to a project,
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/GroveSystem/images/cable_servo.jpg" style={{width:300, height:'auto'}}/></div>
 
 :::tip
-You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Branch-Cable-for-Servo-5PCs-pack.html).
+You can check it out on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Branch-Cable-for-Servo-5PCs-pack.html).
 :::
 
 #### Grove & Qwiic/STEMMA QT Interface to Male/Female Jumper Cables
@@ -362,7 +362,7 @@ You can connect one Grove Module and one Qwiic Module or STEMMA QT Module to [Se
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/products/114992154/stemma.png" style={{width:300, height:'auto'}}/></div>
 
 :::tip
-You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Qwiic-STEMMA-QT-Interface-to-Male-Female-Jumper-Cables-p-4467.html).
+You can check it out on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Qwiic-STEMMA-QT-Interface-to-Male-Female-Jumper-Cables-p-4467.html).
 :::
 
 #### Grove - 4 pin Female Jumper to Grove 4 pin Conversion Cable (5 PCs per PAck)
@@ -372,7 +372,7 @@ You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comimagesproductgrove4p254.jpg" style={{width:300, height:'auto'}}/></div>
 
 :::tip
-You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html).
+You can check it out on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-PAck.html).
 :::
 
 #### Grove - 4 pin Male Jumper to Grove 4 pin Conversion Cable (5 PCs per Pack)
@@ -382,7 +382,7 @@ Grove is a convenient plug-and-play system with specialized interface, but that 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comimagesproductmalejumper.jpg" style={{width:300, height:'auto'}}/></div>
 
 :::tip
-You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-Pack.html).
+You can check it out on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-5-PCs-per-Pack.html).
 :::
 
 #### Grove Female Header - DIP-4P-2.0mm-90-Degree
@@ -392,7 +392,7 @@ This is a 4-pin, 2.0mm pitch, 90-Degree version, DIP Grove Female Header pack wi
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comimagesproductuni4901s.jpg" style={{width:300, height:'auto'}}/></div>
 
 :::tip
-You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Universal-4-pin-connector-90-10-PCs.html).
+You can check it out on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove-Universal-4-pin-connector-90-10-PCs.html).
 :::
 
 #### Grove Female Header - DIP-4P-2.0mm-10 Pcs
@@ -408,11 +408,11 @@ You can check it on the [Bazaar Purchase Page](https://www.seeedstudio.com/Grove
 ## ✨ Contributor Project
 
 - This page is updated by the [Seeed Studio Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6).
-- Thanks [Elizabeth's efforts](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=33931997) and your work will be exhibited!
+- Much thanks to [Elizabeth's efforts](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=33931997) for your contribution and your work will be exhibited as a token of our appreciation!
 
 ## <span id="jump10"> Grove Projects </span>
 
-Here are some project made with Grove for your reference, more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](https://www.instructables.com/howto/Grove/).
+Here are some project made with Grove for your reference. For more projects please refer to [Recipe](https://community.seeedstudio.com/discover.html?t=Grove) or [Instructables](https://www.instructables.com/howto/Grove/).
 
 |Automated Watering|IoT Jar Notifier|Magic Mirror|
 |------------------|--------------------------|-----------------------|
@@ -443,16 +443,18 @@ Here are some project made with Grove for your reference, more projects please r
 
 ## <span id="jump11"> More Knowledge about Grove Ecosystm </span>
 
-The following information are presented by the Seeed Studio and the information might need to be updated as well.
+The following information is presented by the Seeed Studio and may be outdated. We welcome updates from the community to renew the content here if needed!
+
+For more information on how to contribute please click <strong><a href="/Contributor"><span><font color={'8DC215'} size={"4"}>here!</font></span></a></strong>
 
 ### Interface of Grove modules
 
-You may notice that there're 4 color of the Grove cable.
+You may notice that Grove cables come in 4 different colours.
 
-* **pin 1** - Yellow (for example, SCL on I2C Grove Connectors)
-* **pin 2** - White (for example, SDA on I2C Grove Connectors)
-* **pin 3** - Red - VCC on all Grove Connectors
-* **pin 4** - Black - GND on all Grove Connectors
+* **Pin 1** - Yellow (for example, SCL on I2C Grove Connectors)
+* **Pin 2** - White (for example, SDA on I2C Grove Connectors)
+* **Pin 3** - Red - VCC on all Grove Connectors
+* **Pin 4** - Black - GND on all Grove Connectors
 
 There're mainly 4 type of Interface of Grove modules.
 
@@ -460,7 +462,7 @@ There're mainly 4 type of Interface of Grove modules.
 
 A digital Grove connector consists of the standard four lines coming into the Grove plug.   The two signal lines are generically called D0 and D1.  Most modules only use D0, but some do (like the LED Bar Grove display) use both.   Often base units will have the first connector called D0 and the second called D1 and they will be wired D0/D1 and then D1/D2, etc.
 
-Examples of Grove Digital modules are:   Switch Modules, the Fan Module, and the LED Module.  In Figure 8, you can see what the Grove connector looks like on the schematic for the LED Grove module.   They range from the simple to the very complex.
+Examples of Grove Digital modules are:   **Switch Modules**, the **Fan Module**, and the **LED Module**.  In Figure 8, you can see what the Grove connector looks like on the schematic for the LED Grove module.   They can range from simple to very complex.
 
 |pin|Function  | Note   |
 |--------|------|-----|
@@ -472,7 +474,7 @@ Examples of Grove Digital modules are:   Switch Modules, the Fan Module, and the
 
 #### Grove Analog
 
-An Grove Analog connector consists of the standard four lines coming into the Grove plug.   The two signal lines are generically called A0 and A1.  Most modules only use A0.   Often base units will have the first connector called A0 and the second called A1 and they will be wired A0/A1 and then A1/A2, etc.
+A Grove Analog connector consists of the standard four lines coming into the Grove plug.   The two signal lines are generically called A0 and A1.  Most modules only use A0.   Often base units will have the first connector called A0 and the second called A1 and they will be wired A0/A1 and then A1/A2, etc.
 
 |pin|Function  | Note   |
 |--------|------|-----|
@@ -508,7 +510,7 @@ The Grove I2C connector has the standard layout.   Pin 1 is the SCL signal and P
 
 ### Size of Grove
 
-There are 5 sizes of Grove.
+There are 5 sizes of Grove boards available.
 
 | 1X1 | 1X2 | 1X3 | 2X2 | 2X3 |
 |---|-----|------|-----|----|

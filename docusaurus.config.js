@@ -156,6 +156,11 @@ const config = {
           dark: 'rgb(50, 50, 50)',
           light: 'rgb(255, 255, 255)',
         },
+
+        zoom: {
+          selector: '.markdown :not(a) > img', // Exclude images inside links
+          
+        },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
         config: {},
@@ -235,29 +240,37 @@ const config = {
             className: 'navbar_dorp_items',
             items: [
               {
-                label: 'Sensing and Connectivity',
+                label: 'Sensor and Sensing',
                 to: 'Sensor_Network',
+              },
+              {
+                label: 'Networking',
+                to: 'Network',
               },
               {
                 label: 'Edge Computing',
                 to: 'Edge_Computing',
               },
               {
-                label: 'Cloud and Chain',
-                to: 'CloudnChain',
+                label: 'Cloud',
+                to: 'Cloud',
               },
             ],
           },
           {
             type: 'dropdown',
-            label: 'Topics',
-            to: '/Getting_Started',
+            label: 'Technology',
+            to: '/topicintroduction',
             position: 'left',
             className: 'navbar_dorp_items',
             items: [
               {
                 label: 'TinyML',
                 to: '/tinyml_topic',
+              },
+              {
+                label: 'SenseCraft Model Assistant',
+                to: '/ModelAssistant_Introduce_Overview',
               },
               {
                 label: 'Home Assistant',
@@ -275,6 +288,63 @@ const config = {
                 label: '矽递科技 Wiki 文档平台（测试）',
                 to: '/cn/Getting_Started',
               },
+            ],
+          },
+
+          {
+            type: 'dropdown',
+            label: 'FAQs',
+            to: '/knowledgebase',
+            position: 'left',
+            className: 'navbar_dorp_items',
+            items: [
+              {
+                label: 'NVIDIA Jetson Series',
+                to: '/Jetson_FAQ',
+              },
+              {
+                label: 'Seeed Studio XIAO Series',
+                to: '/XIAO_FAQ',
+              },
+              {
+                label: 'reTerminal',
+                to: '/reTerminal-new_FAQ',
+              },
+              {
+                label: 'reRouter',
+                to: '/FAQs_For_openWrt',
+              },
+              {
+                label: 'Odyssey',
+                to: '/ODYSSEY_FAQ',
+              },
+              {
+                label: 'Wio Terminal',
+                to: '/wio_terminal_faq',
+              },
+              // 添加分割线
+              {
+                type: 'html',
+                value: '<hr style="margin: 8px 0;">', // 调整样式根据你的需求
+              },
+              // 添加新的菜单项
+              {
+                label: 'Discord',
+                href: 'https://discord.com/invite/eWkprNDMU7',
+              },
+              {
+                label: 'Email',
+                href: 'https://www.seeedstudio.com/contacts',
+              },
+              {
+                label: 'Forum',
+                href: 'https://forum.seeedstudio.com/',
+              },
+              {
+                label: 'Have Suggestions?',
+                href: 'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
+              },
+
             ],
           },
 
@@ -326,12 +396,12 @@ const config = {
             position: 'right',
             className: 'navbar_doc_right_items',
           },
-          {
-            label: 'Help 🙋',
-            position: 'right',
-            className: 'navbar_doc_right_items',
-            to: '/knowledgebase',
-          },
+          // {
+          //   label: 'Help 🙋',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          //   to: '/knowledgebase',
+          // },
           // {
           //   type: 'doc',
           //   docId: 'Solutions',
@@ -341,12 +411,18 @@ const config = {
           // },
           {
             to: 'https://wiki-gpt.seeedstudio.com/chat',
-            label: 'Chat 🤖️',
+            label: 'AI Bot 🤖️',
             position: 'right',
             className: 'navbar_doc_right_items',
           },
           {
-            href: 'https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process',
+            to: 'https://sensecraft.seeed.cc/ai/#/home',
+            label: 'SenseCraft AI',
+            position: 'right',
+            className: 'navbar_doc_right_items',
+          },
+          {
+            href: 'https://sensecraft.seeed.cc/ai/#/home',
             position: 'right',
             className: 'header-SSCMA',
           },
@@ -399,16 +475,20 @@ const config = {
                 to: '/Getting_Started',
               },
               {
-                label: 'Sensor Network',
+                label: 'Sensor and Sensing',
                 to: '/Sensor_Network',
+              },
+              {
+                label: 'Network',
+                to: '/Network',
               },
               {
                 label: 'Edge Computing',
                 to: '/Edge_Computing',
               },
               {
-                label: 'Cloud & Chain',
-                to: '/CloudnChain',
+                label: 'Cloud',
+                to: '/Cloud',
               },
               {
                 label: 'Solutions',
@@ -548,7 +628,7 @@ const config = {
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
           // 'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
-          'Building Sustainable Growth, Strengthening Local Partnerships, Joining the <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Seeed Studio Ranger Program</a>! ',
+          'Building Sustainable Growth, Strengthening Local Partnerships. Join   the <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Seeed Studio Ranger Program</a> now! ',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
         isCloseable: false,

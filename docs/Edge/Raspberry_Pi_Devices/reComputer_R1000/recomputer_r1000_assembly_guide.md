@@ -1,17 +1,17 @@
 ---
-description: reComputer R1000 Hardware Guide
-title: reComputer R1000 Hardware Guide
+description: reComputer R1000 Assembly Guide
+title: reComputer R1000 Assembly Guide
 keywords:
   - Edge
   - reComputer R1000
-  - Hardware Guide
+  - Assembly Guide
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /recomputer_r1000_hardware_guide
+slug: /recomputer_r1000_assembly_guide
 last_update:
-  date: 05/10/2024
-  author: Parker Hu
+  date: 06/06/2024
+  author: Evelyn Chen
 ---
-#  reComputer R1000 Hardware Overview
+#  reComputer R1000 Assembly Guide
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="600" height="auto"/></p>
 
@@ -33,13 +33,14 @@ This Wiki will show you how to Assemble and Disassemble the unit to install peri
 ## Hardware prerequisite 
 You need to prepare the following hardware
 
-- reTerminal DM x 1
+- reComputer R1000 x 1
+- Accessories
 - Screw Driver set
   * Phillips + 3.5 bit
   * Phillips + 3.0 bit
   * Slotted - 2.5 bit
 
-### Assembly & Disassembly Guide
+### Disassembly Guide
 
 Following these steps should help you disassemble the device without any issues. 
 
@@ -68,7 +69,7 @@ Following these steps should help you disassemble the device without any issues.
 
 **STEP 6:** Remove the four screws that secure the PCB in place
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/46.png" /></div>
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass01.jpg" /></div>
 
 ### Assemble SSD
 
@@ -76,15 +77,17 @@ Following these steps should help you disassemble the device without any issues.
 
 **STEP 2:** Load the SSD into the M.2 socket and lock the screws.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/39.png" /></div>
+<div align="left"><img width={350} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass02.jpg" /></div>
 
 ### Assemble Wi-Fi/BLE Antenna
 
-**STEP 1:** Disassemble the entire device following section [Assembly & Disassembly Guide](/recomputer_r1000_hardware_guide/#assembly--disassembly-guide).
+**STEP 1:** Disassemble the entire device following section [Disassembly Guide](/recomputer_r1000_assembly_guide/#assembly--disassembly-guide).
 
 **STEP 2:** Connect the feeder line from the CM4 module to antenna hole following the illustrastions below.
 
 **STEP 3:** Assemble the device for usage.
+
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass08.jpg" /></div>
 
 ### Assemble 4G/LoRa®/Zigbee Module and Antenna
 
@@ -95,7 +98,7 @@ Following these steps should help you disassemble the device without any issues.
 **STEP 3:** Install the feeder line following the pictures below. 
 
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/40.png" /></div>
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass03.jpg" /></div>
 
 ### Assemble TPM 2.0 Module
 
@@ -103,7 +106,7 @@ Following these steps should help you disassemble the device without any issues.
 
 **STEP 2:** Load the TPM 2.0 module into the J13 socket.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/41.png" /></div>
+<div align="left"><img width={350} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass04.jpg" /></div>
 
 ### Assemble UPS and PoE module
 
@@ -117,7 +120,7 @@ Following these steps should help you disassemble the device without any issues.
 - Align the PoE module with the designated aperture on the board.
 - Carefully solder the PoE module onto the board. Due to the compact nature of the board, exercise caution while soldering to avoid damaging nearby components.
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/42.png" /></div>
+<div align="left"><img width={350} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass05.jpg" /></div>
 
 ## Mounting Guide
 
@@ -130,12 +133,12 @@ reComputer R1000 offers various installation methods. The DIN-rail clip and inst
 **STEP 3:** Push the device in the direction of the standard profile rail. You will hear the device click into  place.
 <br />
 
-**Removing**
+*Removing*
 **STEP 1:** Push down the device until it is released by the rail clip. 
 **STEP 2:** Swing the device out of the standard profile rail.
 **STEP 3:** Lift the device up and off.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/43.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass06.jpg" /></div>
 
 ### Wall Mounting Guide
 
@@ -145,7 +148,7 @@ Vertical mounting method is also suitable for reComputer R1000, however the moun
 **STEP 2:** Fasten the brackets with supplied screws.
 **STEP 3:** Mark the bore holes, drill the required holes in the wall and fasten the device to the wall using two screws.
 
-<div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/44.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass07.jpg" /></div>
 
 ## Accessories List
 

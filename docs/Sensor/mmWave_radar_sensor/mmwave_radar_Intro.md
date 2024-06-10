@@ -3,17 +3,22 @@ description: mmWave Radar Sensor Guide
 title: mmWave Radar Sensor Guide
 keywords:
 - Grove
+- mmWave Radar Sensor
+
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /mmwave_radar_Intro
 last_update:
-  date: 07/19/2023
-  author: Matthew
+  date: 05/29/2024
+  author: Yaohao
 ---
 
 ## Different types of mmWave Radar Sensors
 
-- We have different kinds of mmWave Radar Sensors as you can see on the left side.
-- Here is the full picture of mmWave radar sensors:
+
+Millimeter-wave (mmWave) radar sensors are capable of detecting objects, measuring their distance, speed, and angle, and can penetrate various materials such as plastic, clothing, and drywall, making them suitable for a wide range of applications.
+In Seeed, We have leveraged the power of mmWave to come up with various sensors that can perform a variety of actions, such as fall detection and sleep breathing monitoring.
+
+Our range of mmWave Radar Sensors are shown below, each with different features and functions. Click on any of the products below to find out more about them!
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
