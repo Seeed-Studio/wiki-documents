@@ -6,7 +6,7 @@ keywords:
   - custom classification model
   - classification model
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /How_to_run_local_llm_text_to_image_on_reComputer
+slug: /Train_and_deploy_a_custom_classification_model_with_YOLOv8
 last_update:
   date: 11/06/2024
   author: Bruno
@@ -126,6 +126,8 @@ This is part of a project for a Smart Bird Feeder that I'm going to place at my 
 
 Because this is a classification task, we don't need to know the position of the bird in the photo. 
 
+You can use another dataset of your choice, as long as it is a Classification dataset or model
+
 I have procured 12 classes of birds that I know live in my area and are common near me and created a [classification dataset](https://universe.roboflow.com/bruno-santos-omqsq/bird-classification-19z7c/dataset/1) in Roboflow.
 
 The classes of birds that I'm going to try to identify are:
@@ -142,12 +144,9 @@ The classes of birds that I'm going to try to identify are:
 - Western House Martin
 - white Wagtail
 
-<div align="center">
-    <img width={800} 
-     src="6_image.png" />
-</div>
 
-To download the dataset, head to roboflow - [using this link](https://universe.roboflow.com/bruno-santos-omqsq/bird-classification-19z7c/dataset/1) - and select "Download Dataset". - You need an account for that. 
+Choose your dataset and download it from roboflow.
+Once you've selected your dataset, select "Download Dataset". - You need an account for that. 
 
 <div align="center">
     <img width={800} 
@@ -161,7 +160,7 @@ Next, select *Folder Structure* on the Format and select *show download code*.
      src="8_image.png" />
 </div>
 
-Next, select "Jupyter" if you're going to use a Jupyter Notebook or Terminal if your're planing on doing this in the terminal.
+Next, select *Jupyter* if you're going to use a Jupyter Notebook or *Terminal* if your're planing on doing this in the terminal.
 
 I've select Jupyter, to use this in a Jupyter notebook. Copy the code. 
 <div align="center">
@@ -412,6 +411,36 @@ yolo task=classify mode=predict model='./runs/classify/train6/weights/best.pt' s
 I'm going to say that these results are great
 
 ## Exporting the model
+We can use the model as it is for the inference, we just need to open it and use it.
+For faster inference times we can export it to TensorRT, since we're on a NVIDIA Jetson Orin NX, or even ONNX, for example. 
+
+Is not that we need faster inference times for this project - I'm not going to use this on real time video - but it's nice we can take advantage of the platform we're on.
+
+Unfortunately, due to the virtual environment I was unable to export it to TensorRT. For some reason, I couldn't import tensorrt in Python, but outside the virtual environment, I had no problem with tensorrt libraries.
+
+### ONNX
+We can export the model to ONNX format like this
+```bash
+yolo export model='./runs/classify/train6/weights/best.pt' format=onnx imgsz=640
+```
+We get a best.onnx that we can use to run inference with.
+
+To run inference using ONNX, we need to install the onnxruntime_gpu wheel. 
+
+To install onnxruntime-gpu with JetPack 6.0, we need to download it from the [Jetson Zoo](https://elinux.org/Jetson_Zoo#ONNX_Runtime). 
+
+We're going to download onnxruntime_gpu 1.18.0
+
+Download the pip wheel for our Python version (Python-3.10)
+```bash
+wget https://nvidia.box.com/shared/static/48dtuob7meiw6ebgfsfqakc9vse62sg4.whl -O onnxruntime_gpu-1.18.0-cp310-cp310-linux_aarch64.whl
+```
+and then, install it
+```bash
+pip install onnxruntime_gpu-1.18.0-cp310-cp310-linux_aarch64.whl
+```
+
+
 
 ## Inference
 ### photo
@@ -541,7 +570,8 @@ cap.release()
 cv2.destroyAllWindows
 ```
 
+<!-- this video is also on the files -->
 Here's a video showing the inference on a video feed
 <div class="table-center">
-<iframe width="800" height="500" src="https://youtu.be/ovoSMaoA9As" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="YOLOv8_Custom_classification.mp4" frameBorder={0} />
 </div>
