@@ -573,5 +573,5 @@ cv2.destroyAllWindows
 <!-- this video is also on the files -->
 Here's a video showing the inference on a video feed
 <div class="table-center">
-<iframe src="YOLOv8_Custom_classification.mp4" frameBorder={0} />
+<iframe src="https://youtu.be/ovoSMaoA9As" frameBorder={0} />
 </div>
