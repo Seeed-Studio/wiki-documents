@@ -2834,7 +2834,7 @@ const sidebars = {
             items: [
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
-              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_hardware_guide',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_assembly_guide',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
             ],
           },
