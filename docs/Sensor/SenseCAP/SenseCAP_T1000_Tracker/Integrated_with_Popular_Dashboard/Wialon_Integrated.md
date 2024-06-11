@@ -17,10 +17,10 @@ last_update:
 
 The content of this chapter will guide users how to connect the SenseCAP [T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to Wialon platform.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/qubitro_in1.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/wialon-sensecap.png" alt="pir" width={800} height="auto" /></p>
 
 Before starting the setup, please check [Get Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker) to connect your SenseCAP T1000 Tracker to SenseCAP Cloud first.
-
+ 
 
 ## Get SenseCAP API on SenseCAP Portal
 
@@ -41,14 +41,15 @@ Then you will get the `API ID` and `Access API keys`.
 
 Log into [Wialon Hosting](https://hosting.wialon.com/?lang=en). 
 
+**Wialon Hosting** is a platform for GPS monitoring and IoT which is stored and administered in our data centers.
 
 ### Add Unit
 
 Navigate to **Units** tab and click **New** to add a new unit.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/wailon-add.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/-add.png" alt="pir" width={800} height="auto" /></p>
 
-Name your unit, and select the `Device Type` to `SenseCAP API`, click the wrench icon to fill properties.
+Name your unit, and select the `Device Type` to `SenseCAP API`, click the wrench icon to fill in  the properties.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-news.png" alt="pir" width={800} height="auto" /></p>
@@ -57,8 +58,7 @@ Name your unit, and select the `Device Type` to `SenseCAP API`, click the wrench
 **API host**:sensecap.seeed.cc<br/>
 **API ID**: The API ID in SenseCAP Portal<br/>
 **API Password**: The Access API keys in SenseCAP Portal<br/>
-
-The `Unique ID` should be the EUI of your device.
+**Unique ID**: The EUI of your device.
 
 
 Keep your device online, then you can see the location on the map.
@@ -69,10 +69,18 @@ Keep your device online, then you can see the location on the map.
 
 ### Geofence(optional)
 
+Geofence is a limited area on the map that can be used for monitoring purposes.
+
+
 Navigate to `Geofences` tab and click `New` to add a new geofence.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/geofence-set2.png" alt="pir" width={800} height="auto" /></p>
 
+* Indicate the geofence name.
+* Select the type.
+* Mark the center of the geofence on the map (double-click on the required place).
+* Indicate the geofence radius.
+* Click Save.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/geofence-set.png" alt="pir" width={800} height="auto" /></p>
