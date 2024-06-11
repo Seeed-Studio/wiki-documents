@@ -58,6 +58,8 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png" style={{width:1000, height:'auto'}}/></div>
 
+> *A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For reiable analog reads, use ADC1(A0/A1/A2) instead. Refer to the ESP32-C3 datasheet.
+
 ### Component overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/front-label-3.png" style={{width:500, height:'auto'}}/></div>
