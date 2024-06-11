@@ -136,7 +136,7 @@ height:'auto'}}/></div>
 
 Press the **Deploy** button. You will see the values for humidity and temperature in the debug window.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/rtu.gif" style={{width:800, 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/rtu2.gif" style={{width:800, 
 height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
