@@ -80,7 +80,7 @@ Navigate to `Geofences` tab and click `New` to add a new geofence.
 * Select the type.
 * Mark the center of the geofence on the map (double-click on the required place).
 * Indicate the geofence radius.
-* Click Save.
+* Click `Save`.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/geofence-set.png" alt="pir" width={800} height="auto" /></p>
