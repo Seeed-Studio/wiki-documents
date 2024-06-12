@@ -51,8 +51,8 @@ You need to prepare the following hardware
 
 | Switch Position                                              | Mode        | Description    | nRPI-BOOT |
 | ------------------------------------------------------------ | ----------- | -------------- | --------- |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/10.png" alt="image"/> | Normal mode | Boot from eMMC | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/11.png" alt="image"/> | Flash mode  | Boot from USB  | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Normal mode | Boot from eMMC | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Flash mode  | Boot from USB  | High      |
 
 </div>
 
@@ -61,14 +61,18 @@ You need to prepare the following hardware
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/33.png" /></div>
 
 - **Step 3.** Please connect the Power Cord from the power supply to the reComputer R1000 power port.
+
+<div style={{ textAlign: 'left', marginLeft: '40px' }}>
+    <img 
+        width="100" 
+        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" 
+        style={{ transform: 'rotate(90deg)' }} 
+    />
+</div>
   
-:::danger
-
-Please make sure you have connected the power cord in the right polarity. 
-
+:::note
+The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that regardless of how the power supply's positive and negative terminals are connected, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
 :::
-  
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/34.png" /></div>
 
 Now let's move on to software set up on your host computer. Please follow the steps according to your desired operating system
 
@@ -95,6 +99,10 @@ Windows will now find the hardware and install the necessary drivers
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wiFi, set locale settings** and more
+
+:::note
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials, you may encounter issues. This problem is currently being resolved.
+:::
 
 - **Step 8.** Click **CHOOSE OS** and select your preferred OS
 
@@ -172,6 +180,9 @@ sudo ./rpiboot
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+:::note
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials, you may encounter issues. This problem is currently being resolved.
+:::
 
 - **Step 10.** Click **CHOOSE OS** and select your preferred OS
 
@@ -254,6 +265,9 @@ sudo ./rpiboot
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+:::note
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials, you may encounter issues. This problem is currently being resolved.
+:::
 
 - **Step 11.** Click **CHOOSE OS** and select your preferred OS
 
