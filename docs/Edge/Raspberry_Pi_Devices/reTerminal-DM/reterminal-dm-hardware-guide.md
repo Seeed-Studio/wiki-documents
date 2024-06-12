@@ -93,7 +93,7 @@ You need to prepare the following hardware
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/lora-antenna.png" alt="pir" width="800" height="auto"/></p>
 
-### Install PCIe Extension Module and E
+### Install PCIe Extension Module
 
 :::note
 PCIe Extension Module will be released soon, please stay tuned.
