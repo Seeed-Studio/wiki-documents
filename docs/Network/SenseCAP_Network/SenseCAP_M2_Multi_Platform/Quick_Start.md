@@ -130,6 +130,7 @@ Input the IP Address (192.168.168.1) in your browser to enter the Local Console.
 
 Then click Save and Apply to apply your settings.
 
+
 The indicator on the top will show solid green if the gateway is successfully connected to the WIFI.
 
 ### Cellular Connection (for 4G version)

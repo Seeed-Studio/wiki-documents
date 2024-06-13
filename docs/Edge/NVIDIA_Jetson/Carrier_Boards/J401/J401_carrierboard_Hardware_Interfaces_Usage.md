@@ -19,7 +19,7 @@ In addition, there are multiple peripherals supported on the board. It can enabl
 
 The board supports a wide input range of **9-19V DC**, making it flexible to integrate into a variety of computing tasks. It maintains operation in the temperature range from -10°C to 60°C.
 
-<div align="center"><img width ="800" src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTE1NA_356376_xs4inuEPMdjVeyj__1679475367?w=1200&h=1335"/></div>
+<div align="center"><img width ="1000" src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTE1NA_356376_xs4inuEPMdjVeyj__1679475367?w=1200&h=1335"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-p-5636.html">
@@ -32,11 +32,79 @@ The main function of 260 pin SODIMM is to connect your carrier board with **[NVI
 
 ### Connection Overview
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Jetson-connect-J401.gif"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Jetson-connect-J401.gif"/></div>
 
 :::note
 If the connection is correct, when you connect your power adapter, you will see the power indicator light up.
 :::
+
+## M.2 Key M
+
+M.2 Key M is a specification for the physical and electrical layout of an M.2 connector that supports high-speed data transfer using the PCIe (Peripheral Component Interconnect Express) interface. M.2 Key M connectors are commonly used for connecting solid-state drives (SSDs) and other high-performance expansion cards to a motherboard or other host device. The "Key M" designation refers to the specific pin configuration and keying of the M.2 connector, which determines the type of devices that can be connected to it. 
+
+### Supported SSD are as follows:
+- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+
+### Connection Overview 
+
+If you want to remove the included SSD and install a new one, you can follow the steps below. 
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-Install-new-ssd.gif"/></div>
+
+### Usage
+
+We will explain how to do a simple benchmark on the connected SSD. 
+
+- **Step 1:** Check the write speed by executing the below command.
+
+```sh
+sudo dd if=/dev/zero of=/home/nvidia/test bs=1M count=512 conv=fdatasync
+```
+
+- **Step 2:** Check the read speed by executing the below commands. Make sure to execute this after executing the above command for write speed.
+
+```sh
+sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
+sudo dd if=/home/nvidia/test of=/dev/null bs=1M count=512
+```
+
+## M.2 Key E
+
+M.2 Key E is a specification for the physical and electrical layout of an M.2 connector that supports wireless communication modules, such as Wi-Fi and Bluetooth cards. The "Key E" designation refers to the specific pin configuration and keying of the M.2 connector, which is optimized for wireless networking devices. M.2 Key E connectors are commonly found on motherboards and other devices that require wireless connectivity options.Here we recommand [Intel wifi/blue tooth](https://www.intel.com/content/www/us/en/products/sku/94150/intel-dual-band-wirelessac-8265/specifications.html) module.
+
+### Connection Overview
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-wifi-model.gif"/></div>
+
+### Usage
+
+After installing wifi/bluetooth, you can see the wifi/bluetooth icon in the top right corner.
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-bluetooth-test.gif"/></div>
+
+#### Wifi test
+
+```
+ifconfig
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-test.png"/></div>
+
+#### Bluetooth test
+
+```
+bluetoothctl
+power on   #open bluetooth
+agent on   #registe agent
+scan on    #search other bluetooths
+connect xx:xx:xx:xx #connect target bluetooth
+paired-devices #show all paired devices
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-bluetooth-test.png"/></div>
 
 ## CSI Cameras
 
@@ -67,7 +135,7 @@ CSI stands for Camera Serial Interface. It is a specification that describes a s
 
 Here the 2 CSI camera connectors are marked as **CAM0 and CAM1**. You can either connect one camera to any connector out of the 2 or connect 2 cameras to both the connectors at the same time.
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/camera-connect-J401.gif"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/camera-connect-J401.gif"/></div>
 
 ### Usage
 Open your terminal(Ctrl+Alt+T) and input command like below:
@@ -76,7 +144,7 @@ Open your terminal(Ctrl+Alt+T) and input command like below:
 sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-cameral.gif" /></div>
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-cameral.gif" /></div>
 
 
 import Tabs from '@theme/Tabs';
@@ -129,13 +197,12 @@ RTC stands for Real-Time Clock. It is a clock that keeps track of the current ti
 
 ### Connection Overview
 
-
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
 
 Connect a **3V CR1220 coin cell battery** to the RTC socket on the board as shown below. Make sure the **positive (+)** end of the battery is facing upwards.
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-coin-cell-back.gif"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-coin-cell-back.gif"/></div>
 
 </TabItem>
 
@@ -143,7 +210,7 @@ Connect a **3V CR1220 coin cell battery** to the RTC socket on the board as show
 
 Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm JST socket on the board as shown below:
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-coin-cell.gif"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-coin-cell.gif"/></div>
 
 </TabItem>
 </Tabs>
@@ -156,7 +223,7 @@ Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm
 
 - **Step 3:** On the Ubuntu Desktop, click the drop-down menu at the top right corner, navigate to `Settings > Date & Time`, connect to a network via an Ethernet cable and select **Automatic Date & Time** to obtain the date/ time automatically.
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
 
 :::note
 If you have not connected to internet via Ethernet, you can manually set the date/time here.
@@ -170,7 +237,7 @@ sudo hwclock
 
 You will see the output something like below which is not the correct date/time.
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-RTC.png"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-RTC.png"/></div>
 
 - **Step 5:** Change the hardware clock time to the current system clock time by entering the below command.
 
@@ -246,68 +313,6 @@ sudo systemctl status hwtosys.service
 
 - **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock. 
 
-## M.2 Key M
-
-M.2 Key M is a specification for the physical and electrical layout of an M.2 connector that supports high-speed data transfer using the PCIe (Peripheral Component Interconnect Express) interface. M.2 Key M connectors are commonly used for connecting solid-state drives (SSDs) and other high-performance expansion cards to a motherboard or other host device. The "Key M" designation refers to the specific pin configuration and keying of the M.2 connector, which determines the type of devices that can be connected to it.
-
-### Connection Overview 
-
-If you want to remove the included SSD and install a new one, you can follow the steps below. Here we only recommend to use Seeed SSDs with [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) and [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) storage because we have only tested those SSDs. Further this interface supports PCIe Gen4.0 SSDs.
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-Install-new-ssd.gif"/></div>
-
-### Usage
-
-We will explain how to do a simple benchmark on the connected SSD. 
-
-- **Step 1:** Check the write speed by executing the below command.
-
-```sh
-sudo dd if=/dev/zero of=/home/nvidia/test bs=1M count=512 conv=fdatasync
-```
-
-- **Step 2:** Check the read speed by executing the below commands. Make sure to execute this after executing the above command for write speed.
-
-```sh
-sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
-sudo dd if=/home/nvidia/test of=/dev/null bs=1M count=512
-```
-
-## M.2 Key E
-
-M.2 Key E is a specification for the physical and electrical layout of an M.2 connector that supports wireless communication modules, such as Wi-Fi and Bluetooth cards. The "Key E" designation refers to the specific pin configuration and keying of the M.2 connector, which is optimized for wireless networking devices. M.2 Key E connectors are commonly found on motherboards and other devices that require wireless connectivity options.
-
-### Connection Overview
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-wifi-model.gif"/></div>
-
-### Usage
-
-After installing wifi/bluetooth, you can see the wifi/bluetooth icon in the top right corner.
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-bluetooth-test.gif"/></div>
-
-#### Wifi test
-
-```
-ifconfig
-```
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-test.png"/></div>
-
-#### Bluetooth test
-
-```
-bluetoothctl
-power on   #open bluetooth
-agent on   #registe agent
-scan on    #search other bluetooths
-connect xx:xx:xx:xx #connect target bluetooth
-paired-devices #show all paired devices
-```
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-bluetooth-test.png"/></div>
-
 ## Fan control
 
 nvfancontrol is a userspace fan speed control daemon. This manages the fan speed based on the temperature-to-fan-speed mapping table in the nvfancontrol configuration file.
@@ -319,7 +324,6 @@ If you want to change  nvfancontrol.conf make sure you have read [it](https://do
 :::
 
 ### Usage
-
 
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
@@ -389,16 +393,16 @@ cat /sys/class/hwmon/hwmon0/rpm
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
-  <thead>
-    <tr>
-      <th>Header Pin</th>
-      <th>Module Pin Name</th>
-      <th>Module Pin</th>
-      <th>SoC Pin name</th>
-      <th>Default Usage</th>
-      <th>Alternate Functionality</th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+  <th>Header Pin</th>
+  <th>Module Pin Name</th>
+  <th>Module Pin</th>
+  <th>SoC Pin name</th>
+  <th>Default Usage</th>
+  <th>Alternate Functionality</th>
+</tr>
+</thead>
   <tbody>
     <tr>
       <td>1</td>
@@ -807,13 +811,13 @@ Connect the J401 with TTL with UART as below:
 </table>
 </div>
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-UART-connect.gif"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-UART-connect.gif"/></div>
 
 #### Usage
 
 - **Step 1:** Install [puTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on your windows laptop, and set puTTy as below:
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-windows-uart-set.png"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-windows-uart-set.png"/></div>
 
 - **Step 2:** Install PuTTy on Jetson, open your terminal(ALT+Ctrl+T) and type the following command.
 
@@ -829,7 +833,7 @@ Make sure your baudrate have be set 115200.
 
 The result is as below:
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-uart-result.gif"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-uart-result.gif"/></div>
 
 ### I2C
 
@@ -925,7 +929,7 @@ Connect the J401 to [Grove-3-Axis Digital Accelerometer](https://www.seeedstudio
 </table>
 </div>
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-connect.gif"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-connect.gif"/></div>
 
 #### Test
 
@@ -941,7 +945,7 @@ Your channel may be different from mine in the commmand: ```i2cdetect -y -r x```
 
 You will see the result as below, before connecting to the I2C, no I2C device was detected on channel 7, but afterwards an I2C device with the address 0x19 was detected.:
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-test.png"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-test.png"/></div>
 
 ## Tech Support & Product Discussion
 

@@ -11,3 +11,4 @@ last_update:
 ---
 
 
+ReSpeaker Lite is a 2 mic 
