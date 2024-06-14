@@ -6,9 +6,9 @@ keywords:
   - custom classification model
   - classification model
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Train_and_deploy_a_custom_classification_model_with_YOLOv8
+slug: /train_and_deploy_a_custom_classification_model_with_yolov8
 last_update:
-  date: 11/06/2024
+  date: 06/11/2024
   author: Bruno
 ---
 
@@ -27,12 +27,14 @@ What we get as an output is single class label and a confidence score.
 
 Image classification is useful when we don\'t need to know the location of the object in the image and we just need to know what class the image belongs to. 
 
-## Requirements
+## Materials Requirements
+
+### Hardware Setup
 
 For this tutorial, we're going to need a Nvidia [Jetson Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
 <div align="center">
-    <img width={800} 
+    <img width={600} 
      src="https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_J4012.png" />
 </div>
 
@@ -41,6 +43,8 @@ For this tutorial, we're going to need a Nvidia [Jetson Orin NX 16GB](https://ww
     </a>
 </div>
 
+### Software Setup
+
 - JetPack 6.0 installed in the reComputer
 - a Roboflow account to download the dataset
 
@@ -48,21 +52,23 @@ For this tutorial, we're going to need a Nvidia [Jetson Orin NX 16GB](https://ww
 The reComputer J4012 from Seeed Studio is a Jetson Orin NX 16GB.
 It's a powerfull machine, but the Tegra Linux comes with a lot of things and, boots to graphical mode. Let's change that. 
 
-**NOTE:** I'm going to run the examples and programing remotly using VScode and a SSH terminal with X forwarding enable. 
+:::note
+I'm going to run the examples and programing remotly using VScode and a SSH terminal with X forwarding enable. 
 X forwarding is an option with SSH that can run some graphical applications on our side of the connection, instead of the remote computer. 
+:::
 
 If you're going to connect to your reComputer with monitor, keyboard and mouse, skip the next step.
 
 ### Change boot mode
 <div align="center">
     <img width={800} 
-     src="1_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/1_image.png" />
 </div>
 It's all good, but we aren't going to need graphics and, in idle mode, it's consuming around 1.5GB of memory. 
 
 <div align="center">
     <img width={800} 
-     src="2_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/2_image.png" />
 </div>
 
 We're going to make it boot to the command line instead.
@@ -97,7 +103,7 @@ sudo nvpmodel -q
 ```
 <div align="center">
     <img width={800} 
-     src="3_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/3_image.png" />
 </div>
 
 Let's select the max power mode for the training of our model
@@ -106,21 +112,21 @@ sudo nvpmodel -m 0
 ```
 <div align="center">
     <img width={800} 
-     src="4_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/4_image.png" />
 </div>
 
 After a reboot, we can confirm that we're running full power
 
 <div align="center">
     <img width={800} 
-     src="5_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/5_image.png" />
 </div>
 
-# Training the model
+## Training the model
 For the model training, we're going to use YOLOv8. Bellow are the steps needed to install it with CUDA support.
 We're also going to need a [roboflow](https://roboflow.com/) account. 
 
-## The model
+### The model
 I'm going to create a model to classify birds. 
 This is part of a project for a Smart Bird Feeder that I'm going to place at my garden and I want to know what birds are those that are feeding there. 
 
@@ -150,22 +156,22 @@ Once you've selected your dataset, select "Download Dataset". - You need an acco
 
 <div align="center">
     <img width={800} 
-     src="7_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/7_image.png" />
 </div>
 
 Next, select *Folder Structure* on the Format and select *show download code*. 
 
 <div align="center">
-    <img width={800} 
-     src="8_image.png" />
+    <img width={500} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/8_image.png" />
 </div>
 
 Next, select *Jupyter* if you're going to use a Jupyter Notebook or *Terminal* if your're planing on doing this in the terminal.
 
 I've select Jupyter, to use this in a Jupyter notebook. Copy the code. 
 <div align="center">
-    <img width={800} 
-     src="9_image.png" />
+    <img width={500} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/9_image.png" />
 </div>
 
 ## Creating the environment
@@ -242,12 +248,12 @@ python setup.py install
 After a while, it will be compiled and installed.
 <div align="center">
     <img width={800} 
-     src="10_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/10_image.png" />
 </div>
 After installing, let's see if Cuda is available.
 <div align="center">
     <img width={800} 
-     src="11_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/11_image.png" />
 </div>
 
 From the command line
@@ -283,8 +289,8 @@ After downloading the model, we now have a set of three directories (test, train
 Because this is for image classification, we don't need to label the images. 
 YOLOv8 will know the classes, not only from the configuration file we'll create later, but also from the directories. 
 <div align="center">
-    <img width={800} 
-     src="12_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/12_image.png" />
 </div>
 
 ### Train
@@ -317,7 +323,7 @@ For the classification, we're going to use one of [pre-trained models already av
 
 <div align="center">
     <img width={800} 
-     src="13_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/13_image.png" />
 </div>
 
 This models have been trained on ImageNet and are fine tuned for classification. 
@@ -342,21 +348,21 @@ Now that's it's running, here's some statistics using jtop (tegra-stats)
 
 <div align="center">
     <img width={800} 
-     src="14_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/14_image.png" />
 </div>
 <div align="center">
     <img width={800} 
-     src="15_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/15_image.png" />
 </div>
 <div align="center">
     <img width={800} 
-     src="16_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/16_image.png" />
 </div>
 
 After a couple of hours, the training is complete. 
 <div align="center">
-    <img width={800} 
-     src="17_image.png" />
+    <img width={500} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/17_image.png" />
 </div>
 
 Now, let's see how the model behaves. Let's test it.
@@ -367,45 +373,46 @@ yolo task=classify mode=predict model='./runs/classify/train6/weights/best.pt' s
 This will make yolo to go into the test directories and try to predict each
 <div align="center">
     <img width={800} 
-     src="18_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/18_image.png" />
 </div>
 <div align="center">
-    <img width={800} 
-     src="19_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/19_image.png" />
 </div>
 <div align="center">
-    <img width={800} 
-     src="20_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/20_image.png" />
 </div>
 <div align="center">
-    <img width={800} 
-     src="21_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/21_image.png" />
 </div>
 
 The results are all correct. Let's try with two images that it has never seen. 
+
 <div align="center">
-    <img width={800} 
-     src="22_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/22_image.png" />
 </div>
 <div align="center">
-    <img width={800} 
-     src="23_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/23_image.png" />
 </div>
 
 ```bash
 yolo task=classify mode=predict model='./runs/classify/train6/weights/best.pt' source=house_sparrow.jpg
 ```
 <div align="center">
-    <img width={800} 
-     src="24_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/24_image.png" />
 </div>
 
 ```bash
 yolo task=classify mode=predict model='./runs/classify/train6/weights/best.pt' source=white_wagtail.jpg
 ```
 <div align="center">
-    <img width={800} 
-     src="25_image.png" />
+    <img width={300} 
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/25_image.png" />
 </div>
 
 I'm going to say that these results are great
@@ -510,7 +517,7 @@ This is me, on my desktop computer. Just use *ssh -X username@jetson_ip* and the
 
 <div align="center">
     <img width={800} 
-     src="26_image.png" />
+     src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/YOLOv8_custom_classification_reComputer_J4012/26_image.png" />
 </div>
 
 Now, let's try to run inference on a video feed, displaying the class with the higher probability
@@ -572,6 +579,27 @@ cv2.destroyAllWindows
 
 <!-- this video is also on the files -->
 Here's a video showing the inference on a video feed
-<div class="table-center">
+<!-- <div class="table-center">
 <iframe src="https://youtu.be/ovoSMaoA9As" frameBorder={0} />
+</div> -->
+
+<iframe width={560} height={315} src="https://www.youtube.com/embed/ovoSMaoA9As?si=-d2buntx0T5oRtr4" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## ✨ Contributor Project
+
+- This project is supported by the Seeed Studio Contributor Project.
+- Thanks **Bruno's efforts** and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

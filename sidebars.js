@@ -3084,7 +3084,8 @@ const sidebars = {
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv5-Object-Detection-Jetson',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-DeepStream-TRT-Jetson',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson',
-                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise'
+                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
+                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8_custom_classification_model',
                 ]},
 
                 {
