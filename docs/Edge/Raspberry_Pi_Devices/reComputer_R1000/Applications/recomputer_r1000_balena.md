@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_balena
 last_update:
   date: 06/14/2024
-  author: Kasun Thushara
+  author: Jack Peng and Kasun Thushara
 ---
 
 ## What is balena?
