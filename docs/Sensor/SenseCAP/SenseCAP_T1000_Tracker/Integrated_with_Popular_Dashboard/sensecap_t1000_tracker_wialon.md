@@ -1,5 +1,5 @@
 ---
-description: SenseCAP_T1000_tracker_and_Wialon_Integrated(Helium)
+description: SenseCAP_T1000_tracker_and_Wialon_Integrated
 title:  Wialon Integrated
 keywords:
 - SenseCAP_T1000_tracker
