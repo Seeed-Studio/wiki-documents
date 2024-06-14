@@ -365,13 +365,7 @@ The reComputer R1000 supports three power supply options: AC, DC terminal and Po
 
 ### 2-Pin Power terminal
 
-<div style={{ textAlign: 'left', marginLeft: '40px' }}>
-    <img 
-        width="100" 
-        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" 
-        style={{ transform: 'rotate(90deg)' }} 
-    />
-</div>
+<div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
 The reComputer R1000 is supplied with a nominal AC voltage of 12~24 V or DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
@@ -656,13 +650,15 @@ If the USB hub is functioning properly, you should see its details listed in the
 
 ### SIM Slot
 
-<div style={{ position: 'relative', left: '200px' }}>
+<div style={{ position: 'relative', left: '150px' }}>
     <img 
         width="40" 
         src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig19.png" 
         style={{ transform: 'rotate(90deg)', position: 'absolute', top: '0', left: '0', transformOrigin: 'left top' }} 
     />
 </div>
+<br />
+<br />
 The reComputer R1000 uses a standard-size SIM card slot commonly found in industrial applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
 :::note
 Please note that the standard version of reComputer R1000 does not come with a 4G module. If you require 4G functionality, an additional 4G module must be purchased separately.
