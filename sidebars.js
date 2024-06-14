@@ -2837,6 +2837,26 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_assembly_guide',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
+
+
+              {
+                type: 'category',
+                label: 'Applications',
+                items: [
+
+                  {
+                    type: 'category',
+                    label: 'Fleet Management',
+                    items: [
+                       'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
+                    ],
+                    },
+
+                
+                ],
+              },
+
+
             ],
           },
         ],
