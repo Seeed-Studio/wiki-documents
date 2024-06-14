@@ -252,6 +252,7 @@ Additional information about TFLite is outside of the scope of this guide but th
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - SD Card
 - [Grove - Temperature and Humidity Sensor (SHT31)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)
 - [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
+- [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
 
 
 #### Grove - Expansion Board - I2C Display
@@ -537,6 +538,90 @@ With the new firmware in place the device now shows the same demo screen we saw 
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
+
+
+#### Round Display for Xiao
+
+To test this setup we can use an existing sample with Zephyr:
+
+```
+west build -p always -b xiao_esp32s3 samples/drivers/display --  -DSHIELD=seeed_xiao_round_display
+```
+
+Enter bootloader mode and flash your device:
+```
+west flash
+```
+
+You'll see a display showing multiple colored corners with a black corner blinking.
+
+Another example demonstrates the use of the touchscreen:
+
+```
+west build -p always -b xiao_esp32s3 samples/modules/lvgl/demos --  -DSHIELD=seeed_xiao_round_display -DCONFIG_LV_Z_DEMO_MUSIC=y
+```
+
+The music demo shown here is only a portion of the actual screen but still demonstrates the touch screen in action. As you can see touching the play button turns on the music animation.
+
+You can see from the [shield file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) that this works by intefacing with the GC9A01 round display driver over SPI and the CHSC6X touch module over i2c.
+
+Let's dive into this example a bit to see how it works:
+```
+/ {
+    chosen {
+      zephyr,display = &gc9a01_xiao_round_display;
+    };
+
+	lvgl_pointer {
+		compatible = "zephyr,lvgl-pointer-input";
+		input = <&chsc6x_xiao_round_display>;
+	};
+};
+
+/*
+ * xiao_serial uses pins D6 and D7 of the Xiao, which are used respectively to
+ * control the screen backlight and as touch controller interrupt.
+ */
+&xiao_serial {
+	status = "disabled";
+};
+
+&xiao_i2c {
+	clock-frequency = < I2C_BITRATE_FAST >;
+
+	chsc6x_xiao_round_display: chsc6x@2e {
+		status = "okay";
+		compatible = "chipsemi,chsc6x";
+		reg = <0x2e>;
+		irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
+	};
+};
+
+&xiao_spi {
+	status = "okay";
+	cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>, <&xiao_d 2 GPIO_ACTIVE_LOW>;
+
+	gc9a01_xiao_round_display: gc9a01@0 {
+		status = "okay";
+		compatible = "galaxycore,gc9x01x";
+		reg = <0>;
+		spi-max-frequency = <DT_FREQ_M(100)>;
+		cmd-data-gpios = <&xiao_d 3 GPIO_ACTIVE_HIGH>;
+		pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
+		width = <240>;
+		height = <240>;
+		display-inversion;
+	};
+};
+```
+
+This shield does the following:
+- Selects the GC9A01 display as the chosen Zephyr display
+- Sets the LVGL pointer logic to use the CHSC6X module
+- Disable serial as the pins are used for backlight and touch interrupt (as seen above via: `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`)
+- Configures the round display for SPI using the D1, D2, and D3 pins
+
+The [sample logic](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) relies on the [LVGL demo example code](https://github.com/lvgl/lvgl/tree/master/demos/music) which can be further examined.
 
 
 ## ✨ Contributor Project

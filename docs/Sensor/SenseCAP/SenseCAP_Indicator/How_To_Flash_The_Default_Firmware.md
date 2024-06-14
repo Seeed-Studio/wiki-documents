@@ -79,7 +79,7 @@ values={[
 ]}>
 <TabItem value="Win">
 
-  > Official Espressif Docs: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.htmll)
+  > Official Espressif Docs: [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/windows-setup.html)
 
   **Option 1: Using the Offline Installer**
 
@@ -93,7 +93,7 @@ Navigate yourself to [Using the Command Promp](https://docs.espressif.com/projec
 
 <TabItem value="Unix">
 
-  > Official Espressif Docs: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html)
+  > Official Espressif Docs: [Standard Toolchain Setup for Linux and macOS](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/linux-macos-setup.html)
 
   If in Linux or MacOS, you can follow this guide to change the version of git repo.
 

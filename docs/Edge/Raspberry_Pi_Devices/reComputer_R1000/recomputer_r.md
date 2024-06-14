@@ -575,7 +575,7 @@ raspi-gpio set 21 op dh
 
 ### RS485
 
-<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/08.png" /></div>
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig21.png" /></div>
 
 The reComputer R1000 is equipped with 3 sets of RS485 interface using 3-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in industrial and automation applications. The RS485A and RS485B signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
 By default, 120Ω terminal resistors is not installed. However, the packaging box includes five surface-mount resistors. If needed, users should solder the resistor onto the device themselves.
