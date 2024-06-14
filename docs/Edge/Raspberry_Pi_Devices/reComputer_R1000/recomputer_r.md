@@ -76,7 +76,6 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 ## Naming Conventions
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
-
 ## Specifications
 
 <div class="table-center">
@@ -664,8 +663,6 @@ If the USB hub is functioning properly, you should see its details listed in the
         style={{ transform: 'rotate(90deg)', position: 'absolute', top: '0', left: '0', transformOrigin: 'left top' }} 
     />
 </div>
-<br />
-<br />
 The reComputer R1000 uses a standard-size SIM card slot commonly found in industrial applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
 :::note
 Please note that the standard version of reComputer R1000 does not come with a 4G module. If you require 4G functionality, an additional 4G module must be purchased separately.
@@ -978,7 +975,7 @@ Here is the accessories and optional modules list:
 
 </div>
 
-The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. Additionally, 4G module and LoRa®® module shouldn't be used at the same time, can not plug in two LoRa® modules on board. 
+The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. 
 
 :::note
 Can not plug in 2 LoRa® modules on board.
