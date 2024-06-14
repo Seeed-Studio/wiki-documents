@@ -82,24 +82,24 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 
 **To update your radar to the latest version**
 
-**Step1.** You will need to have a **Jlink** and **MR24HPC1** 24GHz mmWave Sensor.
+**Step 1.** You will need to have a **Jlink** and **MR24HPC1** 24GHz mmWave Sensor.
 
 Connect the radar and Jlink together via Dupont wire as shown in the diagram below.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/57.jpg"/></div>
 
-**Step2.** Download the necessary software and firmware.
+**Step 2.** Download the necessary software and firmware.
 
 | File | Download Address |
 |:----------------:|:----------------:|
 | JlinkV644e.rar | [Download](https://files.seeedstudio.com/wiki/60GHzradar/JlinkV644e.rar) |
 | Pack_Segger_AT32F4xx_v1.3.3.zip | [Download](https://files.seeedstudio.com/wiki/60GHzradar/Pack_Segger_AT32F4xx_v1.3.3.zip)
 
-**Step3.** Unzip **JlinkV644e.rar** and open the **JLink_Windows_V644e.exe** file inside.
+**Step 3.** Unzip **JlinkV644e.rar** and open the **JLink_Windows_V644e.exe** file inside.
 
 Just follow the default options to install. Once the installation is complete, start the **J-Flash V6.44e** software.
 
-**Step4.** Install the chip package.
+**Step 4.** Install the chip package.
 
 Unzip **Pack_Segger_AT32F4xx_v1.3.3.zip** and open **Segger_AT32F4xx_AddOn.exe** inside.
 
@@ -121,7 +121,7 @@ Solution:
 
 This fixes the problem and we can flash with JFlash or JFlash Lite software.
 
-**Step5.** Create a new project.
+**Step 5.** Create a new project.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/48.png"/></div>
 
@@ -133,11 +133,11 @@ Find and choose **AT32F403ARGT7**.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/51.png"/></div>
 
-**Step6.** Drag and drop the radar firmware (.bin file) into this software and a window will pop up, we will just use its default starting address of 0x8000000.
+**Step 6.** Drag and drop the radar firmware (.bin file) into this software and a window will pop up, we will just use its default starting address of 0x8000000.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/52.png"/></div>
 
-**Step7.** Clink **Target** -> **Connect**
+**Step 7.** Clink **Target** -> **Connect**
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/60GHzradar/53.png"/></div>
 
@@ -514,7 +514,7 @@ If you are using **MacOS**, the serial port name of the device will often start 
 
 In this example, we will demonstrate how the Sensor works with our popular product XIAO nRF52840 Sense.
 
-### Demo1: Serial port printing of raw data frames from Sensor output
+### Demo 1: Serial port printing of raw data frames from Sensor output
 
 This example will guide you through the process of printing out the raw data reported by the Sensor via the serial port.
 
@@ -569,7 +569,7 @@ Upload program. Opening your serial monitor to a baud rate of 115200 should show
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/1.png" style={{width:600, height:'auto'}}/></div>
 
-### Demo2: Serial port printing of parsed human presence information
+### Demo 2: Serial port printing of parsed human presence information
 
 In this example, we will use the functions in the library to parse the received data frames and print out all the feature data reported by the Sensor active via the serial port.
 
@@ -691,11 +691,11 @@ There is also the possibility that the data you received differs from the inform
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/4.png"  style={{width:600, height:'auto'}}/></div>
 
-For more information on how to switch on and off Open Underlying Message, please refer to the relevant section of [**Demo3**](#jump1). In short, the opening of Open Underlying Message means that more detailed data is exported.
+For more information on how to switch on and off Open Underlying Message, please refer to the relevant section of [](#jump1). In short, the opening of Open Underlying Message means that more detailed data is exported.
 
 For the meaning of the data of the Open Underlying Message, please consult the [**Function**](#jump2) section or user manual of this Sensor for space reasons.
 
-### <span id="jump1">Demo3: Send data to Sensor</span>
+### <span id="jump1">Demo 3: Send data to Sensor</span>
 
 The MR24HPC1 offers a wealth of mode setting functions. This example will explain the implementation of the switch Open Underlying Message as an example of how to send data frames.
 
@@ -783,7 +783,7 @@ Normally, our commands do not need to be repeated to the Sensor, but as the Sens
 - Re-upload the above procedure several times.
 - Set the third parameter of the `checkSetMode_func()` function (cyclic sending) to `true`. Please note, however, that repeatedly sending data frames of the setting type **may cause the Sensor to jam**, so please use this function with caution. If the Sensor is stuck, disconnect the 5V supply pin from the Sensor and wait a few moments for the function to resume.
 
-### Demo4: Reset Sensor
+### Demo 4: Reset Sensor
 
 There may be times when you have problems with your Sensor detecting anomalies or when you want to clear all settings on your Sensor, then you can reset your Sensor according to this example.
 
@@ -828,7 +828,7 @@ void loop() {
 
 Resetting the Sensor is very simple, you just need to call `reset_func()`. The reset only needs to be **executed once**, so we use it in the `Setup()` function.
 
-### Demo5: Using Arduino/Seeeduino
+### Demo 5: Using Arduino/Seeeduino
 
 Our library is Arduino compatible and you can also choose the Arduino you have on hand to develop your Sensor project.
 
@@ -862,7 +862,7 @@ The MR24HPC1 Sensor communicates using the UART serial port, you just need to co
     </tr>
   </tbody></table>
 
-All the functions are applied in the same way as in Demo1 to Demo4 above, so we will not repeat them in this example. In this example, we will give you an overview of how to use the Arduino's soft serial port to get data information from the Sensor.
+All the functions are applied in the same way as in `Demo 1` to `Demo 4` above, so we will not repeat them in this example. In this example, we will give you an overview of how to use the Arduino's soft serial port to get data information from the Sensor.
 
 :::tip
 For notes on the Arduino soft serial port, please refer to the [official Arduino documentation](https://docs.arduino.cc/learn/built-in-libraries/software-serial).
@@ -899,7 +899,7 @@ void setup() {
 }
 ```
 
-Using **Demo1** as an example, if you want to use the Arduino to print the reported data frames from the Sensor, then the complete program is as follows.
+Using **Demo 1** as an example, if you want to use the Arduino to print the reported data frames from the Sensor, then the complete program is as follows.
 
 ```c
 #include "Arduino.h"
@@ -934,7 +934,7 @@ void loop() {
 }
 ```
 
-### Demo6: Direct connection to PC for data
+### Demo 6: Direct connection to PC for data
 
 You can refer to this routine if you want to use an upper computer designed for Sensor, or if you want to use the serial software to get a complete data frame.
 
@@ -987,13 +987,13 @@ At the same time, you can also send data frames to the Sensor via the software's
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/60GHzradar/40.png" style={{width:600, height:'auto'}}/></div>
 
-### Demo7: MR24HPBC1 & XIAO ESP32C3 & ESPHome & Home Assistant
+### Demo 7: MR24HPBC1 & XIAO ESP32C3 & ESPHome & Home Assistant
 
 We have created a tutorial for connecting to ESPHome and Home Assistant for this radar and the XIAO ESP32C3, if you are interested, you can refer to the tutorial here.
 
 - [XIAO ESP32C3 accesses Home Assistant via ESPHome service](https://wiki.seeedstudio.com/xiao-esp32c3-esphome)
 
-### Demo8: Using sensors in the XIAO ESP32C3
+### Demo 8: Using sensors in the XIAO ESP32C3
 
 Due to the [special design](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#special-way---use-usb-serial-and-uart0uart1-at-the-same-time) of the XIAO ESP32C3 hardware serial port, you will need to use the following code in order to use the UART to send and receive data messages with the sensor.
 
@@ -1039,11 +1039,11 @@ void loop() {
 
 ## Troubleshooting
 
-### **FAQ1: Can this Sensor detect more than one person at a time in the same environment?**
+### FAQ 1: Can this Sensor detect more than one person at a time in the same environment?
 
 > A: Not available. This Sensor can only be used on a single living object. If more than one person or animal is in the monitoring range, this will have an effect on the results of the monitoring.
 
-### FAQ2: Why can't I see anything in the serial monitor with the XIAO ESP32C3?
+### FAQ 2: Why can't I see anything in the serial monitor with the XIAO ESP32C3?
 
 > XIAO ESP32C3 serial port function is not quite consistent with the general Arduino hardware, and using Serial1 directly may cause the USB serial port not to work. For related application cases, please go to the [Serial chapter of XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial) for details.
 
