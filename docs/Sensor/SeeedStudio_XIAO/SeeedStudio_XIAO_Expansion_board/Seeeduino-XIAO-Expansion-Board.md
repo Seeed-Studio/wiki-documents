@@ -300,11 +300,11 @@ This example uses a rotary angle sensor to control servo via integration ports o
 **Step 3**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then upload it.
 
 :::tip
-Before you run the following code, you need to install ESP32Servo library first in **Arduino Library Manager**.
+If your Development Board is **XIAO ESP32 Series**. Before you run the following code, you need to install ESP32Servo library first in **Arduino Library Manager** and change the following code from ```#include <Servo.h>``` to ```#include <ESP32Servo.h>```.
 :::
 
 ```CPP
-#include <ESPServo.h>
+#include <Servo.h>
 #include <Arduino.h>
 #include <Wire.h>
 
