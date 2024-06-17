@@ -7,13 +7,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /meshtastic_kit_wio_tracker_1110
 last_update:
-  date: 6/14/2024
+  date: 6/17/2024
   author: Jessie
 ---
 
-The Tracker Dev Kit for Meshtastic® is based on [Wio-WM1110 Wireless Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html), 
 
 
+[Meshtastic®](https://meshtastic.org/) is an open source, off-grid, decentralized, mesh network built to run on affordable, low-power devices, it enables you to use inexpensive LoRa radios as a long range off-grid communication platform in areas without existing or reliable communications infrastructure.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/mesh-kit.png" alt="pir" width={800} height="auto" /></p>
 
@@ -22,6 +22,3 @@ The Tracker Dev Kit for Meshtastic® is based on [Wio-WM1110 Wireless Module](ht
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
-
-
-
