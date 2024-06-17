@@ -163,7 +163,9 @@ void loop() {
 
 you need to prepare the following:
 - **A device installed Home Assistant**
+
 The first step to getting started with Home Assistant is to install it on a device, you can follow [here](https://www.home-assistant.io/installation/) for step-by-step guide.
+
 - [XIAO-ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)
 - [Grove Base for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)
 - [Grove - Offline Speech Recognizer Module](https://www.seeedstudio.com/Grove-Offline-Voice-Recognition-Module-p-5861.html)
@@ -174,30 +176,28 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 :::
 
-**Step 1.** Connect XIAO ESP32S3 to your computer via a USB Type-C cable.
+**Step 1.** Hardware Preparation
 
-**Step 2.** Connect XIAO ESP32S3 to XIAO expension board.
-
-**Step 3.** Connect XIAO expension board to Offline Speech Recognizer on UART port via Grove cable.
-
-**Step 4.** Connect Offline Speech Recognizer to a speaker.
-
-**Step 5.** Connect antenna to XIAO ESP32S3.
+Connect XIAO ESP32S3 to your computer via a USB Type-C cable.
+Connect XIAO ESP32S3 to XIAO expension board.
+Connect XIAO expension board to Offline Speech Recognizer on UART port via Grove cable.
+Connect Offline Speech Recognizer to a speaker.
+Connect antenna to XIAO ESP32S3.
 
 Here is the connecting picture for your reference.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Offline_Voice_Recognition_Img/29.jpg" style={{width:700, height:'auto'}}/></div>
 
-
-#### Software Setup
-
-**Step1.** Create your smart home
+**Step 2.** Create your smart home
 Entered the Home Assistant device’s address in your browser’s address bar, and create a Home Assistant account, you can follow [here](https://www.home-assistant.io/getting-started/onboarding/) for step-by-step guide.
 
-**Step.** Install ESPHome on Home Assistant
+**Step 3.** Install ESPHome on Home Assistant
 You can quickly setup ESPHome on Home Asssistant by follow [here](https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/#install-esphome-on-home-assistant)
 
-**Step3.** Add XIAO ESP32S3 to ESPHome
+
+#### Software 
+
+ Add XIAO ESP32S3 to ESPHome
 
 - Click **+ NEW DEVICE**
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Offline_Voice_Recognition_Img/6.png" style={{width:1000, height:'auto'}}/></div>
@@ -243,9 +243,13 @@ Now you can disconnect the XIAO ESP32C3 from the computer and just power it via 
 
 #### Offline voice recognition
 
-**Step1.** Inside the offline-voice-recognition.yaml file that we created before, add the following at the end of the file and push it OTA to XIAO ESP32S3
+**Step1.** Inside the offline-voice-recognition.yaml file that we created before, add the following at the **end of the file** and push it OTA to XIAO ESP32S3
 
-```cpp
+<details>
+
+<summary>Click here to preview the full code</summary>
+
+```yaml
 uart:
   id: uart_bus
   tx_pin: GPIO43
@@ -501,6 +505,13 @@ select:
       - "air swing up and down"
       - "air swing left and right"
 ```
+
+</details>
+
+:::note
+When we create a new device, the yaml.file that automatically generated will be vary because of different configuration and device type, so we recommend **not changing the beginning of file**, and just adding the code at the end.
+:::
+
 - You can learn more about **Uart Bus** [here](https://esphome.io/components/uart)
 - You can learn more about **Switch Component** [here](https://esphome.io/components/switch/)
 - You can learn more about **Select Component** [here](https://esphome.io/components/select/)
