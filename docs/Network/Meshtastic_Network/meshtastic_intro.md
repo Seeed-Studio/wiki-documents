@@ -47,6 +47,5 @@ Click [here](https://meshtastic.org/docs/) to learn more about Meshtastic networ
 
 
 
-
 * Tracker Dev Kit for Meshtastic® – Wio Tracker 1110
-* ...
+* 
