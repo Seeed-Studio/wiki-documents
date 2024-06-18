@@ -45,9 +45,9 @@ the cable.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/writting-1.png" alt="pir" width="500" height="auto"/></p>
 Here, we will use the wiring diagram of OBB and Jetson Orin Nano as an example. The following information provides wiring examples for the NVIDIA® 
 Jetson™ Orin Nano Dev Kit.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/writting-2.png" alt="pir" width="500" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/wiring-2.png" alt="pir" width="700" height="auto"/></p>
 We have also provided a schematic diagram of the wiring.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/wiring-1.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/wiring-3.png" alt="pir" width="1000" height="auto"/></p>
 
 ### Sign Up for Allxon Account
 
