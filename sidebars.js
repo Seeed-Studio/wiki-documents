@@ -953,29 +953,29 @@ const sidebars = {
         },
       ]
     },
-    {
-      type: 'category',
-      label: 'SenseCAP Watcher',
-      collapsed: true,
-      collapsible: true,
-      // link: {
-      //   type: "doc",
-      //   id: 'Sensor/SenseCAP/SenseCAP_Watcher/Introduction',
-      // },
-      items: [
-        {
-          type: 'category',
-          label: 'Getting Started',
-          link: {
-            type: "doc",
-            id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
-          },
-          items: [
+    // {
+    //   type: 'category',
+    //   label: 'SenseCAP Watcher',
+    //   collapsed: true,
+    //   collapsible: true,
+    //   // link: {
+    //   //   type: "doc",
+    //   //   id: 'Sensor/SenseCAP/SenseCAP_Watcher/Introduction',
+    //   // },
+    //   items: [
+    //     {
+    //       type: 'category',
+    //       label: 'Getting Started',
+    //       link: {
+    //         type: "doc",
+    //         id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
+    //       },
+    //       items: [
             
-          ],
-        },
-      ]
-    },
+    //       ],
+    //     },
+    //   ]
+    // },
     {
       type: 'category',
       label: 'mmWave Radar Sensor',
