@@ -2120,6 +2120,25 @@ const sidebars = {
       label: 'Network',
       className: 'sideboard_calss',
     },
+ //   {
+  //    type: 'category',
+   //   label: 'Meshtastic Network',
+   //   collapsed: true,
+  //    collapsible: true,
+   //   link: {
+   //     type: "doc",
+   //     id: 'Network/Meshtastic_Network/meshtastic_intro',
+   //   },
+   //   items: [
+   //     {
+   //       type: 'category',
+   //       label: 'Hardware',
+    //      items: [
+    //        'Network/Meshtastic_Network/meshtastic_kit_wio_tracker_1110',
+    //      ],
+   //     },
+   //   ],
+  //  },
 
     {
       type: 'category',
@@ -3105,7 +3124,8 @@ const sidebars = {
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv5-Object-Detection-Jetson',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-DeepStream-TRT-Jetson',
                   'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson',
-                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise'
+                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
+                  'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8_custom_classification_model',
                 ]},
 
                 {

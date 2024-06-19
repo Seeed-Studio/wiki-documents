@@ -164,7 +164,7 @@ This example introduces how to use the OLED display on the Seeed Studio Expansio
 #include <U8x8lib.h>
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ PIN_WIRE_SCL, /* data=*/ PIN_WIRE_SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
 
 void setup(void) {
   u8x8.begin();
@@ -235,7 +235,7 @@ This example uses Buzzer on the Seeed Studio Expansion Base for XIAO to play Hap
 **Code**
 
 ```CPP
-int speakerPin = A3;
+int speakerPin = D3;
 int length = 28; // the number of notes
 char notes[] = "GGAGcB GGAGdc GGxecBA yyecdc";
 int beats[] = { 2, 2, 8, 8, 8, 16, 1, 2, 2, 8, 8, 8, 16, 1, 2, 2, 8, 8, 8, 8, 16, 1, 2, 2, 8, 8, 8, 16 };
@@ -299,6 +299,10 @@ This example uses a rotary angle sensor to control servo via integration ports o
 
 **Step 3**. Open Arduino IDE, Copy the code and stick on the Ardiono IDE then upload it.
 
+:::tip
+If your Development Board is **XIAO ESP32 Series**. Before you run the following code, you need to install ESP32Servo library first in **Arduino Library Manager** and change the following code from ```#include <Servo.h>``` to ```#include <ESP32Servo.h>```.
+:::
+
 ```CPP
 #include <Servo.h>
 #include <Arduino.h>
@@ -352,7 +356,7 @@ This example uses RTC to display the clock on the OLED.
 PCF8563 pcf;
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ PIN_WIRE_SCL, /* data=*/ PIN_WIRE_SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
 
 void setup() {
   Serial.begin(115200);
