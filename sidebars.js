@@ -2891,6 +2891,7 @@ const sidebars = {
                     label: 'Fleet Management',
                     items: [
                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
+                       'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
                     ],
                     },
 
