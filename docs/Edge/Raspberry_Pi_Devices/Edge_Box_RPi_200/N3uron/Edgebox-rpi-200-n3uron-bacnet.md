@@ -1,6 +1,6 @@
 ---
-description: Connect N3uron with BACnet on Edgebox RPi 200
-title: Connect N3uron with BACnet on Edgebox RPi 200
+description: In this wiki, we will explore how to use the EdgeBox RPi 200 for Building Management Systems (BMS) with N3uron and BACnet IoT. Learn how to integrate and simulate devices, enhancing your BMS solutions effectively.
+title: Connect N3uron with BACnet on EdgeBox RPi 200
 keywords:
   - Edge Box Rpi 200
   - Getting started
@@ -115,11 +115,11 @@ sudo nano /etc/dhcpcd.conf
 - Once the module and the device are configured, click `Save`.
 - Restart the module.
 
-For a quick lookup, select Browser and in the dialog box, select the device
+In most cases, using a quick preview is preferable to manual creation.,select Browser and in the dialog box, select the device
 
  <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_bacnet/browser.PNG" /></center>
 
-You can then drag and drop the object for quick visualization.
+You can then drag and drop the object for quick visualization. In this example, tag values for "Temperature Indoor" are correctly displayed. Please follow the visualizations.
 
  <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_bacnet/drag.gif" /></center>
 
