@@ -702,6 +702,10 @@ void loop()
 }
 ```
 
+:::tip
+If you find there is not any data feedback, you can try to change the code from ```&Serial1``` to ```&Serial0```.
+:::
+
 In this program, we are using the XIAO nRF52840's hardware **Serial1** port to connect to the Sensor and use the hardware **Serial** port Serial to output data, so we need to initialise this serial port separately in the initialisation function `Setup()`.
 
 In the main `loop()` function we use the function `recvRadarBytes()` to receive data frames from the Sensor and then use the `showData()` function to print out the received data frames via the serial port.
