@@ -21,24 +21,7 @@ You can securely manage NVIDIA® JetPack 4.6 onward versions with Cyber Security
 Allxon brings in-band and out-of-band remote device management services to all edge devices to help businesses save on time and cut out exponential labor costs. By simply navigating on an easy-to-use single cloud portal, businesses can effortlessly optimize and streamline their services.
 
 ## Hardware Supported
-
-Allxon is supported by the following hardware
-
-- [NVIDIA® Jetson Nano™ Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-Nano-Development-Kit-B01-p-4437.html)
-- [NVIDIA® Jetson Xavier™ NX Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-Xavier-NX-Developer-Kit-p-4573.html)
-- [NVIDIA Jetson AGX Xavier Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Xavier-Development-Kit-p-4418.html)
-- [NVIDIA Jetson TX2 Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-TX2-Developer-Kit-p-4413.html)
-- [Jetson SUB Mini PC](https://www.seeedstudio.com/Jetson-SUB-Mini-PC-Blue-p-5212.html)
-- [Jetson EX1 Mini PC](https://www.seeedstudio.com/Jetson-EX1-Mini-PC-Ubuntu-p-5233.html)
-- [A203 Carrier Board](https://www.seeedstudio.com/A203-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5131.html)
-- [A203 (Version 2) Carrier Board](https://www.seeedstudio.com/A203-Carrier-Board-for-Jetson-Nano-Xavier-NX-V2-p-5214.html)
-- [A205 Carrier Board](https://www.seeedstudio.com/A205-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5133.html)
-- [A206 Carrier Board](https://www.seeedstudio.com/A206-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5132.html)
-- [EX1 Carrier Board](https://www.seeedstudio.com/NX-NANO-EX1-Carrier-Board-p-5185.html)
-- [EX1 Dual Ethernet Ports Carrier Board](https://www.seeedstudio.com/EX1-Dual-ethernet-ports-Carrier-Board-p-5234.html)
-- [EX1-TX2 Carrier Board](https://www.seeedstudio.com/EX2-TX2-Carrier-Board-p-5232.html)
-
-If you own any of the above hardware, you can proceed to installing Allxon on your hardware.
+- [Support all nvidia jetson devices](https://www.seeedstudio.com/tag/nvidia.html)
 
 ## Prerequisites
 
@@ -46,14 +29,25 @@ If you own any of the above hardware, you can proceed to installing Allxon on yo
 - Latest Jetson OS already installed on the Jetson Device
 - Monitor, keyboard, mouse (optional)
 
+
 ## Getting Started
 
 Getting started with Allxon only takes a couple of minutes!
-
+- Hardware Wiring Introduction
 - Sign Up for Allxon Account
 - Install Allxon DMS Agent on Jetson Device
 - Get Device Pairing Code
 - Add Jetson Device to Allxon DMS Portal
+
+### Hardware Wiring Introduction
+Pin Define for OOB Enabler main board and the corresponding color of 
+the cable.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/writting-1.png" alt="pir" width="500" height="auto"/></p>
+Here, we will use the wiring diagram of OBB and Jetson Orin Nano as an example. The following information provides wiring examples for the NVIDIA® 
+Jetson™ Orin Nano Dev Kit.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/wiring-2.png" alt="pir" width="700" height="auto"/></p>
+We have also provided a schematic diagram of the wiring.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/wiring-3.png" alt="pir" width="1000" height="auto"/></p>
 
 ### Sign Up for Allxon Account
 
