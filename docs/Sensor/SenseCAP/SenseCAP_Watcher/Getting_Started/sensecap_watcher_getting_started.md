@@ -1,7 +1,7 @@
 ---
-description: Create a doc page with rich content.
+description: SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. Simply speak to Watcher to give commands, and it will execute your desired tasks when the event occurs.
 title: Getting Started with SenseCAP Watcher
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG
 slug: /getting_started_with_watcher
 last_update:
   date: 06/17/2024
