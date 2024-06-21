@@ -2885,17 +2885,28 @@ const sidebars = {
                 type: 'category',
                 label: 'Applications',
                 items: [
+                  {
+                    type: 'category',
+                    label: 'Industrial Edge',
+                    items: [
+                      {
+                        type: 'category',
+                        label: 'NodeRed',
+                        items: [
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
+                        ],
+                        },
+                    ],
+                    },
 
                   {
                     type: 'category',
                     label: 'Fleet Management',
                     items: [
-                       'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
-                       'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
                     ],
                     },
 
-                
                 ],
               },
 
