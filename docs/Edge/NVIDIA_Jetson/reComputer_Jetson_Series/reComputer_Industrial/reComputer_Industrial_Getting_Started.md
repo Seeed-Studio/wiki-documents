@@ -280,7 +280,15 @@ On the Ubuntu host PC, open a Terminal window and enter the command **lsusb**. I
 - For Orin Nano 8GB: **0955:7523 NVidia Corp**
 - For Orin Nano 4GB: **0955:7623 NVidia Corp**
 
-### Different Methods of Flashing
+### Flash to Jetson
+
+<!-- Code -->
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="Jetpack 5.1.1" label="Jetpack 5.1.1">
 
 Here we offer 2 different methods of flashing.
 
@@ -290,21 +298,12 @@ Here we offer 2 different methods of flashing.
 :::note
 The first method download is around 14GB and the second method download is about 3GB
 :::
-
-<!-- Code -->
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-<TabItem value="method1" label="Method 1">
-
 #### Download System Image
 
-- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
-
 <Tabs>
-<TabItem value="Jetpack 5.1.1" label="Jetpack 5.1.1">
+<TabItem value="Method 1" label="Method 1">
+
+- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
   <table>
   <thead>
     <tr>
@@ -343,42 +342,6 @@ import TabItem from '@theme/TabItem';
     </tr>
   </tbody>
   </table>
-  </TabItem>
-
-
-<TabItem value="Jetpack 6.0" label="Jetpack 6.0">
-  <table>
-  <thead>
-    <tr>
-      <th>Device</th>
-      <th>Image Link</th>
-      <th>JetPack Version</th>
-      <th>L4T Version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>reComputer Industrial J4012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278523&Signature=j1UcmlqSP0SLSZYPzl7WM79LXAQ%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td rowSpan={6}>6.0</td>
-      <td rowSpan={6}>36.3.0</td>
-    </tr>
-    <tr>
-      <td>reComputer Industrial J4011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278558&Signature=JYoWNRV84oa4c%2B3do05L5xYIscY%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-    <tr>
-      <td>reComputer Industrial J3011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278492&Signature=CjWGyF0%2F%2BmeuP1yO4UWTWEBqwM8%3D">Download</a></td>
-    </tr>
-    <tr>
-      <td>reComputer Industrial J3010</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278412&Signature=ao1BlZrETvKwl4fzwVSr8rIB6K4%3D">Download</a></td>
-    </tr>
-  </tbody>
-  </table>
-  </TabItem>
-  </Tabs>
 
 
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
@@ -386,12 +349,12 @@ The source code for the above images can be found [here](https://github.com/Seee
 - **Step 2:** Extract the generated file 
 
 ```sh
-tar -xvf <file_name>.tar.gz
+sudo tar -xvf <file_name>.tar.gz
 ```
 
-#### Flash to Jetson
 
-- **Step 1:** Navigate to the extracted file from before and execute the flash command as follows 
+
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
 
 ```sh
 cd mfi_p3509-a02+p3767-0000
@@ -402,7 +365,7 @@ Now it will start to flash the system image to the board. If the flashing is suc
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
+- **Step 4:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -411,12 +374,9 @@ Now it will start to flash the system image to the board. If the flashing is suc
 After that, the board will reboot and will be ready to use!
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
-
----
-
-</TabItem>
-<TabItem value="method2" label="Method 2">
-
+  </TabItem>
+<TabItem value="Method 2" label="Method 2">
+  
 #### Download and Prepare NVIDIA L4T and rootfs
 
 ```sh
@@ -478,9 +438,7 @@ Here it will ask whether to replace the files. Type A and press ENTER to replace
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/126.png"/></div>
 
-#### Flash to Jetson
-
-- **Step 1:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows 
+- **Step 4:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows 
 
 ```sh
 cd Linux_for_Tegra
@@ -496,7 +454,7 @@ Now it will start to flash the system image to the board. If the flashing is suc
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
+- **Step 5:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -506,7 +464,7 @@ After that, the board will reboot and you will see the following
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **Step 3:** Open a terminal window inside the device, execute the following, the device will reboot and ready to use!
+- **Step 6:** Open a terminal window inside the device, execute the following, the device will reboot and ready to use!
 
 ```sh
 systemctl disable nvgetty.service
@@ -520,9 +478,76 @@ Futhermore, if you want to install SDK components such as CUDA, cuDNN, TensorRT,
 sudo apt update
 sudo apt install nvidia-jetpack -y
 ```
+  </TabItem>
+  </Tabs>
 
 ---
 
+</TabItem>
+<TabItem value="Jetpack 6.0" label="Jetpack6.0">
+
+- **Step 1:**Download the system image to your Ubuntu PC corresponding to the board you are using
+  <table>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Image Link</th>
+      <th>JetPack Version</th>
+      <th>L4T Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reComputer Industrial J4012</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278523&Signature=j1UcmlqSP0SLSZYPzl7WM79LXAQ%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td rowSpan={6}>6.0</td>
+      <td rowSpan={6}>36.3.0</td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278558&Signature=JYoWNRV84oa4c%2B3do05L5xYIscY%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278492&Signature=CjWGyF0%2F%2BmeuP1yO4UWTWEBqwM8%3D">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3010</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278412&Signature=ao1BlZrETvKwl4fzwVSr8rIB6K4%3D">Download</a></td>
+    </tr>
+  </tbody>
+  </table>
+
+
+
+The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
+
+- **Step 2:** Extract the generated file 
+
+```sh
+sudo tar -xvf <file_name>.tar.gz
+```
+
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
+
+```sh
+cd mfi_p3509-a02+p3767-0000
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
+```
+
+Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
+
+<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
+
+- **Step 4:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
+
+After that, the board will reboot and will be ready to use!
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 </TabItem>
 </Tabs>
 
