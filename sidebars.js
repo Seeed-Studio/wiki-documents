@@ -2155,12 +2155,6 @@ const sidebars = {
             {
               type: 'category',
               label: 'Wio Tracker 1110 Meshtastic Kit',
-              collapsed: true,
-              collapsible: true,
-              link: {
-                type: "doc",
-                id: 'Network/Meshtastic_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',
-              },
               items: [
                 'Network/Meshtastic_Network/wio_tracker_kit/get_started_with_Meshtastic_kit',
                 {

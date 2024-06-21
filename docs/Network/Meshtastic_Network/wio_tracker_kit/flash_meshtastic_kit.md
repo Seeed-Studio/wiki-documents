@@ -18,11 +18,8 @@ This tutorial will guide users to flash the Wio Tracker 1110 Dev Board to the Me
 ### Preparation
 
 * Wio Tracker 1110 Board x 1
-
 * Computer x 1
-
 * USB Type-C Cable x 1
-
 * Firmware x 1
 
 
@@ -138,7 +135,12 @@ Example:
 ### Download the application
 
 
-#### uf2
+
+import Tabs2 from '@theme/Tabs';
+import TabItem2 from '@theme/TabItem';
+
+<Tabs2>
+<TabItem2 value="uf" label="uf2">
 
 Double click the `Reset` button, there should be a `WM1110_BOOT` disk in your PC.
 
@@ -146,15 +148,20 @@ Double click the `Reset` button, there should be a `WM1110_BOOT` disk in your PC
 
 Copy the .uf2 file to the disk, the download will run automatically, then the disk will log out.
 
+</TabItem2>
 
-#### Serial Port
+<TabItem2 value="serial" label="serial">
+
 
 Double click the `Reset` button on the board and run command:
 
 ```
-./adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.14.681ae9d8.zip --port /dev/cu.usbmodem11401 -b 115200
+./adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.14.681ae9d8.zip --port /dev/cu.usbmodem11101 -b 115200
 ```
 
 Flash successfully:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-flash-done.png" alt="pir" width={800} height="auto" /></p>
+
+</TabItem2>
+</Tabs2>
