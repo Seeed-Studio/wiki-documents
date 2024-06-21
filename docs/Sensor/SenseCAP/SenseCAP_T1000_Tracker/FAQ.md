@@ -136,9 +136,6 @@ To save power, the temperature/light sensor function is disable by default, so y
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/enable-sensor.png" alt="pir" width={500} height="auto" /></p>
 
-### Motion sensor
-
-The motion sensor(3-axis acceleration) is used to detect the shock and motion/motionless event, so if you want to enable the motion sensor, need to select the mode to event mode first, then we can get the 
 
 ## Cache Data
 
