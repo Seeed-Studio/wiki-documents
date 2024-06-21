@@ -164,6 +164,9 @@ void loop()
   delay(1000);
 }
 ```
+:::tip
+If your ESP32 development board version already update to 3.0.0, you need to change the code from ```softAPIPv6()``` to ```softAPlinkLocalIPv6()```.
+:::
 
 **Step 2.** Upload the codes and open the Serial Monitor to check more details about the WiFI access point
 
