@@ -206,7 +206,7 @@ For example:
 
 **Region List**
 
-Refer to [LoRa Region by Country](/docs/configuration/region-by-country) for a more comprehensive list.
+Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
 
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
