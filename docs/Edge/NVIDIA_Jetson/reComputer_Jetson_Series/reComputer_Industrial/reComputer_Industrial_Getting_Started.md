@@ -298,7 +298,6 @@ Here we offer 2 different methods of flashing.
 :::note
 The first method download is around 14GB and the second method download is about 3GB
 :::
-#### Download System Image
 
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
