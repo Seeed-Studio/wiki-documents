@@ -93,6 +93,9 @@ void loop() {
   }
 }
 ```
+:::tip
+When ESP32 development board update to version 3.0.0, this code not compatible anymore. But this code still work with version 2.0.X.
+:::
 
 Upload this program for XIAO ESP32S3 Sense and open **Serial Plotter**, you will see the loudness change curve of the sound.
 

@@ -303,7 +303,9 @@ import TabItem from '@theme/TabItem';
 
 - **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
 
-<table>
+<Tabs>
+<TabItem value="Jetpack 5.1.1" label="Jetpack 5.1.1">
+  <table>
   <thead>
     <tr>
       <th>Device</th>
@@ -340,7 +342,44 @@ import TabItem from '@theme/TabItem';
       <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_jetson-xavier-nx-devkit-emmc-8g-5.1-35.3.1-recompter-industrial-v0.5.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=6547177068&Signature=ldsUQn8gR4v2trmzxfA1jAM0kc8%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
-</table>
+  </table>
+  </TabItem>
+
+
+<TabItem value="Jetpack 6.0" label="Jetpack 6.0">
+  <table>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Image Link</th>
+      <th>JetPack Version</th>
+      <th>L4T Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>reComputer Industrial J4012</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278523&Signature=j1UcmlqSP0SLSZYPzl7WM79LXAQ%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td rowSpan={6}>6.0</td>
+      <td rowSpan={6}>36.3.0</td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278558&Signature=JYoWNRV84oa4c%2B3do05L5xYIscY%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3011</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278492&Signature=CjWGyF0%2F%2BmeuP1yO4UWTWEBqwM8%3D">Download</a></td>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J3010</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-06-14.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4872278412&Signature=ao1BlZrETvKwl4fzwVSr8rIB6K4%3D">Download</a></td>
+    </tr>
+  </tbody>
+  </table>
+  </TabItem>
+  </Tabs>
+
 
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
 

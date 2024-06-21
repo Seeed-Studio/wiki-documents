@@ -46,6 +46,10 @@ Click [here](https://meshtastic.org/docs/) to learn more about Meshtastic networ
 ## Supported Hardware
 
 
-
 * Tracker Dev Kit for Meshtastic® – Wio Tracker 1110
-* 
+* ...
+
+
+:::note
+Meshtastic® is a registered trademark of Meshtastic LLC. Meshtastic software components are released under various licenses, see GitHub for details. No warranty is provided - use at your own risk.
+:::
