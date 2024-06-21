@@ -2142,25 +2142,37 @@ const sidebars = {
       label: 'Network',
       className: 'sideboard_calss',
     },
- //   {
-  //    type: 'category',
-   //   label: 'Meshtastic Network',
-   //   collapsed: true,
-  //    collapsible: true,
-   //   link: {
-   //     type: "doc",
-   //     id: 'Network/Meshtastic_Network/meshtastic_intro',
-   //   },
-   //   items: [
-   //     {
-   //       type: 'category',
-   //       label: 'Hardware',
-    //      items: [
-    //        'Network/Meshtastic_Network/meshtastic_kit_wio_tracker_1110',
-    //      ],
-   //     },
-   //   ],
-  //  },
+    {
+      type: 'category',
+      label: 'Meshtastic Network',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/Meshtastic_Network/meshtastic_intro',
+      },
+      items: [
+            {
+              type: 'category',
+              label: 'Wio Tracker 1110 Meshtastic Kit',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'Network/Meshtastic_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',
+              },
+              items: [
+                'Network/Meshtastic_Network/wio_tracker_kit/get_started_with_Meshtastic_kit',
+                {
+                  type: 'doc', 
+                  id:'Network/Meshtastic_Network/wio_tracker_kit/flash_meshtastic_kit',
+                  label: 'Flash Firmware', 
+                },
+
+              ],
+            },
+          ],
+    },
 
     {
       type: 'category',
