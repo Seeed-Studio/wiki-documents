@@ -61,7 +61,17 @@ This test uses an RS485 to USB module to connect reComputer R1000 and W10 PC.
 
 ## Steps to use the RS485 interface normally and perform Modbus testing
 
-**Step 1**: First, you need to download the [**C program**](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/tree/master/tools/rs485_control_DE) provided by us, and then refer to the contents of the ReadMe. Compile and run. This program will create a new ttyAMAx device, where the device number depends on the parameters you enter when running the program.
+**Step 1**: First, you need to download the [**C program**](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/tree/master/tools/rs485_control_DE) provided by us, and then refer to the contents of the ReadMe. Compile and run. 
+
+```shell
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+cd seeed-linux-dtoverlays/tools/rs485_control_DE/
+sudo apt-get install libgpiod-dev
+gcc -o rs485_DE rs485_DE.c -lgpiod
+sudo ./rs485_DE /dev/ttyAMA2 /dev/gpiochip0 6 /dev/ttyAMA10 /dev/gpiochip2 12
+```
+
+This program will create a new ttyAMAx device, where the device number depends on the parameters you enter when running the program.
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/cfg_c.gif" /></center>
 
 **Step 2**: After completing the first step, you can use the functions of RS485. Enter the following script on reComputer R1000 to open the minicom software
