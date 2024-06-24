@@ -14,7 +14,7 @@ last_update:
 ---
 
 ## Introduction
-This article mainly introduces how to repair the 485 communication function of recomputer R1000, and tests the rs485 and Modbus communication functions.
+This article mainly introduces how to repair the 485 communication function of recomputer R1000, and tests the RS485 and Modbus communication functions.
 The work to repair the RS485 function mainly lies in two points:
 - Turn on power to the 485 transceiver. By default the r1000 does not have the power pin turned on, so turn it on when needed
 - Controls the DE pin of the 485 transceiver, which is used by the device to switch between data sending mode and receiving mode. By default, R1000 does not control the DE pin, so when the user does not control this pin, the 485 can only communicate in one direction.
@@ -48,12 +48,13 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 * Using [modbus poll](https://www.modbustools.com/modbus_poll.html) on your W10 PC.You can also use other modbus testing tools
 * Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on reComputer R1000.You can also use other modbus testing tools
+* Using [mobaxterm](https://mobaxterm.mobatek.net/) on your W10 PC.You can also use other serial port testing tools
 * You need to download the **minicom** tool using the following command on the reComputer R1000:
 ```sh
 sudo apt-get install minicom
 ```
 
-## Hardware Configuration
+### Hardware Configuration
 
 This test uses an RS485 to USB module to connect reComputer R1000 and W10 PC.
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/485_to_usb.png" alt="pir" width="700" height="auto" /></div>
@@ -68,7 +69,7 @@ This test uses an RS485 to USB module to connect reComputer R1000 and W10 PC.
 ```shell
 minicom -D /dev/ttyAMAx -b 9600
 ```
-Among them, `-D` is followed by the device number you want to open, `-b` refers to the baud rate, and the device number needs to be the newly created device number in the first step.Then open MobaXterm on the W10 PC, create a new serial port terminal, select the serial port number, and the baud rate is 9600; finally, you can perform two-way communication with rs485. As shown in the figure, the content entered on the reComputer R1000 can be sent to via rs485. In W10 PC, the content entered on W10 PC can also be sent to reComputer R1000, and the two-way communication is normal.
+Among them, `-D` is followed by the device number you want to open, `-b` refers to the baud rate, and the device number needs to be the newly created device number in the first step.Then open MobaXterm on the W10 PC, create a new serial port terminal, select the serial port number, and the baud rate is 9600; finally, you can perform two-way communication with RS485. As shown in the figure, the content entered on the reComputer R1000 can be sent to via RS485. In W10 PC, the content entered on W10 PC can also be sent to reComputer R1000, and the two-way communication is normal.
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/RS485_test.gif" /></center>
 
 
@@ -77,20 +78,20 @@ Among them, `-D` is followed by the device number you want to open, `-b` refers 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/Modbus_RTU_test.gif" /></center>
 
 :::note
-- The above example shows how to use one rs485 interface. If you want to use three 485 interfaces, you can use the following script to achieve it:
+- The above example shows how to use one RS485 interface. If you want to use three 485 interfaces, you can use the following script to achieve it:
 ```shell
 sudo ./rs485_DE /dev/ttyAMA2 /dev/gpiochip0 6 /dev/ttyAMA10 /dev/gpiochip2 12 &
 sudo ./rs485_DE /dev/ttyAMA3 /dev/gpiochip0 17 /dev/ttyAMA11 &
 sudo ./rs485_DE /dev/ttyAMA5 /dev/gpiochip0 24 /dev/ttyAMA12 &
 ```
 ttyAMA10~ttyAMA12 corresponds to ttyAMA2~ttyAMA5 one-to-one. Use ttyAMA10~ttyAMA12 in your application for normal communication (ttyAMA2~ttyAMA5 cannot be used, you need to use the device number newly created by the script)
-- If you just want to power on the rs485 transceiver, you can do it using the following script:
+- If you just want to power on the RS485 transceiver, you can do it using the following script:
 ```shell
 echo 590 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio590/direction
 echo 1 > /sys/class/gpio/gpio590/value
 ```
-At this time, the rs485 transceiver is turned on normally, but the DE pin is not controlled.If you want to use our c program to control the DE pin after executing these three commands, please restart or execute the following script:
+At this time, the RS485 transceiver is turned on normally, but the DE pin is not controlled.If you want to use our c program to control the DE pin after executing these three commands, please restart or execute the following script:
 ```shell
 echo 590 > /sys/class/gpio/unexport
 ```
