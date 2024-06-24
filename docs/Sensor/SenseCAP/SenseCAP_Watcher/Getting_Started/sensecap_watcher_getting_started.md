@@ -10,7 +10,7 @@ last_update:
 
 # Getting Started with SenseCAP Watcher
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/11.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/watcher">
@@ -131,15 +131,15 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 ### Front View
 
-等图
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-1.svg" style={{width:600, height:'auto'}}/></div>
 
 ### Back View
 
-等图
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-2.svg" style={{width:600, height:'auto'}}/></div>
 
 ### Inside
 
-等图
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-3.svg" style={{width:600, height:'auto'}}/></div>
 
 ### Mounting Interface
 
@@ -203,23 +203,17 @@ To power off the Watcher, you need to access the Setting menu. Using the wheel b
 If your Watcher is connected to a power cord, the device's Shutdown button becomes a Reboot button, at which point the device is not allowed to shut down. Similarly, a device that is switched off will automatically switch on when the power cord is connected.
 :::
 
-### Hardware Reset
+At the bottom of your Watcher device, you will find a small hole. This hole provides access to the hardware power off button, which allows you to turn off the device when needed.
 
-Hardware Reset Button on Watcher
-
-At the bottom of your Watcher device, you will find a small hole. This hole provides access to the hardware reset button, which allows you to reset the device if needed.
-
-To perform a hardware reset, follow these steps:
+To power off your Watcher using the hardware button, follow these steps:
 
 1. Locate a thin, pointed object, such as a paperclip or a small needle.
 
 2. Carefully insert the pointed object into the small hole at the bottom of your Watcher.
 
-3. Gently press and hold the reset button inside the hole for a few seconds.
+3. Gently press the power off button inside the hole and your Watcher will power off.
 
-4. Release the button and wait for the Watcher to restart.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/reset.gif" style={{width:650, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/power_off_button.gif" style={{width:650, height:'auto'}}/></div><br />
 
 :::note
 It is important to exercise caution when using a pointed object to press the reset button. Be gentle and avoid applying excessive force to prevent damage to the device.
