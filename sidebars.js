@@ -2142,25 +2142,31 @@ const sidebars = {
       label: 'Network',
       className: 'sideboard_calss',
     },
- //   {
-  //    type: 'category',
-   //   label: 'Meshtastic Network',
-   //   collapsed: true,
-  //    collapsible: true,
-   //   link: {
-   //     type: "doc",
-   //     id: 'Network/Meshtastic_Network/meshtastic_intro',
-   //   },
-   //   items: [
-   //     {
-   //       type: 'category',
-   //       label: 'Hardware',
-    //      items: [
-    //        'Network/Meshtastic_Network/meshtastic_kit_wio_tracker_1110',
-    //      ],
-   //     },
-   //   ],
-  //  },
+    {
+      type: 'category',
+      label: 'Meshtastic Network',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Network/Meshtastic_Network/meshtastic_intro',
+      },
+      items: [
+            {
+              type: 'category',
+              label: 'Wio Tracker 1110 Meshtastic Kit',
+              items: [
+                'Network/Meshtastic_Network/wio_tracker_kit/get_started_with_Meshtastic_kit',
+                {
+                  type: 'doc', 
+                  id:'Network/Meshtastic_Network/wio_tracker_kit/flash_meshtastic_kit',
+                  label: 'Flash Firmware', 
+                },
+
+              ],
+            },
+          ],
+    },
 
     {
       type: 'category',
@@ -2886,16 +2892,28 @@ const sidebars = {
                 type: 'category',
                 label: 'Applications',
                 items: [
+                  {
+                    type: 'category',
+                    label: 'Industrial Edge',
+                    items: [
+                      {
+                        type: 'category',
+                        label: 'NodeRed',
+                        items: [
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
+                        ],
+                        },
+                    ],
+                    },
 
                   {
                     type: 'category',
                     label: 'Fleet Management',
                     items: [
-                       'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
                     ],
                     },
 
-                
                 ],
               },
 

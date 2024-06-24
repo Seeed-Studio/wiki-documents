@@ -245,24 +245,36 @@ cd usbboot
 ```sh
 make
 ```
+- **Step 6.** Connect reComputer R1000 to the PC via USB Type-C cable
 
-- **Step 6.** Run the usbboot tool and it will wait for a connection
+- **Step 7.** Run the usbboot tool and it will wait for a connection
 
 ```sh
 sudo ./rpiboot
 ```
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 7.** Connect reComputer R1000 to the PC via USB Type-C cable
+- **Step 8.** Download snap 
+```sh
+sudo apt install snap
+```
+- **Step 9.** Download **rpi-imager** 
+```sh
+snap install rpi-imager
+```
 
-- **Step 8.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
+- **Step 10.** Open Raspberry Pi Imager software
 
-- **Step 9.** Open Raspberry Pi Imager software
+```sh
+rpi-imager
+```
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="1000" height="auto"/></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+- **Step 11.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-- **Step 10.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 :::note
@@ -271,7 +283,9 @@ The system has preset a username and password. Please set the default username t
 
 - **Step 11.** Click **CHOOSE OS** and select your preferred OS
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
+
+<!-- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p> -->
 
 **NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
@@ -288,6 +302,8 @@ Or you can use this link to download the image file:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 14.** Flip the **Boot Mode switch** back to the **Normal mode** position
 
@@ -338,27 +354,38 @@ raspberry
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
 ##### For Mac/Linux
+- **Step 1.** Open **ssh service** on the r1000
 
-- **Step 1.** Open **Terminal** on the computer and type the following
+Open **preferences** and select **raspberry pi configuration**, the result is shown as blow: 
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/the_first_step.png" /></div>
+
+Select **interfaces** and open **SSH** and **VNC**, then click **OK**. The result is shown as blow:
+ 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/the second step.png" /></div>
+
+- **Step 2.** Open **Terminal** on the computer and type the following
 
 ```sh
+# ssh username@hostname
 ssh pi@raspberrypi.local
 ```
 
-- **Step 2.** Type **yes** for the following message
+- **Step 3.** Type **yes** for the following message
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Step 3.** When it asks for the password, type the following
+- **Step 4.** When it asks for the password, type the following
 
 ```sh
+# password for user
 raspberry
 ```
 
-- **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+- **Step 5.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 

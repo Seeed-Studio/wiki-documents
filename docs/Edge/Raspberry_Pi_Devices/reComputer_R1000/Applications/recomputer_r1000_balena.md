@@ -1,11 +1,11 @@
 ---
-description: Balena is a versatile IoT platform that enables developers to build, deploy, and manage IoT applications across various device architectures with ease, leveraging containerized deployment for seamless updates and robust device management. The reComputer R1000 edge IoT controller, powered by the Raspberry Pi CM4, offers high-performance capabilities for demanding edge computing tasks. Together, Balena and reComputer R1000 provide a powerful and scalable solution for efficient and secure IoT application deployment and management in diverse environments.
+description: balena is a versatile IoT platform that enables developers to build, deploy, and manage IoT applications across various device architectures with ease, leveraging containerized deployment for seamless updates and robust device management. The reComputer R1000 edge IoT controller, powered by the Raspberry Pi CM4, offers high-performance capabilities for demanding edge computing tasks. Together, balena and reComputer R1000 provide a powerful and scalable solution for efficient and secure IoT application deployment and management in diverse environments.
 
-title: reComputer R1000 with Balena
+title: reComputer R1000 with balena
 keywords:
   - Edge
   - reComputer R1000
-  - Balena
+  - balena
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_balena
 last_update:
@@ -15,7 +15,7 @@ last_update:
 
 ## What is balena?
 
-balena is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
+[balena](https://www.balena.io/) is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" alt="pir" width="700" height="auto" /></div>
 
@@ -66,7 +66,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/type-cport.png" alt="pir" width="250" height="auto" /></div>
 
-## Image file acquisition
+## Image File Acquisition
 
 **Step 1**: Go to balenaCloud, create a free account, and then create a fleet for your Raspberry pi 4 or CM4 device
 
@@ -80,7 +80,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 It is recommended to download the balenaOS image file first and then burn it. If you directly click "Flash" in the lower right corner of the window to burn it, it may fail to burn.
 :::
 
-## Steps for Flashing Balena OS
+## Steps for Flashing balena OS
 
 **Step 1**: Open the [**rpiboot**](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) software, and then the system will show the new disk
 
