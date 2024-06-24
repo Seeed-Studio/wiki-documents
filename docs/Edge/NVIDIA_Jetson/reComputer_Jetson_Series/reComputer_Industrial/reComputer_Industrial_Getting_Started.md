@@ -375,7 +375,7 @@ After that, the board will reboot and will be ready to use!
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
   </TabItem>
 <TabItem value="Method 2" label="Method 2">
-  
+
 #### Download and Prepare NVIDIA L4T and rootfs
 
 ```sh
