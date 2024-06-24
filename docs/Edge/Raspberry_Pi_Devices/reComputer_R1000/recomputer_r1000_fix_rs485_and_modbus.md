@@ -57,7 +57,7 @@ sudo apt-get install minicom
 ### Hardware Configuration
 
 This test uses an RS485 to USB module to connect reComputer R1000 and W10 PC.
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/485_to_usb.png" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/hardwareconnection.png" alt="pir" width="700" height="auto" /></div>
 
 ## Steps to use the RS485 interface normally and perform Modbus testing
 
