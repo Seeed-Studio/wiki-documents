@@ -13,7 +13,16 @@ last_update:
 
 ## Introduction
 
-The Wio Tracker Meshtastic development kit is based on the Wio-WM1110, featuring two Grove modules - GPS (Air530) and a 0.96" OLED Display, pre-loaded with Meshtastic firmware. Simply unpack and flash the firmware to start exploring Meshtastic and enjoy the fun of Mesh Networks.
+
+<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-10.png" alt="pir" width={500} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+The Wio Tracker Meshtastic development kit is based on the [Wio-WM1110 Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html), featuring two Grove modules - GPS (Air530) and a 0.96" OLED Display, pre-loaded with Meshtastic firmware. Simply unpack and flash the firmware to start exploring Meshtastic and enjoy the fun of Mesh Networks.
 
 ### Features
 
@@ -57,6 +66,8 @@ The Wio Tracker Meshtastic development kit is based on the Wio-WM1110, featuring
 <tr><td colspan="1"><b>Bandwidth</b></td><td colspan="2">0\.5Hz ~ 625Hz</td></tr>
 <tr><td colspan="1"><b>Sensitivity (LSB/g)</b></td><td colspan="2">1000 (±2g) ~ 83 (±16g)</td></tr>
 </table>
+
+
 
 **Grove - OLED Display 0.96 inch**
 
@@ -155,7 +166,7 @@ This library provides a command-line interface (CLI) for managing the user setti
 </Tabs>
 
 
-#### Configuration
+#### Parameters Configuration
 
 
 
