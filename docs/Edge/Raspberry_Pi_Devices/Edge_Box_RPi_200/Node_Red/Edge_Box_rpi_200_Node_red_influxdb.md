@@ -57,13 +57,13 @@ sudo apt update
 
 Add the InfluxDB GPG key and repository to your system.
 
-1. Add the GPG key:
+Add the GPG key:
    
 ```sh
 curl https://repos.influxdata.com/influxdata-archive.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
  ```
 
-1. Add the repository to the sources list:
+Add the repository to the sources list:
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdb.list
@@ -204,6 +204,7 @@ Make sure to replace `<password>` with the password you set for the admin user.
 [Inject Node] -> [Function Node] -> [InfluxDB Out Node]
 ```
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/ifdb-flow.PNG" /></center>
+
 ### Function Node
 
 This node formats the data to be sent to InfluxDB.
@@ -241,6 +242,7 @@ This node sends the formatted data to InfluxDB.
 - **Measurement**: lab
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/influxin.PNG" /></center>
+
   
 **Step 3**. Click the pencil icon to add a new InfluxDB server configuration.
    
