@@ -953,29 +953,29 @@ const sidebars = {
         },
       ]
     },
-    // {
-    //   type: 'category',
-    //   label: 'SenseCAP Watcher',
-    //   collapsed: true,
-    //   collapsible: true,
-    //   // link: {
-    //   //   type: "doc",
-    //   //   id: 'Sensor/SenseCAP/SenseCAP_Watcher/Introduction',
-    //   // },
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Getting Started',
-    //       link: {
-    //         type: "doc",
-    //         id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
-    //       },
-    //       items: [
+    {
+      type: 'category',
+      label: 'SenseCAP Watcher',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/SenseCAP/SenseCAP_Watcher/watcher_main_page',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Getting Started',
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
+          },
+          items: [
             
-    //       ],
-    //     },
-    //   ]
-    // },
+          ],
+        },
+      ]
+    },
     {
       type: 'category',
       label: 'mmWave Radar Sensor',
@@ -2891,17 +2891,28 @@ const sidebars = {
                 type: 'category',
                 label: 'Applications',
                 items: [
+                  {
+                    type: 'category',
+                    label: 'Industrial Edge',
+                    items: [
+                      {
+                        type: 'category',
+                        label: 'NodeRed',
+                        items: [
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
+                        ],
+                        },
+                    ],
+                    },
 
                   {
                     type: 'category',
                     label: 'Fleet Management',
                     items: [
-                       'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
-                       'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
                     ],
                     },
 
-                
                 ],
               },
 
