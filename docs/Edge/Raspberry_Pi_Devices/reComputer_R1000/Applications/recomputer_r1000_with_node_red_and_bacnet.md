@@ -7,7 +7,7 @@ keywords:
   - reComputer R1000
   - Node-Red
   - Bacnet
-image: https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_r_images/01.png
+image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /reComputer_r1000_node_red_bacnet_ip
 last_update:
   date: 06/20/2024
@@ -32,7 +32,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">

@@ -33,7 +33,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
