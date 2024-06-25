@@ -1,6 +1,6 @@
 ---
 description: How to Run a Local LLM Text-to-Image on reComputer
-title: How to Run a Local LLM Text-to-Image on reComputer
+title: Text2Image with Stable Diffusion
 keywords:
 - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
