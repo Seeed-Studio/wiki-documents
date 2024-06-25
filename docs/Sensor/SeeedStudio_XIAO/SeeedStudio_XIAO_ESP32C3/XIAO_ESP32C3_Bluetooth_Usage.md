@@ -71,6 +71,12 @@ void loop() {
 }
 ```
 
+:::tip
+If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
+1. ```BLEScanResults foundDevices = pBLEScan->start(scanTime, false);``` change to ```BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);```
+2. ```Serial.println(foundDevices.getCount());``` change to ```Serial.println(foundDevices->getCount());```
+:::
+
 **Step 2.** Upload the codes and open the Serial Monitor to start scanning for Bluetooth devices
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-1.jpg" alt="pir" width={1000} height="auto" /></div>
@@ -138,6 +144,11 @@ void loop() {
   delay(2000);
 }
 ```
+
+:::tip
+If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
+1.  ```std::string value = pCharacteristic->getValue();``` change to ```String value = pCharacteristic->getValue();```
+:::
 
 - **Step 2.** Upload the codes and open the Serial Monitor
 

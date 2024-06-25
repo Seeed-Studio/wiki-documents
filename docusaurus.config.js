@@ -307,6 +307,10 @@ const config = {
                 to: '/XIAO_FAQ',
               },
               {
+                label: 'reComputer R1000 Series',
+                to: '/reComputer_R1000_FAQ',
+              },
+              {
                 label: 'reTerminal',
                 to: '/reTerminal-new_FAQ',
               },

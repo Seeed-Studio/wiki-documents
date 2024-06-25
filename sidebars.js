@@ -2813,6 +2813,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_Modbus_rtu',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_Bacnet_tcp',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_influxdb',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_box_rpi_200_grafana',
             ],
             },	 
           
@@ -2885,7 +2886,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_assembly_guide',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
-
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/reComputer_R1000_FAQ', 
 
               {
                 type: 'category',
