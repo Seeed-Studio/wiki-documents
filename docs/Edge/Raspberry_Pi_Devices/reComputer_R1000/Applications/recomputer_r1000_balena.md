@@ -7,7 +7,7 @@ keywords:
   - reComputer R1000
   - balena
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /recomputer_r1000_balena
+slug: /reComputer_r1000_balena
 last_update:
   date: 06/17/2024
   author: ShuishengPeng and Kasun Thushara
@@ -32,7 +32,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
@@ -57,8 +57,8 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 | Switch Position                                              | Mode        | Description    | nRPI-BOOT |
 | ------------------------------------------------------------ | ----------- | -------------- | --------- |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Normal mode | Boot from eMMC | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Flash mode  | Boot from USB  | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_r_images/fig141.png" alt="image" width="80"/> | Normal mode | Boot from eMMC | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_r_images/fig14.png" alt="image" width="80"/>  | Flash mode  | Boot from USB  | High      |
 
 </div>
 
