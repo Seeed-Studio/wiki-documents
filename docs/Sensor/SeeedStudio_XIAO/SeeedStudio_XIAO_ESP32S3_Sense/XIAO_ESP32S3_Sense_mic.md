@@ -64,6 +64,10 @@ For the first project case, let's detect the noise in the environment and show t
 
 The following is the complete sample program.
 
+:::tip
+Check and make sure which version of ESP32-Arduino you are using, the following example is for 2.0.x the one below is for 3.0.x and later
+:::
+
 ```cpp
 #include <I2S.h>
 
@@ -93,9 +97,43 @@ void loop() {
   }
 }
 ```
+
 :::tip
-When ESP32 development board update to version 3.0.0, this code not compatible anymore. But this code still work with version 2.0.X.
+The example above is only compatible with 2.0.x of ESP32-arduino, if you are on latest (e.g. 3.0.x) use the one below
 :::
+
+```cpp
+#include <ESP_I2S.h>
+I2SClass I2S;
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  // A baud rate of 115200 is used instead of 9600 for a faster data rate
+  // on non-native USB ports
+  Serial.begin(115200);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+
+  // setup 42 PDM clock and 41 PDM data pins
+  I2S.setPinsPdmRx(42, 41);
+
+  // start I2S at 16 kHz with 16-bits per sample
+  if (!I2S.begin(I2S_MODE_PDM_RX, 16000, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO)) {
+    Serial.println("Failed to initialize I2S!");
+    while (1); // do nothing
+  }
+}
+
+void loop() {
+  // read a sample
+  int sample = I2S.read();
+
+  if (sample && sample != -1 && sample != 1) {
+    Serial.println(sample);
+  }
+}
+```
 
 Upload this program for XIAO ESP32S3 Sense and open **Serial Plotter**, you will see the loudness change curve of the sound.
 
