@@ -8,7 +8,7 @@ keywords:
   - BMS
   - N3uron
   - BACnet
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
 slug: /edgebox_rpi_200_n3uron_bacnet
 last_update:
   date: 6/20/2024
@@ -115,17 +115,15 @@ sudo nano /etc/dhcpcd.conf
 - Once the module and the device are configured, click `Save`.
 - Restart the module.
 
-In most cases, using a quick preview is preferable to manual creation.,select Browser and in the dialog box, select the device
+- The "BACnet Browser" in N3uron is opened, and after selecting the device, "Rebrowse" is clicked to view a list of objects. 
 
  <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_bacnet/browser.PNG" /></center>
 
-You can then drag and drop the object for quick visualization. In this example, tag values for "Temperature Indoor" are correctly displayed. Please follow the visualizations.
+- The "Temperature Indoor" folder is located and dragged to the "Model" section. In the "Data" section under the "Real Time" tab, the tag values for "Temperature Indoor" are correctly displayed.
 
  <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_bacnet/drag.gif" /></center>
 
- At this point, the connection is ready and we can move on to creating new tags.
-
-
+ At this point, the connection is ready and we can move on to creating new tags from scratch.
 
 
 ## Create a New Tag

@@ -354,27 +354,38 @@ raspberry
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
 ##### For Mac/Linux
+- **Step 1.** Open **ssh service** on the r1000
 
-- **Step 1.** Open **Terminal** on the computer and type the following
+Open **preferences** and select **raspberry pi configuration**, the result is shown as blow: 
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/the_first_step.png" /></div>
+
+Select **interfaces** and open **SSH** and **VNC**, then click **OK**. The result is shown as blow:
+ 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/the second step.png" /></div>
+
+- **Step 2.** Open **Terminal** on the computer and type the following
 
 ```sh
+# ssh username@hostname
 ssh pi@raspberrypi.local
 ```
 
-- **Step 2.** Type **yes** for the following message
+- **Step 3.** Type **yes** for the following message
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Step 3.** When it asks for the password, type the following
+- **Step 4.** When it asks for the password, type the following
 
 ```sh
+# password for user
 raspberry
 ```
 
-- **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+- **Step 5.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
