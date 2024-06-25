@@ -175,6 +175,12 @@ void loop() {
 }
 ```
 
+:::tip
+If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
+1. ```BLEScanResults foundDevices = pBLEScan->start(scanTime, false);``` change to ```BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);```
+2. ```Serial.println(foundDevices.getCount());``` change to ```Serial.println(foundDevices->getCount());```
+:::
+
 Now you can select XIAO ESP32S3 motherboard and upload the program. If the program runs smoothly, open the serial monitor and set the baud rate to 115200, you can see the following result.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/54.png" style={{width:700, height:'auto'}}/></div>
@@ -433,6 +439,11 @@ void loop() {
   delay(1000); // Delay a second between loops.
 } // End of loop
 ```
+
+:::tip
+If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
+1.  ```std::string value = pRemoteCharacteristic->readValue();``` change to ```String value = pRemoteCharacteristic->readValue();```
+:::
 
 The above program will turn XIAO into a client and search for nearby Bluetooth devices. When the UUID of the Bluetooth device matches the UUID you provided, it will connect to the device and obtain its characteristic value.
 

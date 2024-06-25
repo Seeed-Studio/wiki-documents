@@ -953,29 +953,29 @@ const sidebars = {
         },
       ]
     },
-    // {
-    //   type: 'category',
-    //   label: 'SenseCAP Watcher',
-    //   collapsed: true,
-    //   collapsible: true,
-    //   // link: {
-    //   //   type: "doc",
-    //   //   id: 'Sensor/SenseCAP/SenseCAP_Watcher/Introduction',
-    //   // },
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Getting Started',
-    //       link: {
-    //         type: "doc",
-    //         id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
-    //       },
-    //       items: [
+    {
+      type: 'category',
+      label: 'SenseCAP Watcher',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Sensor/SenseCAP/SenseCAP_Watcher/watcher_main_page',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Getting Started',
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
+          },
+          items: [
             
-    //       ],
-    //     },
-    //   ]
-    // },
+          ],
+        },
+      ]
+    },
     {
       type: 'category',
       label: 'mmWave Radar Sensor',
@@ -2813,6 +2813,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_Modbus_rtu',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_Bacnet_tcp',
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_Box_rpi_200_Node_red_influxdb',
+              'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Node_Red/Edge_box_rpi_200_grafana',
             ],
             },	 
           
@@ -2886,8 +2887,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_assembly_guide',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_fix_rs485_and_modbus',
-
-
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/reComputer_R1000_FAQ', 
               {
                 type: 'category',
                 label: 'Applications',
