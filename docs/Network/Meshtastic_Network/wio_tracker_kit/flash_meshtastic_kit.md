@@ -25,8 +25,6 @@ This tutorial will guide users to flash the Wio Tracker 1110 Dev Board to the Me
 
 
 
-
-
 ### Connect the board
 
 Connect the Dev Board to your PC via the USB cable.
@@ -114,23 +112,40 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 ### Flash the bootloader
 
 
+import Tabs5 from '@theme/Tabs';
+import TabItem5 from '@theme/TabItem';
+
+<Tabs5>
+<TabItem5 value="uf" label="uf2">
+
+Double click the `Reset` button, there should be a `WM1110_BOOT` disk in your PC.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
+
+Copy the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the disk, the download will run automatically, then the disk will log out.
+
+</TabItem5>
+
+<TabItem5 value="serial" label="serial">
+
 Double click the `Reset` button on the board and run command:
 
 * **For Windows**: 
 ```
-./adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p COMxx -b 115200
+adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p COMxx -b 115200
 ```
 
 * **For others**: 
 ```
-./adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200
+adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200
 ```
 
 Replace the serial port to your device port.
 Example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-
+</TabItem5>
+</Tabs5>
 
 ### Download the application
 
@@ -146,7 +161,7 @@ Double click the `Reset` button, there should be a `WM1110_BOOT` disk in your PC
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
 
-Copy the .uf2 file to the disk, the download will run automatically, then the disk will log out.
+Copy the `firmware-wio-tracker-wm1110-2.3.14.681ae9d8.uf2` file to the disk, the download will run automatically, then the disk will log out.
 
 </TabItem2>
 
@@ -155,8 +170,14 @@ Copy the .uf2 file to the disk, the download will run automatically, then the di
 
 Double click the `Reset` button on the board and run command:
 
+* **For Windows**: 
 ```
-./adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.14.681ae9d8.zip --port /dev/cu.usbmodem11101 -b 115200
+adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p COMxx -b 115200
+```
+
+* **For others**: 
+```
+adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.14.681ae9d8.zip --port /dev/tty.SLAB_USBtoUART -b 115200
 ```
 
 Flash successfully:
