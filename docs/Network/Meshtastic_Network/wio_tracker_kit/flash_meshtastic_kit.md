@@ -150,6 +150,15 @@ Example:
 ### Download the application
 
 
+You may now use the [Meshtastic Web Flasher](https://flasher.meshtastic.org/) to download and copy firmware.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flasher.png" alt="pir" width={600} height="auto" /></p>
+
+Select the device to `Seeed Wio WM1110 Tracker` and latest firmware, download the `UF2` file.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/download-uf2.png" alt="pir" width={600} height="auto" /></p>
+
 
 import Tabs2 from '@theme/Tabs';
 import TabItem2 from '@theme/TabItem';
