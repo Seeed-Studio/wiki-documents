@@ -47,7 +47,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Software
 
 * Using [modbus poll](https://www.modbustools.com/modbus_poll.html) on your W10 PC.You can also use other modbus testing tools
-* Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on reComputer R1000.You can also use other modbus testing tools
+* Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on reComputer R1000 and W10 PC.You can also use other modbus testing tools
 * Using [mobaxterm](https://mobaxterm.mobatek.net/) on your W10 PC.You can also use other serial port testing tools
 * You need to download the **minicom** tool using the following command on the reComputer R1000:
 ```sh
@@ -83,9 +83,13 @@ Among them, `-D` is followed by the device number you want to open, `-b` refers 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/RS485_test.gif" /></center>
 
 
-**Step 3**: After testing the RS485 function, you can perform the Modbus function test. Open the ModbusMechanic software on reComputer R1000, select the device number and baud rate, then click on the simulated slave function in the upper left corner to add two coils; then open Modbus poll in W10 as the master station to read the coils of the slave station. Then open the display window of Modbus poll, and you can see that the sending and receiving messages of Modbus RTU are normal.
+**Step 3**: After testing the RS485 function, you can perform the Modbus function test. This step allows the reComputer R1000 to be tested as a Modbus slave.Open the ModbusMechanic software on reComputer R1000, select the device number and baud rate, then click on the simulated slave function in the upper left corner to add two coils; then open Modbus poll in W10 as the master station to read the coils of the slave station. Then open the display window of Modbus poll, and you can see that the sending and receiving messages of Modbus RTU are normal.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/Modbus_RTU_test.gif" /></center>
+
+**Step 4**:This step allows the reComputer R1000 to be tested as a Modbus master. Open the ModbusMechanic software on both reComputer R1000 and W10 PC, and select the device number and baud rate. W10 PC refers to the third step of setting. Select `Read Coils(0x01)` on reComputer R1000 to read the coil of the slave, set `Slave Node` to 1, `Register` select the address you want to read, and finally click `Transmit packet`.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/Modbus_master_test.gif" /></center>
 
 :::note
 - The above example shows how to use one RS485 interface. If you want to use three 485 interfaces, you can use the following script to achieve it:
