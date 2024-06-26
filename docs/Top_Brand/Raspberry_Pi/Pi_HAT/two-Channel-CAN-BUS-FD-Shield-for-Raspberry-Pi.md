@@ -26,8 +26,7 @@ The CAN BUS shield now also **supports the Nvidia Jetson Nano platform**, and di
 
 |Product Name|Chip|RPi State|Jetson Nano State|
 |--|--|--|--|
-|2-Channel CAN-BUS(FD) Shield for RPi (MCP2517FD)|MCP2517FD|Two Channels|Single Channel(can0)|
-|[2-Channel CAN-BUS(FD) Shield for RPi (MCP2517FD)](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html)|MCP2518FD|Two Channels|Single Channel(can0)|
+|[2-Channel CAN-BUS(FD) Shield for RPi (MCP2517FD)](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html)|MCP2517FD|Two Channels|Single Channel(can0)|
 |[2-Channel CAN-BUS(FD) Shield for Raspberry Pi (MCP2518FD)](https://www.seeedstudio.com/CAN-BUS-FD-HAT-for-Raspberry-Pi-p-4742.html)|MCP2518FD|Two Channels|Two Channels|
 
 As you can see, there are two versions of chips used in the 2-Channel CAN-BUS(FD) Shield for RPi (MCP2517FD) and both channels work on RPi but only single channel (CAN0) works on the Jetson Nano Platform!
