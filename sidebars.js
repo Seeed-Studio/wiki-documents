@@ -2773,14 +2773,20 @@ const sidebars = {
         label: 'Edge Controller',
         collapsed: true,
         collapsible: true,
-        link: {
-          type: "doc",
-          id: 'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_intro',
-        },
+       // link: {
+         // type: "doc",
+         // id: 'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_intro',
+       // },
         items: [
           {
             type: 'category',
             label: 'EdgeBox-RPI-200',
+            collapsed: true,
+            collapsible: true,
+            link: {
+              type: "doc",
+              id: 'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_intro',
+            },
             items: [
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox_rpi_200_Introduction',
               {
