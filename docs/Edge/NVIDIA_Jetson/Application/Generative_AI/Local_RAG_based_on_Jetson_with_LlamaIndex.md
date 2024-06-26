@@ -1,6 +1,6 @@
 ---
 description:  Local RAG based on Jetson with LlamaIndex
-title:  Local RAG based on Jetson with LlamaIndex
+title:  RAG with LlamaIndex
 keywords:
   - Edge
   - reComputer
