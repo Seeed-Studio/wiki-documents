@@ -42,7 +42,8 @@ This wiki will guide you how to install JetPack to Jetson AGX Orin 32GB H01 Kit.
 First of all, you need to install the peripheral drivers for this board. These are needed for some hardware peripherals to function on the board. Click the below links to download the drivers according to the JetPack version
 
 
-<table>
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
   <thead>
     <tr>
       <th>JetPack Version</th>
@@ -61,10 +62,22 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td>35.3.1</td>
       <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/Jetson-AGX-Orin-32GB-H01-Kit/Driver-for-JP-5.1.1/AGX-Orin-32GB-H01-JP5.1.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
+    <tr>
+      <td>6.0</td>
+      <td>36.3</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/Orin-AGX-H01/AGX-Orin-H01-JP6.0.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=5319384300&Signature=DzFtDLbO6tqFEA55OqageSQuJvo%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
   </tbody>
 </table>
+</div>
 
 ## Flash to Jetson
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="JP5.0.2/JP5.1.1" label="JP5.0.2/JP5.1.1">
 
 Here we will use **NVIDIA L4T 35.1** to install **Jetpack 5.0.2** on the Jetson AGX Orin 32GB H01 Kit.
 
@@ -109,6 +122,67 @@ sudo ./flash.sh jetson‐agx‐orin‐devkit mmcblk0p1
 You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/9.jpg"/></div>
+
+</TabItem>
+
+<TabItem value="JP6.0" label="JP6.0">
+
+Here we will use **NVIDIA L4T 36.3** to install **Jetpack 6.0** on the Jetson AGX Orin 32GB H01 Kit.
+
+- **Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r363) the NVIDIA drivers on the host PC. The required drivers are shown below:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/>
+</div>
+
+- **Step 2:** Move the downloaded peripheral drivers from before into the same folder with NVIDIA drivers. Now you will see three compressed files in the same folder.
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/files.png"/>
+</div>
+
+- **Step 3:** Extract **Jetson_Linux_R36.3.0_aarch64.tbz2** and **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** by navigating to the folder containing these files and apply the changes:
+
+```bash
+cd < directory_where_the_files_are_located >
+tar xf Jetson_Linux_R36.3.0_aarch64.tbz2
+sudo tar xfp Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2 -C Linux_for_tegra/rootfs
+cd Linux_for_tegra
+sudo ./tools/l4t_flash_prerequisites.sh
+sudo ./apply_binaries.sh
+```
+
+- **Step 4:** Extract **AGX-Orin-H01-JP6.0.zip**. Here we additionally install the **unzip** package which is needed to decompress the .zip file.
+
+```sh
+cd ..
+sudo apt install unzip 
+sudo unzip AGX-Orin-H01-JP6.0.zip
+```
+
+Here it will ask whether to replace the files. Type **A** and press **ENTER** to replace the necessary files
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/extract_drivers.png"/>
+</div>
+
+- **Step 5:** Flash the system to the eMMC
+
+```sh
+cd Linux_for_Tegra
+sudo ./flash.sh jetson-agx-orin-devkit internal
+```
+
+You will see the following output if the flashing process is successful:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Orin-AGX-H01/flash_successful.png"/>
+</div>
+
+
+</TabItem>
+</Tabs>
+
 
 ## Tech Support & Product Discussion
 
