@@ -14,7 +14,7 @@ last_update:
 ## Introduction
 
 
-<p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-10.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/mesh-kit1.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html">
@@ -110,9 +110,15 @@ import TabItem from '@theme/TabItem';
 <TabItem value="app" label="App">
 
 * Download the `Meshtastic` App.<br/>
-* The display will show the name and PIN code, enter the code and then click `Pair` to connect the device.
+* The display will show the name and PIN code
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair.png" alt="pir" width={600} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
+
+
+* Enter the code and then click `Pair` to connect the device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
 
   
@@ -173,11 +179,9 @@ This library provides a command-line interface (CLI) for managing the user setti
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
 
 
-import Tabs3 from '@theme/Tabs';
-import TabItem3 from '@theme/TabItem';
 
-<Tabs3>
-<TabItem3 value="app" label="App">
+<Tabs>
+<TabItem value="app" label="App">
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
@@ -185,17 +189,17 @@ import TabItem3 from '@theme/TabItem';
 
 
   
-</TabItem3>
+</TabItem>
 
-<TabItem3 value="web" label="Web Client">
+<TabItem value="web" label="Web Client">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-lora-config.png" alt="pir" width={800} height="auto" /></p>
 
 
 
-</TabItem3>
+</TabItem>
 
-<TabItem3 value="cli" label="Python CLI">
+<TabItem value="cli" label="Python CLI">
 
 Run the following command, replacing `REGION-CODE` with the region code listed above according to your regional location.
 
@@ -207,8 +211,8 @@ For example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/cli-region.png" alt="pir" width={600} height="auto" /></p>
 
 
-</TabItem3>
-</Tabs3>
+</TabItem>
+</Tabs>
 
 
 

@@ -102,8 +102,6 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 
 
 </TabItem>
-
-
 </Tabs>
 
 
@@ -111,24 +109,17 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 
 ### Flash the bootloader
 
-
-import Tabs5 from '@theme/Tabs';
-import TabItem5 from '@theme/TabItem';
-
-<Tabs5>
-<TabItem5 value="uf" label="uf2">
-
-Double click the `Reset` button, there should be a `WM1110_BOOT` disk in your PC.
+<Tabs>
+<TabItem value="uf2" label="UF2">
+Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your PC.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
 
-Copy the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the disk, the download will run automatically, then the disk will log out.
+Copy the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the drive. The download will run automatically, then the drive will log out.
 
-</TabItem5>
-
-<TabItem5 value="serial" label="serial">
-
-Double click the `Reset` button on the board and run command:
+</TabItem>
+<TabItem value="serial" label="Serial">
+Double click the `Reset` button on the board and run the following command:
 
 * **For Windows**: 
 ```
@@ -140,51 +131,51 @@ adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.
 adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200
 ```
 
-Replace the serial port to your device port.
-Example:
+Replace the serial port with your device port. Example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
-
-</TabItem5>
-</Tabs5>
+</TabItem>
+</Tabs>
 
 ### Download the application
 
+You may use the [Meshtastic Web Flasher](https://flasher.meshtastic.org/) to download and copy firmware.
 
-You may now use the [Meshtastic Web Flasher](https://flasher.meshtastic.org/) to download and copy firmware.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flasher.png" alt="pir" width={800} height="auto" /></p>
 
+Select the device to `Seeed Wio WM1110 Tracker` and the latest firmware, and download the `UF2` file.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flasher.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/download-uf2.png" alt="pir" width={800} height="auto" /></p>
 
-Select the device to `Seeed Wio WM1110 Tracker` and latest firmware, download the `UF2` file.
+<Tabs>
+<TabItem value="uf2" label="UF2">
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/download-uf2.png" alt="pir" width={600} height="auto" /></p>
-
-
-import Tabs2 from '@theme/Tabs';
-import TabItem2 from '@theme/TabItem';
-
-<Tabs2>
-<TabItem2 value="uf" label="uf2">
-
-Double click the `Reset` button, there should be a `WM1110_BOOT` disk in your PC.
+Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your PC.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
 
-Copy the `firmware-wio-tracker-wm1110-2.3.14.681ae9d8.uf2` file to the disk, the download will run automatically, then the disk will log out.
+Copy the `firmware-wio-tracker-wm1110-2.3.14.681ae9d8.uf2` file to the drive. The download will run automatically, then the drive will log out.
 
-</TabItem2>
+:::tip
+Just ignore this error prompt, the device has actually been upgraded successfully.
+<p style={{ display: 'flex', justifyContent: 'center' }}>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="Image 1" width="400" height="auto" style={{ marginRight: '10px' }} />
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="Image 2" width="400" height="auto" style={{ marginLeft: '10px' }} />
+</p>
+:::
 
-<TabItem2 value="serial" label="serial">
+</TabItem>
 
-
-Double click the `Reset` button on the board and run command:
+<TabItem value="serial" label="Serial">
+Double click the `Reset` button on the board and run the following command:
 
 * **For Windows**: 
+
 ```
 adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p COMxx -b 115200
 ```
 
-* **For others**: 
+* **For others**:
+
 ```
 adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.14.681ae9d8.zip --port /dev/tty.SLAB_USBtoUART -b 115200
 ```
@@ -192,6 +183,6 @@ adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.
 Flash successfully:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-flash-done.png" alt="pir" width={800} height="auto" /></p>
-
-</TabItem2>
-</Tabs2>
+  
+</TabItem>
+</Tabs>
