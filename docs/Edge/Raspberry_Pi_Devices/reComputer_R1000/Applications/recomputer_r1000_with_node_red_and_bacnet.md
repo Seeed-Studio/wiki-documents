@@ -1,14 +1,14 @@
 ---
-description: This wiki provides a comprehensive guide to working with the Recomputer R1000, an industrial IoT edge controller based on the Raspberry Pi 4. It includes instructions for setting up Node-RED, simulating room temperatures with YABE, and discovering and reading BACnet IP device parameters for efficient Building Management System (BMS) integration.
+description: This wiki provides a comprehensive guide to working with the reComputer R1000, an industrial IoT edge controller based on the Raspberry Pi 4. It includes instructions for setting up Node-RED, simulating room temperatures with YABE, and discovering and reading BACnet IP device parameters for efficient Building Management System (BMS) integration.
 
-title: recomputer R1000 with Node-Red and BACnet IP
+title: reComputer R1000 with Node-Red and BACnet IP
 keywords:
   - Edge Controller
-  - Recomputer R1000
+  - reComputer R1000
   - Node-Red
   - Bacnet
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /recomputer_r1000_node_red_bacnet_ip
+slug: /reComputer_r1000_node_red_bacnet_ip
 last_update:
   date: 06/20/2024
   author: ShuishengPeng
@@ -17,7 +17,7 @@ last_update:
 ## Introduction 
 BACnet IP (Building Automation and Control Network over IP) is a communication protocol designed for managing and automating building systems. It enables devices from different manufacturers to interoperate seamlessly over standard IP networks, enhancing system integration and flexibility. The primary advantages of BACnet IP in Building Management Systems (BMS) include improved scalability, easier installation and maintenance, and the ability to leverage existing network infrastructure. BACnet IP also supports real-time data exchange, facilitating better monitoring and control of building systems. This results in increased energy efficiency, reduced operational costs, and enhanced occupant comfort and safety.
 
-This tutorial shows the process of using node-red to read BACnet device data on Recomputer R1000 and perform real-time visual display.We used a BACnet device simulator on the W10 PC to simulate the real BACnet device. The recomputer R1000 and the W10 PC were connected to the same router to ensure that they were on the same network segment, and then the data was read and displayed.
+This tutorial shows the process of using node-red to read BACnet device data on reComputer R1000 and perform real-time visual display.We used a BACnet device simulator on the W10 PC to simulate the real BACnet device. The reComputer R1000 and the W10 PC were connected to the same router to ensure that they were on the same network segment, and then the data was read and displayed.
 
 ## Getting Start
 
@@ -45,13 +45,13 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-Recomputer R1000 comes to your hand pre-installed with Raspberry Pi OS. If you are booting this device for the first time, please read our [Getting Started Wiki](https://wiki.seeedstudio.com/recomputer_r/). For information about node-red, you can refer to the [following posts](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/). It is recommended that you review this guide before proceeding to the wiki. In this tutorial, we are going to connect the Host PC running the YABE room temperature simulator with Node-RED running on Recomputer R1000.
+reComputer R1000 comes to your hand pre-installed with Raspberry Pi OS. If you are booting this device for the first time, please read our [Getting Started Wiki](https://wiki.seeedstudio.com/reComputer_r/). For information about node-red, you can refer to the [following posts](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/). It is recommended that you review this guide before proceeding to the wiki. In this tutorial, we are going to connect the Host PC running the YABE room temperature simulator with Node-RED running on reComputer R1000.
 
 ### Node download
 This tutorial uses the **"node-bacnet-contrib-extended"** node, **"node-red-contrib-loop"** node, and **"node-red-dashboard"** node. Please download them before starting. For how to download nodes, you can refer to [Tutorial](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/).
 ### YABE
 
-Please go to this [link](https://sourceforge.net/projects/yetanotherbacnetexplorer/) and download YABE (Yet Another BACnet Explorer). YABE is a versatile tool that allows you to simulate and explore BACnet devices, making it ideal for testing and development purposes. Once downloaded and installed on your Host PC, YABE will be used to simulate room temperature data, which we will then read and process using Node-RED on the Recomputer R1000.
+Please go to this [link](https://sourceforge.net/projects/yetanotherbacnetexplorer/) and download YABE (Yet Another BACnet Explorer). YABE is a versatile tool that allows you to simulate and explore BACnet devices, making it ideal for testing and development purposes. Once downloaded and installed on your Host PC, YABE will be used to simulate room temperature data, which we will then read and process using Node-RED on the reComputer R1000.
 
 
 
