@@ -101,7 +101,7 @@ Windows will now find the hardware and install the necessary drivers
 Here you can **set a hostname, enable SSH, set a password, configure wiFi, set locale settings** and more
 
 :::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials, you may encounter issues. This problem is currently being resolved.
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000. 
 :::
 
 - **Step 8.** Click **CHOOSE OS** and select your preferred OS
@@ -181,7 +181,7 @@ sudo ./rpiboot
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 :::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials, you may encounter issues. This problem is currently being resolved.
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000. 
 :::
 
 - **Step 10.** Click **CHOOSE OS** and select your preferred OS
@@ -278,7 +278,7 @@ The result is shown as below:
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 :::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials, you may encounter issues. This problem is currently being resolved.
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000. 
 :::
 
 - **Step 11.** Click **CHOOSE OS** and select your preferred OS
