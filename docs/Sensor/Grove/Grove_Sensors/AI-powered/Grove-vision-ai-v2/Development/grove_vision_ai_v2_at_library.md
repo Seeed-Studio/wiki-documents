@@ -75,6 +75,61 @@ The Arduino library maintains compatibility with the latest AT command set, ensu
     </a>
 </div>
 
+<br></br>
+
+:::info
+
+<div class="table-center">
+<table align="center">
+    <tr>
+        <td>MCU</td>
+        <td>Board Version</td>
+        <td>Grove(I2C)</td>
+        <td>Pin(Uart)</td>
+    </tr>
+    <tr>
+        <td>SAMD21</td>
+        <td>1.8.5</td>
+        <td>✅</td>
+        <td>⚠️</td>
+    </tr>
+    <tr>
+        <td>RP2040</td>
+        <td>3.9.1</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <td>nRF52840 - nRF52 Boards</td>
+        <td>1.1.8</td>
+        <td>✅</td>
+        <td>⚠️</td>
+    </tr>
+    <tr>
+        <td>nRF52840 - mbed-enabled</td>
+        <td>2.9.2</td>
+        <td>✅</td>
+        <td>⚠️</td>
+    </tr>
+    <tr>
+        <td>ESP32C3</td>
+        <td>2.0.17</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <td>ESP32S3</td>
+        <td>2.0.17</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+</table>
+</div>
+
+\*⚠️: might not work well
+:::
+
+
 ## Connect the Grove Vision AI V2
 
 <Tabs groupId="grove_connect">
@@ -788,6 +843,7 @@ Every time to get the data value from Grove Vision V2, it is supposed to call th
  */
 int SSCMA::invoke(int times, bool filter, bool show);
 ```
+
 ### What does `AI.begin()` do? {#faq_begin}
 
 :::info
@@ -799,13 +855,14 @@ bool begin(TwoWire *wire = &Wire, int32_t rst = -1, uint16_t address = I2C_ADDRE
 :::
 
 ## Resources
+
 - [AT Commands reference manual](https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md)
 - [Seeed Arduino SSCMA - Arduino Library](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA)
 
 ## References
+
 - [WiseEye2 AI Processor - Himax](https://www.himax.com.tw/products/wiseeye-ai-sensing/wiseeye2-ai-processor/)
 - [WIseEye2 Technical Highlights](https://himaxwiseeyeplus.github.io/)
-
 
 ## Contributing
 
