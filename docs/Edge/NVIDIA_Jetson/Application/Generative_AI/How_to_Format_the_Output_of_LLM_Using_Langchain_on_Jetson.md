@@ -1,6 +1,6 @@
 ---
 description: How to Format the Output of LLM Using Langchain on Jetson
-title: How to Format the Output of LLM Using Langchain on Jetson
+title: Format Output with Langchain
 keywords:
 - reComputer
 - LLM
