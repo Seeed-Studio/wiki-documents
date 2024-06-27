@@ -1,36 +1,37 @@
 ---
-description: Deploy InfluxDB on an Edgebox RPi 200 for efficient time-series data collection and analysis in IoT applications. This guide covers installation, configuration, and usage to leverage the power of InfluxDB on your Raspberry Pi-powered edge controller. Achieve real-time insights and robust monitoring capabilities directly at the edge of your network.
+description: Deploy InfluxDB on an reTerminal DM for efficient time-series data collection and analysis in IoT applications. This guide covers installation, configuration, and usage to leverage the power of InfluxDB on your Raspberry Pi-powered HMI. Achieve real-time insights and robust monitoring capabilities directly at the edge of your network.
 
-title: Edge Box RPi 200 with Node Red and InfluxDB
+title: reTerminal DM with Node Red and InfluxDB
 keywords:
-  - Edge Controller
-  - Edge-Box
+  - Raspberry Pi
+  - HMI
   - Node-Red
   - InfluxDB
-image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /edge_box_rpi_200_node_red_influxdb
+image: https://files.seeedstudio.com/wiki/reTerminalDM/nodered/reterminal-influx.png
+slug: /reterminal_dm_200_node_red_influxdb
 last_update:
-  date: 06/13/2024
+  date: 06/28/2024
   author: Kasun Thushara
 ---
 ## Introduction
 
-Deploying [InfluxDB](https://www.influxdata.com/) on an Edgebox RPi 200, a Raspberry Pi-powered edge controller, enables robust time-series data collection and analysis at the edge of your network. This setup is ideal for IoT applications, providing real-time insights and monitoring capabilities. By leveraging the lightweight yet powerful InfluxDB database, you can efficiently manage and analyze sensor data directly on the Edgebox. The following guide outlines the steps to install, configure, and use InfluxDB on your Edgebox RPi 200, ensuring a seamless integration into your data infrastructure.
+Deploying [InfluxDB](https://www.influxdata.com/) on an reTerminal DM, a Raspberry Pi-powered HMI, enables robust time-series data collection and analysis at the edge of your network. This setup is ideal for IoT applications, providing real-time insights and monitoring capabilities. By leveraging the lightweight yet powerful InfluxDB database, you can efficiently manage and analyze sensor data directly on the reTerminal DM. The following guide outlines the steps to install, configure, and use InfluxDB on your reTerminal DM, ensuring a seamless integration into your data infrastructure.
 
 ### Hardware Preparation
+
 
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg">Edge Box RPi 200</th>
+      <th class="table-trnobg">reTerminal DM</th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
@@ -39,15 +40,15 @@ Deploying [InfluxDB](https://www.influxdata.com/) on an Edgebox RPi 200, a Raspb
 
 ### Software Preparation
 
-Edge Box comes to your hand pre-installed with Raspberry Pi OS. If you are booting this device for the first time, please read our [Getting Started Wiki](https://wiki.seeedstudio.com/Edge_Box_introduction/). We have prepared a [Getting Started Guide on Node-RED](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/). It is recommended that you review this guide before proceeding to the wiki. In this tutorial, we are going to connect the Host PC running the YABE room temperature simulator with Node-RED running on Edge Box.
+We have prepared a [Getting started Guide on Node-RED](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/). It is recommended that you review this guide before proceeding to the wiki.
 
-## Installing InfluxDB on Edgebox RPi 200
+## Installing InfluxDB on reTerminal DM
 
-This guide covers the steps to install and set up InfluxDB on an Edgebox RPi 200 edge controller.
+This guide covers the steps to install and set up InfluxDB on an reTerminal DM HMI.
 
 **Step 1**: Update the System
 
-First, ensure your system is up-to-date by running the following command: SSH to EdgeBox and
+First, ensure your system is up-to-date by running the following command: SSH to reTerminal DM and
 
 ```sh
 sudo apt update
@@ -194,7 +195,7 @@ Make sure to replace `<password>` with the password you set for the admin user.
 
 ## Sending Data to InfluxDB via Node-RED
 
-**Step 1**. Open your Node-RED in your browser (typically `http://<your-edgebox-ip>:1880`).
+**Step 1**. Open your Node-RED in your browser (typically `http://<your-reTerminal-DM-ip>:1880`).
 
 **Step 2**. Install the `node-red-contrib-influxdb` using the Node-RED manage palette.
 
@@ -203,7 +204,7 @@ Make sure to replace `<password>` with the password you set for the admin user.
 ```
 [Inject Node] -> [Function Node] -> [InfluxDB Out Node]
 ```
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/ifdb-flow.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/ifdb-flow.PNG" /></center>
 
 ### Function Node
 
@@ -224,7 +225,7 @@ msg.payload = [
 ];
 return msg;
 ```
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/js-influxdb.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/js-influxdb.PNG" /></center>
 
 **Step 4**. Click "Done".
 
@@ -241,7 +242,7 @@ This node sends the formatted data to InfluxDB.
 - **Database**: data (previously created)
 - **Measurement**: lab
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/influxin.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/influxin.PNG" /></center>
 
   
 **Step 3**. Click the pencil icon to add a new InfluxDB server configuration.
@@ -254,7 +255,7 @@ This node sends the formatted data to InfluxDB.
 - **Username**: admin
 - **Password**: `<password>` (the password you created)
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/server-ifdb.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/server-ifdb.PNG" /></center>
 
 **Step 5**. Click "Add" and then "Done".
 
@@ -272,10 +273,10 @@ USE data
 SELECT * FROM lab
 ```
 
+
 Make sure to replace `<password>` with the password you set for the admin user.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/result-lab.PNG" /></center>
-
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/result-lab.PNG" /></center>
 
 
 ## Tech Support & Product Discussion

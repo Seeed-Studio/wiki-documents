@@ -1,19 +1,19 @@
 ---
-description: This wiki provides a comprehensive guide to working with the Edge Box RPi 200, an industrial IoT edge controller based on the Raspberry Pi 4. It includes instructions for setting up Node-RED, simulating room temperatures with YABE, and discovering and reading BACnet IP device parameters for efficient Building Management System (BMS) integration.
+description: This wiki provides a comprehensive guide to working with the reTerminal DM an industrial IoT edge HMI based on the Raspberry Pi 4. It includes instructions for setting up Node-RED, simulating room temperatures with YABE, and discovering and reading BACnet IP device parameters for efficient Building Management System (BMS) integration.
 
-title: Edge Box RPi 200 with Node Red and BACnet TCP
+title: reTerminal DM with Node Red and BACnet TCP
 keywords:
-  - Edge Controller
-  - Edge-Box
+  - BMS
+  - HMI
+  - Raspberry pi
   - Node-Red
   - Bacnet
-image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /edge_box_rpi_200_node_red_bacnet_tcp
+image: https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet-reterminaldm.png
+slug: /reterminal_dm_rpi_200_node_red_bacnet_tcp
 last_update:
-  date: 06/05/2024
+  date: 06/26/2024
   author: Kasun Thushara
 ---
-
 ## Introduction 
 BACnet IP (Building Automation and Control Network over IP) is a communication protocol designed for managing and automating building systems. It enables devices from different manufacturers to interoperate seamlessly over standard IP networks, enhancing system integration and flexibility. The primary advantages of BACnet IP in Building Management Systems (BMS) include improved scalability, easier installation and maintenance, and the ability to leverage existing network infrastructure. BACnet IP also supports real-time data exchange, facilitating better monitoring and control of building systems. This results in increased energy efficiency, reduced operational costs, and enhanced occupant comfort and safety.
 
@@ -21,20 +21,20 @@ BACnet IP (Building Automation and Control Network over IP) is a communication p
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
 
-### Hardware Preparation
+### Hardware 
 
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg">Edge Box RPi 200</th>
+      <th class="table-trnobg">reTerminal DM</th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
@@ -43,28 +43,29 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-Edge Box comes to your hand pre-installed with Raspberry Pi OS. If you are booting this device for the first time, please read our [Getting Started Wiki](https://wiki.seeedstudio.com/Edge_Box_introduction/). We have prepared a [Getting Started Guide on Node-RED](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/). It is recommended that you review this guide before proceeding to the wiki. In this tutorial, we are going to connect the Host PC running the YABE room temperature simulator with Node-RED running on Edge Box.
+We have prepared a [Getting started Guide on Node-RED](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/). It is recommended that you review this guide before proceeding to the wiki.
 
 ### YABE
 
-Please go to this [link](https://sourceforge.net/projects/yetanotherbacnetexplorer/) and download YABE (Yet Another BACnet Explorer). YABE is a versatile tool that allows you to simulate and explore BACnet devices, making it ideal for testing and development purposes. Once downloaded and installed on your Host PC, YABE will be used to simulate room temperature data, which we will then read and process using Node-RED on the Edge Box.
+Please go to this [link](https://sourceforge.net/projects/yetanotherbacnetexplorer/) and download YABE (Yet Another BACnet Explorer). YABE is a versatile tool that allows you to simulate and explore BACnet devices, making it ideal for testing and development purposes. Once downloaded and installed on your Host PC, YABE will be used to simulate room temperature data, which we will then read and process using Node-RED on the reTerminal DM.
 
 ### Configure Ethernet settings for BACnet IP
 Since your Device IP domain is different from your wireless settings, you may have to change the IP configuration manually. For that,
 
 - **Step 01**: Run the following command:
+
 ```sh
 sudo nano /etc/dhcpcd.conf
 ```
 
-- **Step 02**: Then configure the Ethernet port settings according to your Device network domain and set priorities using the metric command. The lowest metric has the highest priority. Then connect Edge Box and Device.
+- **Step 02**: Then configure the Ethernet port settings according to your PLC/Device network domain and set priorities using the **metric** command. The lowest metric has the highest priority.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/ipconfig.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/ipconfig.PNG"/></center>
 
 ## Install BACnet node
 
 1. **Open Node-RED:**
-   Start Node-RED on your Edge Box. You can usually access it by opening a web browser and navigating to `http://<your-edgebox-ip>:1880`.
+   Start Node-RED on your reTerminal. You can usually access it by opening a web browser and navigating to `http://<your-reTerminal-DM-ip>:1880`.
 
 2. **Access Manage Palette:**
    In the top-right corner of the Node-RED interface, click on the three horizontal lines (menu) to open the main menu. From the drop-down menu, select "Manage palette."
@@ -90,25 +91,25 @@ Now, you have successfully installed `node-red-contrib-bacnet-extended` and can 
 
 Once you have installed YABE, navigate to the `add-on` folder and double-click `bacnet.Room.Simulator` to start it. 
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/room-simulator.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/room-simulator.PNG" /></center>
 
 Once done, you need to start YABE.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/Yabe-app.png" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/Yabe-app.png" /></center>
 
 Then, click on the `+` mark to add a device and enter the IP address of your PC's Ethernet port. Click on "Start."
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/YABE-config.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/YABE-config.PNG" /></center>
 
 :::note
-You might need to configure the Ethernet port IP address to ensure it is in the same network domain as both the EdgeBox and your PC.
+You might need to configure the Ethernet port IP address to ensure it is in the same network domain as both the reTerminal DM and your PC.
 :::
 
 
 
 After that, you should be able to see the device with the same device ID as the room temperature simulator.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/simulator&YABE.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/simulator&YABE.PNG" /></center>
 
 ## Discover BACnet IP Devices
 
@@ -126,7 +127,7 @@ After that, you should be able to see the device with the same device ID as the 
    Connect the nodes in the following manner:
    - Inject >>> Function >>> Discover-devices >>> Debug
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/discover-device.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/discover-device.PNG" /></center>
 
 4. **Configure the Function Node:**
    Double-click the Function node to open its configuration dialog. In the function block, write the following code:
@@ -136,7 +137,7 @@ After that, you should be able to see the device with the same device ID as the 
    msg.transportClosedDuration = 8000;
    return msg;
    ```
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/discover-func.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/discover-func.PNG" /></center>
 
 5. **Deploy the Flow:**
    Click on the "Deploy" button in the top-right corner of the Node-RED interface to deploy the flow.
@@ -147,9 +148,9 @@ After that, you should be able to see the device with the same device ID as the 
 7. **Check the Debug Output:**
    Wait for the output to appear in the Debug window. You will see the device IP and device ID in the debug message.
 
-<center><img width={600} height={400} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/debug-discover.PNG" /></center>
+<center><img width={600} height={400} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/debug-discover.PNG" /></center>
 
-<center><img width={800} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/bacnet1.gif" /></center>
+<center><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet1.gif" /></center>
 
 ## Read All Device Parameters
 
@@ -167,7 +168,7 @@ To read all parameters from BACnet devices using Node-RED, follow these steps:
      Inject >>>> Function >>>> Read-All-Devices >>>> Debug
      ```
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/read-all-devices.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/read-all-devices.PNG" /></center>
 
 4. **Configure the Function Node:**
    - Double-click on the Function node to open its configuration window.
@@ -179,7 +180,7 @@ To read all parameters from BACnet devices using Node-RED, follow these steps:
      return msg;
      ```
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/discover-func.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/discover-func.PNG" /></center>
 
 5. **Deploy the Flow:**
    - Click the "Deploy" button in the top-right corner of the Node-RED interface to deploy the flow.
@@ -192,10 +193,10 @@ To read all parameters from BACnet devices using Node-RED, follow these steps:
 
 This setup will read all the parameters from BACnet devices on your network and display them in Node-RED's Debug window.
 
-<center><img width="300" src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/debug-read-all.png" /></center>
+<center><img width="300" src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/debug-read-all.PNG" /></center>
 
 
-<center><img width={800} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/bacnet2.gif" /></center>
+<center><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet2.gif" /></center>
 
 ## Read single device data
 
@@ -211,7 +212,7 @@ This setup will read all the parameters from BACnet devices on your network and 
      Inject >>>> Function >>>> Read-Single-Device >>>> Debug
      ```
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/read-single-device.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/read-single-device.PNG" /></center>
 
 
 4. **Configure the Function Node:**
@@ -224,7 +225,7 @@ This setup will read all the parameters from BACnet devices on your network and 
         return msg;
      ```
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/read-single-func.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/read-single-func.PNG" /></center>
 
 5. **Deploy the Flow:**
    - Click the "Deploy" button in the top-right corner of the Node-RED interface to deploy the flow.
@@ -236,9 +237,9 @@ This setup will read all the parameters from BACnet devices on your network and 
    - Wait for the output to appear in the Debug window. You will see the parameters of the Selected device in the BACnet network area.
 
 
-<center><img width={300} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/debug-single-device.PNG" /></center>
+<center><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/debug-single-device.PNG" /></center>
 
-<center><img width={800} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/bacnet3.gif" /></center>
+<center><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet3.gif" /></center>
 
 ## Read Single device particular object data
 
@@ -255,7 +256,7 @@ This setup will read all the parameters from BACnet devices on your network and 
      Inject >>>> Function >>>> Read-Single-Devices >>>> Function >>>> Debug
      ```
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/single-object.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/single-object.PNG" /></center>
 
 4. **Configure the Function Node:**
    - Double-click on the Function node near to inject node to open its configuration window.
@@ -290,7 +291,7 @@ This setup will read all the parameters from BACnet devices on your network and 
 
      ```
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/single-object-func.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/single-object-func.PNG" /></center>
 
 5. **Deploy the Flow:**
    - Click the "Deploy" button in the top-right corner of the Node-RED interface to deploy the flow.
@@ -301,9 +302,9 @@ This setup will read all the parameters from BACnet devices on your network and 
 7. **Check the Output:**
    - Wait for the output to appear in the Debug window. You will see the parameters of the only the particular object in Selected device in the BACnet network area.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/debug-single-object.PNG" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/debug-single-object.PNG" /></center>
 
-<center><img width={800} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/bacnet4.gif" /></center>
+<center><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet4.gif" /></center>
 
 ## Tech Support & Product Discussion
 

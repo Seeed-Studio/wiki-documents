@@ -1279,9 +1279,14 @@ import TabItem from '@theme/TabItem';
 </div>
 
 
-**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
-
-
+**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen. 
+Install necessary packages build-essential(build essential package is a Debian package that contains the tools needed to create a DEB package from source code.) by installing module.
+```sh
+sudo apt update
+sudo apt install git
+sudo apt-get install build-essential
+```
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/dmlora.png"/></div>
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
 
 - Select Interface Options
