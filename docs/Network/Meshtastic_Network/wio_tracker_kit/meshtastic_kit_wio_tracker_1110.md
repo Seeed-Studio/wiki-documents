@@ -5,7 +5,7 @@ keywords:
 - Meshtastic
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /get_started_with_Meshtastic_kit
+slug: /meshtastic_kit_wio_tracker_1110
 last_update:
   date: 6/17/2024
   author: Jessie
