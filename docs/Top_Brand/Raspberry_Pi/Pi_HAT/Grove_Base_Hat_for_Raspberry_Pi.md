@@ -201,10 +201,8 @@ If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to u
 ```python
 git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
-# Python2
-sudo pip install .
 # Python3
-sudo pip3 install .
+sudo pip3 install . --break-system-packages
 ```
 
 #### Usage
@@ -226,35 +224,6 @@ pi@raspberrypi:~$ grove_
 
 Then we will show you how to use them according to port type.
 
-**PWM Port**
-
-:::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
-:::
-
-We will take the [Grove - buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) for example to introduce the PWM port.
-
-*Hardware connection diagram*
-
-![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect1.jpg)
-
-Tap the following command `sudo grove_pwm_buzzer` in the command line interface.
-
-```python
-pi@raspberrypi:~$ sudo grove_pwm_buzzer
-Insert Grove-Buzzer to Grove-Base-Hat slot PWM[12 13 VCC GND]
-
-3800
-3400
-3000
-2900
-2550
-2270
-2000
-exiting application
-```
-
-The buzzer will ring a few times and then stop, the program will automatically exit.
 
 **Digital Port**
 
