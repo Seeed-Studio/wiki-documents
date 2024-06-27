@@ -32,7 +32,7 @@ last_update:
   </table>
 </div>
 
-:::提示
+:::tip
 本教程的所有内容仅适用于XIAO ESP32S3 Sense。
 :::
 
@@ -64,6 +64,10 @@ XIAO ESP32S3 Sense支持高达**32GB**的microSD卡，所以如果您准备为XI
 
 下面是完整的示例程序。
 
+:::tip
+检查并确保您使用的是哪个版本的 `esp32`，以下示例适用于 2.0.x 版本，下面的示例适用于 3.0.x 及更高版本
+:::
+
 ```cpp
 #include <I2S.h>
 
@@ -79,6 +83,43 @@ void setup() {
   // start I2S at 16 kHz with 16-bits per sample
   I2S.setAllPins(-1, 42, 41, -1, -1);
   if (!I2S.begin(PDM_MONO_MODE, 16000, 16)) {
+    Serial.println("Failed to initialize I2S!");
+    while (1); // do nothing
+  }
+}
+
+void loop() {
+  // read a sample
+  int sample = I2S.read();
+
+  if (sample && sample != -1 && sample != 1) {
+    Serial.println(sample);
+  }
+}
+```
+
+:::tip
+上面的示例仅与版本为 2.0.x 的 `esp32` 兼容，如果您使用的是最新版本（例如 3.0.x），请使用下面的示例
+:::
+
+```cpp
+#include <ESP_I2S.h>
+I2SClass I2S;
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  // A baud rate of 115200 is used instead of 9600 for a faster data rate
+  // on non-native USB ports
+  Serial.begin(115200);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+
+  // setup 42 PDM clock and 41 PDM data pins
+  I2S.setPinsPdmRx(42, 41);
+
+  // start I2S at 16 kHz with 16-bits per sample
+  if (!I2S.begin(I2S_MODE_PDM_RX, 16000, I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO)) {
     Serial.println("Failed to initialize I2S!");
     while (1); // do nothing
   }
@@ -145,6 +186,10 @@ if (sample && sample != -1 && sample != 1) {
 如果这是您第一次在XIAO ESP32S3上使用microSD卡，您可以阅读[文件系统Wiki](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/#prepare-the-microsd-card)内容来了解microSD卡的安装和准备。 
 
 下面是这个项目的Arduino程序。
+
+:::caution
+请注意，下面的示例仅与版本为 2.0.x 的 `esp32` 兼容，并不适用于最新版本（例如 3.0.x）的`esp32`板载包。
+:::
 
 ```cpp
 /* 
@@ -264,8 +309,7 @@ void generate_wav_header(uint8_t *wav_header, uint32_t wav_size, uint32_t sample
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/102.png" style={{width:700, height:'auto'}}/></div>
 
-:::提示
-
+:::note
 要播放从XIAO ESP32S3录制的音频，您可能需要使用支持WAV格式的音频播放器。
 :::
 

@@ -573,7 +573,7 @@ If you encounter an Invoke failed, then you have trained a model that does not m
 
 1. Please check whether you have modified the image size of Colab. The default compression size is **192x192**, Grove Vision AI V2 requires the image size to be compressed as square, please do not use non-square size for compression. Also don't use too large size *(no more than 240x240 is recommended)*.
 
-2. The model file for Grove Vision AI V2 must be suffixed with **int8_vela.tflite**. Please do not use model files in other formats. This includes **int8.tflite, which is also not available** for Grove Vision AI V2.
+<!-- 2. The model file for Grove Vision AI V2 must be suffixed with **int8_vela.tflite**. Please do not use model files in other formats. This includes **int8.tflite, which is also not available** for Grove Vision AI V2. -->
 
 ## Tech Support & Product Discussion
 

@@ -1,21 +1,21 @@
 ---
-description: This article mainly introduces how to repair the 485 communication function of reComputer R1000, and tests the rs485 and Modbus communication functions.
-title: reComputer R1000 repair the rs485 communication function 
+description: This article mainly introduces how to use the 485 communication function of reComputer R1000, and tests the rs485 and Modbus communication functions.
+title: How to use rs485 and modbus with reComputer R1000
 keywords:
   - Edge
   - reComputer R1000
   - Modbus RTU
   - rs485
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer_r1000_rs485_fix
+slug: /reComputer_r1000_use_rs485_modbus
 last_update:
   date: 06/24/2024
   author: ShuishengPeng
 ---
 
 ## Introduction
-This article mainly introduces how to repair the 485 communication function of reComputer R1000, and tests the RS485 and Modbus communication functions.
-The work to repair the RS485 function mainly lies in two points:
+This article mainly introduces how to use the 485 communication function of reComputer R1000, and tests the RS485 and Modbus communication functions.
+The work to use the RS485 function mainly lies in two points:
 - Turn on power to the 485 transceiver. By default the r1000 does not have the power pin turned on, so turn it on when needed
 - Controls the DE pin of the 485 transceiver, which is used by the device to switch between data sending mode and receiving mode. By default, R1000 does not control the DE pin, so when the user does not control this pin, the 485 can only communicate in one direction.
   
