@@ -2741,6 +2741,10 @@ const sidebars = {
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-Modbus-TCP',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-Bacnet',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-influxdb',
+
             ],
             },
         ],
@@ -2773,14 +2777,20 @@ const sidebars = {
         label: 'Edge Controller',
         collapsed: true,
         collapsible: true,
-        link: {
-          type: "doc",
-          id: 'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_intro',
-        },
+       // link: {
+         // type: "doc",
+         // id: 'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_intro',
+       // },
         items: [
           {
             type: 'category',
             label: 'EdgeBox-RPI-200',
+            collapsed: true,
+            collapsible: true,
+            link: {
+              type: "doc",
+              id: 'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edge_Box_intro',
+            },
             items: [
               'Edge/Raspberry_Pi_Devices/Edge_Box_RPi_200/Edgebox_rpi_200_Introduction',
               {
@@ -2886,7 +2896,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_flash_os',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_assembly_guide',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
-              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_fix_rs485_and_modbus',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_how_to_use_rs485_modbus',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/reComputer_R1000_FAQ', 
               {
                 type: 'category',
@@ -2903,6 +2913,13 @@ const sidebars = {
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
                         ],
                         },
+                        {
+                          type: 'category',
+                          label: 'FUXA',
+                          items: [
+                             'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_modbus',
+                          ],
+                          },
                     ],
                     },
 
