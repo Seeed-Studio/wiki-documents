@@ -2741,6 +2741,9 @@ const sidebars = {
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-RS485',
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-mqtt',
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-Modbus-TCP',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-Bacnet',
+
             ],
             },
         ],
