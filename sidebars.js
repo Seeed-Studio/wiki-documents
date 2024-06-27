@@ -2921,6 +2921,14 @@ const sidebars = {
                     ],
                     },
 
+                    {
+                      type: 'category',
+                      label: 'Computer Vision',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_Yolov8_object_detection',
+                      ],
+                      },
+
                 ],
               },
 
