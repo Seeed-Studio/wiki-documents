@@ -54,7 +54,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Method 1" label="Run with AI kit">
+<TabItem value="Method 1" label="Run with Hailo-8L">
 
 ### Step 1: Install AI kit 
 
@@ -130,8 +130,8 @@ The right result show as bellow:
 Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8.
 
 ```
-https://github.com/Seeed-Projects/Benchmark-of-Yolo-on-CM4-with-AI-kit.git
-cd Benchmark-of-Yolo-on-CM4-with-AI-kit/object_detection_benchmark/Yolov8-without-AIkit
+git clone https://github.com/Seeed-Projects/Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L.git
+cd Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L/object_detection_benchmark/Yolov8-with-AIkit
 bash ./run.sh
 ```
 ### Result
@@ -139,15 +139,15 @@ bash ./run.sh
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object_detection_with_AIkit.gif" alt="pir" width={1000} height="auto"/></p>
 </TabItem>
 
-<TabItem value="Method 2" label="Run without AI kit">
+<TabItem value="Method 2" label="Run without Hailo-8L">
 
 ### Run YOLOv8
 
 Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8.
 
 ```
-https://github.com/Seeed-Projects/Benchmark-of-Yolo-on-CM4-with-AI-kit.git
-cd Benchmark-of-Yolo-on-CM4-with-AI-kit/object_detection_benchmark/Yolov8-without-AIkit
+git clone https://github.com/Seeed-Projects/Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L.git
+cd Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L/object_detection_benchmark/Yolov8-without-AIkit
 bash ./run.sh
 ```
 ### Result
