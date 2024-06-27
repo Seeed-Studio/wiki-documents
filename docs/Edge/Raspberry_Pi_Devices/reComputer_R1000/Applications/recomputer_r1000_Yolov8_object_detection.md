@@ -1,12 +1,12 @@
 ---
-description: YOLOv8 Object Detection on reComputer R1000 with Hailo-8L
+description: This wiki demonstrates object detection model using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration. 
 title:  YOLOv8 Object Detection on reComputer R1000 with Hailo-8L
 keywords:
   - Edge
   - reComputer r1000
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /YOLOv8_Object_Detection_on_reComputer_R1000_with_Hailo-8L
+slug: /yOlOv8_object_detection_on_recomputer_r1000_with_hailo_8l
 last_update:
   date: 06/26/2024
   author: Jiahao
