@@ -55,9 +55,10 @@ The below image is for Orin NX 16GB
 
 ## Download the peripheral drivers
 
-First of all, you need to install the peripheral drivers for this board. These are needed for some hardware peripherals to function on the board. Click the below links to download the drivers according to the Jetson module
+First of all, you need to install the peripheral drivers for this board. These are needed for some hardware peripherals to function on the board. Click the below links to download the drivers according to the Jetson module.
 
-<table>
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
   <thead>
     <tr>
       <th>Jetson Module</th>
@@ -68,7 +69,7 @@ First of all, you need to install the peripheral drivers for this board. These a
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB</td>
+      <td rowSpan={3}>Jetson Orin NX 8GB/ 16GB</td>
       <td>5.1</td>
       <td>35.2.1</td>
       <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A607-Carrier-Board/Orin-NX/A607-Orin-NX-JP5.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
@@ -79,24 +80,49 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A607-Carrier-Board/Orin-NX/A607-Orin-NX-JP5.1.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
-      <td>Jetson Orin Nano 4GB</td>
-      <td rowSpan={2}>5.1.1</td>
-      <td rowSpan={2}>35.3.1</td>
+      <td>6.0</td>
+      <td>36.3</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A607/A607-JP6.0.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4719368326&Signature=8UuuH0SNAMXiKXcxdS9zy9eieYE%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td rowSpan={2}>Jetson Orin Nano 4GB</td>
+      <td>5.1.1</td>
+      <td>35.3.1</td>
       <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A607-Carrier-Board/Orin-NX/A607-Orin-Nano-4GB-JP5.1.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
-      <td>Jetson Orin Nano 8GB</td>
+      <td>6.0</td>
+      <td>36.3</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A607/A607-JP6.0.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4719368326&Signature=8UuuH0SNAMXiKXcxdS9zy9eieYE%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>  
+    <tr>
+      <td rowSpan={2}>Jetson Orin Nano 8GB</td>
+      <td>5.1.1</td>
+      <td>35.3.1</td>
       <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/A607-Carrier-Board/Orin-NX/A607-Orin-Nano-8GB-JP5.1.1.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>6.0</td>
+      <td>36.3</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A607/A607-JP6.0.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4719368326&Signature=8UuuH0SNAMXiKXcxdS9zy9eieYE%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
+</div>
 
 **Note:** Currently we provide the above drivers. We will keep updating the drivers in the future with the release of new JetPack versions.
 
 ## Flash to Jetson 
 
-!!!note
+:::note
  Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
+:::  
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="JP5.1/JP5.1.1" label="JP5.1/JP5.1.1">
 
 ### Jetson Orin NX
 
@@ -240,6 +266,56 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 \
 You will see the following output if the flashing process is successful
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/A603/10.jpg" /></div>
+</TabItem>
+
+<TabItem value="JP6.0" label="JP6.0">
+
+Here we will use NVIDIA L4T **36.3** to install **Jetpack 6.0** on the A607 Carrier Board with Jetson Orin NX module.
+
+**Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r363) the NVIDIA drivers on the host PC. The required drivers are shown below:
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg" /></div>
+
+**Step 2:** Move the downloaded peripheral drivers from before into the same folder with NVIDIA drivers. Now you will see three compressed files in the same folder.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A607/compressed_files.png" /></div>
+
+**Step 3:** Extract **Jetson_Linux_R36.3.0_aarch64.tbz2** and **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
+
+```sh
+tar xf Jetson_Linux_R36.3.0_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
+cd Linux_for_Tegra/
+sudo ./apply_binaries.sh
+sudo ./tools/l4t_flash_prerequisites.sh
+```
+
+**Step 4:** Extract **A607-JP6.0.zip**. Here we additionally install the **unzip** package which is needed to decompress the .zip file
+
+```sh
+cd ..
+sudo apt install unzip 
+sudo unzip A607-JP6.0.zip
+```
+
+Here it will ask whether to replace the files. Type **A** and press **ENTER** to replace the necessary files:
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A607/replace_files.png" /></div>
+
+**Step 5:** Flash the system to either NVMe SSD:
+
+```sh
+cd Linux_for_Tegra
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit internal
+```
+
+You will see the following output if the flashing process is successful:
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A603/10.jpg" /></div>
+
+</TabItem>
+</Tabs>
+
 
 ## Configure WiFi and Bluetooth
 
