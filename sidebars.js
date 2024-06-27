@@ -2743,6 +2743,7 @@ const sidebars = {
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-canbus',
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-Modbus-TCP',
           'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-Bacnet',
+          'Edge/Raspberry_Pi_Devices/reTerminal-DM/Node-Red/reTerminal-DM-Node-Red-influxdb',
 
             ],
             },
