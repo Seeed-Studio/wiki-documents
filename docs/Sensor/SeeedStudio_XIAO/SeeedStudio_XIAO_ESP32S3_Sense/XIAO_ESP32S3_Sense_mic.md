@@ -65,7 +65,7 @@ For the first project case, let's detect the noise in the environment and show t
 The following is the complete sample program.
 
 :::tip
-Check and make sure which version of ESP32-Arduino you are using, the following example is for 2.0.x the one below is for 3.0.x and later
+Check and make sure which version of `esp32` you are using, the following example is for 2.0.x the one below is for 3.0.x and later
 :::
 
 ```cpp
@@ -99,7 +99,7 @@ void loop() {
 ```
 
 :::tip
-The example above is only compatible with 2.0.x of ESP32-arduino, if you are on latest (e.g. 3.0.x) use the one below
+The example above is only compatible with 2.0.x of `esp32`, if you are on latest (e.g. 3.0.x) use the one below
 :::
 
 ```cpp
