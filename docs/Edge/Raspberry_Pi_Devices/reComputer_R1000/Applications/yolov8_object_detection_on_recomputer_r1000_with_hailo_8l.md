@@ -130,8 +130,8 @@ The right result show as bellow:
 Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8.
 
 ```
-git clone https://github.com/Seeed-Projects/Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L.git
-cd Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L/object_detection_benchmark/Yolov8-with-AIkit
+git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
+cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L/object_detection_benchmark/Yolov8-with-AIkit
 bash ./run.sh
 ```
 ### Result
@@ -146,8 +146,8 @@ bash ./run.sh
 Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8.
 
 ```
-git clone https://github.com/Seeed-Projects/Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L.git
-cd Running-YOLOv8-Object-Detection-on-reComputer-R1000-CM4-Powered-Edge-Gateway-with-Hailo-8L/object_detection_benchmark/Yolov8-without-AIkit
+git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
+cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L/object_detection_benchmark/Yolov8-without-AIkit
 bash ./run.sh
 ```
 ### Result
