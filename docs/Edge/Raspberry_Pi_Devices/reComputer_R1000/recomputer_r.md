@@ -1380,7 +1380,7 @@ Ensure you replace /dev/ttyUSB* with the correct serial port for each Zigbee mod
 
 ### PoE
 
-The reComputer R1000 worked as powered devices can support the IEEE 802.3af standard by adding a PoE power supply module. The seat for PoE is pre-soldered on board; however, users need to disassemble the device to install the PoE module for Ethernet PoE function.
+The reComputer R1000 worked as powered devices can support the IEEE 802.3af standard by adding a PoE power supply module. Users need to disassemble the device to install the PoE module for Ethernet PoE function.
 
 :::note
 The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to [solder and assemble the PoE module themselves](/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module).
