@@ -1386,9 +1386,9 @@ The reComputer R1000 worked as powered devices can support the IEEE 802.3af stan
 The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to [solder and assemble the PoE module themselves](/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module).
 :::
 
-### SSD
+### M.2 Slot
 
-The reComputer R1000 supports 2280 NVMe SSD through the use of a PCIe slot(J62) below two Mini-PCIe slots on board. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
+The reComputer R1000 supports 2280 NVMe SSD and AI accelerator(Hailo) through the use of a PCIe slot(J62) below two Mini-PCIe slots on board. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
 
 [Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-ssd).
 
