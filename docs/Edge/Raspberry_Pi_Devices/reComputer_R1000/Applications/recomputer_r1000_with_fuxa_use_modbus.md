@@ -59,7 +59,7 @@ Before you start this project, you may need to prepare your hardware and softwar
     sudo npm install -g --unsafe-perm @frangoteam/fuxa
     sudo fuxa
   ```
-
+* Regarding how to use the modbus function of reComputer R1000, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus/).
 ### Hardware Configuration
 For ModbustRTU, we used an rs485 to USB module to connect the reComuputer R1000 with the W10 pc.
 
