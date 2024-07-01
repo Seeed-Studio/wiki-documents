@@ -1286,7 +1286,7 @@ sudo apt update
 sudo apt install git
 sudo apt-get install build-essential
 ```
-
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/dmlora.png"/></div>
 **Step 2.** type `sudo raspi-config` in command line to open Raspberry Pi Software Configuration Tool:
 
 - Select Interface Options
