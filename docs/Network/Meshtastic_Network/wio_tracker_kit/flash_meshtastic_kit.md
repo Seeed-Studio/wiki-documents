@@ -11,19 +11,20 @@ last_update:
   author: Jessie
 ---
 
-This tutorial will guide users to flash the Wio Tracker 1110 Dev Board to the Meshtastic version, for those who want to use the Meshtastic network.
+This tutorial will guide users to flash the [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) to the Meshtastic version, for those who want to use the Meshtastic network.
 
 
+:::tip
+If you want to flash the board back to the LoRaWAN version, please check this [tutorial](https://wiki.seeedstudio.com/flash_to_wio_tracker/).
+:::
 
 ### Preparation
 
 * Wio Tracker 1110 Board x 1
 * Computer x 1
 * USB Type-C Cable x 1
-* Firmware x 1
 
-
-
+ 
 
 ### Connect the board
 

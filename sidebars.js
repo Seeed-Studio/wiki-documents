@@ -1651,6 +1651,21 @@ const sidebars = {
 
     {
       type: 'category',
+      label: 'ReSpeaker',
+      items: [
+        {
+          type: 'category',
+          label: 'ReSpeaker Lite',
+          items: [
+            'Sensor/ReSpeaker/ReSpeaker_Lite/reSpeaker_lite_introduction',
+           // 'Sensor/ReSpeaker/ReSpeaker_Lite/reSpeaker_ha',
+          ],
+        },
+        ],
+    },
+
+    {
+      type: 'category',
       label: 'Other Sensing Modules',
       items: [
         {

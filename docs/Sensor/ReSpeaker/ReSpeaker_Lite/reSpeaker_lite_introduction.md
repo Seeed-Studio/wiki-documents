@@ -1,20 +1,19 @@
 ---
 description: ReSpeaker Lite
-title: ReSpeaker Lite
+title: Get Started
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reSpeaker_usb_v3
+slug: /reSpeaker_lite_introduction
 last_update:
-  date: 4/11/2024
+  date: 6/28/2024
   author: Jessie
 ---
 
 ## Introduction
 
 
-ReSpeaker Lite is a 2 mic 
-
+ReSpeaker Lite is a plug-and-play modular voice interface to hack things around you. Let you interact with your home appliances, your plant, your office, your internet-equipped devices, or any other things in your daily life, all by your voice. The ReSpeaker project provides hardware components and software libraries to build voice-enabled device.
 
 
 
@@ -111,24 +110,6 @@ After flashing is completed, please restart the board.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/flash-done.png" alt="pir" width={500} height="auto" /></p>
-
-
-## AEC
-
-
-Raw data:
-
-<audio controls="controls">
-  <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel1_raw.wav"></source>
-</audio>
-
-
-Processed data:
-
-<audio controls="controls">
-  <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel1_raw.wav"></source>
-</audio>
-
 
 
 
