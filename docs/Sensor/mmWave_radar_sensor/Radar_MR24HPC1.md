@@ -557,6 +557,10 @@ void loop() {
 }
 ```
 
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
+
 In this program, we are using the XIAO nRF52840's hardware **Serial1** port to connect to the Sensor and use the hardware **Serial** port Serial to output data, so we need to initialise this serial port separately in the initialisation function `Setup()`.
 
 In the main `loop()` function we use the function `recvRadarBytes()` to receive data frames from the Sensor and then use the `showData()` function to print out the received data frames via the serial port.
@@ -668,6 +672,10 @@ void loop() {
 }
 ```
 
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
+
 To implement the data parsing function, we first need to call the `HumanStatic_func()` function. The parameter passed in can be `true` or `false` to control whether the display of the Human Movement Parameters is enabled or not.
 
 If you choose to turn it on, i.e. pass in the parameter `true`, you may get the following message for the serial port.
@@ -739,6 +747,10 @@ void loop() {
   delay(50);   //Do not set the delay time too long, as this may affect the reception of the data frames returned by the radar.
 }
 ```
+
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
 
 Before sending data to the Sensor, we need to consult the user manual to obtain the complete data frames to be sent according to our needs and define an array in the program to hold the data frames to be sent.
 
@@ -825,6 +837,10 @@ void loop() {
 
 }
 ```
+
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
 
 Resetting the Sensor is very simple, you just need to call `reset_func()`. The reset only needs to be **executed once**, so we use it in the `Setup()` function.
 

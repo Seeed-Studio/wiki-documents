@@ -2156,7 +2156,7 @@ const sidebars = {
               type: 'category',
               label: 'Wio Tracker 1110 Meshtastic Kit',
               items: [
-                'Network/Meshtastic_Network/wio_tracker_kit/get_started_with_Meshtastic_kit',
+                'Network/Meshtastic_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',
                 {
                   type: 'doc', 
                   id:'Network/Meshtastic_Network/wio_tracker_kit/flash_meshtastic_kit',
@@ -2934,6 +2934,14 @@ const sidebars = {
                       
                     ],
                     },
+
+                    {
+                      type: 'category',
+                      label: 'Computer Vision',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                      ],
+                      },
 
                 ],
               },

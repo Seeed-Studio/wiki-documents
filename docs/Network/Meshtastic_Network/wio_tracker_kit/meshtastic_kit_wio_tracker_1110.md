@@ -5,7 +5,7 @@ keywords:
 - Meshtastic
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /get_started_with_Meshtastic_kit
+slug: /meshtastic_kit_wio_tracker_1110
 last_update:
   date: 6/17/2024
   author: Jessie
@@ -107,9 +107,16 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="app" label="App">
+
+<TabItem value="ios" label="IOS APP">
 
 * Download the `Meshtastic` App.<br/>
+
+* Select the target device on the Bluetooth panel.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+
+
 * The display will show the name and PIN code
 
 
@@ -120,6 +127,27 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
+</TabItem>
+
+<TabItem value="android" label="Android App">
+
+
+* Download the `Meshtastic` App.<br/>
+
+* Click `+` and choose the target device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
+
+
+* The display will show the name and PIN code
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
+
+
+* Enter the code and then click `OK` to connect the device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
   
 </TabItem>
@@ -181,16 +209,20 @@ In order to start communicating over the mesh, you must set your region. This se
 
 
 <Tabs>
-<TabItem value="app" label="App">
+<TabItem value="ios" label="IOS APP">
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 
 
-  
 </TabItem>
 
+<TabItem value="android" label="Android App">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
+
+
+</TabItem>
 <TabItem value="web" label="Web Client">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-lora-config.png" alt="pir" width={800} height="auto" /></p>
@@ -249,6 +281,11 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 :::info
 **EU_433** and **EU_868** have to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
 :::
+
+
+Now that you have set the LoRa region on your device, you can continue with configuring any [additional configs](https://meshtastic.org/docs/configuration/) to suit your needs.
+
+
 
 
 

@@ -547,6 +547,10 @@ void loop()
 }
 ```
 
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
+
 In this program, we are using the XIAO nRF52840's hardware **Serial1** port to connect to the Sensor and use the hardware **Serial** port Serial to output data, so we need to initialise this serial port separately in the initialisation function `Setup()`.
 
 In the main `loop()` function we use the function `recvRadarBytes()` to receive data frames from the Sensor and then use the `showData()` function to print out the received data frames via the serial port.
@@ -631,6 +635,10 @@ void loop()
 }
 ```
 
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
+
 In this example, the function to detect the presence of a human body is implemented by the `HumanExis_Func()` function. The basic logic of the program implementation is that the `HumanExis_Func()` function assigns the status information reported by the sensor to the `sensor_report` variable. Based on the value of `sensor_report`, we then print out all the values in that state through the serial port.
 
 Note that the `sensor_report` corresponds to the data output from the serial port under indentation. For example, the `bodysign_val` variable representing the sign parameter is only valid when `sensor_report` is `BODYVAL`, and is not present in other `sensor_reports` reported by the sensor.
@@ -706,6 +714,10 @@ void loop()
 }
 ```
 
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
+
 Among the fall detection functions, there is also a function for dwell detection. The main function of this function is to assist the user or the sensor to determine whether the human body has fallen or not. When there is no human activity for a period of time after a dramatic change in acceleration in the vertical direction (i.e., staying in place), there is a high probability that the sensor will determine that someone has fallen and is unconscious.
 
 ### Demo4: Send data to Sensor
@@ -752,6 +764,10 @@ void loop()
   delay(50);                       //Do not set the delay time too long, as this may affect the reception of the data frames returned by the radar.
 }
 ```
+
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
 
 In the program of this example, you can see that an array `DevID_buff[10]` is defined, which stores the hexadecimal number of your query device ID, one location per byte.
 
@@ -829,6 +845,10 @@ void loop()
   // put your main code here, to run repeatedly:
 }
 ```
+
+:::tip
+If you are using XIAO ESP32 series and there is no data feedback from mmwave radar. You can try to change the code above from ```Serial1.begin(115200);``` to ```Serial1.begin(115200, SERIAL_8N1, D7, D6);```.
+:::
 
 Resetting the Sensor is very simple, you just need to call `reset_func()`. The reset only needs to be **executed once**, so we use it in the `Setup()` function.
 
