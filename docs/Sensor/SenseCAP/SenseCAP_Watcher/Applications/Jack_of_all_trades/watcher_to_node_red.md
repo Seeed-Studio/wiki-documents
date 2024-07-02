@@ -4,7 +4,7 @@ title: Watcher to Node-Red
 keywords:
 - watcher
 - Node-Red
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/cover.png
 slug: /watcher_to_node_red
 last_update:
   date: 06/28/2024
@@ -17,12 +17,12 @@ last_update:
 
 It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/10.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/cover.png" style={{width:1000, height:'auto'}}/></div>
 
 To make it easier for our users to **connect data from the Watcher to various other Paas platforms for more in-depth data processing**. For example. from Watcher to IFTTT, Telegram, Twilio etc. We will do a series of tutorials for **Watcher & Node-RED**.
 
 This tutorial, the first in a series, will walk you through installing and using Node-red and calling the Watcher API to connect to Node-RED.
-
+f
 ## Part 1. Install Node.js®
 
 To install Node-RED locally you will need a [supported version of Node.js](https://nodered.org/docs/faq/node-versions).
