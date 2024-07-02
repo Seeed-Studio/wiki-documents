@@ -38,6 +38,13 @@ last_update:
 <a class="feature4"></a> 
 </div> -->
 
+## XIAO系列课程：Arduino小型化与TinyML应用——从入门到精通
+
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112691704234614&bvid=BV1WY3WeZEVa&cid=500001597534060&p=1" scrolling="no" border={0} frameBorder="no" framespacing={0} allowFullScreen="true" style={{width: 800, height: 480}} />
+
+
+
 ## Seeed Studio XIAO 系列介绍
 
 ### Seeed Studio XIAO ESP32S3 Sense
