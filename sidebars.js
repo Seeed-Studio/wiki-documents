@@ -81,7 +81,7 @@ const sidebars = {
     //         // 'FAQ/reTerminal/troubleshooting-touch-screen-inaccuracy',
     //         // 'FAQ/reTerminal/check_Encryption_Chip',
     //         // 'FAQ/reTerminal/disable_screen_rotation_on_reTerminal',
-
+    //         // 'FAQ/reTerminal/screen_refresh_rate',
     //       ],
     //     },
 
