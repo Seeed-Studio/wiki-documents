@@ -2930,7 +2930,9 @@ const sidebars = {
                         type: 'category',
                         label: 'NodeRed',
                         items: [
-                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
+                          'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer-r1000-nodered-getting-start',
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_with_node_red_and_bacnet',
+                           
                         ],
                         },
                         {
