@@ -131,19 +131,23 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 ### Front View
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-1.svg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-1.svg" style={{width:1000, height:'auto'}}/></div>
 
 ### Back View
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-2.svg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-2.svg" style={{width:1000, height:'auto'}}/></div>
 
 ### Inside
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-3.svg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-3.svg" style={{width:1000, height:'auto'}}/></div>
 
 ### Mounting Interface
 
 On the back of your Watcher device, you will find a Mounting Bracket that allows you to securely attach the device to various surfaces or accessories. Currently, we offer two types of mounting brackets to accommodate different placement needs:
+
+:::tip
+Please note that the Watcher body does not come with any of the stands below, so if you need a stand, please purchase it separately.
+:::
 
 - **360° Rotate Bracket**
    - This bracket is designed for easy installation on walls or other vertical surfaces.
@@ -178,6 +182,10 @@ To use either of these mounting brackets, follow these general steps:
 5. Once your Watcher is securely mounted using either bracket, you can proceed to connect it to power and configure it according to your preferences.
 
 By offering these two mounting bracket options, we aim to provide flexibility and convenience in integrating your Watcher device into various environments. Whether you prefer a wall-mounted setup or a desk-friendly arrangement, our brackets ensure a secure and adjustable installation.
+
+:::tip
+Please note that the Watcher body does not come with any of the stands below, so if you need a stand, please purchase it separately.
+:::
 
 ## Operation Guidelines
 
@@ -278,11 +286,11 @@ After powering on your Watcher, if it has not been previously bound to a device,
 
 You can either scan the QR code or use the provided link to download the app.
 
-<!-- <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/sensecap_watcher_getting_started">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Comming Soon 🖱️</font></span></strong>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Download APP 🖱️</font></span></strong>
     </a>
-</div> -->
+</div>
 
 <br />
 
@@ -407,7 +415,7 @@ By following these steps, you can effectively send commands to your Watcher usin
 
 Remember to regularly review and adjust your Watcher's settings and task flows to ensure optimal performance and alignment with your monitoring requirements. For a more detailed description and explanation of the APP's tasks and options, as well as a detailed description of the intervals, please read **Watcher Quick Start Series 1# : Concepts and Classification of Tasks** to learn more.
 
-## Setting
+## Watcher Setting
 
 This guide will walk you through the various settings options available on your Watcher device and explain their functions.
 
