@@ -2938,7 +2938,10 @@ const sidebars = {
                           label: 'FUXA',
                           items: [
                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_modbus',
-                          ],
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_mqtt',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_opcua',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_webapi',
+                            ],
                           },
                     ],
                     },
