@@ -22,7 +22,7 @@ It provides a browser-based editor that makes it easy to wire together flows usi
 To make it easier for our users to **connect data from the Watcher to various other Paas platforms for more in-depth data processing**. For example. from Watcher to IFTTT, Telegram, Twilio etc. We will do a series of tutorials for **Watcher & Node-RED**.
 
 This tutorial, the first in a series, will walk you through installing and using Node-red and calling the Watcher API to connect to Node-RED.
-f
+
 ## Part 1. Install Node.js®
 
 To install Node-RED locally you will need a [supported version of Node.js](https://nodered.org/docs/faq/node-versions).
