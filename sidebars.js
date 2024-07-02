@@ -973,7 +973,26 @@ const sidebars = {
           items: [
             
           ],
-        },
+        },{
+          type: 'category',
+          label: 'Applications',
+          items: [
+            {
+              type: 'category',
+              label: 'Jack_of_all_trades',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Jack_of_all_trades/watcher_to_node_red',
+              ],
+            },
+            // {
+            //   type: 'category',
+            //   label: 'Society',
+            //   items: [
+            //     'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Society/watcher_to_ifttt',
+            //   ],
+            // }
+          ],
+        }
       ]
     },
     {
