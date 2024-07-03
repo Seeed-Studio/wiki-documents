@@ -1,15 +1,16 @@
 ---
-description: Edge Box RPi 200 with Node Red and MQTT
-title: Edge Box RPi 200 with Node Red and MQTT
+description: Learn how to install MQTT on the reComputer R1000 and test it with Node-RED. MQTT is a lightweight messaging protocol ideal for IoT applications, enabling efficient, real-time data exchange even over unreliable networks. With Node-RED integration, edge devices and central servers achieve seamless connectivity, optimizing data transmission and processing directly at the edge.
+
+title: reComputer R1000 with Node Red and MQTT
 keywords:
   - Edge Controller
-  - Edge-Box
+  - reComputer R1000
   - Node-Red
   - MQTT
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Edge-Box-Node-Red-MQTT
+image: https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png
+slug: /recomputer_r1000_nodered_mqtt
 last_update:
-  date: 05/16/2024
+  date: 07/02/2024
   author: Kasun Thushara
 ---
 
@@ -17,28 +18,29 @@ last_update:
 
 
 
-**MQTT (Message Queuing Telemetry Transport)** is a lightweight messaging protocol ideal for IoT (Internet of Things) applications due to its efficiency and low bandwidth requirements. It facilitates communication between devices in a publish-subscribe model, allowing for real-time data exchange over unreliable networks. With Node-RED, integrating MQTT enables seamless connectivity between edge devices and central servers or other devices, fostering efficient data transmission and processing. EdgeBox Edge Controller, by supporting MQTT natively, eliminates the need for additional hardware gateways by allowing the installation of an MQTT broker directly on the EdgeBox itself. This reduces complexity, minimizes latency, and enhances reliability, as data can be processed and acted upon at the edge without relying on external intermediaries, thus optimizing IoT system architecture.
+**MQTT (Message Queuing Telemetry Transport)** is a lightweight messaging protocol ideal for IoT (Internet of Things) applications due to its efficiency and low bandwidth requirements. It facilitates communication between devices in a publish-subscribe model, allowing for real-time data exchange over unreliable networks. With Node-RED, integrating MQTT enables seamless connectivity between edge devices and central servers or other devices, fostering efficient data transmission and processing reComputer R1000 Edge Controller, by supporting MQTT natively, eliminates the need for additional hardware gateways by allowing the installation of an MQTT broker directly on the reComputer R1000 itself. This reduces complexity, minimizes latency, and enhances reliability, as data can be processed and acted upon at the edge without relying on external intermediaries, thus optimizing IoT system architecture.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/noderedmqtt.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png" style={{width:800, height:'auto'}}/></div>
 
 ## Getting Start
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
+
 
 ### Hardware Preparation
 
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg">Edge Box RPi 200</th>
+      <th class="table-trnobg">reComputer R1000</th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
@@ -47,12 +49,11 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-Edge Box-200 comes to your hand pre installed raspberry pi OS. If you are booting this device first time please read our [Getting Started](https://wiki.seeedstudio.com/Edge_Box_introduction/) Wiki.
-We have prepared a [Getting started Guide on Node-RED](https://wiki.seeedstudio.com/Edge-Box-Getting-Started-with-Node-Red/). It is recommended that you review this guide before proceeding to the wiki.
+We have prepared a [Getting started Guide on Node-RED](https://wiki.seeedstudio.com/recomputer_r1000_getting_statrted_node_red/). It is recommended that you review this guide before proceeding to the wiki.
 
-## Setup EdgeBox as MQTT Broker 
+## Setup reComputer R1000 as MQTT Broker 
 
-- **Step 01** : SSH or VNC  to EdgeBox RPi 200  and Update  Raspberry Pi OS:
+- **Step 01** : SSH or VNC  to reComputer R1000 and Update  Raspberry Pi OS:
 ```sh
 sudo apt update
 ```
@@ -102,14 +103,14 @@ listener 1883
 ```
 Save the modifications by pressing Ctrl+S and exit the editor with Ctrl+X. 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/mqttconfig.PNG" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/mqttconfig.PNG" style={{width:800, height:'auto'}}/></div>
 
 - **Step 05** : To establish usernames and passwords, granting access to MQTT clients, or resetting existing passwords, utilize the following command in the terminal:
 
 ```sh
 sudo mosquitto_passwd -c /etc/mosquitto/pwfile <username>
 ```
-After generating a username and password, reboot Edgebox 
+After generating a username and password, reboot reComputer R1000
 
 ```sh
 sudo reboot
@@ -164,9 +165,9 @@ The MQTT-in node subscribes to MQTT topics and receives messages from the broker
 
 - **Step 04** Click Done to save the configuration.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/connection.PNG" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/connection.PNG" style={{width:600, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/mqttin.PNG" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/mqttin.PNG" style={{width:600, height:'auto'}}/></div>
 
 **MQTT-out Node** 
 
@@ -192,17 +193,17 @@ The MQTT-out node (MQTT output) is used to publish messages to MQTT topics. You 
    
     - **Name**: Optionally, assign a meaningful name to your node.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/mqttout.PNG" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/mqttout.PNG" style={{width:600, height:'auto'}}/></div>
 
   - **Step 07** Click Done to save the configuration.
 
 We use the inject node to inject the message at a certain interval, and we also use the debug node to inspect the published message.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/debugnode.PNG" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/debugnode.PNG" style={{width:600, height:'auto'}}/></div>
 
 You can view this graphical representation below to understand how to connect and configure the MQTT-in, MQTT-out, debug, and inject nodes.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/mqtt-edgebox.gif" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/mqtt-edgebox.gif" style={{width:800, height:'auto'}}/></div>
 
 
 ## Tech Support & Product Discussion

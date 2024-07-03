@@ -301,7 +301,7 @@ nano global_conf.json.sx1250.US915
 nano global_conf.json.sx1250.US915.USB
 ```
 
-Basically, you only need to modify these parameters: `"server_address" "serv_port_up" "serv_port_down"`, which can be found at the tail of the config file. Copy `Gateway Server address` to `"server_address"`, change `"serv_port_up"` and `"serv_port_down"` to `1700`, these parameters should be edited like this: 
+Basically, you need to modify these parameters: `"gateway_ID" "server_address" "serv_port_up" "serv_port_down"`, which can be found at the tail of the config file. Copy `Gateway Server address` to `"server_address"`, change `"serv_port_up"` and `"serv_port_down"` to `1700`, these parameters should be edited like this: 
 
 ```
 "gateway_conf": {
