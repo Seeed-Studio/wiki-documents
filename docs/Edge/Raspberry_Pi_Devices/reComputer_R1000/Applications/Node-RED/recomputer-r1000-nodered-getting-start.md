@@ -6,8 +6,8 @@ keywords:
   - reComputer
   - IoT
   - Node-Red
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /recomputer_r1000_getting_statrted_node_red
+image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
+slug: /recomputer_r1000_getting_started_node_red
 last_update:
   date: 07/01/2024
   author: Kasun Thushara
