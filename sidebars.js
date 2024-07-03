@@ -81,7 +81,7 @@ const sidebars = {
     //         // 'FAQ/reTerminal/troubleshooting-touch-screen-inaccuracy',
     //         // 'FAQ/reTerminal/check_Encryption_Chip',
     //         // 'FAQ/reTerminal/disable_screen_rotation_on_reTerminal',
-
+    //         // 'FAQ/reTerminal/screen_refresh_rate',
     //       ],
     //     },
 
@@ -2945,7 +2945,9 @@ const sidebars = {
                         type: 'category',
                         label: 'NodeRed',
                         items: [
-                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_node_red_and_bacnet',
+                          'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer-r1000-nodered-getting-start',
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_with_node_red_and_bacnet',
+                           
                         ],
                         },
                         {
@@ -2953,7 +2955,10 @@ const sidebars = {
                           label: 'FUXA',
                           items: [
                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_modbus',
-                          ],
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_mqtt',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_opcua',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_webapi',
+                            ],
                           },
                     ],
                     },
