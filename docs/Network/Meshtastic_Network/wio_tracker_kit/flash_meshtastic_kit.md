@@ -159,7 +159,6 @@ Copy the `firmware-wio-tracker-wm1110-2.3.14.681ae9d8.uf2` file to the drive. Th
 Just ignore this error prompt, the device has actually been upgraded successfully.
 <p style={{ display: 'flex', justifyContent: 'center' }}>
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="Image 1" width="400" height="auto" style={{ marginRight: '10px' }} />
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="Image 2" width="400" height="auto" style={{ marginLeft: '10px' }} />
 </p>
 :::
 
