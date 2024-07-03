@@ -40,7 +40,7 @@
     "react-popper": "^2.3.0",
     "rehype-katex": "5",
     "remark-math": "3",
-    "sass": "^1.63.3",
+    "sass": "^1.77.6",
     "scss": "^0.2.4",
     "swiper": "^11.1.0"
   },
@@ -48,7 +48,6 @@
     "@docusaurus/eslint-plugin": "^2.4.3",
     "@docusaurus/module-type-aliases": "^2.4.3",
     "@tsconfig/docusaurus": "^1.0.5",
-    "node-sass": "^9.0.0",
     "typescript": "^4.7.4"
   },
   "browserslist": {

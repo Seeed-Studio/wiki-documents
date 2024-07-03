@@ -1,6 +1,6 @@
 ---
-description: SenseCAP ONE Weather Sensoe Introduction
-title: SenseCAP ONE Weather Sensoe
+description: SenseCAP ONE Weather Sensor Introduction
+title: SenseCAP ONE Weather Sensor
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
