@@ -1,13 +1,13 @@
 ---
 description: This article mainly introduces how to use the 485 communication function of reComputer R1000, and tests the rs485 and Modbus communication functions.
-title: How to use rs485 and modbus with reComputer R1000
+title: How to use rs485 and modbus rtu with reComputer R1000
 keywords:
   - Edge
   - reComputer R1000
   - Modbus RTU
   - rs485
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer_r1000_use_rs485_modbus
+slug: /reComputer_r1000_use_rs485_modbus_rtu
 last_update:
   date: 06/24/2024
   author: ShuishengPeng
@@ -20,6 +20,11 @@ The work to use the RS485 function mainly lies in two points:
 - Controls the DE pin of the 485 transceiver, which is used by the device to switch between data sending mode and receiving mode. By default, R1000 does not control the DE pin, so when the user does not control this pin, the 485 can only communicate in one direction.
   
 We wrote a [**C program**](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/tree/master/tools/rs485_control_DE) to turn on the power and manage the DE pin, If your application is only responsible for receiving/sending data, you can use this program to ensure that the sending and receiving of the RS485 interface is normal.
+- In addition to the methods mentioned in this article, we also provide a script that you can execute using the following command. This script can automatically create a new /dev/ttyx and then use the newly created device number to perform rs485/modbus rtu communication is enough
+  ```shell
+  curl -sSL https://raw.githubusercontent.com/Seeed-Projects/R1000-RS485-Util/main/setup_rs485.sh | sudo bash
+  ```
+
 ## Getting Start
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
@@ -59,7 +64,7 @@ sudo apt-get install minicom
 This test uses an RS485 to USB module to connect reComputer R1000 and W10 PC.
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/hardwareconnection.png" alt="pir" width="700" height="auto" /></div>
 
-## Steps to use the RS485 interface normally and perform Modbus testing
+## Steps to use the RS485 interface normally and perform Modbus RTU testing
 
 **Step 1**: First, you need to download the [**C program**](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/tree/master/tools/rs485_control_DE) provided by us, and then refer to the contents of the ReadMe. Compile and run. 
 
