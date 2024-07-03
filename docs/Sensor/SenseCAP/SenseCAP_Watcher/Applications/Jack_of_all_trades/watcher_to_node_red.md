@@ -146,7 +146,7 @@ So Watcher will notify you via SenseCraft APP as well as audio alerts and flashi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/5.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 4.** Click the **Done** button to get all message from platfrom or you can select specified message you want to receive.
+**Step 4.** Click the **Done** button to get all message from platfrom or you can select specified message you want to receive. For example, if you just want to receive your Watcher message, you can fill in the **EUI** code that can be found in device **Setting** -> **About Device** or the message in **Step 6**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/6.png" style={{width:800, height:'auto'}}/></div>
 
