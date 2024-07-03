@@ -1668,19 +1668,43 @@ const sidebars = {
     //   ],
     // },
 
+
+
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'ReSpeaker Lite',
       items: [
+        'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'Integrated with XIAO ESP32S3',
+          link: {
+            type: "doc",
+            id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
+          },
           items: [
-            'Sensor/ReSpeaker/ReSpeaker_Lite/reSpeaker_lite_introduction',
-           // 'Sensor/ReSpeaker/ReSpeaker_Lite/reSpeaker_ha',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/i2s_test',
+           // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/i2s_rgb',
+            {
+              type: 'doc', 
+              id:'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_generator',
+              label: 'Streams Generator', 
+            },
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_print',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_memory',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/player_spiffs',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_mqtt',    
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_i2s_tflite',
           ],
         },
-        ],
+        {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/ReSpeaker_Lite/Application/reSpeaker_ha',
+              ],
+        },
+          ],
     },
 
     {
@@ -1840,6 +1864,7 @@ const sidebars = {
       ],
     },
 
+    
     {
       type: 'category',
       label: 'Other Microcontrollers',
