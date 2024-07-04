@@ -74,7 +74,7 @@ EdgeBox-RPI-200 is not only an industrial raspberry pi/linux gateway and IIoT ga
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg"><font size={"4"}>EdgeBoX Getting Started with Node-Red</font></th>
+      <th class="table-trnobg"><font size={"4"}>Edge Box Getting Started with Node-Red</font></th>
       <th class="table-trnobg"><font size={"4"}>Edge Box RPi 200 with Node Red and MQTT</font></th>
 		</tr>
     <tr class="table-trnobg"></tr>
