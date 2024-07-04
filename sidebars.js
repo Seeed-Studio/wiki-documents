@@ -1668,6 +1668,45 @@ const sidebars = {
     //   ],
     // },
 
+
+
+    {
+      type: 'category',
+      label: 'ReSpeaker Lite',
+      items: [
+        'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
+        {
+          type: 'category',
+          label: 'Integrated with XIAO ESP32S3',
+          link: {
+            type: "doc",
+            id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
+          },
+          items: [
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/i2s_test',
+           // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/i2s_rgb',
+            {
+              type: 'doc', 
+              id:'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_generator',
+              label: 'Streams Generator', 
+            },
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_print',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_memory',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/player_spiffs',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_mqtt',    
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_i2s_tflite',
+          ],
+        },
+        {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/ReSpeaker_Lite/Application/reSpeaker_ha',
+              ],
+        },
+          ],
+    },
+
     {
       type: 'category',
       label: 'Other Sensing Modules',
@@ -1825,6 +1864,7 @@ const sidebars = {
       ],
     },
 
+    
     {
       type: 'category',
       label: 'Other Microcontrollers',
@@ -2947,6 +2987,7 @@ const sidebars = {
                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_mqtt',
                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_opcua',
                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_webapi',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_to_achieve_SCADA',
                             ],
                           },
                     ],
