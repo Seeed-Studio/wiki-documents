@@ -984,13 +984,13 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Jack_of_all_trades/watcher_to_node_red',
               ],
             },
-            // {
-            //   type: 'category',
-            //   label: 'Society',
-            //   items: [
-            //     'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Society/watcher_to_ifttt',
-            //   ],
-            // }
+            {
+              type: 'category',
+              label: 'Society',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Society/watcher_to_twilio',
+              ],
+            }
           ],
         }
       ]
