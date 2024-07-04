@@ -2982,13 +2982,22 @@ const sidebars = {
                           type: 'category',
                           label: 'FUXA',
                           items: [
-                             'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_modbus',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_mqtt',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_opcua',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_webapi',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_to_achieve_SCADA',
+                             'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_modbus',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_mqtt',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_opcua',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_webapi',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_to_achieve_SCADA',
                             ],
                           },
+                          {
+                            type: 'category',
+                            label: 'FIN',
+                            items: [
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_install_fin',
+                              ],
+                            },
+   
+                          
                     ],
                     },
 
