@@ -413,7 +413,7 @@ Please note that due to the time constraints of the task flow, **there will be a
 
 By following these steps, you can effectively send commands to your Watcher using the SenseCraft APP, enabling it to perform specific monitoring tasks and notify you when the specified conditions are met.
 
-Remember to regularly review and adjust your Watcher's settings and task flows to ensure optimal performance and alignment with your monitoring requirements. For a more detailed description and explanation of the APP's tasks and options, as well as a detailed description of the intervals, please read **Watcher Quick Start Series 1# : Concepts and Classification of Tasks** to learn more.
+Remember to regularly review and adjust your Watcher's settings and task flows to ensure optimal performance and alignment with your monitoring requirements. For a more detailed description and explanation of the APP's tasks and options, as well as a detailed description of the intervals, please read **[Watcher Quick Start Series 1# : Concepts and Classification of Tasks](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)** to learn more.
 
 ## Watcher Setting
 
@@ -466,15 +466,15 @@ By familiarizing yourself with these settings options, you can customize and opt
 
 ## Resources
 
-**Watcher Quick Start Series 1# : Concepts and Classification of Tasks**
+- **[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
 
-**Watcher Quick Start Series 2# : Creating and Updating Watcher Emojis**
+**[Watcher Quick Start Series 1# : Concepts and Classification of Tasks](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
 
-**Watcher Quick Start Series 3# : What does Watcher do**
+**Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools**
 
-**Watcher Quick Start Series 4# : As a Grove sensor**
+**Watcher Quick Start Series 3# : As a Grove sensor**
 
-**Watcher Quick Start Series 5# : Training a model for Watcher**
+**Watcher Quick Start Series 4# : Training a model for Watcher**
 
 
 ## Tech Support & Product Discussion

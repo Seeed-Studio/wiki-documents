@@ -24,15 +24,13 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-- Watcher Quick Start Series 1# : Concepts and Classification of Tasks *(Comming Soon)*
+- [Watcher Quick Start Series 1# : Concepts and Classification of Tasks](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-- Watcher Quick Start Series 2# : Creating and Updating Watcher Emojis *(Comming Soon)*
+- Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools *(Comming Soon)*
 
-- Watcher Quick Start Series 3# : What does Watcher do *(Comming Soon)*
+- Watcher Quick Start Series 3# : As a Grove sensor *(Comming Soon)*
 
-- Watcher Quick Start Series 4# : As a Grove sensor *(Comming Soon)*
-
-- Watcher Quick Start Series 5# : Training a model for Watcher *(Comming Soon)*
+- Watcher Quick Start Series 4# : Training a model for Watcher *(Planing)*
 
 
 ### API Core
