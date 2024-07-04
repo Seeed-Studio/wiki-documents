@@ -2964,6 +2964,7 @@ const sidebars = {
                       label: 'Computer Vision',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l'
                       ],
                       },
 
