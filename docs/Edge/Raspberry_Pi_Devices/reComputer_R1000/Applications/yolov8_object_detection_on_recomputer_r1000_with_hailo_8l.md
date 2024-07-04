@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates object detection model using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration. 
+description: This wiki demonstrates object detection using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration. 
 title:  YOLOv8 Object Detection on reComputer R1000 with Hailo-8L
 keywords:
   - Edge
@@ -18,7 +18,9 @@ no_comments: false # for Disqus
 
 ## Introduction
 
-This wiki demonstrates object detection model using [YOLOv8](https://github.com/ultralytics/ultralytics) on [reComputer R1000](https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html) with [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) Acceleration. The Raspberry Pi AI Kit enhances the performance of the Raspberry Pi and unlock its potential in artificial intelligence and machine learning applications, like smart retail, smart traffic and more. Although the Raspberry AI Kit is designed for Raspberry Pi 5, we have experimented it on our CM4-powered edge gateway. Excited about turning our edge device into an intelligent IoT gateway!
+[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once version 8) is the popular most YOLO series of real-time object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) is used to accelerate inference speed, featuring a 13 tera-operations per second (TOPS) neural network inference accelerator built around the Hailo-8L chip.
+
+This wiki demonstrates object detection using YOLOv8 on [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) with and without Raspberry-pi-AI-kit acceleration. The Raspberry Pi AI Kit enhances the performance of the Raspberry Pi and unlock its potential in artificial intelligence and machine learning applications, like smart retail, smart traffic and more. Although the Raspberry AI Kit is designed for Raspberry Pi 5, we have experimented it on our CM4-powered edge gateway. Excited about turning our edge device into an intelligent IoT gateway!
 
 
 ## Prepare Hardware
@@ -131,8 +133,8 @@ Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8
 
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
-cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L/object_detection_benchmark/Yolov8-with-AIkit
-bash ./run.sh
+cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
+bash ./run.sh object-detection-hailo
 ```
 ### Result
 
@@ -147,8 +149,8 @@ Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8
 
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
-cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L/object_detection_benchmark/Yolov8-without-AIkit
-bash ./run.sh
+cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
+bash ./run.sh object-detection
 ```
 ### Result
 
