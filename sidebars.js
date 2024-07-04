@@ -979,7 +979,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Jack_of_all_trades',
+              label: 'Jack of all trades',
               items: [
                 'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Jack_of_all_trades/watcher_to_node_red',
               ],
