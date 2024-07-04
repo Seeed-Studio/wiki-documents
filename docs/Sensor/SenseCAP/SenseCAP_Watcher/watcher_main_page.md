@@ -32,6 +32,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher Quick Start Series 4# : Training a model for Watcher *(Planing)*
 
+- Watcher Quick Start Series 5# : What does Watcher do *(Comming Soon)*
+
 
 ### API Core
 
