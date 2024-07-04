@@ -62,7 +62,7 @@ However, if the required object model is not available in the SenseCraft AI libr
 
 Then, if you place a task that is judged to be using Local AI Services, then on the SenseCraft APP, the Task Configuration page will display roughly as shown below.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local-app.svg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local-app.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Watcher Cloud-based LLM Service
 
@@ -93,7 +93,7 @@ Users only need to have a basic understanding of these three task modes without 
 If you place a task that is judged to be using pure LLM, then on the SenseCraft APP, the Task Configuration page will display roughly as shown below.
 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/llm-app.svg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/llm-app.png" style={{width:1000, height:'auto'}}/></div>
 
 In addition to the task configuration and execution features, the Pure Cloud-based LLM Service also enables users to engage in pure text-based conversations with the Language Learning Model (LLM).
 
@@ -113,7 +113,7 @@ By leveraging both the Local AI service and the LLM cloud service, the Watcher c
 
 If you place a task that is judged to be using local + LLM, then on the SenseCraft APP, the Task Configuration page will display roughly as shown below.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local_llm-app.svg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local_llm-app.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
 However, it's important to note that using the LLM cloud service in this combined mode may be subject to SenseCraft's pricing structure, similar to the fully cloud-based mode discussed earlier. Users should be aware that once the free public testing phase concludes, there may be associated costs for utilizing the LLM cloud service, even in combination with the Local AI service.
