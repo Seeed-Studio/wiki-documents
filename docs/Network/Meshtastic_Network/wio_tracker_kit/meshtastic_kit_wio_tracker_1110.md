@@ -14,7 +14,7 @@ last_update:
 ## Introduction
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-kit1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-kit1.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html">
@@ -189,13 +189,12 @@ Open [Web Client](https://client.meshtastic.org/), click `New Connection`.
 
 </TabItem>
 
-<TabItem value="cli" label="Python CLI">
+<TabItem value="cli" label="CLI">
 
 
 This library provides a command-line interface (CLI) for managing the user settings of Meshtastic nodes and provides an easy API for sending and receiving messages over mesh radios. 
 
-[Installation](https://meshtastic.org/docs/software/python/cli/installation/)
-[Usage](https://meshtastic.org/docs/software/python/cli/usage/)
+
 
 </TabItem>
 </Tabs>
@@ -232,7 +231,7 @@ In order to start communicating over the mesh, you must set your region. This se
 
 </TabItem>
 
-<TabItem value="cli" label="Python CLI">
+<TabItem value="cli" label="CLI">
 
 Run the following command, replacing `REGION-CODE` with the region code listed above according to your regional location.
 

@@ -77,7 +77,8 @@ import TabItem from '@theme/TabItem';
   
 * The latest version of <a href="https://www.nordicsemi.com/Products/Development-tools/nrf-util">nRF Util development tool</a>,a unified command line utility for Nordic products.<br/>
 
-  
+
+
 <div className="tip" style={{backgroundColor: 'lightblue', padding: '1em', borderRadius: '0.5em'}}>
   <p style={{marginBottom: '0.5em'}}>
     <strong>Note:</strong>

@@ -54,8 +54,10 @@ ReSpeaker Lite is a plug-and-play modular voice interface to hack things around 
 
 ### Update firmware
 
+* [Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_ua_v2.0.3.bin)
 
-* **Install DFU Util**
+
+#### Install DFU Util
 
 [dfu-util](http://dfu-util.sourceforge.net/) is a command line tool for Device Firmware Upgrade via USB port.
 
@@ -127,7 +129,7 @@ If it prompts "Cannot open DFU device", just reboot to try again.
 
 
 
-* **Flash Firmware**
+#### Flash Firmware
 
 
 * Connect the ReSpeaker board to your PC.
@@ -146,190 +148,3 @@ After flashing is completed, please restart the board.
 
 
 
-
-
-### Tuning
-
-For Linux/Mac/Windows: We can configure some parameters of built-in algorithms.
-
-```
-git clone https://github.com/respeaker/usb_4_mic_array.git
-cd usb_4_mic_array
-python tuning.py -p
-```
-
-
-
-<details>
-
-<summary>Parameters of built-in algorithms</summary>
-
-```
-name			type	max	min	r/w	info
--------------------------------
-AECFREEZEONOFF  	int	1	0	rw	Adaptive Echo Canceler updates inhibit.
-                                                            0 = Adaptation enabled
-                                                            1 = Freeze adaptation, filter only
-AECNORM         	float	16	0.25	rw	Limit on norm of AEC filter coefficients
-AECPATHCHANGE   	int	1	0	ro	AEC Path Change Detection.
-                                                            0 = false (no path change detected)
-                                                            1 = true (path change detected)
-AECSILENCELEVEL 	float	1	1e-09	rw	Threshold for signal detection in AEC [-inf .. 0] dBov (Default: -80dBov = 10log10(1x10-8))
-AECSILENCEMODE  	int	1	0	ro	AEC far-end silence detection status. 
-                                                            0 = false (signal detected) 
-                                                            1 = true (silence detected)
-AGCDESIREDLEVEL 	float	0.99	1e-08	rw	Target power level of the output signal. 
-                                                            [-inf .. 0] dBov (default: -23dBov = 10log10(0.005))
-AGCGAIN         	float	1000	1	rw	Current AGC gain factor. 
-                                                            [0 .. 60] dB (default: 0.0dB = 20log10(1.0))
-AGCMAXGAIN      	float	1000	1	rw	Maximum AGC gain factor. 
-                                                            [0 .. 60] dB (default 30dB = 20log10(31.6))
-AGCONOFF        	int	1	0	rw	Automatic Gain Control. 
-                                                            0 = OFF 
-                                                            1 = ON
-AGCTIME         	float	1	0.1	rw	Ramps-up / down time-constant in seconds.
-CNIONOFF        	int	1	0	rw	Comfort Noise Insertion.
-                                                            0 = OFF
-                                                            1 = ON
-DOAANGLE        	int	359	0	ro	DOA angle. Current value. Orientation depends on build configuration.
-ECHOONOFF       	int	1	0	rw	Echo suppression.
-                                                            0 = OFF
-                                                            1 = ON
-FREEZEONOFF     	int	1	0	rw	Adaptive beamformer updates.
-                                                            0 = Adaptation enabled
-                                                            1 = Freeze adaptation, filter only
-FSBPATHCHANGE   	int	1	0	ro	FSB Path Change Detection.
-                                                            0 = false (no path change detected)
-                                                            1 = true (path change detected)
-FSBUPDATED      	int	1	0	ro	FSB Update Decision.
-                                                            0 = false (FSB was not updated)
-                                                            1 = true (FSB was updated)
-GAMMAVAD_SR     	float	1000	0	rw	Set the threshold for voice activity detection.
-                                                            [-inf .. 60] dB (default: 3.5dB 20log10(1.5))
-GAMMA_E         	float	3	0	rw	Over-subtraction factor of echo (direct and early components). min .. max attenuation
-GAMMA_ENL       	float	5	0	rw	Over-subtraction factor of non-linear echo. min .. max attenuation
-GAMMA_ETAIL     	float	3	0	rw	Over-subtraction factor of echo (tail components). min .. max attenuation
-GAMMA_NN        	float	3	0	rw	Over-subtraction factor of non- stationary noise. min .. max attenuation
-GAMMA_NN_SR     	float	3	0	rw	Over-subtraction factor of non-stationary noise for ASR. 
-                                                            [0.0 .. 3.0] (default: 1.1)
-GAMMA_NS        	float	3	0	rw	Over-subtraction factor of stationary noise. min .. max attenuation
-GAMMA_NS_SR     	float	3	0	rw	Over-subtraction factor of stationary noise for ASR. 
-                                                            [0.0 .. 3.0] (default: 1.0)
-HPFONOFF        	int	3	0	rw	High-pass Filter on microphone signals.
-                                                            0 = OFF
-                                                            1 = ON - 70 Hz cut-off
-                                                            2 = ON - 125 Hz cut-off
-                                                            3 = ON - 180 Hz cut-off
-MIN_NN          	float	1	0	rw	Gain-floor for non-stationary noise suppression.
-                                                            [-inf .. 0] dB (default: -10dB = 20log10(0.3))
-MIN_NN_SR       	float	1	0	rw	Gain-floor for non-stationary noise suppression for ASR.
-                                                            [-inf .. 0] dB (default: -10dB = 20log10(0.3))
-MIN_NS          	float	1	0	rw	Gain-floor for stationary noise suppression.
-                                                            [-inf .. 0] dB (default: -16dB = 20log10(0.15))
-MIN_NS_SR       	float	1	0	rw	Gain-floor for stationary noise suppression for ASR.
-                                                            [-inf .. 0] dB (default: -16dB = 20log10(0.15))
-NLAEC_MODE      	int	2	0	rw	Non-Linear AEC training mode.
-                                                            0 = OFF
-                                                            1 = ON - phase 1
-                                                            2 = ON - phase 2
-NLATTENONOFF    	int	1	0	rw	Non-Linear echo attenuation.
-                                                            0 = OFF
-                                                            1 = ON
-NONSTATNOISEONOFF	int	1	0	rw	Non-stationary noise suppression.
-                                                            0 = OFF
-                                                            1 = ON
-NONSTATNOISEONOFF_SR	int	1	0	rw	Non-stationary noise suppression for ASR.
-                                                            0 = OFF
-                                                            1 = ON
-RT60            	float	0.9	0.25	ro	Current RT60 estimate in seconds
-RT60ONOFF       	int	1	0	rw	RT60 Estimation for AES. 0 = OFF 1 = ON
-SPEECHDETECTED  	int	1	0	ro	Speech detection status.
-                                                            0 = false (no speech detected)
-                                                            1 = true (speech detected)
-STATNOISEONOFF  	int	1	0	rw	Stationary noise suppression.
-                                                            0 = OFF
-                                                            1 = ON
-STATNOISEONOFF_SR	int	1	0	rw	Stationary noise suppression for ASR.
-                                                            0 = OFF
-                                                            1 = ON
-TRANSIENTONOFF  	int	1	0	rw	Transient echo suppression.
-                                                            0 = OFF
-                                                            1 = ON
-VOICEACTIVITY   	int	1	0	ro	VAD voice activity status.
-                                                            0 = false (no voice activity)
-                                                            1 = true (voice activity)
-```
-
-</details>
-
-Example, to turn off the Automatic Gain Control (AGC):
-```
-sudo python tuning.py AGCONOFF 0
-```
-
-
-
-
-### AEC
-
-
-<audio controls="controls">
-  <source type="audio/wav" src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/aec.wav"></source>
-</audio>
-
-
-### NS
-
-
-<audio controls="controls">
-  <source type="audio/wav" src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ns.wav"></source>
-</audio>
-
-
-
-### VAD
-
-
-* Step 1. Create a vad.py with below code:
-
-```cpp
-from tuning import Tuning
-import usb.core
-import usb.util
-import time
-
-dev = usb.core.find(idVendor=0x2886, idProduct=0x0018)
-#print dev
-if dev:
-    Mic_tuning = Tuning(dev)
-    print Mic_tuning.is_voice()
-    while True:
-        try:
-            print Mic_tuning.is_voice()
-            time.sleep(1)
-        except KeyboardInterrupt:
-            break
-```
-
-Run:
-```
-sudo python vad.py
-```
-
-* Step 2. We will see the result below, when there is a voice detected, the value should be 1.
-
-```
-jessie@JessiedeAir usb_4_mic_array % sudo python3 vad.py
-0
-0
-0
-1
-0
-1
-0
-```
-
-
-## Resource
-
-[Respeaker Lite](https://github.com/respeaker/usb_4_mic_array)
