@@ -26,13 +26,27 @@ If you want to flash the board back to the LoRaWAN version, please check this [t
 
  
 
-### Connect the board
+
+### Wiring
+
 
 Connect the Dev Board to your PC via the USB cable.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/cable-connect.png" alt="pir" width={700} height="auto" /></p>
 
-### Adafruit-nrfutil Installation
+### Flash the bootloader
+
+<Tabs>
+<TabItem value="uf2" label="UF2">
+Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your PC.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
+
+Copy the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the drive. The download will run automatically, then the drive will log out.
+
+</TabItem>
+<TabItem value="serial" label="Serial">
+
+**Step1: Adafruit-nrfutil Installation**
 
 **Prerequisites**
 
@@ -105,21 +119,8 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 </TabItem>
 </Tabs>
 
+**Step2: Flash the bootloader**
 
-
-
-### Flash the bootloader
-
-<Tabs>
-<TabItem value="uf2" label="UF2">
-Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your PC.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
-
-Copy the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the drive. The download will run automatically, then the drive will log out.
-
-</TabItem>
-<TabItem value="serial" label="Serial">
 Double click the `Reset` button on the board and run the following command:
 
 * **For Windows**: 
@@ -158,15 +159,13 @@ Copy the `firmware-wio-tracker-wm1110-2.3.14.681ae9d8.uf2` file to the drive. Th
 
 :::tip
 Just ignore this error prompt, the device has actually been upgraded successfully.
-<p style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="Image 1" width="400" height="auto" style={{ marginRight: '10px' }} />
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="Image 2" width="400" height="auto" style={{ marginLeft: '10px' }} />
-</p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="pir" width={600} height="auto" /></p>
 :::
 
 </TabItem>
 
 <TabItem value="serial" label="Serial">
+
 Double click the `Reset` button on the board and run the following command:
 
 * **For Windows**: 
