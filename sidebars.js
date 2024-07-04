@@ -971,7 +971,7 @@ const sidebars = {
             id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
           },
           items: [
-            
+            'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_tasks',
           ],
         },{
           type: 'category',
