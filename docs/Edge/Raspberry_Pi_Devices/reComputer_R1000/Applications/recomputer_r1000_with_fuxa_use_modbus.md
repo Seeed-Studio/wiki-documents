@@ -48,10 +48,10 @@ Before you start this project, you may need to prepare your hardware and softwar
 * Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools
 * Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
   ```shell
-    ## You need to have installed Node Version 14 || 16 || 18.It is more recommended to use Node Version 14.21.3
-    wget https://nodejs.org/dist/v14.21.3/node-v14.21.3-linux-arm64.tar.xz
-    tar -xf node-v14.21.3-linux-arm64.tar.xz
-    cd node-v14.21.3-linux-arm64
+    ## You need to have installed Node Version 14 || 16 || 18.
+    wget https://nodejs.org/dist/v18.20.3/node-v18.20.3-linux-arm64.tar.xz
+    tar -xf node-v18.20.3-linux-arm64.tar.xz
+    cd node-v18.20.3-linux-arm64
     sudo cp -R * /usr/local/
     node -v
     npm -v
@@ -59,7 +59,7 @@ Before you start this project, you may need to prepare your hardware and softwar
     sudo npm install -g --unsafe-perm @frangoteam/fuxa
     sudo fuxa
   ```
-
+* Regarding how to use the modbus function of reComputer R1000, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/).
 ### Hardware Configuration
 For ModbustRTU, we used an rs485 to USB module to connect the reComuputer R1000 with the W10 pc.
 

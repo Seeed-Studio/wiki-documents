@@ -210,7 +210,7 @@ sudo apt-get update
 - **Step 2.** Install **Git** by the following command
 
 ```sh
-sudo apt install git pkg-config make gcc libusb-1.0-0-dev
+sudo apt install git libusb-1.0-0-dev pkg-config build-essential
 ```
 
 - **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this
@@ -239,18 +239,41 @@ make
 ```sh
 sudo ./rpiboot
 ```
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 7.** Connect reTerminal to the PC via USB Type-C cable
 
-- **Step 8.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
+- **Step 8.** Download snap 
 
-- **Step 9.** Open Raspberry Pi Imager software
+```sh
+sudo apt install snap
+```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+- **Step 9.** Download **rpi-imager** 
 
-- **Step 10.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+```sh
+snap install rpi-imager
+```
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
+- **Step 10.** Open Raspberry Pi Imager software
+
+```sh
+rpi-imager
+```
+
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="600" height="auto"/></p>
+
+- **Step 11.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+
+Set a hostname, set a password, configure wifi, set locale settings
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
+
+Enable SSH
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/enable_ssh.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 
@@ -264,11 +287,13 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 
 - **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 13.** Finally, click **WRITE**
+- **Step 13.** Finally, click **NEXT** and **YES**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 14.** Flip the **Boot Mode Switch** back to the original position
 
@@ -307,6 +332,7 @@ if you see the following output after the ping command which means both devices 
 - **Step 1.** Open **Command Prompt** and type the following
 
 ```sh
+# ssh username@hostname
 ssh pi@raspberrypi.local
 ```
 

@@ -93,6 +93,10 @@ It is recommended to download the balenaOS image file first and then burn it. If
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/online.png" alt="pir" width="700" height="auto" /></div>
 
+You can see that the online status of the device is `Online (Heartbeat only)`. This is due to the firewall restrictions in my area. If you have the same problem, you can connect a VPN to the device so that it can be displayed normally` Online`.
+
+
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

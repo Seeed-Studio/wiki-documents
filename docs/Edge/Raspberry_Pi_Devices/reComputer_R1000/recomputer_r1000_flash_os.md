@@ -274,7 +274,13 @@ The result is shown as below:
 
 - **Step 11.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
+Set a hostname, set a password, configure wifi, set locale settings
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
+
+Enable SSH
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/enable_ssh.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 :::note
@@ -297,9 +303,9 @@ Or you can use this link to download the image file:
 
 - **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 13.** Finally, click **WRITE**
+- **Step 13.** Finally, click **NEXT** and **YES**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
 The result is shown as below:
@@ -354,38 +360,29 @@ raspberry
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
 ##### For Mac/Linux
-- **Step 1.** Open **ssh service** on the r1000
 
-Open **preferences** and select **raspberry pi configuration**, the result is shown as blow: 
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/the_first_step.png" /></div>
-
-Select **interfaces** and open **SSH** and **VNC**, then click **OK**. The result is shown as blow:
- 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/the second step.png" /></div>
-
-- **Step 2.** Open **Terminal** on the computer and type the following
+- **Step 1.** Open **Terminal** on the computer and type the following
 
 ```sh
 # ssh username@hostname
 ssh pi@raspberrypi.local
 ```
 
-- **Step 3.** Type **yes** for the following message
+- **Step 2.** Type **yes** for the following message
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Step 4.** When it asks for the password, type the following
+- **Step 3.** When it asks for the password, type the following
 
 ```sh
 # password for user
 raspberry
 ```
 
-- **Step 5.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
+- **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
