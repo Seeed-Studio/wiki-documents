@@ -1,12 +1,15 @@
 ---
 description: SenseCAP Watcher
-title: SenseCAP Watcher Wiki Center
+title: Overview
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG
 slug: /watcher
+sidebar_position: 1
 last_update:
   date: 06/20/2024
   author: Citric
 ---
+
+# SenseCAP Watcher Wiki Center
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG" style={{width:800, height:'auto'}}/></div>
 
@@ -24,9 +27,9 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-- [Watcher Quick Start Series 1# : Concepts and Classification of Tasks](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-- Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools *(Comming Soon)*
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
 - Watcher Quick Start Series 3# : As a Grove sensor *(Comming Soon)*
 
