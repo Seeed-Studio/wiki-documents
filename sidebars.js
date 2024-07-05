@@ -971,7 +971,7 @@ const sidebars = {
             id: 'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_getting_started',
           },
           items: [
-            
+            'Sensor/SenseCAP/SenseCAP_Watcher/Getting_Started/sensecap_watcher_tasks',
           ],
         },{
           type: 'category',
@@ -979,18 +979,18 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Jack_of_all_trades',
+              label: 'Jack of all trades',
               items: [
                 'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Jack_of_all_trades/watcher_to_node_red',
               ],
             },
-            // {
-            //   type: 'category',
-            //   label: 'Society',
-            //   items: [
-            //     'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Society/watcher_to_ifttt',
-            //   ],
-            // }
+            {
+              type: 'category',
+              label: 'Society',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Watcher/Applications/Society/watcher_to_twilio',
+              ],
+            }
           ],
         }
       ]
@@ -2983,13 +2983,22 @@ const sidebars = {
                           type: 'category',
                           label: 'FUXA',
                           items: [
-                             'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_modbus',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_mqtt',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_opcua',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_use_webapi',
-                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_with_fuxa_to_achieve_SCADA',
+                             'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_modbus',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_mqtt',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_opcua',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_use_webapi',
+                              'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/fuxa/recomputer_r1000_with_fuxa_to_achieve_SCADA',
                             ],
                           },
+                          {
+                            type: 'category',
+                            label: 'FIN',
+                            items: [
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_install_fin',
+                              ],
+                            },
+   
+                          
                     ],
                     },
 
@@ -3007,6 +3016,7 @@ const sidebars = {
                       label: 'Computer Vision',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l'
                       ],
                       },
 
