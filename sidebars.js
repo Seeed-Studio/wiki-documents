@@ -3019,6 +3019,7 @@ const sidebars = {
         id: 'Edge/NVIDIA_Jetson/RecomputerPage',
       },
       items: [
+        // Carrier Boards
         {
           type: 'category',
           label: 'Carrier Boards',
@@ -3201,6 +3202,7 @@ const sidebars = {
               // },
               items: [
                 // Models
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/Finetune_LLM_by_Llama_Factory_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_local_llm_text_to_image_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
