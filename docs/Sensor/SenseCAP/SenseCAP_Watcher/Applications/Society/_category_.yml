@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Society'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: society_with_watcher
+link:
+  type: generated-index
+  slug: society_with_watcher_main_page
+  title: Watcher to Society
+  description: The "Society Part" of the SenseCAP Watcher wiki focuses on integrating Watcher with various messaging platforms and services to enable alerts and notifications. This part is particularly useful for users who want to stay informed about the status of their Watcher devices or receive important updates from their monitoring tasks.
