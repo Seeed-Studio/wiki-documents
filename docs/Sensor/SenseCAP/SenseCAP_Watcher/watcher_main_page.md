@@ -77,7 +77,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 - Watcher Controls Local Devices via Open Interpreter *(Planing)*
 
 
-#### Society Part
+#### SNS Integration Part
 
 - Watcher & Twillio Message Alerts *(Planing)*
 
