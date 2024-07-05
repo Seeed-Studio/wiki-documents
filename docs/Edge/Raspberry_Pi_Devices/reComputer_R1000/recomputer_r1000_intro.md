@@ -59,7 +59,7 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>  This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This article mainly introduces how to use the 485 communication function of reComputer R1000, and tests the RS485 and Modbus communication functions.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This article mainly introduces how to use the RS485 communication function of reComputer R1000, and tests the RS485 and Modbus communication functions.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
@@ -84,7 +84,7 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
 		<tr class="table-trnobg"> 
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered.svg" style={{width:300, height:'auto'}}/></div></td>
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png" style={{width:300, height:'auto'}}/></div></td>
-            <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/modbus-nodered-tcp.png" style={{width:300, height:'auto'}}/></div></td>
+            <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/modbus-recomp.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
@@ -110,9 +110,9 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/modbus-bacnet.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/bacnet-recomp.png" style={{width:300, height:'auto'}}/></div></td>
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/influxdbicoon.png" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/grafana_new1.gif" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/grafana/grafana2.gif" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
