@@ -60,7 +60,7 @@ Before you start this project, you may need to prepare your hardware and softwar
     sudo fuxa
   ```
 * Regarding how to use the modbusTCP function in fuxa, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_modbus_rtu_and_tcp/).
-* Regarding how to download and configure mosquitto, you can refer to this [tutorial](https://wiki.seeedstudio.com/Edge-Box-Node-Red-MQTT/).Here is also how to configure mqtt communication in node-red, you can also refer to it.
+* Regarding how to download and configure mosquitto, you can refer to this [tutorial](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/).Here is also how to configure mqtt communication in node-red, you can also refer to it.
 
 ### Hardware Configuration
 
