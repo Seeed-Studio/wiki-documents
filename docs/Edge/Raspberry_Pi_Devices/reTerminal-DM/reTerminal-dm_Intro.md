@@ -1,13 +1,13 @@
 ---
-description: reTerminal DM Guide
+description: Introducing reTerminal DM, a 10.1" open-source industrial Human-Machine Interface (HMI) that serves as an Integrated Device Master. This all-in-one device, based on Raspberry Pi CM4, functions as a Panel PC, HMI, PLC, and IIoT Gateway. With an IP65 industrial-grade large screen, reTerminal DM is a next-gen interactive sensing hub, streamlining data flow and onsite device management.
 title: reTerminal DM Guide
 keywords:
 - reTerminal DM
 - Getting Start
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://wdcdn.qpic.cn/MTY4ODg1NjEyODQyNTE2Nw_928147_NLYXC-4cRuQd5Tra_1681284617?w=1200&h=713
 slug: /reTerminal-dm_Intro
 last_update:
-  date: 4/23/2023
+  date: 07/05/2024
   author: Kasun Thushara
 ---
 
@@ -188,21 +188,25 @@ last_update:
     <tr class="table-trnobg">
       <th class="table-trnobg"><font size={"4"}>reTerminal DM Getting Started with Node-Red</font></th>
       <th class="table-trnobg"><font size={"4"}>reTerminal DM RS485 Port with Node-RED</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM MQTT with Node-RED</font></th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered.svg" style={{width:300, height:'auto'}}/></div></td>
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" style={{width:300, height:'auto'}}/></div></td>
+      	<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/MQTT.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, we install Node-RED on reTerminal DM—an intuitive programming tool for connecting hardware devices, APIs, and online services through a browser-based editor, allowing easy flow creation and deployment with a single click.</font></td>
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, explore integrating Modbus devices into Node-RED workflows with the built-in Modbus node. Learn about the RS485 protocol, understand Modbus, and discover how to seamlessly integrate them with reTerminal DM.</font></td>
+       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, explore integrating MQTT into Node-RED, leveraging its support for this protocol to build powerful IoT applications.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-RS485/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-mqtt/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -210,23 +214,51 @@ last_update:
 <div class="table-center">
 	<table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg"><font size={"4"}>reTerminal DM MQTT with Node-RED</font></th>
       <th class="table-trnobg"><font size={"4"}>reTerminal DM CAN BUS with Node-RED</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM with Node Red and Modbus TCP</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM with Node Red and BACnet TCP</font></th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/MQTT.png" style={{width:300, height:'auto'}}/></div></td>
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbus-reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet-reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, explore integrating MQTT into Node-RED, leveraging its support for this protocol to build powerful IoT applications.</font></td>
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, integrate a CAN bus module with Node-RED for efficient high-speed data exchange between ECUs, widely used in automotive, industrial automation, medical equipment, and aerospace applications</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Learn how to work with Modbus TCP on reTerminal DM using Node-RED in this wiki. Discover how Modbus TCP extends the protocol to Ethernet networks, enabling faster communication speeds and seamless integration with modern IT infrastructure.</font></td>
+       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Discover the advantages of BACnet IP in Building Management Systems (BMS) with this wiki, focusing on Node-RED integration. Learn how to achieve improved scalability, easier installation and maintenance, and leverage existing network infrastructure using Node-RED and BACnet IP.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-mqtt/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-canbus/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reterminal_dm_node_red_modbus_tcp/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reterminal_dm_rpi_200_node_red_bacnet_tcp/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM with Node Red and InfluxDB</font></th>
+      <th class="table-trnobg"><font size={"4"}>reTerminal DM with Grafana for IoT Dash Board</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/influxdbicoon.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/grafana/reterminal-grafana-dash.gif" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Deploy InfluxDB on reTerminal DM a Raspberry Pi-powered HMI, for robust time-series data collection and analysis at the network edge. This guide details the steps to install, configure, and use InfluxDB, enabling efficient management and real-time insights for IoT applications.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Learn how to install Grafana on a Raspberry Pi-powered reTerminal DM in this wiki, transforming your data into insightful visualizations. Connect Grafana to an existing InfluxDB database and create an illustrative dashboard to enhance system performance, streamline troubleshooting, and make informed decisions with powerful monitoring tools.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reterminal_dm_200_node_red_influxdb/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reterminal_dm_grafana/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -266,24 +298,44 @@ last_update:
     <tr class="table-trnobg">
       <th class="table-trnobg"><font size={"4"}>reTerminal DM Getting Started with N3uron</font></th>
       <th class="table-trnobg"><font size={"4"}>Connect AWS IoT Core with N3uron</font></th>
-        <th class="table-trnobg"><font size={"4"}>Integrating Historian Module for Visualizing on reTerminal DM</font></th>
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_1.png" style={{width:300, height:'auto'}}/></div></td>
 			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://n3uron.com/wp-content/uploads/2021/09/How-to-Connect-Industrial-Assets-to-AWS-IoT.jpg" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/graph.gif" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> N3uron is your go-to Industrial Edge Platform for IIoT & DataOps, ensuring seamless integration between your plant floor and third-party applications, be it on-premises or in the cloud. In this tutorial, we'll kickstart your journey into the N3uron world.</font></td>
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> With Neuron Historian, effortlessly store tag values collected locally or remotely via N3uron Links. It also provides a convenient Store & Forward feature for retaining data during communication loss. In this tutorial, you'll learn to create graphs and save your data as CSV files with ease.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_N3uron_Get_Start/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_N3uron_AWS/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>Connect N3uron with MQTT and Modbus Support Devices</font></th>
+        <th class="table-trnobg"><font size={"4"}>Integrating Historian Module for Visualizing on reTerminal DM</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron-mqtt-modbus/n3uron_mqtt_modbus_aws.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/graph.gif" style={{width:300, height:'auto'}}/></div></td>  
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Discover the powerful combination of reTerminal DM and N3uron Duo for efficient plant management. Our Wiki highlights the importance of Modbus TCP in industrial settings and showcases seamless MQTT device integration for enhanced connectivity and data manipulation.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> With Neuron Historian, effortlessly store tag values collected locally or remotely via N3uron Links. It also provides a convenient Store & Forward feature for retaining data during communication loss. In this tutorial, you'll learn to create graphs and save your data as CSV files with ease.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_N3uron_modbus_mqtt/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminalDM_N3uron_Historian/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
