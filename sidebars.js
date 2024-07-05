@@ -2923,7 +2923,7 @@ const sidebars = {
             collapsible: true,
             link: {
               type: "doc",
-              id: 'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
+              id: 'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_intro',
             },
             items: [
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r',
