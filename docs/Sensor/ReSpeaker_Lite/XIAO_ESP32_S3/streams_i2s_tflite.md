@@ -15,6 +15,13 @@ last_update:
 
 This project demonstrates how to perform keyword spotting using the reSpeaker Lite board and TensorFlow Lite. The ReSpeaker Lite is an audio board with an integrated XIAO ESP32S3 microcontroller, featuring a dual-channel microphone and speaker. The project utilizes the reSpeaker Lite library, which is built on top of the AudioTools framework, and integrates with TensorFlow Lite for audio classification.
 
+
+### Library Required
+
+* [TensorFlow Lite library](https://github.com/limengdu/tflite-micro-reSpeaker-Lite-arduino-examples)
+
+
+
 ### Functionality
 
 * Captures audio from the I2S interface using the reSpeaker Lite board
@@ -24,22 +31,6 @@ This project demonstrates how to perform keyword spotting using the reSpeaker Li
 * Utilizes the AudioTools framework for audio processing and streaming
 * Easy-to-use AudioLogger for debugging and monitoring
 
-
-
-### Install library
-
-* [TensorFlow Lite library](https://github.com/limengdu/tflite-micro-reSpeaker-Lite-arduino-examples)
-
-Clone this project into the Arduino libraries folder e.g. with
-
-```
-cd  ~/Documents/Arduino/libraries
-git clone https://github.com/limengdu/tflite-micro-reSpeaker-Lite-arduino-examples
-```
-
-Or download the library as `zip` file and add it to the library in Arduino IDE.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/add-lib.png" alt="pir" width={800} height="auto" /></p>
 
 
 ### Code

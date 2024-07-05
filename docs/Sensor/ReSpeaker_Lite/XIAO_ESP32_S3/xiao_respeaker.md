@@ -24,7 +24,11 @@ This chapter will guide users on how to play ReSpeaker Lite with XIAO ESP32S3.
 
 Before we start this chapter, please make sure the ReSpeaker Lite's firmware is the I2S version.
 
+* [I2S Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_i2s_v1.0.5.bin)
+
+
 Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_lite_introduction/#update-firmware) to flash the firmware.
+
 
 ### Software Preparation
 

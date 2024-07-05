@@ -317,7 +317,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**Step 3:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 3 (Optional):** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
@@ -340,6 +340,22 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+Now, you can connect the mouse, keyboard, and monitor to the Jetson device. It will be ready to use!
+
+:::tip
+If your Jetson device takes a long time to open the desktop, please reconnect the power supply.
+:::
+
+**Step 5 (Optional):** Install Nvidia Jetpack SDK
+
+Please open the terminal on the **Jetson device** and execute the following commands:
+
+```bash
+sudo apt update
+sudo apt install nvidia-jetpack
+```
+
 
 </TabItem>
 <TabItem value="JP5.1.2" label="JP5.1.2">
@@ -378,7 +394,7 @@ tfc {
     };
 ```
 
-**Step 5:** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 5 (Optional):** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
 
 ```sh
 cd Linux_for_Tegra
@@ -402,6 +418,21 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+Now, you can connect the mouse, keyboard, and monitor to the Jetson device. It will be ready to use!
+
+:::tip
+If your Jetson device takes a long time to open the desktop, please reconnect the power supply.
+:::
+
+**Step 7 (Optional):** Install Nvidia Jetpack SDK
+
+Please open the terminal on the **Jetson device** and execute the following commands:
+
+```bash
+sudo apt update
+sudo apt install nvidia-jetpack
+```
 
 </TabItem>
 
