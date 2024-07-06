@@ -31,26 +31,26 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-- Watcher Quick Start Series 3# : As a Grove sensor *(Comming Soon)*
+- Watcher Quick Start Series 3# : As a Grove sensor *(Coming Soon)*
 
 - Watcher Quick Start Series 4# : Training a model for Watcher *(Planing)*
 
-- Watcher Quick Start Series 5# : What does Watcher do *(Comming Soon)*
+- Watcher Quick Start Series 5# : What does Watcher do *(Coming Soon)*
 
 
 ### API Core
 
-- Watcher API Essentials Series 1# : Peripherals *(Comming Soon)*
+- Watcher API Essentials Series 1# : Peripherals *(Coming Soon)*
 
-- Watcher API Essentials Series 2# : UI *(Comming Soon)*
+- Watcher API Essentials Series 2# : UI *(Coming Soon)*
 
-- Watcher API Essentials Series 3# : Audio *(Comming Soon)*
+- Watcher API Essentials Series 3# : Audio *(Coming Soon)*
 
-- Watcher API Essentials Series 4# : Wireless *(Comming Soon)*
+- Watcher API Essentials Series 4# : Wireless *(Coming Soon)*
 
-- Watcher API Essentials Series 5# : SenseCAP Data Stream *(Comming Soon)*
+- Watcher API Essentials Series 5# : SenseCAP Data Stream *(Coming Soon)*
 
-- Watcher API Essentials Series 6# : Tasks Flow *(Comming Soon)*
+- Watcher API Essentials Series 6# : Tasks Flow *(Coming Soon)*
 
 ### Application
 
