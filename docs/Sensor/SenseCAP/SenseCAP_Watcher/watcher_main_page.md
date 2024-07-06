@@ -33,7 +33,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher Quick Start Series 3# : As a Grove sensor *(Coming Soon)*
 
-- Watcher Quick Start Series 4# : Training a model for Watcher *(Planing)*
+- Watcher Quick Start Series 4# : Training a model for Watcher *(Planning)*
 
 - Watcher Quick Start Series 5# : What does Watcher do *(Coming Soon)*
 
@@ -57,53 +57,53 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 #### Base Part
 
-- Building development environment for Watcher based on ESP-IDF *(Planing)*
+- Building development environment for Watcher based on ESP-IDF *(Planning)*
 
 #### Designer Part
 
-- UI design for Watcher using SquareLine Studio *(Planing)*
+- UI design for Watcher using SquareLine Studio *(Planning)*
 
 - Watcher with P5JS shocking effect display *(Maybe)*
 
 
 #### Localised Deployment Part
 
-- Watcher and reComputer User's Guide *(Planing)*
+- Watcher and reComputer User's Guide *(Planning)*
 
-- Watcher uses local OpenAI services *(Planing)*
+- Watcher uses local OpenAI services *(Planning)*
 
-- Watcher uses local Gemini services *(Planing)*
+- Watcher uses local Gemini services *(Planning)*
 
-- Watcher Controls Local Devices via Open Interpreter *(Planing)*
+- Watcher Controls Local Devices via Open Interpreter *(Planning)*
 
 
 #### SNS Integration Part
 
-- Watcher & Twillio Message Alerts *(Planing)*
+- Watcher & Twillio Message Alerts *(Planning)*
 
-- Watcher & Telegram Message Alerts *(Planing)*
+- Watcher & Telegram Message Alerts *(Planning)*
 
-- Watcher & Discord Message Alerts *(Planing)*
+- Watcher & Discord Message Alerts *(Planning)*
 
-- Watcher & Whatsapp Message Alerts *(Planing)*
+- Watcher & Whatsapp Message Alerts *(Planning)*
 
-- Watcher & X (Twitter) Message Alerts *(Planing)*
+- Watcher & X (Twitter) Message Alerts *(Planning)*
 
-- Watcher & Google Mail Message Alerts *(Planing)*
+- Watcher & Google Mail Message Alerts *(Planning)*
 
-- Watcher does schedule management with IFTTT *(Planing)*
+- Watcher does schedule management with IFTTT *(Planning)*
 
 #### Smart Home Part
 
-- Watcher as Home Assistant Smart Terminal *(Planing)*
+- Watcher as Home Assistant Smart Terminal *(Planning)*
 
 #### IoT Platform Part
 
-- Watcher Data Streaming to Blynk Hosting *(Planing)*
+- Watcher Data Streaming to Blynk Hosting *(Planning)*
 
-- Watcher Data Streaming to Ubidots Hosting *(Planing)*
+- Watcher Data Streaming to Ubidots Hosting *(Planning)*
 
-- Watcher Data Streaming to Losant Hosting *(Planing)*
+- Watcher Data Streaming to Losant Hosting *(Planning)*
 
 - Watcher Data Streaming to SenseCAP Hosting *(Maybe)*
 
@@ -115,9 +115,9 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 #### Jack-of-all-trades Part
 
-- Watcher Data Streaming to Apache Kafka *(Planing)*
+- Watcher Data Streaming to Apache Kafka *(Planning)*
 
-- Watcher Data Streaming to Node-RED *(Planing)*
+- Watcher Data Streaming to Node-RED *(Planning)*
 
 ### Open Source Material
 
