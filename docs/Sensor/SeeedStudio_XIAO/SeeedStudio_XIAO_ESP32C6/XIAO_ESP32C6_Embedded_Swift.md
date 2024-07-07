@@ -2,7 +2,7 @@
 description: utilize Embedded swift to work with XIAO ESP32C6
 title: XIAO ESP32C6 with (Embedded) Swift
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /xiao-esp32c6-swift
+slug: /xiao-esp32-swift
 last_update:
     date: 2024-07-05T01:50:59.810Z
     author: Spencer
@@ -94,7 +94,6 @@ In this page, we'll be going through the setup and usage of Embedded Swift on Ub
 
 ```shell
 #!/bin/bash
-
 # Update and install required packages
 sudo apt-get update
 sudo apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv python3.10-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
@@ -120,6 +119,7 @@ echo "Installation complete. Use 'get_idf' to set up the ESP-IDF environment."
 you could directly running this script to have swift 6.0 to be installed.
 
 ```shell
+#!/bin/bash
 # Download the Swift 6.0 Snapshot
 wget https://download.swift.org/swift-6.0-branch/ubuntu2204/swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-03-a/swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-03-a-ubuntu22.04.tar.gz
 
