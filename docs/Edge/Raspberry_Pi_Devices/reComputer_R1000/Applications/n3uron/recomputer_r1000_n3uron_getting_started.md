@@ -65,7 +65,7 @@ N3uron can be easily installed with our one-step automated installation script, 
 ```sh
 sudo curl -fsSL https://get.n3uron.com/install.sh | sudo bash
 ``` 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/gif1.gif" alt="pir" width="600" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/Image_3.gif" alt="pir" width="600" height="auto" /></div>
 
 In a few seconds you’ll have N3uron installed, up and running.
 
