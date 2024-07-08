@@ -32,7 +32,7 @@ We are running the machine learning model on our XIAO and feeding camera stream 
 First step of machine learning project is to collect the dataset and here we need to collect Dog and Cat images. Here, We can collect the image in two methods. 
 
 1. Collect Images direclty from the XIAO-ESPS3 Sense and Save to SD card the upload to the EdgeImpulse
-2. Direclty Collect the image via mobile phone, internet or open dataset then uploaded to the Edgeimpulse. 
+2. Directly Collect the image via mobile phone, internet or open dataset then uploaded to the Edgeimpulse. 
 
 
 ### 1.1 Method 1: Collect Images via XIAO-ESP32S3 Sense
