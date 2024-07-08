@@ -1,15 +1,16 @@
 ---
-description: SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. Simply speak to Watcher to give commands, and it will execute your desired tasks when the event occurs.
-title: 1# Concepts and Classification of Tasks
+description: You will gain a solid foundation in understanding the different types of tasks that Watcher can perform and how they are organized within the SenseCraft ecosystem.
+title: 1# How to assign tasks to Watcher
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/20.png
 slug: /getting_started_with_watcher_task
+sidebar_position: 2
 last_update:
   date: 07/02/2024
   author: Citric
 ---
 
 
-# Concepts and Classification of Tasks
+# How to assign tasks to Watcher
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/20.png" style={{width:800, height:'auto'}}/></div>
 
@@ -334,11 +335,11 @@ Both methods provide a simple and intuitive way to stop the task execution when 
 
 ## Resources
 
-- **[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
 
-**[Watcher Quick Start Series 1# : Concepts and Classification of Tasks](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
 
-**Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools**
+**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
 
 **Watcher Quick Start Series 3# : As a Grove sensor**
 

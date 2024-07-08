@@ -317,7 +317,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**Step 3:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 3 (Optional):** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
@@ -340,6 +340,22 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+Now, you can connect the mouse, keyboard, and monitor to the Jetson device. It will be ready to use!
+
+:::tip
+If your Jetson device takes a long time to open the desktop, please reconnect the power supply.
+:::
+
+**Step 5 (Optional):** Install Nvidia Jetpack SDK
+
+Please open the terminal on the **Jetson device** and execute the following commands:
+
+```bash
+sudo apt update
+sudo apt install nvidia-jetpack
+```
+
 
 </TabItem>
 <TabItem value="JP5.1.2" label="JP5.1.2">
@@ -378,7 +394,7 @@ tfc {
     };
 ```
 
-**Step 5:** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 5 (Optional):** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
 
 ```sh
 cd Linux_for_Tegra
@@ -403,6 +419,21 @@ You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
+Now, you can connect the mouse, keyboard, and monitor to the Jetson device. It will be ready to use!
+
+:::tip
+If your Jetson device takes a long time to open the desktop, please reconnect the power supply.
+:::
+
+**Step 7 (Optional):** Install Nvidia Jetpack SDK
+
+Please open the terminal on the **Jetson device** and execute the following commands:
+
+```bash
+sudo apt update
+sudo apt install nvidia-jetpack
+```
+
 </TabItem>
 
 <TabItem value="JP6.0" label="JP6.0">
@@ -424,21 +455,21 @@ Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
   <tbody>
     <tr>
       <td>Jetson Orin NX 16GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-06-07.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771751&Signature=xnTNQkWNaDKnFgCZNMMAuvaGbHU%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001146&Signature=f1AjN08eNjFFXI7cBpAsMvyJJPc%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={4}>6.0</td>
       <td rowSpan={4}>36.3</td>
     </tr>
     <tr>
       <td>Jetson Orin NX 8GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_custom-firmware-6.0-36.3.0-2024-06-11.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771665&Signature=db1cEEBFhGgLevUo0pIJEjSbqaM%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001121&Signature=cMWZwS6tEdtQgnTIsuY6Tc3nb5Q%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 8GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771729&Signature=begx1Ve49Lqc7fDlk5f36Kv1Eec%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001087&Signature=sQtF63h5xU6fv9d%2BqIdOGnkNHWI%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 4GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-06-07.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771701&Signature=mr1kGOtvKQxQWKITSFmStBIkptA%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001061&Signature=QJaisOOSM4tCDQHd94xVhVzL7jo%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
