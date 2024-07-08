@@ -1867,6 +1867,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_to_TTN',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/LoRa_Locator',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_1110_to_HA',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/change_antenna_path',
 
                 {
                   type: 'category',
