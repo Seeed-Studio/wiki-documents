@@ -188,6 +188,10 @@ By offering these two mounting bracket options, we aim to provide flexibility an
 Please note that the Watcher body does not come with any of the stands below, so if you need a stand, please purchase it separately.
 :::
 
+### Hardware Diagram
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/Diagram.png" style={{width:1000, height:'auto'}}/></div>
+
 ## Operation Guidelines
 
 This section of the Wiki provides a comprehensive guide on how to power on the Watcher, navigate through its menu pages, and understand its operational logic. By following these instructions, you will be able to effectively utilize the Watcher's features and functionalities.

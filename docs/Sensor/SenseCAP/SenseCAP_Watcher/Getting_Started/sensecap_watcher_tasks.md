@@ -176,11 +176,17 @@ Please note that the actual performance and costs may vary depending on factors 
 
 After understanding the classification and basic concepts of tasks, let's take a closer look at how to issue commands to Watcher in the SenseCraft APP in full detail. Let's assume that you've completed the Watcher matching process and have made it to the Watcher chat page. If you don't know how to bind a device yet, please refer to [Device Binding and OTA Upgrade](https://wiki.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade).
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/workflow.png" style={{width:1000, height:'auto'}}/></div>
+
 ### Type the task
 
 Each Watcher device has its own dedicated chat window within the SenseCraft APP. To issue commands to a specific Watcher, navigate to its chat window and use the input field to enter your desired command. You can type the command manually or use your keyboard's voice input functionality for added convenience.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/21.png" style={{width:250, height:'auto'}}/></div>
+
+:::note
+Push to talk is still in development.
+:::
 
 When composing a command, it's crucial to provide clear and detailed instructions to ensure that the Watcher understands and executes the task accurately. Your command should include the following information:
 
