@@ -37,7 +37,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher Quick Start Series 4# : Training a model for Watcher *(Planing)*
 
-- Watcher Quick Start Series 5# : What does Watcher do *(Comming Soon)*
+- [Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 
 ### API Core

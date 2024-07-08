@@ -351,7 +351,7 @@ Both methods provide a simple and intuitive way to stop the task execution when 
 
 **Watcher Quick Start Series 4# : Training a model for Watcher**
 
-**Watcher Quick Start Series 5# : What does Watcher do**
+**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
 
 
 ## Tech Support & Product Discussion
