@@ -74,7 +74,7 @@ We're also moving forward in parallel with making some Edge Impulse exported Ard
 - [Speech keyword recognition (Yes & No) Arduino Library](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_Esp32_KWS_inferencing.zip)
 - [Fruit identification (apples, bananas, grapes) Arduino Library](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)
 
-### How to use the Edge Impulse Arduino Libraies. 
+### How to use the Edge Impulse Arduino Libraries. 
 
 It's like a generic arduino library, we need to install it on Arduino IDE first and use the example code to run the Demo. 
 

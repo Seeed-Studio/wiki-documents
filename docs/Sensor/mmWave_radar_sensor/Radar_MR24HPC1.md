@@ -24,7 +24,7 @@ last_update:
 
 ## Introduction
 
-24GHz mmWave Sensor - Human Static Presence Module Lite is an antenna-integrated, health-friendly mmwave radar sensor that applies FMCW ranging technology, with operation in 24GHz, for implementation of human presence, independently of environmental influences. This is also a personalized radar that users can configure underlying parameters of it to determine detected functions.
+24GHz mmWave Sensor - Human Static Presence Module Lite is an antenna-integrated, health-friendly mmwave radar sensor that applies FMCW ranging technology, with operation in 24GHz, for implementation of human static presence, independently of environmental influences. This is also a personalized radar that users can configure underlying parameters of it to determine detected functions.
 
 ### Application
 
