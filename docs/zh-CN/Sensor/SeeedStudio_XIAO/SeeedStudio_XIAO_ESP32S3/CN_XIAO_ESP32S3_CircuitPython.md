@@ -69,7 +69,7 @@ CircuitPython是XIAO ESP32S3的理想编程语言，因为它简化了物理计�
   </table>
 </div>
 
-:::信息
+:::info信息
 在使用它之前，我需要说明我在这里使用的软件/固件是为ESP32S3芯片设计的。因此，当您尝试使用引脚时，请确保使用通用输入/输出，而不是板上的引脚<br/>
 例如，当您尝试使用左侧第一行中的接点时。请确保它是 `GPIO1` 而不是 `A0` 或者`D0`。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:500, height:'auto'}}/></div>
@@ -125,14 +125,14 @@ CircuitPython是XIAO ESP32S3的理想编程语言，因为它简化了物理计�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/11.png" /></div>
 
-###将相关文件（库）添加到“CIRCUITPY”驱动程序
+### 将相关文件（库）添加到“CIRCUITPY”驱动程序
 
 从[相关文件(库)]复制所有文件(https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/related-mpy.zip)至“电路”驱动器。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/12.png" /></div>
 
 
-:::笔记
+:::note注意
 使用“Seeed Studio Grove OLED Display 0.96”时，需要“adafruit_ssd1306.mpy”文件和“adafrut_framebuf.mpy”
 
 adafruit_framebuf库使用名为font5x8.bin的字体文件来呈现文本。此文件需要在执行代码的环境中可以访问。

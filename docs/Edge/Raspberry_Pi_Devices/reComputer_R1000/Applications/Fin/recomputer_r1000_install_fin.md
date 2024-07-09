@@ -1,7 +1,7 @@
 ---
 description: This article mainly introduces how to install fin for reComputer R1000
 
-title: reComputer R1000 install fin
+title: reComputer R1000 install FIN
 keywords:
   - Edge Controller
   - reComputer R1000
@@ -20,7 +20,7 @@ FIN Framework (FIN) is a software framework with application suites that can int
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/FIN_framework.png" /></center>
 
 
-This article mainly introduces how to install Fin on reComputer R1000.
+This article mainly introduces how to install FIN on reComputer R1000.
 
 ## Getting Start
 
@@ -49,7 +49,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Software Preparation
 
 * First you need to find your supplier to get the FIN installation package and license file.
-* After that, please write a file named `fin.service`, which will be used to start the fin service in the system. If your installation package is a zip file, the content of the `fin.service` file is as follows:
+* After that, please write a file named `fin.service`, which will be used to start the FIN service in the system. If your installation package is a zip file, the content of the `fin.service` file is as follows:
   ```shell
   [Unit]
   Description=FIN Framework
@@ -72,7 +72,7 @@ Before you start this project, you may need to prepare your hardware and softwar
   ```
 
 ## installation steps
-**Step 1**: Enter the following command to install fin:
+**Step 1**: Enter the following command to install FIN:
   ```shell
   sudo apt install openjdk-17-jdk
   cd /opt/
@@ -101,7 +101,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/add_license.gif" /></center>
 
 
-After that, you can explore the various functions of `fin`.
+After that, you can explore the various functions of `FIN`.
 
 ## Tech Support & Product Discussion
 
