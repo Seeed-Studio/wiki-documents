@@ -1,6 +1,6 @@
 ---
-description: ReSpeaker Lite
-title: Get Started
+description: Getting Started with ReSpeaker Lite
+title: Getting Started with ReSpeaker Lite
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,15 +11,6 @@ last_update:
 ---
 
 ## Introduction
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/intro.png" alt="pir" width={800} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
 
 
 

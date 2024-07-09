@@ -1,6 +1,6 @@
 ---
 description: Get Started with Wio Tracker Dev Kit for Meshtastic® 
-title:  Get Started
+title:  Getting Started with Meshtastic® Kit
 keywords:
 - Meshtastic
 - Tracker

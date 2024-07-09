@@ -1,5 +1,5 @@
 ---
-description: Change the LoRa Antenna Path
+description: Change the LoRa Antenna Path of the Wio Tracker 1110 Board
 title:  Change Antenna Path
 keywords:
 - Antenna
@@ -13,7 +13,7 @@ last_update:
 
 
 
-Currently, the Wio Tracker 1110 Dev board is using the onboard LoRa antenna, to get a better signal, we may need an external antenna, this chapter will guide users to change the antenna path to connect an external LoRa antenna. 
+The Wio Tracker 1110 Dev board is using the onboard LoRa antenna by default, to get a better signal, we may need an external antenna, this chapter will guide users to change the antenna path to connect an external LoRa antenna. 
 
 
 * Remove `R3`.
