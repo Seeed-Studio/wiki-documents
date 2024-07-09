@@ -1,5 +1,5 @@
 ---
-description: How to use RoboSense LiDAR on reComputer
+description: This wiki provides a step-by-step guide to install and set up RoboSense LiDAR on reComputer J30/40 using ROS.
 title: Use RoboSense Lidar
 keywords:
 - Jetson Nano
@@ -8,7 +8,7 @@ keywords:
 - Lidar
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Robosense_Lidar
+slug: /robosense_lidar
 last_update:
   date: 05/7/2024
   author: ZhuYaoHui
@@ -26,7 +26,7 @@ This wiki provides a step-by-step guide to install and set up RoboSense LiDAR on
 
 
 ## Prerequisites
-- __[reComputer J30/40 series](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__: Already completed the [installation of the JetPack 5.x](/reComputer_J4012_Flash_Jetpack) system and the [ROS Noetic environment](/Installing_ROS1) according to the tutorial. 
+- __[reComputer J30/40 series](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__: Already completed the [installation of the JetPack 5.x](/reComputer_J4012_Flash_Jetpack) system and the [ROS Noetic environment](/installing_ros1) according to the tutorial. 
 
 - __RoboSense all series lidar__
 

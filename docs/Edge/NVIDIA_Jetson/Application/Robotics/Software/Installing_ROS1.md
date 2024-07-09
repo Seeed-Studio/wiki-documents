@@ -1,5 +1,5 @@
 ---
-description: Install ROS1
+description: This wiki provides install ROS1 on reComputer.
 title: Install ROS1
 keywords:
 - ROS1
@@ -8,7 +8,7 @@ keywords:
 - robotics
 - Robot Operating System
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Installing_ROS1
+slug: /installing_ros1
 last_update:
   date: 05/7/2024
   author: ZhuYaoHui

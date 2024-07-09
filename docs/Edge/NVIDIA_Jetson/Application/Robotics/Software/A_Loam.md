@@ -1,5 +1,5 @@
 ---
-description: A-LOAM 3D SLAM
+description: This wiki provides detailed steps to set up and run the A-LOAM algorithm on reComputer Jetson using a RoboSense RS32 LiDAR sensor.
 title: Run A-LOAM 3D SLAM
 keywords:
 - A-LOAM
@@ -8,7 +8,7 @@ keywords:
 - Jetson nano
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /A_Loam
+slug: /a_loam
 last_update:
   date: 05/7/2024
   author: ZhuYaoHui
@@ -36,8 +36,8 @@ This wiki provides detailed steps to set up and run the A-LOAM (Advanced LOAM) a
 - __RoboSense RS32 Lidar__.
 
   :::note
-    - Ensure your reComputer is running Jetpack 5.x. We have only tested on Ubuntu 20.04 and ROS Noetic. Follow the [ROS1 installation for reComputer](/reComputer_J4012_Flash_Jetpack) as outlined in this guide to complete the ROS environment setup.
-    - Ensure you follow the tutorial to [launch the RoboSense RS32 LiDAR on reComputer in ROS](/Robosense_Lidar), and successfully visualize the point cloud data.
+    - Ensure your reComputer is running Jetpack 5.x. We have only tested on Ubuntu 20.04 and ROS Noetic. Follow the [ROS1 installation for reComputer](/installing_ros1) as outlined in this guide to complete the ROS environment setup.
+    - Ensure you follow the tutorial to [launch the RoboSense RS32 LiDAR on reComputer in ROS](/robosense_lidar), and successfully visualize the point cloud data.
   :::
 
 <div align="center">
