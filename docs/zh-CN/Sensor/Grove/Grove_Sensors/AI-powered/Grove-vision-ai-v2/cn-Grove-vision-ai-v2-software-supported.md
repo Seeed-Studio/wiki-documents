@@ -283,7 +283,7 @@ typedef struct
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/10.gif" style={{width:600, height:'auto'}}/></div>
 
-:::warning警告 
+:::caution警告 
 
 请注意连接的方向，Grove Vision AI的Type-C连接器应与XIAO的Type-C连接器方向相同。
 :::

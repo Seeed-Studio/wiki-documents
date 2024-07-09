@@ -268,9 +268,9 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 - 设置用户身份验证。
 - 为 MQTT 通信启用 SSL/TLS 加密。
 - 配置适当的防火墙规则。
-
-通过遵循这些通用步骤，您应该能够在 Home Assistant 中配置 EMQX，从而使您能够以可靠的 MQTT 代理为核心开始构建您的物联网生态系统。请注意，具体步骤可能会根据您的 Home Assistant 和 EMQX 版本以及您的网络配置而有所不同。始终参考**[官方文档](https://github.com/hassio-addons/addon-emqx/blob/main/emqx/DOCS.md)**获取最准确和最新的信息。 
 :::
+通过遵循这些通用步骤，您应该能够在 Home Assistant 中配置 EMQX，从而使您能够以可靠的 MQTT 代理为核心开始构建您的物联网生态系统。请注意，具体步骤可能会根据您的 Home Assistant 和 EMQX 版本以及您的网络配置而有所不同。始终参考**[官方文档](https://github.com/hassio-addons/addon-emqx/blob/main/emqx/DOCS.md)**获取最准确和最新的信息。 
+
 
 
 
@@ -299,7 +299,7 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/33.png" style={{width:1000, height:'auto'}}/></div>
 
-:::warning警告
+:::caution警告
 当显示 IP 地址时，意味着 WIFI 没有问题，服务状态必须是图中的文字来表示正常，请注意，如果 WIFI 不正常，MQTT 绝对不正常；当您刚切换过去时，可能会显示未连接，并且需要等待约 10 秒左右，您无需刷新即可查看状态，状态更改后它会自动显示最新的状态。
 :::
 

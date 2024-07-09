@@ -211,7 +211,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/33.png" style={{width:1000, height:'auto'}}/></div>
 
-:::warning警告
+:::caution警告
 
  当IP地址显示时，表示WIFI没有问题，服务状态必须是图中的文本来表示正常，请注意，如果WIFI不正常，MQTT肯定也不正常；当您刚切换时，它可能会显示未连接，您需要等待大约10秒左右，您不需要刷新来查看状态，状态变化后会自动显示最新状态。
 
