@@ -39,9 +39,9 @@ last_update:
 
 Seeed Studio XIAO ESP32S3是一款功能强大、用途广泛的开发板，具有各种外围接口和GPIO引脚。这些引脚可以用于各种目的，例如与其他设备通信、读取模拟传感器、控制LED等。在本教程中，我们将探索XIAO ESP32S3及其相关板XIAO ESP32_Sense的引脚，并学习如何将这些引脚用于不同的用途。具体而言，我们将介绍1x UART、1x lIC、1x iIS、1x SPI、11x GPIO（PWM）、9xADC、1x用户LED、1x充电LED、1个重置按钮、1x引导按钮的使用，以及XIAO ESP32S3 Sense的1x B2B连接器（带2个额外的GPIO）。在本教程结束时，您将对XIAO ESP32S3的引脚有一个很好的了解，并能够在您的项目中有效地使用它。
 
-##入门
+## 入门
 
-###Pinout概述
+### Pinout概述
 
 在我们开始之前，让我们用下面的示意图回顾一下XIAO ESP32S3的所有引脚及其功能。
 
@@ -129,7 +129,7 @@ XIAO ESP32S3具有多达11个常规GPIO引脚和9个模拟引脚。在这个例�
 
 请将XIAO ESP32S3或Sense安装到扩展板上，并通过Grove电缆将继电器连接到扩展板的**A0/D0**接口。最后，通过USB-C电缆将XIAO连接到计算机。
 
-###软件实施
+### 软件实施
 
 在这个例子中，我们将使用连接到XIAO扩展板的按钮来实现继电器开/关状态的控制。按下按钮时，继电器接通，松开按钮时，中继器断开。
 
@@ -164,7 +164,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/19.gif" style={{width:500, height:'auto'}}/></div>
 
-:::提示
+:::tip提示
 如果要使用数字功能，则应使用字母“D”作为引脚编号的前缀，例如D4、D5。相反，如果要使用引脚的模拟功能，则应使用字母“a”作为引脚编号的前缀，例如A4、A5。
 :::
 
@@ -178,11 +178,11 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/20.png" style={{width:400, height:'auto'}}/></div>
 
-:::警告
-从图中可以看出，由于肖的空间限制，许多布线布局都非常紧凑。因此，在切断J1和J2之间的连接时，请非常小心，不要在白线外切断，否则可能会导致开发板故障！
+:::caution警告
+从图中可以看出，由于XIAO的空间限制，许多布线布局都非常紧凑。因此，在切断J1和J2之间的连接时，请非常小心，不要在白线外切断，否则可能会导致开发板故障！
 :::
 
-:::提示
+:::tip提示
 切断J1和J2之间的连接后，扩展板上的麦克风功能将不再可用。如果需要使用麦克风功能，D11和D12引脚不能同时使用。在这种情况下，您可以分别焊接J1和J2的两个焊盘，以恢复麦克风功能。如下图所示，分别焊接红色和绿色区域。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/21.png" style={{width:400, height:'auto'}}/></div>
@@ -239,7 +239,7 @@ void loop() {
 }
 ```
 
-上述方法也适用于 [数字PWM](#digital-as-pwm) 和[模拟](#analog) 部分。您只需要修改要使用的扩展板的引脚编号。以后不再重复。
+上述方法也适用于 [数字PWM](#digital-as-pwm) 和 [模拟](#analog) 部分。您只需要修改要使用的扩展板的引脚编号。以后不再重复。
 
 ## 数字PWM
 
@@ -437,7 +437,7 @@ float readConcentration()
 }
 ```
 
-:::提示
+:::tip提示
 如果要使用引脚的模拟功能，应使用字母“a”作为引脚编号的前缀，如A4、A5。相反，如果要使用数字功能，则应使用字母“D”作为引脚编号的前缀，例如D4、D5.
 :::
 
@@ -445,11 +445,11 @@ float readConcentration()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/23.png" style={{width:600, height:'auto'}}/></div>
 
-##串行
+## 串行
 
 在使用Arduino IDE时，串行通信是许多项目的重要组成部分。要在Arduino IDE中使用Serial，需要先打开Serial Monitor窗口。这可以通过单击工具栏中的**串行监视器**图标或按**Ctrl+M**快捷键来完成。
 
-###一般用途
+### 一般用途
 
 一些常用的串行功能包括：
 
@@ -498,7 +498,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/24.png" style={{width:600, height:'auto'}}/></div>
 
-###软件序列的使用
+### 软件序列的使用
 
 如果您觉得一个硬件串行端口不够，还可以使用ESP32的软件串行功能将一些引脚设置为软件串行，以扩大串行端口的数量。
 
@@ -544,7 +544,7 @@ void loop() {
 
 最后，我们添加一个“delay（）”函数，在重复循环之前等待一秒钟。
 
-::: 笔记
+:::note注意
 请注意，为了在ESP32-S3上使用软件串行，您需要为RX和TX选择不用于任何其他目的的适当引脚。在本例中，我们分别将引脚9和10用于RX和TX。
 :::
 
@@ -722,7 +722,8 @@ void loop()
 ## IIC
 
 XIAO ESP32S3具有I2C接口，可用于许多传感器的数据传输和解析，以及使用一些OLED屏幕。
-###硬件准备
+
+### 硬件准备
 
 <table align="center">
 	<tr>
@@ -760,9 +761,9 @@ XIAO扩展板上的OLED显示器使用I2C协议，并通过板上的I2C电路连
 
 本示例介绍了如何在XIAO ESP32S3的Seeed Studio扩展底座上使用OLED显示器。
 
-####步骤1. 在扩展板上安装Seeed Studio XIAO ESP32S3，然后连接C型电缆。
+#### 步骤 1. 在扩展板上安装Seeed Studio XIAO ESP32S3，然后连接C型电缆。
 
-####步骤2.安装u8g2库。
+#### 步骤 2. 安装u8g2库。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino">
@@ -770,7 +771,7 @@ XIAO扩展板上的OLED显示器使用I2C协议，并通过板上的I2C电路连
     </a>
 </div>
 
-####步骤3.复制代码并粘贴在Ardiono IDE上，然后上传。
+#### 步骤 3. 复制代码并粘贴在Ardiono IDE上，然后上传。
 
 ```c
 #include <Arduino.h>
@@ -801,11 +802,11 @@ void loop(void) {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/29.jpg" style={{width:600, height:'auto'}}/></div>
 
-##SPI
+## SPI
 
 ESP32-S3芯片集成了多个外围设备，包括可用于连接闪存、显示器、传感器等外部SPI设备的SPI接口。ESP32-S3还支持高速SPI传输模式，可实现80MHz的最大SPI传输速率，满足大多数SPI设备的数据传输需求。
 
-###硬件准备
+### 硬件准备
 
 <table align="center">
 	<tr>
@@ -882,7 +883,7 @@ void loop(void) {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/31.jpg" style={{width:600, height:'auto'}}/></div>
 
-### For Sense
+### 对于 Sense
 
 如果您购买了Sense版本，并且需要连接到扩展板，请注意扩展板上的SD卡会占用SPI引脚，这可能导致SPI引脚不可用。
 
@@ -903,11 +904,11 @@ Sense扩展板上提供的焊盘接口允许用户选择所需的功能。其中
   </tr>
 </table>
 
-:::警告
+:::caution警告
 从图中可以看出，由于肖的空间限制，许多布线布局都非常紧凑。因此，在切割J3的连接时，请非常小心，不要在白线外切割，否则可能会导致开发板故障！
 :::
 
-:::警告
+:::caution警告
 为了常识起见，J3在上面被简单地描述为打开或关闭SD卡功能的接口，但这实际上是不准确的。实际电路连接如下所示。切断J3实际上断开了从R4到R6的上拉电阻器，这是SD卡功能被禁用而SPI功能恢复正常的主要原因。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/93.png" style={{width:800, height:'auto'}}/></div>
@@ -954,19 +955,20 @@ ESP32-S3的JTAG（联合测试行动小组）接口是一个调试和测试接�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/35.png" style={{width:200, height:'auto'}}/></div>
 
 ESP32-S3的JTAG接口可用于以下目的：
-1.调试：JTAG接口可用于ESP32-S3芯片中的调试和单步执行，帮助开发人员发现和解决代码错误。
+  
+  1.调试：JTAG接口可用于ESP32-S3芯片中的调试和单步执行，帮助开发人员发现和解决代码错误。
 
-2.闪烁程序：通过JTAG接口，可以将程序或调试固件加载到ESP32-S3芯片中。
+  2.闪烁程序：通过JTAG接口，可以将程序或调试固件加载到ESP32-S3芯片中。
 
-3.读取CPU状态：JTAG接口可用于读取ESP32-S3芯片的CPU状态、内存内容和寄存器值，用于调试和测试。
+  3.读取CPU状态：JTAG接口可用于读取ESP32-S3芯片的CPU状态、内存内容和寄存器值，用于调试和测试。
 
 需要注意的是，使用JTAG接口需要专用的硬件设备和软件工具，以及相应的专业知识和技能。因此，一般情况下，JTAG接口仅用于特定场景，如开发、调试和测试。对于普通用户来说，使用ESP32-S3的其他功能和接口已经足够了。
 
 如果你想了解更多关于JTAG调试的信息，请阅读官方网站[ESP32 文档](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/index.html).
 
-##故障排除
+## 故障排除
 
-###Q1：为什么我在使用串行监视器时会出现以下错误？
+### 问题1：为什么我在使用串行监视器时会出现以下错误？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/25.png" style={{width:600, height:'auto'}}/></div>
 
@@ -976,7 +978,7 @@ A： 如果您遇到这种类型的错误，请打开**USB CDC开机**开关。
 
 这个问题也可能表现为ArduinoIDE2.x中的空串行输出，也可能是由同样的原因引起的。
 
-###Q2：ESP-32支持或不支持哪些功能？
+### 问题2：ESP-32支持或不支持哪些功能？
 
 A： 以下是由提供的支持/不支持的功能列表 [ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html)。 截至2023年4月10日。
 
@@ -1005,15 +1007,15 @@ A： 以下是由提供的支持/不支持的功能列表 [ESP32](https://docs.e
 | USB           | Not Supported | Yes           | Yes           | Yes           | ESP32-C3 only CDC/JTAG |
 | Wi-Fi         | Yes           | Yes           | Yes           | Yes           |                        |
 
-### Q3：为什么我总是能在串行监视器中看到芯片的调试消息？
+### 问题3：为什么我总是能在串行监视器中看到芯片的调试消息？
 
-A： 您可以尝试在Arduino IDE中使用以下方法关闭调试消息的输出，**Tool -> Core Debug Level: -> None** v。
+A： 您可以尝试在Arduino IDE中使用以下方法关闭调试消息的输出，**Tool -> Core Debug Level: -> None** 。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/90.png" style={{width:500, height:'auto'}}/></div>
 
 然而，这种方法并不总是有效的，事实上，ESP32-S3的调试信息总是从串行端口打印出来的，这是不可更改的。请原谅，它太急于让你知道它工作正常了。
 
-### Q4：为什么我切断了J3的连接，但仍然测试D8和D9引脚高？写入microSD卡仍然有成功的可能性？
+### 问题4：为什么我切断了J3的连接，但仍然测试D8和D9引脚高？写入microSD卡仍然有成功的可能性？
 
 在SD卡设计方面，正确的电路必须具有上拉电阻器，才能使microSD卡正常工作。如果您在切割J3后发现引脚级别和读写卡仍然正常，这可能只是一种幸运的情况，我们不建议您在这种情况下读写卡，这可能会导致写入数据丢失的问题。而D8和D9引脚可以通过在切割J3之后写入低电平来修改电平。
 
