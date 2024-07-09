@@ -186,7 +186,8 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 
 然后选择**XIAO ESP32S3**并点击**连接**。
 
-:::警告 请注意，虽然此处选择了 XIAO ESP32S3，但我们仍在使用 XIAO ESP32C3！
+:::note注意
+请注意，虽然此处选择了 XIAO ESP32S3，但我们仍在使用 XIAO ESP32C3！
 
 :::
 
@@ -208,7 +209,7 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 首先，我们需要打开主 SenseCraft AI 模型助手页面。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>前往 SenseCraft AI 页面</font></span></strong></a>
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>前往SenseCraft AI页面</font></span></strong></a>
 </div>
 
 <br />
@@ -261,13 +262,15 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 
 安装了 EMQX 附加组件后，打开 **Start on boot（开机启动）**、**Watchdog**和 **Show in sidebar** 开关。点击 **Start** 来启动 EMQX。
 
-:::提示 由于我们正在使用它在我们自己的家庭网络中，目前我们不考虑安全性，并在端口 1883 上进行 MQTT 订阅和发布。请记住，尤其是如果暴露在互联网上，您应该确保您的 EMQX 代理服务器的安全性。您应考虑：
+:::tip提示
+由于我们正在使用它在我们自己的家庭网络中，目前我们不考虑安全性，并在端口 1883 上进行 MQTT 订阅和发布。请记住，尤其是如果暴露在互联网上，您应该确保您的 EMQX 代理服务器的安全性。您应考虑：
 
 - 设置用户身份验证。
 - 为 MQTT 通信启用 SSL/TLS 加密。
 - 配置适当的防火墙规则。
 
-通过遵循这些通用步骤，您应该能够在 Home Assistant 中配置 EMQX，从而使您能够以可靠的 MQTT 代理为核心开始构建您的物联网生态系统。请注意，具体步骤可能会根据您的 Home Assistant 和 EMQX 版本以及您的网络配置而有所不同。始终参考[官方文档](https://github.com/hassio-addons/addon-emqx/blob/main/emqx/DOCS.md)获取最准确和最新的信息。 :::
+通过遵循这些通用步骤，您应该能够在 Home Assistant 中配置 EMQX，从而使您能够以可靠的 MQTT 代理为核心开始构建您的物联网生态系统。请注意，具体步骤可能会根据您的 Home Assistant 和 EMQX 版本以及您的网络配置而有所不同。始终参考**[官方文档](https://github.com/hassio-addons/addon-emqx/blob/main/emqx/DOCS.md)**获取最准确和最新的信息。 
+:::
 
 
 
@@ -296,7 +299,8 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/33.png" style={{width:1000, height:'auto'}}/></div>
 
-:::警告：当显示 IP 地址时，意味着 WIFI 没有问题，服务状态必须是图中的文字来表示正常，请注意，如果 WIFI 不正常，MQTT 绝对不正常；当您刚切换过去时，可能会显示未连接，并且需要等待约 10 秒左右，您无需刷新即可查看状态，状态更改后它会自动显示最新的状态。
+:::warning警告
+当显示 IP 地址时，意味着 WIFI 没有问题，服务状态必须是图中的文字来表示正常，请注意，如果 WIFI 不正常，MQTT 绝对不正常；当您刚切换过去时，可能会显示未连接，并且需要等待约 10 秒左右，您无需刷新即可查看状态，状态更改后它会自动显示最新的状态。
 :::
 
 ### 第十一步：集成到 Home Assistant
@@ -315,7 +319,7 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/36.png" style={{width:1000, height:'auto'}}/></div>
 
-:::注意
+:::note注意
 1. 如果在前面的步骤中配置了用户名和密码，则在添加设备时可能会要求输入它们。
 2. 如果您要将多个Vision AI设备添加到Home Assistant，请注意设备的ID号码，该号码作为区分不同Grove标识之间的标记。
 

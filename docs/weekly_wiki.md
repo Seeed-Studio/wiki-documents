@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/01/2024
+  date: 07/08/2024
   author: Seraphina
 ---
 
@@ -17,52 +17,113 @@ This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! E
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 1st and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 8th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
 
-### [reTerminal DM with Node Red and Modbus TCP](https://wiki.seeedstudio.com/reterminal_dm_node_red_modbus_tcp/)
+### [Watcher to Node-RED Quick Start](https://wiki.seeedstudio.com/watcher_to_node_red/)
 
-**Modbus** is a widely used communication protocol in industrial environments, known for its simplicity and robustness. **Modbus RTU (Remote Terminal Unit)** is a serial communication protocol that operates over RS-232 or RS-485 physical layers. It uses a compact, binary representation of the data, making it efficient for transmission over long distances and in noisy environments. **Modbus TCP**, on the other hand, extends the protocol to Ethernet networks, encapsulating Modbus frames within TCP/IP packets. This allows for faster communication speeds and the integration of Modbus with modern IT infrastructure. Both versions are favored in industrial settings due to their reliability, ease of implementation, and ability to facilitate communication between a wide variety of devices and systems, such as PLCs, sensors, and SCADA systems.
+**Node-RED** is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbus-read.gif" style={{width:800, height:'auto'}}/></div> 
+It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/10.png" style={{width:1000, height:'auto'}}/></div>
 
-### [reTerminal DM with Node Red and BACnet TCP](https://wiki.seeedstudio.com/recomputer_r1000_node_red_bacnet_ip/)
+To make it easier for our users to **connect data from the Watcher to various other Paas platforms for more in-depth data processing**. For example. from Watcher to IFTTT, Telegram, Twilio etc. We will do a series of tutorials for **Watcher & Node-RED**.
 
-BACnet IP (Building Automation and Control Network over IP) is a communication protocol designed for managing and automating building systems. It enables devices from different manufacturers to interoperate seamlessly over standard IP networks, enhancing system integration and flexibility. The primary advantages of BACnet IP in Building Management Systems (BMS) include improved scalability, easier installation and maintenance, and the ability to leverage existing network infrastructure. BACnet IP also supports real-time data exchange, facilitating better monitoring and control of building systems. This results in increased energy efficiency, reduced operational costs, and enhanced occupant comfort and safety.
-
-### [reTerminal DM with Node Red and InfluxDB](https://wiki.seeedstudio.com/reterminal_dm_200_node_red_influxdb/)
-
-Deploying [InfluxDB](https://www.influxdata.com/) on an reTerminal DM, a Raspberry Pi-powered HMI, enables robust time-series data collection and analysis at the edge of your network. This setup is ideal for IoT applications, providing real-time insights and monitoring capabilities. By leveraging the lightweight yet powerful InfluxDB database, you can efficiently manage and analyze sensor data directly on the reTerminal DM. The following guide outlines the steps to install, configure, and use InfluxDB on your reTerminal DM, ensuring a seamless integration into your data infrastructure.
+This tutorial, the first in a series, will walk you through installing and using Node-red and calling the Watcher API to connect to Node-RED.
 
 
-### [reTerminal DM with Grafana for IoT Dash Board](https://wiki.seeedstudio.com/reterminal_dm_grafana/)
+### [reComputer R1000 Walk Through](https://wiki.seeedstudio.com/recomputer_r1000_intro/)
 
-[Grafana](https://grafana.com/oss/grafana/) is an open-source visualization and analytics software that enables you to query, visualize, alert on, and explore your metrics, logs, and traces from any storage location. It offers tools to transform your time-series database (TSDB) data into insightful graphs and visualizations. As a powerful monitoring solution, Grafana helps in making informed decisions, enhancing system performance, and streamlining troubleshooting. In this wiki, we will guide you through the installation of Grafana on a Raspberry Pi-powered reTerminal DM, connect it to an existing InfluxDB database, and create an illustrative dashboard.
-
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/grafana/reterminal-grafana-dash.gif" /></center>
+The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features a quad-core A72 processor, dual Ethernet, and multiple RS485 channels supporting BACnet, Modbus RTU, and Modbus TCP/IP. With versatile wireless options including 4G, LoRa®, and Wi-Fi/BLE, it ensures robust IoT network communication. Ideal for remote device and energy management, the R1000 is perfect for smart building applications.
 
 
-### [reComputer R1000 with fuxa to use modbus RTU/TCP](https://wiki.seeedstudio.com/reterminal_dm_rpi_200_node_red_bacnet_tcp/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:800, height:'auto'}}/></div>
+
+### [reComputer R1000 with Node Red and MQTT](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)
+
+**MQTT (Message Queuing Telemetry Transport)** is a lightweight messaging protocol ideal for IoT (Internet of Things) applications due to its efficiency and low bandwidth requirements. It facilitates communication between devices in a publish-subscribe model, allowing for real-time data exchange over unreliable networks. With Node-RED, integrating MQTT enables seamless connectivity between edge devices and central servers or other devices, fostering efficient data transmission and processing reComputer R1000 Edge Controller, by supporting MQTT natively, eliminates the need for additional hardware gateways by allowing the installation of an MQTT broker directly on the reComputer R1000 itself. This reduces complexity, minimizes latency, and enhances reliability, as data can be processed and acted upon at the edge without relying on external intermediaries, thus optimizing IoT system architecture.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png" style={{width:800, height:'auto'}}/></div>
+
+### [reCoputer R1000 with Node Red and InfluxDB](https://wiki.seeedstudio.com/recomputer_r1000_node_red_influxdb/)
+
+Deploying [InfluxDB](https://www.influxdata.com/) on an reComputer R1000 , a Raspberry Pi-powered edge controller, enables robust time-series data collection and analysis at the edge of your network. This setup is ideal for IoT applications, providing real-time insights and monitoring capabilities. By leveraging the lightweight yet powerful InfluxDB database, you can efficiently manage and analyze sensor data directly on the reComputer R1000. The following guide outlines the steps to install, configure, and use InfluxDB on your reComputer R1000 , ensuring a seamless integration into your data infrastructure.
+
+
+### [reComputer R1000 with Grafana](https://wiki.seeedstudio.com/recomputer_r1000_grafana/)
+
+[Grafana](https://grafana.com/oss/grafana/) is an open-source visualization and analytics software that enables you to query, visualize, alert on, and explore your metrics, logs, and traces from any storage location. It offers tools to transform your time-series database (TSDB) data into insightful graphs and visualizations. As a powerful monitoring solution, Grafana helps in making informed decisions, enhancing system performance, and streamlining troubleshooting. In this wiki, we will guide you through the installation of Grafana on a Raspberry Pi-powered reComputer R1000 , connect it to an existing InfluxDB database, and create an illustrative dashboard.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/grafana/grafana2.gif" /></center>
+
+
+### [reComputer R1000 with fuxa to achieve SCADA](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_achieve_scada/)
 
 FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols. 
 
-This article mainly introduces how to use fuxa for ModbusRTU/TCP communication.
+This article mainly introduces how to use fuxa to achieve SCADA. In the article, fuxa receives data from `node-red` and `OPC UA Simulator`, and displays it using `chart` and `Circular Gauge`; at the same time, it draws a series of patterns to simulate industrial processes.
 
-<p style={{textAlign: 'center'}}><img src="https://meshtastic.org/assets/images/lora-topology-2-c80684f1eafdf2a71fbaf26e494fb26d.webp" alt="pir" width={800} height="auto" /></p>
 
+### [SenseCAP Watcher - 1# Concepts and Classification of Tasks](https://wiki.seeedstudio.com/recomputer_r1000_node_red_modbus_tcp/)
+
+Watcher is a powerful tool that relies on user-issued commands to perform various monitoring and analysis tasks. By sending precise instructions to Watcher, you can direct it to focus on specific targets, collect data, and provide valuable insights.
+
+In the following sections, we will dive into the details of task categorization, model selection, and pricing information. Our goal is to equip you with the knowledge and skills necessary to efficiently assign tasks to Watcher and make the most of its functionalities. We will explore the different types of tasks available, guide you in selecting the appropriate models for your requirements, and provide clarity on the associated costs.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/20.png" style={{width:800, height:'auto'}}/></div>
+
+### [reComputer R1000 install fin](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)
+
+FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/FIN_framework.png" /></center>
+
+
+This article mainly introduces how to install Fin on reComputer R1000.
+
+
+### [Finetune with Llama-Factory](https://wiki.seeedstudio.com/Finetune_LLM_on_Jetson/)
+
+🚀Finetune LLM by Llama-Factory on Jetson! Now you can tailor a custom private local LLM to meet your requirements. 
+
+<div align="center">
+    <img width={800} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run.gif" />
+</div>
+
+Llama-Factory provides a highly convenient large language model fine-tuning tool that supports common large language models, datasets, and fine-tuning methods. With this platform, we can easily customize private large language models.
+
+In this wiki, we will learn how to deploy Llama-Factory on Nvidia Jetson and use Llama-Factory to train a large language model that supports Chinese Q&A.
+
+### [reComputer R1000 with N3uron](https://wiki.seeedstudio.com/recomputer_r1000_n3uron/)
+
+N3uron is a complete Industrial Edge Platform for IIoT & DataOps that enables seamless integration between the industrial plant floor and third-party applications, whether on-premise or in the cloud.
+With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/n3uron1.png" alt="pir" width="700" height="auto" /></div>
+
+### [reComputer R1000 use bacnet MS/TP](https://wiki.seeedstudio.com/reComputer_r1000_use_bacnet_mstp/)
+
+This article mainly introduces how to perform functional testing of bacnet MS/TP protocol on reComputer R1000.We simulated a bacnet MS/TP server on reComputer R1000, and then used YABE on the W10 PC to check whether the device is present. If the device we simulated can be found normally, it means that the bacnet MS/TP communication is normal.
 
 ## Existed Wiki Updated
 
-### [A607 JetPack 6 Compatibility](https://wiki.seeedstudio.com/reComputer_A607_Flash_System/#flash-to-jetson)
+### [reTerminal && reTerminal DM-FAQ - How to solve screen refresh rate is too low](https://wiki.seeedstudio.com/screen_refresh_rate_low/)
 
-We've now updated the method for flashing Jetpack 6 on A607.
+Screen has noticeable refresh stutter stripes. If your situation is the same, you can follow this wiki to solve it.
 
-### [NVIDIA® Jetson AGX Orin 32GB H01 JetPack 6 Compatibility](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#flash-to-jetson)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/FAQ/DM_bug.gif" alt="pir" width={600} height="auto" /></p>
 
-We've now updated the method for flashing Jetpack 6 on Jetson AGX Orin 32GB H01.
+### recomputer J401 and industrial JetPack 6 Compatibility
+
+We've now updated the method for flashing Jetpack 6 on recomputer J401 and industrial.
+
+[recomputer J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
+
+[recomputer J401 industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started)
 
 ### [Installation to reTerminal DM Lorawan Module](https://wiki.seeedstudio.com/reterminal-dm/#lorawan--module)
  
@@ -157,6 +218,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.6.10th](/Seeed_Elderly/weekly_wiki/wiki240610)
 - [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/wiki240617)
 - [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
+- [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
 
 </details>
 
