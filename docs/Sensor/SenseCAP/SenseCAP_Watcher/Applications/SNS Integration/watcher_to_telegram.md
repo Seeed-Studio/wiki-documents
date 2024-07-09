@@ -4,7 +4,7 @@ title: Watcher to Telegram
 keywords:
 - watcher
 - Telegram
-image: https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png
+image: https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png
 slug: /watcher_to_telegram
 last_update:
   date: 06/07/2024
@@ -12,6 +12,8 @@ last_update:
 ---
 
 # Watcher To Telegram Quick Start
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png" style={{width:1000, height:'auto'}}/></div>
 
 ## What is Telegram
 
