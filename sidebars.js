@@ -1181,6 +1181,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee',
               ],
             },
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Embedded_Swift',
           ],
         },
         {
@@ -2931,6 +2932,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_assembly_guide',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_how_to_use_rs485_modbus',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_use_bacnet_mstp',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/reComputer_R1000_FAQ', 
               {
                 type: 'category',
@@ -2971,6 +2973,13 @@ const sidebars = {
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_install_fin',
                               ],
                             },
+                            {
+                              type: 'category',
+                              label: 'N3uron',
+                              items: [
+                                 'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_getting_started',
+                                ],
+                              },
    
                           
                     ],
@@ -3187,7 +3196,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv5-Object-Detection-Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-DeepStream-TRT-Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
+                // 'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8_custom_classification_model',
               ]
             },
@@ -3254,9 +3263,43 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
               ]
             },
+
+            {
+              type: 'category',
+              label: 'Robotics',
+                // link: {
+                //   type: "doc",
+                //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+                // },
+              items: [
+    
+                {
+                  type: 'category',
+                  label: 'Software',
+                    // link: {
+                    //   type: "doc",
+                    //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Software',
+                    // },
+                  items: [
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/Installing_ROS1',
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/A_Loam',
+                    ]},
+                  
+                {
+                  type: 'category',
+                  label: 'Hardware',
+                        // link: {
+                        //   type: "doc",
+                        //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
+                        // },
+                  items: [
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
+                      ]},
+                
+                ]}
+            
           ]
         },
-
         // FAQs
         {
           type: 'category',

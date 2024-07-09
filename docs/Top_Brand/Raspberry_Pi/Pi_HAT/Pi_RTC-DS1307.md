@@ -97,7 +97,7 @@ git clone https://github.com/Seeed-Studio/pi-hats.git
 When the download finish, tap the following command in your terminal
 
 ```
-cd pi-hats
+cd ~/pi-hats/tools
 sudo ./install.sh -u rtc_ds1307
 ```
 

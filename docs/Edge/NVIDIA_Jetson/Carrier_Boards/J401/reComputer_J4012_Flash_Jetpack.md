@@ -455,21 +455,21 @@ Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
   <tbody>
     <tr>
       <td>Jetson Orin NX 16GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-06-07.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771751&Signature=xnTNQkWNaDKnFgCZNMMAuvaGbHU%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001146&Signature=f1AjN08eNjFFXI7cBpAsMvyJJPc%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={4}>6.0</td>
       <td rowSpan={4}>36.3</td>
     </tr>
     <tr>
       <td>Jetson Orin NX 8GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_custom-firmware-6.0-36.3.0-2024-06-11.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771665&Signature=db1cEEBFhGgLevUo0pIJEjSbqaM%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001121&Signature=cMWZwS6tEdtQgnTIsuY6Tc3nb5Q%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 8GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771729&Signature=begx1Ve49Lqc7fDlk5f36Kv1Eec%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001087&Signature=sQtF63h5xU6fv9d%2BqIdOGnkNHWI%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 4GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-06-07.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4871771701&Signature=mr1kGOtvKQxQWKITSFmStBIkptA%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001061&Signature=QJaisOOSM4tCDQHd94xVhVzL7jo%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
