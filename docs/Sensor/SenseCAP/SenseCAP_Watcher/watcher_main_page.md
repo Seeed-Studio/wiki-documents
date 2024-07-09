@@ -23,6 +23,8 @@ last_update:
 
 Introducing the Watcher Product Catalogue, your comprehensive guide to setting up, using, and maintaining your Watcher device. Discover the key features, customization options, and mounting possibilities that make Watcher the perfect monitoring solution. With detailed instructions, troubleshooting tips, and specifications, this catalogue empowers you to fully utilize your Watcher and experience peace of mind through advanced surveillance technology.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/Infrastructure.png" style={{width:1000, height:'auto'}}/></div>
+
 ### Getting Started
 
 - [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
@@ -35,7 +37,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher Quick Start Series 4# : Training a model for Watcher *(Planing)*
 
-- Watcher Quick Start Series 5# : What does Watcher do *(Comming Soon)*
+- [Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 
 ### API Core
