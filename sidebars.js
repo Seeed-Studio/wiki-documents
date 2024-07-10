@@ -2995,6 +2995,15 @@ const sidebars = {
 
                     {
                       type: 'category',
+                      label: 'Cloud Solutions',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/AWS/recomputer_r1000_aws',
+                        
+                      ],
+                      },
+
+                    {
+                      type: 'category',
                       label: 'Computer Vision',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
