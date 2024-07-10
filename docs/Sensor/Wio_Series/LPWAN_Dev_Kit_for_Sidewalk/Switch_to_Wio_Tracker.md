@@ -26,7 +26,9 @@ This tutorial will guide users to flash the LPWAN Dev Board for Amazon Sidewalk 
 
 * J-Link Debug Programmer x 1
 
-* [Bootloader file](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/tree/master/bootloader/Seeed_Wio_Tracker_1110) x 1
+* [Bootloader file](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/tree/master/bootloader/Seeed_Wio_Tracker_1110)
+
+* [Application Firmware](https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/wio_tracker_app_release_sw_0.5_2024-06-06.uf2)
 
 
 

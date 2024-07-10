@@ -4,7 +4,7 @@ title: Getting Started with ReSpeaker Lite
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reSpeaker_lite_introduction
+slug: /reSpeaker_usb_v3
 last_update:
   date: 6/28/2024
   author: Jessie
