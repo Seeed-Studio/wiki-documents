@@ -45,8 +45,10 @@ Click [here](https://meshtastic.org/docs/) to learn more about Meshtastic networ
 
 ## Supported Hardware
 
-* Tracker Dev Kit for Meshtastic® – Wio Tracker 1110
-* ...
+* [Tracker Dev Kit for Meshtastic® – Wio Tracker 1110](hhttps://www.seeedstudio.com/Wio-Tracker-1110-Dev-Kit-for-Meshtastic.html)
+* [SenseCAP Card Tracker T1000-E for Meshtastic](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
+* [SenseCAP Indicator for Meshtastic](https://www.seeedstudio.com/Indicator-for-Meshtastic.html)
+
 
 
 :::note

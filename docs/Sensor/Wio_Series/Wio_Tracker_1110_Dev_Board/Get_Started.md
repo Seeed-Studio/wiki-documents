@@ -1,6 +1,6 @@
 ---
-description: Get_Started_with_Wio_Tracker_1110 
-title: Get Started with Wio-Tracker_1110 
+description: Get Started with Wio Tracker 1110 
+title: Get Started with Wio Tracker 1110 
 keywords:
 - Tracker
 - Wio

@@ -1867,6 +1867,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_to_TTN',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/LoRa_Locator',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_1110_to_HA',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/change_antenna_path',
 
                 {
                   type: 'category',
@@ -1895,7 +1896,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'LPWAN_Dev_Kit_for_Sidewalk',
+              label: 'LPWAN Dev Kit for Sidewalk',
               items: [
                 'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/LPWAN_Dev_Kit_for_Sidewalk',
                 'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/Switch_to_Wio_Tracker',
