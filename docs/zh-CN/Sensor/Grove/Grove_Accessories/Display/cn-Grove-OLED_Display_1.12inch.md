@@ -61,7 +61,13 @@ last_update:
 | Arduino                                                      | 树莓派                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) |
-| :::警告                                                      |                                                              |
+| 
+-->
+|Arduino|树莓派|
+|---|---|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
+:::警告       
     上述提及的支持平台只是表示该模块的软件或理论上的兼容性。在大多数情况下，我们只为Arduino平台提供软件库或代码示例。由于无法为所有可能的MCU平台提供软件库/演示代码，因此用户需要编写自己的软件库。
 :::
 

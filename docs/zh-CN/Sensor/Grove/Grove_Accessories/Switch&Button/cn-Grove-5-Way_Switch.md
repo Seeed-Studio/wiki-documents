@@ -126,7 +126,7 @@ Grove - 5向开关可用于检测开关位置以及诸如单击/双击/长按等
 
 ![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/path.jpg)
 
-或者，您只需点击代码块右上角的<img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg">图标，即可将以下代码复制到Arduino IDE中的新草图里。
+或者，您只需点击代码块右上角的 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) 图标，即可将以下代码复制到Arduino IDE中的新草图里。
 
 ```C++
 #include "Grove_Multi_Switch.h"

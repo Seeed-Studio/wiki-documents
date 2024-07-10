@@ -186,7 +186,7 @@ ___
     2. 在计算机上打开它，点击位于**XXXX\Arduino\libraries\Seeed_LTC2941-master\examples\battery_power**文件夹中的**battery_power.ino**文件，其中**XXXX**是您安装Arduino IDE的位置。
     <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/path_2.jpg" /></div>
 
-    3. 或者，您可以直接点击代码块右上角的<img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg">图标，将以下代码复制到Arduino IDE中的新草图中。
+    3. 或者，您可以直接点击代码块右上角的![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg)图标，将以下代码复制到Arduino IDE中的新草图中。
 
 ```C++
 

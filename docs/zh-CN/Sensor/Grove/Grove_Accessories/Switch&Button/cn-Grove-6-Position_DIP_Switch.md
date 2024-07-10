@@ -114,7 +114,7 @@ Grove - 6位DIP开关有6个单独的开关位置，使用I2C传输数据。它�
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/path.jpg" /></div>
 
-或者，您只需点击代码块右上角的<img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg">图标，即可将以下代码复制到Arduino IDE中的新草图中。
+或者，您只需点击代码块右上角的 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) 图标，即可将以下代码复制到Arduino IDE中的新草图中。
 
 ```C++
 #include "Grove_Multi_Switch.h"

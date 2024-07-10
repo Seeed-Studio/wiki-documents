@@ -51,6 +51,7 @@ Grove - I2C电机驱动器V1.3（最新版本）可以直接控制步进电机�
 <th scope="col">
 典型值
 </th>
+<th scope="col">
 最大值
 </th>
 <th scope="col">
