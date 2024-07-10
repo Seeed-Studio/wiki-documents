@@ -17,7 +17,7 @@ last_update:
 ## 介绍
 [SenseCraft模型助手](https://edgelab.readthedocs.io/en/latest/)是一个专注于嵌入式人工智能的开源项目。我们针对现实世界场景优化了OpenMMLab的优秀算法，并使实现更加用户友好，在嵌入式设备上实现更快、更准确的推理。
 
-##所需硬件
+## 所需硬件
 - [Seeed Studio XIAO ESP32S3 Sense](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)
 - [Seeed Studio Round Display for XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
 - Type-C Cable
@@ -27,9 +27,8 @@ last_update:
 - SenseCraft Model Assistant v0.1.0
 - 示例代码： [SenseCraft模型助手示例-esp32](https://github.com/Seeed-Studio/edgelab-example-esp32)
 
-##如何安装
-###安装ESP-IDF
-###安装ESP IDF
+## 如何安装
+### 安装ESP IDF
 
 请按照
 [ESP-IDF入门指南](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)
@@ -50,9 +49,9 @@ git submodule init
 git submodule update
 ```
 
-##如何使用
+## 如何使用
 
-###构建示例
+### 构建示例
 
 转到示例目录(`examples/<example_name>`) 并构建示例。
 
@@ -69,9 +68,9 @@ idf.py menuconfig
 ```
 
 - 在中选择摄像头模块 `Component config` -> `SenseCraft Model Assistant Configuration` -> `Camera Configuration` -> `Select Camera Pinout`
-![img](https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-camera.png)
+![img](https://raw.githubusercontent.com/Seeed-Studio/sscma-example-esp32/1.0.0/docs/_static/esp32/images/esp32s3-xiao-camera.png)
 - 在中选择LCD模块`Component config` -> `SenseCraft Model Assistant Configuration` -> `LCD Configuration` -> `Select LCD Pinout`
-![img](https://raw.githubusercontent.com/Seeed-Studio/edgelab-example-esp32/main/docs/_static/esp32/images/esp32s3-xiao-lcd.png)
+![img](https://raw.githubusercontent.com/Seeed-Studio/sscma-example-esp32/1.0.0/docs/_static/esp32/images/esp32s3-xiao-lcd.png)
 
 
 若要生成此，请运行：
@@ -83,7 +82,7 @@ idf.py build
 
 ### 加载并运行示例
 
-T要闪存（'/dev/ttyUSB0'替换为设备串行端口）：
+T要闪存（`/dev/ttyUSB0`替换为设备串行端口）：
 ```
 idf.py --port /dev/ttyUSB0 flash
 ```
@@ -96,7 +95,7 @@ idf.py --port /dev/ttyUSB0 monitor
 
 ## 技术支持和产品讨论
 
-.
+
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
