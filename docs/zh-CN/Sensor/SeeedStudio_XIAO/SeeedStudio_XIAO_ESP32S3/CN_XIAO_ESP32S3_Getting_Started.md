@@ -121,7 +121,7 @@ Seeed Studio XIAO ESP32S3 Sense集成了摄像头传感器、数字麦克风和S
     </tr>
 </table>
 
-###特征
+### 特征
 
 - **强大的MCU板**: 采用ESP32S3 32位双核Xtensa处理器芯片，运行频率高达240 MHz，安装多个开发端口，支持Arduino/MicroPython
 - **高级功能** (用于Sense): 可拆卸的OV2640相机传感器，分辨率为1600*1200，与OV5640相机传感器兼容，内置额外的数字麦克风
@@ -215,9 +215,9 @@ XIAO ESP32S3 Sense附带预装的WebCam示例程序。你可以使用这个程�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/98.png" style={{width:900, height:'auto'}}/></div>
 
-###硬件准备
+### 硬件准备
 
-####焊接接头
+#### 焊接接头
 
 XIAO ESP32S3出厂时默认没有引脚头，您需要准备自己的引脚头，并将其焊接到XIAO的相应引脚上，以便连接到扩展板或传感器。
 
@@ -258,7 +258,7 @@ XIAO ESP32S3出厂时默认没有引脚头，您需要准备自己的引脚头�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
 
-:::提示
+:::tip提示
 Wiki中所有关于相机的程序都与OV5640和OV2640相机兼容。
 :::
 
@@ -266,20 +266,20 @@ Wiki中所有关于相机的程序都与OV5640和OV2640相机兼容。
 
 XIAO ESP32S3的推荐编程工具是Arduino IDE，因此作为软件准备的一部分，您需要完成Arduino的安装。
 
-:::提示
+:::tip提示
 如果这是您第一次使用Arduino，我们强烈建议您参考 [Arduino入门](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
 :::
 
-- **步骤1**根据您的操作系统下载并安装Arduino IDE的稳定版本。
+- **步骤 1** - 根据您的操作系统下载并安装Arduino IDE的稳定版本。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong>
     </a>
 </div>
 
-- **步骤 2.** 启动Arduino应用程序。
+- **步骤 2** - 启动Arduino应用程序。
 
-- **步骤p 3.** 将ESP32板包添加到您的Arduino IDE中。
+- **步骤 3** - 将ESP32板包添加到您的Arduino IDE中。
 
     导航到**文件>首选项**，并用以下url填充**“Additional Boards Manager url”**：
     *<https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json>*
@@ -290,7 +290,7 @@ XIAO ESP32S3的推荐编程工具是Arduino IDE，因此作为软件准备的一
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-:::警告
+:::caution警告
 XIAO ESP32S3的车载软件包至少需要提供版本**2.0.8**。
 :::
 
@@ -333,7 +333,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
-- **步骤4** - 选择您的板和端口。
+- **步骤 4** - 选择您的板和端口。
 在Arduino IDE的顶部，您可以直接选择端口。这可能是COM3或更高版本（**COM1**和**COM2**通常保留用于硬件串行端口）。
 
 此外，在左侧的开发板中搜索**xiao**。选择**XIAO_ESP32S3**。
@@ -350,9 +350,9 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
 当你遇到以上两种情况时，你可以尝试将XIAO置于BootLoader模式，这可以解决大多数设备无法识别和上传失败的问题。具体方法是：
 
-- **步骤1** 按住XIAO ESP32S3上的BOOT（引导）按钮，不要松开它。
-- **第2步** 按住BOOT（引导）按钮，然后通过数据线连接到计算机。连接到计算机后释放BOOT按钮。
-- **步骤3** 上传**Blink**程序以检查XIAO ESP32S3的操作。
+- **步骤 1** - 按住XIAO ESP32S3上的BOOT（引导）按钮，不要松开它。
+- **步骤 2** - 按住BOOT（引导）按钮，然后通过数据线连接到计算机。连接到计算机后释放BOOT按钮。
+- **步骤 3** - 上传**Blink**程序以检查XIAO ESP32S3的操作。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -366,13 +366,13 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
 到目前为止，我相信您已经对晓ESP32S3的功能和硬件有了很好的了解。接下来，让我们以最简单的眨眼程序为例，为您的XIAO ESP32S3执行第一次眨眼！
 
-- **步骤1.** 启动Arduino应用程序。
+- **步骤 1** - 启动Arduino应用程序。
 
-- **步骤 2.** 引导到 **File > Examples > 01.Basics > Blink**，打开程序。
+- **步骤 2** - 引导到 **File > Examples > 01.Basics > Blink**，打开程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
-- **步骤 3.** 将板卡型号选择为**XIAO ESP32S3**，然后选择正确的端口号上传程序。
+- **步骤 3** - 将板卡型号选择为**XIAO ESP32S3**，然后选择正确的端口号上传程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/12.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -385,9 +385,9 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 	</tr>
 </table>
 
-祝贺你，你已经学会了如何为肖ESP32S3编写和上传程序！
+祝贺你，你已经学会了如何为XIAO ESP32S3编写和上传程序！
 
-:::提示
+:::tip提示
 只有当XIAO ESP32S3上的用户LED引脚设置为高电平时，LED才会熄灭，只有当引脚设置为低电平时，它才会点亮。
 :::
 
@@ -399,20 +399,22 @@ XIAO ESP32S3系列内置电源管理芯片，可使用电池独立供电，或�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/16.jpg" style={{width:400, height:'auto'}}/></div>
 
-:::提示
+:::tip提示
 由于XIAO ESP32S3的所有GPIO引脚都分配了自己的功能，因此我们没有为电池引脚配置GPIO。这意味着我们无法通过读取其中一个GPIO的模拟值来获得软件级别的电池电压。如有必要，可以考虑将蓄电池的正极和负极端子连接到其中两个引脚上，以测量蓄电池电压。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/17.png" style={{width:800, height:'auto'}}/></div>
 :::
 
-:::警告
+:::caution警告
 当您使用电池电源时，5V引脚上将没有电压。
 :::
 
 同时，我们设计了一个用于电池充电的红色指示灯，通过指示灯显示屏告知用户电池在充电中的当前状态。
 
 1.当XIAO ESP32S3未连接到电池时，当连接Type-C电缆时红灯亮起，30秒后熄灭。
+
 2.当连接电池并连接C型电缆进行充电时，红灯会闪烁。
+
 3.当连接Type-C为电池充满电时，红灯熄灭。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/104.jpg" style={{width:600, height:'auto'}}/></div>
@@ -598,13 +600,13 @@ void loop(){
 }
 ```
 
-:::提示
+:::tip提示
 如果你想学习更多地使用深度睡眠模式和唤醒功能，你可以在Arduino IDE中找到更多ESP为芯片正式编写的示例程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/16.png" style={{width:600, height:'auto'}}/></div>
 :::
 
-##UF2引导程序
+## UF2引导程序
 
 
 
@@ -612,16 +614,16 @@ void loop(){
 
 
 
-###方法一
+### 方法一
 
-:::笔记
+:::note注意
 目前，此方法只能在Windows系统上使用。
 :::
 
-**步骤1**。下载所需的脚本zip。并将其提取到本地机器中。
+**步骤 1** - 下载所需的脚本zip。并将其提取到本地机器中。
 *https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/xiaos3-bin2uf2.zip*
 
-**第2步**。将BIN文件转换为UF2文件。
+**步骤 2** - 将BIN文件转换为UF2文件。
 
 一旦编译并保存了Arduino程序，就可以直接导出二进制文件BIN文件。然后，这个文件将在您的Arduino项目文件夹中生成。
 
@@ -629,40 +631,41 @@ void loop(){
 
 此时，您所需要做的就是将此BIN文件复制到第一步中刚刚提取的**xiaos3-binuf2**目录中，然后执行**convert_uf2.bat**脚本直接生成一个uf2文件。
 
-**步骤3**。将XIAO置于UF2 BootLoader模式。
+**步骤 3** - 将XIAO置于UF2 BootLoader模式。
 然后请将XIAO连接到计算机，然后再次运行**boot_uf2.bat**脚本，XIAO将以U盘的形式出现在计算机中，这意味着它已成功进入uf2 BootLoader模式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/107.png" style={{width:800, height:'auto'}}/></div>
 
-**步骤4**。将UF2文件复制到XIAO ESP32S3。
+**步骤 4** - 将UF2文件复制到XIAO ESP32S3。
 
 接下来，您可以访问XIAO ESP32S3的U盘，并将转换后的UF2复制到U盘上。复制完成后，XIAO U盘将自动消失，程序将开始执行。
 
-：：提示
+:::tip提示
 
 1.请确保您的程序编译和执行没有问题，否则UF2程序可能无法按预期运行。
-2.Blink的示例UF2文件在**xiaos3-binUF2**文件夹中提供。当上传此程序时，XIAO ESP32S3上的橙色LED将闪烁，您可以将此UF2文件用作测试。
-：：：
 
-**步骤5**。再次进入UF2 BootLoader。
+2.Blink的示例UF2文件在**xiaos3-binUF2**文件夹中提供。当上传此程序时，XIAO ESP32S3上的橙色LED将闪烁，您可以将此UF2文件用作测试。
+:::
+
+**步骤 5** - 再次进入UF2 BootLoader。
 一旦您执行了上述步骤，并且您仍然希望XIAO ESP32S3访问UF2 BootLoader来上传其他UF2文件，您需要先快速按下**重置**按钮，然后再按下**启动**按钮。并且不需要再次执行boot_uf2.bat脚本。
 
-:::注释
+:::note注意
 按重置，然后启动，并迅速！
 :::
 
-###方法二
+### 方法二
 该项目由定制IDF和UF2工厂应用程序的第二阶段引导程序作为第三阶段引导程序组成。注意：由于IDF是积极开发和经常更改的，它作为子模块包含在lib/esp-IDF中，请在那里运行导出脚本以正确设置环境。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/adafruit/tinyuf2/tree/master/ports/espressif"><strong><span><font color={'FFFFFF'} size={"4"}>📚 学习更多</font></span></strong></a></div>
 
-##故障排除
+## 故障排除
 
-###Q1：如果上传程序失败/程序运行异常/找不到设备端口，该怎么办？
+### 问题1：如果上传程序失败/程序运行异常/找不到设备端口，该怎么办？
 
 如果您遇到上述问题，建议您首先尝试按下XIAO ESP32S3上的重置按钮，尝试重新运行程序。如果问题仍然存在，请重新检查您的程序并阅读中提供的方法**[BootLoader Mode](#bootloader-mode)** 以恢复设备。
 
-###Q2：为什么我的肖有圆角不齐的问题？这是质量问题吗？
+### 问题2：为什么我的肖有圆角不齐的问题？这是质量问题吗？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>
 
