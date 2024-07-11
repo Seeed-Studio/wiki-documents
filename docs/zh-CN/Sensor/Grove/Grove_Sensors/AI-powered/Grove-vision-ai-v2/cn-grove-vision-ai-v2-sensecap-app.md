@@ -85,17 +85,17 @@ last_update:
 
 然后选择**XIAO ESP32S3**并单击**Connect（连接）**。
 
-:::警告 
+:::note注意 
 
 请注意，虽然此处选择了XIAO ESP32S3，但我们仍然使用的是XIAO ESP32C3！
 
- :::
+:::
 
 点击下面的按钮下载固件文件，然后点击网页上的**Add File**按钮，为`0x0`地址烧录`XIAO_C3_as_AT_module.bin`固件。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/visionai-v2-ha/res/XIAO_C3_as_AT_module.bin">
-            <strong><span><font color={'FFFFFF'} size={"4"}>请点击这里下载文件。</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>请点击这里下载文件</font></span></strong>
     </a>
 </div>
 
@@ -126,6 +126,7 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}>Download APP 🖱️</font></span></strong>
     </a>
 </div>
+
 ## 在SenseCAP中配置设备
 
 ### 步骤 3. 添加设备
@@ -168,11 +169,11 @@ last_update:
 
 将安装了XIAO ESP32C3和摄像头的Grove Vision AI V2通过USB-C电缆连接到计算机。
 
-:::提示 
+:::tip提示 
 
 电缆应将Grove Vision AI V2连接到计算机，而不是XIAO。
 
- :::
+:::
 
 然后点击下面的**Connect（连接）**按钮。
 
@@ -186,7 +187,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/20.png" style={{width:1000, height:'auto'}}/></div>
 
-:::提示
+:::tip提示
 
  如果预览中没有显示屏幕或模型信息中没有信息，则可能是模型存在问题，您需要重新选择模型或重新上传。 
 
@@ -210,11 +211,11 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/33.png" style={{width:1000, height:'auto'}}/></div>
 
-:::警告
+:::caution警告
 
  当IP地址显示时，表示WIFI没有问题，服务状态必须是图中的文本来表示正常，请注意，如果WIFI不正常，MQTT肯定也不正常；当您刚切换时，它可能会显示未连接，您需要等待大约10秒左右，您不需要刷新来查看状态，状态变化后会自动显示最新状态。
 
- :::
+:::
 
 完成后，点击**Stop（停止）**按钮停止推理，并点击**Disconnect（断开）**以断开串行端口连接。
 
@@ -228,11 +229,11 @@ last_update:
 
 现在我们可以打开手机，输入我们的帐号和密码登录。手机将同步PaaS设备信息。
 
-:::警告 
+:::note注意 
 
 请确保选择您注册时使用的正确网站。
 
- :::
+:::
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2-mate/11.png" style={{width:400, height:'auto'}}/></div>

@@ -1867,6 +1867,7 @@ const sidebars = {
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_to_TTN',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/LoRa_Locator',
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Connect_1110_to_HA',
+                'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/change_antenna_path',
 
                 {
                   type: 'category',
@@ -1895,7 +1896,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'LPWAN_Dev_Kit_for_Sidewalk',
+              label: 'LPWAN Dev Kit for Sidewalk',
               items: [
                 'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/LPWAN_Dev_Kit_for_Sidewalk',
                 'Sensor/Wio_Series/LPWAN_Dev_Kit_for_Sidewalk/Switch_to_Wio_Tracker',
@@ -2932,6 +2933,7 @@ const sidebars = {
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_assembly_guide',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_warranty',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_how_to_use_rs485_modbus',
+              'Edge/Raspberry_Pi_Devices/reComputer_R1000/recomputer_r1000_use_bacnet_mstp',
               'Edge/Raspberry_Pi_Devices/reComputer_R1000/reComputer_R1000_FAQ', 
               {
                 type: 'category',
@@ -3272,9 +3274,43 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
               ]
             },
+
+            {
+              type: 'category',
+              label: 'Robotics',
+                // link: {
+                //   type: "doc",
+                //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+                // },
+              items: [
+    
+                {
+                  type: 'category',
+                  label: 'Software',
+                    // link: {
+                    //   type: "doc",
+                    //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Software',
+                    // },
+                  items: [
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/Installing_ROS1',
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/A_Loam',
+                    ]},
+                  
+                {
+                  type: 'category',
+                  label: 'Hardware',
+                        // link: {
+                        //   type: "doc",
+                        //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
+                        // },
+                  items: [
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
+                      ]},
+                
+                ]}
+            
           ]
         },
-
         // FAQs
         {
           type: 'category',

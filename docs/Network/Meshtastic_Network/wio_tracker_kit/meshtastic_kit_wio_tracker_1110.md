@@ -1,6 +1,6 @@
 ---
 description: Get Started with Wio Tracker Dev Kit for Meshtastic® 
-title:  Get Started
+title:  Getting Started with Meshtastic® Kit
 keywords:
 - Meshtastic
 - Tracker
@@ -14,16 +14,18 @@ last_update:
 ## Introduction
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-kit1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-kit.gif" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html">
+    <a class="get_one_now_item" href="hhttps://www.seeedstudio.com/Wio-Tracker-1110-Dev-Kit-for-Meshtastic.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 
-The Wio Tracker Meshtastic development kit is based on the [Wio-WM1110 Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html), featuring two Grove modules - GPS (Air530) and a 0.96" OLED Display, pre-loaded with Meshtastic firmware. Simply unpack and flash the firmware to start exploring Meshtastic and enjoy the fun of Mesh Networks.
+Featuring a Wio Tracker 1110 Dev Board (based on Nordic nRF52840 for BLE, Semtech LR1110 for LoRa), [Grove Air530 GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Grove0.96" OLED Display](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) and native compatibility with Meshtastic firmware, it's a plug and play dev kit for you to build your low-power Meshtatstic tracker device.
+
+
 
 ### Features
 

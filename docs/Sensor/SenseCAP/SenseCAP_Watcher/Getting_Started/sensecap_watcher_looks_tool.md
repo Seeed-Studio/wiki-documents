@@ -1,7 +1,7 @@
 ---
 description: Delves into the customization options available for Watcher's appearance and explores the various tools provided by the SenseCraft platform.
 title: 2# Watcher Looks & SenseCraft Tools
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/20.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/45.png
 slug: /getting_started_with_watcher_look_tool
 sidebar_position: 3
 last_update:
@@ -191,7 +191,7 @@ Discover a world of creativity and inspiration in our Watcher Animation Showcase
 
 **Watcher Quick Start Series 4# : Training a model for Watcher**
 
-**Watcher Quick Start Series 5# : What does Watcher do**
+**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
 
 
 ## Tech Support & Product Discussion
