@@ -411,11 +411,11 @@ XIAO ESP32S3系列内置电源管理芯片，可使用电池独立供电，或�
 
 同时，我们设计了一个用于电池充电的红色指示灯，通过指示灯显示屏告知用户电池在充电中的当前状态。
 
-1.当XIAO ESP32S3未连接到电池时，当连接Type-C电缆时红灯亮起，30秒后熄灭。
+1. 当XIAO ESP32S3未连接到电池时，当连接Type-C电缆时红灯亮起，30秒后熄灭。
 
-2.当连接电池并连接C型电缆进行充电时，红灯会闪烁。
+2. 当连接电池并连接C型电缆进行充电时，红灯会闪烁。
 
-3.当连接Type-C为电池充满电时，红灯熄灭。
+3. 当连接Type-C为电池充满电时，红灯熄灭。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/104.jpg" style={{width:600, height:'auto'}}/></div>
 
