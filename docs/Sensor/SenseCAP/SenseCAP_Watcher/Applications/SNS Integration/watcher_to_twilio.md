@@ -1,6 +1,6 @@
 ---
 description: Send message from Watcher to twilio
-title: Watcher to twilio
+title: Watcher to Twilio
 keywords:
 - watcher
 - twilio
