@@ -1,5 +1,6 @@
 ---
-description: reComputer R1000 with N3uron
+description: N3uron is a complete Industrial Edge Platform for IIoT and DataOps, enabling seamless integration between industrial plant floors and third-party applications, both on-premise and in the cloud. Paired with the Computer R1000, it enhances edge control capabilities and delivers robust cloud integration for seamless data availability across your organization.
+
 title: reComputer R1000 with N3uron
 keywords:
   - Edge
