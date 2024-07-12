@@ -31,7 +31,6 @@ Overall, Grove network modules significantly lower the barrier to electronic pro
 
 We have various types of Grove network modules that can be applied to different scenarios such as IoT projects, wireless sensor networks, and smart homes.
 
-
 ### LoRa®
 
 #### Grove Wio-E5
