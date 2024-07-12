@@ -3236,6 +3236,40 @@ const sidebars = {
               ]
             },
             
+            {
+              type: 'category',
+              label: 'Robotics',
+                // link: {
+                //   type: "doc",
+                //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+                // },
+              items: [
+    
+                {
+                  type: 'category',
+                  label: 'Software',
+                    // link: {
+                    //   type: "doc",
+                    //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Software',
+                    // },
+                  items: [
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/Installing_ROS1',
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/A_Loam',
+                    ]},
+                  
+                {
+                  type: 'category',
+                  label: 'Hardware',
+                        // link: {
+                        //   type: "doc",
+                        //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
+                        // },
+                  items: [
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
+                      ]},
+                
+                ]},
+
             // Managed Services
             {
               type: 'category',
@@ -3274,41 +3308,6 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
               ]
             },
-
-            {
-              type: 'category',
-              label: 'Robotics',
-                // link: {
-                //   type: "doc",
-                //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-                // },
-              items: [
-    
-                {
-                  type: 'category',
-                  label: 'Software',
-                    // link: {
-                    //   type: "doc",
-                    //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Software',
-                    // },
-                  items: [
-                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/Installing_ROS1',
-                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/A_Loam',
-                    ]},
-                  
-                {
-                  type: 'category',
-                  label: 'Hardware',
-                        // link: {
-                        //   type: "doc",
-                        //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
-                        // },
-                  items: [
-                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
-                      ]},
-                
-                ]}
-            
           ]
         },
         // FAQs
