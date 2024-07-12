@@ -193,14 +193,15 @@ reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included 
 
 ### Prerequisites
 
-- Ubuntu Host PC (native or VM using VMware Workstation Player)
+- Ubuntu 
 - reComputer J4012/ J4011/ J3010 and J3011
 - USB Type-C data transmission cable
 
 ### Enter Force Recovery Mode
 
 :::note
-Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
+- We do not recommend using virtual machines and ARM architecture Ubuntu for flashing.
+- Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
 :::
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
