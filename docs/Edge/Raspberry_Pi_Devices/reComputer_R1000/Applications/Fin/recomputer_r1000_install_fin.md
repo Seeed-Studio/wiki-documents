@@ -79,16 +79,17 @@ Before you start this project, you may need to prepare your hardware and softwar
   ## Unzip the installation package to the /opt directory
   sudo unzip ~/Desktop/FINFramework_5.1.6.55.zip
   ## Change the name so you can know the version number
-  sudo mv finFramewor finFramework_5.1.6.55
+  sudo mv finFramework finFramework_5.1.6.55
   ## Import service files to system
   sudo cp ~/Desktop/fin.service /etc/systemd/system/
   sudo systemctl daemon-reload
   sudo systemctl enable fin
   sudo systemctl start fin
+  sudo reboot
   ```
   <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/install_fin.gif" /></center>
 
-**Step 2**:Click the browser and enter `http://localhost:8080/`. The following interface will appear, indicating that the first step of the installation is successful.
+**Step 2**:After reboot.Click the browser and enter `http://localhost:8080/`. The following interface will appear, indicating that the first step of the installation is successful.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/login.png" /></center>
 
