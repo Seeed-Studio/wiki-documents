@@ -350,8 +350,6 @@ Grove is a very powerful platform developed by Seeed Studio to simplify your IoT
 </div>
 
 
-
-
 #### Grove - Serial RF Pro
 
 <div class="all_container">
