@@ -291,7 +291,7 @@ Additionally, the latest development release version (`3.0.0-rc1`) was released 
 
 - **Step 2.** Navigate to **File > Examples > 01.Basics > Blink**, open the program.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/11.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
 - **Step 3.** Select the board model to **XIAO ESP32C6**, and select the correct port number to upload the program.
 

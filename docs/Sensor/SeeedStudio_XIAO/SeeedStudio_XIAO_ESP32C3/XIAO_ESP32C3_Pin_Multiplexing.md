@@ -123,11 +123,9 @@ However, if you want to use UART0 as the serial, you need to connect pin D6 as t
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-3.png" alt="pir" width={1000} height="auto" /></div>
 
-Also, you need to set **USB CDC On Boot** to **Disabled** from Arduino IDE.
+<!-- Also, you need to set **USB CDC On Boot** to **Disabled** from Arduino IDE. -->
 
-**NOTE: Change photo when board shows up on Arduino Board Manager**
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
+<!-- **NOTE: Change photo when board shows up on Arduino Board Manager** -->
 
 Upload the following code to Arduino IDE to send the string "Hello World!" via serial
 
@@ -143,9 +141,15 @@ void loop() {
 }
 ```
 
-The output will be as follows on Arduino Serial Monitor
+The output will be as follows on Arduino Serial Monitor:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-2.jpg" alt="pir" width={450} height="auto" /></div>
+
+<br></br>
+
+Check that `USB CDC On Boot` is `Enabled` if there is no serial output:
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
 
 ### Special way - use USB serial and UART0/UART1 at the same time
 

@@ -1,17 +1,17 @@
 ---
-description: Get Started with SenseCAP Indicator Introduction
-title: Introduction
+description: Get Started with SenseCAP Indicator
+title: Get Started with SenseCAP Indicator
 keywords:
 - Get Started SenseCAP Indicator
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png
 slug: /Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator
 sidebar_position: 1
 last_update:
-  date: 11/17/2023
+  date: 7/11/2024
   author: Spencer
 ---
 
-# **Overview**
+## Overview
 
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/IOdI5_MGbCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -32,7 +32,7 @@ SenseCAP Indicator is a fully open source powerful IoT development platform for 
 </div>
 
 
-## **Features**
+## Features
 
 - **Dual MCUs and Rich GPIOs**
 Equipped with powerful ESP32S3 and RP2040 dual MCUs and over 400 Grove-compatible GPIOs for flexible expansion options.
@@ -46,23 +46,23 @@ Leverage the extensive ESP32 and Raspberry Pi open source ecosystem for infinite
 Seeed Studio also provides one-stop ODM service for quick customization and scale-up to meet various needs.(please contact iot@seeed.cc)
 
 
-## **Hardware Overview**
+## Hardware Overview
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_2.png"/></div>
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_3.png"/></div>
 
-### **System Diagram**
+### System Diagram
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_7.png"/></div>
 
 
-### **Button Function**
+### Button Function
 - **Short Press:** Turn off /Wake up the screen.
 - **Long Press for 3s:** Switch on/Wwitch off the device.
 - **Long Press for 10s:** Factory firmware reset.
 
-### **Grove**
+### Grove
 
 There are two Grove interfaces for connecting Grove modules, providing more possibilities for developers.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/grove.png"/></div>
@@ -72,13 +72,13 @@ Grove is a modular, standardized connector prototyping system and a strong open 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_4.png"/></div>
 
 
-### **LoRa®**
+### LoRa®
 The embedded Semtech SX1262 LoRa® module enables you to build the LoRa® application and connect your local LoRa sensors to the Cloud via Wi-Fi. For example, you could build a LoRa hub device to connect your LoRa sensors to your smart home ecosystem to implement Matter over Wi-Fi. In this way, the LoRa devices could be connected to the Matter ecosystem via Wi-Fi, without the need to buy a new Matter-compatible device.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_55.png"/></div>
 
 
-## **Specification**
+## Specification
 
 |Screen|3\.95 Inch, Capacitive RGB Touch Screen|
 | :- | :- |
@@ -93,7 +93,12 @@ The embedded Semtech SX1262 LoRa® module enables you to build the LoRa® applic
 |**LoRa(SX1262**)|<p>LoRa and FSK Modem</p><p>+21dBm Max Transmitted Power</p> <p>-136dBm@SF12 BW=125KHz RX Sensitivity</p><p>Up to 5km communication distance</p>|
 |**Sensors**(Optional)|<p>**CO2(Sensirion SCD41)**</p><p>Range: 0-40000ppm</p><p>Accuracy: 400ppm-5000ppm ±(50ppm+5% of reading)</p><p>**TVOC (SGP40)**</p><p>Range: 1-500 VOC Index Points</p>**Grove Temperature and Humidity Sensor(AHT20)**<p>Temperature Range: -40 ~ + 85 ℃/± 0.3 ℃; 0 ~ 100% RH/± 2% RH (25 ℃)</p>|
 
-# **Tech Support**
+## Resources
+
+- [**PDF**]: [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
+- [**PDF**]: [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
+
+## Tech Support
 
 **Need help with your SenseCAP Indicator? We're here to assist you!**
 

@@ -2979,6 +2979,9 @@ const sidebars = {
                               label: 'N3uron',
                               items: [
                                  'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_getting_started',
+                                 'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_aws',
+                                 'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_bacnet',
+                                 'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_modbus_mqtt',
                                 ],
                               },
    
@@ -2994,6 +2997,15 @@ const sidebars = {
                       
                     ],
                     },
+
+                    {
+                      type: 'category',
+                      label: 'Cloud Solutions',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/AWS/recomputer_r1000_aws',
+                        
+                      ],
+                      },
 
                     {
                       type: 'category',
@@ -3226,6 +3238,40 @@ const sidebars = {
               ]
             },
             
+            {
+              type: 'category',
+              label: 'Robotics',
+                // link: {
+                //   type: "doc",
+                //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
+                // },
+              items: [
+    
+                {
+                  type: 'category',
+                  label: 'Software',
+                    // link: {
+                    //   type: "doc",
+                    //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Software',
+                    // },
+                  items: [
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/Installing_ROS1',
+                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/A_Loam',
+                    ]},
+                  
+                {
+                  type: 'category',
+                  label: 'Hardware',
+                        // link: {
+                        //   type: "doc",
+                        //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
+                        // },
+                  items: [
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
+                      ]},
+                
+                ]},
+
             // Managed Services
             {
               type: 'category',
@@ -3264,41 +3310,6 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
               ]
             },
-
-            {
-              type: 'category',
-              label: 'Robotics',
-                // link: {
-                //   type: "doc",
-                //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
-                // },
-              items: [
-    
-                {
-                  type: 'category',
-                  label: 'Software',
-                    // link: {
-                    //   type: "doc",
-                    //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Software',
-                    // },
-                  items: [
-                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/Installing_ROS1',
-                      'Edge/NVIDIA_Jetson/Application/Robotics/Software/A_Loam',
-                    ]},
-                  
-                {
-                  type: 'category',
-                  label: 'Hardware',
-                        // link: {
-                        //   type: "doc",
-                        //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
-                        // },
-                  items: [
-                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
-                      ]},
-                
-                ]}
-            
           ]
         },
         // FAQs
