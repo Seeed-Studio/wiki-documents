@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TDS-Sensor
 last_update:
-  date: 1/6/2023
-  author: shuxu hu
+  date: 7/12/2024
+  author: Harrison Xu
 ---
 
 
@@ -62,7 +62,7 @@ It supports 3.3 / 5V input voltage and 0 ~ 2.3V Output Voltage making it easy to
 ### Play With Arduino
 
 
-**Materials required**
+#### Materials required
 
 
 | Seeeduino V4.2 | Base Shield | Grove - TDS Sensor|
@@ -82,15 +82,16 @@ It supports 3.3 / 5V input voltage and 0 ~ 2.3V Output Voltage making it easy to
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Connection%20Pic.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Connection%20Pic.jpg" alt="pir" width={600} height="auto" /></p>
+
 #### Software
 
 :::note
-        If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
 - **Step 1.**  Open the Arduino IDE and create a new file, then copy the following code into the new file.
 
-```C++
+```cpp showLineNumbers
 #define SERIAL Serial
 #define sensorPin A0
 
@@ -104,7 +105,7 @@ void setup() {
 void loop() {
     sensorValue = analogRead(sensorPin);
     Voltage = sensorValue*5/1024.0; //Convert analog reading to Voltage
-    tdsValue=(133.42/Voltage*Voltage*Voltage - 255.86*Voltage*Voltage + 857.39*Voltage)*0.5; //Convert voltage value to TDS value
+    tdsValue=(133.42*Voltage*Voltage*Voltage - 255.86*Voltage*Voltage + 857.39*Voltage)*0.5; //Convert voltage value to TDS value
     SERIAL.print("TDS Value = "); 
     SERIAL.print(tdsValue);
     SERIAL.println(" ppm");
@@ -124,7 +125,7 @@ void loop() {
 
 ### Play With Raspberry Pi
 
-**Materials required**
+#### Materials required
 
 | Raspberry Pi | Grove Base Hat for RasPi | Grove - TDS Sensor|
 |--------------|-------------|-----------------|
@@ -137,6 +138,7 @@ void loop() {
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Grove-TDS-rasp.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TDS-Sensor/img/Grove-TDS-rasp.jpg" alt="pir" width={600} height="auto" /></p>
+
 - **Step 4.** Connect the Raspberry Pi to PC through USB cable.
 
 #### Software
@@ -159,7 +161,7 @@ nano TDS.py
 
 - **Step 4.** Copy the following code into the file:
 
-```py
+```py showLineNumbers
 import math
 import sys
 import time
@@ -176,7 +178,7 @@ class GroveTDS:
         value = self.adc.read(self.channel)
         if value != 0:
             voltage = value*5/1024.0
-            tdsValue = (133.42/voltage*voltage*voltage-255.86*voltage*voltage+857.39*voltage)*0.5
+            tdsValue = (133.42*voltage*voltage*voltage-255.86*voltage*voltage+857.39*voltage)*0.5
             return tdsValue
         else:
             return 0
@@ -207,8 +209,7 @@ if __name__ == '__main__':
 python TDS.py 0
 ```
 
-!!!Success
-        If everything goes well, you will be able to see the following result:
+If everything goes well, you will be able to see the following result:
 
 ```sh
 pi@raspberrypi:~/grove.py/grove$ python TDS.py 0
@@ -228,7 +229,7 @@ TDS Value: 30.9311414242
 
 ## FAQ
 
-**Q1#** Limitations of Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids)?
+**Q1:** Limitations of Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids)?
 
 **A1:** Limitations are as followed:
 
