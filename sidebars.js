@@ -2972,6 +2972,8 @@ const sidebars = {
                             label: 'FIN',
                             items: [
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_install_fin',
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_use_modbus_tcp',
+                              
                               ],
                             },
                             {
