@@ -4,8 +4,8 @@ title: XIAO ESP32C6 with (Embedded) Swift
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/swift-xiao-esp32.png
 slug: /xiao-esp32-swift
 last_update:
-    date: 2024-07-05T01:50:59.810Z
-    author: Spencer
+  date: 2024-07-12T02:50:00.462Z
+  author: Spencer
 ---
 # Guide to Embedded Swift with Seeed Studio XIAO-C6
 
