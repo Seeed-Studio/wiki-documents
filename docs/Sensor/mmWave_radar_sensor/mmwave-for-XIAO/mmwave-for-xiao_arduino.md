@@ -176,7 +176,7 @@ Before we get started developing a sketch, let's look at the available functions
         - **movePower**: The energy value that triggers the motion threshold.
         - **staticPower**: The energy value that triggers the resting threshold.
 
-    - **Ruturn**:
+    - **Return**:
         - Success 0x00 or Error 0x01.
 
 - `RadarStatus getConfig()` —— Reads the parameter values of the setting sensor.
@@ -191,27 +191,27 @@ Before we get started developing a sketch, let's look at the available functions
     - **Input Parameters**:
         - **resolution**: 1 is 0.25M, 0 is 0.75M. Default 0.75M.
 
-    - **Ruturn**:
+    - **Return**:
         - Success 0x00 or Error 0x01.
 
 - `RadarStatus getResolution()` —— Get distance to door resolution, 1 is 0.25M, 0 is 0.75M. Default 0.75M.
-    - **Ruturn**:
+    - **Return**:
         - **radarStatus.resolution**: 1 is 0.25M, 0 is 0.75M. Default 0.75M.
 
 - `AskStatus rebootRadar()` —— Reboot radar command.
-    - **Ruturn**:
+    - **Return**:
         - Success 0x00 or Error 0x01.
 
 - `AskStatus refactoryRadar()` —— Restore the radar to factory settings.
-    - **Ruturn**:
+    - **Return**:
         - Success 0x00 or Error 0x01.
 
 - `AskStatus enableEngineeringModel()` —— Enables sensor engineering mode output.
-    - **Ruturn**:
+    - **Return**:
         - Success 0x00 or Error 0x01.
 
 - `AskStatus disableEngineeringModel()` —— Exit engineering mode output.
-    - **Ruturn**:
+    - **Return**:
         - Success 0x00 or Error 0x01.
 
 

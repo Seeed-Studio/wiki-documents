@@ -111,7 +111,6 @@ Before we get started developing a sketch, let's look at the available functions
 
     **Return value:** 2 Byte integer type check digit.
 
-    **Return value:** None
 
 - `void SerialInit()` —— Set the radar serial port baud rate to 9600. If it is a Seeeduino board, set the soft serial port to RX: 2, TX: 3.
 **Input parameters:** None
