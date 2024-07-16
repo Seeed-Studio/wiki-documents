@@ -2,12 +2,12 @@
 description: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
 title: Getting Started with XIAO nRF52840
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_BLE
 last_update:
-  date: 1/11/2023
-  author: shuxu hu
+  date: 2024-07-16T06:09:39.067Z
+  author: Spencer
 ---
 
 # Getting Started with Seeed Studio XIAO nRF52840 (Sense)
@@ -269,6 +269,19 @@ When P0.14 (D14) turns off the ADC function at a high level of 3.3V, P0.31 will 
 Currently for this issue, we recommend that users do not turn off the ADC function of P0.14 (D14) or set P0.14 (D14) to high during battery charging.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
+
+### Q4: How is the RGB behavior?
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/nRF_RGB.png" alt="nRF52840 RGB Schematic" width="120" height="auto" /></p>
+
+The `P0.17` pin is used to control the start RGB behavior. The pin indicates the charging status: 
+
+- Low level: when **charging** is in progress.
+- High level: when the battery is either **not charging** or **fully charged**.
+
+When it is at a low level, the `RED_CHG` LED will light up.
+
+For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/symlink/bq25100a.pdf) and [XIAO nRF52840 datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf).
 
 ## Resources
 
