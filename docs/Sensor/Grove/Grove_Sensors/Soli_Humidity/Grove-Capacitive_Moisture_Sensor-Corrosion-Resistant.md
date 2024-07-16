@@ -16,7 +16,7 @@ The Grove - Capacitive Moisture Sensor (Corrosion Resistant) is a soil moisture 
 
 It is important to note that this sensor can only qualitatively test the humidity of the soil and cannot measure quantitatively. Which means when the humidity of the soil rises, the value of the output decreases; conversely, when the humidity decreases, the output value becomes higher.
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Capacitive-Moisture-Sensor-Corrosion-Resistant-p-2850.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Capacitive-Moisture-Sensor-Corrosion-Resistant-p-2580.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Upgradable to Industrial Sensors
 

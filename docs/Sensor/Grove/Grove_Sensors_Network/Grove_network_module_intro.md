@@ -16,6 +16,7 @@ The Grove Network Modules are modular electronic components introduced by Seeed 
 
 <div style={{textAlign:'center'}}><img src="https://i.imgur.com/67pioxP.png" style={{width:1000, height:'auto'}}/></div>
 
+
 Overall, Grove network modules significantly lower the barrier to electronic project development by simplifying the connection and configuration process, allowing you to focus on functionality implementation and application innovation.
 
 ## Features

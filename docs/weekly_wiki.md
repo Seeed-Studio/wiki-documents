@@ -5,135 +5,63 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/08/2024
-  author: Seraphina
+  date: 07/16/2024
+  author: Frank
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings
 
-This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 8th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 15th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
 
-### [Watcher to Node-RED Quick Start](https://wiki.seeedstudio.com/watcher_to_node_red/)
+### [Watcher To IFTTT Quick Start](https://wiki.seeedstudio.com/watcher_to_ifttt/)
 
-**Node-RED** is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png" style={{width:1000, height:'auto'}}/></div>
 
-It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
+IFTTT (If This Then That) is a web-based service that allows developers to create automations and integrations between various apps, devices, and services without complex programming. It enables users to define simple conditional statements called "applets" that trigger actions based on specific events. It provides a user-friendly interface and a vast library of pre-built applets, making it accessible for developers to create powerful automations and integrations efficiently.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/10.png" style={{width:1000, height:'auto'}}/></div>
+### [Watcher To Telegram Quick Start](https://wiki.seeedstudio.com/watcher_to_telegram/)
 
-To make it easier for our users to **connect data from the Watcher to various other Paas platforms for more in-depth data processing**. For example. from Watcher to IFTTT, Telegram, Twilio etc. We will do a series of tutorials for **Watcher & Node-RED**.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png" style={{width:1000, height:'auto'}}/></div>
 
-This tutorial, the first in a series, will walk you through installing and using Node-red and calling the Watcher API to connect to Node-RED.
+**What is Telegram**
 
+Telegram is a popular messaging app that offers a wide range of features for users and developers alike. With its open API and protocol, developers can create custom Telegram clients, bots, and integrate Telegram's services into their own applications. Telegram provides a secure and reliable platform for real-time communication, supporting various media types, group chats, and end-to-end encryption. Its cloud-based infrastructure ensures seamless synchronization across devices and allows for easy scalability. Developers can leverage Telegram's features and tools to build innovative solutions and enhance user experiences within their projects.
 
-### [reComputer R1000 Walk Through](https://wiki.seeedstudio.com/recomputer_r1000_intro/)
+### [AWS IoT Core Intergate With reComputer R1000](https://wiki.seeedstudio.com/recomputer_r1000_aws/)
 
-The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features a quad-core A72 processor, dual Ethernet, and multiple RS485 channels supporting BACnet, Modbus RTU, and Modbus TCP/IP. With versatile wireless options including 4G, LoRa®, and Wi-Fi/BLE, it ensures robust IoT network communication. Ideal for remote device and energy management, the R1000 is perfect for smart building applications.
+AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. In this guide, we will discuss how to connect our reComputer R1000 to the AWS IoT cloud.
 
+### [reComputer R1000 Connect AWS IoT Core with N3uron](https://wiki.seeedstudio.com/recomputer_r1000_n3uron_aws/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:800, height:'auto'}}/></div>
+We have outlined the process of transmitting data from your [reComputer-R1000 device with AWS IoT Core using the MQTT protocol](https://wiki.seeedstudio.com/recomputer_r1000_aws/). This tutorial will seamlessly integrate with the aforementioned process. In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.
 
-### [reComputer R1000 with Node Red and MQTT](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)
-
-**MQTT (Message Queuing Telemetry Transport)** is a lightweight messaging protocol ideal for IoT (Internet of Things) applications due to its efficiency and low bandwidth requirements. It facilitates communication between devices in a publish-subscribe model, allowing for real-time data exchange over unreliable networks. With Node-RED, integrating MQTT enables seamless connectivity between edge devices and central servers or other devices, fostering efficient data transmission and processing reComputer R1000 Edge Controller, by supporting MQTT natively, eliminates the need for additional hardware gateways by allowing the installation of an MQTT broker directly on the reComputer R1000 itself. This reduces complexity, minimizes latency, and enhances reliability, as data can be processed and acted upon at the edge without relying on external intermediaries, thus optimizing IoT system architecture.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png" style={{width:800, height:'auto'}}/></div>
-
-### [reCoputer R1000 with Node Red and InfluxDB](https://wiki.seeedstudio.com/recomputer_r1000_node_red_influxdb/)
-
-Deploying [InfluxDB](https://www.influxdata.com/) on an reComputer R1000 , a Raspberry Pi-powered edge controller, enables robust time-series data collection and analysis at the edge of your network. This setup is ideal for IoT applications, providing real-time insights and monitoring capabilities. By leveraging the lightweight yet powerful InfluxDB database, you can efficiently manage and analyze sensor data directly on the reComputer R1000. The following guide outlines the steps to install, configure, and use InfluxDB on your reComputer R1000 , ensuring a seamless integration into your data infrastructure.
-
-
-### [reComputer R1000 with Grafana](https://wiki.seeedstudio.com/recomputer_r1000_grafana/)
-
-[Grafana](https://grafana.com/oss/grafana/) is an open-source visualization and analytics software that enables you to query, visualize, alert on, and explore your metrics, logs, and traces from any storage location. It offers tools to transform your time-series database (TSDB) data into insightful graphs and visualizations. As a powerful monitoring solution, Grafana helps in making informed decisions, enhancing system performance, and streamlining troubleshooting. In this wiki, we will guide you through the installation of Grafana on a Raspberry Pi-powered reComputer R1000 , connect it to an existing InfluxDB database, and create an illustrative dashboard.
-
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/grafana/grafana2.gif" /></center>
-
-
-### [reComputer R1000 with fuxa to achieve SCADA](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_achieve_scada/)
-
-FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols. 
-
-This article mainly introduces how to use fuxa to achieve SCADA. In the article, fuxa receives data from `node-red` and `OPC UA Simulator`, and displays it using `chart` and `Circular Gauge`; at the same time, it draws a series of patterns to simulate industrial processes.
-
-
-### [SenseCAP Watcher - 1# Concepts and Classification of Tasks](https://wiki.seeedstudio.com/recomputer_r1000_node_red_modbus_tcp/)
-
-Watcher is a powerful tool that relies on user-issued commands to perform various monitoring and analysis tasks. By sending precise instructions to Watcher, you can direct it to focus on specific targets, collect data, and provide valuable insights.
-
-In the following sections, we will dive into the details of task categorization, model selection, and pricing information. Our goal is to equip you with the knowledge and skills necessary to efficiently assign tasks to Watcher and make the most of its functionalities. We will explore the different types of tasks available, guide you in selecting the appropriate models for your requirements, and provide clarity on the associated costs.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/20.png" style={{width:800, height:'auto'}}/></div>
-
-### [reComputer R1000 install fin](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)
+### [reComputer R1000 with FIN to use modbus TCP](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp/)
 
 FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/FIN_framework.png" /></center>
+This article introduces how to use the `Modbus Connector` of `FIN Framwork`, which mainly includes three aspects: creating a `FIN Framwork` project, configuring the `Modbus Connector`, and adding data points to `Equip`.
 
-
-This article mainly introduces how to install Fin on reComputer R1000.
-
-
-### [Finetune with Llama-Factory](https://wiki.seeedstudio.com/Finetune_LLM_on_Jetson/)
-
-🚀Finetune LLM by Llama-Factory on Jetson! Now you can tailor a custom private local LLM to meet your requirements. 
-
-<div align="center">
-    <img width={800} 
-     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run.gif" />
-</div>
-
-Llama-Factory provides a highly convenient large language model fine-tuning tool that supports common large language models, datasets, and fine-tuning methods. With this platform, we can easily customize private large language models.
-
-In this wiki, we will learn how to deploy Llama-Factory on Nvidia Jetson and use Llama-Factory to train a large language model that supports Chinese Q&A.
-
-### [reComputer R1000 with N3uron](https://wiki.seeedstudio.com/recomputer_r1000_n3uron/)
-
-N3uron is a complete Industrial Edge Platform for IIoT & DataOps that enables seamless integration between the industrial plant floor and third-party applications, whether on-premise or in the cloud.
-With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/n3uron1.png" alt="pir" width="700" height="auto" /></div>
-
-### [reComputer R1000 use bacnet MS/TP](https://wiki.seeedstudio.com/reComputer_r1000_use_bacnet_mstp/)
-
-This article mainly introduces how to perform functional testing of bacnet MS/TP protocol on reComputer R1000.We simulated a bacnet MS/TP server on reComputer R1000, and then used YABE on the W10 PC to check whether the device is present. If the device we simulated can be found normally, it means that the bacnet MS/TP communication is normal.
 
 ## Existed Wiki Updated
 
-### [reTerminal && reTerminal DM-FAQ - How to solve screen refresh rate is too low](https://wiki.seeedstudio.com/screen_refresh_rate_low/)
+### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/flash_to_wio_tracker/)
 
-Screen has noticeable refresh stutter stripes. If your situation is the same, you can follow this wiki to solve it.
+We've added the [Application Firmware](https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/wio_tracker_app_release_sw_0.5_2024-06-06.uf2).
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/FAQ/DM_bug.gif" alt="pir" width={600} height="auto" /></p>
+### [Get Started with SenseCAP Indicator](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/)
 
-### recomputer J401 and industrial JetPack 6 Compatibility
-
-We've now updated the method for flashing Jetpack 6 on recomputer J401 and industrial.
-
-[recomputer J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
-
-[recomputer J401 industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started)
-
-### [Installation to reTerminal DM Lorawan Module](https://wiki.seeedstudio.com/reterminal-dm/#lorawan--module)
- 
-We have updated packages installation to reterminal dm lorawan module.
+We have added the [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) and the [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf).
 
 
-
-### [Using Grove Vision AI V2 with AT Commands - Compatibility of different XIAO](https://wiki.seeedstudio.com/grove_vision_ai_v2_at/)
-
-We've added a table of how the Grove Vision AI V2 pairs with the XIAO
 
 <!-- ### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
 
@@ -219,6 +147,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/wiki240617)
 - [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
 - [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
+- [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
 
 </details>
 
