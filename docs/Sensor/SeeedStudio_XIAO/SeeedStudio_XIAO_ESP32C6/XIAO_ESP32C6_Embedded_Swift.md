@@ -9,6 +9,8 @@ last_update:
 ---
 # Guide to Embedded Swift with Seeed Studio XIAO-C6
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/swift-xiao-esp32.png" alt="pir" width={600} height="auto" /></p>
+
 ## Introduction
 
 The Seeed Studio XIAO ESP32C6 is a powerful and versatile development board built around the ESP32-C6 SoC, featuring dual 32-bit **RISC-V** processors. The high-performance processor operates up to 160 MHz, while the low-power processor runs up to 20 MHz. With 512KB SRAM and 4MB Flash, the XIAO ESP32C6 offers significant programming space, making it ideal for various IoT applications. This board excels in wireless connectivity, supporting 2.4 GHz Wi-Fi 6, Bluetooth® 5.3, Zigbee, and Thread (802.15.4), and is Matter-native, which is crucial for smart-home interoperability.
