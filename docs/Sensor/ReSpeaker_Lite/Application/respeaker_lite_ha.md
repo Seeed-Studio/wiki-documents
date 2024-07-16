@@ -1,13 +1,13 @@
 ---
-description: Voice Assistant System with ReSpeaker Lite and XIAO ESP32S3
-title: Voice Assistant System with ReSpeaker Lite and XIAO ESP32S3
+description: Voice Assistant System for Home Assitant
+title: Voice Assistant System for Home Assitant
 keywords:
 - ESP32S3
 - XIAO
 - reSpeaker
 - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reSpeaker_v3_HA
+slug: /respeaker_lite_ha
 last_update:
   date: 4/2/2024
   author: Jessie
@@ -37,7 +37,6 @@ Go to [Settings > Add-ons](https://my.home-assistant.io/redirect/supervisor).
 
 Under the Official `add-ons` section, you will find the `ESPHome`, `Whisper`, `Piper`, `openWakeWord` add-on, and click `Install`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/.png" alt="pir" width={800} height="auto" /></p>
 
 Enable `Start on boot` and `Watchdog`, and click `Start`.
 
@@ -83,7 +82,7 @@ Click `CONFIGURE` and `SUBMIT`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/choose-s3.png" alt="pir" width={800} height="auto" /></p>
 
 * Step 5. Click `SKIP`, we will configure this file manually.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/skip.png" alt="pir" width={800} height="auto" /></p>
 
 * Step 6. Click `EDIT` and copy the following code:
 
