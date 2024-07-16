@@ -138,7 +138,7 @@ Seeed Studio Grove Base for XIAO是适用于 **[Seeed Studio XIAO](https://wiki.
 
 #### 软件代码
 
-```C++
+```cpp
 #include "GBT24LTR11.h"
 
 #ifdef __AVR__

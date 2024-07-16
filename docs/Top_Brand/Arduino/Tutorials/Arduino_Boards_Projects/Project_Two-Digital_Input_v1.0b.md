@@ -38,7 +38,7 @@ The purpose of this project is to demonstrate two forms of digital input – usi
 
 _**Now upload the following Arduino sketch:**_
 
-```c++
+```cpp
 // Project Two - Digital Inputs
 //
 

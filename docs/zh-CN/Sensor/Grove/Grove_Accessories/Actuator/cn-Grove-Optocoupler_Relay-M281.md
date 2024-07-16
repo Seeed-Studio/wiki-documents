@@ -126,7 +126,7 @@ last_update:
 
 - **步骤 1.** 将以下代码复制到Arduino IDE中的一个新草图中
 
-```C++
+```cpp
 const int Pinout = 5;      
 
 void setup() {

@@ -389,7 +389,7 @@ The below demo code is for the Xduino to send SMS message, dial a voice call, su
 
 8. If the program returns error in the terminal after you typing the command, don't worry, just try input the command again.
 
-```c++
+```cpp
 /*Note: this code is a demo for how to using gprs shield to send sms message, dial a voice call and
   send a http request to the website, upload data to pachube.com by TCP connection,
 

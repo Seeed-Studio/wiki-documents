@@ -100,7 +100,7 @@ This is an easy-to-use module, what you need to do is connect the module to I2C 
 
 - **Step 4.** Upload the demo code below in your Arduino IDE.
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <SPI.h>
@@ -178,7 +178,7 @@ void loop(void) {
 
 - **Step 3.** Upload the demo code below in your Arduino IDE.
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <SPI.h>

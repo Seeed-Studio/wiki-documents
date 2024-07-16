@@ -97,7 +97,7 @@ GP2Y0D805Z0F is a distance measuring sensor unit, composed of an integrated comb
 
 - **Step 1.** Open the Arduino IDE and create a new file, then copy the following code into the new file.
 
-```c++
+```cpp
 /*
  *  
  * Copyright (c) 2018 Seeed Technology Co., Ltd.

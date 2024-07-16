@@ -287,7 +287,7 @@ void loop(void)
 - **Step 7.** Now you can use this sensor, and the output will be like this:
 
 
-```C++
+```cpp
 Start calibration.......Init OK!
 Uncalibration  temp = 29.20
 Please Place the module horizontally!

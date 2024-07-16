@@ -57,7 +57,7 @@ CircuitPython是一种专为低成本微控制器板实验和学习编程而设�
 
 **步骤三** 复制并上传以下代码：
 
-```c++
+```cpp
 """Example for Pico. Blinks the built-in LED."""
 import time
 import board

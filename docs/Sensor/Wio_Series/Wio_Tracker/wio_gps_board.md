@@ -484,7 +484,7 @@ void loop() {
 - **Step 5.** Upload code to Wio GPS board, it shows how to read a file from the SD card using the SD library and send it over the serial port.
 
 
-```c++
+```cpp
 /*
   SD card file dump
 

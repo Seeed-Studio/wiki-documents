@@ -207,7 +207,7 @@ In addition, during communication in particular, spike-like errors occurred, whi
 
 The following is the procedure to test the battery voltage.
 
-```c++
+```cpp
 void setup() {
   Serial.begin(115200);
   pinMode(A0, INPUT);         // ADC

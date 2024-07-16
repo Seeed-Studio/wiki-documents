@@ -135,7 +135,7 @@ Si es la primera vez que utilizas Arduino, ampliamente te recomendamos ver [Prim
 
   3. O, puedes simplemente dar click en el ícono ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) en la esquina superior derecha del bloque de código de tu actual código en el IDE de Arduino.
 
-```C++
+```cpp
 // NeoPixel Ring simple sketch (c) 2013 Shae Erisson
 // released under the GPLv3 license to match the rest of the AdaFruit NeoPixel library
 

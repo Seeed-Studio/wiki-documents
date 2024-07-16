@@ -54,7 +54,7 @@ Connect the I2C Hub with Seeeduino XIAO's I2C interface, and connect each I2C de
 
 #### Software code
 
-```C++
+```cpp
 #include "TCA9548A.h"
 
 // if you use the software I2C to drive, you can uncommnet the define SOFTWAREWIRE which in TCA9548A.h. 

@@ -92,7 +92,7 @@ Are you trying to find an easy to use and cost-effect PH sensor/meter? Do you wa
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 #### Software Code
-```C++
+```cpp
 /*
   # This sample code is used to test the pH meter V1.1.
   # Editor : YouYou

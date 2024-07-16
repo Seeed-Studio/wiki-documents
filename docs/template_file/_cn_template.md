@@ -220,7 +220,7 @@ Now that we have our library installed and we understand the basic functions, le
 	</table>
 </div>
 
-```c++
+```cpp
 //文件名
 
 代码段
@@ -269,7 +269,7 @@ Opening your serial monitor to a baud rate of 9600 should show the distance betw
 </div>
 
 
-```c++
+```cpp
 //文件名
 
 代码段
@@ -419,7 +419,7 @@ Now that we have our library installed and we understand the basic functions, le
 	</table>
 </div>
 
-```c++
+```cpp
 //文件名
 
 代码段
@@ -465,7 +465,7 @@ Now that we have our library installed and we understand the basic functions, le
 
 
 
-```c++
+```cpp
 //文件名
 
 代码段

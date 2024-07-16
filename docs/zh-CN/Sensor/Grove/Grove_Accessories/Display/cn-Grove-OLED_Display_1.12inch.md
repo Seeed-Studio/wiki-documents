@@ -115,7 +115,7 @@ last_update:
 
 - **步骤 4.** 在您的Arduino IDE中上传以下示例代码。
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <SPI.h>

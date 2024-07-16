@@ -165,7 +165,7 @@ Here are some projects for your reference.
 
 Here is the code of HelloWorld.ino.
 
-```c++
+```cpp
 #include <Wire.h>
 #include "rgb_lcd.h"
 
@@ -371,7 +371,7 @@ if __name__=="__main__":
 - Q2: How to use button to switch Grove RGB LCD to display different pages? 
     - A2: Here is the code. 
 
-```c++
+```cpp
 
 #include <Wire.h>
 #include "rgb_lcd.h"

@@ -110,7 +110,7 @@ Si no tienes la Shield Base - Grove, puedes conectar directamente el módulo Gro
 
 O puedes abrir un nuevo sketch y copiar el siguiente código en el.
 
-```c++
+```cpp
 
 #include <IRSendRev.h>
 

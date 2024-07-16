@@ -293,7 +293,7 @@ XIAO nRF52840 Sense内置LED，有3种颜色:
 
 先定义一些变量。我在包含的库之后定义了这些库:
 
-```C
+```cpp
 /* threshold for predictions */
 float threshold = 0.7;
 
@@ -319,7 +319,7 @@ int oldLED;
 <i>int LED</i> 是我们将要打开的电流LED。
 
 接下来，在loop( )函数中，在for循环指令内部，我们循环使用CLASSIFIER_LABEL_COUNT(大约在第129行左右——上面的行已经有了):
-```C
+```cpp
 for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
 ```
 
@@ -327,7 +327,7 @@ for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
 
 完整的for循环加上新增的代码如下所示:
 
-```C
+```cpp
 for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
         //lets light up some LEDS

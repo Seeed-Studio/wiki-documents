@@ -64,7 +64,7 @@ last_update:
 
 - **步骤三**. 将以下代码复制到Thonny中。
 
-```c++
+```cpp
 from machine import Pin, Timer
  
 led = Pin(25, Pin.OUT)

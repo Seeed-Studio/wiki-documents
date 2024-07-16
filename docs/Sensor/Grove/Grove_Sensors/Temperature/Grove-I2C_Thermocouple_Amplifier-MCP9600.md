@@ -169,7 +169,7 @@ If we don't have Grove Base Shield, We also can directly connect this module to 
 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include "Seeed_MCP9600.h"
 
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
@@ -300,7 +300,7 @@ void loop()
 If every thing goes well, when you open the Serial Monitor, you will see the temperature value and the alert information.
 :::
 
-```C++
+```cpp
 serial start!!
 version =4011
 
@@ -355,7 +355,7 @@ $$
 
 Alert pin 1, alert pin2 and alert pin3 follow the same principle. You can change the  hysteresis value and the limit by modify the line 23 and line 26.
 
-```C++
+```cpp
 CHECK_RESULT(ret,sensor.set_alert_limit(i,sensor.covert_temp_to_reg_form(28+i)));
 
 /*Set hysteresis.for example,set hysteresis to 2℃,when the INT limitation is 30℃,interruption will be generated when 

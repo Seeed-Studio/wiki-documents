@@ -54,7 +54,7 @@ Now you have successfully install the CircuitPython to the Seeed Studio XIAO nRF
 
 **Step 3** Copy and upload the following codes:
 
-```c++
+```cpp
 """Example for Seeed Studio XIAO nRF52840. Blinks the built-in LED."""
 import time
 import board

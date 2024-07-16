@@ -170,7 +170,7 @@ Now, the Grove VOC and eCO2 Gas Sensor library can be installed to the Arduino I
 
 This repo shows us the VOC and eCO2 data obtained. In the code, we use the `sgp_measure_signals_blocking_read()` function to get the VOC and eCO2 information, which is positive and integer.
 
-```c++
+```cpp
 #include <Arduino.h>
 #include "sensirion_common.h"
 #include "sgp30.h"

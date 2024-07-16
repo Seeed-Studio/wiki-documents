@@ -165,7 +165,7 @@ Unzip the [sample sketch](https://github.com/Seeed-Studio/Wio_Extension_RTC/raw/
 6. Use Serial monitor to print the serial message. 
 
 
-```c++
+```cpp
 #include <WioLTEforArduino.h>
 #include "WioRTC.h"
 

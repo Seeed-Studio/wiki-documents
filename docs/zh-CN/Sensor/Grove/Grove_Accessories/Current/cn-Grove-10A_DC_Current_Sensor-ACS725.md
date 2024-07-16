@@ -133,7 +133,7 @@ Grove - 10A DC 电流传感器（ACS725）基于霍尔原理，差分霍尔传�
 - **步骤 2.** 在/example/文件夹中，您可以找到演示代码。这里我们以**Grove_10A_Current_Sensor**为例。只需点击[Grove_10A_Current_Sensor.ino](https://github.com/Seeed-Studio/Grove_Current_Sensor/blob/master/examples/Grove_10A_Current_Sensor/Grove_10A_Current_Sensor.ino)即可打开演示。或者您可以复制以下代码：
 
 
-```C++
+```cpp
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
   #define RefVal 3.3
   #define SERIAL SerialUSB
@@ -226,14 +226,14 @@ void loop()
 
 第19行：
 
-```C++
+```cpp
 float Vref = 322;  
 //Vref is zero drift value, you need to change this value to the value you actually measured before using it.
 ```
 
 在演示代码中，我们将Vref设置为322，但每块板的零偏移值可能不同。如您所知，我们在本次演示中使用的板的零偏移值为346.68。因此，我们修改第21行：
 
-```C++
+```cpp
 float Vref = 346.68;
 ```
 

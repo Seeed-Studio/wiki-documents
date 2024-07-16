@@ -133,7 +133,7 @@ Arduino board with Relay Shield, and a motor connected to the Relay Shield
 
 4.Start the Arduino IDE and upload the following code to the Arduino board:
 
-```c++
+```cpp
 int MotorControl = 5;    // Digital Arduino Pin used to control the motor
 
 // the setup routine runs once when you press reset:

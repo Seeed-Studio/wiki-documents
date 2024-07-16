@@ -159,7 +159,7 @@ This example introduces how to use the OLED display on the Seeed Studio Expansio
 
 **OLED Code**
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <Wire.h>
@@ -190,7 +190,7 @@ This example introduces how to use the button on the Seeed Studio Expansion Base
 
 **Code**
 
-```CPP
+```cpp
 const int buttonPin = 1;     // the number of the pushbutton pin
 int buttonState = 0;         // variable for reading the pushbutton status
 
@@ -234,7 +234,7 @@ This example uses Buzzer on the Seeed Studio Expansion Base for XIAO to play Hap
 
 **Code**
 
-```CPP
+```cpp
 int speakerPin = D3;
 int length = 28; // the number of notes
 char notes[] = "GGAGcB GGAGdc GGxecBA yyecdc";
@@ -303,7 +303,7 @@ This example uses a rotary angle sensor to control servo via integration ports o
 If your Development Board is **XIAO ESP32 Series**. Before you run the following code, you need to install ESP32Servo library first in **Arduino Library Manager** and change the following code from ```#include <Servo.h>``` to ```#include <ESP32Servo.h>```.
 :::
 
-```CPP
+```cpp
 #include <Servo.h>
 #include <Arduino.h>
 #include <Wire.h>
@@ -349,7 +349,7 @@ This example uses RTC to display the clock on the OLED.
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <PCF8563.h>
@@ -639,7 +639,7 @@ The MicroSD card system format is FAT or exFAT. If you use other MicroSD card sy
 
 **The `main.py` code**
 
-```CPP
+```cpp
 import sd
 f = open("/sd/hello.txt", "r")   ## read the file from SD card
 print(f.read())
@@ -649,7 +649,7 @@ print(f.read())
 
 **The `sd.py` code**
 
-```CPP
+```cpp
 import os
 import adafruit_sdcard
 import board
@@ -731,7 +731,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Code**
 
-```CPP
+```cpp
 #include <IRremote.h>
 #include <Servo.h>
 
@@ -849,7 +849,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Code**
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <IRremote.h>
@@ -995,7 +995,7 @@ If other people put their finger on it, the LED ring will turn to red colour and
 
 **Code**
 
-```C
+```cpp
 #include <Servo.h>
 #include <Arduino.h>
 #include <U8x8lib.h>
@@ -1183,7 +1183,7 @@ Please connect the expansion board and the required modules with Grove wire, con
 
 **Code**
 
-```C
+```cpp
 #include <U8x8lib.h>
 #include "ATSerial.h"
 #include "Protocol.h"
@@ -1310,7 +1310,7 @@ Please connect each sensor as shown in the diagram. Connect the CO2 sensor and P
 
 **Code**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <Seeed_HM330X.h>
@@ -1536,7 +1536,7 @@ As shown in the figure below, connect the heart rate sensor to the I2C interface
 
 **Code**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 
@@ -1583,6 +1583,10 @@ void loop() {
 - **[PDF]**[**Seeed Studio Expansion Base for XIAO_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
 - **[SCH]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
 - **[BRD]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
+
+## FAQ 
+
+### Q1: Does the PMIC on the XIAO Expansion board output power on the 5V pins? If so, how much current can we draw?
 
 ## Tech Support & Product Discussion
 

@@ -184,7 +184,7 @@ The probe is then fully inserted into the liquid to be measured. You can rest as
 
 The following is a sample program for the Grove ORP Sensor.
 
-```c++
+```cpp
 #define VOLTAGE 3.37   //vcc voltage(unit: V)
 #define OFFSET 16      //UNUSED - zero drift voltage(unit: mV)
 #define LED 13         //operating instructions

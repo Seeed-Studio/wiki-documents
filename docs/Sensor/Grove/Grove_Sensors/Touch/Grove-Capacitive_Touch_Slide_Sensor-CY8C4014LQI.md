@@ -149,7 +149,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 
 #include "Seeed_CY8C401XX.h"
 
@@ -201,7 +201,7 @@ The library file may be updated. This code may not be applicable to the updated 
 If every thing goes well, when you open the Serial Monitor and touch the slide touch sensor, you will see the LED light up, and the Serial Monitor is shown below:
 :::
 
-```C++
+```cpp
 button value is1
 button 1 is pressed
 slider value is0

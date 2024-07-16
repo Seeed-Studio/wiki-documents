@@ -183,7 +183,7 @@ When the library is installed you will see **INSTALLED** , click **Close** then.
 
       in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 /* Encoder Library - Basic Example
  * http://www.pjrc.com/teensy/td_libs_Encoder.html
  *
@@ -228,7 +228,7 @@ void loop() {
 :::success
      If every thing goes well, you will get the result. When you move the obstacle from left to right, the count value will increase by 1; when you move the obstacle from right to left, the count value will be decremented by 1.
 :::
-```C++
+```cpp
 Basic Encoder Test:
 0
 1

@@ -140,7 +140,7 @@ The gesture functionality is not supported yet, since this functionality needs a
 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include <Wire.h>
 
 #include "Seeed_TMG3993.h"
@@ -201,7 +201,7 @@ Two thresholds need to be configured - low and high. Any proximity value which i
 
 - **Step 3.** Restart the Arduino IDE. Open the example, the same way as in Example 1, but this time choose "Example2-ProximityInterrupt" instead of "Example1". Or copy the following code into Arduino IDE:
 
-```C++
+```cpp
 
 
 #include <Wire.h>
@@ -272,7 +272,7 @@ This example reads the R, G, B, C sensor values. C is defined as the non-color f
 
 - **Step 3.** Restart the Arduino IDE. Open the example, the same way as in Example 1, but this time choose "Example3-Color-Light" instead of "Example1". Or copy the following code into Arduino IDE:
 
-```C++
+```cpp
 
 
 #include <Wire.h>

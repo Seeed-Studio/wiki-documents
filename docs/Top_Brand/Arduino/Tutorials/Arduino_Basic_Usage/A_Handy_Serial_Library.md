@@ -16,7 +16,7 @@ Arduino hadn’t debugging function, maybe this is the first impression of some 
 
 As for some simple application, we can use serial print to debug, and Arduino had provided a very easy to use serial print function.
 
-```c++
+```cpp
 void setup()
 {
     Serial.begin(115200);
@@ -31,7 +31,7 @@ void loop()
 ```
 Besides, there is Serial.print, Serial.write and so on. When you are familiar with these functions, you will find that these function is not so friendly actually, just have a look at the following code:
 
-```c++
+```cpp
 void setup()
 {
     Serial.begin(115200);
@@ -51,14 +51,14 @@ void loop()
 
 To print a[3]=5, it can take 4 lines of code, troublesom? Remember the C language lessons, it takes only one line of code:
 
-```c++
+```cpp
 printf("a[%d] = %d", 3, 5);
 ```
 
 As for C++, one line is enough also:
 
 
-```c++
+```cpp
 cout &lt;&lt; "a[" &lt;&lt; 3 &lt;&lt; "] = " &lt;&lt; 5 &lt;&lt; endl;
 ```
 

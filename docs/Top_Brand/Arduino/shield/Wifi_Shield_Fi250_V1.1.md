@@ -88,7 +88,7 @@ The demo we use a Arduino Leonardo, we suggest you use a hardware serial port, s
 
 Install Wifi Shield (Fi250) library, download demo code Wizfi250_Client.
 
-```c++
+```cpp
 /*
 //This demo use Arduino Leonardo or Seeeduino Lite. The jumper connect D0-WIFI_TX, D1_WIFI_RX; Let the boot pin not connect
 */
@@ -158,7 +158,7 @@ void loop() {
 
 Install Wifi Shield (Fi250) library, download demo code Wizfi250_http.
 
-```c++
+```cpp
 /*
 //This demo use Arduino Leonardo or Seeeduino Lite. The jumper connect D0-WIFI_TX, D1_WIFI_RX; Let the boot pin not connect
 */

@@ -108,7 +108,7 @@ Connect a pushbutton to Pin D0 and an LED to Pin 25. Then upload the following c
 Please note that the operating voltage of the Seeed Studio XIAO RP2040 is 3.3V, if you connect the sensor to 5V incorrectly, the motherboard may not work properly.
 :::
 
-```c++
+```cpp
 const int buttonPin = D0;     // the number of the pushbutton pin
 const int ledPin =  25;      // the number of the LED pin
  
@@ -140,7 +140,7 @@ void loop() {
 
 Connect a potentiometer to Pin A0 and an LED to Pin 25. Then upload the following code to control the blinking interval of the LED by rotating the potentiometer knob.
 
-```c++
+```cpp
 const int sensorPin = A0;
 const int ledPin =  25; 
 void setup() {
@@ -167,7 +167,7 @@ int sensorValue = analogRead(sensorPin);
 
 Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message
 
-```c++
+```cpp
 void setup() {
     Serial.begin(115200);
     while (!Serial);
@@ -193,7 +193,7 @@ Type the keyword "Adafruit_NeoPixel" library in Ardunio library Manager and inst
 
 - **Step 2.** Copy the codes to Arduino and click the **Upload** button to upload.
 
-```c++
+```cpp
 #include <Adafruit_NeoPixel.h>
 
 int Power = 11;
@@ -257,7 +257,7 @@ Type the keyword "U8G2" library in Ardunio library Manager and install the laste
 
 - **Step 2.** Copy the codes to Arduino and click the **Upload** button to upload.
 
-```c++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
  
@@ -314,7 +314,7 @@ Type the keyword "Adafruit_SSD1306" library in Ardunio library Manager and insta
 
 - **Step 2.** Copy the codes to Arduino and click the **Upload** button to upload.
 
-```c++
+```cpp
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
