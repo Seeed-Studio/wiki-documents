@@ -159,7 +159,7 @@ This example introduces how to use the OLED display on the Seeed Studio Expansio
 
 **OLED Code**
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <Wire.h>
@@ -190,7 +190,7 @@ This example introduces how to use the button on the Seeed Studio Expansion Base
 
 **Code**
 
-```CPP
+```cpp
 const int buttonPin = 1;     // the number of the pushbutton pin
 int buttonState = 0;         // variable for reading the pushbutton status
 
@@ -234,7 +234,7 @@ This example uses Buzzer on the Seeed Studio Expansion Base for XIAO to play Hap
 
 **Code**
 
-```CPP
+```cpp
 int speakerPin = D3;
 int length = 28; // the number of notes
 char notes[] = "GGAGcB GGAGdc GGxecBA yyecdc";
@@ -303,7 +303,7 @@ This example uses a rotary angle sensor to control servo via integration ports o
 If your Development Board is **XIAO ESP32 Series**. Before you run the following code, you need to install ESP32Servo library first in **Arduino Library Manager** and change the following code from ```#include <Servo.h>``` to ```#include <ESP32Servo.h>```.
 :::
 
-```CPP
+```cpp
 #include <Servo.h>
 #include <Arduino.h>
 #include <Wire.h>
@@ -349,7 +349,7 @@ This example uses RTC to display the clock on the OLED.
 
 **Step 3**. Copy the code and stick on the Ardiono IDE then upload it.
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <PCF8563.h>
@@ -639,7 +639,7 @@ The MicroSD card system format is FAT or exFAT. If you use other MicroSD card sy
 
 **The `main.py` code**
 
-```CPP
+```cpp
 import sd
 f = open("/sd/hello.txt", "r")   ## read the file from SD card
 print(f.read())
@@ -649,7 +649,7 @@ print(f.read())
 
 **The `sd.py` code**
 
-```CPP
+```cpp
 import os
 import adafruit_sdcard
 import board
@@ -731,7 +731,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Code**
 
-```CPP
+```cpp
 #include <IRremote.h>
 #include <Servo.h>
 
@@ -849,7 +849,7 @@ Please follow the same color line to connect each sensor on the board. Please co
 
 **Code**
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <IRremote.h>

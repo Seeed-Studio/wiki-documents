@@ -117,7 +117,7 @@ The OLED128*64 uses all the pins of SSD1308 chip, the default original point is 
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
  
