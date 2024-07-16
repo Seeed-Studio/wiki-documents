@@ -170,7 +170,7 @@ After we generated the library from Edge Impulse. We need to modify the code for
 
 Flash the test code below.
 
-```c++
+```cpp
 #include <AIot_Example_inferencing.h>
 #include"LIS3DHTR.h"
 #include"TFT_eSPI.h"

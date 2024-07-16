@@ -128,7 +128,7 @@ Grove - 5向开关可用于检测开关位置以及诸如单击/双击/长按等
 
 或者，您只需点击代码块右上角的 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) 图标，即可将以下代码复制到Arduino IDE中的新草图里。
 
-```C++
+```cpp
 #include "Grove_Multi_Switch.h"
 
 GroveMultiSwitch mswitch[1];
@@ -260,7 +260,7 @@ void loop()
 如果一切顺利，您将得到相应的结果。当您按下**KEY E**时，它会触发**KEY E: RAW - LOW PRESSED**。
 :::
 
-```C++
+```cpp
 Grove Multi Switch
 ***** Device probe  Device BN-5E-0.1
 Grove Multi Switch

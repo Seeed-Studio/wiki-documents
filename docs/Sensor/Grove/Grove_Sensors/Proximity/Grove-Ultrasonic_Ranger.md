@@ -509,7 +509,7 @@ The distance to obstacles in front is: 2 inches
 
 - A4: Yes, Here is the example, one sensor is connected to D2 and other to D3.
 
-```c++
+```cpp
 #include "Ultrasonic.h"
 
 Ultrasonic ultrasonic1(2);

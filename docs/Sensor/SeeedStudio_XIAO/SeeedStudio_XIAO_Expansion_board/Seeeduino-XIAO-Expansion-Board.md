@@ -995,7 +995,7 @@ If other people put their finger on it, the LED ring will turn to red colour and
 
 **Code**
 
-```C
+```cpp
 #include <Servo.h>
 #include <Arduino.h>
 #include <U8x8lib.h>
@@ -1183,7 +1183,7 @@ Please connect the expansion board and the required modules with Grove wire, con
 
 **Code**
 
-```C
+```cpp
 #include <U8x8lib.h>
 #include "ATSerial.h"
 #include "Protocol.h"
@@ -1310,7 +1310,7 @@ Please connect each sensor as shown in the diagram. Connect the CO2 sensor and P
 
 **Code**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <Seeed_HM330X.h>
@@ -1536,7 +1536,7 @@ As shown in the figure below, connect the heart rate sensor to the I2C interface
 
 **Code**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 
@@ -1583,6 +1583,10 @@ void loop() {
 - **[PDF]**[**Seeed Studio Expansion Base for XIAO_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
 - **[SCH]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
 - **[BRD]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
+
+## FAQ 
+
+### Q1: Does the PMIC on the XIAO Expansion board output power on the 5V pins? If so, how much current can we draw?
 
 ## Tech Support & Product Discussion
 

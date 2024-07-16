@@ -131,7 +131,7 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 - **Step 3.** Restart the Arduino IDE. Open a new sketch, and copy the following code into the new sketch.
 
-```C
+```cpp
 #include <Arduino.h>
 #include <Wire.h>
 #include "SHT31.h"

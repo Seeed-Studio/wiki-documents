@@ -148,7 +148,7 @@ Now that we have our library installed and we understand the basic functions, le
 
 **Step 4.** Negative to "file-->examples-->Sensirion IIC Sen4x-->exampleUsage" and open the example provided in the library. You can also copy the code below:
 
-```c++
+```cpp
 #include <Arduino.h>
 #include <SensirionI2CSht4x.h>
 #include <Wire.h>

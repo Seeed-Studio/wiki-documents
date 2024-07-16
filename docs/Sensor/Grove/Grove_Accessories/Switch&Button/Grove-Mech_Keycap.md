@@ -131,7 +131,7 @@ If we don't have Grove Base Shield, We also can directly connect Grove-Mech keyc
 
 - **Step 3.** Open the Arduino IDE and create a new file, then copy the following code into the new file.
 
-```c++
+```cpp
 /**
  * This is an exmaple of the Grove - Mech Keycap.
  * Every press of the key will change the color the SK6805 RGB LED. The SK6805 is a NeoPixel compatible chip.

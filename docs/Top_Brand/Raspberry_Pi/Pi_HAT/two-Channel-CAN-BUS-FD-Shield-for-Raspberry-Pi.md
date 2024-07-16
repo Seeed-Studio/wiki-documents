@@ -158,7 +158,7 @@ sudo reboot
 
 - **Step 5**. Check the kernel log to see if CAN-BUS HAT was initialized successfully. You will also see **can0** and **can1** appear in the list of ifconfig results
 
-```C
+```cpp
 pi@raspberrypi:~ $ dmesg | grep spi
 [    6.178008] mcp25xxfd spi0.0 can0: MCP2517FD rev0.0 (-RX_INT +MAB_NO_WARN +CRC_REG +CRC_RX +CRC_TX +ECC -HD m:20.00MHz r:18.50MHz e:0.00MHz) successfully initialized.
 [    6.218466] mcp25xxfd spi0.1 (unnamed net_device) (uninitialized): Failed to detect MCP25xxFD (osc=0x00000000).
@@ -242,7 +242,7 @@ For 2 channel pi hat, there are two ways to send & receive, you can use both **c
 
 Arduino Code for CAN BUS Shield:
 
-```C
+```cpp
 // demo: CAN-BUS Shield, send data
 // loovee@seeed.cc
 
@@ -294,7 +294,7 @@ void loop()
 
 Respberry pi setting and and you can use **can-util** to receive
 
-```C
+```cpp
 #set 500k baudrate
 pi@raspberrypi:~ $ sudo ip link set can0 up type can bitrate 500000
 pi@raspberrypi:~ $ ip -details link show can0

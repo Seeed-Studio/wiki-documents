@@ -171,7 +171,7 @@ We've already released the [Grove - Barometer Sensor (BMP280)](https://wiki.seee
 - **Step 3.** Copy the code into Arduino IDE and upload.
 
 
-```C++
+```cpp
 #include <Dps310.h>
 
 Dps310 Dps310PressureSensor = Dps310();

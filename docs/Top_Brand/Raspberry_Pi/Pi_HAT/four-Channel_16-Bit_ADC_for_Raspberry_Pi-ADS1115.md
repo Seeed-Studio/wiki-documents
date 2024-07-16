@@ -102,7 +102,7 @@ As I2C is not turned on by default, we need to configure I2C by hand.
 - **Step 1**. Power up the Raspberry Pi.
 - **Step 2**. Open raspi-config by typing following command in terminal.
 
-```C++
+```cpp
 
 sudo raspi-config
 

@@ -66,7 +66,7 @@ Grove - I2C电机驱动器(L298P)是一种常用的步进电机和伺服电机�
 
 #### **软件代码 1 - 直流电机**
 
-```C++
+```cpp
 #include "Grove_I2C_Motor_Driver.h"
 
 // default I2C address is 0x0f
@@ -114,7 +114,7 @@ void loop() {
 
 #### **软件代码 2 - 步进电机**
 
-```C++
+```cpp
 #include <Grove_I2C_Motor_Driver.h>
 
 // default I2C address is 0x0f

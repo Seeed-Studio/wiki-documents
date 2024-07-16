@@ -100,7 +100,7 @@ When you need to add a rotary knob to your project, for example a volume knob fo
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```c++
+```cpp
 #include <CircularLED.h>
 #include <Encoder.h>
 #include <TimerOne.h>

@@ -164,7 +164,7 @@ Do not touch or shake or let this product in vibration when it works. This will 
 
 **Here is the code:**
 
-```c++
+```cpp
 /*
  * bmp280_example.ino
  * Example sketch for BMP280

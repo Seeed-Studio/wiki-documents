@@ -160,7 +160,7 @@ Now let's check what will happen then:
 When you upload the example1 code, Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.  
 You can see the following results：
 
-```C++
+```cpp
 Grove - Human Presence Sensor example
 1:[432], 2:[288], 3[248], 4:[384], temp[20.87], millis[109]
 1:[424], 2:[296], 3[232], 4:[400], temp[20.87], millis[215]
@@ -212,7 +212,7 @@ This example reads the data of four IR sensors and converts them into current (p
 When you upload the example1 code, Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **9600**.  
 You can see the following results：
 
-```c++
+```cpp
 Grove - Human Presence Sensor example
 o o x o  millis: 16949
 o x x o  millis: 17050

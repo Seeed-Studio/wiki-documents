@@ -95,7 +95,7 @@ Thanks to the new SSD1315 chip, it can work with 3.3V, so that we removed the ex
 
 - **Step 2.**  Open the Arduino IDE and create a new file, then copy the following code into the new file.
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 

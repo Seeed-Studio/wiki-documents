@@ -94,7 +94,7 @@ As the name indicates, the Grove - MP3 V3 is the upgraded version of Grove - MP3
 
 The WT2003S_Terminal_Player Example code is as follow:
 
-```C++
+```cpp
 #include "WT2003S_Player.h"
 
 #ifdef __AVR__

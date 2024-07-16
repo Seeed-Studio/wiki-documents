@@ -154,7 +154,7 @@ sku:    103020016
 
 将下面的示例代码复制到Arduino IDE中并上传。
 
-```c++
+```cpp
 void setup()
 {
     Serial.begin(9600);

@@ -208,7 +208,7 @@ Platforms Supported
 
 Here is the code
 
-```c++
+```cpp
     #include "Barometer.h"
     #include <Wire.h>
     float temperature;

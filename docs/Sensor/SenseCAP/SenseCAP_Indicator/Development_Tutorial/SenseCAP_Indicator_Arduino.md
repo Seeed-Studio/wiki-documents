@@ -8,6 +8,7 @@ slug: /SenseCAP_Indicator_ESP32_Arduino
 last_update:
   date: 9/24/2023
   author: Hendra
+craft: true
 ---
 
 # Develop SenseCAP Indicator both chips with Arduino

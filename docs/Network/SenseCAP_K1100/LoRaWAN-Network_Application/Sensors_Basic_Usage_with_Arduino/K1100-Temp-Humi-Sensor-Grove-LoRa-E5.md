@@ -174,7 +174,7 @@ Now, the Grove Temp&Humi Sensor library can be installed to the Arduino IDE. Ope
 
 This repo shows us the temperature and humidity data obtained. In the code, we use the `measureHighPrecision()` function to get the temperature and humidity information, which is positive and float.
 
-```c++
+```cpp
 #include <Arduino.h>
 #include <SensirionI2CSht4x.h>
 #include <Wire.h>

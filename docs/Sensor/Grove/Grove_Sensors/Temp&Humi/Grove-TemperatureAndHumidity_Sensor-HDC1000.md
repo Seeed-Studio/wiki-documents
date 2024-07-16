@@ -246,7 +246,7 @@ Here is how to use Grove - Temperature&Humidity Sensor (HDC1000) with Seeeduino 
 
 - **Step 3.** Restart the Arduino IDE. Open a new sketch, and copy the following code into the new sketch.
 
-```c++
+```cpp
 /*
  * HDC1000.h
  * A library for HDC1000 1.0

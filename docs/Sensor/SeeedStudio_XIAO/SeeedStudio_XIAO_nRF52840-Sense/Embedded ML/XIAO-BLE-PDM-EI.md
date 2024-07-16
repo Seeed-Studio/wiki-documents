@@ -293,7 +293,7 @@ First, we need to define a threshold. We know that the predictions go from 0.0 t
 
 First, define some variables. I've define these right after the included libraries:
 
-```C
+```cpp
 /* threshold for predictions */
 float threshold = 0.7;
 
@@ -320,7 +320,7 @@ int oldLED;
 
 Next, in the loop() function, inside the for loop instruction, where we loop thought the CLASSIFIER_LABEL_COUNT (around line 129 - already with the lines above):
 
-```C
+```cpp
 for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
 ```
 
@@ -328,7 +328,7 @@ We use a if instruction to check for the classification value . If it's above t
 
 The complete for loop, with our additions, is:
 
-```C
+```cpp
 for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
         //lets light up some LEDS

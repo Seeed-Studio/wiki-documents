@@ -101,7 +101,7 @@ Grove Speaker Plus 由一个强大的放大驱动板和高品质扬声器组成�
         如果您是第一次使用 Arduino，我们强烈建议您在开始之前先阅读[Arduino 入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 :::
 
-```C++
+```cpp
 /*macro definition of Speaker pin*/
 #define SPEAKER 3
 

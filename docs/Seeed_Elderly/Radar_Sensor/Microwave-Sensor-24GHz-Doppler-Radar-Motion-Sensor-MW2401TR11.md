@@ -192,7 +192,7 @@ it just an example， you are able to use other devices with RX and TX port or s
 - **step 2. setup Seeeduino Cortex-MO+, please follow** [seeedruino Cortex-MO+ instructions](https://wiki.seeedstudio.com/Seeeduino-Cortex-M0/)
 - **step 3. copy the code into arduino IDE then upload.** [upload code guide](https://wiki.seeedstudio.com/Upload_Code/)
 
-```C
+```cpp
 int MW_out = 2;   
 // set pin 2 as OUT port
 void setup() {

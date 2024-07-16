@@ -993,7 +993,7 @@ void delayUntil(unsigned long elapsedTime) {
 
 **代码**
 
-```C
+```cpp
 #include <Servo.h>
 #include <Arduino.h>
 #include <U8x8lib.h>
@@ -1181,7 +1181,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
 
 **代码**
 
-```C
+```cpp
 #include <U8x8lib.h>
 #include "ATSerial.h"
 #include "Protocol.h"
@@ -1308,7 +1308,7 @@ void setup() {
 
 **代码**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <Seeed_HM330X.h>
@@ -1533,7 +1533,7 @@ void loop() {
 
 **代码**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 

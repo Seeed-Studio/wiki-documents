@@ -92,7 +92,7 @@ Grove - OLED显示屏 0.96英寸（SSD1315）是一款具有Grove I2C接口的�
 
 - **步骤 2.** 打开Arduino IDE并创建一个新文件，然后将以下代码复制到新文件中。
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 
