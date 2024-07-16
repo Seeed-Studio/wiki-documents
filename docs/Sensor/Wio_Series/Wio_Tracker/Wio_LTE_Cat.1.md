@@ -375,7 +375,7 @@ Hi, the board of "Wio LTE Cat.1" is stored in "Seeed SAMD Boards" package like "
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
 - Step 9. Press **RST** button to enable the COM port.
 
-```c++
+```cpp
 #include "wio_tracker.h"
 
 char message[128] = "Hello from Wio Traker!";
@@ -413,7 +413,7 @@ void loop() {
 - Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 11. The phone number owner will receive the message.
 
-```C++
+```cpp
 Power On!
 
 
@@ -435,7 +435,7 @@ Send OK!
 - Step 7. Select Sketch-->Upload to upload the code to Wio_LTE.
 - Step 8. Press **RST** button to enable the COM port.
 
-```C++
+```cpp
 #include "wio_tracker.h"
 
 uint16_t newSMSNumber = -1;
@@ -485,7 +485,7 @@ void loop() {
 - Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. Open serial monitor, when seeing **Waitting for new SMS!**, send message to the board, the new message will display soon with phone number, time, content.
 
-```C
+```cpp
 Power On!
 Wait for network registered...
 
@@ -517,7 +517,7 @@ Waiting for new SMS!
 - Step 7. Select Sketch-->Upload to upload the code to Wio_LTE.
 - Step 8. Press **RST** button to enable the COM port.
 
-```c++
+```cpp
 #include "gnss.h"
 
 
@@ -566,7 +566,7 @@ void loop() {
 - Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. We will see lat, lon info printed on screen.
 
-```C
+```cpp
 Waitting for module to alvie...
 Waitting for module to alvie...
 Waitting for module to alvie...
@@ -610,7 +610,7 @@ Data type in string: 113.966248,22.583819
 - Step 7. Select Sketch-->Upload to upload the code to Wio_LTE.
 - Step 8. Press **RST** button to enable the COM port.
 
-```C
+```cpp
 #include "gnss.h"
 
 
@@ -664,7 +664,7 @@ void loop() {
 - Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. We will see below logs.
 
-```C
+```cpp
 Waitting for module to alvie...
 Waitting for module to alvie...
 Waitting for module to alvie...
@@ -741,7 +741,7 @@ $GPVTG,,T,2.3,M,0.0,N,0.0,K,A*0C
 - Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 11. The phone number owner will receive the call.
 
-```c++
+```cpp
 #include "wio_tracker.h"
 
 WioTracker wio = WioTracker();
@@ -788,7 +788,7 @@ void loop() {
 - Step 7. Keep COM Port blank.
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
 
-```C
+```cpp
 #include "ethernet.h"
 
 Ethernet eth = Ethernet();
@@ -898,7 +898,7 @@ Hello world!
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
 
 
-```C
+```cpp
  // include the SD library:
 #include <SD.h>
 
@@ -985,7 +985,7 @@ void loop(void) {
 
 
 
-```C
+```cpp
 
 Initializing SD card...
 Card type: SDHC

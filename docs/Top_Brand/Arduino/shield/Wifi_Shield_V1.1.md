@@ -67,7 +67,7 @@ This Wifi Shield utilizes a RN171 wifi module to provide your Arduino/Seeeduino 
 
 Download the [Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) on github, unzip it into the libraries folder of Arduino.
 
-```c++
+```cpp
 
 #include <Arduino.h>
 #include <SoftwareSerial.h>

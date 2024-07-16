@@ -160,7 +160,7 @@ ACS70331 QFN封装的内部结构如图2所示。芯片位于主电流路径之�
 
 - **步骤 2.** 在/example/文件夹中，您可以找到演示代码。这里我们以[Grove - ±5A DC/AC 电流传感器（ACS70331）](https://github.com/Seeed-Studio/Grove_Current_Sensor/blob/master/examples/Grove_5A_DC_Current_Sensor/Grove_5A_DC_Current_Sensor.ino)为例。只需点击**Grove_5A_DC_Current_Sensor.ino**打开演示代码。或者您也可以复制以下代码：
 
-```C++
+```cpp
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
   #define RefVal 3.3
   #define SERIAL SerialUSB
@@ -257,14 +257,14 @@ void loop()
 
 第32行：
 
-```C++
+```cpp
 float Vref = 1508; 
 //Vref is zero drift value, you need to change this value to the value you actually measured before using it.
 ```
 
 在演示代码中，我们将Vref设置为1508，但是，每块板的零偏移值都不同。如您所知，我们在本次演示中使用的板的零偏移值为595.70。因此，让我们修改第21行：
 
-```C++
+```cpp
 float Vref = 595.70;
 ```
 
@@ -292,7 +292,7 @@ float Vref = 595.70;
 
 对于硬件连接和校准部分，请参考[DC 演示](https://yiyan.baidu.com/#dc-demo)，唯一的区别是代码。请使用以下代码进行交流负载测试。
 
-```C++
+```cpp
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
   #define RefVal 3.3
   #define SERIAL SerialUSB

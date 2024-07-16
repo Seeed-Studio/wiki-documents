@@ -1658,25 +1658,25 @@ const sidebars = {
             id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
           },
           items: [
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/i2s_test',
-           // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/i2s_rgb',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
+           // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb',
             {
               type: 'doc', 
-              id:'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_generator',
+              id:'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
               label: 'Streams Generator', 
             },
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_print',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_memory',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/player_spiffs',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_mqtt',    
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/streams_i2s_tflite',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',    
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
           ],
         },
         {
               type: 'category',
               label: 'Application',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/reSpeaker_ha',
+                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
               ],
         },
           ],
@@ -2972,6 +2972,8 @@ const sidebars = {
                             label: 'FIN',
                             items: [
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_install_fin',
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_use_modbus_tcp',
+                              
                               ],
                             },
                             {
@@ -4796,6 +4798,7 @@ const sidebars = {
     'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24HPC1',
     'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR60BHA1',
     'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR60FDA1',
+
 
     {
       type: 'doc',

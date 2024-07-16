@@ -207,7 +207,7 @@ This example will show you how to use an NFC tag as a key to unlock a door or a 
 4.  In the Arduino IDE create a new sketch and copy, paste, and upload the code below to your Arduino board replacing the myUID string constant with your tag’s UID obtained from Example \#1.
 
 #### Code
-```CPP
+```cpp
 	#if 1 // use SPI
 	#include <SPI.h>
 	#include <PN532/PN532_SPI/PN532_SPI.h>

@@ -55,7 +55,7 @@ CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上
 
 **步骤 3** 复制并上传以下代码：
 
-```c++
+```cpp
 """Example for Seeed Studio XIAO nRF52840. Blinks the built-in LED."""
 import time
 import board

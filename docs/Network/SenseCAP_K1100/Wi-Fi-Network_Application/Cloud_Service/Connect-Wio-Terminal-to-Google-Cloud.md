@@ -248,14 +248,14 @@ Now we need to set the Wi-Fi credentials and Google Cloud IoT Core information i
 
 - **STEP 3:** Change the **Wifi network details**
 
-```c++
+```cpp
 const char *ssid = "Enter_SSID";
 const char *password = "Enter_Password";
 ```
 
 - **STEP 4:** Change the **Google Cloud IoT details**
 
-```c++
+```cpp
 const char *project_id = "Enter_Project_ID";
 const char *location = "Enter_location";
 const char *registry_id = "Enter_Registry_ID";
@@ -264,7 +264,7 @@ const char *device_id = "Enter_Device_ID";
 
 - **STEP 5:** Copy the private key bytes that we obtained from **ec_private.pem** and saved into notepad before
 
-```c++
+```cpp
 const char *private_key_str =
     "6e:b8:17:35:c7:fc:6b:d7:a9:cb:cb:49:7f:a0:67:"
     "63:38:b0:90:57:57:e0:c0:9a:e8:6f:06:0c:d9:ee:"
@@ -277,7 +277,7 @@ const char *private_key_str =
 
 Open **esp32-mqtt.h** and replace the entire file with the following codes. Here we have replaced configTime function with the implementation of obtaining NTP time via UDP.
 
-```c++
+```cpp
 #include <Client.h>
 #include <rpcWiFi.h>
 #include <WiFiClientSecure.h>
@@ -484,7 +484,7 @@ void setupCloudIoT(){
 
 Add Wio Terminal board to macro definitions inside **Esp32-lwmqtt.ino**
 
-```c++
+```cpp
 #if defined(ESP32) || defined(WIO_TERMINAL)
 #define __ESP32_MQTT_H__
 #endif
@@ -546,7 +546,7 @@ Navigate to **Esp32-lwmqtt.ino** and add the following
 
 - **STEP 1:**  After the loop, add the following for the built-in light sensor
 
-```c++
+```cpp
 void loop() {
   int light = analogRead(WIO_LIGHT); //assign variable to store light sensor values 
   light = map(light,0,1023,0,100); //Map sensor values  
@@ -554,7 +554,7 @@ void loop() {
 
 - **STEP 2:**  Add the topic with the Subfolder name
 
-```c++
+```cpp
     publishTelemetry(getDefaultSensor());
     publishTelemetry("/light",String(light));
 ```
@@ -590,7 +590,7 @@ Navigate to the previously used **Esp32-lwmqtt.ino** and add the following:
 
 - **STEP 1:** Add the following after **#include "esp32-mqtt.h"**
 
-```c++
+```cpp
 #include "DHT.h" //DHT library
 
 #define DHTPIN 0 //Define Signal Pin of DHT
@@ -600,13 +600,13 @@ DHT dht(DHTPIN, DHTTYPE); //Initializing DHT sensor
 
 - **STEP 2:** Add the following inside the **setup** to start the DHT sensor
 
-```c++
+```cpp
 dht.begin(); 
 ```
 
 - **STEP 3:** Add the following inside the **if loop** within **void loop()**
 
-```c++
+```cpp
 int temperature = dht.readTemperature(); //Assign variable to store temperature
 int humidity = dht.readHumidity(); //Assign variable to store humidity
 

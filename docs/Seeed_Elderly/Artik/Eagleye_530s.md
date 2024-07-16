@@ -984,7 +984,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 - Step 2. Modify the source code /root/GrovePi/Software/Cpp/grovepi.cpp and add one line as shown.
 
-```c++
+```cpp
 void GrovePi::SMBusName(char *smbus_name)
 {
  unsigned int hw_revision = gpioHardwareRevision();

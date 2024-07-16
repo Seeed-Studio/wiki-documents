@@ -120,7 +120,7 @@ OLED128*64使用SSD1308芯片的所有引脚，默认原点位于左上角。您
 - **步骤 2.** 参考 [如何安装库](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) 来为 Arduino 安装库。
 - **步骤 3.** 将代码复制到 Arduino IDE 并上传。如果您不知道如何上传代码，请查看 [如何上传代码](https://wiki.seeedstudio.com/Upload_Code/)。
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
  

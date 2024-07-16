@@ -98,7 +98,7 @@ Grove - OLED Display 1.12 V3.0 (SH1107)是一款具有128*128分辨率的**单�
 </div>
 - **步骤 4.** 将以下示例代码上传到你的Arduino IDE中。
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <SPI.h>
@@ -177,7 +177,7 @@ void loop(void) {
 
 - **步骤 3.** 将以下示例代码上传到你的Arduino IDE中。
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <SPI.h>

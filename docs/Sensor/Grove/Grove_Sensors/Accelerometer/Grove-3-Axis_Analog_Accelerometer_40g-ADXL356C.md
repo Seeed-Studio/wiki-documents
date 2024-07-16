@@ -142,7 +142,7 @@ or you can just copy the following code.
 :::note
        This code is written for both ADXL_356B and ADXL_356C, and if you need to implement them on 356C, pls switch the line `#define MODUEL_RANGE  20` with `#define MODUEL_RANGE  40`, or it will not work.
 :::
-```c++
+```cpp
 
 #include <Arduino.h>
 
@@ -267,7 +267,7 @@ void loop()
 - **Step 5.** Now you can use this sensor, and the output will be like this:
 
 
-```C++
+```cpp
 Please Place the module horizontally!
 Start calibration........
 Calibration OK!!

@@ -113,7 +113,7 @@ We will provide an example here to show you how to use this sensor.
 
 
 Here is a part of the code:
-```c++
+```cpp
 
 void setup()
 {

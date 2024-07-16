@@ -109,7 +109,7 @@ Grove - 触觉马达是一个集成了[DRV2605L](http://www.ti.com/product/DRV26
 - **步骤 2.** 参考[如何安装库](https://wiki.seeedstudio.com/How_to_install_Arduino_Library)为Arduino安装库。
 - **步骤 3.** 将代码复制到Arduino IDE并上传。如果您不知道如何上传代码，请查看[如何上传代码](https://wiki.seeedstudio.com/Upload_Code/)。
 
-```c++
+```cpp
 #include <drv2605.h>
 
 DRV2605 haptic;

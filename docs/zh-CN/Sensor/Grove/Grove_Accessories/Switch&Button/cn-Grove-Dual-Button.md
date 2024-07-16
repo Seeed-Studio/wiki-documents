@@ -69,7 +69,7 @@ Grove双按钮与Grove Shield上的“D2”接口连接，Grove无源蜂鸣器�
 
 - **步骤1** 将以下代码复制到Arduino IDE并上传。如果您不知道如何更新代码，请查看[如何上传代码](https://wiki.seeedstudio.com/Upload_Code/)。
 
-```c++
+```cpp
  //set the corresponding notes with frequency
  #define NOTE_D0 0
  #define NOTE_D1 294

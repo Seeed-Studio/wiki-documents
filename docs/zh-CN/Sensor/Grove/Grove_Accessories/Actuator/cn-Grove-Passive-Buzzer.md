@@ -63,7 +63,7 @@ last_update:
 
 #### 代码示例1 - 简单获取蜂鸣声
 
-```c++
+```cpp
 int buzzer = 5; // Buzzer connect with Pin 5
 int frequency = 2700; //reach the Resonant Frequency
 int cycle = 1000000/frequency;  
@@ -86,7 +86,7 @@ void loop()
 
 #### 代码示例2 - 使用蜂鸣器播放音乐
 
-```c++
+```cpp
  //set the corresponding notes with frequency
  #define NOTE_D0 0
  #define NOTE_D1 294

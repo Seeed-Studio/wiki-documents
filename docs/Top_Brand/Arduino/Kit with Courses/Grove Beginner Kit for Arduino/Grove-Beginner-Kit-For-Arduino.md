@@ -1147,7 +1147,7 @@ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
   
 If you break out other modules and only use OLED, you have to software I2C:
 
-```CPP
+```cpp
 // U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);  
 
 U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE); 
@@ -1251,7 +1251,7 @@ Use Grove cable to connect the OLED to Seeeduino Lotus's **I2C** interface (Note
   
 
  Or you can set the bus lock to 100000 then add in the setup().
-```CPP
+```cpp
 void setup(void) {
   u8x8.setBusClock(100000); //  it for limit the I2C bus clock
   u8x8.begin();

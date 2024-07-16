@@ -152,7 +152,7 @@ The above code has no restrictions on the Grove - Wio-E5 connection, it will aut
 :::
 Please select the LoRaWAN® band you wish to use. This band must be consistent with the gateway band you are using. The available frequency bands are in the comments of the code below. In the tutorials we use, the default is the **EU868** band.
 
-```c++
+```cpp
 #define Frequency DSKLORAE5_ZONE_EU868
 /*
 Select your frequency band here.
@@ -532,7 +532,7 @@ If you want to apply the content of this tutorial to your own project developmen
 
 At the beginning of the program, we need to prepare the necessary triad information to connect to Helium and to set the frequency of the Wio-E5.
 
-```c++
+```cpp
 #define Frequency DSKLORAE5_ZONE_EU868
 /*
 Select your frequency band here.
@@ -556,7 +556,7 @@ Next, a `data_decord()` function is defined. This function converts the sensor v
 
 In general, to prevent data overflow, we need to consider the maximum and minimum values that the sensor may read. And split into hexadecimal numbers that will not overflow.
 
-```c++
+```cpp
 void data_decord(int val_1, int val_2, uint8_t data[4])
 {
   int val[] = {val_1, val_2};
@@ -580,20 +580,20 @@ void data_decord(int val_1, int val_2, uint8_t data[4])
 
 For the SHT40 sensor, he will have two data, one is temperature data and one is humidity data, and there are positive and negative values, so the negative numbers need to be processed, and also the decimal places need to be processed.
 
-```c++
+```cpp
 int_temp = temperature*100;
 int_humi = humidity*100;
 ```
 
 The next step is the initialization of the SHT40 and the initial setup of the Wio-E5. These will all be executed in the `setup()` function.
 
-```c++
+```cpp
 lorae5.begin(DSKLORAE5_SWSERIAL_WIO_P2)
 ```
 
 In the initialization code, `DSKLORAE5_SWSERIAL_WIO_P2` represents the Grove interface on the **right** side of the Wio Terminal, while `DSKLORAE5_SWSERIAL_WIO_P1` represents the Grove interface on the **left** side. For other projects without external sensors, you can also use `DSKLORAE5_SEARCH_WIO` , which will automatically search for the Grove interface your Wio-E5 is connected to.
 
-```c++
+```cpp
 lorae5.send_sync(              //Sending the sensor values out
         8,                     // LoRaWan Port
         data,                  // data array
@@ -606,7 +606,7 @@ lorae5.send_sync(              //Sending the sensor values out
 
 The important role of the `send_sync()` function is to send the sensor values over the LoRaWAN®. The first parameter indicates the channel number to send the data, the second parameter indicates the content of the data sent, and the third parameter indicates the length of the data sent. In general, we only need to focus on the content of the first three parameters.
 
-```c++
+```cpp
 delay(15000);
 ```
 

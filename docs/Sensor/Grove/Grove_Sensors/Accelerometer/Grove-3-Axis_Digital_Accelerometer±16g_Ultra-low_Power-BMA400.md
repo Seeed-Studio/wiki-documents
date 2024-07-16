@@ -191,7 +191,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
     3. Or, you can just click the icon <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg" alt="pir" width={50} height="auto" /></p>
  in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 
 #include "BMA400.h"
 
@@ -254,7 +254,7 @@ void loop(void)
      If every thing goes well, it may show as below:
 :::
 
-```C++
+```cpp
 BMA400 Raw Data
 BMA400 is connected
 85.94,357.42,916.02,23

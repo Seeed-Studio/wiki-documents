@@ -179,7 +179,7 @@ This folder **\Arduino\libraries\Seeed_MAX31850K-master\examples** contains two 
 
 Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
@@ -300,7 +300,7 @@ void loop(void)
      If every thing goes well, you will get the result.
 :::
 
-```c++
+```cpp
 DONE
 Device Address: 3B23211800ing temperatures... 77.00
 Requesting temperatures...DONE

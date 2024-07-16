@@ -171,7 +171,7 @@ Now, the 3-Axis Digital Accelerometer library can be installed to the Arduino ID
 
 This repo demonstrates how to use the built-in IMU sensor as a component in Wio Terminal. Using the library's **getAccelerationX()**, **getAccelerationY()**, and **getAccelerationZ()** functions, you can directly obtain the X-axis, Y-axis, and Z-axis offsets of the IMU sensor. These three values may be positive or negative float numbers.
 
-```c++
+```cpp
 #include"LIS3DHTR.h"
 LIS3DHTR<TwoWire> lis;
  

@@ -147,7 +147,7 @@ To see how can you build your own UI application for reTerminal with LVGL 8.0, y
 
 All the necessary components are imported and initialized in main.c, after that the main UI function is called. The UI description, callbacks and helper functions are located inside of **lv_demo_reterminal_UI/lv_demo_reterminal_UI.c**.
 
-```C
+```cpp
     tv = lv_tabview_create(lv_scr_act(), LV_DIR_TOP, tab_h);
 
     lv_obj_set_style_text_font(lv_scr_act(), font_normal, 0);
@@ -166,7 +166,7 @@ We create a Tabview widget on the active screen and populate it with three tabs:
 
 The content of each tab is initialized separately in a corresponding function:
 
-```C
+```cpp
     assistant_create(t1);
     debug_create(t2);
     stats_create(t3);
@@ -178,7 +178,7 @@ The content of each tab is initialized separately in a corresponding function:
 
 Additionally color changer elements are created on the Tabview widget and built-in accelerometer is initialized. After that we create three timer callbacks with dummy input data:
 
-```C
+```cpp
     static uint32_t user_data = 10;
     lv_timer_t * time_timer = lv_timer_create(time_timer_cb, 1,  &user_data);
     lv_timer_t * system_timer = lv_timer_create(system_timer_cb, 500,  &user_data);
@@ -187,7 +187,7 @@ Additionally color changer elements are created on the Tabview widget and built-
 
 These are responsible for getting system time, system status (CPU, Mem, Disk Space, Ethernet current speed, etc) and accelerometer readings respectively. You can find these three callback functions at the bottom of the lv_demo_reterminal_UI.c.
 
-```C
+```cpp
 void time_timer_cb(lv_timer_t * timer)
 {
 
@@ -245,7 +245,7 @@ If you decide to follow our demo application closely when creating your first UI
 **assistant_create**
 We create a panel object for the tab and set its height.
 
-```C
+```cpp
     lv_obj_t * panel1 = lv_obj_create(parent);
     lv_obj_set_height(panel1, lv_pct(100));
 ```
@@ -256,7 +256,7 @@ Then we create an image button object from C array located in assets folder, obt
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl-3.png" alt="pir" height="400" height="auto"/></p>
 
-```C
+```cpp
     LV_IMG_DECLARE(speech_btn_img);
 
     /*Create a transition animation on width transformation and recolor.*/
@@ -289,7 +289,7 @@ In the next code block we create text labels for time, date, user greeting. Thes
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl-4.png" alt="pir" width="600" height="auto"/></p>
 
-```C
+```cpp
     lv_obj_t * name = lv_label_create(panel1);
     lv_label_set_text(name, "Hi there, Username");
     lv_obj_add_style(name, &style_large, 0);
@@ -318,7 +318,7 @@ Note that the grid layout feature of LVGL needs to be globally enabled with ```L
 
 You can read about Layouts in LVGL in more detail by following [this link](https://docs.lvgl.io/master/layouts/grid.html).
 
-```C
+```cpp
     static lv_coord_t grid_main_col_dsc[] = {LV_GRID_FR(1), LV_GRID_FR(1), LV_GRID_TEMPLATE_LAST};
     static lv_coord_t grid_main_row_dsc[] = {LV_GRID_CONTENT, LV_GRID_CONTENT, LV_GRID_TEMPLATE_LAST};
 

@@ -156,7 +156,7 @@ Grove - 2-通道固态继电器
 
 - **步骤 1.** 打开Arduino IDE并创建一个新文件，您可以点击代码块右上角的 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg)图标，将以下代码复制到Arduino IDE中的一个新草图中。
 
-```c++
+```cpp
 #include <Arduino.h>
 uint8_t channel1 = 2;
 uint8_t channel2 = 3;

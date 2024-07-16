@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /steams_mqtt
+slug: /respeaker_steams_mqtt
 last_update:
   date: 7/1/2024
   author: Jessie

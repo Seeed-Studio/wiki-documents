@@ -88,7 +88,7 @@ last_update:
 
 请将下面的代码粘贴到Arduino IDE中，并将其上传到Seeed Studio XIAO nRF52840。
 
-```c++
+```cpp
 #include <ArduinoBLE.h>
 
 BLEService ledService("19B10000-E8F2-537E-4F6C-D104768A1214"); // Bluetooth® Low Energy LED Service
@@ -163,7 +163,7 @@ void loop() {
 
 这个例子实现的关键是下面的段落。
 
-```c++
+```cpp
   while (central.connected()) {
         if (switchCharacteristic.written()) {
           if (switchCharacteristic.value()) {   
@@ -229,7 +229,7 @@ void loop() {
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-BLE/6.png" /></div>
 
-```c++
+```cpp
 //Radar_with_XIAOBLE_example
 
 #include <ArduinoBLE.h>
@@ -308,7 +308,7 @@ void loop() {
 
 在这个例子中，向移动设备发送数据的函数是`setValue()`。如果你想实时显示数据，你需要将`BLENotify`添加到下面的代码中。最后一个参数20表示可以发送的数据的最大长度。
 
-```c++
+```cpp
 BLEStringCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 20);
 ```
 
@@ -363,7 +363,7 @@ BLEStringCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A12
 
 请选择一个不需要连接任何设备的XIAO nRF52840，直接上传下面的程序。
 
-```c++
+```cpp
 #include <ArduinoBLE.h>
 
 BLEService ledService("19B10000-E8F2-537E-4F6C-D104768A1214"); // Bluetooth® Low Energy LED Service
@@ -450,7 +450,7 @@ void loop() {
 
 为此目的，与扩展板连接的XIAO上传以下程序。
 
-```c++
+```cpp
 #include <ArduinoBLE.h>
 #include <U8x8lib.h>
 #include <Wire.h>

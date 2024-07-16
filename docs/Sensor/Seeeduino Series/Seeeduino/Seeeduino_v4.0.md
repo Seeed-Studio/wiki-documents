@@ -265,7 +265,7 @@ Connect your ESP8266 WiFi module to the Seeeduino board as follows (See the phot
 **2.** Open the Arduino IDE
 **3.** Upload a blank program to your board, or make sure that the program it has does not user any Serial functions.
 
-```C++
+```cpp
 void setup()
 {
 
