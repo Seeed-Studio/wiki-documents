@@ -20,7 +20,7 @@ Seeed Studio XIAO nRF52840 (Sense) 具有丰富的接口。 有 **11 个数字 I
 
 将按钮连接到引脚 D6，将 LED 连接到引脚 D10。然后上传以下代码以使用按钮控制 LED 的开/关。
 
-```c++
+```cpp
 const int buttonPin = 6;     // pushbutton connected to digital pin 6
 const int ledPin =  10;      // LED connected to digital pin 10
  
@@ -82,7 +82,7 @@ void loop() {
 
 将电位计连接到引脚 A5，将 LED 连接到引脚 D10。然后上传以下代码，通过旋转电位器旋钮来控制LED的闪烁间隔。
 
-```c++
+```cpp
 const int sensorPin = 5;
 const int ledPin =  10; 
 void setup() {
@@ -108,7 +108,7 @@ void loop() {
 ## 串行
 使用 Serial1 通过 GPIO 而不是 USB 使用 UART。您也可以同时使用两者。 使用引脚 D6 作为 UART 的 TX 引脚，使用引脚 D7 作为 UART 的 RX 引脚来发送“Hello World！”消息。
 
-```c++
+```cpp
 void setup() {
     Serial1.begin(115200);
     while (!Serial1);

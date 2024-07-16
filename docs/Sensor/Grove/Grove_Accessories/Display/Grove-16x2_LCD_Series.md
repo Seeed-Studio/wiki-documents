@@ -162,7 +162,7 @@ The first version of Grove - 16 x 2 LCD series does not have a built-in pull-up 
 in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
-```C++
+```cpp
 #include <Wire.h>
 #include "rgb_lcd.h"
 

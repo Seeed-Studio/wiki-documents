@@ -186,7 +186,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 
 #include "LTC2941.h"
 
@@ -242,7 +242,7 @@ The library file may be updated. This code may not be applicable to the updated 
 If every thing goes well, when you open the Serial Monitor and tap any key the press the send button , it may show as below:
 :::
 
-```C++
+```cpp
 LTC2941 Raw Data
 1439.96C,399.99mAh,100.00%
 1439.96C,399.99mAh,100.00%
@@ -255,7 +255,7 @@ LTC2941 Raw Data
 
 In the demo, we use a 400mAh battery, so you can see the results `1439.96mC,399.99mAh,100.00%`. The percentage of remaining battery is valid only after you set the battery capacity. You can change the battery capacity at the code line 21,
 
-```C
+```cpp
 ltc2941.setBatteryFullMAh(400); // set the battery capacity here
 ```
 

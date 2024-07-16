@@ -131,7 +131,7 @@ K1连接到按钮上，当按键打开时，**SIG1**会被R2下拉，因此**SIG
 - **步骤 2.** 参考[如何安装库](https://wiki.seeedstudio.com/How_to_install_Arduino_Library)来为Arduino安装库。
 - **步骤 3.** 打开Arduino IDE并创建一个新文件，然后将以下代码复制到新文件中。
 
-```c++
+```cpp
 /**
  * This is an exmaple of the Grove - Mech Keycap.
  * Every press of the key will change the color the SK6805 RGB LED. The SK6805 is a NeoPixel compatible chip.

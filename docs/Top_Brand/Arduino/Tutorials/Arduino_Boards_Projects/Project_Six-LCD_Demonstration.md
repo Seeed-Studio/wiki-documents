@@ -29,7 +29,7 @@ Now it is time to demonstrate the LCD module and matching Grove units. With the 
 
 _**Now upload the following Arduino sketch:**_
 
-```c++
+```cpp
 // Project Six - LCD demonstration
 //
 

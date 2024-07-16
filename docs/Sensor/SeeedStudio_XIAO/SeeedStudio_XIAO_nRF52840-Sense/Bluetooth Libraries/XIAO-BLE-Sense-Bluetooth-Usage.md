@@ -88,7 +88,7 @@ In this example, we are going to connect the Seeed Studio XIAO nF52840 (Sense) a
 
 Please paste this code below into the Arduino IDE and upload it to the Seeed Studio XIAO nRF52840.
 
-```c++
+```cpp
 #include <ArduinoBLE.h>
 
 BLEService ledService("19B10000-E8F2-537E-4F6C-D104768A1214"); // Bluetooth® Low Energy LED Service
@@ -163,7 +163,7 @@ void loop() {
 
 The key to the implementation of this example is the following paragraph.
 
-```c++
+```cpp
   while (central.connected()) {
         if (switchCharacteristic.written()) {
           if (switchCharacteristic.value()) {   
@@ -228,7 +228,7 @@ Please open the example code in the library and upload it to Seeed Studio XIAO n
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO-BLE/6.png" /></div>
 
-```c++
+```cpp
 //Radar_with_XIAOBLE_example
 
 #include <ArduinoBLE.h>
@@ -307,7 +307,7 @@ void loop() {
 
 In this example, the function that sends data to the mobile device is `setValue()`. If you want to get a real time display of the data you need to add `BLENotify` to this code below. The last parameter, 20, indicates the maximum length of data you can send.
 
-```c++
+```cpp
 BLEStringCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLENotify, 20);
 ```
 
@@ -361,7 +361,7 @@ Before you start, please be prepared to do the following.
 
 Please select one of the XIAO nRF52840, which does not require any device to be connected, and upload the program below directly.
 
-```c++
+```cpp
 #include <ArduinoBLE.h>
 
 BLEService ledService("19B10000-E8F2-537E-4F6C-D104768A1214"); // Bluetooth® Low Energy LED Service
@@ -448,7 +448,7 @@ Put the Seeed Studio XIAO nRF52840 on the expansion board.
 
 And for this purpose the XIAO with the extension board connected uploads the following procedure.
 
-```c++
+```cpp
 #include <ArduinoBLE.h>
 #include <U8x8lib.h>
 #include <Wire.h>

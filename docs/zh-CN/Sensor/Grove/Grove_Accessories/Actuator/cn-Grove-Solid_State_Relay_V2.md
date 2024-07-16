@@ -151,7 +151,7 @@ Grove - 固态继电器 V2
 
 - **步骤 1.** 打开 Arduino IDE 并创建一个新文件，您可以直接点击代码块右上角的 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) 图标，将以下代码复制到 Arduino IDE 中的新草图中。
 
-```c++
+```cpp
 #include <Arduino.h>
 uint8_t pin = 7;
 void setup() {

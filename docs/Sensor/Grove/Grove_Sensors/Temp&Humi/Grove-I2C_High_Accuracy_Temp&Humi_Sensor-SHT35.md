@@ -149,7 +149,7 @@ If we don't have Grove Base Shield, We also can directly connect this module to 
 
     3. Or, you can just click the icon<div><img width="{1000}" src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg" /></div> in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include "Seeed_SHT35.h"
 
 
@@ -223,7 +223,7 @@ void loop()
      If every thing goes well, when you open the Serial Monitor , it may show as below:
 :::
 
-```C++
+```cpp
 serial start!!
 =>
 temperature =24.10

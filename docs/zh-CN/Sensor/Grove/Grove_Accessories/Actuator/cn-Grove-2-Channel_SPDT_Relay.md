@@ -127,7 +127,7 @@ Grove - 2通道单刀双掷（SPDT）继电器具有两个单刀双掷开关。�
 
 - **步骤 1.** 打开Arduino IDE并创建一个新文件，然后将以下代码复制到新文件中。
 
-```c++
+```cpp
 #include <Arduino.h>
 uint8_t channel1 = 7;
 uint8_t channel2 = 8;

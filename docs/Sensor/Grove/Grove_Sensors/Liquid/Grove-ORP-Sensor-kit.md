@@ -79,7 +79,7 @@ An Oxidation Reduction Potential (ORP) Sensor measures the activity of oxidizers
 
 
 #### Software Code
-```C++
+```cpp
 #define VOLTAGE 5.00    //system voltage
 #define OFFSET 0        //zero drift voltage
 #define LED 13         //operating instructions

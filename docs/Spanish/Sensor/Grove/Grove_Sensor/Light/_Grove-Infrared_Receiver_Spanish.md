@@ -97,7 +97,7 @@ Si no tienes la Shield Base - Grove, puedes conectar directamente el módulo Gro
 
 O puedes abrir un nuevo sketch y copia el siguiente código en tu IDE de Arduino.
 
-```c++
+```cpp
 
 #include <IRSendRev.h>
 

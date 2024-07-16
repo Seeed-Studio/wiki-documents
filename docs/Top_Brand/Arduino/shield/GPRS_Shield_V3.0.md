@@ -62,7 +62,7 @@ Please link to the documentation of [GPRS Shield V2.0](https://wiki.seeedstudio.
 
 A1: Here is the code.
 
-```c++
+```cpp
 #include <SoftwareSerial.h>
 
 unsigned char buffer[64]; // buffer array for data recieve over serial port

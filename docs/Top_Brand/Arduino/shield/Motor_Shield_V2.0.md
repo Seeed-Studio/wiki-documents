@@ -378,7 +378,7 @@ Here we will show you how this Motor Shield works via a simple demo.  First of a
 
 Copy below code to Arduino IDE and upload it to Seeeduino V4, then you will find your stepper move.
 
-```CPP
+```cpp
 /*
  * Stepper test for Seeed Motor Shield V2
  * loovee @ 15 Mar, 2016
@@ -493,7 +493,7 @@ A2: There is a pin conflict between Motor shield and SD card shield in digital p
 - Step 1.Stack the SD card shield to the Arduino.
 - Step 2.Modify the library of Motordriver.h as follows.
 
-```CPP
+```cpp
 /******Pins definitions*************/
 #define MOTORSHIELD_IN1    8
 #define MOTORSHIELD_IN2    7

@@ -185,7 +185,7 @@ Before we get started developing a sketch, let's look at the available functions
 
 5. `Serial.print(data.confidence)` - The **struct** format can not be directly used to print, it should point to the specific type which is defined in the head file.
 
-```C
+```cpp
 typedef struct
 {
     uint16_t x;

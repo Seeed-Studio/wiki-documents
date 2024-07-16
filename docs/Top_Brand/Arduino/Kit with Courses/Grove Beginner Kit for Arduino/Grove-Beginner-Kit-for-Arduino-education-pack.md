@@ -58,7 +58,7 @@ Please follow the same color line to connect each sensor on the board, put the P
 
 **Code**
 
-```CPP
+```cpp
 #define PIR_MOTION_SENSOR 2//Use pin 2 to receive the signal from the module
 
 int BuzzerPin = 5;     // set D5 as buzzer
@@ -134,7 +134,7 @@ Please connect the fan grove cable to D7, Servo grove cable to D3.
 :::
 **Code**
 
-```CPP
+```cpp
 #include <Servo.h>
 
 Servo myservo;  // create servo object to control a servo
@@ -227,7 +227,7 @@ This is controller botton function.
 
 **Code**
 
-```CPP
+```cpp
 #include <IRremote.h>
 #include <Servo.h>
 

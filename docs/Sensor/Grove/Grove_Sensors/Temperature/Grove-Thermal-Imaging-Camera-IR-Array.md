@@ -89,7 +89,7 @@ If it is your first time playing Wio Terminal and not sure which interface to pl
 
 **Software Code 1**
 
-```C++
+```cpp
 /*
     Output the temperature readings to all pixels to be read by a Processing visualizer
 */
@@ -286,7 +286,7 @@ Upload the software code 1 above into your Arduino IDE and open the **Serial Por
 
 **Software Code 2**
 
-```C++
+```cpp
 #include <Wire.h>
 #include "MLX90641_API.h"
 #include "MLX9064X_I2C_Driver.h"

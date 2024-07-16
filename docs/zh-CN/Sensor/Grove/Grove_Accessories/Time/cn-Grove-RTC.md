@@ -95,7 +95,7 @@ RTC模块基于DS1307时钟芯片，支持I2C协议。它使用锂电池（CR122
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-RTC/img/library%20example.jpg" /></div>
 
-```c++
+```cpp
 #include <Wire.h>
 #include "DS1307.h"
 

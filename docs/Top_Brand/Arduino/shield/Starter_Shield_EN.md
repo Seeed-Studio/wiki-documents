@@ -326,7 +326,7 @@ This function is used to read data from a specified address of EEPROM.
 
 Example：
 
-```C++
+```cpp
 temp_data[i] = EEPROM.read(i);
 ```
 
@@ -338,7 +338,7 @@ temp_data[i] = EEPROM.read(i);
 
 Example:
 
-```C++
+```cpp
 if(temp_data[i] != mark[i])
     {
       EEPROM.write(0,mark[0]);
@@ -362,7 +362,7 @@ if(temp_data[i] != mark[i])
 
 Example:
 
-```C++
+```cpp
 if(flag_clockpoint)
       {
         tm1636.point(POINT_ON);
@@ -377,7 +377,7 @@ Create a character flow with the content of DispData[].
 
 Example:
 
-```C++
+```cpp
 tm1636.display(disp);
 ```
 
@@ -398,7 +398,7 @@ This function sweep 4 LEDs in the direction you choose.
 
 Example:
 
-```C++
+```cpp
 /*Run the 4 LEDs from left to right*/
 ticktockshield.runLED(1,LEFT_TO_RIGHT);
 ```
@@ -417,7 +417,7 @@ The Function is used to turn on or off an individual LED.
 
 Example:
 
-```C++
+```cpp
 void TickTockShield::turnOffLED()
 {
  setLed(LOW,LED_CLOCK_ADJUST);
@@ -431,7 +431,7 @@ void TickTockShield::turnOffLED()
 Let the buzzer buzz.
 Example:
 
-```C++
+```cpp
 /*It will sound alarm for a minute untill the "MENU" key is pressed*/
     if(ticktockshield.isAlarmEnable())
     {
@@ -451,7 +451,7 @@ Set the alarm time.
 
 Example:
 
-```C++
+```cpp
 ticktockshield.setAlarm(12,0);//Yes,the alarm clock is initialized to 12:00 and the data in the EEPROM.
 ```
 
@@ -459,7 +459,7 @@ ticktockshield.setAlarm(12,0);//Yes,the alarm clock is initialized to 12:00 and 
 Read the preset alarm value from EEPROM and store them into given variables, including the enable flag of the alarm.
 Example:
 
-```C++
+```cpp
 if(isFirstLoad())//if it is the first time to load the firmware?
  {
   ticktockshield.setAlarm(12,0);
@@ -471,7 +471,7 @@ if(isFirstLoad())//if it is the first time to load the firmware?
 Get the reading from temperature sensor.
 Example:
 
-```C++
+```cpp
 /*Read the ambient temperature and display on the digital tube.*/
  ticktockshield.displayTemperature(ticktockshield.getTemperature());
 ```
@@ -480,14 +480,14 @@ Example:
 Display temperature value(negative value supported) on the 7 segment display. The character C represents celsius degrees.
 Example:
 
-```C++
+```cpp
  ticktockshield.displayTemperature(ticktockshield.getTemperature());
 ```
 
 **12. ticktockshield.scanKey();**
 Find out which key gets pressed. Return the pin number of the key pressed. And return "-1" if no keys is pressed.
 
-```C++
+```cpp
 if((flag_scan_again)&amp;&amp;(KEY_MENU == ticktockshield.scanKey()))
       {
         ticktockshield.writeToAdjustArea();
@@ -519,7 +519,7 @@ Display time on 7 segment Display.
 
 Example:
 
-```C++
+```cpp
 if(ticktockshield.isAlarmEnable())
       {
         tm1636.point(POINT_ON);

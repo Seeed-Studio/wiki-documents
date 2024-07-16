@@ -64,7 +64,7 @@ Click on the Install button and close this page when the installation status say
 
 - **Step 3**. Copy the following codes to Thonny.
 
-```c++
+```cpp
 from machine import Pin, Timer
  
 led = Pin(25, Pin.OUT)

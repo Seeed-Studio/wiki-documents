@@ -107,7 +107,7 @@ Platforms Supported
 
 - **Step 2**. Copy the code into Arduino IDE and upload.
 
-```C++
+```cpp
 #include "TFLidar.h"
 
 #define USETFMINI
@@ -169,7 +169,7 @@ void loop() {
       You could delete **Line 41** to **Line 43** of the demo code if only the **Distance** is required:
 :::
 
-```C++
+```cpp
 SERIAL.print("strength = ");
 SERIAL.print(SeeedTFLidar.get_strength()); //output signal strength value
 ```
@@ -208,7 +208,7 @@ SERIAL.print(SeeedTFLidar.get_strength()); //output signal strength value
 
 #### Software
 
-```C++
+```cpp
 #include"seeed_line_chart.h" //include the library
 #include "TFLidar.h"
 #define LINE_DIS 0X00

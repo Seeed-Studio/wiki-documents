@@ -35,7 +35,7 @@ The final project in our series may seem complex, but is quite simple. We use th
 
  _**Now upload the following Arduino sketch:**_
 
-```c++
+```cpp
 // Project Eight - Thermostat
 //
 

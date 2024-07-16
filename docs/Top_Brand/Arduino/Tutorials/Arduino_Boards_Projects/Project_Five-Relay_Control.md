@@ -34,7 +34,7 @@ The Arduino's D6 pin sends a signal to the Relay on the D1 connector.  The Relay
 
 _**Now upload the following Arduino sketch:**_
 
-```c++
+```cpp
 // Project Five - Relay Control
 //
 

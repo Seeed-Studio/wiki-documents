@@ -237,7 +237,7 @@ Charge status pin and positive pin of the battery had beed connect to A4 and A5,
 
 Copy and upload the below code to detect the battery status.
 
-```c++
+```cpp
 // battey of Seeeduino LoRaWAN
 
 const int pin_battery_status  = A5;
@@ -356,7 +356,7 @@ After both of the sketch is well uploaded, open the serial monitor of the receiv
 * Step 4. Download [DHT Library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/DHT.zip) and unzip to arduino library folder.
 * Step 5. Copy below code to arduino IDE and upload.
 
-```c++
+```cpp
 
 #include <LoRaWan.h>
 #include "DHT.h"
@@ -450,7 +450,7 @@ void loop(void)
 * Step 1. Please refer to [User Manual](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/res/RHF-UM01649-IoT-Discovery-User-Manual-seeed-v2.1.pdf) Session 3.2.3 to setup the gateway.
 * Step 2. For seeeduino Lorawan, Please open your Arduino IDE and click on **File > Examples > LoRaWAN > OTAA** and refer the code.
 
-```c++
+```cpp
 #include <LoRaWan.h>
 
 
@@ -537,7 +537,7 @@ void loop(void)
 
 * Step 1. Copy below code you Seeeduino LoRaWAN W/GPS.
 
-```c++
+```cpp
 void setup()
 {
     Serial2.begin(9600);
@@ -565,7 +565,7 @@ void loop()
 
 Thanks for **Todd Krein** for sharing the example in Github. Please download the [TinyGPS++ library](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/TinyGPSPlus-master.zip) and then copy below code to Seeeduino Lorawan.
 
-```c++
+```cpp
 #define USE_GPS 1
  
 #include "LoRaWan.h"
@@ -746,7 +746,7 @@ void dummy(void)
 
 If you want to check version of you board, please upload below code to your board.
 
-```c++
+```cpp
 void setup()
 {
     Serial1.begin(9600);
