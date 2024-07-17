@@ -1,14 +1,14 @@
 ---
 description: This article introduces how to use the `Modbus Connector` of `FIN Framwork`.
 
-title: reComputer R1000 with FIN to use modbus TCP
+title: reComputer R1000 with FIN to use modbus TCP/RTU
 keywords:
   - Edge Controller
   - reComputer R1000
   - FIN
-  - ModbusTCP
+  - ModbusTCP/RTU
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /reComputer_r1000_fin_modbus_tcp
+slug: /reComputer_r1000_fin_modbus_tcp_and_rtu
 last_update:
   date: 07/15/2024
   author: ShuishengPeng
@@ -17,7 +17,7 @@ last_update:
 ## Introduction 
 FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
 
-This article introduces how to use the `Modbus Connector` of `FIN Framwork`, which mainly includes three aspects: creating a `FIN Framwork` project, configuring the `Modbus Connector`, and adding data points to `Equip`.
+This article introduces how to use the `Modbus Connector` of `FIN Framwork`, the use of Modbus TCP/RTU in FIN Framwork was explained in detail. which mainly includes three aspects: creating a `FIN Framwork` project, configure `serial port number`, configuring the `Modbus Connector`, and adding data points to `Equip`.
 
 ## Getting Start
 
@@ -45,12 +45,18 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 * Regarding how to install FIN Framwork, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/).
+* Regarding how to use the modbus function of reComputer R1000, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_use_rs485_modbus_rtu/).
 * Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools.
 ### Hardware Configuration
 
 For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000 to a switch to ensure that they are on the same network segment.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/r1000_connection.png" alt="pir" width="500" height="auto" /></div>
+
+For ModbustRTU, we used an rs485 to USB module to connect the reComuputer R1000 with the W10 pc.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/hardwareconnection.png" alt="pir" width="700" height="auto" /></div>
+
 
 ### Create New Project
 **Step 1**: Click the `Create` button in the lower left corner of the homepage, and a new pop-up window will appear. The pop-up window mainly has three attributes that need to be filled in:
@@ -64,7 +70,7 @@ For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/modbus_tcp_2.gif" /></center>
 
-### Configure `Modbus Connector`
+### Configure `Modbus Connector` for Modbus TCP
 
 **Step 1**: Open `Modbus Connector`. Click `Settrings => Ext` and find `Modbus`. At this time, `Modbus` is marked in red. Click `Enable` and you can see that the `Modbus` mark turns green, indicating that the `Modbus Connector` has been successfully opened. Enter `DB Builder` again and you can see that there is already a `Modbus` option.
 
@@ -75,8 +81,17 @@ For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000
   - ModbusSlave: this would be the slave of the modbus device being connected (default is 1)
   - Existing Register Map: If the user already configured a Modbus connector, they would see available registers here to choose from or create a new one with the next property ModbusRegMapUri.
   - ModbusRegMapUri: this is where the user would specify the name of the register map to link with this connector. Replace "xxx" with whatever the name of the register map is.
-  - Uri: this is where the uri of the modbus connector would be specified.
-   
+  - Uri: this is where the uri of the modbus connector would be specified.The format of URI is as shown in the table:
+   <div class="table-center">
+
+  | Protocol                                              | URI setup        | Example    | Notes |
+  | ------------------------------------------------------------ | ----------- | -------------- | --------- |
+  | TCP/IP | `modbus-tcp://host:port/` | `modbus-tcp://10.0.0.17/` | Default port is 502, can be omitted if standard       |
+  | RTU over TCP/IP  | `modbus-rtutcp://host:port/`  | `modbus-rtutcp://192.168.1.120:9001/`  | Default port is 502, can be omitted if standard      |
+  | RTU over RS-485  | `modbus-rtu://<port>-<baud>-<dataBits>-<parity>`  | `modbus-rtu://serial0-9600-8n1-none`  |       |
+
+  </div>
+
 In our example, we specified "r1000_demo" as our register map. Then added our IP to the device in the Uri.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/modbus_tcp_4.gif" /></center>
@@ -147,6 +162,61 @@ The system will create a new `r1000_demo.csv` file in the `opt/finFramework_5.1.
 **Step 5**: Communication test. After adding the description information of the register, communication can be carried out. Here we use `ModbusMechanic` as the Modbus slave. Click `Modbus => Ping` and you can see that `Status` changes to `OK`, indicating that the communication is normal.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/modbus_tcp_7.gif" /></center>
+
+
+### Configure `Modbus Connector` for Modbus RTU
+#### Configure serial port
+The script that needs to be executed is as follows:
+```shell
+## Turn off FIN service
+sudo systemctl stop fin
+## After downloading the config file, place it in /opt/finFramework_5.1.6.55/etc/finStackSerial/
+sudo cp ~/config.props  /opt/finFramework_5.1.6.55/etc/finStackSerial/
+## Modify the config.props file to: serialPorts=/dev/ttyAMA30, /dev/ttyAMA31, /dev/ttyAMA32
+sudo nano /opt/finFramework_5.1.6.55/etc/finStackSerial/config.props
+## Restart the FIN service, wait for a while and then use a browser to open FIN
+sudo systemctl restart fin
+
+```
+**Step 1**: Turn off FIN service, then download [config file](https://drive.google.com/file/d/1j1aGGSsGPjGCYfUGcXTqL2XGP2EuqFw2/view?usp=share_link) and save it to `/opt/finFramework_5.1.6 .55/etc/finStackSerial/` directory
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/RTU_1.gif" /></center>
+
+**Step 2**: Modify config.props to:
+```shell
+serialPorts=/dev/ttyAMA30, /dev/ttyAMA31, /dev/ttyAMA32
+```
+After the modification is completed, restart the FIN service
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/RTU_2.gif" /></center>
+
+**Step 3**：Click on `Folio => launch`,and insert the following query:`serialPorts()`, The result will show which name has to be used for your specific port.The port is not the name of the physical port, but there is a match between the physical ports of the device and the name of the port to be used like `serial0`, `serial1` ...
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/RTU_3.gif" /></center>
+
+#### Configure Modbus RTU
+
+**Step 1**: Open `Modbus Connector`. Click `Settrings => Ext` and find `Modbus`. At this time, `Modbus` is marked in red. Click `Enable` and you can see that the `Modbus` mark turns green, indicating that the `Modbus Connector` has been successfully opened. Enter `DB Builder` again and you can see that there is already a `Modbus` option.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/modbus_tcp_3.gif" /></center>
+
+**Step 2**: Add a new Modbus connection. Click `Modbus => Add`.In our example, we specified "r1000_demo_rtu" as our register map. Then added our serial port to the device in the Uri.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/RTU_4.gif" /></center>
+
+**Step 3**: Add a new `Register Maps`. Click `Register Maps => Add`, enter `Name`, which needs to be consistent with the name of `ModbusRegMapUri` in the second step, and finally click `ADD`.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/RTU_5.gif" /></center>
+
+The system will create a new `r1000_demo_rtu.csv` file in the `opt/finFramework_5.1.6.55/var/proj/recomputer_R1000_demo/data/modbus/` directory. This file describes the Modbus register information we need to read.
+
+**Step 4**: Add the register information to be read. `Modbus Connector` exists as a Modbus master. It will read the registers of the slave. We need to configure the register information to be read. Click `r1000_demo_rtu`, you can see that there is a description of `ping` by default, this is a must. We continue to add new register information and click `Register Maps => r1000_demo_rtu => Add`.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/RTU_6.gif" /></center>
+
+**Step 5**: Communication test. After adding the description information of the register, communication can be carried out. Here we use `ModbusMechanic` as the Modbus slave. Click `Modbus => Ping` and you can see that `Status` changes to `OK`, indicating that the communication is normal.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/RTU_7.gif" /></center>
+
 
 ### Add data points to `Equip Tree`
 
