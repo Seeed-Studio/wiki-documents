@@ -47,7 +47,7 @@ First,we can test it by computer.
 
 -   1) Open Arduino IDE, and paste the code below.
 
-```CPP
+```cpp
  
 #include <SoftwareSerial.h>
  

@@ -166,7 +166,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
-```C++
+```cpp
 #include "arduino_bma456.h"
 
 uint32_t step = 0;
@@ -204,7 +204,7 @@ void loop(void)
      If every thing goes well, when you open the Serial Monitor and walk with this sensor on or move it to simulated walking posture , it may show as below:
 :::
 
-```C++
+```cpp
 BM
 Step: 0
 BMA456 Step Counter

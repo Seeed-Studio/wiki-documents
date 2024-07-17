@@ -159,7 +159,7 @@ Connect the weight sensor to the amplifier as the picture depicts below.
 
 Copy and paste the demo code below to Arduino IDE and upload it.
 
-```c++
+```cpp
 void setup()
 {
     Serial.begin(9600);

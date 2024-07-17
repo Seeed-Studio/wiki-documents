@@ -147,7 +147,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 **Step 1.** Copy the code below, and download it to your arduino. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```C++
+```cpp
 /*
   AnalogReadSerial
 
@@ -182,7 +182,7 @@ void loop() {
 If every thing goes well, when you open the Serial Monitor it may show as below:
 :::
 
-```C++
+```cpp
 678
 663
 631

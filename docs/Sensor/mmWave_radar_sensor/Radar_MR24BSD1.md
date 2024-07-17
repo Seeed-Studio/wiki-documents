@@ -278,7 +278,7 @@ The code in this example is as follows.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/4.png"/></div>
 
-```c++
+```cpp
 //Human_State_Data_Decoding_Example.ino
 
 #include <sleepbreathingradar.h>
@@ -347,7 +347,7 @@ The code in this example is as follows.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/1.png"/></div>
 
-```c++
+```cpp
 //Physical_Parameters_Example.ino
 
 #include <sleepbreathingradar.h>
@@ -403,7 +403,7 @@ The code in this example is as follows.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/6.png"/></div>
 
-```c++
+```cpp
 //Sleep_Breathing_Data_Decoding.ino
 
 #include <sleepbreathingradar.h>

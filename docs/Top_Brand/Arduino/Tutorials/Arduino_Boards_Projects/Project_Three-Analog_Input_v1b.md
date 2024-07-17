@@ -31,7 +31,7 @@ The Potentiometer module produces an analog voltage on its SIG output, which is 
 
 _**Now upload the following Arduino sketch:**_
 
-```c++
+```cpp
 // Project Three - Analog Input
 //
 

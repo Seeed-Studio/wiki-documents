@@ -111,7 +111,7 @@ It has equipped with a fully calibrated digital I2C interface, so there are slig
 
 Once it is all set up, we can upload the sample code to see if it works:
 
-```C++
+```cpp
 // Example testing sketch for various DHT humidity/temperature sensors
 // Written by ladyada, public domain
 #include "Wire.h"

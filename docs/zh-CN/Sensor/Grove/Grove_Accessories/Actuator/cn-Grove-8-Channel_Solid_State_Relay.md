@@ -181,7 +181,7 @@ last_update:
 
 或者，您可以直接点击代码块右上角的图标 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) 将以下代码复制到Arduino IDE中的一个新草图中。
 
-```c++
+```cpp
 #include <multi_channel_relay.h>
 
 #define USE_8_CHANNELS (1)
@@ -303,7 +303,7 @@ void loop()
      如果一切顺利，您将看到结果。同时，您会看到板载LED灯交替亮起和熄灭。
 :::
 
-```c++
+```cpp
 Scanning...
 I2C device found at address 0x11 !
 Found 1 I2C devices
@@ -378,7 +378,7 @@ Channel 2 on
 
 如果您想更改地址，您需要在使用之前设置地址。例如，我们想要将其更改为0x2f。我们可以使用以下代码。
 
-```C++
+```cpp
 #include <multi_channel_relay.h>
 
 Multi_Channel_Relay relay;

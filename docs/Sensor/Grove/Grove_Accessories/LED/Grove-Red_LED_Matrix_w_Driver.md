@@ -158,7 +158,7 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 
 
 
-```C++
+```cpp
 
 
 #include <Wire.h>
@@ -221,7 +221,7 @@ Are you willing to let the LED matrix to display the emoji? Now, it is your turn
 - **Step 5.** Create the new '.ino' file under the same folder with other LED Matrix examples and copy below code.
 
 
-```C++
+```cpp
 
 #include "Grove_LED_Matrix_Driver_HT16K33.h"
 #include <Wire.h>

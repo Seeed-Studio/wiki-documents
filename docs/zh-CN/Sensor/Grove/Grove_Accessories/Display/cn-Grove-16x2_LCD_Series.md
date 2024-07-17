@@ -156,7 +156,7 @@ Grove - 16 x 2 LCD系列的第一个版本没有内置上拉电阻，也没有�
 即可将以下代码复制到 Arduino IDE 中的一个新草图中。
 
 
-```C++
+```cpp
 #include <Wire.h>
 #include "rgb_lcd.h"
 

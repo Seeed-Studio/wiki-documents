@@ -132,7 +132,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 - **Step 2.** In the /example/ folder, you can find the demo code. Here we take the **Grove_10A_Current_Sensor** for instance. Just click the [Grove_10A_Current_Sensor.ino](https://github.com/Seeed-Studio/Grove_Current_Sensor/blob/master/examples/Grove_10A_Current_Sensor/Grove_10A_Current_Sensor.ino) to open the demo. Or you can copy the following code:
 
-```C++
+```cpp
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
   #define RefVal 3.3
   #define SERIAL SerialUSB
@@ -226,14 +226,14 @@ Due to the presence of zero offset, the sensor will also have a reading when the
 
 Line 19:
 
-```C++
+```cpp
 float Vref = 322;  
 //Vref is zero drift value, you need to change this value to the value you actually measured before using it.
 ```
 
 In the demo code, we set the Vref to 322, however, the zero offset value varies from board to board. As you know, the board we use in this demo is 346.68. So let's modify the Line 21:
 
-```C++
+```cpp
 float Vref = 346.68;
 ```
 

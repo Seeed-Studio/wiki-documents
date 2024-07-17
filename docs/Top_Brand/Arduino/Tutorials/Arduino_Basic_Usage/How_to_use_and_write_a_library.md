@@ -19,7 +19,7 @@ It’ very easy to use a Library, here we introduce how to write a Library.
 
 Then let’s go, we write a simple calculate Library here. Include the following function:
 
-```c++
+```cpp
 int sum(int a, int b);
 int minus(int a, int b);
 ```
@@ -28,7 +28,7 @@ Yes, It’s very simple, it’s obvious that the first function return the sum o
 Firstly, we built a folder named Calc, it’s also the name of the Library.
 Then we built a Calc.h file, and fill it:
 
-```c++
+```cpp
 #ifndef __CALC_H__
 #define __CALC_H__
 
@@ -56,7 +56,7 @@ int minus(int a, int b)
 
 To help users to understand the use of the Library, we built an examples folder. And there’s a demo named cale_test, code folowing:
 
-```c++
+```cpp
 // demo of calc library
 #include &lt;Calc.h&gt;
 
@@ -82,7 +82,7 @@ void loop()
 When using the Arduino IDE, you will see some library functions will be displayed in red, while others do not. Obviously, let the function name and the header file names as well as some macro definitions displayed in red makes the code look more beautiful, and easy to check for errors.
 To help us create this library can be displayed on the IDE into the red; you need to add a keyboards.txt file in Calc folder, keyboards.txt as follows:
 
-```c++
+```cpp
 #######################################
 # Syntax Coloring Map For Calc
 #######################################

@@ -48,7 +48,7 @@ last_update:
 
 安装完成后，复制以下代码并运行它。
 
-```c++
+```cpp
 #include <Wire.h>
 #include "MMA7660.h"
 MMA7660 accelemeter;

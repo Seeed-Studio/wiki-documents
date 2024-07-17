@@ -168,7 +168,7 @@ ___
       ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/ard2.jpg)
     3. 或者，您也可以直接点击代码块右上角的 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) 图标，将以下代码复制到Arduino IDE中的新草图中。
 
-```C++
+```cpp
 
 #include "PCA9685.h"
 #include <Wire.h>

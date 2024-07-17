@@ -187,7 +187,7 @@ Grove Vision AI Module Sensor 代表拇指大小的 AI 摄像头、已安装用�
 
    5. `Serial.print(data.confidence)` - **struct**格式不能直接用于打印，它应该指向头文件中定义的特定类型。
 
-```C
+```cpp
 typedef struct
 {
     uint16_t x;

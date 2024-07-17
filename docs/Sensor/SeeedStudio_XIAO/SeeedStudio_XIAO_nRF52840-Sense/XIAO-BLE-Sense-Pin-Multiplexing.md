@@ -20,7 +20,7 @@ Seeed Studio XIAO nRF52840 (Sense) has rich interfaces. There are **11 digital I
 
 Connect a pushbutton to Pin D6 and an LED to Pin D10. Then upload the following code to control the ON/OFF of LED using the pushbutton.
 
-```c++
+```cpp
 const int buttonPin = 6;     // pushbutton connected to digital pin 6
 const int ledPin =  10;      // LED connected to digital pin 10
  
@@ -82,7 +82,7 @@ void loop() {
 
 Connect a potentiometer to Pin A5 and an LED to Pin D10. Then upload the following code to control the blinking interval of the LED by rotating the potentiometer knob.
 
-```c++
+```cpp
 const int sensorPin = 5;
 const int ledPin =  10; 
 void setup() {
@@ -109,7 +109,7 @@ void loop() {
 Use Serial1 to use the UART via GPIO instead of USB. You can use both concurrently as well.
 Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message. 
 
-```c++
+```cpp
 void setup() {
     Serial1.begin(115200);
     while (!Serial1);

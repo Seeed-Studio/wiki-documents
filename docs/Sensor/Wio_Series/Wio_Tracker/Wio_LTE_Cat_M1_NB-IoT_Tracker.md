@@ -153,7 +153,7 @@ running up to 168MHZ
 - Step 6. Select Sketch-->Upload to upload the code to Wio_LTE.
 
 
-```c++
+```cpp
 
 #include <Seeed_ws2812.h>
 #include <ublox_sara_r4.h>
@@ -191,7 +191,7 @@ void loop() {
 - Step 7. Select Sketch-->Upload to upload the code to Wio LTE Cat NB1.
 - Step 8. Press **RST** button to enable the COM port.
 
-```c++
+```cpp
 
 #include <ublox_sara_r4_gnss.h>
 
@@ -214,7 +214,7 @@ void loop() {
 - Step 9. Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. We will see lat, lon info printed on screen.
 
-```C++
+```cpp
 $GNRMC,,V,,,,,,,,,,N*4D
 $GNVTG,,,,,,,,,N*2E
 $GNGGA,,,,,,0,00,99.99,,,,,,*56
@@ -253,7 +253,7 @@ $GNGLL,,,,,,V,N*7A
 - Step 7. Select Sketch-->Upload to upload the code to Wio_LTE.
 
 
-```C++
+```cpp
 // include the SD library:
 #include <SD.h>
 
@@ -354,7 +354,7 @@ void loop(void) {
 - Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. Open serial monitor, we will see below info on screen.
 
-```C++
+```cpp
 Initializing SD card...
 Card type: SDHC
 
@@ -377,7 +377,7 @@ Files found on the card (name, date and size in bytes):
 - Step 6. Select Sketch-->Upload to upload the code to Wio_LTE.
 
 
-```c++
+```cpp
 #include <ublox_sara_r4.h>
 #include <UART_Interface.h>
 
@@ -415,7 +415,7 @@ void loop() {
 
 - Step 7. Press **RST**, then you can see below info on screen.
 
-```c++
+```cpp
 AT+CSQ
 
 +CSQ: 99,99
@@ -449,7 +449,7 @@ AT+CSQ
 - Step 5. Keep COM Port blank.
 - Step 6. Select Sketch-->Upload to upload the code to Wio_LTE.
 
-```c++
+```cpp
 #include <ublox_sara_r4.h>
 
 Ublox_sara_r4 ublox = Ublox_sara_r4();
@@ -521,7 +521,7 @@ void loop() {
 
 - Step 7. Press **RST**, then you can see below info on screen.
 
-```c++
+```cpp
 [INFO] Begin...
 [INFO] Waitting for module to alvie...
 ...
@@ -549,7 +549,7 @@ void loop() {
 - Step 5. Keep COM Port blank.
 - Step 6. Select Sketch-->Upload to upload the code to Wio_LTE.
 
-```c++
+```cpp
 #include <ublox_sara_r4.h>
 
 Ublox_sara_r4 ublox = Ublox_sara_r4();
@@ -648,7 +648,7 @@ void loop() {
 - Step 5. Keep COM Port blank.
 - Step 6. Select Sketch-->Upload to upload the code to Wio_LTE.
 
-```c++
+```cpp
 #include <Arduino.h>
 
 #include <math.h>
@@ -745,7 +745,7 @@ void loop()
 - Step 5. Keep COM Port blank.
 - Step 6. Select Sketch-->Upload to upload the code to Wio_LTE.
 
-```c++
+```cpp
 #include <Arduino.h>
 
 #include <math.h>

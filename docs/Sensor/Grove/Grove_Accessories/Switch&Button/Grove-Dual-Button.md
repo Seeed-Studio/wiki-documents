@@ -70,7 +70,7 @@ interface.
 
 - **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```c++
+```cpp
  //set the corresponding notes with frequency
  #define NOTE_D0 0
  #define NOTE_D1 294

@@ -383,7 +383,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_ultrasonic.py
 
 ```
 
-```c++
+```cpp
 #include "Ultrasonic.h"
 
 Ultrasonic ultrasonic1(2);

@@ -113,7 +113,7 @@ Grove - 红外线发射器可以发送数据，而Grove - 红外线接收器将�
 
 **发送示例代码:**
 
-```c++
+```cpp
 /* send.ino Example sketch for IRLib2
  *  Illustrates how to send a code.
  */

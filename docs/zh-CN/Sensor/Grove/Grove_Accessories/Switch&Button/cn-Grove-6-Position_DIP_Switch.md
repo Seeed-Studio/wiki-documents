@@ -116,7 +116,7 @@ Grove - 6位DIP开关有6个单独的开关位置，使用I2C传输数据。它�
 
 或者，您只需点击代码块右上角的 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) 图标，即可将以下代码复制到Arduino IDE中的新草图中。
 
-```C++
+```cpp
 #include "Grove_Multi_Switch.h"
 
 GroveMultiSwitch mswitch[1];
@@ -248,7 +248,7 @@ void loop()
 如果一切顺利，您将得到结果。例如，默认开关是关闭-高电平，当您将**Switch6**切换到**ON**时，输出将是**POS 6: RAW - LOW ON**。
 :::
 
-```C++
+```cpp
 Grove Multi Switch
 ***** Device probe OK *****
 Grove 6-Position DIP Switch Inserted!
