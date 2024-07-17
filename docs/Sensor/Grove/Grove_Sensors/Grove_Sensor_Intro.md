@@ -14,10 +14,7 @@ last_update:
 
 Grove Sensor is a modular sensor introduced by Seeed Studio, and it is part of the Grove system. The Grove system uses a unified interface design, making it easy for users to quickly build various electronic projects. There are many types of Grove sensors, including but not limited to temperature sensors, humidity sensors, light sensors, gas sensors, and more.
 
-
-
-
-
+<div style={{textAlign:'center'}}><img src="https://i.imgur.com/0Nf6VH7.png" style={{width:1000, height:'auto'}}/></div>
 
 
 Overall, the Grove sensor system provides a convenient solution for electronics enthusiasts and developers, greatly simplifying the use of sensors and the development of projects.
@@ -417,7 +414,7 @@ We have various types of Grove sensors, including but not limited to temperature
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
-        <img src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Grove_Temperature_Sensor_View.jpg" style={{width:900, height:'auto'}}/>
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2017-11bazaar619115_1010200153.jpg" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>Grove - Temperature Sensor measure ambient temperature through a thermistor NCP18WF104F03RC which features high stability and high accuracy. </font>
@@ -952,184 +949,1508 @@ We have various types of Grove sensors, including but not limited to temperature
 
 
 
+### Gas
 
+#### Grove - Gas Sensor V2(Multichannel)
 
-<div class="title_container">
-    <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Sensors</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>We have different kinds of Grove sensors</font></div>
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/04.png" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Multichannel Gas Sensor V2 provides stable and reliable gases detecting function under the circumstances of any other four sorts of gases. It can detect a variety of gases, besides Carbon monoxide (CO), Nitrogen dioxide (NO2), Ethyl alcohol(C2H5CH), Volatile Organic Compounds (VOC), and etc. </font>
     </div>
 </div>
 
-<div class="intro_container">
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temp & Humi</font></div>
-            <a href="/Grove-Temperature-Humidity-Sensor-DH20" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a>,
-            <a href="/Grove-Temperature_and_Humidity_Sensor_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
-            <br/>
-            <a href="/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AHT20</font></span></a>,
-            <a href="/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HDC1000</font></span></a>
-            <br/>
-            <a href="/Grove-TempAndHumi_Sensor-SHT31" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT31 </font></span></a>,
-            <a href="/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT35 </font></span></a>,
-            <a href="/Grove-SHT4x" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SHT4x </font></span></a>
-            <br/>
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Multichannel-Gas-Sensor-V2/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Gas Sensor module
+
+The Grove - Gas Sensor module is useful for gas leakage detecting(in home and industry). It can detect LPG, i-butane, methane, alcohol, Hydrogen, smoke and so on. Measurements can be taken as soon as possible based on its fast response time. Also, the sensitivity can be adjusted by the potentiometer.
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">Grove - Gas Sensor(MQ2)</th>
+      <th class="table-trnobg">Grove - Gas Sensor(MQ3)</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/Twig-Gas_Sensor.bmp" style={{width:900, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ3/img/wiki.jpg" style={{width:900, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Gas-Sensor-MQ2.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-MQ3-Grove-Gas-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+        </tr>
+    </table>
+</div>
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">Grove - Gas Sensor(MQ5)</th>
+      <th class="table-trnobg">Grove - Gas Sensor(MQ9)</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/Twig-Gas_Sensor.bmp" style={{width:900, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar884389_3.jpg" style={{width:900, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Gas-Sensor-MQ5.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Gas-Sensor-MQ9.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+        </tr>
+    </table>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/Grove-Gas_Sensor-MQ2/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Gas Sensor(O₂)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/cover.jpg" style={{width:900, height:'auto'}}/>
     </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temperature</font></div>
-            <a href="/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808" target="_blank"><span><font color={'FFFFFF'} size={"2"}>I2C - MCP9808</font></span></a>
-            <br/>
-            <a href="/Grove-Thermal-Imaging-Camera-IR-Array" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Thermal Imaging</font></span></a>
-            <br/>
-            <a href="/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K" target="_blank"><span><font color={'FFFFFF'} size={"2"}>One Wire - MAX31850K</font></span></a>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"} >Multiple in one</font></div>
-            <a href="/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Temp/Humi/Pressure/Gas</font></span></a>
-            <br/>
-            <a href="/Grove_SEN5X_All_in_One" target="_blank"><span><font color={'FFFFFF'} size={"2"}>NOx/PM/VOC/RH/Temp</font></span></a>
-            <br/>
-            <a href="/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO2/Temp/Humi</font></span></a>,
-            <a href="/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931" target="_blank"><span><font color={'FFFFFF'} size={"2"}> More... </font></span></a>
-            <br/>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>AI-powered</font></div>
-            <a href="/Train-Deploy-AI-Model-Grove-Vision-AI" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Grove - Vision AI </font></span></a>
-            <br/>
-            <a href="/edge-impulse-vision-ai" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Fast Models Traning </font></span></a>
-            <br/>
-            <a href="/grove_gesture_paj7660/" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Grove - Smart IR Gesture </font></span></a>
-            <br/>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This Grove O2 sensor can be used to make a simple oxygen level detector and analyzer. It can measure O2 concentration within a range of 0 to 25% Vol and the max detecting concentration is 30% Vol. This sensor will be EOL soon. Please choose the newly upgraded O2 sensor. </font>
     </div>
 </div>
 
-<div class="intro_container">
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Soli Humidity</font></div>
-            <a href="/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant" target="_blank"><span><font color={'FFFFFF'} size={"2"}> One Probe Type</font></span></a>
-            <br/>
-            <a href="/Grove-Moisture_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Two Probe Type</font></span></a>
-            <br/>
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-ME2-O2-f20.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Gas_Sensor-O2/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Gas O₂ Sensor(MIX8410)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/products/101990680/101990680_preview-34.png" style={{width:900, height:'auto'}}/>
     </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Proximity</font></div>
-            <a href="/Grove-Time_of_Flight_Distance_Sensor-VL53L0X" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TOF</font></span></a>,
-            <a href="/Grove-80cm_Infrared_Proximity_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Infrared</font></span></a>
-            <br/>
-            <a href="/Grove-Gesture_v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Gesture</font></span></a>
-            <br/>
-            <a href="/Grove-Doppler-Radar" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Doppler</font></span></a>,
-            <a href="/Grove-Ultrasonic_Ranger" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Ultrasonic</font></span></a>
-            <br/>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Air Quality</font></div>
-            <a href="/Grove-Air_Quality_Sensor_v1.3" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Air Quality</font></span></a>
-            <br/>
-            <a href="/Grove-Laser_PM2.5_Sensor-HM3301" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Laser PM2.5 Sensor</font></span></a>
-            <br/>
-            <a href="/Grove-Dust_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Dust Sensor</font></span></a>
-            <br/>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gas</font></div>
-            <a href="/Grove-Gas_Sensor-O2-MIX8410" target="_blank"><span><font color={'FFFFFF'} size={"2"}> O₂ </font></span></a>
-            <a href="/Grove-CO2_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> CO₂ </font></span></a>
-            <br/>
-            <a href="/Grove-HCHO_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HCHO </font></span></a>,
-            <a href="/Grove-VOC_and_eCO2_Gas_Sensor-SGP30" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SGP30 </font></span></a>
-            <br/>
-            <a href="/Grove-Multichannel-Gas-Sensor-V2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Multichannel Gas </font></span></a>
-            <br/>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Oxygen Sensor (MIX8410) is an electrochemical oxygen sensor and it can be used to test the oxygen concentration in air. Under the catalysis of the electrodes, a redox reaction occurs on the working electrode and the counter electrode, thereby generating a current. The concentration of oxygen in the air is calculated by measuring this current and referring to the oxygen concentration linear characteristic graph. </font>
     </div>
 </div>
 
-<div class="intro_container">
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Barometer</font></div>
-            <a href="/Grove-Barometer-High-Accuracy" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HP206C  </font></span></a>
-            <br/>
-            <a href="/Grove-Barometer_Sensor-BME280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BME280  </font></span></a>,
-            <a href="/Grove-Barometer_Sensor-BMP280" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  BMP280  </font></span></a>
-            <br/>
-            <a href="/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DPS310 </font></span></a>,
-            <a href="/Grove-Integrated-Pressure-Sensor-Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  MPX5700AP  </font></span></a>
-            <br/>
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Gas_Sensor-O2-MIX8410/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+#### Grove - Oxygen Sensor Pro(GGC2330-O2)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove_Oxygen_Sensor_Pro/img/IMG_9621.png" style={{width:900, height:'auto'}}/>
     </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Accelerometer</font></div>
-            <a href="/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 3-axis </font></span></a>,
-            <a href="/Grove-6-Axis_Accelerometer&Gyroscope_BMI088" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 6-axis </font></span></a>
-            <br/>
-            <a href="/Grove-IMU_9DOF_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 9-axis </font></span></a>,
-            <a href="/Grove-IMU_10DOF_v2.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 10-axis </font></span></a>
-            <br/>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Light</font></div>
-            <a href="/Grove-Digital_Light_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Light </font></span></a>,
-            <a href="/Grove-UV_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> UV </font></span></a>,
-            <a href="/Grove-Infrared_Receiver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Infrared </font></span></a>
-            <br/>
-            <a href="/Grove-Line_Finder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Line Finder </font></span></a>,
-            <a href="/Grove-Luminance_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Luminance </font></span></a>
-            <br/>
-            <a href="/Grove-Sunlight_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sunlight(Multiple Light) </font></span></a>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Biometric</font></div>
-            <a href="/Grove-Finger-clip_Heart_Rate_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Heart Rate </font></span></a>
-            <br/>
-            <a href="/Grove-Fingerprint_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Fingerprint </font></span></a>
-            <br/>
-            <a href="/Grove-GSR_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> GSR(Galvanic Skin) </font></span></a>
-            <br/>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>GGC2330-O2 is a professional Oxygen Sensor, which is precalibrated with the built-in MCU and temperature sensor. It features low power consumption, good stability, high sensitivity, and long life. </font>
     </div>
 </div>
 
-<div class="intro_container">
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sound</font></div>
-            <a href="/Grove-Sound_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sound </font></span></a>,
-            <a href="/Grove-Loudness_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Loudness </font></span></a>
-            <br/>
-            <a href="/Grove-Recorder_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Recorder </font></span></a>
-            <br/>
-            <a href="/Grove-Speech_Recognizer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Speech Recognizer </font></span></a>
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-Pro-Pre-calibration-p-4896.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Oxygen-Sensor-Pro/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Alcohol Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar885599_a3.jpg" style={{width:900, height:'auto'}}/>
     </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Touch</font></div>
-            <a href="/Grove-Touch_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Touch </font></span></a>
-            <br/>
-            <a href="/Grove-2_Channel_Inductive_Sensor-LDC1612" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Inductive </font></span></a>,
-            <a href="/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Capacitive </font></span></a>
-            <br/>
-            <a href="/Grove-Round_Force_Sensor_FSR402" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Round Force Sensitive </font></span></a>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Liquid</font></div>
-            <a href="/Grove-Water_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water </font></span></a>,
-            <a href="/Grove-Water-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Water Level </font></span></a>
-            <br/>
-            <a href="/Grove-EC-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> EC </font></span></a>,
-            <a href="/Grove-TDS-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TDS </font></span></a>
-            <br/>
-            <a href="/Grove-PH-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PH </font></span></a>,
-            <a href="/Grove-ORP-Sensor-Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> ORP </font></span></a>
-            <br/>
-    </div>
-    <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Motion</font></div>
-            <a href="/Grove-PIR_Motion_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> PIR Motion </font></span></a>,
-            <a href="/Grove-Mouse_Encoder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Mouse </font></span></a>
-            <br/>
-            <a href="/Grove-Piezo_Vibration_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Vibration </font></span></a>,
-            <a href="/Grove-Collision_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Collision </font></span></a>
-            <br/>
-            <a href="/Grove-Slide_Potentiometer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Slide Potentiometer </font></span></a>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Alcohol Sensor is a complete alcohol sensor module, based on MQ303A. It has good sensitivity and fast response to alcohol. </font>
     </div>
 </div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Alcohol-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Alcohol_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - CO2 Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/img/Grove_CO2_Sensor.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - CO2 Sensor(MH-Z16) is an infrared CO2 detection sensor, Which features high sensitivity and high Precision Non-dispersive, measuring the range of 0-2000 parts per million (PPM). </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Carbon-Dioxide-Sensor-MH-Z16.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-CO2_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove -Smart Air Quality Sensor (SGP41)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-voc-and-eco2-gas-sensor_sgp41_-v1.0-45font.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This is a digital gas sensor that uses Sensirion's SGP41 with advanced CMOSens technology to measure VOCs and NOx in indoor air. It is highly stable and durable, making it suitable for continuous monitoring over extended periods. Its compact size and flexible power supply options make it easy to use in various applications such as air purifiers and demand-controlled ventilation systems. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html?queryID=3ac9c3a1ed9e1a56a66b142e8282868a&objectID=5687&indexName=bazaar_retailer_products"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/grove-smart-air-quality-sensor-sgp41/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove-VOC and eCO2 Gas Sensor(SGP30)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove-VOC and eCO2 Gas Sensor SGP30 is an air quality sensor. Based on SGP30, this module provides TVOC(Total Volatile Organic Compounds) and CO2eq output with outstanding long-term stability and low power consumption, which makes it a perfect choice for indoor air quality detection using Arduino or Raspberry Pi. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-VOC-and-eCO2-Gas-Sensor-for-Arduino-SGP30.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - VOC Gas Sensor (SGP40)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101021095-voc-gas-sensor-_sgp40_-45font_1.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - VOC Gas Sensor (SGP40) is an innovative environmental sensing module developed for a wide array of Volatile Organic Compound (VOC) detection applications. This sensor can perform high-quality VOC measurements in real-time. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP40-p-5700.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/grove_voc_gas_sensor_sgp40/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - HCHO Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comimagesproductgrove20hcho.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - HCHO Sensor can be used to detect VOCs, such as HCHO, toluene, benzene, and alcohol which is Built with VOC sensor WSP2110 and Up to 1ppm high sensibility. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-HCHO-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-HCHO_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Multichannel Gas Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comimagesproduct101020088201.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Three independent gas channels in one package Built with ATmega168PA Detectable gases include:Carbon monoxide (CO) , Nitrogen dioxide (NO2) , Hydrogen (H2) , Ammonia (NH3) , Methane (CH4) , etc Grove compat </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Multichannel_Gas_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+
+
+### Barometer
+
+#### Grove - Barometer (High-Accuracy)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This Grove - Barometer (High-Accuracy) Sensor features an HP206C high-accuracy chip to detect barometric pressure, Altimeter, and temperature. It can widely measure pressure ranging from 300mbar~1200mbar, with super high accuracy of 0.01mbar(0.1m) in ultra-high resolution mode. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Barometer-High-Accuracy.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Barometer-High-Accuracy/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Barometer Sensor(BME280)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2016-06r425ianm2rr93qmjqfuewgx7.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Temp&Humi&Barometer Sensor (BME280) is a breakout board for Bosch BMP280, a high-precision, low-power combined humidity, pressure, and temperature sensor. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Barometer_Sensor-BME280/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Barometer Sensor (BMP280)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2016-06b0u1ofgckz2dmivxo6znx8ox.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - BMP280 I2C and SPI Barometric and Temperature Sensor is built around Bosch BMP280. It is a low-cost and high-precision environmental sensor measures the temperature and barometer. Grove - BMP280 supports both I2C and SPI communication and we provide the BMP280 Arduino library. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Barometer-Sensor-BMP280.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Barometer_Sensor-BMP280/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - High Precision Barometric Pressure Sensor DPS310
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-High-Precision-Barometer-Sensor-DPS310/img/Grove-High-Precision-Barometer-Sensor-DPS310-wiki.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - DPS310 is a high precision barometric pressure sensor, it can measure air pressure change caused by height changes in the centimeter level. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Integrated Pressure Sensor Kit
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP/img/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-wiki.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Integrated Pressure Sensor Kit (MPX5700AP) is made for measuring pressure in the range of 15Kpa to 700Kpa, which is perfectly suitable for making your own Arduino air pressure measurement system. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Integrated-Pressure-Sensor-Kit-MPX5700AP-p-4295.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Integrated-Pressure-Sensor-Kit/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+### Accelerometer
+
+#### Grove - D7S Vibration Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101021096_d7s-vibration-sensor-45font.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - D7S Vibration Sensor is an earthquake detection module that provides real-time monitoring of seismic activities. It uses a high-precision accelerometer and advanced earthquake algorithms to detect and classify various types of vibrations based on their severity. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-D7S-Vibration-Sensor-p-5701.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/grove-d7s-vibration-sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - 3-Axis Digital Accelerometer
+
+The Grove - 3-Axis Digital Accelerometer is a 3-axis digital accelerometer often used for orientation detection, gesture detection and motion detection, among other items.
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">Grove - 3-Axis Digital Accelerometer(±1.5g)</th>
+      <th class="table-trnobg">Grove - ADXL345 - 3-Axis Digital Accelerometer(±16g)</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881163_3.jpg" style={{width:900, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2016-11gspzr5xrvqzue5sh4zoms1de.jpg" style={{width:900, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-1-5g.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-16g.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+        </tr>
+    </table>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/Grove-Gas_Sensor-MQ2/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-16g.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-3-Axis_Digital_Accelerometer-16g/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - 3-Axis Digital Accelerometer (LIS3DHTR)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/products/114020121/img/114020121wiki.png" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - 3-Axis Digital Accelerometer(LIS3DHTR) is a low-cost 3 - Axis accelerometer which is based on the LIS3DHTR chip which provides multiple ranges and interfaces selection. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR-p-4533.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+#### Grove - 3-Axis Analog Accelerometer
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881167_3.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The ADXL335 is a triple axis MEMS accelerometer with a low power consumption of 150 μA in the measurement mode! This analog accelerometer is a low g accelerometer with a minimum full-scale range of ±3 g. The ADXL335 can measure the static acceleration of gravity in tilt-sensing applications, as well as dynamic acceleration resulting from motion, shock, or vibration. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-ADXL335.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-3-Axis_Analog_Accelerometer/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+#### Grove - 3-Axis Digitial Compass v2.0
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Bazaar_doc/101020492/main_page.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - 3-Axis Digital Compass is a digital compass sensor based on Bosch BMM150. It allows measurement of the magnatic field in three perpendicular axes and the output can be read out over I2C and SPI interface, perfectly suitable for 3-Axis mobile applications. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-3-Axis_Digitial_Compass_v2.0/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - 3 Axis Digital Accelerometer±16g Ultra-low Power (BMA400)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-16g_Ultra-low_Power-BMA400/img/main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - 3-Axis Digital Accelerometer ±16g Ultra-low Power (BMA400) sensor is a 12 bit, digital, triaxial acceleration sensor with smart on-chip motion and position-triggered interrupt features. It can detect your movement posture, such as Walking, Running, Standing still. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-16g-Ultra-low-Power-BMA400.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - 6-Axis Accelerometer&amp;Gyroscope
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndGyroscope/img/Grove-6-Axis_AccelerometerAndGyroscope_product_view_1200_s.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - 6-Axis Accelerometer&Gyroscope is a cost-effective Grove sensor integrated with a 3-axis digital accelerometer and a 3-axis digital gyroscope </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-6-Axis-Accelerometer-Gyroscope.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-6-Axis_AccelerometerAndGyroscope/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - 6-Axis Accelerometer&Gyroscope(BMI088)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/img/main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - 6-Axis Accelerometer&Gyroscope(BMI088) is a 6 DoF(degrees of freedom) High-performance Inertial Measurement Unit(IMU) .This sensor is based on BOSCH BMI088, which is a high-performance IMU with high vibration suppression.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-6-Axis-Accelerometer-Gyroscope-BMI088.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-6-Axis_Accelerometer&Gyroscope_BMI088/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - IMU 9DOF(lcm20600+AK09918)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-IMU_9DOF-lcm20600_AK09918/img/Main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - IMU 9DOF (lcm20600+AK09918) is a 9 Degrees of Freedom IMU (Inertial measurement unit) which combines gyroscope, accelerometer and electronic compass. We use two chips LCM20600+AK09918 to implement those 3 functions.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-IMU-9DOF-ICM20600-AK09918.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-IMU_9DOF-lcm20600+AK09918/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+### Light
+
+#### Grove Lightning Sensor AS3935
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101021072-lightning-sensor-45font.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove AS3935 Lightning sensor is an easy-to-use sensor built around the AS3935 IC, which can detect both cloud-to-ground and intra-cloud types of lightning for up to 30 or 40 km. It is programmable with I2C or SPI communication and supports 3.3V and 5.0V power supply.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Lightning-Sensor-AS3935-p-5603.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/grove-lightning-sensor-as3935/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Digital Light Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881092_3.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This module is based on the I2C light-to-digital converter TSL2561 to transform light intensity into a digital signal. It has three detection modes to take your readings (infrared mode, full-spectrum, and human visible mode) and can be used to measure the change in light intensity in various light situations with many popular microcontrollers.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Digital_Light_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Light Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/cover.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - Light Sensor v1.2 is an analog module and can output various electrical signals which can be converted to different ranges. It integrates LS06-S photoresistor, a high-sensitive and reliable photodiode, to detect the intensity of light in the environment. It is a perfect Arduino light sensor module for light measurement, light detection, and light-controlled switch.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Light_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Sunlight Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/Grove_sunlight_sensor_view.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Sunlight Sensor is a multi-channel digital light sensor, which has the ability to detect visible light and infrared light. It offers excellent performance under a wide dynamic range and a variety of light sources including direct sunlight. Suitable for your Raspberry Pi weather station or smart irrigation system using Arduino if you need to monitor the visible spectrum.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Sunlight-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Sunlight_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+#### Grove - UV Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2017-11bazaar619113_1010200433.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove – UV Sensor is used for detecting the intensity of incident ultraviolet(UV) radiation. It is based on the sensor GUVA-S12D which has a wide spectral range of 240~370nm.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-UV-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-UV_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Infrared Receiver
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/Grove-Infrared_Receiver.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - IR (Infrared) Receiver is used to receive infrared signals and also used for remote control detection. The IR detector has a demodulator inside that looks for modulated IR at 38 kHz. The Infrared Receiver can receive signals well within 10 meters.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Infrared-Receiver.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Infrared_Receiver/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Line Finder V1.1
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/7/f7977d25c91ae8cb643e6e27412c097e.image_1024_1.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Most automated robotic projects start from a line-following robot, Grove - Line finder v1.1 is designed to achieve this task easily and quickly.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Line-Finder-v1-1.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Line_Finder/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Flame Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comimagesproductflame20sensor.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove-Flame Sensor can be used to detect fire sources or other light sources of the wavelength in the range of 760nm - 1100 nm. It is based on the YG1006 sensor which is a high-speed and high-sensitive NPN silicon phototransistor. Due to its black epoxy, the sensor is sensitive to infrared radiation. With an extra buzzer and LED, you can easily build a fire alarm system.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Flame-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Flame_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Infrared Reflective Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-08bazaar894643_101020174.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Infrared Reflective Sensor v1.2 can be used for the detection of proximity and color of objects. The reflective photosensor - RPR-220 used in this module consists of an infrared light emitting diode and a high –sensitivity phototransistor.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Infrared-Reflective-Sensor-v1-2.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Infrared_Reflective_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+### Biometric
+
+#### Grove - Finger-clip Heart Rate Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Grove-Finger-clip_Heart_Rate_Sensor.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Finger-clip Heart Rate Sensor is based on PAH8001EI-2G. Low power consumption and flexible power saving mode make it suitable for wearable device.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Finger-clip-Heart-Rate-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Finger-clip_Heart_Rate_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - EMG Detector
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_product.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>EMG detector is a bridge connects human body and electrical, the sensor gathers small muscle signal then process with 2th amplify and filter, the output signal can be recognized by Arduino.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-EMG-Detector-p-1737.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-EMG_Detector/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Ear-clip Heart Rate Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Ear-clip_Heart_Rate_Sensor/img/Heart_rate_ear_clip_kit.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Ear/Finger-clip Heart Rate Sensor contains a clip and a receiver module. Just gently clip it to your ear/finger and you are ready to use.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Ear-clip-Heart-Rate-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Ear-clip_Heart_Rate_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - GSR Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-08bazaar888312_2.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - GSR Sensor stands for galvanic skin response and it is a method of measuring the electrical conductance of the skin. It can be used to reflect human emotional activity.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GSR-sensor-p-1614.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-GSR_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+### Sound
+
+#### Grove - Sound Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2017-02fhpnt4qmmyzrtwvb40liimrw.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This Grove-Sound Sensor is based on an LM358 amplifier and an electret microphone. It detects the sound intensity of the environment and outputs an analog signal which is easily sampled and tested by a Seeeduino.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Sound-Sensor-Based-on-LM358-amplifier-Arduino-Compatible.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Sound_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Loudness Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Loudness_Sensor/img/Loudness%20Sensor_new.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove-Loudness Sensor is based on amplifier LM2904 and a built-in microphone and is designed to detect the loudness of environmental sound.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Loudness-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Loudness_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Analog Microphone
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/04.png" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - Analog Microphone is a based on high-performance SiSonic MEMS technology, which is an ideal choice of sound sensors where excellent audio performance is required.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Analog-Microphone/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Recorder v2.0
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/5/05_5_1.png" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Recorder v2.0 is an upgraded recorder with enriched features and is able to record 8-20 seconds of audio with high-quality and natural voice.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Recorder-v2-0-p-4552.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Recorder_v2.0/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+#### Grove Offline Voice Recognition
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-107020149-grove---offline-voice-recognition-module-45font.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This is a low-power pure-offline voice recognition module with less than 100ms identification time and 150 pre-programmed commands. It uses the US516P6 voice chip with a 32-bit RSIC architecture core, DSP instruction set, and FPU arithmetic unit. Ideal for various smart devices like smart home appliances, toys, and lamps that require voice control.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Offline-Voice-Recognition-Module-p-5861.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Offline-Voice-Recognition/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+
+### Touch
+
+#### Grove - Touch Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881144_3.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Touch Sensor enables you to replace press with touch. It can detect the change in capacitance when a finger is near by.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Touch-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Touch_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Rotary Angle Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881159_2.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Rotary Angle Sensor, this potentiometer twig produces analog output between 0 and Vcc (5V DC with Seeeduino) on its D1 connector. The D2 connector is not used. The angular range is 300 degrees with a linear change in value. The resistance value is 10k ohms, perfect for Arduino use. This may also be known as a rotary angle sensor.</font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Rotary_Angle_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Grove - Round Force Sensor FSR402
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Round_Force_Sensor_FSR402/img/main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove-Round Force Sensor(FSR402) is a force sensitive module. At the end of the sensor there is a round force sensitive resistor, the resistance of which depends on pressure applied to this resistor. Simply say, the greater the pressure, the smaller the resistance. However, the output of this sensor is not strictly linear, so we do not recommend it for accurate measurements. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Round-Force-Sensor-FSR402.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Round_Force_Sensor_FSR402/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - 2-Channel Inductive Sensor(LDC1612)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-2-Channel_Inductive_Sensor-LDC1612/img/main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - 2-Channel Inductive Sensor is based on Texas Instruments(TI) LDC1612. The LDC1612 enables the performance and reliability benefits of inductive sensing to be realized at minimal cost and power. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-2-Channel-Inductive-Sensor-LDC1612.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-2_Channel_Inductive_Sensor-LDC1612/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - 12 Key Capacitive I2C Touch Sensor V3 (MPR121)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101020872_touch-sensor-v3.png" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - 12 Key Capacitive I2C Touch Sensor V3 (MPR121) is a multichannel proximity capacitive touch sensor. It's a 3-in-1 module with the following features: Capacitance Sensing, Touch Sensing, and Proximity Sensing. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121-p-4694.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove 12 Channel Capacitive Touch Keypad (ATtiny1616)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616/img/wiki.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This Grove module is a high sensitivity, low power 12 button Capacitive Touch Keypad, it is built around the ATtiny1616. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-p-4068.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+### Liquid
+
+#### Grove - ORP Sensor Kit Pro
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-110020370-grove--orp-sensor-kit-pro-45font.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - ORP Sensor Kit (HR-O) is a Grove sensor that measures the ORP value, detecting the quality of the liquid. It works with a 5-meter IP68 ORP probe, offering a -2000mV to 2000mV sensing range, operating under 0-80℃, supporting Arduino programming. The sensor is environmentally friendly and RoHS certificated. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-Pro-p-5570.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-ORP-Sensor-Pro/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - Water Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2017-11bazaar620080_1010200183.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Water Sensor module is part of the Grove system. It indicates whether the sensor is dry, damp or completely immersed in water by measuring conductivity. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Water-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Water_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Water Level Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Water-Level-Sensor/img/Grove-Water-Level-Sensor-10CM-wiki.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove Water Level Sensor is a very accurate sensor that can be helpful in water level sensing applications. It is completely waterproof and uses capacitive pads to detect water levels up to 10cm. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Water-Level-Sensor-10CM-p-4443.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Water-Level-Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+#### Grove - TDS Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-tds-sensor-preview.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>An Arduino-compatible TDS(Total Dissolved Solids) sensor/meter for measuring TDS levels in water to indicate the water quality. It can be implemented in fields such as homemade water filter, hydroponics, aquarium and others related to testing water quality. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-TDS-Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Turbidity Sensor Meter for Arduino V1.0
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/Grove-Turbidity-Sensor-wiki.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - Turbidity Sensor can measure the turbidity of the water. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+### Motion
+
+#### Grove - PIR Motion Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881121_3.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - PIR Motion Sensor(Passive Infrared Sensor) is an easy-to-use motion sensor with Grove compatible interface. Simply connecting it to Base Shield and programming it, it can be used as a suitable motion detector for Arduino projects. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-PIR-Motion-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-PIR_Motion_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Digital PIR Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/products/101020793/img/101020793wiki.png" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This Grove Digital PIR Sensor is the cheapest PIR sensor in the PIR families, however, it is able to give a quick response and generate a high signal from the "sig" Pin. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Digital-PIR-Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Tilt Switch
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881140_3.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove-Tilt Switch is the equivalent of a button, base on SW-200D, which is a two balls type single direction tilt sensitive trigger switch. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Tilt-Switch.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Tilt_Switch/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Piezo Vibration Sensor
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Grove-Piezo_Vibration_Sensor-1.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove-Piezo Vibration Sensor is suitable for measurements of flexibility, vibration, impact and touch. The module is based on PZT film sensor LDT0-028. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Piezo-Vibration-Sensor.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Piezo_Vibration_Sensor/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Slide Potentiometer
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Slide_Potentiometer/img/Sliding1.JPG" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - Slide Potentiometer module incorporates a linear variable resistor with a maximum resistance of 10KΩ. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Slide-Potentiometer.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Slide_Potentiometer/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Optical Rotary Encoder(TCUT1600X01)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - Optical Rotary Encoder(TCUT1600X01) is a transmissive sensor that includes an infrared emitter and two phototransistor detectors. Usually, the infrared emitter emits infrared rays, the phototransistor detectors receives the infrared rays, then the phototransistor is turned on, both of the output is High, the on-board LED indicators light up. When there is an obstacle blocking, the phototransistor can not receive the infrared rays, so the phototransistor will be turned off and both of the output will be Low, the on-board LED indicators fade away. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Optical-Rotary-Encoder-TCUT1600X01.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Optical_Rotary_Encoder-TCUT1600X01/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/img/Grove-12-bit-Magnetic-Rotary-Sensor-AS5600-preview.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove 12-bit Magnetic Rotary Position Sensor / Encoder (AS5600) is a programmable 12-bit high-resolution contactless magnetic rotary position sensor. Compared with the traditional potentiometer, it has significant advantages: high precision, non-contact, no rotation angle limitation. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600-p-4192.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove-Encoder
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-08bazaar896375_1.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>This module is an incremental rotary encoder. It encodes the rotation signal from the axis and output the signal by electronic pulse. The Grove – Encoder is one of the Grove series and has a standard Grove interface. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Encoder.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Encoder/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+#### Grove - Step Counter(BMA456)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/main.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>The Grove - Step Counter(BMA456) is based on BMA456, which is an exetremely small, triaxial, low-g high performance accelerations module. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Step-Counter-BMA456.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/Grove-Step_Counter-BMA456/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+### Weight
+
+#### Grove - ADC for Load Cell (HX711)
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:900, height:'auto'}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>Grove - ADC for Load Cell is born to save your time and make it easy to use load cells, based on HX711. It is a 24-bit A/D converter chip designed for high precision electronic scales. </font>
+    </div>
+</div>
+
+
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="/grove_adc_for_load_cell_hx711/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
+    </a>
+</div>
+
+
+## Co-Create Grvoe sensors with Seeed Studio Fusion
+
+Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engineers turn their Grove designs into real products. Participants can have their designs manufactured and sold on Seeed Studio Bazaar (Product purchase page).
+
+<div style={{textAlign:'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/03/project_2.png" style={{width:500, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://docs.google.com/forms/d/e/1FAIpQLSe3A7_rIbn2OLO4JyJd_poGZodItCaRy6M6-3FtdqL3xG1Usg/viewform"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Apply Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/co-create.html"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 More Information</font></span></strong>
+    </a>
+</div>
+
+
 
 ## ✨ Contributor Project
 
