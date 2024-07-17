@@ -1,12 +1,12 @@
 ---
-description: This wiki demonstrates pose estimation using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration. 
-title:  YOLOv8 Pose estimation on reComputer R1000 with Hailo-8L
+description: This wiki demonstrates object detection using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration. 
+title:  YOLOv8 Object Detection on reComputer R1000 with Hailo-8L
 keywords:
   - Edge
   - reComputer r1000
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l
+slug: /yolov8_object_detection_on_recomputer_r1000_with_hailo_8l
 last_update:
   date: 06/26/2024
   author: Jiahao
@@ -14,13 +14,13 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# YOLOv8 Pose Estimation on reComputer R1000 with Hailo-8L
+# YOLOv8 Object Detection on reComputer R1000 with Hailo-8L
 
 ## Introduction
 
-[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once version 8) is the popular most YOLO series of real-time pose estimation models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) is used to accelerate inference speed, featuring a 13 tera-operations per second (TOPS) neural network inference accelerator built around the Hailo-8L chip.
+[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once version 8) is the popular most YOLO series of real-time object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) is used to accelerate inference speed, featuring a 13 tera-operations per second (TOPS) neural network inference accelerator built around the Hailo-8L chip.
 
-This wiki demonstrates pose estimation using YOLOv8 on [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) with and without Raspberry-pi-AI-kit acceleration. The Raspberry Pi AI Kit enhances the performance of the Raspberry Pi and unlock its potential in artificial intelligence and machine learning applications, like smart retail, smart traffic and more. Although the Raspberry AI Kit is designed for Raspberry Pi 5, we have experimented it on our CM4-powered edge gateway. Excited about turning our edge device into an intelligent IoT gateway!
+This wiki demonstrates object detection using YOLOv8 on [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) with and without Raspberry-pi-AI-kit acceleration. The Raspberry Pi AI Kit enhances the performance of the Raspberry Pi and unlock its potential in artificial intelligence and machine learning applications, like smart retail, smart traffic and more. Although the Raspberry AI Kit is designed for Raspberry Pi 5, we have experimented it on our CM4-powered edge gateway. Excited about turning our edge device into an intelligent IoT gateway!
 
 
 ## Prepare Hardware
@@ -116,7 +116,8 @@ hailortcli fw-control identify
 
 The right result show as bellow:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_hardware.png" alt="pir" width={1000} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
+
 
 Open terminal on the reCompuer R1000, and input command as follows to check if hailo-8L have been connected.
 
@@ -125,7 +126,8 @@ lspci | grep Hailo
 ```
 
 The right result show as bellow:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_hardware.png" alt="pir" width={1000} height="auto"/></p>
 
 ### Run YOLOv8
 
@@ -134,11 +136,11 @@ Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
-bash ./run.sh pose-estimation-hailo
+bash ./run.sh object-detection-hailo
 ```
 ### Result
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/YOLOv8-pose-estimation-with-AIkit.gif" alt="pir" width={1000} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object_detection_with_AIkit.gif" alt="pir" width={1000} height="auto"/></p>
 </TabItem>
 
 <TabItem value="Method 2" label="Run without Hailo-8L">
@@ -150,26 +152,26 @@ Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
-bash ./run.sh pose-estimation
+bash ./run.sh object-detection
 ```
 ### Result
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/YOLOv8-pose-estimation-without-AIkit.gif" alt="pir" width={1000} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object_detection_withoutAIkit.gif" alt="pir" width={1000} height="auto"/></p>
 </TabItem>
 </Tabs>
 
 
 ## Result 
 
-We compared the inference speed of YOLOv8 for pose estimation with input 640*640 resolution before and after acceleration using the AI kit. The results show that prior to acceleration, the inference speed was only 0.5 FPS, whereas after acceleration, it reached 27 FPS.
+We compared the inference speed of YOLOv8 for object detection with input 640*640 resolution before and after acceleration using the AI kit. The results show that prior to acceleration, the inference speed was only 0.75 FPS, whereas after acceleration, it reached 29.5 FPS.
 
 <div align="center">
-<iframe width="800" height="400" src="https://www.youtube.com/embed/OwIrMppQzUU" title="Raspberry Pi AI: YOLOv8 Pose Estimation on reComputer R1000(CM4-powered Edge Gateway) with Hailo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="400" src="https://www.youtube.com/embed/yZ0IlqLZ86E" title="YOLOv8 Object Detection on reComputer R1000(CM4-Powered Edge Gateway) with Hailo-8L" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Project Outlook
 
-In this project, we benchmark the running speed of YOLOv8 on pose estimation with and without AI kit. The result shows that the AI kit can greatly improve the performance of the edge device. And in the future, we will benchmark the running speed of YOLOv8 in different scenarios.
+In this project, we benchmark the running speed of YOLOv8 on object detection with and without AI kit. The result shows that the AI kit can greatly improve the performance of the edge device.And in the future, we will benchmark the running speed of YOLOv8 in different scenarios, including semantic segmentation and pose estimation AI kits after acceleration.
 
 ## Tech Support & Product Discussion
 
