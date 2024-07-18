@@ -89,10 +89,10 @@ import TabItem from '@theme/TabItem';
 <TabItem value="Method 1" label="CM4 Benchmark">
 
 For object detection please refer to the following wiki:
-[yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](http://localhost:3000/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
+[yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
 
 For pose estimation Please refer to the following wiki:
-[yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](http://localhost:3000/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
+[yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
 </TabItem>
 
 <TabItem value="Method 2" label="Pi5 Benchmark">
@@ -223,8 +223,6 @@ bash run.sh object-detection
 
 
 ## Result 
-
-### object detection
 
 <Tabs>
 <TabItem value="Method 1" label="Object Detection Benchmark">
