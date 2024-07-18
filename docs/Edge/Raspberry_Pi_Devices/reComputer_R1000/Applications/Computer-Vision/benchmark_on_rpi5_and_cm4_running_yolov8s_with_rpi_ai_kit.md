@@ -224,8 +224,6 @@ bash run.sh object-detection
 
 ## Result 
 
-### object detection
-
 <Tabs>
 <TabItem value="Method 1" label="Object Detection Benchmark">
 
