@@ -1,11 +1,11 @@
 ---
-description: Send message from Watcher to IFTTT
-title: Watcher to Node-RED to IFTTT
+description: Send message from Watcher & Node-RED to IFTTT
+title: Watcher & Node-RED to IFTTT
 keywords:
 - watcher
 - IFTTT
 image: https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png
-slug: /watcher_to_ifttt
+slug: /watcher_node_red_to_ifttt
 last_update:
   date: 06/28/2024
   author: Allen

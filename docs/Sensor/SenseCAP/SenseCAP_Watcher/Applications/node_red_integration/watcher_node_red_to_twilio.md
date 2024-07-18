@@ -1,11 +1,11 @@
 ---
-description: Send message from Watcher to twilio
-title: Watcher to Node-RED to Twilio
+description: Send message from Watcher & Node-RED to twilio
+title: Watcher & Node-RED to Twilio
 keywords:
 - watcher
 - twilio
 image: https://files.seeedstudio.com/wiki/watcher_to_twilio_image/tw1.png
-slug: /watcher_to_twilio
+slug: /watcher_node_red_to_twilio
 last_update:
   date: 07/03/2024
   author: Allen

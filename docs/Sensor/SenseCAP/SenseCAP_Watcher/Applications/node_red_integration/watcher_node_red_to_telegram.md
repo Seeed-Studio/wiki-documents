@@ -1,11 +1,11 @@
 ---
-description: Send message from Watcher to Telegram
-title: Watcher to Node-RED to Telegram
+description: Send message from Watcher & Node-RED to Telegram
+title: Watcher & Node-RED to Telegram
 keywords:
 - watcher
 - Telegram
 image: https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png
-slug: /watcher_to_telegram
+slug: /watcher_node_red_to_telegram
 last_update:
   date: 06/07/2024
   author: Allen
