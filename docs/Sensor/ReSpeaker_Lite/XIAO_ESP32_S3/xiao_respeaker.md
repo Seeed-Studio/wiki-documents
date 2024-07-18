@@ -1,6 +1,6 @@
 ---
 description: Integrating ReSpeaker Lite with XIAO ESP32S3
-title: Integrated with XIAO ESP32S3
+title: ReSpeaker Lite Voice Assistant Kit
 keywords:
 - ESP32S3
 - XIAO
@@ -12,12 +12,60 @@ last_update:
   author: Jessie
 ---
 
-[Seeed Studio XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) leverages 240MHz Xtensa 32-bit LX7 dual-core processor, supporting both WiFi and BLE 5.0 wireless connectivities, a 2.4GHz Rod antenna, allows for deep sleep mode with power consumption as low as 14μA while supporting lithium battery charging management. 
 
-This chapter will guide users on how to play ReSpeaker Lite with XIAO ESP32S3.
+
+Powered by XMOS XU316 AI Sound and Audio chipset, it is a high-performance open source voice assistant development kit. The kit integrates the ReSpeaker Lite dual-microphone array and a powerful [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) processor, offering exceptional voice recognition, noise reduction, and voice processing capabilities. This kit provides firmware integration with Home Assistant via ESPHome, making it ideal for smart voice assistants and home automation applications. 
+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xiao-res.png" alt="pir" width={600} height="auto" /></p>
 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+### Features 
+
+* **Pre-Soldered ESP32 Controller**: A powerful XIAO ESP32S3 is pre-soldered via the I2S pins, offering a solderless experience for further development and integration.
+* **Dual Microphone Array for Far-Field Voice Capture**: The 2 high performance digital microphones capture and extract far-field speech and voice (up to 3 meters) even in noisy environments as it cancells point noise using two microphone input.
+* **Onboard AI NLU Algorithms**: Powered by XMOS XU-316 AI sound and audio chip, the kit includes Natural Language Understanding algorithms for Interference Cancellation (IC)​, Acoustic Echo Cancellation, Noise Suppression, and Automatic Gain Control (AGC), enabling high quality voice capture.
+* **Embracing Open Source**: As an open source hardware, it's compatible with Arduino, PlatformIO, MicroPython, CircuitPython for furthur developement.
+* **Compatible with Popular Voice Assistants**: This kit allows you to build your own natural language processor and connect it to Home Assitant via ESPHome, Amazon Alexa Voice Service, Google Assistant, or Cloud Speech-to-Text service, enabling you to ask questions and issue voice commands to your programs.
+* **Onboard RGB LED**: The kit features a programmable WS2812 RGB LED, supporting custom effects and offering a visual interface for your applications.
+
+
+### Specification
+
+|**Dual Microphone Array**|Provides high-quality audio input.|
+| :- | :- |
+|**Power Indicator Light**|Illuminates when powered on.|
+|**RGB Light**|Programmable WS2812, provides visual feedback.|
+|**Mute Indicator Light**|Lights up red when the mute button is pressed.|
+|**USR Button**|User-defined button.|
+|**Mute Button**|Mutes audio input when pressed.|
+|[**XIAO ESP32S3**](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)|For further development and integration.|
+|**XU316 Core Processor**|Responsible for audio processing and transmission.|
+|**External Power Supply Solder Pad**|Supports external 5V power supply.|
+|**USB Type-C Port**|Used for power and data transmission.|
+|**Speaker Connector**|For audio output. Supports 5W amplifier speakers.|
+|**3.5mm Headphone jack**|Output audio, We can plug active speakers or Headphones into this port.|
+|**External power pad 1** |Unused IO pins on the XU316.|
+|**External power pad 2**|Unused IO pins on the XIAO ESP32.|
+|**JTAG**|For debugging and programming the XU316.|
+
+
+
+### Hardware Overview
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/front.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/back.png" alt="pir" width={800} height="auto" /></p>
+
+
+### Hardware Flowchart
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/flow-chart.png" alt="pir" width={800} height="auto" /></p>
 
 ### Flash the I2S firmware
 
