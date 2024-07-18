@@ -4767,6 +4767,43 @@ const sidebars = {
         },
     
 
+
+        {
+          type: 'doc',
+          id: 'zh-CN/Sensor/mmWave_radar_sensor/cn-mmwave_radar_Intro',
+          label: '毫米波雷达传感器',
+          className: 'sideboard_calss',
+        },
+        {
+          type: 'category',
+          label: '用于XIAO的毫米波',
+          collapsed: true,
+          collapsible: true,   
+          items: [
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-for-XIAO/cn-mmwave-for-xiao',      
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-for-XIAO/cn-mmwave-for-xiao_arduino',
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-for-XIAO/cn-mmwave-for-xiao-connect-to-HA',
+          ], 
+        },
+        {
+          type: 'category',
+          label: '毫米波套件',
+          collapsed: true,
+          collapsible: true,   
+          items: [
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-kit/cn-mmwave_human_kit',
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-kit/cn-mmWave_Kit_And_Grove_Connect_To_ESPHome',
+                 
+          ], 
+        },
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24BSD1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24FDB1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24HPB1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24HPC1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR60BHA1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR60FDA1',
+
+
     {
       type: 'doc',
       id: 'zh-CN/Sensor/SeeedStudio_XIAO/CN_SeeedStudio_XIAO_Series_Introduction',
