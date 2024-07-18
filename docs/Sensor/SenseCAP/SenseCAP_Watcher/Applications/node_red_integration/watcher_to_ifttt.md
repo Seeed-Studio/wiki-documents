@@ -1,6 +1,6 @@
 ---
 description: Send message from Watcher to IFTTT
-title: Watcher to IFTTT
+title: Watcher to Node-RED to IFTTT
 keywords:
 - watcher
 - IFTTT

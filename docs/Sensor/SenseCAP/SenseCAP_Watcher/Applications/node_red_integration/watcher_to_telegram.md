@@ -1,6 +1,6 @@
 ---
 description: Send message from Watcher to Telegram
-title: Watcher to Telegram
+title: Watcher to Node-RED to Telegram
 keywords:
 - watcher
 - Telegram
