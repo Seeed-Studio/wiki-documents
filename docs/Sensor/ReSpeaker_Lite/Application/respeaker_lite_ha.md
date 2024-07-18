@@ -14,8 +14,18 @@ last_update:
 ---
 
 Say 'hello' to effortless control and 'goodbye' to tapping on screens with our voice assistant system.<br/>
-Picture this: you're cozied up on your couch, and with just a simple shout-out to the [ReSpeaker Lite](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html), you can switch up the lights, crank up the tunes, or even ask about the weather – all without lifting a finger. Thanks to a nifty little [Seeed XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) chip, you've got a mini-but-mighty brain that hooks up your voice to Home Assistant, making your smart home smarter and your life a whole lot easier. So, if you're ready to make your home listen and respond to your voice as if it's just another member of the family, let's get started on this voice-activated adventure!
 
+Picture this: you're cozied up on your couch, and with just a simple shout-out to the ReSpeaker Lite, you can switch up the lights, crank up the tunes, or even ask about the weather – all without lifting a finger. Thanks to a nifty little [Seeed XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) chip, you've got a mini-but-mighty brain that hooks up your voice to Home Assistant, making your smart home smarter and your life a whole lot easier. 
+
+This chapter we will use the [ReSpeaker Lite Voice Assistant Kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html) to connect the Sonoff smart switch to realize voice control of the light switch.
+
+
+## Hardware Required
+
+
+* ReSpeaker Lite Voice Assistant Kit
+* [Home Assistant Device](https://wiki.seeedstudio.com/home_assistant_topic/)
+* [Sonoff BASICR2](https://sonoff.tech/product/diy-smart-switches/basicr2/)
 
 ## Getting Started
 
@@ -35,8 +45,11 @@ Go to [Settings > Add-ons](https://my.home-assistant.io/redirect/supervisor).
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/add-ons.png" alt="pir" width={800} height="auto" /></p>
 
 
-Under the Official `add-ons` section, you will find the `ESPHome`, `Whisper`, `Piper`, `openWakeWord` add-on, and click `Install`.
-
+Under the Official `add-ons` section, search and install the following add-ons:
+* `ESPHome`
+* `Whisper`
+* `Piper`
+* `openWakeWord` 
 
 Enable `Start on boot` and `Watchdog`, and click `Start`.
 
@@ -62,31 +75,84 @@ Click `CONFIGURE` and `SUBMIT`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/config-success.png" alt="pir" width={800} height="auto" /></p>
 
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/device-page.png" alt="pir" width={800} height="auto" /></p>
+There should be 3 entities in your `Wyoming Protocol`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/entities.png" alt="pir" width={800} height="auto" /></p>
 
-### Add Seeed Studio XIAO ESP32S3 to ESPHome
+### Add your smart device
 
-* Step 1: Navigate to `ESPHome`, and click `+ NEW DEVICE`.
+Here we use [BASICR2](https://sonoff.tech/product/diy-smart-switches/basicr2/) as a reference example.
+
+Setup the device according to the manual.
+
+Search and install `Sonoff LAN` in `HACS`.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/sonoff.png" alt="pir" width={600} height="auto" /></p>
+
+Navigate to `Settings` -> `Devices & services`, click `ADD INTEGRATION`, add `Sonoff`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/add-sonoff.png" alt="pir" width={400} height="auto" /></p>
+
+Enter your `eWeLink` account credentials.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/credentials.png" alt="pir" width={400} height="auto" /></p>
+
+When it connected, you will see an entity.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/sonoff-id.png" alt="pir" width={800} height="auto" /></p>
+
+
+### Add Voice Asssitant
+
+Navigate to `Settings` -> `Voice Assistant`. 
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/voice-assistant.png" alt="pir" width={800} height="auto" /></p>
+
+Enter a name and select:
+
+**Speech to text**: `Whisper`
+
+**Text to speech**: `Piper`
+
+**Wake word engine**: `openwakeword`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/piper-config.png" alt="pir" width={800} height="auto" /></p>
+
+
+Choose a wakeword you preferred.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/choose-wakeword.png" alt="pir" width={800} height="auto" /></p>
+
+
+
+### Add XIAO ESP32S3 to ESPHome
+
+Navigate to `ESPHome`, and click `+ NEW DEVICE`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/add-new-esphome.png" alt="pir" width={800} height="auto" /></p>
 
 
-* Step 2. Enter a Name for your device, then click `NEXT`.
+Enter a Name for your device, then click `NEXT`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/next11.png" alt="pir" width={500} height="auto" /></p>
 
-* Step 4. Select `ESP32-S3`.
+Select `ESP32-S3`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/choose-s3.png" alt="pir" width={800} height="auto" /></p>
 
-* Step 5. Click `SKIP`, we will configure this file manually.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/skip.png" alt="pir" width={800} height="auto" /></p>
+Click `SKIP`, we will configure this file manually.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/skip.png" alt="pir" width={400} height="auto" /></p>
 
-* Step 6. Click `EDIT` and copy the following code:
+Click `EDIT` and copy the following code:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/config.png" alt="pir" width={800} height="auto" /></p>
+
+Remember to replace the Wi-Fi info:
+```
+wifi:
+  ssid: "Wi-Fi name"
+  password: "Wi-Fi password"
+```
 
 <details>
 
@@ -239,25 +305,6 @@ light:
           min_brightness: 50%
           max_brightness: 100%
 
-# light:
-#   - platform: monochromatic
-#     id: led
-#     name: "Desk Lamp"
-#     output: light_output
-#     effects:
-#       - pulse:
-#           name: "Slow Breathing Light"
-#           transition_length: 5s  # 缓慢呼吸灯，渐变时间较长
-#       - pulse:
-#           name: "Fast Breathing Light"
-#           transition_length: 1s  # 快速呼吸灯，渐变时间较短
-#       - pulse:
-#           name: "Fast Pulse"
-#           transition_length: 0.5s
-#           update_interval: 0.5s
-#           min_brightness: 0%
-#           max_brightness: 100%
-
 output:
   - platform: ledc
     id: light_output
@@ -315,24 +362,23 @@ switch:
 </details>
 
 
-* Step 7: Click `SAVE` and then `INSTALL`.
+Click `SAVE` and then `INSTALL`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/click-install.png" alt="pir" width={800} height="auto" /></p>
 
-
-* Step 8: Choose `Manual Download` -> `Modern-format`.
+Choose `Manual Download` -> `Modern-format`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/manual-download.png" alt="pir" width={800} height="auto" /></p>
 
 
-* Step 9: Connect the XIAO ESP32S3 to your PC via a USB Type-C cable.
+Connect the XIAO ESP32S3 to your PC via a USB Type-C cable.
 
-* Step 10: Navigate to [Web-ESPHome](https://web.esphome.io/), click `CONNECT`, then choose the port and connect it.
+Navigate to [Web-ESPHome](https://web.esphome.io/), click `CONNECT`, then choose the port and connect it.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/connect-port.png" alt="pir" width={800} height="auto" /></p>
 
 
-* Step 11: Select the `.bin` file we just downloaded, and click `INSTALL`.
+Select the `.bin` file we just downloaded, and click `INSTALL`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install.png" alt="pir" width={800} height="auto" /></p>
 
@@ -341,33 +387,22 @@ Wait for a few minutes for the installation. After the installation is successfu
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install-done.png" alt="pir" width={800} height="auto" /></p>
 
 
+Navigate to `Settings` and select `Devices & Services`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install-done.png" alt="pir" width={800} height="auto" /></p>
 
 
+You will see `ESPHome` as a discovered integration. Click `CONFIGURE`.
 
-### Add Voice Asssitant
-
-Navigate to `Settings` -> `Voice Assistant`. 
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/voice-assistant.png" alt="pir" width={800} height="auto" /></p>
-
-Enter a name and select:
-
-**Speech to text**: `Whisper`
-
-**Text to speech**: `Piper`
-
-**Wake word engine**: `openwakeword`
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/piper-config.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/configure.png" alt="pir" width={800} height="auto" /></p>
 
 
-Choose a wakeword you preferred.
+Click `SUBMIT`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/esp-submit.png" alt="pir" width={800} height="auto" /></p>
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/choose-wakeword.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/esp-device.png" alt="pir" width={800} height="auto" /></p>
 
 
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/piper-config.png" alt="pir" width={800} height="auto" /></p>
-
+Now you are all set, try waking it up with `hey jarvis` and talking to it!
