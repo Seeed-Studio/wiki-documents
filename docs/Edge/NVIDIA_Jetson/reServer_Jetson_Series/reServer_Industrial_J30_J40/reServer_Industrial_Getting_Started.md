@@ -535,17 +535,38 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
  
 #### Usage
 
-Before connecting PoE cameras, you need to enable the PoE function for the 4 Ethernet ports. Enable it as follows:
+- Before connecting PoE cameras, you need to enable the PoE function for the 4 Ethernet ports. Enable it as follows:
 
-```sh
-sudo -i
-cd /sys/class/gpio
-echo 315 > export 
-cd gpio315
-echo "out" > direction
-echo 1 > value
-```
+  ```sh
+  sudo -i
+  cd /sys/class/gpio
+  echo 315 > export 
+  cd gpio315
+  echo "out" > direction
+  echo 1 > value
+  ```
 
+- If you need to configure different IP addresses for each POE interface, follow these instructions:
+
+  **Step 1**: Connect the POE to the reServer Industrial device. For example, to configure eth3, set the name of eth3 to POE3.
+    ```bash
+  sudo nmcli connection add type ethernet ifname eth3 con-name POE3
+    ```
+
+  **Step 2**: Configure the IP address of POE3 to **192.168.6.6**. The IP address can be customized according to actual usage.
+  ```bash
+  sudo nmcli connection modify POE3 ipv4.addresses 192.168.6.6/24
+  ```
+
+  **Step3**: To set POE3's IPv4 address to manual configuration.
+    ```bash
+  sudo nmcli connection modify POE3 ipv4.method manual
+  ```
+
+  **Step4**: Start the connection
+  ```bash
+  sudo nmcli connection up POE3
+  ```
 ### SATA Connectors
 
 reServer Industrial supports 2 SATA 2.5" HDD/SSD and comes with both SATA data and power connectors. You can connect to HDD/ SSD as follows

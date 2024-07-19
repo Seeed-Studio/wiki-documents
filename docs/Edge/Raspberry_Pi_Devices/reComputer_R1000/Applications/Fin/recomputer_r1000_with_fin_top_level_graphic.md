@@ -18,7 +18,7 @@ last_update:
 ## Introduction 
 FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
 
-This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a Top Level Graphic using the `Graphics Builder`.
+This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Top Level Graphic` using the `Graphics Builder`.
 
 ## Getting Start
 
@@ -48,7 +48,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 * Regarding how to install FIN Framwork, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/).
 
 ## Steps of create a Top Level Graphic
-### Create new Graphic
+### Create new Top Level Graphic
 **Step 1**: We create three sites. For how to create sites under Equip Tree, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp_and_rtu/#add-data-points-to-equip-tree). And please keep the system context in the home directory.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Top_grap_Equip_tree_and_top_path.png" /></center>
@@ -57,9 +57,9 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Top_Grap_1.gif" /></center>
 
-### Configure new Graphic
+### Configure new Top Level Graphic
 
-**Step 1**: Import the floor plan. First select `IMAGE` in the `TYPE` column in the lower left corner, and then you can import the background image. There are two ways to import background images. The first way is to drag it directly from the folder into the edit box; the second way is to click `BROWSE` in the lower left corner. If you have imported a certain image before, you can click here Find that picture. After importing, right-click the mouse and select `Arrange => Send to back` to move the image to the bottom layer.
+**Step 1**: Import the floor plan. First select `IMAGE` in the `TYPE` column in the lower left corner, and then you can import the background image. There are two ways to import background images. The first way is to drag it directly from the folder into the edit box; the second way is to click `BROWSE` in the lower left corner. If you have imported a certain image before, you can click here find that picture. After importing, right-click the mouse and select `Arrange => Send to back` to move the image to the bottom layer.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/Top_Grap_2.gif" /></center>
 
