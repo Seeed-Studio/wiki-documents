@@ -132,7 +132,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 **Coin demo**
 This program allows user to detect the distance from the coin to the copper trace.
 
-```C++
+```cpp
 
 
 #include "Seeed_LDC1612.h"
@@ -230,7 +230,7 @@ The library file may be updated. This code may not be applicable to the updated 
   If everything goes well, you will see the following result
 :::
 
-```C++
+```cpp
 
 The distance between the COIN is 5~10mm
 The distance between the COIN is 5~10mm
@@ -247,7 +247,7 @@ The distance between the COIN is 5~10mm
 
 Code for basic_demo.ino
 
-```C++
+```cpp
 
 
 #include "Seeed_LDC1612.h"
@@ -302,7 +302,7 @@ void loop()
     If everything goes well, you will see the following result
 :::
 
-```C++
+```cpp
 
 start!
 17:06:16.418 -> fsensor =3.74
@@ -327,7 +327,7 @@ You may connect coil 1 as shown below:
 
 Code for muti_channel_demo.ino
 
-```C++
+```cpp
 
 #include "Seeed_LDC1612.h"
 #include "math.h"
@@ -387,7 +387,7 @@ void loop()
         If everything goes well, you will see the following result
 :::
 
-```C++
+```cpp
 
 start!
 17:04:34.063 -> fsensor =3.74

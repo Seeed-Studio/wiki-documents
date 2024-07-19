@@ -201,7 +201,7 @@ AD转换结果与万用表测得的电压一致，误差在5 mV左右，在实�
 
 以下是测试电池电压的程序。
 
-```c++
+```cpp
 void setup() {
   Serial.begin(115200);
   pinMode(A0, INPUT);         // ADC

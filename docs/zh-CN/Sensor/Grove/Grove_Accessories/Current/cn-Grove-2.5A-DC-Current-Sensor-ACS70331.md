@@ -154,7 +154,7 @@ ACS70331 QFN 封装的内部结构如图 2 所示。芯片位于初级电流路�
 
 - **步骤2.** 在/example/文件夹中，您可以找到演示代码。这里我们以[Grove_2_5A_Current_Sensor.ino](https://github.com/Seeed-Studio/Grove_Current_Sensor/tree/master/examples/Grove_2_5A_Current_Sensor)为例。只需点击Grove_2_5A_Current_Sensor.ino即可打开演示代码。或者您也可以复制以下代码：
 
-```C++
+```cpp
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
   #define RefVal 3.3
   #define SERIAL SerialUSB
@@ -250,14 +250,14 @@ void loop()
 
 第21行：
 
-```C++
+```cpp
 float Vref = 265;  
 //Vref is zero drift value, you need to change this value to the value you actually measured before using it.
 ```
 
 在演示代码中，我们将Vref设置为265，但是，零点偏移值因板而异。正如您所知，我们在这个演示中使用的板的零点偏移值是288.09。所以，让我们修改第21行：
 
-```C++
+```cpp
 float Vref = 283.20;
 ```
 

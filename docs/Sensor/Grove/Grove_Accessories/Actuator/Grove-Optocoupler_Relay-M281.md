@@ -126,7 +126,7 @@ Unlike the other TRIAC SSR in our website, this relay is based on MOSFET, so it 
 
 - **Step 1.** Copy the following code into a new sketch in the Arduino IDE
 
-```C++
+```cpp
 const int Pinout = 5;      
 
 void setup() {

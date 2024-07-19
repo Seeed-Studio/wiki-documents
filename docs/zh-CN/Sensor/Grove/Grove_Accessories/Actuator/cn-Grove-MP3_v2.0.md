@@ -143,7 +143,7 @@ Grove - MP3 v2.0 是一款小巧紧凑的音频模块。它支持对 MP3、WAV �
     有关串行的更多信息，请参考[Seeed Arduino串行](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/)。
 :::
 
-```c++
+```cpp
 #ifdef __AVR__
 #include <SoftwareSerial.h>
 SoftwareSerial SSerial(2, 3); // RX, TX

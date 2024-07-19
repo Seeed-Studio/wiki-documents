@@ -283,7 +283,7 @@ Hardware connection diagram
 
 Tap the following command ++python grove_sound_sensor.py 0++ in the command line interface.
 
-```C++
+```cpp
 
 pi@raspberrypi:~/grove.py/grove $ python3 grove_sound_sensor.py 0
 Detecting sound...

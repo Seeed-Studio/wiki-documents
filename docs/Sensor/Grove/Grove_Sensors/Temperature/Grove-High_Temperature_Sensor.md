@@ -105,7 +105,7 @@ The platforms mentioned above as supported is/are an indication of the module's 
 - Step 2. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 3. Copy the code into Arduino IDE and upload.
 
-```c++
+```cpp
 #include "High_Temp.h"
 
 HighTemp ht(A1, A0);

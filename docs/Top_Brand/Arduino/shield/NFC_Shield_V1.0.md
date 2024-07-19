@@ -106,7 +106,7 @@ Donwload the [PN532_SPI Library For NFC Shield](https://files.seeedstudio.com/wi
 
 1.Open and upload the example readAllMemoryBlocks example as show below.
 
-```c++
+```cpp
 //This example reads all MIFARE memory block from 0x00 to 0x63.
 //It is tested with a new MIFARE 1K cards. Uses default keys for authenication.
 //Contributed by Seeed Technology Inc (www.seeedstudio.com)

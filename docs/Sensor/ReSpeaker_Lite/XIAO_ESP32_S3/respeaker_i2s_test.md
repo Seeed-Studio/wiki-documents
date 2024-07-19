@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reSpeaker_i2s_test
+slug: /respeaker_i2s_test
 last_update:
   date: 7/1/2024
   author: Jessie

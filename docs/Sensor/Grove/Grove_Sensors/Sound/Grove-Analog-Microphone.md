@@ -152,7 +152,7 @@ void loop() {
 
 **Software**
 
-```C
+```cpp
 #include "seeed_line_chart.h" //include the library
 
 TFT_eSPI tft;

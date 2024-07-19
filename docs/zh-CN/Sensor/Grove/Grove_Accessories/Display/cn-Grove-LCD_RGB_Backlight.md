@@ -161,7 +161,7 @@ Grove-LCD RGB 背光已经从 V4.0 更新到 V5.0，代码也进行了升级以�
 
 以下是HelloWorld.ino的代码：
 
-```c++
+```cpp
 #include <Wire.h>
 #include "rgb_lcd.h"
 
@@ -367,7 +367,7 @@ if __name__=="__main__":
 - Q2: 如何使用按钮来切换Grove RGB LCD以显示不同的页面？
     - A2: 以下是相关代码。
 
-```c++
+```cpp
 
 #include <Wire.h>
 #include "rgb_lcd.h"

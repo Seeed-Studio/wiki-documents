@@ -147,7 +147,7 @@ last_update:
 
 或者，您只需点击代码块右上角的图标 ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) ，即可将以下代码复制到Arduino IDE中的新草图中。
 
-```c++
+```cpp
 #include <multi_channel_relay.h>
 
 Multi_Channel_Relay relay;
@@ -318,7 +318,7 @@ Channel 2 on
 
 如果您想要更改地址，您需要在使用之前设置地址。例如，我们想要将其更改为0x2f。我们可以使用以下代码。
 
-```C++
+```cpp
 #include <multi_channel_relay.h>
 
 Multi_Channel_Relay relay;

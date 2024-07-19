@@ -446,7 +446,7 @@ Now we will modify our **Device EUI**, **Application EUI**, **Application KEY** 
 
 - **Step 7.** Please follow the [guide](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network) here to setup your TTN application, get your **Application EUI** and copy it to the macro definition `LORAWAN_JOIN_EUI` in `LoRaWAN/App/se-identity.h` , for example, the Application EUI here is `80 00 00 00 00 00 00 0x07` :
 
-```C
+```cpp
 // LoRaWAN/App/se-identity.h
 
 /*!
@@ -457,7 +457,7 @@ Now we will modify our **Device EUI**, **Application EUI**, **Application KEY** 
 
 - **Step 8.** Also, you can modify your **Device EUI** and **Application Key**, by setting the macro definition `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` in `LoRaWAN/App/se-identity.h`. Make sure `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` are the same as the `Device EUI` and `App Key` in TTN console.
 
-```C
+```cpp
 // LoRaWAN/App/se-identity.h
 
 /*!

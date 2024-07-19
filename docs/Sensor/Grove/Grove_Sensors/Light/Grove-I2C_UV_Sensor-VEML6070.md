@@ -124,7 +124,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include "Seeed_VEML6070.h"
 
 

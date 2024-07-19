@@ -106,7 +106,7 @@ Software Installation.
 - **Step 4.** Start the Arduino IDE, Let's try the up/down demo.
 - **Step 5.** Copy below code and paste to arduino IDE.
 
-```c++
+```cpp
 /*
 The following simple demo will show you a very easy application: When you move up, the red led will be turned on, otherwise the red led will be turned off.
 */
@@ -138,7 +138,7 @@ void loop()
 
 - **Step 8.** Let's try the 9 gestures by select **File->Example->Grove_Gesture->paj7620_9gestures**, then select Seeeduino v4 as board manager and correct COM port.
 
-```c++
+```cpp
 #include <Wire.h>
 #include "paj7620.h"
 
@@ -281,7 +281,7 @@ void loop()
 - **Step 9.** Click upload and open the Serial Monitor port.
 - **Step 10.** This example can recognize 9 gestures and output the result, including move up, move down, move left, move right, move forward, move backward, circle-clockwise, circle-counter clockwise, and wave. Let's try and see COM port output as below.
 
-```c++
+```cpp
 PAJ7620U2 TEST DEMO: Recognize 9 gestures.
 INIT SENSOR...
 Addr0 =20,  Addr1 =76
@@ -1030,7 +1030,7 @@ while True:
 
 - **Step 4.** Here is the screen output.
 
-```c++
+```cpp
 pi@raspberrypi:~/Dexter/GrovePi/Software/Python/grove_gesture_sensor $ python3 gesture_value.py 
 wake-up finish.
 Paj7620 initialize register finished.

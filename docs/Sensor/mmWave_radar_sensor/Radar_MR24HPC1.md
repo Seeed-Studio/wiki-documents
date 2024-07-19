@@ -1063,6 +1063,36 @@ void loop() {
 
 > XIAO ESP32C3 serial port function is not quite consistent with the general Arduino hardware, and using Serial1 directly may cause the USB serial port not to work. For related application cases, please go to the [Serial chapter of XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial) for details.
 
+### FAQ 3: Is is avaliable to use other chip instead of XIAO ESP32-C3 to use the library? {#faq3}
+
+Yes, it is indeed possible to use other chips instead of XIAO ESP32-C3 with the library. Just make sure you connect the correct RX/TX pins or two GPIO pins and set the baud rate to `115200`.
+Confirm which method to use, software or hardware, for example if you have an `Arduino Uno R3` which has only one serial port, you can implement as below:
+
+```cpp
+#include "Arduino.h"
+#include <humanstaticLite.h>
+
+#include <SoftwareSerial.h>
+// Choose any two pins that can be used with SoftwareSerial to RX & TX
+#define RX_Pin A2
+#define TX_Pin A3
+
+SoftwareSerial mySerial = SoftwareSerial(RX_Pin, TX_Pin);
+
+// we'll be using software serial
+HumanStaticLite radar = HumanStaticLite(&mySerial);
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  mySerial.begin(115200);
+}
+void loop() {
+  // Your code here
+}
+```
+
+
 ## Resources
 
 - **[PDF]** [Quick Setup Template](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)

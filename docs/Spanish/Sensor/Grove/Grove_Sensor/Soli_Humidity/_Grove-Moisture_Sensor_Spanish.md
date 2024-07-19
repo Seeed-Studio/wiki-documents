@@ -91,7 +91,7 @@ Si no cuantas con un Grove Shield Base, puedes conectar el Grove - Sensor de Hue
 
 - **Paso 1.** Copia el código en el IDE de Arduino y carguelo. Si no sabes como cargar un código, por favor revisa [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-```c++
+```cpp
 int sensorPin = A0;
 int sensorValue = 0;
 

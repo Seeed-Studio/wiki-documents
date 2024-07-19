@@ -115,14 +115,14 @@ The AWS CLI is a way to manage your AWS services from your board.  You need this
 
 1.First, you need to install pip (Python package manager):
 
-```C++
+```cpp
 curl https://bootstrap.pypa.io/ez_setup.py -o - | python
 easy_install pip
 ```
 
 2.Next, install the AWS CLI with pip:
 
-```C++
+```cpp
 pip install awscli
 ```
 
@@ -130,7 +130,7 @@ Note: In order to view the help files ("aws iot help") you need to install Groff
 
 3.For Groff:
 
-```C++
+```cpp
 wget http://ftp.gnu.org/gnu/groff/groff-1.22.3.tar.gz
 tar -zxvf groff-1.22.3.tar.gz
 cd groff-1.22.3
@@ -144,7 +144,7 @@ cd ~
 4.For Less:
 First rename the old version of less
 
-```C++
+```cpp
 mv /usr/bin/less /usr/bin/less-OLD
 Then install the new version of less
 wget http://www.greenwoodsoftware.com/less/less-458.zip
@@ -159,7 +159,7 @@ cd ~
 
 5.To make sure everything has installed correctly, run the iot help file:
 
-```C++
+```cpp
 aws iot help
 ```
 
@@ -167,7 +167,7 @@ aws iot help
 
 At this point, you should have AWS CLI installed. And the Access ID and Key you have download before, configure AWS and enter the ID and Key with:
 
-```C++
+```cpp
 aws configure
 ```
 
@@ -176,14 +176,14 @@ aws configure
 
 1.First create a folder to store your certificates in:
 
-```C++
+```cpp
 mkdir aws_certs
 cd aws_certs
 ```
 
 2.Generate a private key with open ssl:
 
-```C++
+```cpp
 openssl genrsa -out privateKey.pem 2048
 openssl req -new -key privateKey.pem -out cert.csr
 ```
@@ -194,13 +194,13 @@ openssl req -new -key privateKey.pem -out cert.csr
 
 4.Run the following to activate the certificate:
 
-```C++
+```cpp
 aws iot create-certificate-from-csr --certificate-signing-request file://cert.csr --set-as-active &gt; certOutput.txt
 ```
 
 5.Run the following to save the certificate into a cert.pem file:
 
-```C++
+```cpp
 aws iot describe-certificate --certificate-id &lt;certificate ID&gt; --output text --query certificateDescription.certificatePem  &gt; cert.pem
 ```
 
@@ -212,7 +212,7 @@ NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" f
 
 * Copy the following text (ctrl-c):
 
-```C++
+```cpp
 {
 "Version": "2012-10-17",
 "Statement": [{
@@ -230,7 +230,7 @@ NOTE: Replace &lt;certificate ID&gt; with the ID stored in the "certificateId" f
 
 7.First enter:
 
-```C++
+```cpp
  aws iot create-policy --policy-name PubSubToAnyTopic --policy-document file://policy.doc
 ```
 
@@ -244,7 +244,7 @@ Notice:The policy name can be anything.
 
 9.Then attach the policy to the certificate with:
 
-```C++
+```cpp
 aws iot attach-principal-policy --principal &lt;principal arn&gt; --policy-name "PubSubToAnyTopic"
 ```
 
@@ -261,7 +261,7 @@ NOTE: replace &lt;principal arn&gt; with the  value stored in "certifcateArn" in
 * Now that the certificates are in order we can use MQTT to subscribe and publish to the cloud.
 * First get the root CA pem file:
 
-```C++
+```cpp
 curl https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem &gt; rootCA.pem
 ```
 
@@ -271,7 +271,7 @@ curl https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-C
 
 1.Create a nodejs project
 
-```C++
+```cpp
 cd ~
 mkdir aws_nodejs &amp;&amp; cd aws_nodejs
 npm init
@@ -283,11 +283,11 @@ touch main.js
 
 2.Copy and save demo code to main.js
 
-```C
+```cpp
 vi main.js
 ```
 
-```C++
+```cpp
 // Plug Grove - Relay to base shield port D2
 // Plug Grove - Temperature&Huminity(High quality) to i2c port
 
@@ -410,7 +410,7 @@ function sendData(){
 
 ![](https://files.seeedstudio.com/wiki/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/AWS_Edison_starter_kit_coding5.png)
 
-```C++
+```cpp
   node main.js
 ```
 

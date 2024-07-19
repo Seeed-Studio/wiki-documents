@@ -188,7 +188,7 @@ ___
 
     3. 或者，您可以直接点击代码块右上角的![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg)图标，将以下代码复制到Arduino IDE中的新草图中。
 
-```C++
+```cpp
 
 #include "LTC2941.h"
 
@@ -244,7 +244,7 @@ void loop(void)
 如果一切顺利，当您打开串口监视器并按下任意键后点击发送按钮时，它可能会显示如下内容：
 :::
 
-```C++
+```cpp
 LTC2941 Raw Data
 1439.96C,399.99mAh,100.00%
 1439.96C,399.99mAh,100.00%
@@ -257,7 +257,7 @@ LTC2941 Raw Data
 
 在示例中，我们使用了一个400mAh的电池，因此您可以看到结果`1439.96mC,399.99mAh,100.00%`。剩余电池的百分比只有在您设置了电池容量之后才有效。您可以在代码的第21行更改电池容量，
 
-```C
+```cpp
 ltc2941.setBatteryFullMAh(400); // set the battery capacity here
 ```
 

@@ -157,7 +157,7 @@ The reason why the wiring method of the soil moisture sensor is different from o
 
 This repo demonstrates how to use the soil moisture sensor. The soil moisture sensor uses an analog interface where you can simply read the moisture value of the soil by reading its pins.
 
-```c++
+```cpp
 int sensorPin = A0;
 int sensorValue = 0;
  

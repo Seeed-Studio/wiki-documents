@@ -137,4 +137,6 @@ yarn.lock
 .vscode/*
 .*vs*
 
-
+# plugin FrontMatter
+frontmatter.json
+taxonomyDb.json

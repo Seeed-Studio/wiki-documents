@@ -10,7 +10,7 @@ slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:
-  date: 04/02/2024
+  date: 07/16/2024
   author: Spencer
 ---
 
@@ -291,7 +291,7 @@ Additionally, the latest development release version (`3.0.0-rc1`) was released 
 
 - **Step 2.** Navigate to **File > Examples > 01.Basics > Blink**, open the program.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/11.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
 - **Step 3.** Select the board model to **XIAO ESP32C6**, and select the correct port number to upload the program.
 
@@ -314,6 +314,21 @@ If you want to connect the battery for XIAO, we recommend you to purchase qualif
 
 :::caution
 When you use battery power, there will be no voltage on the 5V pin.
+:::
+
+:::tip red indicator light
+
+At the same time, we have the red indicator light for battery charging as [XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage):
+
+The red light behavior for the XIAO ESP32 C6 is as follows:
+
+- When the XIAO ESP32 C6 is not connected to a battery:
+  - The red light comes on when the Type-C cable is connected and goes off after 30 seconds.
+- When the battery is connected and the Type-C cable is connected for charging:
+  - The red light flashes.
+- When the battery is fully charged via the Type-C connection:
+  - The red light turns off.
+
 :::
 
 ## Deep sleep mode and wake-up

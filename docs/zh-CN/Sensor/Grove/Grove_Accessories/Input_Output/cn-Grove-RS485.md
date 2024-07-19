@@ -90,7 +90,7 @@ Grove - NFC支持I2C和UART，[Seeed Arduino NFC库](https://github.com/Seeed-St
 
 - **步骤1.** 打开两个Arduino IDE窗口，并分别复制以下代码。其中一个设备作为主设备，另一个设备作为从设备。
 
-```c++
+```cpp
 /*      Slave     */
 #include <SoftwareSerial.h>
 SoftwareSerial Slave(6, 7);  
@@ -115,7 +115,7 @@ void loop() {
 }
 ```
 
-```c++
+```cpp
 /*      Master      */
 #include <SoftwareSerial.h>
 SoftwareSerial Master(6, 7);
