@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Node-RED Integration'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: node_red_integration_with_watcher
+link:
+  type: generated-index
+  slug: node_red_integration_main_page
+  title: Watcher to Node-RED Integration
+  description: The "Node-RED Integration" of the SenseCAP Watcher wiki focuses on integrating Watcher with various messaging platforms and services to enable alerts and notifications. This part is particularly useful for users who want to stay informed about the status of their Watcher devices or receive important updates from their monitoring tasks.
