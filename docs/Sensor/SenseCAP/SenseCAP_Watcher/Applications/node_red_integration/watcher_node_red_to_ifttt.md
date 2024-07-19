@@ -13,7 +13,9 @@ last_update:
 
 # Watcher To IFTTT Quick Start
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png" style={{width:1000, height:'auto'}}/></div>
+<div class="table-center">
+<iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/watcher_ifttt.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## Part 1. What is IFTTT
 
