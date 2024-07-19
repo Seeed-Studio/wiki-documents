@@ -506,6 +506,14 @@ The flash command may run for 2-10 minutes.
 Please complete the **System Configuration** according to your needs.
 :::
 
+**Step 5:** After starting the system, you need to execute the following command to reactivate the wireless network card driver:
+```bash
+sudo rm /lib/modules/5.15.136-tegra/build
+sudo ln -s /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.136-tegra/build
+sudo apt install -y iwlwifi-modules
+```
+
+
 </TabItem>
 </Tabs>
 
