@@ -14,9 +14,7 @@ last_update:
 
 Grove Accessories refer to components and peripherals compatible with the Grove ecosystem. Grove is an open-source hardware platform developed by Seeed Studio, designed to simplify electronics prototyping and experimentation. It features a standardized interface and connectors that allow users to easily combine various modules such as sensors, actuators, displays, cables, and adapters without soldering or complex wiring.
 
-<br /><br /><br /><br />
-此处插图
-<br /><br /><br /><br />
+<div style={{textAlign:'center'}}><img src="https://i.imgur.com/N7xKjV1.png" style={{width:1000, height:'auto'}}/></div>
 
 Grove Accessories typically include a variety of actuators, displays, switch&button, and so on. These accessories are designed to be directly plugged into Grove interfaces, enabling rapid prototyping and project development. The Grove system's standardized connectors facilitate easy and quick assembly of components, making it straightforward for users to build and iterate on their electronic designs without the complexities of soldering or intricate wiring.
 
