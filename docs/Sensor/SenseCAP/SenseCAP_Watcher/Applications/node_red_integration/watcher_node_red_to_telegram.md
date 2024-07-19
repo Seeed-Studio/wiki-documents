@@ -13,7 +13,9 @@ last_update:
 
 # Watcher To Telegram Quick Start
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png" style={{width:1000, height:'auto'}}/></div>
+<div class="table-center">
+<iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/watcher_telegram.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## What is Telegram
 
