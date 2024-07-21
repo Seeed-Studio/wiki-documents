@@ -8,10 +8,13 @@ last_update:
     author: halyssonJr
 ---
 
-# Seed Studio XIAO RP2040 with NuttX(RTOS)
+# Seeed Studio XIAO RP2040 with NuttX(RTOS)
+
 ## Introduction
 
-[NuttX](https://nuttx.apache.org/) NuttX is a mature real-time operating system (RTOS) widely recognized for its standards compliance and small footprint. One of NuttX's main features is its scalability, which allows it to be used in environments ranging from 8-bit microcontrollers to 64-bit systems. This flexibility is achieved through adherence to POSIX and ANSI standards, enabling you to experiment with similar NuttX features across a wide range of chips from different architectures, families, and semiconductor vendors.
+[NuttX](https://nuttx.apache.org/) is a mature real-time operating system (RTOS) widely recognized for its standards compliance and small footprint. One of NuttX's main features is its scalability, which allows it to be used in environments ranging from 8-bit microcontrollers to 64-bit systems. This flexibility is achieved through adherence to POSIX and ANSI standards, enabling you to experiment with similar NuttX features across a wide range of chips from different architectures, families, and semiconductor vendors.
+
+<div align="center"><img width ="{200}" src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/nuttx.svg"/></div>
 
 Additionally, NuttX offers many advanced and useful features, such as USB, Ethernet, Audio, and Graphics subsystems. These characteristics make NuttX an attractive choice for developers seeking a versatile, robust RTOS capable of operating on various types of hardware.
 
@@ -41,7 +44,6 @@ export PICO_SDK_PATH=<absolute_path_to_pico-sdk_directory>
 
 ```
 mkdir nuttxspace
-
 ```
 
 3. Clone the repositories
@@ -51,6 +53,7 @@ cd nuttxspace
 git clone https://github.com/apache/nuttx.git nuttx
 git clone https://github.com/apache/nuttx-apps apps
 ```
+The Apache Nuttx it's divided into two project: 
 
 - Nuttx: contains implemented the kernel, driver and subsystems.
 - Apps: contains a collection of tools, shells, network utilities, libraries and interpreters.
@@ -60,37 +63,71 @@ git clone https://github.com/apache/nuttx-apps apps
 To start an application it's necessary to load a configuration on NuttX, calling the command: 
 
 ```
-./tools/configurate.sh seeed-xiao-rp2040:your_application
+./tools/configurate.sh board_name:your_application
+```
+Also it's possible to check the list of board-supported a running the command:
+
+```
+./tools/configurate.sh -L
 ```
 
-The command it's composed two parameters:
-- Board name
-- Application
+Once the script is run, the NuttX must be compiled. There are two possibilities to do that using: [Make](https://nuttx.apache.org/docs/latest/quickstart/compiling_make.html) or [CMake](https://nuttx.apache.org/docs/latest/quickstart/compiling_cmake.html).
 
-Once the script is run, the NuttX must be compiled. There are two possibilities to do that: [Make](https://nuttx.apache.org/docs/latest/quickstart/compiling_make.html) or [CMake](https://nuttx.apache.org/docs/latest/quickstart/compiling_cmake.html).
+## Programming
 
-Successful compilation is guaranteed, the next goal it's programming using BOOTSEL.
+Successful compilation is guaranteed, the next goal it's programming using BOOTSEL. For that, you must follow these steps:
 
-**Step 1**: Connect the Seed Stduio XIAO RP2040 to USB port while pressing button `B` (boot). The board will be detected as USB Mass Storage Device.
+**Step 1**: Connect the Seed Stduio XIAO RP2040 to USB port while pressing button `B` (boot). The board will be detected as USB Mass Storage Device `RPI-RP2`.
 
-**Step 2**: Copy “nuttx.uf2” into the Seed Stduio. XIAO RP2040.
+**Step 2**: In the workspace, go to `nuttx` and copy `nuttx.uf2` into the Seed Stduio. XIAO RP2040. 
 
-**Step 3**: Search for a new usb device.
+**Step 3**: Search for a new USB device on your computer.
 
 **Step 4**: Open a serial communication with Seed Stduio XIAO RP2040.
 
-```
-picocom -b 115200 /dev/ttyACM0
-```
+## Hand-on
+
+It's time to explore NuttX practically. In this session, four applications are available: usb nsh, gpio, user leds, and ws2812 driver.
 
 ### USBNSH
 
 The NuttXShell(NSH) is a shell system to be used in NuttX, similar to bash and other similar options. It supports a rich set of included commands, scripting and the ability to run your own applications as “builtin” (part of the same NuttX binary).
 
+
+We can start the build process clearing the previous configuration
+
+```
+$ cd ~/nuttxspace/nuttx
+$ make distclean
+```
+
+Now we select the NSH configuration to the seeed-xiao-rp2040 board:
+
+```
+$ ./tools/configurate.sh seeed-xiao-rp2040:usbnsh
+```
+
+Compile de the source code.
+
+```
+$  make -j
+```
+
+After programming and open serial communication 
+
+```
+picocom -b 115200 /dev/ttyACM0
+```
+
+You must to press Enter 3 times, and then this message will show in the terminal.
+
 ```
 NuttShell (NSH) NuttX-12.5.1
-nsh> uname -a
-NuttX 12.5.1 e89a38f7b9 Jul 16 2024 23:05:35 arm seeed-xiao-rp2040
+nsh> 
+```
+Typing `?`, you will access the available options for commands and built-in applications.
+
+```
 nsh> ?
 help usage: [-v] [<cmd>]
 
@@ -105,7 +142,12 @@ help usage: [-v] [<cmd>]
     cd          env         kill        pwd         true        
 
 Builtin Apps:
-    getprime    hello       nsh         ostest      sh          
+    getprime    hello       nsh         ostest      sh 
+```
+
+Let's say hello to NuttX, type `hello` and then it executes the command:
+
+```      
 nsh> hello
 Hello, World!!
 ```
@@ -117,3 +159,93 @@ Hello, World!!
 
 
 ## WS2812 LED
+
+The WS2812 driver allows control of any smart pixels that use the ws2812 protocol. This application over NSH allows one to call a command to perform the sample.
+
+Clear the previous configuration
+
+```
+$ cd ~/nuttxspace/nuttx
+$ make distclean
+```
+
+```
+$ ./tools/configurate.sh seeed-xiao-rp2040:ws2812
+```
+
+Compile de the source code.
+
+```
+$  make -j
+```
+
+After programming and open serial communication 
+
+```
+picocom -b 115200 /dev/ttyACM0
+```
+
+You must to press Enter 3 times, and then this message will show in the terminal.
+
+```
+NuttShell (NSH) NuttX-12.5.1
+nsh> ?
+help usage:  help [-v] [<cmd>]
+
+    .           cp          exit        mkdir       rm          uname       
+    [           cmp         expr        mkrd        rmdir       umount      
+    ?           dirname     false       mount       set         unset       
+    alias       dd          fdinfo      mv          sleep       uptime      
+    unalias     df          free        pidof       source      usleep      
+    basename    dmesg       help        printf      test        xd          
+    break       echo        hexdump     ps          time        
+    cat         env         kill        pwd         true        
+    cd          exec        ls          reboot      truncate    
+
+Builtin Apps:
+    getprime    hello       nsh         ostest      sh          ws2812      
+nsh> 
+
+```
+
+```
+nsh> ls /dev/
+/dev:
+ console
+ leds0
+ null
+ ttyACM0
+ ttyS0
+
+```
+
+```
+nsh> ws2812 -h
+Usage: ws2812 [OPTIONS]
+
+Arguments are "sticky".  For example, once the device path is
+specified, that path will be re-used until it is changed.
+  [-p path] selects the ws2812 device.  Default: /dev/leds0 Current: /dev/leds0
+  [-l leds] selects number of ws2812s in the chain.  Default: 1 Current: 1
+  [-r repeat] selects the number change cycles.  Default: 4 Current: 4
+  [-d delay] selects delay between updates.  Default: 20000 us Current: 20000 us
+
+```
+
+```
+nsh> ws2812
+```
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
