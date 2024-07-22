@@ -81,9 +81,9 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 #### SNS Integration Part
 
-- [Watcher & Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
+- Watcher & Twillio Message Alerts *(Planning)*
 
-- [Watcher & Telegram Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
+- Watcher & Telegram Message Alerts *(Planning)*
 
 - Watcher & Discord Message Alerts *(Planning)*
 
@@ -93,15 +93,11 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher & Google Mail Message Alerts *(Planning)*
 
-- [Watcher does schedule management with IFTTT](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
+- Watcher does schedule management with IFTTT *(Planning)*
 
 #### Smart Home Part
 
 - Watcher as Home Assistant Smart Terminal *(Planning)*
-
-#### Database Part
-
-- [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
 
 #### IoT Platform Part
 
@@ -119,11 +115,19 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Developing Watcher with Wokwi *(Maybe)*
 
-#### Integration Hub Part
-
-- Watcher Data Streaming to Apache Kafka *(Planning)*
+#### Node-RED Integration Part
 
 - [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_node_red/)
+
+- [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
+
+- [Watcher & Node-RED to Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
+
+- [Watcher & Node-RED to Telegram Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
+
+- [Watcher & Node-RED to IFTTT Gmail Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
+
+- Watcher & Node-RED Data Streaming to Apache Kafka *(Planning)*
 
 ### Open Source Material
 
