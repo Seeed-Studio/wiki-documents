@@ -48,7 +48,7 @@ We highly recommend studying the [Getting Started with N3uron](https://wiki.seee
 
 Please go to this [link](https://sourceforge.net/projects/yetanotherbacnetexplorer/) and download YABE (Yet Another BACnet Explorer). YABE is a versatile tool that allows you to simulate and explore BACnet devices, making it ideal for testing and development purposes. Once downloaded and installed on your Host PC, YABE will be used to simulate room temperature data, which we will then read and process using Node-RED on the reComputer R1000.
 
-### Configure Ethernet settings for Modbus TCP/IP
+### Configure Ethernet settings for BACnet TCP/IP
 
 Since your PLC/Device IP domain is different from your wireless settings, you may have to change the IP configuration manually. For that,
 
