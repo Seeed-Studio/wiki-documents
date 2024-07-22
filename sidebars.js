@@ -3016,7 +3016,8 @@ const sidebars = {
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit'
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/install_m.2_coral_to_rpi5'
                       ],
                       },
 
