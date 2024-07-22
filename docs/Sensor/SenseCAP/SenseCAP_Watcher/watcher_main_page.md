@@ -81,9 +81,9 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 #### SNS Integration Part
 
-- Watcher & Twillio Message Alerts *(Planning)*
+- [Watcher & Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
 
-- Watcher & Telegram Message Alerts *(Planning)*
+- [Watcher & Telegram Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
 
 - Watcher & Discord Message Alerts *(Planning)*
 
@@ -93,7 +93,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher & Google Mail Message Alerts *(Planning)*
 
-- Watcher does schedule management with IFTTT *(Planning)*
+- [Watcher does schedule management with IFTTT](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
 
 #### Smart Home Part
 
@@ -119,11 +119,11 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Developing Watcher with Wokwi *(Maybe)*
 
-#### Jack-of-all-trades Part
+#### Integration Hub Part
 
 - Watcher Data Streaming to Apache Kafka *(Planning)*
 
-- Watcher Data Streaming to Node-RED *(Planning)*
+- [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_node_red/)
 
 ### Open Source Material
 

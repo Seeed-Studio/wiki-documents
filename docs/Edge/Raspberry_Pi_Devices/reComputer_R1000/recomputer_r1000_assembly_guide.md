@@ -121,7 +121,7 @@ Following these steps should help you disassemble the device without any issues.
 - Carefully solder the PoE module onto the board. Due to the compact nature of the board, exercise caution while soldering to avoid damaging nearby components.
 
 :::note
-Place the PoE module correctly according to the PCB silk screen orientation and solder it.
+Please correctly install the PoE module, placing the white dots facing inward, next to a capacitor.
 :::
 
 
