@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/16/2024
+  date: 07/22/2024
   author: Frank
 ---
 
@@ -17,49 +17,50 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 15th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 22th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
+### [Watcher To IFTTT Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb/)
 
-### [Watcher To IFTTT Quick Start](https://wiki.seeedstudio.com/watcher_to_ifttt/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/Watcher_MongoDB_Cover.jpg" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png" style={{width:1000, height:'auto'}}/></div>
+**MongoDB** is a powerful, cross-platform document database that excels in handling both structured and unstructured data. Its flexible, schema-less data model is based on JSON-like documents, making it an excellent choice for dynamic applications requiring ad hoc queries and indexing.
+
+Using MongoDB provides a straightforward method to **store and utilize data from the Watcher for further processing or other project applications.**
+
+This tutorial will guide you through using the Watcher API and Node-RED to seamlessly send data to MongoDB, a setup perfect for projects that demand real-time data handling and persistence.
+
+
+### [reComputer R1000 with FIN to create a Top Level Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_top_level_gaphic/)
 
 IFTTT (If This Then That) is a web-based service that allows developers to create automations and integrations between various apps, devices, and services without complex programming. It enables users to define simple conditional statements called "applets" that trigger actions based on specific events. It provides a user-friendly interface and a vast library of pre-built applets, making it accessible for developers to create powerful automations and integrations efficiently.
 
-### [Watcher To Telegram Quick Start](https://wiki.seeedstudio.com/watcher_to_telegram/)
+This article will show you how to use the of FIN Framwork, and to create a using the .Graphics BuilderTop Level GraphicGraphics Builder.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png" style={{width:1000, height:'auto'}}/></div>
 
-**What is Telegram**
+### [reComputer R1000 with FIN to create a Floor Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_floor_gaphic/)
 
-Telegram is a popular messaging app that offers a wide range of features for users and developers alike. With its open API and protocol, developers can create custom Telegram clients, bots, and integrate Telegram's services into their own applications. Telegram provides a secure and reliable platform for real-time communication, supporting various media types, group chats, and end-to-end encryption. Its cloud-based infrastructure ensures seamless synchronization across devices and allows for easy scalability. Developers can leverage Telegram's features and tools to build innovative solutions and enhance user experiences within their projects.
+This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Floor Graphic` using the `Graphics Builder`.
 
-### [AWS IoT Core Intergate With reComputer R1000](https://wiki.seeedstudio.com/recomputer_r1000_aws/)
+### [reComputer R1000 with FIN to create a Site Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_site_gaphic/)
 
-AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. In this guide, we will discuss how to connect our reComputer R1000 to the AWS IoT cloud.
 
-### [reComputer R1000 Connect AWS IoT Core with N3uron](https://wiki.seeedstudio.com/recomputer_r1000_n3uron_aws/)
+This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Site Graphic` using the `Graphics Builder`.
 
-We have outlined the process of transmitting data from your [reComputer-R1000 device with AWS IoT Core using the MQTT protocol](https://wiki.seeedstudio.com/recomputer_r1000_aws/). This tutorial will seamlessly integrate with the aforementioned process. In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.
-
-### [reComputer R1000 with FIN to use modbus TCP](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp/)
-
-FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
-
-This article introduces how to use the `Modbus Connector` of `FIN Framwork`, which mainly includes three aspects: creating a `FIN Framwork` project, configuring the `Modbus Connector`, and adding data points to `Equip`.
 
 
 ## Existed Wiki Updated
 
-### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/flash_to_wio_tracker/)
+### [Voice Assistant System for Home Assitant](https://wiki.seeedstudio.com/respeaker_lite_ha/)
 
-We've added the [Application Firmware](https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/wio_tracker_app_release_sw_0.5_2024-06-06.uf2).
+We've added examples of [Adding smart devices](https://wiki.seeedstudio.com/respeaker_lite_ha/#add-your-smart-device).
 
-### [Get Started with SenseCAP Indicator](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/)
+### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/)
 
-We have added the [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) and the [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf).
+We've added instructions for [Configuring the IP address for the POE interface](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#usage).
+
+
 
 
 
@@ -148,6 +149,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
 - [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
 - [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
+- [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
 
 </details>
 
