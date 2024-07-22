@@ -33,7 +33,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-- Watcher Quick Start Series 3# : As a Grove sensor *(Coming Soon)*
+- [Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)
 
 - Watcher Quick Start Series 4# : Training a model for Watcher *(Planning)*
 

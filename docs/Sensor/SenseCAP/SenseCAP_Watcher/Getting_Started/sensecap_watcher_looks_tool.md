@@ -92,10 +92,11 @@ The Check Update feature ensures that your Watcher is always running the latest 
 
 To check for updates, simply navigate to the Check Update menu on your Watcher device or within the SenseCraft APP. If an update is available, you will be prompted to download and install it. It is recommended to keep your Watcher updated to ensure optimal performance, stability, and security.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/57.png" style={{width:250, height:'auto'}}/></div>
+
 :::tip
 Some OTA versions may require Watcher users to force an update to continue using it. This may be due to fixing a major software bug or a service upgrade in the background.
 :::
-
 
 ### Delete Detected History
 
@@ -187,7 +188,7 @@ Discover a world of creativity and inspiration in our Watcher Animation Showcase
 
 **[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
 
-**Watcher Quick Start Series 3# : As a Grove sensor**
+**[Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)**
 
 **Watcher Quick Start Series 4# : Training a model for Watcher**
 
