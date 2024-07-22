@@ -2977,6 +2977,7 @@ const sidebars = {
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_top_level_graphic',
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_create_site_graphic',
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with-fin_create_floor_graphic',
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_create_equip_graphic',
                               ],
                             },
                             {
