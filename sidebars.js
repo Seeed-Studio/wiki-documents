@@ -1652,7 +1652,7 @@ const sidebars = {
         'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
         {
           type: 'category',
-          label: 'Integrated with XIAO ESP32S3',
+          label: 'ReSpeaker Lite Voice Assistant Kit',
           link: {
             type: "doc",
             id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
@@ -2974,7 +2974,9 @@ const sidebars = {
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_install_fin',
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_use_modbus',
                                'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with-_fin_use_logic_to_alarm',
-                              
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_top_level_graphic',
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with_fin_create_site_graphic',
+                               'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Fin/recomputer_r1000_with-fin_create_floor_graphic',
                               ],
                             },
                             {
@@ -3016,7 +3018,8 @@ const sidebars = {
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit'
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/install_m.2_coral_to_rpi5'
                       ],
                       },
 
@@ -4764,6 +4767,43 @@ const sidebars = {
           ], 
         },
     
+
+
+        {
+          type: 'doc',
+          id: 'zh-CN/Sensor/mmWave_radar_sensor/cn-mmwave_radar_Intro',
+          label: '毫米波雷达传感器',
+          className: 'sideboard_calss',
+        },
+        {
+          type: 'category',
+          label: '用于XIAO的毫米波',
+          collapsed: true,
+          collapsible: true,   
+          items: [
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-for-XIAO/cn-mmwave-for-xiao',      
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-for-XIAO/cn-mmwave-for-xiao_arduino',
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-for-XIAO/cn-mmwave-for-xiao-connect-to-HA',
+          ], 
+        },
+        {
+          type: 'category',
+          label: '毫米波套件',
+          collapsed: true,
+          collapsible: true,   
+          items: [
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-kit/cn-mmwave_human_kit',
+            'zh-CN/Sensor/mmWave_radar_sensor/mmwave-kit/cn-mmWave_Kit_And_Grove_Connect_To_ESPHome',
+                 
+          ], 
+        },
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24BSD1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24FDB1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24HPB1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR24HPC1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR60BHA1',
+        'zh-CN/Sensor/mmWave_radar_sensor/cn-Radar_MR60FDA1',
+
 
     {
       type: 'doc',

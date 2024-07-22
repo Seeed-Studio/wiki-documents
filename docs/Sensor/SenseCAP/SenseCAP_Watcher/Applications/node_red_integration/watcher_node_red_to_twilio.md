@@ -1,11 +1,11 @@
 ---
-description: Send message from Watcher to twilio
-title: Watcher to Twilio
+description: Send message from Watcher & Node-RED to twilio
+title: Watcher & Node-RED to Twilio
 keywords:
 - watcher
 - twilio
 image: https://files.seeedstudio.com/wiki/watcher_to_twilio_image/tw1.png
-slug: /watcher_to_twilio
+slug: /watcher_node_red_to_twilio
 last_update:
   date: 07/03/2024
   author: Allen
@@ -13,7 +13,9 @@ last_update:
 
 # Watcher To Twilio Quick Start
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/tw1.png" style={{width:1000, height:'auto'}}/></div>
+<div class="table-center">
+<iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/watcher_twilio.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## Part 1. What is Twilio
 

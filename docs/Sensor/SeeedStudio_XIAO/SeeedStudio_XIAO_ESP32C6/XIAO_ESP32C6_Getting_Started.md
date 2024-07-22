@@ -181,11 +181,14 @@ export const Highlight = ({children, color}) => (
 </table>
 
 :::tip
-There's an IO port 14 used to select between using the built-in antenna or an external antenna. If port 14 is at a low level, it uses the built-in antenna; if it's at a high level, it uses the external antenna. The default is low level. If you want to set it high, you can refer the code below.
+GPIO14 is used to select between using the built-in antenna or an external antenna. Before that, you need to set GPIO3 low level to turn on this function. If GPIO14 is set low level, it uses the built-in antenna; if it set to high level, it uses the external antenna. Default is low level. If you want to set it high, you can refer the code below.
 ```cpp
 void setup() {
+  pinMode(3, OUTPUT);
+  digitalWrite(3, LOW);//turn on this function
+  delay(100);
   pinMode(14, OUTPUT); 
-  digitalWrite(14, HIGH);
+  digitalWrite(14, HIGH);//use external antenna
 }
 ```
 :::
