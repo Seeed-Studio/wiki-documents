@@ -36,11 +36,14 @@ last_update:
 The Seeed Studio XIAO ESP32C6 is an embedded development board that boasts outstanding RF performance, thanks to its support for both 2.4GHz Wifi - 802.11b/g/n and Bluetooth Low Energy (BLE) 5.0 dual wireless communication. This capability enables the XIAO ESP32C6 to provide reliable and high-speed wireless connectivity for a wide range of Internet of Things (IoT) applications. The board features an onboard ceramic antenna, which eliminates the need for an external antenna and simplifies the design process. The ESP32C6 chip also offers low power consumption, making it suitable for battery-powered IoT devices. In this tutorial, we will explore how to leverage the XIAO ESP32C6's Wi-Fi capabilities to connect to a Wi-Fi network and perform basic networking tasks.
 
 :::tip
-There's an IO port 14 used to select between using the built-in antenna or an external antenna. If port 14 is at a low level, it uses the built-in antenna; if it's at a high level, it uses the external antenna. The default is low level. If you want to set it high, you can refer the code below.
+GPIO14 is used to select between using the built-in antenna or an external antenna. Before that, you need to set GPIO3 low level to turn on this function. If GPIO14 is set low level, it uses the built-in antenna; if it set to high level, it uses the external antenna. Default is low level. If you want to set it high, you can refer the code below.
 ```cpp
 void setup() {
+  pinMode(3, OUTPUT);
+  digitalWrite(3, LOW);//turn on this function
+  delay(100);
   pinMode(14, OUTPUT); 
-  digitalWrite(14, HIGH);
+  digitalWrite(14, HIGH);//use external antenna
 }
 ```
 :::
