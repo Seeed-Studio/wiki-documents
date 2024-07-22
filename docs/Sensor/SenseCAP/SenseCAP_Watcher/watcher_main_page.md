@@ -99,6 +99,10 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher as Home Assistant Smart Terminal *(Planning)*
 
+#### Database Part
+
+- [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
+
 #### IoT Platform Part
 
 - Watcher Data Streaming to Blynk Hosting *(Planning)*
