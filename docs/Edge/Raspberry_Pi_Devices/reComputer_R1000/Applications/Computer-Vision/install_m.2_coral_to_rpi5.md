@@ -6,7 +6,7 @@ keywords:
   - rpi5
   - M.2 coral
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /install_m.2_coral_to_rpi5
+slug: /install_m2_coral_to_rpi5
 last_update:
   date: 07/19/2024
   author: Jiahao
