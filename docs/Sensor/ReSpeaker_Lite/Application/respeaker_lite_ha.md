@@ -389,7 +389,7 @@ Wait for a few minutes for the installation. After the installation is successfu
 
 Navigate to `Settings` and select `Devices & Services`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install-done.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/devices.png" alt="pir" width={800} height="auto" /></p>
 
 
 You will see `ESPHome` as a discovered integration. Click `CONFIGURE`.

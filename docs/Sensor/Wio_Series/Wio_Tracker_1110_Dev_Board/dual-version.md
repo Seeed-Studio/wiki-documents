@@ -615,7 +615,7 @@ To register your Sidewalk endpoint, either use automatic touchless registration 
 
 ### Network Switch
 
- The default is LoRaWAN network, click the `BUTTON` to switch network.
+ The default is LoRaWAN network, click the `User Button` to switch network.
 
  <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/click-button.png"/></div>
 
@@ -1067,7 +1067,9 @@ As a first step you will need to create a new Amazon Location Service Map resour
 
 * Then expand the navigation bar on the left side of the screen, and select `Route calculators`.
 
-<div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/003/route.1.png"/></div>
+
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/router-cal.png"/></div>
+
 
 
 
@@ -1075,7 +1077,7 @@ Continue by selecting `HERE` as Data Provider, click on the `Create route calcul
 
 
 
-<div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/003/route.2.png"/></div>
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/create-router.png"/></div>
 
 ### Creating Tracker
 
@@ -1087,18 +1089,21 @@ Navigate to `Trackers` -> `Create tracker`:
 Input the name of the tracker and select `Time-based filtering` under position filtering.
 
 
-<div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/003/tracker.2.png"/></div>
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/time-based.png"/></div>
 
 
 Then scroll down and mark the `Enable EventBridge events` setting under EventBridge configuration, then click `Create tracker`.
 
 
-<div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/003/tracker.3.png"/></div>
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/enable-bridge.png"/></div>
 
 
 ### Creating Geofence Collection
 
-<div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/003/route.2.png"/></div>
+
+Navigate to `Geofence collections`, and click `create geofence collection`.
+
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/geolocate.png"/></div>
 
 
 
@@ -1118,10 +1123,10 @@ Then scroll down and mark the `Enable EventBridge events` setting under EventBri
  npm run frontend:publish
  ```
 
-* Once it's completed, you will receive the website URL
+* Once it's completed, you will receive the website URL.
  
 
-<div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/003/cloud9.4.png"/></div>
+<div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/web-url.png"/></div>
 
 
 * Navigate to this URL in your browser to view your tracking application.

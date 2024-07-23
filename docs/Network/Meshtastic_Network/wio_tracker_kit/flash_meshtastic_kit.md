@@ -35,8 +35,12 @@ Connect the Dev Board to your PC via the USB cable.
 
 ### Flash the bootloader
 
+
 <Tabs>
 <TabItem value="uf2" label="UF2">
+
+* [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2)
+
 Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your PC.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
@@ -45,6 +49,8 @@ Copy the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the drive. 
 
 </TabItem>
 <TabItem value="serial" label="Serial">
+
+* [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip)
 
 **Step1: Adafruit-nrfutil Installation**
 
