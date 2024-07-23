@@ -3275,7 +3275,8 @@ const sidebars = {
                         //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
                         // },
                   items: [
-                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar',
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/CSI_Camera'
                       ]},
                 
                 ]},
