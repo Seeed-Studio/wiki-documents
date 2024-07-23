@@ -505,6 +505,49 @@ After uploading the program, open the Serial Monitor in Arduino IDE and set the 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/24.png" style={{width:600, height:'auto'}}/></div>
 
+### UART Serial
+
+According to the above XIAO-S3 Pin diagrams for specific parameters,we can observe that there are TX pin and RX pin,This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added,So nex,we will use the pins led out by the chip for serial communication
+
+Core Function that need to be include:
+
+- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- enalbe Serial1,the function prototype : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
+  - `baud`  :badu rate
+  - `config`:Configuration bit
+  - `rxPin` :Receive Pin
+  - `txPin` :Send Pin
+
+It is worth nothing that if we use digital pin port to define,this place should be`#define RX_PIN D7`、`#define TX_PIN D6`,if we use GPIO pin port to define,this place should be `#define RX_PIN 44`、`#define TX_PIN 43`,please refer to the pin diagrams of different XIAO Series for specific parameters
+
+Here is an example program:
+
+```c
+#define RX_PIN D7
+#define TX_PIN D6
+#define BAUD 115200
+
+
+void setup() {
+    Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);
+    while(!Serial1);
+}
+ 
+void loop() {
+  if(Serial1.available() > 0)
+  {
+    char incominByte = Serial1.read();
+    Serial1.print("I received : ");
+    Serial1.println(incominByte);
+  }
+  delay(1000);
+}
+```
+
+After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 115200. You will see the following message on the serial monitor, which outputs 'Hello Everyone!' every second. Also, you can send content to the XIAO ESP32S3 through the serial monitor, and XIAO will print out each byte of the content you send.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
+
+
 ### Usage of Software Serial
 
 If you feel that one hardware serial port is not enough, you can also use the ESP32's software serial function to set some pins as software serial to expand the number of serial ports.
@@ -597,7 +640,7 @@ void setup()
     MySerial0.print("MySerial0");
 
     // And configure MySerial1 on pins RX=D9, TX=D10
-    MySerial1.begin(115200, SERIAL_8N1, 8, 9);
+    MySerial1.begin(115200, SERIAL_8N1, 9, 10);
     MySerial1.print("MySerial1");
 }
 
