@@ -66,7 +66,6 @@ Before we begin, let's review all the pins that the XIAO ESP32S3 has and its fun
 	</tr>
 </table>
 
-
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
