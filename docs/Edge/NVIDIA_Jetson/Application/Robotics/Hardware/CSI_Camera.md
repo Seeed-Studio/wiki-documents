@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a step-by-step guide to use multiple CSI cameras on reComputer by ROS.
-title: CSI Camera in ROS
+title: CSI Camera with ROS
 keywords:
 - Jetson Nano
 - reComputer
@@ -13,10 +13,10 @@ last_update:
   date: 05/7/2024
   author: ZhuYaoHui
 ---
-# How to use multiple CSI cameras on reComputer by ROS1
+# How to Use Multiple CSI Cameras on reComputer with ROS
 
 ## Introduction
-This tutorial provides instructions on how to read multiple CSI camera image data through ROS on [reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) series devices and publish image topics to be displayed in the RVIZ visualization interface.
+This tutorial provides a step-by-step guide on how to read multiple CSI camera image data through ROS on  [reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) series devices and publish image topics to be displayed in the RVIZ visualization interface.
 
 <div align="center">
     <img width={700} 
@@ -24,7 +24,7 @@ This tutorial provides instructions on how to read multiple CSI camera image dat
 </div>
 
 ## Prerequisites
-- __[reComputer J30/40 series](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__: Already completed the [installation of the JetPack 5.x](/reComputer_J4012_Flash_Jetpack) system and the [ROS Noetic environment](/installing_ros1) according to the tutorial. 
+- __[reComputer J30/40 series](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__:  Ensure you have completed the [installation of the JetPack 5.x](/reComputer_J4012_Flash_Jetpack) system and the [ROS Noetic environment](/installing_ros1) according to the provided tutorials.
 
 - __Supported cameras are as follows:__
 
@@ -58,7 +58,7 @@ Please follow this tutorial to complete the [Connecting and testing of the CSI c
   </div>
 
 ### Installation
-- **Step 1:** Open a terminal on your reComputer, and Create a directory for your workspace:
+- **Step 1:** Open a terminal on your reComputer and create a directory for your workspace:
   ```bash
   mkdir -p ~/catkin_ws/src
   cd ~/catkin_ws/src
