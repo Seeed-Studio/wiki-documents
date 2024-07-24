@@ -150,7 +150,7 @@ sudo docker compose down
 ```
 
 ## More Details
-- Zero Shot Detection with Jetson Platform Services: https://docs.nvidia.com/jetson/jps/inference-services/zero_shot_detection.html
+Zero Shot Detection with Jetson Platform Services: https://docs.nvidia.com/jetson/jps/inference-services/zero_shot_detection.html
 
 ## Tech Support & Product Discussion
 

@@ -157,7 +157,7 @@ sudo docker compose down
 ```
 
 ## More Details
-- Visual Language Models (VLM) with Jetson Platform Services: https://docs.nvidia.com/jetson/jps/inference-services/vlm.html
+Visual Language Models (VLM) with Jetson Platform Services: https://docs.nvidia.com/jetson/jps/inference-services/vlm.html
 
 ## Tech Support & Product Discussion
 
