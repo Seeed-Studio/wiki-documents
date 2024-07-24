@@ -1,18 +1,20 @@
 ---
 description: This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming on reComputer Jetson.
 title: Getting Started with NVStreamer
-tags:
-  - Data Label
+keywords:
+- reComputer
+- NVStreamer
+- RTSP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /getting_started_with_nvstreamer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui
 ---
-# How to Use NVStreamer for RTSP Streaming on reComputer
+# How to Use NVStreamer for RTSP Streaming on reComputer with Jetson Platform Services
 
 ## Introduction
-NVStreamer is a software developed by NVIDIA that can store and serve video files, which can then be streamed using the RTSP protocol. It is particularly useful for testing with VST, as it provides an alternative method to cameras for creating video sources as input for VST. Specifically, it offers a mechanism to use specific video files as input for VST testing. VST can be configured to receive RTSP streams as if they were coming from ONVIF-S cameras.
+[NVStreamer](https://docs.nvidia.com/moj/nvstreamer/moj-nvstreamer.html) is a software developed by NVIDIA that can store and serve video files, which can then be streamed using the RTSP protocol. It is particularly useful for testing with VST, as it provides an alternative method to cameras for creating video sources as input for VST. Specifically, it offers a mechanism to use specific video files as input for VST testing. VST can be configured to receive RTSP streams as if they were coming from ONVIF-S cameras.
 
 This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
@@ -23,10 +25,10 @@ This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming 
 
 ## Prerequisites
 Before proceeding with the setup process, please ensure that your system meets the following prerequisites:
-- A Linux workstation running Ubuntu 22.04 or later.
+- A Linux workstation running Ubuntu `22.04` or `later`.
 - The Linux system must have sufficient available space to store the video files you will be serving (typically several hundred GB).
-- Driver Version: 535.113.01, Jetpack 6.0 and CUDA Version: 12.2.
-- Make sure that JetPack and the related Jetson services packages are installed.
+- Driver Version: `535.113.01`, Jetpack `6.0` and CUDA Version: `12.2`.
+- Make sure that `JetPack` and the related `Jetson services` packages are installed.
   ```bash
   sudo apt-get install nvidia-jetpack
   sudo apt install nvidia-jetson-services
@@ -36,7 +38,7 @@ Before proceeding with the setup process, please ensure that your system meets t
 
 ### Installation and Startup
 
-**Step 1**: Download the application package **_nvstreamer-1.1.0.tar.gz_** from NGC to your Jetson using this link: [NGC Reference Workflow and Resources](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/jps/resources/reference-workflow-and-resources). You will need to enter your NGC credentials. On the page, use one of the options available in the "Download" menu (top right corner):
+**Step 1**: Download the application package **`nvstreamer-1.1.0.tar.gz`** from NGC to your Jetson using this link: [NGC Reference Workflow and Resources](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/jps/resources/reference-workflow-and-resources). You will need to enter your NGC credentials. On the page, use one of the options available in the **`Download`** menu (top right corner):
 
 ```bash
 tar -xvzf nvstreamer-1.1.0.tar.gz
@@ -74,7 +76,7 @@ http://[reComputer-IP]:31000
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig1.png" />
 </div>
 
-**Step 2**: Select "**File Upload**" and choose the video disk file you want to test as a camera (supported codecs: h264/h265, containers: mp4/mkv). Drag and drop it into the indicated area. If the video file contains B-frames, NVStreamer will automatically transcode the file, which may take a few minutes depending on the file size.
+**Step 2**: Select **`File Upload`** and choose the video disk file you want to test as a camera (supported codecs: h264/h265, containers: mp4/mkv). Drag and drop it into the indicated area. If the video file contains B-frames, NVStreamer will automatically transcode the file, which may take a few minutes depending on the file size.
 <div align="center">
     <img width={1000} 
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig2.png" />
@@ -91,7 +93,7 @@ The RTSP streaming tutorial ends at this step. Copy or note down the RTSP addres
 
 ### Adding RTSP Stream to VST
 
-**Step 1**: Access VST web server here: **http://[JETSON-IP]:30080/vst/**, (Note: HTTP, not HTTPS) where [JETSON-IP] is the IP address of the Jetson device on which you are running the docker container.
+**Step 1**: Access VST web server here: **`http://[JETSON-IP]:30080/vst/`**, (Note: HTTP, not HTTPS) where `[JETSON-IP]` is the IP address of the Jetson device on which you are running the docker container.
 
  You will see a UI similar to this:
 <div align="center">
@@ -110,17 +112,20 @@ The RTSP streaming tutorial ends at this step. Copy or note down the RTSP addres
     sudo systemctl start jetson-vst
     ```
 
-**Step 2**: Click the "**Camera Management**" tab and Click on **RTSP**, paste the RTSP address copied from NVStreamer UI to **rtsp url** box. Fill **location** and **name** fields with the same string (it will become the camera name) and hit **Submit**.
+**Step 2**: Click the **`Camera Management`** tab and Click on **`RTSP`**, paste the RTSP address copied from NVStreamer UI to **`rtsp url`** box. Fill **`location`** and **`name`** fields with the same string (it will become the camera name) and hit **`Submit`**.
 <div align="center">
     <img width={1000} 
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig5.png" />
 </div>
 
-**Step 3**: You can now click on **Streams tab** to see the file.
+**Step 3**: You can now click on **`Streams tab`** to see the file.
 <div align="center">
     <img width={1000} 
      src="https://files.seeedstudio.com/wiki/reComputer/Application/nvstreamer/fig6.png" />
 </div>
+
+## More Details
+- NVStreamer on Jetson Orin: https://docs.nvidia.com/moj/nvstreamer/moj-nvstreamer.html
 
 ## Tech Support & Product Discussion
 

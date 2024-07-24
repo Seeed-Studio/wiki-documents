@@ -3237,6 +3237,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_local_llm_text_to_image_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Local_RAG_based_on_Jetson_with_LlamaIndex',
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_zero_shot_detection_on_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_VLM_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 
                 // Projects
