@@ -120,13 +120,15 @@ optional arguments:
 ```
 ### Convert Tensorflow Model to TFlite Model
 
-:::note
-If you want to optimize your model please check the [Optimize Tensorflow Model](https://www.tensorflow.org/lite/performance/model_optimization)
-:::
+
 ```
 tflite_convert --saved_model_dir=YOUR_MODEL_PATH --output_file=YOUR_MODEL_NAME.tflite
 ```
 ### Convert TFlite Model to Edge TPU Model
+
+:::note
+You should optimize your model before you convert tflite model to edge tup model, please check the [Optimize Tensorflow Model](https://www.tensorflow.org/lite/performance/model_optimization)
+:::
 
 #### Install edgetpu compiler
 
@@ -155,74 +157,38 @@ And then you should get a new file named `YOUR_MODEL_NAME_edgetpu.tflite`
 We do not recommend this approach because there are many conflicting packages in the actual process. And TensorFlow Lite supports a limited set of operations, some PyTorch operations may not be supported.  
 :::
 
-### Convert Pytorch model to ONNX model
+### Convert Pytorch model to tflite model
 
-#### Install Pytorch 
-
-```
-pip3 install torch torchvision torchaudio
-```
-#### Install ONNX
+#### Install dependencies 
 
 ```
-pip3 install onnx
+pip install -r https://github.com/google-ai-edge/ai-edge-torch/releases/download/v0.1.1/requirements.txt
+pip install ai-edge-torch==0.1.1
 ```
 
 #### Convert 
+```
+import ai_edge_torch
+import numpy
+import torch
+import torchvision
 
-Here is the function to convert PyTorch model to ONNX model:
-```
-torch.onnx.export(
-    model,                  # PyTorch Model
-    sample_input,           # Input tensor
-    onnx_model_path,        # Output file (eg. 'output_model.onnx')
-    opset_version=12,       # Operator support version
-    input_names=['input']   # Input tensor name (arbitary)
-    output_names=['output'] # Output tensor name (arbitary)
-)
-```
 
-Here is the code to convert PyTorch model to ONNX model:
-```
- import torch
- import onnx
- import torchvision
- ​
- # Load  PyTorch model
- model = torchvision.models.resnet18(pretrained=True)
- ​
- # Set  input shape of the model
- input_shape = (1, 3, 224, 224)
- ​
- # Export  PyTorch model to ONNX format
- torch.onnx.export(model, torch.randn(input_shape), 'resnet18.onnx', opset_version=11)
+resnet18 = torchvision.models.resnet18(torchvision.models.ResNet18_Weights.IMAGENET1K_V1).eval()
+sample_inputs = (torch.randn(1, 3, 224, 224),)
+torch_output = resnet18(*sample_inputs)
+
+edge_model = ai_edge_torch.convert(resnet18.eval(), sample_inputs)
+
+edge_model.export('resnet.tflite')
 ```
 
-### Convert ONNX model to TF model
-
-#### Install Tensorflow and onnx-tf
-
-```
-pip3 install tensorflow
-pip3 install onnx-tf
-pip install -U tensorflow-probability
-```
-#### convert 
-
-```
-import onnx
-import onnx_tf
-
-# Load ONNX model
-onnx_model = onnx.load('resnet18.onnx')
-# Convert ONNX model to TensorFlow format
-tf_model = onnx_tf.backend.prepare(onnx_model)
-# Export  TensorFlow  model 
-tf_model.export_graph("resnet18.tf")
-```
+You will get ```resnet.tflite``` 
 
 ### Check tflite_converter
-
+:::note
+You should optimize your model before you convert tflite model to edge tup model, please check the [Optimize Tensorflow Model](https://www.tensorflow.org/lite/performance/model_optimization)
+:::
 ```
 tflite_convert -h
 ```
@@ -258,14 +224,7 @@ optional arguments:
                         Experimental flag, subject to change. Enables MLIR-based quantizer instead of flatbuffer conversion. (default True)
 
 ```
-### Convert Tensorflow Model to TFlite Model
 
-:::note
-If you want to optimize your model please check the [Optimize Tensorflow Model](https://www.tensorflow.org/lite/performance/model_optimization)
-:::
-```
-tflite_convert --saved_model_dir=resnet18 --output_file=resnet18.tflite
-```
 ### Convert TFlite Model to Edge TPU Model
 
 #### Install edgetpu compiler
