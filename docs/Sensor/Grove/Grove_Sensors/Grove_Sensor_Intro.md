@@ -14,7 +14,7 @@ last_update:
 
 Grove Sensor is a modular sensor introduced by Seeed Studio, and it is part of the Grove system. The Grove system uses a unified interface design, making it easy for users to quickly build various electronic projects. There are many types of Grove sensors, including but not limited to temperature sensors, humidity sensors, light sensors, gas sensors, and more.
 
-<div style={{textAlign:'center'}}><img src="https://i.imgur.com/0Nf6VH7.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Intro/Grove_Sensor.png" style={{width:1000, height:'auto'}}/></div>
 
 
 Overall, the Grove sensor system provides a convenient solution for electronics enthusiasts and developers, greatly simplifying the use of sensors and the development of projects.
