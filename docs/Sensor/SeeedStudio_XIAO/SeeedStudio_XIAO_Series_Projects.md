@@ -467,12 +467,15 @@ This section will list the major platforms supported by XIAO, including Platform
 		</tr>
         <tr>
 			<th>XIAO ESP32C3</th>
+			<th>XIOA ESP32C6</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/circuitpython-esp32c3.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/circuitpython-esp32c6.png" style={{width:300, height:'auto'}}/></div></td>
 		</tr>
         <tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://circuitpython.org/board/seeed_xiao_esp32c3/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://circuitpython.org/board/seeed_xiao_esp32c6/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
