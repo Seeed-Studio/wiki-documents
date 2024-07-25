@@ -10,6 +10,7 @@ last_update:
   author: Spencer
 ---
 
+## Overview
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" /></div>
 
@@ -1609,6 +1610,12 @@ void loop() {
 - **[PDF]**[**Seeed Studio Expansion Base for XIAO_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
 - **[SCH]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
 - **[BRD]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
+
+## FAQ 
+
+### Q1: Does the PMIC on the XIAO Expansion board output power on the 5V pins?
+
+The PMIC does not output power; the 5V is directly sourced from the USB. The current provided on the 5V pin is equivalent to the current available from the USB connection.
 
 ## Tech Support & Product Discussion
 
