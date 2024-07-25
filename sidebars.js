@@ -4584,7 +4584,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'zh-CN/Sensor/SeeedStudio_XIAO/CN_SeeedStudio_XIAO_Series_Introduction',
+      id: 'docs/Sensor/Grove/Grove_System',
       label: 'Grove',
       className: 'sideboard_calss',
     },
