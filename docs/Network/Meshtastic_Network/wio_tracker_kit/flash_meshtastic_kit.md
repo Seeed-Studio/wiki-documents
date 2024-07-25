@@ -45,7 +45,7 @@ Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your P
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
 
-Copy the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the drive. The download will run automatically, then the drive will log out.
+Drag the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the driver. The download will run automatically, then the driver will log out.
 
 </TabItem>
 <TabItem value="serial" label="Serial">
@@ -157,11 +157,11 @@ Select the device to `Seeed Wio WM1110 Tracker` and the latest firmware, and dow
 <Tabs>
 <TabItem value="uf2" label="UF2">
 
-Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your PC.
+Double click the `Reset` button, there should be a `WM1110_BOOT` driver on your PC.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
 
-Copy the `firmware-wio-tracker-wm1110-2.3.14.681ae9d8.uf2` file to the drive. The download will run automatically, then the drive will log out.
+Drag the `.uf2` file to the driver. The download will run automatically, then the driver will log out.
 
 :::tip
 Just ignore this error prompt, the device has actually been upgraded successfully.
