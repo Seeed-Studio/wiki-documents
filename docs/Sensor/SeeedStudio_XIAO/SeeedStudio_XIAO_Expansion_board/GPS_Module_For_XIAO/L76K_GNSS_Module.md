@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Mod
 slug: /get_start_l76k_gnss
 sidebar_position: 0
 last_update:
-  date: 2024-01-16T11:25:12.268Z
+  date: 2024-07-25T09:03:13.513Z
   author: Spencer
 ---
 
@@ -40,6 +40,7 @@ The module comes with a high-performance active GNSS antenna intended to cover G
 - **Ceramic Antenna:** Enhanced signal reception, superior to traditional antennas.
 
 ### Specification
+
 <div class="table-center">
 <table align="center">
 	<tr>
@@ -184,8 +185,9 @@ First, you need to search and download the latest version **TinyGPSPlus** librar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/installing-tinygpsplus.png" style={{width:800, height:'auto'}}/></div>
 
+## Application Demo
 
-## L76K GNSS Module Example
+### Example 1: Reading and Displaying GNSS Data
 
 Once the hardware and software are ready, we start uploading our first example program. The L76K GNSS Module prints the GNSS information via the serial port every 1 second after powering up. In this example, we will use **TinyGPSPlus** library to parse the NMEA sentences received from the module and print the results including atitude, longitude and time to the Arduino IDE's Serial Monitor.
 
@@ -278,15 +280,19 @@ Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals ca
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-output.png" style={{width:800, height:'auto'}}/></div>
 
+This code uses the TinyGPSPlus library to read data from the L76K GNSS module via a serial connection and displays valid location information and date/time on the serial monitor.
 
-##### Change the behaviour of LED
+## Configuration
 
-This section demonstrates how to control a green LED using Arduino by sending specific hexadecimal commands through serial communication. The example provided below will show you how to turn off the LED and then return it to its normal blinking state.
+### Example 1: Change the behaviour of LED
+
+This section demonstrates how to control a green LED using Arduino by sending specific hexadecimal commands through serial communication. The example provided below shows how to turn off the LED and then return it to its normal blinking state.
 
 ```cpp
 static const int RXPin = D7, TXPin = D6;
 static const uint32_t GPSBaud = 9600;
 SoftwareSerial SerialGNSS(RXPin, TXPin);
+
 void setup() {
   SerialGNSS.begin(GPSBaud);
 
@@ -322,11 +328,29 @@ void setup() {
   SerialGNSS.write(RecoverState, sizeof(RecoverState));
 }
 
-void loop() {
-  // Do nothing.
-}
-
+void loop() {}
 ```
+
+:::info
+For details to see CASIC Protocol Messages of Quectel_L76K_GNSS.
+
+```c
+struct CASIC_Messages {  
+  uint16_t header; // 0xBA, 0xCE
+  uint16_t len;    // 0x10, 0x00
+  uint8_t class;   // 0x06
+  uint8_t id;      // 0x03
+  uint8_t* payload; // 0x40, 0x42, 0x0F, 0x00, 0xA0, 0x86, 0x01, 0x00, ->8
+                   // 0x00, 0x00, 0x01, 0x05, 0x00, 0x00, 0x00, 0x00, ->8
+  uint8_t checksum; // 0xF0,0xC8, 0x17, 0x08
+} L76KStruct;
+```
+:::
+
+## Resources
+
+- **PDF**: [Quectel_L76K_GNSS_协议规范_V1.0](https://raw.githubusercontent.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO/fb74b715224e0ac153c3884e578ee8e024ed8946/docs/Quectel_L76K_GNSS_协议规范_V1.0.pdf)
+- **PDF**: [Quectel_L76K_GNSS_Protocol_Specification_V1.1](https://raw.githubusercontent.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO/fb74b715224e0ac153c3884e578ee8e024ed8946/docs/Quectel_L76K_GNSS_Protocol_Specification_V1.1.pdf)
 
 ## Troubleshooting
 
