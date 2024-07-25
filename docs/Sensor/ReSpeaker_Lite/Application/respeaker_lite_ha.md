@@ -20,6 +20,10 @@ Picture this: you're cozied up on your couch, and with just a simple shout-out t
 This chapter we will use the [ReSpeaker Lite Voice Assistant Kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html) to connect the Sonoff smart switch to realize voice control of the light switch.
 
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/I9KOY2ik5nw" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+
 ## Hardware Required
 
 
@@ -389,7 +393,7 @@ Wait for a few minutes for the installation. After the installation is successfu
 
 Navigate to `Settings` and select `Devices & Services`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install-done.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/devices.png" alt="pir" width={800} height="auto" /></p>
 
 
 You will see `ESPHome` as a discovered integration. Click `CONFIGURE`.

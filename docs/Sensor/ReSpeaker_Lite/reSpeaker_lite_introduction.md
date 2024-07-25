@@ -82,7 +82,7 @@ Powered by XMOS XU316 AI Sound and Audio chipset, this dev board excels in audio
 ### Update firmware
 
 
-* [Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_ua_v2.0.3.bin)
+* [Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_ua_v2.0.5.bin)
 
 #### Wiring
 
@@ -172,7 +172,7 @@ If it prompts "Cannot open DFU device", just reboot to try again.
 
 * Run the following command:
 ```
-dfu-util -e -a 1 -D ffva_ua_v2.0.3.bin
+dfu-util -e -a 1 -D ffva_ua_v2.0.5.bin
 ```
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/flash-done.png" alt="pir" width={500} height="auto" /></p>
 

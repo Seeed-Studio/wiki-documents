@@ -48,7 +48,7 @@ void setup(void) {
     auto cfg = i2sStream.defaultConfig(RX_MODE);
     cfg.copyFrom(info);
     cfg.i2s_format = I2S_STD_FORMAT; // or try with I2S_LSB_FORMAT
-    cfg.is_master = true;  // this module nees a master clock if the ESP32 is master
+    cfg.is_master = false;  // this module nees a master clock if the ESP32 is master
     cfg.use_apll = false;   // try with yes
     i2sStream.begin(cfg);
 
