@@ -56,6 +56,8 @@ Once you have enabled the UART alarm function using either of the above methods,
 
 Once UART functionality is enabled, Watcher will begin transmitting data through its UART interface. In this section, we will provide a detailed guide on how to read and interpret the data received from Watcher's UART output. We will cover the necessary hardware connections, communication protocols, and data formats to ensure a smooth and successful data retrieval process.
 
+By default, Watcher uses the following UART configuration: baud rate of **115200**, **8 data bits**, **no parity**, **1 stop bit**, and **no hardware flow control**. When connecting to Watcher's UART interface, ensure that your receiving device is configured with the same settings to ensure proper communication.
+
 When Watcher sends alarm information via UART, it follows a specific protocol and format based on the `tf_module_uart_alarm_t` structure defined in the `tf_module_uart_alarm.h` header file. The UART protocol and format for Watcher's UART alarm module are as follows:
 
 ### Output Format
