@@ -210,6 +210,22 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 - Receive: PA4=1, PA5=0
 - Transmit(high output power, SMPS mode): PA4=0, PA5=1
 
+#### Note 4. General workflow guide - Grove LoRa E5 Configuration and Usage
+
+Grove LoRa E5 comes with built-in LoRaWAN firmware that provides an AT server (check the [LoRa-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)).
+
+Like any non-hardcoded device, you can define every EUI and API key as needed. Refer to this workflow for more details: [SenseCAP Indicator Application LoRaWAN](https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_LoRaWAN/#HEAD_register_device).
+
+The typical workflow for your product (XIAO [any microcontroller] + Grove E5) would be as follows:
+
+1. Register the device on the LoRaWAN Network Server to get credentials: EUI and key.
+2. Configure your LoRa E5 device to set the EUI and other parameters.
+3. Enjoy it: send and receive messages. Note: You must be covered by an accessible LoRaWAN Gateway.
+
+For your Arduino project, we recommend this library(repository) to configure your device: [andresoliva/LoRa-E5](https://github.com/andresoliva/LoRa-E5).
+
+Ensure your LNS (LoRaWAN Network Server) is set up correctly, and verify that your credentials and LoRa parameters match.
+
 ## Examples and Demo
 
 1. [Grove - Wio-E5 P2P Example](https://wiki.seeedstudio.com/Grove_Wio_E5_P2P/) Using Pure UART function to communicate between two wio-e5 devices
