@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO-Expansion-Board
 last_update:
-  date: 1/10/2023
-  author: shuxu hu
+  date: 07/18/2024
+  author: Spencer
 ---
 
 
@@ -25,40 +25,66 @@ Seeed Studio XIAO SAMD21 , Seeed Studio XIAO RP2040, and Seeed Studio XIAO nRF52
     </a>
 </div>
 
-## **Features**
+## Features
 
 - **Quick Prototyping:** Easy debug and Reset with RESET button and SWD pin led out to male header.
 <!-- 0.96”OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out. -->
-
 - **Rich peripherals:** OLED display, RTC, expandable memory space, passive buzzer, user button, on board battery management chip.
-
 - **No Soldering Needed:** All pin led out. Convenient plug and play Grove connectors support multiple data protocols, including IIC, UART, Analog/Digital.
-
 - **Circuit Python Supported:** Well supports circuit python. MicroSD card slot enables memory space expand, making it possible to allocate more libraries needed in prototyping and project building.
-
 - **Mini Size:** Compact and elegant with only half Raspberry Pi 4 size, especially suitable for projects require mini size.
 
-## **Specification**
+## Specification
 
-|Item|Value|
-|---|---|
-|Operating voltage|5V / 3.7V Lithium Battery|
-|Charging current| 460mA (Max)|
-|RTC timer precision|± 1.5S/DAY(25°C)|
-|RTC battery|CR1220|
-|Display|0.96" OLED display|
-|Expandable memory|MicroSD card|
-|Grove Interface|Grove IIC*2, Grove UART*1, A0/D0 Grove*1|
-|Other External Equipment|Passive buzzer, user button, 5V servo connector|
+<div class="table-center">
+<table align="center">
+  <tr>
+    <th>Item</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Operating voltage</td>
+    <td>5V / 3.7V Lithium Battery</td>
+  </tr>
+  <tr>
+    <td>Charging current</td>
+    <td>460mA (Max)</td>
+  </tr>
+  <tr>
+    <td>RTC timer precision</td>
+    <td>± 1.5S/DAY(25°C)</td>
+  </tr>
+  <tr>
+    <td>RTC battery</td>
+    <td>CR1220</td>
+  </tr>
+  <tr>
+    <td>Display</td>
+    <td>0.96" OLED display</td>
+  </tr>
+  <tr>
+    <td>Expandable memory</td>
+    <td>MicroSD card</td>
+  </tr>
+  <tr>
+    <td>Grove Interface</td>
+    <td>Grove IIC*2, Grove UART*1, A0/D0 Grove*1</td>
+  </tr>
+  <tr>
+    <td>Other External Equipment</td>
+    <td>Passive buzzer, user button, 5V servo connector</td>
+  </tr>
+</table>
+</div>
 
-## **Applications**
+## Applications
 
 - SWD debug
 - Rapid prototyping
 - Data display
 - Mini Size Project
 
-## **Part List**
+## Part List
 
 |Item|Value|
 |---|---|
@@ -71,16 +97,16 @@ This product does not include Seeed Studio XIAO and battery, Seeed Studio XIAO i
 
 :::
 
-## **Getting Started**
+## Getting Started
 
-### **Materials Required**
+### Materials Required
 
 | Seeed Studio XIAO SAMD21 (Pre-solder) | Seeed Studio Expansion Base for XIAO|
 |--------------|--------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/102010388_Preview-07.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" alt="pir" width={600} height="auto" /></p>
 |[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
 
-### **Hardware Overview**
+### Hardware Overview
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg" /></div>
 
@@ -90,15 +116,15 @@ There are an external MicroSD card slot and RTC Battery Holder, the MicroSD card
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/ssssssssssccccccccc.png" /></div>
 
-### **Pinout Diagram**
+### Pinout Diagram
 
 External headers-pin description for Grove-Shield for Seeed Studio XIAO .
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/pinpinpin4.jpg" /></div>
 
-## **Expansion Board Usage**
+## Expansion Board Usage
 
-### **Connection**
+### Connection
 
 Put the Seeed Studio XIAO SAMD21 on the expansion board, the Seeed Studio XIAO SAMD21 green LED should light up.
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png" /></div>
@@ -107,7 +133,7 @@ Put the Seeed Studio XIAO SAMD21 on the expansion board, the Seeed Studio XIAO S
 Please plug the Seeed Studio XIAO on the expansion board first, then plug Type-C, Remember pluing Seeed Studio XIAO into the **middle of the two female header connectors**, otherwise you will damage the Seeed Studio XIAO and the expansion board.
 :::
 
-## **Battery usage**
+## Battery usage
 
 The Seeed Studio Expansion Base for XIAO can be powered by a battery, so if you do some demo that needs to be moved, that battery will help you to solve the power supply issue. when you plug the battery please watch out for the positive and negative anodes, follow the picture to connect the battery in case of damage the board.
 
@@ -119,7 +145,7 @@ As the below picture, if the LED flashing which means the battery does not charg
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_flash_light.png" /></div>
 
-## **Modules on the expansion board**
+## Modules on the expansion board
 
 Rich peripherals on board including:
 
@@ -145,7 +171,7 @@ Rich peripherals on board including:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/444.png" /></div>
 
-### **OLED Display**
+### OLED Display
 
 This example introduces how to use the OLED display on the Seeed Studio Expansion Base for XIAO.
 
@@ -178,7 +204,7 @@ void loop(void) {
 }
 ```
 
-### **LED control by User Button**
+### LED control by User Button
 
 This example introduces how to use the button on the Seeed Studio Expansion Base for XIAO to control the LED on the Seeed Studio XIAO SAMD21.
 
@@ -218,7 +244,7 @@ void loop() {
 }
 ```
 
-### **Buzzer**
+### Buzzer
 
 The Buzzer is default connected to the Pin A3, if you want to remove the buzzer function, just follow the below picture, cut off the line.
 
@@ -287,7 +313,7 @@ void loop() {
 }
 ```
 
-### **Servo Control by Rotary Angle Sensor**
+### Servo Control by Rotary Angle Sensor
 
 This example uses a rotary angle sensor to control servo via integration ports on the Seeed Studio Expansion Base for XIAO.
 
@@ -337,7 +363,7 @@ void loop() {
 }
 ```
 
-### **RTC clock display**
+### RTC clock display
 
 This example uses RTC to display the clock on the OLED.
 
@@ -395,7 +421,7 @@ void loop() {
 }
 ```
 
-### **SD card Function**
+### SD card Function
 
 For the XIAO SAMD21, XIAO RP2040, XIAO ESP32C3 and XIAO ESP32S3, you do not need to install a separate SD card library to use a third party. This procedure below is applicable to these XIAOs.
 
@@ -528,7 +554,7 @@ void loop() {
 }
 ```
 
-## **Acrylic Case for Seeed Studio Seeed Studio Expansion Base for XIAO**
+## Acrylic Case for Seeed Studio Seeed Studio Expansion Base for XIAO
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/110010024_Preview-08.png" /></div>
 
@@ -546,13 +572,13 @@ This Acrylic case easy to build it up and it also can dress the case look neater
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/build_up.gif" /></div>
 
-## **Circuitpython on Seeed Studio XIAO SAMD21 with expansion board**
+## Circuitpython on Seeed Studio XIAO SAMD21 with expansion board
 
 This wiki introduce how to install and run the official [**CircuitPython**](https://circuitpython.org/) by Adafruit Industries on the [**Seeed Studio XIAO SAMD21 development board**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html) !
 
 CircuitPython is a programming language designed to simplify experimenting and learning to program on low-cost microcontroller boards. It makes getting started easier than ever with no upfront desktop downloads needed. Once you get your board set up, open any text editor, and get started editing code. For more info, please refer to [**here**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython).
 
-## **Installing CircuitPython**
+## Installing CircuitPython
 
 **Step 1.** Install the Seeed Studio XIAO SAMD21 on the Expansion board then conect the Type-C cable.
 
@@ -576,7 +602,7 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 **Step 6.** Now, CircuitPython is loaded on Seeed Studio XIAO SAMD21 ! All you need to do it's to write you python program and name it `main.py` and drag it onto the `CIRCUITPY` drive.
 
-### **CircuitPyhton Blink example**
+### CircuitPyhton Blink example
 
 There is a simple example introduce how to use the CirsuitPython on the Seeed Studio XIAO .
 
@@ -620,7 +646,7 @@ while True:
     time.sleep(1)
 ```
 
-### **MicroSD card for circuitpython**
+### MicroSD card for circuitpython
 
 The Seeed Studio XIAO SAMD21 build-in about 40 KB flash, but it may have not enough space to store the large size python code file, fortunately, Seeed Studio XIAO SAMD21 Expansion board built-in an MicroSD card slot for extending the store space, so you can follow this instruction to learn how to run the circuitpython on the MicroSD card.
 
@@ -689,9 +715,9 @@ When you finish all the step, the buzzer will work. If you to run other python f
 If you want back to Arduino mode, you just need to upload any programme on the Arduino IDE.
 :::
 
-## **Demo**
+## Demo
 
-### **Project 1 - Remote control fan**
+### Project 1 - Remote control fan
 
 **Overview**
 
@@ -809,7 +835,7 @@ void loop() {
 }
 ```
 
-### **Project 2 - Remote control car**
+### Project 2 - Remote control car
 
 **Overview**
 
@@ -926,7 +952,7 @@ void delayUntil(unsigned long elapsedTime) {
 }
 ```
 
-### **Project 3 - Fingerprint unlocks treasure box -Seeed Studio XIAO**
+### Project 3 - Fingerprint unlocks treasure box -Seeed Studio XIAO
 
 **Overview**
 
@@ -1147,7 +1173,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
 }
 ```
 
-### **Project 4 - Seeed Studio Expansion Base for XIAO - mjolnir**
+### Project 4 - Seeed Studio Expansion Base for XIAO - mjolnir
 
 **Overview**
 
@@ -1272,7 +1298,7 @@ void setup() {
   }
 ```
 
-### **Project 5 - Air Quality Sensor Hub - Seeed Studio Expansion Base for XIAO**
+### Project 5 - Air Quality Sensor Hub - Seeed Studio Expansion Base for XIAO
 
 **Overview**
 
@@ -1501,7 +1527,7 @@ void loop() {
 }
 ```
 
-### **Project 6 - Seeed Studio Expansion Base for XIAO - Heart Rate**
+### Project 6 - Seeed Studio Expansion Base for XIAO - Heart Rate
 
 **Overview**
 
@@ -1583,10 +1609,6 @@ void loop() {
 - **[PDF]**[**Seeed Studio Expansion Base for XIAO_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
 - **[SCH]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
 - **[BRD]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
-
-## FAQ 
-
-### Q1: Does the PMIC on the XIAO Expansion board output power on the 5V pins? If so, how much current can we draw?
 
 ## Tech Support & Product Discussion
 
