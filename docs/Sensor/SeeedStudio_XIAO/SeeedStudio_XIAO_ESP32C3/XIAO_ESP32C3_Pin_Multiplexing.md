@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
-  date: 03/03/2023
-  author: Citric
+  date: 07/25/2024
+  author: Spencer
 ---
 
 # Pin Multiplexing
@@ -108,7 +108,7 @@ void loop() {
 }
 ```
 
-## Serial
+## Serial - UART
 
 ### Regular method - choose one of USB serial or UART0 serial to use
 
@@ -116,6 +116,15 @@ There are 2 serial interfaces on this board:
 
 - USB Serial
 - UART0 Serial
+
+:::note
+There is no `Serial2` for XIAO ESP32 C3. 
+Also If you need to use `Serial1`, you must define the pins; otherwise, it may not receive data. For XIAO ESP32 series, use `Serial1` as follows:
+
+```cpp
+Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
+```
+:::
 
 By default, USB serial is enabled, which means you can connect the board to a PC via USB Type-C and open serial monitor on Arduino IDE to view data sent via serial.
 
