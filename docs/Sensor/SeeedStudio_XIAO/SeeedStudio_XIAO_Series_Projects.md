@@ -53,14 +53,17 @@ Here is a collection of hands-on preparation content for each XIAO, where you ca
         <tr>
 			<th>XIAO ESP32C3</th>
 			<th>XIAO ESP32S3 (Sense)</th>
+			<th>XIOA ESP32C6</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/4.jpg" style={{width:250, height:'auto'}}/></div></td>
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:280, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:280, height:'auto'}}/></div></td>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -90,14 +93,17 @@ Here is a collection of tutorials for each XIAO on how to use the pin function. 
         <tr>
 			<th>XIAO ESP32C3</th>
 			<th>XIAO ESP32S3 (Sense)</th>
+			<th>XIAO ESP32C6</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://yokahiyori.com/wp-content/uploads/2022/12/2022-15-22_DSC01683_b_169_r4-2048x1151.png" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/22.gif" style={{width:280, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/22.gif" style={{width:280, height:'auto'}}/></div></td>		
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6-blink.gif" style={{width:280, height:'auto'}}/></div></td>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -322,6 +328,53 @@ This section aims to list the tutorials in the Wiki on some of the function poin
 	</table>
 </div>
 
+#### Seeed Studio XIAO ESP32C6
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th colspan="3">Seeed Studio XIAO ESP32C6</th>
+		</tr>
+        <tr>
+			<th>XIAO ESP32C6 WiFi Usage</th>
+            <th>XIAO ESP32C6 BLE Usage</th>
+            <th>XIAO ESP32C6 & AWS IoT</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/ble.png" style={{width:300, height:'auto'}}/></div></td>
+            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/10.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+        <tr>
+            <td><font size={"1"}>In this tutorial, we will explore how to leverage the XIAO ESP32C6's Wi-Fi capabilities to connect to a Wi-Fi network and perform basic networking tasks</font></td>
+            <td><font size={"1"}>In this tutorial, we will focus on the basic features of the XIAO ESP32C6's Bluetooth capabilities, such as how to scan for nearby Bluetooth devices, how to establish a Bluetooth connection, and how to transmit and receive data over a Bluetooth connection.</font></td>
+            <td><font size={"1"}>This Wiki serves as a comprehensive guide to deploying an advanced IoT system that harnesses the power of AWS services and the XIAO ESP32C6 microcontroller to monitor and analyze environmental data. </font></td>
+        </tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_wifi_usage_esp32c6/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32c6_bluetooth/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32c6_aws_iot/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+        <tr>
+			<th>XIAO ESP32C6 & Apache Kafka</th>
+            <th>XIAO ESP32C6 Zigbee Usage</th>
+		</tr>
+		<tr class="form_without_frame">
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/structure.png" style={{width:350, height:'auto'}}/></div></td>
+            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee/0.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+        <tr class="form_without_frame">
+            <td><font size={"1"}>By using the XIAO ESP32C6 with the DHT20 environmental sensor, data is collected and seamlessly sent to Apache Kafka via the ESP32C6. </font></td>
+            <td><font size={"1"}>In this tutorial, we will embark on a journey to explore Zigbee application development using the XIAO ESP32C6 development board.</font></td>>
+        </tr>
+        <tr class="form_without_frame">
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32c6_kafka/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32c6_zigbee/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+
 ### <span id="jump5">Platform Support for XIAO Series</span>
 
 This section will list the major platforms supported by XIAO, including PlatformIO, MicroPython, CircuitPython. support is updated in real time.
@@ -476,6 +529,75 @@ This section will list the major platforms supported by XIAO, including Platform
         <tr class="form_without_frame">
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://circuitpython.org/board/seeed_xiao_esp32c3/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://circuitpython.org/board/seeed_xiao_esp32c6/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+---
+
+#### Programing in Rust
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th colspan="3">Programing in Rust</th>
+		</tr>
+        <tr>
+			<th>XIAO SAMD21</th>
+			<th>XIAO RP2040</th>
+			<th>XIAO ESP32S3 (Sence)</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/rust_xiao_samd21.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/rust_xiao_rp2040.png" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/rust_xiao_esp32s3_sence.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/atsamd-rs/atsamd/tree/master/boards/xiao_m0"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://tutoduino.fr/en/tutorials/programing-in-rust-the-xiao-rp2040-board/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://forum.seeedstudio.com/t/rust-on-xiao-esp32s3/276724"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+---
+
+#### Embedded Swift
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th colspan="3">Embedded Swift</th>
+		</tr>
+        <tr>
+			<th>XIAO ESP32C6</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/swift-xiao-esp32.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao-esp32-swift/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+---
+
+#### Apache NuttX ROTS
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th colspan="3">Apache NuttX ROTS</th>
+		</tr>
+        <tr>
+			<th>XIAO RP2040</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/Apache_NuttX_RTOS_rp2040.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://nuttx.apache.org/docs/latest/platforms/arm/rp2040/boards/seeed-xiao-rp2040/index.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
