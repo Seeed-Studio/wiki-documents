@@ -695,9 +695,9 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
-- **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-1)
+- **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
 
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Certification files]() -->
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Certification files](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Certification.zip)
 
 ### For Seeed Studio XIAO ESP32S3 Sense
 
@@ -718,9 +718,7 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 Sense pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
-- **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-sense-1)
-
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Certification files]() -->
+- **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip)
 
 ## Course Resources
 
@@ -733,6 +731,8 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 - **[STP]** [XIAO ESP32S3 Sense housing design (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp)
 
 - **[STP]** [XIAO ESP32S3 Sense housing design (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp)
+
+
 
 
 *The remaining open source material is being compiled, so stay tuned!*

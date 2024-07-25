@@ -523,9 +523,15 @@ If you want to learn to use more of the deep sleep mode and wake-up functions, y
 
 ## Resources
 
+- **[PDF]** [ESP32C6 datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf)
+
 - **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
 
 - **[PDF]** [Seeed Studio XIAO ESP32C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
+
+- **[XLSX]** [Seeed Studio XIAO ESP32C6 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+
+- **[ZIP]** [Seeed Studio XIAO ESP32C6 Certification files](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/SeeedStudio_XIAO_ESP32C6_Certification.zip)
 
 ## Course Resources
 
