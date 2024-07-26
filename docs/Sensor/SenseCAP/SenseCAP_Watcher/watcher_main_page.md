@@ -127,7 +127,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher & Node-RED to IFTTT Gmail Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
 
-- Watcher & Node-RED Data Streaming to Apache Kafka *(Planning)*
+- [Watcher & Node-RED Data Streaming to Apache Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
 
 ### Open Source Material
 
