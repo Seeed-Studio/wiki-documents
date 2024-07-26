@@ -3254,6 +3254,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_local_llm_text_to_image_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Local_RAG_based_on_Jetson_with_LlamaIndex',
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_zero_shot_detection_on_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_run_VLM_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 
                 // Projects
@@ -3292,7 +3294,8 @@ const sidebars = {
                         //   id: 'Edge/NVIDIA_Jetson/Application/Robotics/Hardware',
                         // },
                   items: [
-                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar'
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar',
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/CSI_Camera'
                       ]},
                 
                 ]},
@@ -3332,6 +3335,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Lumeo-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/No-code-Edge-AI-Tool',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/reComputer_Jetson_Series_Resource',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/NVStreamer_Getting_Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
               ]
             },
