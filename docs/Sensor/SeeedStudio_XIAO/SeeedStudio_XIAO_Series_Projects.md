@@ -583,12 +583,12 @@ This section will list the major platforms supported by XIAO, including Platform
 
 ---
 
-#### Apache NuttX ROTS
+#### Apache NuttX RTOS
 
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th colspan="3">Apache NuttX ROTS</th>
+			<th colspan="3">Apache NuttX RTOS</th>
 		</tr>
         <tr>
 			<th>XIAO RP2040</th>
