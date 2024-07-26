@@ -12,24 +12,26 @@ last_update:
 
 # Getting start with reComputer J30/40
 
-<div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-110110146--recomputer-j3010-first.jpg"/></div>
+<div align="center">
+  <iframe width="800" height="480" src="https://www.youtube.com/embed/-KAyUHzRxHc" title="Unboxing &amp; Plug in reComputer J4012 - Powered by NVIDIA Jetson Orin NX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3010-w-o-power-adapter-p-5631.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
 ## Introduction
-reComputer J3010 built with Jetson Orin Nano 4GB is a powerful and compact intelligent edge box to bring up to 20TOPS modern AI performance to the edge, which offers around the same performance as Jetson Xavier NX. While combining the NVIDIA Ampere™ GPU architecture with 64-bit operating capability.
+reComputer J30/40 built with Jetson Orin is a powerful and compact intelligent edge box to bring up to 100TOPS modern AI performance to the edge. While combining the NVIDIA Ampere™ GPU architecture with 64-bit operating capability.
 
-The full system includes one NVIDIA Jetson Orin Nano 4GB production module, a heatsink, and a power adapter. reComputer J3010 is preinstalled with Jetpack 5.1, simplifies development, and fits for deployment for edge AI solution providers working in video analytics, object detection, natural language processing, medical imaging, and robotics across industries of smart cities, security, industrial automation, smart factories.
+The full system includes one NVIDIA Jetson Orin production module, a heatsink, and a power adapter. reComputer J30/40 is preinstalled with Jetpack 5.1.1, simplifies development, and fits for deployment for edge AI solution providers working in video analytics, object detection, natural language processing, medical imaging, and robotics across industries of smart cities, security, industrial automation, smart factories.
 
-If you are looking for the version with power adapter, please check out [reComputer J3010](https://www.seeedstudio.com/reComputer-J3010-p-5589.html).
+If you are looking for the version without power adapter, please check out [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
 
 ## Features
 
-- **Brilliant AI Performance for production:** on-device processing with up to 20 TOPS AI performance with low power and low latency
-- **Hand-size edge AI device:** compact size at 130mm x120mm x 58.5mm, includes NVIDIA Jetson Orin Nano 4GB production module, a heatsink, enclosure, and a power adapter. Support desktop, wall mount, fit in anywhere
+- **Brilliant AI Performance for production:** on-device processing with up to 100 TOPS AI performance with low power and low latency
+- **Hand-size edge AI device:** compact size at 130mm x120mm x 58.5mm, includes NVIDIA Jetson Orin production module, a heatsink, enclosure, and a power adapter. Support desktop, wall mount, fit in anywhere
 - **Expandable with rich I/Os:** 4x USB3.2, HDMI 2.1, 2xCSI, 1xRJ45 for GbE, M.2 Key E, M.2 Key M, CAN and GPIO
 - **Accelerate solution to market:** pre-installed Jetpack with NVIDIA JetPack™ 5.1 on the included 128GB NVMe SSD, Linux OS BSP, 128GB SSD, WiFi BT combo module, Antennas x2, support Jetson software and leading AI frameworks and software platforms
 - **Comprehensive certificates:** FCC, CE, RoHS, UKCA
@@ -158,7 +160,7 @@ If you are looking for the version with power adapter, please check out [reCompu
       <td colSpan='4' align='center'>1* 40-Pin Expansion header,1* 12-Pin Control and UART header</td>
     </tr>
     <tr>
-  colSpan={4}    <td>RTC</td>
+      <td>RTC</td>
       <td colSpan='4' align='center'>RTC 2-pin, RTC socket (supports CR1220 but not included)</td>
     </tr>
     <tr>
@@ -180,8 +182,31 @@ If you are looking for the version with power adapter, please check out [reCompu
   </tbody>
 </table>
 
-## Flash JetPack to reComputer J30/40
+## Flash JetPack
 
 :::info
-Please refer to this [wiki](/reComputer_J4012_Flash_Jetpack) page for more information because J30/40 use J401 carrier board.
+reComputer J30/40 powered by J401 Carrier Board.
+Please refer to this [wiki page](/reComputer_J4012_Flash_Jetpack) for more information about flash jetpack.
 :::
+
+## Interfaces Usage
+
+:::info
+reComputer J30/40 powered by J401 Carrier Board.
+Please refer to this [wiki page](/J401_carrierboard_Hardware_Interfaces_Usage) for more information about Interfaces Usage.
+:::
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
