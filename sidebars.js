@@ -3606,10 +3606,10 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCAP Mate APP',
+      label: 'SenseCraft APP',
       items: [
-        'Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP',
-        'Cloud_Chain/SenseCAP_Mate_APP/sensecap_mate_app_event',
+        'Cloud_Chain/SenseCAP_Mate_APP/sensecraft_app',
+    //    'Cloud_Chain/SenseCAP_Mate_APP/sensecap_mate_app_event',
       ],
     },
     {
