@@ -76,7 +76,6 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 ## Naming Conventions
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
-
 ## Specifications
 
 <div class="table-center">
@@ -101,7 +100,7 @@ With robust IoT network communication capabilities, the R1000 series supports mu
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Operating System</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspbian, Debian</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS, Ubuntu</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RAM</td>
@@ -366,13 +365,7 @@ The reComputer R1000 supports three power supply options: AC, DC terminal and Po
 
 ### 2-Pin Power terminal
 
-<div style={{ textAlign: 'left', marginLeft: '40px' }}>
-    <img 
-        width="100" 
-        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" 
-        style={{ transform: 'rotate(90deg)' }} 
-    />
-</div>
+<div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
 The reComputer R1000 is supplied with a nominal AC voltage of 12~24 V or DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
@@ -575,7 +568,7 @@ raspi-gpio set 21 op dh
 
 ### RS485
 
-<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/08.png" /></div>
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig21.png" /></div>
 
 The reComputer R1000 is equipped with 3 sets of RS485 interface using 3-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in industrial and automation applications. The RS485A and RS485B signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
 By default, 120Ω terminal resistors is not installed. However, the packaging box includes five surface-mount resistors. If needed, users should solder the resistor onto the device themselves.
@@ -657,7 +650,7 @@ If the USB hub is functioning properly, you should see its details listed in the
 
 ### SIM Slot
 
-<div style={{ position: 'relative', left: '200px' }}>
+<div style={{ position: 'relative', left: '150px' }}>
     <img 
         width="40" 
         src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig19.png" 
@@ -978,7 +971,7 @@ Here is the accessories and optional modules list:
 
 </div>
 
-The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. Additionally, 4G module and LoRa®® module shouldn't be used at the same time, can not plug in two LoRa® modules on board. 
+The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol. 
 
 :::note
 Can not plug in 2 LoRa® modules on board.
@@ -1387,15 +1380,15 @@ Ensure you replace /dev/ttyUSB* with the correct serial port for each Zigbee mod
 
 ### PoE
 
-The reComputer R1000 worked as powered devices can support the IEEE 802.3af standard by adding a PoE power supply module. The seat for PoE is pre-soldered on board; however, users need to disassemble the device to install the PoE module for Ethernet PoE function.
+The reComputer R1000 worked as powered devices can support the IEEE 802.3af standard by adding a PoE power supply module. Users need to disassemble the device to install the PoE module for Ethernet PoE function.
 
 :::note
 The reComputer R1000 supports PoE power supply, but the standard product does not include a PoE module by default. Seeed can provide PoE soldering and assembly services for batch customization orders. However, if a customer is testing a sample, they will need to [solder and assemble the PoE module themselves](/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module).
 :::
 
-### SSD
+### M.2 Slot
 
-The reComputer R1000 supports 2280 NVMe SSD through the use of a PCIe slot(J62) below two Mini-PCIe slots on board. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
+The reComputer R1000 supports 2280 NVMe SSD and AI accelerator(Hailo) through the use of a PCIe slot(J62) below two Mini-PCIe slots on board. It is important to note that the CM4's PCIe is gen2.0 with a maximum theoretical speed of 5Gbps. If you are using a Gen3.0 or higher SSD, it may not be able to achieve the SSD's maximum speed. After testing, the reTerminal DM with installed SSD can achieve a maximum write speed of 230MB/s and a maximum read speed of 370MB/s. If you are unsure which SSDs are compatible, you can purchase following the accessories list below.
 
 [Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-ssd).
 

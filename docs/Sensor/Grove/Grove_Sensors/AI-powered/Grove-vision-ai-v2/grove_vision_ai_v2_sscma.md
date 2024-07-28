@@ -376,6 +376,10 @@ To customize this command for your own training, you would:
 
 5. Set `height` and `width` to match the dimensions of the input images for your model. 
 
+:::caution
+We don't really recommend that you change the image size in the Colab code, as this value is a more appropriate dataset size that we have verified to be a combination of size, accuracy, and speed of inference. If you are using a dataset that is not of this size, and you may want to consider changing the image size to ensure accuracy, then please do not exceed 240x240.
+:::
+
 6. Change `data_root` to point to the root directory of your dataset.
 
 7. If you have a different pre-trained model file, update the `load_from` path accordingly.
@@ -472,9 +476,7 @@ Sometimes Google Colab does not automatically refresh the contents of a folder. 
 
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/37.png" style={{width:400, height:'auto'}}/></div>
-
-In the directory above, the **.tflite** model files are available for XIAO ESP32S3 and Grove Vision AI V2. For Grove Vision AI V2, we prefer to use the **vela.tflite** files, which are accelerated and have better operator support. And due to the limitation of the device memory size, we recommend you to choose **INT8** model.
+In the directory above, the **.tflite** model files are available for XIAO ESP32S3 and Grove Vision AI V2. For Grove Vision AI V2, be sure to select the model file that uses the **xxx_int8_vela.tflite** format. No other format can be used by Grove Vision AI V2.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/38.png" style={{width:400, height:'auto'}}/></div>
 
@@ -557,7 +559,7 @@ If you want to continue to use Arduino devices such as the XIAO to realise your 
 
 ## Troubleshooting
 
-### What if I follow the steps and end up with less than satisfactory model results?
+### 1. What if I follow the steps and end up with less than satisfactory model results?
 
 If your model's recognition accuracy is unsatisfactory, you could diagnose and improve it by considering the following aspects:
 
@@ -574,6 +576,14 @@ If your model's recognition accuracy is unsatisfactory, you could diagnose and i
    - **Solution**: Use class weights, oversample the minority classes, or undersample the majority classes to balance the data.
 
 By thoroughly analyzing and implementing targeted improvements, you can progressively enhance your model's accuracy. Remember to use a validation set to test the performance of the model after each modification to ensure the effectiveness of your improvements.
+
+### 2. Why do I see **Invoke failed** message in SenseCraft deployment after following the steps in the Wiki?
+
+If you encounter an Invoke failed, then you have trained a model that does not meet the requirements for use with the device. Please focus on the following areas.
+
+1. Please check whether you have modified the image size of Colab. The default compression size is **192x192**, Grove Vision AI V2 requires the image size to be compressed as square, please do not use non-square size for compression. Also don't use too large size *(no more than 240x240 is recommended)*.
+
+2. The model file for Grove Vision AI V2 must be suffixed with **int8_vela.tflite**. Please do not use model files in other formats. This includes **int8.tflite, which is also not available** for Grove Vision AI V2.
 
 ## Tech Support & Product Discussion
 

@@ -99,7 +99,7 @@ Use this command to erase the flash memory on Xiao ESP32S3
 esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 firmware.bin 
 ```
 
-:::提示
+:::tip提示
 更改电脑上带有端口COM号的COMXX
 :::
 
@@ -149,7 +149,7 @@ pip install opencv-python
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/run_the_client.jpeg" alt="pir" width={600} height="auto" /></p>
 
-:::警告
+:::caution警告
 当推出流媒体示例时，Xiao ESP32S3感应板可能会变得相当热。
 :::
 

@@ -55,7 +55,7 @@ Seeed Studio XIAO ESP32S3是一款功能强大的开发板，支持蓝牙5、BLE
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
-:::注释
+:::note注意
 如果您没有安装天线，则可能无法使用蓝牙功能。
 
 如果你有条件，我建议你使用大天线，这样会得到更好的体验。
@@ -174,6 +174,11 @@ void loop() {
   delay(10000);
 }
 ```
+:::tip提示
+如果您已经升级了您的ESP32开发板到版本3.0.0以上，您需要更改一些代码以兼容它。
+1. ```BLEScanResults foundDevices = pBLEScan->start(scanTime, false);``` 修改为 ```BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);```
+2. ```Serial.println(foundDevices.getCount());``` 修改为 ```Serial.println(foundDevices->getCount());```
+:::
 
 现在您可以选择XIAO ESP32S3主板并上传程序。如果程序运行顺利，打开串行监视器，将波特率设置为115200，可以看到以下结果。
 
@@ -194,7 +199,7 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 };
 ```
 
-在`Setup` 功能中，我们使用指定的参数设置BLE扫描，包括扫描间隔和窗口值。它还初始化BLE设备，并设置回调函数来处理扫描过程中发现的广告设备。
+在 `Setup` 功能中，我们使用指定的参数设置BLE扫描，包括扫描间隔和窗口值。它还初始化BLE设备，并设置回调函数来处理扫描过程中发现的广告设备。
 
 ```c
 BLEDevice::init("");
@@ -432,6 +437,10 @@ void loop() {
   delay(1000); // Delay a second between loops.
 } // End of loop
 ```
+:::tip提示
+如果您已经将您的ESP32开发板升级到版本3.0.0以上，您需要更改一些代码以兼容它。
+1.  将```std::string value = pRemoteCharacteristic->readValue();``` 修改为 ```String value = pRemoteCharacteristic->readValue();```
+:::
 
 上述程序将把晓变成一个客户端，并搜索附近的蓝牙设备。当蓝牙设备的UUID与您提供的UUID匹配时，它将连接到设备并获得其特征值。
 
@@ -789,7 +798,7 @@ BLEService *pService = pServer->createService(BLEUUID((uint16_t)0x181A)); // Env
   pCharacteristic->addDescriptor(new BLE2902());
 ```
 
-在上面的程序中，您可以看到 `createService()` 用于创建服务器。 参数是一个特定的UUID： **0x181A**。在关贸总协定的规则中， **0x181A** 表示环境监测类型数据，以及相同特征的UUID： **0x2A59** 也有着特殊的意义。在GATT中，它表示模拟输出。这符合我们的光传感器值的情况，所以我在这里定义它。你可以阅读[here](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/GATT.pdf)关贸总协定为我们准备的一些具体的统一战线意味着什么。
+在上面的程序中，您可以看到 `createService()` 用于创建服务器。 参数是一个特定的UUID： **0x181A**。在关贸总协定的规则中， **0x181A** 表示环境监测类型数据，以及相同特征的UUID： **0x2A59** 也有着特殊的意义。在GATT中，它表示模拟输出。这符合我们的光传感器值的情况，所以我在这里定义它。您可以在[此处](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/GATT.pdf)查看 GATT 为我们准备的一些特定 UUID 的含义。
 
 当然，您也可以在不遵循GATT标准的情况下设置UUID，您只需要确保这两个值是唯一的，并且不会影响您的客户通过识别这些UUID来查找值的能力。你可以访问 [uuidgenerator.net](https://www.uuidgenerator.net/) 为您的服务和特性创建随机UUID。
 
@@ -855,7 +864,7 @@ pCharacteristic->registerForNotify([](BLERemoteCharacteristic* pBLERemoteCharact
 
 最后，将灯光值放置在指针pData中。
 
-:::提示
+:::tip提示
 上述示例给出了单个传感器的单个值的最简单示例。如果您想通过蓝牙宣传多个传感器或多个传感器值，我们建议您阅读此处的教程示例。
 
 - [ESP32 BLE服务器和客户端（蓝牙低能耗）](https://randomnerdtutorials.com/esp32-ble-server-client/)
@@ -863,13 +872,13 @@ pCharacteristic->registerForNotify([](BLERemoteCharacteristic* pBLERemoteCharact
 
 ## 故障排除
 
-### Q1: XIAO ESP32S3示例中没有BleoutSerial？
+### 问题1: XIAO ESP32S3示例中没有BleoutSerial？
 
 [ESP32-S3芯片中没有蓝牙经典硬件](https://github.com/espressif/arduino-esp32/issues/8023)。只有“老”的ESP32才能做到这一点——没有其他Espressif SoC拥有BT Classic。
 
 ## 技术支持和产品讨论
 
-.
+
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

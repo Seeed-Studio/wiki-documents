@@ -95,7 +95,7 @@ If we don't have the base shield, we also can directly connect the Grove-RTC to 
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-RTC/img/library%20example.jpg" /></div>
 
-```c++
+```cpp
 #include <Wire.h>
 #include "DS1307.h"
 

@@ -50,7 +50,8 @@ last_update:
 
 ## 在Windows子系统Linux（WSL）上安装Ubuntu 22.04
 
-:::tip 此部分仅适用于Windows计算机；如果您不使用Windows计算机，请跳过此部分，继续执行 **[编译环境准备](https://chat.openai.com/c/39651f87-794b-406a-8ac8-e5a5c8f209f7#preparation-of-the-compilation-environment)**。 :::
+:::tip 此部分仅适用于Windows计算机；如果您不使用Windows计算机，请跳过此部分，继续执行 **[编译环境准备](https://chat.openai.com/c/39651f87-794b-406a-8ac8-e5a5c8f209f7#preparation-of-the-compilation-environment)** 。
+:::
 
 Himax SDK需要在Linux环境中进行编译，因此如果您使用的是Windows计算机，您需要安装WSL。要在Windows子系统Linux（WSL）上安装Ubuntu 22.04，您需要按照以下一般步骤进行操作。在开始之前，请确保您正在运行兼容的Windows 10或Windows 11版本。
 
@@ -77,7 +78,9 @@ wsl --install -d Ubuntu-22.04
 
 1. 现在您可以使用WSL在Windows机器上使用Ubuntu。您可以访问Linux终端，安装软件包并运行Linux应用程序。
 
-    :::note 如果您之前安装了WSL 1并且希望升级到WSL 2，则需要遵循一些额外步骤，包括安装WSL 2 Linux内核更新包并设置您的现有发行版使用WSL 2。您可以在[官方微软文档](https://learn.microsoft.com/en-us/windows/wsl/install)中找到这些额外步骤的说明。 :::
+    :::note注意
+    如果您之前安装了WSL 1并且希望升级到WSL 2，则需要遵循一些额外步骤，包括安装WSL 2 Linux内核更新包并设置您的现有发行版使用WSL 2。您可以在**[官方微软文档](https://learn.microsoft.com/en-us/windows/wsl/install)**中找到这些额外步骤的说明。
+    :::
 
     请记住查看[官方微软文档](https://learn.microsoft.com/en-us/windows/wsl/install)以获取最新的说明和故障排除提示。
 
@@ -152,7 +155,9 @@ wsl --install -d Ubuntu-22.04
 sudo snap install --classic code
 ```
 
-:::note 请记住，安装命令可能会因您的Linux发行版而略有不同，因此您应该查阅官方文档或特定Linux版本的软件包管理说明。 :::
+:::note注意
+请注意，安装命令可能会因您的Linux发行版而略有不同，因此您应该查阅官方文档或特定Linux版本的软件包管理说明。
+:::
 
 ### 步骤3. 安装Python
 
@@ -367,7 +372,9 @@ arm-none-eabi-gcc --version
 
 现在，您的环境已经准备好进行ARM开发。
 
-:::note 请不要使用 `apt install` 来安装arm编译器，因为该版本太旧，可能无法编译此项目。请确保您使用的版本与屏幕截图上的版本13.2相同。 :::
+:::note注意
+请不要使用 `apt install` 来安装arm编译器，因为该版本太旧，可能无法编译此项目。请确保您使用的版本与屏幕截图上的版本13.2相同。
+:::
 
 ## 使用Himax SDK运行录音示例
 
@@ -408,7 +415,7 @@ make
 
 通过执行 flasher.py 脚本，我们可以将生成的固件刷写到设备上。
 
-:::note 
+:::note注意
 
 如果您使用的是Windows计算机，请创建一个新的终端，并确保在 git bash 环境中执行以下命令。 
 
@@ -614,7 +621,7 @@ res = f_read(&file, buffer, 512, NULL);
 
 总而言之，该代码包括挂载microSD卡、创建或打开文件、向文件写入数据和从文件读取数据的功能，表明microSD卡在此应用程序中用于存储。 
 
-:::提示 
+:::tip提示 
 代码`grove_vision_ai.c`已经为使用PDM microphone和存储卡. 提供了更完整的配置。然而，由于microphone输出是通过SDK中的串口，为了保存音频文件，你需要使用`getdata.py`读取串口，然后转录它。另一方面，microSD卡不需要单独的Python程序来完成存储任务。 
 ::: 
 

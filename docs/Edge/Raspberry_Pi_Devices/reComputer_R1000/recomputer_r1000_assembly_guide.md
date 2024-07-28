@@ -120,7 +120,14 @@ Following these steps should help you disassemble the device without any issues.
 - Align the PoE module with the designated aperture on the board.
 - Carefully solder the PoE module onto the board. Due to the compact nature of the board, exercise caution while soldering to avoid damaging nearby components.
 
+:::note
+Please correctly install the PoE module, placing the white dots facing inward, next to a capacitor.
+:::
+
+
 <div align="left"><img width={350} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass05.jpg" /></div>
+
+<div align="left"><img width={350} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/POE.png" /></div>
 
 ## Mounting Guide
 

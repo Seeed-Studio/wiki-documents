@@ -63,7 +63,7 @@ The Grove interface on the breadboard and on the Grove Passive Buzzer are connec
 
 #### Code example1 - simply get the beep sound
 
-```c++
+```cpp
 int buzzer = 5; // Buzzer connect with Pin 5
 int frequency = 2700; //reach the Resonant Frequency
 int cycle = 1000000/frequency;  
@@ -86,7 +86,7 @@ void loop()
 
 #### Code example2 - Use buzzer to play music
 
-```c++
+```cpp
  //set the corresponding notes with frequency
  #define NOTE_D0 0
  #define NOTE_D1 294

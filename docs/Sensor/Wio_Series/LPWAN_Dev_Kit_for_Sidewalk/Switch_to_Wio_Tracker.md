@@ -26,7 +26,9 @@ This tutorial will guide users to flash the LPWAN Dev Board for Amazon Sidewalk 
 
 * J-Link Debug Programmer x 1
 
-* [Bootloader file](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/tree/master/bootloader/Seeed_Wio_Tracker_1110) x 1
+* [Bootloader file](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/tree/master/bootloader/Seeed_Wio_Tracker_1110)
+
+* [Application Firmware](https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/wio_tracker_app_release_sw_0.5_2024-06-06.uf2)
 
 
 
@@ -40,11 +42,11 @@ Please note that, after you flashing the board, it can not use SenseCAP Cloud, b
 
 Connect the Dev Board to the J-Link Debug Programmer as follows:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/connection-pic.png" alt="pir" width={700} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/connection-pin.png" alt="pir" width={700} height="auto" /></p>
 
 :::info Connection:
-**CLK** (Wio-WM1110 Dev Board Pin1) -> **SWCLK** (J-Link Debug Programmer Pin 9)  
-**DIO** (Wio-WM1110 Dev Board Pin3) -> **SWDIO** (J-Link Debug Programmer Pin 7)  
+**DIO** (Wio-WM1110 Dev Board Pin2) -> **SWDIO** (J-Link Debug Programmer Pin7)  
+**CLK** (Wio-WM1110 Dev Board Pin4) -> **SWDCLK** (J-Link Debug Programmer Pin9)  
 **GND** (Wio-WM1110 Dev Board Pin5) -> **GND** (J-Link Debug Programmer GND)
 :::
 

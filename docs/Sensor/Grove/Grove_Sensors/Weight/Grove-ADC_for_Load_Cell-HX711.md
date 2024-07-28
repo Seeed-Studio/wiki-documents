@@ -37,7 +37,7 @@ With the Grove connector and 4-pin screw terminal, it becomes quite easy to conn
 		<th>Value</th>
 	</tr>
 	<tr>
-		<td>Battry</td>
+		<td>Battery</td>
 		<td>Exclude</td>
 	</tr>
 	<tr>

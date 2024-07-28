@@ -161,7 +161,7 @@ If we don't have Grove Base Shield, We also can directly connect Grove-Rotary An
 
 - **Paso 1.** Por favor, copia el siguiente código en el IDE de Arduino y subelo al Arduino. Si no sabes como hacerlo, revisa [how to upload code](http://wiki.seeedstudio.com/Upload_Code/).
 
-```c++
+```cpp
 /*Macro definiciones del Sensor de Ángulo Rotatorio y pin LED*/
 
 #define ROTARY_ANGLE_SENSOR A0

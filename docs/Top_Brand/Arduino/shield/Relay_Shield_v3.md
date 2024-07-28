@@ -191,7 +191,7 @@ The external power supply in the figure above can be a battery or power supply. 
 
 4.Start the Arduino IDE and upload the following code to the Arduino board:
 
-```CPP
+```cpp
 int MotorControl = 5;    // Digital Arduino Pin used to control the motor
 
 // the setup routine runs once when you press reset:
@@ -227,7 +227,7 @@ Because the Relay Shield uses digital pins on the Arduino to control each the re
 
 3.Now you can control relays 1, 2, 3, and 4 in Relay Shield #2 using the Arduino’s 8, 9, 10, and 11 digital I/O pins. See sample code below for controlling RELAY1 in Relay Shield #2:
 
-```CPP
+```cpp
 int relay1inShield2 = 8;    // Digital Arduino Pin 8 is used to control relay 1 in Relay Shield #2
 
 // the setup routine runs once when you press reset:

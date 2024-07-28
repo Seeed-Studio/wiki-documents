@@ -38,7 +38,7 @@ To program the Xiao RP2040 the following steps can be taken:
 1. Build an example or your application
 2. Plugin the Xiao RP2040
 3. Hold the button designated `B` (boot) and press `R` (reset) which will mount the device as a mass storage device
-4. Drag the uf2 file (ie `build/zephyr/zephyr.uf2`) generated during the build process to the device triggering an update
+4. Run the flash command to flash the device `west flash -r uf2`
 
 The simplest example is to run the "Hello World" sample on the board. After changing to the directory of the Zephyr install run the following commands.
 
@@ -46,9 +46,15 @@ The simplest example is to run the "Hello World" sample on the board. After chan
 west build -p always -b xiao_rp2040 samples/subsys/usb/console
 ```
 
-After this completes enter the `build/zephyr` folder and drag `zephyr.uf2` to your waiting RP2040 mounted drive. The device will reset after it receives the file and your machine should now be connected over USB for serial.
+Enter into bootloader mode as previously described and then flash the device:
 
-Find the port for your device by typing `ls /dev/tty*` and confirming which device appears when your USB has been plugged in.
+```
+west flash -r uf2
+```
+
+The device will reset after it receives the file and your machine should now be connected over USB for serial.
+
+Find the port for your device, for example on Ubuntu by typing `ls /dev/tty*`, and confirm which device appears when your USB has been plugged in.
 
 In my example I see `/dev/ttyACM0` as the newly added device.
 
@@ -130,6 +136,11 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/led_strip
 ```
 
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
 You'll see the onboard WS2812 LED cycling through red, blue and green continually in a flashing pattern.
 
 Let's dive into this example a bit to see why it works:
@@ -197,6 +208,11 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/fade_led
 ```
 
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
 You'll see the blue light of the RGB onboard LED slowly fade and repeat the process again.
 
 Let's dive into this example a bit to see why it works:
@@ -231,9 +247,12 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/counter/alarm -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-You can find the uf2 file at `~/zephyrproject/zephyr/build/zephyr/zephyr.uf2`
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
 
-After uploading the uf2 file connect to monitor (after quickly resetting your board to ensure it restarts):
+Connect to monitor (after quickly resetting your board to ensure it restarts):
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -273,9 +292,12 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-You can find the uf2 file at `~/zephyrproject/zephyr/build/zephyr/zephyr.uf2`
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
 
-After uploading the uf2 file connect to monitor:
+Connect to monitor:
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -325,6 +347,11 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
 You'll see a display showing multiple black boxes and a blinking box in the corner given this display only supports two colors.
 
 Let's dive into this example a bit to see why it works:
@@ -366,7 +393,12 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf -DSHIELD=seeed_xiao_expansion_board
 ```
 
-After uploading the uf2 file connect to monitor:
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
+Connect to monitor:
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -417,7 +449,12 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/basic/blinky_pwm -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/xiao-rp2040/xiao_expansion_buzzer.overlay"
 ```
 
-After uploading the uf2 file you should begin hearing a series of buzzes which change in sound as the sample runs its course.
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
+After flashing the uf2 file you should begin hearing a series of buzzes which change in sound as the sample runs its course.
 
 Let's look at why this works:
 ```
@@ -468,7 +505,12 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/subsys/fs/fs_sample -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf $(dirname $(pwd))/applications/xiao-zephyr-examples/xiao_expansion_sd.conf" -DSHIELD=seeed_xiao_expansion_board
 ```
 
-After uploading the uf2 file connect to monitor:
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
+Connect to monitor:
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -533,7 +575,12 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-After uploading the uf2 file connect to monitor:
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
+
+Connect to monitor:
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -588,13 +635,15 @@ cd ~/zephyrproject/zephyr
 west build -p always -b xiao_rp2040 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
-When this completes, move the build file from `build/zephyr/zephyr.uf2` to the mounted Xiao RP2040 (remember you can hold the boot button down while plugging in to enter this state) which will reset the device with the new firmware.
+Enter bootloader mode and flash your device:
+```
+west flash -r uf2
+```
 
 With the new firmware in place the device now shows the same demo screen we saw previously on the expansion board just now updated for the color LCD over SPI.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/rp2040/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_rp2040_zephyr/spi_lcd.jpg" style={{width:500, height:'auto'}}/></div>
-
 
 ## ✨ Contributor Project
 

@@ -1,84 +1,90 @@
 ---
-description: Weekly Wiki 
+description: Weekly Wiki
 title: Weekly Wiki
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 06/03/2024
-  author: Seraphina
+  date: 07/22/2024
+  author: Frank
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings
 
-This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is June 3rd and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 22th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
+### [Watcher To IFTTT Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb/)
 
-### [Grove - ADC for Load Cell (HX711)](https://wiki.seeedstudio.com/grove_adc_for_load_cell_hx711 /)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/Watcher_MongoDB_Cover.jpg" style={{width:1000, height:'auto'}}/></div>
 
-The Grove - ADC for Load Cell (HX711) is a 24-bit A/D converter designed specifically for the load cell. It contains an on-chip low noise programmable amplifier with an optional gain of 32, 64 and 128. The HX711 chip integrates a regulated power supply, an on-chip clock oscillator, and other peripheral circuits, which have the advantages of high integration, fast response, and strong anti-interference.
+**MongoDB** is a powerful, cross-platform document database that excels in handling both structured and unstructured data. Its flexible, schema-less data model is based on JSON-like documents, making it an excellent choice for dynamic applications requiring ad hoc queries and indexing.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:700, height:'auto'}}/></div>
+Using MongoDB provides a straightforward method to **store and utilize data from the Watcher for further processing or other project applications.**
 
-#### [Grove Vision AI V2 Notifies You Via Telegram](https://wiki.seeedstudio.com/grove_vision_ai_v2_telegram/)
-
-<div class="table-center">
-<iframe width="400" height="700" src="https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/telegram_xiao.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-This project combines the XIAO ESP32S3 and Grove Vision AI V2 to create a compact person detection device. The V2 module, equipped with a person detection model, identifies human presence and sends the results to the ESP32S3. The microcontroller then processes the information and forwards the detection alerts to a designated Telegram account, providing real-time notifications whenever a person is detected in the monitored area.
+This tutorial will guide you through using the Watcher API and Node-RED to seamlessly send data to MongoDB, a setup perfect for projects that demand real-time data handling and persistence.
 
 
-### [Quick start with Zigbee on XIAO ESP32C6](https://wiki.seeedstudio.com/vision_ai_v2_crowd_heat_map/)
+### [reComputer R1000 with FIN to create a Top Level Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_top_level_gaphic/)
 
-In this tutorial, we will embark on a journey to explore Zigbee application development using the XIAO ESP32C6 development board. The XIAO ESP32C6 is a compact yet powerful board that features the ESP32-C6 chip, which offers integrated Wi-Fi and Bluetooth Low Energy (BLE) connectivity. By leveraging the ESP Zigbee SDK, we can harness the full potential of the XIAO ESP32C6 and extend its capabilities to include Zigbee functionality.
+IFTTT (If This Then That) is a web-based service that allows developers to create automations and integrations between various apps, devices, and services without complex programming. It enables users to define simple conditional statements called "applets" that trigger actions based on specific events. It provides a user-friendly interface and a vast library of pre-built applets, making it accessible for developers to create powerful automations and integrations efficiently.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee/0.png" style={{width:800, height:'auto'}}/></div>
-
-
-
-<!-- ## Existed Wiki Updated
-
-### [Flash JetPack OS to A603 Carrier Board](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/#flash-to-jetson)
- 
-We have updated the method for flashing Jetpack 6 on the A603 carrier board.
-
-At the same time, we have added a driver package for the A603 based on JP5.1.2, adapted to the IMX477 camera: [Use IMX477 Camera with A603 Jetson Carrier Board](https://wiki.seeedstudio.com/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board/) -->
+This article will show you how to use the of FIN Framwork, and to create a using the .Graphics BuilderTop Level GraphicGraphics Builder.
 
 
-<!-- ### [Seeed Ranger Map Shown](https://wiki.seeedstudio.com/ranger/)
+### [reComputer R1000 with FIN to create a Floor Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_floor_gaphic/)
+
+This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Floor Graphic` using the `Graphics Builder`.
+
+### [reComputer R1000 with FIN to create a Site Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_site_gaphic/)
 
 
-### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
+This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Site Graphic` using the `Graphics Builder`.
+
+
+
+## Existed Wiki Updated
+
+### [Voice Assistant System for Home Assitant](https://wiki.seeedstudio.com/respeaker_lite_ha/)
+
+We've added examples of [Adding smart devices](https://wiki.seeedstudio.com/respeaker_lite_ha/#add-your-smart-device).
+
+### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/)
+
+We've added instructions for [Configuring the IP address for the POE interface](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#usage).
+
+
+
+
+
+<!-- ### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
 
 Integrate WebVision moduel with N3uron on EdgeBox RPI 200. -->
 
 ## The Efforts of Contributor
 
-<!-- ### XIAO's Zephyr Application
+<!-- ### [Train and deploy a custom classification model with YOLOv8](https://wiki.seeedstudio.com/train_and_deploy_a_custom_classification_model_with_yolov8/)
 
-Thanks our contributor Tim to create the tutorial for XIAO SAMD21/XIAO RP2040/XIAO ESP3232C3/XIAO ESP32S3 With Zephyr(RTOS)
+Thanks our contributor Bruno to create the application tutorial for reComputer.
 
-This wiki covers Zephyr support for the Seeed Studio XIAOs. With the assistance of this guide you will be able to utilize the feature set available to the board.
+On this guide we will explain how to train and deploy a custom classification model with YOLOv8
 
-[XIAO SAMD21 With Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-SAMD21-Zephyr-RTOS/)
-[XIAO RP2040 With Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-RP2040-Zephyr-RTOS/)
-[XIAO ESP32C3 with Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-ESP32C3-Zephyr/)
-[XIAO ESP32S3(sense) With Zephyr(RTOS)](https://wiki.seeedstudio.com/XIAO-ESP3253-Zephyr-RTOS/) -->
+<iframe width={560} height={315} src="https://www.youtube.com/embed/ovoSMaoA9As?si=-d2buntx0T5oRtr4" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /> -->
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
 
 
 ## Past Weekly wiki
+
+<details><summary>Click here</summary>
 
 - [weekly wiki on 2.27th](/Seeed_Elderly/weekly_wiki/wiki227)
 - [weekly wiki on 3.06th](/Seeed_Elderly/weekly_wiki/wiki306)
@@ -137,3 +143,13 @@ This wiki covers Zephyr support for the Seeed Studio XIAOs. With the assistance 
 - [weekly wiki on 2024.5.13th](/Seeed_Elderly/weekly_wiki/wiki240513)
 - [weekly wiki on 2024.5.20th](/Seeed_Elderly/weekly_wiki/wiki240520)
 - [weekly wiki on 2024.5.27th](/Seeed_Elderly/weekly_wiki/wiki240527)
+- [weekly wiki on 2024.6.03rd](/Seeed_Elderly/weekly_wiki/wiki240603)
+- [weekly wiki on 2024.6.10th](/Seeed_Elderly/weekly_wiki/wiki240610)
+- [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/wiki240617)
+- [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
+- [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
+- [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
+- [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
+
+</details>
+

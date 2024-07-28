@@ -101,7 +101,7 @@ Then, click on the `+` mark to add a device and enter the IP address of your PC'
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/YABE-config.PNG" /></center>
 
 :::note
-You might need to configure the Ethernet port IP address to ensure it is in the same network domain as both the reComputer and your PC.
+You might need to configure the Ethernet port IP address to ensure it is in the same network domain as both the EdgeBox and your PC.
 :::
 
 

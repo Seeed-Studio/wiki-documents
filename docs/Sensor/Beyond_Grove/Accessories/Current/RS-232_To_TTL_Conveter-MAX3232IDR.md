@@ -68,15 +68,6 @@ This module is based on Max3232, it supports multiple baud rate communication an
 - Hand-Held Equipment
 - Palmtop PCs
 
-
-
-## Hardware Overview
-
-### Pin Out
-
-![](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/img/pinout.jpg)
-
-
 ## Getting Started
 
 This is a simple module that only needs to connect the corresponding interface to the corresponding device to transfer data using the serial port tool. You should note that when connecting a TTL device, the RX pin of the module needs to be connected to the TX pin of the device, and vice versa, the TX pin of the module needs to be connected to the RX pin of the device.

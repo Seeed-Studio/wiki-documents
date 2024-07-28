@@ -27,6 +27,7 @@ last_update:
 <div class="table-center">
 <iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
+
 ### 特点
 
 - **强大的AI处理能力**：搭载WiseEye2 HX6538处理器，配备双核Arm Cortex-M55和集成的Arm Ethos-U55神经网络单元。

@@ -30,8 +30,6 @@ last_update:
 ## How to Install 
 ### Install ESP-IDF
 
-### Install the ESP IDF
-
 Follow the instructions of the
 [ESP-IDF get started guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)
 to setup the toolchain and the ESP-IDF itself.
@@ -95,7 +93,7 @@ idf.py --port /dev/ttyUSB0 monitor
 
 ## Tech Support & Product Discussion
 
-.
+
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

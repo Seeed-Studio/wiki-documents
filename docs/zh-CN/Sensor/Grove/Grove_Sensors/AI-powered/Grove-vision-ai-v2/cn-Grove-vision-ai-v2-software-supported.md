@@ -101,7 +101,7 @@ SenseCraft AI可以帮助用户轻松地将大量公开可用的AI模型部署�
 
 ### <span id="jump5"> Arduino库介绍 </span>
 
-:::提示
+:::tip提示
 
 如果这是您第一次使用Arduino，请务必参考[Arduino入门指南](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 
@@ -139,7 +139,7 @@ SenseCraft AI可以帮助用户轻松地将大量公开可用的AI模型部署�
     - `fileter` —— 意味着仅在上一个结果与先前结果不同（通过几何形状和分数比较）时才发送事件回复。
     - `bool show` —— 意味着仅在上一个结果与先前结果不同（通过几何形状和分数比较）时才发送事件回复。
 
-  :::注意
+  :::note注意
 
   关于Grove Vision AI的协议定义的更多信息，请阅读[**协议文档**](https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md)。 
 
@@ -208,9 +208,10 @@ typedef struct
 } point_t;
 ```
 
-:::注意：
+:::note注意
 
 这里的深度坐标是相对的，这并不意味着Grove Vision AI启用了深度摄像头，而是算法计算了一个相对的深度坐标，这在某些模型中是有效的（例如，面部3D模型）。
+:::
 
 - `perf_t &perf() { return _perf; }` —— 图像处理和推理时间。
 
@@ -223,7 +224,7 @@ typedef struct
 } perf_t;
 ```
 
-:::注意：
+:::note注意
 
 输出的结果并不总是提供识别框和点的信息，这取决于模型。
 :::
@@ -282,9 +283,10 @@ typedef struct
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/10.gif" style={{width:600, height:'auto'}}/></div>
 
-:::警告 
+:::caution警告 
 
 请注意连接的方向，Grove Vision AI的Type-C连接器应与XIAO的Type-C连接器方向相同。
+:::
 
 **步骤 2.** 启动Arduino应用程序。
 
@@ -301,12 +303,13 @@ typedef struct
 
 :::tip 下面是Grove Vision AI V2示例支持的开发板列表，您可以选择要使用的开发板来完成下一个示例。在本教程中，将以XIAO ESP32S3为例。
 
-- 如果您想在后续例程中使用Seeed Studio XIAO SAMD21，请参考[此教程](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)完成添加。
-- 如果您想在后续例程中使用Seeed Studio XIAO RP2040，请参考[此教程](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)完成添加。
-- 如果您想在后续例程中使用Seeed Studio XIAO nRF52840，请参考[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)完成添加。
-- 如果您想在后续例程中使用Seeed Studio XIAO ESP32C3，请参考[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)完成添加。
-- 如果您想在后续例程中使用Seeed Studio XIAO ESP32S3，请参考[此教程](http://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)完成添加。
-- 如果您想在后续例程中使用Seeeduino V4.3，请参考[此教程](https://wiki.seeedstudio.com/Seeeduino_v4.2/)完成添加。 :::
+- 如果您想在后续例程中使用Seeed Studio XIAO SAMD21，请参考**[此教程](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)**完成添加。
+- 如果您想在后续例程中使用Seeed Studio XIAO RP2040，请参考**[此教程](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
+- 如果您想在后续例程中使用Seeed Studio XIAO nRF52840，请参考**[此教程](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)**完成添加。
+- 如果您想在后续例程中使用Seeed Studio XIAO ESP32C3，请参考**[此教程](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
+- 如果您想在后续例程中使用Seeed Studio XIAO ESP32S3，请参考**[此教程](http://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)**完成添加。
+- 如果您想在后续例程中使用Seeeduino V4.3，请参考**[此教程](https://wiki.seeedstudio.com/Seeeduino_v4.2/)**完成添加。
+:::
 
 **步骤 4.** 安装**ArduinoJSON**库。
 

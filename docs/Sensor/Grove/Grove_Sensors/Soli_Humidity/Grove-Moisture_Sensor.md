@@ -112,7 +112,7 @@ If we don't have Grove Base Shield, We also can directly connect Grove-Moisture 
 
 - **Step 1.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```c++
+```cpp
 int sensorPin = A0;
 int sensorValue = 0;
 

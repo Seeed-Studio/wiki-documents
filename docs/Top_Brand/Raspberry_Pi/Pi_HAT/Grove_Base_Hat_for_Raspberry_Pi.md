@@ -166,30 +166,6 @@ To operate grove sensors, the grove.py depends many hardware interface libraries
 
 #### Installation
 
-**Online one-click installation**
-
-One-click installation, quick start, what ever you call, with the single command below, we can install/update all dependencies and latest grove.py.
-
-:::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you **cannot use this command line**.
-:::
-
-```python
-curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
-```
-
-:::tipsuccess
-if everything goes well, you will see the following notice.
-
-```
-     Successfully installed grove.py-0.5
-     #######################################################
-     Lastest Grove.py from github install complete   !!!!!
-     #######################################################
-```
-
-:::
-
 **Step by step installation**
 
 Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step.
@@ -201,10 +177,8 @@ If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to u
 ```python
 git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
-# Python2
-sudo pip install .
 # Python3
-sudo pip3 install .
+sudo pip3 install . --break-system-packages
 ```
 
 #### Usage
@@ -213,11 +187,11 @@ Now you can use the Grove Base Hat for Raspberry Pi with dozens Grove modules, t
 
 ```
 pi@raspberrypi:~$ grove_
-grove_3_axis_compass_bmm150        grove_i2c_color_sensor_v2          grove_mini_pir_motion_sensor       grove_rotary_angle_sensor          grove_temperature_sensor
+grove_i2c_color_sensor_v2          grove_mini_pir_motion_sensor       grove_rotary_angle_sensor          grove_temperature_sensor
 grove_4_digit_display              grove_i2c_motor_driver             grove_moisture_sensor              grove_ryb_led_button               grove_thumb_joystick
 grove_air_quality_sensor_v1_3      grove_lcd_1.2inches                grove_oled_display_128x64          grove_servo                        grove_tilt_switch
 grove_button                       grove_led                          grove_piezo_vibration_sensor       grove_slide_potentiometer          grove_touch_sensor
-grove_collision_sensor             grove_light_sensor_v1_2            grove_pwm_buzzer                   grove_sound_sensor                 grove_ultrasonic_ranger
+grove_collision_sensor             grove_light_sensor_v1_2                            grove_sound_sensor                 grove_ultrasonic_ranger
 grove_gesture_sensor               grove_loudness_sensor              grove_recorder_v3_0                grove_switch                       grove_water_sensor
 grove_high_accuracy_temperature    grove_mech_keycap                  grove_relay                        grove_temperature_humidity_sensor  
 pi@raspberrypi:~$ grove_
@@ -226,35 +200,6 @@ pi@raspberrypi:~$ grove_
 
 Then we will show you how to use them according to port type.
 
-**PWM Port**
-
-:::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
-:::
-
-We will take the [Grove - buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) for example to introduce the PWM port.
-
-*Hardware connection diagram*
-
-![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect1.jpg)
-
-Tap the following command `sudo grove_pwm_buzzer` in the command line interface.
-
-```python
-pi@raspberrypi:~$ sudo grove_pwm_buzzer
-Insert Grove-Buzzer to Grove-Base-Hat slot PWM[12 13 VCC GND]
-
-3800
-3400
-3000
-2900
-2550
-2270
-2000
-exiting application
-```
-
-The buzzer will ring a few times and then stop, the program will automatically exit.
 
 **Digital Port**
 

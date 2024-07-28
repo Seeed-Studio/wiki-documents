@@ -156,7 +156,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 - **Step 2.** In the /example/ folder, you can find the demo code. Here we take the [Grove - ±5A DC/AC Current Sensor (ACS70331)](https://github.com/Seeed-Studio/Grove_Current_Sensor/blob/master/examples/Grove_5A_DC_Current_Sensor/Grove_5A_DC_Current_Sensor.ino) for instance. Just click the **Grove_5A_DC_Current_Sensor.ino** to open the demo. Or you can copy the following code:
 
-```C++
+```cpp
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
   #define RefVal 3.3
   #define SERIAL SerialUSB
@@ -254,14 +254,14 @@ Due to the presence of zero offset, the sensor will also have a reading when the
 
 Line 32:
 
-```C++
+```cpp
 float Vref = 1508; 
 //Vref is zero drift value, you need to change this value to the value you actually measured before using it.
 ```
 
 In the demo code, we set the Vref to 1508, however, the zero offset value varies from board to board. As you know, the board we use in this demo is 595.70. So let's modify the Line 21:
 
-```C++
+```cpp
 float Vref = 595.70;
 ```
 
@@ -288,7 +288,7 @@ When you use AC power, please pay attention to safety and avoid electric shock.
 
 For the hardware connection and calibration part, please refer to the [DC Demo](#dc-demo), the only difference is the code. Please use the following code for AC load.
 
-```C++
+```cpp
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
   #define RefVal 3.3
   #define SERIAL SerialUSB

@@ -100,4 +100,3 @@ To install it *offline*, you can **download the repo zip** from GitHub, navigate
 [Sensirion I2C SHT4X Arduino Library](https://github.com/Sensirion/arduino-i2c-sht4x)<br/>
 [Sensirion Gas Index Algorithm Arduino Library](https://github.com/Sensirion/arduino-gas-index-algorithm)
 :::
-

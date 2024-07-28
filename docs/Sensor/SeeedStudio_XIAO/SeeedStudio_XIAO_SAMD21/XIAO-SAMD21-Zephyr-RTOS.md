@@ -91,7 +91,7 @@ The simplest example is to run the "Hello World" sample on the board. After chan
 west build -p always -b seeeduino_xiao samples/subsys/usb/console
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -178,7 +178,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/basic/blinky
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -248,7 +248,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/subsys/usb/hid-mouse --  -DDTC_OVERLAY_FILE=/home/nineso/zephyrproject/zephyr/boards/shields/seeed_xiao_expansion_board/seeed_xiao_expansion_board.overlay
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -288,7 +288,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/subsys/fs/littlefs -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -373,7 +373,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/modules/tflite-micro/hello_world -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -429,7 +429,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -474,7 +474,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/basic/button -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf -DSHIELD=seeed_xiao_expansion_board
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -654,7 +654,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/sensor/sht3xd -- -DDTC_OVERLAY_FILE="$(dirname $(pwd))/applications/xiao-zephyr-examples/sht31.overlay $(dirname $(pwd))/applications/xiao-zephyr-examples/console.overlay" -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/console.conf
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash
@@ -728,7 +728,7 @@ cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
 ```
 
-Double press RESET or short the RST pin to the GND.
+Double press RESET or short the RST pin to the GND:
 
 ```
 west flash

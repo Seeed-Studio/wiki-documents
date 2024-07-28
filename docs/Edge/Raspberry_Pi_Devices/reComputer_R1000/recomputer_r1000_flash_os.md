@@ -51,8 +51,8 @@ You need to prepare the following hardware
 
 | Switch Position                                              | Mode        | Description    | nRPI-BOOT |
 | ------------------------------------------------------------ | ----------- | -------------- | --------- |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/10.png" alt="image"/> | Normal mode | Boot from eMMC | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/11.png" alt="image"/> | Flash mode  | Boot from USB  | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Normal mode | Boot from eMMC | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Flash mode  | Boot from USB  | High      |
 
 </div>
 
@@ -61,14 +61,18 @@ You need to prepare the following hardware
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/33.png" /></div>
 
 - **Step 3.** Please connect the Power Cord from the power supply to the reComputer R1000 power port.
+
+<div style={{ textAlign: 'left', marginLeft: '40px' }}>
+    <img 
+        width="100" 
+        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" 
+        style={{ transform: 'rotate(90deg)' }} 
+    />
+</div>
   
-:::danger
-
-Please make sure you have connected the power cord in the right polarity. 
-
+:::note
+The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that regardless of how the power supply's positive and negative terminals are connected, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
 :::
-  
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/34.png" /></div>
 
 Now let's move on to software set up on your host computer. Please follow the steps according to your desired operating system
 
@@ -95,6 +99,10 @@ Windows will now find the hardware and install the necessary drivers
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wiFi, set locale settings** and more
+
+:::note
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000. 
+:::
 
 - **Step 8.** Click **CHOOSE OS** and select your preferred OS
 
@@ -172,6 +180,9 @@ sudo ./rpiboot
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+:::note
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000. 
+:::
 
 - **Step 10.** Click **CHOOSE OS** and select your preferred OS
 
@@ -234,30 +245,53 @@ cd usbboot
 ```sh
 make
 ```
+- **Step 6.** Connect reComputer R1000 to the PC via USB Type-C cable
 
-- **Step 6.** Run the usbboot tool and it will wait for a connection
+- **Step 7.** Run the usbboot tool and it will wait for a connection
 
 ```sh
 sudo ./rpiboot
 ```
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 7.** Connect reComputer R1000 to the PC via USB Type-C cable
+- **Step 8.** Download snap 
+```sh
+sudo apt install snap
+```
+- **Step 9.** Download **rpi-imager** 
+```sh
+snap install rpi-imager
+```
 
-- **Step 8.** Download **Raspberry Pi Imager** software by visiting [this link](https://www.raspberrypi.org/software/)
+- **Step 10.** Open Raspberry Pi Imager software
 
-- **Step 9.** Open Raspberry Pi Imager software
+```sh
+rpi-imager
+```
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="1000" height="auto"/></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+- **Step 11.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-- **Step 10.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+Set a hostname, set a password, configure wifi, set locale settings
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
+
+Enable SSH
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/enable_ssh.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
+:::note
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000. 
+:::
 
 - **Step 11.** Click **CHOOSE OS** and select your preferred OS
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
+
+<!-- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p> -->
 
 **NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
@@ -269,11 +303,13 @@ Or you can use this link to download the image file:
 
 - **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 13.** Finally, click **WRITE**
+- **Step 13.** Finally, click **NEXT** and **YES**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
+The result is shown as below:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 14.** Flip the **Boot Mode switch** back to the **Normal mode** position
 
@@ -328,6 +364,7 @@ raspberry
 - **Step 1.** Open **Terminal** on the computer and type the following
 
 ```sh
+# ssh username@hostname
 ssh pi@raspberrypi.local
 ```
 
@@ -341,6 +378,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 - **Step 3.** When it asks for the password, type the following
 
 ```sh
+# password for user
 raspberry
 ```
 

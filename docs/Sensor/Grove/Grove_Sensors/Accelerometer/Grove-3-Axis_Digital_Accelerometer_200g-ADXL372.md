@@ -250,7 +250,7 @@ void loop() {
 - **Step 7.** Now you can use this sensor, and the output will be like this:
 
 
-```C++
+```cpp
 Please Place the module horizontally!
 Start calibration........
 ................

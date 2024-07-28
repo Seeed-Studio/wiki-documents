@@ -14,7 +14,7 @@ last_update:
 
 # XIAO ESP32S3 Sense 上的摄像头使用
 
-:::note
+:::tip
 本教程的内容仅适用于Seeed Studio XIAO ESP32S3 Sense。
 :::
 
@@ -38,11 +38,11 @@ last_update:
   </table>
 </div>
 
-##入门
+## 入门
 
 本教程可能涉及microSD卡、相机、天线等的使用。请准备以下材料，并根据您的项目需求正确安装。
 
-####天线的安装
+#### 天线的安装
 
 在XIAO ESP32S3正面的左下角，有一个单独的“WiFi/BT天线连接器”。为了获得更好的WiFi/蓝牙信号，您需要取出包装内的天线并将其安装在连接器上。
 
@@ -50,7 +50,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
-###安装扩展板（用于Sense）
+### 安装扩展板（用于Sense）
 
 安装扩展板非常简单，只需将扩展板上的连接器与XIAO ESP32S3上的B2B连接器对齐，用力按压并听到“咔嗒”一声，即可完成安装。
 
@@ -70,7 +70,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
 
-:::提示
+:::tip提示
 Wiki中所有关于相机的程序都与OV5640和OV2640相机兼容。
 :::
 
@@ -84,7 +84,7 @@ XIAO ESP32S3 Sense支持高达**32GB**的microSD卡，因此，如果您准备�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
-###扩展板摄像头插槽电路设计
+### 扩展板摄像头插槽电路设计
 
 XIAO ESP32S3感应卡插槽占用了ESP32-S3的14个GPIO，占用的引脚细节如下表所示。
 
@@ -141,28 +141,28 @@ XIAO ESP32S3感应卡插槽占用了ESP32-S3的14个GPIO，占用的引脚细节
     </table>
 </div>
 
-###打开PSRAM选项
+### 打开PSRAM选项
 
 ESP32的PSRAM是指ESP32芯片上的外部PSRAM（伪静态随机存取存储器），它提供了额外的存储空间来增加ESP32系统的可用内存。在ESP32系统中，PSRAM有以下主要用途：
 
-1.扩展可用RAM：ESP32的内置RAM是有限的，特别是对于一些需要大量内存的应用，如图像处理、音频处理等，内置RAM可能不够。通过使用PSRAM，可以扩展ESP32的可用RAM以满足这些应用的需要。
+1. 扩展可用RAM：ESP32的内置RAM是有限的，特别是对于一些需要大量内存的应用，如图像处理、音频处理等，内置RAM可能不够。通过使用PSRAM，可以扩展ESP32的可用RAM以满足这些应用的需要。
 
-2.加速内存访问：由于PSRAM是外部内存，访问速度比内部RAM慢，但它可以用作缓存或临时内存，以加速内存访问和数据处理。
+2. 加速内存访问：由于PSRAM是外部内存，访问速度比内部RAM慢，但它可以用作缓存或临时内存，以加速内存访问和数据处理。
 
-3.存储缓冲区：对于需要大缓冲区的应用程序，如网络缓冲区、音频缓冲区等，PSRAM可以提供足够的存储空间，以避免内存不足的情况。
+3. 存储缓冲区：对于需要大缓冲区的应用程序，如网络缓冲区、音频缓冲区等，PSRAM可以提供足够的存储空间，以避免内存不足的情况。
 
 对于本教程的内容，您**需要打开Arduino IDE的PSRAM功能**，以确保相机正常工作。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/94.png" style={{width:700, height:'auto'}}/></div>
 
 
-##相机库概述
+## 相机库概述
 
 在开始之前，我们建议您阅读本章，以了解常见的相机功能。这样你就可以使用这些函数来完成你自己的项目开发，或者更容易地阅读程序。
 
-###第一部分：esp_camera.h
+### 第一部分：esp_camera.h
 
-1.摄像机初始化的配置结构。
+1. 摄像机初始化的配置结构。
 
 以下是配置示例，只需根据实际引脚情况填写即可。
 
@@ -195,9 +195,9 @@ static camera_config_t camera_example_config = {
     };
 ```
 
-2.初始化摄像头驱动程序。
+2. 初始化摄像头驱动程序。
 
-按照上述格式配置“camera_example_config”后，我们需要使用此函数来初始化相机驱动程序。
+按照上述格式配置`camera_example_config`后，我们需要使用此函数来初始化相机驱动程序。
 
 ```cpp
 esp_err_t esp_camera_init(const camera_config_t* config);
@@ -207,7 +207,7 @@ esp_err_t esp_camera_init(const camera_config_t* config);
 
 - **输出**: 成功时ESP_OK 
 
-:::注意
+:::note注意
 当前此函数只能调用一次，并且没有方法可以对此模块进行去初始化。
 :::
 
@@ -230,21 +230,23 @@ typedef struct {
 } camera_fb_t;
 ```
 
-4.返回要重新使用的帧缓冲区。
+4. 返回要重新使用的帧缓冲区。
 
 ```cpp
 void esp_camera_fb_return(camera_fb_t * fb);
 ```
 
 - **输入参数**：指向帧缓冲区的指针
-5.获取指向图像传感器控制结构的指针。
+
+5. 获取指向图像传感器控制结构的指针。
 
 ```cpp
 sensor_t * esp_camera_sensor_get();
 ```
 
 - **输出**：指向传感器的指针
-6.将摄像头设置保存到非易失性存储器（NVS）。
+
+6. 将摄像头设置保存到非易失性存储器（NVS）。
 
 ```cpp
 esp_err_t esp_camera_save_to_nvs(const char *key);
@@ -252,7 +254,7 @@ esp_err_t esp_camera_save_to_nvs(const char *key);
 
 - **输入参数**：相机设置的唯一nvs密钥名称
 
-7.从非易失性存储器（NVS）加载相机设置。
+7. 从非易失性存储器（NVS）加载相机设置。
 
 ```cpp
 esp_err_t esp_camera_load_from_nvs(const char *key);
@@ -260,9 +262,9 @@ esp_err_t esp_camera_load_from_nvs(const char *key);
 
 - **输入参数**：相机设置的唯一nvs密钥名称
 
-###第二部分：img_converters.h
+### 第二部分：img_converters.h
 
-1.将图像缓冲区转换为JPEG。
+1. 将图像缓冲区转换为JPEG。
 
 ```cpp
 bool fmt2jpg_cb(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t quality, jpg_out_cb cb, void * arg);
@@ -280,7 +282,7 @@ bool fmt2jpg_cb(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, p
   - **arg**：要传递给回调的指针
 - **输出**：成功时为true
 
-2.将相机帧缓冲区转换为JPEG。
+2. 将相机帧缓冲区转换为JPEG。
 
 ```cpp
 bool frame2jpg_cb(camera_fb_t * fb, uint8_t quality, jpg_out_cb cb, void * arg);
@@ -294,7 +296,7 @@ bool frame2jpg_cb(camera_fb_t * fb, uint8_t quality, jpg_out_cb cb, void * arg);
   - **arg**：要传递给回调的指针
 - **输出**：成功时为true
 
-3.将图像缓冲区转换为JPEG缓冲区。
+3. 将图像缓冲区转换为JPEG缓冲区。
 
 ```cpp
 bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t quality, uint8_t ** out, size_t * out_len);
@@ -312,7 +314,7 @@ bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
   - **out_len**：要填充输出缓冲区长度的指针
 - **输出**：成功时为true
 
-4.将相机帧缓冲区转换为JPEG缓冲区。
+4. 将相机帧缓冲区转换为JPEG缓冲区。
 
 ```cpp
 bool frame2jpg(camera_fb_t * fb, uint8_t quality, uint8_t ** out, size_t * out_len);
@@ -326,7 +328,7 @@ bool frame2jpg(camera_fb_t * fb, uint8_t quality, uint8_t ** out, size_t * out_l
   - **out_len**：要填充输出缓冲区长度的指针
 - **输出**：成功时为true
 
-5.将图像缓冲区转换为BMP缓冲区。
+5. 将图像缓冲区转换为BMP缓冲区。
 
 ```cpp
 bool fmt2bmp(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t ** out, size_t * out_len);
@@ -344,7 +346,7 @@ bool fmt2bmp(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
   - **out_len**：要填充输出缓冲区长度的指针
 - **输出**：成功时为true
 
-6.将相机帧缓冲区转换为BMP缓冲区。
+6. 将相机帧缓冲区转换为BMP缓冲区。
 
 ```cpp
 bool frame2bmp(camera_fb_t * fb, uint8_t ** out, size_t * out_len);
@@ -358,9 +360,9 @@ bool frame2bmp(camera_fb_t * fb, uint8_t ** out, size_t * out_len);
   - **arg**：要传递给回调的指针
 - **输出**：成功时为true
 
-###第三部分：app_httpd.cpp
+### 第三部分：app_httpd.cpp
 
-:::笔记
+:::note注意
 图书馆介绍的这一部分是基于[创建视频保存终端--基于Web服务器]部分。该库主要用于为web服务器执行图像采集和人脸识别功能。它没有直接包含在ESP的车载包中。
 :::
 
@@ -374,7 +376,7 @@ static int run_face_recognition(fb_data_t *fb, std::list<dl::detect::result_t> *
   - **fb**：指向表示包含图像数据的帧缓冲区的结构的指针。
   - **结果**：指向检测到的人脸结果列表的指针。
 
-2.处理对BMP图像文件的HTTP请求。
+2. 处理对BMP图像文件的HTTP请求。
 
 ```cpp
 static esp_err_t bmp_handler(httpd_req_t *req)
@@ -382,7 +384,7 @@ static esp_err_t bmp_handler(httpd_req_t *req)
 
 - **输入参数**：指向表示HTTP请求的结构体的指针。
 
-3.以流方式对JPEG图像数据进行编码。
+3. 以流方式对JPEG图像数据进行编码。
 
 ```cpp
 static size_t jpg_encode_stream(void *arg, size_t index, const void *data, size_t len)
@@ -394,7 +396,7 @@ static size_t jpg_encode_stream(void *arg, size_t index, const void *data, size_
   - **数据**：指向包含要编码的图像数据的缓冲器的指针。
   - **len**：数据缓冲区的长度。
 
-4.处理HTTP请求，以便从相机捕获和流式传输图像。
+4. 处理HTTP请求，以便从相机捕获和流式传输图像。
 
 ```cpp
 static esp_err_t capture_handler(httpd_req_t *req)
@@ -402,7 +404,7 @@ static esp_err_t capture_handler(httpd_req_t *req)
 
 - **输入参数**：指向表示HTTP请求的结构体的指针。
 
-5.处理来自摄像机的流式视频的HTTP请求。
+5. 处理来自摄像机的流式视频的HTTP请求。
 ```cpp
 static esp_err_t stream_handler(httpd_req_t *req)
 ```
@@ -414,7 +416,7 @@ static esp_err_t stream_handler(httpd_req_t *req)
 void startCameraServer()
 ```
 
-##用相机拍照
+## 用相机拍照
 
 接下来我们从相机的最基本用法开始，例如，我们将首先使用相机来完成图像采集。第一个项目我们将使用microSD卡，这个程序的主要任务是获得每分钟的摄像机镜头，然后将镜头保存到microSD。
 
@@ -589,21 +591,21 @@ void loop() {
 }
 ```
 
-:::笔记
+:::note笔记
 该程序的编译和上传需要另外两个依赖项，请访问GitHub并完整下载。
 :::
 
-请上传XIAO ESP32S3的程序，程序上传成功后，请打开串行监视器，调整相机以面对您想要拍摄的对象，等待一分钟，拍摄将保存到SD卡中。接下来，肖将每分钟拍一张照片。
+请上传XIAO ESP32S3的程序，程序上传成功后，请打开串行监视器，调整相机以面对您想要拍摄的对象，等待一分钟，拍摄将保存到SD卡中。接下来，XIAO将每分钟拍一张照片。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/89.png" style={{width:700, height:'auto'}}/></div>
 
 取出microSD卡，在读卡器的帮助下，您可以看到卡中保存的照片。
 
-###程序注释
+### 程序注释
 
 该程序从我们需要使用的相机和SD卡库开始，并导入我们为XIAO ESP32S3定义的一些引脚依赖文件。
 
-然后为了便于阅读，我们相继定义了两个函数，一个是将捕获的图像保存到SD卡的函数“photo_save（）”，另一个是写入文件的函数“writeFile（）”。
+然后为了便于阅读，我们相继定义了两个函数，一个是将捕获的图像保存到SD卡的函数`photo_save（）`，另一个是写入文件的函数`writeFile（）`。
 
 ```cpp
 // Save pictures to SD card
@@ -626,11 +628,11 @@ void photo_save(const char * fileName) {
 
 在将图像保存到microSD卡的功能中，完成了两项主要任务。第一个是获取图片，第二个是调用写入文件的函数。
 
-获取图像可以用“esp_camera_fb_get（）”完成，图像信息将保存在指针“fb”中，然后我们可以将“fb’的“buf”写入SD卡。
+获取图像可以用`esp_camera_fb_get（）`完成，图像信息将保存在指针`fb`中，然后我们可以将`fb`的`buf`写入SD卡。
 
-在“Setup（）”函数中，程序的很大一部分是配置相机引脚和相机初始化，默认情况下我们可以直接应用它。如果您对相机的像素或质量有要求，可以根据[相机库概述]（#相机库概述）一章中描述的功能调整内部的值。
+在`Setup（）`函数中，程序的很大一部分是配置相机引脚和相机初始化，默认情况下我们可以直接应用它。如果您对相机的像素或质量有要求，可以根据[相机库概述]（#相机库概述）一章中描述的功能调整内部的值。
 
-在“loop（）”函数中要做的最后一件事是控制每分钟拍摄的照片，并将增量数字作为拍摄照片的文件名后缀。
+在`loop（）`函数中要做的最后一件事是控制每分钟拍摄的照片，并将增量数字作为拍摄照片的文件名后缀。
 
 ```cpp
 if(camera_sign && sd_sign){
@@ -650,13 +652,13 @@ if(camera_sign && sd_sign){
   }
 ```
 
-在执行`loop（）`之前，我们配置两个标志检查`camera_sign`和`sd_sign`。这样可以确保在“Setup（）”中成功执行相机和SD卡检查后，必须运行拍摄和保存图片的任务。
+在执行`loop（）`之前，我们配置两个标志检查`camera_sign`和`sd_sign`。这样可以确保在`Setup（）`中成功执行相机和SD卡检查后，必须运行拍摄和保存图片的任务。
 
-##项目一：制作手持相机
+## 项目一：制作手持相机
 
 接下来，我们利用以上理论知识，制作出一款超小型的照片神器。该项目的最终结果是，XIAO的Seeed Studio圆形显示屏上显示了实时摄像头，当您锁定要拍摄的对象时，触摸屏幕并拍照记录在microSD卡上。
 
-###前期准备
+### 前期准备
 
 在开始此项目之前，您需要提前准备以下硬件。
 
@@ -689,7 +691,7 @@ if(camera_sign && sd_sign){
 
 由于XIAO EPS32S3 Sense设计有三个上拉电阻R4~R6连接到SD卡插槽，并且圆形显示器也有上拉电阻，因此当两者同时使用时，无法读取SD卡。为了解决这个问题，我们需要切断XIAO ESP32S3 Sense扩展板上的J3。
 
-:::提示
+:::tip提示
 然而，**我们需要感谢工程师Mjrovai同时使用XIAO ESP32S3 Sense上的microSD卡插槽的新方法**，这在软件级别也是可能的。我们可以参考**[他的方法和程序](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
 :::
 
@@ -701,7 +703,7 @@ if(camera_sign && sd_sign){
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/101.gif" style={{width:500, height:'auto'}}/></div>
 
-:::提示
+:::tip提示
 我们建议您先卸下相机模块，以避免在用刀片切断J3连接时刮伤相机。
 :::
 
@@ -908,7 +910,7 @@ void loop() {
 
 ### 程序注释
 
-摄像头和microSD卡的配置是之前的内容，这里不再赘述。有关microSD卡的使用，请参阅[XIAO ESP32S3 Sense文件系统](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem) Wiki to learn how to use it.
+摄像头和microSD卡的配置是之前的内容，这里不再赘述。有关microSD卡的使用，您可以参考[XIAO ESP32S3 Sense文件系统](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem) Wiki 以了解如何使用它。
 
 ```cpp
 // Take a photo
@@ -954,14 +956,16 @@ tft.endWrite();
 
 这部分代码在屏幕上显示捕获的图像。首先从 `camera_fb_t` camera_fb_t结构中检索图像缓冲区及其长度。然后，它设置屏幕以接收图像数据，并使用 `pushColors()` 函数在屏幕上显示图像。
 
-##录制短视频并保存到microSD卡
+## 录制短视频并保存到microSD卡
 
-：：：注释
+:::note注意
 我们不建议在MCU上导出视频编码，因为当前支持的编码库资源太小，操作非常复杂和乏味。
+
 这个例子不涉及视频编码，并且导出的视频是每帧AVI的MJPG合成，因此视频记录可能不是特别好和令人满意。本教程的目的是为您提供录制短视频的简单方法和想法，我们欢迎有更好解决方案的合作伙伴向我们提交PR。
-：：：
+:::
 
 在前几章中，我们掌握了如何使用相机拍摄图像。我们知道，一张图像被拼接在一起，形成一张运动视频图片。基于这一理论，我们在本章中的项目将指导您如何编写程序，每1分钟录制一段10秒的视频，并将其保存在microSD卡中。
+
 您可以在此链接下找到完整的程序代码和所需的依赖关系文件。
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -1110,8 +1114,8 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/96.png" style={{width:800, height:'auto'}}/></div>
 
-:::笔记
-由于该节目不涉及诸如编码和帧速率之类的设置，如果所记录的镜头的每一帧中没有变化，则视频可能只打开一秒钟。
+:::note注意
+由于程序不涉及编码和帧率等设置，如果录制的每一帧画面没有变化，视频可能只会打开一秒钟。
 :::
 
 
@@ -1144,9 +1148,10 @@ if ((now - lastCaptureTime) >= 60000) {
 }
 ```
 
-##项目二：视频流
+## 项目二：视频流
 
 在本教程的最后，让我们展示一个视频流项目。该项目允许您在XIAO ESP32S3 Sense创建的网页上查看实时视频流，您可以通过设置一些参数来更改屏幕显示。
+
 您可以在此链接下找到完整的程序代码和所需的依赖文件。
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -1275,21 +1280,21 @@ void loop() {
 ```
 在上传程序之前，您需要将代码中的WiFi名称和密码更改为您自己的。上传程序后，如果XIAO ESP32C3成功连接到您的WiFi，将打印出其IP地址。
 
-：：：注意
-肖ESP32S3如果长时间执行此项目，请注意散热，肖会变得很烫，请小心烫伤！
-：：：
+:::caution警告
+XIAO ESP32S3如果长时间执行此项目，请注意散热，XIAO会变得很烫，请小心烫伤！
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/97.png" style={{width:800, height:'auto'}}/></div>
 
-：：：提示
-如上图所示，如果打开调试信息的输出，则可能会看到一些芯片内核的调试信息打印在串行监视器中。例如“[0；31mE（2947）MFN:Partition Not found[0m”，请不要担心，它不会影响程序的运行。
-：：：
+:::tip提示
+如上图所示，如果打开调试信息的输出，则可能会看到一些芯片内核的调试信息打印在串行监视器中。例如`[0；31mE（2947）MFN:Partition Not found[0m`，请不要担心，它不会影响程序的运行。
+:::
 
 请打开您的浏览器，我们建议使用Edge或Google Chrome，然后输入该IP地址，您将看到视频的配置页面。
 
-：：：注意
+:::note注意
 请注意，您使用浏览器的设备需要与XIAO位于同一LAN上。
-：：：
+:::
 
 配置好要设置的视频流规格后，点击左侧工具栏底部的**开始流**，可以看到摄像机的直播画面。
 
@@ -1297,9 +1302,9 @@ void loop() {
 
 幸运的是，ESP32也正式增加了人脸识别的程序。您可以通过打开用于人脸识别的按钮开关来体验该功能，但图像质量会降低。
 
-：：：提示
+:::tip提示
 由于性能原因，屏幕质量不能高于**CIF**，否则打开人脸识别开关时会弹出错误网页。
-：：：
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/99.png" style={{width:400, height:'auto'}}/></div>
 
@@ -1308,9 +1313,9 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" style={{width:600, height:'auto'}}/></div>
 
 
-##故障排除
+## 故障排除
 
-###Q1：当XIAO ESP32S3 Sense和圆形显示器一起使用时，我是否需要切割J3引脚？可以使用哪个SD卡插槽？
+### 问题1：当XIAO ESP32S3 Sense和圆形显示器一起使用时，我是否需要切割J3引脚？可以使用哪个SD卡插槽？
 
 A： 原则上，当XIAO ESP32S3 Sense与圆形显示器配合使用microSD卡时，需要切断J3引脚。原因是在两块扩展板的电路设计中都有上拉电阻，所以从理论上讲，如果两个上拉电阻同时工作，那么SD卡插槽将不能正常工作。将出现SD卡装载失败的错误消息。由于圆形显示器上的上拉电阻不能被阻断，因此需要切断感测扩展板上的J3，以确保当两个上拉电阻一起使用时，只有一个上拉电阻工作。这也决定了当两者一起使用时，圆形显示屏上只有SD卡插槽处于活动状态。
 
@@ -1318,7 +1323,7 @@ A： 原则上，当XIAO ESP32S3 Sense与圆形显示器配合使用microSD卡�
 
 
 
-##技术支持和产品讨论
+## 技术支持和产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您的体验与我们的产品是尽可能顺利。我们提供多种沟通渠道，以满足不同的喜好和需求。
 <div class="button_tech_support_container">

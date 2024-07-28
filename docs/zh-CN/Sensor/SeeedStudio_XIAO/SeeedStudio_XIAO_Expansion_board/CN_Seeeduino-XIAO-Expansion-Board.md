@@ -159,7 +159,7 @@ Seeed Studio XIAO的扩展底板可以通过电池供电，因此如果您进行
 
 **OLED代码**
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <Wire.h>
@@ -190,7 +190,7 @@ void loop(void) {
 
 **代码**
 
-```CPP
+```cpp
 const int buttonPin = 1;     // the number of the pushbutton pin
 int buttonState = 0;         // variable for reading the pushbutton status
 
@@ -234,7 +234,7 @@ void loop() {
 
 **代码**
 
-```CPP
+```cpp
 int speakerPin = A3;
 int length = 28; // the number of notes
 char notes[] = "GGAGcB GGAGdc GGxecBA yyecdc";
@@ -299,7 +299,7 @@ void loop() {
 
 **第三步**. 打开Arduino IDE，将代码复制并粘贴到Arduino IDE中，然后上传它。
 
-```CPP
+```cpp
 #include <Servo.h>
 #include <Arduino.h>
 #include <Wire.h>
@@ -347,7 +347,7 @@ void loop() {
 
 
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <PCF8563.h>
@@ -637,7 +637,7 @@ MicroSD卡的系统格式可以是FAT或exFAT。如果您使用其他MicroSD卡�
 
 ** `main.py` 代码**
 
-```CPP
+```cpp
 import sd
 f = open("/sd/hello.txt", "r")   ## read the file from SD card
 print(f.read())
@@ -647,7 +647,7 @@ print(f.read())
 
 ** `sd.py` 代码**
 
-```CPP
+```cpp
 import os
 import adafruit_sdcard
 import board
@@ -729,7 +729,7 @@ sys.path.append("/sd/lib")  ## switch to the path to SD card
 
 **代码**
 
-```CPP
+```cpp
 #include <IRremote.h>
 #include <Servo.h>
 
@@ -847,7 +847,7 @@ void loop() {
 
 **代码**
 
-```CPP
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <IRremote.h>
@@ -993,7 +993,7 @@ void delayUntil(unsigned long elapsedTime) {
 
 **代码**
 
-```C
+```cpp
 #include <Servo.h>
 #include <Arduino.h>
 #include <U8x8lib.h>
@@ -1181,7 +1181,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
 
 **代码**
 
-```C
+```cpp
 #include <U8x8lib.h>
 #include "ATSerial.h"
 #include "Protocol.h"
@@ -1308,7 +1308,7 @@ void setup() {
 
 **代码**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 #include <Seeed_HM330X.h>
@@ -1533,7 +1533,7 @@ void loop() {
 
 **代码**
 
-```C
+```cpp
 #include <Arduino.h>
 #include <U8x8lib.h>
 

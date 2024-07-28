@@ -1,6 +1,6 @@
 ---
 description: Real Time Subtitle Recoder on Nvidia Jetson
-title: Real Time Subtitle Recoder on Nvidia Jetson
+title: Real Time Subtitle Recoder
 keywords:
   - Edge
   - reComputer

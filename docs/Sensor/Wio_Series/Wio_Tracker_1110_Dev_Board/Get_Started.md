@@ -1,6 +1,6 @@
 ---
-description: Get_Started_with_Wio_Tracker_1110 
-title: Get Started with Wio-Tracker_1110 
+description: Get Started with Wio Tracker 1110 
+title: Get Started with Wio Tracker 1110 
 keywords:
 - Tracker
 - Wio
@@ -236,6 +236,17 @@ You can also use a [Grove-I2C Hub](https://www.seeedstudio.com/Grove-I2C-Hub.htm
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WM1110-A-Grove.jpg" alt="pir" width={800} height="auto" /></p>
+
+## Flash Firmware 
+
+* [Latest Firmware](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_app_release_sw_0.5_2024-06-06.uf2)
+
+Double click the `Reset` button, there should be a `WM1110_BOOT` driver on your PC.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wm1110-boot.png" alt="pir" width={600} height="auto" /></p>
+
+Drag the `.uf2` file to the driver. The download will run automatically, then the driver will log out.
+
 
 ## SenseCAP API 
 

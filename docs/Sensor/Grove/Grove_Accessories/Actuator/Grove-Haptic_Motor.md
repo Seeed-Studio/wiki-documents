@@ -109,7 +109,7 @@ Grove - Haptic motor is a grove module integrated with [DRV2605L](http://www.ti.
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Copy the code into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-```c++
+```cpp
 #include <drv2605.h>
 
 DRV2605 haptic;

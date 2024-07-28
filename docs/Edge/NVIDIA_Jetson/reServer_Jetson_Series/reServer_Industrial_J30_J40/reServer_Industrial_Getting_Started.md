@@ -295,40 +295,84 @@ import TabItem from '@theme/TabItem';
 
 #### Download System Image
 
-- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
+- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using.
 
-<table>
-  <thead>
-    <tr>
-      <th>Device</th>
-      <th>Image Link</th>
-      <th>JetPack Version</th>
-      <th>L4T Version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>reServer Industrial J4012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346367&Signature=4176QCNbBCKBemfAmAJp3XS3yjk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td rowSpan={4}>5.1.1</td>
-      <td rowSpan={4}>35.3.1</td>
-    </tr>
-    <tr>
-      <td>reServer Industrial J4011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346497&Signature=uJCOUWHcOU%2B403%2FwrlCfntq%2FlYw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-    <tr>
-      <td>reServer Industrial J3011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346537&Signature=jwQ1bdd8f%2Bt9Lp1dpd%2FD0JZtQTM%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-    <tr>
-      <td>reServer Industrial J3010</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346594&Signature=uV0a08irm7K81lGofbWexIBPNOw%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-center">
+  <table style={{textAlign: 'center'}}>
+    <thead>
+      <tr>
+        <th>Device</th>
+        <th>JetPack Version</th>
+        <th>L4T Version</th>
+        <th>Image Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowSpan={2}>reServer Industrial J4012</td>
+        <td>5.1.1</td>
+        <td>35.3.1</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346367&Signature=4176QCNbBCKBemfAmAJp3XS3yjk%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td>6.0</td>
+        <td>36.3</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-16g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874005414&Signature=%2Bkqu1BpYLI7gQKuk65K20lU1gEU%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={2}>reServer Industrial J4011</td>
+        <td>5.1.1</td>
+        <td>35.3.1</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346497&Signature=uJCOUWHcOU%2B403%2FwrlCfntq%2FlYw%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td>6.0</td>
+        <td>36.3</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-8g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4720405571&Signature=sxFd2%2Btt8q2UwHE12z5agKAAfwg%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={2}>reServer Industrial J3011</td>
+        <td>5.1.1</td>
+        <td>35.3.1</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346537&Signature=jwQ1bdd8f%2Bt9Lp1dpd%2FD0JZtQTM%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td>6.0</td>
+        <td>36.3</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-8g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4880405687&Signature=t%2FfCM%2B91ZiNWpHNvp%2BvlT4O2jOc%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td rowSpan={2}>reServer Industrial J3010</td>
+        <td>5.1.1</td>
+        <td>35.3.1</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346594&Signature=uV0a08irm7K81lGofbWexIBPNOw%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+      <tr>
+        <td>6.0</td>
+        <td>36.3</td>
+        <td>
+          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-4g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4880405769&Signature=e7wvl%2FypH9%2FXE0X0IyO9Ga4%2BhSU%3D" target="_blank" rel="noopener noreferrer">Download</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
+<!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
 
 - **Step 2:** Extract the generated file 
 
@@ -491,17 +535,38 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
  
 #### Usage
 
-Before connecting PoE cameras, you need to enable the PoE function for the 4 Ethernet ports. Enable it as follows:
+- Before connecting PoE cameras, you need to enable the PoE function for the 4 Ethernet ports. Enable it as follows:
 
-```sh
-sudo -i
-cd /sys/class/gpio
-echo 315 > export 
-cd gpio315
-echo "out" > direction
-echo 1 > value
-```
+  ```sh
+  sudo -i
+  cd /sys/class/gpio
+  echo 315 > export 
+  cd gpio315
+  echo "out" > direction
+  echo 1 > value
+  ```
 
+- If you need to configure different IP addresses for each POE interface, follow these instructions:
+
+  **Step 1**: Connect the POE to the reServer Industrial device. For example, to configure eth3, set the name of eth3 to POE3.
+    ```bash
+  sudo nmcli connection add type ethernet ifname eth3 con-name POE3
+    ```
+
+  **Step 2**: Configure the IP address of POE3 to **192.168.6.6**. The IP address can be customized according to actual usage.
+  ```bash
+  sudo nmcli connection modify POE3 ipv4.addresses 192.168.6.6/24
+  ```
+
+  **Step3**: To set POE3's IPv4 address to manual configuration.
+    ```bash
+  sudo nmcli connection modify POE3 ipv4.method manual
+  ```
+
+  **Step4**: Start the connection
+  ```bash
+  sudo nmcli connection up POE3
+  ```
 ### SATA Connectors
 
 reServer Industrial supports 2 SATA 2.5" HDD/SSD and comes with both SATA data and power connectors. You can connect to HDD/ SSD as follows

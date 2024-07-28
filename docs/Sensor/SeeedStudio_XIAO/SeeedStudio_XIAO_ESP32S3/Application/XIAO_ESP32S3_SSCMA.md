@@ -359,6 +359,10 @@ This command is used to start the training process of a machine learning model, 
 
 - `height=192` and `width=192` set the height and width of the input images that the model expects.
 
+:::caution
+We don't really recommend that you change the image size in the Colab code, as this value is a more appropriate dataset size that we have verified to be a combination of size, accuracy, and speed of inference. If you are using a dataset that is not of this size, and you may want to consider changing the image size to ensure accuracy, then please do not exceed 240x240.
+:::
+
 - `data_root=Gesture_Detection_Swift-YOLO_192/dataset/` defines the path to the directory where the training data is located.
 
 - `load_from=Gesture_Detection_Swift-YOLO_192/pretrain.pth` provides the path to a pre-trained model checkpoint file from which training should resume or use as a starting point for transfer learning.
@@ -471,11 +475,9 @@ Sometimes Google Colab does not automatically refresh the contents of a folder. 
 
 :::
 
+In the directory above, the **.tflite** model files are available for XIAO ESP32S3 and Grove Vision AI V2. For XIAO ESP32S3 Sense, be sure to select the model file that uses the **xxx_int8.tflite** format. No other format can be used by XIAO ESP32S3 Sense.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/37.png" style={{width:400, height:'auto'}}/></div>
-
-In the directory above, the **.tflite** model files are available for XIAO ESP32S3 and XIAO ESP32S3. For XIAO ESP32S3, we prefer to use the **vela.tflite** files, which are accelerated and have better operator support. And due to the limitation of the device memory size, we recommend you to choose **INT8** model.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/38.png" style={{width:400, height:'auto'}}/></div>
 
 Once you have found the model files, please download them locally to your computer as soon as possible, Google Colab may empty your storage directory if you are idle for a long time!
 
@@ -547,7 +549,7 @@ Due to space issues, we won't be expanding on the specifics of these protocols i
 
 ## Troubleshooting
 
-### What if I follow the steps and end up with less than satisfactory model results?
+### 1. What if I follow the steps and end up with less than satisfactory model results?
 
 If your model's recognition accuracy is unsatisfactory, you could diagnose and improve it by considering the following aspects:
 
@@ -564,6 +566,14 @@ If your model's recognition accuracy is unsatisfactory, you could diagnose and i
    - **Solution**: Use class weights, oversample the minority classes, or undersample the majority classes to balance the data.
 
 By thoroughly analyzing and implementing targeted improvements, you can progressively enhance your model's accuracy. Remember to use a validation set to test the performance of the model after each modification to ensure the effectiveness of your improvements.
+
+### 2. Why do I see **Invoke failed** message in SenseCraft deployment after following the steps in the Wiki?
+
+If you encounter an Invoke failed, then you have trained a model that does not meet the requirements for use with the device. Please focus on the following areas.
+
+1. Please check whether you have modified the image size of Colab. The default compression size is **192x192**, Grove Vision AI V2 requires the image size to be compressed as square, please do not use non-square size for compression. Also don't use too large size *(no more than 240x240 is recommended)*.
+
+<!-- 2. The model file for Grove Vision AI V2 must be suffixed with **int8_vela.tflite**. Please do not use model files in other formats. This includes **int8.tflite, which is also not available** for Grove Vision AI V2. -->
 
 ## Tech Support & Product Discussion
 

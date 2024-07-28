@@ -1,18 +1,18 @@
 ---
 description: Flash JetPack to reComputer J4012 (J401 carrier board)
-title: J401 carrier Board Flash JetPack
+title: Flash Jetpack
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J4012_Flash_Jetpack
 last_update:
-  date: 6/29/2023
-  author: Lakshantha
+  date: 6/12/2024
+  author: Lakshantha/Youjiang
 ---
 
-# J401 carrier board
+# Flash JetPack OS to J401 Carrier Board
 
-<div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_10_1.png"/></div>
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/recomputer-j401.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-without-Power-Adapter-p-5637.html">
@@ -185,15 +185,30 @@ Here, we will show you how to flash [Jetpack](https://developer.nvidia.com/embed
 
 reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included NVMe SSD, so that you do not need to flash it. However, if you want to flash it again with JetPack, you can follow this guide.
 
+### Supported Module
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html) 
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer) 
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html) 
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html) 
+
 ### Prerequisites
 
-- Ubuntu Host PC (native or VM using VMware Workstation Player)
+- Ubuntu 
 - reComputer J4012/ J4011/ J3010 and J3011
 - USB Type-C data transmission cable
 
 ### Enter Force Recovery Mode
 
-Before we can move on to the installation steps, we need to make sure that the reComputer is in force recovery mode.
+:::note
+- We do not recommend using virtual machines and ARM architecture Ubuntu for flashing.
+- Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
+:::
+
+<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
+
+<details>
+
+<summary> Step-by-Step </summary>
 
 **Step 1.** Use a jumper wire to connect the **FC REC** pin and the **GND** pin.
 
@@ -265,6 +280,8 @@ The below image is for Orin NX 16GB
 
 **Step 4.** Remove the jumper wire
 
+</details>
+
 ### Flash to Jetson
 
 :::note
@@ -301,7 +318,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**Step 3:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 3 (Optional):** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
@@ -324,6 +341,22 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+Now, you can connect the mouse, keyboard, and monitor to the Jetson device. It will be ready to use!
+
+:::tip
+If your Jetson device takes a long time to open the desktop, please reconnect the power supply.
+:::
+
+**Step 5 (Optional):** Install Nvidia Jetpack SDK
+
+Please open the terminal on the **Jetson device** and execute the following commands:
+
+```bash
+sudo apt update
+sudo apt install nvidia-jetpack
+```
+
 
 </TabItem>
 <TabItem value="JP5.1.2" label="JP5.1.2">
@@ -362,7 +395,7 @@ tfc {
     };
 ```
 
-**Step 5:** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 5 (Optional):** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
 
 ```sh
 cd Linux_for_Tegra
@@ -387,50 +420,99 @@ You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
+Now, you can connect the mouse, keyboard, and monitor to the Jetson device. It will be ready to use!
+
+:::tip
+If your Jetson device takes a long time to open the desktop, please reconnect the power supply.
+:::
+
+**Step 7 (Optional):** Install Nvidia Jetpack SDK
+
+Please open the terminal on the **Jetson device** and execute the following commands:
+
+```bash
+sudo apt update
+sudo apt install nvidia-jetpack
+```
+
 </TabItem>
 
 <TabItem value="JP6.0" label="JP6.0">
 
 Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
 
-**Step 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r363) the NVIDIA drivers on the host PC. The required drivers are shown below:
+**Step 1:** Download the system image to your Ubuntu PC corresponding to the Jetson module you are using:
 
-<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/P1.png"/></div>
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <thead>
+    <tr>
+      <th>Jetson Module</th>
+      <th>Download Link</th>
+      <th>JetPack Version</th>
+      <th>L4T Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jetson Orin NX 16GB</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001146&Signature=f1AjN08eNjFFXI7cBpAsMvyJJPc%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td rowSpan={4}>6.0</td>
+      <td rowSpan={4}>36.3</td>
+    </tr>
+    <tr>
+      <td>Jetson Orin NX 8GB</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001121&Signature=cMWZwS6tEdtQgnTIsuY6Tc3nb5Q%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>Jetson Orin Nano 8GB</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001087&Signature=sQtF63h5xU6fv9d%2BqIdOGnkNHWI%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+    <tr>
+      <td>Jetson Orin Nano 4GB</td>
+      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001061&Signature=QJaisOOSM4tCDQHd94xVhVzL7jo%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-**Step 2:** Extract **Jetson_Linux_R36.3.0_aarch64.tbz2** and **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
-
-```sh
-tar xf Jetson_Linux_R36.3.0_aarch64.tbz2
-sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2 -C Linux_for_Tegra/rootfs
-cd Linux_for_Tegra/
-sudo ./apply_binaries.sh
-sudo ./tools/l4t_flash_prerequisites.sh
+**Step 2:** Extract the downloaded image file:
+```bash
+sudo tar xpf mfi_xxxx.tar.gz
+# For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 4:** Navigate to **"Linux_for_Tegra"** directory, and enter the below command to configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting
+**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD: 
 
-```sh
-cd Linux_for_Tegra
-sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
-```
-
-For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
-
-```sh
-sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
-```
-
-**Step 5:** Flash the system to the NVMe SSD
-
-```sh
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
-  -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" \
-  --showlogs --network usb0 jetson-orin-nano-devkit internal
+```bash
+cd mfi_xxxx
+# For example: cd mfi_recomputer-orin-j401
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
 You will see the following output if the flashing process is successful
 
-<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+:::note
+The flash command may run for 2-10 minutes.
+:::
+
+**Step 4:** Connect the J401 to a display using the HDMI connector on the board and finish the initial configuration setup:
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+:::info
+Please complete the **System Configuration** according to your needs.
+:::
+
+**Step 5:** After starting the system, you need to execute the following command to reactivate the wireless network card driver:
+```bash
+sudo rm /lib/modules/5.15.136-tegra/build
+sudo ln -s /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.136-tegra/build
+sudo apt install -y iwlwifi-modules
+```
+
 
 </TabItem>
 </Tabs>

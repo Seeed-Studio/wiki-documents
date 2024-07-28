@@ -133,15 +133,16 @@ sudo systemctl start mosquitto
 - **Step 01** : Open a new SSH session or terminal and run the following command to subscribe to a topic
 
 ```sh
-mosquitto_sub -h localhost -t test
+mosquitto_sub -h localhost -t test -u <USER> -P <PASSWORD>
 ```
- - **Step 02** : In another SSH session or terminal, run the following command to publish a message to the same topic
+ - **Step 02** : In another SSH session or terminal, run the following command to publish a message to the same topic. Make sure to enter User name and Password accordingly.
 
 ```sh
-mosquitto_pub -h localhost -t test -m "Hello, world!"
+mosquitto_pub -h localhost -t test -m "Hello, world!" -u <USER> -P <PASSWORD>
 ```
 
-You should see the message "Hello, world!" appear in the first SSH session window where you ran the mosquitto_sub command.
+You should see the message "Hello, world!" appear in the first SSH session window where you ran the mosquitto_sub command.  Make sure to enter User name and Password accordingly.
+
 
 
 ## Edit Flows

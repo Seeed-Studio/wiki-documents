@@ -93,7 +93,7 @@ This Grove-OLED Display supports the U8g2 monochrome displays library written by
 
 - **Step 2.**  Open the Arduino IDE and create a new file, then copy the following code into the new file.
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <Wire.h>

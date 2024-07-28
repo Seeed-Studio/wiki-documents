@@ -65,7 +65,7 @@ Connect the Grove - 3-Axis Digital Accelerometer (LIS3DHTR) with Seeeduino XIAO'
 
 #### Software Code
 
-```C++
+```cpp
 // This example use I2C.
 #include "LIS3DHTR.h"
 #include <Wire.h>

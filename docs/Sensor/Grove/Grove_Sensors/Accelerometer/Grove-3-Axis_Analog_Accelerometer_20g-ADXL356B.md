@@ -146,7 +146,7 @@ Product|Measurement Range|Output Port|Power Consumption
 
 or you can just copy the code below:
 
-```c++
+```cpp
 
 #include <Arduino.h>
 
@@ -271,7 +271,7 @@ void loop()
 - **Step 5.** Now you can use this sensor, and the output will be like this:
 
 
-```C++
+```cpp
 Please Place the module horizontally!
 Start calibration........
 Calibration OK!!
