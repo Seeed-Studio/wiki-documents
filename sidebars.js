@@ -4589,7 +4589,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Sensor/Grove/Grove_System',
+      id: 'zh-CN/Sensor/Grove/cn-Grove_System',
       label: 'Grove',
       className: 'sideboard_calss',
     },
