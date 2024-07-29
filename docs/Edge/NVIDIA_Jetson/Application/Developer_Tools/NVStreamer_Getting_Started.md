@@ -25,7 +25,18 @@ This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming 
 
 ## Prerequisites
 Before proceeding with the setup process, please ensure that your system meets the following prerequisites:
-- A Linux workstation running Ubuntu `22.04` or `later`.
+<div align="center">
+    <img width={800} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/agx_orin.png" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=a07376a957f072a4f755e1832fa0e544&objectID=5569&indexName=bazaar_retailer_products">
+      <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+- A reComputer J4012 Orin NX 16G running Ubuntu `22.04` or `later`.
 - The Linux system must have sufficient available space to store the video files you will be serving (typically several hundred GB).
 - Driver Version: `535.113.01`, Jetpack `6.0` and CUDA Version: `12.2`.
 - Make sure that `JetPack` and the related `Jetson services` packages are installed.
