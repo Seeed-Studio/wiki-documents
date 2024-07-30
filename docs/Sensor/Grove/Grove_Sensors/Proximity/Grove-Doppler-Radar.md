@@ -136,7 +136,7 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 #### Software Code
-```C++
+```cpp
 #include "GBT24LTR11.h"
 
 #ifdef __AVR__

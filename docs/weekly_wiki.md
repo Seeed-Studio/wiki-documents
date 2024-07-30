@@ -5,135 +5,124 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/08/2024
-  author: Seraphina
+  date: 07/29/2024
+  author: Frank
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings
 
-This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 8th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 29th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
+### [SenseCAP Watcher as a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove/)
 
-### [Watcher to Node-RED Quick Start](https://wiki.seeedstudio.com/watcher_to_node_red/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
 
-**Node-RED** is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a Grove sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
 
-It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
+### [Watcher & Node-RED To Kafka Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/10.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/head_image.png" style={{width:1000, height:'auto'}}/></div>
 
-To make it easier for our users to **connect data from the Watcher to various other Paas platforms for more in-depth data processing**. For example. from Watcher to IFTTT, Telegram, Twilio etc. We will do a series of tutorials for **Watcher & Node-RED**.
+Apache Kafka is a distributed event streaming platform designed for high-throughput, fault-tolerant data processing. It enables real-time data feeds by allowing producers to publish messages to topics, while consumers can subscribe to these topics to process the data. Kafka is widely used for building data pipelines, real-time analytics, and integrating various data sources. Its robust architecture ensures scalability and durability, making it a popular choice for modern data-driven applications.
 
-This tutorial, the first in a series, will walk you through installing and using Node-red and calling the Watcher API to connect to Node-RED.
+Why use Docker? Because Docker can simulate the environment of multiple computers on a single machine and deploy applications with great ease. Therefore, in this project, we will use Docker to set up the environment and improve efficiency.
 
+### [T1000-E Tracker for Meshtastic](https://wiki.seeedstudio.com/sensecap_t1000_e/)
 
-### [reComputer R1000 Walk Through](https://wiki.seeedstudio.com/recomputer_r1000_intro/)
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/_/5_10.jpg" alt="pir" width={600} height="auto" /></p>
 
-The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features a quad-core A72 processor, dual Ethernet, and multiple RS485 channels supporting BACnet, Modbus RTU, and Modbus TCP/IP. With versatile wireless options including 4G, LoRa®, and Wi-Fi/BLE, it ensures robust IoT network communication. Ideal for remote device and energy management, the R1000 is perfect for smart building applications.
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:800, height:'auto'}}/></div>
-
-### [reComputer R1000 with Node Red and MQTT](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)
-
-**MQTT (Message Queuing Telemetry Transport)** is a lightweight messaging protocol ideal for IoT (Internet of Things) applications due to its efficiency and low bandwidth requirements. It facilitates communication between devices in a publish-subscribe model, allowing for real-time data exchange over unreliable networks. With Node-RED, integrating MQTT enables seamless connectivity between edge devices and central servers or other devices, fostering efficient data transmission and processing reComputer R1000 Edge Controller, by supporting MQTT natively, eliminates the need for additional hardware gateways by allowing the installation of an MQTT broker directly on the reComputer R1000 itself. This reduces complexity, minimizes latency, and enhances reliability, as data can be processed and acted upon at the edge without relying on external intermediaries, thus optimizing IoT system architecture.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png" style={{width:800, height:'auto'}}/></div>
-
-### [reCoputer R1000 with Node Red and InfluxDB](https://wiki.seeedstudio.com/recomputer_r1000_node_red_influxdb/)
-
-Deploying [InfluxDB](https://www.influxdata.com/) on an reComputer R1000 , a Raspberry Pi-powered edge controller, enables robust time-series data collection and analysis at the edge of your network. This setup is ideal for IoT applications, providing real-time insights and monitoring capabilities. By leveraging the lightweight yet powerful InfluxDB database, you can efficiently manage and analyze sensor data directly on the reComputer R1000. The following guide outlines the steps to install, configure, and use InfluxDB on your reComputer R1000 , ensuring a seamless integration into your data infrastructure.
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 
-### [reComputer R1000 with Grafana](https://wiki.seeedstudio.com/recomputer_r1000_grafana/)
+It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
 
-[Grafana](https://grafana.com/oss/grafana/) is an open-source visualization and analytics software that enables you to query, visualize, alert on, and explore your metrics, logs, and traces from any storage location. It offers tools to transform your time-series database (TSDB) data into insightful graphs and visualizations. As a powerful monitoring solution, Grafana helps in making informed decisions, enhancing system performance, and streamlining troubleshooting. In this wiki, we will guide you through the installation of Grafana on a Raspberry Pi-powered reComputer R1000 , connect it to an existing InfluxDB database, and create an illustrative dashboard.
+<div align="center">
+    <img width={700} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
+</div>
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/grafana/grafana2.gif" /></center>
+This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
+### [How to Run VLM on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/run_vlm_on_recomputer/)
 
-### [reComputer R1000 with fuxa to achieve SCADA](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_achieve_scada/)
+VLMs are multi modal models supporting images, video and text and using a combination of large language models and vision transformers. Based on this capability, they are able to support text prompts to query videos and images thereby enabling capabilities such as chatting with the video, and defining natural language based alerts. The [VLM AI service](https://docs.nvidia.com/jetson/jps/inference-services/vlm.html), enables quick deployment of VLMs with Jetson Platform Services for video insight applications. The VLM service exposes REST API endpoints to configure the video stream input, set alerts and ask questions in natural language about the input video stream.
 
-FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols. 
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer/Application/vlm/vlmgif.gif" />
+</div>
 
-This article mainly introduces how to use fuxa to achieve SCADA. In the article, fuxa receives data from `node-red` and `OPC UA Simulator`, and displays it using `chart` and `Circular Gauge`; at the same time, it draws a series of patterns to simulate industrial processes.
+This wiki provides a tutorial on how to run VLM on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
+### [How to Run Zero-Shot Detection on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/run_zero_shot_detection_on_recomputer/)
 
-### [SenseCAP Watcher - 1# Concepts and Classification of Tasks](https://wiki.seeedstudio.com/recomputer_r1000_node_red_modbus_tcp/)
+Generative AI vision transformers such as CLIP have made it possible to build zero shot detection models capable of open vocabulary object detection. Meaning, the model is not bounded by a set of pre-defined classes to detect. The objects to detect are configured at runtime by the user. The Zero Shot Detection AI service, enables quick deployment of generative AI with Jetson Services for open vocabulary detection on video live stream input. The Zero Shot Detection AI service exposes REST API endpoints to control stream input and objects to detect.
 
-Watcher is a powerful tool that relies on user-issued commands to perform various monitoring and analysis tasks. By sending precise instructions to Watcher, you can direct it to focus on specific targets, collect data, and provide valuable insights.
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer/Application/zero_shot_detection/fig1.gif" />
+</div>
 
-In the following sections, we will dive into the details of task categorization, model selection, and pricing information. Our goal is to equip you with the knowledge and skills necessary to efficiently assign tasks to Watcher and make the most of its functionalities. We will explore the different types of tasks available, guide you in selecting the appropriate models for your requirements, and provide clarity on the associated costs.
+This wiki provides a tutorial on how to run Zero-Shot Detection on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/20.png" style={{width:800, height:'auto'}}/></div>
+### [Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit](https://wiki.seeedstudio.com/pose_based_light_control_with_nodered_and_rpi_with_aikit/)
 
-### [reComputer R1000 install fin](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/pose_control_light/pose_control.jpeg" alt="pir" width={1000} height="auto"/></p>
+
+This wiki will guide you on how to run YOLOv8 using an AI kit, use YOLOv8 to monitor your posture, and ultimately control your lights based on your posture. In this project, a USB camera captures your pose, and yolov8n run on [AI kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) with [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) to detect your pose. The processed video, displaying the detected pose, is then streamed in real-time to [reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-CM4104032-p-5898.html) using [gstreamer](https://gstreamer.freedesktop.org/). Meanwhile, the joint coordinates are sent using [mqtt](https://mqtt.org/) to [Node-RED](https://nodered.org/) which deploy on the reComputer R1000. At last, the Node-RED flow controls the smart lights based on the joint coordinates.
+
+### [reComputer R1000 with FIN to create a Equip Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_floor_gaphic/)
 
 FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/FIN_framework.png" /></center>
+This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Equip Graphic` using the `Graphics Builder`.
 
+### [Convert Model to Edge TPU TFlite Format for Google Coral](https://wiki.seeedstudio.com/convert_model_to_edge_tpu_tflite_format_for_google_coral/)
 
-This article mainly introduces how to install Fin on reComputer R1000.
+The [Coral M.2 Accelerator](https://www.seeedstudio.com/Coral-M2-Accelerator-with-Dual-Edge-TPU-p-4681.html) with Dual Edge TPU is an M.2 module that brings two Edge TPU coprocessors to existing systems and products with an available M.2 E-key slot.[Tensorflow](https://www.tensorflow.org/) and [Pytorch](https://pytorch.org/) is the most popular deep learning frameworks. So in order to use the Edge TPU, we need to compile the model to Edge TPU format.
 
+This wiki article will guide you through the process of compiling a model and running it on the Google Coral TPU, enabling you to leverage its capabilities for high-performance machine learning applications.
 
-### [Finetune with Llama-Factory](https://wiki.seeedstudio.com/Finetune_LLM_on_Jetson/)
+### [How to Use Multiple CSI Cameras on reComputer with ROS](https://wiki.seeedstudio.com/csi_camera_on_ros/)
 
-🚀Finetune LLM by Llama-Factory on Jetson! Now you can tailor a custom private local LLM to meet your requirements. 
+This tutorial provides a step-by-step guide on how to read multiple CSI camera image data through ROS on [reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) series devices and publish image topics to be displayed in the RVIZ visualization interface.
 
-<div align="center">
-    <img width={800} 
-     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run.gif" />
-</div>
+### [Recording and playback for Respeaker Lite](https://wiki.seeedstudio.com/respeaker_record_and_play/)
 
-Llama-Factory provides a highly convenient large language model fine-tuning tool that supports common large language models, datasets, and fine-tuning methods. With this platform, we can easily customize private large language models.
+This project demonstrates a basic loopback mechanism using the I2S interface, to test the reading and writing functions of I2S audio data. By switching I2S mode, the audio data is read from the microphone and then written to the speaker.
 
-In this wiki, we will learn how to deploy Llama-Factory on Nvidia Jetson and use Llama-Factory to train a large language model that supports Chinese Q&A.
+### [How to Use NVStreamer for RTSP Streaming on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/getting_started_with_nvstreamer/)
 
-### [reComputer R1000 with N3uron](https://wiki.seeedstudio.com/recomputer_r1000_n3uron/)
+[NVStreamer](https://docs.nvidia.com/moj/nvstreamer/moj-nvstreamer.html) is a software developed by NVIDIA that can store and serve video files, which can then be streamed using the RTSP protocol. It is particularly useful for testing with VST, as it provides an alternative method to cameras for creating video sources as input for VST. Specifically, it offers a mechanism to use specific video files as input for VST testing. VST can be configured to receive RTSP streams as if they were coming from ONVIF-S cameras.
 
-N3uron is a complete Industrial Edge Platform for IIoT & DataOps that enables seamless integration between the industrial plant floor and third-party applications, whether on-premise or in the cloud.
-With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/n3uron1.png" alt="pir" width="700" height="auto" /></div>
-
-### [reComputer R1000 use bacnet MS/TP](https://wiki.seeedstudio.com/reComputer_r1000_use_bacnet_mstp/)
-
-This article mainly introduces how to perform functional testing of bacnet MS/TP protocol on reComputer R1000.We simulated a bacnet MS/TP server on reComputer R1000, and then used YABE on the W10 PC to check whether the device is present. If the device we simulated can be found normally, it means that the bacnet MS/TP communication is normal.
 
 ## Existed Wiki Updated
 
-### [reTerminal && reTerminal DM-FAQ - How to solve screen refresh rate is too low](https://wiki.seeedstudio.com/screen_refresh_rate_low/)
+### [XIAO ESP32C3 WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/)
 
-Screen has noticeable refresh stutter stripes. If your situation is the same, you can follow this wiki to solve it.
+We've added examples of [WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/#scan-wi-fi-access-points).
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/FAQ/DM_bug.gif" alt="pir" width={600} height="auto" /></p>
+### [XIAO Pin Multiplexing](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/)
 
-### recomputer J401 and industrial JetPack 6 Compatibility
+We've added examples of [XIAO ESP32C3 Serial1 Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial1-usage).
 
-We've now updated the method for flashing Jetpack 6 on recomputer J401 and industrial.
+We've added examples of [XIAO ESP32C6 Serial1 Usage](https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/#serial1-usage).
 
-[recomputer J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
-
-[recomputer J401 industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started)
-
-### [Installation to reTerminal DM Lorawan Module](https://wiki.seeedstudio.com/reterminal-dm/#lorawan--module)
- 
-We have updated packages installation to reterminal dm lorawan module.
+We've added examples of [XIAO ESP32S3 Serial1 Usage](https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#serial1-usage).
 
 
-
-### [Using Grove Vision AI V2 with AT Commands - Compatibility of different XIAO](https://wiki.seeedstudio.com/grove_vision_ai_v2_at/)
-
-We've added a table of how the Grove Vision AI V2 pairs with the XIAO
 
 <!-- ### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
 
@@ -219,6 +208,9 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/wiki240617)
 - [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
 - [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
+- [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
+- [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
+- [weekly wiki on 2024.7.22th](/Seeed_Elderly/weekly_wiki/wiki240722)
 
 </details>
 

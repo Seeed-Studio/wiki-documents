@@ -145,7 +145,7 @@ there are some examples  Please copy and paste code below to a new Arduino sketc
 **Basic example:Gas Detection**
 
 In this example, the sensor is connected to A0 pin. The voltage read from the sensor is displayed. This value can be used as a threshold to detect any increase/decrease in gas concentration.
-```C
+```cpp
 void setup() {
     Serial.begin(9600);
 }

@@ -123,7 +123,7 @@ El Grove - 16 x 2 LCD comparte la misam librería con [Grove-LCD RGB Backlight](
 
   3. O, puedes simplemente dar click en el ícono ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) en la esquina superior derecha del bloque de código de tu actual código en el IDE de Arduino.
 
-```C++
+```cpp
 #include <Wire.h>
 #include "rgb_lcd.h"
 

@@ -121,7 +121,7 @@ Grove - I2C FM Receiver v1.1  | Change some components to make the board more st
 
 - **Step 3.** Copy the following code into you Arduino IDE, then save and compile.
 
-```c++
+```cpp
 
 /*
  * I2C_FM.ino

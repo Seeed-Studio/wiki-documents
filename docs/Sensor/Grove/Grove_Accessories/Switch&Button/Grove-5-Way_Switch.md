@@ -130,7 +130,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include "Grove_Multi_Switch.h"
 
 GroveMultiSwitch mswitch[1];
@@ -262,7 +262,7 @@ void loop()
 If every thing goes well, you will get the result. When you press the **KEY E**, it will trigger **KEY E: RAW - LOW PRESSED**
 :::
 
-```C++
+```cpp
 Grove Multi Switch
 ***** Device probe  Device BN-5E-0.1
 Grove Multi Switch

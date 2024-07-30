@@ -143,7 +143,7 @@ Let us implement simple optical encoder to detect the speed of a motor
 
 - **Step 3.** Open a new sketch, and copy the following code into the sketch.
 
-```c++
+```cpp
 unsigned int counter=0;
 void blink()
 {

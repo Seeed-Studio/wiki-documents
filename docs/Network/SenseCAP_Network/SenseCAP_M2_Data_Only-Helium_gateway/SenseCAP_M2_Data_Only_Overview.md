@@ -75,7 +75,7 @@ Besides the powerful features of the SenseCAP device itself, SenseCAP has been p
 
 **Note:**
 
-**Please note that the onboarding fees are NOT included in the product. A $10 onboarding fee and a $5 location asserting fee will be deducted by users' wallets to onboard**. Please make sure you have enough Helium Data Credit in the Wallet when you proceed with the onboarding process.
+**Please note that the onboarding fees are NOT included in the product. A $0.50 onboarding fee and a $0.50 location asserting fee will be deducted by users' wallets to onboard**. Please make sure you have enough Helium Data Credit and at least $1 of SOL in the Wallet when you proceed with the onboarding process.
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/07/Pasted-into-Overview.png)
 

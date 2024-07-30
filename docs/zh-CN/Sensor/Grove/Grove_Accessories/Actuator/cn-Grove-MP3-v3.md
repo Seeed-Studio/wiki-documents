@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-MP3-v3/
-slug: /Grove-MP3-v3
+slug: /cn/Grove-MP3-v3
 last_update:
   date: 03/21/2024
   author: WuFeifei
@@ -94,7 +94,7 @@ Grove - MP3是一款基于WT2003S-20SS音频解码器的20x40mm超小型音乐�
 
 WT2003S_Terminal_Player示例代码如下：
 
-```C++
+```cpp
 #include "WT2003S_Player.h"
 
 #ifdef __AVR__

@@ -226,7 +226,7 @@ To do experiment with AT commands, you would require a way to power up and commu
 
 For developing such a program, we need to use the SoftwareSerial library. Here is the demo code.
 
-```c++
+```cpp
 //Serial Relay - Arduino will patch a
 //serial link between the computer and the GPRS Shield
 //at 19200 bps 8-N-1
@@ -368,7 +368,7 @@ The Arduino code to send a simple text message or dial a voice call is shown bel
 
 ###### Arduino Code
 
-```c++
+```cpp
   #include <SoftwareSerial.h>
 
 

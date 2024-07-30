@@ -59,7 +59,7 @@ This is a simple test for scan the Wio terminal iBeacon device and presents the 
 
 **Test code**
 
-```CPP
+```cpp
 
 #include "sys/time.h"
 #include "rpcBLEDevice.h"
@@ -146,7 +146,7 @@ we can see, after people enter the door, they will see about A or B more detail,
 
 ## Code
 
-```CPP
+```cpp
 #include "sys/time.h"
 #include "BLEDevice.h"
 #include "BLEBeacon.h"

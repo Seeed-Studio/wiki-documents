@@ -157,7 +157,7 @@ The **CTR1** is the control signal from the Arduino or other board. It is pulled
 
 - **Step 1.** Open the Arduino IDE and create a new file, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```c++
+```cpp
 #include <Arduino.h>
 uint8_t channel1 = 2;
 uint8_t channel2 = 3;

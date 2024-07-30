@@ -146,7 +146,7 @@ LCD5110 myGLCD(5,6,3);
 
 ## Simple demonstration
 
-```C++
+```cpp
 
 #include &lt;SPI.h&gt;
 #include &lt;LCD5110_Graph_SPI.h&gt;
@@ -227,7 +227,7 @@ void loop(void)
 
 ## Simple demonstration  with wireless technology
 
-```C++
+```cpp
 /*
  This example code is in the public domain.
  */

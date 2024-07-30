@@ -171,7 +171,7 @@ Now, the Vision AI Module library can be installed to the Arduino IDE. Open the 
 
 This repo is able to obtain the number of models identified by the camera feed and the confidence level. They are unsigned integer data with no more than 8 bits.
 
-```c++
+```cpp
 #include "Seeed_Arduino_GroveAI.h"
 #include <Wire.h>
 

@@ -172,7 +172,7 @@ If you want to use servo, you can connect as shown below:
 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 
 #include "PCA9685.h"
 #include <Wire.h>

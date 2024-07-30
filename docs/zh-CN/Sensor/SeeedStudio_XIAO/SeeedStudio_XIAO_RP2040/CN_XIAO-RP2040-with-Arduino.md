@@ -105,7 +105,7 @@ Seeed Studio XIAO RP2040板上有11个数字引脚，4个模拟引脚，11个PWM
 请注意，Seeed Studio XIAO RP2040的工作电压是3.3V，如果将传感器错误地连接到5V上，主板可能无法正常工作。
 :::
 
-```c++
+```cpp
 const int buttonPin = D0;     // the number of the pushbutton pin
 const int ledPin =  25;      // the number of the LED pin
  
@@ -137,7 +137,7 @@ void loop() {
 
 将一个电位计连接到引脚A0，并将一个LED连接到引脚25。然后上传以下代码，通过旋转电位计旋钮来控制LED的闪烁间隔。
 
-```c++
+```cpp
 const int sensorPin = A0;
 const int ledPin =  25; 
 void setup() {
@@ -164,7 +164,7 @@ int sensorValue = analogRead(sensorPin);
 
 使用引脚D6作为UART的TX引脚，引脚D7作为UART的RX引脚，发送消息 "Hello World!"。
 
-```c++
+```cpp
 void setup() {
     Serial.begin(115200);
     while (!Serial);
@@ -190,7 +190,7 @@ void loop() {
 
 - **步骤二.** 将代码复制到Arduino并点击 **上传** 按钮进行上传。RGB LED将显示彩虹色。
 
-```c++
+```cpp
 #include <Adafruit_NeoPixel.h>
 
 int Power = 11;
@@ -254,7 +254,7 @@ RGB LED将显示彩虹颜色。
 
 - **步骤二.** 将代码复制到Arduino并点击 **Upload** 按钮进行上传。
 
-```c++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
  
@@ -311,7 +311,7 @@ void loop(void) {
 
 - **步骤二.** 将代码复制到Arduino并点击 **上传** 按钮进行上传。
 
-```c++
+```cpp
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>

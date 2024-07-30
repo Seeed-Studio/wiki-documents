@@ -193,14 +193,15 @@ reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included 
 
 ### Prerequisites
 
-- Ubuntu Host PC (native or VM using VMware Workstation Player)
+- Ubuntu 
 - reComputer J4012/ J4011/ J3010 and J3011
 - USB Type-C data transmission cable
 
 ### Enter Force Recovery Mode
 
 :::note
-Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
+- We do not recommend using virtual machines and ARM architecture Ubuntu for flashing.
+- Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
 :::
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
@@ -504,6 +505,14 @@ The flash command may run for 2-10 minutes.
 :::info
 Please complete the **System Configuration** according to your needs.
 :::
+
+**Step 5:** After starting the system, you need to execute the following command to reactivate the wireless network card driver:
+```bash
+sudo rm /lib/modules/5.15.136-tegra/build
+sudo ln -s /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.136-tegra/build
+sudo apt install -y iwlwifi-modules
+```
+
 
 </TabItem>
 </Tabs>

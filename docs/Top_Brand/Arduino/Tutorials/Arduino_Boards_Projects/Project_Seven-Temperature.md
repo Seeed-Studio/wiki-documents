@@ -27,7 +27,7 @@ The Grove unit produces an analog voltage on its D1 output, which is connected t
 
 _**Now upload the following Arduino sketch:**_
 
-```c++
+```cpp
 // Project Seven - temperature
 //
 

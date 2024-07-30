@@ -250,7 +250,7 @@ Now you should see the built-in LED flashes in a one second interval.
 
 void setup() is the setup function only runs one time when you press reset or power the board.
 
-```C
+```cpp
 
 void setup() {
 }
@@ -259,7 +259,7 @@ void setup() {
 
 initialize digital pin LED_BUILTIN as an output.
 
-```C
+```cpp
 
 pinMode(LED_BUILTIN, OUTPUT);
 
@@ -268,7 +268,7 @@ pinMode(LED_BUILTIN, OUTPUT);
 void loop() is the loop function runs over and over again forever.
 
 
-```C
+```cpp
 
 void loop() {
 }
@@ -277,7 +277,7 @@ void loop() {
 
 digitalWrite()is to set the LED_BUILTIN pin as voltage level HIGH, which means to turn on the LED. Similarly to turn off the LED just set the voltage level to LOW by changing the code HIGH to LOW.
 
-```C
+```cpp
 
 digitalWrite(LED_BUILTIN, HIGH);
 digitalWrite(LED_BUILTIN, LOW);
@@ -286,7 +286,7 @@ digitalWrite(LED_BUILTIN, LOW);
 
 delay() means to pause the program, the number inside the bracket means the amount of time(in milliseconds) to pause(delay).
 
-```C
+```cpp
 
 delay(1000);
 
@@ -394,7 +394,7 @@ Step 3: Observe result
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //assign buzzer as pin 6 
 #define buzzer 6                
@@ -436,7 +436,7 @@ Step 3: Observe result
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C++
+```cpp
 
 // initalise the frequency of the notes
 #define NOTE_A4  440
@@ -547,7 +547,7 @@ Step 2:  Link Seeeduino Lotus with computer by a micro USB cable
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //assign name tiltswitchPin to pin 5
 #define tiltswitchPin 5
@@ -592,7 +592,7 @@ Please tilt the tilt switch in both directions, you should see “1” or “0�
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //set title of pin 5 as tiltSwitch
 #define tiltSwitch 5
@@ -638,7 +638,7 @@ Please connect Grove – Buzzer module to D6 port of Seeeduino Lotus
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 // initalise the frequency of the notes
 #define NOTE_A4  440
@@ -820,7 +820,7 @@ Conclusion: Adding library method allows user easily add third party sensor driv
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C++
+```cpp
 
 //add ChainableLED library to this project
 #include <ChainableLED.h>
@@ -906,7 +906,7 @@ You should see the color of LED is changing according to the value of hue, which
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C++
+```cpp
 
 /*
    Example of using the ChainableRGB library for controlling a Grove RGB.
@@ -976,13 +976,13 @@ you should see the red color LED increases the brightness in every 0.5s, because
 
 If we change both red and green variables from this:
 
-```C
+```cpp
 leds.setColorRGB(i, power, 0, 0);
 ```
 
 to this:
 
-```C
+```cpp
 leds.setColorRGB(i, power, 255-power, 0);
 ```
 
@@ -998,7 +998,7 @@ Connect Grove – Buzzer module to D6 port of Seeeduino Lotus.
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add ChainableLED library to this project
 #include <ChainableLED.h>
@@ -1230,7 +1230,7 @@ Step 3:  Link Seeeduino Lotus with computer by a micro USB cable
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add ChainableLED library to this project
 #include <ChainableLED.h>
@@ -1287,7 +1287,7 @@ Note if the ambient light is to bright, you can use you hand to cover the light 
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add ChainableLED library to this project
 #include <ChainableLED.h>
@@ -1421,7 +1421,7 @@ Step 2:  Link Seeeduino Lotus with computer by a micro USB cable
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //naming pin3 as singalPin
 #define signalPin 3
@@ -1461,7 +1461,7 @@ Connect Grove – Chainable RGB LED to D7 port of Seeeduino Lotus
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add ChainableLED library to this project
 #include <ChainableLED.h>
@@ -1521,7 +1521,7 @@ You should see that if the line finder detects black line, the LED should turn o
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add ChainableLED library to this project
 #include <ChainableLED.h>
@@ -1636,7 +1636,7 @@ Please follow the instructions in tutorial 3 on how to <a href="#step3">add libr
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //include the rgb_lcd library
 #include "rgb_lcd.h"
@@ -1678,7 +1678,7 @@ You should see “Hello, World!” displayed in the first line and the a countin
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add LCD library
 #include "rgb_lcd.h"
@@ -1858,7 +1858,7 @@ You will see the Seeed Studio Logo displayed in the first 8 blocks, followed by 
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 
 //add LCD library
@@ -2112,7 +2112,7 @@ Step 2: Link Seeeduino Lotus with computer by a micro USB cable
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add DHT sensor library
 #include <DHT.h>
@@ -2189,7 +2189,7 @@ Firstly Connect Grove - LCD RGB Backlight module to I2C. port of Seeeduino Lotus
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add DHT sensor library
 #include <DHT.h>
@@ -2318,7 +2318,7 @@ Please add the [3-axis accelerometer driver Library](https://github.com/Seeed- S
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add accelemeter library
 #include "MMA7660.h"
@@ -2419,7 +2419,7 @@ Roll (Longitudinal axis) Φ: it has its origin at the centre of gravity and is d
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 #include <Wire.h>
 //add accelemeter library
@@ -2514,7 +2514,7 @@ Here we use the tilt switch to flip the page on LCD screen to show different set
 
 Step 1: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add accelemeter library
 #include "MMA7660.h"
@@ -2764,7 +2764,7 @@ For more information please visit [Arduino TimeLib tutorial](http://playground.a
 
 Step 2: copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add DHT sensor library
 #include <DHT.h>
@@ -3066,7 +3066,7 @@ Step 1: Please add the [TimeLib Library]( https://github.com/PaulStoffregen/Time
 
 Copy & paste the following code into Arduino IDE
 
-```C
+```cpp
 
 //add LCD library
 #include <rgb_lcd.h>

@@ -168,7 +168,7 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
      in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
-```C++
+```cpp
 // NeoPixel Ring simple sketch (c) 2013 Shae Erisson
 // released under the GPLv3 license to match the rest of the AdaFruit NeoPixel library
 

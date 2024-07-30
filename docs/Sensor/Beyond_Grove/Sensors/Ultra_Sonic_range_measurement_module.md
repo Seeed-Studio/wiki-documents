@@ -107,7 +107,7 @@ A short ultrasonic pulse is transmitted at the time 0, reflected by an object. T
 **Step 1.** Copy the code and flash it into the controller board.
 **Step 2.**  Upload the code and open monitor window.
 
-```C
+```cpp
 #include "Arduino.h"
 class Ultrasonic
 {

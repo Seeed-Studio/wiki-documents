@@ -92,7 +92,7 @@ last_update:
 
 - **步骤 2.** 打开Arduino IDE并创建一个新文件，然后将以下代码复制到新文件中。
 
-```C++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <Wire.h>

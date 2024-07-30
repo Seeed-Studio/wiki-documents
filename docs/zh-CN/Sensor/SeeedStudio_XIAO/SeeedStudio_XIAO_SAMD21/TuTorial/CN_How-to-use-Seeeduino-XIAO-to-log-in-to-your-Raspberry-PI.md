@@ -55,7 +55,7 @@ enable_uart=1
 
 - **第二步.** 将以下代码复制到Arduino IDE中，并将代码上传到Seeed Studio XIAO SAMD21。
 
-```c++
+```cpp
 uint32_t baud;
 uint32_t old_baud;
 void setup() {

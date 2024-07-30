@@ -129,7 +129,7 @@ The **SIG1** is pulled down by the 10k R2, if there is no signal, the 'Gate' of 
 
 - **Step 1.** Open the Arduino IDE and create a new file, then copy the following code into the new file.
 
-```c++
+```cpp
 #include <Arduino.h>
 uint8_t channel1 = 7;
 uint8_t channel2 = 8;

@@ -95,7 +95,7 @@ This demo can detect 4 types of PM (particulate matter), VOC (Volatile Organi
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|<div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/GroveAllin1/GroveAllin1overview.jpg"/></div>
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-All-in-one-Environmental-Sensor-SEN54-p-5374.html)|
 
-```c++
+```cpp
 
 /*
  * I2C-Generator: 0.3.0
@@ -400,7 +400,7 @@ Compile the driver:
 
 **Step 4.** Run `./sen5x_i2c_example_usage` in the same directory you used to compile the driver.
 
-```c++
+```cpp
 //sen5x_i2c_example_usage.c
 
 

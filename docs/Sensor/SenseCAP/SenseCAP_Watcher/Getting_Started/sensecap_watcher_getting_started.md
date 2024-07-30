@@ -132,15 +132,15 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 ### Front View
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-1.svg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-1.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Back View
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-2.svg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-2.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Inside
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-3.svg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-3.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Mounting Interface
 
@@ -477,7 +477,7 @@ By familiarizing yourself with these settings options, you can customize and opt
 
 **[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
 
-**Watcher Quick Start Series 3# : As a Grove sensor**
+**[Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)**
 
 **Watcher Quick Start Series 4# : Training a model for Watcher**
 

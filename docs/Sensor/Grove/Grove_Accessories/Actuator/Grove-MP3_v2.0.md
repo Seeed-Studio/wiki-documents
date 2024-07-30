@@ -142,7 +142,7 @@ Most of arduino boards have at least one Serial, some have multiple serials(Ardu
     For more info about the Serial, please refer to [Seeed Arduino Serial](https://wiki.seeedstudio.com/Seeed_Arduino_Serial/).
 :::
 
-```c++
+```cpp
 #ifdef __AVR__
 #include <SoftwareSerial.h>
 SoftwareSerial SSerial(2, 3); // RX, TX

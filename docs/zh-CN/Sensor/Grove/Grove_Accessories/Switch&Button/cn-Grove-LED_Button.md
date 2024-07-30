@@ -121,7 +121,7 @@ Grove - LED 按钮由 Grove - 黄色按钮、Grove - 蓝色 LED 按钮和 Grove 
 
 - **步骤 1.** 打开Arduino IDE并创建一个新文件，然后将以下代码复制到新文件中。
 
-```C++
+```cpp
 #include "Arduino.h"
 
 //1: toggle mode, 2: follow mode
