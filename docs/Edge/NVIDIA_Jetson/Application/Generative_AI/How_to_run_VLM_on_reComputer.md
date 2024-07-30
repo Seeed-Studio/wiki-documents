@@ -14,9 +14,9 @@ last_update:
 # How to Run VLM on reComputer with Jetson Platform Services
 
 ## Introduction
-VLMs are multi modal models supporting images, video and text and using a combination of large language models and vision transformers. Based on this capability, they are able to support text prompts to query videos and images thereby enabling capabilities such as chatting with the video, and defining natural language based alerts. The [VLM AI service](https://docs.nvidia.com/jetson/jps/inference-services/vlm.html), enables quick deployment of VLMs with Jetson Platform Services for video insight applications. The VLM service exposes REST API endpoints to configure the video stream input, set alerts and ask questions in natural language about the input video stream.
+vision language models (VLMs) are multi modal models supporting images, video and text and using a combination of large language models and vision transformers. Based on this capability, they are able to support text prompts to query videos and images thereby enabling capabilities such as chatting with the video, and defining natural language based alerts. The [VLM AI service](https://docs.nvidia.com/jetson/jps/inference-services/vlm.html), enables quick deployment of VLMs with Jetson Platform Services for video insight applications. The VLM service exposes REST API endpoints to configure the video stream input, set alerts and ask questions in natural language about the input video stream.
 
-This wiki provides a tutorial on how to run VLM on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
+This wiki provides a tutorial on how to run VLM on [reComputer J4012 Jetson Orin NX](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
 <div align="center">
     <img width={900} 
@@ -25,7 +25,19 @@ This wiki provides a tutorial on how to run VLM on [reComputer J4012](https://ww
 
 ## Requirements
 Before proceeding with the setup process, please ensure that your system meets the following prerequisites:
-- A Linux workstation running Ubuntu `22.04` or `later`.
+
+<div align="center">
+    <img width={800} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/agx_orin.png" />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=a07376a957f072a4f755e1832fa0e544&objectID=5569&indexName=bazaar_retailer_products">
+      <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+- A reComputer J4012 Orin NX 16G running Ubuntu `22.04` or `later`.
 - Driver Version: `535.113.01`, Jetpack `6.0` and CUDA Version: `12.2`.
 - Make sure that JetPack and the related Jetson services packages are installed.
   ```bash
@@ -33,6 +45,9 @@ Before proceeding with the setup process, please ensure that your system meets t
   sudo apt install nvidia-jetson-services
   ```
 - IP cameras or local videos can be streamed via RTSP. (We recommend using our provided [NVStreamer tutorial](/getting_started_with_nvstreamer) for RTSP streaming.)
+
+
+
 
 ## Getting Started
 
