@@ -1,5 +1,5 @@
 ---
-description: Deploy Ollama and AnytingLLM on Jetson
+description: This wiki will demonstrate how to set up a local knowledge base on Jetson devices with ollama and AnythingLLM. By leveraging the powerful capabilities of large language models, we aim to enhance our work efficiency.
 title: Local AI Assistant
 keywords:
 - reComputer
