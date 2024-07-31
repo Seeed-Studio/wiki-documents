@@ -78,73 +78,18 @@ In this tutorial we will use **two** XIAO ESP32C6s as examples to explain Zigbee
 </div>
 
 ## Part 2.Enviroment Prepatation
+**Step 1.** Launch the Arduino application.
 
-:::tip
-If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
-
-And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to be available.
-
-:::
-
-- **Step 1.** Download and Install the stable version of Arduino IDE according to your operating system.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
     </a>
 </div>
 
-<br></br>
+**Step 2.** Select your development board model and add it to the Arduino IDE.
 
-- **Step 2.** Launch the Arduino application.
-- **[Step 3](#add-board).**  Add the XIAO ESP32C6 on-board package to the Arduino IDE and click `OK`.
-- **Step 4.** Close the Arduino IDE and reopen it.
-
-### Configure the XIAO-C6 Board {#add-board}
-
-As of July 30, 2024, the most current stable release of Arduino-ESP32 is version `2.0.15`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
-
-```
-https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json
-```
-
-
-if you've install the ESP32 board package before, you''ll need to remove it first.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width: 640, height: 'auto'}}/></div>
-
-
-To install the XIAO ESP32C6 board, follow these steps:
-
-1. Add the above board manager URL to your Arduino IDE preferences.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
-
-2. Download the XIAO ESP32C6 board package.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
-
-Additionally, the latest development release version (`3.0.0-rc1`) was released on April, 2024. And has supported XIAO ESP32C6.
-
-### Run your first Blink program
-
-- **Step 1.** Launch the Arduino application.
-
-- **Step 2.** Navigate to **File > Examples > 01.Basics > Blink**, open the program.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
-
-- **Step 3.** Select the board model to **XIAO ESP32C6**, and select the correct port number to upload the program.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/upload_program.png" style={{width:1000, height:'auto'}}/></div>
-
-Once the program is successfully uploaded, you will see the following output message and you can observe that the orange LED on the right side of the XIAO ESP32C6 is blinking.
-
-<table>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6_flash_firmware.png" style={{width:680, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAOC6-blink.gif" style={{width:400, height:'auto'}}/></div></td>
-	</tr>
-</table>
+- If you want to use **Seeed Studio XIAO ESP32C6** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)** to finish adding.
 
 ## Part 3.Program Structure
 
@@ -410,31 +355,6 @@ We need to set to debug level to see serial port message from Zigbee light and s
 ### Step 3.Upload Light Bulb Codes
 
 ```cpp
-// Copyright 2023 Espressif Systems (Shanghai) PTE LTD
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @brief This example demonstrates simple Zigbee light bulb.
- * 
- * The example demonstrates how to use ESP Zigbee stack to create a end device light bulb.
- * The light bulb is a Zigbee end device, which is controlled by a Zigbee coordinator.
- * 
- * Proper Zigbee mode must be selected in Tools->Zigbee mode 
- * and also the correct partition scheme must be selected in Tools->Partition Scheme.
- * 
- * Please check the README.md for instructions and more detailed description.
- */
 
 #ifndef ZIGBEE_MODE_ED
 #error "Zigbee end device mode is not selected in Tools->Zigbee mode"
@@ -615,32 +535,6 @@ void loop() {
 ### Step 4.Upload Light Switch Codes
 
 ```cpp
-// Copyright 2023 Espressif Systems (Shanghai) PTE LTD
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @brief This example demonstrates simple Zigbee light switch.
- * 
- * The example demonstrates how to use ESP Zigbee stack to control a light bulb.
- * The light bulb is a Zigbee end device, which is controlled by a Zigbee coordinator.
- * Button switch and Zigbee runs in separate tasks.
- * 
- * Proper Zigbee mode must be selected in Tools->Zigbee mode 
- * and also the correct partition scheme must be selected in Tools->Partition Scheme.
- * 
- * Please check the README.md for instructions and more detailed description.
- */
 
 #ifndef ZIGBEE_MODE_ZCZR
 #error "Zigbee coordinator mode is not selected in Tools->Zigbee mode"
