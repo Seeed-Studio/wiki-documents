@@ -264,10 +264,10 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 
 #### Add the XIAO-C6 Board {#add-board}
 
-As of April 16, 2024, the most current stable release of Arduino-ESP32 is version `2.0.15`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
+As of July 14, 2024, the most current stable release of Arduino-ESP32 is version `3.0.2`. Version 3.0.0, released on May 28, [added support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) for the **ESP32-C6** chipset. To work with XIAO-C6, you can utilize the stable release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
 
 ```
-https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json
+https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
 
