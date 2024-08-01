@@ -19,9 +19,9 @@ This project is a test sketch for verifying the functionality of the I2S interfa
 
 ### Functionality
 
-The sketch starts by initializing the serial communication and configuring the I2S pins, it generates a square wave audio signal based on the specified frequency and amplitude. The generated audio samples are written to the I2S interface using the I2S.write() function.
+The sketch starts by initializing the serial communication and configuring the I2S pins, it generates a square wave audio signal based on the specified frequency and amplitude. The generated audio samples are written to the I2S interface using the `I2S.write()` function.
 
-The sketch then reads back the samples from the microphone array through the I2S interface using the I2S.read() function and counts the number of non-zero samples received.
+The sketch then reads back the samples from the microphone array through the I2S interface using the `I2S.read()` function and counts the number of non-zero samples received.
 
 ### Code
 

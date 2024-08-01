@@ -1,6 +1,6 @@
 ---
 description: This wiki provides a step-by-step guide to install and set up RoboSense LiDAR on reComputer J30/40 using ROS.
-title: Use RoboSense Lidar
+title: RoboSense Lidar with ROS
 keywords:
 - Jetson Nano
 - reComputer

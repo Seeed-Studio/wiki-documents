@@ -33,7 +33,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-- Watcher Quick Start Series 3# : As a Grove sensor *(Coming Soon)*
+- [Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)
 
 - Watcher Quick Start Series 4# : Training a model for Watcher *(Planning)*
 
@@ -115,11 +115,19 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Developing Watcher with Wokwi *(Maybe)*
 
-#### Jack-of-all-trades Part
+#### Node-RED Integration Part
 
-- Watcher Data Streaming to Apache Kafka *(Planning)*
+- [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_node_red/)
 
-- Watcher Data Streaming to Node-RED *(Planning)*
+- [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
+
+- [Watcher & Node-RED to Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
+
+- [Watcher & Node-RED to Telegram Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
+
+- [Watcher & Node-RED to IFTTT Gmail Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
+
+- [Watcher & Node-RED Data Streaming to Apache Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
 
 ### Open Source Material
 

@@ -14,7 +14,7 @@ last_update:
 
 The Grove Network Modules are modular electronic components introduced by Seeed Studio, forming part of their Grove series. The Grove series modules are designed to simplify the prototyping process, making the construction of electronic projects more intuitive and faster. The network modules primarily provide networking capabilities, allowing devices to connect to the network through wired or wireless means.
 
-<div style={{textAlign:'center'}}><img src="https://i.imgur.com/67pioxP.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Intro/Grove_Network_Module.png" style={{width:1000, height:'auto'}}/></div>
 
 Overall, Grove network modules significantly lower the barrier to electronic project development by simplifying the connection and configuration process, allowing you to focus on functionality implementation and application innovation.
 

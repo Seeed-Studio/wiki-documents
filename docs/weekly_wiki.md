@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/16/2024
+  date: 07/29/2024
   author: Frank
 ---
 
@@ -17,49 +17,110 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 15th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is July 29th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
+### [SenseCAP Watcher as a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove/)
 
-### [Watcher To IFTTT Quick Start](https://wiki.seeedstudio.com/watcher_to_ifttt/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png" style={{width:1000, height:'auto'}}/></div>
+In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a Grove sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
 
-IFTTT (If This Then That) is a web-based service that allows developers to create automations and integrations between various apps, devices, and services without complex programming. It enables users to define simple conditional statements called "applets" that trigger actions based on specific events. It provides a user-friendly interface and a vast library of pre-built applets, making it accessible for developers to create powerful automations and integrations efficiently.
+### [Watcher & Node-RED To Kafka Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
 
-### [Watcher To Telegram Quick Start](https://wiki.seeedstudio.com/watcher_to_telegram/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/head_image.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png" style={{width:1000, height:'auto'}}/></div>
+Apache Kafka is a distributed event streaming platform designed for high-throughput, fault-tolerant data processing. It enables real-time data feeds by allowing producers to publish messages to topics, while consumers can subscribe to these topics to process the data. Kafka is widely used for building data pipelines, real-time analytics, and integrating various data sources. Its robust architecture ensures scalability and durability, making it a popular choice for modern data-driven applications.
 
-**What is Telegram**
+Why use Docker? Because Docker can simulate the environment of multiple computers on a single machine and deploy applications with great ease. Therefore, in this project, we will use Docker to set up the environment and improve efficiency.
 
-Telegram is a popular messaging app that offers a wide range of features for users and developers alike. With its open API and protocol, developers can create custom Telegram clients, bots, and integrate Telegram's services into their own applications. Telegram provides a secure and reliable platform for real-time communication, supporting various media types, group chats, and end-to-end encryption. Its cloud-based infrastructure ensures seamless synchronization across devices and allows for easy scalability. Developers can leverage Telegram's features and tools to build innovative solutions and enhance user experiences within their projects.
+### [T1000-E Tracker for Meshtastic](https://wiki.seeedstudio.com/sensecap_t1000_e/)
 
-### [AWS IoT Core Intergate With reComputer R1000](https://wiki.seeedstudio.com/recomputer_r1000_aws/)
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/_/5_10.jpg" alt="pir" width={600} height="auto" /></p>
 
-AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. In this guide, we will discuss how to connect our reComputer R1000 to the AWS IoT cloud.
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
-### [reComputer R1000 Connect AWS IoT Core with N3uron](https://wiki.seeedstudio.com/recomputer_r1000_n3uron_aws/)
 
-We have outlined the process of transmitting data from your [reComputer-R1000 device with AWS IoT Core using the MQTT protocol](https://wiki.seeedstudio.com/recomputer_r1000_aws/). This tutorial will seamlessly integrate with the aforementioned process. In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.
+It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
 
-### [reComputer R1000 with FIN to use modbus TCP](https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp/)
+<div align="center">
+    <img width={700} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
+</div>
+
+This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
+
+### [How to Run VLM on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/run_vlm_on_recomputer/)
+
+VLMs are multi modal models supporting images, video and text and using a combination of large language models and vision transformers. Based on this capability, they are able to support text prompts to query videos and images thereby enabling capabilities such as chatting with the video, and defining natural language based alerts. The [VLM AI service](https://docs.nvidia.com/jetson/jps/inference-services/vlm.html), enables quick deployment of VLMs with Jetson Platform Services for video insight applications. The VLM service exposes REST API endpoints to configure the video stream input, set alerts and ask questions in natural language about the input video stream.
+
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer/Application/vlm/vlmgif.gif" />
+</div>
+
+This wiki provides a tutorial on how to run VLM on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
+
+### [How to Run Zero-Shot Detection on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/run_zero_shot_detection_on_recomputer/)
+
+Generative AI vision transformers such as CLIP have made it possible to build zero shot detection models capable of open vocabulary object detection. Meaning, the model is not bounded by a set of pre-defined classes to detect. The objects to detect are configured at runtime by the user. The Zero Shot Detection AI service, enables quick deployment of generative AI with Jetson Services for open vocabulary detection on video live stream input. The Zero Shot Detection AI service exposes REST API endpoints to control stream input and objects to detect.
+
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer/Application/zero_shot_detection/fig1.gif" />
+</div>
+
+This wiki provides a tutorial on how to run Zero-Shot Detection on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
+
+### [Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit](https://wiki.seeedstudio.com/pose_based_light_control_with_nodered_and_rpi_with_aikit/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/pose_control_light/pose_control.jpeg" alt="pir" width={1000} height="auto"/></p>
+
+This wiki will guide you on how to run YOLOv8 using an AI kit, use YOLOv8 to monitor your posture, and ultimately control your lights based on your posture. In this project, a USB camera captures your pose, and yolov8n run on [AI kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) with [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) to detect your pose. The processed video, displaying the detected pose, is then streamed in real-time to [reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-CM4104032-p-5898.html) using [gstreamer](https://gstreamer.freedesktop.org/). Meanwhile, the joint coordinates are sent using [mqtt](https://mqtt.org/) to [Node-RED](https://nodered.org/) which deploy on the reComputer R1000. At last, the Node-RED flow controls the smart lights based on the joint coordinates.
+
+### [reComputer R1000 with FIN to create a Equip Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_floor_gaphic/)
 
 FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
 
-This article introduces how to use the `Modbus Connector` of `FIN Framwork`, which mainly includes three aspects: creating a `FIN Framwork` project, configuring the `Modbus Connector`, and adding data points to `Equip`.
+This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Equip Graphic` using the `Graphics Builder`.
+
+### [Convert Model to Edge TPU TFlite Format for Google Coral](https://wiki.seeedstudio.com/convert_model_to_edge_tpu_tflite_format_for_google_coral/)
+
+The [Coral M.2 Accelerator](https://www.seeedstudio.com/Coral-M2-Accelerator-with-Dual-Edge-TPU-p-4681.html) with Dual Edge TPU is an M.2 module that brings two Edge TPU coprocessors to existing systems and products with an available M.2 E-key slot.[Tensorflow](https://www.tensorflow.org/) and [Pytorch](https://pytorch.org/) is the most popular deep learning frameworks. So in order to use the Edge TPU, we need to compile the model to Edge TPU format.
+
+This wiki article will guide you through the process of compiling a model and running it on the Google Coral TPU, enabling you to leverage its capabilities for high-performance machine learning applications.
+
+### [How to Use Multiple CSI Cameras on reComputer with ROS](https://wiki.seeedstudio.com/csi_camera_on_ros/)
+
+This tutorial provides a step-by-step guide on how to read multiple CSI camera image data through ROS on [reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) series devices and publish image topics to be displayed in the RVIZ visualization interface.
+
+### [Recording and playback for Respeaker Lite](https://wiki.seeedstudio.com/respeaker_record_and_play/)
+
+This project demonstrates a basic loopback mechanism using the I2S interface, to test the reading and writing functions of I2S audio data. By switching I2S mode, the audio data is read from the microphone and then written to the speaker.
+
+### [How to Use NVStreamer for RTSP Streaming on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/getting_started_with_nvstreamer/)
+
+[NVStreamer](https://docs.nvidia.com/moj/nvstreamer/moj-nvstreamer.html) is a software developed by NVIDIA that can store and serve video files, which can then be streamed using the RTSP protocol. It is particularly useful for testing with VST, as it provides an alternative method to cameras for creating video sources as input for VST. Specifically, it offers a mechanism to use specific video files as input for VST testing. VST can be configured to receive RTSP streams as if they were coming from ONVIF-S cameras.
 
 
 ## Existed Wiki Updated
 
-### [Flash the Sidewalk version to LoRaWAN version](https://wiki.seeedstudio.com/flash_to_wio_tracker/)
+### [XIAO ESP32C3 WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/)
 
-We've added the [Application Firmware](https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/wio_tracker_app_release_sw_0.5_2024-06-06.uf2).
+We've added examples of [WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/#scan-wi-fi-access-points).
 
-### [Get Started with SenseCAP Indicator](https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator/)
+### [XIAO Pin Multiplexing](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/)
 
-We have added the [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf) and the [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf).
+We've added examples of [XIAO ESP32C3 Serial1 Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial1-usage).
+
+We've added examples of [XIAO ESP32C6 Serial1 Usage](https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/#serial1-usage).
+
+We've added examples of [XIAO ESP32S3 Serial1 Usage](https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#serial1-usage).
 
 
 
@@ -148,6 +209,8 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
 - [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
 - [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
+- [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
+- [weekly wiki on 2024.7.22th](/Seeed_Elderly/weekly_wiki/wiki240722)
 
 </details>
 

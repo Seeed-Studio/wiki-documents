@@ -4,7 +4,7 @@ title: I²C液晶显示屏
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /I2C_LCD
+slug: /cn/I2C_LCD
 last_update:
   date: 03/22/2024
   author: WuFeifei
