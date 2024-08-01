@@ -5,7 +5,9 @@
 .claim_page .swiper-slide {
 	height: auto;
 }
-
+.claim_page  .swiper-button-next:after,.claim_page  .swiper-rtl .swiper-button-prev:after,
+.claim_page  .swiper-button-prev:after, .claim_page   .swiper-rtl .swiper-button-next:after{
+font-size: 24px;}
 .claim_page .swiper-wrapper {
 	margin-bottom: 40px;
 }
@@ -86,7 +88,7 @@ margin-bottom: 10px;}
 
 	.claim_page .swiper-button-prev:after,
 	.claim_page .swiper-button-next:after {
-		font-size: 30px;
+		font-size: 20px;
 	}
 
 	.claim_page .person .swiper-button-next {

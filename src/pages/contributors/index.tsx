@@ -33,7 +33,7 @@ const rangerwhyRender = (isMobile) => {
 			method: 'get',
 		}).then(response => response.json())
 			.then(res => {
-				setList(res.data)
+				setList([...res.data,...res.data,...res.data])
 			})
 	}
 
@@ -46,11 +46,11 @@ const rangerwhyRender = (isMobile) => {
 				<div className={styles.title}>Why join in <div className={styles.s_title}>Seeed Ranger?</div></div>
 				<div className={styles.why_container}>
 					<Swiper
-						modules={[Navigation, Pagination]}
+						modules={[Navigation]}
 						autoplay={true}
 						navigation
 						slidesPerView={isMobile ? 1 : 4} // 每次显示的幻灯片数量
-						spaceBetween={40}
+						spaceBetween={24}
 						pagination={{ clickable: true }} // 显示分页器
 					>
 						{list.map((item, index) => {
@@ -541,16 +541,16 @@ const wishRender = (isMobile) => {
 }
 export default function Ranger(): JSX.Element {
 	function getContributorUuid() {
-		let uuid = localStorage.getItem('wiki_contributor_uuid')
+		let uuid = window.localStorage.getItem('wiki_contributor_uuid')
 		if (!uuid) {
 			uuid = generateUUID()
-			localStorage.setItem('wiki_contributor_uuid', uuid)
+			window.localStorage.setItem('wiki_contributor_uuid', uuid)
 		}
 		return uuid
 	}
-	client_key = getContributorUuid()
 	const [isMobile, setIsMobile] = useState(false)
 	useEffect(() => {
+	  client_key = getContributorUuid()
 		setIsMobile(judgeIsMobile())
 	}, [])
 	return (
