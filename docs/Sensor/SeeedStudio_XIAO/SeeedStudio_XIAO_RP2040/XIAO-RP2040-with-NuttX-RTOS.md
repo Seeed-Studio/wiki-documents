@@ -143,7 +143,7 @@ help usage: [-v] [<cmd>]
 
 Builtin Apps:
     getprime    hello       nsh         ostest      sh 
-```
+``` 
 
 Let's say hello to NuttX, type `hello` and then it executes the command:
 
@@ -154,9 +154,54 @@ Hello, World!!
 
 ### GPIO Driver
 
+Clear the previous configuration
+
+```
+$ cd ~/nuttxspace/nuttx
+$ make distclean
+```
+
+```
+$ ./tools/configurate.sh seeed-xiao-rp2040:userleds
+```
+
+Compile de the source code.
+
+```
+$  make -j
+```
+
+```
+NuttShell (NSH) NuttX-12.5.1
+nsh> gpio -h
+```
+
 
 ### Userleds Subsytem
 
+Clear the previous configuration
+
+```
+$ cd ~/nuttxspace/nuttx
+$ make distclean
+```
+
+```
+$ ./tools/configurate.sh seeed-xiao-rp2040:userleds
+```
+
+Compile de the source code.
+
+```
+$  make -j
+```
+
+```
+NuttShell (NSH) NuttX-12.5.1
+nsh> userled -h
+```
+
+<div style={{textAlign:'center'}}><img src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-userleds.gif" style={{width:300, height:'auto'}}/></div>
 
 ## WS2812 LED
 
@@ -235,6 +280,7 @@ specified, that path will be re-used until it is changed.
 ```
 nsh> ws2812
 ```
+<div style={{textAlign:'center'}}><img src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-rp2040-rgb.gif" style={{width:200, height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
 
