@@ -54,7 +54,7 @@
         background: #33495b;
         color: #fff;
         background: url('https://files.seeedstudio.com/wiki/contributor/banner_bg.png') no-repeat;
-        background-size: contain;
+        background-size: cover;
 
         .title {
             color: #fff;
@@ -84,10 +84,21 @@
             padding: 0;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 1;
             overflow: hidden;
             text-overflow: ellipsis;
             text-align: left;
+        }
+
+        .project_more {
+            text-align: right;
+            font-size: 14px;
+            margin-top: 26px;
+
+            .more_text {
+                margin-right: 4px;
+                cursor: pointer;
+            }
         }
 
         .why_container {

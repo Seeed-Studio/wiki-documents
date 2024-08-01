@@ -60,15 +60,28 @@
 .claim_page .ant-pagination .ant-pagination-item-active a {
 	color: #fff
 }
-.ant-modal-root .ant-btn-primary {
-background-color: #8FC31F;
-box-shadow: none;
+
+.project_more_wrapper {
+margin-bottom: 10px;}
+
+ .project_desc {
+	text-decoration: underline;
+	display: block;
+	color:#000;
+	cursor: pointer;
 }
+
+.ant-modal-root .ant-btn-primary {
+	background-color: #8FC31F;
+	box-shadow: none;
+}
+
 .ant-modal-root .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
 	background-color: #8FC31F;
 	box-shadow: none;
 	opacity: 0.8;
-	}
+}
+
 @media (max-width: 768px) {
 
 	.claim_page .swiper-button-prev:after,

@@ -1,38 +1,30 @@
 import React from 'react'
 import clsx from 'clsx'
 import Layout from '@theme/Layout'
-import Translate, { translate } from '@docusaurus/Translate'
 import styles from './styles.module.scss'
-import { joinList, doList, centerJoinList, howDoesList, iconlist } from '../../define/rangerConfig'
-import { Circle } from 'rc-progress';
-import Link from '@docusaurus/Link'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { judgeIsMobile, generateUUID } from '../../utils/jsUtils';
 import './style.css'
-import { Pagination as AntdPagination, Tooltip, Segmented, Modal, Button, Space, Form, Input, message } from 'antd';
-import { ArrowRightOutlined, GithubOutlined, LikeOutlined, RightOutlined, HeartOutlined, PlusOutlined } from '@ant-design/icons';
+import { Pagination as AntdPagination, Popover, Segmented, Modal, Button, Space, Form, Input, message } from 'antd';
+import { GithubOutlined, ArrowRightOutlined, LikeOutlined, RightOutlined, HeartOutlined, PlusOutlined } from '@ant-design/icons';
 import moment from 'moment';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 
-// const baseUrl='http://sapi-new.seeedstudio.local' //本地环境
+// const baseUrl = 'http://sapi-new.seeedstudio.local' //本地环境
 const baseUrl = 'http://relfusionapi.seeedstudio.com'//测试环境
 // const baseUrl='https://napi.seeedstudio.com'//正式
 
 function getImgUrl(str) {
 	return `https://files.seeedstudio.com/wiki/contributor/${str}.png`
 }
-function getContributorUuid() {
-	let uuid = localStorage.getItem('wiki_contributor_uuid')
-	if (!uuid) {
-		uuid = generateUUID()
-		localStorage.setItem('wiki_contributor_uuid', uuid)
-	}
-	return uuid
+const toUrl = (url: string) => {
+	window.open(url)
 }
-const client_key = getContributorUuid()
+let client_key = ''
 const pageSizeArr = [3, 6, 9]
 const rangerwhyRender = (isMobile) => {
 	const [list, setList] = useState([]);
@@ -44,9 +36,7 @@ const rangerwhyRender = (isMobile) => {
 				setList(res.data)
 			})
 	}
-	const toUrl = (url: string) => {
-		window.open(url)
-	}
+
 	useEffect(() => {
 		queryData()
 	}, [])
@@ -78,10 +68,31 @@ const rangerwhyRender = (isMobile) => {
 
 											<div className={styles.project_title}>Project</div>
 											<div >
-												<Tooltip placement="topLeft" title={item.title}>
-													<div className={styles.project_desc} >{item.title}</div>
-												</Tooltip>
+												{item.projects.map((pitem, pindex) => {
+													return (
+														pindex < 2 && (<a href={pitem.url} target='_blank' key={pindex} className={styles.project_desc} >{pitem.name}</a>)
+													)
+												})}
 											</div>
+											{
+												item.projects?.length > 2 && (
+													<div className={styles.project_more} >
+														<Popover trigger="hover" title='Project' content={
+															(
+																<div  className="project_more_wrapper" >
+																	{item.projects.map((pitem, pindex) => {
+																		return (
+																			(<div onClick={()=>toUrl(pitem.url)} className='project_desc' >{pitem.name}</div>)
+																		)
+																	})}
+																</div>
+															)
+														}>
+															<span className={styles.cursor_pointer}><span className={styles.more_text}>View More</span><ArrowRightOutlined /></span>
+														</Popover>
+													</div>
+												)
+											}
 										</div>
 									</div>
 								</SwiperSlide>
@@ -227,8 +238,8 @@ const claimRender = (isMobile) => {
 
 
 											</div>
-											<div className={clsx(styles.item_time)}>      
-												    {moment(item.created_at*1000).format('YYYY-MM-DD hh:mm')}
+											<div className={clsx(styles.item_time)}>
+												{moment(item.created_at * 1000).format('YYYY-MM-DD hh:mm')}
 											</div>
 										</div>
 									</div>
@@ -277,7 +288,7 @@ function handleOperate(item: any, type: OperateType, action: ActionType, is_canc
 		}
 		).toString()
 
-		 
+
 	}).then(response => response.json())
 		.then(res => {
 			callback && callback()
@@ -338,19 +349,11 @@ const wishRender = (isMobile) => {
 
 		fetch(baseUrl + '/v1/contributor/pull', {
 			method: 'post',
-			// headers: {
-			// 	"Content-Type": "application/json",
-			// },
-			// body: JSON.stringify({
-			// 	...values,
-			// 	client_key: client_key
-			// }
-			// )
 			headers: {
 				"Content-Type": "application/x-www-form-urlencoded",
 			},
 			body: new URLSearchParams({
-							...values,
+				...values,
 				client_key: client_key
 			}
 			).toString()
@@ -430,7 +433,7 @@ const wishRender = (isMobile) => {
 									</div>
 									<div className={clsx(styles.item_publish)}>
 										<div>Publisher: {item.author_name}</div>
-										<div className={clsx(styles.item_time, styles.gray)}> 
+										<div className={clsx(styles.item_time, styles.gray)}>
 											{moment(item.created_at * 1000).format('YYYY-MM-DD hh:mm')}</div>
 									</div>
 									<div className={clsx(styles.item_introduce)}>
@@ -537,18 +540,33 @@ const wishRender = (isMobile) => {
 	)
 }
 export default function Ranger(): JSX.Element {
+	function getContributorUuid() {
+		let uuid = localStorage.getItem('wiki_contributor_uuid')
+		if (!uuid) {
+			uuid = generateUUID()
+			localStorage.setItem('wiki_contributor_uuid', uuid)
+		}
+		return uuid
+	}
+	client_key = getContributorUuid()
 	const [isMobile, setIsMobile] = useState(false)
 	useEffect(() => {
 		setIsMobile(judgeIsMobile())
 	}, [])
 	return (
-		<Layout>
-			<div className={clsx(styles.claim_page, 'claim_page')}>
-				{rangerwhyRender(isMobile)}
-				{claimRender(isMobile)}
-				{wishRender(isMobile)}
+		<BrowserOnly >
+			{() => (
+				<Layout>
+					<div className={clsx(styles.claim_page, 'claim_page')}>
+						{rangerwhyRender(isMobile)}
+						{claimRender(isMobile)}
+						{wishRender(isMobile)}
 
-			</div>
-		</Layout>
+					</div>
+				</Layout>
+			)}
+
+		</BrowserOnly>
+
 	)
 }
