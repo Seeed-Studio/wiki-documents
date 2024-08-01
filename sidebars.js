@@ -1192,6 +1192,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_kafka',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee_arduino',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Embedded_Swift',
