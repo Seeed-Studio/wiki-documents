@@ -416,6 +416,10 @@ This section will list the major platforms supported by XIAO, including Platform
 	</table>
 </div>
 
+:::tip
+[Here is supplement](https://files.seeedstudio.com/wiki/xiao_topicpage/How_PlatformIO_support_xiao.pdf) for Platform IO support XIAO_ESP32C6、XIAO_RP2040、XIAO_NRF52840.
+:::
+
 ---
 
 #### Zephyr
