@@ -145,8 +145,10 @@ Navigate to **Tools > Port** and select the serial port name of the connected XI
 - **Step 1.** Copy the below code to Arduino IDE
 
 ```cpp
-// define led according to pin diagram
+// define led according to pin diagram in article
 int led = D10;
+// Blink the onboard charge led
+// int led = LED_BUILTIN;
 
 void setup() {
   // initialize digital pin led as an output
