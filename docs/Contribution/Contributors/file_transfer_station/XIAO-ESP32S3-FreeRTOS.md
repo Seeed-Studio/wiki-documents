@@ -2,7 +2,7 @@
 description: XIAO ESP32S3(Sense) With FreeRTOS
 title:  XIAO ESP32S3(Sense) With FreeRTOS
 keywords:
-- Software
+- Software, FreeRtos
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-ESP32S3-FreeRTOS
 last_update:
@@ -12,13 +12,8 @@ last_update:
 
 # XIAO ESP32S3(Sense) With FreeRTOS
 
-<!-- <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/xiao_topicpage/zephyr-esp32s3.png"/></div> -->
-
 This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/). With the assistance of this guide you will be able to utilize the feature set available to the board.
 
-<!-- :::note
-This is just the basic guideline for writing a Wiki, including the common writing code.
-::: -->
 
 ## What is [FreeRTOS](https://www.freertos.org/index.html)
 ![image1](./1.png)
@@ -232,6 +227,11 @@ This is a simplified schedule. Actual task scheduling in a real-time system woul
 :::
 
 ### Output
+
+<details>
+
+<summary> Sample Output</summary>
+
 ```shell
 I (11412) Task1: Hello from task 1
 I (11522) Task3: Hello from task 3
@@ -255,6 +255,9 @@ I (14072) Task3: Hello from task 3
 I (14072) Task2: Hello from task 2
 I (14082) Task4: Hello from task 4
 ```
+
+</details>
+
 ## Project 2
 I will be using FreeRTOS use the wifi.
 ## What's more
@@ -284,34 +287,6 @@ Some problems might encounter in the process of hardware connection, software de
 ```
 
 
-### Highlight code
-
-```cpp
-
-{code}
-
-```
-
-### Hide the code
-
-<details>
-
-<summary> title here</summary>
-
-```cpp
-#include
-Print "code here"
-```
-
-</details>
-
-### Download Arduino IDEBbutton
-
-<div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
-    </a>
-</div>
-
 ### Download Github Library Button
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -319,67 +294,6 @@ Print "code here"
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
-
-
-### Table code
-There includes hyperlinks, image links, table title
-
-<table align="center">
-  <caption> <h2>title</h2> </caption>
-  <tbody>
-    <tr>
-    <td><h4>Sensor</h4></td>
-    <td><h4>Gas Type</h4></td>
-    <td><h4>Get One Now</h4></td>
-    </tr>
-    <tr>
-    <td><a href="https://wiki.seeedstudio.com/Grove-Gas_Sensor-MQ2/" target="_blank"><span>MQ2</span></a></td>
-    <td>Combustible Gas, Smoke</td>
-    <td><div class="document">
-<a href="https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html" target="_blank" rel="noopener"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" alt="" width={200} height="auto"/></a>
-</div></td>
-    </tr>
-        <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    </tr>
-  </tbody></table>
-
-
-
-### note 
-
-:::note
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-:::
-
-
-### tip 
-
-:::tip
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-:::
-
-### info 
-
-:::info
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-:::
-
-### danger 
-
-:::danger
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-:::
-
-
-### Caution 
-
-:::caution
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-:::
-
 
 ## Tech Support & Product Discussion
 
