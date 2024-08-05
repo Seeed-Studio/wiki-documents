@@ -115,7 +115,7 @@ Contrary to the original Arduino, it is turned on at LOW and turned off at HIGH.
 
 The official website describes two other built-in LEDs as `two LEDs for serial port downloading`. However, looking at the schematic, there is no physical pin connected to these RX and TX LEDs.
 
-If you look at [USBCore.cpp](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/1.7.2/cores/arduino/USB/USBCore.cpp#L622-L627) here, you can see that they are turned on by `digitalWrite` every time serial USB transmission / reception occurs, which means that the two LEDs are are programmable.
+If you look at [USBCore.cpp](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/1.7.2/cores/arduino/USB/USBCore.cpp#L622-L627) here, you can see that they are turned on by `digitalWrite` every time serial USB transmission / reception occurs, which means that the two LEDs are programmable.
 
 ```cpp
 uint32_t USBDeviceClass::recv(uint32_t ep, void *_data, uint32_t len)
