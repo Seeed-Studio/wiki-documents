@@ -50,13 +50,13 @@ Before we begin, let's review all the pins that the XIAO ESP32S3 has and its fun
 	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense front indication diagram</th>
 	</tr>
 	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/1.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense back indication diagram</th>
 	</tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/3.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
