@@ -206,7 +206,7 @@ Finally, click the **Deploy** button at the top right of the Node-RED interface.
 
 Congratulations! You have successfully configured your Watcher to send messages to Discord through Node-RED. This setup ensures that you receive real-time notifications in your Discord channel whenever your Watcher is triggered. By doing so, you've unlocked a plethora of thrilling opportunities for your development projects. We eagerly anticipate the innovative solutions you'll create next!
 
-## Debugging: Discord API Errors
+## Troubleshooting
 
 When integrating Discord with Node-RED, you might encounter some errors. Here are two common errors and detailed steps to resolve them:
 
