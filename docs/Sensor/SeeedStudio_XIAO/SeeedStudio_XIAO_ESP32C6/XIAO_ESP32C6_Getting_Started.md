@@ -264,29 +264,30 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 
 #### Add the XIAO-C6 Board {#add-board}
 
-As of July 14, 2024, the most current stable release of Arduino-ESP32 is version `3.0.2`. Version 3.0.0, released on May 28, [added support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) for the **ESP32-C6** chipset. To work with XIAO-C6, you can utilize the stable release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
+To install the XIAO ESP32C6 board, follow these steps:
 
 ```
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
-
-if you've install the ESP32 board package before, you''ll need to remove it first.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width: 640, height: 'auto'}}/></div>
-
-
-To install the XIAO ESP32C6 board, follow these steps:
-
-1. Add the above board manager URL to your Arduino IDE preferences.
+1. Add the above board manager URL to the preferences of your Arduino IDE, which is taken from the [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide).
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
 
 2. Download the XIAO ESP32C6 board package.
 
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
+:::note
+Only available if the version of the esp32 board is greater than `3.0.0`.
+:::
 
-Additionally, the latest development release version (`3.0.0-rc1`) was released on April, 2024. And has supported XIAO ESP32C6.
+
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 'auto', height: 'auto'}}/></div>
+
+3. Opt for `XIAO_ESP32C6` variant.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/select_xiao_c6.png" style={{width:1000, height:'auto'}}/></div>
+
+Now enjoy coding ✨.
 
 ## Run your first Blink program
 
