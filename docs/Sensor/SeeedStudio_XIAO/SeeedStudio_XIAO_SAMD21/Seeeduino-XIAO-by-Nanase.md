@@ -305,7 +305,7 @@ Temp: 22.05 °C, Humidity: 44.72 %, Pressure: 1008.9 hPa
 Temp: 22.06 °C, Humidity: 44.81 %, Pressure: 1008.9 hPa
 ```
 
-## UART
+### UART
 
 As mentioned earlier, the physical UART pins are different from those on the USB CDC. `Serial1` is used for serial communication using the TX and RX pins.
 
