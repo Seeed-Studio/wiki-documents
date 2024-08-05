@@ -67,9 +67,7 @@ We've added examples of [XIAO ESP32C6 Serial1 Usage](https://wiki.seeedstudio.co
 
 We've added examples of [XIAO ESP32S3 Serial1 Usage](https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#serial1-usage).
 
-
-
-<!-- ### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
+### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
 
 Integrate WebVision moduel with N3uron on EdgeBox RPI 200. -->
 
