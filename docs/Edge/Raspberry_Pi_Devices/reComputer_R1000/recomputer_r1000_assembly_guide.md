@@ -44,9 +44,10 @@ You need to prepare the following hardware
 
 Following these steps should help you disassemble the device without any issues. 
 
-**STEP 1:** Remove the Four Screws at the Bottom:
+**STEP 1:** Remove the Four Screws at the Bottom and Grounding Screw from Side Panels:
 
 - Locate and unscrew the four screws located at the bottom of the device using an appropriate screwdriver.
+- Remove and unscrew the grounding screw from the side panels.
 
 **STEP 2:** Take Off the Floor Panel:
 

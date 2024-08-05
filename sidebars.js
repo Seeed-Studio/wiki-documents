@@ -1192,6 +1192,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_kafka',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee_arduino',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Embedded_Swift',
@@ -2968,6 +2969,7 @@ const sidebars = {
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_with_node_red_and_bacnet',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer-r1000-nodered-influxdb',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000-grafana',
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/flowfuse/recomputer_r1000_flowfuse_getting_start',
                            
                         ],
                         },
@@ -3261,6 +3263,7 @@ const sidebars = {
                 // Projects
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Riva_and_Llama2_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Real_Time_Subtitle_Recoder_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Ollama_and_AnythingLLM_on_Jetson',
                 
               ]
             },
@@ -4589,7 +4592,7 @@ const sidebars = {
 
     {
       type: 'doc',
-      id: 'Sensor/Grove/Grove_System',
+      id: 'zh-CN/Sensor/Grove/cn-Grove_System',
       label: 'Grove',
       className: 'sideboard_calss',
     },

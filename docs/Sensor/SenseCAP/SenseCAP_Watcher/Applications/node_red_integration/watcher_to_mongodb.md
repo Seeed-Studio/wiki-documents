@@ -37,7 +37,7 @@ For the purpose of this tutorial, we will simply return all the Watcher data. Ho
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/Node_RED_2.png" style={{width:1000, height:'auto'}}/></div>
 
-#### Example Node-RED Function to Format Data:
+#### Example Node-RED Function to Format Data
 
 ```sh
 msg.payload = {
@@ -140,7 +140,7 @@ Switch to the **Install** tab within the palette management window. In the searc
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/Node_RED_4.png" style={{width:1000, height:'auto'}}/></div>
 
 :::note
-The **node-red-contrib-mongodb-aleph** module is recommended for its current compatibility and reliability. However, the availability and functionality of Node-RED modules can vary over time. It's advisable to review the most recent user feedback and compatibility notes in the Node-RED library or GitHub repositories. If you encounter issues with this module, consider exploring other MongoDB modules listed in the Node-RED library for a more suitable option.
+The **node-red-contrib-mongodb-aleph** module is recommended for its current compatibility and reliability at the time of writing this tutorial (July 2024). However, the availability and functionality of Node-RED modules can vary over time. It's advisable to review the most recent user feedback and compatibility notes in the Node-RED library or GitHub repositories. If you encounter issues with this module, consider exploring other MongoDB modules listed in the Node-RED library for a more suitable option.
 :::
 
 ### Step 9. Configure MongoDB node
