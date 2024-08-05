@@ -108,7 +108,7 @@ Please note: The behavior of the built-in LED is reversed to the one on an Ardui
 
 All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
 
-### **Pin Multuiplexing**
+### **Pin Multiplexing**
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
 
