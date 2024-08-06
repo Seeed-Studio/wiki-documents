@@ -3245,10 +3245,11 @@ const sidebars = {
             {
               type: 'category',
               label: 'Generative AI',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Application/Generative_AI',
-              // },
+              link: {
+                type: "doc",
+                id: 'Edge/NVIDIA_Jetson/Application/Generative_AI/Generative_AI_Intro',
+              },
+              
               items: [
                 // Models
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Finetune_LLM_by_Llama_Factory_on_Jetson',
