@@ -3023,6 +3023,16 @@ const sidebars = {
 
                     {
                       type: 'category',
+                      label: 'Home Assistant',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Home-Assistant/recomputer-r1000-home-assistant',
+                        
+                      ],
+                      },
+  
+
+                    {
+                      type: 'category',
                       label: 'Cloud Solutions',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/AWS/recomputer_r1000_aws',
@@ -4160,6 +4170,13 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
             'Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit',
             'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Top_Brand/Raspberry_Pi/Application/Raspberry_Pi_as_a_NAS',
           ],
         },
       ],

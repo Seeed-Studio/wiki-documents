@@ -74,6 +74,12 @@ Here we will use NVIDIA L4T 35.3.1 to install Jetpack 5.1.1 on the A608 Carrier 
 
 **Step 2.** [Download](https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A608/a608_jp511.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4861269491&Signature=801mYzDJxj5g68Vqo2H4k7VVLkM%3D) peripheral drivers and put all the drivers in same folder.
 
+:::caution
+
+Due to server maintenance aimed at better serving everyone, the download of BSP image files is temporarily unavailable. We sincerely apologize for the inconvenience and will restore the service as soon as possible.
+
+:::
+
 Now you will see three compressed files in the same folder:
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/drivers.png" /></div>
@@ -129,6 +135,12 @@ Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the A608 Carrier 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/5.1.2_P1.png" /></div>
 
 **Step 2.** [Download](https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A608/608_jp512.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4866749054&Signature=GavBxI%2Fe6tSG%2BTKECy4NNQ%2BtI7g%3D) peripheral drivers and put all the drivers in same folder.
+
+:::caution
+
+Due to server maintenance aimed at better serving everyone, the download of BSP image files is temporarily unavailable. We sincerely apologize for the inconvenience and will restore the service as soon as possible.
+
+:::
 
 Now you will see three compressed files in the same folder:
 

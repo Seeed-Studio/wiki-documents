@@ -342,6 +342,11 @@ The first method download is around 14GB and the second method download is about
   </tbody>
   </table>
 
+:::caution
+
+Due to server maintenance aimed at better serving everyone, the download of BSP image files is temporarily unavailable. We sincerely apologize for the inconvenience and will restore the service as soon as possible.
+
+:::
 
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
 

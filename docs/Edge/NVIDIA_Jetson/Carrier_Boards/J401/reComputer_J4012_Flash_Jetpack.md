@@ -476,6 +476,12 @@ Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
 </table>
 </div>
 
+:::caution
+
+Due to server maintenance aimed at better serving everyone, the download of BSP image files is temporarily unavailable. We sincerely apologize for the inconvenience and will restore the service as soon as possible.
+
+:::
+
 **Step 2:** Extract the downloaded image file:
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
