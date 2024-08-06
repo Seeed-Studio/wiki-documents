@@ -3023,6 +3023,16 @@ const sidebars = {
 
                     {
                       type: 'category',
+                      label: 'Home Assistant',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Home-Assistant/recomputer-r1000-home-assistant',
+                        
+                      ],
+                      },
+  
+
+                    {
+                      type: 'category',
                       label: 'Cloud Solutions',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/AWS/recomputer_r1000_aws',
