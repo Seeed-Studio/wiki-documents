@@ -127,6 +127,18 @@ Upon successful correction, a blue screen will appear, allowing you to select **
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" style={{width:600, height:450}}/></div>
 
+After a few minutes, the installation will begin.
+
+You can then view the Home Assistant Dashboard UI on a web browser using `<your_recomputer_ip>:8123`.
+
+It will take some time to finish the initial startup process. Once it has finished starting up, create an account and follow the initial setup instructions
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:600, height:450}}/></div>
+
+:::note
+If there are warnings in notifications, please reboot the reComputer.
+:::
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
