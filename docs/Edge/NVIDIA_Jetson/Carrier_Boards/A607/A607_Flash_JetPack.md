@@ -110,6 +110,13 @@ First of all, you need to install the peripheral drivers for this board. These a
 </table>
 </div>
 
+:::caution
+
+Due to server maintenance aimed at better serving everyone, the download of BSP image files is temporarily unavailable. We sincerely apologize for the inconvenience and will restore the service as soon as possible.
+
+:::
+
+
 **Note:** Currently we provide the above drivers. We will keep updating the drivers in the future with the release of new JetPack versions.
 
 ## Flash to Jetson 

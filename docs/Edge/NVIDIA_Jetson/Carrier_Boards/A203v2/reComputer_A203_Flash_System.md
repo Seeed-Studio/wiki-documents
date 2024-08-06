@@ -280,6 +280,8 @@ Now, we need to install the driver as well to make sure each component on the bo
   </tbody>
 </table>
 
+
+
 !!!Note
  There are two JetPack 5.0.2 drivers for A203 included in the downloaded files. Both work fine, except that one of them supports **IMX-219 camera** and the other one supports **IMX-477 camera**.
 
