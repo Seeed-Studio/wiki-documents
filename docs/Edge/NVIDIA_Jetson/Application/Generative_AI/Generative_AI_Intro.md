@@ -1,5 +1,5 @@
 ---
-description: reComputer-Jetson® generative AI guide page
+description: This page introduces how to deploy generative AI technologies on reComputer devices using the Nvidia Jetson platform, including text generation, image generation, audio generation, multimodal generation, and retrieval-augmented generation. It details the application scenarios, technical features, and relevant resource links for each technology, providing developers with comprehensive reference materials and technical support information.
 title: Generative AI with reComputer-Jetson®
 keywords:
   - Edge
