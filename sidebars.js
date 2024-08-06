@@ -4162,6 +4162,13 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
           ],
         },
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Top_Brand/Raspberry_Pi/Application/Raspberry_Pi_as_a_NAS',
+          ],
+        },
       ],
     },
 
