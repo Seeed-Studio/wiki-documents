@@ -278,7 +278,7 @@ Our testing has demonstrated the benefits of the upgraded heat sink over the ori
 | Test Sample           | Peak Temperature on Backside |
 | --------------------- | ---------------------------- |
 | **Without Heat Sink** | 63.6°C                       |
-| **With Heat Sink**    | 53.5°C🔻                     |
+| **With dual Heat Sinks** | 53.5°C (🔻10°C)           |
 
 ***Test Details:***
 - **Environment**: Air-conditioned room (approximately 27°C)
@@ -334,7 +334,7 @@ This smaller, compact option is sufficient for regular use and allows full acces
 </table>
 
   </TabItem>
-  <TabItem value="dual" label="Dual Heat Sink">
+  <TabItem value="dual" label="Dual Heat Sinks">
 
 The larger option provides superior cooling, which is ideal for high-performance tasks but may limit access to some GPIO pins.
 
