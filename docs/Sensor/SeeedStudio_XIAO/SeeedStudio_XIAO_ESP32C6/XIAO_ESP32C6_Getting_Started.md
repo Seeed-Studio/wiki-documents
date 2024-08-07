@@ -10,7 +10,7 @@ slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:
-  date: 07/16/2024
+  date: 08/05/2024
   author: Spencer
 ---
 
