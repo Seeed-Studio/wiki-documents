@@ -288,10 +288,6 @@ sudo apt install unzip
 unzip A603-JP5.1.2.zip
 ```
 
-:::caution
-Here it will ask whether to replace the files. Type **A** and press **ENTER** to replace the necessary files.
-:::
-
 **Step 5:** Configure your username, password & hostname so that you do not need to enter the Ubuntu installation wizard after the device finishes booting.
 
 ```sh
