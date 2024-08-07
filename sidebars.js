@@ -3026,6 +3026,7 @@ const sidebars = {
                       label: 'Home Assistant',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Home-Assistant/recomputer-r1000-home-assistant',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Home-Assistant/recomputer-r1000-modbus-home-assistant',
                         
                       ],
                       },
