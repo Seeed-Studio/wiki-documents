@@ -110,24 +110,19 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
       <td>5.1.2</td>
       <td>35.4.1</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A603/A603-JP5.1.2.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4869959640&Signature=c4CEHyb8dsLdL23zx3dFR1tykks%3D">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/A603-JP5.1.2.zip">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
       <td>6.0</td>
       <td>36.3</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A603/A603-JP6.0.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4869959719&Signature=1SFOkIWHlDIaZzCAR2af9%2F4DFj0%3D">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/A603-JP6.0.zip">Download</a></td>
     </tr>
 
   </tbody>
 </table>
 </div>
 
-:::caution
-
-Due to server maintenance aimed at better serving everyone, the download of BSP image files is temporarily unavailable. We sincerely apologize for the inconvenience and will restore the service as soon as possible.
-
-:::
 
 **Note:** Currently we provide the above drivers. We will keep updating the drivers in the future with the release of new JetPack versions.
 
