@@ -3256,10 +3256,11 @@ const sidebars = {
             {
               type: 'category',
               label: 'Generative AI',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Application/Generative_AI',
-              // },
+              link: {
+                type: "doc",
+                id: 'Edge/NVIDIA_Jetson/Application/Generative_AI/Generative_AI_Intro',
+              },
+              
               items: [
                 // Models
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Finetune_LLM_by_Llama_Factory_on_Jetson',
@@ -4171,6 +4172,13 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
             'Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit',
             'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Top_Brand/Raspberry_Pi/Application/Raspberry_Pi_as_a_NAS',
           ],
         },
       ],
