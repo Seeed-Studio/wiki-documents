@@ -43,7 +43,7 @@ First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
 
-- **Step 4**. Chose the "Interpreter" interface and select the device as **"MicroPython(generic)"** and the port as **"Try to detect prot automatically"**
+- **Step 4**. Chose the "Interpreter" interface and select the device as **"MicroPython(generic)"** and the port as **"Try to detect port automatically"**
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/1.jpg" /></div>
 
