@@ -304,6 +304,13 @@ Find line 172 in ```object-detection-hailo.py```, and change the code like below
 bash run.sh object-detection-hailo
 ```
 
+## Result
+
+
+<div align="center">
+<iframe width="800" height="400" src="https://www.youtube.com/embed/mVNrEVpvvuc" title="YOLOv8n Object Detection on Raspberry Pi 5 with AI Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 ## Tech Support & Product Discussion
 
