@@ -17,6 +17,8 @@ import TabItem from '@theme/TabItem';
 
 The Pico SDK is an extensive software development kit specifically tailored for the Raspberry Pi RP-family microcontrollers, notably powering the XIAO RP2350 board. It encompasses a broad array of libraries and tools designed to support the creation of sophisticated applications. This SDK caters to both novice enthusiasts and seasoned professionals aiming to exploit the robust capabilities of the RP2350 microcontroller in diverse projects.
 
+The Pico SDK is your starting point for developing projects on the XIAO RP2350. This section explains what the SDK is and provides step-by-step setup instructions.
+
 ## Prerequisite 📃
 
 Prior to commencing the SDK Programming on XIAO RP2350, the following equipment are required:
@@ -260,6 +262,7 @@ How to assemble it, precautions, etc -->
 
 ## Additional Resources
 
+- 📄**[PDF]** [Raspberry Pi Pico C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) the book which documents the SDK APIs
 - 📄**[Blog]** [How to learn Pico-SDK programming?](https://example.com) - A comprehensive tutorial focused on RP2350 SDK.
 - 📽️**[Video]** [Intro to Raspberry Pi Pico and RP2040](https://www.youtube.com/watch?v=B5rQSoOmR5w) -  A video tutorial.
 
