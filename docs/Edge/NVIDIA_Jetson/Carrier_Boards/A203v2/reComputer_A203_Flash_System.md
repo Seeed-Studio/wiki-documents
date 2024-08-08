@@ -456,8 +456,10 @@ After we unzip the package, we need to install the driver as well to make sure e
   </tbody>
 </table>
 
-!!!Note
+:::note
+
  There are two JetPack 5.0.2 drivers for A203 included in the downloaded files. Both work fine, except that one of them supports **IMX-219 camera** and the other one supports **IMX-477 camera**.
+:::
 
 ### Step 4. Unzip the Driver in the file
 
