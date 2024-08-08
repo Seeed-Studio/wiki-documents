@@ -140,3 +140,5 @@ yarn.lock
 # plugin FrontMatter
 frontmatter.json
 taxonomyDb.json
+
+XIAO_ESP32C6_Swift_Matter.md

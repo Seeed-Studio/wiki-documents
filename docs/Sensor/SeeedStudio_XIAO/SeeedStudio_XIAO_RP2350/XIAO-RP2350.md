@@ -161,13 +161,12 @@ The XIAO RP2350, powered by the RP2350, supports MicroPython and the C/C++ SDK p
   </table>
 </div>
 
+## Getting Started ▶️
+
 :::info
-
 This page primarily focuses on MicroPython users. For those interested in learning SDK programming or advanced users, you can visit [XIAO RP2350 with C/C++ SDK](/xiao-rp2350-c-cpp-sdk) to learn about setting up the environment and running example code.
-
 :::
 
-## Getting Started ▶️
 
 If your board doesn't have the firmware or you want to upgrade to a new version of MicroPython, you'll need to upload the `UF2` bootloader. For this step, please visit the [XIAO RP2350 with MicroPython](/xiao-rp2350-micropython) for detailed instructions on getting started with MicroPython on the XIAO RP2350.
 

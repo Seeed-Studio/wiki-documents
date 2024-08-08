@@ -7,29 +7,26 @@ sidebar_position: 2
 last_update:
     date: 2024-08-06T09:04:18.916Z
     author: Spencer
-draft: true
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Introduction 
+## Introduction
 
-The Pico SDK is an extensive software development kit specifically tailored for the Raspberry Pi RP-family microcontrollers, notably powering the XIAO RP2350 board. It encompasses a broad array of libraries and tools designed to support the creation of sophisticated applications. This SDK caters to both novice enthusiasts and seasoned professionals aiming to exploit the robust capabilities of the RP2350 microcontroller in diverse projects.
+The Pico SDK represents a comprehensive software development kit tailored for the Raspberry Pi RP-family of microcontrollers, with a particular focus on the XIAO RP2350 board. This SDK incorporates a wide range of libraries and tools designed to facilitate the development of advanced applications, serving both novice enthusiasts and experienced professionals. The SDK functions as a foundational platform for exploiting the extensive capabilities of the RP2350 microcontroller across various projects.
 
-The Pico SDK is your starting point for developing projects on the XIAO RP2350. This section explains what the SDK is and provides step-by-step setup instructions.
+## Prerequisites
 
-## Prerequisite 📃
+Before initiating SDK programming on the XIAO RP2350, the following equipment is required:
 
-Prior to commencing the SDK Programming on XIAO RP2350, the following equipment are required:
-
-- A USB Type-C cable.
-- The XIAO RP2350 board.
-- A personal computer equipped with a Linux/Unix operating system.
+- A USB Type-C cable
+- The XIAO RP2350 board
+- A personal computer equipped with a Linux/Unix operating system
 
 :::caution Attention
 
-This documentation primarily addresses development under a Linux environment (Ubuntu 22.04). Windows users are directed to consult the following resource for compatible setup instructions: [Raspberry Pi Pico Setup on Windows](https://github.com/raspberrypi/pico-setup-windows).
+This documentation predominantly addresses development under a Linux environment. Windows users are advised to consult the following resource for compatible setup instructions: [Raspberry Pi Pico Setup on Windows](https://github.com/raspberrypi/pico-setup-windows).
 
 :::
 
@@ -37,7 +34,7 @@ This documentation primarily addresses development under a Linux environment (Ub
 
 ### Step 1: Install System Dependencies
 
-Execute the following commands on your Linux terminal to install the essential system dependencies:
+Execute the following commands in your Linux terminal to install the essential system dependencies:
 
 ```bash
 sudo apt update
@@ -46,49 +43,50 @@ sudo apt install cmake gcc g++ git
 
 ### Step 2: 🔨 Toolchain Installation  {#install_gcc_arm}
 
-To ensure that you can compile code for the RP2350, a specific toolchain is required. Below are two methods for installing the `gcc-arm-none-eabi` toolchain, which provides the necessary compilers and libraries for ARM architecture.
+To compile code for the RP2350, installation of a specific toolchain, `gcc-arm-none-eabi`, is imperative. This toolchain provides the necessary compilers and libraries for ARM architecture. Two methods for installation are provided below.
 
 <Tabs>
 <TabItem value="manual_install" label="Option 1: Manual Installation" default>
 
-The manual installation process allows precise control over the installation environment. Follow these steps:
+The manual installation process offers precise control over the installation environment by following these steps:
 
 1. **Download the Toolchain**:
 
-Access the [ARM Developer Downloads](https://developer.arm.com/downloads/-/gnu-rm) page and download the `.tar.bz2` file for the `gcc-arm-none-eabi` toolchain.
+   Access the ARM Developer Downloads page and download the `.tar.bz2` file for the `gcc-arm-none-eabi` toolchain from [here](https://developer.arm.com/downloads/-/gnu-rm).
 
 2. **Extract the Archive**:
 
-Once the download is complete, open a terminal window and navigate to the directory where the file was saved. Execute the following command to extract the archive:
+   After downloading, open a terminal window, navigate to the directory containing the file, and execute the command below to extract the archive:
 
-```shell
-tar -xjf {downloaded-file}.tar.bz2
-```
+   ```shell
+   tar -xjf {downloaded-file}.tar.bz2
+   ```
 
 3. **Update System Path**:
 
-To make the toolchain accessible from any terminal session, add its directory to your system's PATH. Input the following command in your terminal, substituting `{VERSION}` with the actual version number of the toolchain:
+   To make the toolchain accessible from any terminal session, add its directory to your system's PATH by inputting the following command, substituting `{VERSION}` with the actual version number of the toolchain:
 
-```shell
-echo "export PATH=\$PATH:$(pwd)/gcc-arm-none-eabi-{VERSION}/bin" >> ~/.bashrc
-```
+   ```shell
+   echo "export PATH=\$PATH:$(pwd)/gcc-arm-none-eabi-{VERSION}/bin" >> ~/.bashrc
+   ```
 
 4. **Apply Configuration Changes**:
 
-To ensure that the PATH update takes effect immediately, source your `.bashrc` file by running:
+   To activate the PATH update immediately, source your `.bashrc` file:
 
-```shell
-source ~/.bashrc
-```
+   ```shell
+   source ~/.bashrc
+   ```
 
 </TabItem>
 <TabItem value="script_install" label="Option 2: Scripted Installation">
 
-Opt for a scripted installation to simplify and automate the setup process. Execute the following steps:
+Opt for a scripted installation to streamline and automate the setup process with the following steps:
 
 1. **Download and Execute the Script**:
-   Download the installation script using `curl` and set the necessary execution permissions:
-   
+
+   Utilize `curl` to download the installation script and set the necessary execution permissions:
+
    ```shell
    curl -O https://raw.githubusercontent.com/Seeed-Projects/Seeed-xiao-rp2350-sdk/main/install_gcc_arm.sh
    chmod +x install_gcc_arm.sh
@@ -97,12 +95,12 @@ Opt for a scripted installation to simplify and automate the setup process. Exec
 
 <details><summary>View Script Code</summary>
 
-The script automates the downloading, extraction, and PATH configuration processes. Here's the script content:
+The script automates the download, extraction, and PATH configuration processes, as outlined below:
 
 ```shell
 #!/bin/bash
 
-# Automatically handle the download and installation of the gcc-arm-none-eabi toolchain
+# Handle the automatic download and installation of the gcc-arm-none-eabi toolchain
 TOOLCHAIN_URL="https://developer.arm.com/-/media/Files/downloads/gnu-rm/{VERSION}/gcc-arm-none-eabi-{VERSION}-linux.tar.bz2"
 wget $TOOLCHAIN_URL -O toolchain.tar.bz2
 tar -xjf toolchain.tar.bz2
@@ -124,7 +122,7 @@ rm toolchain.tar.bz2
 
 ### Step 3: ⛓️ SDK Installation  {#install_sdk}
 
-The Pico SDK is essential as it provides the libraries, examples, and documentation required to develop software for the RP2350. It abstracts much of the hardware complexity through easy-to-use APIs and is regularly updated to include support for new features and performance improvements.
+The Pico SDK is crucial as it provides the libraries, examples, and documentation necessary for software development on the RP2350. It abstracts much of the hardware complexity through user-friendly APIs and is regularly updated to incorporate new features and performance enhancements.
 
 #### Installation Instructions
 
@@ -239,17 +237,6 @@ int main() {
 }
 ```
 
-***Demostration***
-
-<!-- A video -->
-
-## The way using VSCode (Windows)
-
-In windows, we could have our wsl()
-
-https://learn.microsoft.com/en-us/windows/wsl/
-
-
 <!-- ## Takeaway
 
 Summarize the previous content, list best practices, common problems, and solutions to help users avoid common errors in practical use.
@@ -263,7 +250,6 @@ How to assemble it, precautions, etc -->
 ## Additional Resources
 
 - 📄**[PDF]** [Raspberry Pi Pico C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) the book which documents the SDK APIs
-- 📄**[Blog]** [How to learn Pico-SDK programming?](https://example.com) - A comprehensive tutorial focused on RP2350 SDK.
 - 📽️**[Video]** [Intro to Raspberry Pi Pico and RP2040](https://www.youtube.com/watch?v=B5rQSoOmR5w) -  A video tutorial.
 
 ## Tech Support & Product Discussion
