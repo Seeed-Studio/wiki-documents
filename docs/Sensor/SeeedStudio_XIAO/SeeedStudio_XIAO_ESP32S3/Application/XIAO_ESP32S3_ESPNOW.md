@@ -1,6 +1,6 @@
 ---
 description: ESP-NOW-protocol-Support-on-Studio-XIAO-ESP32S3.
-title: ESP-NOW protocol Support on Studio XIAO ESP32S3
+title: ESP-NOW protocol on XIAO ESP32 Series
 keywords:
 - ESP-NOW
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,15 +10,19 @@ last_update:
   author: Jason
 ---
 
-# Base on ESP-NOW protocol communication between two XIAO ESP32S3s
+# Start running with ESP-NOW protocol on XIAO Series
 
-This Wiki will tell you what the ESP-NOW protocol is,and tech you how to use XIAO ESP32S3 to communicate using this protocol,the process will be very simple,let's prepare two XIAO ESP32S3 and start this journey!
-By the way,if you just go this board,[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/),Please click on this link,it will tell you how to get started.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png" style={{width:1100, height:'auto'}}/></div>
+<br />
+
+This Wiki will tell you what the ESP-NOW protocol is,and tech you how to use XIAO ESP32 Series to communicate using this protocol,the process will be very simple,In order to enable everyone to utilize the ESP-NOW protocol in the XIAO ESP32 series,we prepare thress XIAO ESP32 types C6/C3/S3 to comuncate,so let's start this journey!
+
+By the way,if you just go this board,Please click on this link,it will tell you how to get started.
+- [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_getting_started/)
+- [Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
 
 ## What is ESP-NOW protocol?
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/125.png" style={{width:800, height:'auto'}}/></div>
-<br />
 
 The official definiton provided : ESP-NOW is a wireless communication protocol defined by espressif that enables direct, fast, and low-power control of smart devices without the need for a router.It can coexist with Wi Fi and Bluetooth LE, supporting multiple series of SoCs such as Lexin ESP8266, ESP32, ESP32-S, and ESP32-C. ESP-NOW is widely used in fields such as smart home appliances, remote control, and sensors.
 
@@ -74,9 +78,7 @@ If you don't have any two XIAO ESP32 series pieces yet, here are the purchased l
 
 Let's first understand the general framework of the code. This instance uses XIAO ESP32S3 XIAO ESP32C3、XIAO ESP32C6， There are three ESP32 boards, XIAO ESP32S3 as the sender, and XIAO ESP32C6 and XIAO ESP32C3 as the receiver. Of course, this is just the assignment role in this code. Then through my explanation below, if you want to change or add or delete the role of the receiver and the sender, it will be very simple,Let's get involved!
 
-### XIAO ESP32S3 Sender
-
-#### Specific Code
+### Part 1. XIAOS3 Sender Code
 
 ```c
 #include <Arduino.h>
@@ -268,17 +270,19 @@ void espnow_deinit(){
 }
 ```
 
-##### The include librarise
-- `#include "WiFi.h"`
-- `#include "esp_now.h"`
+#### Resolution Part1 Code
 
-##### The Core Functions
+The include librarise
+ - `#include "WiFi.h"`
+ - `#include "esp_now.h"`
+
+The Core Functions
 - `espnow_init()`  
   - Role : Initialize ESPNOW function 
-  - Return value : initialize successful : `ESP_OK` Failed : `ESP_FAIL`
+  - Return value : initialize successful : [ESP_OK] Failed : [ESP_FAIL]
 - `espnow_deinit()`
   - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted 
-  - Return value : initialize successful : `ESP_OK`
+  - Return value : initialize successful : [ESP_OK]
 - `SenderXIAOS3_MACAddress_Requir()`  
   - Role : Set the WiFi mode to STA and obtain the MAC address to print on the serial port
 - `SenderXIAOS3_Send_Data()` 
@@ -289,16 +293,16 @@ void espnow_deinit(){
   - Role : Add peer nodes,if need more receiver,you can created nodes,and write a message that matches for sender and receiver
 - `esp_now_register_send_cb()` 
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
-  - Return Value : MAC layer successfully received data:`ESP_NOW_SEND_SUCCESS` otherwise `ESP_NOW_SEND_FAIL`
+  - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 - `ReceiverXIAOC3_Recive_Data_cb()`
  - Role : Accept callback functions from sending and sending data
 - `ReceiverXIAOC6_Recive_Data_cb()`
  - Role : Accept callback functions from sending and sending data
 - `esp_now_register_recv_cb()` 
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
-  - Return Value : MAC layer successfully received data:`ESP_NOW_SEND_SUCCESS` otherwise `ESP_NOW_SEND_FAIL`
+  - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 
-##### Default Variables
+Default Variables
 - `#define ESPNOW_WIFI_CHANNE` 
   - Role : sender and receiver the channel in which it is lcoated
 - `#define MAX_ESP_NOW_MAC_LEN` 
@@ -313,9 +317,7 @@ void espnow_deinit(){
 - `NO_PMK_KEY`
   - Role : Choose to pair devices without encryption
 
-### XIAO ESP32C3 Receiver
-
-#### Specific Code
+### Part 2. XIAOC3 Receiver Code
 
 ```c
 #include<Arduino.h>
@@ -465,17 +467,19 @@ void Association_SenderXIAOS3_peer(){
 }
 ```
 
-##### The include librarise
+#### Resolution Part2 Code
+
+The include librarise
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
 
-##### The Core Functions
+The Core Functions
 - `espnow_init()`  
   - Role : Initialize ESPNOW function 
-  - Return value : initialize successful : `ESP_OK` Failed : `ESP_FAIL`
+  - Return value : initialize successful : [ESP_OK] Failed : [ESP_FAIL]
 - `espnow_deinit()`
   - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted 
-  - Return value : initialize successful : `ESP_OK`
+  - Return value : initialize successful : [ESP_OK]
 - `Receiver_MACAddress_requir()`  
   - Role : Set the WiFi mode to STA and obtain the MAC address to print on the serial port
 - `ReceiverXIAOC3_Send_Data()` 
@@ -486,14 +490,14 @@ void Association_SenderXIAOS3_peer(){
   - Role : Add a channel node for XIAO ESP32S3 to send messages to it
 - `esp_now_register_send_cb()` 
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
-  - Return Value : MAC layer successfully received data:`ESP_NOW_SEND_SUCCESS` otherwise `ESP_NOW_SEND_FAIL`
+  - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 - `ReceiverXIAOC3_Send_Data_cb`
   - Role : This is a callback function,when it be executed whether the printed message was successfully delivered and for which MAC address
 - `esp_now_register_recv_cb()` 
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
-  - Return Value : MAC layer successfully received data:`ESP_NOW_SEND_SUCCESS` otherwise `ESP_NOW_SEND_FAIL`
+  - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 
-##### Default Variables
+Default Variables
 - `#define ESPNOW_WIFI_CHANNE` 
   - Role : sender and receiver the channel in which it is lcoated
 - `#define MAX_ESP_NOW_MAC_LEN` 
@@ -508,10 +512,7 @@ void Association_SenderXIAOS3_peer(){
 - `NO_PMK_KEY`
   - Role : Choose to pair devices without encryption
 
-
-### XIAO ESP32C6 Receiver
-
-#### Specific Code
+### Part 3. XIAOC6 Receiver Code
 
 ```c
 #include<Arduino.h>
@@ -659,18 +660,20 @@ void Association_SenderXIAOS3_peer(){
   }
 }
 ```
-##### The include librarise
+
+#### Resolution Part3 Code
+
+The include librarise
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
 
-
-##### The Core Functions
+The Core Functions
 - `espnow_init()`  
   - Role : Initialize ESPNOW function 
-  - Return value : initialize successful : `ESP_OK` Failed : `ESP_FAIL`
+  - Return value : initialize successful : [ESP_OK] Failed : [ESP_FAIL]
 - `espnow_deinit()`
   - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted 
-  - Return value : initialize successful : `ESP_OK`
+  - Return value : initialize successful : [ESP_OK]
 - `Receiver_MACAddress_requir()`  
   - Role : Set the WiFi mode to STA and obtain the MAC address to print on the serial port
 - `ReceiverXIAOC6_Send_Data()` 
@@ -683,14 +686,14 @@ void Association_SenderXIAOS3_peer(){
   - Role : This is a callback function,when it be executed whether the printed message was successfully delivered and for which MAC address
 - `esp_now_register_send_cb()` 
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
-  - Return Value : MAC layer successfully received data:`ESP_NOW_SEND_SUCCESS` otherwise `ESP_NOW_SEND_FAIL`
+  - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 - `esp_now_register_recv_cb()` 
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
-  - Return Value : MAC layer successfully received data:`ESP_NOW_SEND_SUCCESS` otherwise `ESP_NOW_SEND_FAIL`
+  - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 - `NO_PMK_KEY`
   - Role : Choose to pair devices without encryption
 
-##### Default Variables
+Default Variables
 - `#define ESPNOW_WIFI_CHANNE` 
   - Role : sender and receiver the channel in which it is lcoated
 - `#define MAX_ESP_NOW_MAC_LEN` 
@@ -705,23 +708,51 @@ void Association_SenderXIAOS3_peer(){
 - `NO_PMK_KEY`
   - Role : Choose to pair devices without encryption
 
-The following are the results of two ESP32 communications using ESPNOW
 
-#### Sender XIAO ESP32S3 result 
+## Demo Rendering
+
+The following are the results of IXAO ESP32 communications using ESPNOW
+
+#### Sender XIAOS3 Result 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/121.png" style={{width:600, height:'auto'}}/></div>
 
-#### Receiver XIAO ESP32C3 result
+#### Receiver XIAOC3 Result
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/122.png" style={{width:600, height:'auto'}}/></div>
 
-#### Receiver XIAO ESP32C6 result
+#### Receiver XIAOC6 Result
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/123.png" style={{width:600, height:'auto'}}/></div>
 
-### Summary of ESPNOW:
+## Summary of ESPNOW
 
-The ESP-NOW protocol does not require a networked environment, nor does it require significant power consumption. It can be used one-on-one or many to many, greatly expanding our DIY environment range. For small projects, this is simply the best choice. The above examples only provide the basic usage of ESP-NOW. You can make additions and modifications to this simple framework. In the future, we will make small projects about ESP-NOW to apply this technology to real life.
+Low power consumption:
+- Suitable for battery powered devices that can communicate without connecting to Wi Fi.
+
+Quick connection:
+- Devices can quickly establish connections without the need for complex pairing processes.
+
+Many to many communication:
+- Support communication between multiple devices, allowing one device to send data to multiple devices.
+
+Security:
+- Support encryption function to ensure the security of data transmission.
+
+Short distance communication:
+- Usually used for short-range (tens of meters) wireless communication.
+
+## Troubleshooting
+
+### Questin 1 : Unable to connect, the program did not report any errors
+
+- Check your XIAO ESP32 MAC Address whether or not correct
+- Your connect XIAO ESP32 Wi-Fi channel whether or nor on the same
+- Reset your XIAO ESP32,reopen serial monitor
+
+### Question 2 : Received message, but incomplete
+
+- When detecting both the sender and receiver, there is a similarity in the structure members
 
 ## Resources
 
