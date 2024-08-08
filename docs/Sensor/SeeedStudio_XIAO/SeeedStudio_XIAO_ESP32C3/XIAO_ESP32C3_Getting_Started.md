@@ -39,7 +39,7 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 
 ## Specifications comparison
 
-| Item                  | Seeed Studio XIAO ESP32C3      | Seeeduino XIAO         | Seeed XIAO RP2040                   | Seeed XIAO BLE                         | Seeed XIAO BLE Sense                    |
+| Item                  | Seeed Studio XIAO ESP32C3      | Seeeduino XIAO         | Seeed XIAO RP2040                   | Seeed XIAO nRF52840                         | Seeed XIAO nRF52840 Sense                    |
 |-----------------------|--------------------------------|------------------------|-------------------------------------|----------------------------------------|-----------------------------------------|
 | Processor             | ESP32-C3 32-bit RISC-V @160MHz | SAMD21 M0+@48MHz       | RP2040 Dual-core M0+@133Mhz         | nRF52840 M4F@64MHz                     | nRF52840 M4F@64MHz                      |
 | Wireless Connectivity | WiFi and Bluetooth 5 (LE)      | N/A                    | N/A                                 | Bluetooth 5.0/BLE/NFC                  | Bluetooth 5.0/BLE/NFC                   |
