@@ -1192,6 +1192,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_kafka',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_zigbee_arduino',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Embedded_Swift',
@@ -2968,6 +2969,7 @@ const sidebars = {
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_with_node_red_and_bacnet',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer-r1000-nodered-influxdb',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000-grafana',
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/flowfuse/recomputer_r1000_flowfuse_getting_start',
                            
                         ],
                         },
@@ -3021,6 +3023,16 @@ const sidebars = {
 
                     {
                       type: 'category',
+                      label: 'Home Assistant',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Home-Assistant/recomputer-r1000-home-assistant',
+                        
+                      ],
+                      },
+  
+
+                    {
+                      type: 'category',
                       label: 'Cloud Solutions',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/AWS/recomputer_r1000_aws',
@@ -3037,7 +3049,8 @@ const sidebars = {
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/install_m.2_coral_to_rpi5',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/convert_model_to_edge_tpu_tflite_format_for_google_coral',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit'
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection'
                       ],
                       },
 
@@ -3243,10 +3256,11 @@ const sidebars = {
             {
               type: 'category',
               label: 'Generative AI',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Application/Generative_AI',
-              // },
+              link: {
+                type: "doc",
+                id: 'Edge/NVIDIA_Jetson/Application/Generative_AI/Generative_AI_Intro',
+              },
+              
               items: [
                 // Models
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Finetune_LLM_by_Llama_Factory_on_Jetson',
@@ -3261,6 +3275,7 @@ const sidebars = {
                 // Projects
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Riva_and_Llama2_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Real_Time_Subtitle_Recoder_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Ollama_and_AnythingLLM_on_Jetson',
                 
               ]
             },
@@ -4157,6 +4172,13 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
             'Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit',
             'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Top_Brand/Raspberry_Pi/Application/Raspberry_Pi_as_a_NAS',
           ],
         },
       ],

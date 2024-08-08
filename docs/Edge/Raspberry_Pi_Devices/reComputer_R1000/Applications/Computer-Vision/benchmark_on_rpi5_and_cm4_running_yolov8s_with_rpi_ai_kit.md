@@ -155,8 +155,6 @@ lspci | grep Hailo
 The right result show as bellow:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_hardware.png" alt="pir" width={1000} height="auto"/></p>
 
-Open terminal on the reCompuer R1000, and input command as follows to run YOLOv8.
-
 ### Run Project
 
 
