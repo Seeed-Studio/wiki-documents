@@ -85,30 +85,6 @@ According to the chip manual of ESP32C3, **GPIO2**, **GPIO8** and **GPIO9** in t
 
 First, we are going to connect XIAO ESP32C3 to the computer, connect an LED to the board and upload a simple code from Arduino IDE to check whether the board is functioning well by blinking the connected LED.
 
-### Hardware setup
-
-You need to prepare the following:
-
-- 1 x [Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html)
-- 1 x Computer
-- 1 x USB Type-C cable
-
-:::tip
-
-Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
-
-:::
-
-- **Step 1.** Connect XIAO ESP32C3 to your computer via a USB Type-C cable.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" style={{width:120, height:'auto'}}/></div>
-
-- **Step 2.** Connect an LED to D10 pin as follows
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/connect-led-2.png" style={{width:500, height:'auto'}}/></div>
-
-**Note:** Make sure to connect a resistor (about 150Ω) in series to limit the current through the LED and to prevent excess current that can burn out the LED
-
 ### Software setup
 
 - **Step 1.** Download and Install the latest version of Arduino IDE according to your operating system
@@ -140,15 +116,40 @@ Navigate to **Tools > Board > ESP32 Arduino** and select "**XIAO_ESP32C3**". The
 
 Navigate to **Tools > Port** and select the serial port name of the connected XIAO ESP32C3. This is likely to be COM3 or higher (**COM1** and **COM2** are usually reserved for hardware serial ports).
 
+### Hardware setup
+
+You need to prepare the following:
+
+- 1 x [Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html)
+- 1 x Computer
+- 1 x USB Type-C cable
+
+:::tip
+
+Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+
+:::
+
+- **Step 1.** Connect XIAO ESP32C3 to your computer via a USB Type-C cable.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" style={{width:120, height:'auto'}}/></div>
+
+- **Step 2.** Connect an LED to D10 pin as follows
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/connect-led-2.png" style={{width:500, height:'auto'}}/></div>
+
+**Note:** Make sure to connect a resistor (about 150Ω) in series to limit the current through the LED and to prevent excess current that can burn out the LED
+
 ### Blink the LED
 
 - **Step 1.** Copy the below code to Arduino IDE
 
+Make sure your `D10` is connected to an LED as shown in the diagram above.
+
 ```cpp
+
 // define led according to pin diagram in article
-int led = D10;
-// Blink the onboard charge led
-// int led = LED_BUILTIN;
+const int led = D10; // there is no LED_BUILTIN available for the XIAO ESP32C3.
 
 void setup() {
   // initialize digital pin led as an output
