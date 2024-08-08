@@ -3023,6 +3023,16 @@ const sidebars = {
 
                     {
                       type: 'category',
+                      label: 'Home Assistant',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Home-Assistant/recomputer-r1000-home-assistant',
+                        
+                      ],
+                      },
+  
+
+                    {
+                      type: 'category',
                       label: 'Cloud Solutions',
                       items: [
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/AWS/recomputer_r1000_aws',
@@ -3039,7 +3049,8 @@ const sidebars = {
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/install_m.2_coral_to_rpi5',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/convert_model_to_edge_tpu_tflite_format_for_google_coral',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit'
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/tutorial_of_ai_kit _with_raspberrypi5_about_yolov8n_object_detection'
                       ],
                       },
 
@@ -3245,10 +3256,11 @@ const sidebars = {
             {
               type: 'category',
               label: 'Generative AI',
-              // link: {
-              //   type: "doc",
-              //   id: 'Edge/NVIDIA_Jetson/Application/Generative_AI',
-              // },
+              link: {
+                type: "doc",
+                id: 'Edge/NVIDIA_Jetson/Application/Generative_AI/Generative_AI_Intro',
+              },
+              
               items: [
                 // Models
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Finetune_LLM_by_Llama_Factory_on_Jetson',
@@ -4160,6 +4172,13 @@ const sidebars = {
             'Top_Brand/Raspberry_Pi/Kit/Grove_Base_Kit_for_Raspberry_Pi',
             'Top_Brand/Raspberry_Pi/Kit/LoRa_LoRaWan_Gateway_Kit',
             'Top_Brand/Raspberry_Pi/Kit/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Application',
+          items: [
+            'Top_Brand/Raspberry_Pi/Application/Raspberry_Pi_as_a_NAS',
           ],
         },
       ],
