@@ -7,7 +7,7 @@ keywords:
   - Ai kit
   - YOLO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /tutorial_of_ai_kit _with_raspberrypi5_about_yolov8n_object_detection 
+slug: /tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection 
 last_update:
   date: 08/6/2024
   author: Jiahao
@@ -302,7 +302,6 @@ Find line 172 in ```object-detection-hailo.py```, and change the code like below
 ```
 bash run.sh object-detection-hailo
 ```
-
 
 
 ## Tech Support & Product Discussion
