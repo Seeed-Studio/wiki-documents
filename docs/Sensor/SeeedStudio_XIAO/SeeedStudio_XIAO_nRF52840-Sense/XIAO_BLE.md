@@ -56,7 +56,7 @@ Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansio
 |    Onboard Buttons    |                    N/A |               Reset/ Boot Button |                              Reset Button |                             Reset Button |
 |      Onboard LEDs     |                    N/A |       Full-color RGB/ 3-in-one LED |                              3-in-one LED/ Charge LED |                             3-in-one LED/ Charge LED |
 |    Battery Charge Chip   |                    N/A |                               N/A |                                   BQ25101 |                                  BQ25101 |
-| Programming Languages |                Arduino/ CircuitPython | Arduino/ MicroPython/ CircuitPython |         Arduino/ MicroPython/ CircuitPython |        Arduino/ MicroPython/ CircuitPython |
+| Programming Languages |                Arduino/ MicroPython/ CircuitPython | Arduino/ MicroPython/ CircuitPython |         Arduino/ MicroPython/ CircuitPython |        Arduino/ MicroPython/ CircuitPython |
 
 ## Hardware overview
 

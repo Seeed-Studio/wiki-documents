@@ -96,7 +96,7 @@ Once uploaded, you should be able to see the pin 25 Green (USER) LED on the boar
 If uploading the Arduino program fails, try holding down the "BOOT" button and then clicking the "RUN" button. At this point, Seeed Studio XIAO RP2040 will enter boot mode (your computer will load a removable disk), and you will be able to upload the Arduino program again.
 :::
 
-## **Pin Multuiplexing on the Seeed Studio XIAO RP2040**
+## **Pin Multiplexing on the Seeed Studio XIAO RP2040**
 
 The Seeed Studio XIAO RP2040 contains 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface. We are going to provide the tutorials about these interfaces to make it helpful for your projects.
 

@@ -3049,7 +3049,8 @@ const sidebars = {
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/install_m.2_coral_to_rpi5',
                         'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/convert_model_to_edge_tpu_tflite_format_for_google_coral',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit'
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit',
+                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection'
                       ],
                       },
 

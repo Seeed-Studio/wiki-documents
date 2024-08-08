@@ -87,7 +87,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher & Discord Message Alerts *(Planning)*
 
-- Watcher & Whatsapp Message Alerts *(Planning)*
+- [Watcher & Whatsapp Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_discord)
 
 - Watcher & X (Twitter) Message Alerts *(Planning)*
 
