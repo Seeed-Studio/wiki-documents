@@ -243,9 +243,9 @@ Once you have copied the code into Thonny IDE, as shown in the image below, simp
 
 ### Battery & Power Management
 
-Is it possible to read the battery voltage without extra components? Yes! We heard you. With more pins provided, the XIAO RP2350 makes it possible. For previous members of the XIAO family, such as the [XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage), reading the battery voltage level required manually connecting to *A0* with a resistor.
+Is it possible to read the battery voltage without extra components? Yes, with the XIAO RP2350, it’s easier than ever. In previous XIAO family members, such as the [XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage), reading the battery voltage required manually connecting to *A0* with a resistor.
 
-However, with the XIAO RP2350, this is no longer necessary. You can now use the `A3/GPIO29` pin to directly read the battery voltage level, simplifying your design and development process. Additionally, for battery level reading, the `GPIO19` must be set to a high value, which is the enable pin for reading the battery level.
+But with the XIAO RP2350, this process is simplified. You can now directly use the `A3/GPIO29` pin to read the battery voltage level, streamlining your design and development. Just remember to set the `GPIO19` pin to high, as it’s necessary to enable battery level reading.
 
 Follow along with this code snippet to read the battery voltage using the Pico SDK:
 
@@ -328,10 +328,12 @@ int main() {
 
 The XIAO RP2350 harnesses the power of the Raspberry Pi RP2350, leveraging a wealth of shared resources from the Raspberry Pi community. This opens up a world of possibilities for you to tailor your projects on this tiny board with boundless creativity. Below are essential resources and assets to help you get started.
 
-<!-- - 📄 **[PDF]** [RP2350 datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf) -->
+- 📄 **[PDF]** [RP2350 datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf)
 - 📄 **[PDF]** [Seeed Studio XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
 - 📄 **[XLSX]** [Seeed Studio XIAO RP2350 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
-- 🔗 **[Link]** [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)
+
+- 📄 **[PDF]** [Hardware design with RP2350](https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf)
+- 📄 **[PDF]** [Getting started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)  - Official Raspberry Pi documentation.
 <!-- - 🗂 **[DXF]** [Seeed Studio XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2040-DXF.zip)  -->
 <!-- - 📄 **[LBR]** [Seeed Studio XIAO RP2350 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
 
@@ -348,6 +350,7 @@ As a member of the XIAO family, the XIAO RP2350 does the same. Of course, to mak
 
 Furthermore, dive into the vibrant Raspberry Pi community to expand your knowledge and discover new project ideas. Leverage community-shared resources, forums, and tutorials to enhance your experience with the XIAO RP2350. In addition to the Seeed Studio Wiki, here are a few other recommended places to learn:
 
+- **[Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)**: Get reliable and up-to-date info on the RP2350.
 - **[Raspberry Pi Forums](https://www.raspberrypi.org/forums/)**: Engage with other enthusiasts, ask questions, and share your projects.
 - **[XIAO GitHub Repository](https://github.com/Seeed-Studio/OSHW-XIAO-Series)**: Explore the official XIAO repository for more centralized documentation and more interaction with our team, **Join Us!**
 - **[r/embedded on Reddit](https://www.reddit.com/r/embedded/)**: Join the embedded systems community, share insights, and discuss various topics.
