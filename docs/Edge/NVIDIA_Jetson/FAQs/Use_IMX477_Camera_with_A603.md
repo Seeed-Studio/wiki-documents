@@ -12,11 +12,30 @@ last_update:
   author: Youjiang
 ---
 
-If you need to use the IMX477 camera, please download [this driver package](https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A603/A603_JP5.1.2_IMX477.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=2716365967&Signature=YMt2c0DbGhA9S9WOAEJ97HqIXXE%3D) and follow [this tutorial](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/) to reflash the Jetpack system.
+## Jetpack 5.1.2
+
+If you need to use the IMX477 camera, please download [this driver package](https://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/603_imx477_jp512.zip) and follow [this tutorial](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/) to reflash the Jetpack system.
 
 :::caution
 Please note that you need to use the BSP for [ **JP5.1.2** ](https://developer.nvidia.com/embedded/jetson-linux-r3541).
 :::
+
+## Jetpack 6.0
+
+If you need to use the IMX477 camera, please download [this driver package](https://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/603_imx477_jp60.zip) and follow [this tutorial](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/) to reflash the Jetpack system.
+
+:::caution
+Please note that you need to use the BSP for [ **JP6.0** ](https://developer.nvidia.com/embedded/jetson-linux-r363).
+:::
+
+After the system flashing is completed, connect the CSI camera and use the following command to start the camera:
+
+```bash
+nvgstcapture-1.0 --sensor-id=0
+```
+
+<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/camera.png" /></div>
+
 
 ## Tech Support & Product Discussion
 
