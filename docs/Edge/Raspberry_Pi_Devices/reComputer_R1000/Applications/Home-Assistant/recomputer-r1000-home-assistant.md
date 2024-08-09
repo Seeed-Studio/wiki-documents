@@ -18,7 +18,7 @@ last_update:
 
 The reComputer r1000, designed for Building Automation Systems, features multiple isolated RS485 channels that support both high and low-speed communication. It is compatible with BACnet, Modbus RTU, and Modbus TCP/IP protocols, making it versatile for various automation needs. This guide provides a concise introduction to installing Home Assistant on the reComputer r1000, enabling seamless integration and control of your smart home devices.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/HA.png" style={{width:600, height:450}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/HA/logo.png" style={{width:400}}/></div>
 
 [Home Assistant](https://www.home-assistant.io/) is a free and open-source software for home automation, serving as a central control system or smart home hub for various devices. Designed with local control in mind, it ensures your Building Management System (BMS) operates independently of remote servers or internet connections, enhancing security and reliability. This means your BMS can run 24/7 without the vulnerabilities associated with cloud-connected devices, providing a robust and secure automation solution.
 
@@ -125,7 +125,7 @@ sudo dpkg -i homeassistant-supervised.deb
 
 Upon successful correction, a blue screen will appear, allowing you to select **Raspberry Pi4 64** model.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" style={{width:600, height:450}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" style={{width:600}}/></div>
 
 After a few minutes, the installation will begin.
 
@@ -133,7 +133,7 @@ You can then view the Home Assistant Dashboard UI on a web browser using `<your_
 
 It will take some time to finish the initial startup process. Once it has finished starting up, create an account and follow the initial setup instructions
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:600, height:450}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:600}}/></div>
 
 :::note
 If there are warnings in notifications, please reboot the reComputer.
