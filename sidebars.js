@@ -116,7 +116,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'Grove 系列',
+      label: 'Grove',
       collapsed: true,
       collapsible: true,
       link: {
@@ -4623,7 +4623,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'zh-CN/Sensor/Grove/cn-Grove_System',
-      label: 'Grove',
+      label: 'Grove 系列',
       className: 'sideboard_calss',
     },
         {
