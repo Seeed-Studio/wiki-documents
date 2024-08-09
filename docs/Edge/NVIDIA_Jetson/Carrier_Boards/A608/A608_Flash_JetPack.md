@@ -72,7 +72,9 @@ Here we will use NVIDIA L4T 35.3.1 to install Jetpack 5.1.1 on the A608 Carrier 
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/nvidia_driver.png" /></div>
 
-**Step 2.** [Download](https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A608/a608_jp511.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4861269491&Signature=801mYzDJxj5g68Vqo2H4k7VVLkM%3D) peripheral drivers and put all the drivers in same folder.
+**Step 2.** [Download](http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A608/608_jp511.zip) peripheral drivers and put all the drivers in same folder.
+
+
 
 Now you will see three compressed files in the same folder:
 
@@ -92,7 +94,9 @@ cd Linux_for_Tegra/
 sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 cd ..
-tar -zxvf a608_jp511.tar.gz
+unzip 608_jp511.zip
+cp -r ./608_jp511/Linux_for_Tegra/* ./Linux_for_Tegra/
+
 ```
 
 **Step 4.** Flash the system to A608.
@@ -128,7 +132,8 @@ Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the A608 Carrier 
 **Step 1.** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3541) the NVIDIA drivers on the host PC. The required drivers are shown below:
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/5.1.2_P1.png" /></div>
 
-**Step 2.** [Download](https://nv-jetson-images.oss-us-west-1.aliyuncs.com/A608/608_jp512.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4866749054&Signature=GavBxI%2Fe6tSG%2BTKECy4NNQ%2BtI7g%3D) peripheral drivers and put all the drivers in same folder.
+**Step 2.** [Download](http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A608/608_jp512.zip) peripheral drivers and put all the drivers in same folder.
+
 
 Now you will see three compressed files in the same folder:
 
