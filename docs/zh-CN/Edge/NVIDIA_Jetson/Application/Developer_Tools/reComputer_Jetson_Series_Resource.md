@@ -1,6 +1,6 @@
 ---
-description: Jetson Resource
-title: Jetson Resource
+description: Jetson 官方资源
+title: Jetson 官方资源
 keywords:
   - Edge
   - reComputer Application
@@ -14,7 +14,7 @@ no_comments: false # for Disqus
 
 ---
 
-# Jetson 资源
+# Jetson 官方资源
 
 ## [Jetson 软件](https://developer.nvidia.com/embedded/develop/software)
 

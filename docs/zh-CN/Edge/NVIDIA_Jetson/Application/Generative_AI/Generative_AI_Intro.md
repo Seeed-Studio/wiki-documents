@@ -89,12 +89,11 @@ last_update:
 ## 音频生成
 
 音频生成可以使用神经网络产生高质量、逼真的音频，包括语音、音乐和音效。通过在广泛的数据集上训练，这些模型学会复制自然声音的模式和细微差别，使得语音合成、自动音乐创作和音效创建等应用成为可能。
-
 <div class="table-center">
     <table class="table-nobg">
         <tr class="table-trnobg">
-            <th class="table-trnobg"><font size={"4"}>Speech Subtitle Generation</font></th>
-            <th class="table-trnobg"><font size={"4"}>Deploy Whisper on NVIDIA Jetson Orin</font></th>
+            <th class="table-trnobg"><font size={"4"}>语音字幕生成</font></th>
+            <th class="table-trnobg"><font size={"4"}>在 NVIDIA Jetson Orin 上部署 Whisper</font></th>
         </tr>
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
@@ -111,30 +110,30 @@ last_update:
         </tr>
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
-            <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}><font size={"2"}>  Speech Subtitle Generation on Jetson, which can offer real-time speech-to-subtitle services while avoiding information leakage on the internet. </font></td>
-            <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px' }}><font size={"2"}> Deploying Whisper on the Jetson Orin to build robust, efficient STT applications.</font></td>
+            <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}><font size={"2"}> 在 Jetson 上进行语音字幕生成，能在不泄露互联网信息的情况下提供实时语音转字幕服务。 </font></td>
+            <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px' }}><font size={"2"}> 在 Jetson Orin 上部署 Whisper，构建强大、高效的语音转文本应用程序。</font></td>
         </tr>
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
-            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a>
                 </div>
             </td>
         </tr>
     </table>
 </div>
 
-## Multimodal Generation
+## 多模态生成
 
-Multimodal generation technology combines various forms of data, such as text, images, and sound, to create content that integrates multiple types of information. This technology uses deep learning models to process and fuse data from different modalities, resulting in more expressive and diverse content. For example, text-to-image models can generate corresponding images based on textual descriptions, while speech synthesis models can produce speech from text and simultaneously generate related images. Multimodal generation shows broad application prospects in virtual reality, augmented reality, and multimedia content creation.
+多模态生成技术结合了多种形式的数据，如文本、图像和声音，来创建整合多种信息类型的内容。此技术利用深度学习模型处理和融合来自不同模态的数据，产生更具表现力和多样性的内容。例如，文本到图像的模型可以基于文本描述生成对应的图像，而语音合成模型能从文本生成语音并同时生成相关图像。多模态生成在虚拟现实、增强现实和多媒体内容创建中展示了广泛的应用前景。
 
 <div class="table-center">
     <table class="table-nobg">
         <tr class="table-trnobg">
             <th class="table-trnobg">
-                <font size={"4"}>Run VLM on reComputer</font>
+                <font size={"4"}>在 reComputer 上运行 VLM</font>
             </th>
         </tr>
         <tr class="table-trnobg"></tr>
@@ -148,7 +147,7 @@ Multimodal generation technology combines various forms of data, such as text, i
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
             <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}>
-                <font size={"2"}>  This wiki provides a tutorial on how to run VLM on reComputer J4012 Jetson Orin NX with Jetson Platform Services. </font>
+                <font size={"2"}>  本维基提供了在 reComputer J4012 Jetson Orin NX 上运行 VLM 的教程，使用 Jetson 平台服务。 </font>
             </td>
         </tr>
         <tr class="table-trnobg"></tr>
@@ -158,7 +157,7 @@ Multimodal generation technology combines various forms of data, such as text, i
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/run_vlm_on_recomputer/">
                         <strong>
                             <span>
-                                <font color={'FFFFFF'} size={"4"}>📚 Learn More</font>
+                                <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
                             </span>
                         </strong>
                     </a>
@@ -168,18 +167,18 @@ Multimodal generation technology combines various forms of data, such as text, i
     </table>
 </div>
 
-## Retrieval Augmented Generation
+## 检索增强生成
 
-RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mechanisms with generation models. The RAG model not only uses a generative model to produce responses but also incorporates information retrieval techniques to enhance the accuracy and richness of the generated content by retrieving relevant information from large databases. This technology excels in applications such as question-answering systems, intelligent search, and content generation. By leveraging retrieved information, RAG models can generate more detailed and information-rich responses, thereby improving the quality and relevance of the generated content.
+检索增强生成（RAG）是一种将检索机制与生成模型相结合的技术。RAG 模型不仅使用生成模型产生响应，还结合信息检索技术，通过从大型数据库中检索相关信息来增强生成内容的准确性和丰富性。此技术在问答系统、智能搜索和内容生成等应用中表现出色。通过利用检索的信息，RAG 模型能生成更详细和信息丰富的响应，从而提高生成内容的质量和相关性。
 
 <div class="table-center">
     <table class="table-nobg">
         <tr class="table-trnobg">
             <th class="table-trnobg">
-                <font size={"4"}>Local AI Assistant</font>
+                <font size={"4"}>本地人工智能助手</font>
             </th>
             <th class="table-trnobg">
-                <font size={"4"}>Local RAG with LlamaIndex</font>
+                <font size={"4"}>本地 RAG 与 LlamaIndex</font>
             </th>
         </tr>
         <tr class="table-trnobg"></tr>
@@ -198,10 +197,10 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
             <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}>
-                <font size={"2"}> Set up a local knowledge base on Jetson devices with ollama and AnythingLLM. </font>
+                <font size={"2"}> 在 Jetson 设备上设置本地知识库，使用 ollama 和 AnythingLLM。 </font>
             </td>
             <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}>
-                <font size={"2"}> With this local RAG project, it can protect your data privacy and provide you with low-latency communication experience. </font>
+                <font size={"2"}> 通过这个本地 RAG 项目，它可以保护您的数据隐私，并为您提供低延迟的沟通体验。 </font>
             </td>
         </tr>
         <tr class="table-trnobg"></tr>
@@ -211,7 +210,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/local_ai_ssistant/">
                         <strong>
                             <span>
-                                <font color={'FFFFFF'} size={"4"}>📚 Learn More</font>
+                                <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
                             </span>
                         </strong>
                     </a>
@@ -222,7 +221,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Local_RAG_based_on_Jetson_with_LlamaIndex/">
                         <strong>
                             <span>
-                                <font color={'FFFFFF'} size={"4"}>📚 Learn More</font>
+                                <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
                             </span>
                         </strong>
                     </a>
@@ -232,19 +231,19 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
     </table>
 </div>
 
-## Others
+## 其他
 
 <div class="table-center">
     <table class="table-nobg">
         <tr class="table-trnobg">
             <th class="table-trnobg">
-                <font size={"4"}>Fine-tune LLM on Jetson</font>
+                <font size={"4"}>在 Jetson 上微调 LLM</font>
             </th>
             <th class="table-trnobg">
-                <font size={"4"}>Quantized LLM with MLC</font>
+                <font size={"4"}>使用 MLC 的量化 LLM</font>
             </th>
             <th class="table-trnobg">
-                <font size={"4"}>Zero-Shot Detection</font>
+                <font size={"4"}>零次检测</font>
             </th>
         </tr>
         <tr class="table-trnobg"></tr>
@@ -268,13 +267,13 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
             <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}>
-                <font size={"2"}> Deploy Llama-Factory on Nvidia Jetson and use Llama-Factory to train a large language model. </font>
+                <font size={"2"}> 在 Nvidia Jetson 上部署 Llama-Factory 并使用 Llama-Factory 训练大型语言模型。 </font>
             </td>
             <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}>
-                <font size={"2"}> Deploying the quantized Llama2-7B with MLC LLM on the Jetson Orin NX. </font>
+                <font size={"2"}> 在 Jetson Orin NX 上部署量化的 Llama2-7B 和 MLC LLM。 </font>
             </td>
             <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}>
-                <font size={"2"}> The Zero Shot Detection AI service exposes REST API endpoints to control stream input and objects to detect. </font>
+                <font size={"2"}> 零次检测 AI 服务提供 REST API 端点来控制流输入和检测对象。 </font>
             </td>
         </tr>
         <tr class="table-trnobg"></tr>
@@ -284,7 +283,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Finetune_LLM_on_Jetson/">
                         <strong>
                             <span>
-                                <font color={'FFFFFF'} size={"4"}>📚 Learn More</font>
+                                <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
                             </span>
                         </strong>
                     </a>
@@ -295,7 +294,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/">
                         <strong>
                             <span>
-                                <font color={'FFFFFF'} size={"4"}>📚 Learn More</font>
+                                <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
                             </span>
                         </strong>
                     </a>
@@ -306,7 +305,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/run_zero_shot_detection_on_recomputer/">
                         <strong>
                             <span>
-                                <font color={'FFFFFF'} size={"4"}>📚 Learn More</font>
+                                <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
                             </span>
                         </strong>
                     </a>
@@ -316,7 +315,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
             <th class="table-trnobg">
-                <font size={"4"}>Format Output with Langchain</font>
+                <font size={"4"}>使用 Langchain 格式化输出</font>
             </th>    
         </tr>
         <tr class="table-trnobg"></tr>
@@ -330,7 +329,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
             <td className="table-trnobg" style={{ textAlign: 'justify', width: '300px'}}>
-                <font size={"2"}> Use Langchain to format the output of large language models and deploy it on edge computing devices. </font>
+                <font size={"2"}> 使用 Langchain 格式化大型语言模型的输出并在边缘计算设备上部署。 </font>
             </td>
         </tr>
         <tr class="table-trnobg"></tr>
@@ -340,7 +339,7 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
                     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/">
                         <strong>
                             <span>
-                                <font color={'FFFFFF'} size={"4"}>📚 Learn More</font>
+                                <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
                             </span>
                         </strong>
                     </a>
@@ -351,9 +350,9 @@ RAG (Retrieval-Augmented Generation) is a technology that combines retrieval mec
 </div>
 
 
-## Tech Support & Product Discussion
+## 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们在此提供各种支持，确保您使用我们的产品体验尽可能顺畅。我们提供几个沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
     <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -364,5 +363,4 @@ Thank you for choosing our products! We are here to provide you with different s
     <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
     <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
