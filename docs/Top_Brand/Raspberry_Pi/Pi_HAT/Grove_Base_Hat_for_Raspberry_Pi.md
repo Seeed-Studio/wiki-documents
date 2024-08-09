@@ -115,7 +115,7 @@ We use SWD port to burn the firmware to this hat. In addition, you can see 3 GPI
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Working Voltage             | 3.3V                                                                                                              | 5V                                                                                                                               |
 | MCU                         | STM32F030F4P6                                                                                                     | ATMEGA328P                                                                                                                       |
-| Grove Ports                 | 6 Digital(3.3V)   4 Analog(3.3V)   3 I2C(3.3V)   1 PWM(3.3V)  1 RPISER(UART) connect to Raspberry Pi(3.3V)  1 SWD | 7 Digital(5V)  3 Analog(5V)  3 I2C(5V)  1 SERIAL: Connect to ATMEGA328P D0/1(5V)  1 RPISER: Connect to Raspberry Pi(3.3V)  1 ISP |
+| Grove Ports                 | 6 x Digital(3.3V); 4 x Analog(3.3V) ; 3 x I2C(3.3V); 1 x PWM(3.3V) ; 1 x RPISER(UART) connect to Raspberry Pi(3.3V) ; 1 x SWD | 7 x Digital(5V); 3 x Analog(5V) ;3 x I2C(5V) ;1 x SERIAL: Connect to ATMEGA328P D0/1(5V) ; 1 x RPISER: Connect to Raspberry Pi(3.3V) ;1 x ISP |
 | Grove-Digital               | Connect to Raspberry Pi directly                                                                                  | Connect to ATMEGA328P digital pins and transfer to I2C signal, then through level converter to Raspberry Pi                      |
 | Grove-Analog                | Connect to STM32F030F4P6(12bit ADC) and then transfer to I2C signal,route to Raspberry Pi directly                | Connect to ATMEGA328P analog pins(10bit ADC) and then transfer to I2C signal, then through level converter to Raspberry Pi       |
 | Grove-I2C                   | Connect to Raspberry Pi directly                                                                                  | Connect through level converter to Raspberry Pi                                                                                  |
@@ -168,34 +168,165 @@ To operate grove sensors, the grove.py depends many hardware interface libraries
 
 **Step by step installation**
 
-Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step.
+Besides the one-click installation, you can also install all the dependencies and latest grove.py step by step. Please refer to [grove.py github repository](https://github.com/Seeed-Studio/grove.py).
 
 :::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**. The following instruction is working on Bookworm OS.
 :::
 
-```python
+For beginner or library user only, please install with online method.
+For developer or advanced user, please install [dependencies](https://github.com/Seeed-Studio/grove.py/blob/master/doc/INSTALL.md#install-dependencies) and then install grove.py with [source code](https://github.com/Seeed-Studio/grove.py?tab=readme-ov-file#install-grovepy).
+##### Install Dependencies
+Add repository
+```linux
+# RPi
+echo "deb https://seeed-studio.github.io/pi_repo/ stretch main" | sudo tee /etc/apt/sources.list.d/seeed.list
+```
+Add public GPG key
+
+```shell
+curl https://seeed-studio.github.io/pi_repo/public.key | sudo apt-key add -
+# or
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BB8F40F3
+```
+Enable I2C interface
+```linux
+sudo raspi-config
+```
+
+- Select interfacingg Options>I2C>Yes>Ok>Finish
+- Enable I2C interface
+
+In the lastest version of Python3, it is recommended to use *virtualenv* for isolated package management.
+```linux
+sudo apt install python3-virtualenv
+virtualenv -p python3 env
+source env/bin/activate
+```
+
+Install library raspberry-gpio-python for RPi
+```linux
+pip install rpi-gpio
+```
+Install library rpi_ws281x for RPi
+```linux
+# python3
+sudo pip3 install rpi_ws281x
+# env
+pip install rpi_ws281x
+```
+
+
+##### Online install
+To install into a virtual environment, first active your virtualenv and type the following command:
+```linux
+curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | bash -s -- --user-local --bypass-gui-installation
+```
+If you want to install into the system, you can type the following command:
+```linux
+curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
+```
+
+##### Install grove.py locally
+
+```linux
 git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
-# Python3
-sudo pip3 install . --break-system-packages
+# Python3 
+sudo pip3 install .
+```
+```linux
+# virutalenv for Python3 (If the installation fails when using pip3)
+sudo apt install python3-virtualenv
+virtualenv -p python3 env
+source env/bin/activate
+pip3 install .
 ```
 
 #### Usage
 
-Now you can use the Grove Base Hat for Raspberry Pi with dozens Grove modules, tap the command **grove_** and press the ++tab++ key to check the supported Grove list.
+Now you can use the Grove Base Hat for Raspberry Pi with dozens Grove modules, tap the command **grove_** and press the ++tab++ key to check [the supported Grove list](https://github.com/Seeed-Studio/grove.py/tree/master/doc).
 
-```
-pi@raspberrypi:~$ grove_
-grove_i2c_color_sensor_v2          grove_mini_pir_motion_sensor       grove_rotary_angle_sensor          grove_temperature_sensor
-grove_4_digit_display              grove_i2c_motor_driver             grove_moisture_sensor              grove_ryb_led_button               grove_thumb_joystick
-grove_air_quality_sensor_v1_3      grove_lcd_1.2inches                grove_oled_display_128x64          grove_servo                        grove_tilt_switch
-grove_button                       grove_led                          grove_piezo_vibration_sensor       grove_slide_potentiometer          grove_touch_sensor
-grove_collision_sensor             grove_light_sensor_v1_2                            grove_sound_sensor                 grove_ultrasonic_ranger
-grove_gesture_sensor               grove_loudness_sensor              grove_recorder_v3_0                grove_switch                       grove_water_sensor
-grove_high_accuracy_temperature    grove_mech_keycap                  grove_relay                        grove_temperature_humidity_sensor  
-pi@raspberrypi:~$ grove_
-
+```linux
+(env) pi@raspberrypi:~ $ grove_
+grove_12_key_cap_i2c_touch_mpr121
+grove_16x2_lcd
+grove_1wire_thermocouple_amplifier_max31850
+grove_3_axis_accelerometer_adxl372
+grove_3_axis_compass_bmm150
+grove_3_axis_digital_accelerometer
+grove_4_digit_display
+grove_6_axis_accel_gyro_bmi088
+grove_air_quality_sensor_v1_3
+grove_button
+grove_cap_touch_slider_cy8c
+grove_collision_sensor
+grove_current_sensor
+grove_gesture_sensor
+grove_gpio
+grove_high_accuracy_temperature
+grove_i2c_color_sensor_v2
+grove_i2c_motor_driver
+grove_i2c_thermocouple_amplifier_mcp9600
+grove_imu_9dof_icm20600_ak09918
+grove_lcd_1.2inches
+grove_led
+grove_light_sensor_v1_2
+(env) pi@raspberrypi:~ $ grove_
+grove_12_key_cap_i2c_touch_mpr121
+grove_16x2_lcd
+grove_1wire_thermocouple_amplifier_max31850
+grove_3_axis_accelerometer_adxl372
+grove_3_axis_compass_bmm150
+grove_3_axis_digital_accelerometer
+grove_4_digit_display
+grove_6_axis_accel_gyro_bmi088
+grove_air_quality_sensor_v1_3
+grove_button
+grove_cap_touch_slider_cy8c
+grove_collision_sensor
+grove_current_sensor
+grove_gesture_sensor
+grove_gpio
+grove_high_accuracy_temperature
+grove_i2c_color_sensor_v2
+grove_i2c_motor_driver
+grove_i2c_thermocouple_amplifier_mcp9600
+grove_imu_9dof_icm20600_ak09918
+grove_lcd_1.2inches
+grove_led
+grove_light_sensor_v1_2
+grove_loudness_sensor
+grove_mech_keycap
+grove_mini_pir_motion_sensor
+grove_moisture_sensor
+grove_multi_switch
+grove_multi_switch_poll
+grove_oled_display_128x64
+grove_optical_rotary_encoder
+grove_piezo_vibration_sensor
+grove_pwm_buzzer
+grove_recorder_v3_0
+grove_relay
+grove_rotary_angle_sensor
+grove_round_force_sensor
+grove_ryb_led_button
+grove_servo
+grove_slide_potentiometer
+grove_sound_sensor
+grove_step_counter_bma456
+grove_switch
+grove_temperature_humidity_bme680
+grove_temperature_humidity_sht31
+grove_temperature_sensor
+grove_thumb_joystick
+grove_tilt_switch
+grove_time_of_flight_distance
+grove_touch_sensor
+grove_ultrasonic_ranger
+grove_uv_sensor
+grove_water_sensor
+grove_ws2813_rgb_led_strip
 ```
 
 Then we will show you how to use them according to port type.
@@ -216,7 +347,7 @@ We will take the [Grove - Ultrasonic Ranger](https://www.seeedstudio.com/Grove-U
 Tap the following command `grove_ultrasonic_ranger 5 6` in the command line interface.
 
 ```python
-pi@raspberrypi:~$ python3 grove_ultrasonic_ranger 5 6
+pi@raspberrypi:~$ grove_ultrasonic_ranger 5 6
 Detecting distance...
 6.979909436456088 cm
 7.966469074117726 cm
@@ -259,7 +390,7 @@ We will take the [Grove - Air quality sensor v1.3](https://www.seeedstudio.com/G
 Tap the following command `grove_air_quality_sensor_v1_3 0 1` in the command line interface.
 
 ```python
-pi@raspberrypi:~$ python3 grove_air_quality_sensor_v1_3 0 1
+pi@raspberrypi:~$ grove_air_quality_sensor_v1_3 0 1
 Detecting ...
 62, Air Quality OK.
 63, Air Quality OK.
@@ -305,8 +436,7 @@ We will take the [Grove - OLED Display 128x64](https://www.seeedstudio.com/Grove
 Tap the following command `grove_oled_display_128x64` in the command line interface.
 
 ```
-pi@raspberrypi:~$ python3 grove_oled_display_128x64
-pi@raspberrypi:~$ 
+(env)pi@raspberrypi:~$ grove_oled_display_128x64
 ```
 
 It seems nothing happened, however you can find the most famous sentence in the cyber world if you check your oled.😄
