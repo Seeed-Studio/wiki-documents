@@ -229,94 +229,46 @@ Enjoy your compass!
 #### Software
 
 
-- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment and install the grove.py to your raspberry pi.
 
-:::note 
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
-:::
-:::note
-    You are required to install python-mraa and python-upm, see the instruction here https://github.com/Seeed-Studio/pi_repo#mraa--upm-package-repository-for-raspberry-pi for more information.
-:::
+
+- **Step 2**. Excute below commands to run the code.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
-```
-
-- **Step 3**. Excute below commands to run the code.
-
-```
-cd grove.py/grove
-python3 grove_3_axis_compass_bmm150.py 
-
+virtualenv -p python3 env
+source env/bin/activate
+#enter commmand
+grove_3_axis_compass_bmm150
 ```
 
 Following is the grove_3_axis_compass_bmm150.py code.
 
 ```python
-
 from __future__ import print_function
-import time, sys, signal, atexit, math
-try:
-    from upm import pyupm_bmm150 as sensorObj
-except ImportError:
-    print('Error: Please install python-mraa python-upm module.\r\n' 
-          'See instruction here https://github.com/Seeed-Studio/pi_repo#mraa--upm-package-repository-for-raspberry-pi ')
+import time
+import bmm150
+import math
 
 
 def main():
-    # Instantiate a BMP250E instance using default i2c bus and address
-    sensor = sensorObj.BMM150(0, 0x13)
-
-    # For SPI, bus 0, you would pass -1 as the address, and a valid pin for CS:
-    # BMM150(0, -1, 10);
-
-    ## Exit handlers ##
-    # This function stops python from printing a stacktrace when you hit control-C
-    def SIGINTHandler(signum, frame):
-        raise SystemExit
-
-    # This function lets you run code on exit
-    def exitHandler():
-        print("Exiting")
-        sys.exit(0)
-
-    # Register exit handlers
-    atexit.register(exitHandler)
-    signal.signal(signal.SIGINT, SIGINTHandler)
-
-    # now output data every 250 milliseconds
+    device = bmm150.BMM150()  # Bus number will default to 1
     while (1):
-        sensor.update()
+        x, y, z = device.read_mag_data()
 
-        data = sensor.getMagnetometer()
-        print("Magnetometer x: {0:.2f}".format(data[0]), end=' ')
-        print(" y: {0:.2f}".format(data[1]), end=' ')
-        print(" z: {0:.2f}".format(data[2]), end=' ')
+        heading_rads = math.atan2(x, y)
+
+        heading_degrees = math.degrees(heading_rads)
+
+        print("Magnetometer x: {0:.2f}".format(x), end=' ')
+        print(" y: {0:.2f}".format(y), end=' ')
+        print(" z: {0:.2f}".format(z), end=' ')
         print(" uT")
 
-        xyHeading = math.atan2(data[0], data[1])
-        zxHeading = math.atan2(data[2], data[0])
-        heading = xyHeading
-
-        if heading < 0:
-            heading += 2*math.pi
-        if heading > 2*math.pi:
-            heading -= 2*math.pi
-        
-        headingDegrees = heading * 180/(math.pi); 
-        xyHeadingDegrees = xyHeading * 180 / (math.pi)
-        zxHeadingDegrees = zxHeading * 180 / (math.pi)
-
-        print('heading(axis_Y point to): {0:.2f} degree'.format(headingDegrees))
+        print('heading(axis_Y point to): {0:.2f} degree'.format(heading_degrees))
         time.sleep(.250)
 
 if __name__ == '__main__':
     main()
-
-
 ```
 
 :::success
@@ -324,7 +276,7 @@ if __name__ == '__main__':
 :::
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python3 grove_3_axis_compass_bmm150.py 
+pi@raspberrypi:~/grove.py/grove $ grove_3_axis_compass_bmm150
 Magnetometer x: -34.12  y: 36.71  z: -21.25  uT
 heading(axis_Y point to): 317.10 degree
 Magnetometer x: -34.49  y: 38.20  z: -16.32  uT
