@@ -206,9 +206,7 @@ source env/bin/activate
 
 Install library raspberry-gpio-python for RPi
 ```linux
-sudo apt update
-# python3
-sudo apt install python3-rpi.gpio
+pip install rpi-gpio
 ```
 Install library rpi_ws281x for RPi
 ```linux
@@ -349,7 +347,7 @@ We will take the [Grove - Ultrasonic Ranger](https://www.seeedstudio.com/Grove-U
 Tap the following command `grove_ultrasonic_ranger 5 6` in the command line interface.
 
 ```python
-pi@raspberrypi:~$ python3 grove_ultrasonic_ranger 5 6
+pi@raspberrypi:~$ grove_ultrasonic_ranger 5 6
 Detecting distance...
 6.979909436456088 cm
 7.966469074117726 cm
@@ -392,7 +390,7 @@ We will take the [Grove - Air quality sensor v1.3](https://www.seeedstudio.com/G
 Tap the following command `grove_air_quality_sensor_v1_3 0 1` in the command line interface.
 
 ```python
-pi@raspberrypi:~$ python3 grove_air_quality_sensor_v1_3 0 1
+pi@raspberrypi:~$ grove_air_quality_sensor_v1_3 0 1
 Detecting ...
 62, Air Quality OK.
 63, Air Quality OK.
