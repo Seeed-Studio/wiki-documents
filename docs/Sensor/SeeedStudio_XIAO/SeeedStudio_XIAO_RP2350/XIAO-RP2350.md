@@ -163,10 +163,14 @@ The XIAO RP2350, powered by the RP2350, supports MicroPython and the C/C++ SDK p
 
 ## Getting Started ▶️
 
-:::info
-This page primarily focuses on MicroPython users. For those interested in learning SDK programming or advanced users, you can visit [XIAO RP2350 with C/C++ SDK](/xiao-rp2350-c-cpp-sdk) to learn about setting up the environment and running example code.
+:::note micropython is still not released
+As of August 9, 2024, the stable MicroPython firmware for the XIAO RP2350 is still awaiting release from Raspberry Pi.
+You could use the preview-compiled micropython firmware from https://micropython.org/download/RPI_PICO2/.
 :::
 
+:::info attention
+This page primarily focuses on MicroPython users. For those interested in learning SDK programming or advanced users, you can visit [XIAO RP2350 with C/C++ SDK](/xiao-rp2350-c-cpp-sdk) to learn about setting up the environment and running example code.
+:::
 
 If your board doesn't have the firmware or you want to upgrade to a new version of MicroPython, you'll need to upload the `UF2` bootloader. For this step, please visit the [XIAO RP2350 with MicroPython](/xiao-rp2350-micropython) for detailed instructions on getting started with MicroPython on the XIAO RP2350.
 
@@ -198,6 +202,11 @@ If your device is ready with MicroPython, let's start with a simple project:
 
 Getting the board to blink an LED is often the first program everyone runs. The same goes for the XIAO RP2350.
 
+:::note
+The `USER LED`, the yellow LED on the XIAO RP2350, is connected to `GPIO25/D19` according to the schematic diagram. 
+For all XIAO family boards, the `USER LED` will **light up** when set to a `low level` and **turn off** when set to a `high level`.
+:::
+
 <Tabs>
   <TabItem value="python" label="MicroPython" default>
 
@@ -209,11 +218,11 @@ from time import sleep  # Import the sleep function from the time module
 led = Pin(25, Pin.OUT) 
 
 # Turn off the LED initially
-led.off() # Equivalent to led.value(0)
+led.value(1) # led.on() -> high level -> light off
 sleep(0.5) # Wait for 0.5 seconds
 
 # Turn on the LED
-led.on() # Equivalent to led.value(1)
+led.value(0) # led.off() -> low level -> light on
 sleep(0.5) # Wait for 0.5 seconds
 
 # Enter an infinite loop
@@ -221,7 +230,7 @@ while True:
     # Toggle the LED state (on to off or off to on)
     led.toggle() 
     # Print the current state of the LED
-    print(f"LED {'ON' if led.value() == 1 else 'OFF'}")
+    print(f"LED {'ON' if led.value() == 0 else 'OFF'}")
     sleep(0.5) # Wait for 0.5 seconds before the next toggle
 ```
 
@@ -243,9 +252,9 @@ Once you have copied the code into Thonny IDE, as shown in the image below, simp
 
 ### Battery & Power Management
 
-Is it possible to read the battery voltage without extra components? Yes! We heard you. With more pins provided, the XIAO RP2350 makes it possible. For previous members of the XIAO family, such as the [XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage), reading the battery voltage level required manually connecting to *A0* with a resistor.
+Is it possible to read the battery voltage without extra components? Yes, with the XIAO RP2350, it’s easier than ever. In previous XIAO family members, such as the [XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage), reading the battery voltage required manually connecting to *A0* with a resistor.
 
-However, with the XIAO RP2350, this is no longer necessary. You can now use the `A3/GPIO29` pin to directly read the battery voltage level, simplifying your design and development process. Additionally, for battery level reading, the `GPIO19` must be set to a high value, which is the enable pin for reading the battery level.
+But with the XIAO RP2350, this process is simplified. You can now directly use the `A3/GPIO29` pin to read the battery voltage level, streamlining your design and development. Just remember to set the `GPIO19` pin to high, as it’s necessary to enable battery level reading.
 
 Follow along with this code snippet to read the battery voltage using the Pico SDK:
 
@@ -328,12 +337,16 @@ int main() {
 
 The XIAO RP2350 harnesses the power of the Raspberry Pi RP2350, leveraging a wealth of shared resources from the Raspberry Pi community. This opens up a world of possibilities for you to tailor your projects on this tiny board with boundless creativity. Below are essential resources and assets to help you get started.
 
-<!-- - 📄 **[PDF]** [RP2350 datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf) -->
+***Datasheets and Schematics***
+
+- 📄 **[PDF]** [RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf)
 - 📄 **[PDF]** [Seeed Studio XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
-- 📄 **[XLSX]** [Seeed Studio XIAO RP2350 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
-- 🔗 **[Link]** [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)
-<!-- - 🗂 **[DXF]** [Seeed Studio XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2040-DXF.zip)  -->
-<!-- - 📄 **[LBR]** [Seeed Studio XIAO RP2350 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
+- 📄 **[XLSX]** [Seeed Studio XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
+<!-- - 📄 **[LBR]** [Seeed Studio XIAO RP2350 Eagle Footprint](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
+
+***Related Resources***
+
+- 📄 **[PDF]** [Getting Started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf): A comprehensive guide to setting up and programming Raspberry Pi Pico boards, ideal for beginners looking to learn MicroPython or C/C++.
 
 ### Expansion and Applications
 
@@ -348,6 +361,7 @@ As a member of the XIAO family, the XIAO RP2350 does the same. Of course, to mak
 
 Furthermore, dive into the vibrant Raspberry Pi community to expand your knowledge and discover new project ideas. Leverage community-shared resources, forums, and tutorials to enhance your experience with the XIAO RP2350. In addition to the Seeed Studio Wiki, here are a few other recommended places to learn:
 
+- **[Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)**: Get reliable and up-to-date info on the RP2350.
 - **[Raspberry Pi Forums](https://www.raspberrypi.org/forums/)**: Engage with other enthusiasts, ask questions, and share your projects.
 - **[XIAO GitHub Repository](https://github.com/Seeed-Studio/OSHW-XIAO-Series)**: Explore the official XIAO repository for more centralized documentation and more interaction with our team, **Join Us!**
 - **[r/embedded on Reddit](https://www.reddit.com/r/embedded/)**: Join the embedded systems community, share insights, and discuss various topics.
