@@ -87,7 +87,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher & Discord Message Alerts *(Planning)*
 
-- [Watcher & Whatsapp Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_discord)
+- Watcher & Whatsapp Message Alerts *(Planning)*
 
 - Watcher & X (Twitter) Message Alerts *(Planning)*
 
@@ -128,6 +128,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 - [Watcher & Node-RED to IFTTT Gmail Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
 
 - [Watcher & Node-RED Data Streaming to Apache Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
+
+- [Watcher & Node-RED to Disord Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_discord)
 
 ### Open Source Material
 
