@@ -151,71 +151,62 @@ Upload the program to your Arduino/Seeeduino.
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
-- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment，and install the grove.py to your raspberry pi.
+
+- **Step 2**. Excute below command to run the code.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
+# virutalenv for Python3
+virtualenv -p python3 env
+source env/bin/activate
+# enter commmand
+grove_pwm_buzzer
 ```
 
-- **Step 3**. Excute below command to run the code.
-
-```
-cd grove.py/grove
-python3 grove_pwm_buzzer.py
-```
-
-Following is the grove_led.py code.
+Following is the grove_pwm_buzzer.py code.
 
 ```python
-
 from __future__ import print_function
 
 import time
-from mraa import getGpioLookup
-from upm import pyupm_buzzer as upmBuzzer
+import RPi.GPIO as GPIO
 
 def main():
+    from grove.helper import helper
+    # helper.root_check()
+
     print("Insert Grove-Buzzer to Grove-Base-Hat slot PWM[12 13 VCC GND]")
-
     # Grove Base Hat for Raspberry Pi
-    #   PWM JST SLOT - PWM[12 13 VCC GND]
     pin = 12
-    #
-    # Create the buzzer object using RaspberryPi GPIO12
-    mraa_pin = getGpioLookup("GPIO%d" % pin)
-    buzzer = upmBuzzer.Buzzer(mraa_pin)
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(pin, GPIO.OUT)
 
-    chords = [upmBuzzer.BUZZER_DO, upmBuzzer.BUZZER_RE, upmBuzzer.BUZZER_MI,
-              upmBuzzer.BUZZER_FA, upmBuzzer.BUZZER_SOL, upmBuzzer.BUZZER_LA,
-              upmBuzzer.BUZZER_SI];
+    # create PWM instance
+    pwm = GPIO.PWM(pin, 10)
+    pwm.start(0) 
 
-    # Print sensor name
-    print(buzzer.name())
+    chords = [1047, 1175, 1319, 1397, 1568, 1760, 1976]
+    # Play sound (DO, RE, MI, etc.), pausing for 0.5 seconds between notes
+    try:
+        for note in chords:
+            pwm.ChangeFrequency(note)
+            pwm.ChangeDutyCycle(95)
+            time.sleep(0.5) 
+    finally:
+        pwm.stop()
+        GPIO.cleanup()
 
-    # Play sound (DO, RE, MI, etc.), pausing for 0.1 seconds between notes
-    for chord_ind in range (0,7):
-        # play each note for a half second
-        print(buzzer.playSound(chords[chord_ind], 500000))
-        time.sleep(0.1)
-
-    print("exiting application")
-
-    # Delete the buzzer object
-    del buzzer
+    print("Exiting application")
 
 if __name__ == '__main__':
     main()
-
-
-
 ```
 
 :::success
     If everything goes well, the buzzer will ring a few times and then stop, the program will automatically exit.
  :::
+
+You can quit this program by simply press **ctrl+c**.
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
