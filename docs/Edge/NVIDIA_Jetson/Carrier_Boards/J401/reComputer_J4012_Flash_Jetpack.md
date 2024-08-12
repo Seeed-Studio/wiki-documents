@@ -456,21 +456,21 @@ Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
   <tbody>
     <tr>
       <td>Jetson Orin NX 16GB</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={4}>6.0</td>
       <td rowSpan={4}>36.3</td>
     </tr>
     <tr>
       <td>Jetson Orin NX 8GB</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-8g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-8g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 8GB</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 4GB</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
