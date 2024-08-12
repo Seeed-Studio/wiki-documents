@@ -1,6 +1,6 @@
 ---
 description: This article mainly introduces how to use the 485 communication function of reComputer R1000, and tests the rs485 and Modbus communication functions.
-title: How to use rs485 and modbus rtu with reComputer R1000
+title: How to use rs485 and modbus with reComputer R1000
 keywords:
   - Edge
   - reComputer R1000
@@ -64,6 +64,11 @@ sudo apt-get install minicom
 This test uses an RS485 to USB module to connect reComputer R1000 and W10 PC.
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/RS485_fix/hardwareconnection.png" alt="pir" width="700" height="auto" /></div>
 
+For ModbusTCP, we use Ethernet cables to connect the W10 PC and reComputer R1000 to a switch to ensure that they are on the same network segment.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/r1000_connection.png" alt="pir" width="500" height="auto" /></div>
+
+
 ## Steps to use the RS485 interface normally and perform Modbus RTU testing
 
 **Step 1**: First, you need to download the [**C program**](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/tree/master/tools/rs485_control_DE) provided by us, and then refer to the contents of the ReadMe. Compile and run. 
@@ -116,6 +121,23 @@ echo 590 > /sys/class/gpio/unexport
 ```
 This is because they use different file systems and there will be conflicts when accessing the same resource.
 :::
+
+## Steps to use the  Modbus TCP testing
+
+**Step 1**: Open modbusmechanic on Win10 PC and R1000
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/modbusmac_two.png" /></center>
+
+**Step 2**: R1000 acts as the modbus TCP host. Click `Tool => Start Slave Simulator` on W10 PC, select `TCP` for TYPE, select `1` for Slave ID, and then add `Coils`; then enter `IP` in R1000, and select `Read Coil` for Scan group. Enter `Slave Node` and `Register`, and finally click `Transmit packet`. You can see that the slave data has been successfully read.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/R1000_MASTER_MODBUS_TCP.gif" /></center>
+
+**Step 3**: R1000 acts as a modbus TCP slave. Refer to the second step for configuration. You can see that R1000 can read data normally as a slave.
+
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/R1000_SLAVE_MODBUS_TCP.gif" /></center>
+
+
+Running the Modbus TCP slave program in R1000 needs to listen to the `502` port, which may require `sudo` permissions. If your application cannot listen to the `502` port, please try to add permissions to it.
 
 
 ## Tech Support & Product Discussion

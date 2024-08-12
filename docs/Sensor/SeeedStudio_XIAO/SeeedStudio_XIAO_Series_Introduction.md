@@ -373,7 +373,7 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
         <td align="center"><font size={"3"}>✅</font></td>
 	</tr>
     <tr>
-	    <th>Buletooth</th>
+	    <th>Bluetooth</th>
 	    <td align="center"><font size={"3"}>❌</font></td>
 	    <td align="center"><font size={"3"}>❌</font></td>
 	    <td align="center"><font size={"3"}>✅</font></td>
