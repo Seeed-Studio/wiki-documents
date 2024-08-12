@@ -2,7 +2,7 @@
 description: ESP-NOW-protocol-Support-on-Studio-XIAO-ESP32S3.
 title: ESP-NOW protocol on XIAO ESP32 Series
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png
-slug: /XIAO_ESP32S3_ESP-NOW
+slug: /xaio_esp32s3_espnow
 last_update:
   date: 07/24/2024
   author: Jason
