@@ -379,7 +379,7 @@ This section aims to list the tutorials in the Wiki on some of the function poin
 
 This section will list the major platforms supported by XIAO, including PlatformIO, MicroPython, CircuitPython. support is updated in real time.
 
-#### Plarform IO
+#### Platform IO
 
 <div class="table-center">
 	<table align="center">

@@ -172,21 +172,6 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/contributor_program.png" alt="pir" width={900} height="auto" /></p>
 
 
-## ✨ 特别感谢
-
-### **XIAO 拇指开发板**章节翻译团队 
-
-感谢来自<strong><a><span><font color={'8DC215'} size={"4"}> 贵州师范学院 </font></span></a></strong>的学生对“**XIAO 拇指开发板**”章节的翻译的校对。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/cn_wiki_platform/XIAO_team.jpg" alt="pir" width={600} height="auto" /></p>
-
-- <strong><a><span><font color={'8DC215'} size={"4"}> 金菊 </font></span></a></strong> 同学
-- <strong><a><span><font color={'8DC215'} size={"4"}> 赵桂莹 </font></span></a></strong> 同学
-- <strong><a><span><font color={'8DC215'} size={"4"}> 吴飞飞 </font></span></a></strong> 同学
-- <strong><a><span><font color={'8DC215'} size={"4"}> Chen Lei </font></span></a></strong> 同学
-- <strong><a><span><font color={'8DC215'} size={"4"}> Xin Ping Li </font></span></a></strong> 同学
-- <strong><a><span><font color={'8DC215'} size={"4"}> 王桥 </font></span></a></strong> 老师
-
 ## 技术支持和产品讨论
 
 非常感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您在使用我们产品的过程中获得尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
