@@ -4,7 +4,7 @@ title: NuttX
 keywords:
 - xiao
 last_update:
-    date: 7/12/2024
+    date: 8/12/2024
     author: halyssonJr
 ---
 
@@ -24,7 +24,7 @@ For instance, the [Seeed Studio Xiao RP2040](https://nuttx.apache.org/docs/lates
 
 ## Tools Setup
 
-The first step to get started with NuttX is to install a series of required tools, a toolchain for the architecture you will be working with and, finally, download NuttX source code itself.The Nuttx provides a [guide](https://nuttx.apache.org/docs/latest/quickstart/install.html) to different platforms.
+The first step to get started with NuttX is to install a series of required tools, a toolchain for the architecture you will be working with and, finally, download NuttX source code itself. The Nuttx provides a [guide](https://nuttx.apache.org/docs/latest/quickstart/install.html) to different platforms.
 
 After installing and setting up the environment, follow these steps:
 
@@ -87,7 +87,7 @@ Successful compilation is guaranteed, the next goal it's programming using BOOTS
 
 ## Hand-on
 
-It's time to explore NuttX practically. In this session, four applications are available: usb nsh, gpio, user leds, and ws2812 driver.
+It's time to explore NuttX practically. In this session, four applications are available: USB NSH, GPIO, User LEDs, and WS2812 driver.
 
 ### USBNSH
 
@@ -154,15 +154,16 @@ Hello, World!!
 
 ### GPIO Driver
 
-Clear the previous configuration
+The General Purpose Input/Output (GPIO) is a microcontroller's most fundamental part, allowing it to connect to the external world. This way we will use the NSH to access and configure those pins as we wish. But first, let's clear clear the previous configuration.
 
 ```
 $ cd ~/nuttxspace/nuttx
 $ make distclean
 ```
+Select the gpio configuration to the seeed-xiao-rp2040 board.
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:userleds
+$ ./tools/configurate.sh seeed-xiao-rp2040:gpio
 ```
 
 Compile de the source code.
@@ -170,6 +171,21 @@ Compile de the source code.
 ```
 $  make -j
 ```
+
+After programming and open serial communication 
+
+```
+picocom -b 115200 /dev/ttyACM0
+```
+
+You must to press Enter 3 times, and then this message will show in the terminal.
+
+```
+NuttShell (NSH) NuttX-12.5.1
+nsh>
+```
+
+To check which options are accepted to interact with this application, type `gpio -h`, and it will return a list of parameters.
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -195,6 +211,7 @@ Compile de the source code.
 ```
 $  make -j
 ```
+After programming, open serial communication and press Enter 3 times, following the same steps showed previous application.
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -213,7 +230,7 @@ Clear the previous configuration
 $ cd ~/nuttxspace/nuttx
 $ make distclean
 ```
-
+Select the ws2812 configuration to the seeed-xiao-rp2040 board.
 ```
 $ ./tools/configurate.sh seeed-xiao-rp2040:ws2812
 ```
@@ -224,13 +241,7 @@ Compile de the source code.
 $  make -j
 ```
 
-After programming and open serial communication 
-
-```
-picocom -b 115200 /dev/ttyACM0
-```
-
-You must to press Enter 3 times, and then this message will show in the terminal.
+Compile finished, go to programming the board, open serial communication and press Enter 3 times, following the same steps showed previous application. Typing `?`, will see the ws2812 application available.
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -253,6 +264,8 @@ nsh>
 
 ```
 
+Before running the application, it's important to confirm that the folder ` ls /dev/` was created the `leds0` file, which will be used for the ws2812 drive.
+
 ```
 nsh> ls /dev/
 /dev:
@@ -263,7 +276,7 @@ nsh> ls /dev/
  ttyS0
 
 ```
-
+Typing `ws2812 -h` will return a list of parameters that are accepted to interact with this application.
 ```
 nsh> ws2812 -h
 Usage: ws2812 [OPTIONS]
@@ -276,7 +289,7 @@ specified, that path will be re-used until it is changed.
   [-d delay] selects delay between updates.  Default: 20000 us Current: 20000 us
 
 ```
-
+Let's start our application, type `ws2812` and you see the LEDs changing the color.
 ```
 nsh> ws2812
 ```
