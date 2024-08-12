@@ -129,6 +129,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher & Node-RED Data Streaming to Apache Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
 
+- [Watcher & Node-RED to Disord Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_discord)
+
 ### Open Source Material
 
 
