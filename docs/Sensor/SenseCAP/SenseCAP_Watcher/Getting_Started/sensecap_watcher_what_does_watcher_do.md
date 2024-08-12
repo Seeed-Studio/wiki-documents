@@ -1,6 +1,6 @@
 ---
 description: Provides an in-depth look at the various applications and use cases for Watcher, showcasing its versatility and potential in different monitoring scenarios.
-title: 5# What does Watcher do
+title: 6# What does Watcher do
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
 slug: /what_does_watcher_do
 sidebar_position: 6
@@ -150,6 +150,22 @@ This setup allows Watcher to monitor for potential falls or accidents and prompt
 Watcher Application #3 showcases the incredible versatility and adaptability of Watcher as an all-in-one sensor solution. By addressing a wide range of long-tail scenarios, such as fall detection, pet monitoring, and lost property alerts, Watcher demonstrates its potential to revolutionize safety, security, and convenience in various settings.
 
 This application highlights Watcher's ability to be customized and configured to meet specific needs, making it an invaluable tool for individuals, families, and businesses alike. As a physical AI agent, Watcher seamlessly integrates into different environments, providing proactive monitoring, real-time alerts, and peace of mind to its users.
+
+## Resources
+
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
+
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
+
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
+
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
+
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
+
+- Watcher Quick Start Series 5# : Training a model for Watcher
+
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 ## Tech Support & Product Discussion
 

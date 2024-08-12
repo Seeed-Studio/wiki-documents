@@ -1,6 +1,6 @@
 ---
 description: User will learn how to integrate Watcher with the Grove system, enabling them to expand its capabilities and connect with a wide range of sensors and peripherals.
-title: 3# As a Grove Sensor
+title: 3# As a sensor & Use Grove
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/45.png
 slug: /watcher_as_grove
 sidebar_position: 4
@@ -9,14 +9,14 @@ last_update:
   author: Citric
 ---
 
-# As a Grove sensor
+# As a sensor & Use Grove
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
 
 **SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!** 
 [Click to subscribe ~](https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo)
 
-In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a Grove sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
+In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
 
 Throughout this wiki, we will dive into the details of reading and interpreting the data output from Watcher's UART interface. Additionally, we will provide comprehensive tutorials on how to parse and utilize this data using popular development boards and platforms, including XIAO, Arduino, Raspberry Pi, and Jetson.
 
@@ -722,17 +722,19 @@ That's it! You have now learned how to connect the Watcher to a reComputer, read
 
 ## Resources
 
-**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-**[Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)**
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-**Watcher Quick Start Series 4# : Training a model for Watcher**
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
-**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
+- Watcher Quick Start Series 5# : Training a model for Watcher
+
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 
 ## Tech Support & Product Discussion
