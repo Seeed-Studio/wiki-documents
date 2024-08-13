@@ -73,7 +73,7 @@ The XIAO RP2350 packs the power of the Raspberry Pi RP2350 (dual Cortex-M33 core
     </tr>
     <tr>
         <td>LEDs</td>
-        <td>1 user LED, 1 power LED, two LEDs for serial port downloading, 1 RGB LED</td>
+        <td>1 user LED, 1 power LED, 1 RGB LED<br></br>Two LEDs for serial port downloading</td>
         <td>1 user LED, 1 power LED，1 RGB LED</td>
     </tr>
     <tr>
@@ -83,8 +83,7 @@ The XIAO RP2350 packs the power of the Raspberry Pi RP2350 (dual Cortex-M33 core
     </tr>
     <tr>
         <td>Button</td>
-        <td>1 RESET button, 1 BOOT button</td>
-        <td>1 RESET button, 1 BOOT button</td>
+        <td align="center" colspan="2">1 RESET button, 1 BOOT button</td>
     </tr>
     <tr>
         <td>Security</td>
@@ -98,18 +97,16 @@ The XIAO RP2350 packs the power of the Raspberry Pi RP2350 (dual Cortex-M33 core
     </tr>
     <tr>
         <td>Software compatibility</td>
-        <td>Support Micropython / Arduino / CircuitPython</td>
-        <td>Support Micropython / C,C++</td>
+        <td>Support Micropython/CircuitPython, Arduino</td>
+        <td>Support Micropython, C/C++</td>
     </tr>
     <tr>
         <td>Working Temperature</td>
-        <td>-20°C-70°C</td>
-        <td>-20°C-70°C</td>
+        <td align="center" colspan="2">-20°C~70°C</td>
     </tr>
     <tr>
         <td>Dimensions</td>
-        <td>21x17.5 mm</td>
-        <td>21x17.5 mm</td>
+        <td align="center" colspan="2">21x17.5 mm</td>
     </tr>
 </table>
 
@@ -196,6 +193,11 @@ You can enter BOOTSEL mode on the XIAO RP2350 using either of the two methods be
    While holding the BOOT button, connect the XIAO RP2350 to your computer using a USB cable.
 3. **Release the BOOT Button**:  
    After the board is connected to your computer, you can release the BOOT button. The XIAO RP2350 should now be in BOOTSEL mode, and your computer will recognize it as a removable storage device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/>
+<div style={{ marginTop: '-8px' }}><em>Demonstration from XIAO ESP32S3</em></div>
+</div>
+
 
 </TabItem>
 
