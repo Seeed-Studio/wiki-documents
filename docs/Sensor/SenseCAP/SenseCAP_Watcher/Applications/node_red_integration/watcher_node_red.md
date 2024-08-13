@@ -5,7 +5,7 @@ keywords:
 - watcher
 - Node-Red
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/cover.png
-slug: /watcher_node_red
+slug: /watcher_to_node_red
 sidebar_position: 1
 last_update:
   date: 06/28/2024
