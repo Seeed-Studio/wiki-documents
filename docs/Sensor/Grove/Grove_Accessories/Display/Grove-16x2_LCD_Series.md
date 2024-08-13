@@ -219,6 +219,225 @@ void loop()
 :::note
         If there's no Base Shield with you, Seeeduino VX Series with I2C interface do work as well.
 :::
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+#### Hardware
+
+- **Step 1.** Things used in this project:
+
+<div class="table-center">
+	<table>
+		<tr>
+			<th>Raspberry pi</th>
+      <th>Grove Base Hat for RasPi	</th>
+      <th>Grove - 16x2 LCD</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/perspective.jpg" style={{width:250, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				</a>
+			</div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				</a>
+			</div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-16-x-2-LCD-Black-on-Yellow.html">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				</a>
+			</div></td>
+		</tr>
+	</table>
+</div>
+
+- **Step 2.** Plug the Grove Base Hat into Raspberry.
+- **Step 3.** Connect the Grove - 16 x 2 LCD to I2C port of the Base Hat.
+- **Step 4.** Connect the Raspberry Pi to PC through USB cable.
+
+#### Software
+
+- **Step 1.** Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment install the grove.py to your raspberry pi.
+- **Step 2.** Excute below commands to run the code.
+
+```
+# virutalenv for Python3
+virtualenv -p python3 env
+source env/bin/activate
+#enter commmand
+grove_16x2_lcd
+```
+Following is the jhd1802.py code.
+
+```python
+
+from grove.display.base import *
+from grove.i2c import Bus
+import time
+import sys
+
+# sphinx autoapi required
+__all__ = ["JHD1802"]
+
+class JHD1802(Display):
+    '''
+    Grove - 16 x 2 LCD, using chip JHD1802.
+        - Grove - 16 x 2 LCD (Black on Yellow)
+        - Grove - 16 x 2 LCD (Black on Red)
+        - Grove - 16 x 2 LCD (White on Blue)
+
+    Also, it's our class name,
+    which could drive the above three LCDs.
+
+    Args:
+        address(int): I2C device address, default to 0x3E.
+    '''
+    def __init__(self, address = 0x3E):
+        self._bus = Bus()
+        self._addr = address
+        if self._bus.write_byte(self._addr, 0):
+            print("Check if the LCD {} inserted, then try again"
+                    .format(self.name))
+            sys.exit(1)
+        self.textCommand(0x02)
+        time.sleep(0.1)
+        self.textCommand(0x08 | 0x04) # display on, no cursor
+        self.textCommand(0x28)
+
+    @property
+    def name(self):
+        '''
+        Get device name
+
+        Returns:
+            string: JHD1802
+        '''
+        return "JHD1802"
+
+    def type(self):
+        '''
+        Get device type
+
+        Returns:
+            int: ``TYPE_CHAR``
+        '''
+        return TYPE_CHAR
+
+    def size(self):
+        '''
+        Get display size
+
+        Returns:
+            (Rows, Columns): the display size, in characters.
+        '''
+        # Charactor 16x2
+        # return (Rows, Columns)
+        return 2, 16
+
+    def clear(self):
+        '''
+        Clears the screen and positions the cursor in the upper-left corner.
+        '''
+        self.textCommand(0x01)
+
+    def draw(self, data, bytes):
+        '''
+        Not implement for char type display device.
+        '''
+        return False
+
+    def home(self):
+        '''
+        Positions the cursor in the upper-left of the LCD.
+        That is, use that location in outputting subsequent text to the display.
+        '''
+        self.textCommand(0x02)
+        time.sleep(0.2)
+
+    def setCursor(self, row, column):
+        '''
+        Position the LCD cursor; that is, set the location
+        at which subsequent text written to the LCD will be displayed.
+
+        Args:
+            row   (int): the row at which to position cursor, with 0 being the first row
+            column(int): the column at which to position cursor, with 0 being the first column
+
+	Returns:
+	    None
+        '''
+        # print("setCursor: row={}, column={}".format(row,column))
+        self.textCommand((0x40 * row) + (column % 0x10) + 0x80)
+
+    def write(self, msg):
+        '''
+        Write character(s) to the LCD.
+
+        Args:
+            msg (string): the character(s) to write to the display
+
+        Returns:
+            None
+        '''
+        for c in msg:
+            self._bus.write_byte_data(self._addr,0x40,ord(c))
+
+    def _cursor_on(self, enable):
+        if enable:
+            self.textCommand(0x0E)
+        else:
+            self.textCommand(0x0C)
+            
+            
+    def textCommand(self, cmd):
+        self._bus.write_byte_data(self._addr,0x80,cmd)
+        
+def main():
+    import time
+
+    lcd = JHD1802()
+    rows, cols = lcd.size()
+    print("LCD model: {}".format(lcd.name))
+    print("LCD type : {} x {}".format(cols, rows))
+
+    lcd.backlight(False)
+    time.sleep(1)
+
+    lcd.backlight(True)
+    lcd.setCursor(0, 0)
+    lcd.write("hello world!")
+    lcd.setCursor(0, cols - 1)
+    lcd.write('X')
+    lcd.setCursor(rows - 1, 0)
+    for i in range(cols):
+        lcd.write(chr(ord('A') + i))
+
+    time.sleep(3)
+    lcd.clear()
+
+if __name__ == '__main__':
+    main()
+
+```
+:::tipsuccess
+If everything goes well, you will be able to see the following result
+:::
+
+- The backlight will turn off for 1 second, then turn back on.
+- LCD will display:
+```
+hello world!   X
+ABCDEFGHIJKLMNOP
+```
+- After 3 seconds, the entire display will be cleared, and the screen will be blank.
+
+You can quit this program by simply press `ctrl`+`c`.
 ### Play With Wio Terminal (ArduPy)
 
 #### Hardware

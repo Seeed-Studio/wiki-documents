@@ -1,7 +1,8 @@
 name: Algolia Docsearch Action
 
 # Trigger removed to never automatically run this action
-on: []
+on: 
+  workflow_dispatch:
 
 jobs:
   algolia:
