@@ -347,7 +347,7 @@ If everything goes well, you will be able to see the following result
 
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python grove_uv_sensor.py 
+(env)pi@raspberrypi:~ grove_uv_sensor
 UV Value: 0
 UV Value: 0
 UV Value: 0
