@@ -119,6 +119,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_node_red/)
 
+- [Watcher & Node-RED to p5.js](https://wiki.seeedstudio.com/watcher_node_red_to_p5js)
+
 - [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
 
 - [Watcher & Node-RED to Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
