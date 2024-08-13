@@ -281,7 +281,7 @@ while True:
 - Step 4. We will hear the buzzer on and off.
 
 ```
-pi@raspberrypi:~/GrovePi/Software/Python $ python3 grove_buzzer.py
+(env)pi@raspberrypi:~ grove_pwm_buzzer
 start
 stop
 start
