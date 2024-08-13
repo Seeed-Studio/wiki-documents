@@ -403,7 +403,7 @@ If everything goes well, you will be able to see the following result
 
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python3 grove_high_accuracy_temperature.py 
+(env)pi@raspberrypi:~ grove_high_accuracy_temperature 
 Insert Grove - I2C-High-Accuracy-Temperature
   to Grove-Base-Hat any I2C slot
 Detecting temperature...
