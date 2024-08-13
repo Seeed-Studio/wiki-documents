@@ -572,10 +572,15 @@ if __name__ == '__main__':
     main()
 
 ```
-:::tip success
-If everything goes well, you will be able to see the following result
-:::
 
+```python
+（env）pi@raspberrypi:~ grove_lcd_1.2inches
+```
+:::tip success
+
+If everything goes well, you will be able to see the following result
+
+:::
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/play_with_raspberry.jpg" />
 </div>

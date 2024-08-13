@@ -296,6 +296,7 @@ source env/bin/activate
 #enter commmand
 grove_optical_rotary_encoder
 ```
+
 Following is the grove_optical_rotary_encoder.py code.
 
 ```python
@@ -411,6 +412,11 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+```python
+（env）pi@raspberrypi:~ grove_optical_rotary_encoder
+```
+
 :::tip success
 When the command runs successfully, it will print out the value every second and detect motion.
 :::
@@ -422,8 +428,6 @@ When the command runs successfully, it will print out the value every second and
             time.sleep(0.001)
 ```
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/play_with_raspberry.jpg" />
-</div>
 
 You can quit this program by simply press `ctrl`+`c`.
 
