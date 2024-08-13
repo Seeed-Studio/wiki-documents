@@ -166,6 +166,12 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 - If you want to use **Seeed Studio XIAO ESP32S3** for the later routines, please refer to **[this tutorial](http://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** to finish adding.
 
+:::tip
+ESP32 development board package not compatible with TFT library when ESP32 development board package update to version 3.0.X，so we recommend you use ESP32 deveopment board package version 2.0.X to use XIAO Round Display.
+
+Besides, ESP32C6 is not support version 2.0.X package, so we not recommend you use XIAO ESP32C6 with XIAO Round Display.
+:::
+
 #### Step 4. Add the library of Round Display to Arduino.
 
 First, you need to search and download the latest version **TFT_eSPI** and **LVGL** libraries in the Arduino IDE.

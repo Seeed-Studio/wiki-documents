@@ -106,6 +106,11 @@ When installing the XIAO with Round Display, please let the XIAO's Type-C connec
 
 This part has been described in detail in the [Basic Wiki](https://wiki.seeedstudio.com/get_start_round_display#software-preparation), so you can jump directly to read it.
 
+:::tip
+ESP32 development board package not compatible with TFT library when ESP32 development board package update to version 3.0.X，so we recommend you use ESP32 deveopment board package version 2.0.X to use XIAO Round Display.
+
+Besides, ESP32C6 is not support version 2.0.X package, so we not recommend you use XIAO ESP32C6 with XIAO Round Display.
+:::
 
 ## Drawing simple dials using the TFT_eSPI library
 
