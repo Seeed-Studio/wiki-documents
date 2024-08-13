@@ -425,7 +425,10 @@ if __name__ == '__main__':
     main()
 
 ```
-:::tipsuccess
+```python
+(env)pi@raspberrypi:~ grove_16x2_lcd
+```
+:::tip success
 If everything goes well, you will be able to see the following result
 :::
 
