@@ -1,5 +1,5 @@
 ---
-description: ESP-NOW-Support-on-Seeed-Studio-XIAO-ESP32S3.
+description: ESP-NOW-Support-on-Seeed-Studio-XIAO-ESP32C6.
 title: ESP-NOW protocol on XIAO ESP32 Series
 keywords:
 - ESPNOW
