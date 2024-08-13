@@ -7,10 +7,12 @@ sidebar_position: 1
 last_update:
   date: 2024-08-08T07:21:33.838Z
   author: Spencer
+draft: true
 ---
 
 ## Introduction
 
+Micropython is known for ..., RP2 Family all support Micropyhon and CircuitPython
 Welcome to the guide on using MicroPython with the Seeed Studio XIAO RP2350! This guide will help you get started with setting up MicroPython, writing and running your first script, and exploring the capabilities of the XIAO RP2350 using the Thonny IDE.
 
 ## What You'll Need
@@ -85,9 +87,9 @@ Let's explore how to control the GPIO pins on the XIAO RP2350 with MicroPython.
 
 ## Additional Resources
 
-- [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
-- [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
 - [Thonny IDE Setup Guide](https://raspberrytips.com/thonny-ide-raspberry-pi/)
+- [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
+- [Raspberry Pi Pico-series Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
 
 ## Tech Support & Product Discussion
 
