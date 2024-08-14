@@ -32,7 +32,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 * 256 KB Flash, 32 KB SRAM
 * USB Type-C
 * SPI, I2C, UART, DMA available
-* coin size(20mm x 17.5mm)
+* coin size(21mm x 17.8mm)
 * Logic level:3.3V
 
 There are no components on the backside of the board, and all pins have castellated holes, making it easy to solder onto another board.
@@ -62,7 +62,7 @@ Castellated holes:
 | Logic level | 3.3V |
 | LEDs: |1 user LED, 1 power LED, two LEDs for serial port downloading   |
 | Power | USB Type-C interface, power pads at the back|
-| Size | 20x17.5x3.5mm |
+| Size | 21x17.8x3.5mm |
 
 
 As you can see, it is a SAMD type Arduino and is similar to the Arduino MKR series, so technically, any library written for them can be used on Seeed Studio XIAO SAMD21. On the other hand, since it is different from the ATmega type Arduino like Arduino Uno, the library which depends on some specific register of ATmega cannot be used.
