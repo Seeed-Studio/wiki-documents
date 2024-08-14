@@ -10,7 +10,7 @@ slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:
-  date: 07/16/2024
+  date: 08/05/2024
   author: Spencer
 ---
 
@@ -108,7 +108,7 @@ export const Highlight = ({children, color}) => (
         </tr>
         <tr>
             <th colspan="2" rowspan="1">Dimensions</th>
-            <td colspan="3">21 x 17.5 mm</td>
+            <td colspan="3">21 x 17.8 mm</td>
         </tr>
         <tr>
             <th colspan="1" rowspan="3">Power</th>
@@ -161,7 +161,7 @@ export const Highlight = ({children, color}) => (
 - **Outstanding RF Performance**: Features an on-board antenna with up to *80m* BLE/Wi-Fi range and offers an interface for connecting an external UFL antenna, ensuring reliable connectivity.
 - **Leveraging Power Consumption**: Offers four working modes, including a deep sleep mode with consumption as low as *15* μA, along with support for lithium battery charge management.
 - **Dual RISC-V Processors**: Incorporates two 32-bit RISC-V processors, with the high-performance processor capable of running up to 160 MHz and the low-power processor up to *20 MHz*.
-- **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.5mm and single-sided mount design, ideal for space-limited projects like wearable devices.
+- **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.8mm and single-sided mount design, ideal for space-limited projects like wearable devices.
 
 ## Hardware overview
 
@@ -264,29 +264,30 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 
 #### Add the XIAO-C6 Board {#add-board}
 
-As of July 14, 2024, the most current stable release of Arduino-ESP32 is version `3.0.2`. Version 3.0.0, released on May 28, [added support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) for the **ESP32-C6** chipset. To work with XIAO-C6, you can utilize the stable release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
+To install the XIAO ESP32C6 board, follow these steps:
 
 ```
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
-
-if you've install the ESP32 board package before, you''ll need to remove it first.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width: 640, height: 'auto'}}/></div>
-
-
-To install the XIAO ESP32C6 board, follow these steps:
-
-1. Add the above board manager URL to your Arduino IDE preferences.
+1. Add the above board manager URL to the preferences of your Arduino IDE, which is taken from the [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide).
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
 
 2. Download the XIAO ESP32C6 board package.
 
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
+:::note
+Only available if the version of the esp32 board is greater than `3.0.0`.
+:::
 
-Additionally, the latest development release version (`3.0.0-rc1`) was released on April, 2024. And has supported XIAO ESP32C6.
+
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 'auto', height: 'auto'}}/></div>
+
+3. Opt for `XIAO_ESP32C6` variant.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/select_xiao_c6.png" style={{width:1000, height:'auto'}}/></div>
+
+Now enjoy coding ✨.
 
 ## Run your first Blink program
 

@@ -13,6 +13,9 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
 
+**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!** 
+[Click to subscribe ~](https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo)
+
 In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a Grove sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
 
 Throughout this wiki, we will dive into the details of reading and interpreting the data output from Watcher's UART interface. Additionally, we will provide comprehensive tutorials on how to parse and utilize this data using popular development boards and platforms, including XIAO, Arduino, Raspberry Pi, and Jetson.

@@ -7,9 +7,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_getting_started
 last_update:
-  date: 03/23/2023
-  author: Citric
+  date: 08/07/2024
+  author: Spencer
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Getting Started with Seeed Studio XIAO ESP32S3 (Sense)
 
@@ -77,8 +80,8 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
 	</tr>
     <tr>
 	    <th>Dimensions</th>
-	    <td align="center">21 x 17.5mm</td>
-        <td align="center">21 x 17.5 x 15mm (with expansion board)</td>
+	    <td align="center">21 x 17.8mm</td>
+        <td align="center">21 x 17.8 x 15mm (with expansion board)</td>
 	</tr>
     <tr>
 	    <th rowspan="5">Power</th>
@@ -128,7 +131,7 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
 - **Elaborate Power Design**: Lithium battery charge management capability, offer 4 power consumption model which allows for deep sleep mode with power consumption as low as 14μA
 - **Great Memory for more Possibilities**: Offer 8MB PSRAM and 8MB FLASH, supporting SD card slot for external 32GB FAT memory 
 - **Outstanding RF performance**: Support 2.4GHz Wi-Fi and BLE dual wireless communication, support 100m+ remote communication when connected with U.FL antenna
-- **Thumb-sized Compact Design**: 21 x 17.5mm, adopting the classic form factor of XIAO, suitable for space limited projects like wearable devices
+- **Thumb-sized Compact Design**: 21 x 17.8mm, adopting the classic form factor of XIAO, suitable for space limited projects like wearable devices
 
 ## Hardware Overview
 
@@ -263,6 +266,91 @@ If you need to know the detailed parameter information of ov5640, you can refer 
 :::tip
 All the programs about cameras in the Wiki are compatible with both OV5640 and OV2640 cameras.
 :::
+
+<!-- #### Installing the Upgraded Heat Sink
+
+Ensure optimal cooling for your XIAO ESP32S3 Sense by installing our upgraded heat sink. This new design is tailored to address the cooling deficiencies observed with the previous models, particularly during intensive operations like camera usage. Feedback highlighted that the original heat sink did not adequately dissipate heat, leading to the development of a more effective solution.
+
+<details><summary>Click to View Performance Comparison</summary>
+
+Our testing has demonstrated the benefits of the upgraded heat sink over the original setup:
+
+| Test Sample           | Peak Temperature on Backside |
+| --------------------- | ---------------------------- |
+| **Without Heat Sink** | 63.6°C                       |
+| **With dual Heat Sinks** | 53.5°C (🔻10°C)           |
+
+***Test Details:***
+- **Environment**: Air-conditioned room (approximately 27°C)
+- **Temperature Measuring Tool**: OMEGA CL3515R thermocouple
+- **Measurement Location**: Backside thermal pad of the XIAO ESP32S3
+- **Testing Firmware**: WebCamera
+- **Power Supply**: Type-C 5V
+- **Operating Duration**: 1 hour
+
+***Key result:***
+- The device equipped with the heat sink maintained stable operation for over an hour, reaching its peak temperature without performance degradation.
+- During testing with the WebCamera in SVGA (800x600) mode:
+  - The XIAO ESP32S3 operated smoothly.
+  - The video output was fluid.
+  - There was a significant reduction in temperature, ensuring reliable performance without any frame drops or disconnections.
+
+</details>
+
+***Gather the following items before starting the installation:***
+
+- Selected heat sink (single or dual)
+- A clean ESP32S3
+
+Ensure your device is powered off and unplugged from any power source before you start.
+
+:::tip notice
+
+***Purchasing Note:*** When purchasing your XIAO ESP32S3 Sense, it's important to note that only **models equipped with a camera** come with a heat sink included. If you have a version of the ESP32S3 that does not include a camera, you will need to purchase a heat sink separately. 
+
+***Installation Tip:*** Prioritize covering the Thermal PAD with the heat sink, as it is directly above the ESP32S3 chip, the primary source of heat. Proper alignment ensures optimal heat dissipation.
+
+:::
+
+Now, let’s begin the installation process:
+
+***Step 1. Prepare the Heat Sink:***
+Start by removing the protective cover from the heat sink to expose the thermal adhesive. This will prepare the heat sink for a secure attachment to the ESP32S3 chip.
+
+<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/remove-heat-sink-cover.gif" style={{width:400, height:'auto'}}/></div></td>
+
+***Step 2. Pssemble the Heat Sink:***
+
+<Tabs>
+  <TabItem value="single" label="Single Heat Sink" default>
+
+This smaller, compact option is sufficient for regular use and allows full access to all GPIO pins.
+
+<table>
+<tr>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-single-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/clean-single-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
+</tr>
+</table>
+
+  </TabItem>
+  <TabItem value="dual" label="Dual Heat Sinks">
+
+The larger option provides superior cooling, which is ideal for high-performance tasks but may limit access to some GPIO pins.
+
+<table>
+<tr>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-dual-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/clean-dual-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
+</tr>
+</table>
+
+  </TabItem>
+</Tabs>
+
+***Step 3: Final Inspection and Testing***
+
+After installation, ensure everything is properly secured with no risk of short circuits. Verify that the heat sink is properly aligned and securely attached. -->
 
 ### Software Preparation
 

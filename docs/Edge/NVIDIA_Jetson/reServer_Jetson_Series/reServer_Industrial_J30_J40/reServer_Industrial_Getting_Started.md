@@ -313,14 +313,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346367&Signature=4176QCNbBCKBemfAmAJp3XS3yjk%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-16g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874005414&Signature=%2Bkqu1BpYLI7gQKuk65K20lU1gEU%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-16g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -328,14 +328,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346497&Signature=uJCOUWHcOU%2B403%2FwrlCfntq%2FlYw%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-8g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4720405571&Signature=sxFd2%2Btt8q2UwHE12z5agKAAfwg%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -343,14 +343,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346537&Signature=jwQ1bdd8f%2Bt9Lp1dpd%2FD0JZtQTM%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-8g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4880405687&Signature=t%2FfCM%2B91ZiNWpHNvp%2BvlT4O2jOc%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -358,19 +358,20 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4850346594&Signature=uV0a08irm7K81lGofbWexIBPNOw%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-4g-j401-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4880405769&Signature=e7wvl%2FypH9%2FXE0X0IyO9Ga4%2BhSU%3D" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-4g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
+
 
 <!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
 
