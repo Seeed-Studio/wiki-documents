@@ -11,11 +11,11 @@ last_update:
 
 # SenseCAP Watcher Wiki Center
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/watcher">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Learn More 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
 </div>
 
@@ -119,6 +119,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_node_red/)
 
+- [Watcher & Node-RED to p5.js](https://wiki.seeedstudio.com/watcher_node_red_to_p5js)
+
 - [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
 
 - [Watcher & Node-RED to Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
@@ -128,6 +130,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 - [Watcher & Node-RED to IFTTT Gmail Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
 
 - [Watcher & Node-RED Data Streaming to Apache Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
+
+- [Watcher & Node-RED to Discord Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_discord)
 
 ### Open Source Material
 

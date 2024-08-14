@@ -139,13 +139,13 @@ Seeed Studio XIAO ESP32S3 Sense集成了摄像头传感器、数字麦克风和S
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应前端指示图</th>
 	</tr>
 	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/1.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应返回指示图</th>
 	</tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/3.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应引脚列表</th>

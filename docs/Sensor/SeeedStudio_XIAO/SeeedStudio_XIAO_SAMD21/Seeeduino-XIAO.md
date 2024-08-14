@@ -44,7 +44,7 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 - Powerful CPU: ARM® Cortex®-M0+ 32bit 48MHz microcontroller(SAMD21G18) with 256KB Flash,32KB SRAM.
 - Flexible compatibility: Compatible with Arduino IDE.
 - Easy project operation: Breadboard-friendly.
-- Small size: As small as a thumb(20x17.5mm) for wearable devices and small projects.
+- Small size: As small as a thumb(21x17.8mm) for wearable devices and small projects.
 - Multiple development interfaces: 11 digital/analog pins, 10 PWM Pins, 1 DAC output, 1 SWD Bonding pad interface, 1 I2C interface, 1 UART interface, 1 SPI interface.
 
 ## **Specification**
@@ -62,7 +62,7 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 |UART interface|1|
 |Power supply and downloading interface| Type-C|
 |Power|3.3V/5V DC|
-|Dimensions|21×17.5×3.5mm|
+|Dimensions|21×17.8×3.5mm|
 
 ## **Hardware Overview**
 
@@ -108,7 +108,7 @@ Please note: The behavior of the built-in LED is reversed to the one on an Ardui
 
 All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
 
-### **Pin Multuiplexing**
+### **Pin Multiplexing**
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
 

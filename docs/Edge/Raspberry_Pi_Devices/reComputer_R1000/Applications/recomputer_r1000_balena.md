@@ -49,7 +49,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 * [balenaEtcher](https://etcher.balena.io/) to flash the CM4 memory.
 
 
-## Hardware Configuration
+### Hardware Configuration
 
 **Step 1**: You need to set the switch on the side of the R1000 to boot mode, then power on the device
 
@@ -66,36 +66,70 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/type-cport.png" alt="pir" width="250" height="auto" /></div>
 
-## Image File Acquisition
+### Image File Acquisition
 
-**Step 1**: Go to balenaCloud, create a free account, and then create a fleet for your Raspberry pi 4 or CM4 device
+**Step 1**: Go to balenaCloud, create a free account, and then create a fleet,Default device type choose `Raspberry Pi CM4 IO Board`
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/createfleet.gif" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/create_fleet.gif" alt="pir" width="700" height="auto" /></div>
 
 **Step 2**: Click "Add device", select the version information and configuration information you want, and then download the balenaOS image file in the lower right corner.
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/Downloadimage.gif" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/dowload_img.gif" alt="pir" width="700" height="auto" /></div>
 
 :::note
 It is recommended to download the balenaOS image file first and then burn it. If you directly click "Flash" in the lower right corner of the window to burn it, it may fail to burn.
 :::
 
-## Steps for Flashing balena OS
+### Steps for Flashing balena OS
 
 **Step 1**: Open the [**rpiboot**](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) software, and then the system will show the new disk
 
 **Step 2**: Open the flash tool [balenaEtcher](https://etcher.balena.io/), select the previously downloaded balena image file, then select the target disk, and finally click Burn.
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/Burn.gif" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/burn_image.gif" alt="pir" width="700" height="auto" /></div>
 
 
-**Step 3**: After the flashing is completed, set the reComputer R1000 DIP switch to normal mode, then power on again. After a while, you can see the new device has been added successfully on balenaCloud.
+### Change Configure
+**Step 1**:Copy the [reComputer-R100x.dtbo](https://files.seeedstudio.com/wiki/reComputer-R1000/balena/reComputer-R100x.dtbo) file to the `resin-boot => overlays` folder
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/online.png" alt="pir" width="700" height="auto" /></div>
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/dtbo_file.png" alt="pir" width="700" height="auto" /></div>
 
-You can see that the online status of the device is `Online (Heartbeat only)`. This is due to the firewall restrictions in my area. If you have the same problem, you can connect a VPN to the device so that it can be displayed normally` Online`.
+**Step 2**:Add the following content to the `config.txt` file:
+```shell
+dtparam=i2c_arm=on
+dtoverlay=i2c1,pins_44_45
+dtoverlay=i2c3,pins_2_3
+dtoverlay=i2c6,pins_22_23
+dtoverlay=audremap,pins_18_19
+dtoverlay=reComputer-R100x,uart2
+```
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/change_config.png" alt="pir" width="700" height="auto" /></div>
+
+**Step 3**:Set the reComputer R1000 DIP switch to normal mode, then power on again. After a while, you can see the new device has been added successfully on balenaCloud.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/device_online.png" alt="pir" width="700" height="auto" /></div>
+
+If the device is `Online (Heartbeat only)`. This is due to the firewall restrictions in my area. If you have the same problem, you can connect a VPN to the device so that it can be displayed normally`Online`.
 
 
+### Deployment test
+**Step 1**:Enter the following command to download the resources and deploy them:
+```shell
+balena login
+git clone https://github.com/mpous/seeed-recomputer-r100x.git
+cd seeed-recomputer-r100x
+balena push recomputerR1000
+```
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/push_program.png" alt="pir" width="700" height="auto" /></div>
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/updating_two.png" alt="pir" width="700" height="auto" /></div>
+
+**Step 2**:After the deployment is completed, a unicorn will appear on the terminal and the status of all services will change to `Running`.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/unicorn.png" alt="pir" width="700" height="auto" /></div>
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/Deployment_Complete.png" alt="pir" width="700" height="auto" /></div>
 
 ## Tech Support & Product Discussion
 

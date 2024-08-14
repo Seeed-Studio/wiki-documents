@@ -379,7 +379,7 @@ This section aims to list the tutorials in the Wiki on some of the function poin
 
 This section will list the major platforms supported by XIAO, including PlatformIO, MicroPython, CircuitPython. support is updated in real time.
 
-#### Plarform IO
+#### Platform IO
 
 <div class="table-center">
 	<table align="center">
@@ -415,6 +415,10 @@ This section will list the major platforms supported by XIAO, including Platform
 		</tr>
 	</table>
 </div>
+
+:::tip
+[Here is supplement](https://files.seeedstudio.com/wiki/xiao_topicpage/How_PlatformIO_support_xiao.pdf) for Platform IO support XIAO_ESP32C6、XIAO_RP2040、XIAO_NRF52840.
+:::
 
 ---
 
@@ -556,6 +560,15 @@ This section will list the major platforms supported by XIAO, including Platform
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/atsamd-rs/atsamd/tree/master/boards/xiao_m0"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://tutoduino.fr/en/tutorials/programing-in-rust-the-xiao-rp2040-board/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://forum.seeedstudio.com/t/rust-on-xiao-esp32s3/276724"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+		<tr>
+			<th>XIAO nRF52840</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/rust_xiao_nrf52840.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/Wumpf/Seeed-nRF52840-Sense-projects"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/29/2024
+  date: 08/12/2024
   author: Frank
 ---
 
@@ -17,116 +17,60 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 29th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 12th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [SenseCAP Watcher as a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove/)
+### [reComputer R1000 with Home Assistant](https://wiki.seeedstudio.com/recomputer_r1000_home_automation/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/HA.png" style={{width:600, height:450}}/></div>
 
-In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a Grove sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
+The reComputer r1000, designed for Building Automation Systems, features multiple isolated RS485 channels that support both high and low-speed communication. It is compatible with BACnet, Modbus RTU, and Modbus TCP/IP protocols, making it versatile for various automation needs. This guide provides a concise introduction to installing Home Assistant on the reComputer r1000, enabling seamless integration and control of your smart home devices.
 
-### [Watcher & Node-RED To Kafka Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
+### [reComputer R1000 and Modbus with Home Assistant](https://wiki.seeedstudio.com/recomputer_r1000_home_assistant_modbus/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/head_image.png" style={{width:1000, height:'auto'}}/></div>
+In modern building management systems (BMS), integrating various protocols and devices is crucial for efficient monitoring and control. This guide focuses on leveraging the capabilities of Modbus communication protocols (Modbus TCP and Modbus RTU) with Home Assistant OS, using the powerful reComputer R1000, a Raspberry Pi-powered solution. Whether you're setting up a new system or enhancing an existing one, this guide will walk you through the process of connecting your Modbus devices to Home Assistant, ensuring seamless integration and control.
 
-Apache Kafka is a distributed event streaming platform designed for high-throughput, fault-tolerant data processing. It enables real-time data feeds by allowing producers to publish messages to topics, while consumers can subscribe to these topics to process the data. Kafka is widely used for building data pipelines, real-time analytics, and integrating various data sources. Its robust architecture ensures scalability and durability, making it a popular choice for modern data-driven applications.
+### [Use the Raspberry Pi as a NAS (Network-Attached Storage)](https://wiki.seeedstudio.com/Raspberry_Pi_as_a_NAS/)
 
-Why use Docker? Because Docker can simulate the environment of multiple computers on a single machine and deploy applications with great ease. Therefore, in this project, we will use Docker to set up the environment and improve efficiency.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry_Pi_NAS/Raspberry%20Pi.png" style={{width:600, height:450}}/></div>
 
-### [T1000-E Tracker for Meshtastic](https://wiki.seeedstudio.com/sensecap_t1000_e/)
+The Raspberry Pi is a powerful microcomputer, popular among tech enthusiasts. It can be used for various DIY projects, including setting up a Network Attached Storage (NAS). In this , we will explore the following aspects:
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/_/5_10.jpg" alt="pir" width={600} height="auto" /></p>
+- Is Raspberry Pi good for NAS?
+- How to convert Raspberry Pi 5 to NAS?
+- Common Issues and Solutions When Using Raspberry Pi as a NAS
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
+### [Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection](https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/)
+
+YOLOv8 (You Only Look Once version 8) is the popular most YOLO series of real-time pose estimation and object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The Raspberry-pi-AI-kit is used to accelerate inference speed, featuring a 13 tera-operations per second (TOPS) neural network inference accelerator built around the Hailo-8L chip.
+
+This wiki will guide you on how to use YOLOv8n for object detection with AI Kit on Raspberry Pi 5, from training to deployment.
+
+### [Seeed Studio XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/)
+
+The Pico SDK represents a comprehensive software development kit tailored for the Raspberry Pi RP-family of microcontrollers, with a particular focus on the XIAO RP2350 board. This SDK incorporates a wide range of libraries and tools designed to facilitate the development of advanced applications, serving both novice enthusiasts and experienced professionals. The SDK functions as a foundational platform for exploiting the extensive capabilities of the RP2350 microcontroller across various projects.
+
+### [Seeed Studio XIAO RP2350 with MicroPython](https://wiki.seeedstudio.com/xiao-rp2350-micropython/)
+
+Welcome to the guide on using MicroPython with the Seeed Studio XIAO RP2350! This guide will help you get started with setting up MicroPython, writing and running your first script, and exploring the capabilities of the XIAO RP2350 using the Thonny IDE.
 
 
-It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
 
-<div align="center">
-    <img width={700} 
-     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
-</div>
 
-This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
-### [How to Run VLM on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/run_vlm_on_recomputer/)
 
-VLMs are multi modal models supporting images, video and text and using a combination of large language models and vision transformers. Based on this capability, they are able to support text prompts to query videos and images thereby enabling capabilities such as chatting with the video, and defining natural language based alerts. The [VLM AI service](https://docs.nvidia.com/jetson/jps/inference-services/vlm.html), enables quick deployment of VLMs with Jetson Platform Services for video insight applications. The VLM service exposes REST API endpoints to configure the video stream input, set alerts and ask questions in natural language about the input video stream.
 
-<div align="center">
-    <img width={900} 
-     src="https://files.seeedstudio.com/wiki/reComputer/Application/vlm/vlmgif.gif" />
-</div>
 
-This wiki provides a tutorial on how to run VLM on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
-### [How to Run Zero-Shot Detection on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/run_zero_shot_detection_on_recomputer/)
-
-Generative AI vision transformers such as CLIP have made it possible to build zero shot detection models capable of open vocabulary object detection. Meaning, the model is not bounded by a set of pre-defined classes to detect. The objects to detect are configured at runtime by the user. The Zero Shot Detection AI service, enables quick deployment of generative AI with Jetson Services for open vocabulary detection on video live stream input. The Zero Shot Detection AI service exposes REST API endpoints to control stream input and objects to detect.
-
-<div align="center">
-    <img width={900} 
-     src="https://files.seeedstudio.com/wiki/reComputer/Application/zero_shot_detection/fig1.gif" />
-</div>
-
-This wiki provides a tutorial on how to run Zero-Shot Detection on [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
-
-### [Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit](https://wiki.seeedstudio.com/pose_based_light_control_with_nodered_and_rpi_with_aikit/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/pose_control_light/pose_control.jpeg" alt="pir" width={1000} height="auto"/></p>
-
-This wiki will guide you on how to run YOLOv8 using an AI kit, use YOLOv8 to monitor your posture, and ultimately control your lights based on your posture. In this project, a USB camera captures your pose, and yolov8n run on [AI kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) with [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) to detect your pose. The processed video, displaying the detected pose, is then streamed in real-time to [reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-CM4104032-p-5898.html) using [gstreamer](https://gstreamer.freedesktop.org/). Meanwhile, the joint coordinates are sent using [mqtt](https://mqtt.org/) to [Node-RED](https://nodered.org/) which deploy on the reComputer R1000. At last, the Node-RED flow controls the smart lights based on the joint coordinates.
-
-### [reComputer R1000 with FIN to create a Equip Graphic](https://wiki.seeedstudio.com/reComputer_r1000_fin_floor_gaphic/)
-
-FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
-
-This article will show you how to use the `Graphics Builder` of FIN Framwork, and to create a `Equip Graphic` using the `Graphics Builder`.
-
-### [Convert Model to Edge TPU TFlite Format for Google Coral](https://wiki.seeedstudio.com/convert_model_to_edge_tpu_tflite_format_for_google_coral/)
-
-The [Coral M.2 Accelerator](https://www.seeedstudio.com/Coral-M2-Accelerator-with-Dual-Edge-TPU-p-4681.html) with Dual Edge TPU is an M.2 module that brings two Edge TPU coprocessors to existing systems and products with an available M.2 E-key slot.[Tensorflow](https://www.tensorflow.org/) and [Pytorch](https://pytorch.org/) is the most popular deep learning frameworks. So in order to use the Edge TPU, we need to compile the model to Edge TPU format.
-
-This wiki article will guide you through the process of compiling a model and running it on the Google Coral TPU, enabling you to leverage its capabilities for high-performance machine learning applications.
-
-### [How to Use Multiple CSI Cameras on reComputer with ROS](https://wiki.seeedstudio.com/csi_camera_on_ros/)
-
-This tutorial provides a step-by-step guide on how to read multiple CSI camera image data through ROS on [reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) series devices and publish image topics to be displayed in the RVIZ visualization interface.
-
-### [Recording and playback for Respeaker Lite](https://wiki.seeedstudio.com/respeaker_record_and_play/)
-
-This project demonstrates a basic loopback mechanism using the I2S interface, to test the reading and writing functions of I2S audio data. By switching I2S mode, the audio data is read from the microphone and then written to the speaker.
-
-### [How to Use NVStreamer for RTSP Streaming on reComputer with Jetson Platform Services](https://wiki.seeedstudio.com/getting_started_with_nvstreamer/)
-
-[NVStreamer](https://docs.nvidia.com/moj/nvstreamer/moj-nvstreamer.html) is a software developed by NVIDIA that can store and serve video files, which can then be streamed using the RTSP protocol. It is particularly useful for testing with VST, as it provides an alternative method to cameras for creating video sources as input for VST. Specifically, it offers a mechanism to use specific video files as input for VST testing. VST can be configured to receive RTSP streams as if they were coming from ONVIF-S cameras.
 
 
 ## Existed Wiki Updated
 
-### [XIAO ESP32C3 WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/)
+### [Flash JetPack OS to A608 Carrier Board (NVIDIA Jetson Orin NX/Nano supported)](https://wiki.seeedstudio.com/reComputer_A608_Flash_System/#download-the-system-image-package-to-the-pc-host-2)
 
-We've added examples of [WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/#scan-wi-fi-access-points).
+We have added an [example](https://wiki.seeedstudio.com/reComputer_A608_Flash_System/#download-the-system-image-package-to-the-pc-host-2) of installing JetPack 6.0 on an A608 carrier board with a Jetson Orin NX module using NVIDIA L4T 36.3.
 
-### [XIAO Pin Multiplexing](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/)
-
-We've added examples of [XIAO ESP32C3 Serial1 Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial1-usage).
-
-We've added examples of [XIAO ESP32C6 Serial1 Usage](https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/#serial1-usage).
-
-We've added examples of [XIAO ESP32S3 Serial1 Usage](https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#serial1-usage).
-
-
-
-<!-- ### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
-
-Integrate WebVision moduel with N3uron on EdgeBox RPI 200. -->
 
 ## The Efforts of Contributor
 
@@ -211,6 +155,8 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
 - [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
 - [weekly wiki on 2024.7.22th](/Seeed_Elderly/weekly_wiki/wiki240722)
+- [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/wiki240729)
+- [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 
 </details>
 
