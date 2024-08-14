@@ -4,7 +4,7 @@ title: ESP-NOW protocol on XIAO ESP32 Series
 keywords:
 - ESPNOW
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png
-slug: /XIAO_ESP32_espnow
+slug: /xiao_esp32c6_espnow
 last_update:
   date: 07/24/2024
   author: Jason
