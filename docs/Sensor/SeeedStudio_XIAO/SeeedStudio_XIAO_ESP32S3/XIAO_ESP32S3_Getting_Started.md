@@ -764,7 +764,7 @@ First of all, it should be noted that this is not a quality issue and will not a
 
 XIAO ESP32S3 is the most complex one in all XIAO because of its high integration, and the PCB needs to be put together in factory production. Due to the high level of integration, the splicing board connection can only be placed at the four rounded corners, which will lead to the problem of uneven rounded corners on the picture. We will try to improve the process to ensure that this problem will be solved in the subsequent production.
 
-#### Q3: How to Flash the Factory Firmware to XIAO ESP32S3 Provided on the Resource Section?
+### Q3: How to Flash the Factory Firmware to XIAO ESP32S3 Provided on the Resource Section?
 
 The script provided in the resource section supports Windows. After downloading the zip file, you'll find the following files:
 
