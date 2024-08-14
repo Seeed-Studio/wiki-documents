@@ -370,8 +370,8 @@ Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the reComputer
 **Step 2:** Extract **Jetson_Linux_R35.4.1_aarch64** and **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
 
 ```sh
-tar xf Jetson_Linux_R35.4.1_aarch64
-sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64 -C Linux_for_Tegra/rootfs/
+tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
 cd Linux_for_Tegra/
 sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh

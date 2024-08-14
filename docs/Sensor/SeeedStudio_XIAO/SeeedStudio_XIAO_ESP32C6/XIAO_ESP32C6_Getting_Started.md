@@ -108,7 +108,7 @@ export const Highlight = ({children, color}) => (
         </tr>
         <tr>
             <th colspan="2" rowspan="1">Dimensions</th>
-            <td colspan="3">21 x 17.5 mm</td>
+            <td colspan="3">21 x 17.8 mm</td>
         </tr>
         <tr>
             <th colspan="1" rowspan="3">Power</th>
@@ -161,7 +161,7 @@ export const Highlight = ({children, color}) => (
 - **Outstanding RF Performance**: Features an on-board antenna with up to *80m* BLE/Wi-Fi range and offers an interface for connecting an external UFL antenna, ensuring reliable connectivity.
 - **Leveraging Power Consumption**: Offers four working modes, including a deep sleep mode with consumption as low as *15* μA, along with support for lithium battery charge management.
 - **Dual RISC-V Processors**: Incorporates two 32-bit RISC-V processors, with the high-performance processor capable of running up to 160 MHz and the low-power processor up to *20 MHz*.
-- **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.5mm and single-sided mount design, ideal for space-limited projects like wearable devices.
+- **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.8mm and single-sided mount design, ideal for space-limited projects like wearable devices.
 
 ## Hardware overview
 

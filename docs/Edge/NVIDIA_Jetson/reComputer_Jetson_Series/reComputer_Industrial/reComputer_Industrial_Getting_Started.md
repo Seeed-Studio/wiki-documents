@@ -499,21 +499,21 @@ sudo apt install nvidia-jetpack -y
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-08-08.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={6}>6.0</td>
       <td rowSpan={6}>36.3.0</td>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-07-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-08-08.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-07-04.tar.gz">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-08-08.tar.gz">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-07-03.tar.gz">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-08-08.tar.gz">Download</a></td>
     </tr>
   </tbody>
   </table> 
