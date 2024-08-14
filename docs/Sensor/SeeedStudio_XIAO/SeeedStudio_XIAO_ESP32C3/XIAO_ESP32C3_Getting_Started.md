@@ -4,13 +4,14 @@ title: Getting Started with Seeed Studio XIAO ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Getting_Started
 last_update:
-  date: 06/11/2024
+  date: 08/14/2024
   author: Spencer
 ---
 
 # Getting Started with Seeed Studio XIAO ESP32C3
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:300, height:'auto', "border-radius": '12.8px'}}/></div>
+<br></br>
 
 **Seeed Studio XIAO ESP32C3** is an IoT mini development board based on the Espressif **ESP32-C3** WiFi/Bluetooth dual-mode chip. ESP32-C3 is a **32-bit RISC-V CPU**, which includes an **FPU** (Floating Point Unit) for **32-bit single-precision arithmetic** with powerful computing power. It has excellent radio frequency performance, supporting **IEEE 802.11 b/g/n WiFi**, and **Bluetooth 5 (LE)** protocols. This board comes included with an external antenna to increase the signal strength for your wireless applications. It also has a **small and exquisite form-factor** combined with a **single-sided surface-mountable design**. It is equipped with rich interfaces and has **11 digital I/O** that can be used as **PWM pins** and **3 analog I/O** that can be used as **ADC pins**. It supports four serial interfaces such as **UART, I2C and SPI**. There is also a small **reset button** and a **bootloader mode button** on the board. XIAO ESP32C3 is fully compatible with the [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) and [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board) except for the Seeeduino XIAO Expansion board, the SWD spring contacts on the board will not be compatible.
 
@@ -25,16 +26,16 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 
 ## Features
 
-- Powerful CPU: ESP32-C3, 32­bit RISC­-V single­core processor that operates at up to 160 MHz
--  Complete Wi­Fi subsystem:  Complies with IEEE 802.11b/g/n protocol and supports Station mode, SoftAP mode, SoftAP + Station mode, and promiscuous mode
-- Bluetooth LE subsystem: Supports features of Bluetooth 5 and Bluetooth mesh
-- Ultra-Low Power: Deep sleep power consumption is about 43μA
-- Better RF performance: External RF antenna included
-- Battery charging chip: Supports lithium battery charge and discharge management
-- Rich on-chip resources: 400KB of SRAM, and 4MB of on-board flash memory
-- Ultra small size: As small as a thumb(21x17.8mm) XIAO series classic form-factor for wearable devices and small projects
-- Reliable security features: Cryptographic hardware accelerators that support AES-128/256, Hash, RSA, HMAC, digital signature and secure boot
-- Rich interfaces: 1xI2C, 1xSPI, 2xUART, 11xGPIO(PWM), 4xADC, 1xJTAG bonding pad interface
+- **Powerful CPU:** ESP32-C3, 32­bit RISC­-V single­core processor that operates at up to 160 MHz
+- **Complete Wi­Fi subsystem:**  Complies with IEEE 802.11b/g/n protocol and supports Station mode, SoftAP mode, SoftAP + Station mode, and promiscuous mode
+- **Bluetooth LE subsystem:** Supports features of Bluetooth 5 and Bluetooth mesh
+- **Ultra-Low Power:** Deep sleep power consumption is about 43μA
+- **Better RF performance:** External RF antenna included
+- **Battery charging chip:** Supports lithium battery charge and discharge management
+- **Rich on-chip resources:** 400KB of SRAM, and 4MB of on-board flash memory
+- **Ultra small size:** As small as a thumb(21x17.8mm) XIAO series classic form-factor for wearable devices and small projects
+- **Reliable security features:** Cryptographic hardware accelerators that support AES-128/256, Hash, RSA, HMAC, digital signature and secure boot
+- **Rich interfaces:** 1xI2C, 1xSPI, 2xUART, 11xGPIO(PWM), 4xADC, 1xJTAG bonding pad interface
 - Single-sided components, surface mounting design
 
 ## Specifications comparison

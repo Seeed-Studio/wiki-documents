@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_getting_started
 last_update:
-  date: 08/07/2024
+  date: 08/14/2024
   author: Spencer
 ---
 
@@ -158,11 +158,8 @@ Before everything starts, it is quite essential to have some basic parameters of
 	</tr>
 </table>
 
-
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
-
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
-
 - GND - Power/data/signal ground
 
 ### Strapping Pins
@@ -171,13 +168,10 @@ At each startup or reset, a chip requires some initial configuration parameters,
 
 The parameters controlled by the given strapping pins at chip reset are as follows:
 
-• **Chip boot mode** – GPIO0 and GPIO46
-
-• **VDD_SPI voltage** – GPIO45
-
-• **ROM messages printing** – GPIO46
-
-• **JTAG signal source** – GPIO3
+- **Chip boot mode** – GPIO0 and GPIO46
+- **VDD_SPI voltage** – GPIO45
+- **ROM messages printing** – GPIO46
+- **JTAG signal source** – GPIO3
 
 GPIO0, GPIO45, and GPIO46 are connected to the chip’s internal weak pull-up/pull-down resistors at chip reset.
 These resistors determine the default bit values of the strapping pins. Also, these resistors determine the bit
@@ -435,35 +429,30 @@ With this preparation, you can start writing programs for XIAO ESP32S3 to compil
 
 ### BootLoader Mode
 
-There are times when we use the wrong program to make XIAO appear to lose ports or not work properly. The specific performance is:
+Sometimes, using the wrong program can cause the XIAO to lose its port or not function correctly. Common issues include:
 
-- Connected to computer, but no port number found for XIAO.
-
-- The computer is connected and the port number appears, but the upload program fails.
+- The XIAO is connected to the computer, but *no port number* is found.
+- The XIAO is connected, and a port number appears, but the *program upload fails*.
 
 When you encounter the above two situations, you can try to put XIAO into BootLoader mode, which can solve most of the problems of unrecognized devices and failed uploads. The specific method is:
 
-- **Step 1**. Press and hold the BOOT button on the XIAO ESP32S3 without releasing it.
-
-- **Step 2**. Keep the BOOT button pressed and then connect to the computer via the data cable. Release the BOOT button after connecting to the computer.
-
+- **Step 1**. Press and hold the `BOOT` button on the XIAO ESP32S3 without releasing it.
+- **Step 2**. Keep the `BOOT` button pressed and then connect to the computer via the data cable. Release the `BOOT` button after connecting to the computer.
 - **Step 3**. Upload the **Blink** program to check the operation of the XIAO ESP32S3.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/></div>
 
-
 ### Reset
 
-When the program runs abnormally, you can press Reset once during power-up to let XIAO re-execute the uploaded program.
+When the program runs abnormally, you can press `Reset` once during power-up to let XIAO re-execute the uploaded program.
 
-When you press and hold the BOOT key while powering up and then press the Reset key once, you can also enter BootLoader mode.
+When you press and hold the `BOOT` key while powering up and then press the `Reset` key once, you can also enter BootLoader mode.
 
 ## Run your first Blink program
 
 By now, I believe you have a good understanding of the features and hardware of the XIAO ESP32S3. Next, let's take the simplest Blink program as an example and perform the first blink for your XIAO ESP32S3!
 
 - **Step 1.** Launch the Arduino application.
-
 - **Step 2.** Navigate to **File > Examples > 01.Basics > Blink**, open the program.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
@@ -704,52 +693,62 @@ If you want to learn to use more of the deep sleep mode and wake-up functions, y
 
 We understand that some users are looking to flash UF2 files directly to XIAO, which will enable the process of batch flashing programs. Here we will describe this method.
 
-### Method I
+<Tabs>
+<TabItem value="method1" label="Method I" default>
 
 :::note
-Currently this method can only be used on Windows systems.
+This method is currently only available on Windows systems.
 :::
 
-**Step 1**. Download the required script zip. And extract it to your local machine.
+**Step 1**: Download and Extract the Script
+
+Download the required script zip file and extract it to your local machine:
 
 *https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/xiaos3-bin2uf2.zip*
 
-**Step 2**. Converting BIN files into UF2 files.
+**Step 2**: Convert BIN Files to UF2 Files
 
-Once you have compiled and saved an Arduino program, you can export the binary file BIN file directly. This file will then be generated in your Arduino project folder.
+After compiling and saving an Arduino program, you can export the binary `BIN` file. This file will be generated in your Arduino project folder.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/106.png" style={{width:600, height:'auto'}}/></div>
 
-At this point, all you need to do is copy this BIN file to the **xiaos3-bin2uf2** directory that you just extracted in the first step, and then execute the **convert_uf2.bat** script to generate a UF2 file directly.
+Copy the `BIN` file to the **xiaos3-bin2uf2** directory that you extracted earlier. Then, run the **convert_uf2.bat** script to generate a UF2 file, which will require the name of your `bin` file.
 
-**Step 3**. Put the XIAO into UF2 BootLoader mode.
+**Step 3**: Enter UF2 BootLoader Mode
 
-Then please connect the XIAO to the computer and then run the **boot_uf2.bat** script again, the XIAO will appear in the computer as a USB stick, which means it has successfully entered the UF2 BootLoader mode.
+Connect the XIAO to your computer and run the **boot_uf2.bat** script. The XIAO will appear on your computer as a USB drive, indicating it has successfully entered UF2 BootLoader mode.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/107.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 4**. Copy the UF2 file to XIAO ESP32S3.
+**Step 4**: Copy the UF2 File to XIAO ESP32S3
 
-Next you can access the XIAO ESP32S3's USB stick and copy the converted UF2 to the USB stick. Once the copying is complete, the XIAO USB stick will automatically disappear and the program will start to execute.
+Access the XIAO ESP32S3's USB drive and copy the converted UF2 file to it. Once the copying is complete, the XIAO USB drive will automatically disappear, and the program will start running.
 
 :::tip
-1. Please ensure that your program is compiled and executed without problems, otherwise the UF2 program may not run as expected.
-2. The sample UF2 file for Blink is provided in the **xiaos3-bin2uf2** folder. When this program is uploaded, the orange LED on the XIAO ESP32S3 will flash and you can use this UF2 file as a test.
+1. Ensure your program is compiled and running correctly; otherwise, the UF2 file may not execute as expected.
+2. A sample UF2 file for Blink is provided in the **xiaos3-bin2uf2** folder. When uploaded, the orange LED on the XIAO ESP32S3 will blink. You can use this UF2 file as a test.
 :::
 
-**Step 5**. Enter the UF2 BootLoader again.
+**Step 5**: Re-enter UF2 BootLoader Mode
 
-Once you have performed the above steps and you still want the XIAO ESP32S3 to access the UF2 BootLoader to upload other UF2 files, you need to quickly press the **Reset** button first and then the **Boot** button afterwards. And there is no need to execute the boot_uf2.bat script again.
+If you need to re-enter UF2 BootLoader mode to upload another UF2 file, quickly press the **Reset** button followed by the **Boot** button. There’s no need to run the boot_uf2.bat script again.
 
 :::note
-Press Reset then Boot, and be quick!
+Press Reset, then Boot, quickly!
 :::
 
-### Method II
+</TabItem>
 
-The project is composed of customizing the 2nd stage bootloader from IDF and UF2 factory application as 3rd stage bootloader. Note: since IDF is actively developed and change very often, it is included as submodule at lib/esp-idf, please run export script there to have your environment setup correctly.
+<TabItem value="method2" label="Method II" >
+
+The project is composed of customizing the 2nd stage bootloader from IDF and UF2 factory application as 3rd stage bootloader. 
+
+**Note:** since IDF is actively developed and change very often, it is included as submodule at lib/esp-idf, please run export script there to have your environment setup correctly.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/adafruit/tinyuf2/tree/master/ports/espressif"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 
@@ -765,6 +764,44 @@ First of all, it should be noted that this is not a quality issue and will not a
 
 XIAO ESP32S3 is the most complex one in all XIAO because of its high integration, and the PCB needs to be put together in factory production. Due to the high level of integration, the splicing board connection can only be placed at the four rounded corners, which will lead to the problem of uneven rounded corners on the picture. We will try to improve the process to ensure that this problem will be solved in the subsequent production.
 
+#### Q3: How to Flash the Factory Firmware to XIAO ESP32S3 Provided on the Resource Section?
+
+The script provided in the resource section supports Windows. After downloading the zip file, you'll find the following files:
+
+<Tabs>
+<TabItem value="normal" label="XIAO ESP32S3 Factory firmware" >
+
+```shell
+.
+├── boot_app0.bin
+├── esp32_flasher.py
+├── esptool.exe
+├── project_config.json
+├── xiao_esp32s3_firmware.bin
+├── xiao_esp32s3_firmware.bootloader.bin
+├── xiao_esp32s3_firmware.partitions.bin
+└── xiao_esp32s3_firmware_win.bat
+```
+</TabItem>
+<TabItem value="sense" label="XIAO ESP32S3 Sense Factory firmware" >
+
+```shell
+.
+├── CameraWebServer.bin
+├── boot_app0.bin
+├── bootloader.bin
+├── esp32_flasher.py
+├── esptool.exe
+├── partition-table.bin
+├── project_config.json
+└── xiao_esp32s3_sense_firmware_win.bat
+```
+
+</TabItem>
+</Tabs>
+
+To flash the firmware, simply run the appropriate `.bat` file. If the flashing process fails, copy the command line from the prompt and run it manually in the terminal where the files are located.
+
 ## Resources
 
 [PDF] **[ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)**
@@ -775,7 +812,7 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Dimension in DXF](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
 - **[LBR]** [Seeed Studio XIAO ESP32S3 Eagle footprint](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Factory firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Factory firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 - **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Certification files](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Certification.zip)
@@ -789,7 +826,7 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Eagle Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH&PCB_230324.zip)
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Sense Dimension in DXF (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf)
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Sense Dimension in DXF (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Factory firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAOESP32S3-Sense-firmware.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Factory firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-firmware-20240814.zip)
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 Sense pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip)
 
@@ -803,9 +840,6 @@ XIAO ESP32S3 is the most complex one in all XIAO because of its high integration
 
 - **[STP]** [XIAO ESP32S3 Sense housing design (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp)
 - **[STP]** [XIAO ESP32S3 Sense housing design (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp)
-
-
-
 
 *The remaining open source material is being compiled, so stay tuned!*
 
@@ -824,6 +858,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
