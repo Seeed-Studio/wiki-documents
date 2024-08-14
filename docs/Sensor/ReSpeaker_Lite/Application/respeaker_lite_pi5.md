@@ -4,7 +4,7 @@ title: ChatGPT - Raspberry Pi
 keywords:
 - Raspberry Pi
 - LLM
-- reSpeaker
+- ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_pi5
 last_update:
@@ -14,6 +14,13 @@ last_update:
 
 
 This project integrates voice input, large model response, and voice output functionalities using a Raspberry Pi 5. It employs the ReSpeaker Lite as the audio input and output device, enabling seamless interaction with ChatGPT and speech-to-text conversion services.
+
+
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pi.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
 
 
 <!-- This project mainly implements three functions: voice input, large model response, and voice output. Respeaker lite is used as the audio input and output device, and Raspberry Pi 5 is used as the main control to connect the large model and speech-to-text conversion services. -->
@@ -193,9 +200,7 @@ if __name__ == "__main__":
 
 <!--This code will wait for the voice input keyword `Hi`. When the keyword is entered, the system will start to detect the voice input command and pass the command to the openai API. After getting the reply, it will be broadcast in the form of voice; enter the keyword If the system does not detect voice input for 3 times, it will continue to enter the keyword waiting mode. At this point, you need to enter keywords to start the voice question and answer session. -->
 
-
-
 ```shell
-python llm_openai.py
+python openai.py
 ```
 
