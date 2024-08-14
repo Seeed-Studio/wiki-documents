@@ -644,6 +644,11 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 <br />
 
+***Seeed Series Kicad files***
+
+- **[kicad_sym]** [Kicad Symbols](https://files.seeedstudio.com/wiki//XIAO/Seeed_Studio_XIAO_Series-20240814.kicad_sym)
+- **[ZIP]** [Kicad Footprints](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_Series-20240814.pretty.zip)
+
 ### Seeed Studio XIAO SMAD21 Open-Source Materials
 
 - **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
@@ -802,6 +807,12 @@ easily integrate XIAO into their own boards for rapid mass production.</font>
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Certification files](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Certification.zip)
 
+### Seeed Studio XIAO RP2350 Sense Open-Source Materials
+
+- **[PDF]** [Seeed Studio XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+- **[XLSX]** [Seeed Studio XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
+- **[DXF]** [Seeed Studio XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf)
+- **[STEP]** [Seeed Studio XIAO RP2350 3D STEP File](https://grabcad.com/library/seeed-studio-xiao-rp2350-1)
 
 ## Tech Support & Product Discussion
 
