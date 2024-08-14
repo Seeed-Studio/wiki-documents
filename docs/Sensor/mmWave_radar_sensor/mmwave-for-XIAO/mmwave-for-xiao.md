@@ -98,7 +98,7 @@ last_update:
     </tr>
     <tr>
         <td align="center">Dimensions</td>
-        <td align="center">17.5mm x 21mm</td>
+        <td align="center">18mm x 22mm</td>
     </tr>
   </table>
 </div>

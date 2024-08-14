@@ -110,13 +110,13 @@ First of all, you need to install the peripheral drivers for this board. These a
       <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
       <td>5.1.2</td>
       <td>35.4.1</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/A603-JP5.1.2.zip">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/A603-JP5.1.2.zip">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin NX 8GB/ 16GB,<br />Jetson Orin Nano 4GB/ 8GB</td>
       <td>6.0</td>
       <td>36.3</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/A603-JP6.0.zip">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/A603-JP6.0.zip">Download</a></td>
     </tr>
 
   </tbody>

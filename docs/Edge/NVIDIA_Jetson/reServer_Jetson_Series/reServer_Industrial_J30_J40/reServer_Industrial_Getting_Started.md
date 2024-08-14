@@ -313,14 +313,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-16g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-16g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -328,14 +328,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -343,14 +343,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -358,14 +358,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-4g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-4g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
     </tbody>

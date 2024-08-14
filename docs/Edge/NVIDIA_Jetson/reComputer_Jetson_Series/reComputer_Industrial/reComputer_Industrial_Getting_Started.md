@@ -315,29 +315,29 @@ The first method download is around 14GB and the second method download is about
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={6}>5.1.1</td>
       <td rowSpan={6}>35.3.1</td>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J2012</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-xavier-nx-16g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-xavier-nx-16g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J2011</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-xavier-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-xavier-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
   </table>
@@ -499,21 +499,21 @@ sudo apt install nvidia-jetpack -y
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4721638275&Signature=9oCr9TTuvLArIg3Vi3dP8JWPWds%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-08-08.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={6}>6.0</td>
       <td rowSpan={6}>36.3.0</td>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=5321639726&Signature=xfU99UHgmquTIs90AnoLkO%2F4Tbk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-08-08.tar.gz" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4721638465&Signature=8EhQ0tZkKpSlppRJ2LLg1%2BAjdmI%3D">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-08-08.tar.gz">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4721638490&Signature=VLhKyqalDMVYiRy%2B6%2B10Wj3hVCY%3D">Download</a></td>
+      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/reComputer-Industrial/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-08-08.tar.gz">Download</a></td>
     </tr>
   </tbody>
   </table> 

@@ -119,6 +119,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_node_red/)
 
+- [Watcher & Node-RED to p5.js](https://wiki.seeedstudio.com/watcher_node_red_to_p5js)
+
 - [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
 
 - [Watcher & Node-RED to Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
@@ -128,6 +130,8 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 - [Watcher & Node-RED to IFTTT Gmail Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
 
 - [Watcher & Node-RED Data Streaming to Apache Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
+
+- [Watcher & Node-RED to Discord Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_discord)
 
 ### Open Source Material
 

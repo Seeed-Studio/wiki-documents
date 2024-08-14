@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/05/2024
+  date: 08/12/2024
   author: Frank
 ---
 
@@ -17,59 +17,60 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 5th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 12th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Watcher To WhatsApp](https://wiki.seeedstudio.com/watcher_node_red_to_whatsapp/)
+### [reComputer R1000 with Home Assistant](https://wiki.seeedstudio.com/recomputer_r1000_home_automation/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_WhatsApp/watcher_whatsapp.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/HA.png" style={{width:600, height:450}}/></div>
 
-**WhatsApp** is an instant messaging and voice-over-IP service owned by Meta. It enables users to send text, voice, and video messages, make voice and video calls, and share images, documents, locations, and other content.
+The reComputer r1000, designed for Building Automation Systems, features multiple isolated RS485 channels that support both high and low-speed communication. It is compatible with BACnet, Modbus RTU, and Modbus TCP/IP protocols, making it versatile for various automation needs. This guide provides a concise introduction to installing Home Assistant on the reComputer r1000, enabling seamless integration and control of your smart home devices.
 
-This tutorial will guide you through integrating the Watcher API with Node-RED to seamlessly send data from the Watcher to WhatsApp. This integration provides a simple and efficient method to **receive notifications and opens the door for further applications and integrations**.
+### [reComputer R1000 and Modbus with Home Assistant](https://wiki.seeedstudio.com/recomputer_r1000_home_assistant_modbus/)
 
-### [Local AI Assistant : Deploy Ollama and AnytingLLM on Jetson](https://wiki.seeedstudio.com/local_ai_ssistant/)
+In modern building management systems (BMS), integrating various protocols and devices is crucial for efficient monitoring and control. This guide focuses on leveraging the capabilities of Modbus communication protocols (Modbus TCP and Modbus RTU) with Home Assistant OS, using the powerful reComputer R1000, a Raspberry Pi-powered solution. Whether you're setting up a new system or enhancing an existing one, this guide will walk you through the process of connecting your Modbus devices to Home Assistant, ensuring seamless integration and control.
 
-Local AI Assistant is an artificial intelligence application that runs on local hardware and software, offering intelligent interaction and data processing capabilities. It operates independently of cloud services, protecting user privacy while providing quick response times and high levels of customization. 
+### [Use the Raspberry Pi as a NAS (Network-Attached Storage)](https://wiki.seeedstudio.com/Raspberry_Pi_as_a_NAS/)
 
-<div align="center">
-    <img width={800} 
-     src="https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/ai-assistant.png" />
-</div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry_Pi_NAS/Raspberry%20Pi.png" style={{width:600, height:450}}/></div>
 
-In this wiki, we will demonstrate how to set up a local knowledge base on Jetson devices with [ollama](https://ollama.com/) and [AnythingLLM](https://anythingllm.com/). By leveraging the powerful capabilities of large language models, we aim to enhance our work efficiency.
+The Raspberry Pi is a powerful microcomputer, popular among tech enthusiasts. It can be used for various DIY projects, including setting up a Network Attached Storage (NAS). In this , we will explore the following aspects:
 
-### [Quick start with Zigbee on XIAO ESP32C6 by Arduino](https://wiki.seeedstudio.com/xiao_esp32c6_zigbee_arduino/)
+- Is Raspberry Pi good for NAS?
+- How to convert Raspberry Pi 5 to NAS?
+- Common Issues and Solutions When Using Raspberry Pi as a NAS
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee/0.png" style={{width:800, height:'auto'}}/></div>
+### [Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection](https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/)
 
-Zigbee is a widely adopted wireless communication protocol that finds extensive use in home automation, smart energy management, and Internet of Things (IoT) applications. Known for its low power consumption, reliable data transmission, and mesh network capabilities, Zigbee is an excellent choice for building scalable and efficient wireless networks.
+YOLOv8 (You Only Look Once version 8) is the popular most YOLO series of real-time pose estimation and object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The Raspberry-pi-AI-kit is used to accelerate inference speed, featuring a 13 tera-operations per second (TOPS) neural network inference accelerator built around the Hailo-8L chip.
 
-Let's embark on this exciting journey of Zigbee development with the XIAO ESP32C6 and unlock the full potential of this powerful wireless communication protocol!
+This wiki will guide you on how to use YOLOv8n for object detection with AI Kit on Raspberry Pi 5, from training to deployment.
 
-### [reComputer R1000 with FlowFuse](https://wiki.seeedstudio.com/recomputer_r1000_flow_fuse/)
+### [Seeed Studio XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/)
 
-[FlowFuse](https://flowfuse.com/) enhances Node-RED by adding features for collaborative development, managing remote deployments, supporting DevOps delivery pipelines, and hosting Node-RED applications. It serves as a DevOps platform specifically designed for the development and delivery of Node-RED applications, making it easier for teams to work together and deploy their projects efficiently.
+The Pico SDK represents a comprehensive software development kit tailored for the Raspberry Pi RP-family of microcontrollers, with a particular focus on the XIAO RP2350 board. This SDK incorporates a wide range of libraries and tools designed to facilitate the development of advanced applications, serving both novice enthusiasts and experienced professionals. The SDK functions as a foundational platform for exploiting the extensive capabilities of the RP2350 microcontroller across various projects.
+
+### [Seeed Studio XIAO RP2350 with MicroPython](https://wiki.seeedstudio.com/xiao-rp2350-micropython/)
+
+Welcome to the guide on using MicroPython with the Seeed Studio XIAO RP2350! This guide will help you get started with setting up MicroPython, writing and running your first script, and exploring the capabilities of the XIAO RP2350 using the Thonny IDE.
 
 
-<!-- ## Existed Wiki Updated
 
-### [XIAO ESP32C3 WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/)
 
-We've added examples of [WiFi Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/#scan-wi-fi-access-points).
 
-### [XIAO Pin Multiplexing](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/)
 
-We've added examples of [XIAO ESP32C3 Serial1 Usage](https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/#serial1-usage).
 
-We've added examples of [XIAO ESP32C6 Serial1 Usage](https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/#serial1-usage).
 
-We've added examples of [XIAO ESP32S3 Serial1 Usage](https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#serial1-usage).
 
-### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
 
-Integrate WebVision moduel with N3uron on EdgeBox RPI 200. -->
+
+## Existed Wiki Updated
+
+### [Flash JetPack OS to A608 Carrier Board (NVIDIA Jetson Orin NX/Nano supported)](https://wiki.seeedstudio.com/reComputer_A608_Flash_System/#download-the-system-image-package-to-the-pc-host-2)
+
+We have added an [example](https://wiki.seeedstudio.com/reComputer_A608_Flash_System/#download-the-system-image-package-to-the-pc-host-2) of installing JetPack 6.0 on an A608 carrier board with a Jetson Orin NX module using NVIDIA L4T 36.3.
+
 
 ## The Efforts of Contributor
 
@@ -155,6 +156,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
 - [weekly wiki on 2024.7.22th](/Seeed_Elderly/weekly_wiki/wiki240722)
 - [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/wiki240729)
+- [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 
 </details>
 
