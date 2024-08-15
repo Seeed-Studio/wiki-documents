@@ -16,7 +16,6 @@ sidebar_position: 0
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Seeed Studio XIAO RA4M1
 
 <!-- Product Description -->
 
@@ -33,9 +32,11 @@ import TabItem from '@theme/TabItem';
   </a>
 </div><br></br>
 
+## Introduction
+
 The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up to 48 MHz) into the classic XIAO form factor. This development board offers 256KB Flash, 32KB SRAM, 8KB EEPROM, a USB 2.0 connector, reset and boot buttons, 3 LEDs, a 14-bit A/D converter, a 12-bit D/A converter, and a CAN BUS interface. With onboard charging circuitry and low-power modes (as low as 45μA), it’s ideal for battery-powered applications. Sharing the same 32-bit R7FA4M1AB3CFM microcontroller as the Arduino Uno R4, it's natively compatible with Arduino IDE and the extensive XIAO accessories, making it the perfect starting point for electronics projects.
 
-## **Features**
+### Features
 
 <!-- Key Features with bullet -->
 
@@ -49,7 +50,7 @@ The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up t
 - **Production-Friendly:** Surface Mount Device (SMD) design with all components on the front and stamp holes on both sides, facilitating efficient mass production.
 
 
-## **Specification**
+### Specification
 
 <!-- Technical Specifications | Table | or bullet -->
 
@@ -107,32 +108,104 @@ The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up t
         </tr>
         <tr>
             <th>Dimensions</th>
-            <td>21x17.5 mm</td>
+            <td>21x17.8 mm</td>
+        </tr>
+        <tr>
+            <th>Power</th>
+            <td>Type-C: 5V<br />BAT: 3.8V</td>
         </tr>
     </tbody>
 </table>
 
-## **Hardware Overview**
+### Hardware Overview
 
+Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of Seeed Studio XIAO RA4M1.
 
 <!-- 硬件相关 -->
 
 <!-- 引脚等的定义 -->
+<table>
+	<tr>
+	    <th>XIAO RA4M1 front indication diagram</th>
+	</tr>
+    <tr>
+        <br />
+        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-components.png" style={{width:500, height:'auto'}}/></div>
+        <br />        
+    </tr>
+    <tr>
+        <th>XIAO RA4M1 Pin List</th>
+    </tr>
+    <tr>
+        <br />
+        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-pinout.png" style={{width:1000, height:'auto'}}/></div>
+        <br />
+    </tr>
+</table>
 
-## Schematic Online Viewer
+## Getting Started
 
-<!-- 原理图预览链接 -->
+### Hardware Preparation
+
+You need to prepare the following:
+
+- 1 x [Seeed Studio XIAO RA4M1](https://www.seeedstudio.com?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1)
+- 1 x Computer
+- 1 x USB Type-C cable
+
+:::tip
+Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+:::
+**Solder header**
+
+XIAO RA4M1 is shipped without pin headers by default, you need to prepare your own pin headers and solder it to the corresponding pins of XIAO so that you can connect to the expansion board or sensor.
+
+Due to the miniature size of XIAO RA4M1, please be careful when soldering headers, do not stick different pins together, and do not stick solder to the shield or other components. Otherwise, it may cause XIAO to short circuit or not work properly, and the consequences caused by this will be borne by the user.
+
+### Software Preparation
+
+The recommended programming tool for the XIAO RA4M1 is the Arduino IDE, so as part of the software preparation, you will need to complete the Arduino installation.
+
+:::tip
+If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
+:::
+
+- **Step 1.** Download and Install the stable version of Arduino IDE according to your operating system.
+
+<div class="download_arduino_container" style={{textAlign: 'center'}}>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+    </a>
+</div>
+
+- **Step 2.** Launch the Arduino application.
+
+- **Step 3.** Add RA4M1 board package to your Arduino IDE.
+
+    Navigate to **File > Preferences**, and fill **"Additional Boards Manager URLs"** with the url below:
+    *<https://files.seeedstudio.com/arduino/package_renesas_1.2.0_index.json>*
+    
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/arduino_preference.png" style={{width:800, height:'auto'}}/></div>
+
+    Navigate to **Tools > Board > Boards Manager...**, type the keyword **RA4M1** in the search box, select the latest version of **Seeed Renesas Board**, and install it.
+
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:700, height:'auto'}}/></div>
+- **Step 4.** Select your board and port.
+
+    On top of the Arduino IDE, you can select the port directly. Also, search for xiao in the development board on the left. select XIAO_RA4M1.
+
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:600, height:'auto'}}/></div>
+
 
 
 ## Resources
 
 - 📄 **[PDF]** [RA4M1 datasheet](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet)
-- 📄 **[PDF]** [Seeed Studio XIAO RA4M1 Schematic](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 Eagle file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO_RP2040_v1.22_SCH&PCB.zip)
-- 📄 **[DXF]** [Seeed Studio XIAO RA4M1 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-DXF.zip)
-- 📄 **[LBR]** [Seeed Studio XIAO RA4M1 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr)
-- 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx)
+- 📄 **[PDF]** [Seeed Studio XIAO RA4M1 Schematic](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH_PDF_v1.0_240719.pdf)
+<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip) -->
+<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 Eagle file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO_RP2040_v1.22_SCH&PCB.zip) -->
+<!-- - 📄 **[DXF]** [Seeed Studio XIAO RA4M1 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-DXF.zip) -->
+<!-- - 📄 **[LBR]** [Seeed Studio XIAO RA4M1 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
+<!-- - 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx) -->
 
 ## Tech Support & Product Discussion
 
