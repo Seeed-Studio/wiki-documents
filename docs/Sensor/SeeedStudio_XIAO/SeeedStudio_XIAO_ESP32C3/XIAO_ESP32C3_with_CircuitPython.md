@@ -12,11 +12,11 @@ last_update:
   author: Evelyn Chen
 ---
 
-# **Seeed Studio XIAO ESP32-C3 with CircuitPython**
+# **Seeed Studio XIAO ESP32C3 with CircuitPython**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/title.png" /></div>
 
-This wiki introduce how to install and run the official CircuitPython by Adafruit Industries on the Seeed Studio XIAO ESP32-C3 development board!
+This wiki introduce how to install and run the official CircuitPython by Adafruit Industries on the Seeed Studio XIAO ESP32C3 development board!
 CircuitPython is a programming language designed to simplify experimenting and learning to program on low-cost microcontroller boards. It makes getting started easier than ever with no upfront desktop downloads needed. Once you get your board set up, open any text editor, and get started editing code. For more info, please refer to [here](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython).
 
 ## Installing CircuitPython
@@ -29,7 +29,7 @@ If you haven't already installed esptool.py, you can do so using pip on your pc:
 pip install esptool
 ```
 
-#### Download the ESP32-C3 CircuitPython firmware
+#### Download the XIAO ESP32C3 CircuitPython firmware
 You need to download the firmware binary file from [circirtpython.org](https://circuitpython.org/board/seeed_xiao_esp32c3/)
 After downloading correct bin file, navigate to the folder, and open a cmd terminal there.
 As of the final draft, the latest version of bin file is:
@@ -37,8 +37,8 @@ As of the final draft, the latest version of bin file is:
 adafruit-circuitpython-seeed_xiao_esp32c3-en_GB-9.1.1.bin
 ```
 
-#### Connect the ESP32-C3 on your PC
-You need to press and hold down BOOT button on your ESP32-C3 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
+#### Connect the XIAO ESP32C3 on your PC
+You need to press and hold down BOOT button on your XIAO ESP32C3 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
 
 #### Check port
 Find out all serial devices on your pc.
@@ -92,7 +92,7 @@ Replace '/dev/cu.usbmodem11301' with the correct port name from your system(e.g.
 
 
 #### Write flash
-Flash the firmware onto ESP32-C3:
+Flash the firmware onto XIAO ESP32C3:
 ```linux
 esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 adafruit-circuitpython-seeed_xiao_esp32c3-en_GB-9.1.1.bin
 ```
@@ -103,7 +103,7 @@ Hard resetting via RTS pin...
 ### Method 2: Web Serial esptool
 The WebSerial ESPTool was designed to be a web-capable option for programming Espressif ESP family microcontroller boards that have a serial based ROM bootloader. It allows you to erase the contents of the microcontroller and program up to 4 files at different offsets. Please refer to [Web Serial ESPtool](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/web-serial-esptool).
 
-Then can start to compile script using your prefer tool to ESP32C3!
+Then can start to compile script using your prefer tool to XIAO ESP32C3!
 
 ## Recommended Editors for CircuitPython
 
@@ -143,7 +143,7 @@ The editor allows you to edit files using web Bluetooth, USB, and Web Workflow o
 
 
 
-## Getting Started with CircuitPython on the ESP32-C3
+## Getting Started with CircuitPython on the XIAO ESP32C3
 
 ### Network-WLAN
 
@@ -160,7 +160,7 @@ f.close()
 * Replace with your local wifi passwordwifi *password*
 * The other password, , is used when you access the board via a web browser. Set this to whatever you want *webpassword*
 
-Once connected, you can press the **Reset** button to kick the firmware, then hit return a few times to get to the REPL prompt. Then reconnect device to Thonny, the IP address of your ESP32-C3 shows up.
+Once connected, you can press the **Reset** button to kick the firmware, then hit return a few times to get to the REPL prompt. Then reconnect device to Thonny, the IP address of your XIAO ESP32C3 shows up.
 
 :::note
 Don't forget, ESP32 does not support 5 GHz networks, so use your 2.4 GHz SSID if you have two.
@@ -234,7 +234,7 @@ while True:
         print("Received:", data)
 
 ```
-The ESP32C3 have one hardware UART. the pins listed below:
+The XIAO ESP32C3 have one hardware UART. the pins listed below:
 | UART | Pin |
 |------|-----|
 | TX   | D6  |
@@ -373,9 +373,9 @@ while True:
 
 #### Light up OLED screen
 
-##### Download and Extract the Library Bundle:
+**Download and Extract the Library Bundle**:
 * Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
-##### Copy Libraries to CIRCUITPY:
+**Copy Libraries to CIRCUITPY**:
 * Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
 * Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
 You'll need to manually install the necessary libraries from the bundle:
@@ -387,7 +387,7 @@ You'll need to manually install the necessary libraries from the bundle:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/11.png" /></div>
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/12.png" /></div>
 
-##### Create Your CircuitPython Code:
+**Create Your CircuitPython Code**:
 * Create a code.py file (or main.py) . This file should contain your CircuitPython code.
 ```python
 import board

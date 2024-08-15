@@ -10,7 +10,7 @@ last_update:
   author: Evelyn Chen
 ---
 
-# **Seeed Studio XIAO ESP32-C3 with MicroPython**
+# **Seeed Studio XIAO ESP32C3 with MicroPython**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/title.png" /></div>
 
@@ -26,7 +26,7 @@ If you haven't already installed esptool.py, you can do so using pip on your pc:
 pip install esptool
 ```
 
-#### Download the ESP32-C3 MicroPython firmware
+#### Download the XIAO ESP32C3 MicroPython firmware
 You need to download the firmware binary file from [micropython.org](https://micropython.org/download/ESP32_GENERIC_C3/)
 After downloading correct bin file, navigate to the folder, and open a cmd terminal there.
 As of the final draft, the latest version of bin file is:
@@ -34,8 +34,8 @@ As of the final draft, the latest version of bin file is:
 ESP32_GENERIC_C3-20230602-v1.23.0.bin
 ```
 
-#### Connect the ESP32-C3 on your PC
-You need to press and hold down BOOT button on your ESP32-C3 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
+#### Connect the XIAO ESP32C3 on your PC
+You need to press and hold down BOOT button on your XIAO ESP32C3 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
 
 #### Check port
 Find out all serial devices on your pc.
@@ -89,7 +89,7 @@ Replace '/dev/cu.usbmodem11301' with the correct port name from your system(e.g.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/2.png" /></div>
 
 #### Write flash
-Flash the firmware onto ESP32-C3:
+Flash the firmware onto XIAO ESP32C3:
 ```linux
 esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 ESP32_GENERIC_C3-20240602-v1.23.0.bin
 ```
@@ -126,7 +126,7 @@ esp.flash_size()
 ```
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/4.png" /></div>
 
-Congratulations on successfully setting up MicroPython on your ESP32-C3 with Thonny!
+Congratulations on successfully setting up MicroPython on your XIAO ESP32C3 with Thonny!
 
 
 ### 2. Arduino Lab for MicroPython
@@ -153,7 +153,7 @@ while True:
 ### 3. Pymakr on Visual Studio Code
 * Install Pymakr
 Follow the [installation instructions](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/) to install Pymakr.
-* Connect Your ESP32-C3 to your computer.
+* Connect Your XIAO ESP32C3 to your computer.
 * Create a New Project
 Open VS Code and create a new project for your microcontroller.
 * Add a New Python File
@@ -174,7 +174,7 @@ Create a new Python file within your project.
 * More information please refer to [hardware overview](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#hardware-overview)
 * [Seeed Studio XIAO ESP32C3 Schematic](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
 
-## Getting Started with MicroPython on the ESP32-C3
+## Getting Started with MicroPython on the XIAO ESP32C3
 
 Here is [a quick reference for ESP32 operation by micropython](https://docs.micropython.org/en/latest/esp32/quickref.html#installing-micropython).
 For more knowledge about [micropython libraries](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries).
@@ -338,7 +338,7 @@ print(pwm3)                               # view PWM settings
 
 ESP chips have different hardware peripherals:
 
-| Hardware Specification                         | ESP32-C3 | ESP32 |
+| Hardware Specification                         | ESP32C3 | ESP32 |
 |------------------------------------------------|----------|-------|
 | Number of groups (speed modes)                 | 1        | 2     |
 | Number of timers per group                      | 4        | 4     |
@@ -347,9 +347,9 @@ ESP chips have different hardware peripherals:
 | Total PWM channels (Pins, duties) (groups * channels) | 6        | 16    |
 
 ### ADC(analog to digital conversion)
-On ESP32-C3, ADC functionality is available on pins 2,3,4.
+On XIAO ESP32C3, ADC functionality is available on pins 2,3,4.
 :::note
-A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For analog reads, use ADC1(A0/A1/A2) instead. Refer to the ESP32-C3 datasheet.
+A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For analog reads, use ADC1(A0/A1/A2) instead. Refer to the XIAO ESP32C3 datasheet.
 :::
 The *machine.ADC* class:
 ```python

@@ -10,11 +10,11 @@ last_update:
   author: Evelyn Chen
 ---
 
-# **Seeed Studio XIAO ESP32-C6 with CircuitPython**
+# **Seeed Studio XIAO ESP32C6 with CircuitPython**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c6_circuitpython/title.png" /></div>
 
-This wiki introduce how to install and run the official CircuitPython by Adafruit Industries on the Seeed Studio XIAO ESP32-C6 development board!
+This wiki introduce how to install and run the official CircuitPython by Adafruit Industries on the Seeed Studio XIAO ESP32C6 development board!
 CircuitPython is a programming language designed to simplify experimenting and learning to program on low-cost microcontroller boards. It makes getting started easier than ever with no upfront desktop downloads needed. Once you get your board set up, open any text editor, and get started editing code. For more info, please refer to [here](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython).
 
 ## Installing CircuitPython
@@ -27,7 +27,7 @@ If you haven't already installed esptool.py, you can do so using pip on your pc:
 pip install esptool
 ```
 
-#### Download the ESP32-C6 CircuitPython firmware
+#### Download the ESP32C6 CircuitPython firmware
 You need to download the firmware binary file from [circirtpython.org](https://circuitpython.org/board/seeed_xiao_esp32c6/)
 After downloading correct bin file, navigate to the folder, and open a cmd terminal there.
 As of the final draft, the latest version of bin file is:
@@ -35,8 +35,8 @@ As of the final draft, the latest version of bin file is:
 adafruit-circuitpython-seeed_xiao_esp32c6-en_GB-9.1.1.bin
 ```
 
-#### Connect the ESP32-C6 on your PC
-You need to press and hold down BOOT button on your ESP32-C6 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
+#### Connect the XIAO ESP32C6 on your PC
+You need to press and hold down BOOT button on your XIAO ESP32C6 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
 
 #### Check port
 Find out all serial devices on your pc.
@@ -89,7 +89,7 @@ esptool.py --chip esp32c6 --port /dev/cu.usbmodem11301 erase_flash
 Replace '/dev/cu.usbmodem11301' with the correct port name from your system(e.g. `COM3` on Windows, `/dev/ttyUSB0` on linux).
 
 #### Write flash
-Flash the firmware onto ESP32-C6:
+Flash the firmware onto XIAO ESP32C6:
 ```linux
 esptool.py --chip esp32c6 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 adafruit-circuitpython-seeed_xiao_esp32c6-en_GB-9.1.1.bin
 ```
@@ -146,7 +146,7 @@ The editor allows you to edit files using web Bluetooth, USB, and Web Workflow o
 * More information please refer to [hardware overview](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#hardware-overview)
 * [Seeed Studio XIAO ESP32C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
-## Getting Started with CircuitPython on the ESP32-C6
+## Getting Started with CircuitPython on the XIAO ESP32C6
 
 ### Network-WLAN
 
@@ -165,7 +165,7 @@ f.close()
 * Replace with your local wifi passwordwifi *password*
 * The other password, , is used when you access the board via a web browser. Set this to whatever you want *webpassword*
 
-Once connected, you can press the **Reset** button to kick the firmware, then hit return a few times to get to the REPL prompt. Then reconnect device to Thonny, the IP address of your ESP32-C6 shows up.
+Once connected, you can press the **Reset** button to kick the firmware, then hit return a few times to get to the REPL prompt. Then reconnect device to Thonny, the IP address of your XIAO ESP32C6 shows up.
 
 #### Method 2: Edit *setting.toml* file via Thonny Files
 Open Thonny-->View-->Files, and wirte the wifi network, password and webpassword to setting.toml file. Remember to save it and press the Reset button to kick the firmware, and reopen Thonny.
@@ -240,7 +240,7 @@ while True:
         print("Received:", data)
 
 ```
-The ESP32C6 have one hardware UART. the pins listed below:
+The XIAO ESP32C6 have one hardware UART. the pins listed below:
 | UART       | Pin   | GPIO  |
 |------------|-------|-------|
 | LP_UART_TXD | A5    | GPIO5 |
@@ -312,7 +312,7 @@ finally:
     # Ensure chip select is inactive (high) after communication
     cs.value = True
 ```
-The ESP32C6 have one hardware SPI. the pins listed below:
+The XIAO ESP32C6 have one hardware SPI. the pins listed below:
 | SPI  | Pin |
 |------|-----|
 | SCK  | D8  |
@@ -389,9 +389,9 @@ while True:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_circuitpython/11.png" /></div>
 
 #### Light up OLED screen
-##### Download and Extract the Library Bundle:
+**Download and Extract the Library Bundle**:
 * Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
-##### Copy Libraries to CIRCUITPY:
+**Copy Libraries to CIRCUITPY**:
 * Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
 * Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
 You'll need to manually install the necessary libraries from the bundle:
@@ -399,7 +399,7 @@ You'll need to manually install the necessary libraries from the bundle:
 ** adafruit_bus_device
 ** adafruit_register
 ** adafruit_framebuf.mpy
-##### Copy fond5x8.bin to CIRCUITPY:
+**Copy fond5x8.bin to CIRCUITPY**:
 * Download font5x8.bin file from [here](https://github.com/adafruit/Adafruit_CircuitPython_framebuf/blob/main/examples/font5x8.bin).
 * Open Thonny-->View-->Files, and then copy the font5x8.bin files to CircuitPython device.
 
@@ -407,7 +407,7 @@ You'll need to manually install the necessary libraries from the bundle:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_circuitpython/13.png" /></div>
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/esp32c6_circuitpython/14.png" /></div>
 
-##### Create Your CircuitPython Code:
+**Create Your CircuitPython Code**:
 * Create a code.py file (or main.py) . This file should contain your CircuitPython code.
 ```python 
 import board

@@ -10,7 +10,7 @@ last_update:
   author: Evelyn Chen
 ---
 
-# **Seeed Studio XIAO ESP32-S3 with MicroPython**
+# **Seeed Studio XIAO ESP32S3 with MicroPython**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/title.png" /></div>
 
@@ -25,15 +25,15 @@ If you haven't already installed esptool.py, you can do so using pip on your pc:
 ``` linux
 pip install esptool
 ```
-#### Download the ESP32-S3 MicroPython firmware
+#### Download the XIAO ESP32S3 MicroPython firmware
 You need to download the firmware binary file from [micropython.org](https://micropython.org/download/ESP32_GENERIC_S3/)
 After downloading correct bin file, navigate to the folder, and open a cmd terminal there.
 As of the final draft, the latest version of bin file is:
 ```
 ESP32_GENERIC_S3-20230602-v1.23.0.bin
 ```
-#### Connect the ESP32-S3 on your PC
-You need to press and hold down BOOT button on your ESP32-C3 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
+#### Connect the XIAO ESP32S3 on your PC
+You need to press and hold down BOOT button on your XIAO ESP32S3 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
 
 #### Check port
 Find out all serial devices on your pc.
@@ -84,7 +84,7 @@ Replace '/dev/cu.usbmodem11301' with the correct port name from your system(e.g.
 
 
 #### Write flash
-Flash the firmware onto ESP32-S3:
+Flash the firmware onto XIAO ESP32S3:
 ```linux
 esptool.py --chip esp32s3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 ESP32_GENERIC_S3-20240602-v1.23.0.bin
 ```
@@ -118,7 +118,7 @@ esp.flash_size()
 ```
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/4.png" /></div>
 
-Congratulations on successfully setting up MicroPython on your ESP32-S3 with Thonny!
+Congratulations on successfully setting up MicroPython on your XIAO ESP32S3 with Thonny!
 
 ### 2. Arduino Lab for MicroPython
 Download Arduino lab for MicroPython and connect the device to your pc.
@@ -145,7 +145,7 @@ while True:
 
 * Install Pymakr
 Follow the [installation instructions](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/) to install Pymakr.
-* Connect Your ESP32-S3 to your computer.
+* Connect Your XIAO ESP32S3 to your computer.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32s3_micropython/8.png" /></div>
 
 * Create a New Project
@@ -166,7 +166,7 @@ Create a new Python file within your project.
 * More information please refer to [hardware overview](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#hardware-overview)
 * [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 
-## Getting Started with MicroPython on the ESP32-S3
+## Getting Started with MicroPython on the XIAO ESP32S3
 
 Here is [a quick reference for ESP32 operation by micropython](https://docs.micropython.org/en/latest/esp32/quickref.html#installing-micropython).
 For more knowledge about [micropython libraries](https://docs.micropython.org/en/latest/library/index.html#python-standard-libraries-and-micro-libraries).
@@ -326,7 +326,7 @@ pwm3 = PWM(Pin(3), freq=20000, duty=512)  # create and configure in one go
 print(pwm3)                               # view PWM settings
 ```
 ### ADC(analog to digital conversion)
-On ESP32-S3, ADC functionality is available on pins 1,2,3,4,5,6,7,8,9.
+On XIAO ESP32S3, ADC functionality is available on pins 1,2,3,4,5,6,7,8,9.
 The *machine.ADC* class:
 ```python
 from machine import ADC
