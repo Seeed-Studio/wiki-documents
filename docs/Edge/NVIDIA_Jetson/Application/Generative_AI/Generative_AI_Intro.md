@@ -13,10 +13,12 @@ last_update:
 ---
 
 <div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/reComputer/deploy-genai-on-jetson.png" style={{width:800, height:'auto'}}/>
+    <a href="https://github.com/Seeed-Projects/jetson-examples">
+        <img src="https://files.seeedstudio.com/wiki/reComputer/deploy-genai-on-jetson.png" style={{width:800, height:'auto'}}/>
+    </a>
 </div>
 
-**Generative AI** is an artificial intelligence technology that can generate new data, such as images, text, or audio, by learning from existing data. **Nvidia Jetson** is an edge AI platform developed by NVIDIA, featuring high-performance processing capabilities and low-power design, suitable for various embedded and IoT devices. It supports deep learning, computer vision, and other AI applications, offering powerful computing capabilities and a rich set of development tools. The combination of Generative AI and Jetson enables efficient local real-time generation and inference on edge devices.
+[**Generative AI**](https://www.seeedstudio.com/edge-ai/generative-ai) is an artificial intelligence technology that can generate new data, such as images, text, or audio, by learning from existing data. **Nvidia Jetson** is an edge AI platform developed by NVIDIA, featuring high-performance processing capabilities and low-power design, suitable for various embedded and IoT devices. It supports deep learning, computer vision, and other AI applications, offering powerful computing capabilities and a rich set of development tools. The combination of Generative AI and Jetson enables efficient local real-time generation and inference on edge devices.
 
 ## Text Generation
 

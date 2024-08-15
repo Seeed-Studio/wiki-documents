@@ -32,7 +32,7 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 - Better RF performance: External RF antenna included
 - Battery charging chip: Supports lithium battery charge and discharge management
 - Rich on-chip resources: 400KB of SRAM, and 4MB of on-board flash memory
-- Ultra small size: As small as a thumb(20x17.5mm) XIAO series classic form-factor for wearable devices and small projects
+- Ultra small size: As small as a thumb(21x17.8mm) XIAO series classic form-factor for wearable devices and small projects
 - Reliable security features: Cryptographic hardware accelerators that support AES-128/256, Hash, RSA, HMAC, digital signature and secure boot
 - Rich interfaces: 1xI2C, 1xSPI, 2xUART, 11xGPIO(PWM), 4xADC, 1xJTAG bonding pad interface
 - Single-sided components, surface mounting design

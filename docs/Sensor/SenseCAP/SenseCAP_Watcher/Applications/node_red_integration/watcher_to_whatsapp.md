@@ -16,7 +16,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_WhatsApp/watcher_whatsapp.png" style={{width:1000, height:'auto'}}/></div>
 
-**WhatsApp** is an instant messaging and voice-over-IP service owned by Meta. It enables users to send text, voice, and video messages, make voice and video calls, and share images, documents, locations, and other content.
+[**WhatsApp**](https://web.whatsapp.com/) is an instant messaging and voice-over-IP service owned by Meta. It enables users to send text, voice, and video messages, make voice and video calls, and share images, documents, locations, and other content.
 
 This tutorial will guide you through integrating the Watcher API with Node-RED to seamlessly send data from the Watcher to WhatsApp. This integration provides a simple and efficient method to **receive notifications and opens the door for further applications and integrations**.
 
