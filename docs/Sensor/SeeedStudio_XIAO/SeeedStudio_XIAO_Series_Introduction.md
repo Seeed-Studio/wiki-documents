@@ -44,7 +44,7 @@ last_update:
         <th>Seeed Studio XIAO nRF52840</th>
         <th>Seeed Studio XIAO nRF52840 Sense</th>
         <th>Seeed Studio XIAO ESP32C3</th>
-        <th>Seeed Studio XIAO Esp32C6</th>
+        <th>Seeed Studio XIAO ESP32C6</th>
         <th>Seeed Studio XIAO ESP32S3</th>
         <th>Seeed Studio XIAO ESP32S3 Sense</th>
 	</tr>
