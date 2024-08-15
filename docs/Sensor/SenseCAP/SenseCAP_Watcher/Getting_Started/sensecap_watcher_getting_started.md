@@ -13,6 +13,8 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.png" style={{width:1000, height:'auto'}}/></div>
 
+**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
@@ -151,6 +153,7 @@ Please note that the Watcher body does not come with any of the stands below, so
 :::
 
 - **360° Rotate Bracket**
+
    - This bracket is designed for easy installation on walls or other vertical surfaces.
    - It provides a full 360 degrees of rotation, allowing you to adjust the orientation of your Watcher device to achieve the desired viewing angle.
    - The rotate bracket offers flexibility in positioning and ensures a secure attachment to the wall.
@@ -158,6 +161,7 @@ Please note that the Watcher body does not come with any of the stands below, so
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/omni_wheel_bracket.gif" style={{width:650, height:'auto'}}/></div><br />
 
 - **1/4 Thread Tripod Bracket**
+
    - This bracket is ideal for placing your Watcher on flat surfaces such as desks, tables, or shelves.
    - It features a standard 1/4-inch thread, making it compatible with most tripods and other mounting accessories.
    - The tripod bracket provides stability and allows you to position your Watcher at various heights and angles, depending on your specific needs.
@@ -190,11 +194,47 @@ Please note that the Watcher body does not come with any of the stands below, so
 
 ### Hardware Diagram
 
+Continuing with the hardware architecture of the Watcher, let's dive into the details provided in the diagram.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/Diagram.png" style={{width:1000, height:'auto'}}/></div>
+
+The heart of the Watcher is the Main MCU, which is an **ESP32-S3** chip. This powerful microcontroller operates at 240MHz and comes with 8MB of PSRAM for efficient processing and memory management.
+
+The ESP32-S3 communicates with various peripherals and interfaces:
+
+1. **Display**: It connects to a **1.45-inch 412*412** LCD Touch Screen via the SPI/I2C interface, allowing for intuitive user interaction and vibrant visual output.
+
+2. **Audio**: The I2S interface enables the ESP32-S3 to communicate with a speaker and a microphone, facilitating audio input and output capabilities.
+
+3. **Storage**: The Watcher is equipped with a Flash 32M module, connected via the SPI interface, providing ample storage for firmware, data, and user files.
+
+4. **Wireless Connectivity**: The ESP32-S3 integrates Wi-Fi and BLE functionality, enabling seamless wireless communication with other devices and networks.
+
+5. **Expandability**: An Expansion Port, connected via the I2C interface, allows for future hardware additions and customization.
+
+6. **User Input**: A Dial Wheel, connected via GPIO/PWM, offers an intuitive way for users to navigate and control the Watcher's functions.
+
+7. **External Storage**: A Micro SD Card slot, interfaced via SPI, enables users to extend the storage capacity of the Watcher for additional data and media files.
+
+8. **Power and Data**: A USB port is available for charging the 400mAh battery and transferring data between the Watcher and other devices.
+
+The AI MCU, a Himax HX6538 chip with Cortex M55 and US5 cores, works alongside the Main MCU to handle AI-related tasks and computations, enhancing the Watcher's intelligent capabilities.
+
+Lastly, the Watcher features a Camera OV5647 module, likely connected via the MIPI interface, enabling computer vision applications and visual sensing.
+
+This comprehensive hardware architecture allows the Watcher to deliver a feature-rich and versatile user experience, combining display, audio, wireless connectivity, storage, and AI capabilities in a compact and efficient design.
 
 ## Operation Guidelines
 
 This section of the Wiki provides a comprehensive guide on how to power on the Watcher, navigate through its menu pages, and understand its operational logic. By following these instructions, you will be able to effectively utilize the Watcher's features and functionalities.
+
+### Installation Packaging
+
+The Watcher comes with a unique packaging that doubles as a stylish, calendar-like stand. By placing the Watcher inside this stand, you can create an attractive decoration for your home. Follow the step-by-step instructions below and refer to the accompanying video for a visual guide on how to install your Watcher in its stand.
+
+<div class="table-center">
+<iframe width="760" height="415" src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher-packaging.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ### Power On
 
@@ -238,7 +278,7 @@ If you encounter persistent problems with your Watcher that are not resolved by 
 Remember to handle your Watcher with care and only use the hardware reset button when necessary to ensure the longevity and proper functioning of your device.
 :::
 
-### Operating logic
+### Operating Logic
 
 The Watcher's operational logic revolves around the wheel button, which serves as the primary means of navigation and selection. Rotating the wheel button counterclockwise allows you to move up or left within menus, while rotating it clockwise enables you to move down or right.
 
@@ -258,6 +298,20 @@ However, it's important to note that in certain situations where there may be po
 
 Throughout the Wiki, specific instructions will be provided for navigating and selecting options within each menu, taking into account any exceptions to the general wheel button logic. By familiarizing yourself with both the wheel button and touch screen controls, you'll be able to efficiently operate your Watcher device and access its various features and settings.
 
+### Push to Talk
+
+The Watcher's Push to Talk feature allows you to interact with the device using voice commands from any screen or interface. Simply press and hold the Wheel Button located in the top-right corner of the device to activate the voice input interface. While holding the button, speak your command or message, such as assigning a task or initiating a conversation. Once you release the button, the Watcher will process your voice input and respond accordingly. If further clarification is needed, press and hold the button again to provide additional voice input.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/push_to_talk.gif" style={{width:650, height:'auto'}}/></div><br />
+
+:::tip
+1. Currently the voice dialogue only supports the use of English. Please note that if you use other languages, unexpected situations may occur.
+
+2. If you start a dialogue while Watcher is running a task, then Watcher will first pause the current task, and then re-enter your original task once the dialogue is over.
+
+3. To find out how to assign tasks, read the **[Run - Sending Task to Watcher by Speaking](#run---sending-task-to-watcher-by-speaking)** and **[How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)** tutorial first.
+:::
+
 ### Menu Overview
 
 The Watcher offers four main menu options: **Task Templates**, **Current Task**, **Extension**, and **Setting**. These menus provide access to various features and functions of the device.
@@ -274,7 +328,11 @@ The Current Task menu option provides a convenient way to access and manage the 
 
 <br />
 
-The Extension menu is a placeholder for future expandability. As the Watcher continues to evolve, this menu will serve as a gateway to additional features and functionalities that will be made available to users. Keep an eye out for updates and announcements regarding the Extension menu, as it may offer exciting new capabilities for your device.
+The Extension menu, currently accessible on the Watcher, serves as a hub for displaying data from a select range of connected Grove sensors, specifically the **[Grove SHT41](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT41-p-5383.html)**, **[Grove SHT40](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)**, and **[Grove SCD41](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html)**.
+
+This feature allows users to seamlessly integrate one of these supported Grove sensors at a time with their Watcher device, enabling real-time monitoring and visualization of sensor data. By navigating to the Extension menu, users can view the values and readings from their connected sensor, empowering them to gather insights and make informed decisions based on the collected data.
+
+As the Watcher platform continues to evolve, the Extension menu may expand to include support for a wider array of Grove sensors and additional features and functionalities, further enhancing the device's capabilities and user experience. Stay tuned for updates and announcements regarding future enhancements to the Extension menu.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/extension.gif" style={{width:700, height:'auto'}}/></div>
 
@@ -380,13 +438,13 @@ Each of these task templates has specific alarm triggering conditions based on t
 
 ## Run - Sending Task to Watcher via SenseCraft APP
 
-The SenseCraft APP allows you to send Tasks to your Watcher device. In this example, we will demonstrate the process of sending a task using one of the sample tasks provided by Watcher. Let's use the command *If you see a fire, please notify me*.
+The SenseCraft APP allows you to send Tasks to your Watcher device. In this example, we will demonstrate the process of sending a task using one of the sample tasks provided by Watcher. Let's use the command *If you see a candles, please notify me*.
 
 **Step 1.** Open the SenseCraft APP and navigate to the chat window for your connected Watcher device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/6.svg" style={{width:550, height:'auto'}}/></div><br />
 
-**Step 2.** In the chat window, either select the desired task from the available options or manually type in the command *If you see a fire, please notify me*. Send the command to your Watcher by tapping the send button or pressing enter.
+**Step 2.** In the chat window, either select the desired task from the available options or manually type in the command *If you see a candles, please notify me*. Send the command to your Watcher by tapping the send button or pressing enter.
 
 **Step 3.** Upon receiving the command, Watcher will interpret it and break it down into a task flow consisting of **When**, **Do**, and **Capture Frequency** components.
 
@@ -402,13 +460,13 @@ Review the parsed task flow to ensure that Watcher has correctly understood your
 
 **Step 4.** Once you have confirmed or adjusted the task details, click the **Run** button to send the finalized task to your Watcher.
 
-Watcher will download the task instructions, and once the download is complete, it will transform into a vigilant monitoring system, ready to detect any instances of fire.
+Watcher will download the task instructions, and once the download is complete, it will transform into a vigilant monitoring system, ready to detect any instances of candles.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/9.svg" style={{width:700, height:'auto'}}/></div>
 
 <br />
 
-**Step 5.** If Watcher identifies a fire, it will send an alert based on the predefined settings, which may include flashing lights, audible alarms, and notifications through the SenseCraft APP.
+**Step 5.** If Watcher identifies a candles, it will send an alert based on the predefined settings, which may include flashing lights, audible alarms, and notifications through the SenseCraft APP.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/10.svg" style={{width:550, height:'auto'}}/></div>
 
@@ -419,6 +477,59 @@ Please note that due to the time constraints of the task flow, **there will be a
 By following these steps, you can effectively send commands to your Watcher using the SenseCraft APP, enabling it to perform specific monitoring tasks and notify you when the specified conditions are met.
 
 Remember to regularly review and adjust your Watcher's settings and task flows to ensure optimal performance and alignment with your monitoring requirements. For a more detailed description and explanation of the APP's tasks and options, as well as a detailed description of the intervals, please read **[Watcher Quick Start Series 1# : Concepts and Classification of Tasks](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)** to learn more.
+
+## Run - Sending Task to Watcher by Speaking
+
+The Watcher offers a convenient and intuitive way to send tasks or engage in conversation using voice commands, thanks to its "Push to Talk" feature. This functionality is accessible from any screen or interface on the device, making it easy to interact with the Watcher without navigating through menus. Here's a step-by-step guide on how to use this feature:
+
+1. Activate Push to Talk:
+
+   - Locate the Wheel Button on the top-right corner of the Watcher.
+   - Press and hold the Wheel Button to enter the voice input interface.
+
+2. Speak Your Command or Message:
+
+   - While holding the Wheel Button, clearly speak your task or message to the Watcher.
+   - You can assign tasks, such as "Tell me if the baby is crying" or "If the dog is stealing food, say stop copper".
+   - Alternatively, you can engage in conversation by asking questions or making statements, like "Tell me a joke".
+
+3. Release the Wheel Button:
+
+   - Once you have finished speaking, release the Wheel Button.
+   - The Watcher will process your voice input and determine whether it is a task assignment or a conversation.
+
+4. Task Assignment:
+
+   - If the Watcher recognizes your voice input as a task assignment, it will automatically break down your task into relevant components.
+   - The Watcher will display cards on its screen, showing the **Object** (what to monitor), **Behavior** (what action to look for), **Notification** (how to alert you), **Time Range** (when to monitor), and **Frequency** (how often to monitor).
+   - Review the displayed information to ensure it accurately represents your intended task.
+   - If the details are correct, confirm the task, and the Watcher will begin executing it according to the specified parameters.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/80.jpg" style={{width:650, height:'auto'}}/></div>
+
+5. Conversation:
+
+   - If the Watcher determines that you are engaging in conversation, it will respond to your queries or statements using both the screen and voice output.
+   - The Watcher will display its response on the screen while simultaneously speaking it out loud.
+   - After each conversation turn, there will be a brief buffer period.
+   - If you press and hold the Wheel Button and speak again within this buffer period, you can continue the conversation seamlessly.
+   - However, if you do not speak within the buffer period, the Watcher will consider the conversation ended and return to its previous state.
+
+<br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/81.png" style={{width:600, height:'auto'}}/></div><br />
+
+Tips for Optimal Usage:
+
+- Speak clearly and at a moderate pace to ensure accurate voice recognition.
+- When speaking, please get as close to Watcher as possible, about **3 ~ 10cm** distance speaking recognition accuracy is best.
+- Minimize background noise to improve the Watcher's ability to understand your voice commands.
+- Be specific and concise when assigning tasks to help the Watcher accurately interpret your intentions.
+- If the Watcher misinterprets your task or conversation, simply press and hold the Wheel Button again to provide clarification or corrections.
+
+By leveraging the Push to Talk feature, you can effortlessly send tasks and engage in conversations with the Watcher, making your interaction with the device more natural and efficient.
+
+:::note
+If you encounter an error of **0x7002**, it means that the current Watcher's network status is not good and the audio service call failed, please change the network or location and retry again.
+:::
 
 ## Watcher Setting
 
@@ -471,17 +582,19 @@ By familiarizing yourself with these settings options, you can customize and opt
 
 ## Resources
 
-**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-**[Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)**
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-**Watcher Quick Start Series 4# : Training a model for Watcher**
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
-**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
+- Watcher Quick Start Series 5# : Training a model for Watcher
+
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 
 ## Tech Support & Product Discussion
