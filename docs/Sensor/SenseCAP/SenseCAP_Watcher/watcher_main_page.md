@@ -1,7 +1,7 @@
 ---
 description: SenseCAP Watcher
 title: Overview
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.png
 slug: /watcher
 sidebar_position: 1
 last_update:

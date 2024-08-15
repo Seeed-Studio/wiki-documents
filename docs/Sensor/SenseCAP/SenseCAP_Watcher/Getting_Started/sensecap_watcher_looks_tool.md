@@ -1,7 +1,7 @@
 ---
 description: Delves into the customization options available for Watcher's appearance and explores the various tools provided by the SenseCraft platform.
 title: 2# Watcher Looks & SenseCraft Tools
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/45.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/30.png
 slug: /getting_started_with_watcher_look_tool
 sidebar_position: 3
 last_update:
@@ -12,6 +12,14 @@ last_update:
 # Watcher Looks & SenseCraft Tools
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/30.png" style={{width:800, height:'auto'}}/></div>
+
+**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+    </a>
+</div><br />
 
 Welcome to the world of Watcher customization and SenseCraft tools! In this article, we'll dive into the exciting possibilities of personalizing your Watcher device and explore the powerful features offered by the SenseCraft APP. Whether you're a new user looking to give your Watcher a unique look or an experienced enthusiast seeking to unlock the full potential of your device, this guide will provide you with the knowledge and inspiration to make your Watcher truly your own. Get ready to embark on a creative journey as we uncover the secrets of Watcher expression design and SenseCraft APP settings.
 
@@ -57,6 +65,42 @@ The SenseCraft Remote Control feature is a crucial setting that determines how y
 However, if you choose to disable the SenseCraft Remote Control feature, your Watcher will only communicate with your mobile device via Bluetooth. While this can be useful for local control and configuration, it also means that you will lose access to the powerful cloud-based services and remote notification capabilities. Additionally, if your Watcher moves out of Bluetooth range from your mobile device, you risk losing control of your Watcher altogether.
 
 To manage the SenseCraft Remote Control setting, simply navigate to the corresponding menu on your Watcher device and toggle the feature on or off as desired. By carefully considering your needs and weighing the benefits of cloud connectivity, you can make an informed decision on how to configure this essential setting for your Watcher.
+
+### HTTP Message Block
+
+The HTTP Message Block feature in Watcher is a localized alarm service that operates alongside other alarm methods such as RGB alarms, APP alarms, and UART alarms. Its primary purpose is to provide users with a fully localized message pushing service, aimed at protecting user privacy. Unlike other alarm services that may rely on external platforms or servers, the HTTP Message Block is designed to work exclusively with the user's own HTTP endpoint, ensuring that all data and notifications remain within the user's local environment.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/83.png" style={{width:250, height:'auto'}}/></div>
+
+To set up the HTTP Message Block, users need to configure two essential pieces of information: the **HTTP URL** and the **HTTP Token**. These details are provided by the software that accompanies the **[Device AI Service](#device-ai-server)**, ensuring a seamless integration between the two features. By keeping the configuration data local, Watcher maintains a high level of privacy and security for its users.
+
+Once configured, the HTTP Message Block allows Watcher to send notifications and alerts directly to the user's specified HTTP URL. This localized approach eliminates the need for data to be transmitted to external servers or platforms, providing users with complete control over their data and notifications. The user's local system or application running at the configured HTTP URL can then process and handle the information according to the user's preferences.
+
+It's important to note that, at present, the HTTP Message Block is designed to work hand-in-hand with the Device AI Service. While the HTTP Message Block sends notifications to the user's configured HTTP URL, the Device AI Service plays a crucial role in processing and analyzing the data locally, enabling intelligent decision-making and event triggering.
+
+By leveraging the HTTP Message Block in conjunction with the Device AI Service, users can enjoy the benefits of a fully localized and privacy-focused alarm system. This powerful combination enables Watcher to deliver timely and relevant notifications while ensuring that sensitive data remains within the user's trusted environment, empowering users with complete control and privacy over their data and alerts.
+
+Detailed information on setting up and configuring the Device AI Service, along with in-depth explanations of each AI capability, can be found in the **[Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy/)**.
+
+:::caution
+If you want to use completely local notification service without going through SenseCraft, then when you configure the message notification, please **don't** tick **APP Push Notification**, otherwise your notification will still go through SenseCraft and then pushed to your app. and remember to **tick the HTTP Push Notification option**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/84.jpg" style={{width:300, height:'auto'}}/></div>
+:::
+
+### Device AI Server
+
+The Device AI Service in Watcher is a powerful feature that allows users to deploy AI capabilities directly on their local devices, such as PCs or high-performance machines like Jetson. To set up the Device AI Service, users need to provide the URL and the Watcher Service Token, which are displayed in the user interface of the accompanying Device AI Service software.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/82.png" style={{width:250, height:'auto'}}/></div>
+
+Once configured, the Device AI Service enables Watcher to leverage the user's local computing resources for a variety of AI-powered functionalities, including voice interaction, task decomposition, image analysis, and chatbot services.
+
+For users who value the flexibility and control of running AI services locally, the Device AI Service in Watcher offers a comprehensive and customizable solution. Detailed information on setting up and configuring the Device AI Service, along with in-depth explanations of each AI capability, can be found in the **[Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy/)**.
+
+:::caution
+If you have previously clicked Private Watcher Service, then you will not be able to use SenseCraft's cloud service. When you suddenly find that you can't get messages from the cloud service, please check if **SenseCraft** is not selected.
+:::
 
 ### Restore Device Setting
 
@@ -150,7 +194,7 @@ If your desired images are not already in the PNG format or don't meet the requi
 
 ### Uploading Your Custom Animation
 
-Once you have your series of PNG images ready, it's time to bring your custom animations to life on your Watcher. Connect your Watcher to the SenseCraft APP and navigate to the "Animation" page. Here, you'll find several Watcher states that allow for animation customization, including **Standby**, **Listening**, **Speaking**, **Watching Space**, and **Greeting**. Currently, the **Watching Space** and **Greeting** states are available for modification, while the others are still under development.
+Once you have your series of PNG images ready, it's time to bring your custom animations to life on your Watcher. Connect your Watcher to the SenseCraft APP and navigate to the "Animation" page. Here, you'll find several Watcher states that allow for animation customization, including **Standby**, **Listening**, **Speaking**, **Watching Space**, and **Greeting**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/43.png" style={{width:250, height:'auto'}}/></div>
 
