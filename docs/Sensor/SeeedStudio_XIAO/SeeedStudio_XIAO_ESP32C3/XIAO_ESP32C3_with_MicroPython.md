@@ -528,6 +528,8 @@ oled.show()  # Show the text
 
 Thank you for reading this article！ Feel free to share your thoughts in the comments.
 
+* [The firmware binary file](https://micropython.org/download/ESP32_GENERIC_C3/) for XIAO ESP32C3 with MicroPython
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

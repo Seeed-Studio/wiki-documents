@@ -504,6 +504,10 @@ Camara streaming test is also provided for ESP32S3 sense(with camera), please re
 
 Thank you for reading this article！ Feel free to share your thoughts in the comments.
 
+## Resources
+* [The firmware binary file](https://micropython.org/download/ESP32_GENERIC_S3/) for XIAO ESP32S3 with MicroPython
+
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

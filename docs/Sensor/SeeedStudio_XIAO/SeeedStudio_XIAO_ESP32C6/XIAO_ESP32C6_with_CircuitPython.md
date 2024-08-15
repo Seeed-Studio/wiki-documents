@@ -445,6 +445,11 @@ Start by plugging in your board, and double-clicking reset until you get the onb
 
 Thank you for reading this article！ Feel free to share your thoughts in the comments.
 
+## Resources
+* [The firmware binary file](https://circuitpython.org/board/seeed_xiao_esp32c6/) for XIAO ESP32C6 with CircuitPython
+* [The library bundle for CircuitPython](https://circuitpython.org/libraries)
+
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
