@@ -14,12 +14,12 @@ last_update:
 # Watcher & Node-RED To p5.js Quick Start
 
 <div class="table-center">
-<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/p5js_video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="800" height="450" src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/p5js_video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-## What is p5.js
+## What is [p5.js](https://p5js.org/)
 
-p5.js is a JavaScript library that makes coding accessible for artists and designers. It provides an easy way to create graphics, animations, and interactive applications using a simple syntax. With features like drawing on a canvas, handling user input, and supporting multimedia, p5.js is ideal for creative coding projects, educational purposes, and digital art. Its vibrant community and extensive resources help users of all skill levels get started.
+ p5.js is a JavaScript library that makes coding accessible for artists and designers. It provides an easy way to create graphics, animations, and interactive applications using a simple syntax. With features like drawing on a canvas, handling user input, and supporting multimedia, p5.js is ideal for creative coding projects, educational purposes, and digital art. Its vibrant community and extensive resources help users of all skill levels get started.
 
 ## Node-RED configuration
 

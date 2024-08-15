@@ -16,7 +16,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Discord_Node_Red/Watcher_Discord_Cover.png" style={{width:1000, height:'auto'}}/></div>
 
-**Discord** is an instant messaging and VoIP social platform that facilitates communication via voice calls, video calls, text messaging, and media sharing. Conversations on Discord can be private or occur within virtual communities known as "servers."
+[**Discord**](https://discord.com/) is an instant messaging and VoIP social platform that facilitates communication via voice calls, video calls, text messaging, and media sharing. Conversations on Discord can be private or occur within virtual communities known as "servers."
 
 This tutorial will guide you through integrating the Watcher API with Node-RED to seamlessly send data from the Watcher to Discord. This integration provides a simple and efficient method to **receive notifications and opens the door for further applications and integrations**.
 
