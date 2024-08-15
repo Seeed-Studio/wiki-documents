@@ -80,8 +80,8 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
 	</tr>
     <tr>
 	    <th>Dimensions</th>
-	    <td align="center">21 x 17.5mm</td>
-        <td align="center">21 x 17.5 x 15mm (with expansion board)</td>
+	    <td align="center">21 x 17.8mm</td>
+        <td align="center">21 x 17.8 x 15mm (with expansion board)</td>
 	</tr>
     <tr>
 	    <th rowspan="5">Power</th>
@@ -131,7 +131,7 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
 - **Elaborate Power Design**: Lithium battery charge management capability, offer 4 power consumption model which allows for deep sleep mode with power consumption as low as 14μA
 - **Great Memory for more Possibilities**: Offer 8MB PSRAM and 8MB FLASH, supporting SD card slot for external 32GB FAT memory 
 - **Outstanding RF performance**: Support 2.4GHz Wi-Fi and BLE dual wireless communication, support 100m+ remote communication when connected with U.FL antenna
-- **Thumb-sized Compact Design**: 21 x 17.5mm, adopting the classic form factor of XIAO, suitable for space limited projects like wearable devices
+- **Thumb-sized Compact Design**: 21 x 17.8mm, adopting the classic form factor of XIAO, suitable for space limited projects like wearable devices
 
 ## Hardware Overview
 

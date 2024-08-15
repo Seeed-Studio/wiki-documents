@@ -20,7 +20,7 @@ Thanks to recent improvements in model optimization and emergence of frameworks 
 
 **The possibilities of TinyML are truly huge.**
 
-We have made a [whole series on deploying tiny machine learning models](https://wiki.seeedstudio.com/Wio-Terminal-TinyML/) to another Seeed studio product, a compact development board in a plastic case, Wio Terminal. But it is possible to go tinier and deploy similar models to ARM Cortex M0+ and the little [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) board which is built around it – the board is as small as a thumb(20×17.5mm), consumes only 1.33 mAh of power (which means it can work ~112 hours on a 150 mA battery, much more if put in deep sleep) and cost as little as 4.3 USD.
+We have made a [whole series on deploying tiny machine learning models](https://wiki.seeedstudio.com/Wio-Terminal-TinyML/) to another Seeed studio product, a compact development board in a plastic case, Wio Terminal. But it is possible to go tinier and deploy similar models to ARM Cortex M0+ and the little [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html) board which is built around it – the board is as small as a thumb(21×17.8mm), consumes only 1.33 mAh of power (which means it can work ~112 hours on a 150 mA battery, much more if put in deep sleep) and cost as little as 4.3 USD.
 
 This project covers training and deploying model to Seeed Studio XIAO SAMD21 and Seeed Studio XIAO RP2040 development boards. For additional information, have a look at the corresponding video!
 

@@ -17,7 +17,7 @@ last_update:
 <iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/watcher_to_telegram_image/watcher_telegram.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-## What is Telegram
+## What is [Telegram](https://telegram.org/)
 
 Telegram is a popular messaging app that offers a wide range of features for users and developers alike. With its open API and protocol, developers can create custom Telegram clients, bots, and integrate Telegram's services into their own applications. Telegram provides a secure and reliable platform for real-time communication, supporting various media types, group chats, and end-to-end encryption. Its cloud-based infrastructure ensures seamless synchronization across devices and allows for easy scalability. Developers can leverage Telegram's features and tools to build innovative solutions and enhance user experiences within their projects.
 
