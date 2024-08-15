@@ -1,12 +1,12 @@
 ---
-description: how to use SDK for RP2350
+description: "Use Pico SDK on XIAO RP2350 "
 title: Seeed Studio XIAO RP2350 with C/C++ SDK
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-rp2350-c-cpp-sdk
 sidebar_position: 2
 last_update:
-   date: 2024-08-13T08:42:31.057Z
-   author: Spencer
+    date: 2024-08-14T06:27:29.006Z
+    author: Spencer
 ---
 
 import Tabs from '@theme/Tabs';
