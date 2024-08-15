@@ -14,7 +14,7 @@ last_update:
 # Watcher & Node-RED To p5.js Quick Start
 
 <div class="table-center">
-<iframe width="1000" height="500" src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/p5js_video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="900" height="500" src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/p5js_video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 ## What is p5.js
@@ -107,7 +107,11 @@ The effect will like below image, this servcie running on port 5500.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/10.png" style={{width:1000, height:'auto'}}/></div>
 
-When detected people, it will like this.
+When detected people, it will look like this.
+
+:::tip
+You need to keep running Node-RED and server.js
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/11.png" style={{width:1000, height:'auto'}}/></div>
 
