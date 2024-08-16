@@ -37,23 +37,23 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 **[Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)**
 
-Watcher Quick Start Series 5# : Training a model for Watcher *(Comming Soon)*
+Watcher Quick Start Series 5# : Training a model for Watcher *(Coming Soon)*
 
 **[Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
 
 ### API Core
 
-- Watcher API Essentials Series 1# : Peripherals *(Comming Soon)*
+- Watcher API Essentials Series 1# : Peripherals *(Coming Soon)*
 
-- Watcher API Essentials Series 2# : UI *(Comming Soon)*
+- Watcher API Essentials Series 2# : UI *(Coming Soon)*
 
-- Watcher API Essentials Series 3# : Audio *(Comming Soon)*
+- Watcher API Essentials Series 3# : Audio *(Coming Soon)*
 
-- Watcher API Essentials Series 4# : Wireless *(Comming Soon)*
+- Watcher API Essentials Series 4# : Wireless *(Coming Soon)*
 
-- Watcher API Essentials Series 5# : SenseCAP Data Stream *(Comming Soon)*
+- Watcher API Essentials Series 5# : SenseCAP Data Stream *(Coming Soon)*
 
-- Watcher API Essentials Series 6# : Tasks Flow *(Comming Soon)*
+- Watcher API Essentials Series 6# : Tasks Flow *(Coming Soon)*
 
 ### Application
 
