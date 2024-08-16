@@ -3658,6 +3658,7 @@ const sidebars = {
       items: [
         'Cloud_Chain/SenseCAP_Mate_APP/sensecraft_app',
     //    'Cloud_Chain/SenseCAP_Mate_APP/sensecap_mate_app_event',
+         'Cloud_Chain/SenseCAP_Mate_APP/sensecraft_cloud_fee',
       ],
     },
     {
