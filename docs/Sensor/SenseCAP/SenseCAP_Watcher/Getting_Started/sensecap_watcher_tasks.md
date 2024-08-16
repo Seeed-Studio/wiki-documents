@@ -1,7 +1,7 @@
 ---
 description: You will gain a solid foundation in understanding the different types of tasks that Watcher can perform and how they are organized within the SenseCraft ecosystem.
 title: 1# How to assign tasks to Watcher
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/20.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/85.png
 slug: /getting_started_with_watcher_task
 sidebar_position: 2
 last_update:
@@ -12,7 +12,15 @@ last_update:
 
 # How to assign tasks to Watcher
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/20.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/85.png" style={{width:1000, height:'auto'}}/></div>
+
+**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+    </a>
+</div><br />
 
 Welcome to the tutorial on assigning tasks to Watcher. In this guide, we will walk you through the process of issuing commands to Watcher, enabling you to effectively utilize its capabilities for your monitoring needs.
 
@@ -69,7 +77,7 @@ Then, if you place a task that is judged to be using Local AI Services, then on 
 
 #### Pure Cloud-based LLM Service
 
-If you set "fire" as the object in a Watcher task, but there are no pre-trained models for fire detection available in the SenseCraft AI library, the device will **automatically switch to using the cloud-based Large Language Model (LLM) service for detection**.
+If you set "candle" as the object in a Watcher task, but there are no pre-trained models for candle detection available in the SenseCraft AI library, the device will **automatically switch to using the cloud-based Large Language Model (LLM) service for detection**.
 
 :::note
 It's important to note that whenever Watcher relies on cloud-based services, such as the LLM service, there may be additional usage costs involved. These costs are associated with the processing power, storage, and data transfer required to perform the detection and analysis in the cloud.
@@ -77,7 +85,7 @@ It's important to note that whenever Watcher relies on cloud-based services, suc
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_3.png" style={{width:1000, height:'auto'}}/></div>
 
-As shown in the image, when the Watcher detects a fire using the LLM service, it executes the specified action, which in this case is sending a push notification to the connected mobile app. **This ensures that the user is promptly alerted about the presence of fire, even though the device couldn't perform the detection locally**.
+As shown in the image, when the Watcher detects a candle using the LLM service, it executes the specified action, which in this case is sending a push notification to the connected mobile app. **This ensures that the user is promptly alerted about the presence of candle, even though the device couldn't perform the detection locally**.
 
 By leveraging the power of cloud-based LLM services, Watcher can still accurately identify objects and trigger appropriate actions, even when a specific model is not available in the SenseCraft AI library. This fallback mechanism enhances the device's versatility and ensures that it can adapt to a wide range of detection scenarios.
 
@@ -184,10 +192,6 @@ Each Watcher device has its own dedicated chat window within the SenseCraft APP.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/21.png" style={{width:250, height:'auto'}}/></div>
 
-:::note
-Push to talk is still in development.
-:::
-
 When composing a command, it's crucial to provide clear and detailed instructions to ensure that the Watcher understands and executes the task accurately. Your command should include the following information:
 
 - The specific object or objects you want the Watcher to recognize.
@@ -232,7 +236,7 @@ After completing your task command input, follow these steps to confirm and exec
 
     If you discover any misinterpretations or wish to make changes to the task configuration, use the "Detail Config" option to manually modify the settings according to your requirements. As described in the [Concept of the Tash chapter](#concept-of-the-task), the Detail Config page varies from mode to mode. You just need to select or modify the configuration items according to the actual situation.
 
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/24.png" style={{width:1000, height:'auto'}}/></div>
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/24.png" style={{width:800, height:'auto'}}/></div>
 
     In the "Detail Config" section, you can find various settings that allow you to fine-tune your task configuration. Here's an overview of the available settings:
 
@@ -339,20 +343,66 @@ Option 2: Ending the Task directly on the Watcher Device
 
 Both methods provide a simple and intuitive way to stop the task execution when needed. Choose the method that is most convenient for you based on your current situation and proximity to the Watcher device.
 
+## Sending Task by Speaking
+
+The Watcher offers a convenient and intuitive way to send tasks using voice commands, thanks to its "Push to Talk" feature. This functionality is accessible from any screen or interface on the device, making it easy to interact with the Watcher without navigating through menus. Here's a step-by-step guide on how to use this feature:
+
+1. Activate Push to Talk:
+
+   - Locate the Wheel Button on the top-right corner of the Watcher.
+   - Press and hold the Wheel Button to enter the voice input interface.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/push_to_talk.gif" style={{width:650, height:'auto'}}/></div><br />
+
+2. Speak Your Command or Message:
+
+   - While holding the Wheel Button, clearly speak your task or message to the Watcher.
+   - You can assign tasks, such as "Tell me if the baby is crying" or "If the dog is stealing food, say stop copper".
+   - Alternatively, you can engage in conversation by asking questions or making statements, like "Tell me a joke".
+
+3. Release the Wheel Button:
+
+   - Once you have finished speaking, release the Wheel Button.
+   - The Watcher will process your voice input and determine whether it is a task assignment or a conversation.
+
+4. Task Assignment:
+
+   - If the Watcher recognizes your voice input as a task assignment, it will automatically break down your task into relevant components.
+   - The Watcher will display cards on its screen, showing the **Object** (what to monitor), **Behavior** (what action to look for), **Notification** (how to alert you), **Time Range** (when to monitor), and **Frequency** (how often to monitor).
+   - Review the displayed information to ensure it accurately represents your intended task.
+   - If the details are correct, confirm the task, and the Watcher will begin executing it according to the specified parameters.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/80.jpg" style={{width:650, height:'auto'}}/></div>
+
+Tips for Optimal Usage:
+
+- Speak clearly and at a moderate pace to ensure accurate voice recognition.
+- When speaking, please get as close to Watcher as possible, about **3 ~ 10cm** distance speaking recognition accuracy is best.
+- Minimize background noise to improve the Watcher's ability to understand your voice commands.
+- Be specific and concise when assigning tasks to help the Watcher accurately interpret your intentions.
+- If the Watcher misinterprets your task or conversation, simply press and hold the Wheel Button again to provide clarification or corrections.
+
+By leveraging the Push to Talk feature, you can effortlessly send tasks and engage in conversations with the Watcher, making your interaction with the device more natural and efficient.
+
+:::note
+If you encounter an error of **0x7002**, it means that the current Watcher's network status is not good and the audio service call failed, please change the network or location and retry again.
+:::
+
 ## Resources
 
-**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-**[Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)**
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-**Watcher Quick Start Series 4# : Training a model for Watcher**
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
-**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
+- Watcher Quick Start Series 5# : Training a model for Watcher
 
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 ## Tech Support & Product Discussion
 
