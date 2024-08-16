@@ -1696,6 +1696,7 @@ const sidebars = {
           },
           items: [
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
            // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb',
             {
@@ -3657,6 +3658,7 @@ const sidebars = {
       items: [
         'Cloud_Chain/SenseCAP_Mate_APP/sensecraft_app',
     //    'Cloud_Chain/SenseCAP_Mate_APP/sensecap_mate_app_event',
+         'Cloud_Chain/SenseCAP_Mate_APP/sensecraft_cloud_fee',
       ],
     },
     {
