@@ -70,7 +70,7 @@ ls /dev/cu*
 This will show all serial port devices.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/1.png" /></div>
 
-:::Tip
+:::tip
 If the port is busy, you can use the following command to find an dkill and processes using the port(On macOS):
 Identify processes using the port:
 ```
@@ -82,6 +82,7 @@ Find the process ID(PID) from the output and kill the procee:
 kill -9 <PID>
 ```
 Replace *PID* with the actual process ID found.
+:::
 
 
 #### Erase flash
@@ -127,11 +128,13 @@ Then you can use **R**ead-**E**valuate-**P**rint-**L**oop, or REPL for serial co
 Interacting with the REPL with *help()*, which tell you where to start exploring the REPL. To run code in REPL, type it in next to the REPL prompt.
 To list built-in modules type *help("modules")* and would show up a list of all the core modules built into CircuitPython, including "*board*".
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/3.png" /></div>
-Then can type "*import board*" into the REPL and press enter. Next, type "*dir(board)*" into the REPL and get a list of all of the pins on your board.
+
+Then can type *"import board"* into the REPL and press enter. Next, type *"dir(board)"* into the REPL and get a list of all of the pins on your board.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/4.png" /></div>
 
 ### 2. CircuitPython Web Workflow
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/5.png" /></div>
+
 [The CircuitPython Code Editor](https://code.circuitpython.org/) provides a fuller and more enriching experience when editing files on your ESP32-based device running the latest version of CircuitPython.
 The editor allows you to edit files using web Bluetooth, USB, and Web Workflow over WiFi.
 
@@ -234,7 +237,9 @@ while True:
         print("Received:", data)
 
 ```
+
 The XIAO ESP32C3 have one hardware UART. the pins listed below:
+
 | UART | Pin |
 |------|-----|
 | TX   | D6  |
@@ -375,14 +380,15 @@ while True:
 
 **Download and Extract the Library Bundle**:
 * Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
+
 **Copy Libraries to CIRCUITPY**:
 * Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
 * Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
 You'll need to manually install the necessary libraries from the bundle:
-** adafruit_ssd1306
-** adafruit_bus_device
-** adafruit_register
-** adafruit_framebuf.mpy
+  * adafruit_ssd1306
+  * adafruit_bus_device
+  * adafruit_register
+  * adafruit_framebuf.mpy
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/11.png" /></div>
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/12.png" /></div>

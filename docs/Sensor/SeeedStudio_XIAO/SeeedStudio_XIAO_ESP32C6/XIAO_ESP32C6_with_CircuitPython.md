@@ -313,6 +313,7 @@ finally:
     cs.value = True
 ```
 The XIAO ESP32C6 have one hardware SPI. the pins listed below:
+
 | SPI  | Pin |
 |------|-----|
 | SCK  | D8  |
@@ -391,14 +392,16 @@ while True:
 #### Light up OLED screen
 **Download and Extract the Library Bundle**:
 * Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
+
 **Copy Libraries to CIRCUITPY**:
 * Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
 * Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
 You'll need to manually install the necessary libraries from the bundle:
-** adafruit_ssd1306
-** adafruit_bus_device
-** adafruit_register
-** adafruit_framebuf.mpy
+  * adafruit_ssd1306
+  * adafruit_bus_device
+  * adafruit_register
+  * adafruit_framebuf.mpy
+  
 **Copy fond5x8.bin to CIRCUITPY**:
 * Download font5x8.bin file from [here](https://github.com/adafruit/Adafruit_CircuitPython_framebuf/blob/main/examples/font5x8.bin).
 * Open Thonny-->View-->Files, and then copy the font5x8.bin files to CircuitPython device.

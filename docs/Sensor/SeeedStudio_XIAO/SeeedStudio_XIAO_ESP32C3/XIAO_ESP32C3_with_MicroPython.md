@@ -67,7 +67,7 @@ ls /dev/cu*
 This will show all serial port devices.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/1.png" /></div>
 
-:::Tip
+:::tip
 If the port is busy, you can use the following command to find an dkill and processes using the port(On macOS):
 Identify processes using the port:
 ```
@@ -79,7 +79,7 @@ Find the process ID(PID) from the output and kill the procee:
 kill -9 <PID>
 ```
 Replace *PID* with the actual process ID found.
-
+:::
 
 #### Erase flash
 ```linux
@@ -306,6 +306,7 @@ uart1.write('hello')  # write 5 bytes
 uart1.read(5)         # read up to 5 bytes
 ```
 The ESP32C3 have one hardware UART. the pins listed below:
+
 | UART | Pin |
 |------|-----|
 | TX   | 21  |
@@ -395,6 +396,7 @@ from machine import Pin, SPI
 hspi = SPI(1, 10000000)
 hspi = SPI(1, 10000000, sck=Pin(8), mosi=Pin(10), miso=Pin(9))
 ```
+
 | SPI  | Pin |
 |------|-----|
 | SCK  | D8  |
@@ -527,6 +529,8 @@ oled.show()  # Show the text
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/17.png" /></div>
 
 Thank you for reading this article！ Feel free to share your thoughts in the comments.
+
+## Resources
 
 * [The firmware binary file](https://micropython.org/download/ESP32_GENERIC_C3/) for XIAO ESP32C3 with MicroPython
 
