@@ -1718,6 +1718,7 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
+                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
               ],
         },
           ],
