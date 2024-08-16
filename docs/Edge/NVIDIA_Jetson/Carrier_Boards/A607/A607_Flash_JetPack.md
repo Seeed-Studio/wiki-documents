@@ -82,7 +82,7 @@ First of all, you need to install the peripheral drivers for this board. These a
     <tr>
       <td>6.0</td>
       <td>36.3</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A607/A607-JP6.0.zip" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eal4wLeS_NdInqcXI24DA7IBZ0yHdgFwONkx8Guy5WUhnw?e=6P8KH5" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td rowSpan={2}>Jetson Orin Nano 4GB</td>
@@ -93,7 +93,7 @@ First of all, you need to install the peripheral drivers for this board. These a
     <tr>
       <td>6.0</td>
       <td>36.3</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A607/A607-JP6.0.zip" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eal4wLeS_NdInqcXI24DA7IBZ0yHdgFwONkx8Guy5WUhnw?e=6P8KH5" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>  
     <tr>
       <td rowSpan={2}>Jetson Orin Nano 8GB</td>
@@ -104,7 +104,7 @@ First of all, you need to install the peripheral drivers for this board. These a
     <tr>
       <td>6.0</td>
       <td>36.3</td>
-      <td><a href="http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A607/A607-JP6.0.zip" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eal4wLeS_NdInqcXI24DA7IBZ0yHdgFwONkx8Guy5WUhnw?e=6P8KH5" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
