@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1">
   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
   </a>
 </div><br></br>
@@ -130,7 +130,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 	</tr>
     <tr>
         <br />
-        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-components.png" style={{width:500, height:'auto'}}/></div>
+        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-components.png" style={{width:380, height:'auto'}}/></div>
         <br />        
     </tr>
     <tr>
@@ -138,7 +138,7 @@ Before everything starts, it is quite essential to have some basic parameters of
     </tr>
     <tr>
         <br />
-        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-pinout.png" style={{width:1000, height:'auto'}}/></div>
+        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-pinout.png" style={{width:880, height:'auto'}}/></div>
         <br />
     </tr>
 </table>
@@ -149,7 +149,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 You need to prepare the following:
 
-- 1 x [Seeed Studio XIAO RA4M1](https://www.seeedstudio.com?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1)
+- 1 x [Seeed Studio XIAO RA4M1](https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1)
 - 1 x Computer
 - 1 x USB Type-C cable
 
