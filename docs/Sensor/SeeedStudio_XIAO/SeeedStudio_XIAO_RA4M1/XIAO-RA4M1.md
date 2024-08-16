@@ -202,7 +202,6 @@ When you encounter the above two situations, you can try to put XIAO into BootLo
 
 - **Method 1.** Press and hold the `BOOT` button on the XIAO RA4M1 without releasing it.
 - **Method 2.** Keep the `BOOT` button pressed and then connect to the computer via the data cable. Release the BOOT button after connecting to the computer.
-- **Method 3.** Upload the **Blink** program to check the operation of the XIAO RA4M1.
 
 ## Reset
 
