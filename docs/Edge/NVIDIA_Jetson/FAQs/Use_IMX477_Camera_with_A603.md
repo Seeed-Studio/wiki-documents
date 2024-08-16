@@ -14,7 +14,7 @@ last_update:
 
 ## Jetpack 5.1.2
 
-If you need to use the IMX477 camera, please download [this driver package](https://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/603_imx477_jp512.zip) and follow [this tutorial](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/) to reflash the Jetpack system.
+If you need to use the IMX477 camera, please download [this driver package](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERJdh3pvdYZOqJWugsnMJKEBMkGXtU8ngY03kJeLDWSkLw?e=TuLWmL) and follow [this tutorial](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/) to reflash the Jetpack system.
 
 :::caution
 Please note that you need to use the BSP for [ **JP5.1.2** ](https://developer.nvidia.com/embedded/jetson-linux-r3541).
@@ -22,7 +22,7 @@ Please note that you need to use the BSP for [ **JP5.1.2** ](https://developer.n
 
 ## Jetpack 6.0
 
-If you need to use the IMX477 camera, please download [this driver package](https://recomputer-jetson.oss-us-west-1.aliyuncs.com/A603/603_imx477_jp60.zip) and follow [this tutorial](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/) to reflash the Jetpack system.
+If you need to use the IMX477 camera, please download [this driver package](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ETIsoZ25I69KsSiA6TweK4UBVfo7gBrvPyKX9pJ68J8oIA?e=a9uumE) and follow [this tutorial](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/) to reflash the Jetpack system.
 
 :::caution
 Please note that you need to use the BSP for [ **JP6.0** ](https://developer.nvidia.com/embedded/jetson-linux-r363).
