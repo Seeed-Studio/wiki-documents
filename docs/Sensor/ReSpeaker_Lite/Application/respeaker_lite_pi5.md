@@ -204,3 +204,9 @@ if __name__ == "__main__":
 python openai.py
 ```
 
+Now you are all set, try waking it up with `Hi` and talking to it!
+
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pi.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
