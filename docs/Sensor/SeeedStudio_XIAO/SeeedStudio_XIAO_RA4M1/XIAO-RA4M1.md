@@ -156,11 +156,6 @@ You need to prepare the following:
 :::tip
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
-**Solder header**
-
-XIAO RA4M1 is shipped without pin headers by default, you need to prepare your own pin headers and solder it to the corresponding pins of XIAO so that you can connect to the expansion board or sensor.
-
-Due to the miniature size of XIAO RA4M1, please be careful when soldering headers, do not stick different pins together, and do not stick solder to the shield or other components. Otherwise, it may cause XIAO to short circuit or not work properly, and the consequences caused by this will be borne by the user.
 
 ### Software Preparation
 
@@ -196,6 +191,42 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:600, height:'auto'}}/></div>
 
 
+## BootLoader Mode
+
+Sometimes, using the wrong program can cause the XIAO to lose its port or not function correctly. Common issues include:
+
+- The XIAO is connected to the computer, but no port number is found.
+- The XIAO is connected, and a port number appears, but the program upload fails.
+
+When you encounter the above two situations, you can try to put XIAO into BootLoader mode, which can solve most of the problems of unrecognized devices and failed  uploads. The specific method is:
+
+- **Step 1.** Press and hold the `BOOT` button on the XIAO RA4M1 without releasing it.
+- **Step 2.** Keep the `BOOT` button pressed and then connect to the computer via the data cable. Release the BOOT button after connecting to the computer.
+- **Step 3.** Upload the **Blink** program to check the operation of the XIAO RA4M1.
+
+## Reset
+
+When the program runs abnormally, you can press `Reset` once during power-up to let XIAO re-execute the uploaded program.
+When you press and hold the `BOOT` key while powering up and then press the `Reset` key once, you can also enter BootLoader mode.
+
+## Run your first Blink program
+
+By now, I believe you have a good understanding of the features and hardware of the XIAO RA4M1. Next, let's take the simplest Blink program as an example and perform the first blink for your XIAO RA4M1!
+
+- **Step 1.** Launch the Arduino application.
+- **Step 2.** Navigate to **File > Examples > 01.Basics > Blink**, open the program.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink_code.png" style={{width:700, height:'auto'}}/></div>
+
+- **Step 3.** Select the board model to **XIAO RA4M1**, and select the correct port number to upload the program.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/choose_board.png" style={{width:700, height:'auto'}}/></div>
+
+Once the program is successfully uploaded, you will see the following output message and you can observe that the orange LED on the right side of the XIAO RA4M1 is blinking.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink.gif" style={{width:700, height:'auto'}}/></div>
+
+Congratulations, you've learned how to write and upload programs for the XIAO RA4M1!
+:::note
+The LED will only turn off when the user LED pin on the XIAO RA4M1 is set to a high level, and it will only turn on when the pin is set to a low level.
+:::
 
 ## Resources
 
@@ -206,6 +237,16 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 <!-- - 📄 **[DXF]** [Seeed Studio XIAO RA4M1 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-DXF.zip) -->
 <!-- - 📄 **[LBR]** [Seeed Studio XIAO RA4M1 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
 <!-- - 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx) -->
+
+
+## Troubleshooting
+
+
+### Q1: What should I look for when soldering pins
+
+XIAO RA4M1 is shipped without soldering pin headers by default, you need to solder it to the corresponding pins of XIAO so that you can connect to the expansion board or sensor.
+
+Due to the miniature size of XIAO RA4M1, please be careful when soldering headers, do not stick different pins together, and do not stick solder to the shield or other components. Otherwise, it may cause XIAO to short circuit or not work properly, and the consequences caused by this will be borne by the user.
 
 ## Tech Support & Product Discussion
 
