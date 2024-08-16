@@ -334,7 +334,7 @@ This feature allows users to seamlessly integrate one of these supported Grove s
 
 As the Watcher platform continues to evolve, the Extension menu may expand to include support for a wider array of Grove sensors and additional features and functionalities, further enhancing the device's capabilities and user experience. Stay tuned for updates and announcements regarding future enhancements to the Extension menu.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/extension.gif" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/connect_grove.gif" style={{width:700, height:'auto'}}/></div>
 
 <br />
 
