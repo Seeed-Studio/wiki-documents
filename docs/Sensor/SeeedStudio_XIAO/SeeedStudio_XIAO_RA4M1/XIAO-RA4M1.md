@@ -3,7 +3,7 @@ title: Getting Started with Seeed Studio XIAO RA4M1
 description: |
   XIAO RA4M1 - Smallest Dev Borad Based on 32-bit Renesas RA4M1, Arduino IDE-Ready, 19 GPIOs, RGB LED, CAN BUS, USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
-slug: /getting-started-xiao-ra4m1
+slug: /getting_started_xiao_ra4m1
 keywords:
   - XIAO
   - RA4M1
@@ -202,9 +202,8 @@ Sometimes, using the wrong program can cause the XIAO to lose its port or not fu
 
 When you encounter the above two situations, you can try to put XIAO into BootLoader mode, which can solve most of the problems of unrecognized devices and failed  uploads. The specific method is:
 
-- **Step 1.** Press and hold the `BOOT` button on the XIAO RA4M1 without releasing it.
-- **Step 2.** Keep the `BOOT` button pressed and then connect to the computer via the data cable. Release the BOOT button after connecting to the computer.
-- **Step 3.** Upload the **Blink** program to check the operation of the XIAO RA4M1.
+- **Method 1.** Press and hold the `BOOT` button on the XIAO RA4M1 without releasing it.
+- **Method 2.** Keep the `BOOT` button pressed and then connect to the computer via the data cable. Release the BOOT button after connecting to the computer.
 
 ## Reset
 
