@@ -20,11 +20,11 @@ User button is connected to XMOS XU316 and it's not programmed yet(reserve for f
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={600} height="auto" /></p>
 
 
-This example code shorts the `Usr` pin to `D3`, and then uses XIAO ESP32S3 to detect whether the button is pressed.
+This example connects the `Usr` pin to `D3`, and then uses XIAO ESP32S3 to detect whether the button is pressed.
 
 ### Code
 
-```python
+```cpp
 const int buttonPin = D3;  
 int buttonState = 0;
 
