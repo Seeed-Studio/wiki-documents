@@ -93,7 +93,7 @@ When the phototransistor detectors receive the infrared signal, the output shoul
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg)  | -->
 |Arduino|Raspberry Pi|
 |---|---|
-|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
@@ -244,6 +244,193 @@ Basic Encoder Test:
 -3
 -4
 ```
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+#### Hardware
+
+- **Step 1.** Things used in this project:
+<div class="table-center">
+	<table>
+		<tr>
+			<th>Raspberry pi</th>
+      <th>Grove Base Hat for RasPi	</th>
+      <th>Grove - Optical Rotary Encoder</th>
+		</tr>
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Optical_Rotary_Encoder-TCUT1600X01/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+		</tr>
+		<tr>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				</a>
+			</div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				</a>
+			</div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Optical-Rotary-Encoder%28TCUT1600X01%29-p-3142.html">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+				</a>
+			</div></td>
+		</tr>
+	</table>
+</div>
+
+- **Step 2.** Plug the Grove Base Hat into Raspberry.
+- **Step 3.** Connect the Grove - OLED Display 1.12'' to I2C port of the Base Hat.
+- **Step 4.** Connect the Raspberry Pi to PC through USB cable.
+
+#### Software
+- **Step 1.** Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment install the grove.py to your raspberry pi.
+- **Step 2.** Excute below commands to run the code.
+
+```
+# virutalenv for Python3
+virtualenv -p python3 env
+source env/bin/activate
+#enter commmand
+grove_optical_rotary_encoder
+```
+
+Following is the grove_optical_rotary_encoder.py code.
+
+```python
+
+'''
+This is the code for
+    - Grove - Optical Rotary Encoder(TCUT1600X01) <https://www.seeedstudio.com/Grove-Optical-Rotary-Encoder-TCUT1600X0-p-3142.html>`_
+
+Examples:
+
+    .. code-block:: python
+
+        from grove.grove_button import GroveButton
+        import time, sys
+
+        # connect to pin 5 (slot D5)
+        PIN = 5
+        encoder = GroveOpticalRotaryEncoder(PIN)
+
+        # Read the value every second and detect motion
+        while True:
+            print("\rPosition: {0}  ".format(encoder.position()), file=sys.stderr, end='')
+            time.sleep(0.001)
+
+'''
+from __future__ import print_function
+import time, sys, signal, atexit
+from grove.gpio import GPIO
+
+__all__ = ["GroveOpticalRotaryEncoder"]
+
+# The UPM version rotaryencoder has bug result in segment fault.
+# This pure python version could work well.
+class GroveOpticalRotaryEncoder(object):
+    '''
+    Grove optical Rotary Encoder(TCUT1600X01) class
+
+    Args:
+        pin(int): the number of gpio/slot your grove device connected.
+    '''
+    def __init__(self, pin1, pin2 = None):
+        pin2 = pin1 + 1 if pin2 is None else pin2
+        self.__gpio  = GPIO(pin1, GPIO.IN)
+        self.__gpio2 = GPIO(pin2, GPIO.IN)
+        self.__gpio.on_event = self.__gpio_event
+        self._pos = 0
+
+    # called by GPIO library
+    def __gpio_event(self, pin, value):
+        v1 = self.__gpio.read()
+        if not v1: return
+        v2 = self.__gpio2.read()
+        self._pos += 1 if v2 else -1
+
+    def position(self, pos = None):
+        '''
+        set or get the position counter
+
+        Args:
+            pos(int):
+                optinal, the position counter to be set.
+
+                if not specified, only get the current counter
+
+        Returns:
+            (int): current position counter
+        '''
+        if not pos is None:
+            self._pos = pos
+        return self._pos
+
+def main():
+    from grove.helper import SlotHelper
+    sh = SlotHelper(SlotHelper.GPIO)
+    pin = sh.argv2pin()
+
+    '''
+    from upm.pyupm_rotaryencoder import RotaryEncoder as GroveOpticalRotaryEncoder
+    from mraa import getGpioLookup
+
+    mraa_pin1 = getGpioLookup("GPIO%02d" % (pin + 0))
+    mraa_pin2 = getGpioLookup("GPIO%02d" % (pin + 1))
+
+    # Instantiate a Grove Rotary Encoder, using signal pins mraa_pin1 & mraa_pin2
+    myRotaryEncoder = GroveOpticalRotaryEncoder(mraa_pin1, mraa_pin2);
+    '''
+    myRotaryEncoder = GroveOpticalRotaryEncoder(pin)
+
+    ## Exit handlers ##
+    # This function stops python from printing a stacktrace when you hit control-C
+    def SIGINTHandler(signum, frame):
+        raise SystemExit
+
+    # This function lets you run code on exit, including functions from myRotaryEncoder
+    def exitHandler():
+        print("Exiting")
+        sys.exit(0)
+
+    # Register exit handlers
+    atexit.register(exitHandler)
+    signal.signal(signal.SIGINT, SIGINTHandler)
+
+    # Read the value every second and detect motion
+    counter = 0
+    while True:
+        print("\rPosition: {0}  ".format(myRotaryEncoder.position()), file=sys.stderr, end='')
+        counter += 1
+        if counter >= 5000:
+            print("")
+            counter = 0
+        time.sleep(0.001)
+
+if __name__ == '__main__':
+    main()
+```
+
+```python
+（env）pi@raspberrypi:~ grove_optical_rotary_encoder
+```
+
+:::tip success
+When the command runs successfully, it will print out the value every second and detect motion.
+:::
+
+```python
+# Read the value every second and detect motion
+        while True:
+            print("\rPosition: {0}  ".format(encoder.position()), file=sys.stderr, end='')
+            time.sleep(0.001)
+```
+
+
+You can quit this program by simply press `ctrl`+`c`.
+
 ## Schematic Online Viewer
 
 

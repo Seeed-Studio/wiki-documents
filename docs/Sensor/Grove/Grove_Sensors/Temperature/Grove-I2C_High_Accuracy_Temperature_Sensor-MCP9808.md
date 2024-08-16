@@ -328,60 +328,82 @@ delay(10);
 #### Software
 
 :::caution
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
-- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment and install the grove.py to your raspberry pi.
+
+- **Step 2**. Excute below commands to run the code.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
+# virutalenv for Python3
+virtualenv -p python3 env
+source env/bin/activate
+#enter commmand
+grove_high_accuracy_temperature
 ```
 
-- **Step 3**. Excute below commands to run the code.
-
-```
-cd grove.py/grove
-python3 grove_high_accuracy_temperature.py 
-
-```
-
-Following is the grove_high_accuracy_temperature.py code.
+Following is the mcp9808.py code.
 
 ```python
 
-import sys
-import time
-from grove.factory import Factory
+import math
+import threading
+from grove.i2c import Bus 
 from grove.temperature import Temper
 
-def main():
-    print("Insert Grove - I2C-High-Accuracy-Temperature")
-    print("  to Grove-Base-Hat any I2C slot")
+RES_LOW = 0x00
+RES_MEDIUM = 0x01
+RES_HIGH = 0x02
+RES_PRECISION = 0x03
 
-    sensor = Factory.getTemper("MCP9808-I2C")
-    sensor.resolution(Temper.RES_1_16_CELSIUS)
+MCP9808_REG_AMBIENT_TEMP = 0x05
 
-    print('Detecting temperature...')
-    while True:
-        print('{} Celsius'.format(sensor.temperature))
-        time.sleep(1)
+class TemperMCP9808(Temper):
+    def __init__(self, address=0x18):
+        self._addr = address
+        self._bus = Bus()
+        self._resolution = Temper.RES_1_2_CELSIUS
 
+    def _derive_res(self, res):
+        ares = -1
+        if res >= Temper.RES_1_2_CELSIUS:
+            ares = RES_LOW
+        elif res >= Temper.RES_1_4_CELSIUS:
+            ares = RES_MEDIUM
+        elif res >= Temper.RES_1_8_CELSIUS:
+            ares = RES_HIGH
+        elif res >= Temper.RES_1_16_CELSIUS:
+            ares = RES_PRECISION
 
-if __name__ == '__main__':
-    main()
+        if ares < 0:
+            return False
+        self._bus.write_byte(self._addr, ares)
+        # print("ares = {}".format(ares))
+        return True
 
+    @property
+    def temperature(self):
+        result = self._bus.read_word_data(self._addr, MCP9808_REG_AMBIENT_TEMP)
+        # Swap the bytes
+        data = (result & 0xff) << 8 | (result & 0xff00) >> 8
+        # print("data = {}".format(data))
+        # print("data = {}".format(hex(data)))
+        # Check if the temperature is negative
+        if data & 0x1000:
+            data = -((data ^ 0x0FFF) + 1)
+        else:
+            data = data & 0x0fff
+        return data / 16.0
 ```
 
-:::success
-    If everything goes well, you will be able to see the following result
+:::tip success
+If everything goes well, you will be able to see the following result
 :::
 
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python3 grove_high_accuracy_temperature.py 
+(env)pi@raspberrypi:~ grove_high_accuracy_temperature 
 Insert Grove - I2C-High-Accuracy-Temperature
   to Grove-Base-Hat any I2C slot
 Detecting temperature...
@@ -395,10 +417,9 @@ Detecting temperature...
     time.sleep(1)
 KeyboardInterrupt
 
-
 ```
 
-You can quit this program by simply press ++ctrl+c++.
+You can quit this program by simply press **ctrl+c**.
 
 ## Schematic Online Viewer
 

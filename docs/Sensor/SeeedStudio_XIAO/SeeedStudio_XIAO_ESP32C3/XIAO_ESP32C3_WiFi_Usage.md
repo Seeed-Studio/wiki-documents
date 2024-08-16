@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 Seeed Studio XIAO ESP32C3 supports WiFi connectivity with IEEE 802.11b/g/n. This wiki will introduce the basics of WiFi usage on this board.
 
 :::caution attention
-⚠️ Please be careful when you try to use the board as a hotspot(access point). There may be a overheat problem and cause burns.
+⚠️ Please be careful when using the board as a hotspot (access point). It may overheat and cause burns.
 :::
 
 ## Hardware set up
@@ -164,7 +164,7 @@ void loop() {
 
 ### Connect to a WiFi network
 
-In this example, we are going to use XIAO ESP32C3 to connect to a WiFI network.
+In this example, we are going to use XIAO ESP32C3 to connect to a WiFi network.
 
 - **Step 1.** Copy and paste the code below into Arduino IDE
 
