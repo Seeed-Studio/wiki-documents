@@ -8,9 +8,9 @@ keywords:
   - xiao
   - RP2350
 sidebar_position: 0
-author: Spencer
 last_update:
-  date: 2024-08-08T14:19:47.057Z
+  author: Spencer
+  date: 2024-08-14T06:25:44.889Z
 ---
 
 import Tabs from '@theme/Tabs';
@@ -194,10 +194,9 @@ You can enter BOOTSEL mode on the XIAO RP2350 using either of the two methods be
 3. **Release the BOOT Button**:  
    After the board is connected to your computer, you can release the BOOT button. The XIAO RP2350 should now be in BOOTSEL mode, and your computer will recognize it as a removable storage device.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/>
-<div style={{ marginTop: '-8px' }}><em>Demonstration from XIAO ESP32S3</em></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
+<div style={{ marginTop: '-8px' }}><em>Hold Boot-> Plug in Cable-> Release Boot</em></div>
 </div>
-
 
 </TabItem>
 
@@ -209,6 +208,10 @@ You can enter BOOTSEL mode on the XIAO RP2350 using either of the two methods be
    While still holding the BOOT button, press and release the RESET button, which is labeled "B" on the bottom right corner of the board in the image above.
 3. **Release the BOOT Button**:  
    After pressing the RESET button, release the BOOT button. The XIAO RP2350 should now be in BOOTSEL mode, and your computer will recognize it as a removable storage device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
+<div style={{ marginTop: '-8px' }}><em>Hold Boot-> Click Reset-> Release Boot</em></div>
+</div>
 
 </TabItem>
 </Tabs>

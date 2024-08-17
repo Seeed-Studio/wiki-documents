@@ -1,7 +1,7 @@
 ---
 description: SenseCAP Watcher
 title: Overview
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.png
 slug: /watcher
 sidebar_position: 1
 last_update:
@@ -27,18 +27,19 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 ### Getting Started
 
-- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
+**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
 
-- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
+**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
 
-- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
+**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
 
-- [Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)
+**[Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)**
 
-- Watcher Quick Start Series 4# : Training a model for Watcher *(Planning)*
+**[Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)**
 
-- [Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
+Watcher Quick Start Series 5# : Training a model for Watcher *(Coming Soon)*
 
+**[Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
 
 ### API Core
 
@@ -67,18 +68,6 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 - Watcher with P5JS shocking effect display *(Maybe)*
 
-
-#### Localised Deployment Part
-
-- Watcher and reComputer User's Guide *(Planning)*
-
-- Watcher uses local OpenAI services *(Planning)*
-
-- Watcher uses local Gemini services *(Planning)*
-
-- Watcher Controls Local Devices via Open Interpreter *(Planning)*
-
-
 #### SNS Integration Part
 
 - Watcher & Twillio Message Alerts *(Planning)*
@@ -97,7 +86,7 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 #### Smart Home Part
 
-- Watcher as Home Assistant Smart Terminal *(Planning)*
+- [Integrate Watcher into Home Assistant](https://wiki.seeedstudio.com/watcher_integrate_ha)
 
 #### IoT Platform Part
 
