@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-ESP32S3-FreeRTOS
 last_update:
-  date: 08/05/2024
+  date: 08/17/2024
   author: Priyanshu_Roy
 ---
 
