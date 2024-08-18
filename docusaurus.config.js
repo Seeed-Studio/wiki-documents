@@ -602,7 +602,7 @@ const config = {
         // Replace this with the name of your index/collection.
         // It should match the "index_name" entry in the scraper's "config.json" file.
         // typesenseCollectionName: 'wiki_platform_1713169217',
-        typesenseCollectionName: 'wiki_platform_1715763811',
+        typesenseCollectionName: 'wiki_platform_1723968755',
   
         typesenseServerConfig: {
           nodes: [
@@ -616,7 +616,9 @@ const config = {
         },
               // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
       typesenseSearchParameters: {},
-
+      "query_by": "hierarchy.lvl0,hierarchy.lvl2,content",
+      "sort_by": "",
+      
       // Optional
       contextualSearch: true,
     },
