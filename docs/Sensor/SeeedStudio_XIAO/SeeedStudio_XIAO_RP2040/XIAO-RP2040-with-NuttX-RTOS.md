@@ -4,7 +4,7 @@ title: NuttX
 keywords:
 - xiao
 last_update:
-    date: 8/12/2024
+    date: 8/18/2024
     author: halyssonJr
 ---
 
@@ -75,11 +75,11 @@ Once the script is run, the NuttX must be compiled. There are two possibilities 
 
 ## Programming
 
-Successful compilation is guaranteed, the next goal it's programming using BOOTSEL. For that, you must follow these steps:
+Successful compilation was guaranteed, the next goal it's programming using BOOTSEL. For that, you must follow these steps:
 
 **Step 1**: Connect the Seed Stduio XIAO RP2040 to USB port while pressing button `B` (boot). The board will be detected as USB Mass Storage Device `RPI-RP2`.
 
-**Step 2**: In the workspace, go to `nuttx` and copy `nuttx.uf2` into the Seed Stduio. XIAO RP2040. 
+**Step 2**: In the workspace, go to `nuttx` and copy `nuttx.uf2` into the Seed Stduio XIAO RP2040. 
 
 **Step 3**: Search for a new USB device on your computer.
 
@@ -87,7 +87,7 @@ Successful compilation is guaranteed, the next goal it's programming using BOOTS
 
 ## Hand-on
 
-It's time to explore NuttX practically. In this session, four applications are available: USB NSH, GPIO, User LEDs, and WS2812 driver.
+It's time to explore NuttX practically. In this session, four applications are available: USB NSH, GPIO, USERLEDS, and WS2812 driver.
 
 ### USBNSH
 
@@ -101,13 +101,13 @@ $ cd ~/nuttxspace/nuttx
 $ make distclean
 ```
 
-Now we select the NSH configuration to the seeed-xiao-rp2040 board:
+Now we select the USBNSH configuration to the seeed-xiao-rp2040 board:
 
 ```
 $ ./tools/configurate.sh seeed-xiao-rp2040:usbnsh
 ```
 
-Compile de the source code.
+Compile the source code.
 
 ```
 $  make -j
@@ -151,10 +151,11 @@ Let's say hello to NuttX, type `hello` and then it executes the command:
 nsh> hello
 Hello, World!!
 ```
+Congratulations, your first interation with NuttX was completed.
 
 ### GPIO Driver
 
-The General Purpose Input/Output (GPIO) is a microcontroller's most fundamental part, allowing it to connect to the external world. This way we will use the NSH to access and configure those pins as we wish. But first, let's clear clear the previous configuration.
+The General Purpose Input/Output (GPIO) is a microcontroller's most fundamental part, allowing it to connect to the external world. This way we will use the NSH to access and configure those pins as we wish. But first, let's clear the previous configuration.
 
 ```
 $ cd ~/nuttxspace/nuttx
@@ -193,14 +194,17 @@ nsh> gpio -h
 ```
 
 
-### Userleds Subsytem
+### USERLED
 
-Clear the previous configuration
+The USERLEDS is a subsystem that allows to control of the LEDs with single operation. Also, you can use commands-line like the printf. In this demo we will turn on and turn off the LED on-board each 1 seconds.
+
+First, clear the previous configuration.
 
 ```
 $ cd ~/nuttxspace/nuttx
 $ make distclean
 ```
+Configure the board for userled application using the command:
 
 ```
 $ ./tools/configurate.sh seeed-xiao-rp2040:userleds
@@ -213,9 +217,32 @@ $  make -j
 ```
 After programming, open serial communication and press Enter 3 times, following the same steps showed previous application.
 
+If you type: ` ls /dev/`, will show a list of devices, and observe `userleds` file was created.
+
+```
+nsh> ls /dev/
+/dev:
+ console
+ userleds
+ null
+ ttyACM0
+ ttyS0
+```
+Typing `leds`, you observe the LEDs blinky same time.
+
 ```
 NuttShell (NSH) NuttX-12.5.1
-nsh> userled -h
+nsh> leds
+leds_main: Starting the led_daemon
+leds_main: led_daemon started
+
+led_daemon (pid # 3): Running
+led_daemon: Opening /dev/userled
+led_daemon: Supported LEDs 0x07
+led_daemon: LED set 0x01
+led_daemon: LED set 0x00
+led_daemon: LED set 0x01
+led_daemon: LED set 0x00
 ```
 
 <div style={{textAlign:'center'}}><img src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-userleds.gif" style={{width:300, height:'auto'}}/></div>
