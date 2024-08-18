@@ -86,7 +86,7 @@ Watcher Quick Start Series 5# : Training a model for Watcher *(Coming Soon)*
 
 #### Smart Home Part
 
-- [Integrate Watcher into Home Assistant](https://wiki.seeedstudio.com/watcher_integrate_ha)
+- [Integrate Watcher into Home Assistant](https://wiki.seeedstudio.com/integrate_watcher_to_ha/)
 
 #### IoT Platform Part
 
@@ -106,7 +106,7 @@ Watcher Quick Start Series 5# : Training a model for Watcher *(Coming Soon)*
 
 #### Node-RED Integration Part
 
-- [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_node_red/)
+- [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_to_node_red/)
 
 - [Watcher & Node-RED to p5.js](https://wiki.seeedstudio.com/watcher_node_red_to_p5js)
 
