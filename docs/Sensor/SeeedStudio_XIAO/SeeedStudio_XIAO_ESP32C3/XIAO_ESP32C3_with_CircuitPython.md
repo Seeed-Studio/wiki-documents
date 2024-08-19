@@ -25,6 +25,7 @@ CircuitPython is a programming language designed to simplify experimenting and l
 
 #### Install Esptool
 If you haven't already installed esptool.py, you can do so using pip on your pc:
+
 ``` linux
 pip install esptool
 ```
@@ -33,23 +34,30 @@ pip install esptool
 You need to download the firmware binary file from [circirtpython.org](https://circuitpython.org/board/seeed_xiao_esp32c3/)
 After downloading correct bin file, navigate to the folder, and open a cmd terminal there.
 As of the final draft, the latest version of bin file is:
+
 ```
 adafruit-circuitpython-seeed_xiao_esp32c3-en_GB-9.1.1.bin
 ```
 
 #### Connect the XIAO ESP32C3 on your PC
+
 You need to press and hold down BOOT button on your XIAO ESP32C3 board to enter the 'bootloader' mode while pluging in to the type C USB cable to your pc.
 
 #### Check port
+
 Find out all serial devices on your pc.
+
 
 * Linux 
 
 On Linux, you can use the *dmesg* command to view connected devices:
+
 ```Linux
 dmesg | grep tty
 ```
+
 Alternatively, you can list serial devices using *ls*:
+
 ```
 ls /dev/ttyS* /dev/ttyUSB*
 ```
@@ -57,6 +65,7 @@ ls /dev/ttyS* /dev/ttyUSB*
 * Window
 
 On Windows, you can check serial ports through Device Manager. Look for the “Ports (COM & LPT)” section to see the available serial ports. You can also use the mode command in Command Prompt to list serial ports:
+
 ```
 mode
 ```
@@ -64,39 +73,50 @@ mode
 * macOS
 
 On macOS, you can list available serial ports using the *ls* command:
+
 ```
 ls /dev/cu*
 ```
+
 This will show all serial port devices.
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/1.png" /></div>
 
 :::tip
 If the port is busy, you can use the following command to find an dkill and processes using the port(On macOS):
 Identify processes using the port:
+
 ```
 lsof | grep port
 ```
+
 This command lists open files and searches for any process using the specified port.
 Find the process ID(PID) from the output and kill the procee:
+
 ```
 kill -9 <PID>
 ```
+
 Replace *PID* with the actual process ID found.
 :::
 
 
 #### Erase flash
+
 ```linux
 esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 erase_flash
 ```
+
 Replace '/dev/cu.usbmodem11301' with the correct port name from your system(e.g. `COM3` on Windows, `/dev/ttyUSB0` on linux).
 
 
 #### Write flash
 Flash the firmware onto XIAO ESP32C3:
+
 ```linux
 esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash -z 0x0 adafruit-circuitpython-seeed_xiao_esp32c3-en_GB-9.1.1.bin
 ```
+
 Again, replace '/dev/cu.usbmodem11301' with the correct port name, and 'adafruit-circuitpython-seeed_xiao_esp32c3-en_GB-9.1.1.bin' with the path to your blank firmware file.
 Hard resetting via RTS pin...
 
@@ -114,12 +134,15 @@ On these boards, there are alternative ways to transfer and edit files. You can 
 
 ### 1. Thonny
 Install and open thonny, then configure Thonny following the instruction:
+
 ```
 pip install thonny
 #open thonny after installation
 thonny
 ```
+
 Go to Run-->Configure Interpreter, and ensure that the Interpreter tab in the Thonny options looks as shown below, select "CircuitPython (generic)" and port:
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/2.png" /></div>
 
 click "OK" on the dialog and you should be presented with the Micropython shell at the bottom of the thonny window as shown in the figure below.
@@ -127,18 +150,22 @@ Then you can use **R**ead-**E**valuate-**P**rint-**L**oop, or REPL for serial co
 
 Interacting with the REPL with *help()*, which tell you where to start exploring the REPL. To run code in REPL, type it in next to the REPL prompt.
 To list built-in modules type *help("modules")* and would show up a list of all the core modules built into CircuitPython, including "*board*".
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/3.png" /></div>
 
 Then can type *"import board"* into the REPL and press enter. Next, type *"dir(board)"* into the REPL and get a list of all of the pins on your board.
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/4.png" /></div>
 
 ### 2. CircuitPython Web Workflow
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/5.png" /></div>
 
 [The CircuitPython Code Editor](https://code.circuitpython.org/) provides a fuller and more enriching experience when editing files on your ESP32-based device running the latest version of CircuitPython.
 The editor allows you to edit files using web Bluetooth, USB, and Web Workflow over WiFi.
 
 ## Pinout/Port Information
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/6.png" /></div>
 
 * More information please refer to [hardware overview](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#hardware-overview)
@@ -152,6 +179,7 @@ The editor allows you to edit files using web Bluetooth, USB, and Web Workflow o
 
 For boards without native USB (like ESP32-C3 or ESP32) you will need to use the REPL to connect to the Wi-Fi. Wi-Fi function is enabled when a file named *settings.toml* is added to the root folder of the CircuitPython file system.
 Create *settings.toml* file via REPL:
+
 ```r
 f = open('settings.toml', 'w')
 f.write('CIRCUITPY_WIFI_SSID = "wifissid"\n')
@@ -159,6 +187,7 @@ f.write('CIRCUITPY_WIFI_PASSWORD = "wifipassword"\n')
 f.write('CIRCUITPY_WEB_API_PASSWORD = "webpassword"\n')
 f.close()
 ```
+
 * Replace with the name of your local wifi network *wifissid*
 * Replace with your local wifi passwordwifi *password*
 * The other password, , is used when you access the board via a web browser. Set this to whatever you want *webpassword*
@@ -168,11 +197,13 @@ Once connected, you can press the **Reset** button to kick the firmware, then hi
 :::note
 Don't forget, ESP32 does not support 5 GHz networks, so use your 2.4 GHz SSID if you have two.
 :::
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/7.png" /></div>
 
 ### Delay and timing 
 
 The *time* module:
+
 ```python
 import time
 time.sleep(1)           # sleep for 1 second
@@ -182,7 +213,9 @@ start = time.ticks_ms() # get millisecond counter
 delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 ```
 
+
 ### Pins and GPIO
+
 Can use module "*board*" and "*microcontroller*" to controller the gpio with the following code and connect a LED to D5:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/14.png" /></div>
 
@@ -220,6 +253,7 @@ while True:
 ### UART(serial bus)
 
 Using *busio* module:
+
 ```python
 import board
 import busio
@@ -246,7 +280,9 @@ The XIAO ESP32C3 have one hardware UART. the pins listed below:
 | RX   | D7  |
 
 ### PWM(pulse width modulation)
+
 Using *pwmio* module:
+
 ```python
 import board
 import pwmio
@@ -263,8 +299,11 @@ while True:
         time.sleep(0.1)
 
 ```
+
 ### ADC(analog to digital conversion)
+
 Using the *analogio* module:
+
 ```python
 import board
 import analogio
@@ -281,6 +320,7 @@ while True:
 ```
 
 ### SPI
+
 ```python
 import board
 import busio
@@ -300,6 +340,7 @@ data_in = bytearray(3)
 spi.write_readinto(data_out, data_in)
 print("Received:", data_in)
 ```
+
 | SPI  | Pin |
 |------|-----|
 | SCK  | D8  |
@@ -307,6 +348,7 @@ print("Received:", data_in)
 | MISO | D9  |
 
 ### I2C
+
 ```python
 import board
 import busio
@@ -316,6 +358,7 @@ i2c = busio.I2C(board.SCL, board.SDA, frequency=400000)
 ```
 
 ### Expension Board Base for XIAO
+
 *Prerequisites*:
 
 <table align="center">
@@ -349,6 +392,7 @@ i2c = busio.I2C(board.SCL, board.SDA, frequency=400000)
   </tbody></table>
 
 #### Read the light sensor data
+
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/9.png" /></div>
 
 ```python
@@ -374,6 +418,7 @@ while True:
     # Delay for a short period of time before reading again
     time.sleep(1)
 ```
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/10.png" /></div>
 
 #### Light up OLED screen
@@ -382,6 +427,7 @@ while True:
 * Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
 
 **Copy Libraries to CIRCUITPY**:
+
 * Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
 * Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
 You'll need to manually install the necessary libraries from the bundle:
@@ -391,10 +437,13 @@ You'll need to manually install the necessary libraries from the bundle:
   * adafruit_framebuf.mpy
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/11.png" /></div>
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/12.png" /></div>
 
 **Create Your CircuitPython Code**:
+
 * Create a code.py file (or main.py) . This file should contain your CircuitPython code.
+
 ```python
 import board
 import busio
@@ -422,17 +471,22 @@ oled.show()
 
 
 ## "Uninstalling" CircuitPython
+
 A lot of our boards can be used with multiple programming languages. For example, the Circuit Playground Express can be used with MakeCode, Code.org CS Discoveries, CircuitPython and Arduino. You may want to go back to Arduino or MakeCode. There is nothing to uninstall. CircuitPython is "just another program" that is loaded into your board. So you can simply load another program(Arduino or MakeCode) and it will overwrite CircuitPython.
+
 ### Backup your Code
+
 before replacing CircuitPython, don't forget to make a backup of the code you have on the CIRCUITPY drive. That means your *code.py* and any other files, the lib folder etc. You may lose these files when you remove CircuitPython, so backups are key! Just drag the files to a folder on your laptop or desktop computer like you would with any USB drive.
 
 ### Moving to Arduino
+
 If you want to use Arduino instead, you just use the Arduino IDE to load an Arduino program. Here's an example of uploading a simple "Blink" Arduino program, but you don't have to use this particular program.
 Start by plugging in your board, and double-clicking reset until you get the onboard LED(s).
 
 Thank you for reading this article！ Feel free to share your thoughts in the comments.
 
 ## Resources
+
 * [The firmware binary file](https://circuitpython.org/board/seeed_xiao_esp32c3/) for XIAO ESP32C3 with CircuitPython
 * [The library bundle for CircuitPython](https://circuitpython.org/libraries)
 
