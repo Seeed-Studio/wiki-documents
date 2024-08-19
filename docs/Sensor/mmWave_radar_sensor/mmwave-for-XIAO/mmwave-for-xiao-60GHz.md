@@ -4,25 +4,22 @@ title: 60GHz mmWave for XIAO
 keywords:
 - mmwave
 - radar
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
 slug: /mmwave_for_xiao_60ghz
 last_update:
-  date: 08/07/2024
+  date: 08/19/2024
   author: Spencer
-draft: true
 ---
 
 # Seeed Studio 60GHz mmWave for XIAO
 
-<br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto', "border-radius": '12.8px'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:300, height:'auto', "border-radius": '12.8px'}}/></div><br />
-
-<!-- <div class="get_one_now_container" style={{textAlign: 'center'}}>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
-</div><br /> -->
+</div><br />
 
 Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
@@ -68,6 +65,8 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 ## Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/hardware-overview.jpg" style={{"border-radius": '12.8px'}}/></div><br />
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/6-mmWave-size.jpg" style={{width:'auto', height:'auto', "border-radius": '6.6px'}}/></div>
 
 ## Getting Started
 
